@@ -33,7 +33,7 @@ jobs:
 
       - name: Check JavaScript syntax
         run: |
-          for file in app.js builder.js converter.js i18n.js; do
+          for file in *.js; do
             echo "Checking $file"
             node --input-type=module --check < "$file"
           done
