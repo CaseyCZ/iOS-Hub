@@ -91,9 +91,9 @@ function sourceIcon(source) {
   return icon ? `<img src="${escapeHtml(icon)}" alt="" loading="lazy" referrerpolicy="no-referrer">` : escapeHtml(source.name.slice(0,2).toUpperCase());
 }
 
-function sourceDirectLink(source) {
-  const scheme = source.mode === 'sidestore' ? 'sidestore' : 'altstore';
-  return `${scheme}://source?url=${encodeURIComponent(source.url)}`;
+function sourceInstallerLink(installer, source) {
+  const path = installer === 'livecontainer' ? 'sources' : 'source';
+  return `${installer}://${path}?url=${encodeURIComponent(source.url)}`;
 }
 
 function sourceTags(source) {
@@ -128,7 +128,7 @@ function matchesGenre(source) {
 function sourceCategoryBadges(source) {
   const badges = [];
   if (source.official) badges.push(`<span class="pill">✓ ${escapeHtml(tr('official'))}</span>`);
-  if (source.trusted) badges.push(`<span class="pill online">✓ ${escapeHtml(tr('trusted'))}</span>`);
+  if (source.trusted) badges.push(`<span class="pill">✓ ${escapeHtml(tr('trusted'))}</span>`);
   if (isCommunitySource(source)) badges.push(`<span class="pill">${escapeHtml(tr('community'))}</span>`);
   if (isModifiedSource(source)) badges.push(`<span class="pill">${escapeHtml(tr('modified'))}</span>`);
   return badges.join('');
@@ -187,15 +187,18 @@ function renderSources() {
           <h3>${escapeHtml(source.name)}</h3>
           <div class="source-meta">
             <span class="pill mode">${escapeHtml(modeLabel(source.mode))}</span>
-            <span class="pill online">● ${escapeHtml(tr('online'))}</span>
             ${sourceCategoryBadges(source)}
           </div>
         </div>
       </div>
       <p>${escapeHtml(desc)}</p>
       <div class="source-stats"><span><strong>${escapeHtml(appCount)}</strong> ${escapeHtml(tr('apps'))}</span>${status.checkedAt ? `<span>${escapeHtml(tr('checked'))}: ${escapeHtml(formatDate(status.checkedAt))}</span>` : ''}</div>
-      <div class="source-actions">
-        <a class="btn small primary" href="${escapeHtml(sourceDirectLink(source))}">${escapeHtml(tr('add'))}</a>
+      <div class="source-installers" aria-label="Install source">
+        <a class="btn small primary installer-link" href="${escapeHtml(sourceInstallerLink('altstore', source))}">AltStore</a>
+        <a class="btn small secondary installer-link" href="${escapeHtml(sourceInstallerLink('sidestore', source))}">SideStore</a>
+        <a class="btn small secondary installer-link" href="${escapeHtml(sourceInstallerLink('livecontainer', source))}">LiveContainer</a>
+      </div>
+      <div class="source-actions source-utilities">
         <button class="btn small secondary" type="button" data-copy-source="${escapeHtml(source.url)}">${escapeHtml(tr('copyUrl'))}</button>
         <a class="btn small ghost" href="${escapeHtml(source.url)}" target="_blank" rel="noopener">JSON ↗</a>
         ${source.website ? `<a class="btn small ghost" href="${escapeHtml(source.website)}" target="_blank" rel="noopener">Web ↗</a>` : ''}
