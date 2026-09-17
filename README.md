@@ -12,16 +12,16 @@
 </p>
 
 <p align="center">
-  <img src="https://img.shields.io/badge/VERZE-v1.0.0-38BDF8?style=for-the-badge&labelColor=0284C7" alt="CaseyCZ iOS Hub v1.0.0" />
+  <img src="https://img.shields.io/badge/VERZE-v1.0.1-38BDF8?style=for-the-badge&labelColor=0284C7" alt="CaseyCZ iOS Hub v1.0.1" />
 </p>
 
 <p align="center">
-  <a href="https://caseycz.github.io/repo/"><img src="https://img.shields.io/badge/Web-Otev%C5%99%C3%ADt-38BDF8?style=for-the-badge&labelColor=0284C7&logo=googlechrome&logoColor=white" alt="Otevřít CaseyCZ iOS Hub" /></a>
+  <a href="https://caseycz.github.io/iOS-Hub/"><img src="https://img.shields.io/badge/Web-Otev%C5%99%C3%ADt-38BDF8?style=for-the-badge&labelColor=0284C7&logo=googlechrome&logoColor=white" alt="Otevřít CaseyCZ iOS Hub" /></a>
 </p>
 
 ## O projektu
 
-**CaseyCZ iOS Hub** nahrazuje původní Cydia / Reposi3 stránku moderním katalogem pro současný iOS sideloading.
+**CaseyCZ iOS Hub** je moderní katalog pro iOS sideloading, veřejné AltStore / SideStore zdroje a vlastní kombinované source JSONy.
 
 Web nabízí přehled vybraných veřejných zdrojů, kontrolu jejich dostupnosti a **Source Builder**, který umí spojit kompatibilní AltStore Classic katalogy do jednoho vlastního CaseyCZ Mixu.
 
@@ -39,7 +39,7 @@ Web nabízí přehled vybraných veřejných zdrojů, kontrolu jejich dostupnost
 
 ## Source Builder
 
-První verze Builderu kombinuje menší veřejné Classic zdroje, které lze rozumně sloučit do jednoho JSONu. Velké komunitní katalogy a PAL zdroje se přidávají přímo a do Mixu se nezahrnují.
+Builder kombinuje menší veřejné Classic zdroje, které lze rozumně sloučit do jednoho JSONu. Velké komunitní katalogy a PAL zdroje se přidávají přímo a do Mixu se nezahrnují.
 
 Automatizace v GitHub Actions pravidelně:
 
@@ -54,10 +54,6 @@ Automatizace v GitHub Actions pravidelně:
 Katalog používá vlastní whitelist v `sources/registry.json`. Repo [awesome-altstore](https://github.com/victordedomenico/awesome-altstore) slouží pouze jako jeden z podkladů pro objevování zdrojů; jednotlivé URL jsou před zařazením kontrolované samostatně.
 
 CaseyCZ iOS Hub cizí IPA soubory nerehostuje. Sloučený source zachovává původní download URL jednotlivých projektů.
-
-## Legacy
-
-Původní Cydia / Reposi3 verze je bezpečně uložená ve větvi `backup-cydia-legacy-2026-09-17`.
 
 ## Podpora
 
