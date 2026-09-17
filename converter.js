@@ -1,10 +1,18 @@
-import { Archive, ArchiveCompression, ArchiveFormat } from './vendor/libarchive/libarchive.js';
+import { Archive } from './vendor/libarchive/libarchive.js';
 import { SUPPORTED_LANGUAGES, applyTranslations, normalizeLanguage, t } from './i18n.js';
 
 const root = document.documentElement;
 const $ = (selector, scope = document) => scope.querySelector(selector);
 
 const STORAGE = { theme:'caseycz-theme', language:'caseycz-language' };
+const BETA_WARNING = {
+  en:'Beta: Mach-O executables are written with executable UNIX permissions. Packages that depend on symbolic links or other special filesystem metadata may still require a desktop conversion tool.',
+  cs:'Beta: Mach-O binárním souborům při balení vracíme spustitelná UNIX oprávnění. Balíčky závislé na symbolických odkazech nebo jiných speciálních filesystem metadatech mohou stále vyžadovat desktopový nástroj.',
+  de:'Beta: Mach-O-Binärdateien erhalten beim Verpacken ausführbare UNIX-Rechte. Pakete mit symbolischen Links oder speziellen Dateisystem-Metadaten können weiterhin ein Desktop-Werkzeug benötigen.',
+  es:'Beta: los binarios Mach-O reciben permisos UNIX ejecutables al crear la IPA. Los paquetes que dependen de enlaces simbólicos u otros metadatos especiales pueden seguir necesitando una herramienta de escritorio.',
+  fr:'Bêta : les binaires Mach-O reçoivent des permissions UNIX exécutables lors de la création de l’IPA. Les paquets utilisant des liens symboliques ou des métadonnées spéciales peuvent encore nécessiter un outil de bureau.'
+};
+
 let lang = 'en';
 let selectedFile = null;
 let resultFile = null;
@@ -30,7 +38,9 @@ function applyLanguage(value) {
   applyTranslations(lang);
   const select = $('#languageSelect');
   if (select) select.value = lang;
-  document.title = `DEB → IPA Converter — CaseyCZ iOS Hub`;
+  const warning = $('#metadataWarning');
+  if (warning) warning.textContent = BETA_WARNING[lang] || BETA_WARNING.en;
+  document.title = 'DEB → IPA Converter — CaseyCZ iOS Hub';
   safeSet(STORAGE.language, lang);
   if (!busy) updateRuntimeReady();
 }
@@ -86,6 +96,19 @@ function findAppRoot(entries) {
   })[0];
 }
 
+async function isExecutableFile(file) {
+  const bytes = new Uint8Array(await file.slice(0, 4).arrayBuffer());
+  if (bytes.length >= 2 && bytes[0] === 0x23 && bytes[1] === 0x21) return true; // #!
+  if (bytes.length < 4) return false;
+  const magic = [...bytes].map(value => value.toString(16).padStart(2, '0')).join('').toLowerCase();
+  return new Set([
+    'feedface', 'cefaedfe',
+    'feedfacf', 'cffaedfe',
+    'cafebabe', 'bebafeca',
+    'cafebabf', 'bfbafeca'
+  ]).has(magic);
+}
+
 function setProgress(percent, title, detail = '') {
   $('#progressPanel').hidden = false;
   $('#progressPercent').textContent = `${Math.max(0, Math.min(100, Math.round(percent)))}%`;
@@ -139,6 +162,8 @@ async function convertDebToIpa() {
   $('#convertButton').disabled = true;
 
   try {
+    if (typeof window.JSZip !== 'function') throw new Error('ZIP runtime is not available.');
+
     setProgress(5, tr('openingDeb'), selectedFile.name);
     await new Promise(resolve => requestAnimationFrame(resolve));
 
@@ -167,22 +192,42 @@ async function convertDebToIpa() {
 
     if (!payloadFiles.length) throw new Error('.app bundle is empty');
 
-    setProgress(67, tr('buildingPayload'), `${appName} · ${payloadFiles.length} ${tr('files')}`);
+    setProgress(64, tr('buildingPayload'), `${appName} · ${payloadFiles.length} ${tr('files')}`);
     await new Promise(resolve => setTimeout(resolve, 20));
 
     const baseName = appName.replace(/\.app$/i, '') || selectedFile.name.replace(/\.deb$/i, '') || 'App';
     const outputName = `${baseName}.ipa`;
-    setProgress(76, tr('packagingIpa'), tr('packagingWait'));
+    const zip = new window.JSZip();
 
-    const archiveFile = await Archive.write({
-      files: payloadFiles,
-      outputFileName: outputName,
-      compression: ArchiveCompression.DEFLATE,
-      format: ArchiveFormat.ZIP,
-      passphrase: null
+    for (let index = 0; index < payloadFiles.length; index += 1) {
+      const entry = payloadFiles[index];
+      const executable = await isExecutableFile(entry.file);
+      const data = await entry.file.arrayBuffer();
+      zip.file(entry.pathname, data, {
+        binary: true,
+        createFolders: true,
+        date: new Date(entry.file.lastModified || Date.now()),
+        unixPermissions: executable ? 0o100755 : 0o100644
+      });
+      if (index % 20 === 0 || index === payloadFiles.length - 1) {
+        const pct = 65 + ((index + 1) / payloadFiles.length) * 15;
+        setProgress(pct, tr('buildingPayload'), `${index + 1}/${payloadFiles.length} ${tr('files')}`);
+        await new Promise(resolve => requestAnimationFrame(resolve));
+      }
+    }
+
+    setProgress(82, tr('packagingIpa'), tr('packagingWait'));
+    const archiveBlob = await zip.generateAsync({
+      type: 'blob',
+      compression: 'DEFLATE',
+      compressionOptions: { level: 6 },
+      platform: 'UNIX',
+      streamFiles: true
+    }, metadata => {
+      setProgress(82 + (metadata.percent * 0.17), tr('packagingIpa'), `${Math.round(metadata.percent)}%`);
     });
 
-    resultFile = new File([archiveFile], outputName, { type: 'application/octet-stream', lastModified: Date.now() });
+    resultFile = new File([archiveBlob], outputName, { type: 'application/octet-stream', lastModified: Date.now() });
     resultUrl = URL.createObjectURL(resultFile);
 
     setProgress(100, tr('done'), outputName);
@@ -239,10 +284,12 @@ function closeSupport() {
 
 const dropZone = $('#dropZone');
 ['dragenter', 'dragover'].forEach(type => dropZone.addEventListener(type, event => {
-  event.preventDefault(); dropZone.classList.add('dragging');
+  event.preventDefault();
+  dropZone.classList.add('dragging');
 }));
 ['dragleave', 'drop'].forEach(type => dropZone.addEventListener(type, event => {
-  event.preventDefault(); dropZone.classList.remove('dragging');
+  event.preventDefault();
+  dropZone.classList.remove('dragging');
 }));
 dropZone.addEventListener('drop', event => {
   const file = event.dataTransfer?.files?.[0];
