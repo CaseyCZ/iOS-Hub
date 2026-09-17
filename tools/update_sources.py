@@ -4,7 +4,6 @@ from __future__ import annotations
 import hashlib
 import itertools
 import json
-import shutil
 import urllib.error
 import urllib.request
 from datetime import datetime, timezone
@@ -129,7 +128,12 @@ def dedupe_apps(source_payloads: list[tuple[dict, dict]]) -> tuple[list[dict], l
 
 def write_json(path: Path, payload: object) -> None:
     path.parent.mkdir(parents=True, exist_ok=True)
-    path.write_text(json.dumps(payload, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+    rendered = json.dumps(payload, ensure_ascii=False, indent=2) + "\n"
+    # Avoid touching unchanged generated files. This keeps scheduled refreshes
+    # small even when hundreds of mix combinations exist.
+    if path.exists() and path.read_text(encoding="utf-8") == rendered:
+        return
+    path.write_text(rendered, encoding="utf-8")
 
 
 def main() -> None:
@@ -204,7 +208,6 @@ def main() -> None:
                 "tintColor": "#38BDF8",
                 "apps": apps,
                 "userInfo": {
-                    "generatedAt": generated_at,
                     "sourceIDs": list(combo),
                     "sourceURLs": [meta["url"] for meta, _ in selected],
                 },
