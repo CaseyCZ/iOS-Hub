@@ -1,0 +1,130 @@
+{
+  "updated": "2026-09-17",
+  "attribution": {
+    "name": "awesome-altstore",
+    "url": "https://github.com/victordedomenico/awesome-altstore",
+    "note": "Used as a discovery reference. Source URLs are independently checked before being listed here."
+  },
+  "sources": [
+    {
+      "id": "utm",
+      "name": "UTM Repository",
+      "url": "https://alt.getutm.app/",
+      "website": "https://getutm.app/",
+      "mode": "classic",
+      "mergeable": true,
+      "official": true,
+      "recommended": true,
+      "description": {
+        "cs": "Oficiální zdroj UTM a UTM SE pro virtualizaci a emulaci na iOS.",
+        "en": "Official UTM and UTM SE source for virtualization and emulation on iOS."
+      },
+      "tags": ["virtualization", "emulator", "ipa"]
+    },
+    {
+      "id": "provenance",
+      "name": "Provenance Emulator",
+      "url": "https://provenance-emu.com/apps.json",
+      "website": "https://provenance-emu.com/",
+      "mode": "classic",
+      "mergeable": true,
+      "official": true,
+      "recommended": true,
+      "description": {
+        "cs": "Oficiální zdroj emulátoru Provenance pro více retro platforem.",
+        "en": "Official Provenance multi-system retro emulator source."
+      },
+      "tags": ["emulator", "games", "ipa"]
+    },
+    {
+      "id": "ish",
+      "name": "iSH",
+      "url": "https://ish.app/altstore.json",
+      "website": "https://ish.app/",
+      "mode": "classic",
+      "mergeable": true,
+      "official": true,
+      "recommended": true,
+      "description": {
+        "cs": "Oficiální zdroj iSH — linuxové shell prostředí běžící lokálně na iOS.",
+        "en": "Official iSH source — a Linux shell environment running locally on iOS."
+      },
+      "tags": ["linux", "terminal", "developer"]
+    },
+    {
+      "id": "flycast",
+      "name": "Flycast",
+      "url": "https://flyinghead.github.io/flycast-builds/altstore.json",
+      "website": "https://github.com/flyinghead/flycast",
+      "mode": "classic",
+      "mergeable": true,
+      "official": true,
+      "recommended": true,
+      "description": {
+        "cs": "Projektový zdroj Flycast pro emulaci Dreamcast, Naomi a Atomiswave.",
+        "en": "Project source for Flycast, a Dreamcast, Naomi and Atomiswave emulator."
+      },
+      "tags": ["emulator", "dreamcast", "ipa"]
+    },
+    {
+      "id": "sidestore-community",
+      "name": "SideStore Team Picks",
+      "url": "https://community-apps.sidestore.io/sidecommunity.json",
+      "website": "https://sidestore.io/",
+      "mode": "sidestore",
+      "mergeable": false,
+      "official": true,
+      "recommended": true,
+      "description": {
+        "cs": "Velký komunitní katalog SideStore. Kvůli velikosti se přidává přímo a nemíchá se do CaseyCZ Mixu.",
+        "en": "Large SideStore community catalog. Because of its size it is added directly and is not merged into CaseyCZ Mix."
+      },
+      "tags": ["sidestore", "community", "catalog"]
+    },
+    {
+      "id": "qbitcontrol",
+      "name": "qBitControl",
+      "url": "https://raw.githubusercontent.com/Michael-128/qBitControl-releases/main/source.json",
+      "website": "https://github.com/Michael-128/qBitControl",
+      "mode": "pal",
+      "mergeable": false,
+      "official": true,
+      "recommended": false,
+      "description": {
+        "cs": "Projektový AltStore PAL zdroj pro qBitControl, vzdálenou správu qBittorrentu.",
+        "en": "Project AltStore PAL source for qBitControl, a qBittorrent remote client."
+      },
+      "tags": ["pal", "utility", "qbittorrent"]
+    },
+    {
+      "id": "iphanpy",
+      "name": "iPhanpy",
+      "url": "https://raw.githubusercontent.com/matfantinel/iphanpy/refs/heads/main/altstore/source.json",
+      "website": "https://fantinel.dev/blog/iphanpy-mastodon-client/",
+      "mode": "pal",
+      "mergeable": false,
+      "official": true,
+      "recommended": false,
+      "description": {
+        "cs": "Projektový AltStore PAL zdroj pro iPhanpy, nativně zabaleného klienta Mastodon.",
+        "en": "Project AltStore PAL source for iPhanpy, a native-wrapped Mastodon client."
+      },
+      "tags": ["pal", "mastodon", "social"]
+    },
+    {
+      "id": "epic-games",
+      "name": "Epic Games",
+      "url": "https://content-download-egs.distro.on.epicgames.com/iOS/altstore/source.json",
+      "website": "https://www.epicgames.com/",
+      "mode": "pal",
+      "mergeable": false,
+      "official": true,
+      "recommended": true,
+      "description": {
+        "cs": "Oficiální iOS zdroj Epic Games. Přidává se přímo a není součástí Classic mixu.",
+        "en": "Official Epic Games iOS source. Added directly and not included in the Classic mix."
+      },
+      "tags": ["pal", "games", "official"]
+    }
+  ]
+}
