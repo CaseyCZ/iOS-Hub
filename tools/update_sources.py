@@ -14,10 +14,8 @@ REGISTRY = ROOT / "sources" / "registry.json"
 DATA_DIR = ROOT / "data"
 SOURCE_CACHE_DIR = DATA_DIR / "source-cache"
 MIX_DIR = ROOT / "mix"
+SIDESTORE_DIR = ROOT / "sidestore"
 BASE_URL = "https://caseycz.github.io/iOS-Hub/"
-# Stable hosted combinations are still pre-generated only for the curated
-# mergeable pool. Experimental Mix Lab can combine the wider online catalog
-# locally in the browser from same-origin checked source snapshots.
 MAX_MIX_SOURCES = 12
 USER_AGENT = "CaseyCZ-iOS-Hub/1.1 (+https://caseycz.github.io/iOS-Hub/)"
 
@@ -127,6 +125,19 @@ def assess_mix_compatibility(source: dict, payload: dict) -> tuple[str, str]:
     return "experimental", "Source JSON is readable but uses an unclassified distribution mode."
 
 
+def is_sidestore_compatible(source: dict, payload: dict) -> bool:
+    """Conservative SideStore pool: AltSource-compatible direct IPA entries only."""
+    if (source.get("mode") or "classic") not in {"classic", "sidestore"}:
+        return False
+    apps = [app for app in payload.get("apps", []) if isinstance(app, dict)]
+    if not apps:
+        return False
+    return all(
+        (app.get("bundleIdentifier") or app.get("bundleID")) and has_classic_download(app)
+        for app in apps
+    )
+
+
 def dedupe_apps(source_payloads: list[tuple[dict, dict]]) -> tuple[list[dict], list[dict]]:
     merged: dict[str, tuple[dict, dict]] = {}
     conflicts: list[dict] = []
@@ -188,6 +199,24 @@ def make_mix(selected: list[tuple[dict, dict]], filename: str, identifier_suffix
     }, conflicts
 
 
+def make_sidestore_source(selected: list[tuple[dict, dict]]) -> tuple[dict, list[dict]]:
+    apps, conflicts = dedupe_apps(selected)
+    return {
+        "name": "CaseyCZ SideStore Source",
+        "identifier": "com.caseycz.ios.sidestore",
+        "subtitle": "Checked SideStore-compatible apps from CaseyCZ iOS Hub",
+        "website": BASE_URL,
+        "sourceURL": f"{BASE_URL}sidestore/source.json",
+        "tintColor": "#38BDF8",
+        "apps": apps,
+        "userInfo": {
+            "generatedBy": "CaseyCZ iOS Hub",
+            "sourceIDs": [meta["id"] for meta, _ in selected],
+            "sourceURLs": [meta["url"] for meta, _ in selected],
+        },
+    }, conflicts
+
+
 def main() -> None:
     registry = json.loads(REGISTRY.read_text(encoding="utf-8"))
     sources = registry.get("sources", [])
@@ -196,6 +225,7 @@ def main() -> None:
     DATA_DIR.mkdir(parents=True, exist_ok=True)
     SOURCE_CACHE_DIR.mkdir(parents=True, exist_ok=True)
     MIX_DIR.mkdir(parents=True, exist_ok=True)
+    SIDESTORE_DIR.mkdir(parents=True, exist_ok=True)
 
     status = {"generatedAt": generated_at, "sources": {}}
     catalog = {"generatedAt": generated_at, "sources": []}
@@ -222,6 +252,7 @@ def main() -> None:
                 "httpStatus": http_status,
                 "appCount": len(apps),
                 "iconURL": payload.get("iconURL") or (apps[0].get("iconURL") if apps else "") or "",
+                "error": None,
                 "mixTest": mix_test,
                 "mixReason": mix_reason,
             })
@@ -240,19 +271,16 @@ def main() -> None:
             result["error"] = f"{type(exc).__name__}: {exc}"[:300]
         status["sources"][source_id] = result
 
-    # Remove cached metadata for sources that did not pass the current online check.
     live_cache_files = {f"{source_id}.json" for source_id in loaded}
     for path in SOURCE_CACHE_DIR.glob("*.json"):
         if path.name not in live_cache_files:
             path.unlink()
 
-    # Curated hosted pool: all arbitrary combinations are pre-generated here.
     mergeable_ids = sorted(
         source["id"] for source in sources
         if source.get("mergeable") and source.get("mode") == "classic" and source["id"] in loaded
     )
 
-    # Automatic test pool: wider set that passed Classic structural/install metadata checks.
     auto_compatible_ids = sorted(
         source_id for source_id, (source, _payload) in loaded.items()
         if status["sources"][source_id]["mixTest"] == "pass" and source.get("mode") == "classic"
@@ -260,6 +288,11 @@ def main() -> None:
     experimental_ids = sorted(
         source_id for source_id in loaded
         if status["sources"][source_id]["mixTest"] == "experimental"
+    )
+
+    sidestore_compatible_ids = sorted(
+        source_id for source_id, (source, payload) in loaded.items()
+        if is_sidestore_compatible(source, payload) and source_id != "sidestore-official"
     )
 
     effective_max = min(MAX_MIX_SOURCES, len(mergeable_ids))
@@ -280,8 +313,6 @@ def main() -> None:
                 all_conflicts[slug] = conflicts
             mix_count += 1
 
-    # One hosted preset can safely include the full automatically compatible pool
-    # without generating the exponential set of every possible combination.
     all_compatible_url = None
     if auto_compatible_ids:
         filename = "all-compatible.json"
@@ -294,11 +325,22 @@ def main() -> None:
             all_conflicts["all-compatible"] = conflicts
         all_compatible_url = f"{BASE_URL}mix/{filename}"
 
-    # Delete only obsolete combinations. Unchanged mixes stay byte-for-byte
-    # untouched, so scheduled checks do not rewrite hundreds of files.
     for path in MIX_DIR.glob("*.json"):
         if path.name not in expected_mix_files:
             path.unlink()
+
+    sidestore_url = None
+    sidestore_app_count = 0
+    sidestore_conflict_count = 0
+    if sidestore_compatible_ids:
+        sidestore_selected = [loaded[source_id] for source_id in sidestore_compatible_ids]
+        sidestore_source, sidestore_conflicts = make_sidestore_source(sidestore_selected)
+        write_json(SIDESTORE_DIR / "source.json", sidestore_source)
+        sidestore_url = f"{BASE_URL}sidestore/source.json"
+        sidestore_app_count = len(sidestore_source["apps"])
+        sidestore_conflict_count = len(sidestore_conflicts)
+        if sidestore_conflicts:
+            all_conflicts["sidestore-official"] = sidestore_conflicts
 
     status["mixes"] = {
         "count": mix_count,
@@ -308,6 +350,13 @@ def main() -> None:
         "experimentalSourceIDs": experimental_ids,
         "allCompatibleURL": all_compatible_url,
     }
+    status["sidestore"] = {
+        "sourceURL": sidestore_url,
+        "sourceIDs": sidestore_compatible_ids,
+        "appCount": sidestore_app_count,
+        "conflictCount": sidestore_conflict_count,
+    }
+
     write_json(DATA_DIR / "status.json", status)
     write_json(DATA_DIR / "catalog.json", catalog)
     write_json(DATA_DIR / "conflicts.json", {"generatedAt": generated_at, "mixes": all_conflicts})
@@ -315,7 +364,8 @@ def main() -> None:
     online_count = sum(1 for item in status["sources"].values() if item["online"])
     print(
         f"Checked {len(sources)} sources; {online_count} online; "
-        f"{len(auto_compatible_ids)} auto Mix-compatible; generated {mix_count} hosted combinations."
+        f"{len(auto_compatible_ids)} auto Mix-compatible; generated {mix_count} hosted combinations; "
+        f"SideStore package: {len(sidestore_compatible_ids)} sources / {sidestore_app_count} apps."
     )
 
 
