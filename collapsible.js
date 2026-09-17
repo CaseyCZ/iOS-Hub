@@ -37,10 +37,6 @@ function disclosureSummary(label, countText = '') {
   return `<span class="disclosure-title"><span class="show-text">${escapeHtml(tr('show'))}</span><span class="hide-text">${escapeHtml(tr('hide'))}</span> · ${escapeHtml(label)}</span>${countText ? `<span class="disclosure-count">${escapeHtml(countText)}</span>` : ''}`;
 }
 
-function sourceName(id) {
-  return registry.find(source => source.id === id)?.name || id;
-}
-
 function rows(items, kind) {
   if (!items.length) return `<div class="disclosure-empty">${escapeHtml(tr('empty'))}</div>`;
   return `<div class="disclosure-list">${items.map(item => {
@@ -61,13 +57,17 @@ function packageDetails(type) {
   return {sources, apps};
 }
 
-function injectPackageDisclosure(card, type) {
-  if (card.querySelector('.package-disclosure')) return;
+function injectPackageDisclosure(card, type, force = false) {
+  const existing = card.querySelector('.package-disclosure');
+  if (existing && !force) return;
+  const open = existing ? existing.open : isOpen(type);
+  existing?.remove();
+
   const {sources, apps} = packageDetails(type);
   const details = document.createElement('details');
   details.className = 'content-disclosure package-disclosure';
   details.dataset.disclosureType = type;
-  details.open = isOpen(type);
+  details.open = open;
   details.innerHTML = `<summary>${disclosureSummary(`${tr('sources')} + ${tr('apps')}`, `${sources.length} · ${apps.length}`)}</summary>
     <div class="disclosure-body collapsible-scroll">
       <div class="disclosure-section"><h5>${escapeHtml(tr('sources'))} · ${sources.length}</h5>${rows(sources, 'source')}</div>
@@ -77,13 +77,13 @@ function injectPackageDisclosure(card, type) {
   card.appendChild(details);
 }
 
-function renderPackageDisclosures() {
+function renderPackageDisclosures(force = false) {
   const host = $('#officialSourcePackages');
   if (!host) return;
   $$('.official-source-card').forEach(card => {
     if (!host.contains(card)) return;
     const badge = card.querySelector('.pill')?.textContent?.trim();
-    injectPackageDisclosure(card, badge === 'SideStore' ? 'side' : 'alt');
+    injectPackageDisclosure(card, badge === 'SideStore' ? 'side' : 'alt', force);
   });
 }
 
@@ -174,7 +174,7 @@ async function renderMixDisclosure() {
 
 function refreshLanguage() {
   updateBuilderSummary();
-  renderPackageDisclosures();
+  renderPackageDisclosures(true);
   if ($('#expResult')?.classList.contains('show')) renderMixDisclosure();
 }
 
@@ -185,7 +185,7 @@ async function initCollapsibles() {
   const countNode = $('#expSelectedCount');
   const result = $('#expResult');
 
-  packageHost && new MutationObserver(renderPackageDisclosures).observe(packageHost, {childList:true, subtree:true});
+  packageHost && new MutationObserver(() => renderPackageDisclosures(false)).observe(packageHost, {childList:true, subtree:true});
   countNode && new MutationObserver(updateBuilderSummary).observe(countNode, {childList:true, characterData:true, subtree:true});
   result && new MutationObserver(() => {
     if (result.classList.contains('show')) renderMixDisclosure();
@@ -206,7 +206,7 @@ async function initCollapsibles() {
     console.warn('Collapsible list data could not be loaded.', error);
   }
 
-  renderPackageDisclosures();
+  renderPackageDisclosures(true);
   updateBuilderSummary();
   if (result?.classList.contains('show')) renderMixDisclosure();
 
