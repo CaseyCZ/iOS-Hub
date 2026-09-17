@@ -2,14 +2,28 @@
   const root = document.documentElement;
   const $ = (selector, scope = document) => scope.querySelector(selector);
   const $$ = (selector, scope = document) => [...scope.querySelectorAll(selector)];
-  const state = { registry: [], status: {}, catalog: {}, selected: new Set(), filter: 'all', query: '', lang: 'cs' };
-  const SUPPORT_URL = 'https://www.buymeacoffee.com/caseycz';
+  const state = {
+    registry: [], status: {}, catalog: {}, selected: new Set(),
+    sourceCategory: 'all', genre: 'all', query: '', lang: 'cs'
+  };
   const MIX_LIMIT = 4;
+
+  const GENRE_RULES = {
+    games: ['games','pokemon','mmo','geometry-dash','game'],
+    emulators: ['emulator','retro','dreamcast','dolphinios','virtualization'],
+    video: ['video','streaming','youtube','media','stremio','kodi'],
+    music: ['music','audio'],
+    anime: ['anime','manga','comics'],
+    social: ['social','mastodon','fediverse'],
+    downloads: ['torrent','download','qbittorrent','network'],
+    sideload: ['sideload','signing','livecontainer','debug'],
+    utilities: ['utility','developer','terminal','linux','privacy','app','ios']
+  };
 
   const text = (cs, en) => state.lang === 'en' ? en : cs;
   const safeGet = key => { try { return localStorage.getItem(key); } catch (_) { return null; } };
   const safeSet = (key, value) => { try { localStorage.setItem(key, value); } catch (_) {} };
-  const escapeHtml = value => String(value ?? '').replace(/[&<>'"]/g, char => ({'&':'&amp;','<':'&lt;','>':'&gt;',"'":'&#39;','"':'&quot;'}[char]));
+  const escapeHtml = value => String(value ?? '').replace(/[&<>'\"]/g, char => ({'&':'&amp;','<':'&lt;','>':'&gt;',"'":'&#39;','\"':'&quot;'}[char]));
 
   function applyTheme(theme) {
     const value = theme === 'light' ? 'light' : 'dark';
@@ -25,7 +39,9 @@
     $$('[data-cs][data-en]').forEach(node => { node.textContent = node.dataset[state.lang]; });
     $$('[data-cs-placeholder][data-en-placeholder]').forEach(node => { node.placeholder = node.dataset[`${state.lang}Placeholder`]; });
     $$('[data-lang]').forEach(button => button.classList.toggle('active', button.dataset.lang === state.lang));
-    document.title = state.lang === 'en' ? 'CaseyCZ iOS Hub — Apps, IPA & AltStore Sources' : 'CaseyCZ iOS Hub — Aplikace, IPA & AltStore zdroje';
+    document.title = state.lang === 'en'
+      ? 'CaseyCZ iOS Hub — Sources, Catalog & Tools'
+      : 'CaseyCZ iOS Hub — Zdroje, katalog & nástroje';
     safeSet('caseycz-language', state.lang);
     renderSources();
     renderBuilder();
@@ -52,31 +68,52 @@
     return `altstore://source?url=${encodeURIComponent(source.url)}`;
   }
 
+  function matchesSourceCategory(source) {
+    if (state.sourceCategory === 'all') return true;
+    if (state.sourceCategory === 'official') return source.official === true;
+    if (state.sourceCategory === 'trusted') return source.trusted === true;
+    if (state.sourceCategory === 'community') return source.official !== true;
+    if (state.sourceCategory === 'modified') return source.modified === true;
+    return true;
+  }
+
+  function matchesGenre(source) {
+    if (state.genre === 'all') return true;
+    const tags = (source.tags || []).map(tag => String(tag).toLowerCase());
+    const rules = GENRE_RULES[state.genre] || [];
+    return rules.some(rule => tags.includes(rule));
+  }
+
+  function sourceCategoryBadges(source) {
+    const badges = [];
+    if (source.official) badges.push(`<span class="pill">✓ ${text('Official','Official')}</span>`);
+    if (source.trusted) badges.push(`<span class="pill online">✓ ${text('Trusted','Trusted')}</span>`);
+    if (!source.official) badges.push(`<span class="pill">${text('Community','Community')}</span>`);
+    if (source.modified) badges.push(`<span class="pill">${text('Modified','Modified')}</span>`);
+    return badges.join('');
+  }
+
   function renderSources() {
     const grid = $('#sourceGrid');
     if (!grid) return;
     const q = state.query.trim().toLowerCase();
     const filtered = state.registry.filter(source => {
-      if (getStatus(source.id).online === false) return false;
-      if (state.filter !== 'all' && source.mode !== state.filter) return false;
+      if (getStatus(source.id).online !== true) return false;
+      if (!matchesSourceCategory(source) || !matchesGenre(source)) return false;
       if (!q) return true;
       return [source.name, source.mode, ...(source.tags || []), source.description?.cs, source.description?.en]
         .filter(Boolean).join(' ').toLowerCase().includes(q);
     });
 
     if (!filtered.length) {
-      grid.innerHTML = `<div class="panel empty" style="grid-column:1/-1"><div class="empty-icon">⌕</div><h3>${text('Nic nenalezeno','Nothing found')}</h3><p>${text('Zkus jiný filtr nebo hledaný výraz.','Try another filter or search term.')}</p></div>`;
+      grid.innerHTML = `<div class="panel empty" style="grid-column:1/-1"><div class="empty-icon">⌕</div><h3>${text('Nic nenalezeno','Nothing found')}</h3><p>${text('Zkus jinou kategorii, žánr nebo hledaný výraz.','Try another category, genre or search term.')}</p></div>`;
       return;
     }
 
     grid.innerHTML = filtered.map(source => {
       const status = getStatus(source.id);
-      const online = status.online !== false;
-      const statusKnown = typeof status.online === 'boolean';
-      const statusClass = statusKnown ? (online ? 'online' : 'offline') : '';
-      const statusText = statusKnown ? (online ? text('Online','Online') : text('Offline','Offline')) : text('Čeká na kontrolu','Pending check');
       const appCount = Number.isFinite(status.appCount) ? status.appCount : '—';
-      const selectable = source.mergeable && online && source.mode === 'classic';
+      const selectable = source.mergeable && source.mode === 'classic';
       const checked = state.selected.has(source.id);
       const desc = source.description?.[state.lang] || source.description?.cs || '';
       return `<article class="source-card" data-source-id="${escapeHtml(source.id)}">
@@ -86,9 +123,8 @@
             <h3>${escapeHtml(source.name)}</h3>
             <div class="source-meta">
               <span class="pill mode">${escapeHtml(modeLabel(source.mode))}</span>
-              <span class="pill ${statusClass}">${statusKnown ? (online ? '●' : '●') : '○'} ${escapeHtml(statusText)}</span>
-              ${source.trusted ? `<span class="pill online">✓ ${text('Trusted','Trusted')}</span>` : ''}
-              ${source.official ? `<span class="pill">${text('Projektový zdroj','Project source')}</span>` : ''}
+              <span class="pill online">● ${text('Online','Online')}</span>
+              ${sourceCategoryBadges(source)}
             </div>
           </div>
         </div>
@@ -101,7 +137,7 @@
           ${source.website ? `<a class="btn small ghost" href="${escapeHtml(source.website)}" target="_blank" rel="noopener">Web ↗</a>` : ''}
           <label class="select-source ${selectable ? '' : 'disabled'}" title="${selectable ? text('Přidat do CaseyCZ Mixu','Add to CaseyCZ Mix') : text('Tento typ se do mixu nepřidává','This source type is not merged')}">
             <input type="checkbox" data-source-check="${escapeHtml(source.id)}" ${checked ? 'checked' : ''} ${selectable ? '' : 'disabled'}>
-            <span>${text('Mix','Mix')}</span>
+            <span>Mix</span>
           </label>
         </div>
       </article>`;
@@ -116,7 +152,7 @@
   }
 
   function builderSources() {
-    return state.registry.filter(source => source.mergeable && source.mode === 'classic' && getStatus(source.id).online !== false);
+    return state.registry.filter(source => source.mergeable && source.mode === 'classic' && getStatus(source.id).online === true);
   }
 
   function renderBuilder() {
@@ -194,9 +230,12 @@
     const statuses = state.status?.sources || {};
     const online = state.registry.filter(source => statuses[source.id]?.online === true).length;
     const mergeable = builderSources().length;
-    const apps = Object.values(statuses).reduce((sum, item) => sum + (Number.isFinite(item.appCount) ? item.appCount : 0), 0);
-    if ($('#statSources')) $('#statSources').textContent = online || state.registry.length;
-    if ($('#statMix')) $('#statMix').textContent = mergeable;
+    const apps = state.registry.reduce((sum, source) => {
+      const item = statuses[source.id];
+      return sum + (item?.online === true && Number.isFinite(item.appCount) ? item.appCount : 0);
+    }, 0);
+    if ($('#statSources')) $('#statSources').textContent = online || '—';
+    if ($('#statMix')) $('#statMix').textContent = mergeable || '—';
     if ($('#statApps')) $('#statApps').textContent = apps || '—';
   }
 
@@ -232,10 +271,17 @@
   }
 
   document.addEventListener('click', event => {
-    const filter = event.target.closest('[data-filter]');
-    if (filter) {
-      state.filter = filter.dataset.filter;
-      $$('[data-filter]').forEach(btn => btn.classList.toggle('active', btn === filter));
+    const category = event.target.closest('[data-category-filter]');
+    if (category) {
+      state.sourceCategory = category.dataset.categoryFilter;
+      $$('[data-category-filter]').forEach(btn => btn.classList.toggle('active', btn === category));
+      renderSources();
+      return;
+    }
+    const genre = event.target.closest('[data-genre-filter]');
+    if (genre) {
+      state.genre = genre.dataset.genreFilter;
+      $$('[data-genre-filter]').forEach(btn => btn.classList.toggle('active', btn === genre));
       renderSources();
       return;
     }
