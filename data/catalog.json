@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-17T13:19:07Z",
+  "generatedAt": "2026-09-17T13:31:11Z",
   "sources": [
     {
       "id": "utm",
@@ -562,6 +562,22 @@
       ]
     },
     {
+      "id": "stremio-official-pal",
+      "name": "Stremio",
+      "appCount": 1,
+      "iconURL": "https://i.imgur.com/ykZuH0r.png",
+      "apps": [
+        {
+          "name": "Stremio",
+          "bundleIdentifier": "com.stremio.pal",
+          "developerName": "Stremio",
+          "version": "2.0.8",
+          "iconURL": "https://i.imgur.com/ykZuH0r.png",
+          "subtitle": "Freedom to stream."
+        }
+      ]
+    },
+    {
       "id": "stremio-ios",
       "name": "Stremio iOS (Unofficial AltStore Source)",
       "appCount": 1,
@@ -574,6 +590,22 @@
           "version": "2.0.8",
           "iconURL": "https://www.stremio.com/website/stremio-logo-small.png",
           "subtitle": "Freedom to stream."
+        }
+      ]
+    },
+    {
+      "id": "kodi-ios",
+      "name": "Kodi iOS automated builds (not affiliated with Kodi Team)",
+      "appCount": 1,
+      "iconURL": "https://kodi.tv/images/kodi-logo.svg",
+      "apps": [
+        {
+          "name": "Kodi iOS",
+          "bundleIdentifier": "org.xbmc.kodi-ios",
+          "developerName": "Kodi Team",
+          "version": "21.3",
+          "iconURL": "https://kodi.tv/images/kodi-logo.svg",
+          "subtitle": "Kodi media center for iOS"
         }
       ]
     },
