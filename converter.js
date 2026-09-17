@@ -1,37 +1,37 @@
 import { Archive, ArchiveCompression, ArchiveFormat } from './vendor/libarchive/libarchive.js';
+import { SUPPORTED_LANGUAGES, applyTranslations, normalizeLanguage, t } from './i18n.js';
 
 const root = document.documentElement;
 const $ = (selector, scope = document) => scope.querySelector(selector);
-const $$ = (selector, scope = document) => [...scope.querySelectorAll(selector)];
 
-let lang = 'cs';
+const STORAGE = { theme:'caseycz-theme', language:'caseycz-language' };
+let lang = 'en';
 let selectedFile = null;
 let resultFile = null;
 let resultUrl = null;
 let busy = false;
 
-const text = (cs, en) => lang === 'en' ? en : cs;
+const tr = key => t(lang, key);
 const safeGet = key => { try { return localStorage.getItem(key); } catch (_) { return null; } };
 const safeSet = (key, value) => { try { localStorage.setItem(key, value); } catch (_) {} };
 
-Archive.init({
-  workerUrl: new URL('./vendor/libarchive/worker-bundle.js', import.meta.url).href
-});
+Archive.init({ workerUrl: new URL('./vendor/libarchive/worker-bundle.js', import.meta.url).href });
 
 function applyTheme(theme) {
   const value = theme === 'light' ? 'light' : 'dark';
   root.dataset.theme = value;
   $('#themeToggle').textContent = value === 'dark' ? '☀' : '☾';
-  safeSet('caseycz-theme', value);
+  safeSet(STORAGE.theme, value);
 }
 
 function applyLanguage(value) {
-  lang = value === 'en' ? 'en' : 'cs';
+  lang = normalizeLanguage(value);
   root.lang = lang;
-  $$('[data-cs][data-en]').forEach(node => { node.textContent = node.dataset[lang]; });
-  $$('[data-lang]').forEach(button => button.classList.toggle('active', button.dataset.lang === lang));
-  document.title = lang === 'en' ? 'DEB → IPA Converter — CaseyCZ iOS Hub' : 'DEB → IPA Converter — CaseyCZ iOS Hub';
-  safeSet('caseycz-language', lang);
+  applyTranslations(lang);
+  const select = $('#languageSelect');
+  if (select) select.value = lang;
+  document.title = `DEB → IPA Converter — CaseyCZ iOS Hub`;
+  safeSet(STORAGE.language, lang);
   if (!busy) updateRuntimeReady();
 }
 
@@ -45,11 +45,7 @@ function formatBytes(bytes) {
 }
 
 function normalizePath(path) {
-  return String(path || '')
-    .replace(/\\/g, '/')
-    .replace(/^\.\//, '')
-    .replace(/^\/+/, '')
-    .replace(/\/+/g, '/');
+  return String(path || '').replace(/\\/g, '/').replace(/^\.\//, '').replace(/^\/+/, '').replace(/\/+/g, '/');
 }
 
 function flattenExtracted(node, prefix = '') {
@@ -57,11 +53,8 @@ function flattenExtracted(node, prefix = '') {
   if (!node || typeof node !== 'object') return files;
   for (const [name, value] of Object.entries(node)) {
     const path = normalizePath(prefix ? `${prefix}/${name}` : name);
-    if (value instanceof File) {
-      files.push({ file: value, path });
-    } else if (value && typeof value === 'object') {
-      files.push(...flattenExtracted(value, path));
-    }
+    if (value instanceof File) files.push({ file: value, path });
+    else if (value && typeof value === 'object') files.push(...flattenExtracted(value, path));
   }
   return files;
 }
@@ -76,8 +69,7 @@ function dataArchiveEntry(entries) {
 function findAppRoot(entries) {
   const roots = new Set();
   for (const entry of entries) {
-    const path = normalizePath(entry.path);
-    const parts = path.split('/');
+    const parts = normalizePath(entry.path).split('/');
     for (let i = 0; i < parts.length; i += 1) {
       if (parts[i].toLowerCase().endsWith('.app')) {
         roots.add(parts.slice(0, i + 1).join('/'));
@@ -132,11 +124,8 @@ function showError(error) {
   console.error(error);
   const raw = error instanceof Error ? error.message : String(error);
   let message = raw;
-  if (/data\.tar/i.test(raw)) {
-    message = text('Balíček nevypadá jako standardní Debian .deb — nenašel jsem data.tar.*.', 'The package does not look like a standard Debian .deb — data.tar.* was not found.');
-  } else if (/\.app/i.test(raw)) {
-    message = text('V balíčku jsem nenašel iOS aplikaci .app. Tweaky, knihovny a jiné Debian balíčky nelze převést na IPA.', 'No iOS .app was found in the package. Tweaks, libraries and other Debian packages cannot be converted to IPA.');
-  }
+  if (/data\.tar/i.test(raw)) message = tr('debInvalid');
+  else if (/\.app/i.test(raw)) message = tr('appNotFound');
   $('#errorMessage').textContent = message;
   $('#errorPanel').hidden = false;
   $('#progressPanel').hidden = true;
@@ -150,20 +139,20 @@ async function convertDebToIpa() {
   $('#convertButton').disabled = true;
 
   try {
-    setProgress(5, text('Otevírám DEB…', 'Opening DEB…'), selectedFile.name);
+    setProgress(5, tr('openingDeb'), selectedFile.name);
     await new Promise(resolve => requestAnimationFrame(resolve));
 
     const deb = await Archive.open(selectedFile);
-    setProgress(18, text('Rozbaluji Debian balíček…', 'Extracting Debian package…'));
+    setProgress(18, tr('extractingDeb'));
     const debTree = await deb.extractFiles();
     const debEntries = flattenExtracted(debTree);
 
     const dataEntry = dataArchiveEntry(debEntries);
     if (!dataEntry) throw new Error('data.tar.* not found');
 
-    setProgress(34, text('Našel jsem data archiv…', 'Data archive found…'), dataEntry.path);
+    setProgress(34, tr('dataFound'), dataEntry.path);
     const dataArchive = await Archive.open(dataEntry.file);
-    setProgress(48, text('Hledám iOS aplikaci…', 'Looking for iOS application…'));
+    setProgress(48, tr('lookingApp'));
     const dataTree = await dataArchive.extractFiles();
     const appEntries = flattenExtracted(dataTree);
 
@@ -173,20 +162,17 @@ async function convertDebToIpa() {
     const appPrefix = `${appRoot}/`;
     const payloadFiles = appEntries
       .filter(entry => entry.path.startsWith(appPrefix))
-      .map(entry => ({
-        file: entry.file,
-        pathname: `Payload/${appName}/${entry.path.slice(appPrefix.length)}`
-      }))
+      .map(entry => ({ file: entry.file, pathname: `Payload/${appName}/${entry.path.slice(appPrefix.length)}` }))
       .filter(entry => entry.pathname.split('/').pop());
 
     if (!payloadFiles.length) throw new Error('.app bundle is empty');
 
-    setProgress(67, text('Vytvářím Payload…', 'Building Payload…'), `${appName} · ${payloadFiles.length} ${text('souborů', 'files')}`);
+    setProgress(67, tr('buildingPayload'), `${appName} · ${payloadFiles.length} ${tr('files')}`);
     await new Promise(resolve => setTimeout(resolve, 20));
 
     const baseName = appName.replace(/\.app$/i, '') || selectedFile.name.replace(/\.deb$/i, '') || 'App';
     const outputName = `${baseName}.ipa`;
-    setProgress(76, text('Balím IPA…', 'Packaging IPA…'), text('Tohle může u velké aplikace chvíli trvat.', 'This can take a while for a large app.'));
+    setProgress(76, tr('packagingIpa'), tr('packagingWait'));
 
     const archiveFile = await Archive.write({
       files: payloadFiles,
@@ -199,9 +185,9 @@ async function convertDebToIpa() {
     resultFile = new File([archiveFile], outputName, { type: 'application/octet-stream', lastModified: Date.now() });
     resultUrl = URL.createObjectURL(resultFile);
 
-    setProgress(100, text('Hotovo.', 'Done.'), outputName);
+    setProgress(100, tr('done'), outputName);
     $('#resultName').textContent = outputName;
-    $('#resultMeta').textContent = `${formatBytes(resultFile.size)} · ${payloadFiles.length} ${text('souborů v aplikaci', 'app files')} · ${text('zpracováno lokálně', 'processed locally')}`;
+    $('#resultMeta').textContent = `${formatBytes(resultFile.size)} · ${payloadFiles.length} ${tr('appFiles')} · ${tr('processedLocal')}`;
     $('#downloadIpa').href = resultUrl;
     $('#downloadIpa').download = outputName;
 
@@ -222,7 +208,7 @@ async function shareResult() {
   try {
     await navigator.share({ files: [resultFile], title: resultFile.name });
   } catch (error) {
-    if (error?.name !== 'AbortError') showToast(text('Sdílení se nepodařilo.', 'Sharing failed.'));
+    if (error?.name !== 'AbortError') showToast(tr('shareFailed'));
   }
 }
 
@@ -237,7 +223,7 @@ function showToast(message) {
 
 function updateRuntimeReady() {
   $('#runtimeDot').classList.add('ready');
-  $('#runtimeText').textContent = text('Převodní engine připraven.', 'Conversion engine ready.');
+  $('#runtimeText').textContent = tr('engineReady');
 }
 
 function openSupport() {
@@ -245,7 +231,6 @@ function openSupport() {
   document.body.classList.add('modal-open');
   $('#supportModal')?.setAttribute('aria-hidden', 'false');
 }
-
 function closeSupport() {
   $('#supportModal')?.classList.remove('open');
   document.body.classList.remove('modal-open');
@@ -254,17 +239,15 @@ function closeSupport() {
 
 const dropZone = $('#dropZone');
 ['dragenter', 'dragover'].forEach(type => dropZone.addEventListener(type, event => {
-  event.preventDefault();
-  dropZone.classList.add('dragging');
+  event.preventDefault(); dropZone.classList.add('dragging');
 }));
 ['dragleave', 'drop'].forEach(type => dropZone.addEventListener(type, event => {
-  event.preventDefault();
-  dropZone.classList.remove('dragging');
+  event.preventDefault(); dropZone.classList.remove('dragging');
 }));
 dropZone.addEventListener('drop', event => {
   const file = event.dataTransfer?.files?.[0];
   if (!file) return;
-  if (!file.name.toLowerCase().endsWith('.deb')) return void showToast(text('Vyber soubor s příponou .deb.', 'Choose a .deb file.'));
+  if (!file.name.toLowerCase().endsWith('.deb')) return void showToast(tr('chooseDebToast'));
   setSelectedFile(file);
 });
 
@@ -278,7 +261,7 @@ $('#retryButton').addEventListener('click', convertDebToIpa);
 $('#newConversion').addEventListener('click', () => { cleanupResult(); setSelectedFile(null); window.scrollTo({ top: 0, behavior: 'smooth' }); });
 $('#shareIpa').addEventListener('click', shareResult);
 $('#themeToggle').addEventListener('click', () => applyTheme(root.dataset.theme === 'dark' ? 'light' : 'dark'));
-$$('[data-lang]').forEach(button => button.addEventListener('click', () => applyLanguage(button.dataset.lang)));
+$('#languageSelect').addEventListener('change', event => applyLanguage(event.target.value));
 document.addEventListener('click', event => {
   if (event.target.closest('[data-support-open]')) openSupport();
   if (event.target.closest('[data-support-close]') || event.target.id === 'supportModal') closeSupport();
@@ -286,11 +269,10 @@ document.addEventListener('click', event => {
 document.addEventListener('keydown', event => { if (event.key === 'Escape') closeSupport(); });
 window.addEventListener('beforeunload', cleanupResult);
 
-const savedTheme = safeGet('caseycz-theme');
+const savedTheme = safeGet(STORAGE.theme);
 const systemDark = window.matchMedia?.('(prefers-color-scheme: dark)').matches;
 applyTheme(savedTheme === 'light' || savedTheme === 'dark' ? savedTheme : (systemDark ? 'dark' : 'light'));
-const savedLang = safeGet('caseycz-language');
-const browserEn = (navigator.language || '').toLowerCase().startsWith('en');
-applyLanguage(savedLang === 'en' || savedLang === 'cs' ? savedLang : (browserEn ? 'en' : 'cs'));
+const savedLang = safeGet(STORAGE.language);
+applyLanguage(SUPPORTED_LANGUAGES.includes(savedLang) ? savedLang : 'en');
 $('#year').textContent = new Date().getFullYear();
 updateRuntimeReady();
