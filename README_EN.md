@@ -12,16 +12,16 @@
 </p>
 
 <p align="center">
-  <img src="https://img.shields.io/badge/VERSION-v1.0.0-38BDF8?style=for-the-badge&labelColor=0284C7" alt="CaseyCZ iOS Hub v1.0.0" />
+  <img src="https://img.shields.io/badge/VERSION-v1.0.1-38BDF8?style=for-the-badge&labelColor=0284C7" alt="CaseyCZ iOS Hub v1.0.1" />
 </p>
 
 <p align="center">
-  <a href="https://caseycz.github.io/repo/"><img src="https://img.shields.io/badge/Website-Open-38BDF8?style=for-the-badge&labelColor=0284C7&logo=googlechrome&logoColor=white" alt="Open CaseyCZ iOS Hub" /></a>
+  <a href="https://caseycz.github.io/iOS-Hub/"><img src="https://img.shields.io/badge/Website-Open-38BDF8?style=for-the-badge&labelColor=0284C7&logo=googlechrome&logoColor=white" alt="Open CaseyCZ iOS Hub" /></a>
 </p>
 
 ## About
 
-**CaseyCZ iOS Hub** replaces the old Cydia / Reposi3 page with a modern catalog for current iOS sideloading workflows.
+**CaseyCZ iOS Hub** is a modern catalog for iOS sideloading, public AltStore / SideStore sources and custom combined source JSON files.
 
 The website provides a curated list of public sources, availability checks and a **Source Builder** that can combine compatible AltStore Classic catalogs into one custom CaseyCZ Mix.
 
@@ -39,7 +39,7 @@ The website provides a curated list of public sources, availability checks and a
 
 ## Source Builder
 
-The first Builder version combines smaller public Classic sources that can reasonably be merged into one JSON file. Large community catalogs and PAL sources are added directly instead of being merged.
+The Builder combines smaller public Classic sources that can reasonably be merged into one JSON file. Large community catalogs and PAL sources are added directly instead of being merged.
 
 GitHub Actions automation regularly:
 
@@ -54,10 +54,6 @@ GitHub Actions automation regularly:
 The catalog uses its own whitelist in `sources/registry.json`. [awesome-altstore](https://github.com/victordedomenico/awesome-altstore) is used only as one discovery reference; each source URL is checked independently before being added.
 
 CaseyCZ iOS Hub does not rehost third-party IPA files. Merged sources preserve the original download URLs from each project.
-
-## Legacy
-
-The previous Cydia / Reposi3 version is safely preserved in the `backup-cydia-legacy-2026-09-17` branch.
 
 ## Support
 
