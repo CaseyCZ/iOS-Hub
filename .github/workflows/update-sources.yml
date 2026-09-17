@@ -14,12 +14,18 @@ on:
 permissions:
   contents: write
 
+concurrency:
+  group: update-altstore-sources
+  cancel-in-progress: true
+
 jobs:
   refresh:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
 
       - name: Set up Python
         uses: actions/setup-python@v5
@@ -36,7 +42,21 @@ jobs:
           git add data mix
           if git diff --cached --quiet; then
             echo "No generated changes."
-          else
-            git commit -m "Update AltStore source cache [skip ci]"
-            git push
+            exit 0
           fi
+
+          git commit -m "Update AltStore source cache [skip ci]"
+
+          # A website/content commit may land while source validation is running.
+          # Rebase the generated commit on the latest main before pushing.
+          for attempt in 1 2 3; do
+            git pull --rebase origin main
+            if git push origin HEAD:main; then
+              exit 0
+            fi
+            echo "Push raced with another commit; retrying ($attempt/3)..."
+            sleep 2
+          done
+
+          echo "Unable to push generated source cache after 3 attempts."
+          exit 1
