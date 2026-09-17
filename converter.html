@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="cs" data-theme="dark">
+<html lang="en" data-theme="dark">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
@@ -7,6 +7,7 @@
   <meta name="description" content="CaseyCZ DEB → IPA Converter — convert iOS application .deb packages locally in your browser on iPhone, Mac and PC.">
   <title>DEB → IPA Converter — CaseyCZ iOS Hub</title>
   <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="hub-extra.css">
   <link rel="stylesheet" href="converter.css">
 </head>
 <body>
@@ -14,17 +15,23 @@
     <div class="wrap topbar-inner">
       <a class="brand" href="index.html" aria-label="CaseyCZ iOS Hub">
         <span class="brand-mark">iOS</span>
-        <span>CaseyCZ iOS Hub<small>apps · IPA · AltStore sources</small></span>
+        <span>CaseyCZ iOS Hub<small>sources · catalog · tools</small></span>
       </a>
       <nav class="nav" aria-label="Primary">
-        <a href="index.html#sources" data-cs="Zdroje" data-en="Sources">Zdroje</a>
+        <a href="index.html#sources" data-i18n="sources">Sources</a>
         <a href="index.html#builder">Source Builder</a>
         <a href="converter.html" class="active">DEB → IPA</a>
       </nav>
       <div class="nav-actions">
-        <div class="lang" aria-label="Language"><button type="button" data-lang="cs" class="active">CZ</button><button type="button" data-lang="en">EN</button></div>
+        <select id="languageSelect" class="language-select" aria-label="Language">
+          <option value="en">EN</option>
+          <option value="cs">CZ</option>
+          <option value="de">DE</option>
+          <option value="es">ES</option>
+          <option value="fr">FR</option>
+        </select>
         <button id="themeToggle" class="icon-btn" type="button" aria-label="Theme">☀</button>
-        <button class="compact-btn" type="button" data-support-open><span>☕</span><span class="support-label" data-cs="Podpořit" data-en="Support">Podpořit</span></button>
+        <button class="compact-btn" type="button" data-support-open><span>☕</span><span class="support-label" data-i18n="support">Support</span></button>
       </div>
     </div>
   </header>
@@ -33,12 +40,12 @@
     <section class="hero converter-hero wrap">
       <div class="eyebrow">LOCAL · PRIVATE · WEBASSEMBLY</div>
       <h1>DEB → IPA</h1>
-      <p data-cs="Převeď iOS aplikaci z balíčku .deb na .ipa přímo v prohlížeči. Funguje na Windows, macOS i iPhonu — soubor se nikam neodesílá." data-en="Convert an iOS application from a .deb package to .ipa directly in your browser. Works on Windows, macOS and iPhone — your file is never uploaded.">Převeď iOS aplikaci z balíčku .deb na .ipa přímo v prohlížeči. Funguje na Windows, macOS i iPhonu — soubor se nikam neodesílá.</p>
+      <p data-i18n="converterIntro">Convert an iOS application from a .deb package to .ipa directly in your browser. Works on Windows, macOS and iPhone — your file is never uploaded.</p>
       <div class="privacy-strip">
-        <span>🔒 <strong data-cs="100 % lokálně" data-en="100% local">100 % lokálně</strong></span>
+        <span>🔒 <strong data-i18n="local100">100% local</strong></span>
         <span>🖥️ Windows / Mac</span>
         <span>📱 iPhone / iPad</span>
-        <span>☁️ <strong data-cs="Bez uploadu" data-en="No upload">Bez uploadu</strong></span>
+        <span>☁️ <strong data-i18n="noUpload">No upload</strong></span>
       </div>
     </section>
 
@@ -46,14 +53,14 @@
       <div class="converter-layout">
         <div class="panel converter-main">
           <div class="converter-step-head">
-            <div><span class="step-number">1</span><div><strong data-cs="Vyber .deb soubor" data-en="Choose a .deb file">Vyber .deb soubor</strong><small data-cs="Musí obsahovat skutečnou iOS .app aplikaci." data-en="It must contain an actual iOS .app application.">Musí obsahovat skutečnou iOS .app aplikaci.</small></div></div>
+            <div><span class="step-number">1</span><div><strong data-i18n="chooseDeb">Choose a .deb file</strong><small data-i18n="chooseDebHelp">It must contain an actual iOS .app application.</small></div></div>
           </div>
 
           <label id="dropZone" class="drop-zone" for="debFile">
             <input id="debFile" type="file" accept=".deb,application/vnd.debian.binary-package,application/x-deb" hidden>
             <div class="drop-icon">⇩</div>
-            <strong data-cs="Přetáhni .deb sem" data-en="Drop .deb here">Přetáhni .deb sem</strong>
-            <span data-cs="nebo klepni a vyber soubor" data-en="or tap to choose a file">nebo klepni a vyber soubor</span>
+            <strong data-i18n="dropDeb">Drop .deb here</strong>
+            <span data-i18n="tapChoose">or tap to choose a file</span>
           </label>
 
           <div id="fileCard" class="file-card" hidden>
@@ -63,63 +70,50 @@
           </div>
 
           <div id="mobileWarning" class="notice converter-warning" hidden>
-            <strong data-cs="Velký soubor na iPhonu:" data-en="Large file on iPhone:">Velký soubor na iPhonu:</strong>
-            <span data-cs="Safari má omezenou operační paměť. U velmi velkých .deb může být spolehlivější Mac nebo PC." data-en="Safari has limited working memory. Very large .deb files may be more reliable on Mac or PC.">Safari má omezenou operační paměť. U velmi velkých .deb může být spolehlivější Mac nebo PC.</span>
+            <strong data-i18n="largeIphone">Large file on iPhone:</strong>
+            <span data-i18n="largeIphoneDesc">Safari has limited working memory. Very large .deb files may be more reliable on Mac or PC.</span>
           </div>
 
-          <button id="convertButton" class="btn primary converter-submit" type="button" disabled>
-            <span data-cs="Převést na IPA" data-en="Convert to IPA">Převést na IPA</span>
-            <span>→</span>
-          </button>
+          <button id="convertButton" class="btn primary converter-submit" type="button" disabled><span data-i18n="convertToIpa">Convert to IPA</span><span>→</span></button>
 
           <div id="progressPanel" class="conversion-progress" hidden>
-            <div class="progress-head"><strong id="progressTitle" data-cs="Připravuji převod…" data-en="Preparing conversion…">Připravuji převod…</strong><span id="progressPercent">0%</span></div>
+            <div class="progress-head"><strong id="progressTitle" data-i18n="preparing">Preparing conversion…</strong><span id="progressPercent">0%</span></div>
             <div class="progress-track"><div id="progressBar" class="progress-bar"></div></div>
             <div id="progressDetail" class="progress-detail"></div>
           </div>
 
           <div id="resultPanel" class="conversion-result" hidden>
             <div class="result-check">✓</div>
-            <div class="result-copy">
-              <span class="pill online" data-cs="HOTOVO" data-en="DONE">HOTOVO</span>
-              <h2 id="resultName">App.ipa</h2>
-              <p id="resultMeta"></p>
-            </div>
+            <div class="result-copy"><span class="pill online" data-i18n="done">DONE</span><h2 id="resultName">App.ipa</h2><p id="resultMeta"></p></div>
             <div class="result-actions">
-              <a id="downloadIpa" class="btn primary" href="#" download>⬇ <span data-cs="Stáhnout IPA" data-en="Download IPA">Stáhnout IPA</span></a>
-              <button id="shareIpa" class="btn secondary" type="button" hidden>↗ <span data-cs="Sdílet IPA" data-en="Share IPA">Sdílet IPA</span></button>
-              <button id="newConversion" class="btn ghost" type="button" data-cs="Převést další" data-en="Convert another">Převést další</button>
+              <a id="downloadIpa" class="btn primary" href="#" download>⬇ <span data-i18n="downloadIpa">Download IPA</span></a>
+              <button id="shareIpa" class="btn secondary" type="button" hidden>↗ <span data-i18n="shareIpa">Share IPA</span></button>
+              <button id="newConversion" class="btn ghost" type="button" data-i18n="convertAnother">Convert another</button>
             </div>
           </div>
 
           <div id="errorPanel" class="conversion-error" hidden>
-            <strong data-cs="Převod se nepodařil" data-en="Conversion failed">Převod se nepodařil</strong>
+            <strong data-i18n="conversionFailed">Conversion failed</strong>
             <p id="errorMessage"></p>
-            <button id="retryButton" class="btn secondary small" type="button" data-cs="Zkusit znovu" data-en="Try again">Zkusit znovu</button>
+            <button id="retryButton" class="btn secondary small" type="button" data-i18n="tryAgain">Try again</button>
           </div>
         </div>
 
         <aside class="panel converter-side">
           <div class="side-block">
             <span class="step-number">2</span>
-            <div><strong data-cs="Co web udělá" data-en="What the web app does">Co web udělá</strong>
+            <div><strong data-i18n="whatWebDoes">What the web app does</strong>
               <ul>
-                <li data-cs="Rozbalí Debian .deb / AR balíček." data-en="Opens the Debian .deb / AR package.">Rozbalí Debian .deb / AR balíček.</li>
-                <li data-cs="Najde data.tar a uvnitř skutečnou .app." data-en="Finds data.tar and the actual .app inside.">Najde data.tar a uvnitř skutečnou .app.</li>
-                <li data-cs="Vytvoří správnou strukturu Payload/App.app." data-en="Creates the required Payload/App.app structure.">Vytvoří správnou strukturu Payload/App.app.</li>
-                <li data-cs="Zabalí výsledek jako .ipa." data-en="Packages the result as .ipa.">Zabalí výsledek jako .ipa.</li>
+                <li data-i18n="stepDeb">Opens the Debian .deb / AR package.</li>
+                <li data-i18n="stepData">Finds data.tar and the actual .app inside.</li>
+                <li data-i18n="stepPayload">Creates the required Payload/App.app structure.</li>
+                <li data-i18n="stepIpa">Packages the result as .ipa.</li>
               </ul>
             </div>
           </div>
-          <div class="notice">
-            <strong data-cs="Důležité:" data-en="Important:">Důležité:</strong>
-            <span data-cs="Funguje jen pro .deb obsahující aplikaci .app. Jailbreak tweaky, knihovny a systémové balíčky nelze pouhým přebalením změnit na IPA." data-en="Only .deb packages containing an .app can be converted. Jailbreak tweaks, libraries and system packages cannot become an IPA by repackaging alone.">Funguje jen pro .deb obsahující aplikaci .app. Jailbreak tweaky, knihovny a systémové balíčky nelze pouhým přebalením změnit na IPA.</span>
-          </div>
-          <div class="notice">
-            <strong data-cs="Podepisování:" data-en="Signing:">Podepisování:</strong>
-            <span data-cs="Výsledná IPA není automaticky podepsaná. Pro instalaci ji následně použij v AltStore, SideStore nebo jiném kompatibilním instalačním nástroji." data-en="The resulting IPA is not automatically signed. Install it afterwards using AltStore, SideStore or another compatible installer.">Výsledná IPA není automaticky podepsaná. Pro instalaci ji následně použij v AltStore, SideStore nebo jiném kompatibilním instalačním nástroji.</span>
-          </div>
-          <div class="runtime-status"><span id="runtimeDot" class="runtime-dot"></span><span id="runtimeText" data-cs="Načítám převodní engine…" data-en="Loading conversion engine…">Načítám převodní engine…</span></div>
+          <div class="notice"><strong data-i18n="important">Important:</strong> <span data-i18n="importantDesc">Only .deb packages containing an .app can be converted. Jailbreak tweaks, libraries and system packages cannot become an IPA by repackaging alone.</span></div>
+          <div class="notice"><strong data-i18n="signing">Signing:</strong> <span data-i18n="signingDesc">The resulting IPA is not automatically signed. Install it afterwards using AltStore, SideStore or another compatible installer.</span></div>
+          <div class="runtime-status"><span id="runtimeDot" class="runtime-dot"></span><span id="runtimeText" data-i18n="loadingEngine">Loading conversion engine…</span></div>
         </aside>
       </div>
     </section>
@@ -128,21 +122,18 @@
   <footer class="footer">
     <div class="wrap footer-inner">
       <span>© <span id="year"></span> CaseyCZ · iOS Hub</span>
-      <div class="footer-links">
-        <a href="index.html">← iOS Hub</a>
-        <a href="https://github.com/CaseyCZ/iOS-Hub" target="_blank" rel="noopener">GitHub · iOS-Hub</a>
-      </div>
+      <div class="footer-links"><a href="index.html">← iOS Hub</a><a href="https://github.com/CaseyCZ/iOS-Hub" target="_blank" rel="noopener">GitHub · iOS-Hub</a></div>
     </div>
   </footer>
 
   <div id="supportModal" class="support-backdrop" role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="supportTitle">
     <div class="support-dialog">
       <button class="support-close" type="button" data-support-close aria-label="Close">×</button>
-      <div class="eyebrow" data-cs="PODPORA CASEYCZ" data-en="SUPPORT CASEYCZ">PODPORA CASEYCZ</div>
-      <h2 id="supportTitle" data-cs="Podpořit další vývoj." data-en="Support further development.">Podpořit další vývoj.</h2>
-      <p data-cs="Pokud ti CaseyCZ iOS Hub šetří čas, můžeš podpořit další vývoj přes Buy Me a Coffee." data-en="If CaseyCZ iOS Hub saves you time, you can support further development through Buy Me a Coffee.">Pokud ti CaseyCZ iOS Hub šetří čas, můžeš podpořit další vývoj přes Buy Me a Coffee.</p>
+      <div class="eyebrow" data-i18n="supportEyebrow">SUPPORT CASEYCZ</div>
+      <h2 id="supportTitle" data-i18n="supportTitle">Support further development.</h2>
+      <p data-i18n="supportDesc">If CaseyCZ iOS Hub saves you time, you can support further development through Buy Me a Coffee.</p>
       <a href="https://www.buymeacoffee.com/caseycz" target="_blank" rel="noopener"><img class="support-qr" src="https://caseycz.github.io/support-qr.svg" alt="Buy Me a Coffee CaseyCZ QR code"></a>
-      <a class="btn primary" style="width:100%" href="https://www.buymeacoffee.com/caseycz" target="_blank" rel="noopener" data-cs="Otevřít Buy Me a Coffee ↗" data-en="Open Buy Me a Coffee ↗">Otevřít Buy Me a Coffee ↗</a>
+      <a class="btn primary" style="width:100%" href="https://www.buymeacoffee.com/caseycz" target="_blank" rel="noopener" data-i18n="openCoffee">Open Buy Me a Coffee ↗</a>
     </div>
   </div>
 
