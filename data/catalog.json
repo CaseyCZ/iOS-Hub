@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-17T13:31:11Z",
+  "generatedAt": "2026-09-17T13:39:22Z",
   "sources": [
     {
       "id": "utm",
@@ -332,6 +332,22 @@
           "bundleIdentifier": "com.kdt.livecontainer",
           "developerName": "LiveContainer Team",
           "version": "3.8.0",
+          "iconURL": "https://raw.githubusercontent.com/LiveContainer/LiveContainer/main/screenshots/AppIcon1024.png",
+          "subtitle": "Run iOS apps without actually installing them!"
+        }
+      ]
+    },
+    {
+      "id": "livecontainer-nightly",
+      "name": "LiveContainer (nightly)",
+      "appCount": 1,
+      "iconURL": "https://raw.githubusercontent.com/LiveContainer/LiveContainer/main/screenshots/AppIcon1024.png",
+      "apps": [
+        {
+          "name": "LiveContainer (nightly)",
+          "bundleIdentifier": "com.kdt.livecontainer",
+          "developerName": "LiveContainer Team",
+          "version": "3.8.10",
           "iconURL": "https://raw.githubusercontent.com/LiveContainer/LiveContainer/main/screenshots/AppIcon1024.png",
           "subtitle": "Run iOS apps without actually installing them!"
         }
