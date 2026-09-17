@@ -1,0 +1,40 @@
+name: Vendor DEB to IPA runtime
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - ".github/workflows/vendor-converter.yml"
+
+permissions:
+  contents: write
+
+jobs:
+  vendor:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Download pinned browser runtime
+        run: |
+          set -euo pipefail
+          mkdir -p vendor/libarchive
+          BASE="https://cdn.jsdelivr.net/npm/libarchive.js@2.0.2"
+          curl -fL "$BASE/dist/libarchive.js" -o vendor/libarchive/libarchive.js
+          curl -fL "$BASE/dist/worker-bundle.js" -o vendor/libarchive/worker-bundle.js
+          curl -fL "$BASE/dist/libarchive.wasm" -o vendor/libarchive/libarchive.wasm
+          curl -fL "$BASE/LICENSE" -o vendor/libarchive/LICENSE
+
+      - name: Commit runtime
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add vendor/libarchive
+          if git diff --cached --quiet; then
+            echo "Runtime already up to date."
+          else
+            git commit -m "Vendor DEB converter runtime [skip ci]"
+            git push
+          fi
