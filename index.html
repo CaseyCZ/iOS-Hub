@@ -95,14 +95,18 @@
 
     <section id="builder" class="section wrap">
       <div class="section-head">
-        <div><h2>Source Builder</h2><p data-i18n="builderDesc">Select up to four compatible AltStore Classic sources. Automation prepares one public JSON URL that can be added to AltStore with one tap.</p></div>
-        <div class="section-tools"><button id="selectRecommended" class="btn small secondary" type="button" data-i18n="selectRecommended">Select recommended</button><button id="clearSelection" class="btn small ghost" type="button" data-i18n="clear">Clear</button></div>
+        <div><h2>Source Builder</h2><p id="builderDesc" data-i18n="builderDesc">Select compatible AltStore Classic sources — including all currently available mix-ready sources.</p></div>
+        <div class="section-tools">
+          <button id="selectAll" class="btn small primary" type="button">Select all</button>
+          <button id="selectRecommended" class="btn small secondary" type="button" data-i18n="selectRecommended">Select recommended</button>
+          <button id="clearSelection" class="btn small ghost" type="button" data-i18n="clear">Clear</button>
+        </div>
       </div>
       <div class="builder">
         <div class="panel builder-left">
-          <div style="display:flex;align-items:center;justify-content:space-between;gap:12px"><strong data-i18n="sourcesForMix">Sources for CaseyCZ Mix</strong><span class="pill mode"><span id="selectedCount">0</span>/4</span></div>
+          <div style="display:flex;align-items:center;justify-content:space-between;gap:12px"><strong data-i18n="sourcesForMix">Sources for CaseyCZ Mix</strong><span class="pill mode"><span id="selectedCount">0</span>/<span id="mixCapacity">—</span></span></div>
           <div id="builderList" class="builder-list"></div>
-          <p id="mixWarning" class="notice" hidden data-i18n="mixLimit">A mix can contain up to four sources.</p>
+          <p id="mixWarning" class="notice" hidden>A mix can contain up to the currently generated source limit.</p>
           <div style="margin-top:14px"><button id="buildMix" class="btn primary" type="button" disabled data-i18n="buildMix">Build CaseyCZ Mix</button></div>
           <div id="builderResult" class="builder-result">
             <strong id="mixName">CaseyCZ Mix</strong>
