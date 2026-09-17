@@ -55,7 +55,15 @@ function formatBytes(bytes) {
 }
 
 function normalizePath(path) {
-  return String(path || '').replace(/\\/g, '/').replace(/^\.\//, '').replace(/^\/+/, '').replace(/\/+/g, '/');
+  const normalized = String(path || '')
+    .replace(/\\/g, '/')
+    .replace(/^\.\//, '')
+    .replace(/^\/+/, '')
+    .replace(/\/+/g, '/');
+  if (!normalized || normalized.includes('\0')) return '';
+  const parts = normalized.split('/');
+  if (parts.some(part => !part || part === '.' || part === '..')) return '';
+  return normalized;
 }
 
 function flattenExtracted(node, prefix = '') {
@@ -63,6 +71,7 @@ function flattenExtracted(node, prefix = '') {
   if (!node || typeof node !== 'object') return files;
   for (const [name, value] of Object.entries(node)) {
     const path = normalizePath(prefix ? `${prefix}/${name}` : name);
+    if (!path) continue;
     if (value instanceof File) files.push({ file: value, path });
     else if (value && typeof value === 'object') files.push(...flattenExtracted(value, path));
   }
@@ -79,7 +88,9 @@ function dataArchiveEntry(entries) {
 function findAppRoot(entries) {
   const roots = new Set();
   for (const entry of entries) {
-    const parts = normalizePath(entry.path).split('/');
+    const normalized = normalizePath(entry.path);
+    if (!normalized) continue;
+    const parts = normalized.split('/');
     for (let i = 0; i < parts.length; i += 1) {
       if (parts[i].toLowerCase().endsWith('.app')) {
         roots.add(parts.slice(0, i + 1).join('/'));
@@ -98,7 +109,7 @@ function findAppRoot(entries) {
 
 async function isExecutableFile(file) {
   const bytes = new Uint8Array(await file.slice(0, 4).arrayBuffer());
-  if (bytes.length >= 2 && bytes[0] === 0x23 && bytes[1] === 0x21) return true; // #!
+  if (bytes.length >= 2 && bytes[0] === 0x23 && bytes[1] === 0x21) return true;
   if (bytes.length < 4) return false;
   const magic = [...bytes].map(value => value.toString(16).padStart(2, '0')).join('').toLowerCase();
   return new Set([
@@ -187,8 +198,12 @@ async function convertDebToIpa() {
     const appPrefix = `${appRoot}/`;
     const payloadFiles = appEntries
       .filter(entry => entry.path.startsWith(appPrefix))
-      .map(entry => ({ file: entry.file, pathname: `Payload/${appName}/${entry.path.slice(appPrefix.length)}` }))
-      .filter(entry => entry.pathname.split('/').pop());
+      .map(entry => {
+        const relative = normalizePath(entry.path.slice(appPrefix.length));
+        const pathname = relative ? normalizePath(`Payload/${appName}/${relative}`) : '';
+        return { file: entry.file, pathname };
+      })
+      .filter(entry => entry.pathname);
 
     if (!payloadFiles.length) throw new Error('.app bundle is empty');
 
