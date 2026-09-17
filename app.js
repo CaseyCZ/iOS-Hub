@@ -204,14 +204,30 @@ function renderSources() {
   }).join('');
 }
 
+function uniqueDiscoveredAppCount() {
+  const onlineIds = new Set(
+    state.registry
+      .filter(source => getStatus(source.id).online === true)
+      .map(source => source.id)
+  );
+  const keys = new Set();
+  for (const source of (state.catalog?.sources || [])) {
+    if (!onlineIds.has(source.id)) continue;
+    for (const app of (source.apps || [])) {
+      const bundle = String(app.bundleIdentifier || '').trim().toLowerCase();
+      const fallback = `${source.id}:${app.name || ''}:${app.developerName || ''}`.toLowerCase();
+      const key = bundle || fallback;
+      if (key) keys.add(key);
+    }
+  }
+  return keys.size;
+}
+
 function updateStats() {
   const statuses = state.status?.sources || {};
   const online = state.registry.filter(source => statuses[source.id]?.online === true).length;
   const mixReady = state.status?.mixes?.autoCompatibleSourceIDs?.length || 0;
-  const apps = state.registry.reduce((sum, source) => {
-    const item = statuses[source.id];
-    return sum + (item?.online === true && Number.isFinite(item.appCount) ? item.appCount : 0);
-  }, 0);
+  const apps = uniqueDiscoveredAppCount();
   if ($('#statSources')) $('#statSources').textContent = online || '—';
   if ($('#statMix')) $('#statMix').textContent = mixReady || '—';
   if ($('#statApps')) $('#statApps').textContent = apps || '—';
