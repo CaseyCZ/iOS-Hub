@@ -13,6 +13,25 @@ REGISTRY = ROOT / "sources" / "registry.json"
 STATUS = ROOT / "data" / "status.json"
 CATALOG = ROOT / "data" / "catalog.json"
 
+EXPECTED_SITE_URL = "https://caseycz.github.io/iOS-Hub/"
+EXPECTED_REPO_URL = "https://github.com/CaseyCZ/iOS-Hub"
+EXPECTED_PROJECT_NAME = "CaseyCZ iOS Hub"
+OLD_PUBLIC_REFERENCES = (
+    "https://caseycz.github.io/repo",
+    "https://github.com/CaseyCZ/repo",
+)
+OWNED_REFERENCE_FILES = (
+    ROOT / "README.md",
+    ROOT / "README_EN.md",
+    ROOT / "index.html",
+    ROOT / "converter.html",
+    ROOT / "app.js",
+    ROOT / "builder.js",
+    ROOT / "i18n.js",
+    ROOT / "tools" / "update_sources.py",
+    ROOT / ".github" / "workflows" / "update-sources.yml",
+)
+
 LANGUAGES = ("en", "cs", "de", "es", "fr")
 ALLOWED_MODES = {"classic", "pal", "sidestore"}
 ID_RE = re.compile(r"^[a-z0-9][a-z0-9-]*$")
@@ -192,6 +211,53 @@ def validate_translations() -> None:
             )
 
 
+def validate_project_identity() -> None:
+    for path in OWNED_REFERENCE_FILES:
+        if not path.exists():
+            continue
+        text = path.read_text(encoding="utf-8")
+        label = path.relative_to(ROOT)
+        for old in OLD_PUBLIC_REFERENCES:
+            if old in text:
+                error(f"{label} still contains old public reference: {old}")
+
+    readme = ROOT / "README.md"
+    if readme.exists():
+        text = readme.read_text(encoding="utf-8")
+        if EXPECTED_SITE_URL not in text:
+            error(f"README.md must link to current site {EXPECTED_SITE_URL}")
+        if EXPECTED_PROJECT_NAME not in text:
+            error(f"README.md must use current project name {EXPECTED_PROJECT_NAME!r}")
+
+    index = ROOT / "index.html"
+    if index.exists():
+        text = index.read_text(encoding="utf-8")
+        if EXPECTED_REPO_URL not in text:
+            error(f"index.html must link to current repository {EXPECTED_REPO_URL}")
+        if EXPECTED_PROJECT_NAME not in text:
+            error(f"index.html must use current project name {EXPECTED_PROJECT_NAME!r}")
+
+    generator = ROOT / "tools" / "update_sources.py"
+    if generator.exists():
+        text = generator.read_text(encoding="utf-8")
+        expected_base = f'BASE_URL = "{EXPECTED_SITE_URL}"'
+        if expected_base not in text:
+            error(f"tools/update_sources.py must define {expected_base}")
+
+    expected_sources = {
+        ROOT / "altstore" / "source.json": f"{EXPECTED_SITE_URL}altstore/source.json",
+        ROOT / "sidestore" / "source.json": f"{EXPECTED_SITE_URL}sidestore/source.json",
+    }
+    for path, expected_source_url in expected_sources.items():
+        payload = load_json(path)
+        if not isinstance(payload, dict):
+            continue
+        if payload.get("website") != EXPECTED_SITE_URL:
+            error(f"{path.relative_to(ROOT)} website must be {EXPECTED_SITE_URL}")
+        if payload.get("sourceURL") != expected_source_url:
+            error(f"{path.relative_to(ROOT)} sourceURL must be {expected_source_url}")
+
+
 def validate_registry() -> None:
     payload = load_json(REGISTRY)
     if not isinstance(payload, dict) or not isinstance(payload.get("sources"), list):
@@ -315,6 +381,7 @@ def main() -> int:
     validate_generated_data()
     validate_layout()
     validate_translations()
+    validate_project_identity()
 
     for message in warnings:
         print(f"WARNING: {message}")
