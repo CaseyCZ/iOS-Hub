@@ -1,0 +1,47 @@
+name: Audit iOS Hub
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - "*.js"
+      - "*.html"
+      - "sources/**"
+      - "tools/**"
+      - ".github/workflows/audit.yml"
+
+permissions:
+  contents: read
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Check JavaScript syntax
+        run: |
+          for file in app.js experimental-mix.js converter.js i18n.js; do
+            echo "Checking $file"
+            node --input-type=module --check < "$file"
+          done
+
+      - name: Check Python syntax
+        run: python -m py_compile tools/update_sources.py
+
+      - name: Validate registry JSON
+        run: python -m json.tool sources/registry.json >/dev/null
+
+      - name: Check required web files
+        run: |
+          test -f index.html
+          test -f converter.html
+          test -f vendor/libarchive/libarchive.js
+          test -f vendor/jszip/jszip.min.js
