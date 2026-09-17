@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-17T13:16:59Z",
+  "generatedAt": "2026-09-17T13:19:07Z",
   "sources": [
     {
       "id": "utm",
@@ -574,6 +574,134 @@
           "version": "2.0.8",
           "iconURL": "https://www.stremio.com/website/stremio-logo-small.png",
           "subtitle": "Freedom to stream."
+        }
+      ]
+    },
+    {
+      "id": "esound",
+      "name": "Spicy Sparks",
+      "appCount": 1,
+      "iconURL": "https://esound.app/images/altstore/source-icon.png?v=4",
+      "apps": [
+        {
+          "name": "eSound",
+          "bundleIdentifier": "com.appstore.esound",
+          "developerName": "Spicy Sparks",
+          "version": "5.2.5",
+          "iconURL": "https://esound.app/images/altstore/esound/esound-icon.png?v=4",
+          "subtitle": "Music player powered by YouTube"
+        }
+      ]
+    },
+    {
+      "id": "partyknights",
+      "name": "Party Knights - Drinking Game",
+      "appCount": 1,
+      "iconURL": "https://partyknights.app/assets/img/icon_128.webp",
+      "apps": [
+        {
+          "name": "Party Knights - Drinking Game",
+          "bundleIdentifier": "com.saturdayapps.partyKnights",
+          "developerName": "Saturday Apps",
+          "version": "2.29.1",
+          "iconURL": "https://partyknights.app/assets/img/icon_128.webp",
+          "subtitle": "Drinking game app for unforgettable nights."
+        }
+      ]
+    },
+    {
+      "id": "itorrent",
+      "name": "iTorrent Source",
+      "appCount": 1,
+      "iconURL": "https://raw.githubusercontent.com/XITRIX/xitrix.github.io/master/sourceIcon.png",
+      "apps": [
+        {
+          "name": "iTorrent",
+          "bundleIdentifier": "com.xitrix.iTorrent2",
+          "developerName": "XITRIX",
+          "version": "2.2.0",
+          "iconURL": "https://raw.githubusercontent.com/XITRIX/xitrix.github.io/master/icon.png",
+          "subtitle": "Torrent client for iOS"
+        }
+      ]
+    },
+    {
+      "id": "qbitconnect",
+      "name": "BlueMatter",
+      "appCount": 1,
+      "iconURL": "https://raw.githubusercontent.com/RajnishOne/altstore-releases/main/icons/general/bluematter.png",
+      "apps": [
+        {
+          "name": "qBitConnect",
+          "bundleIdentifier": "com.bluematter.qbitconnect",
+          "developerName": "Rajnish Sharma",
+          "version": "1.6.9",
+          "iconURL": "https://raw.githubusercontent.com/RajnishOne/altstore-releases/main/icons/qBitConnect/AppIcon-40%403x.png",
+          "subtitle": "Modern qBittorrent remote client."
+        }
+      ]
+    },
+    {
+      "id": "artemis",
+      "name": "Auties00",
+      "appCount": 1,
+      "iconURL": "https://avatars.githubusercontent.com/u/28218457?v=4",
+      "apps": [
+        {
+          "name": "Artemis",
+          "bundleIdentifier": "com.github.auties00.artemis",
+          "developerName": "Auties00",
+          "version": "3.0",
+          "iconURL": "https://github.com/Auties00/Artemis/blob/main/Artemis/Assets.xcassets/AppIcon.appiconset/appstore.png?raw=true",
+          "subtitle": "Alternative client for HIDIVE"
+        }
+      ]
+    },
+    {
+      "id": "hackerwebapp",
+      "name": "HackerWeb",
+      "appCount": 1,
+      "iconURL": "https://raw.githubusercontent.com/cheeaun/hackerweb-native-2/main/assets/icon.png",
+      "apps": [
+        {
+          "name": "HackerWeb",
+          "bundleIdentifier": "cheeaun.hackerweb",
+          "developerName": "Lim Chee Aun",
+          "version": "3.0.1",
+          "iconURL": "https://raw.githubusercontent.com/cheeaun/hackerweb-native-2/main/assets/icon.png",
+          "subtitle": "A read-only Hacker News client"
+        }
+      ]
+    },
+    {
+      "id": "courtpredict",
+      "name": "Charon Source",
+      "appCount": 1,
+      "iconURL": "https://courtpredict-ios.web.app/icons/source.png",
+      "apps": [
+        {
+          "name": "CourtPredict",
+          "bundleIdentifier": "org.charon.basketballbetapp",
+          "developerName": "Charon",
+          "version": "1.0.1",
+          "iconURL": "https://courtpredict-ios.web.app/icons/app-icon.png",
+          "subtitle": "Predict basketball game winners and compete with friends! Track your accuracy and climb the leaderboard based on your winning percentage."
+        }
+      ]
+    },
+    {
+      "id": "wayfarer",
+      "name": "Laoalts",
+      "appCount": 1,
+      "iconURL": "https://stor-cdn.f8d.rocks/wf/icon.png",
+      "apps": [
+        {
+          "name": "Wayfurther",
+          "bundleIdentifier": "sb.lao.Wayfurther",
+          "developerName": "Shibo Lyu",
+          "version": "1.3",
+          "iconURL": "https://stor-cdn.f8d.rocks/wf/icon.png",
+          "subtitle": "The unofficial Niantic Wayfarer iOS app."
         }
       ]
     },
