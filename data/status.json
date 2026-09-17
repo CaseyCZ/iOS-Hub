@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-09-17T12:49:50Z",
+  "generatedAt": "2026-09-17T13:11:29Z",
   "sources": {
     "utm": {
       "online": true,
-      "checkedAt": "2026-09-17T12:49:50Z",
+      "checkedAt": "2026-09-17T13:11:29Z",
       "appCount": 2,
       "httpStatus": 200,
       "iconURL": "https://alt.getutm.app/icon.png",
@@ -11,7 +11,7 @@
     },
     "provenance": {
       "online": true,
-      "checkedAt": "2026-09-17T12:49:50Z",
+      "checkedAt": "2026-09-17T13:11:29Z",
       "appCount": 3,
       "httpStatus": 200,
       "iconURL": "https://raw.githubusercontent.com/Provenance-Emu/Provenance/develop/Provenance/Resources/Assets.xcassets/AppIcon.appiconset/iTunesArtwork%402x.png",
@@ -19,7 +19,7 @@
     },
     "ish": {
       "online": true,
-      "checkedAt": "2026-09-17T12:49:50Z",
+      "checkedAt": "2026-09-17T13:11:29Z",
       "appCount": 1,
       "httpStatus": 200,
       "iconURL": "https://ish.app/assets/icon-full.png",
@@ -27,7 +27,7 @@
     },
     "flycast": {
       "online": true,
-      "checkedAt": "2026-09-17T12:49:50Z",
+      "checkedAt": "2026-09-17T13:11:29Z",
       "appCount": 1,
       "httpStatus": 200,
       "iconURL": "https://github.com/flyinghead/flycast/raw/master/shell/linux/flycast.png",
@@ -35,15 +35,167 @@
     },
     "sidestore-community": {
       "online": true,
-      "checkedAt": "2026-09-17T12:49:50Z",
+      "checkedAt": "2026-09-17T13:11:29Z",
       "appCount": 23,
       "httpStatus": 200,
       "iconURL": "https://sidestore.io/assets/icon.png",
       "error": null
     },
+    "sidestore-official": {
+      "online": true,
+      "checkedAt": "2026-09-17T13:11:29Z",
+      "appCount": 1,
+      "httpStatus": 200,
+      "iconURL": "https://apps.sidestore.io/apps/sidestore/v0.1.1/icon.png",
+      "error": null
+    },
+    "stikdebug": {
+      "online": true,
+      "checkedAt": "2026-09-17T13:11:29Z",
+      "appCount": 2,
+      "httpStatus": 200,
+      "iconURL": "https://github.com/StikDebug/StikDebug/blob/main/assets/StikDebug.png?raw=true",
+      "error": null
+    },
+    "livecontainer": {
+      "online": true,
+      "checkedAt": "2026-09-17T13:11:29Z",
+      "appCount": 1,
+      "httpStatus": 200,
+      "iconURL": "https://raw.githubusercontent.com/LiveContainer/LiveContainer/main/screenshots/AppIcon1024.png",
+      "error": null
+    },
+    "manicemu": {
+      "online": true,
+      "checkedAt": "2026-09-17T13:11:29Z",
+      "appCount": 1,
+      "httpStatus": 200,
+      "iconURL": "https://apps.manicemu.site/images/manicicon.jpg",
+      "error": null
+    },
+    "melonx": {
+      "online": false,
+      "checkedAt": "2026-09-17T13:11:29Z",
+      "appCount": null,
+      "httpStatus": null,
+      "iconURL": "",
+      "error": "JSONDecodeError: Expecting value: line 1 column 1 (char 0)"
+    },
+    "flycast-ios": {
+      "online": true,
+      "checkedAt": "2026-09-17T13:11:29Z",
+      "appCount": 1,
+      "httpStatus": 200,
+      "iconURL": "https://github.com/chachillie/Flycast-iOS/raw/main/shell/linux/flycast.png",
+      "error": null
+    },
+    "geode-ios": {
+      "online": true,
+      "checkedAt": "2026-09-17T13:11:29Z",
+      "appCount": 1,
+      "httpStatus": 200,
+      "iconURL": "https://ios-repo.geode-sdk.org/img/AltSourceIcon.png",
+      "error": null
+    },
+    "retrosekai": {
+      "online": true,
+      "checkedAt": "2026-09-17T13:11:29Z",
+      "appCount": 1,
+      "httpStatus": 200,
+      "iconURL": "https://repo.untitledcharts.com/assets/logo.png",
+      "error": null
+    },
+    "countdown": {
+      "online": false,
+      "checkedAt": "2026-09-17T13:11:29Z",
+      "appCount": null,
+      "httpStatus": null,
+      "iconURL": "",
+      "error": "JSONDecodeError: Expecting property name enclosed in double quotes: line 30 column 9 (char 1746)"
+    },
+    "oatmealdome": {
+      "online": true,
+      "checkedAt": "2026-09-17T13:11:29Z",
+      "appCount": 2,
+      "httpStatus": 200,
+      "iconURL": "https://cdn.oatmealdome.me/dolphinios/AppIcon.appiconset/ios_marketing1024x1024.png",
+      "error": null
+    },
+    "crystall1ne": {
+      "online": true,
+      "checkedAt": "2026-09-17T13:11:29Z",
+      "appCount": 2,
+      "httpStatus": 200,
+      "iconURL": "https://alt.crystall1ne.dev/resources/media/the_icon.png",
+      "error": null
+    },
+    "pokemmo": {
+      "online": true,
+      "checkedAt": "2026-09-17T13:11:29Z",
+      "appCount": 1,
+      "httpStatus": 200,
+      "iconURL": "https://pokemmo.com/build/images/altstore.f5930b35.png",
+      "error": null
+    },
+    "odyssey": {
+      "online": true,
+      "checkedAt": "2026-09-17T13:11:29Z",
+      "appCount": 2,
+      "httpStatus": 200,
+      "iconURL": "https://theodyssey.dev/assets/images/icon.png",
+      "error": null
+    },
+    "yattee": {
+      "online": false,
+      "checkedAt": "2026-09-17T13:11:29Z",
+      "appCount": null,
+      "httpStatus": null,
+      "iconURL": "",
+      "error": "HTTPError: HTTP Error 404: Not Found"
+    },
+    "ignited": {
+      "online": true,
+      "checkedAt": "2026-09-17T13:11:29Z",
+      "appCount": 1,
+      "httpStatus": 200,
+      "iconURL": "https://cdn.ignitedemulator.com/assets/altstore-icon.png",
+      "error": null
+    },
+    "thatstella": {
+      "online": false,
+      "checkedAt": "2026-09-17T13:11:29Z",
+      "appCount": null,
+      "httpStatus": null,
+      "iconURL": "",
+      "error": "JSONDecodeError: Expecting value: line 29 column 13 (char 3558)"
+    },
+    "mona": {
+      "online": true,
+      "checkedAt": "2026-09-17T13:11:29Z",
+      "appCount": 1,
+      "httpStatus": 200,
+      "iconURL": "https://i.imgur.com/PeIdqwy.png",
+      "error": null
+    },
+    "vortx": {
+      "online": true,
+      "checkedAt": "2026-09-17T13:11:29Z",
+      "appCount": 2,
+      "httpStatus": 200,
+      "iconURL": "https://raw.githubusercontent.com/VortXTV/VortX/main/docs/logo.png",
+      "error": null
+    },
+    "stremio-ios": {
+      "online": true,
+      "checkedAt": "2026-09-17T13:11:29Z",
+      "appCount": 1,
+      "httpStatus": 200,
+      "iconURL": "https://www.stremio.com/website/stremio-logo-small.png",
+      "error": null
+    },
     "qbitcontrol": {
       "online": true,
-      "checkedAt": "2026-09-17T12:49:50Z",
+      "checkedAt": "2026-09-17T13:11:29Z",
       "appCount": 1,
       "httpStatus": 200,
       "iconURL": "https://raw.githubusercontent.com/Michael-128/qBitControl/main/qBitControl/Assets.xcassets/AppIcon.appiconset/logo1.png",
@@ -51,7 +203,7 @@
     },
     "iphanpy": {
       "online": true,
-      "checkedAt": "2026-09-17T12:49:50Z",
+      "checkedAt": "2026-09-17T13:11:29Z",
       "appCount": 1,
       "httpStatus": 200,
       "iconURL": "https://i.imgur.com/AAsffEA.png",
@@ -59,7 +211,7 @@
     },
     "epic-games": {
       "online": true,
-      "checkedAt": "2026-09-17T12:49:50Z",
+      "checkedAt": "2026-09-17T13:11:29Z",
       "appCount": 3,
       "httpStatus": 200,
       "iconURL": "https://content-download-egs.distro.on.epicgames.com/.well-known/EG-Shield-2023-Black-dual-tone-expanded.png",
@@ -67,11 +219,15 @@
     }
   },
   "mixes": {
-    "count": 15,
+    "count": 162,
     "maxSourcesPerMix": 4,
     "mergeableSourceIDs": [
       "flycast",
+      "ignited",
       "ish",
+      "manicemu",
+      "oatmealdome",
+      "pokemmo",
       "provenance",
       "utm"
     ]

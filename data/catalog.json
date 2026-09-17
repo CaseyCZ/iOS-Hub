@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-17T12:49:50Z",
+  "generatedAt": "2026-09-17T13:11:29Z",
   "sources": [
     {
       "id": "utm",
@@ -278,6 +278,286 @@
           "version": "1.0.3",
           "iconURL": "https://github.com/spknetwork/Android-App/releases/download/v1.0.3_48/AppIcon-512.png",
           "subtitle": "Tokenized Video Communities"
+        }
+      ]
+    },
+    {
+      "id": "sidestore-official",
+      "name": "SideStore Official",
+      "appCount": 1,
+      "iconURL": "https://apps.sidestore.io/apps/sidestore/v0.1.1/icon.png",
+      "apps": [
+        {
+          "name": "SideStore",
+          "bundleIdentifier": "com.SideStore.SideStore",
+          "developerName": "SideStore Team",
+          "version": "0.6.2",
+          "iconURL": "https://apps.sidestore.io/apps/sidestore/v0.1.1/icon.png",
+          "subtitle": ""
+        }
+      ]
+    },
+    {
+      "id": "stikdebug",
+      "name": "StikDebug & More!",
+      "appCount": 2,
+      "iconURL": "https://github.com/StikDebug/StikDebug/blob/main/assets/StikDebug.png?raw=true",
+      "apps": [
+        {
+          "name": "StikDebug",
+          "bundleIdentifier": "com.stik.stikdebug",
+          "developerName": "StikDebug",
+          "version": "3.1.10",
+          "iconURL": "https://github.com/StikDebug/StikDebug/blob/main/assets/StikDebug.png?raw=true",
+          "subtitle": "On-device JIT enabler and device toolbox."
+        },
+        {
+          "name": "StikPair",
+          "bundleIdentifier": "com.stik.StikPair",
+          "developerName": "StikDebug",
+          "version": "1.2.0",
+          "iconURL": "https://github.com/StikDebug/StikPair/blob/main/App/Assets.xcassets/AppLogo.imageset/StikPair-iOS-Default-1024%401x.png?raw=true",
+          "subtitle": "Requires iOS 27+"
+        }
+      ]
+    },
+    {
+      "id": "livecontainer",
+      "name": "LiveContainer",
+      "appCount": 1,
+      "iconURL": "https://raw.githubusercontent.com/LiveContainer/LiveContainer/main/screenshots/AppIcon1024.png",
+      "apps": [
+        {
+          "name": "LiveContainer",
+          "bundleIdentifier": "com.kdt.livecontainer",
+          "developerName": "LiveContainer Team",
+          "version": "3.8.0",
+          "iconURL": "https://raw.githubusercontent.com/LiveContainer/LiveContainer/main/screenshots/AppIcon1024.png",
+          "subtitle": "Run iOS apps without actually installing them!"
+        }
+      ]
+    },
+    {
+      "id": "manicemu",
+      "name": "Manic EMU",
+      "appCount": 1,
+      "iconURL": "https://apps.manicemu.site/images/manicicon.jpg",
+      "apps": [
+        {
+          "name": "Manic EMU v2.0.0",
+          "bundleIdentifier": "com.aoshuang.manicemu",
+          "developerName": "Manic EMU Development Team",
+          "version": "2.0.0",
+          "iconURL": "https://apps.manicemu.site/images/manicicon.jpg",
+          "subtitle": "Love Retro Games"
+        }
+      ]
+    },
+    {
+      "id": "flycast-ios",
+      "name": "Flycast-iOS26",
+      "appCount": 1,
+      "iconURL": "https://github.com/chachillie/Flycast-iOS/raw/main/shell/linux/flycast.png",
+      "apps": [
+        {
+          "name": "Flycast",
+          "bundleIdentifier": "com.chachirie.FlycastiOS",
+          "developerName": "Chachirie",
+          "version": "1.0",
+          "iconURL": "https://github.com/chachillie/Flycast-iOS/raw/main/shell/linux/flycast.png",
+          "subtitle": "Dreamcast, Naomi and Atomiswave emulator."
+        }
+      ]
+    },
+    {
+      "id": "geode-ios",
+      "name": "Geode",
+      "appCount": 1,
+      "iconURL": "https://ios-repo.geode-sdk.org/img/AltSourceIcon.png",
+      "apps": [
+        {
+          "name": "Geode",
+          "bundleIdentifier": "com.geode.launcher",
+          "developerName": "Geode SDK Team",
+          "version": "1.5.5",
+          "iconURL": "https://raw.githubusercontent.com/geode-sdk/ios-launcher/main/Icons/Default.png",
+          "subtitle": "Geode, now on iOS!"
+        }
+      ]
+    },
+    {
+      "id": "retrosekai",
+      "name": "UntitledCharts",
+      "appCount": 1,
+      "iconURL": "https://repo.untitledcharts.com/assets/logo.png",
+      "apps": [
+        {
+          "name": "Retro Sekai!",
+          "bundleIdentifier": "com.lila.retrosekai.beta",
+          "developerName": "0x1b1b",
+          "version": "2026.0.1",
+          "iconURL": "https://repo.untitledcharts.com/assets/retrosekai/icon.png",
+          "subtitle": "Project Sekai but RETRO STYLE."
+        }
+      ]
+    },
+    {
+      "id": "oatmealdome",
+      "name": "OatmealDome's AltStore Source",
+      "appCount": 2,
+      "iconURL": "https://cdn.oatmealdome.me/dolphinios/AppIcon.appiconset/ios_marketing1024x1024.png",
+      "apps": [
+        {
+          "name": "DolphiniOS",
+          "bundleIdentifier": "me.oatmealdome.dolphinios-njb",
+          "developerName": "OatmealDome",
+          "version": "3.2.1",
+          "iconURL": "https://cdn.oatmealdome.me/dolphinios/AppIcon.appiconset/ios_marketing1024x1024.png",
+          "subtitle": "GameCube and Wii games on the go."
+        },
+        {
+          "name": "DolphiniOS (Public Beta)",
+          "bundleIdentifier": "me.oatmealdome.DolphiniOS-njb-patreon-beta",
+          "developerName": "OatmealDome",
+          "version": "5.0.0b6",
+          "iconURL": "https://cdn.oatmealdome.me/dolphinios/AppIcon.appiconset/BetaAppStore.png",
+          "subtitle": "Test the latest DolphiniOS."
+        }
+      ]
+    },
+    {
+      "id": "crystall1ne",
+      "name": "crystall1ne.dev",
+      "appCount": 2,
+      "iconURL": "https://alt.crystall1ne.dev/resources/media/the_icon.png",
+      "apps": [
+        {
+          "name": "Angel Aura Amethyst",
+          "bundleIdentifier": "org.angelauramc.amethyst",
+          "developerName": "AngelAuraMC",
+          "version": "1.0.9212a18",
+          "iconURL": "https://raw.githubusercontent.com/AngelAuraMC/Amethyst-iOS/main/Natives/Assets.xcassets/AppIcon-Light.appiconset/1024x1024.png",
+          "subtitle": "Bringing Minecraft: Java Edition to mobile devices."
+        },
+        {
+          "name": "PojavLauncher iOS",
+          "bundleIdentifier": "net.kdt.pojavlauncher",
+          "developerName": "PojavLauncherTeam",
+          "version": "2.2",
+          "iconURL": "https://raw.githubusercontent.com/PojavLauncherTeam/PojavLauncher_iOS/main/Natives/Assets.xcassets/AppIcon-Dark.appiconset/AppIcon-Dark_1024x1024.png",
+          "subtitle": "Brought Minecraft: Java Edition to mobile devices."
+        }
+      ]
+    },
+    {
+      "id": "pokemmo",
+      "name": "PokeMMO",
+      "appCount": 1,
+      "iconURL": "https://pokemmo.com/build/images/altstore.f5930b35.png",
+      "apps": [
+        {
+          "name": "PokeMMO",
+          "bundleIdentifier": "eu.pokemmo.client",
+          "developerName": "PokeMMO",
+          "version": "32920",
+          "iconURL": "https://pokemmo.com/build/images/altstore.f5930b35.png",
+          "subtitle": ""
+        }
+      ]
+    },
+    {
+      "id": "odyssey",
+      "name": "Odyssey",
+      "appCount": 2,
+      "iconURL": "https://theodyssey.dev/assets/images/icon.png",
+      "apps": [
+        {
+          "name": "Odyssey",
+          "bundleIdentifier": "org.coolstar.odyssey",
+          "developerName": "Odyssey Team",
+          "version": "1.4.3",
+          "iconURL": "https://theodyssey.dev/assets/images/icon.png",
+          "subtitle": "An iOS 13.0-13.7 jailbreak."
+        },
+        {
+          "name": "Taurine",
+          "bundleIdentifier": "com.odysseyteam.taurine",
+          "developerName": "Odyssey Team",
+          "version": "1.1.6",
+          "iconURL": "https://taurine.app/assets/images/icon.png",
+          "subtitle": "An iOS 14.0-14.3 jailbreak."
+        }
+      ]
+    },
+    {
+      "id": "ignited",
+      "name": "Ignited Source",
+      "appCount": 1,
+      "iconURL": "https://cdn.ignitedemulator.com/assets/altstore-icon.png",
+      "apps": [
+        {
+          "name": "Ignited",
+          "bundleIdentifier": "com.litritt.ignited",
+          "developerName": "LitRitt",
+          "version": "1.11",
+          "iconURL": "https://cdn.ignitedemulator.com/assets/icon-1024.png",
+          "subtitle": "Retro games, modern design."
+        }
+      ]
+    },
+    {
+      "id": "mona",
+      "name": "Mona",
+      "appCount": 1,
+      "iconURL": "https://i.imgur.com/PeIdqwy.png",
+      "apps": [
+        {
+          "name": "Mona - HRT journal",
+          "bundleIdentifier": "com.deliacheminot.mona",
+          "developerName": "Délia Cheminot",
+          "version": "1.21.1",
+          "iconURL": "https://i.imgur.com/Xb9A1Lh.png",
+          "subtitle": "Your hormonal journal"
+        }
+      ]
+    },
+    {
+      "id": "vortx",
+      "name": "VortX",
+      "appCount": 2,
+      "iconURL": "https://raw.githubusercontent.com/VortXTV/VortX/main/docs/logo.png",
+      "apps": [
+        {
+          "name": "VortX",
+          "bundleIdentifier": "com.stremiox.app.native",
+          "developerName": "Mamaclapper",
+          "version": "0.4.0",
+          "iconURL": "https://raw.githubusercontent.com/VortXTV/VortX/main/docs/logo.png",
+          "subtitle": "Stream movies and shows on iPhone and iPad."
+        },
+        {
+          "name": "VortX (Apple TV)",
+          "bundleIdentifier": "com.stremiox.tv",
+          "developerName": "Mamaclapper",
+          "version": "0.4.0",
+          "iconURL": "https://raw.githubusercontent.com/VortXTV/VortX/main/docs/logo.png",
+          "subtitle": "Stream movies and shows on Apple TV."
+        }
+      ]
+    },
+    {
+      "id": "stremio-ios",
+      "name": "Stremio iOS (Unofficial AltStore Source)",
+      "appCount": 1,
+      "iconURL": "https://www.stremio.com/website/stremio-logo-small.png",
+      "apps": [
+        {
+          "name": "Stremio",
+          "bundleIdentifier": "com.stremio.pal",
+          "developerName": "Stremio",
+          "version": "2.0.8",
+          "iconURL": "https://www.stremio.com/website/stremio-logo-small.png",
+          "subtitle": "Freedom to stream."
         }
       ]
     },
