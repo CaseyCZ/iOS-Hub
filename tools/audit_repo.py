@@ -13,6 +13,7 @@ REGISTRY = ROOT / "sources" / "registry.json"
 STATUS = ROOT / "data" / "status.json"
 CATALOG = ROOT / "data" / "catalog.json"
 
+LANGUAGES = ("en", "cs", "de", "es", "fr")
 ALLOWED_MODES = {"classic", "pal", "sidestore"}
 ID_RE = re.compile(r"^[a-z0-9][a-z0-9-]*$")
 LEGACY_PATHS = [
@@ -96,26 +97,37 @@ def validate_alt_source(path: Path, *, required: bool = True) -> tuple[int, int]
     return valid_apps, duplicate_count
 
 
-class LocalScriptParser(HTMLParser):
+class PageParser(HTMLParser):
     def __init__(self) -> None:
         super().__init__()
         self.scripts: list[str] = []
+        self.i18n_keys: set[str] = set()
 
     def handle_starttag(self, tag: str, attrs: list[tuple[str, str | None]]) -> None:
-        if tag.lower() != "script":
-            return
         values = dict(attrs)
-        src = values.get("src")
-        if src:
-            self.scripts.append(src)
+        if tag.lower() == "script":
+            src = values.get("src")
+            if src:
+                self.scripts.append(src)
+        for attr in ("data-i18n", "data-i18n-placeholder"):
+            key = values.get(attr)
+            if key:
+                self.i18n_keys.add(key)
+
+
+def parse_page(path: Path) -> PageParser | None:
+    if not path.exists():
+        error(f"Missing HTML file: {path.relative_to(ROOT)}")
+        return None
+    parser = PageParser()
+    parser.feed(path.read_text(encoding="utf-8"))
+    return parser
 
 
 def validate_html_scripts(path: Path) -> None:
-    if not path.exists():
-        error(f"Missing HTML file: {path.relative_to(ROOT)}")
+    parser = parse_page(path)
+    if parser is None:
         return
-    parser = LocalScriptParser()
-    parser.feed(path.read_text(encoding="utf-8"))
     for src in parser.scripts:
         parsed = urlparse(src)
         if parsed.scheme or src.startswith("//"):
@@ -150,6 +162,34 @@ def validate_security_policy(path: Path) -> None:
     for part in REQUIRED_CSP_PARTS:
         if part not in csp:
             error(f"{label} CSP is missing required directive: {part}")
+
+
+def validate_translations() -> None:
+    i18n_path = ROOT / "i18n.js"
+    if not i18n_path.exists():
+        error("Missing i18n.js")
+        return
+
+    used: set[str] = set()
+    for html in (ROOT / "index.html", ROOT / "converter.html"):
+        parser = parse_page(html)
+        if parser:
+            used.update(parser.i18n_keys)
+
+    for script in (ROOT / "app.js", ROOT / "converter.js"):
+        if not script.exists():
+            continue
+        text = script.read_text(encoding="utf-8")
+        used.update(re.findall(r"\btr\(\s*['\"]([A-Za-z0-9_]+)['\"]\s*\)", text))
+
+    i18n_text = i18n_path.read_text(encoding="utf-8")
+    for key in sorted(used):
+        occurrences = len(re.findall(rf"\b{re.escape(key)}\s*:", i18n_text))
+        if occurrences < len(LANGUAGES):
+            error(
+                f"Translation key {key!r} is used by the UI but appears in only "
+                f"{occurrences}/{len(LANGUAGES)} language dictionaries"
+            )
 
 
 def validate_registry() -> None:
@@ -274,6 +314,7 @@ def main() -> int:
     validate_registry()
     validate_generated_data()
     validate_layout()
+    validate_translations()
 
     for message in warnings:
         print(f"WARNING: {message}")
