@@ -90,7 +90,7 @@
       </div>
 
       <div id="sourceGrid" class="source-grid" aria-live="polite"></div>
-      <div class="notice" style="margin-top:13px"><strong data-i18n="note">Note:</strong> <span data-i18n="catalogNote">CaseyCZ iOS Hub does not rehost third-party sources. The catalog uses original public source URLs and preserves original download links. External sources can change at any time.</span></div>
+      <div class="notice" style="margin-top:13px"><strong data-i18n="note">Note:</strong> <span data-i18n="catalogNote">CaseyCZ iOS Hub does not rehost third-party IPA files. The catalog uses original public source URLs and preserves original download links. External sources can change at any time.</span></div>
     </section>
 
     <section id="builder" class="section wrap">
@@ -125,9 +125,44 @@
             <li data-i18n="mixBullet2">Automation checks JSON validity and source availability.</li>
             <li data-i18n="mixBullet3">Apps are deduplicated by bundleIdentifier.</li>
             <li data-i18n="mixBullet4">On conflict the newer entry wins when a reliable release date is available.</li>
-            <li data-i18n="mixBullet5">PAL and large community sources are added directly, not through Mix.</li>
+            <li>Other online sources can be tested below in Experimental Mix Lab.</li>
           </ul>
         </aside>
+      </div>
+
+      <div id="experimentalMixLab" class="panel" style="margin-top:18px">
+        <div class="section-head" style="margin-bottom:14px">
+          <div>
+            <div class="eyebrow">BETA · AUTO TESTED</div>
+            <h3 id="expTitle" style="margin:.25rem 0 .45rem">Experimental Mix Lab</h3>
+            <p id="expDesc" style="margin:0">Try combining the wider online catalog. Every source is checked by automation first.</p>
+          </div>
+          <div class="section-tools">
+            <button id="expSelectCompatible" class="btn small primary" type="button">Select compatible</button>
+            <button id="expSelectAll" class="btn small secondary" type="button">Select all online</button>
+            <button id="expClear" class="btn small ghost" type="button">Clear</button>
+          </div>
+        </div>
+        <div style="display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:10px">
+          <strong id="expSelectedCount">0 selected</strong>
+          <span class="pill mode">Experimental</span>
+        </div>
+        <div id="experimentalBuilderList" class="builder-list"></div>
+        <div style="display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin-top:14px">
+          <button id="expBuild" class="btn primary" type="button" disabled>Test & build Mix</button>
+          <span id="expMessage" class="muted"></span>
+        </div>
+        <div id="expResult" class="builder-result">
+          <strong id="expResultTitle">Experimental Mix</strong>
+          <div id="expResultInfo" class="muted" style="margin-top:6px"></div>
+          <p id="expResultNote" class="notice" style="margin-top:10px"></p>
+          <div class="builder-actions">
+            <a id="expAdd" class="btn small primary" href="#" hidden>＋ Add to AltStore</a>
+            <button id="expCopyUrl" class="btn small secondary" type="button" hidden>Copy URL</button>
+            <a id="expDownload" class="btn small secondary" href="#">Download JSON</a>
+            <a id="expPreview" class="btn small ghost" href="#" target="_blank" rel="noopener">Preview JSON</a>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -173,5 +208,6 @@
 
   <div id="toast" class="pill online" hidden style="position:fixed;z-index:400;left:50%;bottom:22px;transform:translateX(-50%);padding:9px 12px;background:var(--panel);box-shadow:var(--shadow)"></div>
   <script type="module" src="app.js"></script>
+  <script type="module" src="experimental-mix.js"></script>
 </body>
 </html>
