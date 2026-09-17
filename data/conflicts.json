@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-17T14:28:45Z",
+  "generatedAt": "2026-09-17T14:44:54Z",
   "mixes": {
     "all-compatible": [
       {
@@ -7,6 +7,26 @@
         "keptSource": "livecontainer-nightly",
         "otherSource": "livecontainer",
         "keptVersion": "3.8.10"
+      }
+    ],
+    "sidestore-official": [
+      {
+        "bundleIdentifier": "com.kdt.livecontainer",
+        "keptSource": "livecontainer-nightly",
+        "otherSource": "livecontainer",
+        "keptVersion": "3.8.10"
+      },
+      {
+        "bundleIdentifier": "app.ish.iSH",
+        "keptSource": "ish",
+        "otherSource": "sidestore-community",
+        "keptVersion": "Build 813"
+      },
+      {
+        "bundleIdentifier": "com.xitrix.iTorrent2",
+        "keptSource": "itorrent",
+        "otherSource": "sidestore-community",
+        "keptVersion": "2.2.0"
       }
     ]
   }
