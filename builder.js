@@ -30,40 +30,45 @@ const GENRE_RULES = {
 
 const copy = {
   en: {
-    title:'Source Builder', desc:'All online sources are in one list. Filter them, select any combination and let the automated Mix test show what is compatible.',
-    selectPass:'Select compatible', selectAll:'Select all shown', clear:'Clear', build:'Build CaseyCZ Mix', selected:'selected', shown:'shown', pass:'PASS', try:'TRY',
+    title:'Source Builder', desc:'Choose a ready source for AltStore, SideStore or LiveContainer, or create your own filtered Mix.',
+    selectPass:'Select compatible', selectAll:'Select all shown', clear:'Clear selection', build:'Build CaseyCZ Mix', selected:'selected', shown:'shown', pass:'PASS', try:'TRY',
     mixStatus:'Mix status', statusAll:'All', statusPass:'PASS only', statusTry:'TRY only', platform:'Platform', platformAll:'All', classic:'AltStore Classic', pal:'AltStore PAL', sidestore:'SideStore', autoTested:'Auto tested',
-    packages:'CaseyCZ ready sources', packagesDesc:'Stable sources generated from the latest online checks. Nightly feeds stay available in the Builder but are not preferred here.', altPackage:'CaseyCZ AltStore Source', sidePackage:'CaseyCZ SideStore Source', addAlt:'＋ Add to AltStore', addSide:'＋ Add to SideStore', copyUrl:'Copy URL', json:'JSON ↗', apps:'apps', sources:'sources',
+    altPackage:'CaseyCZ AltStore Source', sidePackage:'CaseyCZ SideStore Source', livePackage:'CaseyCZ LiveContainer Source', customMix:'Custom Mix', filters:'⚙ Filters · Search · Selection',
+    addAlt:'＋ Add to AltStore', addSide:'＋ Add to SideStore', addLive:'＋ Add to LiveContainer', copyUrl:'Copy URL', json:'JSON ↗', apps:'apps', sources:'sources',
     hosted:'Hosted Mix ready', local:'Local Mix ready', experimental:'Experimental Mix ready', localNote:'This PASS combination is valid but is not pre-hosted. Download the JSON to inspect or host it; direct Add requires a public source URL.', tryNote:'This Mix contains one or more TRY sources. Download and test the JSON first; PAL or installer-specific metadata may not work after merging.',
     conflicts:'duplicates resolved', download:'Download JSON', preview:'Preview JSON', building:'Testing and combining sources…', failed:'The selected Mix could not be built.', copied:'Source URL copied.', empty:'No sources match the current filters.'
   },
   cs: {
-    title:'Source Builder', desc:'Všechny online zdroje jsou v jednom seznamu. Odfiltruj je, vyber libovolnou kombinaci a automatický Mix test ukáže kompatibilitu.',
+    title:'Source Builder', desc:'Vyber hotový zdroj pro AltStore, SideStore nebo LiveContainer, nebo si vytvoř vlastní filtrovaný Mix.',
     selectPass:'Vybrat kompatibilní', selectAll:'Vybrat vše zobrazené', clear:'Zrušit výběr', build:'Vytvořit CaseyCZ Mix', selected:'vybráno', shown:'zobrazeno', pass:'PASS', try:'ZKUSIT',
     mixStatus:'Stav Mixu', statusAll:'Vše', statusPass:'Jen PASS', statusTry:'Jen ZKUSIT', platform:'Platforma', platformAll:'Vše', classic:'AltStore Classic', pal:'AltStore PAL', sidestore:'SideStore', autoTested:'Automaticky testováno',
-    packages:'Hotové CaseyCZ zdroje', packagesDesc:'Stabilní zdroje generované z poslední online kontroly. Nightly zůstává v Builderu, ale tady nemá přednost před Stable.', altPackage:'CaseyCZ AltStore Source', sidePackage:'CaseyCZ SideStore Source', addAlt:'＋ Přidat do AltStore', addSide:'＋ Přidat do SideStore', copyUrl:'Kopírovat URL', json:'JSON ↗', apps:'aplikací', sources:'zdrojů',
-    hosted:'Veřejný Mix je připraven', local:'Lokální Mix je připraven', experimental:'Experimentální Mix je připraven', localNote:'Tato PASS kombinace je validní, ale není předem hostovaná. JSON můžeš stáhnout nebo hostovat; přímé Přidat vyžaduje veřejnou URL.', tryNote:'Tento Mix obsahuje jeden nebo více zdrojů ZKUSIT. JSON nejdřív stáhni a otestuj; PAL nebo installer-specifická metadata se po sloučení nemusí chovat stejně.',
+    altPackage:'CaseyCZ AltStore Source', sidePackage:'CaseyCZ SideStore Source', livePackage:'CaseyCZ LiveContainer Source', customMix:'Vlastní Mix', filters:'⚙ Filtry · Hledání · Výběr',
+    addAlt:'＋ Přidat do AltStore', addSide:'＋ Přidat do SideStore', addLive:'＋ Přidat do LiveContainer', copyUrl:'Kopírovat URL', json:'JSON ↗', apps:'aplikací', sources:'zdrojů',
+    hosted:'Veřejný Mix je připraven', local:'Lokální Mix je připraven', experimental:'Experimentální Mix je připraven', localNote:'Tato PASS kombinace je validní, ale není předem hostovaná. JSON můžeš stáhnout nebo hostovat; přímé přidání vyžaduje veřejnou URL.', tryNote:'Tento Mix obsahuje jeden nebo více zdrojů ZKUSIT. JSON nejdřív stáhni a otestuj; PAL nebo installer-specifická metadata se po sloučení nemusí chovat stejně.',
     conflicts:'duplicit vyřešeno', download:'Stáhnout JSON', preview:'Náhled JSON', building:'Testuji a spojuji zdroje…', failed:'Vybraný Mix se nepodařilo vytvořit.', copied:'URL zdroje zkopírována.', empty:'Aktuálním filtrům neodpovídá žádný zdroj.'
   },
   de: {
-    title:'Source Builder', desc:'Alle Online-Quellen stehen in einer Liste. Filtere sie, wähle eine Kombination und nutze den automatischen Mix-Test.',
-    selectPass:'Kompatible wählen', selectAll:'Alle sichtbaren wählen', clear:'Leeren', build:'CaseyCZ Mix erstellen', selected:'ausgewählt', shown:'sichtbar', pass:'PASS', try:'TEST',
+    title:'Source Builder', desc:'Wähle eine fertige Quelle für AltStore, SideStore oder LiveContainer oder erstelle einen eigenen gefilterten Mix.',
+    selectPass:'Kompatible wählen', selectAll:'Alle sichtbaren wählen', clear:'Auswahl löschen', build:'CaseyCZ Mix erstellen', selected:'ausgewählt', shown:'sichtbar', pass:'PASS', try:'TEST',
     mixStatus:'Mix-Status', statusAll:'Alle', statusPass:'Nur PASS', statusTry:'Nur TEST', platform:'Plattform', platformAll:'Alle', classic:'AltStore Classic', pal:'AltStore PAL', sidestore:'SideStore', autoTested:'Automatisch geprüft',
-    packages:'Fertige CaseyCZ Quellen', packagesDesc:'Stabile Quellen aus der letzten Online-Prüfung. Nightly bleibt im Builder verfügbar.', altPackage:'CaseyCZ AltStore Source', sidePackage:'CaseyCZ SideStore Source', addAlt:'＋ Zu AltStore', addSide:'＋ Zu SideStore', copyUrl:'URL kopieren', json:'JSON ↗', apps:'Apps', sources:'Quellen',
+    altPackage:'CaseyCZ AltStore Source', sidePackage:'CaseyCZ SideStore Source', livePackage:'CaseyCZ LiveContainer Source', customMix:'Eigener Mix', filters:'⚙ Filter · Suche · Auswahl',
+    addAlt:'＋ Zu AltStore', addSide:'＋ Zu SideStore', addLive:'＋ Zu LiveContainer', copyUrl:'URL kopieren', json:'JSON ↗', apps:'Apps', sources:'Quellen',
     hosted:'Gehosteter Mix bereit', local:'Lokaler Mix bereit', experimental:'Experimenteller Mix bereit', localNote:'Diese PASS-Kombination ist gültig, aber nicht vorab gehostet. Für direktes Hinzufügen ist eine öffentliche URL nötig.', tryNote:'Dieser Mix enthält TEST-Quellen. Lade die JSON-Datei herunter und teste sie zuerst.', conflicts:'Duplikate gelöst', download:'JSON laden', preview:'JSON ansehen', building:'Quellen werden getestet…', failed:'Der ausgewählte Mix konnte nicht erstellt werden.', copied:'URL kopiert.', empty:'Keine Quellen entsprechen den Filtern.'
   },
   es: {
-    title:'Source Builder', desc:'Todas las fuentes online están en una sola lista. Filtra, selecciona una combinación y usa la prueba automática del Mix.',
-    selectPass:'Seleccionar compatibles', selectAll:'Seleccionar visibles', clear:'Limpiar', build:'Crear CaseyCZ Mix', selected:'seleccionadas', shown:'visibles', pass:'PASS', try:'PROBAR',
+    title:'Source Builder', desc:'Elige una fuente lista para AltStore, SideStore o LiveContainer, o crea tu propio Mix filtrado.',
+    selectPass:'Seleccionar compatibles', selectAll:'Seleccionar visibles', clear:'Borrar selección', build:'Crear CaseyCZ Mix', selected:'seleccionadas', shown:'visibles', pass:'PASS', try:'PROBAR',
     mixStatus:'Estado del Mix', statusAll:'Todo', statusPass:'Solo PASS', statusTry:'Solo PROBAR', platform:'Plataforma', platformAll:'Todo', classic:'AltStore Classic', pal:'AltStore PAL', sidestore:'SideStore', autoTested:'Prueba automática',
-    packages:'Fuentes CaseyCZ listas', packagesDesc:'Fuentes estables generadas desde la última comprobación. Nightly sigue disponible en el Builder.', altPackage:'CaseyCZ AltStore Source', sidePackage:'CaseyCZ SideStore Source', addAlt:'＋ Añadir a AltStore', addSide:'＋ Añadir a SideStore', copyUrl:'Copiar URL', json:'JSON ↗', apps:'apps', sources:'fuentes',
+    altPackage:'CaseyCZ AltStore Source', sidePackage:'CaseyCZ SideStore Source', livePackage:'CaseyCZ LiveContainer Source', customMix:'Mix personalizado', filters:'⚙ Filtros · Búsqueda · Selección',
+    addAlt:'＋ Añadir a AltStore', addSide:'＋ Añadir a SideStore', addLive:'＋ Añadir a LiveContainer', copyUrl:'Copiar URL', json:'JSON ↗', apps:'apps', sources:'fuentes',
     hosted:'Mix alojado listo', local:'Mix local listo', experimental:'Mix experimental listo', localNote:'Esta combinación PASS es válida pero no está alojada. Añadir directamente requiere una URL pública.', tryNote:'Este Mix contiene fuentes PROBAR. Descarga y prueba primero el JSON.', conflicts:'duplicados resueltos', download:'Descargar JSON', preview:'Ver JSON', building:'Probando fuentes…', failed:'No se pudo crear el Mix.', copied:'URL copiada.', empty:'Ninguna fuente coincide con los filtros.'
   },
   fr: {
-    title:'Source Builder', desc:'Toutes les sources en ligne sont dans une seule liste. Filtrez-les, sélectionnez une combinaison et utilisez le test automatique du Mix.',
-    selectPass:'Sélectionner compatibles', selectAll:'Tout sélectionner affiché', clear:'Effacer', build:'Créer CaseyCZ Mix', selected:'sélectionnées', shown:'affichées', pass:'PASS', try:'TEST',
+    title:'Source Builder', desc:'Choisissez une source prête pour AltStore, SideStore ou LiveContainer, ou créez votre propre Mix filtré.',
+    selectPass:'Sélectionner compatibles', selectAll:'Tout sélectionner affiché', clear:'Effacer la sélection', build:'Créer CaseyCZ Mix', selected:'sélectionnées', shown:'affichées', pass:'PASS', try:'TEST',
     mixStatus:'Statut du Mix', statusAll:'Tout', statusPass:'PASS seulement', statusTry:'TEST seulement', platform:'Plateforme', platformAll:'Tout', classic:'AltStore Classic', pal:'AltStore PAL', sidestore:'SideStore', autoTested:'Test automatique',
-    packages:'Sources CaseyCZ prêtes', packagesDesc:'Sources stables issues du dernier contrôle. Nightly reste disponible dans le Builder.', altPackage:'CaseyCZ AltStore Source', sidePackage:'CaseyCZ SideStore Source', addAlt:'＋ Ajouter à AltStore', addSide:'＋ Ajouter à SideStore', copyUrl:'Copier URL', json:'JSON ↗', apps:'apps', sources:'sources',
+    altPackage:'CaseyCZ AltStore Source', sidePackage:'CaseyCZ SideStore Source', livePackage:'CaseyCZ LiveContainer Source', customMix:'Mix personnalisé', filters:'⚙ Filtres · Recherche · Sélection',
+    addAlt:'＋ Ajouter à AltStore', addSide:'＋ Ajouter à SideStore', addLive:'＋ Ajouter à LiveContainer', copyUrl:'Copier URL', json:'JSON ↗', apps:'apps', sources:'sources',
     hosted:'Mix hébergé prêt', local:'Mix local prêt', experimental:'Mix expérimental prêt', localNote:'Cette combinaison PASS est valide mais non hébergée. L’ajout direct nécessite une URL publique.', tryNote:'Ce Mix contient des sources TEST. Téléchargez et testez d’abord le JSON.', conflicts:'doublons résolus', download:'Télécharger JSON', preview:'Aperçu JSON', building:'Test des sources…', failed:'Impossible de créer le Mix.', copied:'URL copiée.', empty:'Aucune source ne correspond aux filtres.'
   }
 };
@@ -161,12 +166,15 @@ function saveFilters() {
   safeSet(STORAGE.compatibility, compatibility);
   safeSet(STORAGE.query, query);
 }
+function hideResult() { $('#expResult')?.classList.remove('show'); }
 
 function applyCopy() {
   const map = {expSelectCompatible:'selectPass', expSelectAll:'selectAll', expClear:'clear', expBuild:'build'};
   Object.entries(map).forEach(([id,key]) => { const node = $('#' + id); if (node) node.textContent = tr(key); });
   if ($('#builderTitle')) $('#builderTitle').textContent = tr('title');
   if ($('#builderDesc')) $('#builderDesc').textContent = tr('desc');
+  if ($('#customMixCardTitle')) $('#customMixCardTitle').textContent = tr('customMix');
+  if ($('#customMixFiltersLabel')) $('#customMixFiltersLabel').textContent = tr('filters');
   if ($('#mixPlatformLabel')) $('#mixPlatformLabel').textContent = tr('platform');
   if ($('#mixStatusLabel')) $('#mixStatusLabel').textContent = tr('mixStatus');
   if ($('#mixTestBadge')) $('#mixTestBadge').textContent = tr('autoTested');
@@ -188,12 +196,20 @@ function syncFilterUi() {
 
 function packageCard(name, url, meta, type) {
   if (!url) return '';
-  const install = type === 'side'
-    ? `sidestore://source?url=${encodeURIComponent(url)}`
-    : `altstore://source?url=${encodeURIComponent(url)}`;
-  const addLabel = type === 'side' ? tr('addSide') : tr('addAlt');
+  let install = `altstore://source?url=${encodeURIComponent(url)}`;
+  let addLabel = tr('addAlt');
+  let badge = 'AltStore';
+  if (type === 'side') {
+    install = `sidestore://source?url=${encodeURIComponent(url)}`;
+    addLabel = tr('addSide');
+    badge = 'SideStore';
+  } else if (type === 'live') {
+    install = `livecontainer://sources?url=${encodeURIComponent(url)}`;
+    addLabel = tr('addLive');
+    badge = 'LiveContainer';
+  }
   return `<article class="official-source-card">
-    <span class="pill online">${type === 'side' ? 'SideStore' : 'AltStore'}</span>
+    <span class="pill mode">${badge}</span>
     <h4>${escapeHtml(name)}</h4>
     <div class="muted">${escapeHtml(meta)}</div>
     <div class="official-source-actions">
@@ -215,7 +231,11 @@ function renderOfficialPackages() {
   const sideApps = status?.sidestore?.appCount || 0;
   const altMeta = altApps ? `${altSources} ${tr('sources')} · ${altApps} ${tr('apps')}` : `${altSources} ${tr('sources')}`;
   const sideMeta = `${sideSources} ${tr('sources')} · ${sideApps} ${tr('apps')}`;
-  node.innerHTML = `<div style="margin-bottom:10px"><strong>${escapeHtml(tr('packages'))}</strong><div class="muted">${escapeHtml(tr('packagesDesc'))}</div></div><div class="official-source-grid">${packageCard(tr('altPackage'), altUrl, altMeta, 'alt')}${packageCard(tr('sidePackage'), sideUrl, sideMeta, 'side')}</div>`;
+  node.innerHTML = [
+    packageCard(tr('altPackage'), altUrl, altMeta, 'alt'),
+    packageCard(tr('sidePackage'), sideUrl, sideMeta, 'side'),
+    packageCard(tr('livePackage'), altUrl, altMeta, 'live')
+  ].join('');
 }
 
 function modeName(source) {
@@ -303,25 +323,25 @@ function hostedTarget(ids) {
   const manual = hostedIds();
   const max = Number(status?.mixes?.maxSourcesPerMix || 0);
   if (sorted.length && sorted.length <= max && sorted.every(id => manual.has(id))) {
-    return {url:new URL(`mix/${sorted.join('--')}.json`, window.location.href).href.split('#')[0], alt:true, side:true};
+    return {url:new URL(`mix/${sorted.join('--')}.json`, window.location.href).href.split('#')[0], alt:true, side:true, live:true};
   }
 
   const auto = [...autoCompatibleIds()];
   if (auto.length && sameIds(sorted, auto)) {
-    return {url:status?.mixes?.allCompatibleURL || null, alt:true, side:true};
+    return {url:status?.mixes?.allCompatibleURL || null, alt:true, side:true, live:true};
   }
 
   const altIds = status?.altstore?.sourceIDs || [];
   if (altIds.length && sameIds(sorted, altIds)) {
-    return {url:status?.altstore?.sourceURL || null, alt:true, side:true};
+    return {url:status?.altstore?.sourceURL || null, alt:true, side:true, live:true};
   }
 
   const sideIds = status?.sidestore?.sourceIDs || [];
   if (sideIds.length && sameIds(sorted, sideIds)) {
-    return {url:status?.sidestore?.sourceURL || null, alt:false, side:true};
+    return {url:status?.sidestore?.sourceURL || null, alt:false, side:true, live:true};
   }
 
-  return {url:null, alt:false, side:false};
+  return {url:null, alt:false, side:false, live:false};
 }
 
 async function buildMix() {
@@ -375,6 +395,7 @@ async function buildMix() {
 
     const alt = $('#expAdd');
     const side = $('#expAddSideStore');
+    const live = $('#expAddLiveContainer');
     const copyButton = $('#expCopyUrl');
 
     if (target.url && target.alt) {
@@ -391,6 +412,14 @@ async function buildMix() {
       side.textContent = tr('addSide');
     } else {
       side.hidden = true;
+    }
+
+    if (target.url && target.live) {
+      live.hidden = false;
+      live.href = `livecontainer://sources?url=${encodeURIComponent(target.url)}`;
+      live.textContent = tr('addLive');
+    } else {
+      live.hidden = true;
     }
 
     if (target.url) {
@@ -433,20 +462,22 @@ async function init() {
   render();
 
   $('#expSelectCompatible')?.addEventListener('click', () => {
-    candidates().filter(source => getStatus(source.id).mixTest === 'pass').forEach(source => selected.add(source.id));
+    selected = new Set(candidates().filter(source => getStatus(source.id).mixTest === 'pass').map(source => source.id));
     saveSelection();
+    hideResult();
     render();
   });
   $('#expSelectAll')?.addEventListener('click', () => {
-    candidates().forEach(source => selected.add(source.id));
+    selected = new Set(candidates().map(source => source.id));
     saveSelection();
+    hideResult();
     render();
   });
   $('#expClear')?.addEventListener('click', () => {
     selected.clear();
     saveSelection();
+    hideResult();
     render();
-    $('#expResult')?.classList.remove('show');
   });
   $('#expBuild')?.addEventListener('click', buildMix);
 
@@ -455,6 +486,7 @@ async function init() {
     if (!id) return;
     if (event.target.checked) selected.add(id); else selected.delete(id);
     saveSelection();
+    hideResult();
     render();
   });
 
