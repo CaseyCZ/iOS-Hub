@@ -14,7 +14,7 @@ const STORAGE = {
 
 const SOURCE_CATEGORIES = new Set(['all', 'official', 'trusted', 'community', 'modified']);
 const GENRES = new Set(['all', 'games', 'emulators', 'video', 'music', 'anime', 'social', 'downloads', 'sideload', 'utilities']);
-const MIX_LIMIT = 4;
+let mixLimit = 12;
 
 const GENRE_RULES = {
   games: ['games','pokemon','mmo','geometry-dash','game'],
@@ -26,6 +26,34 @@ const GENRE_RULES = {
   downloads: ['torrent','download','qbittorrent','network'],
   sideload: ['sideload','signing','livecontainer','debug'],
   utilities: ['utility','developer','terminal','linux','privacy','app','ios']
+};
+
+const BUILDER_COPY = {
+  en: {
+    desc: 'Select any compatible AltStore Classic sources — including all currently available mix-ready sources.',
+    selectAll: 'Select all',
+    limit: max => `A mix can contain up to ${max} sources.`
+  },
+  cs: {
+    desc: 'Vyber libovolné kompatibilní AltStore Classic zdroje — klidně všechny aktuálně dostupné zdroje pro Mix.',
+    selectAll: 'Vybrat vše',
+    limit: max => `Do jednoho mixu lze zahrnout maximálně ${max} zdrojů.`
+  },
+  de: {
+    desc: 'Wähle beliebige kompatible AltStore-Classic-Quellen — auch alle aktuell Mix-fähigen Quellen.',
+    selectAll: 'Alle auswählen',
+    limit: max => `Ein Mix kann bis zu ${max} Quellen enthalten.`
+  },
+  es: {
+    desc: 'Selecciona cualquier fuente AltStore Classic compatible, incluso todas las fuentes disponibles para Mix.',
+    selectAll: 'Seleccionar todo',
+    limit: max => `Un mix puede contener hasta ${max} fuentes.`
+  },
+  fr: {
+    desc: 'Sélectionnez les sources AltStore Classic compatibles de votre choix, y compris toutes les sources disponibles pour le Mix.',
+    selectAll: 'Tout sélectionner',
+    limit: max => `Un mix peut contenir jusqu’à ${max} sources.`
+  }
 };
 
 const state = {
@@ -51,7 +79,7 @@ function loadPersistedSettings() {
   if (GENRES.has(genre)) state.genre = genre;
   try {
     const selected = JSON.parse(safeGet(STORAGE.selection) || '[]');
-    if (Array.isArray(selected)) selected.slice(0, MIX_LIMIT).forEach(id => state.selected.add(String(id)));
+    if (Array.isArray(selected)) selected.forEach(id => state.selected.add(String(id)));
   } catch (_) {}
 }
 
@@ -67,10 +95,18 @@ function applyTheme(theme) {
   safeSet(STORAGE.theme, value);
 }
 
+function updateBuilderText() {
+  const copy = BUILDER_COPY[state.lang] || BUILDER_COPY.en;
+  if ($('#builderDesc')) $('#builderDesc').textContent = copy.desc;
+  if ($('#selectAll')) $('#selectAll').textContent = copy.selectAll;
+  if ($('#mixWarning')) $('#mixWarning').textContent = copy.limit(mixLimit);
+}
+
 function applyLanguage(value) {
   state.lang = normalizeLanguage(value);
   root.lang = state.lang;
   applyTranslations(state.lang);
+  updateBuilderText();
   const select = $('#languageSelect');
   if (select) select.value = state.lang;
   document.title = state.lang === 'en'
@@ -193,11 +229,17 @@ function builderSources() {
 function renderBuilder() {
   const list = $('#builderList');
   if (!list) return;
-  const availableIds = new Set(builderSources().map(source => source.id));
+  const available = builderSources();
+  const availableIds = new Set(available.map(source => source.id));
   [...state.selected].forEach(id => { if (!availableIds.has(id)) state.selected.delete(id); });
+
+  if (state.selected.size > mixLimit) {
+    const keep = [...state.selected].slice(0, mixLimit);
+    state.selected = new Set(keep);
+  }
   persistSelection();
 
-  list.innerHTML = builderSources().map(source => {
+  list.innerHTML = available.map(source => {
     const status = getStatus(source.id);
     const checked = state.selected.has(source.id);
     return `<label class="builder-item">
@@ -207,16 +249,21 @@ function renderBuilder() {
     </label>`;
   }).join('');
 
+  const capacity = Math.min(mixLimit, available.length);
   if ($('#selectedCount')) $('#selectedCount').textContent = String(state.selected.size);
-  if ($('#buildMix')) $('#buildMix').disabled = state.selected.size === 0 || state.selected.size > MIX_LIMIT;
-  if ($('#mixWarning')) $('#mixWarning').hidden = state.selected.size <= MIX_LIMIT;
+  if ($('#mixCapacity')) $('#mixCapacity').textContent = String(capacity || 0);
+  if ($('#buildMix')) $('#buildMix').disabled = state.selected.size === 0 || state.selected.size > mixLimit;
+  if ($('#mixWarning')) $('#mixWarning').hidden = state.selected.size <= mixLimit;
+  if ($('#selectAll')) $('#selectAll').disabled = !available.length;
   if (!state.selected.size) $('#builderResult')?.classList.remove('show');
+  updateBuilderText();
 }
 
 function syncSelection(id, checked) {
   if (checked) {
-    if (state.selected.size >= MIX_LIMIT && !state.selected.has(id)) {
-      toast(tr('limit4'));
+    if (state.selected.size >= mixLimit && !state.selected.has(id)) {
+      const copy = BUILDER_COPY[state.lang] || BUILDER_COPY.en;
+      toast(copy.limit(mixLimit));
       renderSources(); renderBuilder();
       return;
     }
@@ -230,7 +277,7 @@ function syncSelection(id, checked) {
 
 function buildMix() {
   const ids = [...state.selected].sort();
-  if (!ids.length || ids.length > MIX_LIMIT) return;
+  if (!ids.length || ids.length > mixLimit) return;
   const slug = ids.join('--');
   const url = new URL(`mix/${slug}.json`, window.location.href).href.split('#')[0];
   const names = ids.map(id => state.registry.find(source => source.id === id)?.name || id);
@@ -288,7 +335,11 @@ async function loadData() {
     ]);
     const registry = await registryResponse.json();
     state.registry = registry.sources || [];
-    if (statusResponse?.ok) state.status = await statusResponse.json();
+    if (statusResponse?.ok) {
+      state.status = await statusResponse.json();
+      const generatedLimit = Number(state.status?.mixes?.maxSourcesPerMix);
+      if (Number.isFinite(generatedLimit) && generatedLimit > 0) mixLimit = generatedLimit;
+    }
     if (catalogResponse?.ok) state.catalog = await catalogResponse.json();
   } catch (error) {
     console.error(error);
@@ -331,9 +382,14 @@ document.addEventListener('click', event => {
   if (event.target.closest('[data-support-close]')) return void closeSupport();
   if (event.target.id === 'supportModal') closeSupport();
   if (event.target.closest('#copyMix')) copyText($('#mixUrl').textContent, tr('mixCopied'));
+  if (event.target.closest('#selectAll')) {
+    state.selected.clear();
+    builderSources().slice(0, mixLimit).forEach(source => state.selected.add(source.id));
+    persistSelection(); renderSources(); renderBuilder();
+  }
   if (event.target.closest('#selectRecommended')) {
     state.selected.clear();
-    builderSources().filter(source => source.recommended).slice(0,MIX_LIMIT).forEach(source => state.selected.add(source.id));
+    builderSources().filter(source => source.recommended).slice(0, mixLimit).forEach(source => state.selected.add(source.id));
     persistSelection(); renderSources(); renderBuilder();
   }
   if (event.target.closest('#clearSelection')) {
