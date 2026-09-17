@@ -8,11 +8,7 @@
 </p>
 
 <p align="center">
-  Moderní katalog pro <strong>AltStore / SideStore zdroje, Source Builder a praktické iOS nástroje</strong>.
-</p>
-
-<p align="center">
-  <img src="https://img.shields.io/badge/VERZE-v1.1.0-38BDF8?style=for-the-badge&labelColor=0284C7" alt="CaseyCZ iOS Hub v1.1.0" />
+  Katalog pro <strong>AltStore / SideStore zdroje, Source Builder a praktické iOS nástroje</strong>.
 </p>
 
 <p align="center">
@@ -21,36 +17,33 @@
 
 ## O projektu
 
-**CaseyCZ iOS Hub** je živý katalog veřejných iOS source repozitářů s automatickou kontrolou dostupnosti. Nefunkční zdroj se na webu nenabízí a po obnovení se může automaticky vrátit.
+**CaseyCZ iOS Hub** je živý katalog veřejných iOS source repozitářů. Zdroj se pravidelně kontroluje a pokud přestane fungovat, na webu se dočasně nenabízí.
 
 ## Hlavní funkce
 
-- 🔗 katalog AltStore Classic, AltStore PAL a SideStore zdrojů
-- 🟢 automatická kontrola dostupnosti a JSON struktury
-- 🗂️ dvojité filtrování podle typu zdroje a žánru
-- 🧩 Source Builder pro kombinování kompatibilních Classic zdrojů
-- 🧹 deduplikace aplikací podle `bundleIdentifier`
-- 🛠️ lokální webový převodník **DEB → IPA** pro iPhone, iPad, Mac i PC
-- 🔒 DEB převod běží lokálně v prohlížeči bez uploadu souboru
-- 🌍 rozhraní EN / CZ / DE / ES / FR, výchozí jazyk je angličtina
-- 💾 uložení jazyka, tématu, filtrů a výběru Source Builderu
-- 🌙 tmavý / světlý vzhled ve stylu CaseyCZ
+- AltStore Classic, AltStore PAL a SideStore zdroje
+- filtry podle typu zdroje, žánru, platformy a Mix kompatibility
+- vyhledávání podle zdroje i názvu aplikace
+- jeden Source Builder pro všechny online zdroje
+- automatický stav `PASS / TRY`
+- hotový **CaseyCZ AltStore Source** a **CaseyCZ SideStore Source**
+- automatická deduplikace aplikací podle `bundleIdentifier`
+- kontrola zdrojů každých 6 hodin
+- EN / CZ / DE / ES / FR, výchozí jazyk EN
+- uložený jazyk, vzhled, filtry a výběr Builderu
+- **DEB → IPA Converter (Beta)** pro iPhone, iPad, Mac a PC
 
-## Source Builder
+## AltStore a SideStore
 
-Builder kombinuje menší veřejné Classic zdroje, které lze rozumně sloučit do jednoho JSONu. Velké komunitní katalogy a PAL zdroje se přidávají přímo.
+Hotové CaseyCZ zdroje se generují automaticky z aktuálně dostupných kompatibilních zdrojů. Stabilní buildy mají ve výchozích balíčcích přednost; Nightly zdroje zůstávají dostupné pro ruční výběr v Builderu.
 
-Automatizace v GitHub Actions pravidelně stahuje povolené zdroje, ověřuje jejich JSON a dostupnost, počítá aplikace a aktualizuje veřejný katalog i připravené Mix JSONy.
+CaseyCZ iOS Hub cizí IPA soubory nerehostuje. Výsledné source JSONy zachovávají původní veřejné download URL jednotlivých projektů.
 
-## DEB → IPA
+## DEB → IPA Beta
 
-Webový převodník zpracuje kompatibilní `.deb` obsahující skutečnou iOS `.app`, vytvoří strukturu `Payload/App.app` a zabalí ji jako `.ipa`. Výsledná IPA není automaticky podepsaná a ne každý Debian balíček lze převést — jailbreak tweaky, knihovny a systémové balíčky nejsou běžné aplikace.
+Převod probíhá lokálně v prohlížeči bez uploadu `.deb` na server. Funguje pro kompatibilní balíčky obsahující skutečnou `.app` aplikaci.
 
-## Zdroje
-
-Katalog používá vlastní whitelist v `sources/registry.json`. Veřejné seznamy slouží jako podklady pro objevování dalších zdrojů; jednotlivé URL jsou před zobrazením kontrolované samostatně.
-
-CaseyCZ iOS Hub cizí IPA soubory nerehostuje. Sloučené source JSONy zachovávají původní download URL jednotlivých projektů.
+Ne každý Debian balíček lze bezpečně převést pouze přebalením. Jailbreak tweaky, knihovny, systémové balíčky a aplikace využívající speciální filesystem metadata nebo symlinky mohou vyžadovat desktopový nástroj. Výsledná IPA také není automaticky podepsaná.
 
 ## Podpora
 
