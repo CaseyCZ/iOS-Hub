@@ -63,34 +63,41 @@
         </div>
       </div>
 
-      <div class="catalog-filters panel">
-        <div class="filter-group">
-          <div class="filter-label" data-i18n="sourceType">Source type</div>
-          <div class="filter-tabs">
-            <button class="filter active" type="button" data-category-filter="all" data-i18n="all">All</button>
-            <button class="filter" type="button" data-category-filter="official" data-i18n="official">Official</button>
-            <button class="filter" type="button" data-category-filter="trusted" data-i18n="trusted">Trusted</button>
-            <button class="filter" type="button" data-category-filter="community" data-i18n="community">Community</button>
-            <button class="filter" type="button" data-category-filter="modified" data-i18n="modified">Modified</button>
+      <details class="content-disclosure filter-disclosure">
+        <summary>
+          <span class="disclosure-title">⚙ <span data-i18n="sourceType">Source type</span> · <span data-i18n="genre">Genre</span> · 🔎</span>
+        </summary>
+        <div class="disclosure-body">
+          <div class="catalog-filters filter-disclosure-grid">
+            <div class="filter-group">
+              <div class="filter-label" data-i18n="sourceType">Source type</div>
+              <div class="filter-tabs">
+                <button class="filter active" type="button" data-category-filter="all" data-i18n="all">All</button>
+                <button class="filter" type="button" data-category-filter="official" data-i18n="official">Official</button>
+                <button class="filter" type="button" data-category-filter="trusted" data-i18n="trusted">Trusted</button>
+                <button class="filter" type="button" data-category-filter="community" data-i18n="community">Community</button>
+                <button class="filter" type="button" data-category-filter="modified" data-i18n="modified">Modified</button>
+              </div>
+            </div>
+            <div class="filter-group">
+              <div class="filter-label" data-i18n="genre">Genre</div>
+              <div class="filter-tabs">
+                <button class="filter active" type="button" data-genre-filter="all" data-i18n="all">All</button>
+                <button class="filter" type="button" data-genre-filter="games" data-i18n="games">Games</button>
+                <button class="filter" type="button" data-genre-filter="emulators" data-i18n="emulators">Emulators</button>
+                <button class="filter" type="button" data-genre-filter="video" data-i18n="video">Video</button>
+                <button class="filter" type="button" data-genre-filter="music" data-i18n="music">Music</button>
+                <button class="filter" type="button" data-genre-filter="anime" data-i18n="animeManga">Anime & Manga</button>
+                <button class="filter" type="button" data-genre-filter="social" data-i18n="social">Social</button>
+                <button class="filter" type="button" data-genre-filter="downloads" data-i18n="downloads">Downloads</button>
+                <button class="filter" type="button" data-genre-filter="sideload" data-i18n="sideloadTools">Sideload Tools</button>
+                <button class="filter" type="button" data-genre-filter="utilities" data-i18n="utilities">Utilities</button>
+              </div>
+            </div>
+            <input id="sourceSearch" class="search" type="search" autocomplete="off" data-i18n-placeholder="searchPlaceholder" placeholder="Search source or app…">
           </div>
         </div>
-        <div class="filter-group">
-          <div class="filter-label" data-i18n="genre">Genre</div>
-          <div class="filter-tabs">
-            <button class="filter active" type="button" data-genre-filter="all" data-i18n="all">All</button>
-            <button class="filter" type="button" data-genre-filter="games" data-i18n="games">Games</button>
-            <button class="filter" type="button" data-genre-filter="emulators" data-i18n="emulators">Emulators</button>
-            <button class="filter" type="button" data-genre-filter="video" data-i18n="video">Video</button>
-            <button class="filter" type="button" data-genre-filter="music" data-i18n="music">Music</button>
-            <button class="filter" type="button" data-genre-filter="anime" data-i18n="animeManga">Anime & Manga</button>
-            <button class="filter" type="button" data-genre-filter="social" data-i18n="social">Social</button>
-            <button class="filter" type="button" data-genre-filter="downloads" data-i18n="downloads">Downloads</button>
-            <button class="filter" type="button" data-genre-filter="sideload" data-i18n="sideloadTools">Sideload Tools</button>
-            <button class="filter" type="button" data-genre-filter="utilities" data-i18n="utilities">Utilities</button>
-          </div>
-        </div>
-        <input id="sourceSearch" class="search" type="search" autocomplete="off" data-i18n-placeholder="searchPlaceholder" placeholder="Search source or app…">
-      </div>
+      </details>
 
       <div id="sourceGrid" class="source-grid" aria-live="polite"></div>
       <div class="notice" style="margin-top:13px"><strong data-i18n="note">Note:</strong> <span data-i18n="catalogNote">CaseyCZ iOS Hub does not rehost third-party IPA files. The catalog uses original public source URLs and preserves original download links. External sources can change at any time.</span></div>
@@ -112,55 +119,62 @@
       <div id="experimentalMixLab" class="panel" style="padding:18px">
         <div id="officialSourcePackages"></div>
 
-        <div class="catalog-filters" style="margin-bottom:14px">
-          <div class="filter-group">
-            <div class="filter-label" data-i18n="sourceType">Source type</div>
-            <div class="filter-tabs">
-              <button class="filter active" type="button" data-exp-category-filter="all" data-i18n="all">All</button>
-              <button class="filter" type="button" data-exp-category-filter="official" data-i18n="official">Official</button>
-              <button class="filter" type="button" data-exp-category-filter="trusted" data-i18n="trusted">Trusted</button>
-              <button class="filter" type="button" data-exp-category-filter="community" data-i18n="community">Community</button>
-              <button class="filter" type="button" data-exp-category-filter="modified" data-i18n="modified">Modified</button>
+        <details class="content-disclosure filter-disclosure builder-filter-disclosure">
+          <summary>
+            <span class="disclosure-title">⚙ <span data-i18n="sourceType">Source type</span> · <span data-i18n="genre">Genre</span> · 🔎</span>
+          </summary>
+          <div class="disclosure-body">
+            <div class="catalog-filters filter-disclosure-grid">
+              <div class="filter-group">
+                <div class="filter-label" data-i18n="sourceType">Source type</div>
+                <div class="filter-tabs">
+                  <button class="filter active" type="button" data-exp-category-filter="all" data-i18n="all">All</button>
+                  <button class="filter" type="button" data-exp-category-filter="official" data-i18n="official">Official</button>
+                  <button class="filter" type="button" data-exp-category-filter="trusted" data-i18n="trusted">Trusted</button>
+                  <button class="filter" type="button" data-exp-category-filter="community" data-i18n="community">Community</button>
+                  <button class="filter" type="button" data-exp-category-filter="modified" data-i18n="modified">Modified</button>
+                </div>
+              </div>
+
+              <div class="filter-group">
+                <div class="filter-label" data-i18n="genre">Genre</div>
+                <div class="filter-tabs">
+                  <button class="filter active" type="button" data-exp-genre-filter="all" data-i18n="all">All</button>
+                  <button class="filter" type="button" data-exp-genre-filter="games" data-i18n="games">Games</button>
+                  <button class="filter" type="button" data-exp-genre-filter="emulators" data-i18n="emulators">Emulators</button>
+                  <button class="filter" type="button" data-exp-genre-filter="video" data-i18n="video">Video</button>
+                  <button class="filter" type="button" data-exp-genre-filter="music" data-i18n="music">Music</button>
+                  <button class="filter" type="button" data-exp-genre-filter="anime" data-i18n="animeManga">Anime & Manga</button>
+                  <button class="filter" type="button" data-exp-genre-filter="social" data-i18n="social">Social</button>
+                  <button class="filter" type="button" data-exp-genre-filter="downloads" data-i18n="downloads">Downloads</button>
+                  <button class="filter" type="button" data-exp-genre-filter="sideload" data-i18n="sideloadTools">Sideload Tools</button>
+                  <button class="filter" type="button" data-exp-genre-filter="utilities" data-i18n="utilities">Utilities</button>
+                </div>
+              </div>
+
+              <div class="filter-group">
+                <div class="filter-label" id="mixPlatformLabel">Platform</div>
+                <div class="filter-tabs">
+                  <button class="filter active" type="button" data-exp-platform-filter="all">All</button>
+                  <button class="filter" type="button" data-exp-platform-filter="classic">AltStore Classic</button>
+                  <button class="filter" type="button" data-exp-platform-filter="pal">AltStore PAL</button>
+                  <button class="filter" type="button" data-exp-platform-filter="sidestore">SideStore</button>
+                </div>
+              </div>
+
+              <div class="filter-group">
+                <div class="filter-label" id="mixStatusLabel">Mix status</div>
+                <div class="filter-tabs">
+                  <button class="filter active" type="button" data-exp-compat-filter="all">All</button>
+                  <button class="filter" type="button" data-exp-compat-filter="pass">PASS only</button>
+                  <button class="filter" type="button" data-exp-compat-filter="try">TRY only</button>
+                </div>
+              </div>
+
+              <input id="expSourceSearch" class="search" type="search" autocomplete="off" data-i18n-placeholder="searchPlaceholder" placeholder="Search source or app…">
             </div>
           </div>
-
-          <div class="filter-group">
-            <div class="filter-label" data-i18n="genre">Genre</div>
-            <div class="filter-tabs">
-              <button class="filter active" type="button" data-exp-genre-filter="all" data-i18n="all">All</button>
-              <button class="filter" type="button" data-exp-genre-filter="games" data-i18n="games">Games</button>
-              <button class="filter" type="button" data-exp-genre-filter="emulators" data-i18n="emulators">Emulators</button>
-              <button class="filter" type="button" data-exp-genre-filter="video" data-i18n="video">Video</button>
-              <button class="filter" type="button" data-exp-genre-filter="music" data-i18n="music">Music</button>
-              <button class="filter" type="button" data-exp-genre-filter="anime" data-i18n="animeManga">Anime & Manga</button>
-              <button class="filter" type="button" data-exp-genre-filter="social" data-i18n="social">Social</button>
-              <button class="filter" type="button" data-exp-genre-filter="downloads" data-i18n="downloads">Downloads</button>
-              <button class="filter" type="button" data-exp-genre-filter="sideload" data-i18n="sideloadTools">Sideload Tools</button>
-              <button class="filter" type="button" data-exp-genre-filter="utilities" data-i18n="utilities">Utilities</button>
-            </div>
-          </div>
-
-          <div class="filter-group">
-            <div class="filter-label" id="mixPlatformLabel">Platform</div>
-            <div class="filter-tabs">
-              <button class="filter active" type="button" data-exp-platform-filter="all">All</button>
-              <button class="filter" type="button" data-exp-platform-filter="classic">AltStore Classic</button>
-              <button class="filter" type="button" data-exp-platform-filter="pal">AltStore PAL</button>
-              <button class="filter" type="button" data-exp-platform-filter="sidestore">SideStore</button>
-            </div>
-          </div>
-
-          <div class="filter-group">
-            <div class="filter-label" id="mixStatusLabel">Mix status</div>
-            <div class="filter-tabs">
-              <button class="filter active" type="button" data-exp-compat-filter="all">All</button>
-              <button class="filter" type="button" data-exp-compat-filter="pass">PASS only</button>
-              <button class="filter" type="button" data-exp-compat-filter="try">TRY only</button>
-            </div>
-          </div>
-
-          <input id="expSourceSearch" class="search" type="search" autocomplete="off" data-i18n-placeholder="searchPlaceholder" placeholder="Search source or app…">
-        </div>
+        </details>
 
         <div style="display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:10px">
           <strong id="expSelectedCount">0 selected</strong>
@@ -229,7 +243,7 @@
     </div>
   </div>
 
-  <div id="toast" class="pill online" hidden style="position:fixed;z-index:400;left:50%;bottom:22px;transform:translateX(-50%);padding:9px 12px;background:var(--panel);box-shadow:var(--shadow)"></div>
+  <div id="toast" class="toast-message" hidden></div>
   <script type="module" src="app.js"></script>
   <script type="module" src="builder.js"></script>
   <script type="module" src="collapsible.js"></script>
