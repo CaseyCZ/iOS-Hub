@@ -9,6 +9,10 @@ on:
       - "*.html"
       - "sources/**"
       - "tools/**"
+      - "altstore/**"
+      - "sidestore/**"
+      - "mix/**"
+      - "data/**"
       - ".github/workflows/audit.yml"
 
 permissions:
@@ -34,15 +38,10 @@ jobs:
           done
 
       - name: Check Python syntax
-        run: python -m py_compile tools/update_sources.py
+        run: python -m py_compile tools/update_sources.py tools/audit_repo.py
 
       - name: Validate registry JSON
         run: python -m json.tool sources/registry.json >/dev/null
 
-      - name: Check required web files
-        run: |
-          test -f index.html
-          test -f converter.html
-          test -f builder.js
-          test -f vendor/libarchive/libarchive.js
-          test -f vendor/jszip/jszip.min.js
+      - name: Audit repository consistency
+        run: python tools/audit_repo.py
