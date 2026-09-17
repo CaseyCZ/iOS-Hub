@@ -1,9 +1,23 @@
 {
   "updated": "2026-09-17",
   "attribution": {
-    "name": "awesome-altstore",
-    "url": "https://github.com/victordedomenico/awesome-altstore",
-    "note": "Used as a discovery reference. Source URLs are independently checked before being listed here."
+    "references": [
+      {
+        "name": "SideStore trustedapps.json",
+        "url": "https://github.com/SideStore/SideStore/blob/develop/trustedapps.json",
+        "note": "Trusted-source discovery and verification reference."
+      },
+      {
+        "name": "awesome-altstore",
+        "url": "https://github.com/victordedomenico/awesome-altstore",
+        "note": "Used as a discovery reference. Source URLs are independently checked before being listed."
+      },
+      {
+        "name": "r/sideloaded SideStore sources thread",
+        "url": "https://www.reddit.com/r/sideloaded/comments/1gk6ukj/sidestore_sources/",
+        "note": "Community discovery reference only; individual sources are independently checked."
+      }
+    ]
   },
   "sources": [
     {
@@ -14,12 +28,10 @@
       "mode": "classic",
       "mergeable": true,
       "official": true,
+      "trusted": true,
       "recommended": true,
-      "description": {
-        "cs": "Oficiální zdroj UTM a UTM SE pro virtualizaci a emulaci na iOS.",
-        "en": "Official UTM and UTM SE source for virtualization and emulation on iOS."
-      },
-      "tags": ["virtualization", "emulator", "ipa"]
+      "description": {"cs": "Oficiální zdroj UTM a UTM SE pro virtualizaci a emulaci na iOS.", "en": "Official UTM and UTM SE source for virtualization and emulation on iOS."},
+      "tags": ["virtualization", "emulator", "ipa", "utility"]
     },
     {
       "id": "provenance",
@@ -29,12 +41,10 @@
       "mode": "classic",
       "mergeable": true,
       "official": true,
+      "trusted": true,
       "recommended": true,
-      "description": {
-        "cs": "Oficiální zdroj emulátoru Provenance pro více retro platforem.",
-        "en": "Official Provenance multi-system retro emulator source."
-      },
-      "tags": ["emulator", "games", "ipa"]
+      "description": {"cs": "Oficiální zdroj emulátoru Provenance pro více retro platforem.", "en": "Official Provenance multi-system retro emulator source."},
+      "tags": ["emulator", "games", "retro", "ipa"]
     },
     {
       "id": "ish",
@@ -44,12 +54,10 @@
       "mode": "classic",
       "mergeable": true,
       "official": true,
+      "trusted": false,
       "recommended": true,
-      "description": {
-        "cs": "Oficiální zdroj iSH — linuxové shell prostředí běžící lokálně na iOS.",
-        "en": "Official iSH source — a Linux shell environment running locally on iOS."
-      },
-      "tags": ["linux", "terminal", "developer"]
+      "description": {"cs": "Oficiální zdroj iSH — linuxové shell prostředí běžící lokálně na iOS.", "en": "Official iSH source — a Linux shell environment running locally on iOS."},
+      "tags": ["linux", "terminal", "developer", "utility"]
     },
     {
       "id": "flycast",
@@ -59,27 +67,270 @@
       "mode": "classic",
       "mergeable": true,
       "official": true,
+      "trusted": false,
       "recommended": true,
-      "description": {
-        "cs": "Projektový zdroj Flycast pro emulaci Dreamcast, Naomi a Atomiswave.",
-        "en": "Project source for Flycast, a Dreamcast, Naomi and Atomiswave emulator."
-      },
-      "tags": ["emulator", "dreamcast", "ipa"]
+      "description": {"cs": "Projektový zdroj Flycast pro emulaci Dreamcast, Naomi a Atomiswave.", "en": "Project source for Flycast, a Dreamcast, Naomi and Atomiswave emulator."},
+      "tags": ["emulator", "games", "dreamcast", "retro", "ipa"]
     },
     {
       "id": "sidestore-community",
-      "name": "SideStore Team Picks",
+      "name": "SideStore Community",
       "url": "https://community-apps.sidestore.io/sidecommunity.json",
       "website": "https://sidestore.io/",
       "mode": "sidestore",
       "mergeable": false,
       "official": true,
+      "trusted": true,
       "recommended": true,
-      "description": {
-        "cs": "Velký komunitní katalog SideStore. Kvůli velikosti se přidává přímo a nemíchá se do CaseyCZ Mixu.",
-        "en": "Large SideStore community catalog. Because of its size it is added directly and is not merged into CaseyCZ Mix."
-      },
-      "tags": ["sidestore", "community", "catalog"]
+      "description": {"cs": "Velký komunitní katalog SideStore s aplikacemi a emulátory od různých vývojářů.", "en": "Large SideStore community catalog with apps and emulators from multiple developers."},
+      "tags": ["sidestore", "community", "catalog", "apps", "games"]
+    },
+    {
+      "id": "sidestore-official",
+      "name": "SideStore Official",
+      "url": "https://apps.sidestore.io/",
+      "website": "https://sidestore.io/",
+      "mode": "sidestore",
+      "mergeable": false,
+      "official": true,
+      "trusted": true,
+      "recommended": true,
+      "description": {"cs": "Oficiální source SideStore a dalších aplikací týmu SideStore.", "en": "Official source for SideStore and other SideStore team apps."},
+      "tags": ["sidestore", "official", "utility", "signing"]
+    },
+    {
+      "id": "stikdebug",
+      "name": "StikDebug",
+      "url": "https://stikdebug.xyz/index.json",
+      "website": "https://stikdebug.xyz/",
+      "mode": "classic",
+      "mergeable": false,
+      "official": true,
+      "trusted": true,
+      "recommended": false,
+      "description": {"cs": "Trusted source projektu StikDebug pro vývojářské a diagnostické nástroje.", "en": "Trusted StikDebug project source for developer and diagnostic tools."},
+      "tags": ["developer", "debug", "utility", "trusted"]
+    },
+    {
+      "id": "livecontainer",
+      "name": "LiveContainer",
+      "url": "https://github.com/LiveContainer/LiveContainer/releases/download/1.0/apps.json",
+      "website": "https://github.com/LiveContainer/LiveContainer",
+      "mode": "classic",
+      "mergeable": false,
+      "official": true,
+      "trusted": true,
+      "recommended": true,
+      "description": {"cs": "Oficiální trusted source pro LiveContainer.", "en": "Official trusted source for LiveContainer."},
+      "tags": ["livecontainer", "utility", "sideload", "trusted"]
+    },
+    {
+      "id": "manicemu",
+      "name": "Manic EMU",
+      "url": "https://apps.manicemu.site/altstore",
+      "website": "https://manicemu.site/",
+      "mode": "classic",
+      "mergeable": true,
+      "official": true,
+      "trusted": true,
+      "recommended": true,
+      "description": {"cs": "Trusted source pro Manic EMU a herní emulaci na iOS.", "en": "Trusted source for Manic EMU and game emulation on iOS."},
+      "tags": ["games", "emulator", "retro", "trusted"]
+    },
+    {
+      "id": "melonx",
+      "name": "MeloNX",
+      "url": "https://git.ryujinx.app/melonx/emu/-/raw/XC-ios-ht/source.json",
+      "website": "https://git.ryujinx.app/melonx/emu",
+      "mode": "classic",
+      "mergeable": false,
+      "official": true,
+      "trusted": true,
+      "recommended": false,
+      "description": {"cs": "Trusted source projektu MeloNX pro emulaci na iOS.", "en": "Trusted MeloNX project source for emulation on iOS."},
+      "tags": ["games", "emulator", "trusted"]
+    },
+    {
+      "id": "flycast-ios",
+      "name": "Flycast iOS",
+      "url": "https://github.com/chachillie/Flycast-iOS/raw/refs/heads/main/flycast-ios.json",
+      "website": "https://github.com/chachillie/Flycast-iOS",
+      "mode": "classic",
+      "mergeable": false,
+      "official": true,
+      "trusted": true,
+      "recommended": false,
+      "description": {"cs": "Trusted iOS source pro alternativní Flycast buildy.", "en": "Trusted iOS source for alternative Flycast builds."},
+      "tags": ["games", "emulator", "dreamcast", "trusted"]
+    },
+    {
+      "id": "geode-ios",
+      "name": "Geode iOS",
+      "url": "https://ios-repo.geode-sdk.org/altsource/main.json",
+      "website": "https://geode-sdk.org/",
+      "mode": "classic",
+      "mergeable": false,
+      "official": true,
+      "trusted": true,
+      "recommended": false,
+      "description": {"cs": "Trusted source projektu Geode pro iOS.", "en": "Trusted source for the Geode iOS project."},
+      "tags": ["games", "mods", "geometry-dash", "trusted"]
+    },
+    {
+      "id": "retrosekai",
+      "name": "RetroSekaï",
+      "url": "https://repo.untitledcharts.com",
+      "website": "https://repo.untitledcharts.com",
+      "mode": "classic",
+      "mergeable": false,
+      "official": false,
+      "trusted": true,
+      "recommended": false,
+      "description": {"cs": "Trusted komunitní source zaměřený na retro a herní aplikace.", "en": "Trusted community source focused on retro and gaming apps."},
+      "tags": ["games", "retro", "community", "trusted"]
+    },
+    {
+      "id": "countdown",
+      "name": "Countdown",
+      "url": "https://neoarz.github.io/Countdown-App/Countdown.json",
+      "website": "https://github.com/Neoarz/Countdown-App",
+      "mode": "classic",
+      "mergeable": false,
+      "official": true,
+      "trusted": true,
+      "recommended": false,
+      "description": {"cs": "Trusted source aplikace Countdown.", "en": "Trusted source for the Countdown app."},
+      "tags": ["utility", "countdown", "trusted"]
+    },
+    {
+      "id": "oatmealdome",
+      "name": "OatmealDome",
+      "url": "https://altstore.oatmealdome.me",
+      "website": "https://oatmealdome.me/",
+      "mode": "classic",
+      "mergeable": true,
+      "official": true,
+      "trusted": true,
+      "recommended": true,
+      "description": {"cs": "Trusted source OatmealDome, známý hlavně projekty pro herní emulaci.", "en": "Trusted OatmealDome source, best known for game-emulation projects."},
+      "tags": ["games", "emulator", "dolphinios", "trusted"]
+    },
+    {
+      "id": "crystall1ne",
+      "name": "crystall1ne",
+      "url": "https://alt.crystall1ne.dev",
+      "website": "https://crystall1ne.dev/",
+      "mode": "classic",
+      "mergeable": false,
+      "official": true,
+      "trusted": true,
+      "recommended": false,
+      "description": {"cs": "Trusted AltStore source vývojáře crystall1ne.", "en": "Trusted AltStore source by crystall1ne."},
+      "tags": ["apps", "utility", "trusted"]
+    },
+    {
+      "id": "pokemmo",
+      "name": "PokeMMO",
+      "url": "https://pokemmo.eu/altstore/",
+      "website": "https://pokemmo.com/",
+      "mode": "classic",
+      "mergeable": true,
+      "official": true,
+      "trusted": true,
+      "recommended": true,
+      "description": {"cs": "Oficiální trusted source pro PokeMMO na iOS.", "en": "Official trusted source for PokeMMO on iOS."},
+      "tags": ["games", "pokemon", "mmo", "trusted"]
+    },
+    {
+      "id": "odyssey",
+      "name": "Odyssey",
+      "url": "https://theodyssey.dev/altstore/odysseysource.json",
+      "website": "https://theodyssey.dev/",
+      "mode": "classic",
+      "mergeable": false,
+      "official": true,
+      "trusted": true,
+      "recommended": false,
+      "description": {"cs": "Trusted source projektu Odyssey.", "en": "Trusted source for the Odyssey project."},
+      "tags": ["utility", "ios", "trusted"]
+    },
+    {
+      "id": "yattee",
+      "name": "Yattee",
+      "url": "https://repos.yattee.stream/alt/apps.json",
+      "website": "https://github.com/yattee/yattee",
+      "mode": "classic",
+      "mergeable": true,
+      "official": true,
+      "trusted": true,
+      "recommended": true,
+      "description": {"cs": "Open-source video klient zaměřený na soukromí; umí YouTube přes Invidious/Piped, PiP, background audio a další funkce.", "en": "Open-source privacy-focused video client with YouTube via Invidious/Piped, PiP, background audio and more."},
+      "tags": ["youtube", "video", "media", "privacy", "open-source", "trusted"]
+    },
+    {
+      "id": "ignited",
+      "name": "Ignited",
+      "url": "https://altstore.ignitedemulator.com/",
+      "website": "https://github.com/litritt/Ignited",
+      "mode": "classic",
+      "mergeable": true,
+      "official": true,
+      "trusted": true,
+      "recommended": true,
+      "description": {"cs": "Trusted source pro multi-system herní emulátor Ignited.", "en": "Trusted source for the Ignited multi-system game emulator."},
+      "tags": ["games", "emulator", "retro", "trusted"]
+    },
+    {
+      "id": "thatstella",
+      "name": "Stella",
+      "url": "https://alt.thatstel.la/",
+      "website": "https://thatstel.la/",
+      "mode": "classic",
+      "mergeable": false,
+      "official": true,
+      "trusted": true,
+      "recommended": false,
+      "description": {"cs": "Trusted AltStore source projektu Stella.", "en": "Trusted AltStore source for the Stella project."},
+      "tags": ["apps", "utility", "trusted"]
+    },
+    {
+      "id": "mona",
+      "name": "Mona",
+      "url": "https://raw.githubusercontent.com/delia-cheminot/mona-hrt/refs/heads/main/ios_source.json",
+      "website": "https://github.com/delia-cheminot/mona-hrt",
+      "mode": "classic",
+      "mergeable": false,
+      "official": true,
+      "trusted": true,
+      "recommended": false,
+      "description": {"cs": "Trusted source projektu Mona.", "en": "Trusted source for the Mona project."},
+      "tags": ["app", "trusted"]
+    },
+    {
+      "id": "vortx",
+      "name": "VortX",
+      "url": "https://raw.githubusercontent.com/VortXTV/VortX/main/altstore/source.json",
+      "website": "https://vortx.tv/",
+      "mode": "classic",
+      "mergeable": false,
+      "official": true,
+      "trusted": false,
+      "recommended": false,
+      "description": {"cs": "Open-source nativní streaming klient pro Apple zařízení postavený na stremio-core a libmpv.", "en": "Open-source native streaming client for Apple devices built on stremio-core and libmpv."},
+      "tags": ["video", "streaming", "stremio", "media", "open-source"]
+    },
+    {
+      "id": "stremio-ios",
+      "name": "Stremio iOS Source",
+      "url": "https://gorlev.github.io/stremio-altstore/stremio-ios.json",
+      "website": "https://github.com/gorlev/stremio-altstore",
+      "mode": "classic",
+      "mergeable": false,
+      "official": false,
+      "trusted": false,
+      "recommended": false,
+      "description": {"cs": "Komunitní AltStore source pro Stremio iOS s automaticky aktualizovanými buildy.", "en": "Community AltStore source for Stremio iOS with automatically updated builds."},
+      "tags": ["video", "streaming", "stremio", "media", "community"]
     },
     {
       "id": "qbitcontrol",
@@ -89,11 +340,9 @@
       "mode": "pal",
       "mergeable": false,
       "official": true,
+      "trusted": false,
       "recommended": false,
-      "description": {
-        "cs": "Projektový AltStore PAL zdroj pro qBitControl, vzdálenou správu qBittorrentu.",
-        "en": "Project AltStore PAL source for qBitControl, a qBittorrent remote client."
-      },
+      "description": {"cs": "Projektový AltStore PAL zdroj pro qBitControl, vzdálenou správu qBittorrentu.", "en": "Project AltStore PAL source for qBitControl, a qBittorrent remote client."},
       "tags": ["pal", "utility", "qbittorrent"]
     },
     {
@@ -104,11 +353,9 @@
       "mode": "pal",
       "mergeable": false,
       "official": true,
+      "trusted": false,
       "recommended": false,
-      "description": {
-        "cs": "Projektový AltStore PAL zdroj pro iPhanpy, nativně zabaleného klienta Mastodon.",
-        "en": "Project AltStore PAL source for iPhanpy, a native-wrapped Mastodon client."
-      },
+      "description": {"cs": "Projektový AltStore PAL zdroj pro iPhanpy, nativně zabaleného klienta Mastodon.", "en": "Project AltStore PAL source for iPhanpy, a native-wrapped Mastodon client."},
       "tags": ["pal", "mastodon", "social"]
     },
     {
@@ -119,11 +366,9 @@
       "mode": "pal",
       "mergeable": false,
       "official": true,
+      "trusted": false,
       "recommended": true,
-      "description": {
-        "cs": "Oficiální iOS zdroj Epic Games. Přidává se přímo a není součástí Classic mixu.",
-        "en": "Official Epic Games iOS source. Added directly and not included in the Classic mix."
-      },
+      "description": {"cs": "Oficiální iOS zdroj Epic Games. Přidává se přímo a není součástí Classic mixu.", "en": "Official Epic Games iOS source. Added directly and not included in the Classic mix."},
       "tags": ["pal", "games", "official"]
     }
   ]
