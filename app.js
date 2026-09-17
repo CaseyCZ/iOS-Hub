@@ -9,13 +9,11 @@ const STORAGE = {
   language: 'caseycz-language',
   category: 'ioshub-source-category',
   genre: 'ioshub-genre',
-  selection: 'ioshub-mix-selection'
+  query: 'ioshub-source-query'
 };
 
 const SOURCE_CATEGORIES = new Set(['all', 'official', 'trusted', 'community', 'modified']);
 const GENRES = new Set(['all', 'games', 'emulators', 'video', 'music', 'anime', 'social', 'downloads', 'sideload', 'utilities']);
-let mixLimit = 12;
-
 const GENRE_RULES = {
   games: ['games','pokemon','mmo','geometry-dash','game'],
   emulators: ['emulator','retro','dreamcast','dolphinios','virtualization'],
@@ -28,39 +26,10 @@ const GENRE_RULES = {
   utilities: ['utility','developer','terminal','linux','privacy','app','ios']
 };
 
-const BUILDER_COPY = {
-  en: {
-    desc: 'Select any compatible AltStore Classic sources — including all currently available mix-ready sources.',
-    selectAll: 'Select all',
-    limit: max => `A mix can contain up to ${max} sources.`
-  },
-  cs: {
-    desc: 'Vyber libovolné kompatibilní AltStore Classic zdroje — klidně všechny aktuálně dostupné zdroje pro Mix.',
-    selectAll: 'Vybrat vše',
-    limit: max => `Do jednoho mixu lze zahrnout maximálně ${max} zdrojů.`
-  },
-  de: {
-    desc: 'Wähle beliebige kompatible AltStore-Classic-Quellen — auch alle aktuell Mix-fähigen Quellen.',
-    selectAll: 'Alle auswählen',
-    limit: max => `Ein Mix kann bis zu ${max} Quellen enthalten.`
-  },
-  es: {
-    desc: 'Selecciona cualquier fuente AltStore Classic compatible, incluso todas las fuentes disponibles para Mix.',
-    selectAll: 'Seleccionar todo',
-    limit: max => `Un mix puede contener hasta ${max} fuentes.`
-  },
-  fr: {
-    desc: 'Sélectionnez les sources AltStore Classic compatibles de votre choix, y compris toutes les sources disponibles pour le Mix.',
-    selectAll: 'Tout sélectionner',
-    limit: max => `Un mix peut contenir jusqu’à ${max} sources.`
-  }
-};
-
 const state = {
   registry: [],
   status: {},
   catalog: {},
-  selected: new Set(),
   sourceCategory: 'all',
   genre: 'all',
   query: '',
@@ -77,14 +46,7 @@ function loadPersistedSettings() {
   const genre = safeGet(STORAGE.genre);
   if (SOURCE_CATEGORIES.has(category)) state.sourceCategory = category;
   if (GENRES.has(genre)) state.genre = genre;
-  try {
-    const selected = JSON.parse(safeGet(STORAGE.selection) || '[]');
-    if (Array.isArray(selected)) selected.forEach(id => state.selected.add(String(id)));
-  } catch (_) {}
-}
-
-function persistSelection() {
-  safeSet(STORAGE.selection, JSON.stringify([...state.selected]));
+  state.query = safeGet(STORAGE.query) || '';
 }
 
 function applyTheme(theme) {
@@ -95,18 +57,10 @@ function applyTheme(theme) {
   safeSet(STORAGE.theme, value);
 }
 
-function updateBuilderText() {
-  const copy = BUILDER_COPY[state.lang] || BUILDER_COPY.en;
-  if ($('#builderDesc')) $('#builderDesc').textContent = copy.desc;
-  if ($('#selectAll')) $('#selectAll').textContent = copy.selectAll;
-  if ($('#mixWarning')) $('#mixWarning').textContent = copy.limit(mixLimit);
-}
-
 function applyLanguage(value) {
   state.lang = normalizeLanguage(value);
   root.lang = state.lang;
   applyTranslations(state.lang);
-  updateBuilderText();
   const select = $('#languageSelect');
   if (select) select.value = state.lang;
   document.title = state.lang === 'en'
@@ -114,7 +68,6 @@ function applyLanguage(value) {
     : `CaseyCZ iOS Hub — ${tr('sources')} · ${tr('tools')}`;
   safeSet(STORAGE.language, state.lang);
   renderSources();
-  renderBuilder();
   updateStats();
 }
 
@@ -128,14 +81,19 @@ function getStatus(id) {
   return state.status?.sources?.[id] || {};
 }
 
+function catalogSource(id) {
+  return state.catalog?.sources?.find(item => item.id === id) || null;
+}
+
 function sourceIcon(source) {
   const status = getStatus(source.id);
-  const icon = status.iconURL || state.catalog?.sources?.find(item => item.id === source.id)?.iconURL;
+  const icon = status.iconURL || catalogSource(source.id)?.iconURL;
   return icon ? `<img src="${escapeHtml(icon)}" alt="" loading="lazy" referrerpolicy="no-referrer">` : escapeHtml(source.name.slice(0,2).toUpperCase());
 }
 
 function sourceDirectLink(source) {
-  return `altstore://source?url=${encodeURIComponent(source.url)}`;
+  const scheme = source.mode === 'sidestore' ? 'sidestore' : 'altstore';
+  return `${scheme}://source?url=${encodeURIComponent(source.url)}`;
 }
 
 function sourceTags(source) {
@@ -163,9 +121,8 @@ function matchesSourceCategory(source) {
 
 function matchesGenre(source) {
   if (state.genre === 'all') return true;
-  const tags = (source.tags || []).map(tag => String(tag).toLowerCase());
-  const rules = GENRE_RULES[state.genre] || [];
-  return rules.some(rule => tags.includes(rule));
+  const tags = [...sourceTags(source)];
+  return (GENRE_RULES[state.genre] || []).some(rule => tags.includes(rule));
 }
 
 function sourceCategoryBadges(source) {
@@ -175,6 +132,25 @@ function sourceCategoryBadges(source) {
   if (isCommunitySource(source)) badges.push(`<span class="pill">${escapeHtml(tr('community'))}</span>`);
   if (isModifiedSource(source)) badges.push(`<span class="pill">${escapeHtml(tr('modified'))}</span>`);
   return badges.join('');
+}
+
+function sourceSearchText(source) {
+  const catalog = catalogSource(source.id);
+  const apps = (catalog?.apps || []).flatMap(app => [
+    app.name,
+    app.developerName,
+    app.bundleIdentifier,
+    app.subtitle,
+    app.version
+  ]);
+  return [
+    source.name,
+    source.mode,
+    ...(source.tags || []),
+    source.description?.cs,
+    source.description?.en,
+    ...apps
+  ].filter(Boolean).join(' ').toLowerCase();
 }
 
 function formatDate(value) {
@@ -192,9 +168,7 @@ function renderSources() {
   const filtered = state.registry.filter(source => {
     if (getStatus(source.id).online !== true) return false;
     if (!matchesSourceCategory(source) || !matchesGenre(source)) return false;
-    if (!q) return true;
-    return [source.name, source.mode, ...(source.tags || []), source.description?.cs, source.description?.en]
-      .filter(Boolean).join(' ').toLowerCase().includes(q);
+    return !q || sourceSearchText(source).includes(q);
   });
 
   if (!filtered.length) {
@@ -205,8 +179,6 @@ function renderSources() {
   grid.innerHTML = filtered.map(source => {
     const status = getStatus(source.id);
     const appCount = Number.isFinite(status.appCount) ? status.appCount : '—';
-    const selectable = source.mergeable && source.mode === 'classic';
-    const checked = state.selected.has(source.id);
     const desc = source.description?.[state.lang] || source.description?.en || source.description?.cs || '';
     return `<article class="source-card" data-source-id="${escapeHtml(source.id)}">
       <div class="source-top">
@@ -227,79 +199,49 @@ function renderSources() {
         <button class="btn small secondary" type="button" data-copy-source="${escapeHtml(source.url)}">${escapeHtml(tr('copyUrl'))}</button>
         <a class="btn small ghost" href="${escapeHtml(source.url)}" target="_blank" rel="noopener">JSON ↗</a>
         ${source.website ? `<a class="btn small ghost" href="${escapeHtml(source.website)}" target="_blank" rel="noopener">Web ↗</a>` : ''}
-        <label class="select-source ${selectable ? '' : 'disabled'}">
-          <input type="checkbox" data-source-check="${escapeHtml(source.id)}" ${checked ? 'checked' : ''} ${selectable ? '' : 'disabled'}>
-          <span>${escapeHtml(tr('mix'))}</span>
-        </label>
       </div>
     </article>`;
   }).join('');
 }
 
-function builderSources() {
-  return state.registry.filter(source => source.mergeable && source.mode === 'classic' && getStatus(source.id).online === true);
+function updateStats() {
+  const statuses = state.status?.sources || {};
+  const online = state.registry.filter(source => statuses[source.id]?.online === true).length;
+  const mixReady = state.status?.mixes?.autoCompatibleSourceIDs?.length || 0;
+  const apps = state.registry.reduce((sum, source) => {
+    const item = statuses[source.id];
+    return sum + (item?.online === true && Number.isFinite(item.appCount) ? item.appCount : 0);
+  }, 0);
+  if ($('#statSources')) $('#statSources').textContent = online || '—';
+  if ($('#statMix')) $('#statMix').textContent = mixReady || '—';
+  if ($('#statApps')) $('#statApps').textContent = apps || '—';
 }
 
-function renderBuilder() {
-  const list = $('#builderList');
-  if (!list) return;
-  const available = builderSources();
-  const availableIds = new Set(available.map(source => source.id));
-  [...state.selected].forEach(id => { if (!availableIds.has(id)) state.selected.delete(id); });
+function syncFilterButtons() {
+  $$('[data-category-filter]').forEach(btn => btn.classList.toggle('active', btn.dataset.categoryFilter === state.sourceCategory));
+  $$('[data-genre-filter]').forEach(btn => btn.classList.toggle('active', btn.dataset.genreFilter === state.genre));
+  const search = $('#sourceSearch');
+  if (search && search.value !== state.query) search.value = state.query;
+}
 
-  if (state.selected.size > mixLimit) {
-    const keep = [...state.selected].slice(0, mixLimit);
-    state.selected = new Set(keep);
+async function loadData() {
+  try {
+    const [registryResponse, statusResponse, catalogResponse] = await Promise.all([
+      fetch('sources/registry.json', {cache:'no-store'}),
+      fetch('data/status.json', {cache:'no-store'}),
+      fetch('data/catalog.json', {cache:'no-store'})
+    ]);
+    const registry = await registryResponse.json();
+    state.registry = registry.sources || [];
+    state.status = statusResponse.ok ? await statusResponse.json() : {};
+    state.catalog = catalogResponse.ok ? await catalogResponse.json() : {};
+  } catch (error) {
+    console.error(error);
+    toast(tr('catalogLoadError'));
   }
-  persistSelection();
-
-  list.innerHTML = available.map(source => {
-    const status = getStatus(source.id);
-    const checked = state.selected.has(source.id);
-    return `<label class="builder-item">
-      <input type="checkbox" data-builder-check="${escapeHtml(source.id)}" ${checked ? 'checked' : ''}>
-      <div><strong>${escapeHtml(source.name)}</strong><span>${escapeHtml(modeLabel(source.mode))}</span></div>
-      <div class="builder-count">${Number.isFinite(status.appCount) ? `${status.appCount} ${escapeHtml(tr('apps'))}` : ''}</div>
-    </label>`;
-  }).join('');
-
-  const capacity = Math.min(mixLimit, available.length);
-  if ($('#selectedCount')) $('#selectedCount').textContent = String(state.selected.size);
-  if ($('#mixCapacity')) $('#mixCapacity').textContent = String(capacity || 0);
-  if ($('#buildMix')) $('#buildMix').disabled = state.selected.size === 0 || state.selected.size > mixLimit;
-  if ($('#mixWarning')) $('#mixWarning').hidden = state.selected.size <= mixLimit;
-  if ($('#selectAll')) $('#selectAll').disabled = !available.length;
-  if (!state.selected.size) $('#builderResult')?.classList.remove('show');
-  updateBuilderText();
-}
-
-function syncSelection(id, checked) {
-  if (checked) {
-    if (state.selected.size >= mixLimit && !state.selected.has(id)) {
-      const copy = BUILDER_COPY[state.lang] || BUILDER_COPY.en;
-      toast(copy.limit(mixLimit));
-      renderSources(); renderBuilder();
-      return;
-    }
-    state.selected.add(id);
-  } else {
-    state.selected.delete(id);
-  }
-  persistSelection();
-  renderSources(); renderBuilder();
-}
-
-function buildMix() {
-  const ids = [...state.selected].sort();
-  if (!ids.length || ids.length > mixLimit) return;
-  const slug = ids.join('--');
-  const url = new URL(`mix/${slug}.json`, window.location.href).href.split('#')[0];
-  const names = ids.map(id => state.registry.find(source => source.id === id)?.name || id);
-  $('#mixName').textContent = names.join(' + ');
-  $('#mixUrl').textContent = url;
-  $('#mixOpen').href = `altstore://source?url=${encodeURIComponent(url)}`;
-  $('#mixPreview').href = url;
-  $('#builderResult').classList.add('show');
+  syncFilterButtons();
+  renderSources();
+  updateStats();
 }
 
 async function copyText(value, successMessage) {
@@ -307,7 +249,11 @@ async function copyText(value, successMessage) {
     await navigator.clipboard.writeText(value);
   } catch (_) {
     const input = document.createElement('textarea');
-    input.value = value; document.body.appendChild(input); input.select(); document.execCommand('copy'); input.remove();
+    input.value = value;
+    document.body.appendChild(input);
+    input.select();
+    document.execCommand('copy');
+    input.remove();
   }
   toast(successMessage || tr('copied'));
 }
@@ -320,46 +266,6 @@ function toast(message) {
   node.hidden = false;
   clearTimeout(toastTimer);
   toastTimer = setTimeout(() => { node.hidden = true; }, 2600);
-}
-
-function updateStats() {
-  const statuses = state.status?.sources || {};
-  const online = state.registry.filter(source => statuses[source.id]?.online === true).length;
-  const mergeable = builderSources().length;
-  const apps = state.registry.reduce((sum, source) => {
-    const item = statuses[source.id];
-    return sum + (item?.online === true && Number.isFinite(item.appCount) ? item.appCount : 0);
-  }, 0);
-  if ($('#statSources')) $('#statSources').textContent = online || '—';
-  if ($('#statMix')) $('#statMix').textContent = mergeable || '—';
-  if ($('#statApps')) $('#statApps').textContent = apps || '—';
-}
-
-function syncFilterButtons() {
-  $$('[data-category-filter]').forEach(btn => btn.classList.toggle('active', btn.dataset.categoryFilter === state.sourceCategory));
-  $$('[data-genre-filter]').forEach(btn => btn.classList.toggle('active', btn.dataset.genreFilter === state.genre));
-}
-
-async function loadData() {
-  try {
-    const [registryResponse, statusResponse, catalogResponse] = await Promise.all([
-      fetch('sources/registry.json', {cache:'no-store'}),
-      fetch('data/status.json', {cache:'no-store'}).catch(() => null),
-      fetch('data/catalog.json', {cache:'no-store'}).catch(() => null)
-    ]);
-    const registry = await registryResponse.json();
-    state.registry = registry.sources || [];
-    if (statusResponse?.ok) {
-      state.status = await statusResponse.json();
-      const generatedLimit = Number(state.status?.mixes?.maxSourcesPerMix);
-      if (Number.isFinite(generatedLimit) && generatedLimit > 0) mixLimit = generatedLimit;
-    }
-    if (catalogResponse?.ok) state.catalog = await catalogResponse.json();
-  } catch (error) {
-    console.error(error);
-    toast(tr('catalogLoadError'));
-  }
-  renderSources(); renderBuilder(); updateStats();
 }
 
 function openSupport() {
@@ -380,44 +286,32 @@ document.addEventListener('click', event => {
   if (category) {
     state.sourceCategory = SOURCE_CATEGORIES.has(category.dataset.categoryFilter) ? category.dataset.categoryFilter : 'all';
     safeSet(STORAGE.category, state.sourceCategory);
-    syncFilterButtons(); renderSources();
+    syncFilterButtons();
+    renderSources();
     return;
   }
+
   const genre = event.target.closest('[data-genre-filter]');
   if (genre) {
     state.genre = GENRES.has(genre.dataset.genreFilter) ? genre.dataset.genreFilter : 'all';
     safeSet(STORAGE.genre, state.genre);
-    syncFilterButtons(); renderSources();
+    syncFilterButtons();
+    renderSources();
     return;
   }
+
   const copy = event.target.closest('[data-copy-source]');
   if (copy) return void copyText(copy.dataset.copySource, tr('sourceCopied'));
   if (event.target.closest('[data-support-open]')) return void openSupport();
   if (event.target.closest('[data-support-close]')) return void closeSupport();
   if (event.target.id === 'supportModal') closeSupport();
-  if (event.target.closest('#copyMix')) copyText($('#mixUrl').textContent, tr('mixCopied'));
-  if (event.target.closest('#selectAll')) {
-    state.selected.clear();
-    builderSources().slice(0, mixLimit).forEach(source => state.selected.add(source.id));
-    persistSelection(); renderSources(); renderBuilder();
-  }
-  if (event.target.closest('#selectRecommended')) {
-    state.selected.clear();
-    builderSources().filter(source => source.recommended).slice(0, mixLimit).forEach(source => state.selected.add(source.id));
-    persistSelection(); renderSources(); renderBuilder();
-  }
-  if (event.target.closest('#clearSelection')) {
-    state.selected.clear(); persistSelection(); renderSources(); renderBuilder();
-  }
 });
 
-document.addEventListener('change', event => {
-  const id = event.target.dataset.sourceCheck || event.target.dataset.builderCheck;
-  if (id) syncSelection(id, event.target.checked);
+$('#sourceSearch')?.addEventListener('input', event => {
+  state.query = event.target.value || '';
+  safeSet(STORAGE.query, state.query);
+  renderSources();
 });
-
-$('#sourceSearch')?.addEventListener('input', event => { state.query = event.target.value; renderSources(); });
-$('#buildMix')?.addEventListener('click', buildMix);
 $('#themeToggle')?.addEventListener('click', () => applyTheme(root.dataset.theme === 'dark' ? 'light' : 'dark'));
 $('#languageSelect')?.addEventListener('change', event => applyLanguage(event.target.value));
 document.addEventListener('keydown', event => { if (event.key === 'Escape') closeSupport(); });
