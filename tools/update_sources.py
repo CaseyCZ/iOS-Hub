@@ -14,10 +14,11 @@ REGISTRY = ROOT / "sources" / "registry.json"
 DATA_DIR = ROOT / "data"
 SOURCE_CACHE_DIR = DATA_DIR / "source-cache"
 MIX_DIR = ROOT / "mix"
+ALTSTORE_DIR = ROOT / "altstore"
 SIDESTORE_DIR = ROOT / "sidestore"
 BASE_URL = "https://caseycz.github.io/iOS-Hub/"
 MAX_MIX_SOURCES = 12
-USER_AGENT = "CaseyCZ-iOS-Hub/1.1 (+https://caseycz.github.io/iOS-Hub/)"
+USER_AGENT = "CaseyCZ-iOS-Hub (+https://caseycz.github.io/iOS-Hub/)"
 
 
 def now_iso() -> str:
@@ -138,6 +139,12 @@ def is_sidestore_compatible(source: dict, payload: dict) -> bool:
     )
 
 
+def is_default_package_source(source: dict) -> bool:
+    """Keep development/nightly feeds selectable, but out of stable CaseyCZ packages."""
+    tags = {str(tag).lower() for tag in source.get("tags", [])}
+    return source.get("nightly") is not True and "nightly" not in tags and "development" not in tags
+
+
 def dedupe_apps(source_payloads: list[tuple[dict, dict]]) -> tuple[list[dict], list[dict]]:
     merged: dict[str, tuple[dict, dict]] = {}
     conflicts: list[dict] = []
@@ -199,14 +206,22 @@ def make_mix(selected: list[tuple[dict, dict]], filename: str, identifier_suffix
     }, conflicts
 
 
-def make_sidestore_source(selected: list[tuple[dict, dict]]) -> tuple[dict, list[dict]]:
+def make_store_source(selected: list[tuple[dict, dict]], store: str) -> tuple[dict, list[dict]]:
     apps, conflicts = dedupe_apps(selected)
+    side = store == "sidestore"
+    name = "CaseyCZ SideStore Source" if side else "CaseyCZ AltStore Source"
+    identifier = "com.caseycz.ios.sidestore" if side else "com.caseycz.ios.altstore"
+    subtitle = (
+        "Checked SideStore-compatible apps from CaseyCZ iOS Hub"
+        if side
+        else "Checked AltStore-compatible apps from CaseyCZ iOS Hub"
+    )
     return {
-        "name": "CaseyCZ SideStore Source",
-        "identifier": "com.caseycz.ios.sidestore",
-        "subtitle": "Checked SideStore-compatible apps from CaseyCZ iOS Hub",
+        "name": name,
+        "identifier": identifier,
+        "subtitle": subtitle,
         "website": BASE_URL,
-        "sourceURL": f"{BASE_URL}sidestore/source.json",
+        "sourceURL": f"{BASE_URL}{store}/source.json",
         "tintColor": "#38BDF8",
         "apps": apps,
         "userInfo": {
@@ -225,6 +240,7 @@ def main() -> None:
     DATA_DIR.mkdir(parents=True, exist_ok=True)
     SOURCE_CACHE_DIR.mkdir(parents=True, exist_ok=True)
     MIX_DIR.mkdir(parents=True, exist_ok=True)
+    ALTSTORE_DIR.mkdir(parents=True, exist_ok=True)
     SIDESTORE_DIR.mkdir(parents=True, exist_ok=True)
 
     status = {"generatedAt": generated_at, "sources": {}}
@@ -263,7 +279,7 @@ def main() -> None:
                 "name": payload.get("name") or source.get("name"),
                 "appCount": len(apps),
                 "iconURL": result["iconURL"],
-                "apps": [app_summary(app) for app in apps[:24]],
+                "apps": [app_summary(app) for app in apps],
             })
         except (urllib.error.URLError, urllib.error.HTTPError, TimeoutError, ValueError, json.JSONDecodeError, UnicodeDecodeError) as exc:
             result["error"] = f"{type(exc).__name__}: {exc}"[:300]
@@ -290,9 +306,15 @@ def main() -> None:
         if status["sources"][source_id]["mixTest"] == "experimental"
     )
 
+    altstore_package_ids = sorted(
+        source_id for source_id in auto_compatible_ids
+        if is_default_package_source(loaded[source_id][0])
+    )
     sidestore_compatible_ids = sorted(
         source_id for source_id, (source, payload) in loaded.items()
-        if is_sidestore_compatible(source, payload) and source_id != "sidestore-official"
+        if is_sidestore_compatible(source, payload)
+        and source_id != "sidestore-official"
+        and is_default_package_source(source)
     )
 
     effective_max = min(MAX_MIX_SOURCES, len(mergeable_ids))
@@ -329,12 +351,25 @@ def main() -> None:
         if path.name not in expected_mix_files:
             path.unlink()
 
+    altstore_url = None
+    altstore_app_count = 0
+    altstore_conflict_count = 0
+    if altstore_package_ids:
+        altstore_selected = [loaded[source_id] for source_id in altstore_package_ids]
+        altstore_source, altstore_conflicts = make_store_source(altstore_selected, "altstore")
+        write_json(ALTSTORE_DIR / "source.json", altstore_source)
+        altstore_url = f"{BASE_URL}altstore/source.json"
+        altstore_app_count = len(altstore_source["apps"])
+        altstore_conflict_count = len(altstore_conflicts)
+        if altstore_conflicts:
+            all_conflicts["altstore-official"] = altstore_conflicts
+
     sidestore_url = None
     sidestore_app_count = 0
     sidestore_conflict_count = 0
     if sidestore_compatible_ids:
         sidestore_selected = [loaded[source_id] for source_id in sidestore_compatible_ids]
-        sidestore_source, sidestore_conflicts = make_sidestore_source(sidestore_selected)
+        sidestore_source, sidestore_conflicts = make_store_source(sidestore_selected, "sidestore")
         write_json(SIDESTORE_DIR / "source.json", sidestore_source)
         sidestore_url = f"{BASE_URL}sidestore/source.json"
         sidestore_app_count = len(sidestore_source["apps"])
@@ -349,6 +384,12 @@ def main() -> None:
         "autoCompatibleSourceIDs": auto_compatible_ids,
         "experimentalSourceIDs": experimental_ids,
         "allCompatibleURL": all_compatible_url,
+    }
+    status["altstore"] = {
+        "sourceURL": altstore_url,
+        "sourceIDs": altstore_package_ids,
+        "appCount": altstore_app_count,
+        "conflictCount": altstore_conflict_count,
     }
     status["sidestore"] = {
         "sourceURL": sidestore_url,
@@ -365,6 +406,7 @@ def main() -> None:
     print(
         f"Checked {len(sources)} sources; {online_count} online; "
         f"{len(auto_compatible_ids)} auto Mix-compatible; generated {mix_count} hosted combinations; "
+        f"AltStore package: {len(altstore_package_ids)} sources / {altstore_app_count} apps; "
         f"SideStore package: {len(sidestore_compatible_ids)} sources / {sidestore_app_count} apps."
     )
 
