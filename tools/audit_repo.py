@@ -25,7 +25,7 @@ LEGACY_PATHS = [
 ]
 REQUIRED_CSP_PARTS = (
     "default-src 'self'",
-    "script-src 'self'",
+    "script-src 'self' 'wasm-unsafe-eval'",
     "connect-src 'self'",
     "worker-src 'self' blob:",
     "object-src 'none'",
