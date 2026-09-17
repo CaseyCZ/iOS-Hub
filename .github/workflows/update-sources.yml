@@ -47,7 +47,7 @@ jobs:
             git fetch origin main
             git reset --hard origin/main
             python tools/update_sources.py
-            git add data mix sidestore
+            git add data mix altstore sidestore
 
             if git diff --cached --quiet; then
               echo "No generated changes."
