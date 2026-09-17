@@ -7,11 +7,13 @@ const STORAGE = {
   selection: 'ioshub-experimental-mix-selection',
   category: 'ioshub-experimental-mix-category',
   genre: 'ioshub-experimental-mix-genre',
+  compatibility: 'ioshub-mix-compatibility',
   query: 'ioshub-experimental-mix-query'
 };
 
 const SOURCE_CATEGORIES = new Set(['all', 'official', 'trusted', 'community', 'modified']);
 const GENRES = new Set(['all', 'games', 'emulators', 'video', 'music', 'anime', 'social', 'downloads', 'sideload', 'utilities']);
+const COMPATIBILITY = new Set(['all', 'pass', 'try']);
 const GENRE_RULES = {
   games: ['games','pokemon','mmo','geometry-dash','game'],
   emulators: ['emulator','retro','dreamcast','dolphinios','virtualization'],
@@ -26,28 +28,44 @@ const GENRE_RULES = {
 
 const copy = {
   en: {
-    title:'Experimental Mix Lab', desc:'Try combining the wider online catalog. Filter it just like the main catalog, then select the sources you want to test together.',
-    tested:'Auto tested', selectPass:'Select compatible', selectAll:'Select all shown', clear:'Clear', build:'Test & build Mix', selected:'selected', shown:'shown', pass:'PASS', experimental:'TRY',
-    hosted:'Hosted Mix ready', local:'Local experimental Mix ready', localNote:'This combination is not pre-hosted. Download the JSON to inspect/test it. PAL or SideStore-specific apps may still require their original installer.',
-    apps:'apps', conflicts:'duplicates resolved', add:'＋ Add to AltStore', copyUrl:'Copy URL', download:'Download JSON', preview:'Preview JSON', building:'Testing and combining sources…', failed:'Experimental Mix could not be built.', copied:'Mix URL copied.'
+    title:'Source Builder',
+    desc:'All online sources are in one list. Filter them, select any combination, and the Builder will use the automated Mix test to decide whether it is verified or experimental.',
+    selectPass:'Select compatible', selectAll:'Select all shown', clear:'Clear', build:'Build CaseyCZ Mix', selected:'selected', shown:'shown', pass:'PASS', experimental:'TRY',
+    mixStatus:'Mix status', statusAll:'All', statusPass:'PASS only', statusTry:'TRY only', autoTested:'Auto tested',
+    hosted:'Hosted Mix ready', local:'Experimental Mix ready', localNote:'This combination is not pre-hosted. Download the JSON to inspect/test it. PAL or SideStore-specific apps may still require their original installer.',
+    apps:'apps', conflicts:'duplicates resolved', add:'＋ Add to AltStore', copyUrl:'Copy URL', download:'Download JSON', preview:'Preview JSON', building:'Testing and combining sources…', failed:'The selected Mix could not be built.', copied:'Mix URL copied.', empty:'No sources match the current filters.'
   },
   cs: {
-    title:'Experimental Mix Lab', desc:'Zkus spojit i širší online katalog. Nejdřív si ho odfiltruj stejně jako hlavní katalog a potom vyber zdroje, které chceš otestovat společně.',
-    tested:'Automatický test', selectPass:'Vybrat kompatibilní', selectAll:'Vybrat vše zobrazené', clear:'Zrušit výběr', build:'Otestovat a vytvořit Mix', selected:'vybráno', shown:'zobrazeno', pass:'PASS', experimental:'ZKUSIT',
-    hosted:'Veřejný Mix je připraven', local:'Lokální experimentální Mix je připraven', localNote:'Tato kombinace není předem hostovaná. JSON můžeš stáhnout a otestovat. PAL nebo SideStore aplikace mohou stále vyžadovat svůj původní instalátor.',
-    apps:'aplikací', conflicts:'duplicit vyřešeno', add:'＋ Přidat do AltStore', copyUrl:'Kopírovat URL', download:'Stáhnout JSON', preview:'Náhled JSON', building:'Testuji a spojuji zdroje…', failed:'Experimentální Mix se nepodařilo vytvořit.', copied:'URL Mixu zkopírována.'
+    title:'Source Builder',
+    desc:'Všechny online zdroje jsou v jednom seznamu. Odfiltruj je, vyber libovolnou kombinaci a Builder podle automatického Mix testu pozná, jestli je výběr ověřený nebo experimentální.',
+    selectPass:'Vybrat kompatibilní', selectAll:'Vybrat vše zobrazené', clear:'Zrušit výběr', build:'Vytvořit CaseyCZ Mix', selected:'vybráno', shown:'zobrazeno', pass:'PASS', experimental:'ZKUSIT',
+    mixStatus:'Stav Mixu', statusAll:'Vše', statusPass:'Jen PASS', statusTry:'Jen ZKUSIT', autoTested:'Automaticky testováno',
+    hosted:'Veřejný Mix je připraven', local:'Experimentální Mix je připraven', localNote:'Tato kombinace není předem hostovaná. JSON můžeš stáhnout a otestovat. PAL nebo SideStore aplikace mohou stále vyžadovat svůj původní instalátor.',
+    apps:'aplikací', conflicts:'duplicit vyřešeno', add:'＋ Přidat do AltStore', copyUrl:'Kopírovat URL', download:'Stáhnout JSON', preview:'Náhled JSON', building:'Testuji a spojuji zdroje…', failed:'Vybraný Mix se nepodařilo vytvořit.', copied:'URL Mixu zkopírována.', empty:'Aktuálním filtrům neodpovídá žádný zdroj.'
   },
   de: {
-    title:'Experimental Mix Lab', desc:'Kombiniere testweise den größeren Online-Katalog. Filtere ihn wie den Hauptkatalog und wähle dann die Quellen für den gemeinsamen Test aus.',
-    tested:'Automatisch geprüft', selectPass:'Kompatible wählen', selectAll:'Alle sichtbaren wählen', clear:'Leeren', build:'Mix testen & erstellen', selected:'ausgewählt', shown:'sichtbar', pass:'PASS', experimental:'TEST', hosted:'Gehosteter Mix bereit', local:'Lokaler experimenteller Mix bereit', localNote:'Diese Kombination ist nicht vorab gehostet. Lade die JSON-Datei zum Testen herunter. PAL- oder SideStore-Apps können weiterhin ihren ursprünglichen Installer benötigen.', apps:'Apps', conflicts:'Duplikate gelöst', add:'＋ Zu AltStore hinzufügen', copyUrl:'URL kopieren', download:'JSON laden', preview:'JSON ansehen', building:'Quellen werden getestet und kombiniert…', failed:'Experimental Mix konnte nicht erstellt werden.', copied:'Mix-URL kopiert.'
+    title:'Source Builder',
+    desc:'Alle Online-Quellen befinden sich in einer Liste. Filtere sie, wähle eine beliebige Kombination und der automatische Mix-Test kennzeichnet sie als geprüft oder experimentell.',
+    selectPass:'Kompatible wählen', selectAll:'Alle sichtbaren wählen', clear:'Leeren', build:'CaseyCZ Mix erstellen', selected:'ausgewählt', shown:'sichtbar', pass:'PASS', experimental:'TEST',
+    mixStatus:'Mix-Status', statusAll:'Alle', statusPass:'Nur PASS', statusTry:'Nur TEST', autoTested:'Automatisch geprüft',
+    hosted:'Gehosteter Mix bereit', local:'Experimenteller Mix bereit', localNote:'Diese Kombination ist nicht vorab gehostet. Lade die JSON-Datei zum Testen herunter. PAL- oder SideStore-Apps können weiterhin ihren ursprünglichen Installer benötigen.',
+    apps:'Apps', conflicts:'Duplikate gelöst', add:'＋ Zu AltStore hinzufügen', copyUrl:'URL kopieren', download:'JSON laden', preview:'JSON ansehen', building:'Quellen werden getestet und kombiniert…', failed:'Der ausgewählte Mix konnte nicht erstellt werden.', copied:'Mix-URL kopiert.', empty:'Keine Quellen entsprechen den aktuellen Filtern.'
   },
   es: {
-    title:'Experimental Mix Lab', desc:'Prueba a combinar el catálogo online más amplio. Fíltralo igual que el catálogo principal y después selecciona las fuentes que quieras probar juntas.',
-    tested:'Prueba automática', selectPass:'Seleccionar compatibles', selectAll:'Seleccionar todo lo visible', clear:'Limpiar', build:'Probar y crear Mix', selected:'seleccionadas', shown:'visibles', pass:'PASS', experimental:'PROBAR', hosted:'Mix alojado listo', local:'Mix experimental local listo', localNote:'Esta combinación no está alojada previamente. Descarga el JSON para probarlo. Las apps PAL o SideStore pueden seguir necesitando su instalador original.', apps:'apps', conflicts:'duplicados resueltos', add:'＋ Añadir a AltStore', copyUrl:'Copiar URL', download:'Descargar JSON', preview:'Ver JSON', building:'Probando y combinando fuentes…', failed:'No se pudo crear el Mix experimental.', copied:'URL del Mix copiada.'
+    title:'Source Builder',
+    desc:'Todas las fuentes online están en una sola lista. Filtra, selecciona cualquier combinación y la prueba automática indicará si el Mix está verificado o es experimental.',
+    selectPass:'Seleccionar compatibles', selectAll:'Seleccionar todo lo visible', clear:'Limpiar', build:'Crear CaseyCZ Mix', selected:'seleccionadas', shown:'visibles', pass:'PASS', experimental:'PROBAR',
+    mixStatus:'Estado del Mix', statusAll:'Todo', statusPass:'Solo PASS', statusTry:'Solo PROBAR', autoTested:'Prueba automática',
+    hosted:'Mix alojado listo', local:'Mix experimental listo', localNote:'Esta combinación no está alojada previamente. Descarga el JSON para probarlo. Las apps PAL o SideStore pueden seguir necesitando su instalador original.',
+    apps:'apps', conflicts:'duplicados resueltos', add:'＋ Añadir a AltStore', copyUrl:'Copiar URL', download:'Descargar JSON', preview:'Ver JSON', building:'Probando y combinando fuentes…', failed:'No se pudo crear el Mix seleccionado.', copied:'URL del Mix copiada.', empty:'Ninguna fuente coincide con los filtros actuales.'
   },
   fr: {
-    title:'Experimental Mix Lab', desc:'Essayez de combiner le catalogue en ligne élargi. Filtrez-le comme le catalogue principal, puis sélectionnez les sources à tester ensemble.',
-    tested:'Test automatique', selectPass:'Sélectionner compatibles', selectAll:'Tout sélectionner affiché', clear:'Effacer', build:'Tester et créer le Mix', selected:'sélectionnées', shown:'affichées', pass:'PASS', experimental:'TEST', hosted:'Mix hébergé prêt', local:'Mix expérimental local prêt', localNote:'Cette combinaison n’est pas pré-hébergée. Téléchargez le JSON pour le tester. Les apps PAL ou SideStore peuvent toujours nécessiter leur installateur d’origine.', apps:'apps', conflicts:'doublons résolus', add:'＋ Ajouter à AltStore', copyUrl:'Copier URL', download:'Télécharger JSON', preview:'Aperçu JSON', building:'Test et fusion des sources…', failed:'Impossible de créer le Mix expérimental.', copied:'URL du Mix copiée.'
+    title:'Source Builder',
+    desc:'Toutes les sources en ligne sont regroupées dans une seule liste. Filtrez-les, sélectionnez n’importe quelle combinaison et le test automatique indiquera si le Mix est vérifié ou expérimental.',
+    selectPass:'Sélectionner compatibles', selectAll:'Tout sélectionner affiché', clear:'Effacer', build:'Créer CaseyCZ Mix', selected:'sélectionnées', shown:'affichées', pass:'PASS', experimental:'TEST',
+    mixStatus:'Statut du Mix', statusAll:'Tout', statusPass:'PASS seulement', statusTry:'TEST seulement', autoTested:'Test automatique',
+    hosted:'Mix hébergé prêt', local:'Mix expérimental prêt', localNote:'Cette combinaison n’est pas pré-hébergée. Téléchargez le JSON pour la tester. Les apps PAL ou SideStore peuvent toujours nécessiter leur installateur d’origine.',
+    apps:'apps', conflicts:'doublons résolus', add:'＋ Ajouter à AltStore', copyUrl:'Copier URL', download:'Télécharger JSON', preview:'Aperçu JSON', building:'Test et fusion des sources…', failed:'Impossible de créer le Mix sélectionné.', copied:'URL du Mix copiée.', empty:'Aucune source ne correspond aux filtres actuels.'
   }
 };
 
@@ -57,6 +75,7 @@ let selected = new Set();
 let blobUrl = null;
 let category = 'all';
 let genre = 'all';
+let compatibility = 'all';
 let query = '';
 
 function lang() {
@@ -83,6 +102,11 @@ function matchesGenre(source) {
   const tags = (source.tags || []).map(tag => String(tag).toLowerCase());
   return (GENRE_RULES[genre] || []).some(rule => tags.includes(rule));
 }
+function matchesCompatibility(source) {
+  if (compatibility === 'all') return true;
+  const test = getStatus(source.id).mixTest;
+  return compatibility === 'pass' ? test === 'pass' : test !== 'pass';
+}
 function matchesQuery(source) {
   const q = query.trim().toLowerCase();
   if (!q) return true;
@@ -90,7 +114,7 @@ function matchesQuery(source) {
     .filter(Boolean).join(' ').toLowerCase().includes(q);
 }
 function candidates() {
-  return allCandidates().filter(source => matchesCategory(source) && matchesGenre(source) && matchesQuery(source));
+  return allCandidates().filter(source => matchesCategory(source) && matchesGenre(source) && matchesCompatibility(source) && matchesQuery(source));
 }
 
 function restoreSettings() {
@@ -100,31 +124,101 @@ function restoreSettings() {
   } catch (_) { selected = new Set(); }
   const savedCategory = safeGet(STORAGE.category);
   const savedGenre = safeGet(STORAGE.genre);
+  const savedCompatibility = safeGet(STORAGE.compatibility);
   category = SOURCE_CATEGORIES.has(savedCategory) ? savedCategory : 'all';
   genre = GENRES.has(savedGenre) ? savedGenre : 'all';
+  compatibility = COMPATIBILITY.has(savedCompatibility) ? savedCompatibility : 'all';
   query = safeGet(STORAGE.query) || '';
 }
 function saveSelection() { safeSet(STORAGE.selection, JSON.stringify([...selected])); }
 function saveFilters() {
   safeSet(STORAGE.category, category);
   safeSet(STORAGE.genre, genre);
+  safeSet(STORAGE.compatibility, compatibility);
   safeSet(STORAGE.query, query);
+}
+
+function setupUnifiedLayout() {
+  const section = $('#builder');
+  const host = $('#experimentalMixLab');
+  if (!section || !host) return;
+
+  // Remove the old limited Classic-only Builder so there is one list only.
+  section.querySelector(':scope > .builder')?.remove();
+  const sectionHead = section.querySelector(':scope > .section-head');
+  if (sectionHead) {
+    sectionHead.querySelector('h2').textContent = tr('title');
+    const desc = sectionHead.querySelector('p');
+    if (desc) desc.textContent = tr('desc');
+    sectionHead.querySelector('.section-tools')?.remove();
+  }
+
+  host.style.marginTop = '0';
+  const internalHead = host.querySelector(':scope > .section-head');
+  if (internalHead) {
+    const textBlock = internalHead.querySelector(':scope > div:first-child');
+    if (textBlock) textBlock.style.display = 'none';
+    internalHead.style.justifyContent = 'flex-end';
+  }
+
+  const statusPill = $('#expSelectedCount')?.parentElement?.querySelector('.pill');
+  if (statusPill) statusPill.textContent = tr('autoTested');
+
+  // Old source-card Mix checkboxes belonged to the removed Classic-only Builder.
+  if (!$('#unifiedBuilderStyle')) {
+    const style = document.createElement('style');
+    style.id = 'unifiedBuilderStyle';
+    style.textContent = '.select-source{display:none!important}';
+    document.head.appendChild(style);
+  }
+
+  const filters = host.querySelector('.catalog-filters');
+  if (filters && !$('#mixCompatibilityFilters')) {
+    const group = document.createElement('div');
+    group.className = 'filter-group';
+    group.id = 'mixCompatibilityFilters';
+    group.innerHTML = `
+      <div class="filter-label" id="mixStatusLabel">${escapeHtml(tr('mixStatus'))}</div>
+      <div class="filter-tabs">
+        <button class="filter active" type="button" data-exp-compat-filter="all">${escapeHtml(tr('statusAll'))}</button>
+        <button class="filter" type="button" data-exp-compat-filter="pass">${escapeHtml(tr('statusPass'))}</button>
+        <button class="filter" type="button" data-exp-compat-filter="try">${escapeHtml(tr('statusTry'))}</button>
+      </div>`;
+    const search = $('#expSourceSearch');
+    filters.insertBefore(group, search || null);
+  }
 }
 
 function applyCopy() {
   const map = {
-    expTitle:'title', expDesc:'desc', expSelectCompatible:'selectPass', expSelectAll:'selectAll', expClear:'clear', expBuild:'build'
+    expSelectCompatible:'selectPass', expSelectAll:'selectAll', expClear:'clear', expBuild:'build'
   };
   Object.entries(map).forEach(([id,key]) => { const node = $('#' + id); if (node) node.textContent = tr(key); });
+
+  const section = $('#builder');
+  if (section) {
+    const h2 = section.querySelector(':scope > .section-head h2');
+    const desc = section.querySelector(':scope > .section-head p');
+    if (h2) h2.textContent = tr('title');
+    if (desc) desc.textContent = tr('desc');
+  }
+  const label = $('#mixStatusLabel');
+  if (label) label.textContent = tr('mixStatus');
+  const statusLabels = {all:'statusAll', pass:'statusPass', try:'statusTry'};
+  $$('[data-exp-compat-filter]').forEach(button => { button.textContent = tr(statusLabels[button.dataset.expCompatFilter] || 'statusAll'); });
+  const statusPill = $('#expSelectedCount')?.parentElement?.querySelector('.pill');
+  if (statusPill) statusPill.textContent = tr('autoTested');
 }
 function syncFilterUi() {
   $$('[data-exp-category-filter]').forEach(button => button.classList.toggle('active', button.dataset.expCategoryFilter === category));
   $$('[data-exp-genre-filter]').forEach(button => button.classList.toggle('active', button.dataset.expGenreFilter === genre));
+  $$('[data-exp-compat-filter]').forEach(button => button.classList.toggle('active', button.dataset.expCompatFilter === compatibility));
   const search = $('#expSourceSearch');
   if (search && search.value !== query) search.value = query;
 }
 
 function render() {
+  setupUnifiedLayout();
   applyCopy();
   syncFilterUi();
   const list = $('#experimentalBuilderList');
@@ -135,7 +229,7 @@ function render() {
   saveSelection();
 
   if (!available.length) {
-    list.innerHTML = '<div class="notice">No sources match the current Mix filters.</div>';
+    list.innerHTML = `<div class="notice">${escapeHtml(tr('empty'))}</div>`;
   } else {
     list.innerHTML = available.map(source => {
       const item = getStatus(source.id);
@@ -154,6 +248,11 @@ function render() {
   if (count) count.textContent = `${selected.size} ${tr('selected')} · ${available.length} ${tr('shown')}`;
   const build = $('#expBuild');
   if (build) build.disabled = selected.size === 0;
+
+  // The hero stat now reflects every source that passed the automatic Mix test,
+  // not only the old manually marked Classic list.
+  const statMix = $('#statMix');
+  if (statMix && status?.mixes?.autoCompatibleSourceIDs) statMix.textContent = String(status.mixes.autoCompatibleSourceIDs.length);
 }
 
 function parseDate(value) {
@@ -207,7 +306,7 @@ function hostedUrl(ids) {
   return null;
 }
 
-async function buildExperimental() {
+async function buildMix() {
   const button = $('#expBuild');
   const message = $('#expMessage');
   const result = $('#expResult');
@@ -231,14 +330,15 @@ async function buildExperimental() {
     if (!apps.length) throw new Error('No mergeable app entries were found.');
     const url = hostedUrl(ids);
     const names = ids.map(id => registry.find(source => source.id === id)?.name || id);
+    const hasTry = ids.some(id => getStatus(id).mixTest !== 'pass');
     const mix = {
-      name: `CaseyCZ Experimental Mix · ${names.join(' + ')}`,
-      identifier: `com.caseycz.ios.experimental.${hashIds(ids)}`,
-      subtitle: 'Experimental combined source generated locally by CaseyCZ iOS Hub',
+      name: `CaseyCZ Mix · ${names.join(' + ')}`,
+      identifier: `com.caseycz.ios.mix.${hashIds(ids)}`,
+      subtitle: hasTry ? 'Experimental combined source generated locally by CaseyCZ iOS Hub' : 'Combined source generated by CaseyCZ iOS Hub',
       website: 'https://caseycz.github.io/iOS-Hub/',
       tintColor: '#38BDF8',
       apps,
-      userInfo: {sourceIDs: ids, sourceURLs: ids.map(id => registry.find(source => source.id === id)?.url || '')}
+      userInfo: {sourceIDs: ids, sourceURLs: ids.map(id => registry.find(source => source.id === id)?.url || ''), experimental: hasTry}
     };
 
     if (blobUrl) URL.revokeObjectURL(blobUrl);
@@ -248,7 +348,7 @@ async function buildExperimental() {
     $('#expResultInfo').textContent = `${apps.length} ${tr('apps')} · ${conflicts} ${tr('conflicts')}`;
     $('#expResultNote').textContent = url ? '' : tr('localNote');
     $('#expDownload').href = blobUrl;
-    $('#expDownload').download = `CaseyCZ-Experimental-Mix-${hashIds(ids)}.json`;
+    $('#expDownload').download = `CaseyCZ-Mix-${hashIds(ids)}.json`;
     $('#expPreview').href = blobUrl;
 
     const add = $('#expAdd');
@@ -281,6 +381,7 @@ async function init() {
   const host = $('#experimentalMixLab');
   if (!host) return;
   restoreSettings();
+  setupUnifiedLayout();
   try {
     const [registryResponse, statusResponse] = await Promise.all([
       fetch('sources/registry.json', {cache:'no-store'}),
@@ -295,8 +396,7 @@ async function init() {
   render();
 
   $('#expSelectCompatible')?.addEventListener('click', () => {
-    const compatible = autoCompatibleIds();
-    selected = new Set(candidates().filter(source => compatible.has(source.id)).map(source => source.id));
+    selected = new Set(candidates().filter(source => getStatus(source.id).mixTest === 'pass').map(source => source.id));
     saveSelection(); render();
   });
   $('#expSelectAll')?.addEventListener('click', () => {
@@ -306,7 +406,7 @@ async function init() {
   $('#expClear')?.addEventListener('click', () => {
     selected.clear(); saveSelection(); render(); $('#expResult')?.classList.remove('show');
   });
-  $('#expBuild')?.addEventListener('click', buildExperimental);
+  $('#expBuild')?.addEventListener('click', buildMix);
   $('#experimentalBuilderList')?.addEventListener('change', event => {
     const id = event.target?.dataset?.expSource;
     if (!id) return;
@@ -319,6 +419,10 @@ async function init() {
   }));
   $$('[data-exp-genre-filter]').forEach(button => button.addEventListener('click', () => {
     genre = GENRES.has(button.dataset.expGenreFilter) ? button.dataset.expGenreFilter : 'all';
+    saveFilters(); render();
+  }));
+  $$('[data-exp-compat-filter]').forEach(button => button.addEventListener('click', () => {
+    compatibility = COMPATIBILITY.has(button.dataset.expCompatFilter) ? button.dataset.expCompatFilter : 'all';
     saveFilters(); render();
   }));
   $('#expSourceSearch')?.addEventListener('input', event => {
