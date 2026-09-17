@@ -1,0 +1,349 @@
+{
+  "generatedAt": "2026-09-17T12:40:52Z",
+  "sources": [
+    {
+      "id": "utm",
+      "name": "UTM Repository",
+      "appCount": 2,
+      "iconURL": "https://alt.getutm.app/icon.png",
+      "apps": [
+        {
+          "name": "UTM",
+          "bundleIdentifier": "com.utmapp.UTM",
+          "developerName": "osy",
+          "version": "4.7.5",
+          "iconURL": "https://alt.getutm.app/icon.png",
+          "subtitle": "Virtual machines for iOS (with JIT support)"
+        },
+        {
+          "name": "UTM SE",
+          "bundleIdentifier": "com.utmapp.UTM-SE",
+          "developerName": "osy",
+          "version": "4.7.5",
+          "iconURL": "https://alt.getutm.app/icon.png",
+          "subtitle": "Virtual machines for iOS (without JIT support)"
+        }
+      ]
+    },
+    {
+      "id": "provenance",
+      "name": "Provenance Emulator",
+      "appCount": 3,
+      "iconURL": "https://raw.githubusercontent.com/Provenance-Emu/Provenance/develop/Provenance/Resources/Assets.xcassets/AppIcon.appiconset/iTunesArtwork%402x.png",
+      "apps": [
+        {
+          "name": "Provenance",
+          "bundleIdentifier": "com.provenance-emu.provenance",
+          "developerName": "Provenance-EMU",
+          "version": "3.3.0",
+          "iconURL": "https://raw.githubusercontent.com/Provenance-Emu/Provenance/develop/Provenance/Resources/Assets.xcassets/AppIcon.appiconset/iTunesArtwork%402x.png",
+          "subtitle": "Multi-system retro emulator for iOS & tvOS"
+        },
+        {
+          "name": "Provenance Alpha",
+          "bundleIdentifier": "com.provenance-emu.provenance.alpha",
+          "developerName": "Provenance-EMU",
+          "version": "3.4.0",
+          "iconURL": "https://raw.githubusercontent.com/Provenance-Emu/Provenance/develop/Provenance/Resources/Assets.xcassets/AppIcon.appiconset/iTunesArtwork%402x.png",
+          "subtitle": "Latest dev builds - test new features early"
+        },
+        {
+          "name": "iCube",
+          "bundleIdentifier": "com.joemattiello.iCube",
+          "developerName": "Provenance Emu",
+          "version": "alpha-ios",
+          "iconURL": "https://icube-emu.com/icon-1024.png",
+          "subtitle": "GameCube & Wii Emulator for iOS & tvOS"
+        }
+      ]
+    },
+    {
+      "id": "ish",
+      "name": "iSH",
+      "appCount": 1,
+      "iconURL": "https://ish.app/assets/icon-full.png",
+      "apps": [
+        {
+          "name": "iSH",
+          "bundleIdentifier": "app.ish.iSH",
+          "developerName": "Theodore Dubois and contributors",
+          "version": "Build 813",
+          "iconURL": "https://ish.app/assets/icon-full.png",
+          "subtitle": "Linux shell for iOS"
+        }
+      ]
+    },
+    {
+      "id": "flycast",
+      "name": "Flyinghead",
+      "appCount": 1,
+      "iconURL": "https://github.com/flyinghead/flycast/raw/master/shell/linux/flycast.png",
+      "apps": [
+        {
+          "name": "Flycast",
+          "bundleIdentifier": "com.flyinghead.Flycast",
+          "developerName": "Flyinghead",
+          "version": "v2.5",
+          "iconURL": "https://github.com/flyinghead/flycast/raw/master/shell/linux/flycast.png",
+          "subtitle": "Dreamcast, Naomi and Atomiswave emulator."
+        }
+      ]
+    },
+    {
+      "id": "sidestore-community",
+      "name": "SideStore Team Picks",
+      "appCount": 23,
+      "iconURL": "https://sidestore.io/assets/icon.png",
+      "apps": [
+        {
+          "name": "PPSSPP",
+          "bundleIdentifier": "org.ppsspp.ppsspp",
+          "developerName": "Henrik Rydgård",
+          "version": "1.13.2",
+          "iconURL": "https://i.imgur.com/JP0Fncv.png",
+          "subtitle": "PlayStation Portable games on iOS."
+        },
+        {
+          "name": "Countdown",
+          "bundleIdentifier": "com.neo.countdown",
+          "developerName": "neoarz",
+          "version": "1.6",
+          "iconURL": "https://github.com/neoarz/Countdown-App/raw/main/Assets/CountdownLogo.jpg",
+          "subtitle": "If you could know exactly when you're going to die, would you want to know?"
+        },
+        {
+          "name": "StikNES",
+          "bundleIdentifier": "com.stik.StikNES",
+          "developerName": "StikNES Team",
+          "version": "5.2",
+          "iconURL": "https://github.com/StikEMU/StikNES-Site/blob/main/Website/logo.png?raw=true",
+          "subtitle": "SwiftUI NES Emulator for iOS"
+        },
+        {
+          "name": "RetroArch",
+          "bundleIdentifier": "com.libretro.RetroArchiOS11",
+          "developerName": "libretro",
+          "version": "1.12.0",
+          "iconURL": "https://i.imgur.com/pqgVB0v.png",
+          "subtitle": "Cross-platform, sophisticated frontend for emulation."
+        },
+        {
+          "name": "Flappy Bird",
+          "bundleIdentifier": "org.brandonplank.flappybird",
+          "developerName": "Brandon Plank",
+          "version": "4.3",
+          "iconURL": "https://i.imgur.com/tIUJeSs.png",
+          "subtitle": "A revival of the once popular game."
+        },
+        {
+          "name": "iSH",
+          "bundleIdentifier": "app.ish.iSH",
+          "developerName": "Theodore Dubois and contributors",
+          "version": "Build 484",
+          "iconURL": "https://ish.app/assets/icon-full.png",
+          "subtitle": "Linux shell for iOS"
+        },
+        {
+          "name": "iNDS",
+          "bundleIdentifier": "net.nerd.iNDS",
+          "developerName": "iNDS Team",
+          "version": "1.10.8",
+          "iconURL": "https://i.imgur.com/DbWJeF8.png",
+          "subtitle": "Revival of the Nintendo DS emulator for iOS."
+        },
+        {
+          "name": "Play!",
+          "bundleIdentifier": "com.virtualapplications.play",
+          "developerName": "Jean-Philip Desjardins",
+          "version": "0.58-8-g70a126e3",
+          "iconURL": "https://i.imgur.com/NOi1cdl.png",
+          "subtitle": "PlayStation 2 Games on iOS."
+        },
+        {
+          "name": "iDOS",
+          "bundleIdentifier": "com.litchie.idosgames",
+          "developerName": "litchie",
+          "version": "2.1",
+          "iconURL": "https://i.imgur.com/Yah6zFk.png",
+          "subtitle": "Play DOS games on iOS."
+        },
+        {
+          "name": "Firebird Emu",
+          "bundleIdentifier": "com.adriweb.firebird-emu",
+          "developerName": "nspire-emus",
+          "version": "1.5",
+          "iconURL": "https://i.imgur.com/U2HvZFZ.png",
+          "subtitle": "ARM-based TI-Nspire calculator."
+        },
+        {
+          "name": "ActiveGS iOS",
+          "bundleIdentifier": "com.yoshisuga.activeGS",
+          "developerName": "yoshisuga & Olivier Goguel",
+          "version": "2021.9",
+          "iconURL": "https://i.imgur.com/7LuLkoR.png",
+          "subtitle": "An emulator for Apple II/2GS."
+        },
+        {
+          "name": "Ready",
+          "bundleIdentifier": "at.spiderlab.c64",
+          "developerName": "T-Pau",
+          "version": "1.6",
+          "iconURL": "https://i.imgur.com/S9WS2C2.png",
+          "subtitle": "8-bit games for your iPad."
+        },
+        {
+          "name": "MAME4iOS",
+          "bundleIdentifier": "com.example.mame4ios",
+          "developerName": "yoshisuga",
+          "version": "2022.5",
+          "iconURL": "https://i.imgur.com/gZCjhLl.png",
+          "subtitle": "A MAME Arcade emulator for iOS."
+        },
+        {
+          "name": "OldOS",
+          "bundleIdentifier": "com.zurac.OldOS",
+          "developerName": "zzanehip",
+          "version": "1.0",
+          "iconURL": "https://raw.githubusercontent.com/zzanehip/The-OldOS-Project/master/OldOS/OldOS/Assets.xcassets/AppIcon.appiconset/1024.png",
+          "subtitle": "OldOS is a testament to the days of iOS 4."
+        },
+        {
+          "name": "unc0ver",
+          "bundleIdentifier": "science.xnu.undecimus",
+          "developerName": "Pwn20wnd",
+          "version": "8.0.2",
+          "iconURL": "https://i.imgur.com/5aehDxj.png",
+          "subtitle": "The most advanced jailbreak tool."
+        },
+        {
+          "name": "iTorrent",
+          "bundleIdentifier": "com.xitrix.iTorrent2",
+          "developerName": "XITRIX",
+          "version": "2.0.14",
+          "iconURL": "https://i.imgur.com/C3KwMP5.png",
+          "subtitle": "Ordinary iOS torrent client app."
+        },
+        {
+          "name": "Rewound",
+          "bundleIdentifier": "com.louisanslow.record",
+          "developerName": "Louis Anslow",
+          "version": "2019.7",
+          "iconURL": "https://i.imgur.com/LfIRxqb.png",
+          "subtitle": "Turn your iPhone into an iPod. Classic."
+        },
+        {
+          "name": "ScummVM",
+          "bundleIdentifier": "org.scummvm.scummvm",
+          "developerName": "ScummVM Team",
+          "version": "2.6.0",
+          "iconURL": "https://i.imgur.com/sSQhbwJ.png",
+          "subtitle": "Point and click adventures."
+        },
+        {
+          "name": "Mini vMac",
+          "bundleIdentifier": "net.namedfork.minivmac",
+          "developerName": "Gryphel Project & zydeco",
+          "version": "2.5",
+          "iconURL": "https://i.imgur.com/MGxGvKR.png",
+          "subtitle": "A miniature early Macintosh emulator."
+        },
+        {
+          "name": "XPatcher",
+          "bundleIdentifier": "com.wh0ba.xpatcher",
+          "developerName": "Wh0ba",
+          "version": "2.2",
+          "iconURL": "https://i.imgur.com/cgrsWgC.png",
+          "subtitle": "A Rom-patcher utility for your iOS device."
+        },
+        {
+          "name": "blurt.blog",
+          "bundleIdentifier": "blog.blurt.blurt",
+          "developerName": "sagarkothari88",
+          "version": "1.0.7",
+          "iconURL": "https://gitlab.com/blurt/openblurt/blurt-mobile-app/-/raw/main/appstore-screenshots/512x512.png",
+          "subtitle": "A fair world of social liberty"
+        },
+        {
+          "name": "VCMI",
+          "bundleIdentifier": "eu.vcmi.vcmiclient",
+          "developerName": "VCMI Team",
+          "version": "1.6.7",
+          "iconURL": "https://github.com/vcmi/vcmi/raw/develop/clientapp/icons/vcmiclient.512x512.png",
+          "subtitle": "Heroes of Might & Magic III engine"
+        },
+        {
+          "name": "3Speak.tv - Acela",
+          "bundleIdentifier": "com.example.acela",
+          "developerName": "sagarkothari88",
+          "version": "1.0.3",
+          "iconURL": "https://github.com/spknetwork/Android-App/releases/download/v1.0.3_48/AppIcon-512.png",
+          "subtitle": "Tokenized Video Communities"
+        }
+      ]
+    },
+    {
+      "id": "qbitcontrol",
+      "name": "Michael-128",
+      "appCount": 1,
+      "iconURL": "https://raw.githubusercontent.com/Michael-128/qBitControl/main/qBitControl/Assets.xcassets/AppIcon.appiconset/logo1.png",
+      "apps": [
+        {
+          "name": "qBitControl",
+          "bundleIdentifier": "MikeMichael225.qBitControl",
+          "developerName": "Michael-128",
+          "version": "1.4.1",
+          "iconURL": "https://raw.githubusercontent.com/Michael-128/qBitControl/main/qBitControl/Assets.xcassets/AppIcon.appiconset/logo1.png",
+          "subtitle": "Remote client for qBittorrent."
+        }
+      ]
+    },
+    {
+      "id": "iphanpy",
+      "name": "iPhanpy",
+      "appCount": 1,
+      "iconURL": "https://i.imgur.com/AAsffEA.png",
+      "apps": [
+        {
+          "name": "iPhanpy",
+          "bundleIdentifier": "dev.fantinel.ios.phanpy",
+          "developerName": "Matt Fantinel",
+          "version": "1.5.6",
+          "iconURL": "https://i.imgur.com/AAsffEA.png",
+          "subtitle": "The best Mastodon client out there - now as an iOS app!"
+        }
+      ]
+    },
+    {
+      "id": "epic-games",
+      "name": "Epic Games, Inc.",
+      "appCount": 3,
+      "iconURL": "https://content-download-egs.distro.on.epicgames.com/.well-known/EG-Shield-2023-Black-dual-tone-expanded.png",
+      "apps": [
+        {
+          "name": "Fortnite",
+          "bundleIdentifier": "com.epicgames.FortniteGame",
+          "developerName": "Epic Games Sweden AB",
+          "version": "42.20",
+          "iconURL": "https://cdn1.epicgames.com/item/fn/FN_Logo_512x512_1024x1024-0a19a924e7f61249ab0c76569abfdc31",
+          "subtitle": ""
+        },
+        {
+          "name": "Fall Guys",
+          "bundleIdentifier": "uk.co.mediatonic.fallguys",
+          "developerName": "Mediatonic, Ltd.",
+          "version": "21.3.1",
+          "iconURL": "https://cdn1.epicgames.com/item/50118b7f954e450f8823df1614b24e80/iOS-New-512x512_512x512-ff4ce9348fe2142316cb4434228d78eb",
+          "subtitle": ""
+        },
+        {
+          "name": "Rocket League Sideswipe",
+          "bundleIdentifier": "com.psyonixllc.mesa",
+          "developerName": "Psyonix, LLC",
+          "version": "1.10.2",
+          "iconURL": "https://content-download-egs.distro.on.epicgames.com/.well-known/1024x1024bb.png",
+          "subtitle": ""
+        }
+      ]
+    }
+  ]
+}
