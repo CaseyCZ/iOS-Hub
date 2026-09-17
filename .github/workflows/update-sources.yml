@@ -1,0 +1,42 @@
+name: Update AltStore sources
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "17 */6 * * *"
+  push:
+    branches: [main]
+    paths:
+      - "sources/registry.json"
+      - "tools/update_sources.py"
+      - ".github/workflows/update-sources.yml"
+
+permissions:
+  contents: write
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Validate sources and build mixes
+        run: python tools/update_sources.py
+
+      - name: Commit generated catalog
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data mix
+          if git diff --cached --quiet; then
+            echo "No generated changes."
+          else
+            git commit -m "Update AltStore source cache [skip ci]"
+            git push
+          fi
