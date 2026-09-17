@@ -14,9 +14,9 @@ ROOT = Path(__file__).resolve().parents[1]
 REGISTRY = ROOT / "sources" / "registry.json"
 DATA_DIR = ROOT / "data"
 MIX_DIR = ROOT / "mix"
-BASE_URL = "https://caseycz.github.io/repo/"
+BASE_URL = "https://caseycz.github.io/iOS-Hub/"
 MAX_MIX_SOURCES = 4
-USER_AGENT = "CaseyCZ-iOS-Hub/1.0 (+https://caseycz.github.io/repo/)"
+USER_AGENT = "CaseyCZ-iOS-Hub/1.0 (+https://caseycz.github.io/iOS-Hub/)"
 
 
 def now_iso() -> str:
@@ -170,11 +170,10 @@ def main() -> None:
             })
         except (urllib.error.URLError, urllib.error.HTTPError, TimeoutError, ValueError, json.JSONDecodeError, UnicodeDecodeError) as exc:
             result["error"] = f"{type(exc).__name__}: {exc}"[:300]
-        except Exception as exc:  # keep one broken upstream from breaking the whole catalog
+        except Exception as exc:
             result["error"] = f"{type(exc).__name__}: {exc}"[:300]
         status["sources"][source_id] = result
 
-    # Remove previously generated mixes. The next block recreates only mixes whose upstreams are online.
     for path in MIX_DIR.glob("*.json"):
         path.unlink()
 
