@@ -57,6 +57,7 @@
     if (!grid) return;
     const q = state.query.trim().toLowerCase();
     const filtered = state.registry.filter(source => {
+      if (getStatus(source.id).online === false) return false;
       if (state.filter !== 'all' && source.mode !== state.filter) return false;
       if (!q) return true;
       return [source.name, source.mode, ...(source.tags || []), source.description?.cs, source.description?.en]
@@ -86,6 +87,7 @@
             <div class="source-meta">
               <span class="pill mode">${escapeHtml(modeLabel(source.mode))}</span>
               <span class="pill ${statusClass}">${statusKnown ? (online ? '●' : '●') : '○'} ${escapeHtml(statusText)}</span>
+              ${source.trusted ? `<span class="pill online">✓ ${text('Trusted','Trusted')}</span>` : ''}
               ${source.official ? `<span class="pill">${text('Projektový zdroj','Project source')}</span>` : ''}
             </div>
           </div>
