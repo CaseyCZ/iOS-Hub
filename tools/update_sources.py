@@ -15,7 +15,10 @@ REGISTRY = ROOT / "sources" / "registry.json"
 DATA_DIR = ROOT / "data"
 MIX_DIR = ROOT / "mix"
 BASE_URL = "https://caseycz.github.io/iOS-Hub/"
-MAX_MIX_SOURCES = 4
+# Pre-generate every combination up to 12 compatible sources. With the current
+# nine mergeable sources this means all 2^9 - 1 = 511 possible mixes, including
+# one mix containing every available source.
+MAX_MIX_SOURCES = 12
 USER_AGENT = "CaseyCZ-iOS-Hub/1.0 (+https://caseycz.github.io/iOS-Hub/)"
 
 
@@ -182,9 +185,10 @@ def main() -> None:
         if source.get("mergeable") and source.get("mode") == "classic" and source["id"] in loaded
     )
 
+    effective_max = min(MAX_MIX_SOURCES, len(mergeable_ids))
     all_conflicts: dict[str, list[dict]] = {}
     mix_count = 0
-    for size in range(1, min(MAX_MIX_SOURCES, len(mergeable_ids)) + 1):
+    for size in range(1, effective_max + 1):
         for combo in itertools.combinations(mergeable_ids, size):
             slug = "--".join(combo)
             selected = [loaded[source_id] for source_id in combo]
@@ -212,7 +216,7 @@ def main() -> None:
 
     status["mixes"] = {
         "count": mix_count,
-        "maxSourcesPerMix": MAX_MIX_SOURCES,
+        "maxSourcesPerMix": effective_max,
         "mergeableSourceIDs": mergeable_ids,
     }
     write_json(DATA_DIR / "status.json", status)
