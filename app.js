@@ -138,12 +138,26 @@ function sourceDirectLink(source) {
   return `altstore://source?url=${encodeURIComponent(source.url)}`;
 }
 
+function sourceTags(source) {
+  return new Set((source.tags || []).map(tag => String(tag).toLowerCase()));
+}
+
+function isCommunitySource(source) {
+  const tags = sourceTags(source);
+  return source.community === true || source.official !== true || tags.has('community');
+}
+
+function isModifiedSource(source) {
+  const tags = sourceTags(source);
+  return source.modified === true || ['modified','mods','modded','tweak','tweaks'].some(tag => tags.has(tag));
+}
+
 function matchesSourceCategory(source) {
   if (state.sourceCategory === 'all') return true;
   if (state.sourceCategory === 'official') return source.official === true;
   if (state.sourceCategory === 'trusted') return source.trusted === true;
-  if (state.sourceCategory === 'community') return source.official !== true;
-  if (state.sourceCategory === 'modified') return source.modified === true;
+  if (state.sourceCategory === 'community') return isCommunitySource(source);
+  if (state.sourceCategory === 'modified') return isModifiedSource(source);
   return true;
 }
 
@@ -158,8 +172,8 @@ function sourceCategoryBadges(source) {
   const badges = [];
   if (source.official) badges.push(`<span class="pill">✓ ${escapeHtml(tr('official'))}</span>`);
   if (source.trusted) badges.push(`<span class="pill online">✓ ${escapeHtml(tr('trusted'))}</span>`);
-  if (!source.official) badges.push(`<span class="pill">${escapeHtml(tr('community'))}</span>`);
-  if (source.modified) badges.push(`<span class="pill">${escapeHtml(tr('modified'))}</span>`);
+  if (isCommunitySource(source)) badges.push(`<span class="pill">${escapeHtml(tr('community'))}</span>`);
+  if (isModifiedSource(source)) badges.push(`<span class="pill">${escapeHtml(tr('modified'))}</span>`);
   return badges.join('');
 }
 
