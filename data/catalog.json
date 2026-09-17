@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-17T13:11:29Z",
+  "generatedAt": "2026-09-17T13:16:59Z",
   "sources": [
     {
       "id": "utm",
@@ -486,6 +486,22 @@
           "version": "1.1.6",
           "iconURL": "https://taurine.app/assets/images/icon.png",
           "subtitle": "An iOS 14.0-14.3 jailbreak."
+        }
+      ]
+    },
+    {
+      "id": "yattee",
+      "name": "Yattee",
+      "appCount": 1,
+      "iconURL": "https://raw.githubusercontent.com/yattee/yattee/main/Assets/yattee-icon-512.png",
+      "apps": [
+        {
+          "name": "Yattee",
+          "bundleIdentifier": "stream.yattee.app",
+          "developerName": "Yattee",
+          "version": "2.0.0",
+          "iconURL": "https://raw.githubusercontent.com/yattee/yattee/main/Assets/yattee-icon-512.png",
+          "subtitle": "Privacy-focused video player"
         }
       ]
     },
