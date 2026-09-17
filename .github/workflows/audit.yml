@@ -28,7 +28,7 @@ jobs:
 
       - name: Check JavaScript syntax
         run: |
-          for file in app.js experimental-mix.js converter.js i18n.js; do
+          for file in app.js builder.js converter.js i18n.js; do
             echo "Checking $file"
             node --input-type=module --check < "$file"
           done
@@ -43,5 +43,6 @@ jobs:
         run: |
           test -f index.html
           test -f converter.html
+          test -f builder.js
           test -f vendor/libarchive/libarchive.js
           test -f vendor/jszip/jszip.min.js
