@@ -39,7 +39,7 @@
     <section class="hero wrap">
       <div class="eyebrow">ALTSTORE · SIDESTORE · SOURCES</div>
       <h1 data-i18n="heroTitle">iOS sources. Catalog. Tools.</h1>
-      <p data-i18n="heroDesc">A live catalog of checked AltStore and SideStore sources. Filter by source type and content, combine compatible Classic sources and use practical iOS tools directly in the browser.</p>
+      <p data-i18n="heroDesc">A live catalog of checked AltStore and SideStore sources. Filter by source type and content, combine compatible sources and use practical iOS tools directly in the browser.</p>
       <div class="hero-actions">
         <a class="btn primary" href="#sources" data-i18n="browseSources">Browse sources</a>
         <a class="btn secondary" href="#builder" data-i18n="buildSource">Build my Source</a>
@@ -95,54 +95,19 @@
 
     <section id="builder" class="section wrap">
       <div class="section-head">
-        <div><h2>Source Builder</h2><p id="builderDesc" data-i18n="builderDesc">Select compatible AltStore Classic sources — including all currently available mix-ready sources.</p></div>
+        <div>
+          <h2 id="builderTitle">Source Builder</h2>
+          <p id="builderDesc">All online sources are in one list. Filter them, select any combination and let the automated Mix test show what is compatible.</p>
+        </div>
         <div class="section-tools">
-          <button id="selectAll" class="btn small primary" type="button">Select all</button>
-          <button id="selectRecommended" class="btn small secondary" type="button" data-i18n="selectRecommended">Select recommended</button>
-          <button id="clearSelection" class="btn small ghost" type="button" data-i18n="clear">Clear</button>
+          <button id="expSelectCompatible" class="btn small primary" type="button">Select compatible</button>
+          <button id="expSelectAll" class="btn small secondary" type="button">Select all shown</button>
+          <button id="expClear" class="btn small ghost" type="button">Clear</button>
         </div>
-      </div>
-      <div class="builder">
-        <div class="panel builder-left">
-          <div style="display:flex;align-items:center;justify-content:space-between;gap:12px"><strong data-i18n="sourcesForMix">Sources for CaseyCZ Mix</strong><span class="pill mode"><span id="selectedCount">0</span>/<span id="mixCapacity">—</span></span></div>
-          <div id="builderList" class="builder-list"></div>
-          <p id="mixWarning" class="notice" hidden>A mix can contain up to the currently generated source limit.</p>
-          <div style="margin-top:14px"><button id="buildMix" class="btn primary" type="button" disabled data-i18n="buildMix">Build CaseyCZ Mix</button></div>
-          <div id="builderResult" class="builder-result">
-            <strong id="mixName">CaseyCZ Mix</strong>
-            <code id="mixUrl"></code>
-            <div class="builder-actions">
-              <a id="mixOpen" class="btn small primary" href="#" data-i18n="addToAltStore">＋ Add to AltStore</a>
-              <button id="copyMix" class="btn small secondary" type="button" data-i18n="copyUrl">Copy URL</button>
-              <a id="mixPreview" class="btn small ghost" href="#" target="_blank" rel="noopener">JSON ↗</a>
-            </div>
-          </div>
-        </div>
-        <aside class="panel builder-right">
-          <div class="builder-side-title" data-i18n="howMixWorks">How Mix works</div>
-          <ul>
-            <li data-i18n="mixBullet1">Uses only pre-approved public source URLs.</li>
-            <li data-i18n="mixBullet2">Automation checks JSON validity and source availability.</li>
-            <li data-i18n="mixBullet3">Apps are deduplicated by bundleIdentifier.</li>
-            <li data-i18n="mixBullet4">On conflict the newer entry wins when a reliable release date is available.</li>
-            <li>Other online sources can be tested below in Experimental Mix Lab.</li>
-          </ul>
-        </aside>
       </div>
 
-      <div id="experimentalMixLab" class="panel" style="margin-top:18px">
-        <div class="section-head" style="margin-bottom:14px">
-          <div>
-            <div class="eyebrow">BETA · AUTO TESTED</div>
-            <h3 id="expTitle" style="margin:.25rem 0 .45rem">Experimental Mix Lab</h3>
-            <p id="expDesc" style="margin:0">Try combining the wider online catalog. Filter it just like the main catalog, then select the sources you want to test together.</p>
-          </div>
-          <div class="section-tools">
-            <button id="expSelectCompatible" class="btn small primary" type="button">Select compatible</button>
-            <button id="expSelectAll" class="btn small secondary" type="button">Select all shown</button>
-            <button id="expClear" class="btn small ghost" type="button">Clear</button>
-          </div>
-        </div>
+      <div id="experimentalMixLab" class="panel" style="padding:18px">
+        <div id="officialSourcePackages"></div>
 
         <div class="catalog-filters" style="margin-bottom:14px">
           <div class="filter-group">
@@ -155,6 +120,7 @@
               <button class="filter" type="button" data-exp-category-filter="modified" data-i18n="modified">Modified</button>
             </div>
           </div>
+
           <div class="filter-group">
             <div class="filter-label" data-i18n="genre">Genre</div>
             <div class="filter-tabs">
@@ -170,24 +136,48 @@
               <button class="filter" type="button" data-exp-genre-filter="utilities" data-i18n="utilities">Utilities</button>
             </div>
           </div>
+
+          <div class="filter-group">
+            <div class="filter-label" id="mixPlatformLabel">Platform</div>
+            <div class="filter-tabs">
+              <button class="filter active" type="button" data-exp-platform-filter="all">All</button>
+              <button class="filter" type="button" data-exp-platform-filter="classic">AltStore Classic</button>
+              <button class="filter" type="button" data-exp-platform-filter="pal">AltStore PAL</button>
+              <button class="filter" type="button" data-exp-platform-filter="sidestore">SideStore</button>
+            </div>
+          </div>
+
+          <div class="filter-group">
+            <div class="filter-label" id="mixStatusLabel">Mix status</div>
+            <div class="filter-tabs">
+              <button class="filter active" type="button" data-exp-compat-filter="all">All</button>
+              <button class="filter" type="button" data-exp-compat-filter="pass">PASS only</button>
+              <button class="filter" type="button" data-exp-compat-filter="try">TRY only</button>
+            </div>
+          </div>
+
           <input id="expSourceSearch" class="search" type="search" autocomplete="off" data-i18n-placeholder="searchPlaceholder" placeholder="Search source or app…">
         </div>
 
         <div style="display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:10px">
           <strong id="expSelectedCount">0 selected</strong>
-          <span class="pill mode">Experimental</span>
+          <span id="mixTestBadge" class="pill mode">Auto tested</span>
         </div>
-        <div id="experimentalBuilderList" class="builder-list"></div>
+
+        <div id="experimentalBuilderList" class="builder-list" aria-live="polite"></div>
+
         <div style="display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin-top:14px">
-          <button id="expBuild" class="btn primary" type="button" disabled>Test & build Mix</button>
+          <button id="expBuild" class="btn primary" type="button" disabled>Build CaseyCZ Mix</button>
           <span id="expMessage" class="muted"></span>
         </div>
+
         <div id="expResult" class="builder-result">
-          <strong id="expResultTitle">Experimental Mix</strong>
+          <strong id="expResultTitle">CaseyCZ Mix</strong>
           <div id="expResultInfo" class="muted" style="margin-top:6px"></div>
           <p id="expResultNote" class="notice" style="margin-top:10px"></p>
           <div class="builder-actions">
             <a id="expAdd" class="btn small primary" href="#" hidden>＋ Add to AltStore</a>
+            <a id="expAddSideStore" class="btn small primary" href="#" hidden>＋ Add to SideStore</a>
             <button id="expCopyUrl" class="btn small secondary" type="button" hidden>Copy URL</button>
             <a id="expDownload" class="btn small secondary" href="#">Download JSON</a>
             <a id="expPreview" class="btn small ghost" href="#" target="_blank" rel="noopener">Preview JSON</a>
@@ -204,9 +194,9 @@
         <article class="panel tool-card">
           <div class="tool-icon">DEB</div>
           <div class="tool-copy">
-            <span class="pill online" data-i18n="converterLocal">100% local · no upload</span>
+            <span class="pill mode">BETA</span>
             <h3 data-i18n="converterCardTitle">DEB → IPA Converter</h3>
-            <p data-i18n="converterCardDesc">Convert an iOS application package from .deb to .ipa locally in your browser. The file is never uploaded to CaseyCZ servers.</p>
+            <p data-i18n="converterCardDesc">Convert a compatible iOS .deb package to .ipa locally in your browser. Some packages with special filesystem metadata may need a desktop conversion tool.</p>
           </div>
           <a class="btn primary" href="converter.html" data-i18n="openTool">Open tool</a>
         </article>
