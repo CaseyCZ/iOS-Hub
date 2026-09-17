@@ -17,24 +17,30 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Download pinned browser runtime
+      - name: Download pinned browser runtimes
         run: |
           set -euo pipefail
-          mkdir -p vendor/libarchive
-          BASE="https://cdn.jsdelivr.net/npm/libarchive.js@2.0.2"
-          curl -fL "$BASE/dist/libarchive.js" -o vendor/libarchive/libarchive.js
-          curl -fL "$BASE/dist/worker-bundle.js" -o vendor/libarchive/worker-bundle.js
-          curl -fL "$BASE/dist/libarchive.wasm" -o vendor/libarchive/libarchive.wasm
-          curl -fL "$BASE/LICENSE" -o vendor/libarchive/LICENSE
 
-      - name: Commit runtime
+          mkdir -p vendor/libarchive
+          LIBARCHIVE="https://cdn.jsdelivr.net/npm/libarchive.js@2.0.2"
+          curl -fL "$LIBARCHIVE/dist/libarchive.js" -o vendor/libarchive/libarchive.js
+          curl -fL "$LIBARCHIVE/dist/worker-bundle.js" -o vendor/libarchive/worker-bundle.js
+          curl -fL "$LIBARCHIVE/dist/libarchive.wasm" -o vendor/libarchive/libarchive.wasm
+          curl -fL "$LIBARCHIVE/LICENSE" -o vendor/libarchive/LICENSE
+
+          mkdir -p vendor/jszip
+          JSZIP="https://cdn.jsdelivr.net/npm/jszip@3.10.1"
+          curl -fL "$JSZIP/dist/jszip.min.js" -o vendor/jszip/jszip.min.js
+          curl -fL "$JSZIP/LICENSE.markdown" -o vendor/jszip/LICENSE.markdown
+
+      - name: Commit runtimes
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add vendor/libarchive
+          git add vendor/libarchive vendor/jszip
           if git diff --cached --quiet; then
-            echo "Runtime already up to date."
+            echo "Runtimes already up to date."
           else
-            git commit -m "Vendor DEB converter runtime [skip ci]"
+            git commit -m "Vendor DEB converter runtimes [skip ci]"
             git push
           fi
