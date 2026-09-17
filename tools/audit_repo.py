@@ -23,6 +23,15 @@ LEGACY_PATHS = [
     ROOT / "debs",
     ROOT / "depictions",
 ]
+REQUIRED_CSP_PARTS = (
+    "default-src 'self'",
+    "script-src 'self'",
+    "connect-src 'self'",
+    "worker-src 'self' blob:",
+    "object-src 'none'",
+    "base-uri 'self'",
+    "form-action 'none'",
+)
 
 errors: list[str] = []
 warnings: list[str] = []
@@ -120,6 +129,27 @@ def validate_html_scripts(path: Path) -> None:
             continue
         if not target.exists():
             error(f"{path.relative_to(ROOT)} references missing local script: {src}")
+
+
+def validate_security_policy(path: Path) -> None:
+    if not path.exists():
+        return
+    text = path.read_text(encoding="utf-8")
+    label = path.relative_to(ROOT)
+    if 'name="referrer" content="no-referrer"' not in text:
+        error(f"{label} must set referrer policy to no-referrer")
+    csp_match = re.search(
+        r'<meta\s+http-equiv="Content-Security-Policy"\s+content="([^"]+)"',
+        text,
+        flags=re.IGNORECASE,
+    )
+    if not csp_match:
+        error(f"{label} is missing a Content-Security-Policy meta tag")
+        return
+    csp = csp_match.group(1)
+    for part in REQUIRED_CSP_PARTS:
+        if part not in csp:
+            error(f"{label} CSP is missing required directive: {part}")
 
 
 def validate_registry() -> None:
@@ -222,8 +252,9 @@ def validate_layout() -> None:
         if "builder.js" not in text:
             error("index.html does not reference builder.js")
 
-    validate_html_scripts(ROOT / "index.html")
-    validate_html_scripts(ROOT / "converter.html")
+    for html in (ROOT / "index.html", ROOT / "converter.html"):
+        validate_html_scripts(html)
+        validate_security_policy(html)
 
     for required in (
         ROOT / "app.js",
