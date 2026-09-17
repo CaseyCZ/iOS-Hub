@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
   <meta name="theme-color" content="#070b14">
   <meta name="referrer" content="no-referrer">
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' https: data:; connect-src 'self'; worker-src 'self' blob:; object-src 'none'; base-uri 'self'; form-action 'none'">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'wasm-unsafe-eval'; style-src 'self' 'unsafe-inline'; img-src 'self' https: data:; connect-src 'self'; worker-src 'self' blob:; object-src 'none'; base-uri 'self'; form-action 'none'">
   <meta name="description" content="CaseyCZ iOS Hub — checked AltStore and SideStore sources, Source Builder and browser-based iOS tools.">
   <title>CaseyCZ iOS Hub — Sources, Catalog & Tools</title>
   <link rel="stylesheet" href="styles.css">
@@ -50,7 +50,7 @@
       <div class="stats" aria-label="Source statistics">
         <div class="stat"><strong id="statSources">—</strong><span data-i18n="availableSources">available sources</span></div>
         <div class="stat"><strong id="statMix">—</strong><span data-i18n="mixReadySources">mix-ready sources</span></div>
-        <div class="stat"><strong id="statApps">—</strong><span data-i18n="discoveredApps">discovered apps</span></div>
+        <div class="stat"><strong id="statApps">—</strong><span data-i18n="discoveredApps">unique discovered apps</span></div>
       </div>
     </section>
 
@@ -198,7 +198,7 @@
           <div class="tool-copy">
             <span class="pill mode">BETA</span>
             <h3 data-i18n="converterCardTitle">DEB → IPA Converter</h3>
-            <p data-i18n="converterCardDesc">Convert a compatible iOS .deb package to .ipa locally in your browser. Some packages with special filesystem metadata may need a desktop conversion tool.</p>
+            <p data-i18n="converterCardDesc">Convert a compatible iOS .deb package to .ipa locally in your browser. Packages with special filesystem metadata may still require a desktop conversion tool.</p>
           </div>
           <a class="btn primary" href="converter.html" data-i18n="openTool">Open tool</a>
         </article>
