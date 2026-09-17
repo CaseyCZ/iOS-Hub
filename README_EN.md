@@ -8,11 +8,11 @@
 </p>
 
 <p align="center">
-  A modern hub for <strong>iOS apps, IPA files, AltStore / SideStore sources and a custom Source Builder</strong>.
+  A modern catalog for <strong>AltStore / SideStore sources, Source Builder and practical iOS tools</strong>.
 </p>
 
 <p align="center">
-  <img src="https://img.shields.io/badge/VERSION-v1.0.1-38BDF8?style=for-the-badge&labelColor=0284C7" alt="CaseyCZ iOS Hub v1.0.1" />
+  <img src="https://img.shields.io/badge/VERSION-v1.1.0-38BDF8?style=for-the-badge&labelColor=0284C7" alt="CaseyCZ iOS Hub v1.1.0" />
 </p>
 
 <p align="center">
@@ -21,39 +21,36 @@
 
 ## About
 
-**CaseyCZ iOS Hub** is a modern catalog for iOS sideloading, public AltStore / SideStore sources and custom combined source JSON files.
-
-The website provides a curated list of public sources, availability checks and a **Source Builder** that can combine compatible AltStore Classic catalogs into one custom CaseyCZ Mix.
+**CaseyCZ iOS Hub** is a live catalog of public iOS source repositories with automated availability checks. Broken sources are hidden from the website and can automatically return when they become healthy again.
 
 ## Main features
 
-- 📱 ready for future CaseyCZ IPA releases
 - 🔗 AltStore Classic, AltStore PAL and SideStore source catalog
-- 🟢 automated source availability and JSON validation
+- 🟢 automated availability and JSON validation
+- 🗂️ two independent filters for source type and genre
 - 🧩 Source Builder for compatible Classic sources
 - 🧹 app deduplication by `bundleIdentifier`
-- ➕ one-tap opening through the AltStore URL scheme
-- 📋 copy original or merged source URLs
-- 🇨🇿 / 🇬🇧 Czech and English UI
+- 🛠️ local browser-based **DEB → IPA** converter for iPhone, iPad, Mac and PC
+- 🔒 DEB conversion runs locally without uploading the file
+- 🌍 EN / CZ / DE / ES / FR interface with English as the default
+- 💾 saved language, theme, filters and Source Builder selection
 - 🌙 CaseyCZ dark / light visual style
 
 ## Source Builder
 
-The Builder combines smaller public Classic sources that can reasonably be merged into one JSON file. Large community catalogs and PAL sources are added directly instead of being merged.
+The Builder combines smaller public Classic sources that can reasonably be merged into one JSON file. Large community catalogs and PAL sources are added directly.
 
-GitHub Actions automation regularly:
+GitHub Actions automation regularly downloads allowed sources, validates their JSON and availability, counts apps, and refreshes the public catalog and generated Mix JSON files.
 
-- downloads allowed sources,
-- validates JSON and the `apps` array,
-- counts available apps,
-- generates combination files in `mix/`,
-- refreshes website status data.
+## DEB → IPA
+
+The browser converter processes compatible `.deb` packages containing a real iOS `.app`, creates the required `Payload/App.app` structure and packages the result as `.ipa`. The resulting IPA is not automatically signed, and not every Debian package can be converted — jailbreak tweaks, libraries and system packages are not regular apps.
 
 ## Sources
 
-The catalog uses its own whitelist in `sources/registry.json`. [awesome-altstore](https://github.com/victordedomenico/awesome-altstore) is used only as one discovery reference; each source URL is checked independently before being added.
+The catalog uses its own whitelist in `sources/registry.json`. Public source lists are used only for discovery; individual URLs are checked independently before they are shown.
 
-CaseyCZ iOS Hub does not rehost third-party IPA files. Merged sources preserve the original download URLs from each project.
+CaseyCZ iOS Hub does not rehost third-party IPA files. Generated source JSON files preserve the original download URLs from each project.
 
 ## Support
 
