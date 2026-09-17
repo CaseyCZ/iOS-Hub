@@ -1,0 +1,33 @@
+{
+  "name": "Kodi iOS automated builds (not affiliated with Kodi Team)",
+  "subtitle": "Automated builds of Kodi for iOS with GitHub Actions",
+  "description": "Provides automated builds of Kodi for iOS with a source you can use for AltStore/SideStore.",
+  "website": "https://kodi.tv",
+  "featuredApps": [
+    "org.xbmc.kodi-ios"
+  ],
+  "apps": [
+    {
+      "name": "Kodi iOS",
+      "bundleIdentifier": "org.xbmc.kodi-ios",
+      "developerName": "Kodi Team",
+      "subtitle": "Kodi media center for iOS",
+      "localizedDescription": "",
+      "iconURL": "https://kodi.tv/images/kodi-logo.svg",
+      "tintColor": "#83afe2",
+      "category": "utilities",
+      "screenshots": [],
+      "versions": [
+        {
+          "version": "21.3",
+          "buildVersion": "20251031-a3a448d26b",
+          "date": "2025-12-13T15:03:56Z",
+          "localizedDescription": "Whatever the latest build version is.",
+          "downloadURL": "https://github.com/ohaiibuzzle/kodi-ios-ipa-builds/releases/latest/download/Kodi-iOS.ipa",
+          "size": 377389737
+        }
+      ]
+    }
+  ],
+  "news": []
+}

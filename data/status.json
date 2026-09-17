@@ -1,301 +1,375 @@
 {
-  "generatedAt": "2026-09-17T14:10:56Z",
+  "generatedAt": "2026-09-17T14:28:45Z",
   "sources": {
     "utm": {
       "online": true,
-      "checkedAt": "2026-09-17T14:10:56Z",
+      "checkedAt": "2026-09-17T14:28:45Z",
       "appCount": 2,
       "httpStatus": 200,
       "iconURL": "https://alt.getutm.app/icon.png",
-      "error": null
+      "error": null,
+      "mixTest": "pass",
+      "mixReason": "Classic source structure and downloadable app metadata passed the automated Mix test."
     },
     "provenance": {
       "online": true,
-      "checkedAt": "2026-09-17T14:10:56Z",
+      "checkedAt": "2026-09-17T14:28:45Z",
       "appCount": 3,
       "httpStatus": 200,
       "iconURL": "https://raw.githubusercontent.com/Provenance-Emu/Provenance/develop/Provenance/Resources/Assets.xcassets/AppIcon.appiconset/iTunesArtwork%402x.png",
-      "error": null
+      "error": null,
+      "mixTest": "pass",
+      "mixReason": "Classic source structure and downloadable app metadata passed the automated Mix test."
     },
     "ish": {
       "online": true,
-      "checkedAt": "2026-09-17T14:10:56Z",
+      "checkedAt": "2026-09-17T14:28:45Z",
       "appCount": 1,
       "httpStatus": 200,
       "iconURL": "https://ish.app/assets/icon-full.png",
-      "error": null
+      "error": null,
+      "mixTest": "pass",
+      "mixReason": "Classic source structure and downloadable app metadata passed the automated Mix test."
     },
     "flycast": {
       "online": true,
-      "checkedAt": "2026-09-17T14:10:56Z",
+      "checkedAt": "2026-09-17T14:28:45Z",
       "appCount": 1,
       "httpStatus": 200,
       "iconURL": "https://github.com/flyinghead/flycast/raw/master/shell/linux/flycast.png",
-      "error": null
+      "error": null,
+      "mixTest": "pass",
+      "mixReason": "Classic source structure and downloadable app metadata passed the automated Mix test."
     },
     "sidestore-community": {
       "online": true,
-      "checkedAt": "2026-09-17T14:10:56Z",
+      "checkedAt": "2026-09-17T14:28:45Z",
       "appCount": 23,
       "httpStatus": 200,
       "iconURL": "https://sidestore.io/assets/icon.png",
-      "error": null
+      "error": null,
+      "mixTest": "experimental",
+      "mixReason": "SideStore source is structurally readable; installation behavior can differ from AltStore Classic."
     },
     "sidestore-official": {
       "online": true,
-      "checkedAt": "2026-09-17T14:10:56Z",
+      "checkedAt": "2026-09-17T14:28:45Z",
       "appCount": 1,
       "httpStatus": 200,
       "iconURL": "https://apps.sidestore.io/apps/sidestore/v0.1.1/icon.png",
-      "error": null
+      "error": null,
+      "mixTest": "experimental",
+      "mixReason": "SideStore source is structurally readable; installation behavior can differ from AltStore Classic."
     },
     "stikdebug": {
       "online": true,
-      "checkedAt": "2026-09-17T14:10:56Z",
+      "checkedAt": "2026-09-17T14:28:45Z",
       "appCount": 2,
       "httpStatus": 200,
       "iconURL": "https://github.com/StikDebug/StikDebug/blob/main/assets/StikDebug.png?raw=true",
-      "error": null
+      "error": null,
+      "mixTest": "pass",
+      "mixReason": "Classic source structure and downloadable app metadata passed the automated Mix test."
     },
     "livecontainer": {
       "online": true,
-      "checkedAt": "2026-09-17T14:10:56Z",
+      "checkedAt": "2026-09-17T14:28:45Z",
       "appCount": 1,
       "httpStatus": 200,
       "iconURL": "https://raw.githubusercontent.com/LiveContainer/LiveContainer/main/screenshots/AppIcon1024.png",
-      "error": null
+      "error": null,
+      "mixTest": "pass",
+      "mixReason": "Classic source structure and downloadable app metadata passed the automated Mix test."
     },
     "livecontainer-nightly": {
       "online": true,
-      "checkedAt": "2026-09-17T14:10:56Z",
+      "checkedAt": "2026-09-17T14:28:45Z",
       "appCount": 1,
       "httpStatus": 200,
       "iconURL": "https://raw.githubusercontent.com/LiveContainer/LiveContainer/main/screenshots/AppIcon1024.png",
-      "error": null
+      "error": null,
+      "mixTest": "pass",
+      "mixReason": "Classic source structure and downloadable app metadata passed the automated Mix test."
     },
     "manicemu": {
       "online": true,
-      "checkedAt": "2026-09-17T14:10:56Z",
+      "checkedAt": "2026-09-17T14:28:45Z",
       "appCount": 1,
       "httpStatus": 200,
       "iconURL": "https://apps.manicemu.site/images/manicicon.jpg",
-      "error": null
+      "error": null,
+      "mixTest": "pass",
+      "mixReason": "Classic source structure and downloadable app metadata passed the automated Mix test."
     },
     "flycast-ios": {
       "online": true,
-      "checkedAt": "2026-09-17T14:10:56Z",
+      "checkedAt": "2026-09-17T14:28:45Z",
       "appCount": 1,
       "httpStatus": 200,
       "iconURL": "https://github.com/chachillie/Flycast-iOS/raw/main/shell/linux/flycast.png",
-      "error": null
+      "error": null,
+      "mixTest": "pass",
+      "mixReason": "Classic source structure and downloadable app metadata passed the automated Mix test."
     },
     "geode-ios": {
       "online": true,
-      "checkedAt": "2026-09-17T14:10:56Z",
+      "checkedAt": "2026-09-17T14:28:45Z",
       "appCount": 1,
       "httpStatus": 200,
       "iconURL": "https://ios-repo.geode-sdk.org/img/AltSourceIcon.png",
-      "error": null
+      "error": null,
+      "mixTest": "pass",
+      "mixReason": "Classic source structure and downloadable app metadata passed the automated Mix test."
     },
     "retrosekai": {
       "online": true,
-      "checkedAt": "2026-09-17T14:10:56Z",
+      "checkedAt": "2026-09-17T14:28:45Z",
       "appCount": 1,
       "httpStatus": 200,
       "iconURL": "https://repo.untitledcharts.com/assets/logo.png",
-      "error": null
+      "error": null,
+      "mixTest": "pass",
+      "mixReason": "Classic source structure and downloadable app metadata passed the automated Mix test."
     },
     "oatmealdome": {
       "online": true,
-      "checkedAt": "2026-09-17T14:10:56Z",
+      "checkedAt": "2026-09-17T14:28:45Z",
       "appCount": 2,
       "httpStatus": 200,
       "iconURL": "https://cdn.oatmealdome.me/dolphinios/AppIcon.appiconset/ios_marketing1024x1024.png",
-      "error": null
+      "error": null,
+      "mixTest": "pass",
+      "mixReason": "Classic source structure and downloadable app metadata passed the automated Mix test."
     },
     "crystall1ne": {
       "online": true,
-      "checkedAt": "2026-09-17T14:10:56Z",
+      "checkedAt": "2026-09-17T14:28:45Z",
       "appCount": 2,
       "httpStatus": 200,
       "iconURL": "https://alt.crystall1ne.dev/resources/media/the_icon.png",
-      "error": null
+      "error": null,
+      "mixTest": "pass",
+      "mixReason": "Classic source structure and downloadable app metadata passed the automated Mix test."
     },
     "pokemmo": {
       "online": true,
-      "checkedAt": "2026-09-17T14:10:56Z",
+      "checkedAt": "2026-09-17T14:28:45Z",
       "appCount": 1,
       "httpStatus": 200,
       "iconURL": "https://pokemmo.com/build/images/altstore.f5930b35.png",
-      "error": null
+      "error": null,
+      "mixTest": "pass",
+      "mixReason": "Classic source structure and downloadable app metadata passed the automated Mix test."
     },
     "odyssey": {
       "online": true,
-      "checkedAt": "2026-09-17T14:10:56Z",
+      "checkedAt": "2026-09-17T14:28:45Z",
       "appCount": 2,
       "httpStatus": 200,
       "iconURL": "https://theodyssey.dev/assets/images/icon.png",
-      "error": null
+      "error": null,
+      "mixTest": "pass",
+      "mixReason": "Classic source structure and downloadable app metadata passed the automated Mix test."
     },
     "yattee": {
       "online": true,
-      "checkedAt": "2026-09-17T14:10:56Z",
+      "checkedAt": "2026-09-17T14:28:45Z",
       "appCount": 1,
       "httpStatus": 200,
       "iconURL": "https://raw.githubusercontent.com/yattee/yattee/main/Assets/yattee-icon-512.png",
-      "error": null
+      "error": null,
+      "mixTest": "pass",
+      "mixReason": "Classic source structure and downloadable app metadata passed the automated Mix test."
     },
     "ignited": {
       "online": true,
-      "checkedAt": "2026-09-17T14:10:56Z",
+      "checkedAt": "2026-09-17T14:28:45Z",
       "appCount": 1,
       "httpStatus": 200,
       "iconURL": "https://cdn.ignitedemulator.com/assets/altstore-icon.png",
-      "error": null
+      "error": null,
+      "mixTest": "pass",
+      "mixReason": "Classic source structure and downloadable app metadata passed the automated Mix test."
     },
     "mona": {
       "online": true,
-      "checkedAt": "2026-09-17T14:10:56Z",
+      "checkedAt": "2026-09-17T14:28:45Z",
       "appCount": 1,
       "httpStatus": 200,
       "iconURL": "https://i.imgur.com/PeIdqwy.png",
-      "error": null
+      "error": null,
+      "mixTest": "pass",
+      "mixReason": "Classic source structure and downloadable app metadata passed the automated Mix test."
     },
     "vortx": {
       "online": true,
-      "checkedAt": "2026-09-17T14:10:56Z",
+      "checkedAt": "2026-09-17T14:28:45Z",
       "appCount": 2,
       "httpStatus": 200,
       "iconURL": "https://raw.githubusercontent.com/VortXTV/VortX/main/docs/logo.png",
-      "error": null
+      "error": null,
+      "mixTest": "pass",
+      "mixReason": "Classic source structure and downloadable app metadata passed the automated Mix test."
     },
     "stremio-official-pal": {
       "online": true,
-      "checkedAt": "2026-09-17T14:10:56Z",
+      "checkedAt": "2026-09-17T14:28:45Z",
       "appCount": 1,
       "httpStatus": 200,
       "iconURL": "https://i.imgur.com/ykZuH0r.png",
-      "error": null
+      "error": null,
+      "mixTest": "experimental",
+      "mixReason": "AltStore PAL source is structurally readable, but notarized marketplace apps can require PAL-specific metadata."
     },
     "stremio-ios": {
       "online": true,
-      "checkedAt": "2026-09-17T14:10:56Z",
+      "checkedAt": "2026-09-17T14:28:45Z",
       "appCount": 1,
       "httpStatus": 200,
       "iconURL": "https://www.stremio.com/website/stremio-logo-small.png",
-      "error": null
+      "error": null,
+      "mixTest": "pass",
+      "mixReason": "Classic source structure and downloadable app metadata passed the automated Mix test."
     },
     "kodi-ios": {
       "online": true,
-      "checkedAt": "2026-09-17T14:10:56Z",
+      "checkedAt": "2026-09-17T14:28:45Z",
       "appCount": 1,
       "httpStatus": 200,
       "iconURL": "https://kodi.tv/images/kodi-logo.svg",
-      "error": null
+      "error": null,
+      "mixTest": "pass",
+      "mixReason": "Classic source structure and downloadable app metadata passed the automated Mix test."
     },
     "nineanimator": {
       "online": false,
-      "checkedAt": "2026-09-17T14:10:56Z",
+      "checkedAt": "2026-09-17T14:28:45Z",
       "appCount": null,
       "httpStatus": null,
       "iconURL": "",
-      "error": "HTTPError: HTTP Error 522: <none>"
+      "error": "HTTPError: HTTP Error 522: <none>",
+      "mixTest": "fail",
+      "mixReason": "Source has not passed the latest check."
     },
     "esound": {
       "online": true,
-      "checkedAt": "2026-09-17T14:10:56Z",
+      "checkedAt": "2026-09-17T14:28:45Z",
       "appCount": 1,
       "httpStatus": 200,
       "iconURL": "https://esound.app/images/altstore/source-icon.png?v=4",
-      "error": null
+      "error": null,
+      "mixTest": "experimental",
+      "mixReason": "AltStore PAL source is structurally readable, but notarized marketplace apps can require PAL-specific metadata."
     },
     "partyknights": {
       "online": true,
-      "checkedAt": "2026-09-17T14:10:56Z",
+      "checkedAt": "2026-09-17T14:28:45Z",
       "appCount": 1,
       "httpStatus": 200,
       "iconURL": "https://partyknights.app/assets/img/icon_128.webp",
-      "error": null
+      "error": null,
+      "mixTest": "pass",
+      "mixReason": "Classic source structure and downloadable app metadata passed the automated Mix test."
     },
     "bringyour": {
       "online": false,
-      "checkedAt": "2026-09-17T14:10:56Z",
+      "checkedAt": "2026-09-17T14:28:45Z",
       "appCount": null,
       "httpStatus": null,
       "iconURL": "",
-      "error": "HTTPError: HTTP Error 404: Not Found"
+      "error": "HTTPError: HTTP Error 404: Not Found",
+      "mixTest": "fail",
+      "mixReason": "Source has not passed the latest check."
     },
     "itorrent": {
       "online": true,
-      "checkedAt": "2026-09-17T14:10:56Z",
+      "checkedAt": "2026-09-17T14:28:45Z",
       "appCount": 1,
       "httpStatus": 200,
       "iconURL": "https://raw.githubusercontent.com/XITRIX/xitrix.github.io/master/sourceIcon.png",
-      "error": null
+      "error": null,
+      "mixTest": "pass",
+      "mixReason": "Classic source structure and downloadable app metadata passed the automated Mix test."
     },
     "qbitconnect": {
       "online": true,
-      "checkedAt": "2026-09-17T14:10:56Z",
+      "checkedAt": "2026-09-17T14:28:45Z",
       "appCount": 1,
       "httpStatus": 200,
       "iconURL": "https://raw.githubusercontent.com/RajnishOne/altstore-releases/main/icons/general/bluematter.png",
-      "error": null
+      "error": null,
+      "mixTest": "experimental",
+      "mixReason": "AltStore PAL source is structurally readable, but notarized marketplace apps can require PAL-specific metadata."
     },
     "artemis": {
       "online": true,
-      "checkedAt": "2026-09-17T14:10:56Z",
+      "checkedAt": "2026-09-17T14:28:45Z",
       "appCount": 1,
       "httpStatus": 200,
       "iconURL": "https://avatars.githubusercontent.com/u/28218457?v=4",
-      "error": null
+      "error": null,
+      "mixTest": "experimental",
+      "mixReason": "AltStore PAL source is structurally readable, but notarized marketplace apps can require PAL-specific metadata."
     },
     "hackerwebapp": {
       "online": true,
-      "checkedAt": "2026-09-17T14:10:56Z",
+      "checkedAt": "2026-09-17T14:28:45Z",
       "appCount": 1,
       "httpStatus": 200,
       "iconURL": "https://raw.githubusercontent.com/cheeaun/hackerweb-native-2/main/assets/icon.png",
-      "error": null
+      "error": null,
+      "mixTest": "experimental",
+      "mixReason": "AltStore PAL source is structurally readable, but notarized marketplace apps can require PAL-specific metadata."
     },
     "courtpredict": {
       "online": true,
-      "checkedAt": "2026-09-17T14:10:56Z",
+      "checkedAt": "2026-09-17T14:28:45Z",
       "appCount": 1,
       "httpStatus": 200,
       "iconURL": "https://courtpredict-ios.web.app/icons/source.png",
-      "error": null
+      "error": null,
+      "mixTest": "experimental",
+      "mixReason": "AltStore PAL source is structurally readable, but notarized marketplace apps can require PAL-specific metadata."
     },
     "wayfarer": {
       "online": true,
-      "checkedAt": "2026-09-17T14:10:56Z",
+      "checkedAt": "2026-09-17T14:28:45Z",
       "appCount": 1,
       "httpStatus": 200,
       "iconURL": "https://stor-cdn.f8d.rocks/wf/icon.png",
-      "error": null
+      "error": null,
+      "mixTest": "pass",
+      "mixReason": "Classic source structure and downloadable app metadata passed the automated Mix test."
     },
     "qbitcontrol": {
       "online": true,
-      "checkedAt": "2026-09-17T14:10:56Z",
+      "checkedAt": "2026-09-17T14:28:45Z",
       "appCount": 1,
       "httpStatus": 200,
       "iconURL": "https://raw.githubusercontent.com/Michael-128/qBitControl/main/qBitControl/Assets.xcassets/AppIcon.appiconset/logo1.png",
-      "error": null
+      "error": null,
+      "mixTest": "experimental",
+      "mixReason": "AltStore PAL source is structurally readable, but notarized marketplace apps can require PAL-specific metadata."
     },
     "iphanpy": {
       "online": true,
-      "checkedAt": "2026-09-17T14:10:56Z",
+      "checkedAt": "2026-09-17T14:28:45Z",
       "appCount": 1,
       "httpStatus": 200,
       "iconURL": "https://i.imgur.com/AAsffEA.png",
-      "error": null
+      "error": null,
+      "mixTest": "experimental",
+      "mixReason": "AltStore PAL source is structurally readable, but notarized marketplace apps can require PAL-specific metadata."
     },
     "epic-games": {
       "online": true,
-      "checkedAt": "2026-09-17T14:10:56Z",
+      "checkedAt": "2026-09-17T14:28:45Z",
       "appCount": 3,
       "httpStatus": 200,
       "iconURL": "https://content-download-egs.distro.on.epicgames.com/.well-known/EG-Shield-2023-Black-dual-tone-expanded.png",
-      "error": null
+      "error": null,
+      "mixTest": "experimental",
+      "mixReason": "AltStore PAL source is structurally readable, but notarized marketplace apps can require PAL-specific metadata."
     }
   },
   "mixes": {
@@ -311,6 +385,46 @@
       "provenance",
       "utm",
       "yattee"
-    ]
+    ],
+    "autoCompatibleSourceIDs": [
+      "crystall1ne",
+      "flycast",
+      "flycast-ios",
+      "geode-ios",
+      "ignited",
+      "ish",
+      "itorrent",
+      "kodi-ios",
+      "livecontainer",
+      "livecontainer-nightly",
+      "manicemu",
+      "mona",
+      "oatmealdome",
+      "odyssey",
+      "partyknights",
+      "pokemmo",
+      "provenance",
+      "retrosekai",
+      "stikdebug",
+      "stremio-ios",
+      "utm",
+      "vortx",
+      "wayfarer",
+      "yattee"
+    ],
+    "experimentalSourceIDs": [
+      "artemis",
+      "courtpredict",
+      "epic-games",
+      "esound",
+      "hackerwebapp",
+      "iphanpy",
+      "qbitconnect",
+      "qbitcontrol",
+      "sidestore-community",
+      "sidestore-official",
+      "stremio-official-pal"
+    ],
+    "allCompatibleURL": "https://caseycz.github.io/iOS-Hub/mix/all-compatible.json"
   }
 }

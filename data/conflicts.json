@@ -1,4 +1,13 @@
 {
-  "generatedAt": "2026-09-17T14:10:56Z",
-  "mixes": {}
+  "generatedAt": "2026-09-17T14:28:45Z",
+  "mixes": {
+    "all-compatible": [
+      {
+        "bundleIdentifier": "com.kdt.livecontainer",
+        "keptSource": "livecontainer-nightly",
+        "otherSource": "livecontainer",
+        "keptVersion": "3.8.10"
+      }
+    ]
+  }
 }

@@ -1,0 +1,251 @@
+{
+  "name": "Stremio iOS (Unofficial AltStore Source)",
+  "identifier": "community.stremio.ios",
+  "subtitle": "Freedom to stream — unofficial AltStore-compatible source for iOS / iPadOS.",
+  "description": "An unofficial AltStore source for Stremio iOS / iPadOS, compatible with any signing app that consumes the standard AltStore source format (Feather, AltStore Classic, AltStore PAL, ESign, Scarlet, Sideloadly, and others). Stremio's official source at dl.strem.io/apple/altstore/source.json cannot be parsed by most signing apps because it uses Apple's encrypted App Store Connect marketplace manifest format; this source points to plain IPA artifacts publicly available on the dl.strem.io CDN. Includes two packages: Stremio PAL (full-featured, com.stremio.pal) and Stremio Lite (legacy, com.stremio.ios). For Apple TV (tvOS) add the separate source: stremio-tvos.json. This is an unofficial community port, not supported by Stremio.",
+  "iconURL": "https://www.stremio.com/website/stremio-logo-small.png",
+  "headerURL": "https://www.stremio.com/website/stremio-logo-small.png",
+  "website": "https://www.stremio.com",
+  "tintColor": "#7055D9",
+  "sourceURL": "https://gorlev.github.io/stremio-altstore/stremio-ios.json",
+  "userInfo": {
+    "name": "Unofficial AltStore Source",
+    "role": "Community Mirror"
+  },
+  "apps": [
+    {
+      "name": "Stremio",
+      "bundleIdentifier": "com.stremio.pal",
+      "developerName": "Stremio",
+      "subtitle": "Freedom to stream.",
+      "localizedDescription": "Stremio — a modern media center for movies, series, live TV and web channels. Expand your content library with the add-on system. Requires iPhone and iPad, iOS 13.0+. NOTE: Some features such as Apple Login and Handoff do not work in the sideloaded version.",
+      "iconURL": "https://www.stremio.com/website/stremio-logo-small.png",
+      "tintColor": "#7055D9",
+      "category": "entertainment",
+      "screenshots": {
+        "iphone": [
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/6a/ee/19/6aee194d-7b33-aaab-b3bf-64b9773e6120/login.png/1242x2688ss.jpg",
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/8a/9d/46/8a9d46c5-68f5-4396-7e97-a0fdc2e4c99b/7A634238-A47C-4B30-9373-0EDCE5E01D8C.png/1242x2688ss.jpg",
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/e0/3b/96/e03b96c3-e1a5-ad13-b45a-a267cf9860a5/D1DC7867-6EE9-4837-919E-81902FC3344F.png/1242x2688ss.jpg",
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/9d/ec/de/9decdee5-5e8c-4ac8-f213-6cd259ce7eeb/5EA57C1E-F7EC-4C2D-AC9A-771814B51ED4.png/1242x2688ss.jpg"
+        ],
+        "ipad": [
+          {
+            "imageURL": "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/71/54/b9/7154b96c-b3e1-148b-0711-b5c26c6dc280/login-ipad.png/2048x2732ss.jpg",
+            "width": 2048,
+            "height": 2732
+          },
+          {
+            "imageURL": "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/7d/ae/9c/7dae9cc9-d812-92df-46a3-301fc6b6ce1a/9B597930-50BE-4D8E-AEEC-EEF762C1E768.png/2048x2732ss.jpg",
+            "width": 2048,
+            "height": 2732
+          },
+          {
+            "imageURL": "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/76/0d/24/760d2486-cdb1-5935-3d98-f21e695d7151/9A77F888-EADE-4EEB-9549-EDDA02E1BEE3.png/2048x2732ss.jpg",
+            "width": 2048,
+            "height": 2732
+          },
+          {
+            "imageURL": "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/40/2b/cd/402bcd56-0df9-17c3-508b-b19540d6205e/D452C7D4-67E6-4AFF-BA25-3DF914C326DA.png/2048x2732ss.jpg",
+            "width": 2048,
+            "height": 2732
+          }
+        ]
+      },
+      "appPermissions": {
+        "entitlements": [],
+        "privacy": {}
+      },
+      "versions": [
+        {
+          "version": "2.0.8",
+          "buildVersion": "23",
+          "date": "2026-09-10",
+          "localizedDescription": "feat: Added P2P/torrent downloads with improved persistence and restoration.\nfeat: Added download exporting and sharing with external apps.\nfeat: Added quick access to Downloads from the profile picker.\nfeat: Added live torrent statistics for peers, download speed, and completion.\nfeat: Added vertical swipe controls for brightness and volume.\nfeat: Added visual feedback for double-tap seeking.\nfeat: Added support for Gravatar profile pictures.\nfeat: Added Cinemeta configuration for eligible profiles.\nfeat: Added streaming server cache size and torrent performance settings.\nfeat: Added warnings when system configuration may limit download functionality.\nfix: Fixed tap-to-open and pause actions in Download Live Activities on iOS 17.0 and 17.1.\nfix: Continue Watching now starts playback directly at the saved position instead of seeking twice.\nfix: Fixed automatic subtitle selection and ensured subtitles refresh correctly when switching episodes.\nfix: Fixed a KSPlayer crash when leaving playback on iOS 15 and macOS 12.\nfix: Fixed the bottom navigation bar remaining visible on iOS 17 and earlier.\nfix: Fixed playback when opening videos from Downloads or deep links.\nfix: Improved player startup and local streaming server reliability.\nfix: Improved Picture in Picture compatibility on macOS 27.\n\nWith the release of iOS 27 and Xcode 27, support for macOS 11 and iOS 14 or earlier is no longer possible. iOS 15 and macOS 12 will become the minimum supported versions when support for iPhone Duo begins.",
+          "downloadURL": "https://dl.strem.io/apple/2.0.8b23/ios/stremio_iOS.ipa",
+          "size": 78506200,
+          "sha256": "a98c31059825132e64b5ef73e9fd525411803d437f1920a0da73633ebd6d8319",
+          "minOSVersion": "13.0"
+        },
+        {
+          "version": "2.0.7",
+          "buildVersion": "22",
+          "date": "2026-08-24",
+          "localizedDescription": "feat: add download Live Activities on iOS 16.2 and later\nfeat: add in-app storage management for reviewing and clearing cached data\nfeat: add subtitle Live Sync for quickly correcting subtitle timing\nfeat: scroll to the top when the active tab is tapped again\nfeat: add gradient fade edges to the profile picker\nfix: correct toast positioning\nfix: refresh content correctly after selecting a profile\nfix: prevent Discover crashes and resolve the “See All” loading race condition\nfix: prevent downloads from becoming stuck in a frozen state\nfix: resume interrupted downloads when selecting “Retry”\nfix: open the offline copy when a downloaded video URL is selected\nfix: warn when hardware decoding is unavailable and software decoding is used\nfix: correct subtitle offset behavior\nfix: detect external displays when the app initially launches\nfix: hide video content from app-switcher snapshots\nfix: make play and pause respond immediately when the controls are hidden\nfix: improve KSPlayer playback of high-bitrate content\n\n### About Live Activities\n\nDownload Live Activities require iOS 16.2 or later. Due to iOS background-execution restrictions, live progress reporting may pause around 30 seconds after the app enters the background. The download will continue, and the Live Activity will update when it completes or fails.\n\nA future update is planned to support background torrent downloading on iOS 26 and later. On older iOS versions, opening a video in Picture in Picture can keep the app running while a download continues.",
+          "downloadURL": "https://dl.strem.io/apple/2.0.7b22/ios/stremio_iOS.ipa",
+          "size": 78704513,
+          "sha256": "cddfe220ce1f0c3befaf29eff9d7c3fe9cdb737bbac4353468169ba0d28b2c0f",
+          "minOSVersion": "13.0"
+        },
+        {
+          "version": "2.0.6",
+          "buildVersion": "21",
+          "date": "2026-07-22",
+          "localizedDescription": "feat: new desktop like UI for player and navigation on iPadOS",
+          "downloadURL": "https://dl.strem.io/apple/2.0.6b21/ios/stremio_iOS.ipa",
+          "size": 75942223,
+          "sha256": "3ff786e83de059293d57378a742c4b70d069fa745133b5f909ea0e060dabf10d",
+          "minOSVersion": "13.0"
+        },
+        {
+          "version": "2.0.5",
+          "buildVersion": "20",
+          "date": "2026-07-22",
+          "localizedDescription": "Stremio 2.0.5 (build 20).",
+          "downloadURL": "https://dl.strem.io/apple/2.0.5b20/ios/stremio_iOS.ipa",
+          "size": 76251082,
+          "sha256": "791f09fe5ff5190a56703cdf0101d905b305000f90fcd5bdb8eec149edd9665a",
+          "minOSVersion": "13.0"
+        },
+        {
+          "version": "2.0.4",
+          "buildVersion": "19",
+          "date": "2026-07-10",
+          "localizedDescription": "Stremio 2.0.4 (build 19).",
+          "downloadURL": "https://dl.strem.io/apple/2.0.4b19/ios/stremio_iOS.ipa",
+          "size": 76237174,
+          "sha256": "ed04112b86196596abb1f6a96a96246b9701edf9e3666f4cb3a348e4bdff01d5",
+          "minOSVersion": "13.0"
+        },
+        {
+          "version": "2.0.3",
+          "buildVersion": "18",
+          "date": "2026-07-09",
+          "localizedDescription": "feat: native Stremio app for macOS\nfeat: automatic macOS updates with delta update support\nfeat: update notices for outdated app versions\nfeat: experimental Picture in Picture support on macOS and tvOS\nfeat: improved KSPlayer Picture in Picture support\nfeat: privacy-friendly crash analytics, configurable from settings\nfeat: bottom toast notifications\nfeat: OLED dark background setting\n\nPlayback Fixes\nfix: show VLC buffering state correctly\nfix: prevent VLC playback startup and end-of-video deadlocks\nfix: prevent seek controls from getting stuck\nfix: fix crashes while seeking\nfix: keep video visible when replacing KSPlayer media\nfix: show an error message when playback fails\nfix: avoid lockups after autoplay finishes a video\nfix: clean up player animations and timers after closing playback\nfix: keep profile lock from interrupting active playback or Picture in Picture\nfix: repair Infuse callback handling\n\nInterface Fixes\nfix: stabilize Settings layout, backgrounds, separators, and account rows\nfix: improve loading and playback-error overlay layout\nfix: improve filter button row edge fade",
+          "downloadURL": "https://dl.strem.io/apple/2.0.3b18/ios/stremio_iOS.ipa",
+          "size": 76228970,
+          "sha256": "f23c50e52756d90573c3328d7f5bb2bc5930b1fe478bf7318013d83a80cfd37a",
+          "minOSVersion": "13.0"
+        },
+        {
+          "version": "2.0.2",
+          "buildVersion": "17",
+          "date": "2026-06-19",
+          "localizedDescription": "fix: titles not showing on board and search",
+          "downloadURL": "https://dl.strem.io/apple/2.0.2b17/ios/stremio_iOS.ipa",
+          "size": 78053554,
+          "sha256": "1194ab49a3b0b502d7c7395630c10c4b7c66cbac5ee73abce0a509bccb65f64f",
+          "minOSVersion": "13.0"
+        },
+        {
+          "version": "2.0.1",
+          "buildVersion": "16",
+          "date": "2026-06-16",
+          "localizedDescription": "Stremio 2.0.1 (build 16).",
+          "downloadURL": "https://dl.strem.io/apple/2.0.1b16/ios/stremio_iOS.ipa",
+          "size": 77732193,
+          "sha256": "5fb0a315a8987981afc255192f2390637ce482e91a534f0509297843af6b0f9c",
+          "minOSVersion": "13.0"
+        },
+        {
+          "version": "2.0.1",
+          "buildVersion": "15",
+          "date": "2026-06-15",
+          "localizedDescription": "Stremio 2.0.1 (build 15).",
+          "downloadURL": "https://dl.strem.io/apple/2.0.1b15/ios/stremio_iOS.ipa",
+          "size": 77732699,
+          "sha256": "d4b022c25245c06b6e4425a243b96b9a84501dde8e7bd7b841362aa74be91f34",
+          "minOSVersion": "13.0"
+        },
+        {
+          "version": "2.0.0",
+          "buildVersion": "14",
+          "date": "2026-06-05",
+          "localizedDescription": "Stremio 2.0.0 (build 14).",
+          "downloadURL": "https://dl.strem.io/apple/2.0.0b14/ios/stremio_iOS.ipa",
+          "size": 78030906,
+          "sha256": "8bf6b174c9b1e9ce5cd7c7d01f9a94a87ac5a9285b250b9ace1b2b0b4270f0a4",
+          "minOSVersion": "13.0"
+        },
+        {
+          "version": "2.0.0",
+          "buildVersion": "13",
+          "date": "2026-06-05",
+          "localizedDescription": "Stremio 2.0.0 (build 13).",
+          "downloadURL": "https://dl.strem.io/apple/2.0.0b13/ios/stremio_iOS.ipa",
+          "size": 77726983,
+          "sha256": "3dd7fe41294a1f7706cb367978ba67a4729f4e668bc834fca52d616b92957197",
+          "minOSVersion": "13.0"
+        },
+        {
+          "version": "2.0.0",
+          "buildVersion": "11",
+          "date": "2026-05-30",
+          "localizedDescription": "Stremio 2.0.0 (build 11).",
+          "downloadURL": "https://dl.strem.io/apple/2.0.0b11/ios/stremio_iOS.ipa",
+          "size": 78020685,
+          "sha256": "61fd16aec965a6dd728b24a057e2c2d579477b9e6677b61166e29e1dd5c0fb1d",
+          "minOSVersion": "13.0"
+        }
+      ],
+      "version": "2.0.8",
+      "versionDate": "2026-09-10",
+      "versionDescription": "feat: Added P2P/torrent downloads with improved persistence and restoration.\nfeat: Added download exporting and sharing with external apps.\nfeat: Added quick access to Downloads from the profile picker.\nfeat: Added live torrent statistics for peers, download speed, and completion.\nfeat: Added vertical swipe controls for brightness and volume.\nfeat: Added visual feedback for double-tap seeking.\nfeat: Added support for Gravatar profile pictures.\nfeat: Added Cinemeta configuration for eligible profiles.\nfeat: Added streaming server cache size and torrent performance settings.\nfeat: Added warnings when system configuration may limit download functionality.\nfix: Fixed tap-to-open and pause actions in Download Live Activities on iOS 17.0 and 17.1.\nfix: Continue Watching now starts playback directly at the saved position instead of seeking twice.\nfix: Fixed automatic subtitle selection and ensured subtitles refresh correctly when switching episodes.\nfix: Fixed a KSPlayer crash when leaving playback on iOS 15 and macOS 12.\nfix: Fixed the bottom navigation bar remaining visible on iOS 17 and earlier.\nfix: Fixed playback when opening videos from Downloads or deep links.\nfix: Improved player startup and local streaming server reliability.\nfix: Improved Picture in Picture compatibility on macOS 27.\n\nWith the release of iOS 27 and Xcode 27, support for macOS 11 and iOS 14 or earlier is no longer possible. iOS 15 and macOS 12 will become the minimum supported versions when support for iPhone Duo begins.",
+      "downloadURL": "https://dl.strem.io/apple/2.0.8b23/ios/stremio_iOS.ipa",
+      "size": 78506200,
+      "minOSVersion": "13.0",
+      "screenshotURLs": [
+        "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/6a/ee/19/6aee194d-7b33-aaab-b3bf-64b9773e6120/login.png/1242x2688ss.jpg",
+        "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/8a/9d/46/8a9d46c5-68f5-4396-7e97-a0fdc2e4c99b/7A634238-A47C-4B30-9373-0EDCE5E01D8C.png/1242x2688ss.jpg",
+        "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/e0/3b/96/e03b96c3-e1a5-ad13-b45a-a267cf9860a5/D1DC7867-6EE9-4837-919E-81902FC3344F.png/1242x2688ss.jpg",
+        "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/9d/ec/de/9decdee5-5e8c-4ac8-f213-6cd259ce7eeb/5EA57C1E-F7EC-4C2D-AC9A-771814B51ED4.png/1242x2688ss.jpg",
+        "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/71/54/b9/7154b96c-b3e1-148b-0711-b5c26c6dc280/login-ipad.png/2048x2732ss.jpg",
+        "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/7d/ae/9c/7dae9cc9-d812-92df-46a3-301fc6b6ce1a/9B597930-50BE-4D8E-AEEC-EEF762C1E768.png/2048x2732ss.jpg",
+        "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/76/0d/24/760d2486-cdb1-5935-3d98-f21e695d7151/9A77F888-EADE-4EEB-9549-EDDA02E1BEE3.png/2048x2732ss.jpg",
+        "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/40/2b/cd/402bcd56-0df9-17c3-508b-b19540d6205e/D452C7D4-67E6-4AFF-BA25-3DF914C326DA.png/2048x2732ss.jpg"
+      ]
+    }
+  ],
+  "news": [
+    {
+      "title": "Stremio 2.0.8",
+      "identifier": "com-stremio-pal-2-0-8-b23-iphone-ipad",
+      "caption": "feat: Added P2P/torrent downloads with improved persistence and restoration.",
+      "tintColor": "7055D9",
+      "date": "2026-09-10",
+      "notify": true,
+      "appID": "com.stremio.pal",
+      "imageURL": "https://www.stremio.com/website/stremio-logo-small.png"
+    },
+    {
+      "title": "Stremio 2.0.7",
+      "identifier": "com-stremio-pal-2-0-7-b22-iphone-ipad",
+      "caption": "feat: add download Live Activities on iOS 16.2 and later",
+      "tintColor": "7055D9",
+      "date": "2026-08-24",
+      "notify": false,
+      "appID": "com.stremio.pal",
+      "imageURL": "https://www.stremio.com/website/stremio-logo-small.png"
+    },
+    {
+      "title": "Stremio 2.0.6",
+      "identifier": "com-stremio-pal-2-0-6-b21-iphone-ipad",
+      "caption": "feat: new desktop like UI for player and navigation on iPadOS",
+      "tintColor": "7055D9",
+      "date": "2026-07-22",
+      "notify": false,
+      "appID": "com.stremio.pal",
+      "imageURL": "https://www.stremio.com/website/stremio-logo-small.png"
+    },
+    {
+      "title": "Stremio 2.0.3",
+      "identifier": "com-stremio-pal-2-0-3-b18-iphone-ipad",
+      "caption": "feat: native Stremio app for macOS",
+      "tintColor": "7055D9",
+      "date": "2026-07-09",
+      "notify": false,
+      "appID": "com.stremio.pal",
+      "imageURL": "https://www.stremio.com/website/stremio-logo-small.png"
+    },
+    {
+      "title": "Stremio 2.0.2",
+      "identifier": "com-stremio-pal-2-0-2-b17-iphone-ipad",
+      "caption": "fix: titles not showing on board and search",
+      "tintColor": "7055D9",
+      "date": "2026-06-19",
+      "notify": false,
+      "appID": "com.stremio.pal",
+      "imageURL": "https://www.stremio.com/website/stremio-logo-small.png"
+    }
+  ]
+}
