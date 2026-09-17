@@ -1,88 +1,141 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <style>
-      .header {
-        background-image: linear-gradient(to right, #667eea, #764ba2);
-      }
-      .header .title {
-        color: white;
-        text-shadow: 1px 1px black;
-      }
-    </style>
-  </head>
-<body>
-    <header class="header">
-      <div class="container">
-        <h1 class="text-center">CaseyCZ</h1>
-        <p class="text-center">
-      </div>
-    </header>
-  <title>CaseyCZ</title>
-	<h2 class="text-center">Links</h2>
-  <p class="text-center">
-    <strong>
-      <a href="https://twitter.com/Searcasey" target="_blank">Twitter</a>
-      <a href="https://www.youtube.com/channel/UCTT4ob7-2lkjdQf3yuqrjDw" target="_blank">Youtube</a>
-      <a href="https://www.reddit.com/user/CaseyCZ" target="_blank">Reddit</a>
-      <a href="https://github.com/CaseyCZ" target="_blank">Github</a>
-    </strong>
-  </p>
+<!doctype html>
+<html lang="cs" data-theme="dark">
+<head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
-  <link rel="stylesheet" href="depictions/style.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-</body>
-<div class="container" style="display: flex; justify-content: center; align-items: center;">
-	<h1 style="text-align: center;">
-		<img src="CydiaIcon.png" alt="Cydia Icon"> 
-	</h1>
-</div>
-<div class="container">
-	<div class="card">
-		<div class="card-body">
-			<p><span class="text-primary"><b>CaseyCZ</span></b> is a Cydia repository (Ios 12+).</p>
-			<a class="btn btn-sm btn-primary" href="cydia://url/https://cydia.saurik.com/api/share#?source=https://CaseyCZ.github.io/repo/">Add to Cydia</a>
-		</div>
-	</div>
-</div>
-<p></p>
-<div class="container">
-  <h3 id="wells" class="page-header">Featured Packages</h3>
-</div>
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#070b14">
+  <meta name="description" content="CaseyCZ iOS Hub — IPA apps, AltStore sources and a custom source builder.">
+  <title>CaseyCZ iOS Hub — Aplikace, IPA & AltStore zdroje</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="wrap topbar-inner">
+      <a class="brand" href="#top" aria-label="CaseyCZ iOS Hub">
+        <span class="brand-mark">iOS</span>
+        <span>CaseyCZ iOS Hub<small>apps · IPA · AltStore sources</small></span>
+      </a>
+      <nav class="nav" aria-label="Primary">
+        <a href="#apps" data-cs="Aplikace" data-en="Apps">Aplikace</a>
+        <a href="#sources" data-cs="Zdroje" data-en="Sources">Zdroje</a>
+        <a href="#builder">Source Builder</a>
+        <a href="#legacy">Legacy</a>
+      </nav>
+      <div class="nav-actions">
+        <div class="lang" aria-label="Language"><button type="button" data-lang="cs" class="active">CZ</button><button type="button" data-lang="en">EN</button></div>
+        <button id="themeToggle" class="icon-btn" type="button" aria-label="Theme">☀</button>
+        <button class="compact-btn" type="button" data-support-open><span>☕</span><span class="support-label" data-cs="Podpořit" data-en="Support">Podpořit</span></button>
+      </div>
+    </div>
+  </header>
 
-<div class="container">
-		<div class="card">
-		<div class="card-header">
-			Cocoatop
-		</div>
-		<div class="card-body">
-		  <p class="card-text">GUI Process Viewer for iOS 13+.
-			CocoaTop is a free Process Viewer for iOS wit option to monitor CPU and RAM activity on installed apps.</p>
-			<a class="btn btn-xs btn-primary" href="depictions/?p=com.CaseyCZ.Cocoatop">More info</a>
-		</div>
-	</div>
-	<div class="card">
-		<div class="card-header">
-			Old Package
-		</div>
-		<div class="card-body">
-		  <p class="card-text">This is a sample package with lots of information.</p>
-		  <a class="btn btn-xs btn-primary" href="depictions/?p=com.supermamon.oldpackage">More info</a>
-		</div>
-	</div>
-	<div class="card">
-		<div class="card-header">
-			New Package
-		</div>
-		<div class="card-body">
-		  <p class="card-text">This is a sample package with lots of information.</p>
-		  <a class="btn btn-xs btn-primary" href="depictions/?p=com.supermamon.newpackage">More info</a>
-		</div>
-	</div>
+  <main id="top">
+    <section class="hero wrap">
+      <div class="eyebrow">ALTSTORE · IPA · SOURCES</div>
+      <h1 data-cs="iOS aplikace. Zdroje. Jedním klepnutím." data-en="iOS apps. Sources. One tap away.">iOS aplikace. Zdroje. Jedním klepnutím.</h1>
+      <p data-cs="Moderní rozcestník pro ověřované AltStore a SideStore zdroje. Vyber si zdroje, spoj kompatibilní Classic katalogy do jednoho CaseyCZ Mixu a přidej ho přímo do AltStore." data-en="A modern hub for checked AltStore and SideStore sources. Pick sources, combine compatible Classic catalogs into one CaseyCZ Mix and add it directly to AltStore.">Moderní rozcestník pro ověřované AltStore a SideStore zdroje. Vyber si zdroje, spoj kompatibilní Classic katalogy do jednoho CaseyCZ Mixu a přidej ho přímo do AltStore.</p>
+      <div class="hero-actions">
+        <a class="btn primary" href="#sources" data-cs="Procházet zdroje" data-en="Browse sources">Procházet zdroje</a>
+        <a class="btn secondary" href="#builder" data-cs="Vytvořit vlastní Source" data-en="Build my Source">Vytvořit vlastní Source</a>
+      </div>
+      <div class="stats" aria-label="Source statistics">
+        <div class="stat"><strong id="statSources">—</strong><span data-cs="dostupných zdrojů" data-en="available sources">dostupných zdrojů</span></div>
+        <div class="stat"><strong id="statMix">—</strong><span data-cs="zdroje pro Mix" data-en="mix-ready sources">zdroje pro Mix</span></div>
+        <div class="stat"><strong id="statApps">—</strong><span data-cs="nalezených aplikací" data-en="discovered apps">nalezených aplikací</span></div>
+      </div>
+    </section>
 
-</div>
+    <section id="apps" class="section wrap">
+      <div class="section-head">
+        <div><h2 data-cs="Aplikace & IPA" data-en="Apps & IPA">Aplikace & IPA</h2><p data-cs="Místo pro vlastní CaseyCZ iOS aplikace a jejich veřejné IPA release. Binární soubory budou vedené přes GitHub Releases, ne jako velké soubory přímo v repozitáři." data-en="A home for CaseyCZ iOS apps and their public IPA releases. Binary files will use GitHub Releases instead of being stored as large files directly in the repository.">Místo pro vlastní CaseyCZ iOS aplikace a jejich veřejné IPA release. Binární soubory budou vedené přes GitHub Releases, ne jako velké soubory přímo v repozitáři.</p></div>
+      </div>
+      <div class="panel empty">
+        <div class="empty-icon">◇</div>
+        <h3 data-cs="První IPA přijde s prvním veřejným releasem" data-en="The first IPA will appear with the first public release">První IPA přijde s prvním veřejným releasem</h3>
+        <p data-cs="Do katalogu zatím nepřidávám rozpracované aplikace. Až bude některý projekt připravený k instalaci, objeví se tady s verzí, historií a přímým IPA odkazem." data-en="Work-in-progress apps are not listed here. Once a project is ready to install, it will appear here with its version, history and a direct IPA link.">Do katalogu zatím nepřidávám rozpracované aplikace. Až bude některý projekt připravený k instalaci, objeví se tady s verzí, historií a přímým IPA odkazem.</p>
+      </div>
+    </section>
 
+    <section id="sources" class="section wrap">
+      <div class="section-head">
+        <div><h2 data-cs="AltStore & SideStore zdroje" data-en="AltStore & SideStore sources">AltStore & SideStore zdroje</h2><p data-cs="Každý zdroj je vedený samostatně. Stav a počet aplikací pravidelně kontroluje automatika v repozitáři." data-en="Each source is tracked independently. Repository automation regularly checks availability and app counts.">Každý zdroj je vedený samostatně. Stav a počet aplikací pravidelně kontroluje automatika v repozitáři.</p></div>
+      </div>
+      <div class="filters">
+        <div class="filter-tabs">
+          <button class="filter active" type="button" data-filter="all" data-cs="Vše" data-en="All">Vše</button>
+          <button class="filter" type="button" data-filter="classic">AltStore Classic</button>
+          <button class="filter" type="button" data-filter="pal">AltStore PAL</button>
+          <button class="filter" type="button" data-filter="sidestore">SideStore</button>
+        </div>
+        <input id="sourceSearch" class="search" type="search" autocomplete="off" data-cs-placeholder="Hledat zdroj nebo aplikaci…" data-en-placeholder="Search source or app…" placeholder="Hledat zdroj nebo aplikaci…">
+      </div>
+      <div id="sourceGrid" class="source-grid" aria-live="polite"></div>
+      <div class="notice" style="margin-top:13px"><strong data-cs="Poznámka:" data-en="Note:">Poznámka:</strong> <span data-cs="CaseyCZ iOS Hub zdroje nerehostuje. Katalog používá původní veřejné source URL a u aplikací zachovává originální download odkazy. Externí zdroj může svůj obsah kdykoliv změnit." data-en="CaseyCZ iOS Hub does not rehost sources. The catalog uses original public source URLs and preserves original download links. External sources can change their content at any time.">CaseyCZ iOS Hub zdroje nerehostuje. Katalog používá původní veřejné source URL a u aplikací zachovává originální download odkazy. Externí zdroj může svůj obsah kdykoliv změnit.</span></div>
+    </section>
+
+    <section id="builder" class="section wrap">
+      <div class="section-head">
+        <div><h2>Source Builder</h2><p data-cs="Vyber až čtyři kompatibilní AltStore Classic zdroje. Automatika z nich připraví jednu veřejnou JSON adresu, kterou můžeš přidat do AltStore jedním klepnutím." data-en="Select up to four compatible AltStore Classic sources. Automation prepares one public JSON URL that can be added to AltStore with one tap.">Vyber až čtyři kompatibilní AltStore Classic zdroje. Automatika z nich připraví jednu veřejnou JSON adresu, kterou můžeš přidat do AltStore jedním klepnutím.</p></div>
+        <div class="section-tools"><button id="selectRecommended" class="btn small secondary" type="button" data-cs="Vybrat doporučené" data-en="Select recommended">Vybrat doporučené</button><button id="clearSelection" class="btn small ghost" type="button" data-cs="Zrušit výběr" data-en="Clear">Zrušit výběr</button></div>
+      </div>
+      <div class="builder">
+        <div class="panel builder-left">
+          <div style="display:flex;align-items:center;justify-content:space-between;gap:12px"><strong data-cs="Zdroje pro CaseyCZ Mix" data-en="Sources for CaseyCZ Mix">Zdroje pro CaseyCZ Mix</strong><span class="pill mode"><span id="selectedCount">0</span>/4</span></div>
+          <div id="builderList" class="builder-list"></div>
+          <p id="mixWarning" class="notice" hidden data-cs="Do jednoho mixu lze zahrnout maximálně čtyři zdroje." data-en="A mix can contain up to four sources.">Do jednoho mixu lze zahrnout maximálně čtyři zdroje.</p>
+          <div style="margin-top:14px"><button id="buildMix" class="btn primary" type="button" disabled data-cs="Vytvořit CaseyCZ Mix" data-en="Build CaseyCZ Mix">Vytvořit CaseyCZ Mix</button></div>
+          <div id="builderResult" class="builder-result">
+            <strong id="mixName">CaseyCZ Mix</strong>
+            <code id="mixUrl"></code>
+            <div class="builder-actions">
+              <a id="mixOpen" class="btn small primary" href="#" data-cs="＋ Přidat do AltStore" data-en="＋ Add to AltStore">＋ Přidat do AltStore</a>
+              <button id="copyMix" class="btn small secondary" type="button" data-cs="Kopírovat URL" data-en="Copy URL">Kopírovat URL</button>
+              <a id="mixPreview" class="btn small ghost" href="#" target="_blank" rel="noopener">JSON ↗</a>
+            </div>
+          </div>
+        </div>
+        <aside class="panel builder-right">
+          <div class="builder-side-title" data-cs="Jak Mix funguje" data-en="How Mix works">Jak Mix funguje</div>
+          <ul>
+            <li data-cs="Používá pouze předem povolené veřejné source URL." data-en="Uses only pre-approved public source URLs.">Používá pouze předem povolené veřejné source URL.</li>
+            <li data-cs="Automatika kontroluje JSON a dostupnost zdroje." data-en="Automation checks JSON validity and source availability.">Automatika kontroluje JSON a dostupnost zdroje.</li>
+            <li data-cs="Aplikace se deduplikují podle bundleIdentifier." data-en="Apps are deduplicated by bundleIdentifier.">Aplikace se deduplikují podle bundleIdentifier.</li>
+            <li data-cs="Při konfliktu zůstane novější položka, pokud lze datum spolehlivě určit." data-en="On conflict the newer entry wins when a reliable release date is available.">Při konfliktu zůstane novější položka, pokud lze datum spolehlivě určit.</li>
+            <li data-cs="PAL a velké komunitní zdroje se přidávají přímo, ne přes Mix." data-en="PAL and large community sources are added directly, not through Mix.">PAL a velké komunitní zdroje se přidávají přímo, ne přes Mix.</li>
+          </ul>
+        </aside>
+      </div>
+    </section>
+
+    <section id="legacy" class="section wrap">
+      <div class="section-head"><div><h2 data-cs="Legacy archiv" data-en="Legacy archive">Legacy archiv</h2><p data-cs="Původní Cydia / Reposi3 verze už není hlavním směrem projektu. Kompletní stav před přestavbou je bezpečně uložený v záložní větvi." data-en="The old Cydia / Reposi3 version is no longer the main direction of the project. The complete pre-redesign state is safely preserved in a backup branch.">Původní Cydia / Reposi3 verze už není hlavním směrem projektu. Kompletní stav před přestavbou je bezpečně uložený v záložní větvi.</p></div></div>
+      <div class="panel empty"><div class="empty-icon">↺</div><h3>backup-cydia-legacy-2026-09-17</h3><p><a class="btn secondary" style="margin-top:12px" href="https://github.com/CaseyCZ/repo/tree/backup-cydia-legacy-2026-09-17" target="_blank" rel="noopener" data-cs="Otevřít archiv na GitHubu" data-en="Open archive on GitHub">Otevřít archiv na GitHubu</a></p></div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap footer-inner">
+      <span>© <span id="year"></span> CaseyCZ · iOS Hub</span>
+      <div class="footer-links">
+        <a href="https://caseycz.github.io/" target="_blank" rel="noopener">CaseyCZ Website</a>
+        <a href="https://github.com/CaseyCZ" target="_blank" rel="noopener">GitHub</a>
+        <a href="https://github.com/victordedomenico/awesome-altstore" target="_blank" rel="noopener">awesome-altstore ↗</a>
+      </div>
+    </div>
+  </footer>
+
+  <div id="supportModal" class="support-backdrop" role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="supportTitle">
+    <div class="support-dialog">
+      <button class="support-close" type="button" data-support-close aria-label="Close">×</button>
+      <div class="eyebrow" data-cs="PODPORA CASEYCZ" data-en="SUPPORT CASEYCZ">PODPORA CASEYCZ</div>
+      <h2 id="supportTitle" data-cs="Podpořit další vývoj." data-en="Support further development.">Podpořit další vývoj.</h2>
+      <p data-cs="Pokud ti CaseyCZ iOS Hub šetří čas, můžeš podpořit další vývoj přes Buy Me a Coffee." data-en="If CaseyCZ iOS Hub saves you time, you can support further development through Buy Me a Coffee.">Pokud ti CaseyCZ iOS Hub šetří čas, můžeš podpořit další vývoj přes Buy Me a Coffee.</p>
+      <a href="https://www.buymeacoffee.com/caseycz" target="_blank" rel="noopener"><img class="support-qr" src="https://caseycz.github.io/support-qr.svg" alt="Buy Me a Coffee CaseyCZ QR code"></a>
+      <a class="btn primary" style="width:100%" href="https://www.buymeacoffee.com/caseycz" target="_blank" rel="noopener" data-cs="Otevřít Buy Me a Coffee ↗" data-en="Open Buy Me a Coffee ↗">Otevřít Buy Me a Coffee ↗</a>
+    </div>
+  </div>
+
+  <div id="toast" class="pill online" hidden style="position:fixed;z-index:400;left:50%;bottom:22px;transform:translateX(-50%);padding:9px 12px;background:var(--panel);box-shadow:var(--shadow)"></div>
+  <script src="app.js" defer></script>
 </body>
 </html>
