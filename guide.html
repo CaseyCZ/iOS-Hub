@@ -72,6 +72,32 @@
     </section>
 
     <section class="section wrap guide-page-section">
+      <div id="guideAssistant" class="panel guide-assistant">
+        <div class="eyebrow" data-guide-copy="assistantEyebrow">QUICK CHOICE</div>
+        <h2 data-guide-copy="assistantTitle">What do you want to do?</h2>
+        <p data-guide-copy="assistantDesc">Pick your goal. iOS Hub will point you to the most relevant method and then you can open the detailed guide.</p>
+
+        <div class="guide-goal-grid" role="group" aria-label="Choose a sideloading goal">
+          <button type="button" class="guide-goal" data-guide-goal="iphone"><span class="guide-goal-icon">📱</span><span data-guide-copy="goalIphone">Install IPA and refresh from iPhone</span></button>
+          <button type="button" class="guide-goal" data-guide-goal="refresh"><span class="guide-goal-icon">↻</span><span data-guide-copy="goalRefresh">My refresh does not work</span></button>
+          <button type="button" class="guide-goal" data-guide-goal="many"><span class="guide-goal-icon">▦</span><span data-guide-copy="goalMany">I want many IPA apps</span></button>
+          <button type="button" class="guide-goal" data-guide-goal="desktop"><span class="guide-goal-icon">💻</span><span data-guide-copy="goalDesktop">Install mainly from a computer</span></button>
+          <button type="button" class="guide-goal" data-guide-goal="tv"><span class="guide-goal-icon">📺</span><span data-guide-copy="goalTv">Install apps on Apple TV</span></button>
+          <button type="button" class="guide-goal" data-guide-goal="permanent"><span class="guide-goal-icon">∞</span><span data-guide-copy="goalPermanent">Permanent install on supported iOS</span></button>
+        </div>
+
+        <div id="guideRecommendation" class="guide-recommendation" hidden>
+          <div class="guide-recommendation-badge" data-guide-copy="recommendationLabel">RECOMMENDATION</div>
+          <h3 id="guideRecommendationTitle"></h3>
+          <p id="guideRecommendationText"></p>
+          <div id="guideRecommendationSteps" class="guide-recommendation-steps"></div>
+          <div class="guide-recommendation-actions">
+            <a id="guideRecommendationPrimary" class="btn primary" href="#" target="_blank" rel="noopener noreferrer"></a>
+            <a id="guideRecommendationSecondary" class="btn secondary" href="#" target="_blank" rel="noopener noreferrer" hidden></a>
+          </div>
+        </div>
+      </div>
+
       <div class="beginner-start panel">
         <div class="eyebrow">BEGINNER MODE</div>
         <h2 data-i18n="beginnerStartTitle">New to sideloading? Start here.</h2>
@@ -179,6 +205,15 @@
       </div>
 
       <div class="guide-grid">
+        <article class="panel guide-card guide-card-highlight">
+          <div class="guide-icon guide-icon-text">SI</div>
+          <div class="resource-badges"><span class="pill online">NEW</span><span class="pill mode">iOS 27</span></div>
+          <h3 data-guide-copy="sideInstallerTitle">Install SideStore without a PC on iOS 27</h3>
+          <p data-guide-copy="sideInstallerDesc">SideInstaller installs SideStore or SideStore + LiveContainer fully on-device on iOS 27. iOS 17–26 have partial support when you already have a pairing file created with a computer.</p>
+          <div class="guide-safety-note" data-guide-copy="sideInstallerSafety">Use only sideinstaller.net or the official FrizzleM/SideInstaller GitHub repository when entering Apple account credentials.</div>
+          <a class="btn primary" href="https://sideinstaller.net/" target="_blank" rel="noopener noreferrer"><span data-guide-copy="sideInstallerOpen">Open official SideInstaller ↗</span></a>
+        </article>
+
         <article class="panel guide-card">
           <div class="guide-icon guide-icon-image"><img class="official-app-icon" src="https://sidestore.io/assets/icon.png" alt="SideStore" loading="lazy" referrerpolicy="no-referrer"></div>
           <div class="resource-badges"><span class="pill online">FREE</span><span class="pill mode">SideStore + LiveContainer</span></div>
@@ -250,6 +285,7 @@
           <tbody>
             <tr><td>AltStore Classic</td><td data-i18n="guideAltBest">Classic sideloading</td><td data-i18n="guideAltDevice">iPhone / iPad</td><td data-i18n="guideAltComputer">Windows or macOS with AltServer</td><td data-i18n="guideAltRefresh">7-day apps; refresh via AltServer over same Wi-Fi or USB</td><td data-i18n="guideYes">Yes</td></tr>
             <tr><td>AltStore + Remote AltServer</td><td data-i18n="guideRemoteBest">Install and refresh without your own computer</td><td data-i18n="guideAltDevice">iPhone / iPad</td><td data-i18n="guideRemoteComputer">PC pairing is required for setup; afterwards the remote server is used</td><td data-i18n="guideRemoteRefresh">Wi-Fi + LocalDevVPN required; cellular is not supported</td><td data-i18n="guideYes">Yes</td></tr>
+            <tr><td>SideInstaller</td><td data-guide-copy="sideInstallerBest">On-device SideStore / LiveContainer setup</td><td data-guide-copy="sideInstallerDevice">iOS/iPadOS 27; partial 17–26 support with an existing pairing file</td><td data-guide-copy="sideInstallerComputer">No PC on iOS 27; older supported versions need a pairing file</td><td data-guide-copy="sideInstallerRefresh">Installer only; refreshing is then handled by SideStore</td><td data-i18n="guideYes">Yes</td></tr>
             <tr><td>SideStore</td><td data-i18n="guideSideBest">On-device refresh after setup</td><td data-i18n="guideSideDevice">iOS / iPadOS 15+</td><td data-i18n="guideSideComputer">Initial install only: Windows, macOS, Linux or Chromebook</td><td data-i18n="guideSideRefresh">LocalDevVPN must be enabled for install, update and refresh</td><td data-i18n="guideYes">Yes</td></tr>
             <tr><td>LiveContainer + SideStore</td><td data-i18n="guideLcBest">Many guest apps in one container</td><td data-i18n="guideLcDevice">iOS / iPadOS 15+</td><td data-i18n="guideLcComputer">Initial install through iloader, SideStore or AltStore</td><td data-i18n="guideLcRefresh">Refresh the container / SideStore; guest apps run inside LiveContainer</td><td data-i18n="guideYes">Yes</td></tr>
             <tr><td>Sideloadly</td><td data-i18n="guideSideloadlyBest">Direct IPA signing from desktop</td><td data-i18n="guideSideloadlyDevice">iPhone / iPad / Apple TV</td><td data-i18n="guideSideloadlyComputer">Windows or macOS</td><td data-i18n="guideSideloadlyRefresh">7-day free signing; optional auto-refresh daemon via Wi-Fi / USB</td><td data-i18n="guideYes">Yes</td></tr>
@@ -261,11 +297,22 @@
 
       <div class="notice guide-limit-note"><strong data-i18n="guideLimitsTitle">Free Apple account limits</strong><br><span data-i18n="guideLimitsDesc">With normal free development signing, apps generally expire after 7 days and must be refreshed. AltStore documents a 3-app device limit and up to 10 registered App IDs at a time. LiveContainer + SideStore can reduce pressure on those slots by running guest apps inside the container.</span></div>
 
-      <div class="section-head guide-section-head">
+      <div id="troubleshooting" class="section-head guide-section-head">
         <div>
           <h2 data-i18n="guideTroubleTitle">Troubleshooting</h2>
           <p data-i18n="guideTroubleDesc">Search the common problems below. Start with the short fix, then open the official documentation if it still fails.</p>
         </div>
+      </div>
+
+      <div class="trouble-quick" role="group" aria-label="Quick troubleshooting filters">
+        <button type="button" data-trouble-filter="refresh" data-guide-copy="troubleChipRefresh">Refresh</button>
+        <button type="button" data-trouble-filter="apple login 503 2fa" data-guide-copy="troubleChipLogin">Apple ID / login</button>
+        <button type="button" data-trouble-filter="pairing" data-guide-copy="troubleChipPairing">Pairing</button>
+        <button type="button" data-trouble-filter="certificate" data-guide-copy="troubleChipCertificate">Certificate</button>
+        <button type="button" data-trouble-filter="3 app limit app ids" data-guide-copy="troubleChipLimits">App limits</button>
+        <button type="button" data-trouble-filter="livecontainer" data-guide-copy="troubleChipLiveContainer">LiveContainer</button>
+        <button type="button" data-trouble-filter="altserver" data-guide-copy="troubleChipAltServer">AltServer</button>
+        <button type="button" data-trouble-filter="" data-guide-copy="troubleChipAll">All</button>
       </div>
 
       <div class="trouble-toolbar">
@@ -273,6 +320,18 @@
       </div>
 
       <div id="troubleList" class="trouble-list">
+        <details class="trouble-item" data-search="apple id apple account login sign in 503 2fa sms call sidestore sideinstaller rate limit">
+          <summary data-guide-copy="troubleLoginQ">Apple ID login fails, HTTP 503 or 2FA does not work</summary>
+          <div class="trouble-answer" data-guide-copy="troubleLoginA">Update the app from its official source first. SideInstaller v1.0.0 specifically notes fixes for HTTP 503 login, support for SMS/call 2FA and saved session IDs to reduce repeated sign-ins. If the error continues, wait before retrying repeatedly and verify you are using the official build.</div>
+        </details>
+        <details class="trouble-item" data-search="livecontainer sidestore auto refresh automatic background shortcut localdevvpn wifi refresh all">
+          <summary data-guide-copy="troubleAutoRefreshQ">LiveContainer + SideStore does not refresh automatically</summary>
+          <div class="trouble-answer" data-guide-copy="troubleAutoRefreshA">First confirm Wi-Fi and LocalDevVPN are active and that a manual Refresh All works. If manual refresh works but automation does not, use manual refresh as the fallback and check the release notes for the exact LC+SS build or Shortcut you installed, because background automation can differ between builds.</div>
+        </details>
+        <details class="trouble-item" data-search="pairing file expired update reset iphone ios random sidestore replace pairing">
+          <summary data-guide-copy="troublePairingExpireQ">SideStore pairing stopped working after an iOS update or reset</summary>
+          <div class="trouble-answer" data-guide-copy="troublePairingExpireA">SideStore documents that pairing files can expire after an update or device reset, and can sometimes expire unexpectedly. Replace the pairing file using the current SideStore installation guide, then reconnect LocalDevVPN and refresh SideStore again.</div>
+        </details>
         <details class="trouble-item" data-search="sidestore refresh update install vpn localdevvpn wifi">
           <summary data-i18n="guideT1Q">SideStore will not install, update or refresh</summary>
           <div class="trouble-answer" data-i18n="guideT1A">Turn on LocalDevVPN first and make sure the device is on Wi-Fi. SideStore requires its on-device VPN whenever you install, update or refresh apps. If needed, reconnect the VPN and reopen SideStore.</div>
@@ -316,6 +375,14 @@
         <div id="troubleEmpty" class="trouble-empty" hidden data-i18n="guideNoTrouble">No troubleshooting item matches your search.</div>
       </div>
 
+      <div class="guide-report panel">
+        <div>
+          <strong data-guide-copy="reportHelpTitle">Still not working?</strong>
+          <span data-guide-copy="reportHelpDesc">Open a pre-filled GitHub report with the selected problem so it is easier to diagnose.</span>
+        </div>
+        <a id="guideReportIssue" class="btn primary" href="https://github.com/CaseyCZ/iOS-Hub/issues/new" target="_blank" rel="noopener noreferrer" data-guide-copy="reportHelpButton">Report this problem ↗</a>
+      </div>
+
       <div class="section-head guide-section-head">
         <div>
           <h2 data-i18n="guideOfficialLinks">Official references</h2>
@@ -323,6 +390,7 @@
         </div>
       </div>
       <div class="guide-official-links">
+        <a class="btn small secondary" href="https://sideinstaller.net/" target="_blank" rel="noopener noreferrer"><span>SideInstaller ↗</span></a>
         <a class="btn small secondary brand-link" href="https://docs.sidestore.io/" target="_blank" rel="noopener noreferrer"><img class="brand-link-icon" src="https://sidestore.io/assets/icon.png" alt="" loading="lazy" referrerpolicy="no-referrer"><span>SideStore Docs ↗</span></a>
         <a class="btn small secondary brand-link" href="https://github.com/LiveContainer/LiveContainer" target="_blank" rel="noopener noreferrer"><img class="brand-link-icon" src="assets/icons/livecontainer.svg" alt="" loading="lazy" referrerpolicy="no-referrer"><span>LiveContainer ↗</span></a>
         <a class="btn small secondary brand-link" href="https://iloader.app/" target="_blank" rel="noopener noreferrer"><img class="brand-link-icon" src="assets/icons/iloader.svg" alt="" loading="lazy" referrerpolicy="no-referrer"><span>iloader ↗</span></a>
