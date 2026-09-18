@@ -196,3 +196,11 @@
 .brand-link{display:inline-flex;align-items:center;justify-content:center;gap:7px}
 .brand-link-icon{width:18px;height:18px;object-fit:contain;border-radius:5px;flex:0 0 auto}
 .resource-icon-image{border-color:var(--border);background:color-mix(in srgb,var(--panel2) 94%,transparent)}
+
+
+/* v1.1.5 — sitewide official link icons */
+.nav-brand-icon{width:18px;height:18px;display:block;object-fit:contain}
+.compact-brand-icon{width:17px;height:17px;display:block;object-fit:contain;flex:0 0 auto}
+.brand-link-icon-contain{object-fit:contain;background:transparent}
+.resource-card>.brand-link{margin-top:auto}
+.resource-card>.brand-link .brand-link-icon{width:18px;height:18px}
