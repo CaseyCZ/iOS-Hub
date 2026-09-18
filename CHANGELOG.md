@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.1.5 — 2026-09-18
+
+- Moved the compact Custom Builder card into the Tools grid beside the DEB → IPA Converter on desktop.
+- Kept the three prepared AltStore, SideStore and LiveContainer source cards in the Ready sources section.
+- Preserved responsive behavior so the two tool cards stack on narrower screens.
+
 ## 1.1.4 — 2026-09-18
 
 - Moved the full Custom Source Builder from the homepage to a dedicated `builder.html` page, matching the separate-tool approach used by the DEB → IPA converter.
