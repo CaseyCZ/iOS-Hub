@@ -107,3 +107,8 @@
 .resource-section-head{margin-top:34px}
 .resource-badges{display:flex;gap:6px;flex-wrap:wrap;justify-content:center}
 .resource-card{min-height:275px}
+
+/* v1.1.5 — expanded resources catalogue */
+.resource-section-head{margin-bottom:16px}
+.resource-card{min-height:290px}
+@media(max-width:640px){.resource-card{min-height:245px}}
