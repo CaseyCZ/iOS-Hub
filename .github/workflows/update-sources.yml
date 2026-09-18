@@ -33,7 +33,9 @@ jobs:
           python-version: "3.12"
 
       - name: Validate sources and build packages
-        run: python tools/update_sources.py
+        run: |
+          python tools/update_sources.py
+          python tools/audit_repo.py
 
       - name: Commit generated catalog
         run: |
@@ -47,6 +49,7 @@ jobs:
             git fetch origin main
             git reset --hard origin/main
             python tools/update_sources.py
+            python tools/audit_repo.py
             git add data mix altstore sidestore
 
             if git diff --cached --quiet; then
