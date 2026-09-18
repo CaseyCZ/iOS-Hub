@@ -293,6 +293,7 @@ def validate_registry() -> None:
 
     ids: dict[str, int] = {}
     urls: dict[str, int] = {}
+    partially_localized: list[str] = []
     for index, source in enumerate(payload["sources"]):
         if not isinstance(source, dict):
             error(f"registry sources[{index}] is not an object")
@@ -337,6 +338,12 @@ def validate_registry() -> None:
             for language in ("en", "cs"):
                 if not str(description.get(language) or "").strip():
                     error(f"registry source {source_id or index!r} is missing {language} description")
+            missing_optional = [
+                language for language in ("de", "es", "fr")
+                if not str(description.get(language) or "").strip()
+            ]
+            if missing_optional:
+                partially_localized.append(source_id or str(index))
 
         if source.get("cachePayload") is False and source.get("builder") is not False:
             error(
@@ -349,6 +356,13 @@ def validate_registry() -> None:
         for key in ("official", "trusted", "recommended", "mergeable", "community", "modified"):
             if key in source and not isinstance(source[key], bool):
                 error(f"registry source {source_id!r} field {key!r} must be boolean")
+
+
+    if partially_localized:
+        warn(
+            f"{len(partially_localized)} registry source descriptions still fall back to English "
+            "for one or more of DE/ES/FR"
+        )
 
 
 def validate_generated_data() -> None:
@@ -780,6 +794,18 @@ def validate_layout() -> None:
     for html in SITE_PAGES:
         validate_html_scripts(html)
         validate_security_policy(html)
+
+    shared_css = ROOT / "hub-extra.css"
+    if shared_css.exists():
+        shared_css_text = shared_css.read_text(encoding="utf-8")
+        for required_css in ("safe-area-inset-left", "safe-area-inset-right", "prefers-reduced-motion"):
+            if required_css not in shared_css_text:
+                error(f"hub-extra.css is missing full-site mobile/accessibility guard: {required_css}")
+
+    for search_script in ("app.js", "builder.js"):
+        path = ROOT / search_script
+        if path.exists() and "Object.values(source.description || {})" not in path.read_text(encoding="utf-8"):
+            error(f"{search_script} must search every localized source description")
 
     for script_name in ("app.js", "builder.js"):
         script = ROOT / script_name
