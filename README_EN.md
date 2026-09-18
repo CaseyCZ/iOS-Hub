@@ -17,7 +17,7 @@
 
 ## About
 
-**CaseyCZ iOS Hub** is a live catalog of public iOS source repositories. Sources are checked regularly, and unavailable sources are temporarily hidden from the website.
+**CaseyCZ iOS Hub** is a live catalog of public iOS source repositories. Sources are checked regularly; if one stops responding, its card remains visible as Offline and its install buttons are temporarily disabled.
 
 ## Main features
 
