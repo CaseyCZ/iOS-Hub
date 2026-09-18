@@ -7,6 +7,8 @@
 - Preserved responsive behavior so the two tool cards stack on narrower screens.
 - Fixed the homepage Ready sources section so the prepared AltStore, SideStore and LiveContainer cards render again after the Builder was moved to its standalone page.
 - Unified the DEB → IPA Converter and Custom Builder cards: matching icon block, background, centered content and bottom-aligned action buttons.
+- Added catalog sorting by source name or app count, with both highest-first and lowest-first app-count options.
+- Added a translated bug-report icon in the top bar linking directly to a new GitHub issue.
 
 ## 1.1.4 — 2026-09-18
 
