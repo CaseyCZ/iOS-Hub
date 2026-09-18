@@ -106,6 +106,10 @@ function sourceIcon(source) {
 }
 
 function sourceInstallerLink(installer, source) {
+  if (installer === 'altstore') {
+    const scheme = source.mode === 'pal' ? 'altstore-pal' : 'altstore';
+    return `${scheme}://source?url=${encodeURIComponent(source.url)}`;
+  }
   return `${installer}://source?url=${encodeURIComponent(source.url)}`;
 }
 
@@ -237,13 +241,19 @@ function renderSources() {
     const appCount = Number.isFinite(status.appCount) ? status.appCount : '—';
     const desc = source.description?.[state.lang] || source.description?.en || source.description?.cs || '';
     const checkedOffline = status.online === false && Boolean(status.checkedAt);
+    const palOnly = source.mode === 'pal';
+    const altStoreLabel = palOnly ? 'AltStore PAL' : 'AltStore';
     const installerButtons = checkedOffline
-      ? `<span class="btn small secondary installer-link is-disabled" aria-disabled="true">${installerIcon('altstore')}AltStore</span>
+      ? `<span class="btn small secondary installer-link is-disabled" aria-disabled="true">${installerIcon('altstore')}${altStoreLabel}</span>
         <span class="btn small secondary installer-link is-disabled" aria-disabled="true">${installerIcon('sidestore')}SideStore</span>
         <span class="btn small secondary installer-link is-disabled" aria-disabled="true">${installerIcon('livecontainer')}LiveContainer</span>`
-      : `<a class="btn small primary installer-link" href="${escapeHtml(sourceInstallerLink('altstore', source))}">${installerIcon('altstore')}AltStore</a>
-        <a class="btn small secondary installer-link" href="${escapeHtml(sourceInstallerLink('sidestore', source))}">${installerIcon('sidestore')}SideStore</a>
-        <a class="btn small secondary installer-link" href="${escapeHtml(sourceInstallerLink('livecontainer', source))}">${installerIcon('livecontainer')}LiveContainer</a>`;
+      : palOnly
+        ? `<a class="btn small primary installer-link" href="${escapeHtml(sourceInstallerLink('altstore', source))}">${installerIcon('altstore')}${altStoreLabel}</a>
+          <span class="btn small secondary installer-link is-disabled" aria-disabled="true" title="AltStore PAL source"> ${installerIcon('sidestore')}SideStore</span>
+          <span class="btn small secondary installer-link is-disabled" aria-disabled="true" title="AltStore PAL source"> ${installerIcon('livecontainer')}LiveContainer</span>`
+        : `<a class="btn small primary installer-link" href="${escapeHtml(sourceInstallerLink('altstore', source))}">${installerIcon('altstore')}${altStoreLabel}</a>
+          <a class="btn small secondary installer-link" href="${escapeHtml(sourceInstallerLink('sidestore', source))}">${installerIcon('sidestore')}SideStore</a>
+          <a class="btn small secondary installer-link" href="${escapeHtml(sourceInstallerLink('livecontainer', source))}">${installerIcon('livecontainer')}LiveContainer</a>`;
     return `<article class="source-card${checkedOffline ? ' is-offline' : ''}" data-source-id="${escapeHtml(source.id)}">
       <div class="source-top">
         <div class="source-icon">${sourceIcon(source)}</div>
