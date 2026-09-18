@@ -16,6 +16,7 @@ CATALOG = ROOT / "data" / "catalog.json"
 EXPECTED_SITE_URL = "https://caseycz.github.io/iOS-Hub/"
 EXPECTED_REPO_URL = "https://github.com/CaseyCZ/iOS-Hub"
 EXPECTED_PROJECT_NAME = "CaseyCZ iOS Hub"
+EXPECTED_PUBLIC_SITE_NAME = "iOS Hub"
 OLD_PUBLIC_REFERENCES = (
     "https://caseycz.github.io/repo",
     "https://github.com/CaseyCZ/repo",
@@ -236,8 +237,8 @@ def validate_project_identity() -> None:
         text = index.read_text(encoding="utf-8")
         if EXPECTED_REPO_URL not in text:
             error(f"index.html must link to current repository {EXPECTED_REPO_URL}")
-        if EXPECTED_PROJECT_NAME not in text:
-            error(f"index.html must use current project name {EXPECTED_PROJECT_NAME!r}")
+        if EXPECTED_PUBLIC_SITE_NAME not in text:
+            error(f"index.html must use current public site name {EXPECTED_PUBLIC_SITE_NAME!r}")
 
     generator = ROOT / "tools" / "update_sources.py"
     if generator.exists():
