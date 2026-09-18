@@ -307,8 +307,7 @@ function troubleMatchCount(query) {
 function splitDiagnosisSteps(text) {
   const normalized = (text || '').replace(/\s+/g,' ').trim();
   if (!normalized) return [];
-  const parts = normalized
-    .split(/(?<=[.!?])\s+/)
+  const parts = (normalized.match(/[^.!?]+[.!?]?/g) || [])
     .map(part => part.trim())
     .filter(part => part.length > 18);
   return (parts.length ? parts : [normalized]).slice(0,3);
