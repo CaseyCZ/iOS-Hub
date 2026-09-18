@@ -228,3 +228,12 @@
   background-size:1049px 591px;
   background-position:-95px -25px;
 }
+
+
+/* v1.1.5 — builder PASS clarification */
+.builder-pass-help{
+  margin-top:8px;
+  max-width:680px;
+  font-size:9px;
+  line-height:1.55;
+}
