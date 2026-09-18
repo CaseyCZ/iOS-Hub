@@ -364,6 +364,20 @@ def validate_layout() -> None:
         validate_html_scripts(html)
         validate_security_policy(html)
 
+    builder = ROOT / "builder.js"
+    if builder.exists():
+        builder_text = builder.read_text(encoding="utf-8")
+        if "livecontainer://sources?url=" in builder_text:
+            error("builder.js uses obsolete LiveContainer deep link; use livecontainer://source?url=")
+
+    generator = ROOT / "tools" / "update_sources.py"
+    if generator.exists():
+        generator_text = generator.read_text(encoding="utf-8")
+        if 'cleaned.pop("marketplaceID", None)' not in generator_text:
+            error("tools/update_sources.py must strip marketplaceID from Classic generated sources")
+        if 'item.pop("Build", None)' not in generator_text:
+            error("tools/update_sources.py must strip custom Build fields from Classic generated sources")
+
     for required in (
         ROOT / "app.js",
         ROOT / "builder-page.js",
