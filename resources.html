@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#070b14">
+  <meta name="referrer" content="no-referrer">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' https: data:; connect-src 'self'; object-src 'none'; base-uri 'self'; form-action 'none'">
+  <meta name="description" content="CaseyCZ iOS Hub — useful apps, services and websites for iPhone, desktop and everyday workflows.">
+  <title>Useful Resources — CaseyCZ iOS Hub</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="hub-extra.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="wrap topbar-inner">
+      <a class="brand" href="index.html" aria-label="CaseyCZ iOS Hub">
+        <span class="brand-mark">iOS</span>
+        <span>CaseyCZ iOS Hub<small>AltStore · SideStore · LiveContainer</small></span>
+      </a>
+      <nav class="nav" aria-label="Primary">
+        <a href="index.html#tools" data-i18n="tools">Tools</a>
+        <a href="builder.html">Source Builder</a>
+        <a href="resources.html" class="active" data-i18n="resourcesNav">Useful</a>
+        <a href="index.html#sources" data-i18n="sources">Sources</a>
+      </nav>
+      <div class="nav-actions">
+        <select id="languageSelect" class="language-select" aria-label="Language">
+          <option value="en">EN</option>
+          <option value="cs">CZ</option>
+          <option value="de">DE</option>
+          <option value="es">ES</option>
+          <option value="fr">FR</option>
+        </select>
+        <a class="icon-btn report-bug-btn" href="https://github.com/CaseyCZ/iOS-Hub/issues/new" target="_blank" rel="noopener" aria-label="Report a bug" title="Report a bug" data-i18n-title="reportBug" data-i18n-aria-label="reportBug">🐞</a>
+        <button id="themeToggle" class="icon-btn" type="button" aria-label="Theme">☀</button>
+        <button class="compact-btn" type="button" data-support-open><span>☕</span><span class="support-label" data-i18n="support">Support</span></button>
+      </div>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero resources-hero wrap">
+      <div class="eyebrow">LINKS · APPS · TOOLS</div>
+      <h1 data-i18n="resourcesPageTitle">Useful Resources</h1>
+      <p data-i18n="resourcesPageDesc">A hand-picked collection of useful apps, services and websites worth keeping close.</p>
+    </section>
+
+    <section class="section wrap resources-page-section">
+      <div class="section-head">
+        <div>
+          <h2 data-i18n="resourcesSectionTitle">Useful apps & websites</h2>
+          <p data-i18n="resourcesSectionDesc">Quick links to practical tools for file sharing, iPhone, desktop and everyday workflows.</p>
+        </div>
+      </div>
+
+      <div class="resource-grid">
+        <article class="panel resource-card">
+          <div class="resource-icon">LS</div>
+          <span class="pill mode" data-i18n="resourceFileTransfer">File transfer</span>
+          <h3>LocalSend</h3>
+          <p data-i18n="resourceLocalSendDesc">Free and open-source file sharing across your local network. Works on Windows, macOS, Linux, Android and iOS without an account or cloud upload.</p>
+          <div class="resource-domain">localsend.org</div>
+          <a class="btn primary" href="https://localsend.org/" target="_blank" rel="noopener noreferrer" data-i18n="openWebsite">Open website ↗</a>
+        </article>
+
+        <article class="panel resource-card">
+          <div class="resource-icon">↗</div>
+          <span class="pill mode" data-i18n="resourceExternal">External link</span>
+          <h3 data-i18n="resourceSharedTitle">Shared useful link</h3>
+          <p data-i18n="resourceSharedDesc">A shortened external link added to the collection. It opens the original destination in a new tab.</p>
+          <div class="resource-domain">t.co/cnLWdPKQ12</div>
+          <a class="btn primary" href="https://t.co/cnLWdPKQ12" target="_blank" rel="noopener noreferrer" data-i18n="openWebsite">Open website ↗</a>
+        </article>
+
+        <article class="panel resource-card">
+          <div class="resource-icon">↗</div>
+          <span class="pill mode" data-i18n="resourceExternal">External link</span>
+          <h3 data-i18n="resourceSharedTitle">Shared useful link</h3>
+          <p data-i18n="resourceSharedDesc">A shortened external link added to the collection. It opens the original destination in a new tab.</p>
+          <div class="resource-domain">t.co/SgInjn6WG4</div>
+          <a class="btn primary" href="https://t.co/SgInjn6WG4" target="_blank" rel="noopener noreferrer" data-i18n="openWebsite">Open website ↗</a>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap footer-inner">
+      <span>© <span id="year"></span> CaseyCZ · iOS Hub · v1.1.5</span>
+      <div class="footer-links">
+        <a href="https://caseycz.github.io/" target="_blank" rel="noopener">CaseyCZ Website</a>
+        <a href="https://github.com/CaseyCZ/iOS-Hub" target="_blank" rel="noopener">GitHub · iOS-Hub</a>
+      </div>
+    </div>
+  </footer>
+
+  <div id="supportModal" class="support-backdrop" role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="supportTitle">
+    <div class="support-dialog">
+      <button class="support-close" type="button" data-support-close aria-label="Close">×</button>
+      <div class="eyebrow" data-i18n="supportEyebrow">SUPPORT CASEYCZ</div>
+      <h2 id="supportTitle" data-i18n="supportTitle">Support further development.</h2>
+      <p data-i18n="supportDesc">If CaseyCZ iOS Hub saves you time, you can support further development through Buy Me a Coffee.</p>
+      <a href="https://www.buymeacoffee.com/caseycz" target="_blank" rel="noopener"><img class="support-qr" src="https://caseycz.github.io/support-qr.svg" alt="Buy Me a Coffee CaseyCZ QR code"></a>
+      <a class="btn primary" style="width:100%" href="https://www.buymeacoffee.com/caseycz" target="_blank" rel="noopener" data-i18n="openCoffee">Open Buy Me a Coffee ↗</a>
+    </div>
+  </div>
+
+  <script type="module" src="resources.js"></script>
+</body>
+</html>
