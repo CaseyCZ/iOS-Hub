@@ -106,8 +106,7 @@ function sourceIcon(source) {
 }
 
 function sourceInstallerLink(installer, source) {
-  const path = installer === 'livecontainer' ? 'sources' : 'source';
-  return `${installer}://${path}?url=${encodeURIComponent(source.url)}`;
+  return `${installer}://source?url=${encodeURIComponent(source.url)}`;
 }
 
 function sourceTags(source) {
