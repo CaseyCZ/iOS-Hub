@@ -9,7 +9,7 @@
   <meta name="description" content="iOS Hub — free sideloading guide, compatibility overview and troubleshooting for AltStore, SideStore, LiveContainer, Sideloadly and TrollStore.">
   <title>Sideloading Guide — iOS Hub</title>
   <link rel="stylesheet" href="styles.css?v=1.1.5-20260918-layout2">
-  <link rel="stylesheet" href="hub-extra.css?v=1.1.5-20260918-helpcenter2">
+  <link rel="stylesheet" href="hub-extra.css?v=1.1.5-20260918-officialdocs1">
 </head>
 <body>
   <header class="topbar">
@@ -445,57 +445,87 @@
       </div>
 
       <div id="troubleList" class="trouble-list">
-        <details class="trouble-item" data-search="apple id apple account login sign in 503 2fa sms call sidestore sideinstaller rate limit">
+        <details class="trouble-item" data-search="apple id apple account login sign in 503 2fa sms call sidestore sideinstaller rate limit anisette 1412 1004 verification code">
           <summary data-guide-copy="troubleLoginQ">Apple ID login fails, HTTP 503 or 2FA does not work</summary>
-          <div class="trouble-answer" data-guide-copy="troubleLoginA">Update the app from its official source first. SideInstaller v1.0.0 specifically notes fixes for HTTP 503 login, support for SMS/call 2FA and saved session IDs to reduce repeated sign-ins. If the error continues, wait before retrying repeatedly and verify you are using the official build.</div>
+          <div class="trouble-answer" data-guide-copy="troubleLoginA">For SideStore sign-in issues, try another Anisette Server first; if the Apple verification code does not arrive, request one manually from Apple Account settings. SideInstaller v1.0.0 also documents fixes for HTTP 503, SMS/call 2FA and reusable session IDs.</div>
+          <div class="trouble-docs">
+            <a href="https://docs.sidestore.io/docs/troubleshooting" target="_blank" rel="noopener noreferrer">SideStore Docs ↗</a>
+            <a href="https://github.com/FrizzleM/SideInstaller/releases" target="_blank" rel="noopener noreferrer">SideInstaller Releases ↗</a>
+          </div>
         </details>
         <details class="trouble-item" data-search="livecontainer sidestore auto refresh automatic background shortcut localdevvpn wifi refresh all">
           <summary data-guide-copy="troubleAutoRefreshQ">LiveContainer + SideStore does not refresh automatically</summary>
-          <div class="trouble-answer" data-guide-copy="troubleAutoRefreshA">First confirm Wi-Fi and LocalDevVPN are active and that a manual Refresh All works. If manual refresh works but automation does not, use manual refresh as the fallback and check the release notes for the exact LC+SS build or Shortcut you installed, because background automation can differ between builds.</div>
+          <div class="trouble-answer" data-guide-copy="troubleAutoRefreshA">First make sure Wi-Fi + LocalDevVPN are active and a manual Refresh All works in the built-in SideStore. LiveContainer's official LC+SS guide says the auto-refresh Shortcut can be used by replacing SideStore's Refresh All Apps action with LiveContainer's action.</div>
+          <div class="trouble-docs">
+            <a href="https://livecontainer.github.io/docs/installation/lc_sidestore" target="_blank" rel="noopener noreferrer">LiveContainer Docs ↗</a>
+          </div>
         </details>
-        <details class="trouble-item" data-search="pairing file expired update reset iphone ios random sidestore replace pairing">
+        <details class="trouble-item" data-search="pairing file expired update reset iphone ios random sidestore replace pairing 1006 udid iloader">
           <summary data-guide-copy="troublePairingExpireQ">SideStore pairing stopped working after an iOS update or reset</summary>
-          <div class="trouble-answer" data-guide-copy="troublePairingExpireA">SideStore documents that pairing files can expire after an update or device reset, and can sometimes expire unexpectedly. Replace the pairing file using the current SideStore installation guide, then reconnect LocalDevVPN and refresh SideStore again.</div>
+          <div class="trouble-answer" data-guide-copy="troublePairingExpireA">SideStore documents that pairing files can expire after an update or reset, and sometimes unexpectedly. Update iloader, delete the stored pairing, pair/trust the device again, place the new pairing file for SideStore, reconnect LocalDevVPN and refresh.</div>
+          <div class="trouble-docs">
+            <a href="https://docs.sidestore.io/docs/advanced/pairing-file" target="_blank" rel="noopener noreferrer">Pairing File Guide ↗</a>
+          </div>
         </details>
-        <details class="trouble-item" data-search="sidestore refresh update install vpn localdevvpn wifi">
+        <details class="trouble-item" data-search="sidestore 1005 1007 app not found invalid format ipa url download">
+          <summary data-guide-copy="troubleInvalidIpaQ">SideStore error 1005 / 1007 — app not found or invalid IPA</summary>
+          <div class="trouble-answer" data-guide-copy="troubleInvalidIpaA">Error 1005 means SideStore could not find the app file at the provided URL. Error 1007 means the downloaded file is not a standard IPA. Re-download from the original source or try another verified source.</div>
+          <div class="trouble-docs"><a href="https://docs.sidestore.io/docs/troubleshooting/error-codes" target="_blank" rel="noopener noreferrer">SideStore Error Codes ↗</a></div>
+        </details>
+        <details class="trouble-item" data-search="sidestore nightly unstable beta latest nightly issue stable build">
+          <summary data-guide-copy="troubleNightlyQ">SideStore nightly is unstable or suddenly broke</summary>
+          <div class="trouble-answer" data-guide-copy="troubleNightlyA">SideStore's official troubleshooting guide says nightly builds may contain unstable bleeding-edge changes. If a problem appears only on nightly, switch back to the latest stable build before deeper troubleshooting.</div>
+          <div class="trouble-docs"><a href="https://docs.sidestore.io/docs/troubleshooting/common-issues" target="_blank" rel="noopener noreferrer">SideStore Common Issues ↗</a></div>
+        </details>
+        <details class="trouble-item" data-search="sidestore refresh update install vpn localdevvpn wifi 1414 minimuxer 27 afc connection dns blocker">
           <summary data-i18n="guideT1Q">SideStore will not install, update or refresh</summary>
           <div class="trouble-answer" data-i18n="guideT1A">Turn on LocalDevVPN first and make sure the device is on Wi-Fi. SideStore requires its on-device VPN whenever you install, update or refresh apps. If needed, reconnect the VPN and reopen SideStore.</div>
+          <div class="trouble-docs"><a href="https://docs.sidestore.io/docs/troubleshooting/common-issues" target="_blank" rel="noopener noreferrer">SideStore Common Issues ↗</a></div>
         </details>
         <details class="trouble-item" data-search="7 days expire expired refresh apple id free signing">
           <summary data-i18n="guideT2Q">My sideloaded app expired after 7 days</summary>
           <div class="trouble-answer" data-i18n="guideT2A">This is normal with a free Apple development account. Refresh the app before expiry with SideStore, AltStore or Sideloadly. If you use AltStore, AltServer must be reachable. Sideloadly can use its auto-refresh daemon.</div>
+          <div class="trouble-docs"><a href="https://faq.altstore.io/altstore-classic/your-altstore" target="_blank" rel="noopener noreferrer">AltStore Refresh Docs ↗</a></div>
         </details>
         <details class="trouble-item" data-search="altstore altserver not found wifi usb firewall itunes icloud windows">
           <summary data-i18n="guideT3Q">AltStore says it cannot find AltServer</summary>
           <div class="trouble-answer" data-i18n="guideT3A">Make sure AltServer is running and the computer is on the same Wi-Fi as the iPhone/iPad, or connect the device by USB. On Windows, firewall rules and the Apple versions of iTunes/iCloud can also matter.</div>
+          <div class="trouble-docs"><a href="https://faq.altstore.io/altstore-classic/troubleshooting-guide" target="_blank" rel="noopener noreferrer">AltStore Troubleshooting ↗</a></div>
         </details>
         <details class="trouble-item" data-search="remote altserver localdevvpn wifi invalid response unavailable choose server cellular">
           <summary data-i18n="guideT10Q">Remote AltServer cannot be reached or is unavailable</summary>
           <div class="trouble-answer" data-i18n="guideT10A">Make sure Wi-Fi and LocalDevVPN are both enabled. Remote AltServer does not work over cellular. If the server returns an invalid response or is unavailable, wait a few minutes or choose another Remote AltServer in AltStore settings.</div>
+          <div class="trouble-docs"><a href="https://faq.altstore.io/altstore-classic/remote-altservers" target="_blank" rel="noopener noreferrer">Remote AltServer Docs ↗</a></div>
         </details>
         <details class="trouble-item" data-search="iloader pairing file anisette usb trust device">
           <summary data-i18n="guideT4Q">iloader / pairing file setup fails</summary>
           <div class="trouble-answer" data-i18n="guideT4A">Use the latest iloader, reconnect the device by USB and trust the computer again. Re-run the initial SideStore installation so the pairing data is generated again. For iloader-specific failures, use its official support links.</div>
+          <div class="trouble-docs"><a href="https://docs.sidestore.io/docs/advanced/pairing-file" target="_blank" rel="noopener noreferrer">SideStore Pairing Guide ↗</a></div>
         </details>
         <details class="trouble-item" data-search="livecontainer certificate mismatch missing sidestore import certificate">
           <summary data-i18n="guideT5Q">LiveContainer says the certificate is missing or mismatched</summary>
           <div class="trouble-answer" data-i18n="guideT5A">Open SideStore, sign in, connect LocalDevVPN and run Refresh All. Then return to LiveContainer and import the signing certificate from SideStore. The built-in LiveContainer + SideStore workflow uses the same certificate.</div>
+          <div class="trouble-docs"><a href="https://livecontainer.github.io/docs/installation/lc_sidestore" target="_blank" rel="noopener noreferrer">LiveContainer LC+SS Docs ↗</a></div>
         </details>
-        <details class="trouble-item" data-search="3 app limit app ids 10 limit slots livecontainer">
+        <details class="trouble-item" data-search="3 app limit app ids 10 limit slots livecontainer 1009 2009 register app ids free developer account">
           <summary data-i18n="guideT6Q">I hit the 3-app or App ID limit</summary>
           <div class="trouble-answer" data-i18n="guideT6A">A free Apple account has strict limits. Remove or deactivate apps you are not using, wait for old App IDs to expire, or use LiveContainer + SideStore so multiple guest apps can run inside one container slot.</div>
+          <div class="trouble-docs"><a href="https://faq.altstore.io/altstore-classic/app-ids" target="_blank" rel="noopener noreferrer">AltStore App IDs ↗</a></div>
         </details>
-        <details class="trouble-item" data-search="livecontainer app not launch jit jitless compatibility crash">
+        <details class="trouble-item" data-search="livecontainer app not launch jit jitless compatibility crash invalid signature entitlements team id revoked certificate diagnose">
           <summary data-i18n="guideT7Q">An app installs in LiveContainer but will not launch</summary>
           <div class="trouble-answer" data-i18n="guideT7A">Not every app is compatible with LiveContainer. Run the JIT-Less Mode Diagnose tool, confirm the certificate import worked, and check the official compatibility information before assuming the IPA itself is broken.</div>
+          <div class="trouble-docs"><a href="https://livecontainer.github.io/docs/faq/jit-less-mode-setup" target="_blank" rel="noopener noreferrer">JIT-Less Diagnose ↗</a></div>
         </details>
         <details class="trouble-item" data-search="trollstore ios version 17 16 compatible support">
           <summary data-i18n="guideT8Q">Can I use TrollStore on a newer iOS version?</summary>
           <div class="trouble-answer" data-i18n="guideT8A">Only on the versions supported by the TrollStore project: 14.0 beta 2 through 16.6.1, 16.7 RC, and 17.0. The project states that 16.7.x other than that RC and 17.0.1+ are not supported by the known CoreTrust bugs.</div>
+          <div class="trouble-docs"><a href="https://github.com/opa334/TrollStore" target="_blank" rel="noopener noreferrer">TrollStore ↗</a></div>
         </details>
         <details class="trouble-item" data-search="apple tv tvos sideloadly atvloadly">
           <summary data-i18n="guideT9Q">What should I use for Apple TV?</summary>
           <div class="trouble-answer" data-i18n="guideT9A">Sideloadly supports Apple TV from Windows/macOS. If you want a self-hosted Linux/OpenWrt service, atvloadly is the more specialized route.</div>
+          <div class="trouble-docs"><a href="https://sideloadly.io/" target="_blank" rel="noopener noreferrer">Sideloadly FAQ ↗</a></div>
         </details>
         <div id="troubleEmpty" class="trouble-empty" hidden data-i18n="guideNoTrouble">No troubleshooting item matches your search.</div>
       </div>
@@ -548,7 +578,7 @@
     </div>
   </div>
 
-  <script type="module" src="guide.js?v=1.1.5-20260918-helpcenter3"></script>
+  <script type="module" src="guide.js?v=1.1.5-20260918-officialdocs1"></script>
   <script src="mobile-menu.js?v=1.1.5-20260918-settingsportal1"></script>
   <script src="settings-menu.js?v=1.1.5-20260918-settingsportal1"></script>
 </body>
