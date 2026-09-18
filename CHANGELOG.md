@@ -16,6 +16,7 @@
 - Added a standalone Sideloading Guide with free setup paths, a compatibility matrix, Apple account limits, searchable troubleshooting and official reference links.
 - Reordered Useful Resources sections alphabetically in Czech, with Free iOS & tvOS sideloading first.
 - Added AltStore Classic Remote AltServers to the Sideloading Guide, including no-computer refresh workflow, compatibility details and troubleshooting.
+- Reworked the Sideloading Guide for complete beginners with plain-language choices, AltStore PAL vs Classic guidance, SideStore and LiveContainer explanations, and a clear explanation of what a Source is.
 
 ## 1.1.4 — 2026-09-18
 
