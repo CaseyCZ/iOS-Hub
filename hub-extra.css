@@ -317,12 +317,13 @@
 .mobile-menu-open .mobile-menu-icon{background:transparent}
 .mobile-menu-open .mobile-menu-icon::before{top:0;transform:rotate(45deg)}
 .mobile-menu-open .mobile-menu-icon::after{top:0;transform:rotate(-45deg)}
-.mobile-nav-panel{display:none;position:absolute;left:0;right:0;top:100%;z-index:150;border-top:1px solid color-mix(in srgb,var(--border) 75%,transparent);border-bottom:1px solid var(--border);background:color-mix(in srgb,var(--page) 96%,transparent);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);box-shadow:0 18px 42px rgba(0,0,0,.28)}
+.mobile-nav-panel{display:none;position:absolute;right:16px;top:calc(100% + 8px);z-index:150;width:220px;padding:8px;border:1px solid var(--border);border-radius:14px;background:color-mix(in srgb,var(--panel) 98%,transparent);box-shadow:var(--shadow)}
 .mobile-menu-open .mobile-nav-panel{display:block}
-.mobile-nav-inner{padding-top:10px;padding-bottom:12px}
-.mobile-nav-links{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:7px}
-.mobile-nav-links a{min-height:42px;padding:0 12px;border:1px solid var(--border);border-radius:11px;background:var(--panel);color:var(--muted);display:flex;align-items:center;justify-content:center;text-align:center;font-size:11px;font-weight:850}
-.mobile-nav-links a:hover,.mobile-nav-links a.active{border-color:var(--accent);background:var(--accent-soft);color:var(--accent)}
+.mobile-nav-inner{width:100%;padding:0;margin:0}
+.mobile-nav-links{display:grid;grid-template-columns:1fr;gap:4px}
+.mobile-nav-links a{width:100%;min-height:40px;padding:0 10px;border:1px solid transparent;border-radius:10px;background:transparent;color:var(--text);display:flex;align-items:center;justify-content:flex-start;text-align:left;font-size:11px;font-weight:800}
+.mobile-nav-links a:hover{background:var(--panel2);border-color:var(--border)}
+.mobile-nav-links a.active{background:var(--accent-soft);border-color:color-mix(in srgb,var(--accent) 45%,var(--border));color:var(--accent)}
 
 @media(max-width:900px){
   .mobile-menu-button{display:grid}
@@ -333,5 +334,5 @@
   .language-menu-button{min-width:42px;width:42px;padding:0}
   .topbar-inner{gap:7px}
   .nav-actions{gap:5px}
-  .mobile-nav-links{grid-template-columns:1fr}
+  .mobile-nav-panel{right:10px;left:auto;top:calc(100% + 8px);width:220px}
 }
