@@ -213,11 +213,11 @@ function applyHelpCopy() {
     const value = copy[node.dataset.helpCopy];
     if (value) node.textContent = value;
   });
-  $('[data-help-placeholder]').forEach(node => {
+  $$('[data-help-placeholder]').forEach(node => {
     const value = copy[node.dataset.helpPlaceholder];
     if (value) node.placeholder = value;
   });
-  $('[data-help-aria-label]').forEach(node => {
+  $$('[data-help-aria-label]').forEach(node => {
     const value = copy[node.dataset.helpAriaLabel];
     if (value) node.setAttribute('aria-label', value);
   });
