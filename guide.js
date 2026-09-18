@@ -324,7 +324,12 @@ function extractKnownError(raw) {
 function helpUrlForFix(raw) {
   const url = new URL(window.location.href);
   url.searchParams.delete('setup');
-  if ((raw || '').trim()) url.searchParams.set('fix', raw.trim());
+  const cleanRaw = String(raw || '').trim();
+  const resolved = cleanRaw ? resolvedTroubleQuery(cleanRaw) : '';
+  const token = cleanRaw
+    ? (extractKnownError(cleanRaw) || diagnosisState.currentKey || (resolved !== cleanRaw.toLowerCase() ? resolved : ''))
+    : '';
+  if (token) url.searchParams.set('fix', token);
   else url.searchParams.delete('fix');
   if (diagnosisState.tried.size) url.searchParams.set('tried', [...diagnosisState.tried].join(','));
   else url.searchParams.delete('tried');
@@ -703,6 +708,10 @@ function updateReportLink() {
   const link = $('#guideReportIssue');
   if (!link) return;
   const query = ($('#troubleSearch')?.value || '').trim();
+  const diagnosticRaw = ($('#assistantTroubleSearch')?.value || '').trim();
+  const queryMatch = query ? getTroubleMatches(resolvedTroubleQuery(query))[0]?.item : null;
+  const queryLabel = queryMatch?.querySelector('summary')?.textContent?.trim() || (query ? 'custom search' : '—');
+  const diagnosticKey = extractKnownError(diagnosticRaw) || diagnosisState.currentKey || '—';
   const copy = copyForLanguage();
   const goalText = activeGoal ? (recommendationsForLanguage()[activeGoal]?.title || activeGoal) : '—';
   const body = [
@@ -710,8 +719,8 @@ function updateReportLink() {
     '',
     `- Language: ${root.lang || 'en'}`,
     `- Selected guide path: ${goalText}`,
-    `- Troubleshooting filter/search: ${query || '—'}`,
-    `- Diagnostic input: ${($('#assistantTroubleSearch')?.value || '').trim() || '—'}`,
+    `- Troubleshooting match: ${queryLabel}`,
+    `- Diagnostic code/key: ${diagnosticKey}`,
     `- Current diagnosis: ${$('#assistantDiagnosisTitle')?.textContent?.trim() || '—'}`,
     `- Already tried: ${diagnosisState.tried.size ? [...diagnosisState.tried].join(', ') : '—'}`,
     `- Help-center mode: ${activeHelpMode}`,
