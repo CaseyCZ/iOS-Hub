@@ -9,7 +9,7 @@
   <meta name="description" content="iOS Hub — free sideloading guide, compatibility overview and troubleshooting for AltStore, SideStore, LiveContainer, Sideloadly and TrollStore.">
   <title>Sideloading Guide — iOS Hub</title>
   <link rel="stylesheet" href="styles.css?v=1.1.5-20260918-layout2">
-  <link rel="stylesheet" href="hub-extra.css?v=1.1.5-20260918-officialdocs1">
+  <link rel="stylesheet" href="hub-extra.css?v=1.1.5-20260918-officialdocs2">
 </head>
 <body>
   <header class="topbar">
@@ -145,6 +145,15 @@
             <div id="assistantTroubleSummary" class="assistant-trouble-summary">
               <strong id="assistantTroubleCount" data-help-copy="fixReady">Choose a problem or paste an error above.</strong>
               <span data-help-copy="fixPrivacy">Everything here is processed locally in your browser.</span>
+            </div>
+            <div class="official-help-sources">
+              <span data-help-copy="officialSources">Official docs used</span>
+              <a href="https://docs.sidestore.io/docs/troubleshooting" target="_blank" rel="noopener noreferrer">SideStore</a>
+              <a href="https://livecontainer.github.io/docs/faq" target="_blank" rel="noopener noreferrer">LiveContainer</a>
+              <a href="https://faq.altstore.io/altstore-classic/troubleshooting-guide" target="_blank" rel="noopener noreferrer">AltStore</a>
+              <a href="https://sideloadly.io/" target="_blank" rel="noopener noreferrer">Sideloadly</a>
+              <a href="https://github.com/opa334/TrollStore" target="_blank" rel="noopener noreferrer">TrollStore</a>
+              <a href="https://github.com/FrizzleM/SideInstaller" target="_blank" rel="noopener noreferrer">SideInstaller</a>
             </div>
             <button id="assistantShowFixes" class="btn primary assistant-show-fixes" type="button" data-help-copy="fixShow">Show matching fixes ↓</button>
           </section>
@@ -412,7 +421,7 @@
             <tr><td>AltStore + Remote AltServer</td><td data-i18n="guideRemoteBest">Install and refresh without your own computer</td><td data-i18n="guideAltDevice">iPhone / iPad</td><td data-i18n="guideRemoteComputer">PC pairing is required for setup; afterwards the remote server is used</td><td data-i18n="guideRemoteRefresh">Wi-Fi + LocalDevVPN required; cellular is not supported</td><td data-i18n="guideYes">Yes</td></tr>
             <tr><td>SideInstaller</td><td data-guide-copy="sideInstallerBest">On-device SideStore / LiveContainer setup</td><td data-guide-copy="sideInstallerDevice">iOS/iPadOS 27; partial 17–26 support with an existing pairing file</td><td data-guide-copy="sideInstallerComputer">No PC on iOS 27; older supported versions need a pairing file</td><td data-guide-copy="sideInstallerRefresh">Installer only; refreshing is then handled by SideStore</td><td data-i18n="guideYes">Yes</td></tr>
             <tr><td>SideStore</td><td data-i18n="guideSideBest">On-device refresh after setup</td><td data-i18n="guideSideDevice">iOS / iPadOS 15+</td><td data-i18n="guideSideComputer">Initial install only: Windows, macOS, Linux or Chromebook</td><td data-i18n="guideSideRefresh">LocalDevVPN must be enabled for install, update and refresh</td><td data-i18n="guideYes">Yes</td></tr>
-            <tr><td>LiveContainer + SideStore</td><td data-i18n="guideLcBest">Many guest apps in one container</td><td data-i18n="guideLcDevice">iOS / iPadOS 15+</td><td data-i18n="guideLcComputer">Initial install through iloader, SideStore or AltStore</td><td data-i18n="guideLcRefresh">Refresh the container / SideStore; guest apps run inside LiveContainer</td><td data-i18n="guideYes">Yes</td></tr>
+            <tr><td>LiveContainer + SideStore</td><td data-i18n="guideLcBest">Many guest apps in one container</td><td data-i18n="guideLcDevice">iOS / iPadOS 15+</td><td data-i18n="guideLcComputer">Initial install through Impactor, iloader or an existing standalone SideStore</td><td data-i18n="guideLcRefresh">Refresh the container / SideStore; guest apps run inside LiveContainer</td><td data-i18n="guideYes">Yes</td></tr>
             <tr><td>Sideloadly</td><td data-i18n="guideSideloadlyBest">Direct IPA signing from desktop</td><td data-i18n="guideSideloadlyDevice">iPhone / iPad / Apple TV</td><td data-i18n="guideSideloadlyComputer">Windows or macOS</td><td data-i18n="guideSideloadlyRefresh">7-day free signing; optional auto-refresh daemon via Wi-Fi / USB</td><td data-i18n="guideYes">Yes</td></tr>
             <tr><td>TrollStore</td><td data-i18n="guideTrollBest">Permanent installs on compatible iOS</td><td data-i18n="guideTrollDevice">iOS/iPadOS 14.0 beta 2–16.6.1, 16.7 RC, and 17.0</td><td data-i18n="guideTrollComputer">Depends on the installation path</td><td data-i18n="guideTrollRefresh">No 7-day refresh on supported versions</td><td data-i18n="guideNotNeeded">Not required for signing</td></tr>
             <tr><td>atvloadly</td><td data-i18n="guideAtvBest">Self-hosted Apple TV sideloading</td><td data-i18n="guideAtvDevice">Apple TV</td><td data-i18n="guideAtvComputer">Linux or OpenWrt host</td><td data-i18n="guideAtvRefresh">Self-hosted pairing and automatic refresh workflow</td><td data-i18n="guideYes">Yes</td></tr>
@@ -578,7 +587,7 @@
     </div>
   </div>
 
-  <script type="module" src="guide.js?v=1.1.5-20260918-officialdocs1"></script>
+  <script type="module" src="guide.js?v=1.1.5-20260918-officialdocs2"></script>
   <script src="mobile-menu.js?v=1.1.5-20260918-settingsportal1"></script>
   <script src="settings-menu.js?v=1.1.5-20260918-settingsportal1"></script>
 </body>
