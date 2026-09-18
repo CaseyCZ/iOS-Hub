@@ -8,7 +8,7 @@
   <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'wasm-unsafe-eval'; style-src 'self' 'unsafe-inline'; img-src 'self' https: data:; connect-src 'self'; worker-src 'self' blob:; object-src 'none'; base-uri 'self'; form-action 'none'">
   <meta name="description" content="iOS Hub — AltStore, SideStore and LiveContainer sources, Source Builder and browser-based iOS tools.">
   <title>iOS Hub — AltStore · SideStore · LiveContainer</title>
-  <link rel="stylesheet" href="styles.css?v=1.1.5-20260918-layout2">
+  <link rel="stylesheet" href="styles.css?v=1.1.5-20260918-status2">
   <link rel="stylesheet" href="hub-extra.css?v=1.1.5-20260918-layout2">
   <link rel="stylesheet" href="collapsible.css?v=1.1.5-20260918-layout2">
 </head>
@@ -106,6 +106,7 @@
         <div>
           <h2 data-i18n="catalogTitle">AltStore · SideStore · LiveContainer sources</h2>
           <p data-i18n="catalogDesc">Only sources that passed the latest automated availability and JSON check are shown.</p>
+          <div id="sourceStatusSummary" class="source-status-summary" aria-live="polite"></div>
         </div>
       </div>
 
@@ -181,7 +182,7 @@
   </div>
 
   <div id="toast" class="toast-message" hidden></div>
-  <script type="module" src="app.js?v=1.1.5-20260918-layout2"></script>
+  <script type="module" src="app.js?v=1.1.5-20260918-status2"></script>
   <script type="module" src="builder.js?v=1.1.5-20260918-layout2"></script>
   <script type="module" src="collapsible.js?v=1.1.5-20260918-status1"></script>
 </body>
