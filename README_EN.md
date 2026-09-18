@@ -8,7 +8,7 @@
 </p>
 
 <p align="center">
-  A catalog for <strong>AltStore / SideStore sources, Source Builder and practical iOS tools</strong>.
+  A catalog for <strong>AltStore / SideStore / LiveContainer sources, Source Builder and practical iOS tools</strong>.
 </p>
 
 <p align="center">
@@ -21,19 +21,19 @@
 
 ## Main features
 
-- AltStore Classic, AltStore PAL and SideStore sources
+- AltStore Classic, AltStore PAL, SideStore and LiveContainer sources
 - filters by source type, genre, platform and Mix compatibility
-- search by source or app name
+- search by source name and source metadata
 - one Source Builder for all online sources
 - automated `PASS / TRY` status
-- ready-to-add **CaseyCZ AltStore Source** and **CaseyCZ SideStore Source**
+- ready-to-add **CaseyCZ AltStore Source**, **CaseyCZ SideStore Source** and **CaseyCZ LiveContainer Source**
 - app deduplication by `bundleIdentifier`
 - source checks every 6 hours
 - EN / CZ / DE / ES / FR interface with English as the default
 - saved language, appearance, filters and Builder selection
 - **DEB → IPA Converter (Beta)** for iPhone, iPad, Mac and PC
 
-## AltStore and SideStore
+## AltStore, SideStore and LiveContainer
 
 The ready-to-add CaseyCZ sources are generated automatically from currently available compatible sources. Stable builds are preferred in the default packages; Nightly feeds remain available for manual selection in the Builder.
 
