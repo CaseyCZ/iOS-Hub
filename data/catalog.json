@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-18T16:27:47Z",
+  "generatedAt": "2026-09-18T19:21:27Z",
   "sources": [
     {
       "id": "utm",
@@ -2023,7 +2023,7 @@
           "name": "Twitch (Moe TwitchControl)",
           "bundleIdentifier": "tv.twitch",
           "developerName": "Moe Apps",
-          "version": "31.2 (0.0.6)",
+          "version": "31.2.4 (0.0.6)",
           "iconURL": "https://raw.githubusercontent.com/MountainofPenguin/moe-altstore/main/icons/twitch-twitchcontrol.png",
           "subtitle": "TwitchControl tweak build"
         },
@@ -2031,7 +2031,7 @@
           "name": "Twitch (Twitchv, Moe Tweach)",
           "bundleIdentifier": "tv.twitch",
           "developerName": "Moe Apps",
-          "version": "31.2 (2.4.1)",
+          "version": "31.2.4 (2.4.1)",
           "iconURL": "https://raw.githubusercontent.com/MountainofPenguin/moe-altstore/main/icons/twitchv-tweach.png",
           "subtitle": "Tweach tweak build"
         }
@@ -4796,10 +4796,34 @@
     {
       "id": "apptesters",
       "name": "AppTesters IPA Repo",
-      "appCount": 9185,
+      "appCount": 9188,
       "catalogLimited": true,
       "iconURL": "https://apptesters.org/apptesters-512x512.png",
       "apps": [
+        {
+          "name": "Mindllama",
+          "bundleIdentifier": "com.vitalii.mind",
+          "developerName": "",
+          "version": "2.5.10",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.vitalii.mind.png",
+          "subtitle": ""
+        },
+        {
+          "name": "RiseSleep",
+          "bundleIdentifier": "com.risesci.nyx",
+          "developerName": "",
+          "version": "0.1.630",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.risesci.nyx.png",
+          "subtitle": ""
+        },
+        {
+          "name": "CARROT",
+          "bundleIdentifier": "com.grailr.CARROTweather",
+          "developerName": "",
+          "version": "6.9.1",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.grailr.CARROTweather.png",
+          "subtitle": ""
+        },
         {
           "name": "Unknown app",
           "bundleIdentifier": "com.madarsoft.fitness",
@@ -6374,30 +6398,6 @@
           "developerName": "",
           "version": "3.0.11",
           "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.joytunes.Sing.png",
-          "subtitle": ""
-        },
-        {
-          "name": "SimplyPiano",
-          "bundleIdentifier": "com.joytunes.asla",
-          "developerName": "",
-          "version": "9.10.92",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.joytunes.asla.png",
-          "subtitle": ""
-        },
-        {
-          "name": "Action",
-          "bundleIdentifier": "com.future.kapi",
-          "developerName": "",
-          "version": "4.39.0",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.future.kapi.png",
-          "subtitle": ""
-        },
-        {
-          "name": "PixelColor",
-          "bundleIdentifier": "com.djitlabs.pixelcolor",
-          "developerName": "",
-          "version": "6.01.02",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.djitlabs.pixelcolor.png",
           "subtitle": ""
         }
       ]
