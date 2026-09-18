@@ -362,6 +362,8 @@ function toast(message) {
   toastTimer = setTimeout(() => { node.hidden = true; }, 2600);
 }
 
+let supportReturnFocus = null;
+
 function openSupport() {
   const modal = $('#supportModal');
   modal?.classList.add('open');
