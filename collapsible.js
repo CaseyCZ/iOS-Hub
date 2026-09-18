@@ -5,11 +5,11 @@ const safeSet = (key, value) => { try { localStorage.setItem(key, value); } catc
 const escapeHtml = value => String(value ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 
 const COPY = {
-  en: {show:'Show list', hide:'Hide list', sources:'Included sources', apps:'Included apps', mix:'Mix contents', sourceList:'Source list', loading:'Loading list…', empty:'No items to show.'},
-  cs: {show:'Zobrazit seznam', hide:'Skrýt seznam', sources:'Zahrnuté zdroje', apps:'Zahrnuté aplikace', mix:'Obsah Mixu', sourceList:'Seznam zdrojů', loading:'Načítám seznam…', empty:'Není co zobrazit.'},
-  de: {show:'Liste anzeigen', hide:'Liste ausblenden', sources:'Enthaltene Quellen', apps:'Enthaltene Apps', mix:'Mix-Inhalt', sourceList:'Quellenliste', loading:'Liste wird geladen…', empty:'Keine Einträge.'},
-  es: {show:'Mostrar lista', hide:'Ocultar lista', sources:'Fuentes incluidas', apps:'Apps incluidas', mix:'Contenido del Mix', sourceList:'Lista de fuentes', loading:'Cargando lista…', empty:'No hay elementos.'},
-  fr: {show:'Afficher la liste', hide:'Masquer la liste', sources:'Sources incluses', apps:'Apps incluses', mix:'Contenu du Mix', sourceList:'Liste des sources', loading:'Chargement de la liste…', empty:'Aucun élément.'}
+  en: {show:'Show list', hide:'Hide list', sources:'Sources', apps:'Apps', package:'📦 Included content · sources + apps', mix:'🧩 Mix contents', sourceList:'☑ Source selection', loading:'Loading list…', empty:'No items to show.'},
+  cs: {show:'Zobrazit seznam', hide:'Skrýt seznam', sources:'Zdroje', apps:'Aplikace', package:'📦 Obsah · zdroje + aplikace', mix:'🧩 Obsah Mixu', sourceList:'☑ Výběr zdrojů', loading:'Načítám seznam…', empty:'Není co zobrazit.'},
+  de: {show:'Liste anzeigen', hide:'Liste ausblenden', sources:'Quellen', apps:'Apps', package:'📦 Inhalt · Quellen + Apps', mix:'🧩 Mix-Inhalt', sourceList:'☑ Quellenauswahl', loading:'Liste wird geladen…', empty:'Keine Einträge.'},
+  es: {show:'Mostrar lista', hide:'Ocultar lista', sources:'Fuentes', apps:'Apps', package:'📦 Contenido · fuentes + apps', mix:'🧩 Contenido del Mix', sourceList:'☑ Selección de fuentes', loading:'Cargando lista…', empty:'No hay elementos.'},
+  fr: {show:'Afficher la liste', hide:'Masquer la liste', sources:'Sources', apps:'Apps', package:'📦 Contenu · sources + apps', mix:'🧩 Contenu du Mix', sourceList:'☑ Sélection des sources', loading:'Chargement de la liste…', empty:'Aucun élément.'}
 };
 
 const OPEN_KEYS = {
@@ -68,10 +68,10 @@ function injectPackageDisclosure(card, type, force = false) {
   details.className = 'content-disclosure package-disclosure';
   details.dataset.disclosureType = type;
   details.open = open;
-  details.innerHTML = `<summary>${disclosureSummary(`${tr('sources')} + ${tr('apps')}`, `${sources.length} · ${apps.length}`)}</summary>
+  details.innerHTML = `<summary>${disclosureSummary(tr('package'), `${sources.length} · ${apps.length}`)}</summary>
     <div class="disclosure-body collapsible-scroll">
-      <div class="disclosure-section"><h5>${escapeHtml(tr('sources'))} · ${sources.length}</h5>${rows(sources, 'source')}</div>
-      <div class="disclosure-section"><h5>${escapeHtml(tr('apps'))} · ${apps.length}</h5>${rows(apps, 'app')}</div>
+      <div class="disclosure-section"><h5>🔗 ${escapeHtml(tr('sources'))} · ${sources.length}</h5>${rows(sources, 'source')}</div>
+      <div class="disclosure-section"><h5>📱 ${escapeHtml(tr('apps'))} · ${apps.length}</h5>${rows(apps, 'app')}</div>
     </div>`;
   details.addEventListener('toggle', () => saveOpen(type, details.open));
   card.appendChild(details);
@@ -168,8 +168,8 @@ async function renderMixDisclosure() {
   });
   details.querySelector('summary').innerHTML = disclosureSummary(tr('mix'), `${sources.length} · ${apps.length}`);
   details.querySelector('.disclosure-body').innerHTML = `
-    <div class="disclosure-section"><h5>${escapeHtml(tr('sources'))} · ${sources.length}</h5>${rows(sources, 'source')}</div>
-    <div class="disclosure-section"><h5>${escapeHtml(tr('apps'))} · ${apps.length}</h5>${rows(apps, 'app')}</div>`;
+    <div class="disclosure-section"><h5>🔗 ${escapeHtml(tr('sources'))} · ${sources.length}</h5>${rows(sources, 'source')}</div>
+    <div class="disclosure-section"><h5>📱 ${escapeHtml(tr('apps'))} · ${apps.length}</h5>${rows(apps, 'app')}</div>`;
 }
 
 function refreshLanguage() {
