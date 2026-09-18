@@ -73,6 +73,14 @@
         </article>
 
         <article class="panel guide-card">
+          <div class="guide-icon">RA</div>
+          <div class="resource-badges"><span class="pill online">NEW</span><span class="pill mode">Remote AltServer</span></div>
+          <h3 data-i18n="guidePathRemoteTitle">AltStore refresh without your computer</h3>
+          <p data-i18n="guidePathRemoteDesc">Pair AltStore Classic once, install LocalDevVPN and then use a Remote AltServer to install and refresh apps from anywhere while connected to Wi-Fi.</p>
+          <a class="btn primary" href="https://faq.altstore.io/altstore-classic/remote-altservers" target="_blank" rel="noopener noreferrer" data-i18n="guideOpenDocs">Open official guide ↗</a>
+        </article>
+
+        <article class="panel guide-card">
           <div class="guide-icon">SL</div>
           <div class="resource-badges"><span class="pill online">FREE</span><span class="pill mode">Sideloadly</span></div>
           <h3 data-i18n="guidePathDesktopTitle">Sign IPA files from Windows or Mac</h3>
@@ -118,6 +126,7 @@
           </thead>
           <tbody>
             <tr><td>AltStore Classic</td><td data-i18n="guideAltBest">Classic sideloading</td><td data-i18n="guideAltDevice">iPhone / iPad</td><td data-i18n="guideAltComputer">Windows or macOS with AltServer</td><td data-i18n="guideAltRefresh">7-day apps; refresh via AltServer over same Wi-Fi or USB</td><td data-i18n="guideYes">Yes</td></tr>
+            <tr><td>AltStore + Remote AltServer</td><td data-i18n="guideRemoteBest">Install and refresh without your own computer</td><td data-i18n="guideAltDevice">iPhone / iPad</td><td data-i18n="guideRemoteComputer">PC pairing is required for setup; afterwards the remote server is used</td><td data-i18n="guideRemoteRefresh">Wi-Fi + LocalDevVPN required; cellular is not supported</td><td data-i18n="guideYes">Yes</td></tr>
             <tr><td>SideStore</td><td data-i18n="guideSideBest">On-device refresh after setup</td><td data-i18n="guideSideDevice">iOS / iPadOS 15+</td><td data-i18n="guideSideComputer">Initial install only: Windows, macOS, Linux or Chromebook</td><td data-i18n="guideSideRefresh">LocalDevVPN must be enabled for install, update and refresh</td><td data-i18n="guideYes">Yes</td></tr>
             <tr><td>LiveContainer + SideStore</td><td data-i18n="guideLcBest">Many guest apps in one container</td><td data-i18n="guideLcDevice">iOS / iPadOS 15+</td><td data-i18n="guideLcComputer">Initial install through iloader, SideStore or AltStore</td><td data-i18n="guideLcRefresh">Refresh the container / SideStore; guest apps run inside LiveContainer</td><td data-i18n="guideYes">Yes</td></tr>
             <tr><td>Sideloadly</td><td data-i18n="guideSideloadlyBest">Direct IPA signing from desktop</td><td data-i18n="guideSideloadlyDevice">iPhone / iPad / Apple TV</td><td data-i18n="guideSideloadlyComputer">Windows or macOS</td><td data-i18n="guideSideloadlyRefresh">7-day free signing; optional auto-refresh daemon via Wi-Fi / USB</td><td data-i18n="guideYes">Yes</td></tr>
@@ -152,6 +161,10 @@
         <details class="trouble-item" data-search="altstore altserver not found wifi usb firewall itunes icloud windows">
           <summary data-i18n="guideT3Q">AltStore says it cannot find AltServer</summary>
           <div class="trouble-answer" data-i18n="guideT3A">Make sure AltServer is running and the computer is on the same Wi-Fi as the iPhone/iPad, or connect the device by USB. On Windows, firewall rules and the Apple versions of iTunes/iCloud can also matter.</div>
+        </details>
+        <details class="trouble-item" data-search="remote altserver localdevvpn wifi invalid response unavailable choose server cellular">
+          <summary data-i18n="guideT10Q">Remote AltServer cannot be reached or is unavailable</summary>
+          <div class="trouble-answer" data-i18n="guideT10A">Make sure Wi-Fi and LocalDevVPN are both enabled. Remote AltServer does not work over cellular. If the server returns an invalid response or is unavailable, wait a few minutes or choose another Remote AltServer in AltStore settings.</div>
         </details>
         <details class="trouble-item" data-search="iloader pairing file anisette usb trust device">
           <summary data-i18n="guideT4Q">iloader / pairing file setup fails</summary>
@@ -191,6 +204,7 @@
         <a class="btn small secondary" href="https://github.com/LiveContainer/LiveContainer" target="_blank" rel="noopener noreferrer">LiveContainer ↗</a>
         <a class="btn small secondary" href="https://iloader.app/" target="_blank" rel="noopener noreferrer">iloader ↗</a>
         <a class="btn small secondary" href="https://faq.altstore.io/" target="_blank" rel="noopener noreferrer">AltStore Docs ↗</a>
+        <a class="btn small secondary" href="https://faq.altstore.io/altstore-classic/remote-altservers" target="_blank" rel="noopener noreferrer">Remote AltServer ↗</a>
         <a class="btn small secondary" href="https://sideloadly.io/" target="_blank" rel="noopener noreferrer">Sideloadly ↗</a>
         <a class="btn small secondary" href="https://github.com/opa334/TrollStore" target="_blank" rel="noopener noreferrer">TrollStore ↗</a>
       </div>
