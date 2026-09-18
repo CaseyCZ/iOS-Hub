@@ -101,7 +101,7 @@ function installerIcon(type) {
 }
 function getStatus(id) { return status?.sources?.[id] || {}; }
 function catalogSource(id) { return catalog?.sources?.find(item => item.id === id) || null; }
-function allCandidates() { return registry.filter(source => getStatus(source.id).online === true && getStatus(source.id).mixTest !== 'fail'); }
+function allCandidates() { return registry.filter(source => source.builder !== false && getStatus(source.id).online === true && getStatus(source.id).mixTest !== 'fail'); }
 function autoCompatibleIds() { return new Set(status?.mixes?.autoCompatibleSourceIDs || []); }
 function hostedIds() { return new Set(status?.mixes?.mergeableSourceIDs || []); }
 
@@ -114,7 +114,7 @@ function isCommunitySource(source) {
 }
 function isModifiedSource(source) {
   const tags = sourceTags(source);
-  return source.modified === true || ['modified','mods','modded','tweak','tweaks'].some(tag => tags.has(tag));
+  return source.modified === true || ['modified','mods','modded','tweak','tweaks','tweaked'].some(tag => tags.has(tag));
 }
 function matchesCategory(source) {
   if (category === 'all') return true;
@@ -295,7 +295,7 @@ function render() {
     return `<label class="builder-item" title="${escapeHtml(item.mixReason || '')}">
       <input type="checkbox" data-exp-source="${escapeHtml(source.id)}" ${checked ? 'checked' : ''}>
       <div><strong>${escapeHtml(source.name)}</strong><span>${escapeHtml(modeName(source))} · → ${escapeHtml(targetName())}</span></div>
-      <div class="builder-count"><span class="pill ${cls}">${escapeHtml(test)}</span> ${Number.isFinite(item.appCount) ? `${item.appCount} ${escapeHtml(tr('apps'))}` : ''}</div>
+      <div class="builder-count"><span class="pill online">● ONLINE</span> <span class="pill ${cls}">${escapeHtml(test)}</span> ${Number.isFinite(item.appCount) ? `${item.appCount} ${escapeHtml(tr('apps'))}` : ''}</div>
     </label>`;
   }).join('') : `<div class="notice">${escapeHtml(tr('empty'))}</div>`;
 
