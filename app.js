@@ -1,4 +1,4 @@
-import { SUPPORTED_LANGUAGES, applyTranslations, normalizeLanguage, t } from './i18n.js?v=1.1.5-20260918-audit10';
+import { SUPPORTED_LANGUAGES, applyTranslations, normalizeLanguage, t } from './i18n.js?v=1.1.5-20260918-audit8';
 
 const root = document.documentElement;
 const $ = (selector, scope = document) => scope.querySelector(selector);
