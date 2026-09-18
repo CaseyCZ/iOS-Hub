@@ -1,6 +1,7 @@
 # Changelog
 
 ## 1.1.5 — 2026-09-18
+- Added another source batch for broader coverage: Apollo for Reddit, Discord App Store Builds, YTKACE, heyFordy SideStore Repo, IPALibrary Source and the official ARMSX2 iOS source.
 - Limited pre-generated hosted Custom Mix combinations to 3 sources per file to keep the repository scalable as the source catalog grows; larger selections still work through the in-browser Builder.
 - Improved Mix validation so sources containing multiple app variants with the same bundle identifier are marked TRY instead of PASS, preventing the Builder from implying that variant-heavy feeds can be merged without loss.
 - Added mega-source safeguards: large feeds can cap catalog previews, skip committing multi-megabyte source caches, stay out of generated all-in-one packages, and be excluded from Custom Builder while still remaining available as standalone sources.
