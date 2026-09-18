@@ -159,7 +159,7 @@ function sourceSearchText(source) {
   const apps = (catalogSource(source.id)?.apps || []).flatMap(app => [
     app.name, app.developerName, app.bundleIdentifier, app.subtitle, app.version
   ]);
-  return [source.name, source.mode, ...(source.tags || []), source.description?.en, source.description?.cs, ...apps]
+  return [source.name, source.mode, ...(source.tags || []), ...Object.values(source.description || {}), ...apps]
     .filter(Boolean).join(' ').toLowerCase();
 }
 function matchesQuery(source) {
