@@ -275,9 +275,13 @@ function handleHelpTabKeydown(event) {
   next.focus();
 }
 
+function triedButtonForKey(key) {
+  return $('.assistant-tried-options [data-tried-key]').find(button => button.dataset.triedKey === key) || null;
+}
+
 function diagnosisTriedTags() {
   return [...diagnosisState.tried].flatMap(key => {
-    const button = $('[data-tried-key="' + key + '"]');
+    const button = triedButtonForKey(key);
     return (button?.dataset.triedTags || '').toLowerCase().split(/\s+/).filter(Boolean);
   });
 }
@@ -934,7 +938,7 @@ const initialFix = initialParams.get('fix');
 const initialSetup = initialParams.get('setup');
 const initialTried = (initialParams.get('tried') || '').split(',').filter(Boolean);
 initialTried.forEach(key => {
-  const button = $('[data-tried-key="' + key + '"]');
+  const button = triedButtonForKey(key);
   if (!button) return;
   diagnosisState.tried.add(key);
   button.classList.add('active');
