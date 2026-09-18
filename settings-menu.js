@@ -17,6 +17,7 @@ function setupSettingsMenu() {
 
   const langButtons = [...panel.querySelectorAll('[data-settings-language]')];
   const themeButtons = [...panel.querySelectorAll('[data-settings-theme]')];
+  let returnFocus = null;
 
   // Safari iOS creates a containing block around the blurred sticky header.
   // Move the panel to <body> so fixed positioning and scrolling use the real viewport.
@@ -53,15 +54,23 @@ function setupSettingsMenu() {
     panel.style.maxHeight = `${Math.max(120, Math.floor(available))}px`;
   };
 
-  const close = () => {
+  const close = (restoreFocus = false) => {
+    const wasOpen = panel.classList.contains('open');
     menu.classList.remove('open');
     panel.classList.remove('open');
     button.setAttribute('aria-expanded', 'false');
     panel.setAttribute('aria-hidden', 'true');
+    if (wasOpen && restoreFocus) {
+      const target = returnFocus || button;
+      requestAnimationFrame(() => target.focus?.());
+    }
+    returnFocus = null;
   };
 
   const open = () => {
+    returnFocus = document.activeElement instanceof HTMLElement ? document.activeElement : button;
     document.querySelector('.topbar')?.classList.remove('mobile-menu-open');
+    document.body.classList.remove('mobile-menu-visible');
     document.getElementById('mobileNavPanel')?.setAttribute('aria-hidden', 'true');
     document.getElementById('mobileMenuButton')?.setAttribute('aria-expanded', 'false');
 
@@ -71,6 +80,10 @@ function setupSettingsMenu() {
     panel.setAttribute('aria-hidden', 'false');
     panel.scrollTop = 0;
     positionPanel();
+    requestAnimationFrame(() => {
+      const active = panel.querySelector('[data-settings-theme].active, [data-settings-language].active');
+      (active || themeButtons[0] || langButtons[0] || panel.querySelector('.settings-report-link'))?.focus();
+    });
   };
 
   const syncLanguage = () => {
@@ -108,11 +121,11 @@ function setupSettingsMenu() {
 
   button.addEventListener('click', event => {
     event.stopPropagation();
-    panel.classList.contains('open') ? close() : open();
+    panel.classList.contains('open') ? close(true) : open();
   });
 
   panel.addEventListener('click', event => event.stopPropagation());
-  panel.querySelector('.settings-report-link')?.addEventListener('click', close);
+  panel.querySelector('.settings-report-link')?.addEventListener('click', () => close(false));
 
   langButtons.forEach(item => {
     item.addEventListener('click', () => {
@@ -137,10 +150,13 @@ function setupSettingsMenu() {
   themeProxy.addEventListener('click', () => requestAnimationFrame(syncTheme));
 
   document.addEventListener('click', event => {
-    if (!menu.contains(event.target) && !panel.contains(event.target)) close();
+    if (!menu.contains(event.target) && !panel.contains(event.target)) close(false);
   });
   document.addEventListener('keydown', event => {
-    if (event.key === 'Escape') close();
+    if (event.key === 'Escape' && panel.classList.contains('open')) {
+      event.preventDefault();
+      close(true);
+    }
   });
 
   window.addEventListener('resize', positionPanel, { passive:true });
