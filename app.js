@@ -45,7 +45,7 @@ const escapeHtml = value => String(value ?? '').replace(/[&<>'\"]/g, char => ({'
 const tr = key => t(state.lang, key);
 const INSTALLER_ICONS = {
   altstore: 'assets/icons/altstore.svg',
-  sidestore: 'assets/icons/sidestore.svg',
+  sidestore: 'assets/icons/sidestore.svg?v=1.1.5-20260918-audit13',
   livecontainer: 'assets/icons/livecontainer.svg'
 };
 function installerIcon(installer) {
