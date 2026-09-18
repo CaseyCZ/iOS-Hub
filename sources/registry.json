@@ -1369,6 +1369,59 @@
         "playstation",
         "ps2"
       ]
+    },
+    {
+      "id": "fouad-source",
+      "name": "Fouad's Source",
+      "url": "https://raw.githubusercontent.com/FouadRaheb/Watusi-for-WhatsApp/master/altstore/source.json",
+      "website": "https://github.com/FouadRaheb/Watusi-for-WhatsApp",
+      "mode": "classic",
+      "mergeable": true,
+      "official": true,
+      "trusted": false,
+      "recommended": true,
+      "community": false,
+      "modified": true,
+      "description": {
+        "cs": "Oficiální modified source Fouada Raheba pro Watusi (WhatsApp) a Regram (Instagram), včetně duplicate a Business variant.",
+        "en": "Official Fouad Raheb modified source for Watusi (WhatsApp) and Regram (Instagram), including duplicate and Business variants."
+      },
+      "tags": [
+        "official",
+        "modified",
+        "tweaks",
+        "whatsapp",
+        "instagram",
+        "social",
+        "regram",
+        "watusi"
+      ]
+    },
+    {
+      "id": "neofreebird",
+      "name": "NeoFreeBird",
+      "url": "https://raw.githubusercontent.com/orionblur/NeoFreeBird/v6/AltSource.json",
+      "website": "https://github.com/orionblur/NeoFreeBird",
+      "mode": "classic",
+      "mergeable": true,
+      "official": true,
+      "trusted": false,
+      "recommended": true,
+      "community": false,
+      "modified": true,
+      "description": {
+        "cs": "Oficiální source NeoFreeBird pro upravený X/Twitter klient s BHTwitter a dalšími QoL úpravami.",
+        "en": "Official NeoFreeBird source for a modified X/Twitter client with BHTwitter and additional quality-of-life tweaks."
+      },
+      "tags": [
+        "official",
+        "modified",
+        "tweaks",
+        "twitter",
+        "x",
+        "social",
+        "bhtwitter"
+      ]
     }
   ]
 }
