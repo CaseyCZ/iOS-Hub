@@ -1,4 +1,4 @@
-import { SUPPORTED_LANGUAGES, applyTranslations, normalizeLanguage, t } from './i18n.js?v=1.1.5-20260918-officialdocs2';
+import { SUPPORTED_LANGUAGES, applyTranslations, normalizeLanguage, t } from './i18n.js?v=1.1.5-20260918-guidei18n1';
 
 const root = document.documentElement;
 const $ = selector => document.querySelector(selector);
