@@ -204,3 +204,27 @@
 .brand-link-icon-contain{object-fit:contain;background:transparent}
 .resource-card>.brand-link{margin-top:auto}
 .resource-card>.brand-link .brand-link-icon{width:18px;height:18px}
+
+
+/* v1.1.5 — HotKeyz real app icon */
+.hotkeyz-app-icon{
+  display:inline-block;
+  flex:0 0 auto;
+  background-image:url("https://leomoon.com/static/img/downloads/desktop-apps/leomoon-hotkeyz.jpg");
+  background-repeat:no-repeat;
+  image-rendering:auto;
+}
+.hotkeyz-app-icon-large{
+  width:52px;
+  height:52px;
+  border-radius:12px;
+  background-size:3146px 1772px;
+  background-position:-283px -73px;
+}
+.hotkeyz-app-icon-small{
+  width:18px;
+  height:18px;
+  border-radius:4px;
+  background-size:1049px 591px;
+  background-position:-95px -25px;
+}
