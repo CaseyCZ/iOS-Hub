@@ -9,7 +9,7 @@
   <meta name="description" content="iOS Hub — free sideloading guide, compatibility overview and troubleshooting for AltStore, SideStore, LiveContainer, Sideloadly and TrollStore.">
   <title>Sideloading Guide — iOS Hub</title>
   <link rel="stylesheet" href="styles.css?v=1.1.5-20260918-layout2">
-  <link rel="stylesheet" href="hub-extra.css?v=1.1.5-20260918-officialdocs2">
+  <link rel="stylesheet" href="hub-extra.css?v=1.1.5-20260918-community1">
 </head>
 <body>
   <header class="topbar">
@@ -134,6 +134,7 @@
 
             <div class="assistant-trouble-chips" role="group" aria-label="Common sideloading problems">
               <button type="button" data-assistant-trouble-filter="refresh" data-help-copy="fixRefresh">Refresh</button>
+              <button type="button" data-assistant-trouble-filter="ios 27 shortcut resign long press background refresh all">iOS 27 / Shortcut</button>
               <button type="button" data-assistant-trouble-filter="apple login 503 2fa" data-help-copy="fixLogin">Apple ID / 503</button>
               <button type="button" data-assistant-trouble-filter="pairing" data-help-copy="fixPairing">Pairing</button>
               <button type="button" data-assistant-trouble-filter="certificate" data-help-copy="fixCertificate">Certificate</button>
@@ -440,6 +441,7 @@
 
       <div class="trouble-quick" role="group" aria-label="Quick troubleshooting filters">
         <button type="button" data-trouble-filter="refresh" data-guide-copy="troubleChipRefresh">Refresh</button>
+        <button type="button" data-trouble-filter="ios 27 shortcut resign long press background refresh all">iOS 27 / Shortcut</button>
         <button type="button" data-trouble-filter="apple login 503 2fa" data-guide-copy="troubleChipLogin">Apple ID / login</button>
         <button type="button" data-trouble-filter="pairing" data-guide-copy="troubleChipPairing">Pairing</button>
         <button type="button" data-trouble-filter="certificate" data-guide-copy="troubleChipCertificate">Certificate</button>
@@ -464,9 +466,28 @@
         </details>
         <details class="trouble-item" data-search="livecontainer sidestore auto refresh automatic background shortcut localdevvpn wifi refresh all">
           <summary data-guide-copy="troubleAutoRefreshQ">LiveContainer + SideStore does not refresh automatically</summary>
+          <div class="trouble-source-badge official">OFFICIAL DOCS</div>
           <div class="trouble-answer" data-guide-copy="troubleAutoRefreshA">First make sure Wi-Fi + LocalDevVPN are active and a manual Refresh All works in the built-in SideStore. LiveContainer's official LC+SS guide says the auto-refresh Shortcut can be used by replacing SideStore's Refresh All Apps action with LiveContainer's action.</div>
           <div class="trouble-docs">
             <a href="https://livecontainer.github.io/docs/installation/lc_sidestore" target="_blank" rel="noopener noreferrer">LiveContainer Docs ↗</a>
+          </div>
+        </details>
+        <details class="trouble-item community-item" data-search="ios 27 shortcut resign long press background refresh all sidestore livecontainer localdevvpn automation">
+          <summary data-guide-copy="communityShortcutQ">iOS 27: Shortcut refresh does not run reliably</summary>
+          <div class="trouble-source-badge community" data-guide-copy="communityLabel">COMMUNITY WORKAROUND</div>
+          <div class="trouble-answer" data-guide-copy="communityShortcutA">Community reports suggest first confirming that manual Refresh All works. For Shortcuts, keep Refresh All Apps as the final refresh action, avoid turning LocalDevVPN off too early, and if one app still refuses to refresh try long-pressing it in SideStore and choosing Resign. These are community workarounds, not official SideStore requirements.</div>
+          <div class="trouble-docs">
+            <a href="https://www.reddit.com/r/SideStore/comments/1wjpdhm/ios_27_shortcut_that_refresh_all_sidestore_apps/" target="_blank" rel="noopener noreferrer">Reddit discussion ↗</a>
+            <a href="https://livecontainer.github.io/docs/installation/lc_sidestore" target="_blank" rel="noopener noreferrer">Official LC+SS docs ↗</a>
+          </div>
+        </details>
+        <details class="trouble-item community-item" data-search="10.7.0.2/30 10.7.0.1/32 localdevvpn tunnel device ip workaround ios 27 refresh">
+          <summary data-guide-copy="communityVpnQ">LocalDevVPN connects but refresh still fails on iOS 27</summary>
+          <div class="trouble-source-badge community" data-guide-copy="communityLabel">COMMUNITY WORKAROUND</div>
+          <div class="trouble-answer" data-guide-copy="communityVpnA">A community workaround reported on Reddit is to set Tunnel IP to 10.7.0.2/30 and Device IP to 10.7.0.1/32 in LocalDevVPN. This is not an official SideStore fix and does not help every device, so use it only after the official Wi-Fi, LocalDevVPN, pairing and DNS-blocker checks.</div>
+          <div class="trouble-docs">
+            <a href="https://www.reddit.com/r/SideStore/comments/1w4q5q4/solution_to_failed_refresh/" target="_blank" rel="noopener noreferrer">Reddit workaround ↗</a>
+            <a href="https://docs.sidestore.io/docs/troubleshooting/common-issues" target="_blank" rel="noopener noreferrer">Official SideStore checks ↗</a>
           </div>
         </details>
         <details class="trouble-item" data-search="pairing file expired update reset iphone ios random sidestore replace pairing 1006 udid iloader">
@@ -587,7 +608,7 @@
     </div>
   </div>
 
-  <script type="module" src="guide.js?v=1.1.5-20260918-officialdocs3"></script>
+  <script type="module" src="guide.js?v=1.1.5-20260918-community1"></script>
   <script src="mobile-menu.js?v=1.1.5-20260918-settingsportal1"></script>
   <script src="settings-menu.js?v=1.1.5-20260918-settingsportal1"></script>
 </body>
