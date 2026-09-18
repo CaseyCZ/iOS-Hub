@@ -934,3 +934,21 @@
   .assistant-tried-options::-webkit-scrollbar{display:none}
   .assistant-tried-options button{flex:0 0 auto}
 }
+
+
+/* Full-site mobile safe areas + reduced-motion accessibility */
+body{
+  padding-left:env(safe-area-inset-left);
+  padding-right:env(safe-area-inset-right);
+  padding-bottom:env(safe-area-inset-bottom);
+}
+.topbar{padding-top:env(safe-area-inset-top)}
+@media (prefers-reduced-motion: reduce){
+  html{scroll-behavior:auto!important}
+  *,*::before,*::after{
+    scroll-behavior:auto!important;
+    animation-duration:.01ms!important;
+    animation-iteration-count:1!important;
+    transition-duration:.01ms!important;
+  }
+}
