@@ -174,3 +174,13 @@
   .beginner-choice:last-child,.beginner-source-term{grid-column:auto;max-width:none}
   .beginner-choice .btn{width:100%;min-width:0}
 }
+
+
+/* v1.1.5 — beginner multi-route actions */
+.beginner-actions{margin-top:auto;width:100%;display:flex;gap:8px;flex-wrap:wrap;justify-content:center}
+.beginner-actions .btn{margin-top:0;flex:1 1 190px;max-width:260px}
+.guide-official-links .btn{display:inline-flex;align-items:center;justify-content:center;gap:5px}
+@media(max-width:640px){
+  .beginner-actions{flex-direction:column}
+  .beginner-actions .btn{width:100%;max-width:none;flex:auto}
+}
