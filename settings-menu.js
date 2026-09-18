@@ -69,6 +69,7 @@ function setupSettingsMenu() {
   });
 
   panel.addEventListener('click', event => event.stopPropagation());
+  panel.querySelector('.settings-report-link')?.addEventListener('click', close);
 
   langButtons.forEach(item => {
     item.addEventListener('click', () => {
