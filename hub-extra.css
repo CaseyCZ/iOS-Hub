@@ -714,3 +714,36 @@
   .trouble-docs{padding:0 12px 12px}
   .official-help-sources{justify-content:flex-start}
 }
+
+
+/* Official vs community troubleshooting */
+.trouble-source-badge{
+  display:inline-flex;
+  align-items:center;
+  min-height:24px;
+  margin:10px 15px 0;
+  padding:0 8px;
+  border-radius:999px;
+  font-size:7px;
+  font-weight:950;
+  letter-spacing:.07em;
+}
+.trouble-source-badge.official{
+  border:1px solid color-mix(in srgb,var(--ok) 42%,var(--border));
+  background:color-mix(in srgb,var(--ok) 10%,var(--panel2));
+  color:var(--ok);
+}
+.trouble-source-badge.community{
+  border:1px solid color-mix(in srgb,var(--warn) 48%,var(--border));
+  background:color-mix(in srgb,var(--warn) 10%,var(--panel2));
+  color:var(--warn);
+}
+.trouble-item.community-item{
+  border-color:color-mix(in srgb,var(--warn) 22%,var(--border));
+}
+.trouble-item.community-item[open]{
+  border-color:color-mix(in srgb,var(--warn) 42%,var(--border));
+}
+@media(max-width:640px){
+  .trouble-source-badge{margin:9px 12px 0}
+}
