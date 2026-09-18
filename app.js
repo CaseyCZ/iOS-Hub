@@ -9,11 +9,13 @@ const STORAGE = {
   language: 'caseycz-language',
   category: 'ioshub-source-category',
   genre: 'ioshub-genre',
+  sort: 'ioshub-source-sort',
   query: 'ioshub-source-query'
 };
 
 const SOURCE_CATEGORIES = new Set(['all', 'official', 'trusted', 'community', 'modified']);
 const GENRES = new Set(['all', 'games', 'emulators', 'video', 'music', 'anime', 'social', 'downloads', 'sideload', 'utilities']);
+const SORT_MODES = new Set(['name', 'apps-desc', 'apps-asc']);
 const GENRE_RULES = {
   games: ['games','pokemon','mmo','geometry-dash','game'],
   emulators: ['emulator','retro','dreamcast','dolphinios','virtualization'],
@@ -32,6 +34,7 @@ const state = {
   catalog: {},
   sourceCategory: 'all',
   genre: 'all',
+  sort: 'name',
   query: '',
   lang: 'en'
 };
@@ -53,8 +56,10 @@ function installerIcon(installer) {
 function loadPersistedSettings() {
   const category = safeGet(STORAGE.category);
   const genre = safeGet(STORAGE.genre);
+  const sort = safeGet(STORAGE.sort);
   if (SOURCE_CATEGORIES.has(category)) state.sourceCategory = category;
   if (GENRES.has(genre)) state.genre = genre;
+  if (SORT_MODES.has(sort)) state.sort = sort;
   state.query = safeGet(STORAGE.query) || '';
 }
 
@@ -162,6 +167,26 @@ function sourceSearchText(source) {
   ].filter(Boolean).join(' ').toLowerCase();
 }
 
+function sourceAppCount(source) {
+  const apps = catalogSource(source.id)?.apps;
+  if (Array.isArray(apps)) return apps.length;
+  const statusCount = getStatus(source.id).appCount;
+  return Number.isFinite(statusCount) ? statusCount : 0;
+}
+
+function compareSources(left, right) {
+  const byName = () => String(left.name || '').localeCompare(String(right.name || ''), state.lang, {sensitivity:'base'});
+  if (state.sort === 'apps-desc') {
+    const diff = sourceAppCount(right) - sourceAppCount(left);
+    return diff || byName();
+  }
+  if (state.sort === 'apps-asc') {
+    const diff = sourceAppCount(left) - sourceAppCount(right);
+    return diff || byName();
+  }
+  return byName();
+}
+
 function formatDate(value) {
   if (!value) return '';
   const date = new Date(value);
@@ -196,7 +221,7 @@ function renderSources() {
     if (getStatus(source.id).online !== true) return false;
     if (!matchesSourceCategory(source) || !matchesGenre(source)) return false;
     return !q || sourceSearchText(source).includes(q);
-  });
+  }).sort(compareSources);
 
   if (!filtered.length) {
     grid.innerHTML = `<div class="panel empty" style="grid-column:1/-1"><div class="empty-icon">⌕</div><h3>${escapeHtml(tr('nothingFound'))}</h3><p>${escapeHtml(tr('tryFilters'))}</p></div>`;
@@ -265,7 +290,8 @@ function updateStats() {
 
 function syncFilterButtons() {
   $$('[data-category-filter]').forEach(btn => btn.classList.toggle('active', btn.dataset.categoryFilter === state.sourceCategory));
-  $$('[data-genre-filter]').forEach(btn => btn.classList.toggle('active', btn.dataset.genreFilter === state.genre));
+  $('[data-genre-filter]').forEach(btn => btn.classList.toggle('active', btn.dataset.genreFilter === state.genre));
+  $('[data-sort-filter]').forEach(btn => btn.classList.toggle('active', btn.dataset.sortFilter === state.sort));
   const search = $('#sourceSearch');
   if (search && search.value !== state.query) search.value = state.query;
 }
@@ -341,6 +367,15 @@ document.addEventListener('click', event => {
   if (genre) {
     state.genre = GENRES.has(genre.dataset.genreFilter) ? genre.dataset.genreFilter : 'all';
     safeSet(STORAGE.genre, state.genre);
+    syncFilterButtons();
+    renderSources();
+    return;
+  }
+
+  const sort = event.target.closest('[data-sort-filter]');
+  if (sort) {
+    state.sort = SORT_MODES.has(sort.dataset.sortFilter) ? sort.dataset.sortFilter : 'name';
+    safeSet(STORAGE.sort, state.sort);
     syncFilterButtons();
     renderSources();
     return;
