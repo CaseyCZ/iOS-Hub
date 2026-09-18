@@ -8,7 +8,7 @@
 </p>
 
 <p align="center">
-  Katalog pro <strong>AltStore / SideStore zdroje, Source Builder a praktické iOS nástroje</strong>.
+  Katalog pro <strong>AltStore / SideStore / LiveContainer zdroje, Source Builder a praktické iOS nástroje</strong>.
 </p>
 
 <p align="center">
@@ -21,19 +21,19 @@
 
 ## Hlavní funkce
 
-- AltStore Classic, AltStore PAL a SideStore zdroje
+- AltStore Classic, AltStore PAL, SideStore a LiveContainer zdroje
 - filtry podle typu zdroje, žánru, platformy a Mix kompatibility
 - vyhledávání podle zdroje i názvu aplikace
 - jeden Source Builder pro všechny online zdroje
 - automatický stav `PASS / TRY`
-- hotový **CaseyCZ AltStore Source** a **CaseyCZ SideStore Source**
+- hotový **CaseyCZ AltStore Source**, **CaseyCZ SideStore Source** a **CaseyCZ LiveContainer Source**
 - automatická deduplikace aplikací podle `bundleIdentifier`
 - kontrola zdrojů každých 6 hodin
 - EN / CZ / DE / ES / FR, výchozí jazyk EN
 - uložený jazyk, vzhled, filtry a výběr Builderu
 - **DEB → IPA Converter (Beta)** pro iPhone, iPad, Mac a PC
 
-## AltStore a SideStore
+## AltStore, SideStore a LiveContainer
 
 Hotové CaseyCZ zdroje se generují automaticky z aktuálně dostupných kompatibilních zdrojů. Stabilní buildy mají ve výchozích balíčcích přednost; Nightly zdroje zůstávají dostupné pro ruční výběr v Builderu.
 
