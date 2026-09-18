@@ -21,6 +21,7 @@
 - Replaced invented letter/emoji branding in the Guide and Useful Resources with official app/project icons, reusing the same AltStore, SideStore and LiveContainer artwork already used by source installer buttons.
 - Audited all public pages for icon consistency: resource CTAs now repeat each project's official icon, GitHub issue and Buy Me a Coffee actions use their official service artwork, and local CSS/JS references are cache-busted so the updated icons appear immediately after deploy.
 - Repaired missing resource icons by replacing fragile favicon hotlinks with stable official project/organization artwork for Stremio, Discord, Telegram, Tailscale, LocalSend, Raspberry Pi, Node.js, OBS and iloader, with fallback URLs for the most important brands.
+- Replaced two more fragile favicon URLs with stable official assets for changedetection.io and 7-Zip during the icon audit.
 
 ## 1.1.4 — 2026-09-18
 
