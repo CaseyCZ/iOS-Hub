@@ -44,9 +44,9 @@ const safeSet = (key, value) => { try { localStorage.setItem(key, value); } catc
 const escapeHtml = value => String(value ?? '').replace(/[&<>'\"]/g, char => ({'&':'&amp;','<':'&lt;','>':'&gt;',"'":'&#39;','\"':'&quot;'}[char]));
 const tr = key => t(state.lang, key);
 const INSTALLER_ICONS = {
-  altstore: 'https://2606795771-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FAfe8qEztjcTjsjjaMBY2%2Fuploads%2FQGRbFk9rdQ37ddG4uK5S%2FAltStoreIcon_Rounded.png?alt=media&token=1dd5cf66-df1e-4a07-8e8a-1039c4f22ff9',
-  sidestore: 'https://sidestore.io/assets/icon.png',
-  livecontainer: 'https://raw.githubusercontent.com/LiveContainer/LiveContainer/main/screenshots/AppIcon1024.png'
+  altstore: 'assets/icons/altstore.svg',
+  sidestore: 'assets/icons/sidestore.svg',
+  livecontainer: 'assets/icons/livecontainer.svg'
 };
 function installerIcon(installer) {
   const src = INSTALLER_ICONS[installer];
