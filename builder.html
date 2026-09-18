@@ -8,9 +8,9 @@
   <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'wasm-unsafe-eval'; style-src 'self' 'unsafe-inline'; img-src 'self' https: data:; connect-src 'self'; worker-src 'self' blob:; object-src 'none'; base-uri 'self'; form-action 'none'">
   <meta name="description" content="CaseyCZ Custom Source Builder — filter and combine checked AltStore, SideStore and LiveContainer-compatible sources into your own Mix.">
   <title>Custom Source Builder — CaseyCZ iOS Hub</title>
-  <link rel="stylesheet" href="styles.css?v=1.1.5-20260918-buildertarget3">
-  <link rel="stylesheet" href="hub-extra.css?v=1.1.5-20260918-buildertarget3">
-  <link rel="stylesheet" href="collapsible.css?v=1.1.5-20260918-buildertarget3">
+  <link rel="stylesheet" href="styles.css?v=1.1.5-20260918-buildertarget4">
+  <link rel="stylesheet" href="hub-extra.css?v=1.1.5-20260918-buildertarget4">
+  <link rel="stylesheet" href="collapsible.css?v=1.1.5-20260918-buildertarget4">
 </head>
 <body>
   <header class="topbar">
@@ -106,6 +106,7 @@
                   </div>
                   <div id="mixTargetHelp" class="muted builder-target-help">Choose the app where you want to add the finished source. The list below will only show sources suitable for that target.</div>
                   <div id="mixPalNote" class="muted builder-target-pal-note">AltStore PAL is not a Custom Mix target because PAL uses notarized marketplace packages and different source metadata than Classic IPA sources.</div>
+                  <div class="muted builder-target-pal-note">SideStore accepts AltSources. LiveContainer accepts AltStore-style sources. CaseyCZ Mix outputs are normalized as Classic IPA-style sources for these targets.</div>
                 </div>
 
                 <div class="filter-group">
@@ -186,8 +187,8 @@
     </div>
   </div>
 
-  <script type="module" src="builder-page.js?v=1.1.5-20260918-buildertarget3"></script>
-  <script type="module" src="builder.js?v=1.1.5-20260918-buildertarget3"></script>
-  <script type="module" src="collapsible.js?v=1.1.5-20260918-buildertarget3"></script>
+  <script type="module" src="builder-page.js?v=1.1.5-20260918-buildertarget4"></script>
+  <script type="module" src="builder.js?v=1.1.5-20260918-buildertarget4"></script>
+  <script type="module" src="collapsible.js?v=1.1.5-20260918-buildertarget4"></script>
 </body>
 </html>
