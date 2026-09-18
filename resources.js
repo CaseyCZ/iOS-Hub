@@ -55,3 +55,16 @@ const savedLang = safeGet('caseycz-language');
 applyLanguage(SUPPORTED_LANGUAGES.includes(savedLang) ? savedLang : 'en');
 
 if ($('#year')) $('#year').textContent = new Date().getFullYear();
+
+
+function enableImageFallbacks() {
+  document.addEventListener('error', event => {
+    const img = event.target;
+    if (!(img instanceof HTMLImageElement)) return;
+    const fallback = img.dataset.fallback;
+    if (!fallback || img.dataset.fallbackUsed === '1') return;
+    img.dataset.fallbackUsed = '1';
+    img.src = fallback;
+  }, true);
+}
+enableImageFallbacks();
