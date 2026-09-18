@@ -24,7 +24,7 @@
 - AltStore Classic, AltStore PAL, SideStore and LiveContainer sources
 - filters by source type, genre, platform and Mix compatibility
 - search by source name and source metadata
-- one Source Builder for all online sources
+- a dedicated **Custom Source Builder** page for all online sources
 - automated `PASS / TRY` status
 - ready-to-add **CaseyCZ AltStore Source**, **CaseyCZ SideStore Source** and **CaseyCZ LiveContainer Source**
 - app deduplication by `bundleIdentifier`
@@ -35,7 +35,7 @@
 
 ## AltStore, SideStore and LiveContainer
 
-The ready-to-add CaseyCZ sources are generated automatically from currently available compatible sources. Stable builds are preferred in the default packages; Nightly feeds remain available for manual selection in the Builder.
+The ready-to-add CaseyCZ sources are generated automatically from currently available compatible sources. Stable builds are preferred in the default packages; Nightly feeds remain available for manual selection in the standalone Builder.
 
 CaseyCZ iOS Hub does not rehost third-party IPA files. Generated source JSON files preserve the original public download URLs from each project.
 
