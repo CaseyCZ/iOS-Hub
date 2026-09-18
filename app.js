@@ -78,8 +78,8 @@ function applyLanguage(value) {
   const select = $('#languageSelect');
   if (select) select.value = state.lang;
   document.title = state.lang === 'en'
-    ? 'CaseyCZ iOS Hub — Sources, Catalog & Tools'
-    : `CaseyCZ iOS Hub — ${tr('sources')} · ${tr('tools')}`;
+    ? 'iOS Hub — Sources, Catalog & Tools'
+    : `iOS Hub — ${tr('sources')} · ${tr('tools')}`;
   safeSet(STORAGE.language, state.lang);
   renderSources();
   updateStats();
