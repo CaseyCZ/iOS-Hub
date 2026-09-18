@@ -66,6 +66,7 @@ function loadPersistedSettings() {
 function applyTheme(theme) {
   const value = theme === 'light' ? 'light' : 'dark';
   root.dataset.theme = value;
+  document.querySelector('meta[name="theme-color"]')?.setAttribute('content', value === 'dark' ? '#070b14' : '#eef3f8');
   const button = $('#themeToggle');
   if (button) button.textContent = value === 'dark' ? '☀' : '☾';
   safeSet(STORAGE.theme, value);
