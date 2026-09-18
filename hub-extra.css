@@ -87,3 +87,17 @@
 
 /* v1.1.5 — catalog sorting + report bug */
 .report-bug-btn{font-size:16px;line-height:1}
+
+
+/* v1.1.5 — useful resources page */
+.resources-hero{padding-bottom:28px}
+.resources-page-section{padding-top:0}
+.resource-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+.resource-card{min-height:250px;padding:18px;display:flex;flex-direction:column;align-items:center;text-align:center}
+.resource-icon{width:58px;height:58px;border:1px solid color-mix(in srgb,var(--accent) 42%,var(--border));border-radius:16px;display:grid;place-items:center;background:var(--accent-soft);color:var(--accent);font-weight:950;letter-spacing:.03em;margin-bottom:12px}
+.resource-card h3{margin:8px 0 7px;font-size:18px;letter-spacing:-.03em}
+.resource-card p{margin:0 auto;color:var(--muted);font-size:11px;line-height:1.6;max-width:420px}
+.resource-domain{margin:10px 0 0;color:var(--muted);font-size:9px;font-weight:800;word-break:break-all}
+.resource-card .btn{margin-top:auto;min-width:170px}
+@media(max-width:900px){.resource-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:640px){.resource-grid{grid-template-columns:1fr}.resource-card{min-height:220px}.resource-card .btn{width:100%}}
