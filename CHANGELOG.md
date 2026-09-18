@@ -9,8 +9,9 @@
 - Unified the DEB → IPA Converter and Custom Builder cards: matching icon block, background, centered content and bottom-aligned action buttons.
 - Added catalog sorting by source name or app count, with both highest-first and lowest-first app-count options.
 - Added a translated bug-report icon in the top bar linking directly to a new GitHub issue.
-- Added a new Useful Resources page with curated external tools and links, starting with LocalSend and the two shared links.
+- Added a new Useful Resources page with curated external tools and links.
 - Added the Useful Resources page to navigation across the Hub.
+- Expanded Useful Resources with verified-free LocalSend, cobalt, changedetection.io self-hosted, AltStore Classic, SideStore, LiveContainer, Sideloadly, atvloadly and TrollStore links; unverified shortened links were removed.
 
 ## 1.1.4 — 2026-09-18
 
