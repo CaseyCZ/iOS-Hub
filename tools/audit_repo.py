@@ -696,8 +696,9 @@ def validate_page_quality() -> None:
             if version and f"iOS Hub · v{version}" not in text:
                 error(f"{label} footer version does not match VERSION ({version})")
 
-        if "mobile-menu.js?v=" not in text or "settings-menu.js?v=" not in text:
-            error(f"{label} must load cache-versioned mobile/settings menu scripts")
+        for shared_script in ("support-dialog.js", "mobile-menu.js", "settings-menu.js"):
+            if f"{shared_script}?v=" not in text:
+                error(f"{label} must load cache-versioned {shared_script}")
 
         for _attr, asset in re.findall(
             r'\b(href|src)=["\']([^"\']+\.(?:css|js)(?:\?[^"\']*)?)["\']',
@@ -723,6 +724,28 @@ def validate_page_quality() -> None:
         ):
             if required not in script_text:
                 error(f"{script_name} support dialog is missing focus-management step: {required}")
+
+    support_focus = ROOT / "support-dialog.js"
+    if not support_focus.exists():
+        error("Missing support-dialog.js")
+    else:
+        support_focus_text = support_focus.read_text(encoding="utf-8")
+        for required in ("event.key !== 'Tab'", "modal.contains(active)", "last.focus()", "first.focus()"):
+            if required not in support_focus_text:
+                error(f"support-dialog.js must trap Tab focus inside the modal: missing {required}")
+
+    settings_script = ROOT / "settings-menu.js"
+    if settings_script.exists():
+        settings_text = settings_script.read_text(encoding="utf-8")
+        for required in ("returnFocus = document.activeElement", "target.focus?.()", "panel.querySelector('[data-settings-theme].active"):
+            if required not in settings_text:
+                error(f"settings-menu.js is missing keyboard focus handling: {required}")
+
+    mobile_script = ROOT / "mobile-menu.js"
+    if mobile_script.exists():
+        mobile_text = mobile_script.read_text(encoding="utf-8")
+        if "setOpen(false, true)" not in mobile_text or "button.focus()" not in mobile_text:
+            error("mobile-menu.js must restore focus to the menu button when Escape closes it")
 
     importers = ("app.js", "builder-page.js", "converter.js", "guide.js", "resources.js")
     versions: set[str] = set()
@@ -780,6 +803,7 @@ def validate_layout() -> None:
         ROOT / "converter.js",
         ROOT / "guide.js",
         ROOT / "resources.js",
+        ROOT / "support-dialog.js",
         ROOT / "mobile-menu.js",
         ROOT / "settings-menu.js",
         ROOT / "i18n.js",
