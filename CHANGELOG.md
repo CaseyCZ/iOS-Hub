@@ -12,6 +12,7 @@
 - Added a new Useful Resources page with curated external tools and links.
 - Added the Useful Resources page to navigation across the Hub.
 - Expanded Useful Resources with verified-free LocalSend, cobalt, changedetection.io self-hosted, AltStore Classic, SideStore, LiveContainer, Sideloadly, atvloadly and TrollStore links; unverified shortened links were removed.
+- Expanded Useful Resources with iloader, Tailscale, WizTree, 7-Zip, Rufus, Raspberry Pi Imager, LeoMoon HotKeyz, iTunes, Visual Studio Community, Node.js, OBS Studio, Stremio, Discord and Telegram, with free-use scope noted where licensing is limited.
 
 ## 1.1.4 — 2026-09-18
 
