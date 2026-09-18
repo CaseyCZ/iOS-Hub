@@ -1015,6 +1015,201 @@
         "youtube",
         "video"
       ]
+    },
+    {
+      "id": "moe-altstore",
+      "name": "Moe AltStore",
+      "url": "https://raw.githubusercontent.com/MountainofPenguin/moe-altstore/main/apps.json",
+      "website": "https://github.com/MountainofPenguin/moe-altstore",
+      "mode": "classic",
+      "mergeable": false,
+      "official": false,
+      "trusted": false,
+      "recommended": true,
+      "community": true,
+      "modified": true,
+      "autoPackage": false,
+      "description": {
+        "cs": "Aktivně aktualizovaný komunitní mirror upravených IPA z Moe Apps, včetně YouTube, Redditu, Infuse a dalších aplikací.",
+        "en": "Actively updated community mirror of modified Moe Apps IPAs, including YouTube, Reddit, Infuse and more."
+      },
+      "tags": [
+        "community",
+        "modified",
+        "tweaked",
+        "youtube",
+        "video",
+        "social",
+        "reddit",
+        "utility"
+      ]
+    },
+    {
+      "id": "youmod-repo",
+      "name": "YouMod Repo",
+      "url": "https://raw.githubusercontent.com/MountainofPenguin/Altstore-Repository/main/apps.json",
+      "website": "https://github.com/MountainofPenguin/Altstore-Repository",
+      "mode": "classic",
+      "mergeable": true,
+      "official": false,
+      "trusted": false,
+      "recommended": true,
+      "community": true,
+      "modified": true,
+      "description": {
+        "cs": "Komunitní automaticky sestavovaný source pro YouMod a upravený YouTube.",
+        "en": "Community auto-built source for YouMod and modified YouTube."
+      },
+      "tags": [
+        "community",
+        "modified",
+        "tweaks",
+        "youtube",
+        "video"
+      ]
+    },
+    {
+      "id": "youproextra",
+      "name": "YouProEXTRA",
+      "url": "https://raw.githubusercontent.com/mrdrvt99/Altstore-Repository/main/apps.json",
+      "website": "https://github.com/mrdrvt99/Altstore-Repository",
+      "mode": "classic",
+      "mergeable": false,
+      "official": false,
+      "trusted": false,
+      "recommended": true,
+      "community": true,
+      "modified": true,
+      "autoPackage": false,
+      "description": {
+        "cs": "Komunitní source s několika variantami upraveného YouTube: YTLite, YTKillerPlus, YTKACE, YouPro a YouMod.",
+        "en": "Community source with several modified YouTube variants: YTLite, YTKillerPlus, YTKACE, YouPro and YouMod."
+      },
+      "tags": [
+        "community",
+        "modified",
+        "tweaks",
+        "youtube",
+        "video"
+      ]
+    },
+    {
+      "id": "owo-source",
+      "name": "OwO Source",
+      "url": "https://repo.owo.network/",
+      "website": "https://owo.network/",
+      "mode": "classic",
+      "mergeable": false,
+      "official": false,
+      "trusted": false,
+      "recommended": true,
+      "community": true,
+      "modified": true,
+      "autoPackage": false,
+      "catalogLimit": 160,
+      "description": {
+        "cs": "Velká a aktivní komunitní knihovna upravených IPA pro sideloading; obsahuje sociální aplikace, utility i další modified buildy.",
+        "en": "Large active community library of modified IPAs for sideloading, including social apps, utilities and other tweaked builds."
+      },
+      "tags": [
+        "community",
+        "modified",
+        "tweaked",
+        "apps",
+        "social",
+        "video",
+        "music",
+        "utility"
+      ]
+    },
+    {
+      "id": "cypwn-ipa",
+      "name": "CyPwn IPA Library",
+      "url": "https://ipa.cypwn.xyz/cypwn.json",
+      "website": "https://www.cypwn.com/sources",
+      "mode": "classic",
+      "mergeable": false,
+      "official": false,
+      "trusted": false,
+      "recommended": true,
+      "community": true,
+      "modified": true,
+      "autoPackage": false,
+      "cachePayload": false,
+      "builder": false,
+      "catalogLimit": 180,
+      "description": {
+        "cs": "Velká komunitní IPA knihovna s přibližně 180 aplikacemi, včetně tweaked, modified a TrollStore/sideload buildů.",
+        "en": "Large community IPA library with roughly 180 apps, including tweaked, modified and TrollStore/sideload builds."
+      },
+      "tags": [
+        "community",
+        "modified",
+        "tweaked",
+        "mega",
+        "apps",
+        "social",
+        "video",
+        "music",
+        "utility"
+      ]
+    },
+    {
+      "id": "apptesters",
+      "name": "AppTesters IPA Repo",
+      "url": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/apps.json",
+      "website": "https://apptesters.org/",
+      "mode": "classic",
+      "mergeable": false,
+      "official": false,
+      "trusted": false,
+      "recommended": false,
+      "community": true,
+      "modified": true,
+      "autoPackage": false,
+      "cachePayload": false,
+      "builder": false,
+      "catalogLimit": 200,
+      "description": {
+        "cs": "Rozsáhlá a velmi aktivní komunitní IPA databáze s čistými i upravenými aplikacemi. Kvůli velikosti se v Hubu načítá jen omezený náhled katalogu.",
+        "en": "Large and very active community IPA database with clean and modified apps. Due to its size, iOS Hub only indexes a limited catalog preview."
+      },
+      "tags": [
+        "community",
+        "modified",
+        "tweaked",
+        "mega",
+        "apps",
+        "games",
+        "social",
+        "video",
+        "music",
+        "utility"
+      ]
+    },
+    {
+      "id": "youtuberebornplus",
+      "name": "YouTubeRebornPlus",
+      "url": "https://raw.githubusercontent.com/arichornlover/arichornlover.github.io/main/apps2.json",
+      "website": "https://github.com/arichornlover/YouTubeRebornPlus",
+      "mode": "classic",
+      "mergeable": true,
+      "official": true,
+      "trusted": false,
+      "recommended": true,
+      "community": false,
+      "modified": true,
+      "description": {
+        "cs": "Oficiální AltStore source projektu YouTubeRebornPlus pro upravený YouTube klient.",
+        "en": "Official AltStore source for the modified YouTubeRebornPlus client."
+      },
+      "tags": [
+        "official",
+        "modified",
+        "tweaks",
+        "youtube",
+        "video"
+      ]
     }
   ]
 }
