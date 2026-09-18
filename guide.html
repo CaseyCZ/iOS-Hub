@@ -9,7 +9,7 @@
   <meta name="description" content="iOS Hub — free sideloading guide, compatibility overview and troubleshooting for AltStore, SideStore, LiveContainer, Sideloadly and TrollStore.">
   <title>Sideloading Guide — iOS Hub</title>
   <link rel="stylesheet" href="styles.css?v=1.1.5-20260918-layout2">
-  <link rel="stylesheet" href="hub-extra.css?v=1.1.5-20260918-diagnosis2">
+  <link rel="stylesheet" href="hub-extra.css?v=1.1.5-20260918-tried1">
 </head>
 <body>
   <header class="topbar">
@@ -158,9 +158,29 @@
               <p id="assistantDiagnosisText"></p>
               <div class="assistant-diagnosis-next" data-help-copy="diagnosisNext">What to do now</div>
               <ol id="assistantDiagnosisSteps"></ol>
+
+              <div class="assistant-tried">
+                <div class="assistant-tried-head">
+                  <strong data-help-copy="triedTitle">What have you already tried?</strong>
+                  <button id="assistantTriedReset" type="button" data-help-copy="triedReset">Clear</button>
+                </div>
+                <p data-help-copy="triedDesc">Mark completed checks. The next recommendation will avoid repeating them when possible.</p>
+                <div class="assistant-tried-options">
+                  <button type="button" data-tried-key="wifi" data-tried-tags="wifi network same wi-fi" data-help-copy="triedWifi">Wi-Fi checked</button>
+                  <button type="button" data-tried-key="vpn" data-tried-tags="localdevvpn vpn wireguard stosvpn" data-help-copy="triedVpn">LocalDevVPN reconnected</button>
+                  <button type="button" data-tried-key="restart" data-tried-tags="restart reopen reboot" data-help-copy="triedRestart">Restarted apps / device</button>
+                  <button type="button" data-tried-key="pairing" data-tried-tags="pairing pair udid iloader" data-help-copy="triedPairing">New pairing file</button>
+                  <button type="button" data-tried-key="stable" data-tried-tags="nightly stable beta" data-help-copy="triedStable">Tried stable build</button>
+                  <button type="button" data-tried-key="login" data-tried-tags="apple login sign in anisette 2fa 503" data-help-copy="triedLogin">Signed in again</button>
+                  <button type="button" data-tried-key="certificate" data-tried-tags="certificate cert import p12 team id" data-help-copy="triedCertificate">Certificate re-imported</button>
+                  <button type="button" data-tried-key="resign" data-tried-tags="resign long press refresh all shortcut" data-help-copy="triedResign">Tried Resign / Refresh All</button>
+                </div>
+              </div>
+
               <div id="assistantDiagnosisDocs" class="assistant-diagnosis-docs"></div>
               <div class="assistant-diagnosis-actions">
-                <button id="assistantDiagnosisShowAll" class="btn primary" type="button" data-help-copy="diagnosisShowAll">Show full troubleshooting ↓</button>
+                <button id="assistantDiagnosisDidntHelp" class="btn primary diagnosis-next-fix" type="button" data-help-copy="diagnosisDidntHelp">This did not help →</button>
+                <button id="assistantDiagnosisShowAll" class="btn secondary" type="button" data-help-copy="diagnosisShowAll">Show full troubleshooting ↓</button>
                 <button id="assistantDiagnosisCopy" class="btn secondary" type="button" data-help-copy="diagnosisCopy">Copy help link</button>
               </div>
             </div>
@@ -625,7 +645,7 @@
     </div>
   </div>
 
-  <script type="module" src="guide.js?v=1.1.5-20260918-diagnosis2"></script>
+  <script type="module" src="guide.js?v=1.1.5-20260918-tried1"></script>
   <script src="mobile-menu.js?v=1.1.5-20260918-settingsportal1"></script>
   <script src="settings-menu.js?v=1.1.5-20260918-settingsportal1"></script>
 </body>
