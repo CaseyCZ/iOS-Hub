@@ -31,7 +31,7 @@ const GENRE_RULES = {
 const copy = {
   en: {
     title:'Custom Source Builder', desc:'Filter checked online sources, select any combination and build your own CaseyCZ Mix for AltStore, SideStore or LiveContainer.',
-    selectPass:'Select PASS for', selectAll:'Select all shown', clear:'Clear selection', build:'Build CaseyCZ Mix', selected:'selected', shown:'shown', pass:'PASS', try:'TRY', passHelp:'PASS means the source passed the automated CaseyCZ Mix merge test. It does not mean every app is compatible with every iOS device.',
+    selectPass:'Select PASS for', selectAll:'Select all shown', clear:'Clear selection', build:'Build CaseyCZ Mix', selected:'selected', shown:'shown', pass:'PASS', try:'TRY', passHelp:'The list is already limited to the selected destination. PASS additionally means the source passed the automated CaseyCZ Mix merge test; it does not guarantee every app will run on every iOS device.',
     mixStatus:'Merge test', targetLabel:'Where do you want to add the Mix?', targetHelpAlt:'The finished Mix will be a Classic AltSource for AltStore Classic. SideStore-only and PAL marketplace sources are hidden.', targetHelpSide:'SideStore is fully compatible with Classic AltSources, so Classic and SideStore sources can be shown here. PAL marketplace sources are hidden.', targetHelpLive:'LiveContainer has basic AltSource support. We show Classic AltSources that can be merged into a source LiveContainer can import.', palNote:'AltStore PAL is not a Custom Mix target because PAL uses notarized marketplace packages and different source metadata than Classic IPA sources.', targetPrefix:'Target', statusAll:'All', statusPass:'PASS only', statusTry:'TRY only', platform:'Platform', platformAll:'All', classic:'AltStore Classic', pal:'AltStore PAL', sidestore:'SideStore', livecontainer:'LiveContainer', autoTested:'Auto tested',
     altPackage:'CaseyCZ AltStore Source', sidePackage:'CaseyCZ SideStore Source', livePackage:'CaseyCZ LiveContainer Source', customMix:'Custom Mix', filters:'⚙ Filters · 🔎 Search · ☑ Selection',
     addAlt:'＋ Add to AltStore', addSide:'＋ Add to SideStore', addLive:'＋ Add to LiveContainer', copyUrl:'Copy URL', json:'JSON ↗', apps:'apps', sources:'sources',
@@ -40,7 +40,7 @@ const copy = {
   },
   cs: {
     title:'Custom Source Builder', desc:'Filtruj kontrolované online zdroje, vyber libovolnou kombinaci a vytvoř vlastní CaseyCZ Mix pro AltStore, SideStore nebo LiveContainer.',
-    selectPass:'Vybrat PASS pro', selectAll:'Vybrat vše zobrazené', clear:'Zrušit výběr', build:'Vytvořit CaseyCZ Mix', selected:'vybráno', shown:'zobrazeno', pass:'PASS', try:'ZKUSIT', passHelp:'PASS znamená, že zdroj prošel automatickým testem sloučení do CaseyCZ Mixu. Neznamená to, že každá aplikace funguje na každém iOS zařízení.',
+    selectPass:'Vybrat PASS pro', selectAll:'Vybrat vše zobrazené', clear:'Zrušit výběr', build:'Vytvořit CaseyCZ Mix', selected:'vybráno', shown:'zobrazeno', pass:'PASS', try:'ZKUSIT', passHelp:'Seznam je už omezený podle zvoleného cíle. PASS navíc znamená, že zdroj prošel automatickým testem sloučení do CaseyCZ Mixu; neznamená to, že každá aplikace poběží na každém iOS zařízení.',
     mixStatus:'Test sloučení', targetLabel:'Kam chceš výsledný Mix přidat?', targetHelpAlt:'Výsledný Mix bude Classic AltSource pro AltStore Classic. SideStore-only a PAL marketplace zdroje se skryjí.', targetHelpSide:'SideStore je plně kompatibilní s Classic AltSources, takže zde mohou být Classic i SideStore zdroje. PAL marketplace zdroje se skryjí.', targetHelpLive:'LiveContainer má základní podporu AltSource. Zobrazíme Classic AltSources, které lze sloučit do zdroje importovatelného v LiveContaineru.', palNote:'AltStore PAL není cílem pro Vlastní Mix, protože PAL používá notarizované marketplace balíčky a jiná metadata než Classic IPA zdroje.', targetPrefix:'Cíl', statusAll:'Vše', statusPass:'Jen PASS', statusTry:'Jen ZKUSIT', platform:'Platforma', platformAll:'Vše', classic:'AltStore Classic', pal:'AltStore PAL', sidestore:'SideStore', livecontainer:'LiveContainer', autoTested:'Automaticky testováno',
     altPackage:'CaseyCZ AltStore Source', sidePackage:'CaseyCZ SideStore Source', livePackage:'CaseyCZ LiveContainer Source', customMix:'Vlastní Mix', filters:'⚙ Filtry · 🔎 Hledání · ☑ Výběr',
     addAlt:'＋ Přidat do AltStore', addSide:'＋ Přidat do SideStore', addLive:'＋ Přidat do LiveContainer', copyUrl:'Kopírovat URL', json:'JSON ↗', apps:'aplikací', sources:'zdrojů',
@@ -49,7 +49,7 @@ const copy = {
   },
   de: {
     title:'Custom Source Builder', desc:'Filtere geprüfte Online-Quellen, wähle eine beliebige Kombination und erstelle deinen eigenen CaseyCZ Mix für AltStore, SideStore oder LiveContainer.',
-    selectPass:'PASS wählen für', selectAll:'Alle sichtbaren wählen', clear:'Auswahl löschen', build:'CaseyCZ Mix erstellen', selected:'ausgewählt', shown:'sichtbar', pass:'PASS', try:'TEST', passHelp:'PASS bedeutet, dass die Quelle den automatischen CaseyCZ-Mix-Zusammenführungstest bestanden hat. Es bedeutet nicht, dass jede App mit jedem iOS-Gerät kompatibel ist.',
+    selectPass:'PASS wählen für', selectAll:'Alle sichtbaren wählen', clear:'Auswahl löschen', build:'CaseyCZ Mix erstellen', selected:'ausgewählt', shown:'sichtbar', pass:'PASS', try:'TEST', passHelp:'Die Liste ist bereits auf das gewählte Ziel beschränkt. PASS bedeutet zusätzlich, dass die Quelle den automatischen CaseyCZ-Mix-Zusammenführungstest bestanden hat; nicht, dass jede App auf jedem iOS-Gerät läuft.',
     mixStatus:'Merge-Test', targetLabel:'Wo möchtest du den Mix hinzufügen?', targetHelpAlt:'Der fertige Mix wird eine Classic AltSource für AltStore Classic. SideStore-only- und PAL-Marketplace-Quellen werden ausgeblendet.', targetHelpSide:'SideStore ist vollständig mit Classic AltSources kompatibel. Classic- und SideStore-Quellen können angezeigt werden; PAL-Marketplace-Quellen werden ausgeblendet.', targetHelpLive:'LiveContainer unterstützt AltSources grundsätzlich. Angezeigt werden Classic AltSources, die zu einer importierbaren Quelle zusammengeführt werden können.', palNote:'AltStore PAL ist kein Ziel für Custom Mix, da PAL notarized Marketplace-Pakete und andere Metadaten als Classic-IPA-Quellen verwendet.', targetPrefix:'Ziel', statusAll:'Alle', statusPass:'Nur PASS', statusTry:'Nur TEST', platform:'Plattform', platformAll:'Alle', classic:'AltStore Classic', pal:'AltStore PAL', sidestore:'SideStore', livecontainer:'LiveContainer', autoTested:'Automatisch geprüft',
     altPackage:'CaseyCZ AltStore Source', sidePackage:'CaseyCZ SideStore Source', livePackage:'CaseyCZ LiveContainer Source', customMix:'Eigener Mix', filters:'⚙ Filter · 🔎 Suche · ☑ Auswahl',
     addAlt:'＋ Zu AltStore', addSide:'＋ Zu SideStore', addLive:'＋ Zu LiveContainer', copyUrl:'URL kopieren', json:'JSON ↗', apps:'Apps', sources:'Quellen',
@@ -57,7 +57,7 @@ const copy = {
   },
   es: {
     title:'Custom Source Builder', desc:'Filtra fuentes online comprobadas, elige cualquier combinación y crea tu propio CaseyCZ Mix para AltStore, SideStore o LiveContainer.',
-    selectPass:'Seleccionar PASS para', selectAll:'Seleccionar visibles', clear:'Borrar selección', build:'Crear CaseyCZ Mix', selected:'seleccionadas', shown:'visibles', pass:'PASS', try:'PROBAR', passHelp:'PASS significa que la fuente superó la prueba automática de combinación de CaseyCZ Mix. No significa que todas las apps sean compatibles con todos los dispositivos iOS.',
+    selectPass:'Seleccionar PASS para', selectAll:'Seleccionar visibles', clear:'Borrar selección', build:'Crear CaseyCZ Mix', selected:'seleccionadas', shown:'visibles', pass:'PASS', try:'PROBAR', passHelp:'La lista ya está limitada al destino seleccionado. PASS además significa que la fuente superó la prueba automática de combinación de CaseyCZ Mix; no garantiza que cada app funcione en todos los dispositivos iOS.',
     mixStatus:'Prueba de combinación', targetLabel:'¿Dónde quieres añadir el Mix?', targetHelpAlt:'El Mix final será una Classic AltSource para AltStore Classic. Se ocultan las fuentes exclusivas de SideStore y las de marketplace PAL.', targetHelpSide:'SideStore es totalmente compatible con Classic AltSources, por lo que aquí pueden aparecer fuentes Classic y SideStore. Se ocultan las PAL.', targetHelpLive:'LiveContainer tiene compatibilidad básica con AltSource. Mostramos Classic AltSources que pueden combinarse en una fuente importable.', palNote:'AltStore PAL no es un destino de Custom Mix porque usa paquetes notarizados de marketplace y metadatos diferentes a las fuentes IPA Classic.', targetPrefix:'Destino', statusAll:'Todo', statusPass:'Solo PASS', statusTry:'Solo PROBAR', platform:'Plataforma', platformAll:'Todo', classic:'AltStore Classic', pal:'AltStore PAL', sidestore:'SideStore', livecontainer:'LiveContainer', autoTested:'Prueba automática',
     altPackage:'CaseyCZ AltStore Source', sidePackage:'CaseyCZ SideStore Source', livePackage:'CaseyCZ LiveContainer Source', customMix:'Mix personalizado', filters:'⚙ Filtros · 🔎 Búsqueda · ☑ Selección',
     addAlt:'＋ Añadir a AltStore', addSide:'＋ Añadir a SideStore', addLive:'＋ Añadir a LiveContainer', copyUrl:'Copiar URL', json:'JSON ↗', apps:'apps', sources:'fuentes',
@@ -65,7 +65,7 @@ const copy = {
   },
   fr: {
     title:'Custom Source Builder', desc:'Filtrez les sources en ligne vérifiées, choisissez n’importe quelle combinaison et créez votre propre CaseyCZ Mix pour AltStore, SideStore ou LiveContainer.',
-    selectPass:'Sélectionner les PASS pour', selectAll:'Tout sélectionner affiché', clear:'Effacer la sélection', build:'Créer CaseyCZ Mix', selected:'sélectionnées', shown:'affichées', pass:'PASS', try:'TEST', passHelp:'PASS signifie que la source a réussi le test automatique de fusion CaseyCZ Mix. Cela ne signifie pas que chaque app est compatible avec chaque appareil iOS.',
+    selectPass:'Sélectionner les PASS pour', selectAll:'Tout sélectionner affiché', clear:'Effacer la sélection', build:'Créer CaseyCZ Mix', selected:'sélectionnées', shown:'affichées', pass:'PASS', try:'TEST', passHelp:'La liste est déjà limitée à la cible choisie. PASS signifie en plus que la source a réussi le test automatique de fusion CaseyCZ Mix; cela ne garantit pas que chaque app fonctionne sur chaque appareil iOS.',
     mixStatus:'Test de fusion', targetLabel:'Où voulez-vous ajouter le Mix ?', targetHelpAlt:'Le Mix final sera une Classic AltSource pour AltStore Classic. Les sources réservées à SideStore et les marketplaces PAL sont masquées.', targetHelpSide:'SideStore est entièrement compatible avec les Classic AltSources. Les sources Classic et SideStore peuvent apparaître ici; les PAL sont masquées.', targetHelpLive:'LiveContainer prend en charge les AltSources de base. Nous affichons les Classic AltSources pouvant être fusionnées dans une source importable.', palNote:'AltStore PAL n’est pas une cible du Custom Mix car PAL utilise des paquets marketplace notariés et des métadonnées différentes des sources IPA Classic.', targetPrefix:'Cible', statusAll:'Tout', statusPass:'PASS seulement', statusTry:'TEST seulement', platform:'Plateforme', platformAll:'Tout', classic:'AltStore Classic', pal:'AltStore PAL', sidestore:'SideStore', livecontainer:'LiveContainer', autoTested:'Test automatique',
     altPackage:'CaseyCZ AltStore Source', sidePackage:'CaseyCZ SideStore Source', livePackage:'CaseyCZ LiveContainer Source', customMix:'Mix personnalisé', filters:'⚙ Filtres · 🔎 Recherche · ☑ Sélection',
     addAlt:'＋ Ajouter à AltStore', addSide:'＋ Ajouter à SideStore', addLive:'＋ Ajouter à LiveContainer', copyUrl:'Copier URL', json:'JSON ↗', apps:'apps', sources:'sources',
@@ -129,7 +129,6 @@ function matchesGenre(source) {
   const tags = [...sourceTags(source)];
   return (GENRE_RULES[genre] || []).some(rule => tags.includes(rule));
 }
-function windowTarget() { return target; }
 function targetName() {
   if (target === 'sidestore') return 'SideStore';
   if (target === 'livecontainer') return 'LiveContainer';
@@ -205,13 +204,15 @@ function applyCopy() {
   if ($('#builderDesc')) $('#builderDesc').textContent = tr('desc');
   if ($('#customMixCardTitle')) $('#customMixCardTitle').textContent = tr('customMix');
   if ($('#customMixFiltersLabel')) $('#customMixFiltersLabel').textContent = tr('filters');
-  if ($('#mixPlatformLabel')) $('#mixPlatformLabel').textContent = tr('platform');
+  if ($('#mixTargetLabel')) $('#mixTargetLabel').textContent = tr('targetLabel');
+  if ($('#mixTargetHelp')) $('#mixTargetHelp').textContent = tr(targetHelpKey());
+  if ($('#mixPalNote')) $('#mixPalNote').textContent = tr('palNote');
   if ($('#mixStatusLabel')) $('#mixStatusLabel').textContent = tr('mixStatus');
   if ($('#mixTestBadge')) $('#mixTestBadge').textContent = tr('autoTested');
   if ($('#mixPassHelp')) $('#mixPassHelp').textContent = tr('passHelp');
+  const targetBadge = $('#mixTargetBadge');
+  if (targetBadge) targetBadge.innerHTML = `${installerIcon(targetIconType())}${escapeHtml(tr('targetPrefix'))}: ${escapeHtml(targetName())}`;
 
-  const platformLabels = {all:'platformAll', classic:'classic', pal:'pal', sidestore:'sidestore', livecontainer:'livecontainer'};
-  $$('[data-exp-platform-filter]').forEach(button => { button.textContent = tr(platformLabels[button.dataset.expPlatformFilter] || 'platformAll'); });
   const statusLabels = {all:'statusAll', pass:'statusPass', try:'statusTry'};
   $$('[data-exp-compat-filter]').forEach(button => { button.textContent = tr(statusLabels[button.dataset.expCompatFilter] || 'statusAll'); });
 }
@@ -270,7 +271,7 @@ function renderOfficialPackages() {
 }
 
 function modeName(source) {
-  return source.mode === 'pal' ? 'AltStore PAL' : source.mode === 'sidestore' ? 'SideStore' : 'AltStore Classic';
+  return source.mode === 'sidestore' ? 'SideStore Source' : 'Classic AltSource';
 }
 
 function render() {
@@ -281,7 +282,7 @@ function render() {
   if (!list) return;
 
   const available = candidates();
-  const validIds = new Set(allCandidates().map(source => source.id));
+  const validIds = new Set(allCandidates().filter(source => matchesTarget(source)).map(source => source.id));
   [...selected].forEach(id => { if (!validIds.has(id)) selected.delete(id); });
   saveSelection();
 
@@ -399,7 +400,7 @@ async function buildMix() {
     const {apps,conflicts} = dedupe(payloads);
     if (!apps.length) throw new Error('No mergeable app entries were found.');
 
-    const target = hostedTarget(ids);
+    const hosted = hostedTarget(ids);
     const names = ids.map(id => registry.find(source => source.id === id)?.name || id);
     const hasTry = ids.some(id => getStatus(id).mixTest !== 'pass');
     const mix = {
@@ -415,9 +416,9 @@ async function buildMix() {
     if (blobUrl) URL.revokeObjectURL(blobUrl);
     blobUrl = URL.createObjectURL(new Blob([JSON.stringify(mix,null,2) + '\n'], {type:'application/json'}));
 
-    $('#expResultTitle').textContent = target.url ? tr('hosted') : (hasTry ? tr('experimental') : tr('local'));
+    $('#expResultTitle').textContent = hosted.url ? tr('hosted') : (hasTry ? tr('experimental') : tr('local'));
     $('#expResultInfo').textContent = `${apps.length} ${tr('apps')} · ${conflicts} ${tr('conflicts')}`;
-    $('#expResultNote').textContent = target.url ? '' : (hasTry ? tr('tryNote') : tr('localNote'));
+    $('#expResultNote').textContent = hosted.url ? '' : (hasTry ? tr('tryNote') : tr('localNote'));
     $('#expDownload').href = blobUrl;
     $('#expDownload').download = `CaseyCZ-Mix-${hashIds(ids)}.json`;
     $('#expDownload').textContent = tr('download');
@@ -429,33 +430,33 @@ async function buildMix() {
     const live = $('#expAddLiveContainer');
     const copyButton = $('#expCopyUrl');
 
-    if (target.url && target.alt && windowTarget() === 'altstore') {
+    if (hosted.url && hosted.alt && target === 'altstore') {
       alt.hidden = false;
-      alt.href = `altstore://source?url=${encodeURIComponent(target.url)}`;
+      alt.href = `altstore://source?url=${encodeURIComponent(hosted.url)}`;
       alt.innerHTML = `${installerIcon('alt')}${escapeHtml(tr('addAlt'))}`;
     } else {
       alt.hidden = true;
     }
 
-    if (target.url && target.side && windowTarget() === 'sidestore') {
+    if (hosted.url && hosted.side && target === 'sidestore') {
       side.hidden = false;
-      side.href = `sidestore://source?url=${encodeURIComponent(target.url)}`;
+      side.href = `sidestore://source?url=${encodeURIComponent(hosted.url)}`;
       side.innerHTML = `${installerIcon('side')}${escapeHtml(tr('addSide'))}`;
     } else {
       side.hidden = true;
     }
 
-    if (target.url && target.live && windowTarget() === 'livecontainer') {
+    if (hosted.url && hosted.live && target === 'livecontainer') {
       live.hidden = false;
-      live.href = `livecontainer://sources?url=${encodeURIComponent(target.url)}`;
+      live.href = `livecontainer://sources?url=${encodeURIComponent(hosted.url)}`;
       live.innerHTML = `${installerIcon('live')}${escapeHtml(tr('addLive'))}`;
     } else {
       live.hidden = true;
     }
 
-    if (target.url) {
+    if (hosted.url) {
       copyButton.hidden = false;
-      copyButton.dataset.url = target.url;
+      copyButton.dataset.url = hosted.url;
       copyButton.textContent = tr('copyUrl');
     } else {
       copyButton.hidden = true;
