@@ -348,6 +348,34 @@ def validate_generated_data() -> None:
                 error(f"{path.relative_to(ROOT)} is not a valid source cache with an apps array")
 
 
+
+def validate_interactive_guide() -> None:
+    html = ROOT / "guide.html"
+    script = ROOT / "guide.js"
+
+    if html.exists():
+        text = html.read_text(encoding="utf-8")
+        ids = re.findall(r'\bid="([^"]+)"', text)
+        duplicates = sorted({value for value in ids if ids.count(value) > 1})
+        for value in duplicates:
+            error(f"guide.html contains duplicate id {value!r}")
+
+    if script.exists():
+        text = script.read_text(encoding="utf-8")
+        if "$$(" in text:
+            error("guide.js contains undefined $$() selector helper; use $() or $()")
+        bad_loop = re.search(
+            r"(?<!\$)\$\([^\n]+?\)\.(?:forEach|filter|map|some)\(",
+            text,
+        )
+        if bad_loop:
+            line = text.count("\n", 0, bad_loop.start()) + 1
+            error(
+                f"guide.js line {line} calls an array method on $() / querySelector; "
+                "use $() / querySelectorAll"
+            )
+
+
 def validate_layout() -> None:
     for path in LEGACY_PATHS:
         if path.exists():
@@ -399,6 +427,7 @@ def main() -> int:
     validate_registry()
     validate_generated_data()
     validate_layout()
+    validate_interactive_guide()
     validate_translations()
     validate_project_identity()
 
