@@ -40,7 +40,7 @@ function applyLanguage(value) {
   if (select) select.value = lang;
   const warning = $('#metadataWarning');
   if (warning) warning.textContent = BETA_WARNING[lang] || BETA_WARNING.en;
-  document.title = 'DEB → IPA Converter — CaseyCZ iOS Hub';
+  document.title = 'DEB → IPA Converter — iOS Hub';
   safeSet(STORAGE.language, lang);
   if (!busy) updateRuntimeReady();
 }
