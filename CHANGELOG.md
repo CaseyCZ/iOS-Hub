@@ -5,6 +5,7 @@
 - Added LiveContainer consistently to source descriptions, catalog headings and installation guidance across the website and READMEs.
 - Reworked package disclosure labels to a compact icon-based content label for sources + apps.
 - Added consistent icons to Builder and catalog filters: source type, genre, platform, Mix status, search and selection.
+- Added a real LiveContainer compatibility option to the Builder platform filter.
 - Changed visible search wording to source-focused text because apps are not shown as a standalone catalog.
 
 ## 1.1.1 — 2026-09-18
