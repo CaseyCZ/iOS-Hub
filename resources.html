@@ -9,7 +9,7 @@
   <meta name="description" content="iOS Hub — useful apps, services and websites for iPhone, desktop and everyday workflows.">
   <title>Useful Resources — iOS Hub</title>
   <link rel="stylesheet" href="styles.css?v=1.1.5-20260918-layout2">
-  <link rel="stylesheet" href="hub-extra.css?v=1.1.5-20260918-mobile2">
+  <link rel="stylesheet" href="hub-extra.css?v=1.1.5-20260918-settings1">
 </head>
 <body>
   <header class="topbar">
@@ -33,23 +33,33 @@
           <option value="es">ES</option>
           <option value="fr">FR</option>
         </select>
-        <div class="language-menu" data-language-menu>
-          <button id="languageMenuButton" class="language-menu-button" type="button" aria-haspopup="menu" aria-expanded="false" aria-label="Language">
-            <img class="language-current-flag" src="assets/flags/gb.svg" alt="">
-            <span class="language-current-name">English</span>
-            <span class="language-menu-chevron" aria-hidden="true">⌄</span>
-          </button>
-          <div class="language-menu-panel" role="menu" aria-label="Language">
-            <button class="language-option" type="button" data-language="cs" role="menuitemradio" aria-checked="false"><img class="language-flag" src="assets/flags/cz.svg" alt=""><span>Čeština</span></button>
-            <button class="language-option" type="button" data-language="en" role="menuitemradio" aria-checked="false"><img class="language-flag" src="assets/flags/gb.svg" alt=""><span>English</span></button>
-            <button class="language-option" type="button" data-language="de" role="menuitemradio" aria-checked="false"><img class="language-flag" src="assets/flags/de.svg" alt=""><span>Deutsch</span></button>
-            <button class="language-option" type="button" data-language="es" role="menuitemradio" aria-checked="false"><img class="language-flag" src="assets/flags/es.svg" alt=""><span>Español</span></button>
-            <button class="language-option" type="button" data-language="fr" role="menuitemradio" aria-checked="false"><img class="language-flag" src="assets/flags/fr.svg" alt=""><span>Français</span></button>
+        <div class="settings-menu" data-settings-menu>
+          <button id="settingsButton" class="icon-btn settings-button" type="button" aria-haspopup="dialog" aria-expanded="false" aria-controls="settingsPanel" aria-label="Settings" title="Settings">⚙</button>
+          <div id="settingsPanel" class="settings-panel" aria-hidden="true">
+            <div class="settings-title" data-settings-copy="title">Settings</div>
+
+            <div class="settings-label" data-settings-copy="appearance">APPEARANCE</div>
+            <div class="settings-theme-seg">
+              <button type="button" data-settings-theme="dark" aria-pressed="false">☾ <span data-settings-copy="dark">Dark</span></button>
+              <button type="button" data-settings-theme="light" aria-pressed="false">☀ <span data-settings-copy="light">Light</span></button>
+            </div>
+
+            <div class="settings-label" data-settings-copy="language">LANGUAGE</div>
+            <div class="settings-language-list">
+              <button type="button" data-settings-language="cs" role="radio" aria-checked="false"><img src="assets/flags/cz.svg" alt=""><span>Čeština</span></button>
+              <button type="button" data-settings-language="en" role="radio" aria-checked="false"><img src="assets/flags/gb.svg" alt=""><span>English</span></button>
+              <button type="button" data-settings-language="de" role="radio" aria-checked="false"><img src="assets/flags/de.svg" alt=""><span>Deutsch</span></button>
+              <button type="button" data-settings-language="es" role="radio" aria-checked="false"><img src="assets/flags/es.svg" alt=""><span>Español</span></button>
+              <button type="button" data-settings-language="fr" role="radio" aria-checked="false"><img src="assets/flags/fr.svg" alt=""><span>Français</span></button>
+            </div>
+
+            <div class="settings-label" data-settings-copy="report">REPORT ISSUE</div>
+            <a class="settings-report-link report-bug-btn" href="https://github.com/CaseyCZ/iOS-Hub/issues/new" target="_blank" rel="noopener" aria-label="Report a bug" title="Report a bug" data-i18n-title="reportBug" data-i18n-aria-label="reportBug"><span aria-hidden="true">🐞</span><span data-i18n="reportBug">Report a bug</span></a>
           </div>
         </div>
-        <a class="compact-btn nav-report-btn report-bug-btn" href="https://github.com/CaseyCZ/iOS-Hub/issues/new" target="_blank" rel="noopener" aria-label="Report a bug" title="Report a bug" data-i18n-title="reportBug" data-i18n-aria-label="reportBug"><span class="report-bug-icon" aria-hidden="true">🐞</span><span class="report-bug-label" data-i18n="reportBug">Report a bug</span></a>
-        <button id="themeToggle" class="icon-btn" type="button" aria-label="Theme">☀</button>
-        <button class="compact-btn" type="button" data-support-open><img class="compact-brand-icon" src="https://cdn.buymeacoffee.com/buttons/bmc-new-btn-logo.svg" alt="" referrerpolicy="no-referrer"><span class="support-label" data-i18n="support">Support</span></button>
+        <button id="themeToggle" class="settings-theme-proxy" type="button" aria-hidden="true" tabindex="-1">☀</button>
+        <button class="compact-btn nav-support-primary" type="button" data-support-open><img class="compact-brand-icon" src="https://cdn.buymeacoffee.com/buttons/bmc-new-btn-logo.svg" alt="" referrerpolicy="no-referrer"><span class="support-label" data-i18n="support">Support</span></button>
+
       </div>
     </div>
   </header>
@@ -340,7 +350,7 @@
   </div>
 
   <script type="module" src="resources.js?v=1.1.5-20260918-layout2"></script>
-  <script src="language-menu.js?v=1.1.5-20260918-lang2"></script>
   <script src="mobile-menu.js?v=1.1.5-20260918-mobile1"></script>
+  <script src="settings-menu.js?v=1.1.5-20260918-settings1"></script>
 </body>
 </html>
