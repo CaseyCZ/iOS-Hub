@@ -21,3 +21,11 @@
 .builder-launch-card{grid-column:1/-1;min-width:0;padding:18px;border:1px solid var(--border);border-radius:14px;background:var(--panel2);box-shadow:0 12px 28px rgba(0,0,0,.12);text-align:center;display:flex;flex-direction:column;align-items:center;gap:8px}.builder-launch-card h4{margin:2px 0 0;font-size:18px;letter-spacing:-.02em}.builder-launch-card p{max-width:720px;margin:0 auto}.builder-launch-card .btn{margin-top:4px;min-width:180px}
 .builder-page-hero{padding-bottom:26px}.builder-page-section{padding-top:0}.builder-page-shell{max-width:980px;margin:0 auto}.builder-page-control{margin-bottom:14px}.builder-page-control .builder-filter-disclosure{margin-top:14px}.builder-page-control .catalog-filters{width:100%}.builder-page-control .builder-control-footer{max-width:560px;margin-left:auto;margin-right:auto}
 @media(max-width:640px){.builder-launch-card{padding:15px}.builder-launch-card .btn{width:100%}.builder-page-hero{padding-bottom:18px}}
+
+/* v1.1.5 — Converter + Custom Builder side by side on homepage */
+.tools-grid{align-items:stretch}
+.tools-grid>.tool-card,.tools-grid>.tools-builder-card{height:100%}
+.tools-grid .tools-builder-card{grid-column:auto;min-height:100%;justify-content:center;margin:0}
+#builder .builder-card-grid{margin-bottom:0}
+@media(max-width:900px){.tools-grid .tools-builder-card{grid-column:auto}}
+
