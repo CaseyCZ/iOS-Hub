@@ -145,3 +145,32 @@
 .guide-official-links{display:flex;justify-content:center;gap:7px;flex-wrap:wrap;margin-top:14px}
 @media(max-width:1000px){.guide-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:640px){.guide-grid{grid-template-columns:1fr}.guide-card{min-height:220px}.guide-card .btn{width:100%}.guide-section-head{margin-top:30px}}
+
+
+/* v1.1.5 — beginner-first guide */
+.beginner-start{padding:24px;text-align:center}
+.beginner-start>h2{margin:8px 0 7px;font-size:26px;letter-spacing:-.04em}
+.beginner-start>p{max-width:760px;margin:0 auto 20px;color:var(--muted);font-size:12px;line-height:1.65}
+.beginner-choice-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin-top:18px}
+.beginner-choice{min-width:0;padding:18px;border:1px solid var(--border);border-radius:15px;background:var(--panel2);display:flex;flex-direction:column;align-items:center;text-align:center;min-height:285px}
+.beginner-choice .guide-icon{margin-bottom:10px}
+.beginner-choice h3{margin:9px 0 7px;font-size:16px;letter-spacing:-.025em;max-width:440px}
+.beginner-choice p{margin:0 auto;color:var(--muted);font-size:11px;line-height:1.62;max-width:470px}
+.beginner-choice p strong{color:var(--text)}
+.beginner-choice .btn{margin-top:auto;min-width:190px}
+.beginner-choice:last-child{grid-column:1/-1;max-width:560px;width:100%;justify-self:center}
+.beginner-default{margin:14px auto 0;max-width:900px}
+.beginner-glossary-head{margin-top:34px}
+.beginner-glossary{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+.beginner-term{padding:16px;text-align:left}
+.beginner-term-name{font-size:13px;font-weight:950;color:var(--text);margin-bottom:5px}
+.beginner-term p{margin:0;color:var(--muted);font-size:10px;line-height:1.6}
+.beginner-source-term{grid-column:1/-1;text-align:center}
+.beginner-source-term .btn{margin-top:10px}
+@media(max-width:760px){
+  .beginner-start{padding:16px}
+  .beginner-choice-grid,.beginner-glossary{grid-template-columns:1fr}
+  .beginner-choice{min-height:245px}
+  .beginner-choice:last-child,.beginner-source-term{grid-column:auto;max-width:none}
+  .beginner-choice .btn{width:100%;min-width:0}
+}
