@@ -112,9 +112,18 @@ def assess_mix_compatibility(source: dict, payload: dict) -> tuple[str, str]:
     if missing_bundle:
         return "fail", f"{missing_bundle} app entries are missing a bundle identifier."
 
+    bundles = [
+        str(app.get("bundleIdentifier") or app.get("bundleID") or "").strip().lower()
+        for app in apps
+        if (app.get("bundleIdentifier") or app.get("bundleID"))
+    ]
+    duplicate_bundles = len(bundles) - len(set(bundles))
+
     classic_downloads = sum(1 for app in apps if has_classic_download(app))
     mode = source.get("mode") or "classic"
 
+    if mode == "classic" and duplicate_bundles:
+        return "experimental", f"{duplicate_bundles} app entries share a bundle identifier; a Mix would collapse variants to one app."
     if mode == "classic" and classic_downloads == len(apps):
         return "pass", "Classic source structure and downloadable app metadata passed the automated Mix test."
     if mode == "classic":
@@ -296,13 +305,21 @@ def main() -> None:
                 "mixReason": mix_reason,
             })
             loaded[source_id] = (source, payload)
-            write_json(SOURCE_CACHE_DIR / f"{source_id}.json", payload)
+            if source.get("cachePayload", True):
+                write_json(SOURCE_CACHE_DIR / f"{source_id}.json", payload)
+
+            catalog_limit = source.get("catalogLimit")
+            catalog_apps = apps
+            if isinstance(catalog_limit, int) and catalog_limit > 0:
+                catalog_apps = apps[:catalog_limit]
+
             catalog["sources"].append({
                 "id": source_id,
                 "name": payload.get("name") or source.get("name"),
                 "appCount": len(apps),
+                "catalogLimited": len(catalog_apps) < len(apps),
                 "iconURL": result["iconURL"],
-                "apps": [app_summary(app) for app in apps],
+                "apps": [app_summary(app) for app in catalog_apps],
             })
         except (urllib.error.URLError, urllib.error.HTTPError, TimeoutError, ValueError, json.JSONDecodeError, UnicodeDecodeError) as exc:
             result["error"] = f"{type(exc).__name__}: {exc}"[:300]
@@ -310,7 +327,11 @@ def main() -> None:
             result["error"] = f"{type(exc).__name__}: {exc}"[:300]
         status["sources"][source_id] = result
 
-    live_cache_files = {f"{source_id}.json" for source_id in loaded}
+    live_cache_files = {
+        f"{source_id}.json"
+        for source_id, (source, _payload) in loaded.items()
+        if source.get("cachePayload", True)
+    }
     for path in SOURCE_CACHE_DIR.glob("*.json"):
         if path.name not in live_cache_files:
             path.unlink()
@@ -322,7 +343,9 @@ def main() -> None:
 
     auto_compatible_ids = sorted(
         source_id for source_id, (source, _payload) in loaded.items()
-        if status["sources"][source_id]["mixTest"] == "pass" and source.get("mode") == "classic"
+        if status["sources"][source_id]["mixTest"] == "pass"
+        and source.get("mode") == "classic"
+        and source.get("autoPackage", True)
     )
     experimental_ids = sorted(
         source_id for source_id in loaded
@@ -337,6 +360,7 @@ def main() -> None:
         source_id for source_id, (source, payload) in loaded.items()
         if is_sidestore_compatible(source, payload)
         and source_id != "sidestore-official"
+        and source.get("autoPackage", True)
         and is_default_package_source(source)
     )
 
