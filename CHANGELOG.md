@@ -72,3 +72,5 @@
 - Clarified Custom Builder PASS selection: “Select compatible” is now “Select shown PASS”, with an explanation that PASS means the source passed the automated CaseyCZ Mix merge test, not device/app compatibility.
 
 - Reworked Custom Builder around a real destination selector: users now choose AltStore Classic, SideStore or LiveContainer first; the source list, PASS selection, target badge and final Add button all follow that destination. AltStore PAL is explicitly excluded from mixed Classic IPA sources.
+
+- Fixed the new Builder destination selector: AltStore Classic, SideStore and LiveContainer now control the visible sources, saved selections are pruned when the destination changes, and only the chosen app gets the final Add button.
