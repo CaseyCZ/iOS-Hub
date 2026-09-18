@@ -165,8 +165,7 @@ function sourceSearchText(source) {
     source.name,
     source.mode,
     ...(source.tags || []),
-    source.description?.cs,
-    source.description?.en,
+    ...Object.values(source.description || {}),
     ...apps
   ].filter(Boolean).join(' ').toLowerCase();
 }
