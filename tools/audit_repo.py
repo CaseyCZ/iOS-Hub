@@ -362,8 +362,8 @@ def validate_interactive_guide() -> None:
 
     if script.exists():
         text = script.read_text(encoding="utf-8")
-        if "$$(" in text:
-            error("guide.js contains undefined $$() selector helper; use $() or $()")
+        if "$" * 3 + "(" in text:
+            error("guide.js contains an undefined triple-dollar selector helper")
         bad_loop = re.search(
             r"(?<!\$)\$\([^\n]+?\)\.(?:forEach|filter|map|some)\(",
             text,
@@ -372,7 +372,7 @@ def validate_interactive_guide() -> None:
             line = text.count("\n", 0, bad_loop.start()) + 1
             error(
                 f"guide.js line {line} calls an array method on $() / querySelector; "
-                "use $() / querySelectorAll"
+                "use the querySelectorAll helper instead"
             )
 
 
