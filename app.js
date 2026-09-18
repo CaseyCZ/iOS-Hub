@@ -290,8 +290,8 @@ function updateStats() {
 
 function syncFilterButtons() {
   $$('[data-category-filter]').forEach(btn => btn.classList.toggle('active', btn.dataset.categoryFilter === state.sourceCategory));
-  $('[data-genre-filter]').forEach(btn => btn.classList.toggle('active', btn.dataset.genreFilter === state.genre));
-  $('[data-sort-filter]').forEach(btn => btn.classList.toggle('active', btn.dataset.sortFilter === state.sort));
+  document.querySelectorAll('[data-genre-filter]').forEach(btn => btn.classList.toggle('active', btn.dataset.genreFilter === state.genre));
+  document.querySelectorAll('[data-sort-filter]').forEach(btn => btn.classList.toggle('active', btn.dataset.sortFilter === state.sort));
   const search = $('#sourceSearch');
   if (search && search.value !== state.query) search.value = state.query;
 }
