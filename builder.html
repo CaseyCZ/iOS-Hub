@@ -6,18 +6,18 @@
   <meta name="theme-color" content="#070b14">
   <meta name="referrer" content="no-referrer">
   <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'wasm-unsafe-eval'; style-src 'self' 'unsafe-inline'; img-src 'self' https: data:; connect-src 'self'; worker-src 'self' blob:; object-src 'none'; base-uri 'self'; form-action 'none'">
-  <meta name="description" content="CaseyCZ Custom Source Builder — filter and combine checked AltStore, SideStore and LiveContainer-compatible sources into your own Mix.">
-  <title>Custom Source Builder — CaseyCZ iOS Hub</title>
-  <link rel="stylesheet" href="styles.css?v=1.1.5-20260918-sources2">
-  <link rel="stylesheet" href="hub-extra.css?v=1.1.5-20260918-sources2">
-  <link rel="stylesheet" href="collapsible.css?v=1.1.5-20260918-sources2">
+  <meta name="description" content="Custom Source Builder — filter and combine checked AltStore, SideStore and LiveContainer-compatible sources into your own Mix.">
+  <title>Custom Source Builder — iOS Hub</title>
+  <link rel="stylesheet" href="styles.css?v=1.1.5-20260918-layout2">
+  <link rel="stylesheet" href="hub-extra.css?v=1.1.5-20260918-layout2">
+  <link rel="stylesheet" href="collapsible.css?v=1.1.5-20260918-layout2">
 </head>
 <body>
   <header class="topbar">
     <div class="wrap topbar-inner">
-      <a class="brand" href="index.html" aria-label="CaseyCZ iOS Hub">
+      <a class="brand" href="index.html" aria-label="iOS Hub">
         <span class="brand-mark">iOS</span>
-        <span>CaseyCZ iOS Hub<small>AltStore · SideStore · LiveContainer</small></span>
+        <span>iOS Hub<small>AltStore · SideStore · LiveContainer</small></span>
       </a>
       <nav class="nav" aria-label="Primary">
         <a href="index.html#tools" data-i18n="tools">Tools</a>
@@ -45,7 +45,7 @@
     <section class="hero builder-page-hero wrap">
       <div class="eyebrow">CUSTOM · ALTSTORE · SIDESTORE · LIVECONTAINER</div>
       <h1 id="builderTitle">Custom Source Builder</h1>
-      <p id="builderDesc">Filter checked online sources, select any combination and build your own CaseyCZ Mix.</p>
+      <p id="builderDesc">Filter checked online sources, select any combination and build your own Mix.</p>
     </section>
 
     <section class="section wrap builder-page-section">
@@ -106,7 +106,7 @@
                   </div>
                   <div id="mixTargetHelp" class="muted builder-target-help">Choose the app where you want to add the finished source. The list below will only show sources suitable for that target.</div>
                   <div id="mixPalNote" class="muted builder-target-pal-note">AltStore PAL is not a Custom Mix target because PAL uses notarized marketplace packages and different source metadata than Classic IPA sources.</div>
-                  <div class="muted builder-target-pal-note">SideStore accepts AltSources. LiveContainer accepts AltStore-style sources. CaseyCZ Mix outputs are normalized as Classic IPA-style sources for these targets.</div>
+                  <div class="muted builder-target-pal-note">SideStore accepts AltSources. LiveContainer accepts AltStore-style sources. Mix outputs are normalized as Classic IPA-style sources for these targets.</div>
                 </div>
 
                 <div class="filter-group">
@@ -130,7 +130,7 @@
                     <button id="expSelectAll" class="btn small secondary" type="button">Select all shown</button>
                     <button id="expClear" class="btn small ghost" type="button">Clear selection</button>
                   </div>
-                  <div id="mixPassHelp" class="muted builder-pass-help">PASS means the source passed the automated CaseyCZ Mix merge test. It does not mean every app is compatible with every iOS device.</div>
+                  <div id="mixPassHelp" class="muted builder-pass-help">PASS means the source passed the automated Mix merge test. It does not mean every app is compatible with every iOS device.</div>
                 </div>
               </div>
             </div>
@@ -141,7 +141,7 @@
               <span id="mixTargetBadge" class="pill mode"><img class="installer-icon" src="assets/icons/altstore.svg" alt=""> AltStore Classic</span>
               <span id="mixTestBadge" class="pill mode">Auto tested</span>
             </div>
-            <button id="expBuild" class="btn primary" type="button" disabled>Build CaseyCZ Mix</button>
+            <button id="expBuild" class="btn primary" type="button" disabled>Build Mix</button>
             <span id="expMessage" class="muted"></span>
           </div>
         </article>
@@ -149,7 +149,7 @@
         <div id="experimentalBuilderList" class="builder-list" aria-live="polite"></div>
 
         <div id="expResult" class="builder-result">
-          <strong id="expResultTitle">CaseyCZ Mix</strong>
+          <strong id="expResultTitle">Mix</strong>
           <div id="expResultInfo" class="muted" style="margin-top:6px"></div>
           <p id="expResultNote" class="notice" style="margin-top:10px"></p>
           <div class="builder-actions">
@@ -167,7 +167,7 @@
 
   <footer class="footer">
     <div class="wrap footer-inner">
-      <span>© <span id="year"></span> CaseyCZ · iOS Hub · v1.1.5</span>
+      <span>© <span id="year"></span> iOS Hub · v1.1.5</span>
       <div class="footer-links">
         <a href="index.html">← iOS Hub</a>
         <a href="converter.html">DEB → IPA</a>
@@ -179,16 +179,16 @@
   <div id="supportModal" class="support-backdrop" role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="supportTitle">
     <div class="support-dialog">
       <button class="support-close" type="button" data-support-close aria-label="Close">×</button>
-      <div class="eyebrow" data-i18n="supportEyebrow">SUPPORT CASEYCZ</div>
+      <div class="eyebrow" data-i18n="supportEyebrow">SUPPORT THE PROJECT</div>
       <h2 id="supportTitle" data-i18n="supportTitle">Support further development.</h2>
-      <p data-i18n="supportDesc">If CaseyCZ iOS Hub saves you time, you can support further development through Buy Me a Coffee.</p>
-      <a href="https://www.buymeacoffee.com/caseycz" target="_blank" rel="noopener"><img class="support-qr" src="https://caseycz.github.io/support-qr.svg" alt="Buy Me a Coffee CaseyCZ QR code"></a>
+      <p data-i18n="supportDesc">If iOS Hub saves you time, you can support further development through Buy Me a Coffee.</p>
+      <a href="https://www.buymeacoffee.com/caseycz" target="_blank" rel="noopener"><img class="support-qr" src="https://caseycz.github.io/support-qr.svg" alt="Buy Me a Coffee QR code"></a>
       <a class="btn primary brand-link" style="width:100%" href="https://www.buymeacoffee.com/caseycz" target="_blank" rel="noopener"><img class="brand-link-icon brand-link-icon-contain" src="https://cdn.buymeacoffee.com/buttons/bmc-new-btn-logo.svg" alt="" referrerpolicy="no-referrer"><span data-i18n="openCoffee">Open Buy Me a Coffee ↗</span></a>
     </div>
   </div>
 
-  <script type="module" src="builder-page.js?v=1.1.5-20260918-sources2"></script>
-  <script type="module" src="builder.js?v=1.1.5-20260918-sources2"></script>
+  <script type="module" src="builder-page.js?v=1.1.5-20260918-layout2"></script>
+  <script type="module" src="builder.js?v=1.1.5-20260918-layout2"></script>
   <script type="module" src="collapsible.js?v=1.1.5-20260918-sources2"></script>
 </body>
 </html>
