@@ -1,9 +1,9 @@
 const LANGUAGE_META = {
-  en: { code: 'EN', flag: 'EN', name: 'English' },
-  cs: { code: 'CZ', flag: '🇨🇿', name: 'Čeština' },
-  de: { code: 'DE', flag: '🇩🇪', name: 'Deutsch' },
-  es: { code: 'ES', flag: '🇪🇸', name: 'Español' },
-  fr: { code: 'FR', flag: '🇫🇷', name: 'Français' }
+  en: { flag: 'assets/flags/gb.svg', name: 'English' },
+  cs: { flag: 'assets/flags/cz.svg', name: 'Čeština' },
+  de: { flag: 'assets/flags/de.svg', name: 'Deutsch' },
+  es: { flag: 'assets/flags/es.svg', name: 'Español' },
+  fr: { flag: 'assets/flags/fr.svg', name: 'Français' }
 };
 
 function setupLanguageMenu() {
@@ -14,7 +14,7 @@ function setupLanguageMenu() {
 
   const panel = menu.querySelector('.language-menu-panel');
   const flag = trigger.querySelector('.language-current-flag');
-  const code = trigger.querySelector('.language-current-code');
+  const name = trigger.querySelector('.language-current-name');
   const options = [...menu.querySelectorAll('[data-language]')];
 
   const close = () => {
@@ -25,8 +25,9 @@ function setupLanguageMenu() {
   const sync = () => {
     const lang = LANGUAGE_META[select.value] ? select.value : 'en';
     const meta = LANGUAGE_META[lang];
-    if (flag) flag.textContent = meta.flag;
-    if (code) code.textContent = meta.code;
+    if (flag) flag.src = meta.flag;
+    if (flag) flag.alt = '';
+    if (name) name.textContent = meta.name;
     trigger.setAttribute('aria-label', `Language: ${meta.name}`);
     options.forEach(option => {
       const active = option.dataset.language === lang;
