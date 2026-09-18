@@ -1,5 +1,12 @@
 # Changelog
 
+## 1.1.4 — 2026-09-18
+
+- Moved the full Custom Source Builder from the homepage to a dedicated `builder.html` page, matching the separate-tool approach used by the DEB → IPA converter.
+- Kept the three ready CaseyCZ source cards on the homepage and replaced the embedded Custom Mix controls with a compact card linking to the standalone Builder.
+- Preserved Builder filters, saved selection, Mix generation, AltStore/SideStore/LiveContainer install actions, languages, theme and collapsible source/result lists on the new page.
+- Extended repository audit checks to the new Builder page and runtime controller.
+
 ## 1.1.3 — 2026-09-18
 
 - Made each source card’s app count clickable; it now expands an inline list of apps contained in that source.
