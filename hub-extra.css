@@ -281,3 +281,14 @@
   .builder-target-tabs{grid-template-columns:1fr}
   .builder-target{min-height:46px}
 }
+
+
+/* v1.1.5 — source availability badges */
+.pill.online{
+  background:color-mix(in srgb,var(--ok) 10%,var(--input));
+  box-shadow:inset 0 0 0 1px color-mix(in srgb,var(--ok) 12%,transparent);
+}
+.pill.offline{
+  background:color-mix(in srgb,var(--bad) 10%,var(--input));
+  box-shadow:inset 0 0 0 1px color-mix(in srgb,var(--bad) 12%,transparent);
+}
