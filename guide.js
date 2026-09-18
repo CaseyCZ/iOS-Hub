@@ -88,7 +88,7 @@ const HELP_COPY = {
     fixTitle:'What is not working?', fixDesc:'Paste part of an error message or pick a common problem. We will narrow the troubleshooting list below.', fixPlaceholder:'Paste an error: 503, pairing, certificate, refresh…',
     fixRefresh:'Refresh', fixLogin:'Apple ID / 503', fixPairing:'Pairing', fixCertificate:'Certificate', fixLimits:'App limits', fixLiveContainer:'LiveContainer', fixAltServer:'AltServer', fixReady:'Choose a problem or paste an error above.', fixPrivacy:'Everything here is processed locally in your browser.', fixShow:'Show matching fixes ↓', fixCount:'Found {n} matching fixes.',
     setupTitle:'Tell us about your setup', setupDesc:'Four quick choices are enough. The result stays on this page and does not send device information anywhere.', setupDevice:'Device', deviceIphone:'iPhone / iPad', deviceTv:'Apple TV', setupVersion:'System version', versionOlder:'Older / supported legacy', versionUnknown:'Not sure', setupComputer:'Computer access', computerNone:'I want no PC', computerSetup:'PC only for setup', computerAvailable:'PC is fine', setupNeed:'Main goal', needIpa:'Install my own IPA', needMany:'Run many apps', needMarketplace:'Alternative marketplace', needPermanent:'Permanent install', setupResultLabel:'YOUR PATH', setupReset:'Start over',
-    officialSources:'Official docs used',jumpLabel:'Jump to:', jumpBasics:'Basics', jumpMethods:'Methods', jumpCompatibility:'Compatibility', jumpTroubleshooting:'Troubleshooting'
+    diagnosisLabel:'LIKELY MATCH', diagnosisNext:'What to do now', diagnosisShowAll:'Show full troubleshooting ↓', diagnosisCopy:'Copy help link', diagnosisCopied:'Link copied', sourceOfficial:'OFFICIAL DOCS', sourceCommunity:'COMMUNITY WORKAROUND', diagnosisOfficialNote:'Based on the official troubleshooting documentation.', diagnosisCommunityNote:'Community workaround — try the official checks first.',officialSources:'Official docs used',jumpLabel:'Jump to:', jumpBasics:'Basics', jumpMethods:'Methods', jumpCompatibility:'Compatibility', jumpTroubleshooting:'Troubleshooting'
   },
   cs: {
     pageEyebrow:'CENTRUM POMOCI · NÁVODY · ŘEŠENÍ', pageTitle:'Centrum pomoci se sideloadingem', pageDesc:'Vyber správnou metodu, najdi příčinu problému nebo popiš svoji konfiguraci a během pár klepnutí dostaneš konkrétní postup.',
@@ -98,7 +98,7 @@ const HELP_COPY = {
     fixTitle:'Co nefunguje?', fixDesc:'Vlož část chybové hlášky nebo vyber častý problém. Zúžíme seznam řešení níže.', fixPlaceholder:'Vlož chybu: 503, pairing, certificate, refresh…',
     fixRefresh:'Refresh', fixLogin:'Apple ID / 503', fixPairing:'Pairing', fixCertificate:'Certifikát', fixLimits:'Limity aplikací', fixLiveContainer:'LiveContainer', fixAltServer:'AltServer', fixReady:'Vyber problém nebo vlož chybu výše.', fixPrivacy:'Vše se zpracovává jen lokálně v prohlížeči.', fixShow:'Ukázat odpovídající řešení ↓', fixCount:'Nalezeno odpovídajících řešení: {n}.',
     setupTitle:'Popiš svoji konfiguraci', setupDesc:'Stačí čtyři rychlé volby. Výsledek zůstává na této stránce a informace o zařízení se nikam neposílají.', setupDevice:'Zařízení', deviceIphone:'iPhone / iPad', deviceTv:'Apple TV', setupVersion:'Verze systému', versionOlder:'Starší / podporovaný legacy', versionUnknown:'Nevím', setupComputer:'Přístup k počítači', computerNone:'Nechci PC', computerSetup:'PC jen pro nastavení', computerAvailable:'PC mi nevadí', setupNeed:'Hlavní cíl', needIpa:'Instalovat vlastní IPA', needMany:'Používat hodně aplikací', needMarketplace:'Alternativní marketplace', needPermanent:'Trvalá instalace', setupResultLabel:'TVÁ CESTA', setupReset:'Začít znovu',
-    officialSources:'Použité oficiální návody',jumpLabel:'Přejít na:', jumpBasics:'Základy', jumpMethods:'Metody', jumpCompatibility:'Kompatibilita', jumpTroubleshooting:'Řešení problémů'
+    diagnosisLabel:'PRAVDĚPODOBNÁ SHODA', diagnosisNext:'Co udělat teď', diagnosisShowAll:'Zobrazit celé řešení problémů ↓', diagnosisCopy:'Kopírovat odkaz na pomoc', diagnosisCopied:'Odkaz zkopírován', sourceOfficial:'OFICIÁLNÍ DOKUMENTACE', sourceCommunity:'KOMUNITNÍ ŘEŠENÍ', diagnosisOfficialNote:'Vychází z oficiální dokumentace řešení problémů.', diagnosisCommunityNote:'Komunitní workaround — nejdřív vyzkoušej oficiální postup.',officialSources:'Použité oficiální návody',jumpLabel:'Přejít na:', jumpBasics:'Základy', jumpMethods:'Metody', jumpCompatibility:'Kompatibilita', jumpTroubleshooting:'Řešení problémů'
   },
   de: {
     pageEyebrow:'HILFECENTER · ANLEITUNGEN · LÖSUNGEN', pageTitle:'Sideloading-Hilfecenter', pageDesc:'Wähle die passende Methode, diagnostiziere ein Problem oder beschreibe dein Setup und erhalte mit wenigen Klicks einen gezielten Weg.',
@@ -108,7 +108,7 @@ const HELP_COPY = {
     fixTitle:'Was funktioniert nicht?', fixDesc:'Füge einen Teil der Fehlermeldung ein oder wähle ein häufiges Problem. Wir grenzen die Lösungen unten ein.', fixPlaceholder:'Fehler einfügen: 503, Pairing, Zertifikat, Refresh…',
     fixRefresh:'Refresh', fixLogin:'Apple ID / 503', fixPairing:'Pairing', fixCertificate:'Zertifikat', fixLimits:'App-Limits', fixLiveContainer:'LiveContainer', fixAltServer:'AltServer', fixReady:'Wähle ein Problem oder füge oben einen Fehler ein.', fixPrivacy:'Alles wird lokal im Browser verarbeitet.', fixShow:'Passende Lösungen anzeigen ↓', fixCount:'{n} passende Lösungen gefunden.',
     setupTitle:'Beschreibe dein Setup', setupDesc:'Vier kurze Entscheidungen reichen. Das Ergebnis bleibt auf dieser Seite und sendet keine Gerätedaten.', setupDevice:'Gerät', deviceIphone:'iPhone / iPad', deviceTv:'Apple TV', setupVersion:'Systemversion', versionOlder:'Älter / unterstütztes Legacy', versionUnknown:'Nicht sicher', setupComputer:'Computerzugang', computerNone:'Ich will keinen PC', computerSetup:'PC nur fürs Setup', computerAvailable:'PC ist okay', setupNeed:'Hauptziel', needIpa:'Eigene IPA installieren', needMany:'Viele Apps ausführen', needMarketplace:'Alternativer Marketplace', needPermanent:'Dauerhafte Installation', setupResultLabel:'DEIN WEG', setupReset:'Neu starten',
-    officialSources:'Verwendete offizielle Doku',jumpLabel:'Springen zu:', jumpBasics:'Grundlagen', jumpMethods:'Methoden', jumpCompatibility:'Kompatibilität', jumpTroubleshooting:'Fehlerbehebung'
+    diagnosisLabel:'WAHRSCHEINLICHER TREFFER', diagnosisNext:'Was du jetzt tun solltest', diagnosisShowAll:'Komplette Fehlerbehebung anzeigen ↓', diagnosisCopy:'Hilfelink kopieren', diagnosisCopied:'Link kopiert', sourceOfficial:'OFFIZIELLE DOKU', sourceCommunity:'COMMUNITY-WORKAROUND', diagnosisOfficialNote:'Basiert auf der offiziellen Fehlerbehebungs-Dokumentation.', diagnosisCommunityNote:'Community-Workaround — zuerst die offiziellen Prüfungen durchführen.',officialSources:'Verwendete offizielle Doku',jumpLabel:'Springen zu:', jumpBasics:'Grundlagen', jumpMethods:'Methoden', jumpCompatibility:'Kompatibilität', jumpTroubleshooting:'Fehlerbehebung'
   },
   es: {
     pageEyebrow:'CENTRO DE AYUDA · GUÍAS · SOLUCIONES', pageTitle:'Centro de ayuda de sideloading', pageDesc:'Elige el método adecuado, diagnostica un problema o describe tu configuración y obtén una ruta concreta en pocos toques.',
@@ -118,7 +118,7 @@ const HELP_COPY = {
     fixTitle:'¿Qué no funciona?', fixDesc:'Pega parte del mensaje de error o elige un problema común. Reduciremos la lista de soluciones de abajo.', fixPlaceholder:'Pega un error: 503, pairing, certificado, refresh…',
     fixRefresh:'Refresh', fixLogin:'Apple ID / 503', fixPairing:'Pairing', fixCertificate:'Certificado', fixLimits:'Límites de apps', fixLiveContainer:'LiveContainer', fixAltServer:'AltServer', fixReady:'Elige un problema o pega un error arriba.', fixPrivacy:'Todo se procesa localmente en tu navegador.', fixShow:'Mostrar soluciones coincidentes ↓', fixCount:'Se encontraron {n} soluciones.',
     setupTitle:'Describe tu configuración', setupDesc:'Cuatro elecciones rápidas son suficientes. El resultado permanece en esta página y no envía datos del dispositivo.', setupDevice:'Dispositivo', deviceIphone:'iPhone / iPad', deviceTv:'Apple TV', setupVersion:'Versión del sistema', versionOlder:'Anterior / legacy compatible', versionUnknown:'No estoy seguro', setupComputer:'Acceso a ordenador', computerNone:'No quiero PC', computerSetup:'PC solo para configurar', computerAvailable:'PC está bien', setupNeed:'Objetivo principal', needIpa:'Instalar mi propia IPA', needMany:'Usar muchas apps', needMarketplace:'Marketplace alternativo', needPermanent:'Instalación permanente', setupResultLabel:'TU RUTA', setupReset:'Empezar de nuevo',
-    officialSources:'Documentación oficial usada',jumpLabel:'Ir a:', jumpBasics:'Conceptos básicos', jumpMethods:'Métodos', jumpCompatibility:'Compatibilidad', jumpTroubleshooting:'Solución de problemas'
+    diagnosisLabel:'COINCIDENCIA PROBABLE', diagnosisNext:'Qué hacer ahora', diagnosisShowAll:'Mostrar toda la solución de problemas ↓', diagnosisCopy:'Copiar enlace de ayuda', diagnosisCopied:'Enlace copiado', sourceOfficial:'DOCUMENTACIÓN OFICIAL', sourceCommunity:'SOLUCIÓN DE LA COMUNIDAD', diagnosisOfficialNote:'Basado en la documentación oficial de solución de problemas.', diagnosisCommunityNote:'Solución de la comunidad — prueba primero las comprobaciones oficiales.',officialSources:'Documentación oficial usada',jumpLabel:'Ir a:', jumpBasics:'Conceptos básicos', jumpMethods:'Métodos', jumpCompatibility:'Compatibilidad', jumpTroubleshooting:'Solución de problemas'
   },
   fr: {
     pageEyebrow:'CENTRE D’AIDE · GUIDES · SOLUTIONS', pageTitle:'Centre d’aide au sideloading', pageDesc:'Choisissez la bonne méthode, diagnostiquez un problème ou décrivez votre configuration et obtenez un parcours ciblé en quelques gestes.',
@@ -128,7 +128,7 @@ const HELP_COPY = {
     fixTitle:'Qu’est-ce qui ne fonctionne pas ?', fixDesc:'Collez une partie du message d’erreur ou choisissez un problème courant. Nous réduirons la liste des solutions ci-dessous.', fixPlaceholder:'Collez une erreur : 503, pairing, certificat, refresh…',
     fixRefresh:'Refresh', fixLogin:'Apple ID / 503', fixPairing:'Pairing', fixCertificate:'Certificat', fixLimits:'Limites d’apps', fixLiveContainer:'LiveContainer', fixAltServer:'AltServer', fixReady:'Choisissez un problème ou collez une erreur ci-dessus.', fixPrivacy:'Tout est traité localement dans votre navigateur.', fixShow:'Afficher les solutions correspondantes ↓', fixCount:'{n} solutions correspondantes trouvées.',
     setupTitle:'Décrivez votre configuration', setupDesc:'Quatre choix rapides suffisent. Le résultat reste sur cette page et n’envoie aucune donnée sur l’appareil.', setupDevice:'Appareil', deviceIphone:'iPhone / iPad', deviceTv:'Apple TV', setupVersion:'Version du système', versionOlder:'Ancien / legacy compatible', versionUnknown:'Je ne sais pas', setupComputer:'Accès à un ordinateur', computerNone:'Je ne veux pas de PC', computerSetup:'PC seulement pour configurer', computerAvailable:'Un PC me convient', setupNeed:'Objectif principal', needIpa:'Installer mes propres IPA', needMany:'Utiliser beaucoup d’apps', needMarketplace:'Marketplace alternatif', needPermanent:'Installation permanente', setupResultLabel:'VOTRE PARCOURS', setupReset:'Recommencer',
-    officialSources:'Documentation officielle utilisée',jumpLabel:'Aller à :', jumpBasics:'Bases', jumpMethods:'Méthodes', jumpCompatibility:'Compatibilité', jumpTroubleshooting:'Dépannage'
+    diagnosisLabel:'CORRESPONDANCE PROBABLE', diagnosisNext:'Que faire maintenant', diagnosisShowAll:'Afficher tout le dépannage ↓', diagnosisCopy:'Copier le lien d’aide', diagnosisCopied:'Lien copié', sourceOfficial:'DOCUMENTATION OFFICIELLE', sourceCommunity:'SOLUTION COMMUNAUTAIRE', diagnosisOfficialNote:'Basé sur la documentation officielle de dépannage.', diagnosisCommunityNote:'Solution communautaire — essayez d’abord les vérifications officielles.',officialSources:'Documentation officielle utilisée',jumpLabel:'Aller à :', jumpBasics:'Bases', jumpMethods:'Méthodes', jumpCompatibility:'Compatibilité', jumpTroubleshooting:'Dépannage'
   }
 };
 
@@ -218,6 +218,7 @@ function applyHelpCopy() {
   });
   updateAssistantTroubleSummary();
   if (Object.values(setupState).every(Boolean)) renderSetupResult();
+  if (!$('#assistantDiagnosis')?.hidden) renderAssistantDiagnosis(false);
 }
 
 function setHelpMode(mode) {
@@ -235,14 +236,138 @@ function setHelpMode(mode) {
   });
 }
 
-function troubleMatchCount(query) {
+function getTroubleMatches(query) {
   const q = (query || '').trim().toLowerCase();
-  if (!q) return 0;
-  const terms = q.split(/\s+/).filter(Boolean);
-  return $$('.trouble-item').filter(item => {
-    const haystack = [item.dataset.search || '', item.textContent || ''].join(' ').toLowerCase();
-    return terms.some(term => haystack.includes(term));
-  }).length;
+  if (!q) return [];
+  const terms = [...new Set(q.split(/\s+/).filter(Boolean))];
+
+  return $$('.trouble-item')
+    .map((item, index) => {
+      const haystack = [item.dataset.search || '', item.textContent || ''].join(' ').toLowerCase();
+      const score = terms.reduce((sum, term) => sum + (haystack.includes(term) ? (/[0-9]/.test(term) ? 3 : 1) : 0), 0);
+      return { item, score, index };
+    })
+    .filter(match => match.score > 0)
+    .sort((a,b) => b.score - a.score || a.index - b.index);
+}
+
+function troubleMatchCount(query) {
+  return getTroubleMatches(query).length;
+}
+
+function splitDiagnosisSteps(text) {
+  const normalized = (text || '').replace(/\s+/g,' ').trim();
+  if (!normalized) return [];
+  const parts = normalized
+    .split(/(?<=[.!?])\s+/)
+    .map(part => part.trim())
+    .filter(part => part.length > 18);
+  return (parts.length ? parts : [normalized]).slice(0,3);
+}
+
+function extractKnownError(raw) {
+  const text = String(raw || '');
+  const code = text.match(/\b(?:1004|1005|1006|1007|1009|1412|1414|2009|503)\b/i);
+  if (code) return code[0].toUpperCase();
+  if (/minimuxer\s*(?:error\s*)?27/i.test(text)) return 'minimuxer 27';
+  return '';
+}
+
+function helpUrlForFix(raw) {
+  const url = new URL(window.location.href);
+  url.searchParams.delete('setup');
+  if ((raw || '').trim()) url.searchParams.set('fix', raw.trim());
+  else url.searchParams.delete('fix');
+  url.hash = '';
+  return url;
+}
+
+function syncFixDeepLink(raw) {
+  const url = helpUrlForFix(raw);
+  history.replaceState(null,'',url.pathname + url.search + url.hash);
+}
+
+function renderAssistantDiagnosis(syncUrl = false) {
+  const input = $('#assistantTroubleSearch');
+  const box = $('#assistantDiagnosis');
+  if (!input || !box) return;
+
+  const raw = input.value.trim();
+  if (!raw) {
+    box.hidden = true;
+    if (syncUrl) syncFixDeepLink('');
+    return;
+  }
+
+  const query = resolvedTroubleQuery(raw);
+  const match = getTroubleMatches(query)[0];
+  if (!match) {
+    box.hidden = true;
+    if (syncUrl) syncFixDeepLink(raw);
+    return;
+  }
+
+  const item = match.item;
+  const copy = helpCopyForLanguage();
+  const isCommunity = item.classList.contains('community-item');
+  const title = item.querySelector('summary')?.textContent?.trim() || raw;
+  const answer = item.querySelector('.trouble-answer')?.textContent?.trim() || '';
+  const docs = [...item.querySelectorAll('.trouble-docs a')];
+  const steps = splitDiagnosisSteps(answer);
+  const source = $('#assistantDiagnosisSource');
+  const code = $('#assistantDiagnosisCode');
+
+  source.className = 'trouble-source-badge ' + (isCommunity ? 'community' : 'official');
+  source.textContent = isCommunity ? copy.sourceCommunity : copy.sourceOfficial;
+  $('#assistantDiagnosisTitle').textContent = title;
+  $('#assistantDiagnosisText').textContent = isCommunity ? copy.diagnosisCommunityNote : copy.diagnosisOfficialNote;
+  $('#assistantDiagnosisSteps').innerHTML = steps.map(step => `<li>${step}</li>`).join('');
+  $('#assistantDiagnosisDocs').innerHTML = docs.map(link => {
+    const href = link.getAttribute('href') || '#';
+    const label = link.textContent.trim();
+    return `<a href="${href}" target="_blank" rel="noopener noreferrer">${label}</a>`;
+  }).join('');
+
+  const errorCode = extractKnownError(raw);
+  if (errorCode) {
+    code.textContent = errorCode;
+    code.hidden = false;
+  } else {
+    code.hidden = true;
+    code.textContent = '';
+  }
+
+  box.dataset.query = query;
+  box.hidden = false;
+  if (syncUrl) syncFixDeepLink(raw);
+}
+
+async function copyDiagnosisLink() {
+  const input = $('#assistantTroubleSearch');
+  const button = $('#assistantDiagnosisCopy');
+  if (!input || !button) return;
+  const url = helpUrlForFix(input.value).toString();
+  let copied = false;
+  try {
+    await navigator.clipboard.writeText(url);
+    copied = true;
+  } catch (_) {
+    const textarea = document.createElement('textarea');
+    textarea.value = url;
+    textarea.setAttribute('readonly','');
+    textarea.style.position = 'fixed';
+    textarea.style.opacity = '0';
+    document.body.appendChild(textarea);
+    textarea.select();
+    try { copied = document.execCommand('copy'); } catch (_) {}
+    textarea.remove();
+  }
+  if (copied) {
+    const copy = helpCopyForLanguage();
+    const original = copy.diagnosisCopy;
+    button.textContent = copy.diagnosisCopied;
+    setTimeout(() => { button.textContent = original; }, 1400);
+  }
 }
 
 function resolvedTroubleQuery(raw) {
@@ -286,7 +411,10 @@ function updateSetupProgress() {
   $$('.setup-question').forEach(question => {
     question.classList.toggle('answered', Boolean(setupState[question.dataset.setupQuestion]));
   });
-  if (answered === 4) renderSetupResult();
+  if (answered === 4) {
+    renderSetupResult();
+    syncSetupDeepLink();
+  }
 }
 
 function selectSetupOption(button) {
@@ -333,9 +461,44 @@ function renderSetupResult() {
 
 function resetSetup() {
   Object.keys(setupState).forEach(key => { setupState[key] = null; });
-  $$('[data-setup-key]').forEach(button => button.classList.remove('active'));
+  $('[data-setup-key]').forEach(button => button.classList.remove('active'));
   $('#setupResult').hidden = true;
+  const url = new URL(window.location.href);
+  url.searchParams.delete('setup');
+  history.replaceState(null,'',url.pathname + url.search + url.hash);
   updateSetupProgress();
+}
+
+function syncSetupDeepLink() {
+  if (!Object.values(setupState).every(Boolean)) return;
+  const url = new URL(window.location.href);
+  url.searchParams.delete('fix');
+  url.searchParams.set('setup', [setupState.device, setupState.version, setupState.computer, setupState.need].join(','));
+  url.hash = '';
+  history.replaceState(null,'',url.pathname + url.search + url.hash);
+}
+
+function loadSetupDeepLink(value) {
+  const parts = String(value || '').split(',');
+  if (parts.length !== 4) return false;
+  const [device,version,computer,need] = parts;
+  const allowed = {
+    device:['iphone','tv'],
+    version:['27','17-26','older','unknown'],
+    computer:['none','setup','available'],
+    need:['ipa','many','marketplace','permanent']
+  };
+  const values = {device,version,computer,need};
+  if (!Object.entries(values).every(([key,val]) => allowed[key].includes(val))) return false;
+
+  Object.assign(setupState, values);
+  Object.entries(values).forEach(([key,val]) => {
+    $('[data-setup-key="' + key + '"]').forEach(button => {
+      button.classList.toggle('active', button.dataset.setupValue === val);
+    });
+  });
+  updateSetupProgress();
+  return true;
 }
 
 const GUIDE_RECOMMENDATIONS = {
@@ -511,7 +674,8 @@ document.addEventListener('click', event => {
     const input = $('#assistantTroubleSearch');
     if (input) input.value = assistantFilter.dataset.assistantTroubleFilter || '';
     updateAssistantTroubleSummary();
-    $$('.assistant-trouble-chips button').forEach(button => button.classList.toggle('active', button === assistantFilter));
+    renderAssistantDiagnosis(true);
+    $('.assistant-trouble-chips button').forEach(button => button.classList.toggle('active', button === assistantFilter));
     return;
   }
 
@@ -520,16 +684,23 @@ document.addEventListener('click', event => {
     if (input) input.value = '';
     $$('.assistant-trouble-chips button').forEach(button => button.classList.remove('active'));
     updateAssistantTroubleSummary();
+    renderAssistantDiagnosis(true);
     input?.focus();
     return;
   }
 
-  if (event.target.closest('#assistantShowFixes')) {
+  if (event.target.closest('#assistantShowFixes') || event.target.closest('#assistantDiagnosisShowAll')) {
     const source = $('#assistantTroubleSearch');
     const input = $('#troubleSearch');
     if (input) input.value = resolvedTroubleQuery(source?.value || '');
+    renderAssistantDiagnosis(true);
     filterTroubleshooting();
     $('#troubleshooting')?.scrollIntoView({ behavior:'smooth', block:'start' });
+    return;
+  }
+
+  if (event.target.closest('#assistantDiagnosisCopy')) {
+    copyDiagnosisLink();
     return;
   }
 
@@ -558,8 +729,9 @@ document.addEventListener('click', event => {
 });
 
 $('#assistantTroubleSearch')?.addEventListener('input', () => {
-  $$('.assistant-trouble-chips button').forEach(button => button.classList.remove('active'));
+  $('.assistant-trouble-chips button').forEach(button => button.classList.remove('active'));
   updateAssistantTroubleSummary();
+  renderAssistantDiagnosis(false);
 });
 $('#troubleSearch')?.addEventListener('input', filterTroubleshooting);
 $('#themeToggle')?.addEventListener('click', () => applyTheme(root.dataset.theme === 'dark' ? 'light' : 'dark'));
@@ -581,6 +753,20 @@ setHelpMode('choose');
 updateSetupProgress();
 updateAssistantTroubleSummary();
 filterTroubleshooting();
+
+const initialParams = new URLSearchParams(window.location.search);
+const initialFix = initialParams.get('fix');
+const initialSetup = initialParams.get('setup');
+if (initialFix) {
+  setHelpMode('fix');
+  const input = $('#assistantTroubleSearch');
+  if (input) input.value = initialFix;
+  updateAssistantTroubleSummary();
+  renderAssistantDiagnosis(false);
+}
+if (initialSetup && loadSetupDeepLink(initialSetup)) {
+  setHelpMode('setup');
+}
 
 function enableImageFallbacks() {
   document.addEventListener('error', event => {
