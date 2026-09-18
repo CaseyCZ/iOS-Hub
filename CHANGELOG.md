@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.1.3 — 2026-09-18
+
+- Made each source card’s app count clickable; it now expands an inline list of apps contained in that source.
+- App rows show available name, developer, version and bundle identifier metadata.
+- Center-aligned cards, headings, descriptions, badges, buttons, filter controls, Builder content, notices and footer for a more consistent visual layout.
+
 ## 1.1.2 — 2026-09-18
 
 - Added LiveContainer consistently to source descriptions, catalog headings and installation guidance across the website and READMEs.
