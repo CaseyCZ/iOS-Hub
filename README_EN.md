@@ -23,8 +23,9 @@
 
 - AltStore Classic, AltStore PAL, SideStore and LiveContainer sources
 - filters by source type, genre, platform and Mix compatibility
-- search by source name and source metadata
+- search by source name, app name, developer, bundle identifier and source metadata
 - a dedicated **Custom Source Builder** page for all online sources
+- an interactive **Help Center** with method selection, error diagnosis, setup wizard and links to official documentation
 - automated `PASS / TRY` status
 - ready-to-add **CaseyCZ AltStore Source**, **CaseyCZ SideStore Source** and **CaseyCZ LiveContainer Source**
 - app deduplication by `bundleIdentifier`
