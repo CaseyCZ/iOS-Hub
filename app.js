@@ -170,6 +170,24 @@ function formatDate(value) {
   return new Intl.DateTimeFormat(localeMap[state.lang] || 'en-GB', {day:'2-digit', month:'2-digit', year:'numeric'}).format(date);
 }
 
+function sourceAppsDisclosure(source) {
+  const apps = [...(catalogSource(source.id)?.apps || [])]
+    .filter(app => app && typeof app === 'object')
+    .sort((left, right) => String(left.name || '').localeCompare(String(right.name || '')));
+  const count = apps.length;
+  const rows = count ? apps.map(app => {
+    const details = [app.developerName, app.version, app.bundleIdentifier].filter(Boolean).map(escapeHtml).join(' · ');
+    return `<div class="source-app-row"><strong>${escapeHtml(app.name || 'Unknown app')}</strong>${details ? `<span>${details}</span>` : ''}</div>`;
+  }).join('') : `<div class="source-app-empty">${escapeHtml(tr('noApps'))}</div>`;
+  return `<details class="source-apps-disclosure">
+    <summary title="${escapeHtml(tr('showApps'))}" aria-label="${escapeHtml(tr('showApps'))}">
+      <span class="source-app-count">📱 <strong>${count}</strong> ${escapeHtml(tr('apps'))}</span>
+      <span class="source-app-chevron" aria-hidden="true">⌄</span>
+    </summary>
+    <div class="source-app-list">${rows}</div>
+  </details>`;
+}
+
 function renderSources() {
   const grid = $('#sourceGrid');
   if (!grid) return;
@@ -201,7 +219,7 @@ function renderSources() {
         </div>
       </div>
       <p>${escapeHtml(desc)}</p>
-      <div class="source-stats"><span><strong>${escapeHtml(appCount)}</strong> ${escapeHtml(tr('apps'))}</span>${status.checkedAt ? `<span>${escapeHtml(tr('checked'))}: ${escapeHtml(formatDate(status.checkedAt))}</span>` : ''}</div>
+      <div class="source-stats">${sourceAppsDisclosure(source)}${status.checkedAt ? `<span class="source-checked">${escapeHtml(tr('checked'))}: ${escapeHtml(formatDate(status.checkedAt))}</span>` : ''}</div>
       <div class="source-installers" aria-label="Install source">
         <a class="btn small primary installer-link" href="${escapeHtml(sourceInstallerLink('altstore', source))}">${installerIcon('altstore')}AltStore</a>
         <a class="btn small secondary installer-link" href="${escapeHtml(sourceInstallerLink('sidestore', source))}">${installerIcon('sidestore')}SideStore</a>
