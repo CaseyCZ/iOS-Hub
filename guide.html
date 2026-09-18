@@ -48,10 +48,94 @@
     </section>
 
     <section class="section wrap guide-page-section">
-      <div class="section-head">
+      <div class="beginner-start panel">
+        <div class="eyebrow">BEGINNER MODE</div>
+        <h2 data-i18n="beginnerStartTitle">New to sideloading? Start here.</h2>
+        <p data-i18n="beginnerStartDesc">You do not need to know what AltStore, SideStore, LiveContainer or a Source means yet. Pick what you want to do and we will point you to the right option.</p>
+
+        <div class="beginner-choice-grid">
+          <article class="beginner-choice">
+            <div class="guide-icon">PAL</div>
+            <span class="pill online">EU</span>
+            <h3 data-i18n="beginnerPalQuestion">I just want apps outside the App Store and I live in the EU</h3>
+            <p data-i18n="beginnerPalAnswer"><strong>Choose AltStore PAL.</strong> It is the easiest route: no computer, no 7-day expiry and no Apple ID password. But it only installs notarized marketplace apps — it does not install arbitrary .ipa files.</p>
+            <a class="btn primary" href="https://faq.altstore.io/altstore-pal/what-is-altstore-pal" target="_blank" rel="noopener noreferrer" data-i18n="beginnerChoosePal">Choose AltStore PAL ↗</a>
+          </article>
+
+          <article class="beginner-choice">
+            <div class="guide-icon">SS</div>
+            <span class="pill online">IPA</span>
+            <h3 data-i18n="beginnerSideQuestion">I want to install .ipa files and refresh them later from my iPhone</h3>
+            <p data-i18n="beginnerSideAnswer"><strong>Choose SideStore.</strong> A computer is needed for the first setup, but afterwards installs and refreshes can be done from the device with Wi-Fi + LocalDevVPN.</p>
+            <a class="btn primary" href="https://docs.sidestore.io/docs/installation/prerequisites" target="_blank" rel="noopener noreferrer" data-i18n="beginnerChooseSide">Choose SideStore ↗</a>
+          </article>
+
+          <article class="beginner-choice">
+            <div class="guide-icon">AS</div>
+            <span class="pill online">IPA</span>
+            <h3 data-i18n="beginnerClassicQuestion">I want AltStore and I do not mind using my computer</h3>
+            <p data-i18n="beginnerClassicAnswer"><strong>Choose AltStore Classic.</strong> It installs normal .ipa files and uses AltServer on Windows or macOS. Free signing expires after 7 days. Remote AltServer can later remove the need to use your own computer for refreshes.</p>
+            <a class="btn primary" href="https://faq.altstore.io/altstore-classic" target="_blank" rel="noopener noreferrer" data-i18n="beginnerChooseClassic">Choose AltStore Classic ↗</a>
+          </article>
+
+          <article class="beginner-choice">
+            <div class="guide-icon">LC</div>
+            <span class="pill mode">MANY APPS</span>
+            <h3 data-i18n="beginnerLcQuestion">I want to keep many IPA apps, not just a few</h3>
+            <p data-i18n="beginnerLcAnswer"><strong>Use SideStore + LiveContainer.</strong> LiveContainer is not another store. It is a launcher that runs guest IPA apps inside one container, helping with the normal free-account app limits.</p>
+            <a class="btn primary" href="https://github.com/LiveContainer/LiveContainer" target="_blank" rel="noopener noreferrer" data-i18n="beginnerChooseLc">Learn about LiveContainer ↗</a>
+          </article>
+
+          <article class="beginner-choice">
+            <div class="guide-icon">TV</div>
+            <span class="pill mode">tvOS</span>
+            <h3 data-i18n="beginnerTvQuestion">I want to install apps on Apple TV</h3>
+            <p data-i18n="beginnerTvAnswer"><strong>Start with Sideloadly.</strong> It supports Apple TV from Windows or macOS. If you prefer a self-hosted Linux/OpenWrt service, use atvloadly.</p>
+            <a class="btn primary" href="https://sideloadly.io/" target="_blank" rel="noopener noreferrer" data-i18n="beginnerChooseTv">Choose Apple TV method ↗</a>
+          </article>
+        </div>
+
+        <div class="beginner-default notice">
+          <strong data-i18n="beginnerStillUnsureTitle">Still not sure?</strong>
+          <span data-i18n="beginnerStillUnsureText"> If you are in the EU and only want approved alternative-marketplace apps, pick AltStore PAL. If you want to install your own IPA files, SideStore is the easiest ongoing workflow after the first setup. Add LiveContainer only when you actually need more apps.</span>
+        </div>
+      </div>
+
+      <div class="section-head guide-section-head beginner-glossary-head">
         <div>
-          <h2 data-i18n="guideQuickTitle">Choose your path</h2>
-          <p data-i18n="guideQuickDesc">Pick the situation closest to what you want to do. Every route below uses a free option.</p>
+          <h2 data-i18n="beginnerGlossaryTitle">What do these names mean?</h2>
+          <p data-i18n="beginnerGlossaryDesc">Five short explanations before you choose anything.</p>
+        </div>
+      </div>
+
+      <div class="beginner-glossary">
+        <article class="panel beginner-term">
+          <div class="beginner-term-name">AltStore PAL</div>
+          <p data-i18n="beginnerPalMeaning">EU-only alternative app marketplace. No arbitrary IPA sideloading, no 7-day expiry and no computer requirement.</p>
+        </article>
+        <article class="panel beginner-term">
+          <div class="beginner-term-name">AltStore Classic</div>
+          <p data-i18n="beginnerClassicMeaning">Traditional sideloading app for IPA files. Works worldwide, uses a free Apple ID and normally needs AltServer for signing and refreshing.</p>
+        </article>
+        <article class="panel beginner-term">
+          <div class="beginner-term-name">SideStore</div>
+          <p data-i18n="beginnerSideMeaning">An AltStore-style sideloading app designed so that after the first setup you can install and refresh apps from the iPhone itself using LocalDevVPN.</p>
+        </article>
+        <article class="panel beginner-term">
+          <div class="beginner-term-name">LiveContainer</div>
+          <p data-i18n="beginnerLcMeaning">A launcher, not a store. It runs multiple guest IPA apps inside one installed container. You normally use it together with SideStore or AltStore.</p>
+        </article>
+        <article class="panel beginner-term beginner-source-term">
+          <div class="beginner-term-name">Source</div>
+          <p data-i18n="beginnerSourceMeaning">A Source is just a catalog link that tells AltStore or SideStore which apps and updates are available. Adding a Source does not install anything by itself — it only adds that catalog to your app browser.</p>
+          <a class="btn small secondary" href="index.html#sources" data-i18n="beginnerBrowseSources">Browse our checked Sources</a>
+        </article>
+      </div>
+
+      <div class="section-head guide-section-head">
+        <div>
+          <h2 data-i18n="guideQuickTitle">Detailed methods</h2>
+          <p data-i18n="guideQuickDesc">Once you know what you need, compare the individual free methods below.</p>
         </div>
       </div>
 
