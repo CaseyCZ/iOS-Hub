@@ -1,6 +1,7 @@
 # Changelog
 
 ## 1.1.5 — 2026-09-18
+- Added eight new verified source candidates focused on Community/Modified apps: xN1ckuz SideBox, Dan's Workshop, WuXu's Library++, Baretsky Tweaked App Library, driftywinds AltStore Repo, IPA Vault, SideloadLabs Repo and the official YTLitePlus source.
 
 - Moved the compact Custom Builder card into the Tools grid beside the DEB → IPA Converter on desktop.
 - Kept the three prepared AltStore, SideStore and LiveContainer source cards in the Ready sources section.
