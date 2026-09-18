@@ -457,8 +457,7 @@ async function buildMix() {
 
 async function init() {
   const host = $('#experimentalMixLab');
-  if (!host) return;
-  restoreSettings();
+  if (host) restoreSettings();
 
   try {
     const [registryResponse,statusResponse,catalogResponse] = await Promise.all([
@@ -471,6 +470,15 @@ async function init() {
     catalog = await catalogResponse.json();
   } catch (error) {
     console.error(error);
+  }
+
+  // The homepage has the prepared source cards but not the standalone
+  // Custom Builder controls. Render those cards even when the Builder host
+  // is absent; previously the early return left "Ready sources" empty.
+  if (!host) {
+    renderOfficialPackages();
+    $('#languageSelect')?.addEventListener('change', () => setTimeout(renderOfficialPackages,0));
+    return;
   }
 
   render();
