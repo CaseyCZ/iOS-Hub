@@ -42,7 +42,7 @@
     <section class="hero wrap">
       <div class="eyebrow">ALTSTORE · SIDESTORE · LIVECONTAINER</div>
       <h1 data-i18n="heroTitle">iOS sources. Catalog. Tools.</h1>
-      <p data-i18n="heroDesc">A live catalog of checked AltStore and SideStore sources. Filter by source type and content, combine compatible sources and use practical iOS tools directly in the browser.</p>
+      <p data-i18n="heroDesc">A live catalog of checked AltStore, SideStore and LiveContainer sources. Filter by source type and content, combine compatible sources and use practical iOS tools directly in the browser.</p>
       <div class="hero-actions">
         <a class="btn primary" href="#tools" data-i18n="openConverter">Open DEB → IPA Converter</a>
         <a class="btn secondary" href="#builder" data-i18n="buildSource">Build my Source</a>
@@ -96,7 +96,7 @@
               <div class="disclosure-body">
                 <div class="catalog-filters filter-disclosure-grid">
                   <div class="filter-group">
-                    <div class="filter-label" data-i18n="sourceType">Source type</div>
+                    <div class="filter-label">⚙ <span data-i18n="sourceType">Source type</span></div>
                     <div class="filter-tabs">
                       <button class="filter active" type="button" data-exp-category-filter="all" data-i18n="all">All</button>
                       <button class="filter" type="button" data-exp-category-filter="official" data-i18n="official">Official</button>
@@ -107,7 +107,7 @@
                   </div>
 
                   <div class="filter-group">
-                    <div class="filter-label" data-i18n="genre">Genre</div>
+                    <div class="filter-label">🏷 <span data-i18n="genre">Genre</span></div>
                     <div class="filter-tabs">
                       <button class="filter active" type="button" data-exp-genre-filter="all" data-i18n="all">All</button>
                       <button class="filter" type="button" data-exp-genre-filter="games" data-i18n="games">Games</button>
@@ -123,7 +123,7 @@
                   </div>
 
                   <div class="filter-group">
-                    <div class="filter-label" id="mixPlatformLabel">Platform</div>
+                    <div class="filter-label">📱 <span id="mixPlatformLabel">Platform</span></div>
                     <div class="filter-tabs">
                       <button class="filter active" type="button" data-exp-platform-filter="all">All</button>
                       <button class="filter" type="button" data-exp-platform-filter="classic">AltStore Classic</button>
@@ -133,7 +133,7 @@
                   </div>
 
                   <div class="filter-group">
-                    <div class="filter-label" id="mixStatusLabel">Mix status</div>
+                    <div class="filter-label">🧪 <span id="mixStatusLabel">Mix status</span></div>
                     <div class="filter-tabs">
                       <button class="filter active" type="button" data-exp-compat-filter="all">All</button>
                       <button class="filter" type="button" data-exp-compat-filter="pass">PASS only</button>
@@ -141,13 +141,13 @@
                     </div>
                   </div>
 
-                  <input id="expSourceSearch" class="search" type="search" autocomplete="off" data-i18n-placeholder="searchPlaceholder" placeholder="Search source or app…">
+                  <div class="filter-group"><div class="filter-label">🔎 <span data-i18n="search">Search</span></div><input id="expSourceSearch" class="search" type="search" autocomplete="off" data-i18n-placeholder="searchPlaceholder" placeholder="Search sources…"></div>
 
-                  <div class="builder-choice-actions">
+                  <div class="filter-group"><div class="filter-label">☑ <span data-i18n="selection">Selection</span></div><div class="builder-choice-actions">
                     <button id="expSelectCompatible" class="btn small primary" type="button">Select compatible</button>
                     <button id="expSelectAll" class="btn small secondary" type="button">Select all shown</button>
                     <button id="expClear" class="btn small ghost" type="button">Clear</button>
-                  </div>
+                  </div></div>
                 </div>
               </div>
             </details>
@@ -181,19 +181,19 @@
     <section id="sources" class="section wrap">
       <div class="section-head">
         <div>
-          <h2 data-i18n="catalogTitle">AltStore & SideStore sources</h2>
+          <h2 data-i18n="catalogTitle">AltStore · SideStore · LiveContainer sources</h2>
           <p data-i18n="catalogDesc">Only sources that passed the latest automated availability and JSON check are shown.</p>
         </div>
       </div>
 
       <details class="content-disclosure filter-disclosure">
         <summary>
-          <span class="disclosure-title">⚙ <span data-i18n="sourceType">Source type</span> · <span data-i18n="genre">Genre</span> · 🔎</span>
+          <span class="disclosure-title">⚙ <span data-i18n="sourceType">Source type</span> · 🏷 <span data-i18n="genre">Genre</span> · 🔎 <span data-i18n="search">Search</span></span>
         </summary>
         <div class="disclosure-body">
           <div class="catalog-filters filter-disclosure-grid">
             <div class="filter-group">
-              <div class="filter-label" data-i18n="sourceType">Source type</div>
+              <div class="filter-label">⚙ <span data-i18n="sourceType">Source type</span></div>
               <div class="filter-tabs">
                 <button class="filter active" type="button" data-category-filter="all" data-i18n="all">All</button>
                 <button class="filter" type="button" data-category-filter="official" data-i18n="official">Official</button>
@@ -203,7 +203,7 @@
               </div>
             </div>
             <div class="filter-group">
-              <div class="filter-label" data-i18n="genre">Genre</div>
+              <div class="filter-label">🏷 <span data-i18n="genre">Genre</span></div>
               <div class="filter-tabs">
                 <button class="filter active" type="button" data-genre-filter="all" data-i18n="all">All</button>
                 <button class="filter" type="button" data-genre-filter="games" data-i18n="games">Games</button>
@@ -217,7 +217,7 @@
                 <button class="filter" type="button" data-genre-filter="utilities" data-i18n="utilities">Utilities</button>
               </div>
             </div>
-            <input id="sourceSearch" class="search" type="search" autocomplete="off" data-i18n-placeholder="searchPlaceholder" placeholder="Search source or app…">
+            <div class="filter-group"><div class="filter-label">🔎 <span data-i18n="search">Search</span></div><input id="sourceSearch" class="search" type="search" autocomplete="off" data-i18n-placeholder="searchPlaceholder" placeholder="Search sources…"></div>
           </div>
         </div>
       </details>
@@ -229,7 +229,7 @@
 
   <footer class="footer">
     <div class="wrap footer-inner">
-      <span>© <span id="year"></span> CaseyCZ · iOS Hub · v1.1.1</span>
+      <span>© <span id="year"></span> CaseyCZ · iOS Hub · v1.1.2</span>
       <div class="footer-links">
         <a href="https://caseycz.github.io/" target="_blank" rel="noopener">CaseyCZ Website</a>
         <a href="https://github.com/CaseyCZ/iOS-Hub" target="_blank" rel="noopener">GitHub · iOS-Hub</a>
