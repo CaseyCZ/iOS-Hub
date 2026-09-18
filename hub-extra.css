@@ -356,7 +356,7 @@
 .settings-language-list img{width:22px;height:15px;display:block;object-fit:cover;border-radius:2px;box-shadow:0 0 0 1px color-mix(in srgb,var(--border) 80%,transparent)}
 .settings-report-link{min-height:40px;width:100%;padding:0 10px;border:1px solid var(--border);border-radius:10px;background:var(--panel2);color:var(--text);display:flex;align-items:center;justify-content:flex-start;gap:8px;font-size:11px;font-weight:850}
 .settings-report-link:hover{border-color:var(--accent);background:var(--accent-soft);color:var(--accent)}
-.nav-support-primary{background:linear-gradient(135deg,var(--accent2),var(--accent))!important;border-color:var(--accent)!important;color:#fff!important;box-shadow:0 8px 22px color-mix(in srgb,var(--accent) 22%,transparent)}
+.nav-support-primary{background:linear-gradient(135deg,var(--action2),var(--action))!important;border-color:var(--action)!important;color:#fff!important;box-shadow:0 8px 22px color-mix(in srgb,var(--accent) 22%,transparent)}
 .nav-support-primary:hover{border-color:color-mix(in srgb,#fff 55%,var(--accent))!important}
 
 /* Landscape phone source cards */
@@ -930,7 +930,7 @@
   font-weight:950;
 }
 .diagnosis-next-fix{
-  background:linear-gradient(135deg,var(--accent2),var(--accent))!important;
+  background:linear-gradient(135deg,var(--action2),var(--action))!important;
   color:#fff!important;
   border-color:var(--accent)!important;
 }
