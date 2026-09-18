@@ -511,6 +511,8 @@ def validate_interactive_guide() -> None:
         text = script.read_text(encoding="utf-8")
         if "$" * 3 + "(" in text:
             error(f"{script_name} contains an undefined triple-dollar selector helper")
+        if "(?<=" in text or "(?<!" in text:
+            error(f"{script_name} uses RegExp lookbehind, which breaks older Safari versions targeted by the site")
         bad_loop = re.search(
             r"(?<!\$)\$\([^\n]+?\)\.(?:forEach|filter|map|some)\(",
             text,
@@ -525,6 +527,27 @@ def validate_interactive_guide() -> None:
     guide = ROOT / "guide.js"
     if guide.exists():
         text = guide.read_text(encoding="utf-8")
+
+        if html.exists():
+            html_text = html.read_text(encoding="utf-8")
+            guide_copy_keys = set(re.findall(r'data-guide-copy=["\']([^"\']+)["\']', html_text))
+            help_copy_keys = set(re.findall(r'data-help-(?:copy|placeholder|aria-label)=["\']([^"\']+)["\']', html_text))
+
+            guide_copy_start = text.find("const GUIDE_COPY")
+            help_copy_start = text.find("const HELP_COPY")
+            setup_results_start = text.find("const SETUP_RESULTS")
+            guide_copy_block = text[guide_copy_start:help_copy_start] if guide_copy_start >= 0 and help_copy_start > guide_copy_start else ""
+            help_copy_block = text[help_copy_start:setup_results_start] if help_copy_start >= 0 and setup_results_start > help_copy_start else ""
+
+            for key in sorted(guide_copy_keys):
+                count = len(re.findall(rf"\b{re.escape(key)}\s*:", guide_copy_block))
+                if count < len(LANGUAGES):
+                    error(f"guide.js GUIDE_COPY key {key!r} appears in only {count}/{len(LANGUAGES)} languages")
+            for key in sorted(help_copy_keys):
+                count = len(re.findall(rf"\b{re.escape(key)}\s*:", help_copy_block))
+                if count < len(LANGUAGES):
+                    error(f"guide.js HELP_COPY key {key!r} appears in only {count}/{len(LANGUAGES)} languages")
+
         start = text.find("const GUIDE_RECOMMENDATIONS")
         end = text.find("function recommendationsForLanguage", start)
         block = text[start:end] if start >= 0 and end > start else ""
