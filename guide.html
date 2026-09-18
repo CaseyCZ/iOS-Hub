@@ -9,7 +9,7 @@
   <meta name="description" content="iOS Hub — free sideloading guide, compatibility overview and troubleshooting for AltStore, SideStore, LiveContainer, Sideloadly and TrollStore.">
   <title>Sideloading Guide — iOS Hub</title>
   <link rel="stylesheet" href="styles.css?v=1.1.5-20260918-layout2">
-  <link rel="stylesheet" href="hub-extra.css?v=1.1.5-20260918-community2">
+  <link rel="stylesheet" href="hub-extra.css?v=1.1.5-20260918-diagnosis1">
 </head>
 <body>
   <header class="topbar">
@@ -146,6 +146,23 @@
             <div id="assistantTroubleSummary" class="assistant-trouble-summary">
               <strong id="assistantTroubleCount" data-help-copy="fixReady">Choose a problem or paste an error above.</strong>
               <span data-help-copy="fixPrivacy">Everything here is processed locally in your browser.</span>
+            </div>
+
+            <div id="assistantDiagnosis" class="assistant-diagnosis" hidden>
+              <div class="assistant-diagnosis-top">
+                <span id="assistantDiagnosisSource" class="trouble-source-badge official">OFFICIAL DOCS</span>
+                <span id="assistantDiagnosisCode" class="pill mode" hidden></span>
+              </div>
+              <div class="assistant-diagnosis-label" data-help-copy="diagnosisLabel">LIKELY MATCH</div>
+              <h4 id="assistantDiagnosisTitle"></h4>
+              <p id="assistantDiagnosisText"></p>
+              <div class="assistant-diagnosis-next" data-help-copy="diagnosisNext">What to do now</div>
+              <ol id="assistantDiagnosisSteps"></ol>
+              <div id="assistantDiagnosisDocs" class="assistant-diagnosis-docs"></div>
+              <div class="assistant-diagnosis-actions">
+                <button id="assistantDiagnosisShowAll" class="btn primary" type="button" data-help-copy="diagnosisShowAll">Show full troubleshooting ↓</button>
+                <button id="assistantDiagnosisCopy" class="btn secondary" type="button" data-help-copy="diagnosisCopy">Copy help link</button>
+              </div>
             </div>
             <div class="official-help-sources">
               <span data-help-copy="officialSources">Official docs used</span>
@@ -608,7 +625,7 @@
     </div>
   </div>
 
-  <script type="module" src="guide.js?v=1.1.5-20260918-community2"></script>
+  <script type="module" src="guide.js?v=1.1.5-20260918-diagnosis1"></script>
   <script src="mobile-menu.js?v=1.1.5-20260918-settingsportal1"></script>
   <script src="settings-menu.js?v=1.1.5-20260918-settingsportal1"></script>
 </body>
