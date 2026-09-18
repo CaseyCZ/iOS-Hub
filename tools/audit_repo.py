@@ -364,11 +364,12 @@ def validate_layout() -> None:
         validate_html_scripts(html)
         validate_security_policy(html)
 
-    builder = ROOT / "builder.js"
-    if builder.exists():
-        builder_text = builder.read_text(encoding="utf-8")
-        if "livecontainer://sources?url=" in builder_text:
-            error("builder.js uses obsolete LiveContainer deep link; use livecontainer://source?url=")
+    for script_name in ("app.js", "builder.js"):
+        script = ROOT / script_name
+        if script.exists():
+            script_text = script.read_text(encoding="utf-8")
+            if "livecontainer://sources?url=" in script_text or "? 'sources' : 'source'" in script_text:
+                error(f"{script_name} uses obsolete LiveContainer deep link; use livecontainer://source?url=")
 
     generator = ROOT / "tools" / "update_sources.py"
     if generator.exists():
