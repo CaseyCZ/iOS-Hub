@@ -295,11 +295,19 @@ function uniqueDiscoveredAppCount() {
 function updateStats() {
   const statuses = state.status?.sources || {};
   const online = state.registry.filter(source => statuses[source.id]?.online === true).length;
+  const offline = state.registry.filter(source => statuses[source.id]?.online === false && Boolean(statuses[source.id]?.checkedAt)).length;
   const mixReady = state.status?.mixes?.autoCompatibleSourceIDs?.length || 0;
   const apps = uniqueDiscoveredAppCount();
   if ($('#statSources')) $('#statSources').textContent = online || '—';
   if ($('#statMix')) $('#statMix').textContent = mixReady || '—';
   if ($('#statApps')) $('#statApps').textContent = apps || '—';
+
+  const sourceStatusSummary = $('#sourceStatusSummary');
+  if (sourceStatusSummary) {
+    sourceStatusSummary.innerHTML = state.registry.length
+      ? `<span class="pill online">● ${escapeHtml(tr('online'))} ${online}</span><span class="pill offline">● ${escapeHtml(tr('offline'))} ${offline}</span>`
+      : '';
+  }
 }
 
 function syncFilterButtons() {
