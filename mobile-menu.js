@@ -21,11 +21,13 @@ function setupMobileMenu() {
   panel.innerHTML = '<div class="wrap mobile-nav-inner"><nav class="mobile-nav-links" aria-label="Mobile navigation">' + nav.innerHTML + '</nav></div>';
   header.appendChild(panel);
 
-  const setOpen = open => {
+  const setOpen = (open, restoreFocus = false) => {
+    const wasOpen = header.classList.contains('mobile-menu-open');
     header.classList.toggle('mobile-menu-open', open);
     panel.setAttribute('aria-hidden', String(!open));
     button.setAttribute('aria-expanded', String(open));
     document.body.classList.toggle('mobile-menu-visible', open);
+    if (!open && wasOpen && restoreFocus) requestAnimationFrame(() => button.focus());
   };
 
   button.addEventListener('click', event => {
@@ -48,7 +50,10 @@ function setupMobileMenu() {
   });
 
   document.addEventListener('keydown', event => {
-    if (event.key === 'Escape') setOpen(false);
+    if (event.key === 'Escape' && header.classList.contains('mobile-menu-open')) {
+      event.preventDefault();
+      setOpen(false, true);
+    }
   });
 
   window.addEventListener('resize', () => {
