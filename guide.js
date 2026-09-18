@@ -386,7 +386,7 @@ function toggleTriedCheck(button) {
 function resetTriedChecks() {
   diagnosisState.tried.clear();
   diagnosisState.dismissed.clear();
-  $$$('.assistant-tried-options button').forEach(button => {
+  $('.assistant-tried-options button').forEach(button => {
     button.classList.remove('active');
     button.setAttribute('aria-pressed','false');
   });
@@ -519,7 +519,7 @@ function renderSetupResult() {
 
 function resetSetup() {
   Object.keys(setupState).forEach(key => { setupState[key] = null; });
-  $$$('[data-setup-key]').forEach(button => button.classList.remove('active'));
+  $('[data-setup-key]').forEach(button => button.classList.remove('active'));
   $('#setupResult').hidden = true;
   const url = new URL(window.location.href);
   url.searchParams.delete('setup');
@@ -552,7 +552,7 @@ function loadSetupDeepLink(value) {
 
   Object.assign(setupState, values);
   Object.entries(values).forEach(([key,val]) => {
-    $$$('[data-setup-key="' + key + '"]').forEach(button => {
+    $('[data-setup-key="' + key + '"]').forEach(button => {
       button.classList.toggle('active', button.dataset.setupValue === val);
     });
   });
@@ -739,7 +739,7 @@ document.addEventListener('click', event => {
     diagnosisState.currentKey = null;
     updateAssistantTroubleSummary();
     renderAssistantDiagnosis(true);
-    $$$('.assistant-trouble-chips button').forEach(button => button.classList.toggle('active', button === assistantFilter));
+    $('.assistant-trouble-chips button').forEach(button => button.classList.toggle('active', button === assistantFilter));
     return;
   }
 
