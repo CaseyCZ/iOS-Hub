@@ -188,11 +188,11 @@ const setupState = { device:null, version:null, computer:null, need:null };
 
 function applyHelpCopy() {
   const copy = helpCopyForLanguage();
-  $('[data-help-copy]').forEach(node => {
+  $$('[data-help-copy]').forEach(node => {
     const value = copy[node.dataset.helpCopy];
     if (value) node.textContent = value;
   });
-  $('[data-help-placeholder]').forEach(node => {
+  $$('[data-help-placeholder]').forEach(node => {
     const value = copy[node.dataset.helpPlaceholder];
     if (value) node.placeholder = value;
   });
@@ -203,12 +203,12 @@ function applyHelpCopy() {
 function setHelpMode(mode) {
   if (!['choose','fix','setup'].includes(mode)) return;
   activeHelpMode = mode;
-  $('[data-guide-mode]').forEach(button => {
+  $$('[data-guide-mode]').forEach(button => {
     const active = button.dataset.guideMode === mode;
     button.classList.toggle('active', active);
     button.setAttribute('aria-selected', String(active));
   });
-  $('[data-guide-panel]').forEach(panel => {
+  $$('[data-guide-panel]').forEach(panel => {
     const active = panel.dataset.guidePanel === mode;
     panel.classList.toggle('active', active);
     panel.hidden = !active;
@@ -219,7 +219,7 @@ function troubleMatchCount(query) {
   const q = (query || '').trim().toLowerCase();
   if (!q) return 0;
   const terms = q.split(/\s+/).filter(Boolean);
-  return $('.trouble-item').filter(item => {
+  return $$('.trouble-item').filter(item => {
     const haystack = [item.dataset.search || '', item.textContent || ''].join(' ').toLowerCase();
     return terms.some(term => haystack.includes(term));
   }).length;
@@ -258,7 +258,7 @@ function updateSetupProgress() {
   const text = $('#setupProgressText');
   if (bar) bar.style.width = `${answered * 25}%`;
   if (text) text.textContent = `${answered} / 4`;
-  $('.setup-question').forEach(question => {
+  $$('.setup-question').forEach(question => {
     question.classList.toggle('answered', Boolean(setupState[question.dataset.setupQuestion]));
   });
   if (answered === 4) renderSetupResult();
@@ -269,7 +269,7 @@ function selectSetupOption(button) {
   const value = button.dataset.setupValue;
   if (!Object.prototype.hasOwnProperty.call(setupState, key)) return;
   setupState[key] = value;
-  $('[data-setup-key="' + key + '"]').forEach(item => item.classList.toggle('active', item === button));
+  $$('[data-setup-key="' + key + '"]').forEach(item => item.classList.toggle('active', item === button));
   updateSetupProgress();
 }
 
@@ -306,7 +306,7 @@ function renderSetupResult() {
 
 function resetSetup() {
   Object.keys(setupState).forEach(key => { setupState[key] = null; });
-  $('[data-setup-key]').forEach(button => button.classList.remove('active'));
+  $$('[data-setup-key]').forEach(button => button.classList.remove('active'));
   $('#setupResult').hidden = true;
   updateSetupProgress();
 }
@@ -484,14 +484,14 @@ document.addEventListener('click', event => {
     const input = $('#assistantTroubleSearch');
     if (input) input.value = assistantFilter.dataset.assistantTroubleFilter || '';
     updateAssistantTroubleSummary();
-    $('.assistant-trouble-chips button').forEach(button => button.classList.toggle('active', button === assistantFilter));
+    $$('.assistant-trouble-chips button').forEach(button => button.classList.toggle('active', button === assistantFilter));
     return;
   }
 
   if (event.target.closest('#assistantTroubleClear')) {
     const input = $('#assistantTroubleSearch');
     if (input) input.value = '';
-    $('.assistant-trouble-chips button').forEach(button => button.classList.remove('active'));
+    $$('.assistant-trouble-chips button').forEach(button => button.classList.remove('active'));
     updateAssistantTroubleSummary();
     input?.focus();
     return;
@@ -531,7 +531,7 @@ document.addEventListener('click', event => {
 });
 
 $('#assistantTroubleSearch')?.addEventListener('input', () => {
-  $('.assistant-trouble-chips button').forEach(button => button.classList.remove('active'));
+  $$('.assistant-trouble-chips button').forEach(button => button.classList.remove('active'));
   updateAssistantTroubleSummary();
 });
 $('#troubleSearch')?.addEventListener('input', filterTroubleshooting);
