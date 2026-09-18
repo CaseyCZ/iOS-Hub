@@ -15,6 +15,7 @@
 - Expanded Useful Resources with iloader, Tailscale, WizTree, 7-Zip, Rufus, Raspberry Pi Imager, LeoMoon HotKeyz, iTunes, Visual Studio Community, Node.js, OBS Studio, Stremio, Discord and Telegram, with free-use scope noted where licensing is limited.
 - Added a standalone Sideloading Guide with free setup paths, a compatibility matrix, Apple account limits, searchable troubleshooting and official reference links.
 - Reordered Useful Resources sections alphabetically in Czech, with Free iOS & tvOS sideloading first.
+- Added AltStore Classic Remote AltServers to the Sideloading Guide, including no-computer refresh workflow, compatibility details and troubleshooting.
 
 ## 1.1.4 — 2026-09-18
 
