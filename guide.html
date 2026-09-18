@@ -55,43 +55,58 @@
 
         <div class="beginner-choice-grid">
           <article class="beginner-choice">
-            <div class="guide-icon">PAL</div>
-            <span class="pill online">EU</span>
-            <h3 data-i18n="beginnerPalQuestion">I just want apps outside the App Store and I live in the EU</h3>
-            <p data-i18n="beginnerPalAnswer"><strong>Choose AltStore PAL.</strong> It is the easiest route: no computer, no 7-day expiry and no Apple ID password. But it only installs notarized marketplace apps — it does not install arbitrary .ipa files.</p>
-            <a class="btn primary" href="https://faq.altstore.io/altstore-pal/what-is-altstore-pal" target="_blank" rel="noopener noreferrer" data-i18n="beginnerChoosePal">Choose AltStore PAL ↗</a>
-          </article>
-
-          <article class="beginner-choice">
-            <div class="guide-icon">SS</div>
-            <span class="pill online">IPA</span>
-            <h3 data-i18n="beginnerSideQuestion">I want to install .ipa files and refresh them later from my iPhone</h3>
-            <p data-i18n="beginnerSideAnswer"><strong>Choose SideStore.</strong> A computer is needed for the first setup, but afterwards installs and refreshes can be done from the device with Wi-Fi + LocalDevVPN.</p>
-            <a class="btn primary" href="https://docs.sidestore.io/docs/installation/prerequisites" target="_blank" rel="noopener noreferrer" data-i18n="beginnerChooseSide">Choose SideStore ↗</a>
-          </article>
-
-          <article class="beginner-choice">
             <div class="guide-icon">AS</div>
-            <span class="pill online">IPA</span>
-            <h3 data-i18n="beginnerClassicQuestion">I want AltStore and I do not mind using my computer</h3>
-            <p data-i18n="beginnerClassicAnswer"><strong>Choose AltStore Classic.</strong> It installs normal .ipa files and uses AltServer on Windows or macOS. Free signing expires after 7 days. Remote AltServer can later remove the need to use your own computer for refreshes.</p>
-            <a class="btn primary" href="https://faq.altstore.io/altstore-classic" target="_blank" rel="noopener noreferrer" data-i18n="beginnerChooseClassic">Choose AltStore Classic ↗</a>
+            <span class="pill online">ALTSTORE</span>
+            <h3 data-i18n="beginnerPalQuestion">I want AltStore — PAL or Classic?</h3>
+            <p data-i18n="beginnerPalAnswer">AltStore PAL is the simple marketplace option in supported regions and does not install arbitrary IPA files. AltStore Classic installs IPA files worldwide, uses free Apple signing and can now refresh through Remote AltServer after setup.</p>
+            <div class="beginner-actions">
+              <a class="btn primary" href="https://faq.altstore.io/altstore-pal/what-is-altstore-pal" target="_blank" rel="noopener noreferrer" data-i18n="beginnerChoosePal">🛍️ AltStore PAL ↗</a>
+              <a class="btn secondary" href="https://faq.altstore.io/altstore-classic" target="_blank" rel="noopener noreferrer" data-i18n="beginnerChooseClassic">🖥️ AltStore Classic ↗</a>
+            </div>
+          </article>
+
+          <article class="beginner-choice">
+            <div class="guide-icon">↻</div>
+            <span class="pill online">IPA + REFRESH</span>
+            <h3 data-i18n="beginnerSideQuestion">I want to install .ipa files and refresh them later from my iPhone</h3>
+            <p data-i18n="beginnerSideAnswer">You now have two good free routes. SideStore is built around on-device refresh after the first setup. AltStore Classic can also install and refresh without your own computer after you pair it with Remote AltServer.</p>
+            <div class="beginner-actions">
+              <a class="btn primary" href="https://docs.sidestore.io/docs/installation/prerequisites" target="_blank" rel="noopener noreferrer" data-i18n="beginnerChooseSide">📱 SideStore ↗</a>
+              <a class="btn secondary" href="https://faq.altstore.io/altstore-classic/remote-altservers" target="_blank" rel="noopener noreferrer" data-i18n="beginnerChooseRemote">🌐 AltStore + Remote AltServer ↗</a>
+            </div>
+          </article>
+
+          <article class="beginner-choice">
+            <div class="guide-icon">PC</div>
+            <span class="pill online">DESKTOP</span>
+            <h3 data-i18n="beginnerClassicQuestion">I want to install IPA files mainly from my computer</h3>
+            <p data-i18n="beginnerClassicAnswer">Sideloadly is the most direct desktop route and supports iPhone, iPad, Apple Silicon Mac and Apple TV, including Wi-Fi sideloading and automatic re-signing. AltStore Classic is useful if you also want Sources and the AltStore library workflow.</p>
+            <div class="beginner-actions">
+              <a class="btn primary" href="https://sideloadly.io/" target="_blank" rel="noopener noreferrer" data-i18n="beginnerChooseSideloadly">💻 Sideloadly ↗</a>
+              <a class="btn secondary" href="https://faq.altstore.io/altstore-classic" target="_blank" rel="noopener noreferrer" data-i18n="beginnerChooseClassic">🖥️ AltStore Classic ↗</a>
+            </div>
           </article>
 
           <article class="beginner-choice">
             <div class="guide-icon">LC</div>
             <span class="pill mode">MANY APPS</span>
             <h3 data-i18n="beginnerLcQuestion">I want to keep many IPA apps, not just a few</h3>
-            <p data-i18n="beginnerLcAnswer"><strong>Use SideStore + LiveContainer.</strong> LiveContainer is not another store. It is a launcher that runs guest IPA apps inside one container, helping with the normal free-account app limits.</p>
-            <a class="btn primary" href="https://github.com/LiveContainer/LiveContainer" target="_blank" rel="noopener noreferrer" data-i18n="beginnerChooseLc">Learn about LiveContainer ↗</a>
+            <p data-i18n="beginnerLcAnswer">Use LiveContainer. It is not another store: it runs guest IPA apps inside one container, so the normal 3-app / 10-App-ID free-account limit does not apply to those guest apps. The LiveContainer + SideStore build is the easiest combined setup.</p>
+            <div class="beginner-actions">
+              <a class="btn primary" href="https://livecontainer.github.io/docs/installation/lc_sidestore" target="_blank" rel="noopener noreferrer" data-i18n="beginnerChooseLc">🧩 LiveContainer + SideStore ↗</a>
+              <a class="btn secondary" href="https://github.com/LiveContainer/LiveContainer" target="_blank" rel="noopener noreferrer" data-i18n="beginnerChooseLcDocs">📖 LiveContainer info ↗</a>
+            </div>
           </article>
 
           <article class="beginner-choice">
             <div class="guide-icon">TV</div>
             <span class="pill mode">tvOS</span>
             <h3 data-i18n="beginnerTvQuestion">I want to install apps on Apple TV</h3>
-            <p data-i18n="beginnerTvAnswer"><strong>Start with Sideloadly.</strong> It supports Apple TV from Windows or macOS. If you prefer a self-hosted Linux/OpenWrt service, use atvloadly.</p>
-            <a class="btn primary" href="https://sideloadly.io/" target="_blank" rel="noopener noreferrer" data-i18n="beginnerChooseTv">Choose Apple TV method ↗</a>
+            <p data-i18n="beginnerTvAnswer">Sideloadly installs IPA files directly to Apple TV from Windows or macOS. If you want a self-hosted service on Linux or OpenWrt, use atvloadly instead.</p>
+            <div class="beginner-actions">
+              <a class="btn primary" href="https://sideloadly.io/" target="_blank" rel="noopener noreferrer" data-i18n="beginnerChooseTv">📺 Sideloadly for Apple TV ↗</a>
+              <a class="btn secondary" href="https://github.com/bitxeno/atvloadly" target="_blank" rel="noopener noreferrer" data-i18n="beginnerChooseAtv">🛠️ atvloadly ↗</a>
+            </div>
           </article>
         </div>
 
@@ -128,7 +143,7 @@
         <article class="panel beginner-term beginner-source-term">
           <div class="beginner-term-name">Source</div>
           <p data-i18n="beginnerSourceMeaning">A Source is just a catalog link that tells AltStore or SideStore which apps and updates are available. Adding a Source does not install anything by itself — it only adds that catalog to your app browser.</p>
-          <a class="btn small secondary" href="index.html#sources" data-i18n="beginnerBrowseSources">Browse our checked Sources</a>
+          <a class="btn small secondary" href="index.html#sources" data-i18n="beginnerBrowseSources">📚 Browse our checked Sources</a>
         </article>
       </div>
 
@@ -145,7 +160,7 @@
           <div class="resource-badges"><span class="pill online">FREE</span><span class="pill mode">SideStore + LiveContainer</span></div>
           <h3 data-i18n="guidePathSideTitle">Refresh from the iPhone after setup</h3>
           <p data-i18n="guidePathSideDesc">Use SideStore with LocalDevVPN. Add LiveContainer if you want to run several guest apps inside one container. iloader handles the initial install.</p>
-          <a class="btn primary" href="https://docs.sidestore.io/docs/installation/prerequisites" target="_blank" rel="noopener noreferrer" data-i18n="guideOpenDocs">Open official guide ↗</a>
+          <a class="btn primary" href="https://docs.sidestore.io/docs/installation/prerequisites" target="_blank" rel="noopener noreferrer" data-i18n="guideOpenDocs">📖 Open official guide ↗</a>
         </article>
 
         <article class="panel guide-card">
@@ -153,7 +168,7 @@
           <div class="resource-badges"><span class="pill online">FREE</span><span class="pill mode">AltStore Classic</span></div>
           <h3 data-i18n="guidePathAltTitle">Classic AltStore workflow</h3>
           <p data-i18n="guidePathAltDesc">Use AltStore Classic with AltServer on Windows or macOS. Keep AltServer available on the same Wi-Fi or connect by USB when apps need refreshing.</p>
-          <a class="btn primary" href="https://faq.altstore.io/altstore-classic/altserver" target="_blank" rel="noopener noreferrer" data-i18n="guideOpenDocs">Open official guide ↗</a>
+          <a class="btn primary" href="https://faq.altstore.io/altstore-classic/altserver" target="_blank" rel="noopener noreferrer" data-i18n="guideOpenDocs">📖 Open official guide ↗</a>
         </article>
 
         <article class="panel guide-card">
@@ -161,7 +176,7 @@
           <div class="resource-badges"><span class="pill online">NEW</span><span class="pill mode">Remote AltServer</span></div>
           <h3 data-i18n="guidePathRemoteTitle">AltStore refresh without your computer</h3>
           <p data-i18n="guidePathRemoteDesc">Pair AltStore Classic once, install LocalDevVPN and then use a Remote AltServer to install and refresh apps from anywhere while connected to Wi-Fi.</p>
-          <a class="btn primary" href="https://faq.altstore.io/altstore-classic/remote-altservers" target="_blank" rel="noopener noreferrer" data-i18n="guideOpenDocs">Open official guide ↗</a>
+          <a class="btn primary" href="https://faq.altstore.io/altstore-classic/remote-altservers" target="_blank" rel="noopener noreferrer" data-i18n="guideOpenDocs">📖 Open official guide ↗</a>
         </article>
 
         <article class="panel guide-card">
@@ -169,7 +184,7 @@
           <div class="resource-badges"><span class="pill online">FREE</span><span class="pill mode">Sideloadly</span></div>
           <h3 data-i18n="guidePathDesktopTitle">Sign IPA files from Windows or Mac</h3>
           <p data-i18n="guidePathDesktopDesc">Use Sideloadly for direct IPA installation. Its daemon can automatically re-sign apps when your device is reachable over Wi-Fi or USB.</p>
-          <a class="btn primary" href="https://sideloadly.io/" target="_blank" rel="noopener noreferrer" data-i18n="guideOpenDocs">Open official guide ↗</a>
+          <a class="btn primary" href="https://sideloadly.io/" target="_blank" rel="noopener noreferrer" data-i18n="guideOpenDocs">📖 Open official guide ↗</a>
         </article>
 
         <article class="panel guide-card">
@@ -177,7 +192,7 @@
           <div class="resource-badges"><span class="pill online">FREE</span><span class="pill mode">TrollStore</span></div>
           <h3 data-i18n="guidePathTrollTitle">No 7-day refresh on supported iOS</h3>
           <p data-i18n="guidePathTrollDesc">Use TrollStore only if your exact iOS/iPadOS version is supported. It permanently installs IPA files on those compatible versions.</p>
-          <a class="btn primary" href="https://github.com/opa334/TrollStore" target="_blank" rel="noopener noreferrer" data-i18n="guideOpenDocs">Open official guide ↗</a>
+          <a class="btn primary" href="https://github.com/opa334/TrollStore" target="_blank" rel="noopener noreferrer" data-i18n="guideOpenDocs">📖 Open official guide ↗</a>
         </article>
 
         <article class="panel guide-card">
@@ -185,7 +200,7 @@
           <div class="resource-badges"><span class="pill online">FREE</span><span class="pill mode">Apple TV</span></div>
           <h3 data-i18n="guidePathTvTitle">Apple TV</h3>
           <p data-i18n="guidePathTvDesc">Use Sideloadly from Windows/macOS or self-host atvloadly on Linux/OpenWrt for an Apple TV focused setup.</p>
-          <a class="btn primary" href="https://github.com/bitxeno/atvloadly" target="_blank" rel="noopener noreferrer" data-i18n="guideOpenDocs">Open official guide ↗</a>
+          <a class="btn primary" href="https://github.com/bitxeno/atvloadly" target="_blank" rel="noopener noreferrer" data-i18n="guideOpenDocs">📖 Open official guide ↗</a>
         </article>
       </div>
 
@@ -284,13 +299,13 @@
         </div>
       </div>
       <div class="guide-official-links">
-        <a class="btn small secondary" href="https://docs.sidestore.io/" target="_blank" rel="noopener noreferrer">SideStore Docs ↗</a>
-        <a class="btn small secondary" href="https://github.com/LiveContainer/LiveContainer" target="_blank" rel="noopener noreferrer">LiveContainer ↗</a>
-        <a class="btn small secondary" href="https://iloader.app/" target="_blank" rel="noopener noreferrer">iloader ↗</a>
-        <a class="btn small secondary" href="https://faq.altstore.io/" target="_blank" rel="noopener noreferrer">AltStore Docs ↗</a>
-        <a class="btn small secondary" href="https://faq.altstore.io/altstore-classic/remote-altservers" target="_blank" rel="noopener noreferrer">Remote AltServer ↗</a>
-        <a class="btn small secondary" href="https://sideloadly.io/" target="_blank" rel="noopener noreferrer">Sideloadly ↗</a>
-        <a class="btn small secondary" href="https://github.com/opa334/TrollStore" target="_blank" rel="noopener noreferrer">TrollStore ↗</a>
+        <a class="btn small secondary" href="https://docs.sidestore.io/" target="_blank" rel="noopener noreferrer">🔗 SideStore Docs ↗</a>
+        <a class="btn small secondary" href="https://github.com/LiveContainer/LiveContainer" target="_blank" rel="noopener noreferrer">🔗 LiveContainer ↗</a>
+        <a class="btn small secondary" href="https://iloader.app/" target="_blank" rel="noopener noreferrer">🔗 iloader ↗</a>
+        <a class="btn small secondary" href="https://faq.altstore.io/" target="_blank" rel="noopener noreferrer">🔗 AltStore Docs ↗</a>
+        <a class="btn small secondary" href="https://faq.altstore.io/altstore-classic/remote-altservers" target="_blank" rel="noopener noreferrer">🔗 Remote AltServer ↗</a>
+        <a class="btn small secondary" href="https://sideloadly.io/" target="_blank" rel="noopener noreferrer">🔗 Sideloadly ↗</a>
+        <a class="btn small secondary" href="https://github.com/opa334/TrollStore" target="_blank" rel="noopener noreferrer">🔗 TrollStore ↗</a>
       </div>
     </section>
   </main>
