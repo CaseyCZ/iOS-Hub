@@ -17,7 +17,7 @@
 
 ## O projektu
 
-**CaseyCZ iOS Hub** je živý katalog veřejných iOS source repozitářů. Zdroj se pravidelně kontroluje a pokud přestane fungovat, na webu se dočasně nenabízí.
+**CaseyCZ iOS Hub** je živý katalog veřejných iOS source repozitářů. Zdroje se pravidelně kontrolují; pokud některý přestane odpovídat, jeho karta zůstane v katalogu označená jako Offline a instalační tlačítka se dočasně vypnou.
 
 ## Hlavní funkce
 
@@ -25,6 +25,7 @@
 - filtry podle typu zdroje, žánru, platformy a Mix kompatibility
 - vyhledávání podle zdroje i názvu aplikace
 - samostatná stránka **Custom Source Builder** pro všechny online zdroje
+- interaktivní **Help Center** s výběrem metody, diagnostikou chyb, průvodcem konfigurací a odkazy na oficiální dokumentaci
 - automatický stav `PASS / TRY`
 - hotový **CaseyCZ AltStore Source**, **CaseyCZ SideStore Source** a **CaseyCZ LiveContainer Source**
 - automatická deduplikace aplikací podle `bundleIdentifier`
