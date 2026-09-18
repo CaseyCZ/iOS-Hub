@@ -14,7 +14,12 @@ on:
       - "sidestore/**"
       - "mix/**"
       - "data/**"
+      - "vendor/**"
+      - "VERSION"
+      - "README*.md"
       - ".github/workflows/audit.yml"
+      - ".github/workflows/update-sources.yml"
+      - ".github/workflows/vendor-converter.yml"
 
 permissions:
   contents: read
