@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-18T09:53:58Z",
+  "generatedAt": "2026-09-18T10:28:51Z",
   "sources": [
     {
       "id": "utm",
@@ -814,6 +814,902 @@
           "version": "1.10.2",
           "iconURL": "https://content-download-egs.distro.on.epicgames.com/.well-known/1024x1024bb.png",
           "subtitle": ""
+        }
+      ]
+    },
+    {
+      "id": "xn1ckuz-sidebox",
+      "name": "xN1ckuz's SideBox",
+      "appCount": 4,
+      "iconURL": "https://avatars.githubusercontent.com/u/74825012?v=4",
+      "apps": [
+        {
+          "name": "Spotify Premium",
+          "bundleIdentifier": "com.spotify.client",
+          "developerName": "Eevee",
+          "version": "9.1.80",
+          "iconURL": "https://raw.githubusercontent.com/xN1ckuz/xN1ckuz-Sidestore-Repo/refs/heads/main/Resources/EeveeSpotify/icon.png",
+          "subtitle": "Spotify Premium Tweak."
+        },
+        {
+          "name": "YouTube Plus",
+          "bundleIdentifier": "com.google.ios.youtube",
+          "developerName": "Dayanch96",
+          "version": "21.24.3",
+          "iconURL": "https://raw.githubusercontent.com/xN1ckuz/xN1ckuz-Sidestore-Repo/refs/heads/main/Resources/YouTubePlus/icon.png",
+          "subtitle": "YouTube Premium Tweak."
+        },
+        {
+          "name": "YouTube Music Ultimate",
+          "bundleIdentifier": "com.google.ios.youtubemusic",
+          "developerName": "Dayanch96",
+          "version": "9.36.1",
+          "iconURL": "https://raw.githubusercontent.com/xN1ckuz/xN1ckuz-Sidestore-Repo/refs/heads/main/Resources/YTMusicUltimate/icon.png",
+          "subtitle": "YouTube Music Premium Tweak."
+        },
+        {
+          "name": "Instagram Plus",
+          "bundleIdentifier": "com.burbn.instagram",
+          "developerName": "SoCuul",
+          "version": "418.2.0",
+          "iconURL": "https://raw.githubusercontent.com/xN1ckuz/xN1ckuz-Sidestore-Repo/refs/heads/main/Resources/SCInstagram/icon.png",
+          "subtitle": "Instagram Plus Tweak."
+        }
+      ]
+    },
+    {
+      "id": "dvntm0-workshop",
+      "name": "Dan's Workshop",
+      "appCount": 7,
+      "iconURL": "https://raw.githubusercontent.com/dayanch96/YTLite/refs/heads/main/Resources/icon.png",
+      "apps": [
+        {
+          "name": "Glow for Facebook",
+          "bundleIdentifier": "com.facebook.Facebook",
+          "developerName": "dvntm",
+          "version": "519.0.0",
+          "iconURL": "https://raw.githubusercontent.com/dayanch96/Glow/refs/heads/main/Sileo/icon.png",
+          "subtitle": "Cleaner. Smarter. Yours."
+        },
+        {
+          "name": "Flow for Messenger",
+          "bundleIdentifier": "com.facebook.Messenger",
+          "developerName": "dvntm",
+          "version": "511.0.0",
+          "iconURL": "https://raw.githubusercontent.com/dayanch96/Flow/refs/heads/main/Sileo/icon.png",
+          "subtitle": "A lightweight Messenger enhancer"
+        },
+        {
+          "name": "Infuse Plus (iOS18+)",
+          "bundleIdentifier": "com.firecore.infuse",
+          "developerName": "dvntm",
+          "version": "8.4.8",
+          "iconURL": "https://raw.githubusercontent.com/dayanch96/InfusePlus/refs/heads/main/Resources/icon.png",
+          "subtitle": "Enhancer for Infuse app"
+        },
+        {
+          "name": "YouTube Plus (iOS16+)",
+          "bundleIdentifier": "com.google.ios.youtube",
+          "developerName": "dvntm",
+          "version": "21.16.2",
+          "iconURL": "https://raw.githubusercontent.com/dayanch96/YTLite/refs/heads/main/Resources/icon.png",
+          "subtitle": "YouTube Plus with additional tweaks"
+        },
+        {
+          "name": "YouTube Music Ultimate (iOS16+)",
+          "bundleIdentifier": "com.google.ios.youtubemusic",
+          "developerName": "dvntm",
+          "version": "9.11.2",
+          "iconURL": "https://raw.githubusercontent.com/dayanch96/YTMusicUltimate/refs/heads/main/Resources/icon.png",
+          "subtitle": "The best enhancer for YouTube Music on iOS"
+        },
+        {
+          "name": "OrwellVK",
+          "bundleIdentifier": "com.vk.vkclient",
+          "developerName": "dvntm",
+          "version": "8.144.1",
+          "iconURL": "https://raw.githubusercontent.com/dayanch96/OrwellVK/refs/heads/main/Sileo/icon.png",
+          "subtitle": "A subtle shift from the familiar"
+        },
+        {
+          "name": "Tweach",
+          "bundleIdentifier": "tv.twitch",
+          "developerName": "dvntm",
+          "version": "30.4.2",
+          "iconURL": "https://raw.githubusercontent.com/dayanch96/Tweach/refs/heads/main/sileo/icon.png",
+          "subtitle": "Download your favorite Clips, VODs and Live Streams with Tweach"
+        }
+      ]
+    },
+    {
+      "id": "wuxu-library-plus",
+      "name": "WuXu's Library++",
+      "appCount": 13,
+      "iconURL": "https://external-content.duckduckgo.com/iu/?u=https://i.imgur.com/g17kMl9.jpeg",
+      "apps": [
+        {
+          "name": "HD Flix (No Ads)",
+          "bundleIdentifier": "com.box.hd.flix.drama.hub",
+          "developerName": "Dezokr",
+          "version": "2.0",
+          "iconURL": "https://external-content.duckduckgo.com/iu/?u=https://i.imgur.com/3tQFB9N.png",
+          "subtitle": "The All-In-One Movie app for iOS"
+        },
+        {
+          "name": "X++",
+          "bundleIdentifier": "com.atebits.Tweetie2",
+          "developerName": "Densor",
+          "version": "10.83",
+          "iconURL": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/bf/46/c4/bf46c48e-94bb-c30d-601f-d73ed5a70689/ProductionAppIcon-0-0-1x_U007emarketing-0-8-0-0-0-85-220.png/512x512bb.jpg",
+          "subtitle": "An new tweak for X!"
+        },
+        {
+          "name": "Facebook++",
+          "bundleIdentifier": "com.facebook.Facebook",
+          "developerName": "Michael Lema",
+          "version": "1.3.1",
+          "iconURL": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/7f/72/b7/7f72b76a-5865-3da5-8dc3-71a2b75551e9/Icon-Production-0-0-1x_U007epad-0-1-0-sRGB-85-220.png/512x512bb.jpg",
+          "subtitle": "Facebook with a number of new features!"
+        },
+        {
+          "name": "TikTok++",
+          "bundleIdentifier": "com.zhiliaoapp.musically",
+          "developerName": "aJBbo",
+          "version": "38.7.0",
+          "iconURL": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/50/70/42/50704260-89c4-2aa4-7740-4a6a621af5db/TikTok_AppIcon26-0-0-1x_U007epad-0-1-0-85-220.png/512x512bb.jpg",
+          "subtitle": "TikTok with added features."
+        },
+        {
+          "name": "Instagram++",
+          "bundleIdentifier": "com.burbn.instagram",
+          "developerName": "Fouad Raheb",
+          "version": "356.1.0",
+          "iconURL": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/4c/be/de/4cbedeca-02d7-e15c-9e14-b0ac165eeb5a/Prod-0-0-1x_U007epad-0-1-0-sRGB-85-220.png/512x512bb.jpg",
+          "subtitle": "A must-have tweak for Instagram users!"
+        },
+        {
+          "name": "MyFitnessPal++",
+          "bundleIdentifier": "com.myfitnesspal.mfp",
+          "developerName": "Strejda603",
+          "version": "26.30.0",
+          "iconURL": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/87/17/fa/8717fa12-83f0-1184-f3d1-9ff90f157708/AppIcon-0-0-1x_U007emarketing-0-8-0-85-220.png/512x512bb.jpg",
+          "subtitle": "MyFitnessPal With Premium Activated."
+        },
+        {
+          "name": "BeReal++",
+          "bundleIdentifier": "AlexisBarreyat.BeReal",
+          "developerName": "Yandevelop",
+          "version": "2.14.2",
+          "iconURL": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/1f/38/c2/1f38c266-41ed-98be-c4a2-13412d9dd587/AppIcon-0-0-1x_U007emarketing-0-6-0-85-220.png/512x512bb.jpg",
+          "subtitle": "See your friends BeReals without posting anything!"
+        },
+        {
+          "name": "Deezer++",
+          "bundleIdentifier": "com.deezer.Deezer",
+          "developerName": "iJulioVerne",
+          "version": "7.15.0",
+          "iconURL": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/80/83/6f/80836fd9-2475-3392-d354-4ee3552ed0e9/AppIcon-0-0-1x_U007epad-0-11-0-0-85-220.png/512x512bb.jpg",
+          "subtitle": "Deezer with premium activated!"
+        },
+        {
+          "name": "SoundCloud++",
+          "bundleIdentifier": "com.soundcloud.TouchApp",
+          "developerName": "VAXMG",
+          "version": "8.71.0",
+          "iconURL": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/22/f9/36/22f936bd-f61d-d1e1-8227-7352688e9367/AppIcon-0-0-1x_U007epad-0-1-0-85-220.png/512x512bb.jpg",
+          "subtitle": "SoundCloud with no ads! Read Description."
+        },
+        {
+          "name": "Spotify++",
+          "bundleIdentifier": "com.spotify.client",
+          "developerName": "Eevee",
+          "version": "9.0.84",
+          "iconURL": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/01/b4/f5/01b4f500-a216-ede2-81dd-e6b4668e53cf/AppIcon-0-0-1x_U007epad-0-1-0-0-sRGB-85-220.png/512x512bb.jpg",
+          "subtitle": "Free Spotify Premium!"
+        },
+        {
+          "name": "YouTube++",
+          "bundleIdentifier": "com.google.ios.youtube",
+          "developerName": "Dayanch96",
+          "version": "20.09.3",
+          "iconURL": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/8e/43/35/8e43350e-2dad-ac27-13d4-71eac741cf80/logo_youtube_2024_q4_color-0-0-1x_U007emarketing-0-0-0-7-0-0-0-85-220.png/512x512bb.jpg",
+          "subtitle": "The All-In-One Tweak for YouTube."
+        },
+        {
+          "name": "Duolingo++",
+          "bundleIdentifier": "com.duolingo.DuolingoMobile",
+          "developerName": "Laxus",
+          "version": "7.134.0",
+          "iconURL": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/d6/b2/08/d6b20859-b86e-5b7c-4ebc-8258c0f9b754/AppIcon-0-0-1x_U007epad-0-1-85-220.png/512x512bb.jpg",
+          "subtitle": "Duolingo with Super Duolingo Activated!"
+        },
+        {
+          "name": "Messenger++",
+          "bundleIdentifier": "com.facebook.Messenger",
+          "developerName": "Michael Lema",
+          "version": "390.0",
+          "iconURL": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/05/90/0d/05900d52-cace-057b-aa3a-3c08aa064c4c/AppIcon-0-0-1x_U007epad-0-1-0-sRGB-85-220.png/512x512bb.jpg",
+          "subtitle": "The ultimate Facebook Messenger tweak!"
+        }
+      ]
+    },
+    {
+      "id": "baretsky-tweaked",
+      "name": "Baretsky's Tweaked App Library",
+      "appCount": 7,
+      "iconURL": "https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png",
+      "apps": [
+        {
+          "name": "TikTok",
+          "bundleIdentifier": "com.zhiliaoapp.musically",
+          "developerName": "",
+          "version": "43.1.0",
+          "iconURL": "https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png",
+          "subtitle": ""
+        },
+        {
+          "name": "YouTube",
+          "bundleIdentifier": "com.google.ios.youtube",
+          "developerName": "",
+          "version": "21.37.4",
+          "iconURL": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ef/Youtube_logo.png/512px-Youtube_logo.png",
+          "subtitle": ""
+        },
+        {
+          "name": "Twitter",
+          "bundleIdentifier": "com.atebits.Tweetie2",
+          "developerName": "",
+          "version": "11.66",
+          "iconURL": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Logo_of_Twitter.svg/512px-Logo_of_Twitter.svg.png",
+          "subtitle": ""
+        },
+        {
+          "name": "Instagram",
+          "bundleIdentifier": "com.burbn.instagram",
+          "developerName": "",
+          "version": "416.1.0",
+          "iconURL": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Instagram_icon.png/600px-Instagram_icon.png",
+          "subtitle": ""
+        },
+        {
+          "name": "Twitch",
+          "bundleIdentifier": "tv.twitch",
+          "developerName": "",
+          "version": "31.2.4",
+          "iconURL": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Twitch_Glitch_Logo_Purple.svg/640px-Twitch_Glitch_Logo_Purple.svg.png",
+          "subtitle": ""
+        },
+        {
+          "name": "YouTube Music",
+          "bundleIdentifier": "com.google.ios.youtubemusic",
+          "developerName": "",
+          "version": "9.02.5",
+          "iconURL": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/Youtube_Music_icon.svg/512px-Youtube_Music_icon.svg.png",
+          "subtitle": ""
+        },
+        {
+          "name": "Ksign",
+          "bundleIdentifier": "nya.asami.ksign",
+          "developerName": "",
+          "version": "1.6",
+          "iconURL": "https://github.com/Nyasami/Ksign/blob/main/Ksign/Resources/Assets.xcassets/AppIcon.appiconset/Ksign-trans%201.png?raw=true",
+          "subtitle": ""
+        }
+      ]
+    },
+    {
+      "id": "driftywinds",
+      "name": "driftywinds' AltStore Repo",
+      "appCount": 10,
+      "iconURL": "https://i.postimg.cc/Kcdr62dc/dp-rounded.png",
+      "apps": [
+        {
+          "name": "YouMod + Tweaks (driftywinds)",
+          "bundleIdentifier": "com.google.ios.youtube",
+          "developerName": "Tonwalter888",
+          "version": "21.37.4",
+          "iconURL": "https://raw.githubusercontent.com/YTLitePlus/YTLitePlus-Altstore/main/Youtube_logo-512.png",
+          "subtitle": "A flexible enhancer for YouTube on iOS | If you want to donate: - https://ko-fi.com/driftywinds"
+        },
+        {
+          "name": "Spotify (EeveeSpotifyReincarnated)",
+          "bundleIdentifier": "com.spotify.client",
+          "developerName": "jaydenjcpy & faroukbmiled",
+          "version": "9.1.50",
+          "iconURL": "https://files.catbox.moe/9fgova.JPG",
+          "subtitle": "Spotify with free premium, and extra UI features | If you want to donate: - https://ko-fi.com/driftywinds"
+        },
+        {
+          "name": "Minecraft",
+          "bundleIdentifier": "com.mojang.minecraftpe",
+          "developerName": "Kamo Hacks",
+          "version": "1.26.0",
+          "iconURL": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/42/01/22/42012236-af5d-f1c1-31c2-4dd7827585dd/AppIcon-1x_U007emarketing-0-9-0-85-220.png/460x0w.png",
+          "subtitle": "Cracked Minecraft with working online | If you want to donate: - https://ko-fi.com/driftywinds"
+        },
+        {
+          "name": "Instagram (RyukGram)",
+          "bundleIdentifier": "com.burbn.instagram",
+          "developerName": "Ryuk",
+          "version": "447.0.0",
+          "iconURL": "https://raw.githubusercontent.com/qnblackcat/AltStore/main/ScreenShot/800px-Instagram_logo_2016.svg.png",
+          "subtitle": "Additional features and fixes by Ryuk based on SCInsta | If you want to donate: - https://ko-fi.com/driftywinds"
+        },
+        {
+          "name": "Twitter BHX",
+          "bundleIdentifier": "com.atebits.Tweetie2",
+          "developerName": "baterblx",
+          "version": "11.54",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.atebits.Tweetie2.png",
+          "subtitle": "Awesome tweak for X | If you want to donate: - https://ko-fi.com/driftywinds"
+        },
+        {
+          "name": "Balatro",
+          "bundleIdentifier": "com.unofficial.balatro",
+          "developerName": "driftywinds",
+          "version": "1.0.1o",
+          "iconURL": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/a6/b1/14/a6b114b7-541f-d929-1724-6665b9ccf255/iOS_AppIcon_Premium-0-0-1x_U007epad-0-85-220.png/492x0w.png",
+          "subtitle": "The best rogue-like card game! | If you want to donate: - https://ko-fi.com/driftywinds"
+        },
+        {
+          "name": "YT Music Ultimate",
+          "bundleIdentifier": "com.google.ios.youtubemusic",
+          "developerName": "Ginsu / dayanch96",
+          "version": "9.22.2",
+          "iconURL": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/Youtube_Music_icon.svg/2048px-Youtube_Music_icon.svg.png",
+          "subtitle": "No ads. Cool tweaks. Requires iOS 15 and later. | If you want to donate: - https://ko-fi.com/driftywinds"
+        },
+        {
+          "name": "Feather",
+          "bundleIdentifier": "kh.crysalis.feather",
+          "developerName": "khcrysalis",
+          "version": "2.4.0",
+          "iconURL": "https://raw.githubusercontent.com/khcrysalis/Feather/main/Images/512%402x.png",
+          "subtitle": "Feather is a free on-device iOS application manager/installer built with UIKit for quality. | If you want to donate: - https://ko-fi.com/driftywinds"
+        },
+        {
+          "name": "Elgato Stream Deck Mobile",
+          "bundleIdentifier": "com.elgato.streamdeck-ios",
+          "developerName": "zxcvbn",
+          "version": "2.2.0",
+          "iconURL": "https://is1-ssl.mzstatic.com/image/thumb/Purple116/v4/af/07/c8/af07c8da-49fe-ffea-79c9-95dba7ef50ba/AppIcon-0-1x_U007emarketing-0-10-0-85-220.png/460x0w.png",
+          "subtitle": "cracked by zxcvbn, more available at https://t.me/zxcvbn_tweaked | If you want to donate: - https://ko-fi.com/driftywinds"
+        },
+        {
+          "name": "LiveContainer - BETA NOT MEANT FOR USE YET",
+          "bundleIdentifier": "com.kdt.livecontainer",
+          "developerName": "khanhduytran0",
+          "version": "2.1.2",
+          "iconURL": "https://cdn-icons-png.flaticon.com/512/9402/9402265.png",
+          "subtitle": "Run iOS apps without actually installing them! More info:- https://github.com/khanhduytran0/LiveContainer | If you want to donate: - https://ko-fi.com/driftywinds"
+        }
+      ]
+    },
+    {
+      "id": "ipa-vault",
+      "name": "IPA Vault Source Repo",
+      "appCount": 58,
+      "iconURL": "https://pub-dd800571175348b6a2745b3396360028.r2.dev/ipavault-altstore-repo-logo.png",
+      "apps": [
+        {
+          "name": "Discord (RainTweak)",
+          "bundleIdentifier": "com.hammerandchisel.discord",
+          "developerName": "Ra1ncord & Moe & IPA Vault",
+          "version": "345.0",
+          "iconURL": "https://pub-dd800571175348b6a2745b3396360028.r2.dev/App%20Icons/Discord-Icons/Discord-AppStore-1024x1024.png",
+          "subtitle": "Discord 345.0 with RainTweak 0.9.6"
+        },
+        {
+          "name": "Facebook (Glow)",
+          "bundleIdentifier": "com.facebook.Facebook.glow",
+          "developerName": "dvntms & IPA Vault",
+          "version": "577.1",
+          "iconURL": "https://pub-dd800571175348b6a2745b3396360028.r2.dev/App%20Icons/Facebook-Icons/Facebook-AppStore-1024x1024.png",
+          "subtitle": "Facebook 577.1 with Glow"
+        },
+        {
+          "name": "Facebook (iQFace)",
+          "bundleIdentifier": "com.facebook.Facebook",
+          "developerName": "7MD & IPA Vault & lucaspedrosa",
+          "version": "579.0.0",
+          "iconURL": "https://pub-dd800571175348b6a2745b3396360028.r2.dev/App%20Icons/Facebook-Icons/Facebook-AppStore-1024x1024.png",
+          "subtitle": "Facebook 579.0.0 with iQFace 1.1"
+        },
+        {
+          "name": "Google Photos (Gunshot 0.2.3) (7.20.2)",
+          "bundleIdentifier": "com.google.Photos.v7-20-2",
+          "developerName": "tqmane & IPA Vault",
+          "version": "7.20.2",
+          "iconURL": "https://pub-dd800571175348b6a2745b3396360028.r2.dev/App%20Icons/Google-Photos-Icons/Google-Photos-AppStore-1024x1024.png",
+          "subtitle": "Google Photos 7.20.2 with Gunshot 0.2.3"
+        },
+        {
+          "name": "Google Photos (Gunshot 0.2.3)",
+          "bundleIdentifier": "com.google.Photos",
+          "developerName": "tqmane & IPA Vault",
+          "version": "7.92.0",
+          "iconURL": "https://pub-dd800571175348b6a2745b3396360028.r2.dev/App%20Icons/Google-Photos-Icons/Google-Photos-AppStore-1024x1024.png",
+          "subtitle": "Google Photos 7.92.0 with Gunshot 0.2.3"
+        },
+        {
+          "name": "iMe (MxGram)",
+          "bundleIdentifier": "com.olcorporation.olai",
+          "developerName": "m1ronx1412 & IPA Vault",
+          "version": "12.8.1",
+          "iconURL": "https://pub-dd800571175348b6a2745b3396360028.r2.dev/App%20Icons/iMe-Icons/iMe-AppStore-1024x1024.png",
+          "subtitle": "iMe 12.8.1 with MxGram 1.0.0"
+        },
+        {
+          "name": "iMe (iQTele)",
+          "bundleIdentifier": "com.olcorporation.olai.iqtele",
+          "developerName": "7MD & IPA Vault",
+          "version": "12.8.1",
+          "iconURL": "https://pub-dd800571175348b6a2745b3396360028.r2.dev/App%20Icons/iMe-Icons/iMe-AppStore-1024x1024.png",
+          "subtitle": "iMe 12.8.1 with iQTele 1.2"
+        },
+        {
+          "name": "Infuse Plus (7.8.4)",
+          "bundleIdentifier": "com.firecore.infuse.v7-8-4",
+          "developerName": "dvntms & IPA Vault",
+          "version": "7.8.4",
+          "iconURL": "https://pub-dd800571175348b6a2745b3396360028.r2.dev/App%20Icons/Infuse-icons/Infuse-AppStore-1024x1024.png",
+          "subtitle": "Infuse 7.8.4 with Infuse Plus 2.6"
+        },
+        {
+          "name": "Infuse Plus (8.2.4)",
+          "bundleIdentifier": "com.firecore.infuse.v8-2-4",
+          "developerName": "dvntms & IPA Vault",
+          "version": "8.2.4",
+          "iconURL": "https://pub-dd800571175348b6a2745b3396360028.r2.dev/App%20Icons/Infuse-icons/Infuse-AppStore-1024x1024.png",
+          "subtitle": "Infuse 8.2.4 with Infuse Plus 2.6"
+        },
+        {
+          "name": "Infuse Plus (8.5.5)",
+          "bundleIdentifier": "com.firecore.infuse",
+          "developerName": "dvntms & IPA Vault",
+          "version": "8.5.5",
+          "iconURL": "https://pub-dd800571175348b6a2745b3396360028.r2.dev/App%20Icons/Infuse-icons/Infuse-AppStore-1024x1024.png",
+          "subtitle": "Infuse 8.5.5 with Infuse Plus 2.6"
+        },
+        {
+          "name": "Instagram (Regram 6.0.1 Cracked)",
+          "bundleIdentifier": "com.burbn.instagram.regram",
+          "developerName": "Spy_0G & IPAVault & PrintedWaste",
+          "version": "447.0.0",
+          "iconURL": "https://pub-dd800571175348b6a2745b3396360028.r2.dev/App%20Icons/Instagram-Icons/Instagram-AppStore-1024x1024.png",
+          "subtitle": "Instagram 447.0.0 with Regram 6.0.1 cracked"
+        },
+        {
+          "name": "Instagram (Regram 6.0.1) (No Plugins)",
+          "bundleIdentifier": "com.burbn.instagram.regram.noplugins",
+          "developerName": "Spy_0G & IPAVault & PrintedWaste",
+          "version": "447.0.0",
+          "iconURL": "https://pub-dd800571175348b6a2745b3396360028.r2.dev/App%20Icons/Instagram-Icons/Instagram-AppStore-1024x1024.png",
+          "subtitle": "IG 447.0.0 (Regram 6.0.1 cracked) (No Plugins)"
+        },
+        {
+          "name": "Instagram (RyukGram No Plugins)",
+          "bundleIdentifier": "com.burbn.instagram.ryukgram.noplugins",
+          "developerName": "faroukbmiled & IPA Vault",
+          "version": "447.0.0",
+          "iconURL": "https://pub-dd800571175348b6a2745b3396360028.r2.dev/App%20Icons/Instagram-Icons/Instagram-AppStore-1024x1024.png",
+          "subtitle": "Instagram 447.0.0 with RyukGram 1.3.3 (No Plugins)"
+        },
+        {
+          "name": "Instagram (RyukGram)",
+          "bundleIdentifier": "com.burbn.instagram",
+          "developerName": "faroukbmiled & IPA Vault",
+          "version": "447.0.0",
+          "iconURL": "https://pub-dd800571175348b6a2745b3396360028.r2.dev/App%20Icons/Instagram-Icons/Instagram-AppStore-1024x1024.png",
+          "subtitle": "Instagram 447.0.0 with RyukGram 1.3.3"
+        },
+        {
+          "name": "Instagram (Sparkle No Plugins)",
+          "bundleIdentifier": "com.burbn.instagram.sparkle.noplugins",
+          "developerName": "efibalogh & CieLogic & IPA Vault",
+          "version": "447.0.0",
+          "iconURL": "https://pub-dd800571175348b6a2745b3396360028.r2.dev/App%20Icons/Instagram-Icons/Instagram-AppStore-1024x1024.png",
+          "subtitle": "Instagram 447.0.0 with Sparkle 1.3.0 (No Plugins)"
+        },
+        {
+          "name": "Instagram (Sparkle)",
+          "bundleIdentifier": "com.burbn.instagram.sparkle",
+          "developerName": "efibalogh & CieLogic & IPA Vault",
+          "version": "447.0.0",
+          "iconURL": "https://pub-dd800571175348b6a2745b3396360028.r2.dev/App%20Icons/Instagram-Icons/Instagram-AppStore-1024x1024.png",
+          "subtitle": "Instagram 447.0.0 with Sparkle 1.3.0"
+        },
+        {
+          "name": "Messenger (Flow)",
+          "bundleIdentifier": "com.facebook.Messenger.flow",
+          "developerName": "dvntms & IPA Vault",
+          "version": "579.0.0",
+          "iconURL": "https://pub-dd800571175348b6a2745b3396360028.r2.dev/App%20Icons/Messenger-Icons/Messenger-AppStore-1024x1024.png",
+          "subtitle": "Messenger 579.0.0 with Flow 1.0"
+        },
+        {
+          "name": "Messenger (Login)",
+          "bundleIdentifier": "com.facebook.Messenger.login",
+          "developerName": "IPA Vault",
+          "version": "523.0.0",
+          "iconURL": "https://pub-dd800571175348b6a2745b3396360028.r2.dev/App%20Icons/Messenger-Icons/Messenger-AppStore-1024x1024.png",
+          "subtitle": "Messenger 523.0.0 login build"
+        },
+        {
+          "name": "Messenger (MSGPlusX)",
+          "bundleIdentifier": "com.facebook.Messenger",
+          "developerName": "Dens0r & IPA Vault & lucaspedrosa",
+          "version": "579.0.0",
+          "iconURL": "https://pub-dd800571175348b6a2745b3396360028.r2.dev/App%20Icons/Messenger-Icons/Messenger-AppStore-1024x1024.png",
+          "subtitle": "Messenger 579.0.0 with MSGPlusX 1.1"
+        },
+        {
+          "name": "Nagram (Lead)",
+          "bundleIdentifier": "xyz.nextalone.nagram.lead",
+          "developerName": "aquaonly & IPA Vault",
+          "version": "12.9.2.1",
+          "iconURL": "https://pub-dd800571175348b6a2745b3396360028.r2.dev/App%20Icons/Nagram-Icons/Nagram-AppStore-1024x1024.png",
+          "subtitle": "Nagram 12.9.2.1 with Lead 1.4.4"
+        },
+        {
+          "name": "Nagram (MxGram)",
+          "bundleIdentifier": "xyz.nextalone.nagram.mxgram",
+          "developerName": "m1ronx1412 & IPA Vault",
+          "version": "12.9.2.1",
+          "iconURL": "https://pub-dd800571175348b6a2745b3396360028.r2.dev/App%20Icons/Nagram-Icons/Nagram-AppStore-1024x1024.png",
+          "subtitle": "Nagram 12.9.2.1 with MxGram 1.0.0"
+        },
+        {
+          "name": "Nagram (TGExtra)",
+          "bundleIdentifier": "xyz.nextalone.nagram.tgextra",
+          "developerName": "swiftleopard & IPA Vault",
+          "version": "12.9.2.1",
+          "iconURL": "https://pub-dd800571175348b6a2745b3396360028.r2.dev/App%20Icons/Nagram-Icons/Nagram-AppStore-1024x1024.png",
+          "subtitle": "Nagram 12.9.2.1 with TGExtra 1.7.7"
+        },
+        {
+          "name": "Nagram (iQTele)",
+          "bundleIdentifier": "xyz.nextalone.nagram",
+          "developerName": "7MD & IPA Vault",
+          "version": "12.9.2.1",
+          "iconURL": "https://pub-dd800571175348b6a2745b3396360028.r2.dev/App%20Icons/Nagram-Icons/Nagram-AppStore-1024x1024.png",
+          "subtitle": "Nagram 12.9.2.1 with iQTele 1.2"
+        },
+        {
+          "name": "Reddit (Login)",
+          "bundleIdentifier": "com.reddit.Reddit.login",
+          "developerName": "IPA Vault",
+          "version": "2024.12.0",
+          "iconURL": "https://pub-dd800571175348b6a2745b3396360028.r2.dev/App%20Icons/Reddit-Icons/Reddit-AppStore-1024x1024.png",
+          "subtitle": "Reddit 2024.12.0 login build"
+        },
+        {
+          "name": "Reddit (RedditFilter)",
+          "bundleIdentifier": "com.reddit.Reddit",
+          "developerName": "Moe & IPA Vault",
+          "version": "2026.37.0",
+          "iconURL": "https://pub-dd800571175348b6a2745b3396360028.r2.dev/App%20Icons/Reddit-Icons/Reddit-AppStore-1024x1024.png",
+          "subtitle": "Reddit 2026.37.0 with RedditFilter 3.3"
+        },
+        {
+          "name": "SoundCloud (NexaSC) (iOS 16.0-16.3)",
+          "bundleIdentifier": "com.soundcloud.TouchApp.nexasc.v7-68-1",
+          "developerName": "cielogic & IPA Vault",
+          "version": "7.68.1",
+          "iconURL": "https://pub-dd800571175348b6a2745b3396360028.r2.dev/App%20Icons/SoundCloud-7.68.1-Icons/SoundCloud-7.68.1-AppStore-1024x1024.png",
+          "subtitle": "SoundCloud 7.68.1 with NexaSC beta 4"
+        },
+        {
+          "name": "SoundCloud (NexaSC)",
+          "bundleIdentifier": "com.soundcloud.TouchApp",
+          "developerName": "cielogic & IPA Vault",
+          "version": "8.78.0",
+          "iconURL": "https://pub-dd800571175348b6a2745b3396360028.r2.dev/App%20Icons/SoundCloud-8.76.0-Icons/SoundCloud-AppStore-1024x1024.png",
+          "subtitle": "SoundCloud 8.78.0 with NexaSC beta 4"
+        },
+        {
+          "name": "Swiftgram (Lead)",
+          "bundleIdentifier": "app.swiftgram.ios.lead",
+          "developerName": "aquaonly & IPA Vault",
+          "version": "12.9.2",
+          "iconURL": "https://pub-dd800571175348b6a2745b3396360028.r2.dev/App%20Icons/Swiftgram-Icons/Swiftgram-AppStore-1024x1024.png",
+          "subtitle": "Swiftgram 12.9.2 with Lead 1.4.4"
+        },
+        {
+          "name": "Swiftgram (MxGram)",
+          "bundleIdentifier": "app.swiftgram.ios.mxgram",
+          "developerName": "m1ronx1412 & IPA Vault",
+          "version": "12.9.2",
+          "iconURL": "https://pub-dd800571175348b6a2745b3396360028.r2.dev/App%20Icons/Swiftgram-Icons/Swiftgram-AppStore-1024x1024.png",
+          "subtitle": "Swiftgram 12.9.2 with MxGram 1.0.0"
+        },
+        {
+          "name": "Swiftgram (iQTele)",
+          "bundleIdentifier": "app.swiftgram.ios",
+          "developerName": "7MD & IPA Vault",
+          "version": "12.9.2",
+          "iconURL": "https://pub-dd800571175348b6a2745b3396360028.r2.dev/App%20Icons/Swiftgram-Icons/Swiftgram-AppStore-1024x1024.png",
+          "subtitle": "Swiftgram 12.9.2 with iQTele 1.2"
+        },
+        {
+          "name": "Swiftgram (TGExtra)",
+          "bundleIdentifier": "app.swiftgram.ios.tgextra",
+          "developerName": "swiftleopard & IPA Vault",
+          "version": "12.9.2",
+          "iconURL": "https://pub-dd800571175348b6a2745b3396360028.r2.dev/App%20Icons/Swiftgram-Icons/Swiftgram-AppStore-1024x1024.png",
+          "subtitle": "Swiftgram 12.9.2 with TGExtra 1.7.7"
+        },
+        {
+          "name": "Telegram (Lead)",
+          "bundleIdentifier": "ph.telegra.Telegraph.lead",
+          "developerName": "aquaonly & IPA Vault",
+          "version": "12.9.4",
+          "iconURL": "https://pub-dd800571175348b6a2745b3396360028.r2.dev/App%20Icons/Telegram-Icons/Telegram-AppStore-1024x1024.png",
+          "subtitle": "Telegram 12.9.4 with Lead 1.4.4"
+        },
+        {
+          "name": "Telegram (MxGram)",
+          "bundleIdentifier": "ph.telegra.Telegraph.mxgram",
+          "developerName": "m1ronx1412 & IPA Vault",
+          "version": "12.9.4",
+          "iconURL": "https://pub-dd800571175348b6a2745b3396360028.r2.dev/App%20Icons/Telegram-Icons/Telegram-AppStore-1024x1024.png",
+          "subtitle": "Telegram 12.9.4 with MxGram 1.0.0"
+        },
+        {
+          "name": "Telegram (iQTele)",
+          "bundleIdentifier": "ph.telegra.Telegraph",
+          "developerName": "7MD & IPA Vault",
+          "version": "12.9.4",
+          "iconURL": "https://pub-dd800571175348b6a2745b3396360028.r2.dev/App%20Icons/Telegram-Icons/Telegram-AppStore-1024x1024.png",
+          "subtitle": "Telegram 12.9.4 with iQTele 1.2"
+        },
+        {
+          "name": "Telegram (TGExtra)",
+          "bundleIdentifier": "ph.telegra.Telegraph.tgextra",
+          "developerName": "swiftleopard & IPA Vault",
+          "version": "12.9.4",
+          "iconURL": "https://pub-dd800571175348b6a2745b3396360028.r2.dev/App%20Icons/Telegram-Icons/Telegram-AppStore-1024x1024.png",
+          "subtitle": "Telegram 12.9.4 with TGExtra 1.7.8"
+        },
+        {
+          "name": "Threads (ThreadSaver)",
+          "bundleIdentifier": "com.burbn.barcelona",
+          "developerName": "swiftleopard & IPA Vault",
+          "version": "447.0",
+          "iconURL": "https://pub-dd800571175348b6a2745b3396360028.r2.dev/App%20Icons/Threads-Icons/Threads-AppStore-1024x1024.png",
+          "subtitle": "Threads 447.0 with ThreadSaver"
+        },
+        {
+          "name": "TikTok (Infinitok)",
+          "bundleIdentifier": "com.zhiliaoapp.musically",
+          "developerName": "Mod4 & IPA Vault",
+          "version": "46.9.0",
+          "iconURL": "https://pub-dd800571175348b6a2745b3396360028.r2.dev/App%20Icons/TikTok-Icons/TikTok-AppStore-1024x1024.png",
+          "subtitle": "TikTok 46.9.0 with Infinitok 0.0.2"
+        },
+        {
+          "name": "Turrit (Lead)",
+          "bundleIdentifier": "com.seastar.turrit.lead",
+          "developerName": "aquaonly & IPA Vault",
+          "version": "1.5.3",
+          "iconURL": "https://pub-dd800571175348b6a2745b3396360028.r2.dev/App%20Icons/Turrit-Icons/Turrit-AppStore-1024x1024.png",
+          "subtitle": "Turrit 1.5.3 with Lead 1.4.4"
+        },
+        {
+          "name": "Turrit (MxGram)",
+          "bundleIdentifier": "com.seastar.turrit.mxgram",
+          "developerName": "m1ronx1412 & IPA Vault",
+          "version": "1.5.3",
+          "iconURL": "https://pub-dd800571175348b6a2745b3396360028.r2.dev/App%20Icons/Turrit-Icons/Turrit-AppStore-1024x1024.png",
+          "subtitle": "Turrit 1.5.3 with MxGram 1.0.0"
+        },
+        {
+          "name": "Turrit (iQTele)",
+          "bundleIdentifier": "com.seastar.turrit",
+          "developerName": "7MD & IPA Vault",
+          "version": "1.5.3",
+          "iconURL": "https://pub-dd800571175348b6a2745b3396360028.r2.dev/App%20Icons/Turrit-Icons/Turrit-AppStore-1024x1024.png",
+          "subtitle": "Turrit 1.5.3 with iQTele 1.2"
+        },
+        {
+          "name": "Turrit (TGExtra)",
+          "bundleIdentifier": "com.seastar.turrit.tgextra",
+          "developerName": "swiftleopard & IPA Vault",
+          "version": "1.5.3",
+          "iconURL": "https://pub-dd800571175348b6a2745b3396360028.r2.dev/App%20Icons/Turrit-Icons/Turrit-AppStore-1024x1024.png",
+          "subtitle": "Turrit 1.5.3 with TGExtra 1.7.7"
+        },
+        {
+          "name": "Twitch",
+          "bundleIdentifier": "tv.twitch",
+          "developerName": "dvntms/zeroxdeadbeef/achu/IPA Vault",
+          "version": "31.2.2",
+          "iconURL": "https://pub-dd800571175348b6a2745b3396360028.r2.dev/App%20Icons/Twitch-Tweach-TC-Icons/Twitch-AppStore-1024x1024.png",
+          "subtitle": "Twitch 31.2.2 with Tweach 2.4 + Twitch Control 0.0.6"
+        },
+        {
+          "name": "Twitch (Glass)",
+          "bundleIdentifier": "tv.twitch.glass",
+          "developerName": "dvntms/zeroxdeadbeef/achu/IPA Vault",
+          "version": "31.2.2",
+          "iconURL": "https://pub-dd800571175348b6a2745b3396360028.r2.dev/App%20Icons/Twitch-Tweach-TC-Icons/Twitch-AppStore-1024x1024.png",
+          "subtitle": "Twitch 31.2.2 with Tweach 2.4 + Twitch Control 0.0.6 (Glass)"
+        },
+        {
+          "name": "Twitter (Login)",
+          "bundleIdentifier": "com.atebits.Tweetie2.twitter.login.v9-67",
+          "developerName": "IPA Vault",
+          "version": "9.67",
+          "iconURL": "https://pub-dd800571175348b6a2745b3396360028.r2.dev/App%20Icons/Twitter-12.14-Icons/Twitter-AppStore-1024x1024.png",
+          "subtitle": "Twitter 9.67 login build"
+        },
+        {
+          "name": "Twitter NFB",
+          "bundleIdentifier": "com.atebits.Tweetie2.twitter",
+          "developerName": "orionblur & IPA Vault",
+          "version": "12.26",
+          "iconURL": "https://pub-dd800571175348b6a2745b3396360028.r2.dev/App%20Icons/Twitter-12.14-Icons/Twitter-AppStore-1024x1024.png",
+          "subtitle": "Twitter 12.26 with NFB 6.6.1"
+        },
+        {
+          "name": "Twitter NFB (Glass)",
+          "bundleIdentifier": "com.atebits.Tweetie2.twitterglass",
+          "developerName": "orionblur & IPA Vault",
+          "version": "12.20",
+          "iconURL": "https://pub-dd800571175348b6a2745b3396360028.r2.dev/App%20Icons/Twitter-12.14-Icons/Twitter-AppStore-1024x1024.png",
+          "subtitle": "Twitter 12.20 with NFB 6.5.1 (Glass)"
+        },
+        {
+          "name": "Twitter NFB + TWI",
+          "bundleIdentifier": "com.atebits.Tweetie2.twittertwi",
+          "developerName": "orionblur & dens0r & IPA Vault",
+          "version": "12.26",
+          "iconURL": "https://pub-dd800571175348b6a2745b3396360028.r2.dev/App%20Icons/Twitter-12.14-Icons/Twitter-AppStore-1024x1024.png",
+          "subtitle": "Twitter 12.26 with NFB 6.6.1 + TWIGalaxy 1.14"
+        },
+        {
+          "name": "Twitter NFB + TWI (Glass)",
+          "bundleIdentifier": "com.atebits.Tweetie2.twittertwiglass",
+          "developerName": "orionblur & dens0r & IPA Vault",
+          "version": "12.20",
+          "iconURL": "https://pub-dd800571175348b6a2745b3396360028.r2.dev/App%20Icons/Twitter-12.14-Icons/Twitter-AppStore-1024x1024.png",
+          "subtitle": "Twitter 12.20 with NFB 6.5.1 + TWIGalaxy 1.14 (Glass)"
+        },
+        {
+          "name": "X NFB",
+          "bundleIdentifier": "com.atebits.Tweetie2",
+          "developerName": "orionblur & IPA Vault",
+          "version": "12.26",
+          "iconURL": "https://pub-dd800571175348b6a2745b3396360028.r2.dev/App%20Icons/X-Icons/X-AppStore-1024x1024.png",
+          "subtitle": "X 12.26 with NFB 6.6.1"
+        },
+        {
+          "name": "X NFB (Glass)",
+          "bundleIdentifier": "com.atebits.Tweetie2.glass",
+          "developerName": "orionblur & IPA Vault",
+          "version": "12.20",
+          "iconURL": "https://pub-dd800571175348b6a2745b3396360028.r2.dev/App%20Icons/X-Icons/X-AppStore-1024x1024.png",
+          "subtitle": "X 12.20 with NFB 6.5.1 (Glass)"
+        },
+        {
+          "name": "X NFB + TWI",
+          "bundleIdentifier": "com.atebits.Tweetie2.twi",
+          "developerName": "orionblur & dens0r & IPA Vault",
+          "version": "12.26",
+          "iconURL": "https://pub-dd800571175348b6a2745b3396360028.r2.dev/App%20Icons/X-Icons/X-AppStore-1024x1024.png",
+          "subtitle": "X 12.26 with NFB 6.6.1 + TWIGalaxy 1.14"
+        },
+        {
+          "name": "X NFB + TWI (Glass)",
+          "bundleIdentifier": "com.atebits.Tweetie2.twiglass",
+          "developerName": "orionblur & dens0r & IPA Vault",
+          "version": "12.20",
+          "iconURL": "https://pub-dd800571175348b6a2745b3396360028.r2.dev/App%20Icons/X-Icons/X-AppStore-1024x1024.png",
+          "subtitle": "X 12.20 with NFB 6.5.1 + TWIGalaxy 1.14 (Glass)"
+        },
+        {
+          "name": "YouTube (YouMod 2.0.0) (iOS 16+)",
+          "bundleIdentifier": "com.google.ios.youtube.youmod.21-33-6",
+          "developerName": "Tonwalter888 & IPA Vault",
+          "version": "21.33.6",
+          "iconURL": "https://pub-dd800571175348b6a2745b3396360028.r2.dev/App%20Icons/YouTube-Icons/YouTube-AppStore-1024x1024.png",
+          "subtitle": "YouTube 21.33.6 with YouMod 2.0.0"
+        },
+        {
+          "name": "YouTube (YouMod 2.0.0)",
+          "bundleIdentifier": "com.google.ios.youtube.youmod",
+          "developerName": "Tonwalter888 & IPA Vault",
+          "version": "21.37.4",
+          "iconURL": "https://pub-dd800571175348b6a2745b3396360028.r2.dev/App%20Icons/YouTube-Icons/YouTube-AppStore-1024x1024.png",
+          "subtitle": "YouTube 21.37.4 with YouMod 2.0.0"
+        },
+        {
+          "name": "YouTube (YTKACE 0.9.3) (iOS 16+)",
+          "bundleIdentifier": "com.google.ios.youtube.ytkace",
+          "developerName": "itzzace0 & IPA Vault",
+          "version": "21.33.6",
+          "iconURL": "https://pub-dd800571175348b6a2745b3396360028.r2.dev/App%20Icons/YouTube-Icons/YouTube-AppStore-1024x1024.png",
+          "subtitle": "YouTube 21.33.6 with YTKACE 0.9.3"
+        },
+        {
+          "name": "YouTube (YTKACE 0.9.3)",
+          "bundleIdentifier": "com.google.ios.youtube",
+          "developerName": "itzzace0 & IPA Vault",
+          "version": "21.37.4",
+          "iconURL": "https://pub-dd800571175348b6a2745b3396360028.r2.dev/App%20Icons/YouTube-Icons/YouTube-AppStore-1024x1024.png",
+          "subtitle": "YouTube 21.37.4 with YTKACE 0.9.3"
+        },
+        {
+          "name": "YTMUltimate+",
+          "bundleIdentifier": "com.google.ios.youtubemusic.ytmultimateplus",
+          "developerName": "dvntms & IPA Vault",
+          "version": "9.37.2",
+          "iconURL": "https://pub-dd800571175348b6a2745b3396360028.r2.dev/App%20Icons/YouTube-Music-Icons/YouTube-Music-AppStore-1024x1024.png",
+          "subtitle": "YouTube Music 9.37.2 with YTMUltimate+ 2.4.1"
+        },
+        {
+          "name": "YTMUltimate+ (No PiP)",
+          "bundleIdentifier": "com.google.ios.youtubemusic",
+          "developerName": "dvntms & IPA Vault",
+          "version": "9.37.2",
+          "iconURL": "https://pub-dd800571175348b6a2745b3396360028.r2.dev/App%20Icons/YouTube-Music-Icons/YouTube-Music-AppStore-1024x1024.png",
+          "subtitle": "YouTube Music 9.37.2 with YTMUltimate+ 2.4.1 No PiP"
+        }
+      ]
+    },
+    {
+      "id": "sideloadlabs",
+      "name": "SideloadLabs Repo",
+      "appCount": 4,
+      "iconURL": "https://avatars.githubusercontent.com/u/312393257?s=96&v=4",
+      "apps": [
+        {
+          "name": "EeveeSpotifyReincarnated",
+          "bundleIdentifier": "com.spotify.client",
+          "developerName": "SideloadLabs",
+          "version": "9.1.76",
+          "iconURL": "https://files.catbox.moe/9fgova.JPG",
+          "subtitle": "This tweak makes Spotify think you have a Premium subscription, granting free listening, just like Spotilife, and provides some additional features like custom lyrics."
+        },
+        {
+          "name": "EeveeSpotifyReincarnated(PATCHED)",
+          "bundleIdentifier": "com.spotify.client.patched",
+          "developerName": "SideloadLabs",
+          "version": "9.1.76",
+          "iconURL": "https://files.catbox.moe/9fgova.JPG",
+          "subtitle": "This tweak makes Spotify think you have a Premium subscription, granting free listening, just like Spotilife, and provides some additional features like custom lyrics."
+        },
+        {
+          "name": "ESR Liquid Glass",
+          "bundleIdentifier": "com.spotify.client.lg",
+          "developerName": "SideloadLabs",
+          "version": "9.1.76",
+          "iconURL": "https://files.catbox.moe/9fgova.JPG",
+          "subtitle": "This tweak makes Spotify think you have a Premium subscription, granting free listening, just like Spotilife, and provides some additional features like custom lyrics."
+        },
+        {
+          "name": "ESR Liquid Glass Patched",
+          "bundleIdentifier": "com.spotify.client.lg.patch",
+          "developerName": "SideloadLabs",
+          "version": "9.1.76",
+          "iconURL": "https://files.catbox.moe/9fgova.JPG",
+          "subtitle": "This tweak makes Spotify think you have a Premium subscription, granting free listening, just like Spotilife, and provides some additional features like custom lyrics."
+        }
+      ]
+    },
+    {
+      "id": "ytliteplus",
+      "name": "YTLitePlus",
+      "appCount": 1,
+      "iconURL": "https://raw.githubusercontent.com/YTLitePlus/YTLitePlus-Altstore/main/Youtube_logo-512.png",
+      "apps": [
+        {
+          "name": "YTLitePlus",
+          "bundleIdentifier": "com.google.ios.youtube",
+          "developerName": "Various Developers",
+          "version": "19.34.2",
+          "iconURL": "https://raw.githubusercontent.com/YTLitePlus/YTLitePlus-Altstore/main/Youtube_logo-512.png",
+          "subtitle": "YTLite with more features!"
         }
       ]
     }

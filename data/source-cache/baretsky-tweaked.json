@@ -1,0 +1,77 @@
+{
+  "name": "Baretsky's Tweaked App Library",
+  "identifier": "com.myrepo.library",
+  "sourceURL": "https://baretsky.github.io/baretsky-tweaked-ipas-library/output/apps.json",
+  "apps": [
+    {
+      "name": "TikTok",
+      "bundleIdentifier": "com.zhiliaoapp.musically",
+      "version": "43.1.0",
+      "versionDate": "2026-01-08",
+      "size": 391163486,
+      "downloadURL": "https://github.com/baretsky/baretsky-tweaked-ipas-library/releases/download/builds/tiktok_43.1.0_BHTikTok_sideloaded.ipa",
+      "localizedDescription": "Tweaked version of TikTok",
+      "iconURL": "https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png"
+    },
+    {
+      "name": "YouTube",
+      "bundleIdentifier": "com.google.ios.youtube",
+      "version": "21.37.4",
+      "versionDate": "2026-09-13",
+      "size": 144735186,
+      "downloadURL": "https://github.com/baretsky/baretsky-tweaked-ipas-library/releases/download/builds/youtube_21.37.4_YTLite_sideloaded.ipa",
+      "localizedDescription": "YouTube enhanced with YTLite.\n\nFeatures:\n- Ad-free playback\n- Background play\n- SponsorBlock integration\n- OLEDBLACK mode\n\nYTLite settings can be found in YouTube settings.",
+      "iconURL": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ef/Youtube_logo.png/512px-Youtube_logo.png"
+    },
+    {
+      "name": "Twitter",
+      "bundleIdentifier": "com.atebits.Tweetie2",
+      "version": "11.66",
+      "versionDate": "2026-02-17",
+      "size": 174755979,
+      "downloadURL": "https://github.com/baretsky/baretsky-tweaked-ipas-library/releases/download/builds/twitter_11.66_NeoFreeBird_sideloaded.ipa",
+      "localizedDescription": "Twitter enhanced with NeoFreeBird.\n\nFeatures:\n- No ads\n- Video download\n- Voice messages\n- Hidden features enabled\n\nTo open NeoFreeBird settings, go to profile -> Settings and privacy -> NeoFreeBird.",
+      "iconURL": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Logo_of_Twitter.svg/512px-Logo_of_Twitter.svg.png"
+    },
+    {
+      "name": "Instagram",
+      "bundleIdentifier": "com.burbn.instagram",
+      "version": "416.1.0",
+      "versionDate": "2026-02-17",
+      "size": 258197447,
+      "downloadURL": "https://github.com/baretsky/baretsky-tweaked-ipas-library/releases/download/builds/instagram_416.1.0_SCInsta_sideloaded.ipa",
+      "localizedDescription": "Instagram enhanced with SCInsta.\n\nFeatures:\n- Download posts and stories\n- View stories anonymously\n- Remove all advertisements\n- Copy text from posts\n\nTo open SCInsta settings, go to profile -> long-press the top-right three lines hamburger menu.",
+      "iconURL": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Instagram_icon.png/600px-Instagram_icon.png"
+    },
+    {
+      "name": "Twitch",
+      "bundleIdentifier": "tv.twitch",
+      "version": "31.2.4",
+      "versionDate": "2026-09-18",
+      "size": 179883043,
+      "downloadURL": "https://github.com/baretsky/baretsky-tweaked-ipas-library/releases/download/builds/twitch_31.2.4_TwitchAdBlock_sideloaded.ipa",
+      "localizedDescription": "Twitch with AdBlock.\n\nFeatures:\n- Full Ad-Blocking",
+      "iconURL": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Twitch_Glitch_Logo_Purple.svg/640px-Twitch_Glitch_Logo_Purple.svg.png"
+    },
+    {
+      "name": "YouTube Music",
+      "bundleIdentifier": "com.google.ios.youtubemusic",
+      "version": "9.02.5",
+      "versionDate": "2026-01-13",
+      "size": 99199057,
+      "downloadURL": "https://github.com/baretsky/baretsky-tweaked-ipas-library/releases/download/builds/youtubemusic_9.02.5_YTMusicUltimate_sideloaded.ipa",
+      "localizedDescription": "Premium features unlocked for YouTube Music.\n\nFeatures:\n- Listen without ads\n- Background playback\n- Audio-only mode\n- High quality audio",
+      "iconURL": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/Youtube_Music_icon.svg/512px-Youtube_Music_icon.svg.png"
+    },
+    {
+      "name": "Ksign",
+      "bundleIdentifier": "nya.asami.ksign",
+      "version": "1.6",
+      "versionDate": "2026-05-24",
+      "size": 16394645,
+      "downloadURL": "https://github.com/baretsky/baretsky-tweaked-ipas-library/releases/download/builds/ksign_1.6.ipa",
+      "localizedDescription": "Ksign is an IPA signing tool for iOS.\n\nFeatures:\n- Sign IPAs with your own certificate\n- Sideload apps easily",
+      "iconURL": "https://github.com/Nyasami/Ksign/blob/main/Ksign/Resources/Assets.xcassets/AppIcon.appiconset/Ksign-trans%201.png?raw=true"
+    }
+  ]
+}
