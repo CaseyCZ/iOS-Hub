@@ -24,7 +24,7 @@
 - AltStore Classic, AltStore PAL, SideStore a LiveContainer zdroje
 - filtry podle typu zdroje, žánru, platformy a Mix kompatibility
 - vyhledávání podle zdroje i názvu aplikace
-- jeden Source Builder pro všechny online zdroje
+- samostatná stránka **Custom Source Builder** pro všechny online zdroje
 - automatický stav `PASS / TRY`
 - hotový **CaseyCZ AltStore Source**, **CaseyCZ SideStore Source** a **CaseyCZ LiveContainer Source**
 - automatická deduplikace aplikací podle `bundleIdentifier`
@@ -35,7 +35,7 @@
 
 ## AltStore, SideStore a LiveContainer
 
-Hotové CaseyCZ zdroje se generují automaticky z aktuálně dostupných kompatibilních zdrojů. Stabilní buildy mají ve výchozích balíčcích přednost; Nightly zdroje zůstávají dostupné pro ruční výběr v Builderu.
+Hotové CaseyCZ zdroje se generují automaticky z aktuálně dostupných kompatibilních zdrojů. Stabilní buildy mají ve výchozích balíčcích přednost; Nightly zdroje zůstávají dostupné pro ruční výběr v samostatném Builderu.
 
 CaseyCZ iOS Hub cizí IPA soubory nerehostuje. Výsledné source JSONy zachovávají původní veřejné download URL jednotlivých projektů.
 
