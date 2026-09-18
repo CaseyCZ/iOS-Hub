@@ -131,7 +131,7 @@ class PageParser(HTMLParser):
             src = values.get("src")
             if src:
                 self.scripts.append(src)
-        for attr in ("data-i18n", "data-i18n-placeholder"):
+        for attr in ("data-i18n", "data-i18n-placeholder", "data-i18n-title", "data-i18n-aria-label"):
             key = values.get(attr)
             if key:
                 self.i18n_keys.add(key)
@@ -193,12 +193,18 @@ def validate_translations() -> None:
         return
 
     used: set[str] = set()
-    for html in (ROOT / "index.html", ROOT / "builder.html", ROOT / "converter.html", ROOT / "guide.html"):
+    for html in SITE_PAGES:
         parser = parse_page(html)
         if parser:
             used.update(parser.i18n_keys)
 
-    for script in (ROOT / "app.js", ROOT / "builder-page.js", ROOT / "converter.js"):
+    for script in (
+        ROOT / "app.js",
+        ROOT / "builder-page.js",
+        ROOT / "converter.js",
+        ROOT / "guide.js",
+        ROOT / "resources.js",
+    ):
         if not script.exists():
             continue
         text = script.read_text(encoding="utf-8")
@@ -325,6 +331,55 @@ def validate_generated_data() -> None:
     if isinstance(catalog, dict) and not isinstance(catalog.get("sources"), list):
         error("data/catalog.json must contain a sources array")
 
+    registry = load_json(REGISTRY)
+    if (
+        isinstance(registry, dict)
+        and isinstance(registry.get("sources"), list)
+        and isinstance(status, dict)
+        and isinstance(status.get("sources"), dict)
+        and isinstance(catalog, dict)
+        and isinstance(catalog.get("sources"), list)
+    ):
+        registry_ids = {
+            str(item.get("id"))
+            for item in registry["sources"]
+            if isinstance(item, dict) and item.get("id")
+        }
+        status_ids = set(status["sources"])
+        if registry_ids != status_ids:
+            missing = sorted(registry_ids - status_ids)
+            extra = sorted(status_ids - registry_ids)
+            if missing:
+                error("data/status.json is missing registry ids: " + ", ".join(missing))
+            if extra:
+                error("data/status.json contains unknown ids: " + ", ".join(extra))
+
+        online_ids = {
+            source_id
+            for source_id, item in status["sources"].items()
+            if isinstance(item, dict) and item.get("online") is True
+        }
+        catalog_ids = {
+            str(item.get("id"))
+            for item in catalog["sources"]
+            if isinstance(item, dict) and item.get("id")
+        }
+        if catalog_ids != online_ids:
+            missing = sorted(online_ids - catalog_ids)
+            extra = sorted(catalog_ids - online_ids)
+            if missing:
+                error("data/catalog.json is missing online source ids: " + ", ".join(missing))
+            if extra:
+                error("data/catalog.json contains non-online/unknown source ids: " + ", ".join(extra))
+
+        for package_name in ("altstore", "sidestore"):
+            package = status.get(package_name, {})
+            if not isinstance(package, dict):
+                continue
+            unknown = sorted(set(package.get("sourceIDs") or []) - registry_ids)
+            if unknown:
+                error(f"data/status.json {package_name}.sourceIDs contains unknown ids: " + ", ".join(unknown))
+
     validate_alt_source(ROOT / "altstore" / "source.json")
     validate_alt_source(ROOT / "sidestore" / "source.json")
 
@@ -351,8 +406,6 @@ def validate_generated_data() -> None:
 
 def validate_interactive_guide() -> None:
     html = ROOT / "guide.html"
-    script = ROOT / "guide.js"
-
     if html.exists():
         text = html.read_text(encoding="utf-8")
         ids = re.findall(r'\bid="([^"]+)"', text)
@@ -360,10 +413,24 @@ def validate_interactive_guide() -> None:
         for value in duplicates:
             error(f"guide.html contains duplicate id {value!r}")
 
-    if script.exists():
+    first_party_scripts = (
+        "app.js",
+        "builder-page.js",
+        "builder.js",
+        "collapsible.js",
+        "converter.js",
+        "guide.js",
+        "resources.js",
+        "mobile-menu.js",
+        "settings-menu.js",
+    )
+    for script_name in first_party_scripts:
+        script = ROOT / script_name
+        if not script.exists():
+            continue
         text = script.read_text(encoding="utf-8")
         if "$" * 3 + "(" in text:
-            error("guide.js contains an undefined triple-dollar selector helper")
+            error(f"{script_name} contains an undefined triple-dollar selector helper")
         bad_loop = re.search(
             r"(?<!\$)\$\([^\n]+?\)\.(?:forEach|filter|map|some)\(",
             text,
@@ -371,9 +438,39 @@ def validate_interactive_guide() -> None:
         if bad_loop:
             line = text.count("\n", 0, bad_loop.start()) + 1
             error(
-                f"guide.js line {line} calls an array method on $() / querySelector; "
+                f"{script_name} line {line} calls an array method on $() / querySelector; "
                 "use the querySelectorAll helper instead"
             )
+
+    guide = ROOT / "guide.js"
+    if guide.exists():
+        text = guide.read_text(encoding="utf-8")
+        start = text.find("const GUIDE_RECOMMENDATIONS")
+        end = text.find("function recommendationsForLanguage", start)
+        block = text[start:end] if start >= 0 and end > start else ""
+        goals = ("iphone", "refresh", "many", "desktop", "tv", "permanent")
+        for lang in LANGUAGES:
+            if lang in ("en", "cs"):
+                marker = re.search(rf"\b{lang}\s*:\s*\{{", block)
+            else:
+                marker = re.search(rf"GUIDE_RECOMMENDATIONS\.{lang}\s*=\s*\{{", block)
+            if not marker:
+                error(f"guide.js GUIDE_RECOMMENDATIONS is missing language {lang!r}")
+                continue
+            lang_start = marker.end()
+            later = [
+                pos for pos in (
+                    block.find("GUIDE_RECOMMENDATIONS.", lang_start),
+                    block.find("\n  en:", lang_start),
+                    block.find("\n  cs:", lang_start),
+                )
+                if pos >= 0
+            ]
+            lang_end = min(later) if later else len(block)
+            lang_block = block[lang_start:lang_end]
+            for goal in goals:
+                if not re.search(rf"\b{goal}\s*:", lang_block):
+                    error(f"guide.js recommendations for {lang!r} are missing goal {goal!r}")
 
 
 
@@ -456,6 +553,57 @@ def validate_internal_links() -> None:
             )
 
 
+
+def validate_page_quality() -> None:
+    expected_canonical = {
+        ROOT / "index.html": EXPECTED_SITE_URL,
+        ROOT / "builder.html": EXPECTED_SITE_URL + "builder.html",
+        ROOT / "converter.html": EXPECTED_SITE_URL + "converter.html",
+        ROOT / "guide.html": EXPECTED_SITE_URL + "guide.html",
+        ROOT / "resources.html": EXPECTED_SITE_URL + "resources.html",
+    }
+    for page in SITE_PAGES:
+        if not page.exists():
+            continue
+        text = page.read_text(encoding="utf-8")
+        label = page.relative_to(ROOT)
+        canonical = expected_canonical[page]
+        if f'rel="canonical" href="{canonical}"' not in text:
+            error(f"{label} is missing canonical URL {canonical}")
+        for required_meta in ('property="og:title"', 'property="og:description"', 'property="og:url"', 'name="twitter:card"'):
+            if required_meta not in text:
+                error(f"{label} is missing social metadata {required_meta}")
+
+        settings = re.search(r'<div\s+id="settingsPanel"[^>]*>', text)
+        if not settings or 'role="dialog"' not in settings.group(0) or 'aria-labelledby=' not in settings.group(0):
+            error(f"{label} settingsPanel must expose dialog semantics")
+
+        for match in re.finditer(r'<input\b[^>]*type="search"[^>]*>', text, flags=re.IGNORECASE):
+            tag = match.group(0)
+            if 'aria-label=' not in tag and 'aria-labelledby=' not in tag:
+                error(f"{label} contains an unlabeled search input: {tag[:120]}")
+
+        for match in re.finditer(r'<a\b[^>]*target="_blank"[^>]*>', text, flags=re.IGNORECASE):
+            tag = match.group(0)
+            if not re.search(r'rel="[^"]*\bnoopener\b', tag, flags=re.IGNORECASE):
+                error(f"{label} opens a new tab without rel=noopener")
+
+    importers = ("app.js", "builder-page.js", "converter.js", "guide.js", "resources.js")
+    versions: set[str] = set()
+    for script_name in importers:
+        script = ROOT / script_name
+        if not script.exists():
+            continue
+        text = script.read_text(encoding="utf-8")
+        match = re.search(r"from\s+['\"]\.\/i18n\.js\?v=([^'\"]+)['\"]", text)
+        if not match:
+            error(f"{script_name} must import i18n.js with an explicit cache version")
+        else:
+            versions.add(match.group(1))
+    if len(versions) > 1:
+        error("i18n.js import cache versions are inconsistent: " + ", ".join(sorted(versions)))
+
+
 def validate_layout() -> None:
     for path in LEGACY_PATHS:
         if path.exists():
@@ -469,7 +617,7 @@ def validate_layout() -> None:
         if "builder.js" not in text:
             error("index.html does not reference builder.js")
 
-    for html in (ROOT / "index.html", ROOT / "builder.html", ROOT / "converter.html"):
+    for html in SITE_PAGES:
         validate_html_scripts(html)
         validate_security_policy(html)
 
@@ -493,6 +641,10 @@ def validate_layout() -> None:
         ROOT / "builder-page.js",
         ROOT / "builder.js",
         ROOT / "converter.js",
+        ROOT / "guide.js",
+        ROOT / "resources.js",
+        ROOT / "mobile-menu.js",
+        ROOT / "settings-menu.js",
         ROOT / "i18n.js",
         ROOT / "vendor" / "libarchive" / "libarchive.js",
         ROOT / "vendor" / "libarchive" / "worker-bundle.js",
@@ -509,6 +661,7 @@ def main() -> int:
     validate_layout()
     validate_internal_links()
     validate_interactive_guide()
+    validate_page_quality()
     validate_translations()
     validate_project_identity()
 
