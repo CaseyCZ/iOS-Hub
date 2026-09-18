@@ -7,12 +7,20 @@
   <meta name="referrer" content="no-referrer">
   <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'wasm-unsafe-eval'; style-src 'self' 'unsafe-inline'; img-src 'self' https: data:; connect-src 'self'; worker-src 'self' blob:; object-src 'none'; base-uri 'self'; form-action 'none'">
   <meta name="description" content="DEB → IPA Converter — convert compatible iOS application .deb packages locally in your browser on iPhone, Mac and PC.">
+  <link rel="canonical" href="https://caseycz.github.io/iOS-Hub/converter.html">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="iOS Hub">
+  <meta property="og:title" content="DEB → IPA Converter — iOS Hub">
+  <meta property="og:description" content="DEB → IPA Converter — convert compatible iOS application .deb packages locally in your browser on iPhone, Mac and PC.">
+  <meta property="og:url" content="https://caseycz.github.io/iOS-Hub/converter.html">
+  <meta name="twitter:card" content="summary">
   <title>DEB → IPA Converter — iOS Hub</title>
-  <link rel="stylesheet" href="styles.css?v=1.1.5-20260918-layout2">
-  <link rel="stylesheet" href="hub-extra.css?v=1.1.5-20260918-settingsportal1">
-  <link rel="stylesheet" href="converter.css?v=1.1.5-20260918-icons7">
+  <link rel="stylesheet" href="styles.css?v=1.1.5-20260918-audit1">
+  <link rel="stylesheet" href="hub-extra.css?v=1.1.5-20260918-audit1">
+  <link rel="stylesheet" href="converter.css?v=1.1.5-20260918-audit1">
 </head>
 <body>
+  <a class="skip-link" href="#top" data-i18n="skipToContent">Skip to content</a>
   <header class="topbar">
     <div class="wrap topbar-inner">
       <a class="brand" href="index.html" aria-label="iOS Hub">
@@ -36,8 +44,8 @@
         </select>
         <div class="settings-menu" data-settings-menu>
           <button id="settingsButton" class="icon-btn settings-button" type="button" aria-haspopup="dialog" aria-expanded="false" aria-controls="settingsPanel" aria-label="Settings" title="Settings">⚙</button>
-          <div id="settingsPanel" class="settings-panel" aria-hidden="true">
-            <div class="settings-title" data-settings-copy="title">Settings</div>
+          <div id="settingsPanel" class="settings-panel" role="dialog" aria-labelledby="settingsTitle" aria-hidden="true">
+            <div id="settingsTitle" class="settings-title" data-settings-copy="title">Settings</div>
 
             <div class="settings-label" data-settings-copy="appearance">APPEARANCE</div>
             <div class="settings-theme-seg">
@@ -96,7 +104,7 @@
           <div id="fileCard" class="file-card" hidden>
             <div class="file-icon">DEB</div>
             <div class="file-info"><strong id="fileName"></strong><span id="fileSize"></span></div>
-            <button id="removeFile" class="icon-btn" type="button" aria-label="Remove">×</button>
+            <button id="removeFile" class="icon-btn" type="button" aria-label="Remove file" data-i18n-aria-label="removeFile">×</button>
           </div>
 
           <div id="mobileWarning" class="notice converter-warning" hidden>
@@ -108,7 +116,7 @@
 
           <div id="progressPanel" class="conversion-progress" hidden>
             <div class="progress-head"><strong id="progressTitle" data-i18n="preparing">Preparing conversion…</strong><span id="progressPercent">0%</span></div>
-            <div class="progress-track"><div id="progressBar" class="progress-bar"></div></div>
+            <div id="progressTrack" class="progress-track" role="progressbar" aria-label="Conversion progress" data-i18n-aria-label="conversionProgressLabel" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"><div id="progressBar" class="progress-bar"></div></div>
             <div id="progressDetail" class="progress-detail"></div>
           </div>
 
@@ -158,7 +166,7 @@
 
   <div id="supportModal" class="support-backdrop" role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="supportTitle">
     <div class="support-dialog">
-      <button class="support-close" type="button" data-support-close aria-label="Close">×</button>
+      <button class="support-close" type="button" data-support-close aria-label="Close" data-i18n-aria-label="close">×</button>
       <div class="eyebrow" data-i18n="supportEyebrow">SUPPORT THE PROJECT</div>
       <h2 id="supportTitle" data-i18n="supportTitle">Support further development.</h2>
       <p data-i18n="supportDesc">If iOS Hub saves you time, you can support further development through Buy Me a Coffee.</p>
@@ -167,10 +175,10 @@
     </div>
   </div>
 
-  <div id="toast" class="pill online" hidden style="position:fixed;z-index:400;left:50%;bottom:22px;transform:translateX(-50%);padding:9px 12px;background:var(--panel);box-shadow:var(--shadow)"></div>
+  <div id="toast" class="pill online" role="status" aria-live="polite" hidden style="position:fixed;z-index:400;left:50%;bottom:22px;transform:translateX(-50%);padding:9px 12px;background:var(--panel);box-shadow:var(--shadow)"></div>
   <script src="vendor/jszip/jszip.min.js"></script>
-  <script type="module" src="converter.js?v=1.1.5-20260918-layout2"></script>
-  <script src="mobile-menu.js?v=1.1.5-20260918-settingsportal1"></script>
-  <script src="settings-menu.js?v=1.1.5-20260918-settingsportal1"></script>
+  <script type="module" src="converter.js?v=1.1.5-20260918-audit1"></script>
+  <script src="mobile-menu.js?v=1.1.5-20260918-audit1"></script>
+  <script src="settings-menu.js?v=1.1.5-20260918-audit1"></script>
 </body>
 </html>
