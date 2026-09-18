@@ -205,6 +205,10 @@ const SETUP_RESULTS = {
   }
 };
 
+function preferredScrollBehavior() {
+  return window.matchMedia?.('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth';
+}
+
 function helpCopyForLanguage() {
   return HELP_COPY[root.lang] || HELP_COPY.en;
 }
@@ -431,7 +435,7 @@ function showNextDiagnosis() {
   if (!diagnosisState.currentKey) return;
   diagnosisState.dismissed.add(diagnosisState.currentKey);
   renderAssistantDiagnosis(true);
-  $('#assistantDiagnosis')?.scrollIntoView({behavior:'smooth',block:'nearest'});
+  $('#assistantDiagnosis')?.scrollIntoView({behavior:preferredScrollBehavior(),block:'nearest'});
 }
 
 async function copyDiagnosisLink() {
@@ -551,7 +555,7 @@ function renderSetupResult() {
   setRecommendationLink($('#setupResultPrimary'), result.primary, result.url);
   setRecommendationLink($('#setupResultSecondary'), result.secondary, result.secondaryUrl);
   box.hidden = false;
-  box.scrollIntoView({behavior:'smooth',block:'nearest'});
+  box.scrollIntoView({behavior:preferredScrollBehavior(),block:'nearest'});
   updateReportLink();
 }
 
@@ -838,7 +842,7 @@ document.addEventListener('click', event => {
     if (input) input.value = resolvedTroubleQuery(source?.value || '');
     renderAssistantDiagnosis(true);
     filterTroubleshooting();
-    $('#troubleshooting')?.scrollIntoView({ behavior:'smooth', block:'start' });
+    $('#troubleshooting')?.scrollIntoView({ behavior:preferredScrollBehavior(), block:'start' });
     return;
   }
 
@@ -871,7 +875,7 @@ document.addEventListener('click', event => {
   const goal = event.target.closest('[data-guide-goal]');
   if (goal) {
     renderRecommendation(goal.dataset.guideGoal);
-    $('#guideRecommendation')?.scrollIntoView({ behavior:'smooth', block:'nearest' });
+    $('#guideRecommendation')?.scrollIntoView({ behavior:preferredScrollBehavior(), block:'nearest' });
     updateReportLink();
     return;
   }
@@ -882,7 +886,7 @@ document.addEventListener('click', event => {
     if (input) {
       input.value = troubleFilter.dataset.troubleFilter || '';
       filterTroubleshooting();
-      $('#troubleshooting')?.scrollIntoView({ behavior:'smooth', block:'start' });
+      $('#troubleshooting')?.scrollIntoView({ behavior:preferredScrollBehavior(), block:'start' });
     }
   }
 });
