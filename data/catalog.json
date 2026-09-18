@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-18T19:21:27Z",
+  "generatedAt": "2026-09-18T20:56:06Z",
   "sources": [
     {
       "id": "utm",
@@ -3347,10 +3347,18 @@
     {
       "id": "cypwn-ipa",
       "name": "CyPwn IPA Library",
-      "appCount": 209,
+      "appCount": 210,
       "catalogLimited": true,
       "iconURL": "https://repo.cypwn.xyz/assets/images/cypwn_small.png",
       "apps": [
+        {
+          "name": "Stremio-2.0.7",
+          "bundleIdentifier": "com.stremio.pal",
+          "developerName": "Stremio-2.0.7 x CyPwn",
+          "version": "2.0.7",
+          "iconURL": "https://ipa.cypwn.xyz/serve/icons/Stremio-2.0.7.png",
+          "subtitle": ""
+        },
         {
           "name": "Stremio-2.0.6",
           "bundleIdentifier": "com.stremio.pal",
@@ -4782,24 +4790,32 @@
           "version": "2.6",
           "iconURL": "https://ipa.cypwn.xyz/serve/icons/Star_Map_2.6_Satella.png",
           "subtitle": ""
-        },
-        {
-          "name": "RefacePro_3.12.0",
-          "bundleIdentifier": "cypwn.RefacePro_3.12.0.3.12.0",
-          "developerName": "RefacePro_3.12.0 x CyPwn",
-          "version": "3.12.0",
-          "iconURL": "https://ipa.cypwn.xyz/serve/icons/RefacePro_3.12.0.png",
-          "subtitle": ""
         }
       ]
     },
     {
       "id": "apptesters",
       "name": "AppTesters IPA Repo",
-      "appCount": 9188,
+      "appCount": 9190,
       "catalogLimited": true,
       "iconURL": "https://apptesters.org/apptesters-512x512.png",
       "apps": [
+        {
+          "name": "Pigment",
+          "bundleIdentifier": "com.pixite.pigment",
+          "developerName": "",
+          "version": "3.15.1",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.pixite.pigment.png",
+          "subtitle": ""
+        },
+        {
+          "name": "Unknown app",
+          "bundleIdentifier": "com.madarsoft.fitness",
+          "developerName": "",
+          "version": "19.6",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.madarsoft.fitness.png",
+          "subtitle": ""
+        },
         {
           "name": "Mindllama",
           "bundleIdentifier": "com.vitalii.mind",
@@ -6382,22 +6398,6 @@
           "developerName": "",
           "version": "5.07.00",
           "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.mwm.stems.png",
-          "subtitle": ""
-        },
-        {
-          "name": "KineMaster",
-          "bundleIdentifier": "com.kinemaster.kios",
-          "developerName": "",
-          "version": "8.2.1",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.kinemaster.kios.png",
-          "subtitle": ""
-        },
-        {
-          "name": "SimplySing",
-          "bundleIdentifier": "com.joytunes.Sing",
-          "developerName": "",
-          "version": "3.0.11",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.joytunes.Sing.png",
           "subtitle": ""
         }
       ]
