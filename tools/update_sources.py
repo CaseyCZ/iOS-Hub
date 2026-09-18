@@ -17,7 +17,7 @@ MIX_DIR = ROOT / "mix"
 ALTSTORE_DIR = ROOT / "altstore"
 SIDESTORE_DIR = ROOT / "sidestore"
 BASE_URL = "https://caseycz.github.io/iOS-Hub/"
-MAX_MIX_SOURCES = 12
+MAX_MIX_SOURCES = 3
 USER_AGENT = "CaseyCZ-iOS-Hub (+https://caseycz.github.io/iOS-Hub/)"
 
 
