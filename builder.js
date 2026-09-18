@@ -33,7 +33,7 @@ const copy = {
     title:'Source Builder', desc:'Choose a ready source for AltStore, SideStore or LiveContainer, or create your own filtered Mix.',
     selectPass:'Select compatible', selectAll:'Select all shown', clear:'Clear selection', build:'Build CaseyCZ Mix', selected:'selected', shown:'shown', pass:'PASS', try:'TRY',
     mixStatus:'Mix status', statusAll:'All', statusPass:'PASS only', statusTry:'TRY only', platform:'Platform', platformAll:'All', classic:'AltStore Classic', pal:'AltStore PAL', sidestore:'SideStore', autoTested:'Auto tested',
-    altPackage:'CaseyCZ AltStore Source', sidePackage:'CaseyCZ SideStore Source', livePackage:'CaseyCZ LiveContainer Source', customMix:'Custom Mix', filters:'⚙ Filters · Search · Selection',
+    altPackage:'CaseyCZ AltStore Source', sidePackage:'CaseyCZ SideStore Source', livePackage:'CaseyCZ LiveContainer Source', customMix:'Custom Mix', filters:'⚙ Filters · 🔎 Search · ☑ Selection',
     addAlt:'＋ Add to AltStore', addSide:'＋ Add to SideStore', addLive:'＋ Add to LiveContainer', copyUrl:'Copy URL', json:'JSON ↗', apps:'apps', sources:'sources',
     hosted:'Hosted Mix ready', local:'Local Mix ready', experimental:'Experimental Mix ready', localNote:'This PASS combination is valid but is not pre-hosted. Download the JSON to inspect or host it; direct Add requires a public source URL.', tryNote:'This Mix contains one or more TRY sources. Download and test the JSON first; PAL or installer-specific metadata may not work after merging.',
     conflicts:'duplicates resolved', download:'Download JSON', preview:'Preview JSON', building:'Testing and combining sources…', failed:'The selected Mix could not be built.', copied:'Source URL copied.', empty:'No sources match the current filters.'
@@ -42,7 +42,7 @@ const copy = {
     title:'Source Builder', desc:'Vyber hotový zdroj pro AltStore, SideStore nebo LiveContainer, nebo si vytvoř vlastní filtrovaný Mix.',
     selectPass:'Vybrat kompatibilní', selectAll:'Vybrat vše zobrazené', clear:'Zrušit výběr', build:'Vytvořit CaseyCZ Mix', selected:'vybráno', shown:'zobrazeno', pass:'PASS', try:'ZKUSIT',
     mixStatus:'Stav Mixu', statusAll:'Vše', statusPass:'Jen PASS', statusTry:'Jen ZKUSIT', platform:'Platforma', platformAll:'Vše', classic:'AltStore Classic', pal:'AltStore PAL', sidestore:'SideStore', autoTested:'Automaticky testováno',
-    altPackage:'CaseyCZ AltStore Source', sidePackage:'CaseyCZ SideStore Source', livePackage:'CaseyCZ LiveContainer Source', customMix:'Vlastní Mix', filters:'⚙ Filtry · Hledání · Výběr',
+    altPackage:'CaseyCZ AltStore Source', sidePackage:'CaseyCZ SideStore Source', livePackage:'CaseyCZ LiveContainer Source', customMix:'Vlastní Mix', filters:'⚙ Filtry · 🔎 Hledání · ☑ Výběr',
     addAlt:'＋ Přidat do AltStore', addSide:'＋ Přidat do SideStore', addLive:'＋ Přidat do LiveContainer', copyUrl:'Kopírovat URL', json:'JSON ↗', apps:'aplikací', sources:'zdrojů',
     hosted:'Veřejný Mix je připraven', local:'Lokální Mix je připraven', experimental:'Experimentální Mix je připraven', localNote:'Tato PASS kombinace je validní, ale není předem hostovaná. JSON můžeš stáhnout nebo hostovat; přímé přidání vyžaduje veřejnou URL.', tryNote:'Tento Mix obsahuje jeden nebo více zdrojů ZKUSIT. JSON nejdřív stáhni a otestuj; PAL nebo installer-specifická metadata se po sloučení nemusí chovat stejně.',
     conflicts:'duplicit vyřešeno', download:'Stáhnout JSON', preview:'Náhled JSON', building:'Testuji a spojuji zdroje…', failed:'Vybraný Mix se nepodařilo vytvořit.', copied:'URL zdroje zkopírována.', empty:'Aktuálním filtrům neodpovídá žádný zdroj.'
@@ -51,7 +51,7 @@ const copy = {
     title:'Source Builder', desc:'Wähle eine fertige Quelle für AltStore, SideStore oder LiveContainer oder erstelle einen eigenen gefilterten Mix.',
     selectPass:'Kompatible wählen', selectAll:'Alle sichtbaren wählen', clear:'Auswahl löschen', build:'CaseyCZ Mix erstellen', selected:'ausgewählt', shown:'sichtbar', pass:'PASS', try:'TEST',
     mixStatus:'Mix-Status', statusAll:'Alle', statusPass:'Nur PASS', statusTry:'Nur TEST', platform:'Plattform', platformAll:'Alle', classic:'AltStore Classic', pal:'AltStore PAL', sidestore:'SideStore', autoTested:'Automatisch geprüft',
-    altPackage:'CaseyCZ AltStore Source', sidePackage:'CaseyCZ SideStore Source', livePackage:'CaseyCZ LiveContainer Source', customMix:'Eigener Mix', filters:'⚙ Filter · Suche · Auswahl',
+    altPackage:'CaseyCZ AltStore Source', sidePackage:'CaseyCZ SideStore Source', livePackage:'CaseyCZ LiveContainer Source', customMix:'Eigener Mix', filters:'⚙ Filter · 🔎 Suche · ☑ Auswahl',
     addAlt:'＋ Zu AltStore', addSide:'＋ Zu SideStore', addLive:'＋ Zu LiveContainer', copyUrl:'URL kopieren', json:'JSON ↗', apps:'Apps', sources:'Quellen',
     hosted:'Gehosteter Mix bereit', local:'Lokaler Mix bereit', experimental:'Experimenteller Mix bereit', localNote:'Diese PASS-Kombination ist gültig, aber nicht vorab gehostet. Für direktes Hinzufügen ist eine öffentliche URL nötig.', tryNote:'Dieser Mix enthält TEST-Quellen. Lade die JSON-Datei herunter und teste sie zuerst.', conflicts:'Duplikate gelöst', download:'JSON laden', preview:'JSON ansehen', building:'Quellen werden getestet…', failed:'Der ausgewählte Mix konnte nicht erstellt werden.', copied:'URL kopiert.', empty:'Keine Quellen entsprechen den Filtern.'
   },
@@ -59,7 +59,7 @@ const copy = {
     title:'Source Builder', desc:'Elige una fuente lista para AltStore, SideStore o LiveContainer, o crea tu propio Mix filtrado.',
     selectPass:'Seleccionar compatibles', selectAll:'Seleccionar visibles', clear:'Borrar selección', build:'Crear CaseyCZ Mix', selected:'seleccionadas', shown:'visibles', pass:'PASS', try:'PROBAR',
     mixStatus:'Estado del Mix', statusAll:'Todo', statusPass:'Solo PASS', statusTry:'Solo PROBAR', platform:'Plataforma', platformAll:'Todo', classic:'AltStore Classic', pal:'AltStore PAL', sidestore:'SideStore', autoTested:'Prueba automática',
-    altPackage:'CaseyCZ AltStore Source', sidePackage:'CaseyCZ SideStore Source', livePackage:'CaseyCZ LiveContainer Source', customMix:'Mix personalizado', filters:'⚙ Filtros · Búsqueda · Selección',
+    altPackage:'CaseyCZ AltStore Source', sidePackage:'CaseyCZ SideStore Source', livePackage:'CaseyCZ LiveContainer Source', customMix:'Mix personalizado', filters:'⚙ Filtros · 🔎 Búsqueda · ☑ Selección',
     addAlt:'＋ Añadir a AltStore', addSide:'＋ Añadir a SideStore', addLive:'＋ Añadir a LiveContainer', copyUrl:'Copiar URL', json:'JSON ↗', apps:'apps', sources:'fuentes',
     hosted:'Mix alojado listo', local:'Mix local listo', experimental:'Mix experimental listo', localNote:'Esta combinación PASS es válida pero no está alojada. Añadir directamente requiere una URL pública.', tryNote:'Este Mix contiene fuentes PROBAR. Descarga y prueba primero el JSON.', conflicts:'duplicados resueltos', download:'Descargar JSON', preview:'Ver JSON', building:'Probando fuentes…', failed:'No se pudo crear el Mix.', copied:'URL copiada.', empty:'Ninguna fuente coincide con los filtros.'
   },
@@ -67,7 +67,7 @@ const copy = {
     title:'Source Builder', desc:'Choisissez une source prête pour AltStore, SideStore ou LiveContainer, ou créez votre propre Mix filtré.',
     selectPass:'Sélectionner compatibles', selectAll:'Tout sélectionner affiché', clear:'Effacer la sélection', build:'Créer CaseyCZ Mix', selected:'sélectionnées', shown:'affichées', pass:'PASS', try:'TEST',
     mixStatus:'Statut du Mix', statusAll:'Tout', statusPass:'PASS seulement', statusTry:'TEST seulement', platform:'Plateforme', platformAll:'Tout', classic:'AltStore Classic', pal:'AltStore PAL', sidestore:'SideStore', autoTested:'Test automatique',
-    altPackage:'CaseyCZ AltStore Source', sidePackage:'CaseyCZ SideStore Source', livePackage:'CaseyCZ LiveContainer Source', customMix:'Mix personnalisé', filters:'⚙ Filtres · Recherche · Sélection',
+    altPackage:'CaseyCZ AltStore Source', sidePackage:'CaseyCZ SideStore Source', livePackage:'CaseyCZ LiveContainer Source', customMix:'Mix personnalisé', filters:'⚙ Filtres · 🔎 Recherche · ☑ Sélection',
     addAlt:'＋ Ajouter à AltStore', addSide:'＋ Ajouter à SideStore', addLive:'＋ Ajouter à LiveContainer', copyUrl:'Copier URL', json:'JSON ↗', apps:'apps', sources:'sources',
     hosted:'Mix hébergé prêt', local:'Mix local prêt', experimental:'Mix expérimental prêt', localNote:'Cette combinaison PASS est valide mais non hébergée. L’ajout direct nécessite une URL publique.', tryNote:'Ce Mix contient des sources TEST. Téléchargez et testez d’abord le JSON.', conflicts:'doublons résolus', download:'Télécharger JSON', preview:'Aperçu JSON', building:'Test des sources…', failed:'Impossible de créer le Mix.', copied:'URL copiée.', empty:'Aucune source ne correspond aux filtres.'
   }
