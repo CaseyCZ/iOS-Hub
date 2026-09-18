@@ -83,3 +83,7 @@
 - Fixed the new Builder destination selector: AltStore Classic, SideStore and LiveContainer now control the visible sources, saved selections are pruned when the destination changes, and only the chosen app gets the final Add button.
 
 - Verified Builder against current SideStore and LiveContainer source docs: fixed LiveContainer deep links to `livecontainer://source?url=`, normalized generated Classic Mixes by stripping PAL-only `marketplaceID` and custom `Build` fields, and clarified that SideStore accepts AltSources while LiveContainer browses AltStore-style sources.
+
+- Added two more current modified sources: Fouad's Source (Watusi + Regram) and NeoFreeBird (X/Twitter + BHTwitter).
+
+- Restored per-source availability indicators in the catalog: green Online, red Offline, and Checking before the first result. Offline sources remain visible for transparency, while their one-tap install buttons are disabled until a later successful check.
