@@ -121,7 +121,7 @@ function isCommunitySource(source) {
 
 function isModifiedSource(source) {
   const tags = sourceTags(source);
-  return source.modified === true || ['modified','mods','modded','tweak','tweaks'].some(tag => tags.has(tag));
+  return source.modified === true || ['modified','mods','modded','tweak','tweaks','tweaked'].some(tag => tags.has(tag));
 }
 
 function matchesSourceCategory(source) {
@@ -196,20 +196,24 @@ function formatDate(value) {
 }
 
 function sourceAppsDisclosure(source) {
-  const apps = [...(catalogSource(source.id)?.apps || [])]
+  const catalog = catalogSource(source.id) || {};
+  const apps = [...(catalog.apps || [])]
     .filter(app => app && typeof app === 'object')
     .sort((left, right) => String(left.name || '').localeCompare(String(right.name || '')));
-  const count = apps.length;
-  const rows = count ? apps.map(app => {
+  const statusCount = getStatus(source.id).appCount;
+  const count = Number.isFinite(catalog.appCount) ? catalog.appCount : (Number.isFinite(statusCount) ? statusCount : apps.length);
+  const limited = catalog.catalogLimited === true && count > apps.length;
+  const rows = apps.length ? apps.map(app => {
     const details = [app.developerName, app.version, app.bundleIdentifier].filter(Boolean).map(escapeHtml).join(' · ');
     return `<div class="source-app-row"><strong>${escapeHtml(app.name || 'Unknown app')}</strong>${details ? `<span>${details}</span>` : ''}</div>`;
   }).join('') : `<div class="source-app-empty">${escapeHtml(tr('noApps'))}</div>`;
+  const limitNote = limited ? `<div class="source-app-empty">${apps.length} / ${count}</div>` : '';
   return `<details class="source-apps-disclosure">
     <summary title="${escapeHtml(tr('showApps'))}" aria-label="${escapeHtml(tr('showApps'))}">
       <span class="source-app-count">📱 <strong>${count}</strong> ${escapeHtml(tr('apps'))}</span>
       <span class="source-app-chevron" aria-hidden="true">⌄</span>
     </summary>
-    <div class="source-app-list">${rows}</div>
+    <div class="source-app-list">${limitNote}${rows}</div>
   </details>`;
 }
 
@@ -218,7 +222,6 @@ function renderSources() {
   if (!grid) return;
   const q = state.query.trim().toLowerCase();
   const filtered = state.registry.filter(source => {
-    if (getStatus(source.id).online !== true) return false;
     if (!matchesSourceCategory(source) || !matchesGenre(source)) return false;
     return !q || sourceSearchText(source).includes(q);
   }).sort(compareSources);
@@ -239,6 +242,11 @@ function renderSources() {
           <h3>${escapeHtml(source.name)}</h3>
           <div class="source-meta">
             <span class="pill mode">${escapeHtml(modeLabel(source.mode))}</span>
+            ${status.online === true
+              ? `<span class="pill online">● ${escapeHtml(tr('online'))}</span>`
+              : status.checkedAt
+                ? `<span class="pill offline">● ${escapeHtml(tr('offline'))}</span>`
+                : `<span class="pill">● ${escapeHtml(tr('checking'))}</span>`}
             ${sourceCategoryBadges(source)}
           </div>
         </div>
