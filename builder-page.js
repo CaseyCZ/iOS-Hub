@@ -23,18 +23,28 @@ function applyLanguage(value) {
   safeSet(STORAGE.language, lang);
 }
 
+let supportReturnFocus = null;
+
 function openSupport() {
   const modal = $('#supportModal');
+  supportReturnFocus = document.activeElement instanceof HTMLElement ? document.activeElement : null;
   modal?.classList.add('open');
   document.body.classList.add('modal-open');
   modal?.setAttribute('aria-hidden', 'false');
+  requestAnimationFrame(() => modal?.querySelector('[data-support-close]')?.focus());
 }
 
 function closeSupport() {
   const modal = $('#supportModal');
+  const wasOpen = modal?.classList.contains('open');
   modal?.classList.remove('open');
   document.body.classList.remove('modal-open');
   modal?.setAttribute('aria-hidden', 'true');
+  if (wasOpen && supportReturnFocus) {
+    const target = supportReturnFocus;
+    supportReturnFocus = null;
+    requestAnimationFrame(() => target.focus?.());
+  }
 }
 
 $('#themeToggle')?.addEventListener('click', () => applyTheme(root.dataset.theme === 'dark' ? 'light' : 'dark'));
