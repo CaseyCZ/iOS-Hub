@@ -327,6 +327,21 @@ def main() -> None:
             result["error"] = f"{type(exc).__name__}: {exc}"[:300]
         status["sources"][source_id] = result
 
+    unique_app_keys: set[str] = set()
+    for source_id, (_source, payload) in loaded.items():
+        for app in payload.get("apps", []):
+            if not isinstance(app, dict):
+                continue
+            bundle = str(app.get("bundleIdentifier") or app.get("bundleID") or "").strip().lower()
+            if bundle:
+                unique_app_keys.add(bundle)
+                continue
+            name = str(app.get("name") or "").strip().lower()
+            developer = str(app.get("developerName") or "").strip().lower()
+            if name or developer:
+                unique_app_keys.add(f"{source_id}:{name}:{developer}")
+    catalog["uniqueAppCount"] = len(unique_app_keys)
+
     live_cache_files = {
         f"{source_id}.json"
         for source_id, (source, _payload) in loaded.items()
