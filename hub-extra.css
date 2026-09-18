@@ -364,12 +364,14 @@
 }
 
 /* Landscape phone source cards */
-@media(max-width:1100px){
-  .source-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
-  .source-installers .installer-link{padding-left:8px;padding-right:8px}
-}
-@media(max-width:800px){
-  .source-grid{grid-template-columns:1fr}
+@media(min-width:641px) and (max-width:1100px){
+  .source-grid{grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}
+  .source-card{padding:12px}
+  .source-installers{display:grid;grid-template-columns:.9fr 1fr 1.2fr;gap:4px;width:100%;align-items:stretch}
+  .source-installers .installer-link{width:100%;min-width:0;padding:0 4px;font-size:9px;gap:4px;white-space:nowrap}
+  .source-installers .installer-icon{width:13px;height:13px}
+  .source-utilities{display:grid;grid-template-columns:1.35fr .8fr .8fr;gap:4px;width:100%}
+  .source-utilities .btn{width:100%;min-width:0;padding:0 5px;font-size:9px;white-space:nowrap}
 }
 @media(max-width:640px){
   .source-installers .installer-link{min-width:0;white-space:nowrap}
