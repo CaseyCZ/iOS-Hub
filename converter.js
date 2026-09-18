@@ -288,15 +288,27 @@ function updateRuntimeReady() {
   $('#runtimeText').textContent = tr('engineReady');
 }
 
+let supportReturnFocus = null;
+
 function openSupport() {
-  $('#supportModal')?.classList.add('open');
+  const modal = $('#supportModal');
+  supportReturnFocus = document.activeElement instanceof HTMLElement ? document.activeElement : null;
+  modal?.classList.add('open');
   document.body.classList.add('modal-open');
-  $('#supportModal')?.setAttribute('aria-hidden', 'false');
+  modal?.setAttribute('aria-hidden', 'false');
+  requestAnimationFrame(() => modal?.querySelector('[data-support-close]')?.focus());
 }
 function closeSupport() {
-  $('#supportModal')?.classList.remove('open');
+  const modal = $('#supportModal');
+  const wasOpen = modal?.classList.contains('open');
+  modal?.classList.remove('open');
   document.body.classList.remove('modal-open');
-  $('#supportModal')?.setAttribute('aria-hidden', 'true');
+  modal?.setAttribute('aria-hidden', 'true');
+  if (wasOpen && supportReturnFocus) {
+    const target = supportReturnFocus;
+    supportReturnFocus = null;
+    requestAnimationFrame(() => target.focus?.());
+  }
 }
 
 const dropZone = $('#dropZone');
