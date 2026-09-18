@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.1.1 — 2026-09-18
+
+- Moved Custom Mix below the three ready-source cards and made it span the full Builder width on desktop.
+- Added compact official app icons to AltStore, SideStore and LiveContainer installer links.
+- Kept Custom Mix controls in a single vertical flow without splitting the card into left/right columns.
+
 ## v1.1.0 — 2026-09-17
 
 - Reordered the homepage to Tools → Source Builder → Sources.

@@ -90,6 +90,15 @@ function lang() {
 }
 function tr(key) { return copy[lang()][key] || copy.en[key] || key; }
 function escapeHtml(value) { return String(value ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c])); }
+const INSTALLER_ICONS = {
+  alt: 'https://2606795771-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FAfe8qEztjcTjsjjaMBY2%2Fuploads%2FQGRbFk9rdQ37ddG4uK5S%2FAltStoreIcon_Rounded.png?alt=media&token=1dd5cf66-df1e-4a07-8e8a-1039c4f22ff9',
+  side: 'https://sidestore.io/assets/icon.png',
+  live: 'https://raw.githubusercontent.com/LiveContainer/LiveContainer/main/screenshots/AppIcon1024.png'
+};
+function installerIcon(type) {
+  const src = INSTALLER_ICONS[type];
+  return src ? `<img class="installer-icon" src="${escapeHtml(src)}" alt="" loading="lazy" referrerpolicy="no-referrer">` : '';
+}
 function getStatus(id) { return status?.sources?.[id] || {}; }
 function catalogSource(id) { return catalog?.sources?.find(item => item.id === id) || null; }
 function allCandidates() { return registry.filter(source => getStatus(source.id).online === true && getStatus(source.id).mixTest !== 'fail'); }
@@ -209,11 +218,11 @@ function packageCard(name, url, meta, type) {
     badge = 'LiveContainer';
   }
   return `<article class="official-source-card">
-    <span class="pill mode">${badge}</span>
+    <span class="pill mode service-pill">${installerIcon(type)}${badge}</span>
     <h4>${escapeHtml(name)}</h4>
     <div class="muted">${escapeHtml(meta)}</div>
     <div class="official-source-actions">
-      <a class="btn small primary" href="${escapeHtml(install)}">${escapeHtml(addLabel)}</a>
+      <a class="btn small primary installer-action" href="${escapeHtml(install)}">${installerIcon(type)}${escapeHtml(addLabel)}</a>
       <button class="btn small secondary" type="button" data-copy-source="${escapeHtml(url)}">${escapeHtml(tr('copyUrl'))}</button>
       <a class="btn small ghost" target="_blank" rel="noopener" href="${escapeHtml(url)}">${escapeHtml(tr('json'))}</a>
     </div>

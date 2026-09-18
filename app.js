@@ -40,6 +40,15 @@ const safeGet = key => { try { return localStorage.getItem(key); } catch (_) { r
 const safeSet = (key, value) => { try { localStorage.setItem(key, value); } catch (_) {} };
 const escapeHtml = value => String(value ?? '').replace(/[&<>'\"]/g, char => ({'&':'&amp;','<':'&lt;','>':'&gt;',"'":'&#39;','\"':'&quot;'}[char]));
 const tr = key => t(state.lang, key);
+const INSTALLER_ICONS = {
+  altstore: 'https://2606795771-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FAfe8qEztjcTjsjjaMBY2%2Fuploads%2FQGRbFk9rdQ37ddG4uK5S%2FAltStoreIcon_Rounded.png?alt=media&token=1dd5cf66-df1e-4a07-8e8a-1039c4f22ff9',
+  sidestore: 'https://sidestore.io/assets/icon.png',
+  livecontainer: 'https://raw.githubusercontent.com/LiveContainer/LiveContainer/main/screenshots/AppIcon1024.png'
+};
+function installerIcon(installer) {
+  const src = INSTALLER_ICONS[installer];
+  return src ? `<img class="installer-icon" src="${escapeHtml(src)}" alt="" loading="lazy" referrerpolicy="no-referrer">` : '';
+}
 
 function loadPersistedSettings() {
   const category = safeGet(STORAGE.category);
@@ -194,9 +203,9 @@ function renderSources() {
       <p>${escapeHtml(desc)}</p>
       <div class="source-stats"><span><strong>${escapeHtml(appCount)}</strong> ${escapeHtml(tr('apps'))}</span>${status.checkedAt ? `<span>${escapeHtml(tr('checked'))}: ${escapeHtml(formatDate(status.checkedAt))}</span>` : ''}</div>
       <div class="source-installers" aria-label="Install source">
-        <a class="btn small primary installer-link" href="${escapeHtml(sourceInstallerLink('altstore', source))}">AltStore</a>
-        <a class="btn small secondary installer-link" href="${escapeHtml(sourceInstallerLink('sidestore', source))}">SideStore</a>
-        <a class="btn small secondary installer-link" href="${escapeHtml(sourceInstallerLink('livecontainer', source))}">LiveContainer</a>
+        <a class="btn small primary installer-link" href="${escapeHtml(sourceInstallerLink('altstore', source))}">${installerIcon('altstore')}AltStore</a>
+        <a class="btn small secondary installer-link" href="${escapeHtml(sourceInstallerLink('sidestore', source))}">${installerIcon('sidestore')}SideStore</a>
+        <a class="btn small secondary installer-link" href="${escapeHtml(sourceInstallerLink('livecontainer', source))}">${installerIcon('livecontainer')}LiveContainer</a>
       </div>
       <div class="source-actions source-utilities">
         <button class="btn small secondary" type="button" data-copy-source="${escapeHtml(source.url)}">${escapeHtml(tr('copyUrl'))}</button>
