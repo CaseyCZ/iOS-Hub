@@ -258,6 +258,12 @@ def validate_project_identity() -> None:
         if EXPECTED_PUBLIC_SITE_NAME not in text:
             error(f"index.html must use current public site name {EXPECTED_PUBLIC_SITE_NAME!r}")
 
+    update_workflow = ROOT / ".github" / "workflows" / "update-sources.yml"
+    if update_workflow.exists():
+        workflow_text = update_workflow.read_text(encoding="utf-8")
+        if workflow_text.count("python tools/audit_repo.py") < 2:
+            error("update-sources workflow must audit generated data before each publish attempt")
+
     generator = ROOT / "tools" / "update_sources.py"
     if generator.exists():
         text = generator.read_text(encoding="utf-8")
@@ -641,6 +647,20 @@ def validate_page_quality() -> None:
             if required_meta not in text:
                 error(f"{label} is missing social metadata {required_meta}")
 
+        if page.name == "guide.html":
+            tab_pairs = (
+                ("guideModeChoose", "guidePanelChoose"),
+                ("guideModeFix", "guidePanelFix"),
+                ("guideModeSetup", "guidePanelSetup"),
+            )
+            for tab_id, panel_id in tab_pairs:
+                tab = re.search(rf'<button\s+id="{tab_id}"[^>]*>', text)
+                panel = re.search(rf'<section\s+id="{panel_id}"[^>]*>', text)
+                if not tab or f'aria-controls="{panel_id}"' not in tab.group(0):
+                    error(f"guide.html tab {tab_id} must reference {panel_id} with aria-controls")
+                if not panel or f'aria-labelledby="{tab_id}"' not in panel.group(0):
+                    error(f"guide.html panel {panel_id} must reference {tab_id} with aria-labelledby")
+
         settings = re.search(r'<div\s+id="settingsPanel"[^>]*>', text)
         if not settings or 'role="dialog"' not in settings.group(0) or 'aria-labelledby=' not in settings.group(0):
             error(f"{label} settingsPanel must expose dialog semantics")
@@ -689,6 +709,20 @@ def validate_page_quality() -> None:
                 continue
             if "?v=" not in asset:
                 error(f"{label} local runtime asset is not cache-versioned: {asset}")
+
+    support_scripts = ("app.js", "builder-page.js", "converter.js", "guide.js", "resources.js")
+    for script_name in support_scripts:
+        script = ROOT / script_name
+        if not script.exists():
+            continue
+        script_text = script.read_text(encoding="utf-8")
+        for required in (
+            "supportReturnFocus = document.activeElement",
+            "querySelector('[data-support-close]')?.focus()",
+            "target.focus?.()",
+        ):
+            if required not in script_text:
+                error(f"{script_name} support dialog is missing focus-management step: {required}")
 
     importers = ("app.js", "builder-page.js", "converter.js", "guide.js", "resources.js")
     versions: set[str] = set()
