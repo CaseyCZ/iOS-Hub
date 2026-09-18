@@ -15,7 +15,7 @@
 
 .catalog-filters{padding:14px;margin-bottom:14px;display:grid;gap:12px}.filter-group{display:grid;grid-template-columns:100px 1fr;gap:10px;align-items:start}.filter-label{padding-top:9px;color:var(--muted);font-size:10px;font-weight:900;text-transform:uppercase;letter-spacing:.05em}.catalog-filters .search{width:100%;min-width:0;margin-top:2px}
 .filter-disclosure{margin:0 0 14px}.filter-disclosure>.disclosure-body{padding:12px}.filter-disclosure .catalog-filters{padding:0;margin:0}.builder-filter-disclosure{margin:12px 0 0}
-.source-installers{display:flex;gap:6px;flex-wrap:wrap;margin-top:12px}.source-installers .installer-link{flex:1 1 0;min-width:0}.source-utilities{margin-top:7px}
+.source-installers{display:flex;gap:6px;flex-wrap:wrap;margin-top:12px}.source-installers .installer-link{flex:1 1 auto;min-width:max-content;white-space:nowrap}.source-utilities{margin-top:7px}
 .toast-message{position:fixed;z-index:400;left:50%;bottom:22px;transform:translateX(-50%);max-width:min(420px,calc(100% - 28px));padding:9px 12px;border:1px solid var(--border);border-radius:10px;background:var(--panel);color:var(--text);box-shadow:var(--shadow);font-size:10px;font-weight:800;text-align:center}.toast-message[hidden]{display:none!important}
 .tools-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.tool-card{padding:18px;display:grid;grid-template-columns:auto 1fr auto;gap:15px;align-items:center}.tool-icon{width:58px;height:58px;border:1px solid color-mix(in srgb,var(--accent) 42%,var(--border));border-radius:16px;display:grid;place-items:center;background:var(--accent-soft);color:var(--accent);font-weight:950;letter-spacing:.03em}.tool-copy{min-width:0}.tool-copy h3{margin:8px 0 4px;font-size:18px;letter-spacing:-.03em}.tool-copy p{margin:0;color:var(--muted);font-size:11px;line-height:1.55}.nav a.active{background:var(--accent-soft);color:var(--accent)}
 .muted{color:var(--muted);font-size:11px;line-height:1.5}
@@ -361,4 +361,16 @@
 
 @media(max-width:640px){
   .settings-panel{position:fixed;left:10px;right:10px;top:70px;width:auto;max-height:calc(100vh - 82px);overflow:auto}
+}
+
+/* Landscape phone source cards */
+@media(max-width:1100px){
+  .source-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .source-installers .installer-link{padding-left:8px;padding-right:8px}
+}
+@media(max-width:800px){
+  .source-grid{grid-template-columns:1fr}
+}
+@media(max-width:640px){
+  .source-installers .installer-link{min-width:0;white-space:nowrap}
 }
