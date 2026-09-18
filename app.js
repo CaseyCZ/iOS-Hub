@@ -236,7 +236,15 @@ function renderSources() {
     const status = getStatus(source.id);
     const appCount = Number.isFinite(status.appCount) ? status.appCount : '—';
     const desc = source.description?.[state.lang] || source.description?.en || source.description?.cs || '';
-    return `<article class="source-card" data-source-id="${escapeHtml(source.id)}">
+    const checkedOffline = status.online === false && Boolean(status.checkedAt);
+    const installerButtons = checkedOffline
+      ? `<span class="btn small secondary installer-link is-disabled" aria-disabled="true">${installerIcon('altstore')}AltStore</span>
+        <span class="btn small secondary installer-link is-disabled" aria-disabled="true">${installerIcon('sidestore')}SideStore</span>
+        <span class="btn small secondary installer-link is-disabled" aria-disabled="true">${installerIcon('livecontainer')}LiveContainer</span>`
+      : `<a class="btn small primary installer-link" href="${escapeHtml(sourceInstallerLink('altstore', source))}">${installerIcon('altstore')}AltStore</a>
+        <a class="btn small secondary installer-link" href="${escapeHtml(sourceInstallerLink('sidestore', source))}">${installerIcon('sidestore')}SideStore</a>
+        <a class="btn small secondary installer-link" href="${escapeHtml(sourceInstallerLink('livecontainer', source))}">${installerIcon('livecontainer')}LiveContainer</a>`;
+    return `<article class="source-card${checkedOffline ? ' is-offline' : ''}" data-source-id="${escapeHtml(source.id)}">
       <div class="source-top">
         <div class="source-icon">${sourceIcon(source)}</div>
         <div class="source-title">
@@ -254,11 +262,8 @@ function renderSources() {
       </div>
       <p>${escapeHtml(desc)}</p>
       <div class="source-stats">${sourceAppsDisclosure(source)}${status.checkedAt ? `<span class="source-checked">${escapeHtml(tr('checked'))}: ${escapeHtml(formatDate(status.checkedAt))}</span>` : ''}</div>
-      <div class="source-installers" aria-label="Install source">
-        <a class="btn small primary installer-link" href="${escapeHtml(sourceInstallerLink('altstore', source))}">${installerIcon('altstore')}AltStore</a>
-        <a class="btn small secondary installer-link" href="${escapeHtml(sourceInstallerLink('sidestore', source))}">${installerIcon('sidestore')}SideStore</a>
-        <a class="btn small secondary installer-link" href="${escapeHtml(sourceInstallerLink('livecontainer', source))}">${installerIcon('livecontainer')}LiveContainer</a>
-      </div>
+      ${checkedOffline && status.error ? `<div class="source-offline-reason">${escapeHtml(status.error)}</div>` : ''}
+      <div class="source-installers" aria-label="Install source">${installerButtons}</div>
       <div class="source-actions source-utilities">
         <button class="btn small secondary" type="button" data-copy-source="${escapeHtml(source.url)}">${escapeHtml(tr('copyUrl'))}</button>
         <a class="btn small ghost" href="${escapeHtml(source.url)}" target="_blank" rel="noopener">JSON ↗</a>
