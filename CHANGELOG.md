@@ -20,6 +20,7 @@
 - Refined the beginner guide into intent-based choices with multiple valid routes where appropriate: SideStore vs AltStore Remote refresh, Sideloadly vs AltStore Classic for desktop IPA installs, LiveContainer options and Apple TV methods; action links now use visual icons throughout the guide.
 - Replaced invented letter/emoji branding in the Guide and Useful Resources with official app/project icons, reusing the same AltStore, SideStore and LiveContainer artwork already used by source installer buttons.
 - Audited all public pages for icon consistency: resource CTAs now repeat each project's official icon, GitHub issue and Buy Me a Coffee actions use their official service artwork, and local CSS/JS references are cache-busted so the updated icons appear immediately after deploy.
+- Repaired missing resource icons by replacing fragile favicon hotlinks with stable official project/organization artwork for Stremio, Discord, Telegram, Tailscale, LocalSend, Raspberry Pi, Node.js, OBS and iloader, with fallback URLs for the most important brands.
 
 ## 1.1.4 — 2026-09-18
 
