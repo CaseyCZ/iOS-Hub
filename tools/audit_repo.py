@@ -24,8 +24,10 @@ OWNED_REFERENCE_FILES = (
     ROOT / "README.md",
     ROOT / "README_EN.md",
     ROOT / "index.html",
+    ROOT / "builder.html",
     ROOT / "converter.html",
     ROOT / "app.js",
+    ROOT / "builder-page.js",
     ROOT / "builder.js",
     ROOT / "i18n.js",
     ROOT / "tools" / "update_sources.py",
@@ -190,12 +192,12 @@ def validate_translations() -> None:
         return
 
     used: set[str] = set()
-    for html in (ROOT / "index.html", ROOT / "converter.html"):
+    for html in (ROOT / "index.html", ROOT / "builder.html", ROOT / "converter.html"):
         parser = parse_page(html)
         if parser:
             used.update(parser.i18n_keys)
 
-    for script in (ROOT / "app.js", ROOT / "converter.js"):
+    for script in (ROOT / "app.js", ROOT / "builder-page.js", ROOT / "converter.js"):
         if not script.exists():
             continue
         text = script.read_text(encoding="utf-8")
@@ -358,12 +360,13 @@ def validate_layout() -> None:
         if "builder.js" not in text:
             error("index.html does not reference builder.js")
 
-    for html in (ROOT / "index.html", ROOT / "converter.html"):
+    for html in (ROOT / "index.html", ROOT / "builder.html", ROOT / "converter.html"):
         validate_html_scripts(html)
         validate_security_policy(html)
 
     for required in (
         ROOT / "app.js",
+        ROOT / "builder-page.js",
         ROOT / "builder.js",
         ROOT / "converter.js",
         ROOT / "i18n.js",
