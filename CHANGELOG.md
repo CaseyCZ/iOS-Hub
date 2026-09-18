@@ -23,6 +23,7 @@
 - Repaired missing resource icons by replacing fragile favicon hotlinks with stable official project/organization artwork for Stremio, Discord, Telegram, Tailscale, LocalSend, Raspberry Pi, Node.js, OBS and iloader, with fallback URLs for the most important brands.
 - Replaced two more fragile favicon URLs with stable official assets for changedetection.io and 7-Zip during the icon audit.
 - Moved the most important program icons into local official-asset wrappers so they no longer depend on fragile external hotlinks; this fixes 7-Zip, Stremio, Discord and other resource icons and also makes AltStore/SideStore/LiveContainer icons consistent site-wide.
+- Completed another full icon audit: Visual Studio now uses Microsoft's real Visual Studio product mark, iTunes uses Apple's actual iTunes icon, Tailscale uses a local mark copied from the official Tailscale repository, and all remaining remote resource icons have explicit fallbacks to prevent blank cards.
 
 ## 1.1.4 — 2026-09-18
 
