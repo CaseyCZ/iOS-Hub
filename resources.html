@@ -8,8 +8,8 @@
   <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' https: data:; connect-src 'self'; object-src 'none'; base-uri 'self'; form-action 'none'">
   <meta name="description" content="CaseyCZ iOS Hub — useful apps, services and websites for iPhone, desktop and everyday workflows.">
   <title>Useful Resources — CaseyCZ iOS Hub</title>
-  <link rel="stylesheet" href="styles.css">
-  <link rel="stylesheet" href="hub-extra.css">
+  <link rel="stylesheet" href="styles.css?v=1.1.5-20260918-icons2">
+  <link rel="stylesheet" href="hub-extra.css?v=1.1.5-20260918-icons2">
 </head>
 <body>
   <header class="topbar">
@@ -33,9 +33,9 @@
           <option value="es">ES</option>
           <option value="fr">FR</option>
         </select>
-        <a class="icon-btn report-bug-btn" href="https://github.com/CaseyCZ/iOS-Hub/issues/new" target="_blank" rel="noopener" aria-label="Report a bug" title="Report a bug" data-i18n-title="reportBug" data-i18n-aria-label="reportBug">🐞</a>
+        <a class="icon-btn report-bug-btn" href="https://github.com/CaseyCZ/iOS-Hub/issues/new" target="_blank" rel="noopener" aria-label="Report a bug" title="Report a bug" data-i18n-title="reportBug" data-i18n-aria-label="reportBug"><img class="nav-brand-icon" src="https://github.githubassets.com/favicons/favicon.svg" alt="" referrerpolicy="no-referrer"></a>
         <button id="themeToggle" class="icon-btn" type="button" aria-label="Theme">☀</button>
-        <button class="compact-btn" type="button" data-support-open><span>☕</span><span class="support-label" data-i18n="support">Support</span></button>
+        <button class="compact-btn" type="button" data-support-open><img class="compact-brand-icon" src="https://cdn.buymeacoffee.com/buttons/bmc-new-btn-logo.svg" alt="" referrerpolicy="no-referrer"><span class="support-label" data-i18n="support">Support</span></button>
       </div>
     </div>
   </header>
@@ -64,7 +64,7 @@
           <h3>AltStore Classic</h3>
           <p data-i18n="resourceAltStoreDesc">Official open-source sideloading platform. AltStore Classic works with a regular free Apple ID; Apple’s 7-day and app-count limits still apply.</p>
           <div class="resource-domain">altstore.io</div>
-          <a class="btn primary" href="https://altstore.io/" target="_blank" rel="noopener noreferrer" data-i18n="openWebsite">Open website ↗</a>
+          <a class="btn primary brand-link" href="https://altstore.io/" target="_blank" rel="noopener noreferrer"><img class="brand-link-icon" src="https://2606795771-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FAfe8qEztjcTjsjjaMBY2%2Fuploads%2FQGRbFk9rdQ37ddG4uK5S%2FAltStoreIcon_Rounded.png?alt=media&token=1dd5cf66-df1e-4a07-8e8a-1039c4f22ff9" alt="" loading="lazy" referrerpolicy="no-referrer"><span data-i18n="openWebsite">Open website ↗</span></a>
         </article>
 
         <article class="panel resource-card">
@@ -73,7 +73,7 @@
           <h3>SideStore</h3>
           <p data-i18n="resourceSideStoreDesc">Open-source sideloading that supports a free Apple account. A computer is needed for initial setup, then apps can be refreshed from the device.</p>
           <div class="resource-domain">sidestore.io</div>
-          <a class="btn primary" href="https://sidestore.io/" target="_blank" rel="noopener noreferrer" data-i18n="openWebsite">Open website ↗</a>
+          <a class="btn primary brand-link" href="https://sidestore.io/" target="_blank" rel="noopener noreferrer"><img class="brand-link-icon" src="https://sidestore.io/assets/icon.png" alt="" loading="lazy" referrerpolicy="no-referrer"><span data-i18n="openWebsite">Open website ↗</span></a>
         </article>
 
         <article class="panel resource-card">
@@ -82,7 +82,7 @@
           <h3>LiveContainer</h3>
           <p data-i18n="resourceLiveContainerDesc">Free open-source iOS app launcher that can run multiple apps inside one container. Commonly installed through SideStore or AltStore.</p>
           <div class="resource-domain">github.com/LiveContainer/LiveContainer</div>
-          <a class="btn primary" href="https://github.com/LiveContainer/LiveContainer" target="_blank" rel="noopener noreferrer" data-i18n="openWebsite">Open website ↗</a>
+          <a class="btn primary brand-link" href="https://github.com/LiveContainer/LiveContainer" target="_blank" rel="noopener noreferrer"><img class="brand-link-icon" src="https://raw.githubusercontent.com/LiveContainer/LiveContainer/main/screenshots/AppIcon1024.png" alt="" loading="lazy" referrerpolicy="no-referrer"><span data-i18n="openWebsite">Open website ↗</span></a>
         </article>
 
         <article class="panel resource-card">
@@ -91,7 +91,7 @@
           <h3>Sideloadly</h3>
           <p data-i18n="resourceSideloadlyDesc">Free sideloading tool for iPhone, iPad, Apple Silicon Mac and Apple TV on Windows or macOS. A free Apple ID is supported; a paid developer account is optional.</p>
           <div class="resource-domain">sideloadly.io</div>
-          <a class="btn primary" href="https://sideloadly.io/" target="_blank" rel="noopener noreferrer" data-i18n="openWebsite">Open website ↗</a>
+          <a class="btn primary brand-link" href="https://sideloadly.io/" target="_blank" rel="noopener noreferrer"><img class="brand-link-icon" src="https://sideloadly.io/favicon.ico" alt="" loading="lazy" referrerpolicy="no-referrer"><span data-i18n="openWebsite">Open website ↗</span></a>
         </article>
 
         <article class="panel resource-card">
@@ -100,7 +100,7 @@
           <h3>atvloadly</h3>
           <p data-i18n="resourceAtvloadlyDesc">Free open-source Apple TV sideloading web service for Linux or OpenWrt. Runs with Docker, supports pairing and automatic app refresh, and accepts free Apple IDs.</p>
           <div class="resource-domain">github.com/bitxeno/atvloadly</div>
-          <a class="btn primary" href="https://github.com/bitxeno/atvloadly" target="_blank" rel="noopener noreferrer" data-i18n="openWebsite">Open website ↗</a>
+          <a class="btn primary brand-link" href="https://github.com/bitxeno/atvloadly" target="_blank" rel="noopener noreferrer"><img class="brand-link-icon" src="https://raw.githubusercontent.com/bitxeno/atvloadly/main/web/static/src/assets/icons/app.svg" alt="" loading="lazy" referrerpolicy="no-referrer"><span data-i18n="openWebsite">Open website ↗</span></a>
         </article>
 
         <article class="panel resource-card">
@@ -109,7 +109,7 @@
           <h3>iloader</h3>
           <p data-i18n="resourceIloaderDesc">Free open-source sideloading companion for installing SideStore or LiveContainer + SideStore and importing pairing files. Official downloads are only from iloader.app and its GitHub repository.</p>
           <div class="resource-domain">iloader.app</div>
-          <a class="btn primary" href="https://iloader.app/" target="_blank" rel="noopener noreferrer" data-i18n="openWebsite">Open website ↗</a>
+          <a class="btn primary brand-link" href="https://iloader.app/" target="_blank" rel="noopener noreferrer"><img class="brand-link-icon" src="https://iloader.app/favicon.ico" alt="" loading="lazy" referrerpolicy="no-referrer"><span data-i18n="openWebsite">Open website ↗</span></a>
         </article>
 
         <article class="panel resource-card">
@@ -118,7 +118,7 @@
           <h3>TrollStore</h3>
           <p data-i18n="resourceTrollStoreDesc">Free open-source permanent IPA installer for supported iOS versions. Compatibility is limited, so check the project’s current supported-version guidance first.</p>
           <div class="resource-domain">github.com/opa334/TrollStore</div>
-          <a class="btn primary" href="https://github.com/opa334/TrollStore" target="_blank" rel="noopener noreferrer" data-i18n="openWebsite">Open website ↗</a>
+          <a class="btn primary brand-link" href="https://github.com/opa334/TrollStore" target="_blank" rel="noopener noreferrer"><img class="brand-link-icon" src="https://raw.githubusercontent.com/opa334/TrollStore/main/TrollStore/Resources/AppIcon60x60@2x.png" alt="" loading="lazy" referrerpolicy="no-referrer"><span data-i18n="openWebsite">Open website ↗</span></a>
         </article>
       </div>
 
@@ -136,7 +136,7 @@
           <h3>LocalSend</h3>
           <p data-i18n="resourceLocalSendDesc">Free and open-source file sharing across your local network. Works on Windows, macOS, Linux, Android and iOS without an account or cloud upload.</p>
           <div class="resource-domain">localsend.org</div>
-          <a class="btn primary" href="https://localsend.org/" target="_blank" rel="noopener noreferrer" data-i18n="openWebsite">Open website ↗</a>
+          <a class="btn primary brand-link" href="https://localsend.org/" target="_blank" rel="noopener noreferrer"><img class="brand-link-icon" src="https://localsend.org/favicon.ico" alt="" loading="lazy" referrerpolicy="no-referrer"><span data-i18n="openWebsite">Open website ↗</span></a>
         </article>
 
         <article class="panel resource-card">
@@ -145,7 +145,7 @@
           <h3>cobalt</h3>
           <p data-i18n="resourceCobaltDesc">Free open-source downloader for publicly accessible media. No ads, trackers or paywalls; use it only for content you are allowed to download.</p>
           <div class="resource-domain">cobalt.tools</div>
-          <a class="btn primary" href="https://cobalt.tools/" target="_blank" rel="noopener noreferrer" data-i18n="openWebsite">Open website ↗</a>
+          <a class="btn primary brand-link" href="https://cobalt.tools/" target="_blank" rel="noopener noreferrer"><img class="brand-link-icon" src="https://raw.githubusercontent.com/imputnet/cobalt/main/web/static/favicon.png" alt="" loading="lazy" referrerpolicy="no-referrer"><span data-i18n="openWebsite">Open website ↗</span></a>
         </article>
 
         <article class="panel resource-card">
@@ -154,7 +154,7 @@
           <h3>changedetection.io</h3>
           <p data-i18n="resourceChangeDetectionDesc">Free open-source self-hosted website change monitoring with alerts. The hosted SaaS is paid, so this card links to the free self-hosted project.</p>
           <div class="resource-domain">github.com/dgtlmoon/changedetection.io</div>
-          <a class="btn primary" href="https://github.com/dgtlmoon/changedetection.io" target="_blank" rel="noopener noreferrer" data-i18n="openWebsite">Open website ↗</a>
+          <a class="btn primary brand-link" href="https://github.com/dgtlmoon/changedetection.io" target="_blank" rel="noopener noreferrer"><img class="brand-link-icon" src="https://changedetection.io/favicon.ico" alt="" loading="lazy" referrerpolicy="no-referrer"><span data-i18n="openWebsite">Open website ↗</span></a>
         </article>
       </div>
 
@@ -172,7 +172,7 @@
           <h3>Stremio</h3>
           <p data-i18n="resourceStremioDesc">Free media-center app with an addon system for Windows, macOS, Linux, Android, TVs, web and more. Optional supporter features help fund development.</p>
           <div class="resource-domain">stremio.com</div>
-          <a class="btn primary" href="https://www.stremio.com/" target="_blank" rel="noopener noreferrer" data-i18n="openWebsite">Open website ↗</a>
+          <a class="btn primary brand-link" href="https://www.stremio.com/" target="_blank" rel="noopener noreferrer"><img class="brand-link-icon" src="https://www.stremio.com/favicon.ico" alt="" loading="lazy" referrerpolicy="no-referrer"><span data-i18n="openWebsite">Open website ↗</span></a>
         </article>
 
         <article class="panel resource-card">
@@ -181,7 +181,7 @@
           <h3>Discord</h3>
           <p data-i18n="resourceDiscordDesc">Free voice, video and text communication for communities and friends on desktop, mobile and web. Nitro is an optional paid subscription.</p>
           <div class="resource-domain">discord.com</div>
-          <a class="btn primary" href="https://discord.com/" target="_blank" rel="noopener noreferrer" data-i18n="openWebsite">Open website ↗</a>
+          <a class="btn primary brand-link" href="https://discord.com/" target="_blank" rel="noopener noreferrer"><img class="brand-link-icon" src="https://discord.com/favicon.ico" alt="" loading="lazy" referrerpolicy="no-referrer"><span data-i18n="openWebsite">Open website ↗</span></a>
         </article>
 
         <article class="panel resource-card">
@@ -190,7 +190,7 @@
           <h3>Telegram</h3>
           <p data-i18n="resourceTelegramDesc">Free cloud messaging across phones, tablets and computers. Core private messaging remains free; Telegram Premium is optional.</p>
           <div class="resource-domain">telegram.org</div>
-          <a class="btn primary" href="https://telegram.org/" target="_blank" rel="noopener noreferrer" data-i18n="openWebsite">Open website ↗</a>
+          <a class="btn primary brand-link" href="https://telegram.org/" target="_blank" rel="noopener noreferrer"><img class="brand-link-icon" src="https://telegram.org/favicon.ico" alt="" loading="lazy" referrerpolicy="no-referrer"><span data-i18n="openWebsite">Open website ↗</span></a>
         </article>
       </div>
 
@@ -208,7 +208,7 @@
           <h3>Tailscale</h3>
           <p data-i18n="resourceTailscaleDesc">Private WireGuard-based networking with a free Personal plan for home and non-commercial use. Paid plans are available for business features.</p>
           <div class="resource-domain">tailscale.com</div>
-          <a class="btn primary" href="https://tailscale.com/" target="_blank" rel="noopener noreferrer" data-i18n="openWebsite">Open website ↗</a>
+          <a class="btn primary brand-link" href="https://tailscale.com/" target="_blank" rel="noopener noreferrer"><img class="brand-link-icon" src="https://tailscale.com/favicon.ico" alt="" loading="lazy" referrerpolicy="no-referrer"><span data-i18n="openWebsite">Open website ↗</span></a>
         </article>
 
         <article class="panel resource-card">
@@ -217,7 +217,7 @@
           <h3>WizTree</h3>
           <p data-i18n="resourceWizTreeDesc">Very fast disk-space analyzer for Windows. Free for personal use; commercial use requires a paid license.</p>
           <div class="resource-domain">diskanalyzer.com</div>
-          <a class="btn primary" href="https://diskanalyzer.com/" target="_blank" rel="noopener noreferrer" data-i18n="openWebsite">Open website ↗</a>
+          <a class="btn primary brand-link" href="https://diskanalyzer.com/" target="_blank" rel="noopener noreferrer"><img class="brand-link-icon" src="https://diskanalyzer.com/favicon.ico" alt="" loading="lazy" referrerpolicy="no-referrer"><span data-i18n="openWebsite">Open website ↗</span></a>
         </article>
 
         <article class="panel resource-card">
@@ -226,7 +226,7 @@
           <h3>7-Zip</h3>
           <p data-i18n="resource7ZipDesc">Free open-source file archiver with strong compression and broad format support. It can be used on personal and commercial computers without registration or payment.</p>
           <div class="resource-domain">7-zip.org</div>
-          <a class="btn primary" href="https://www.7-zip.org/" target="_blank" rel="noopener noreferrer" data-i18n="openWebsite">Open website ↗</a>
+          <a class="btn primary brand-link" href="https://www.7-zip.org/" target="_blank" rel="noopener noreferrer"><img class="brand-link-icon" src="https://www.7-zip.org/favicon.ico" alt="" loading="lazy" referrerpolicy="no-referrer"><span data-i18n="openWebsite">Open website ↗</span></a>
         </article>
 
         <article class="panel resource-card">
@@ -235,7 +235,7 @@
           <h3>Rufus</h3>
           <p data-i18n="resourceRufusDesc">Free open-source Windows utility for creating bootable USB drives from ISO images and other boot media.</p>
           <div class="resource-domain">rufus.ie</div>
-          <a class="btn primary" href="https://rufus.ie/" target="_blank" rel="noopener noreferrer" data-i18n="openWebsite">Open website ↗</a>
+          <a class="btn primary brand-link" href="https://rufus.ie/" target="_blank" rel="noopener noreferrer"><img class="brand-link-icon" src="https://raw.githubusercontent.com/pbatard/rufus/master/res/icons/rufus-128.png" alt="" loading="lazy" referrerpolicy="no-referrer"><span data-i18n="openWebsite">Open website ↗</span></a>
         </article>
 
         <article class="panel resource-card">
@@ -244,7 +244,7 @@
           <h3>Raspberry Pi Imager</h3>
           <p data-i18n="resourceRpiImagerDesc">Official free open-source utility for writing Raspberry Pi OS and other operating-system images to SD cards on Windows, macOS and Linux.</p>
           <div class="resource-domain">raspberrypi.com/software</div>
-          <a class="btn primary" href="https://www.raspberrypi.com/software/" target="_blank" rel="noopener noreferrer" data-i18n="openWebsite">Open website ↗</a>
+          <a class="btn primary brand-link" href="https://www.raspberrypi.com/software/" target="_blank" rel="noopener noreferrer"><img class="brand-link-icon" src="https://www.raspberrypi.com/favicon.ico" alt="" loading="lazy" referrerpolicy="no-referrer"><span data-i18n="openWebsite">Open website ↗</span></a>
         </article>
 
         <article class="panel resource-card">
@@ -253,7 +253,7 @@
           <h3>LeoMoon HotKeyz</h3>
           <p data-i18n="resourceHotkeyzDesc">Lightweight Windows hotkey manager for launching apps, folders, URLs, text snippets and system actions. The current download is offered without a purchase requirement; donations are optional.</p>
           <div class="resource-domain">leomoon.com</div>
-          <a class="btn primary" href="https://leomoon.com/downloads/desktop-apps/leomoon-hotkeyz/" target="_blank" rel="noopener noreferrer" data-i18n="openWebsite">Open website ↗</a>
+          <a class="btn primary brand-link" href="https://leomoon.com/downloads/desktop-apps/leomoon-hotkeyz/" target="_blank" rel="noopener noreferrer"><img class="brand-link-icon" src="https://leomoon.com/favicon.ico" alt="" loading="lazy" referrerpolicy="no-referrer"><span data-i18n="openWebsite">Open website ↗</span></a>
         </article>
 
         <article class="panel resource-card">
@@ -262,7 +262,7 @@
           <h3>iTunes for Windows</h3>
           <p data-i18n="resourceITunesDesc">Apple’s free Windows app for device support, local media libraries and iTunes Store access. Music subscriptions and store purchases are optional paid services.</p>
           <div class="resource-domain">apple.com/itunes</div>
-          <a class="btn primary" href="https://www.apple.com/itunes/" target="_blank" rel="noopener noreferrer" data-i18n="openWebsite">Open website ↗</a>
+          <a class="btn primary brand-link" href="https://www.apple.com/itunes/" target="_blank" rel="noopener noreferrer"><img class="brand-link-icon" src="https://www.apple.com/favicon.ico" alt="" loading="lazy" referrerpolicy="no-referrer"><span data-i18n="openWebsite">Open website ↗</span></a>
         </article>
       </div>
 
@@ -280,7 +280,7 @@
           <h3>Visual Studio Community</h3>
           <p data-i18n="resourceVisualStudioDesc">Microsoft’s full Visual Studio IDE is free for individual developers, learning, academic research and open-source work. Organization use has licensing limits.</p>
           <div class="resource-domain">visualstudio.microsoft.com</div>
-          <a class="btn primary" href="https://visualstudio.microsoft.com/vs/community/" target="_blank" rel="noopener noreferrer" data-i18n="openWebsite">Open website ↗</a>
+          <a class="btn primary brand-link" href="https://visualstudio.microsoft.com/vs/community/" target="_blank" rel="noopener noreferrer"><img class="brand-link-icon" src="https://visualstudio.microsoft.com/favicon.ico" alt="" loading="lazy" referrerpolicy="no-referrer"><span data-i18n="openWebsite">Open website ↗</span></a>
         </article>
 
         <article class="panel resource-card">
@@ -289,7 +289,7 @@
           <h3>Node.js</h3>
           <p data-i18n="resourceNodeDesc">Free open-source cross-platform JavaScript runtime for servers, web applications, command-line tools and automation scripts.</p>
           <div class="resource-domain">nodejs.org</div>
-          <a class="btn primary" href="https://nodejs.org/" target="_blank" rel="noopener noreferrer" data-i18n="openWebsite">Open website ↗</a>
+          <a class="btn primary brand-link" href="https://nodejs.org/" target="_blank" rel="noopener noreferrer"><img class="brand-link-icon" src="https://nodejs.org/favicon.ico" alt="" loading="lazy" referrerpolicy="no-referrer"><span data-i18n="openWebsite">Open website ↗</span></a>
         </article>
 
         <article class="panel resource-card">
@@ -298,7 +298,7 @@
           <h3>OBS Studio</h3>
           <p data-i18n="resourceOBSDesc">Free open-source software for screen recording, video capture and live streaming on Windows, macOS and Linux, with no watermark.</p>
           <div class="resource-domain">obsproject.com</div>
-          <a class="btn primary" href="https://obsproject.com/" target="_blank" rel="noopener noreferrer" data-i18n="openWebsite">Open website ↗</a>
+          <a class="btn primary brand-link" href="https://obsproject.com/" target="_blank" rel="noopener noreferrer"><img class="brand-link-icon" src="https://obsproject.com/assets/images/new_icon_small-r.png" alt="" loading="lazy" referrerpolicy="no-referrer"><span data-i18n="openWebsite">Open website ↗</span></a>
         </article>
       </div>
     </section>
@@ -321,10 +321,10 @@
       <h2 id="supportTitle" data-i18n="supportTitle">Support further development.</h2>
       <p data-i18n="supportDesc">If CaseyCZ iOS Hub saves you time, you can support further development through Buy Me a Coffee.</p>
       <a href="https://www.buymeacoffee.com/caseycz" target="_blank" rel="noopener"><img class="support-qr" src="https://caseycz.github.io/support-qr.svg" alt="Buy Me a Coffee CaseyCZ QR code"></a>
-      <a class="btn primary" style="width:100%" href="https://www.buymeacoffee.com/caseycz" target="_blank" rel="noopener" data-i18n="openCoffee">Open Buy Me a Coffee ↗</a>
+      <a class="btn primary brand-link" style="width:100%" href="https://www.buymeacoffee.com/caseycz" target="_blank" rel="noopener"><img class="brand-link-icon brand-link-icon-contain" src="https://cdn.buymeacoffee.com/buttons/bmc-new-btn-logo.svg" alt="" referrerpolicy="no-referrer"><span data-i18n="openCoffee">Open Buy Me a Coffee ↗</span></a>
     </div>
   </div>
 
-  <script type="module" src="resources.js"></script>
+  <script type="module" src="resources.js?v=1.1.5-20260918-icons2"></script>
 </body>
 </html>
