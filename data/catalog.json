@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-18T16:19:49Z",
+  "generatedAt": "2026-09-18T16:27:47Z",
   "sources": [
     {
       "id": "utm",
@@ -3347,24 +3347,40 @@
     {
       "id": "cypwn-ipa",
       "name": "CyPwn IPA Library",
-      "appCount": 207,
+      "appCount": 209,
       "catalogLimited": true,
       "iconURL": "https://repo.cypwn.xyz/assets/images/cypwn_small.png",
       "apps": [
         {
-          "name": "Power Warriors 18.0",
-          "bundleIdentifier": "com.ZombiAriel.Power-Warriors",
-          "developerName": "Power Warriors 18.0 x CyPwn",
-          "version": "18",
-          "iconURL": "https://ipa.cypwn.xyz/serve/icons/Power Warriors 18.0.png",
+          "name": "Stremio-2.0.6",
+          "bundleIdentifier": "com.stremio.pal",
+          "developerName": "Stremio-2.0.6 x CyPwn",
+          "version": "2.0.6",
+          "iconURL": "https://ipa.cypwn.xyz/serve/icons/Stremio-2.0.6.png",
           "subtitle": ""
         },
         {
-          "name": "CloverPit-1.4.3",
+          "name": "PowerWarriors_18.0",
+          "bundleIdentifier": "com.ZombiAriel.Power-Warriors",
+          "developerName": "PowerWarriors_18.0 x CyPwn",
+          "version": "18",
+          "iconURL": "https://ipa.cypwn.xyz/serve/icons/PowerWarriors_18.0.png",
+          "subtitle": ""
+        },
+        {
+          "name": "Stremio-2.0.0",
+          "bundleIdentifier": "com.stremio.pal",
+          "developerName": "Stremio-2.0.0 x CyPwn",
+          "version": "2.0.0",
+          "iconURL": "https://ipa.cypwn.xyz/serve/icons/Stremio-2.0.0.png",
+          "subtitle": ""
+        },
+        {
+          "name": "CloverPit-1.4.8",
           "bundleIdentifier": "com.PanikArcade.CloverPit",
-          "developerName": "CloverPit-1.4.3 x CyPwn",
-          "version": "1.4.3",
-          "iconURL": "https://ipa.cypwn.xyz/serve/icons/CloverPit-1.4.3.png",
+          "developerName": "CloverPit-1.4.8 x CyPwn",
+          "version": "1.4.8",
+          "iconURL": "https://ipa.cypwn.xyz/serve/icons/CloverPit-1.4.8.png",
           "subtitle": ""
         },
         {
@@ -4774,32 +4790,24 @@
           "version": "3.12.0",
           "iconURL": "https://ipa.cypwn.xyz/serve/icons/RefacePro_3.12.0.png",
           "subtitle": ""
-        },
-        {
-          "name": "AppCake+",
-          "bundleIdentifier": "cypwn.AppCake+.7.2.2",
-          "developerName": "AppCake+ x CyPwn",
-          "version": "7.2.2",
-          "iconURL": "https://ipa.cypwn.xyz/serve/icons/AppCake+.png",
-          "subtitle": ""
-        },
-        {
-          "name": "NewOS",
-          "bundleIdentifier": "cypwn.NewOS.1.0",
-          "developerName": "NewOS x CyPwn",
-          "version": "1.0",
-          "iconURL": "https://ipa.cypwn.xyz/serve/icons/NewOS.png",
-          "subtitle": ""
         }
       ]
     },
     {
       "id": "apptesters",
       "name": "AppTesters IPA Repo",
-      "appCount": 9184,
+      "appCount": 9185,
       "catalogLimited": true,
       "iconURL": "https://apptesters.org/apptesters-512x512.png",
       "apps": [
+        {
+          "name": "Unknown app",
+          "bundleIdentifier": "com.madarsoft.fitness",
+          "developerName": "",
+          "version": "4.3.1",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.madarsoft.fitness.png",
+          "subtitle": ""
+        },
         {
           "name": "TranslateNow",
           "bundleIdentifier": "solutions.wzp.translator",
@@ -6390,14 +6398,6 @@
           "developerName": "",
           "version": "6.01.02",
           "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.djitlabs.pixelcolor.png",
-          "subtitle": ""
-        },
-        {
-          "name": "Foodie",
-          "bundleIdentifier": "com.linecorp.Foodie",
-          "developerName": "",
-          "version": "8.3.1",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.linecorp.Foodie.png",
           "subtitle": ""
         }
       ]
