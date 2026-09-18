@@ -341,8 +341,8 @@
 /* Sitewide settings menu */
 .settings-menu{position:relative}
 .settings-theme-proxy{display:none!important}
-.settings-panel{position:absolute;right:0;top:calc(100% + 8px);z-index:180;width:310px;padding:13px;border:1px solid var(--border);border-radius:16px;background:color-mix(in srgb,var(--panel) 98%,transparent);box-shadow:var(--shadow);display:none}
-.settings-menu.open .settings-panel{display:block}
+.settings-panel{position:fixed;z-index:1000;width:310px;padding:13px;border:1px solid var(--border);border-radius:16px;background:color-mix(in srgb,var(--panel) 98%,transparent);box-shadow:var(--shadow);display:none;overflow-y:auto;overflow-x:hidden;-webkit-overflow-scrolling:touch;overscroll-behavior:contain;touch-action:pan-y}
+.settings-panel.open{display:block}
 .settings-title{font-size:13px;font-weight:900;margin-bottom:13px}
 .settings-label{margin:12px 0 7px;color:var(--muted);font-size:10px;font-weight:900;letter-spacing:.08em}
 .settings-theme-seg{display:grid;grid-template-columns:1fr 1fr;gap:7px}
@@ -359,23 +359,6 @@
 .nav-support-primary{background:linear-gradient(135deg,var(--accent2),var(--accent))!important;border-color:var(--accent)!important;color:#fff!important;box-shadow:0 8px 22px color-mix(in srgb,var(--accent) 22%,transparent)}
 .nav-support-primary:hover{border-color:color-mix(in srgb,#fff 55%,var(--accent))!important}
 
-@media(max-width:900px){
-  .settings-panel{
-    position:absolute;
-    left:auto;
-    right:0;
-    top:calc(100% + 8px);
-    bottom:auto;
-    width:min(360px,calc(100vw - 20px));
-    max-height:calc(100dvh - 88px);
-    overflow-y:auto;
-    overflow-x:hidden;
-    -webkit-overflow-scrolling:touch;
-    overscroll-behavior:contain;
-    touch-action:pan-y;
-  }
-}
-
 /* Landscape phone source cards */
 @media(min-width:641px) and (max-width:1100px){
   .source-grid{grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}
@@ -389,14 +372,6 @@
 @media(max-width:640px){
   .source-installers .installer-link{min-width:0;white-space:nowrap}
 }
-
-@media(max-width:900px) and (orientation:landscape){
-  .settings-panel{
-    top:calc(100% + 6px);
-    max-height:calc(100dvh - 82px);
-  }
-}
-
 
 /* Native hidden must always win */
 [hidden]{display:none!important}
