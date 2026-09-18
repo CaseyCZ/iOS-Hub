@@ -7,11 +7,19 @@
   <meta name="referrer" content="no-referrer">
   <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' https: data:; connect-src 'self'; object-src 'none'; base-uri 'self'; form-action 'none'">
   <meta name="description" content="iOS Hub — useful apps, services and websites for iPhone, desktop and everyday workflows.">
+  <link rel="canonical" href="https://caseycz.github.io/iOS-Hub/resources.html">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="iOS Hub">
+  <meta property="og:title" content="Useful Resources — iOS Hub">
+  <meta property="og:description" content="iOS Hub — useful apps, services and websites for iPhone, desktop and everyday workflows.">
+  <meta property="og:url" content="https://caseycz.github.io/iOS-Hub/resources.html">
+  <meta name="twitter:card" content="summary">
   <title>Useful Resources — iOS Hub</title>
-  <link rel="stylesheet" href="styles.css?v=1.1.5-20260918-layout2">
-  <link rel="stylesheet" href="hub-extra.css?v=1.1.5-20260918-sideload2">
+  <link rel="stylesheet" href="styles.css?v=1.1.5-20260918-audit1">
+  <link rel="stylesheet" href="hub-extra.css?v=1.1.5-20260918-audit1">
 </head>
 <body>
+  <a class="skip-link" href="#top" data-i18n="skipToContent">Skip to content</a>
   <header class="topbar">
     <div class="wrap topbar-inner">
       <a class="brand" href="index.html" aria-label="iOS Hub">
@@ -35,8 +43,8 @@
         </select>
         <div class="settings-menu" data-settings-menu>
           <button id="settingsButton" class="icon-btn settings-button" type="button" aria-haspopup="dialog" aria-expanded="false" aria-controls="settingsPanel" aria-label="Settings" title="Settings">⚙</button>
-          <div id="settingsPanel" class="settings-panel" aria-hidden="true">
-            <div class="settings-title" data-settings-copy="title">Settings</div>
+          <div id="settingsPanel" class="settings-panel" role="dialog" aria-labelledby="settingsTitle" aria-hidden="true">
+            <div id="settingsTitle" class="settings-title" data-settings-copy="title">Settings</div>
 
             <div class="settings-label" data-settings-copy="appearance">APPEARANCE</div>
             <div class="settings-theme-seg">
@@ -358,7 +366,7 @@
 
   <div id="supportModal" class="support-backdrop" role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="supportTitle">
     <div class="support-dialog">
-      <button class="support-close" type="button" data-support-close aria-label="Close">×</button>
+      <button class="support-close" type="button" data-support-close aria-label="Close" data-i18n-aria-label="close">×</button>
       <div class="eyebrow" data-i18n="supportEyebrow">SUPPORT THE PROJECT</div>
       <h2 id="supportTitle" data-i18n="supportTitle">Support further development.</h2>
       <p data-i18n="supportDesc">If iOS Hub saves you time, you can support further development through Buy Me a Coffee.</p>
@@ -367,8 +375,8 @@
     </div>
   </div>
 
-  <script type="module" src="resources.js?v=1.1.5-20260918-sideload2"></script>
-  <script src="mobile-menu.js?v=1.1.5-20260918-settingsportal1"></script>
-  <script src="settings-menu.js?v=1.1.5-20260918-settingsportal1"></script>
+  <script type="module" src="resources.js?v=1.1.5-20260918-audit1"></script>
+  <script src="mobile-menu.js?v=1.1.5-20260918-audit1"></script>
+  <script src="settings-menu.js?v=1.1.5-20260918-audit1"></script>
 </body>
 </html>
