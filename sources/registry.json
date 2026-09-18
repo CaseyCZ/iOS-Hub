@@ -1210,6 +1210,165 @@
         "youtube",
         "video"
       ]
+    },
+    {
+      "id": "apollo-reddit",
+      "name": "Apollo for Reddit",
+      "url": "https://raw.githubusercontent.com/Balackburn/Apollo/main/apps.json",
+      "website": "https://balackburn.github.io/Apollo/",
+      "mode": "classic",
+      "mergeable": true,
+      "official": false,
+      "trusted": false,
+      "recommended": true,
+      "community": true,
+      "modified": true,
+      "description": {
+        "cs": "Aktivně udržovaný komunitní source pro Apollo for Reddit s Apollo-Reborn úpravami a vlastním API.",
+        "en": "Actively maintained community source for Apollo for Reddit with Apollo-Reborn modifications and custom API support."
+      },
+      "tags": [
+        "community",
+        "modified",
+        "tweaks",
+        "reddit",
+        "social"
+      ]
+    },
+    {
+      "id": "discord-appstore-builds",
+      "name": "Discord App Store Builds",
+      "url": "https://raw.githubusercontent.com/AlfaActa/discord-altstore-source/main/source.json",
+      "website": "https://github.com/AlfaActa/discord-altstore-source",
+      "mode": "classic",
+      "mergeable": true,
+      "official": false,
+      "trusted": false,
+      "recommended": false,
+      "community": true,
+      "modified": false,
+      "description": {
+        "cs": "Komunitní automatizovaný AltSource s dešifrovanými App Store buildy Discordu připravenými pro sideloading.",
+        "en": "Community automated AltSource with decrypted Discord App Store builds prepared for sideloading."
+      },
+      "tags": [
+        "community",
+        "discord",
+        "social",
+        "sideload"
+      ]
+    },
+    {
+      "id": "ytkace",
+      "name": "YTKACE",
+      "url": "https://raw.githubusercontent.com/xKatsumi/YTKACE-SideStore-Repo/main/ytkace.json",
+      "website": "https://github.com/xKatsumi/YTKACE-SideStore-Repo",
+      "mode": "classic",
+      "mergeable": true,
+      "official": false,
+      "trusted": false,
+      "recommended": true,
+      "community": true,
+      "modified": true,
+      "description": {
+        "cs": "Komunitní SideStore/LiveContainer source pro upravený YouTube klient YTKACE.",
+        "en": "Community SideStore/LiveContainer source for the modified YTKACE YouTube client."
+      },
+      "tags": [
+        "community",
+        "modified",
+        "tweaks",
+        "youtube",
+        "video",
+        "sidestore",
+        "livecontainer"
+      ]
+    },
+    {
+      "id": "heyfordy",
+      "name": "heyFordy SideStore Repo",
+      "url": "https://raw.githubusercontent.com/Bitte-ein-Git/sidestore-repo/main/apps.json",
+      "website": "https://repo.heyfordy.dev/",
+      "mode": "classic",
+      "mergeable": false,
+      "official": false,
+      "trusted": false,
+      "recommended": false,
+      "community": true,
+      "modified": true,
+      "autoPackage": false,
+      "description": {
+        "cs": "Komunitní modified source s YouTube+, Spotify+, YT Music+, Twitch+, Infuse+ a dalšími aplikacemi.",
+        "en": "Community modified source with YouTube+, Spotify+, YT Music+, Twitch+, Infuse+ and other apps."
+      },
+      "tags": [
+        "community",
+        "modified",
+        "tweaks",
+        "youtube",
+        "spotify",
+        "music",
+        "video",
+        "twitch",
+        "utility"
+      ]
+    },
+    {
+      "id": "ipalibrary",
+      "name": "IPALibrary Source",
+      "url": "https://raw.githubusercontent.com/2nkn0w/ipalibrary.me-source/main/ipalibrary_source.json",
+      "website": "https://github.com/2nkn0w/ipalibrary.me-source",
+      "mode": "classic",
+      "mergeable": false,
+      "official": false,
+      "trusted": false,
+      "recommended": false,
+      "community": true,
+      "modified": true,
+      "autoPackage": false,
+      "cachePayload": false,
+      "builder": false,
+      "catalogLimit": 200,
+      "description": {
+        "cs": "Velká automaticky generovaná komunitní IPA knihovna. V Hubu se indexuje omezený náhled, aby katalog zůstal rychlý.",
+        "en": "Large automatically generated community IPA library. iOS Hub indexes a limited preview to keep the catalog fast."
+      },
+      "tags": [
+        "community",
+        "modified",
+        "tweaked",
+        "mega",
+        "apps",
+        "games",
+        "social",
+        "video",
+        "music",
+        "utility"
+      ]
+    },
+    {
+      "id": "armsx2",
+      "name": "ARMSX2 iOS",
+      "url": "https://raw.githubusercontent.com/ARMSX2/Armsx2-Repo/main/apps.json",
+      "website": "https://ios.armsx2.net/",
+      "mode": "classic",
+      "mergeable": true,
+      "official": true,
+      "trusted": false,
+      "recommended": true,
+      "community": false,
+      "modified": false,
+      "description": {
+        "cs": "Oficiální AltStore/SideStore source emulátoru PlayStation 2 ARMSX2 pro iPhone a iPad.",
+        "en": "Official AltStore/SideStore source for the ARMSX2 PlayStation 2 emulator on iPhone and iPad."
+      },
+      "tags": [
+        "official",
+        "games",
+        "emulator",
+        "playstation",
+        "ps2"
+      ]
     }
   ]
 }
