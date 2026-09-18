@@ -1,4 +1,4 @@
-import { SUPPORTED_LANGUAGES, applyTranslations, normalizeLanguage, t } from './i18n.js?v=1.1.5-20260918-audit11';
+import { SUPPORTED_LANGUAGES, applyTranslations, normalizeLanguage, t } from './i18n.js?v=1.1.5-20260918-audit12';
 
 const root = document.documentElement;
 const $ = (selector, scope = document) => scope.querySelector(selector);
@@ -79,7 +79,7 @@ function applyLanguage(value) {
   const select = $('#languageSelect');
   if (select) select.value = state.lang;
   document.title = state.lang === 'en'
-    ? 'iOS Hub — Sources, Catalog & Tools'
+    ? 'iOS Hub — AltStore · SideStore · LiveContainer'
     : `iOS Hub — ${tr('sources')} · ${tr('tools')}`;
   safeSet(STORAGE.language, state.lang);
   renderSources();
