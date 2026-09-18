@@ -31,8 +31,8 @@ const GENRE_RULES = {
 const copy = {
   en: {
     title:'Custom Source Builder', desc:'Filter checked online sources, select any combination and build your own CaseyCZ Mix for AltStore, SideStore or LiveContainer.',
-    selectPass:'Select compatible', selectAll:'Select all shown', clear:'Clear selection', build:'Build CaseyCZ Mix', selected:'selected', shown:'shown', pass:'PASS', try:'TRY',
-    mixStatus:'Mix status', statusAll:'All', statusPass:'PASS only', statusTry:'TRY only', platform:'Platform', platformAll:'All', classic:'AltStore Classic', pal:'AltStore PAL', sidestore:'SideStore', livecontainer:'LiveContainer', autoTested:'Auto tested',
+    selectPass:'Select shown PASS', selectAll:'Select all shown', clear:'Clear selection', build:'Build CaseyCZ Mix', selected:'selected', shown:'shown', pass:'PASS', try:'TRY', passHelp:'PASS means the source passed the automated CaseyCZ Mix merge test. It does not mean every app is compatible with every iOS device.',
+    mixStatus:'Merge test', statusAll:'All', statusPass:'PASS only', statusTry:'TRY only', platform:'Platform', platformAll:'All', classic:'AltStore Classic', pal:'AltStore PAL', sidestore:'SideStore', livecontainer:'LiveContainer', autoTested:'Auto tested',
     altPackage:'CaseyCZ AltStore Source', sidePackage:'CaseyCZ SideStore Source', livePackage:'CaseyCZ LiveContainer Source', customMix:'Custom Mix', filters:'⚙ Filters · 🔎 Search · ☑ Selection',
     addAlt:'＋ Add to AltStore', addSide:'＋ Add to SideStore', addLive:'＋ Add to LiveContainer', copyUrl:'Copy URL', json:'JSON ↗', apps:'apps', sources:'sources',
     hosted:'Hosted Mix ready', local:'Local Mix ready', experimental:'Experimental Mix ready', localNote:'This PASS combination is valid but is not pre-hosted. Download the JSON to inspect or host it; direct Add requires a public source URL.', tryNote:'This Mix contains one or more TRY sources. Download and test the JSON first; PAL or installer-specific metadata may not work after merging.',
@@ -40,8 +40,8 @@ const copy = {
   },
   cs: {
     title:'Custom Source Builder', desc:'Filtruj kontrolované online zdroje, vyber libovolnou kombinaci a vytvoř vlastní CaseyCZ Mix pro AltStore, SideStore nebo LiveContainer.',
-    selectPass:'Vybrat kompatibilní', selectAll:'Vybrat vše zobrazené', clear:'Zrušit výběr', build:'Vytvořit CaseyCZ Mix', selected:'vybráno', shown:'zobrazeno', pass:'PASS', try:'ZKUSIT',
-    mixStatus:'Stav Mixu', statusAll:'Vše', statusPass:'Jen PASS', statusTry:'Jen ZKUSIT', platform:'Platforma', platformAll:'Vše', classic:'AltStore Classic', pal:'AltStore PAL', sidestore:'SideStore', livecontainer:'LiveContainer', autoTested:'Automaticky testováno',
+    selectPass:'Vybrat zobrazené PASS', selectAll:'Vybrat vše zobrazené', clear:'Zrušit výběr', build:'Vytvořit CaseyCZ Mix', selected:'vybráno', shown:'zobrazeno', pass:'PASS', try:'ZKUSIT', passHelp:'PASS znamená, že zdroj prošel automatickým testem sloučení do CaseyCZ Mixu. Neznamená to, že každá aplikace funguje na každém iOS zařízení.',
+    mixStatus:'Test sloučení', statusAll:'Vše', statusPass:'Jen PASS', statusTry:'Jen ZKUSIT', platform:'Platforma', platformAll:'Vše', classic:'AltStore Classic', pal:'AltStore PAL', sidestore:'SideStore', livecontainer:'LiveContainer', autoTested:'Automaticky testováno',
     altPackage:'CaseyCZ AltStore Source', sidePackage:'CaseyCZ SideStore Source', livePackage:'CaseyCZ LiveContainer Source', customMix:'Vlastní Mix', filters:'⚙ Filtry · 🔎 Hledání · ☑ Výběr',
     addAlt:'＋ Přidat do AltStore', addSide:'＋ Přidat do SideStore', addLive:'＋ Přidat do LiveContainer', copyUrl:'Kopírovat URL', json:'JSON ↗', apps:'aplikací', sources:'zdrojů',
     hosted:'Veřejný Mix je připraven', local:'Lokální Mix je připraven', experimental:'Experimentální Mix je připraven', localNote:'Tato PASS kombinace je validní, ale není předem hostovaná. JSON můžeš stáhnout nebo hostovat; přímé přidání vyžaduje veřejnou URL.', tryNote:'Tento Mix obsahuje jeden nebo více zdrojů ZKUSIT. JSON nejdřív stáhni a otestuj; PAL nebo installer-specifická metadata se po sloučení nemusí chovat stejně.',
@@ -49,24 +49,24 @@ const copy = {
   },
   de: {
     title:'Custom Source Builder', desc:'Filtere geprüfte Online-Quellen, wähle eine beliebige Kombination und erstelle deinen eigenen CaseyCZ Mix für AltStore, SideStore oder LiveContainer.',
-    selectPass:'Kompatible wählen', selectAll:'Alle sichtbaren wählen', clear:'Auswahl löschen', build:'CaseyCZ Mix erstellen', selected:'ausgewählt', shown:'sichtbar', pass:'PASS', try:'TEST',
-    mixStatus:'Mix-Status', statusAll:'Alle', statusPass:'Nur PASS', statusTry:'Nur TEST', platform:'Plattform', platformAll:'Alle', classic:'AltStore Classic', pal:'AltStore PAL', sidestore:'SideStore', livecontainer:'LiveContainer', autoTested:'Automatisch geprüft',
+    selectPass:'Sichtbare PASS wählen', selectAll:'Alle sichtbaren wählen', clear:'Auswahl löschen', build:'CaseyCZ Mix erstellen', selected:'ausgewählt', shown:'sichtbar', pass:'PASS', try:'TEST', passHelp:'PASS bedeutet, dass die Quelle den automatischen CaseyCZ-Mix-Zusammenführungstest bestanden hat. Es bedeutet nicht, dass jede App mit jedem iOS-Gerät kompatibel ist.',
+    mixStatus:'Merge-Test', statusAll:'Alle', statusPass:'Nur PASS', statusTry:'Nur TEST', platform:'Plattform', platformAll:'Alle', classic:'AltStore Classic', pal:'AltStore PAL', sidestore:'SideStore', livecontainer:'LiveContainer', autoTested:'Automatisch geprüft',
     altPackage:'CaseyCZ AltStore Source', sidePackage:'CaseyCZ SideStore Source', livePackage:'CaseyCZ LiveContainer Source', customMix:'Eigener Mix', filters:'⚙ Filter · 🔎 Suche · ☑ Auswahl',
     addAlt:'＋ Zu AltStore', addSide:'＋ Zu SideStore', addLive:'＋ Zu LiveContainer', copyUrl:'URL kopieren', json:'JSON ↗', apps:'Apps', sources:'Quellen',
     hosted:'Gehosteter Mix bereit', local:'Lokaler Mix bereit', experimental:'Experimenteller Mix bereit', localNote:'Diese PASS-Kombination ist gültig, aber nicht vorab gehostet. Für direktes Hinzufügen ist eine öffentliche URL nötig.', tryNote:'Dieser Mix enthält TEST-Quellen. Lade die JSON-Datei herunter und teste sie zuerst.', conflicts:'Duplikate gelöst', download:'JSON laden', preview:'JSON ansehen', building:'Quellen werden getestet…', failed:'Der ausgewählte Mix konnte nicht erstellt werden.', copied:'URL kopiert.', empty:'Keine Quellen entsprechen den Filtern.'
   },
   es: {
     title:'Custom Source Builder', desc:'Filtra fuentes online comprobadas, elige cualquier combinación y crea tu propio CaseyCZ Mix para AltStore, SideStore o LiveContainer.',
-    selectPass:'Seleccionar compatibles', selectAll:'Seleccionar visibles', clear:'Borrar selección', build:'Crear CaseyCZ Mix', selected:'seleccionadas', shown:'visibles', pass:'PASS', try:'PROBAR',
-    mixStatus:'Estado del Mix', statusAll:'Todo', statusPass:'Solo PASS', statusTry:'Solo PROBAR', platform:'Plataforma', platformAll:'Todo', classic:'AltStore Classic', pal:'AltStore PAL', sidestore:'SideStore', livecontainer:'LiveContainer', autoTested:'Prueba automática',
+    selectPass:'Seleccionar PASS visibles', selectAll:'Seleccionar visibles', clear:'Borrar selección', build:'Crear CaseyCZ Mix', selected:'seleccionadas', shown:'visibles', pass:'PASS', try:'PROBAR', passHelp:'PASS significa que la fuente superó la prueba automática de combinación de CaseyCZ Mix. No significa que todas las apps sean compatibles con todos los dispositivos iOS.',
+    mixStatus:'Prueba de combinación', statusAll:'Todo', statusPass:'Solo PASS', statusTry:'Solo PROBAR', platform:'Plataforma', platformAll:'Todo', classic:'AltStore Classic', pal:'AltStore PAL', sidestore:'SideStore', livecontainer:'LiveContainer', autoTested:'Prueba automática',
     altPackage:'CaseyCZ AltStore Source', sidePackage:'CaseyCZ SideStore Source', livePackage:'CaseyCZ LiveContainer Source', customMix:'Mix personalizado', filters:'⚙ Filtros · 🔎 Búsqueda · ☑ Selección',
     addAlt:'＋ Añadir a AltStore', addSide:'＋ Añadir a SideStore', addLive:'＋ Añadir a LiveContainer', copyUrl:'Copiar URL', json:'JSON ↗', apps:'apps', sources:'fuentes',
     hosted:'Mix alojado listo', local:'Mix local listo', experimental:'Mix experimental listo', localNote:'Esta combinación PASS es válida pero no está alojada. Añadir directamente requiere una URL pública.', tryNote:'Este Mix contiene fuentes PROBAR. Descarga y prueba primero el JSON.', conflicts:'duplicados resueltos', download:'Descargar JSON', preview:'Ver JSON', building:'Probando fuentes…', failed:'No se pudo crear el Mix.', copied:'URL copiada.', empty:'Ninguna fuente coincide con los filtros.'
   },
   fr: {
     title:'Custom Source Builder', desc:'Filtrez les sources en ligne vérifiées, choisissez n’importe quelle combinaison et créez votre propre CaseyCZ Mix pour AltStore, SideStore ou LiveContainer.',
-    selectPass:'Sélectionner compatibles', selectAll:'Tout sélectionner affiché', clear:'Effacer la sélection', build:'Créer CaseyCZ Mix', selected:'sélectionnées', shown:'affichées', pass:'PASS', try:'TEST',
-    mixStatus:'Statut du Mix', statusAll:'Tout', statusPass:'PASS seulement', statusTry:'TEST seulement', platform:'Plateforme', platformAll:'Tout', classic:'AltStore Classic', pal:'AltStore PAL', sidestore:'SideStore', livecontainer:'LiveContainer', autoTested:'Test automatique',
+    selectPass:'Sélectionner les PASS affichés', selectAll:'Tout sélectionner affiché', clear:'Effacer la sélection', build:'Créer CaseyCZ Mix', selected:'sélectionnées', shown:'affichées', pass:'PASS', try:'TEST', passHelp:'PASS signifie que la source a réussi le test automatique de fusion CaseyCZ Mix. Cela ne signifie pas que chaque app est compatible avec chaque appareil iOS.',
+    mixStatus:'Test de fusion', statusAll:'Tout', statusPass:'PASS seulement', statusTry:'TEST seulement', platform:'Plateforme', platformAll:'Tout', classic:'AltStore Classic', pal:'AltStore PAL', sidestore:'SideStore', livecontainer:'LiveContainer', autoTested:'Test automatique',
     altPackage:'CaseyCZ AltStore Source', sidePackage:'CaseyCZ SideStore Source', livePackage:'CaseyCZ LiveContainer Source', customMix:'Mix personnalisé', filters:'⚙ Filtres · 🔎 Recherche · ☑ Sélection',
     addAlt:'＋ Ajouter à AltStore', addSide:'＋ Ajouter à SideStore', addLive:'＋ Ajouter à LiveContainer', copyUrl:'Copier URL', json:'JSON ↗', apps:'apps', sources:'sources',
     hosted:'Mix hébergé prêt', local:'Mix local prêt', experimental:'Mix expérimental prêt', localNote:'Cette combinaison PASS est valide mais non hébergée. L’ajout direct nécessite une URL publique.', tryNote:'Ce Mix contient des sources TEST. Téléchargez et testez d’abord le JSON.', conflicts:'doublons résolus', download:'Télécharger JSON', preview:'Aperçu JSON', building:'Test des sources…', failed:'Impossible de créer le Mix.', copied:'URL copiée.', empty:'Aucune source ne correspond aux filtres.'
@@ -192,6 +192,7 @@ function applyCopy() {
   if ($('#mixPlatformLabel')) $('#mixPlatformLabel').textContent = tr('platform');
   if ($('#mixStatusLabel')) $('#mixStatusLabel').textContent = tr('mixStatus');
   if ($('#mixTestBadge')) $('#mixTestBadge').textContent = tr('autoTested');
+  if ($('#mixPassHelp')) $('#mixPassHelp').textContent = tr('passHelp');
 
   const platformLabels = {all:'platformAll', classic:'classic', pal:'pal', sidestore:'sidestore', livecontainer:'livecontainer'};
   $$('[data-exp-platform-filter]').forEach(button => { button.textContent = tr(platformLabels[button.dataset.expPlatformFilter] || 'platformAll'); });
