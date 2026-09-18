@@ -181,7 +181,14 @@ def validate_security_policy(path: Path) -> None:
         error(f"{label} is missing a Content-Security-Policy meta tag")
         return
     csp = csp_match.group(1)
-    for part in REQUIRED_CSP_PARTS:
+    required_parts = list(REQUIRED_CSP_PARTS)
+    if path.name != "converter.html":
+        required_parts = [
+            part for part in required_parts
+            if part not in ("script-src 'self' 'wasm-unsafe-eval'", "worker-src 'self' blob:")
+        ]
+        required_parts.append("script-src 'self'")
+    for part in required_parts:
         if part not in csp:
             error(f"{label} CSP is missing required directive: {part}")
 
