@@ -22,6 +22,7 @@
 - Audited all public pages for icon consistency: resource CTAs now repeat each project's official icon, GitHub issue and Buy Me a Coffee actions use their official service artwork, and local CSS/JS references are cache-busted so the updated icons appear immediately after deploy.
 - Repaired missing resource icons by replacing fragile favicon hotlinks with stable official project/organization artwork for Stremio, Discord, Telegram, Tailscale, LocalSend, Raspberry Pi, Node.js, OBS and iloader, with fallback URLs for the most important brands.
 - Replaced two more fragile favicon URLs with stable official assets for changedetection.io and 7-Zip during the icon audit.
+- Moved the most important program icons into local official-asset wrappers so they no longer depend on fragile external hotlinks; this fixes 7-Zip, Stremio, Discord and other resource icons and also makes AltStore/SideStore/LiveContainer icons consistent site-wide.
 
 ## 1.1.4 — 2026-09-18
 
