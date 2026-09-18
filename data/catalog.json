@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-18T11:20:44Z",
+  "generatedAt": "2026-09-18T16:15:27Z",
   "sources": [
     {
       "id": "utm",
@@ -3347,18 +3347,10 @@
     {
       "id": "cypwn-ipa",
       "name": "CyPwn IPA Library",
-      "appCount": 210,
+      "appCount": 209,
       "catalogLimited": true,
       "iconURL": "https://repo.cypwn.xyz/assets/images/cypwn_small.png",
       "apps": [
-        {
-          "name": "Stremio-2.0.7",
-          "bundleIdentifier": "com.stremio.pal",
-          "developerName": "Stremio-2.0.7 x CyPwn",
-          "version": "2.0.7",
-          "iconURL": "https://ipa.cypwn.xyz/serve/icons/Stremio-2.0.7.png",
-          "subtitle": ""
-        },
         {
           "name": "Stremio-2.0.6",
           "bundleIdentifier": "com.stremio.pal",
@@ -4790,16 +4782,48 @@
           "version": "2.6",
           "iconURL": "https://ipa.cypwn.xyz/serve/icons/Star_Map_2.6_Satella.png",
           "subtitle": ""
+        },
+        {
+          "name": "RefacePro_3.12.0",
+          "bundleIdentifier": "cypwn.RefacePro_3.12.0.3.12.0",
+          "developerName": "RefacePro_3.12.0 x CyPwn",
+          "version": "3.12.0",
+          "iconURL": "https://ipa.cypwn.xyz/serve/icons/RefacePro_3.12.0.png",
+          "subtitle": ""
         }
       ]
     },
     {
       "id": "apptesters",
       "name": "AppTesters IPA Repo",
-      "appCount": 9181,
+      "appCount": 9184,
       "catalogLimited": true,
       "iconURL": "https://apptesters.org/apptesters-512x512.png",
       "apps": [
+        {
+          "name": "TranslateNow",
+          "bundleIdentifier": "solutions.wzp.translator",
+          "developerName": "",
+          "version": "2026.9.27",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/solutions.wzp.translator.png",
+          "subtitle": ""
+        },
+        {
+          "name": "Calm",
+          "bundleIdentifier": "com.calm.calmapp",
+          "developerName": "",
+          "version": "7.1",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.calm.calmapp.png",
+          "subtitle": ""
+        },
+        {
+          "name": "Flightradar24",
+          "bundleIdentifier": "se.resenatverket.FlightRadar24-Free",
+          "developerName": "",
+          "version": "11.11.1",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/se.resenatverket.FlightRadar24-Free.png",
+          "subtitle": ""
+        },
         {
           "name": "EPIK",
           "bundleIdentifier": "com.snowcorp.epik",
@@ -6375,30 +6399,6 @@
           "version": "8.3.1",
           "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.linecorp.Foodie.png",
           "subtitle": ""
-        },
-        {
-          "name": "B612",
-          "bundleIdentifier": "com.linecorp.b612",
-          "developerName": "",
-          "version": "15.3.11",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.linecorp.b612.png",
-          "subtitle": ""
-        },
-        {
-          "name": "InShot",
-          "bundleIdentifier": "com.camerasideas.InstaShot",
-          "developerName": "",
-          "version": "1.99.1",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.camerasideas.InstaShot.png",
-          "subtitle": ""
-        },
-        {
-          "name": "Tripsy",
-          "bundleIdentifier": "app.tripsy.ios",
-          "developerName": "",
-          "version": "3.9.2",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/app.tripsy.ios.png",
-          "subtitle": ""
         }
       ]
     },
@@ -6441,14 +6441,14 @@
       "name": "Discord",
       "appCount": 1,
       "catalogLimited": false,
-      "iconURL": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/3b/49/1d/3b491ddd-2b41-fd44-042f-f01b2899ecd2/AppIcon-0-0-1x_U007epad-0-1-0-85-220.png/512x512bb.jpg",
+      "iconURL": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/eb/6a/f7/eb6af7ed-f71c-61b8-0a16-0773bd68ea77/AppIcon-0-0-1x_U007epad-0-1-0-85-220.png/512x512bb.jpg",
       "apps": [
         {
           "name": "Discord - Talk, Play, Hang Out",
           "bundleIdentifier": "com.hammerandchisel.discord",
           "developerName": "Discord Inc.",
-          "version": "344.1",
-          "iconURL": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/3b/49/1d/3b491ddd-2b41-fd44-042f-f01b2899ecd2/AppIcon-0-0-1x_U007epad-0-1-0-85-220.png/512x512bb.jpg",
+          "version": "345.0",
+          "iconURL": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/eb/6a/f7/eb6af7ed-f71c-61b8-0a16-0773bd68ea77/AppIcon-0-0-1x_U007epad-0-1-0-85-220.png/512x512bb.jpg",
           "subtitle": "The standard Discord app with no tweaks added."
         }
       ]
@@ -8251,5 +8251,6 @@
         }
       ]
     }
-  ]
+  ],
+  "uniqueAppCount": 1911
 }

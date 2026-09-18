@@ -15,14 +15,14 @@
       "developerName": "LiveContainer Team",
       "subtitle": "Run iOS apps without actually installing them!",
       "version": "3.8.10",
-      "versionDate": "2026-09-13T00:37:24Z",
-      "versionDescription": "Nightly build from [e55609b](https://github.com/LiveContainer/LiveContainer/commit/e55609b): Fix 1600\n\nThis is a nightly release [created automatically with GitHub Actions workflow](https://github.com/LiveContainer/LiveContainer/actions/runs/34731254224/attempts/1).\n",
+      "versionDate": "2026-09-13T01:45:38Z",
+      "versionDescription": "Nightly build from [db2811c](https://github.com/LiveContainer/LiveContainer/commit/db2811c): Merge branch 'pr-1597'\n\nThis is a nightly release [created automatically with GitHub Actions workflow](https://github.com/LiveContainer/LiveContainer/actions/runs/35354029729/attempts/1).\n",
       "downloadURL": "https://github.com/LiveContainer/LiveContainer/releases/download/nightly/LiveContainer.ipa",
       "localizedDescription": "Run iOS apps without actually installing them!",
       "iconURL": "https://raw.githubusercontent.com/LiveContainer/LiveContainer/main/screenshots/AppIcon1024.png",
       "tintColor": "#0784FC",
       "category": "utilities",
-      "size": 4745545,
+      "size": 4745477,
       "screenshotURLs": [
         "https://raw.githubusercontent.com/LiveContainer/LiveContainer/main/screenshots/1.png"
       ],
@@ -81,16 +81,16 @@
       "versions": [
         {
           "version": "3.8.10",
-          "date": "2026-09-13T00:37:24Z",
-          "localizedDescription": "Nightly build from [e55609b](https://github.com/LiveContainer/LiveContainer/commit/e55609b): Fix 1600\n\nThis is a nightly release [created automatically with GitHub Actions workflow](https://github.com/LiveContainer/LiveContainer/actions/runs/34731254224/attempts/1).\n",
+          "date": "2026-09-13T01:45:38Z",
+          "localizedDescription": "Nightly build from [db2811c](https://github.com/LiveContainer/LiveContainer/commit/db2811c): Merge branch 'pr-1597'\n\nThis is a nightly release [created automatically with GitHub Actions workflow](https://github.com/LiveContainer/LiveContainer/actions/runs/35354029729/attempts/1).\n",
           "downloadURL": "https://github.com/LiveContainer/LiveContainer/releases/download/nightly/LiveContainer.ipa",
-          "size": 4745545,
-          "commit": "e55609b",
-          "headline": "Fix #1600"
+          "size": 4745477,
+          "commit": "db2811c",
+          "headline": "Merge branch 'pr-1597'"
         }
       ],
-      "commit": "e55609b",
-      "headline": "Fix #1600"
+      "commit": "db2811c",
+      "headline": "Merge branch 'pr-1597'"
     }
   ],
   "news": []
