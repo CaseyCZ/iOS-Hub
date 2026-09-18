@@ -17,6 +17,7 @@
 - Reordered Useful Resources sections alphabetically in Czech, with Free iOS & tvOS sideloading first.
 - Added AltStore Classic Remote AltServers to the Sideloading Guide, including no-computer refresh workflow, compatibility details and troubleshooting.
 - Reworked the Sideloading Guide for complete beginners with plain-language choices, AltStore PAL vs Classic guidance, SideStore and LiveContainer explanations, and a clear explanation of what a Source is.
+- Refined the beginner guide into intent-based choices with multiple valid routes where appropriate: SideStore vs AltStore Remote refresh, Sideloadly vs AltStore Classic for desktop IPA installs, LiveContainer options and Apple TV methods; action links now use visual icons throughout the guide.
 
 ## 1.1.4 — 2026-09-18
 
