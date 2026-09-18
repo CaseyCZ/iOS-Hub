@@ -45,7 +45,7 @@ jobs:
           # Generated files can race with normal website commits. For every
           # attempt start from the newest main and regenerate instead of
           # rebasing generated timestamps/caches and creating conflicts.
-          for attempt in 1 2 3; do
+          for attempt in 1 2 3 4 5; do
             git fetch origin main
             git reset --hard origin/main
             python tools/update_sources.py
@@ -62,9 +62,9 @@ jobs:
               exit 0
             fi
 
-            echo "Push raced with another commit; regenerating on latest main ($attempt/3)..."
+            echo "Push raced with another commit; regenerating on latest main ($attempt/5)..."
             sleep 2
           done
 
-          echo "Unable to push generated source cache after 3 attempts."
+          echo "Unable to push generated source cache after 5 attempts."
           exit 1
