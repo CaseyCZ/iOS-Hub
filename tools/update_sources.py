@@ -145,6 +145,29 @@ def is_default_package_source(source: dict) -> bool:
     return source.get("nightly") is not True and "nightly" not in tags and "development" not in tags
 
 
+def sanitize_classic_app(app: dict) -> dict:
+    """Remove marketplace-only/custom build fields from Classic IPA source output."""
+    cleaned = dict(app)
+    cleaned.pop("marketplaceID", None)
+    cleaned.pop("Build", None)
+    cleaned.pop("build", None)
+
+    versions = cleaned.get("versions")
+    if isinstance(versions, list):
+        normalized_versions = []
+        for version in versions:
+            if isinstance(version, dict):
+                item = dict(version)
+                item.pop("Build", None)
+                item.pop("build", None)
+                normalized_versions.append(item)
+            else:
+                normalized_versions.append(version)
+        cleaned["versions"] = normalized_versions
+
+    return cleaned
+
+
 def dedupe_apps(source_payloads: list[tuple[dict, dict]]) -> tuple[list[dict], list[dict]]:
     merged: dict[str, tuple[dict, dict]] = {}
     conflicts: list[dict] = []
@@ -175,7 +198,7 @@ def dedupe_apps(source_payloads: list[tuple[dict, dict]]) -> tuple[list[dict], l
                 "keptVersion": app_version(winner_app),
             })
 
-    apps = [item[1] for item in merged.values()]
+    apps = [sanitize_classic_app(item[1]) for item in merged.values()]
     apps.sort(key=lambda app: str(app.get("name") or "").lower())
     return apps, conflicts
 
