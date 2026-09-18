@@ -168,10 +168,12 @@ function sourceSearchText(source) {
 }
 
 function sourceAppCount(source) {
-  const apps = catalogSource(source.id)?.apps;
-  if (Array.isArray(apps)) return apps.length;
+  const catalog = catalogSource(source.id);
+  if (Number.isFinite(catalog?.appCount)) return catalog.appCount;
   const statusCount = getStatus(source.id).appCount;
-  return Number.isFinite(statusCount) ? statusCount : 0;
+  if (Number.isFinite(statusCount)) return statusCount;
+  const apps = catalog?.apps;
+  return Array.isArray(apps) ? apps.length : 0;
 }
 
 function compareSources(left, right) {
