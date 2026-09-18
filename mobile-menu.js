@@ -31,9 +31,11 @@ function setupMobileMenu() {
   button.addEventListener('click', event => {
     event.stopPropagation();
     const settingsMenu = document.querySelector('[data-settings-menu]');
+    const settingsPanel = document.getElementById('settingsPanel');
     settingsMenu?.classList.remove('open');
+    settingsPanel?.classList.remove('open');
     document.getElementById('settingsButton')?.setAttribute('aria-expanded', 'false');
-    document.getElementById('settingsPanel')?.setAttribute('aria-hidden', 'true');
+    settingsPanel?.setAttribute('aria-hidden', 'true');
     setOpen(!header.classList.contains('mobile-menu-open'));
   });
 
