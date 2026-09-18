@@ -193,7 +193,7 @@ def validate_translations() -> None:
         return
 
     used: set[str] = set()
-    for html in (ROOT / "index.html", ROOT / "builder.html", ROOT / "converter.html"):
+    for html in (ROOT / "index.html", ROOT / "builder.html", ROOT / "converter.html", ROOT / "guide.html"):
         parser = parse_page(html)
         if parser:
             used.update(parser.i18n_keys)
@@ -206,7 +206,7 @@ def validate_translations() -> None:
 
     i18n_text = i18n_path.read_text(encoding="utf-8")
     for key in sorted(used):
-        occurrences = len(re.findall(rf"\b{re.escape(key)}\s*:", i18n_text))
+        occurrences = len(re.findall(rf"(?:\b{re.escape(key)}|[\"']{re.escape(key)}[\"'])\s*:", i18n_text))
         if occurrences < len(LANGUAGES):
             error(
                 f"Translation key {key!r} is used by the UI but appears in only "
