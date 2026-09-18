@@ -284,6 +284,9 @@ function renderSources() {
 }
 
 function uniqueDiscoveredAppCount() {
+  const generatedCount = Number(state.catalog?.uniqueAppCount);
+  if (Number.isFinite(generatedCount) && generatedCount >= 0) return generatedCount;
+
   const onlineIds = new Set(
     state.registry
       .filter(source => getStatus(source.id).online === true)
