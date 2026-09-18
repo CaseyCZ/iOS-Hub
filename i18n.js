@@ -355,7 +355,7 @@ const GUIDE_FR_FULL = {
   "guidePathRemoteTitle": "Actualiser AltStore sans votre ordinateur",
   "guidePathRemoteDesc": "Appairez AltStore Classic une fois, installez LocalDevVPN puis utilisez un Remote AltServer pour installer et actualiser des apps de n’importe où tant que vous êtes connecté en Wi-Fi.",
   "guidePathDesktopTitle": "Signer des fichiers IPA depuis Windows ou Mac",
-  "guidePathDesktopDesc": "Utilisez Sideloadly pour installer directement des IPA. Son daemon peut resign­er automatiquement les apps lorsque votre appareil est accessible en Wi-Fi ou USB.",
+  "guidePathDesktopDesc": "Utilisez Sideloadly pour installer directement des IPA. Son daemon peut re-signer automatiquement les apps lorsque votre appareil est accessible en Wi-Fi ou USB.",
   "guidePathTrollTitle": "Pas de refresh tous les 7 jours sur iOS compatible",
   "guidePathTrollDesc": "Utilisez TrollStore uniquement si votre version exacte d’iOS/iPadOS est prise en charge. Sur ces versions compatibles, il installe les IPA de manière permanente.",
   "guidePathTvTitle": "Apple TV",
