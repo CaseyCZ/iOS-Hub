@@ -68,3 +68,5 @@
 - First numbered stable checkpoint of CaseyCZ iOS Hub.
 - Checked source catalog, AltStore/SideStore packages, Source Builder, Mix generation and DEB → IPA tool.
 - This state is preserved in the `release-v1.0.0` branch.
+
+- Clarified Custom Builder PASS selection: “Select compatible” is now “Select shown PASS”, with an explanation that PASS means the source passed the automated CaseyCZ Mix merge test, not device/app compatibility.
