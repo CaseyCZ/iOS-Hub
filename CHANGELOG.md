@@ -24,6 +24,7 @@
 - Replaced two more fragile favicon URLs with stable official assets for changedetection.io and 7-Zip during the icon audit.
 - Moved the most important program icons into local official-asset wrappers so they no longer depend on fragile external hotlinks; this fixes 7-Zip, Stremio, Discord and other resource icons and also makes AltStore/SideStore/LiveContainer icons consistent site-wide.
 - Completed another full icon audit: Visual Studio now uses Microsoft's real Visual Studio product mark, iTunes uses Apple's actual iTunes icon, Tailscale uses a local mark copied from the official Tailscale repository, and all remaining remote resource icons have explicit fallbacks to prevent blank cards.
+- Finished the resource icon audit: Visual Studio now uses a local Microsoft-derived product logo, WizTree uses its actual application icon, and LeoMoon HotKeyz uses the real app icon cropped from the official LeoMoon product screenshot instead of broken site favicons.
 
 ## 1.1.4 — 2026-09-18
 
