@@ -32,6 +32,7 @@
           <option value="es">ES</option>
           <option value="fr">FR</option>
         </select>
+        <a class="icon-btn report-bug-btn" href="https://github.com/CaseyCZ/iOS-Hub/issues/new" target="_blank" rel="noopener" aria-label="Report a bug" title="Report a bug" data-i18n-title="reportBug" data-i18n-aria-label="reportBug">🐞</a>
         <button id="themeToggle" class="icon-btn" type="button" aria-label="Theme">☀</button>
         <button class="compact-btn" type="button" data-support-open><span>☕</span><span class="support-label" data-i18n="support">Support</span></button>
       </div>
@@ -107,7 +108,7 @@
 
       <details class="content-disclosure filter-disclosure">
         <summary>
-          <span class="disclosure-title">⚙ <span data-i18n="sourceType">Source type</span> · 🏷 <span data-i18n="genre">Genre</span> · 🔎 <span data-i18n="search">Search</span></span>
+          <span class="disclosure-title">⚙ <span data-i18n="sourceType">Source type</span> · 🏷 <span data-i18n="genre">Genre</span> · ↕ <span data-i18n="sort">Sort</span> · 🔎 <span data-i18n="search">Search</span></span>
         </summary>
         <div class="disclosure-body">
           <div class="catalog-filters filter-disclosure-grid">
@@ -134,6 +135,14 @@
                 <button class="filter" type="button" data-genre-filter="downloads" data-i18n="downloads">Downloads</button>
                 <button class="filter" type="button" data-genre-filter="sideload" data-i18n="sideloadTools">Sideload Tools</button>
                 <button class="filter" type="button" data-genre-filter="utilities" data-i18n="utilities">Utilities</button>
+              </div>
+            </div>
+            <div class="filter-group">
+              <div class="filter-label">↕ <span data-i18n="sort">Sort</span></div>
+              <div class="filter-tabs">
+                <button class="filter active" type="button" data-sort-filter="name" data-i18n="sortName">Name A–Z</button>
+                <button class="filter" type="button" data-sort-filter="apps-desc" data-i18n="sortAppsHigh">Apps: most first</button>
+                <button class="filter" type="button" data-sort-filter="apps-asc" data-i18n="sortAppsLow">Apps: fewest first</button>
               </div>
             </div>
             <div class="filter-group"><div class="filter-label">🔎 <span data-i18n="search">Search</span></div><input id="sourceSearch" class="search" type="search" autocomplete="off" data-i18n-placeholder="searchPlaceholder" placeholder="Search sources…"></div>
