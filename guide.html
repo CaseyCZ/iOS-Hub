@@ -9,7 +9,7 @@
   <meta name="description" content="iOS Hub — free sideloading guide, compatibility overview and troubleshooting for AltStore, SideStore, LiveContainer, Sideloadly and TrollStore.">
   <title>Sideloading Guide — iOS Hub</title>
   <link rel="stylesheet" href="styles.css?v=1.1.5-20260918-layout2">
-  <link rel="stylesheet" href="hub-extra.css?v=1.1.5-20260918-guidewizard1">
+  <link rel="stylesheet" href="hub-extra.css?v=1.1.5-20260918-helpcenter1">
 </head>
 <body>
   <header class="topbar">
@@ -66,39 +66,164 @@
 
   <main id="top">
     <section class="hero guide-hero wrap">
-      <div class="eyebrow">START HERE · COMPATIBILITY · FIXES</div>
-      <h1 data-i18n="guidePageTitle">Sideloading Guide</h1>
-      <p data-i18n="guidePageDesc">Choose a free sideloading path, compare the main tools and fix the most common setup and refresh problems.</p>
+      <div class="eyebrow" data-help-copy="pageEyebrow">HELP CENTER · GUIDES · FIXES</div>
+      <h1 data-help-copy="pageTitle">Sideloading Help Center</h1>
+      <p data-help-copy="pageDesc">Choose the right sideloading method, diagnose a problem or describe your setup and get a focused path in a few taps.</p>
     </section>
 
     <section class="section wrap guide-page-section">
-      <div id="guideAssistant" class="panel guide-assistant">
-        <div class="eyebrow" data-guide-copy="assistantEyebrow">QUICK CHOICE</div>
-        <h2 data-guide-copy="assistantTitle">What do you want to do?</h2>
-        <p data-guide-copy="assistantDesc">Pick your goal. iOS Hub will point you to the most relevant method and then you can open the detailed guide.</p>
+      <div id="guideAssistant" class="panel guide-assistant guide-help-center">
+        <div class="eyebrow" data-help-copy="centerEyebrow">IOS HUB HELP CENTER</div>
+        <h2 data-help-copy="centerTitle">How can we help?</h2>
+        <p data-help-copy="centerDesc">Start with one of the three paths below. You can change direction at any time without losing the rest of the guide.</p>
 
-        <div class="guide-goal-grid" role="group" aria-label="Choose a sideloading goal">
-          <button type="button" class="guide-goal" data-guide-goal="iphone"><span class="guide-goal-icon">📱</span><span data-guide-copy="goalIphone">Install IPA and refresh from iPhone</span></button>
-          <button type="button" class="guide-goal" data-guide-goal="refresh"><span class="guide-goal-icon">↻</span><span data-guide-copy="goalRefresh">My refresh does not work</span></button>
-          <button type="button" class="guide-goal" data-guide-goal="many"><span class="guide-goal-icon">▦</span><span data-guide-copy="goalMany">I want many IPA apps</span></button>
-          <button type="button" class="guide-goal" data-guide-goal="desktop"><span class="guide-goal-icon">💻</span><span data-guide-copy="goalDesktop">Install mainly from a computer</span></button>
-          <button type="button" class="guide-goal" data-guide-goal="tv"><span class="guide-goal-icon">📺</span><span data-guide-copy="goalTv">Install apps on Apple TV</span></button>
-          <button type="button" class="guide-goal" data-guide-goal="permanent"><span class="guide-goal-icon">∞</span><span data-guide-copy="goalPermanent">Permanent install on supported iOS</span></button>
+        <div class="guide-mode-tabs" role="tablist" aria-label="Help center modes">
+          <button type="button" class="guide-mode active" data-guide-mode="choose" role="tab" aria-selected="true">
+            <span class="guide-mode-icon">↗</span>
+            <span><strong data-help-copy="modeChooseTitle">Choose a method</strong><small data-help-copy="modeChooseDesc">Tell us what you want to do</small></span>
+          </button>
+          <button type="button" class="guide-mode" data-guide-mode="fix" role="tab" aria-selected="false">
+            <span class="guide-mode-icon">⌁</span>
+            <span><strong data-help-copy="modeFixTitle">Fix a problem</strong><small data-help-copy="modeFixDesc">Search by symptom or error</small></span>
+          </button>
+          <button type="button" class="guide-mode" data-guide-mode="setup" role="tab" aria-selected="false">
+            <span class="guide-mode-icon">✓</span>
+            <span><strong data-help-copy="modeSetupTitle">My setup</strong><small data-help-copy="modeSetupDesc">Build a recommendation from your device</small></span>
+          </button>
         </div>
 
-        <div id="guideRecommendation" class="guide-recommendation" hidden>
-          <div class="guide-recommendation-badge" data-guide-copy="recommendationLabel">RECOMMENDATION</div>
-          <h3 id="guideRecommendationTitle"></h3>
-          <p id="guideRecommendationText"></p>
-          <div id="guideRecommendationSteps" class="guide-recommendation-steps"></div>
-          <div class="guide-recommendation-actions">
-            <a id="guideRecommendationPrimary" class="btn primary" href="#" target="_blank" rel="noopener noreferrer"></a>
-            <a id="guideRecommendationSecondary" class="btn secondary" href="#" target="_blank" rel="noopener noreferrer" hidden></a>
-          </div>
+        <div class="guide-mode-panels">
+          <section class="guide-mode-panel active" data-guide-panel="choose" role="tabpanel">
+            <div class="guide-panel-head">
+              <h3 data-help-copy="chooseTitle">What do you want to do?</h3>
+              <p data-help-copy="chooseDesc">Pick the closest goal. We will show a practical starting point and the next three steps.</p>
+            </div>
+
+            <div class="guide-goal-grid" role="group" aria-label="Choose a sideloading goal">
+              <button type="button" class="guide-goal" data-guide-goal="iphone"><span class="guide-goal-icon">📱</span><span data-guide-copy="goalIphone">Install IPA and refresh from iPhone</span></button>
+              <button type="button" class="guide-goal" data-guide-goal="refresh"><span class="guide-goal-icon">↻</span><span data-guide-copy="goalRefresh">My refresh does not work</span></button>
+              <button type="button" class="guide-goal" data-guide-goal="many"><span class="guide-goal-icon">▦</span><span data-guide-copy="goalMany">I want many IPA apps</span></button>
+              <button type="button" class="guide-goal" data-guide-goal="desktop"><span class="guide-goal-icon">💻</span><span data-guide-copy="goalDesktop">Install mainly from a computer</span></button>
+              <button type="button" class="guide-goal" data-guide-goal="tv"><span class="guide-goal-icon">📺</span><span data-guide-copy="goalTv">Install apps on Apple TV</span></button>
+              <button type="button" class="guide-goal" data-guide-goal="permanent"><span class="guide-goal-icon">∞</span><span data-guide-copy="goalPermanent">Permanent install on supported iOS</span></button>
+            </div>
+
+            <div id="guideRecommendation" class="guide-recommendation" hidden>
+              <div class="guide-recommendation-badge" data-guide-copy="recommendationLabel">RECOMMENDATION</div>
+              <h3 id="guideRecommendationTitle"></h3>
+              <p id="guideRecommendationText"></p>
+              <div id="guideRecommendationSteps" class="guide-recommendation-steps"></div>
+              <div class="guide-recommendation-actions">
+                <a id="guideRecommendationPrimary" class="btn primary" href="#" target="_blank" rel="noopener noreferrer"></a>
+                <a id="guideRecommendationSecondary" class="btn secondary" href="#" target="_blank" rel="noopener noreferrer" hidden></a>
+              </div>
+            </div>
+          </section>
+
+          <section class="guide-mode-panel" data-guide-panel="fix" role="tabpanel" hidden>
+            <div class="guide-panel-head">
+              <h3 data-help-copy="fixTitle">What is not working?</h3>
+              <p data-help-copy="fixDesc">Paste part of an error message or pick a common problem. We will narrow the troubleshooting list below.</p>
+            </div>
+
+            <div class="assistant-error-box">
+              <span class="assistant-error-icon">⌕</span>
+              <input id="assistantTroubleSearch" type="search" autocomplete="off" data-help-placeholder="fixPlaceholder" placeholder="Paste an error: 503, pairing, certificate, refresh…">
+              <button id="assistantTroubleClear" type="button" aria-label="Clear">×</button>
+            </div>
+
+            <div class="assistant-trouble-chips" role="group" aria-label="Common sideloading problems">
+              <button type="button" data-assistant-trouble-filter="refresh" data-help-copy="fixRefresh">Refresh</button>
+              <button type="button" data-assistant-trouble-filter="apple login 503 2fa" data-help-copy="fixLogin">Apple ID / 503</button>
+              <button type="button" data-assistant-trouble-filter="pairing" data-help-copy="fixPairing">Pairing</button>
+              <button type="button" data-assistant-trouble-filter="certificate" data-help-copy="fixCertificate">Certificate</button>
+              <button type="button" data-assistant-trouble-filter="3 app limit app ids" data-help-copy="fixLimits">App limits</button>
+              <button type="button" data-assistant-trouble-filter="livecontainer" data-help-copy="fixLiveContainer">LiveContainer</button>
+              <button type="button" data-assistant-trouble-filter="altserver" data-help-copy="fixAltServer">AltServer</button>
+            </div>
+
+            <div id="assistantTroubleSummary" class="assistant-trouble-summary">
+              <strong id="assistantTroubleCount" data-help-copy="fixReady">Choose a problem or paste an error above.</strong>
+              <span data-help-copy="fixPrivacy">Everything here is processed locally in your browser.</span>
+            </div>
+            <button id="assistantShowFixes" class="btn primary assistant-show-fixes" type="button" data-help-copy="fixShow">Show matching fixes ↓</button>
+          </section>
+
+          <section class="guide-mode-panel" data-guide-panel="setup" role="tabpanel" hidden>
+            <div class="guide-panel-head">
+              <h3 data-help-copy="setupTitle">Tell us about your setup</h3>
+              <p data-help-copy="setupDesc">Four quick choices are enough. The result stays on this page and does not send device information anywhere.</p>
+            </div>
+
+            <div class="setup-wizard">
+              <div class="setup-question" data-setup-question="device">
+                <div class="setup-question-head"><span>1</span><strong data-help-copy="setupDevice">Device</strong></div>
+                <div class="setup-options">
+                  <button type="button" data-setup-key="device" data-setup-value="iphone" data-help-copy="deviceIphone">iPhone / iPad</button>
+                  <button type="button" data-setup-key="device" data-setup-value="tv" data-help-copy="deviceTv">Apple TV</button>
+                </div>
+              </div>
+
+              <div class="setup-question" data-setup-question="version">
+                <div class="setup-question-head"><span>2</span><strong data-help-copy="setupVersion">System version</strong></div>
+                <div class="setup-options">
+                  <button type="button" data-setup-key="version" data-setup-value="27">iOS 27</button>
+                  <button type="button" data-setup-key="version" data-setup-value="17-26">iOS 17–26</button>
+                  <button type="button" data-setup-key="version" data-setup-value="older" data-help-copy="versionOlder">Older / supported legacy</button>
+                  <button type="button" data-setup-key="version" data-setup-value="unknown" data-help-copy="versionUnknown">Not sure</button>
+                </div>
+              </div>
+
+              <div class="setup-question" data-setup-question="computer">
+                <div class="setup-question-head"><span>3</span><strong data-help-copy="setupComputer">Computer access</strong></div>
+                <div class="setup-options">
+                  <button type="button" data-setup-key="computer" data-setup-value="none" data-help-copy="computerNone">I want no PC</button>
+                  <button type="button" data-setup-key="computer" data-setup-value="setup" data-help-copy="computerSetup">PC only for setup</button>
+                  <button type="button" data-setup-key="computer" data-setup-value="available" data-help-copy="computerAvailable">PC is fine</button>
+                </div>
+              </div>
+
+              <div class="setup-question" data-setup-question="need">
+                <div class="setup-question-head"><span>4</span><strong data-help-copy="setupNeed">Main goal</strong></div>
+                <div class="setup-options">
+                  <button type="button" data-setup-key="need" data-setup-value="ipa" data-help-copy="needIpa">Install my own IPA</button>
+                  <button type="button" data-setup-key="need" data-setup-value="many" data-help-copy="needMany">Run many apps</button>
+                  <button type="button" data-setup-key="need" data-setup-value="marketplace" data-help-copy="needMarketplace">Alternative marketplace</button>
+                  <button type="button" data-setup-key="need" data-setup-value="permanent" data-help-copy="needPermanent">Permanent install</button>
+                </div>
+              </div>
+            </div>
+
+            <div class="setup-progress">
+              <div><span id="setupProgressBar"></span></div>
+              <strong id="setupProgressText">0 / 4</strong>
+            </div>
+
+            <div id="setupResult" class="guide-recommendation setup-result" hidden>
+              <div class="guide-recommendation-badge" data-help-copy="setupResultLabel">YOUR PATH</div>
+              <h3 id="setupResultTitle"></h3>
+              <p id="setupResultText"></p>
+              <div id="setupResultSteps" class="guide-recommendation-steps"></div>
+              <div id="setupResultBadges" class="setup-result-badges"></div>
+              <div class="guide-recommendation-actions">
+                <a id="setupResultPrimary" class="btn primary" href="#"></a>
+                <a id="setupResultSecondary" class="btn secondary" href="#" hidden></a>
+                <button id="setupReset" class="btn ghost" type="button" data-help-copy="setupReset">Start over</button>
+              </div>
+            </div>
+          </section>
+        </div>
+
+        <div class="guide-jumpbar" aria-label="Guide sections">
+          <span data-help-copy="jumpLabel">Jump to:</span>
+          <a href="#basics" data-help-copy="jumpBasics">Basics</a>
+          <a href="#methods" data-help-copy="jumpMethods">Methods</a>
+          <a href="#compatibility" data-help-copy="jumpCompatibility">Compatibility</a>
+          <a href="#troubleshooting" data-help-copy="jumpTroubleshooting">Troubleshooting</a>
         </div>
       </div>
 
-      <div class="beginner-start panel">
+      <div id="basics" class="beginner-start panel">
         <div class="eyebrow">BEGINNER MODE</div>
         <h2 data-i18n="beginnerStartTitle">New to sideloading? Start here.</h2>
         <p data-i18n="beginnerStartDesc">You do not need to know what AltStore, SideStore, LiveContainer or a Source means yet. Pick what you want to do and we will point you to the right option.</p>
@@ -197,7 +322,7 @@
         </article>
       </div>
 
-      <div class="section-head guide-section-head">
+      <div id="methods" class="section-head guide-section-head">
         <div>
           <h2 data-i18n="guideQuickTitle">Detailed methods</h2>
           <p data-i18n="guideQuickDesc">Once you know what you need, compare the individual free methods below.</p>
@@ -263,7 +388,7 @@
         </article>
       </div>
 
-      <div class="section-head guide-section-head">
+      <div id="compatibility" class="section-head guide-section-head">
         <div>
           <h2 data-i18n="guideCompatibilityTitle">Compatibility at a glance</h2>
           <p data-i18n="guideCompatibilityDesc">A practical comparison of the free paths. Exact requirements can change, so the official documentation links remain the final reference.</p>
@@ -423,7 +548,7 @@
     </div>
   </div>
 
-  <script type="module" src="guide.js?v=1.1.5-20260918-guidewizard1"></script>
+  <script type="module" src="guide.js?v=1.1.5-20260918-helpcenter1"></script>
   <script src="mobile-menu.js?v=1.1.5-20260918-settingsportal1"></script>
   <script src="settings-menu.js?v=1.1.5-20260918-settingsportal1"></script>
 </body>
