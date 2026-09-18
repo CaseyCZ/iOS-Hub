@@ -865,3 +865,87 @@
   .assistant-diagnosis-actions{display:grid;grid-template-columns:1fr}
   .assistant-diagnosis-actions .btn{width:100%;flex:auto}
 }
+
+
+/* Adaptive troubleshooting: already tried + next fix */
+.assistant-tried{
+  margin-top:13px;
+  padding:12px;
+  border:1px solid var(--border);
+  border-radius:12px;
+  background:color-mix(in srgb,var(--panel2) 74%,transparent);
+}
+.assistant-tried-head{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:10px;
+}
+.assistant-tried-head strong{
+  font-size:10px;
+}
+.assistant-tried-head button{
+  border:0;
+  background:transparent;
+  color:var(--accent);
+  font:inherit;
+  font-size:8px;
+  font-weight:850;
+  cursor:pointer;
+}
+.assistant-tried>p{
+  margin:4px 0 9px;
+  color:var(--muted);
+  font-size:8px;
+  line-height:1.45;
+}
+.assistant-tried-options{
+  display:flex;
+  gap:6px;
+  flex-wrap:wrap;
+}
+.assistant-tried-options button{
+  min-height:31px;
+  padding:0 10px;
+  border:1px solid var(--border);
+  border-radius:999px;
+  background:var(--panel);
+  color:var(--muted);
+  font-size:8px;
+  font-weight:800;
+  cursor:pointer;
+}
+.assistant-tried-options button:hover{
+  border-color:color-mix(in srgb,var(--accent) 55%,var(--border));
+  color:var(--text);
+}
+.assistant-tried-options button.active{
+  border-color:var(--accent);
+  background:var(--accent-soft);
+  color:var(--accent);
+}
+.assistant-tried-options button.active::before{
+  content:"✓";
+  margin-right:5px;
+  font-weight:950;
+}
+.diagnosis-next-fix{
+  background:linear-gradient(135deg,var(--accent2),var(--accent))!important;
+  color:#fff!important;
+  border-color:var(--accent)!important;
+}
+.diagnosis-next-fix:disabled{
+  opacity:.5;
+  cursor:not-allowed;
+  filter:saturate(.4);
+}
+@media(max-width:640px){
+  .assistant-tried-options{
+    flex-wrap:nowrap;
+    overflow-x:auto;
+    padding-bottom:3px;
+    scrollbar-width:none;
+  }
+  .assistant-tried-options::-webkit-scrollbar{display:none}
+  .assistant-tried-options button{flex:0 0 auto}
+}
