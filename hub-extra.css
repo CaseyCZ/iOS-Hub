@@ -360,7 +360,19 @@
 .nav-support-primary:hover{border-color:color-mix(in srgb,#fff 55%,var(--accent))!important}
 
 @media(max-width:640px){
-  .settings-panel{position:fixed;left:10px;right:10px;top:70px;width:auto;max-height:calc(100vh - 82px);overflow:auto}
+  .settings-panel{
+    position:fixed;
+    left:10px;
+    right:10px;
+    top:70px;
+    bottom:10px;
+    width:auto;
+    max-height:none;
+    overflow-y:auto;
+    overflow-x:hidden;
+    -webkit-overflow-scrolling:touch;
+    overscroll-behavior:contain;
+  }
 }
 
 /* Landscape phone source cards */
@@ -375,4 +387,20 @@
 }
 @media(max-width:640px){
   .source-installers .installer-link{min-width:0;white-space:nowrap}
+}
+
+@media(max-width:900px) and (orientation:landscape){
+  .settings-panel{
+    position:fixed;
+    left:10px;
+    right:10px;
+    top:10px;
+    bottom:10px;
+    width:auto;
+    max-height:none;
+    overflow-y:auto;
+    overflow-x:hidden;
+    -webkit-overflow-scrolling:touch;
+    overscroll-behavior:contain;
+  }
 }
