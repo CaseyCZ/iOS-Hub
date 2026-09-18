@@ -242,15 +242,15 @@ function renderSources() {
     const desc = source.description?.[state.lang] || source.description?.en || source.description?.cs || '';
     const checkedOffline = status.online === false && Boolean(status.checkedAt);
     const palOnly = source.mode === 'pal';
-    const altStoreLabel = palOnly ? 'AltStore PAL' : 'AltStore';
+    const altStoreLabel = palOnly ? 'PAL' : 'AltStore';
     const installerButtons = checkedOffline
       ? `<span class="btn small secondary installer-link is-disabled" aria-disabled="true">${installerIcon('altstore')}${altStoreLabel}</span>
         <span class="btn small secondary installer-link is-disabled" aria-disabled="true">${installerIcon('sidestore')}SideStore</span>
         <span class="btn small secondary installer-link is-disabled" aria-disabled="true">${installerIcon('livecontainer')}LiveContainer</span>`
       : palOnly
         ? `<a class="btn small primary installer-link" href="${escapeHtml(sourceInstallerLink('altstore', source))}">${installerIcon('altstore')}${altStoreLabel}</a>
-          <span class="btn small secondary installer-link is-disabled" aria-disabled="true" title="AltStore PAL source"> ${installerIcon('sidestore')}SideStore</span>
-          <span class="btn small secondary installer-link is-disabled" aria-disabled="true" title="AltStore PAL source"> ${installerIcon('livecontainer')}LiveContainer</span>`
+          <span class="btn small secondary installer-link is-disabled" aria-disabled="true" title="AltStore PAL source">${installerIcon('sidestore')}SideStore</span>
+          <span class="btn small secondary installer-link is-disabled" aria-disabled="true" title="AltStore PAL source">${installerIcon('livecontainer')}LiveContainer</span>`
         : `<a class="btn small primary installer-link" href="${escapeHtml(sourceInstallerLink('altstore', source))}">${installerIcon('altstore')}${altStoreLabel}</a>
           <a class="btn small secondary installer-link" href="${escapeHtml(sourceInstallerLink('sidestore', source))}">${installerIcon('sidestore')}SideStore</a>
           <a class="btn small secondary installer-link" href="${escapeHtml(sourceInstallerLink('livecontainer', source))}">${installerIcon('livecontainer')}LiveContainer</a>`;
