@@ -27,9 +27,13 @@ OWNED_REFERENCE_FILES = (
     ROOT / "index.html",
     ROOT / "builder.html",
     ROOT / "converter.html",
+    ROOT / "guide.html",
+    ROOT / "resources.html",
     ROOT / "app.js",
     ROOT / "builder-page.js",
     ROOT / "builder.js",
+    ROOT / "guide.js",
+    ROOT / "resources.js",
     ROOT / "i18n.js",
     ROOT / "tools" / "update_sources.py",
     ROOT / ".github" / "workflows" / "update-sources.yml",
@@ -216,6 +220,7 @@ def validate_translations() -> None:
             continue
         text = script.read_text(encoding="utf-8")
         used.update(re.findall(r"\btr\(\s*['\"]([A-Za-z0-9_]+)['\"]\s*\)", text))
+        used.update(re.findall(r"\bt\(\s*[A-Za-z0-9_]+\s*,\s*['\"]([A-Za-z0-9_]+)['\"]\s*\)", text))
 
     i18n_text = i18n_path.read_text(encoding="utf-8")
     for key in sorted(used):
@@ -386,6 +391,35 @@ def validate_generated_data() -> None:
             unknown = sorted(set(package.get("sourceIDs") or []) - registry_ids)
             if unknown:
                 error(f"data/status.json {package_name}.sourceIDs contains unknown ids: " + ", ".join(unknown))
+
+        registry_sources = [item for item in registry["sources"] if isinstance(item, dict)]
+        expected_cache_ids = {
+            str(item.get("id"))
+            for item in registry_sources
+            if item.get("id") in online_ids and item.get("cachePayload", True)
+        }
+        cache_dir = ROOT / "data" / "source-cache"
+        if cache_dir.is_dir():
+            actual_cache_ids = {path.stem for path in cache_dir.glob("*.json")}
+            if expected_cache_ids != actual_cache_ids:
+                error(
+                    "source cache IDs differ from expected online cache; "
+                    f"missing={sorted(expected_cache_ids - actual_cache_ids)}, "
+                    f"extra={sorted(actual_cache_ids - expected_cache_ids)}"
+                )
+
+        mixes = status.get("mixes", {})
+        mix_dir = ROOT / "mix"
+        if isinstance(mixes, dict) and mix_dir.is_dir():
+            combo_files = [path for path in mix_dir.glob("*.json") if path.name != "all-compatible.json"]
+            expected_mix_count = mixes.get("count")
+            if isinstance(expected_mix_count, int) and expected_mix_count != len(combo_files):
+                error(
+                    f"data/status.json mix count {expected_mix_count} does not match "
+                    f"{len(combo_files)} generated combination files"
+                )
+            if not (mix_dir / "all-compatible.json").exists():
+                error("Missing mix/all-compatible.json")
 
     validate_alt_source(ROOT / "altstore" / "source.json")
     validate_alt_source(ROOT / "sidestore" / "source.json")
@@ -574,6 +608,13 @@ def validate_page_quality() -> None:
             continue
         text = page.read_text(encoding="utf-8")
         label = page.relative_to(ROOT)
+        if len(re.findall(r"<main\b", text, flags=re.IGNORECASE)) != 1:
+            error(f"{label} must contain exactly one <main>")
+        if len(re.findall(r"<h1\b", text, flags=re.IGNORECASE)) != 1:
+            error(f"{label} must contain exactly one <h1>")
+        if 'class="skip-link"' not in text or 'href="#top"' not in text:
+            error(f"{label} is missing the skip-to-content link")
+
         canonical = expected_canonical[page]
         if f'rel="canonical" href="{canonical}"' not in text:
             error(f"{label} is missing canonical URL {canonical}")
@@ -594,6 +635,41 @@ def validate_page_quality() -> None:
             tag = match.group(0)
             if not re.search(r'rel="[^"]*\bnoopener\b', tag, flags=re.IGNORECASE):
                 error(f"{label} opens a new tab without rel=noopener")
+
+        expected_nav = {
+            "index.html": ["#tools", "builder.html", "guide.html", "resources.html", "#sources"],
+            "builder.html": ["index.html#tools", "builder.html", "guide.html", "resources.html", "index.html#sources"],
+            "converter.html": ["index.html#tools", "builder.html", "guide.html", "resources.html", "index.html#sources"],
+            "guide.html": ["index.html#tools", "builder.html", "guide.html", "resources.html", "index.html#sources"],
+            "resources.html": ["index.html#tools", "builder.html", "guide.html", "resources.html", "index.html#sources"],
+        }
+        nav_match = re.search(r'<nav\s+class="nav"[^>]*>(.*?)</nav>', text, flags=re.IGNORECASE | re.DOTALL)
+        if not nav_match:
+            error(f"{label} is missing primary navigation")
+        else:
+            hrefs = re.findall(r'<a\b[^>]*href=["\']([^"\']+)["\']', nav_match.group(1), flags=re.IGNORECASE)
+            if hrefs != expected_nav[page.name]:
+                error(f"{label} primary navigation differs from expected targets/order: {hrefs}")
+
+        version_path = ROOT / "VERSION"
+        if version_path.exists():
+            version = version_path.read_text(encoding="utf-8").strip()
+            if version and f"iOS Hub · v{version}" not in text:
+                error(f"{label} footer version does not match VERSION ({version})")
+
+        if "mobile-menu.js?v=" not in text or "settings-menu.js?v=" not in text:
+            error(f"{label} must load cache-versioned mobile/settings menu scripts")
+
+        for _attr, asset in re.findall(
+            r'\b(href|src)=["\']([^"\']+\.(?:css|js)(?:\?[^"\']*)?)["\']',
+            text,
+            flags=re.IGNORECASE,
+        ):
+            parsed = urlparse(asset)
+            if parsed.scheme or asset.startswith("//") or parsed.path.startswith("vendor/"):
+                continue
+            if "?v=" not in asset:
+                error(f"{label} local runtime asset is not cache-versioned: {asset}")
 
     importers = ("app.js", "builder-page.js", "converter.js", "guide.js", "resources.js")
     versions: set[str] = set()
