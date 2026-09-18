@@ -6,6 +6,7 @@
 - Kept the three prepared AltStore, SideStore and LiveContainer source cards in the Ready sources section.
 - Preserved responsive behavior so the two tool cards stack on narrower screens.
 - Fixed the homepage Ready sources section so the prepared AltStore, SideStore and LiveContainer cards render again after the Builder was moved to its standalone page.
+- Unified the DEB → IPA Converter and Custom Builder cards: matching icon block, background, centered content and bottom-aligned action buttons.
 
 ## 1.1.4 — 2026-09-18
 
