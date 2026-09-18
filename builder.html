@@ -8,9 +8,9 @@
   <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'wasm-unsafe-eval'; style-src 'self' 'unsafe-inline'; img-src 'self' https: data:; connect-src 'self'; worker-src 'self' blob:; object-src 'none'; base-uri 'self'; form-action 'none'">
   <meta name="description" content="CaseyCZ Custom Source Builder — filter and combine checked AltStore, SideStore and LiveContainer-compatible sources into your own Mix.">
   <title>Custom Source Builder — CaseyCZ iOS Hub</title>
-  <link rel="stylesheet" href="styles.css?v=1.1.5-20260918-builderpass1">
-  <link rel="stylesheet" href="hub-extra.css?v=1.1.5-20260918-builderpass1">
-  <link rel="stylesheet" href="collapsible.css?v=1.1.5-20260918-builderpass1">
+  <link rel="stylesheet" href="styles.css?v=1.1.5-20260918-buildertarget1">
+  <link rel="stylesheet" href="hub-extra.css?v=1.1.5-20260918-buildertarget1">
+  <link rel="stylesheet" href="collapsible.css?v=1.1.5-20260918-buildertarget1">
 </head>
 <body>
   <header class="topbar">
@@ -88,15 +88,24 @@
                   </div>
                 </div>
 
-                <div class="filter-group">
-                  <div class="filter-label">📱 <span id="mixPlatformLabel">Platform</span></div>
-                  <div class="filter-tabs">
-                    <button class="filter active" type="button" data-exp-platform-filter="all">All</button>
-                    <button class="filter" type="button" data-exp-platform-filter="classic">AltStore Classic</button>
-                    <button class="filter" type="button" data-exp-platform-filter="pal">AltStore PAL</button>
-                    <button class="filter" type="button" data-exp-platform-filter="sidestore">SideStore</button>
-                    <button class="filter" type="button" data-exp-platform-filter="livecontainer">LiveContainer</button>
+                <div class="filter-group builder-target-group">
+                  <div class="filter-label"><span id="mixTargetLabel">Where do you want to add the Mix?</span></div>
+                  <div class="builder-target-tabs" role="group" aria-labelledby="mixTargetLabel">
+                    <button class="builder-target active" type="button" data-exp-target="altstore">
+                      <img class="installer-icon" src="assets/icons/altstore.svg" alt="">
+                      <span>AltStore Classic</span>
+                    </button>
+                    <button class="builder-target" type="button" data-exp-target="sidestore">
+                      <img class="installer-icon" src="https://sidestore.io/assets/icon.png" alt="">
+                      <span>SideStore</span>
+                    </button>
+                    <button class="builder-target" type="button" data-exp-target="livecontainer">
+                      <img class="installer-icon" src="assets/icons/livecontainer.svg" alt="">
+                      <span>LiveContainer</span>
+                    </button>
                   </div>
+                  <div id="mixTargetHelp" class="muted builder-target-help">Choose the app where you want to add the finished source. The list below will only show sources suitable for that target.</div>
+                  <div id="mixPalNote" class="muted builder-target-pal-note">AltStore PAL is not a Custom Mix target because PAL uses notarized marketplace packages and different source metadata than Classic IPA sources.</div>
                 </div>
 
                 <div class="filter-group">
@@ -116,7 +125,7 @@
                 <div class="filter-group">
                   <div class="filter-label">☑ <span data-i18n="selection">Selection</span></div>
                   <div class="builder-choice-actions">
-                    <button id="expSelectCompatible" class="btn small primary" type="button">Select shown PASS</button>
+                    <button id="expSelectCompatible" class="btn small primary" type="button">Select PASS for AltStore Classic</button>
                     <button id="expSelectAll" class="btn small secondary" type="button">Select all shown</button>
                     <button id="expClear" class="btn small ghost" type="button">Clear selection</button>
                   </div>
@@ -127,7 +136,10 @@
           </details>
 
           <div class="builder-control-footer">
-            <span id="mixTestBadge" class="pill mode">Auto tested</span>
+            <div class="builder-result-badges">
+              <span id="mixTargetBadge" class="pill mode"><img class="installer-icon" src="assets/icons/altstore.svg" alt=""> AltStore Classic</span>
+              <span id="mixTestBadge" class="pill mode">Auto tested</span>
+            </div>
             <button id="expBuild" class="btn primary" type="button" disabled>Build CaseyCZ Mix</button>
             <span id="expMessage" class="muted"></span>
           </div>
@@ -174,8 +186,8 @@
     </div>
   </div>
 
-  <script type="module" src="builder-page.js?v=1.1.5-20260918-builderpass1"></script>
-  <script type="module" src="builder.js?v=1.1.5-20260918-builderpass1"></script>
-  <script type="module" src="collapsible.js?v=1.1.5-20260918-builderpass1"></script>
+  <script type="module" src="builder-page.js?v=1.1.5-20260918-buildertarget1"></script>
+  <script type="module" src="builder.js?v=1.1.5-20260918-buildertarget1"></script>
+  <script type="module" src="collapsible.js?v=1.1.5-20260918-buildertarget1"></script>
 </body>
 </html>
