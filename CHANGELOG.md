@@ -1,5 +1,12 @@
 # Changelog
 
+## 1.1.2 — 2026-09-18
+
+- Added LiveContainer consistently to source descriptions, catalog headings and installation guidance across the website and READMEs.
+- Reworked package disclosure labels to a compact icon-based content label for sources + apps.
+- Added consistent icons to Builder and catalog filters: source type, genre, platform, Mix status, search and selection.
+- Changed visible search wording to source-focused text because apps are not shown as a standalone catalog.
+
 ## 1.1.1 — 2026-09-18
 
 - Moved Custom Mix below the three ready-source cards and made it span the full Builder width on desktop.
