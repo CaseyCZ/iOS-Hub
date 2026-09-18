@@ -21,7 +21,7 @@
       </a>
       <nav class="nav" aria-label="Primary">
         <a href="#tools" data-i18n="tools">Tools</a>
-        <a href="#builder">Source Builder</a>
+        <a href="builder.html">Source Builder</a>
         <a href="#sources" data-i18n="sources">Sources</a>
       </nav>
       <div class="nav-actions">
@@ -45,7 +45,7 @@
       <p data-i18n="heroDesc">A live catalog of checked AltStore, SideStore and LiveContainer sources. Filter by source type and content, combine compatible sources and use practical iOS tools directly in the browser.</p>
       <div class="hero-actions">
         <a class="btn primary" href="#tools" data-i18n="openConverter">Open DEB → IPA Converter</a>
-        <a class="btn secondary" href="#builder" data-i18n="buildSource">Build my Source</a>
+        <a class="btn secondary" href="builder.html" data-i18n="buildSource">Build my Source</a>
         <a class="btn secondary" href="#sources" data-i18n="browseSources">Browse sources</a>
       </div>
       <div class="stats" aria-label="Source statistics">
@@ -75,106 +75,21 @@
     <section id="builder" class="section wrap">
       <div class="section-head">
         <div>
-          <h2 id="builderTitle">Source Builder</h2>
-          <p id="builderDesc">All online sources are in one list. Filter them, select any combination and let the automated Mix test show what is compatible.</p>
+          <h2 data-i18n="readySourcesTitle">Ready sources</h2>
+          <p data-i18n="readySourcesDesc">Use a prepared CaseyCZ source or open the standalone Custom Builder for your own filtered Mix.</p>
         </div>
       </div>
 
-      <div id="experimentalMixLab" class="panel builder-shell">
+      <div class="panel builder-shell">
         <div class="builder-card-grid">
           <div id="officialSourcePackages" class="builder-ready-cards"></div>
 
-          <article class="builder-control-card">
-            <span class="pill mode">CUSTOM</span>
-            <h4 id="customMixCardTitle">Custom Mix</h4>
-            <div id="expSelectedCount" class="muted">0 selected</div>
-
-            <details class="content-disclosure builder-filter-disclosure">
-              <summary>
-                <span id="customMixFiltersLabel" class="disclosure-title">⚙ Filters · Search · Selection</span>
-              </summary>
-              <div class="disclosure-body">
-                <div class="catalog-filters filter-disclosure-grid">
-                  <div class="filter-group">
-                    <div class="filter-label">⚙ <span data-i18n="sourceType">Source type</span></div>
-                    <div class="filter-tabs">
-                      <button class="filter active" type="button" data-exp-category-filter="all" data-i18n="all">All</button>
-                      <button class="filter" type="button" data-exp-category-filter="official" data-i18n="official">Official</button>
-                      <button class="filter" type="button" data-exp-category-filter="trusted" data-i18n="trusted">Trusted</button>
-                      <button class="filter" type="button" data-exp-category-filter="community" data-i18n="community">Community</button>
-                      <button class="filter" type="button" data-exp-category-filter="modified" data-i18n="modified">Modified</button>
-                    </div>
-                  </div>
-
-                  <div class="filter-group">
-                    <div class="filter-label">🏷 <span data-i18n="genre">Genre</span></div>
-                    <div class="filter-tabs">
-                      <button class="filter active" type="button" data-exp-genre-filter="all" data-i18n="all">All</button>
-                      <button class="filter" type="button" data-exp-genre-filter="games" data-i18n="games">Games</button>
-                      <button class="filter" type="button" data-exp-genre-filter="emulators" data-i18n="emulators">Emulators</button>
-                      <button class="filter" type="button" data-exp-genre-filter="video" data-i18n="video">Video</button>
-                      <button class="filter" type="button" data-exp-genre-filter="music" data-i18n="music">Music</button>
-                      <button class="filter" type="button" data-exp-genre-filter="anime" data-i18n="animeManga">Anime & Manga</button>
-                      <button class="filter" type="button" data-exp-genre-filter="social" data-i18n="social">Social</button>
-                      <button class="filter" type="button" data-exp-genre-filter="downloads" data-i18n="downloads">Downloads</button>
-                      <button class="filter" type="button" data-exp-genre-filter="sideload" data-i18n="sideloadTools">Sideload Tools</button>
-                      <button class="filter" type="button" data-exp-genre-filter="utilities" data-i18n="utilities">Utilities</button>
-                    </div>
-                  </div>
-
-                  <div class="filter-group">
-                    <div class="filter-label">📱 <span id="mixPlatformLabel">Platform</span></div>
-                    <div class="filter-tabs">
-                      <button class="filter active" type="button" data-exp-platform-filter="all">All</button>
-                      <button class="filter" type="button" data-exp-platform-filter="classic">AltStore Classic</button>
-                      <button class="filter" type="button" data-exp-platform-filter="pal">AltStore PAL</button>
-                      <button class="filter" type="button" data-exp-platform-filter="sidestore">SideStore</button>
-                      <button class="filter" type="button" data-exp-platform-filter="livecontainer">LiveContainer</button>
-                    </div>
-                  </div>
-
-                  <div class="filter-group">
-                    <div class="filter-label">🧪 <span id="mixStatusLabel">Mix status</span></div>
-                    <div class="filter-tabs">
-                      <button class="filter active" type="button" data-exp-compat-filter="all">All</button>
-                      <button class="filter" type="button" data-exp-compat-filter="pass">PASS only</button>
-                      <button class="filter" type="button" data-exp-compat-filter="try">TRY only</button>
-                    </div>
-                  </div>
-
-                  <div class="filter-group"><div class="filter-label">🔎 <span data-i18n="search">Search</span></div><input id="expSourceSearch" class="search" type="search" autocomplete="off" data-i18n-placeholder="searchPlaceholder" placeholder="Search sources…"></div>
-
-                  <div class="filter-group"><div class="filter-label">☑ <span data-i18n="selection">Selection</span></div><div class="builder-choice-actions">
-                    <button id="expSelectCompatible" class="btn small primary" type="button">Select compatible</button>
-                    <button id="expSelectAll" class="btn small secondary" type="button">Select all shown</button>
-                    <button id="expClear" class="btn small ghost" type="button">Clear</button>
-                  </div></div>
-                </div>
-              </div>
-            </details>
-
-            <div class="builder-control-footer">
-              <span id="mixTestBadge" class="pill mode">Auto tested</span>
-              <button id="expBuild" class="btn primary" type="button" disabled>Build CaseyCZ Mix</button>
-              <span id="expMessage" class="muted"></span>
-            </div>
+          <article class="builder-launch-card">
+            <span class="pill mode">🧩 CUSTOM</span>
+            <h4 data-i18n="customBuilderCardTitle">Custom Builder</h4>
+            <p class="muted" data-i18n="customBuilderCardDesc">Filter checked sources, choose any combination and create your own CaseyCZ Mix on a dedicated page.</p>
+            <a class="btn primary" href="builder.html" data-i18n="openBuilder">Open Builder</a>
           </article>
-        </div>
-
-        <div id="experimentalBuilderList" class="builder-list" aria-live="polite"></div>
-
-        <div id="expResult" class="builder-result">
-          <strong id="expResultTitle">CaseyCZ Mix</strong>
-          <div id="expResultInfo" class="muted" style="margin-top:6px"></div>
-          <p id="expResultNote" class="notice" style="margin-top:10px"></p>
-          <div class="builder-actions">
-            <a id="expAdd" class="btn small primary" href="#" hidden>＋ Add to AltStore</a>
-            <a id="expAddSideStore" class="btn small primary" href="#" hidden>＋ Add to SideStore</a>
-            <a id="expAddLiveContainer" class="btn small primary" href="#" hidden>＋ Add to LiveContainer</a>
-            <button id="expCopyUrl" class="btn small secondary" type="button" hidden>Copy URL</button>
-            <a id="expDownload" class="btn small secondary" href="#">Download JSON</a>
-            <a id="expPreview" class="btn small ghost" href="#" target="_blank" rel="noopener">Preview JSON</a>
-          </div>
         </div>
       </div>
     </section>
@@ -230,7 +145,7 @@
 
   <footer class="footer">
     <div class="wrap footer-inner">
-      <span>© <span id="year"></span> CaseyCZ · iOS Hub · v1.1.3</span>
+      <span>© <span id="year"></span> CaseyCZ · iOS Hub · v1.1.4</span>
       <div class="footer-links">
         <a href="https://caseycz.github.io/" target="_blank" rel="noopener">CaseyCZ Website</a>
         <a href="https://github.com/CaseyCZ/iOS-Hub" target="_blank" rel="noopener">GitHub · iOS-Hub</a>
