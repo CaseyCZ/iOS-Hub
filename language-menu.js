@@ -1,5 +1,5 @@
 const LANGUAGE_META = {
-  en: { code: 'EN', flag: '🇬🇧', name: 'English' },
+  en: { code: 'EN', flag: 'EN', name: 'English' },
   cs: { code: 'CZ', flag: '🇨🇿', name: 'Čeština' },
   de: { code: 'DE', flag: '🇩🇪', name: 'Deutsch' },
   es: { code: 'ES', flag: '🇪🇸', name: 'Español' },
