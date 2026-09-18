@@ -740,6 +740,38 @@ def validate_page_quality() -> None:
         error("i18n.js import cache versions are inconsistent: " + ", ".join(sorted(versions)))
 
 
+
+def validate_current_help_content() -> None:
+    """Catch known-stale support claims that can misroute users."""
+    watched = (
+        ROOT / "guide.js",
+        ROOT / "guide.html",
+        ROOT / "i18n.js",
+        ROOT / "resources.html",
+    )
+    stale_sideinstaller = (
+        "SideInstaller v1",
+        "v1.0.0",
+        "partial iOS 17",
+        "partial 17–26",
+        "částečnou podporu iOS 17",
+        "částečně 17–26",
+        "unterstützt iOS 17–26 teilweise",
+        "compatibilidad parcial con iOS 17",
+        "prise en charge partielle d’iOS 17",
+    )
+    for path in watched:
+        if not path.exists():
+            continue
+        text = path.read_text(encoding="utf-8")
+        for phrase in stale_sideinstaller:
+            if phrase in text:
+                error(
+                    f"{path.relative_to(ROOT)} contains stale SideInstaller support copy: {phrase!r}; "
+                    "the current official requirements list iOS 27"
+                )
+
+
 def validate_layout() -> None:
     for path in LEGACY_PATHS:
         if path.exists():
