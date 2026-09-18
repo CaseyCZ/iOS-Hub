@@ -92,7 +92,7 @@ function tr(key) { return copy[lang()][key] || copy.en[key] || key; }
 function escapeHtml(value) { return String(value ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c])); }
 const INSTALLER_ICONS = {
   alt: 'assets/icons/altstore.svg',
-  side: 'assets/icons/sidestore.svg',
+  side: 'assets/icons/sidestore.svg?v=1.1.5-20260918-audit13',
   live: 'assets/icons/livecontainer.svg'
 };
 function installerIcon(type) {
