@@ -241,6 +241,26 @@ function setHelpMode(mode) {
   });
 }
 
+function handleHelpTabKeydown(event) {
+  const current = event.target.closest('[data-guide-mode]');
+  if (!current || !['ArrowLeft','ArrowRight','ArrowUp','ArrowDown','Home','End'].includes(event.key)) return;
+
+  const tabs = $('[data-guide-mode]');
+  const index = tabs.indexOf(current);
+  if (index < 0) return;
+
+  event.preventDefault();
+  let nextIndex = index;
+  if (event.key === 'Home') nextIndex = 0;
+  else if (event.key === 'End') nextIndex = tabs.length - 1;
+  else if (event.key === 'ArrowLeft' || event.key === 'ArrowUp') nextIndex = (index - 1 + tabs.length) % tabs.length;
+  else nextIndex = (index + 1) % tabs.length;
+
+  const next = tabs[nextIndex];
+  setHelpMode(next.dataset.guideMode);
+  next.focus();
+}
+
 function diagnosisTriedTags() {
   return [...diagnosisState.tried].flatMap(key => {
     const button = $('[data-tried-key="' + key + '"]');
@@ -852,6 +872,8 @@ document.addEventListener('click', event => {
     }
   }
 });
+
+document.querySelector('.guide-mode-tabs')?.addEventListener('keydown', handleHelpTabKeydown);
 
 $('#assistantTroubleSearch')?.addEventListener('input', () => {
   diagnosisState.dismissed.clear();
