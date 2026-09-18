@@ -1,0 +1,382 @@
+{
+  "name": "🍻 » Bitte ein Git! Repo 🗿",
+  "subtitle": "🌀 heyFordy's App Collection",
+  "description": "My personal AIO Collection of useful / tweaked iOS Apps ! 🗿",
+  "iconURL": "https://repo.heyfordy.dev/assets/repo.png",
+  "website": "https://repo.heyfordy.dev",
+  "tintColor": "#FE9402",
+  "featuredApps": [
+    "com.spotify.client",
+    "com.google.ios.youtube",
+    "com.google.ios.youtubemusic",
+    "com.adobe.Adobe-Reader",
+    "com.picsart.studio",
+    "com.firecore.infuse",
+    "tv.twitch"
+  ],
+  "headerURL": "https://repo.heyfordy.dev/assets/header2.png",
+  "apps": [
+    {
+      "name": "YouTube+🗿",
+      "bundleIdentifier": "com.google.ios.youtube",
+      "developerName": "heyFordy",
+      "subtitle": "iOS YouTube Vanced experience.",
+      "localizedDescription": "YouTube with YTLitePlus and other tweaks for a better viewing experience.",
+      "iconURL": "http://repo.heyfordy.dev/assets/yt.png",
+      "tintColor": "#FD0100",
+      "category": "entertainment",
+      "screenshots": [
+        "https://raw.githubusercontent.com/YTLitePlus/Assets/main/Screenshots/1.png",
+        "https://raw.githubusercontent.com/YTLitePlus/Assets/main/Screenshots/2.png",
+        "https://raw.githubusercontent.com/YTLitePlus/Assets/main/Screenshots/3.png",
+        "https://raw.githubusercontent.com/YTLitePlus/Assets/main/Screenshots/4.png",
+        "https://raw.githubusercontent.com/YTLitePlus/Assets/main/Screenshots/5.png",
+        "https://raw.githubusercontent.com/YTLitePlus/Assets/main/Screenshots/6.png",
+        "https://raw.githubusercontent.com/YTLitePlus/Assets/main/Screenshots/7.png",
+        "https://raw.githubusercontent.com/YTLitePlus/Assets/main/Screenshots/8.png",
+        "https://raw.githubusercontent.com/YTLitePlus/Assets/main/Screenshots/9.png"
+      ],
+      "versions": [
+        {
+          "version": "21.13.6",
+          "date": "2026-05-12",
+          "localizedDescription": "*Fix* | Downgrade v21.14.4 -> v21.13.6",
+          "downloadURL": "https://github.com/Bitte-ein-Git/ios_yt/releases/download/v21.13.6/FordyYT_21.13.6.ipa",
+          "size": 126793096
+        },
+        {
+          "version": "21.13.55",
+          "date": "2026-04-03",
+          "localizedDescription": "Legacy entry for v21.13.6; version number adjusted to avoid duplication.",
+          "downloadURL": "https://api.heyfordy.dev/ios/yt",
+          "size": 126793096
+        },
+        {
+          "version": "21.12.4",
+          "date": "2026-03-26",
+          "localizedDescription": "Updated version to 21.12.4",
+          "downloadURL": "https://api.heyfordy.dev/ios/yt",
+          "size": 126672869
+        },
+        {
+          "version": "21.11.4",
+          "date": "2026-03-18",
+          "localizedDescription": "First AltStore release!",
+          "downloadURL": "https://api.heyfordy.dev/ios/yt",
+          "size": 126418284
+        },
+        {
+          "version": "21.10.2",
+          "date": "2026-03-15",
+          "localizedDescription": "First AltStore release!",
+          "downloadURL": "https://api.heyfordy.dev/ios/yt",
+          "size": 126276531
+        },
+        {
+          "version": "21.09.2",
+          "date": "2026-03-04T00:00:00+01:00",
+          "localizedDescription": "New release",
+          "downloadURL": "https://api.heyfordy.dev/ios/yt",
+          "size": 126300000
+        },
+        {
+          "version": "21.08.3",
+          "date": "2026-02-27T00:00:00+01:00",
+          "localizedDescription": "",
+          "downloadURL": "https://api.heyfordy.dev/ios/yt",
+          "size": 126000000
+        }
+      ],
+      "appPermissions": {
+        "entitlements": [],
+        "privacy": {}
+      }
+    },
+    {
+      "name": "Spotify+🗿",
+      "bundleIdentifier": "com.spotify.client",
+      "developerName": "heyFordy",
+      "subtitle": "Spotify • Ad-free / Premium Patch",
+      "localizedDescription": "Spotify + custom 'EeveeSpotifyReborn'.",
+      "iconURL": "http://repo.heyfordy.dev/assets/spot.png",
+      "tintColor": "#1ED760",
+      "category": "entertainment",
+      "screenshots": [
+        {
+          "imageURL": "https://repo.heyfordy.dev/assets/FordySpot00.jpeg",
+          "width": 1152,
+          "height": 2048
+        },
+        {
+          "imageURL": "https://repo.heyfordy.dev/assets/FordySpot01.jpeg",
+          "width": 1152,
+          "height": 2048
+        },
+        {
+          "imageURL": "https://repo.heyfordy.dev/assets/FordySpot02.jpeg",
+          "width": 1152,
+          "height": 2048
+        },
+        {
+          "imageURL": "https://repo.heyfordy.dev/assets/FordySpot03.jpeg",
+          "width": 1152,
+          "height": 2048
+        },
+        {
+          "imageURL": "https://repo.heyfordy.dev/assets/FordySpot04.jpeg",
+          "width": 1152,
+          "height": 2048
+        }
+      ],
+      "versions": [
+        {
+          "version": "6.2.2",
+          "date": "2026-03-30",
+          "localizedDescription": "Updated heyFordy.dev domain (Build bump)",
+          "downloadURL": "https://github.com/Bitte-ein-Git/ios_spot/releases/download/v6.2.2/FordySpot_v6.2.2.ipa",
+          "size": 85895992,
+          "buildVersion": "2",
+          "minOSVersion": "16.0"
+        },
+        {
+          "version": "6.2.2",
+          "date": "2026-01-27",
+          "localizedDescription": "Updated version to 6.2.2",
+          "downloadURL": "https://github.com/Bitte-ein-Git/ios_spot/releases/download/v6.2.2/FordySpot_v6.2.2.ipa",
+          "size": 85895992,
+          "minOSVersion": "16.0"
+        },
+        {
+          "version": "6.1.6",
+          "date": "2025-09-11",
+          "localizedDescription": "First AltStore release!",
+          "downloadURL": "https://api.heyfordy.dev/ios/spot",
+          "size": 0,
+          "minOSVersion": "16.0"
+        }
+      ],
+      "appPermissions": {
+        "entitlements": [
+          "application-identifier",
+          "aps-environment",
+          "com.apple.developer.applesignin",
+          "com.apple.developer.associated-domains",
+          "com.apple.developer.carplay-audio",
+          "com.apple.developer.game-center",
+          "com.apple.developer.group-session",
+          "com.apple.developer.healthkit",
+          "com.apple.developer.healthkit.access",
+          "com.apple.developer.networking.multicast",
+          "com.apple.developer.networking.wifi-info",
+          "com.apple.developer.siri",
+          "com.apple.developer.team-identifier",
+          "com.apple.developer.usernotifications.communication",
+          "com.apple.security.application-groups",
+          "get-task-allow",
+          "keychain-access-groups"
+        ],
+        "privacy": {
+          "NSAppleMusicUsageDescription": "This will let you play your imported music on Spotify.",
+          "NSBluetoothAlwaysUsageDescription": "This lets you unlock new ways of interacting with other devices compatible with Spotify via Bluetooth.",
+          "NSBluetoothPeripheralUsageDescription": "This lets you unlock new ways of interacting with other devices compatible with Spotify via Bluetooth.",
+          "NSCalendarsUsageDescription": "This lets Spotify view and add events to your calendar.",
+          "NSCalendarsWriteOnlyAccessUsageDescription": "This lets Spotify add events to your calendar.",
+          "NSCameraUsageDescription": "This lets you scan Spotify Codes.",
+          "NSContactsUsageDescription": "This lets Spotify access calendars you may have shared with your contacts.",
+          "NSFaceIDUsageDescription": "This lets you set access restrictions using Face ID.",
+          "NSHealthShareUsageDescription": "Spotify will use HealthKit data to provide personalised audio recommendations for your workouts.",
+          "NSHealthUpdateUsageDescription": "Spotify will use HealthKit data to provide personalised audio recommendations for your workouts.",
+          "NSLocalNetworkUsageDescription": "This lets you listen on different devices. Spotify will also get access to local audio files.",
+          "NSMicrophoneUsageDescription": "This lets you control Spotify using your voice.",
+          "NSMotionUsageDescription": "We will use this to understand which audio motivates you most.",
+          "NSPhotoLibraryAddUsageDescription": "This lets you save images to your Photo Library.",
+          "NSPhotoLibraryUsageDescription": "This lets you select images from your Photo Library.",
+          "NSUserTrackingUsageDescription": "Your data will be used to deliver personalized ads or content to you."
+        }
+      }
+    },
+    {
+      "name": "YT Music+🗿",
+      "bundleIdentifier": "com.google.ios.youtubemusic",
+      "developerName": "heyFordy",
+      "subtitle": "iOS YouTube Music Vanced experience.",
+      "localizedDescription": "YouTube Music with tweaks for a better experience.",
+      "iconURL": "http://repo.heyfordy.dev/assets/ytmusic.png",
+      "tintColor": "#FD0100",
+      "category": "entertainment",
+      "screenshots": [
+        "https://raw.githubusercontent.com/Bitte-ein-Git/ios_ytmusic/main/Resources/scrn1.png",
+        "https://raw.githubusercontent.com/Bitte-ein-Git/ios_ytmusic/main/Resources/scrn2.png",
+        "https://raw.githubusercontent.com/Bitte-ein-Git/ios_ytmusic/main/Resources/scrn3.png",
+        "https://raw.githubusercontent.com/Bitte-ein-Git/ios_ytmusic/main/Resources/scrn4.png",
+        "https://raw.githubusercontent.com/Bitte-ein-Git/ios_ytmusic/main/Resources/scrn5.png"
+      ],
+      "versions": [
+        {
+          "version": "9.06.4",
+          "date": "2026-02-27T00:00:00+01:00",
+          "localizedDescription": "Added to repo !",
+          "downloadURL": "https://github.com/Bitte-ein-Git/ios_ytmusic/releases/download/v2.3.1/FordyYTM_2.3.1.ipa",
+          "size": 82600000
+        }
+      ],
+      "appPermissions": {
+        "entitlements": [],
+        "privacy": {}
+      }
+    },
+    {
+      "name": "Acrobat+🗿",
+      "bundleIdentifier": "com.adobe.Adobe-Reader",
+      "developerName": "heyFordy / Adobe",
+      "subtitle": "Unlocked Adobe Acrobat Reader",
+      "localizedDescription": "This is an awesome app only available on AltStore.",
+      "iconURL": "https://repo.heyfordy.dev/assets/acrobat.png",
+      "tintColor": "#7f7f7f",
+      "category": "other",
+      "screenshots": [],
+      "versions": [
+        {
+          "version": "24.05.01",
+          "date": "2026-08-27T20:26:00+02:00",
+          "localizedDescription": "First stable build with Livecontainer support...",
+          "downloadURL": "https://github.com/elias1731/hello/releases/download/AAR%2B/AARplus_v24.05.01.ipa",
+          "size": 151000000
+        }
+      ],
+      "appPermissions": {
+        "entitlements": [],
+        "privacy": {
+          "NSCameraUsageDescription": "NSCameraUsageDescription",
+          "NSContactsUsageDescription": "NSContactsUsageDescription",
+          "NSFaceIDUsageDescription": "NSFaceIDUsageDescription",
+          "NSMicrophoneUsageDescription": "NSMicrophoneUsageDescription",
+          "NSPhotoLibraryAddUsageDescription": "NSPhotoLibraryAddUsageDescription",
+          "NSPhotoLibraryUsageDescription": "NSPhotoLibraryUsageDescription",
+          "NSSpeechRecognitionUsageDescription": "NSSpeechRecognitionUsageDescription"
+        }
+      }
+    },
+    {
+      "name": "PicsArt+🗿",
+      "bundleIdentifier": "com.picsart.studio",
+      "developerName": "heyFordy",
+      "subtitle": "» Premium patched !",
+      "localizedDescription": "Unlocks Premium/PRO subscription features.",
+      "iconURL": "https://repo.heyfordy.dev/assets/picsart.png",
+      "tintColor": "#fe026d",
+      "category": "photo-video",
+      "screenshots": [],
+      "versions": [
+        {
+          "version": "28.4.3",
+          "date": "2026-03-13T17:40:00+01:00",
+          "localizedDescription": "Updated to App ver 28.4.3",
+          "downloadURL": "https://github.com/Bitte-ein-Git/sidestore-repo/releases/download/com.picsart.studio/PicsArt+.ipa",
+          "size": 98700000,
+          "minOSVersion": "12.0"
+        }
+      ],
+      "appPermissions": {
+        "entitlements": [],
+        "privacy": {}
+      }
+    },
+    {
+      "name": "Infuse+🗿",
+      "bundleIdentifier": "com.firecore.infuse",
+      "developerName": "Firecore, LLC • iOSGods",
+      "subtitle": "An elegant video player | Enhanced & Unlocked",
+      "localizedDescription": "Ignite your video content with Infuse – the beautiful way to watch almost any video format!",
+      "iconURL": "http://repo.heyfordy.dev/assets/infuse-plus.png",
+      "tintColor": "#fe5202",
+      "category": "entertainment",
+      "screenshots": [
+        "https://repo.heyfordy.dev/assets/infusep_scrn1.jpg",
+        "https://repo.heyfordy.dev/assets/infusep_scrn2.jpg",
+        "https://repo.heyfordy.dev/assets/infusep_scrn3.jpg"
+      ],
+      "versions": [
+        {
+          "version": "8.5",
+          "date": "2026-08-09T23:18:00+02:00",
+          "localizedDescription": null,
+          "downloadURL": "https://github.com/Bitte-ein-Git/sidestore-repo/releases/download/com.firecore.infuse/Infuse+.ipa",
+          "size": 98500000
+        }
+      ],
+      "appPermissions": {
+        "entitlements": [],
+        "privacy": {
+          "NSBluetoothAlwaysUsageDescription": "Used to discover nearby Cast devices",
+          "NSCameraUsageDescription": "Used for scanning QR codes",
+          "NSBluetoothPeripheralUsageDescription": "Used for streaming media to external devices",
+          "NSPhotoLibraryAddUsageDescription": "Used for saving QR code",
+          "NSLocalNetworkUsageDescription": "Used to discover network shares and Google Cast devices in your local network",
+          "NSAppleMusicUsageDescription": "Please allow access in order to show iTunes videos.",
+          "NSMicrophoneUsageDescription": "Used for pairing with external devices",
+          "NSFaceIDUsageDescription": "Used for unlocking your device when restrictions are enabled"
+        }
+      }
+    },
+    {
+      "name": "Gopeed",
+      "bundleIdentifier": "com.gopeed.gopeed.app",
+      "developerName": "GopeedLab",
+      "subtitle": "🔥 Download Manager",
+      "localizedDescription": "Free, open-source download manager supporting HTTP, HTTPS, BitTorrent, magnet, and ed2k links.",
+      "iconURL": "https://raw.githubusercontent.com/GopeedLab/gopeed/refs/heads/main/ui/flutter/assets/icon/icon_1024.png",
+      "tintColor": "#48ff77",
+      "category": "utilities",
+      "screenshots": [],
+      "versions": [
+        {
+          "version": "1.9.3",
+          "date": "2026-06-13T12:52:49+0000",
+          "localizedDescription": "Updated to 1.9.3",
+          "downloadURL": "https://release-assets.githubusercontent.com/github-production-release-asset/182502850/d7b09ee4-2766-4054-a8b2-aa9f7f9f2a4e?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-06-13T13%3A51%3A24Z&rscd=attachment%3B+filename%3DGopeed-v1.9.3-ios.ipa&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-06-13T12%3A50%3A41Z&ske=2026-06-13T13%3A51%3A24Z&sks=b&skv=2018-11-09&sig=8G998pggUKF96%2FWvOWAYDurp5WCKJxtes4g6J%2FU8R7k%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4MTM1Njk2OCwibmJmIjoxNzgxMzU1MTY4LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.bcmVebnPB0W76Z4I05WQVYyxneAVWKci9R49ySQxMB4&response-content-disposition=attachment%3B%20filename%3DGopeed-v1.9.3-ios.ipa&response-content-type=application%2Foctet-stream",
+          "size": 27488140,
+          "minOSVersion": "12.0"
+        },
+        {
+          "version": "1.0.0",
+          "date": "2026-01-01T00:00:00+01:00",
+          "localizedDescription": "Gopeed added",
+          "downloadURL": "https://github.com/GopeedLab/gopeed/releases/download/v1.0.0/Gopeed-v1.0.0-ios.ipa",
+          "size": 0,
+          "minOSVersion": "12.0"
+        }
+      ],
+      "appPermissions": {
+        "entitlements": [],
+        "privacy": {}
+      }
+    },
+    {
+      "name": "Twitch+🗿",
+      "bundleIdentifier": "tv.twitch",
+      "developerName": "heyFordy",
+      "subtitle": "Set your own proxy server !",
+      "localizedDescription": "Allows you to specify a custom proxy server for ad-blocking.",
+      "iconURL": "https://repo.heyfordy.dev/assets/ttv.png",
+      "tintColor": "#a302fe",
+      "category": "entertainment",
+      "screenshots": [],
+      "versions": [
+        {
+          "version": "19.4",
+          "date": "2026-03-13T17:20:00+01:00",
+          "localizedDescription": "Custom proxy settings added !",
+          "downloadURL": "https://github.com/Bitte-ein-Git/sidestore-repo/releases/download/tv.twitch/Twitch+.ipa",
+          "size": 83900000,
+          "minOSVersion": "12.0"
+        }
+      ],
+      "appPermissions": {
+        "entitlements": [],
+        "privacy": {}
+      }
+    }
+  ],
+  "news": []
+}

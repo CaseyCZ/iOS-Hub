@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-18T10:50:41Z",
+  "generatedAt": "2026-09-18T10:55:52Z",
   "sources": [
     {
       "id": "utm",
@@ -3347,10 +3347,18 @@
     {
       "id": "cypwn-ipa",
       "name": "CyPwn IPA Library",
-      "appCount": 209,
+      "appCount": 210,
       "catalogLimited": true,
       "iconURL": "https://repo.cypwn.xyz/assets/images/cypwn_small.png",
       "apps": [
+        {
+          "name": "Stremio-2.0.7",
+          "bundleIdentifier": "com.stremio.pal",
+          "developerName": "Stremio-2.0.7 x CyPwn",
+          "version": "2.0.7",
+          "iconURL": "https://ipa.cypwn.xyz/serve/icons/Stremio-2.0.7.png",
+          "subtitle": ""
+        },
         {
           "name": "Stremio-2.0.6",
           "bundleIdentifier": "com.stremio.pal",
@@ -4781,14 +4789,6 @@
           "developerName": "Star_Map_2.6_Satella x CyPwn",
           "version": "2.6",
           "iconURL": "https://ipa.cypwn.xyz/serve/icons/Star_Map_2.6_Satella.png",
-          "subtitle": ""
-        },
-        {
-          "name": "RefacePro_3.12.0",
-          "bundleIdentifier": "cypwn.RefacePro_3.12.0.3.12.0",
-          "developerName": "RefacePro_3.12.0 x CyPwn",
-          "version": "3.12.0",
-          "iconURL": "https://ipa.cypwn.xyz/serve/icons/RefacePro_3.12.0.png",
           "subtitle": ""
         }
       ]
@@ -6416,6 +6416,1764 @@
           "version": "20.05.4",
           "iconURL": "https://raw.githubusercontent.com/arichornlover/YouTube-Reborn-v5/main/layout/Library/Application%20Support/YouTubeReborn.bundle/ytrebornbuttonblack.png",
           "subtitle": "Supercharged with a ton of tweaks for the YouTube app."
+        }
+      ]
+    },
+    {
+      "id": "apollo-reddit",
+      "name": "Apollo for Reddit",
+      "appCount": 1,
+      "catalogLimited": false,
+      "iconURL": "https://raw.githubusercontent.com/Balackburn/Apollo/main/public/images/image_0.webp",
+      "apps": [
+        {
+          "name": "Apollo for Reddit",
+          "bundleIdentifier": "com.christianselig.Apollo",
+          "developerName": "Christian Selig (& Apollo-Reborn contributors)",
+          "version": "3.7.1",
+          "iconURL": "https://raw.githubusercontent.com/Balackburn/Apollo/main/public/images/image_0.webp",
+          "subtitle": "The award-winning Reddit app"
+        }
+      ]
+    },
+    {
+      "id": "discord-appstore-builds",
+      "name": "Discord",
+      "appCount": 1,
+      "catalogLimited": false,
+      "iconURL": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/3b/49/1d/3b491ddd-2b41-fd44-042f-f01b2899ecd2/AppIcon-0-0-1x_U007epad-0-1-0-85-220.png/512x512bb.jpg",
+      "apps": [
+        {
+          "name": "Discord - Talk, Play, Hang Out",
+          "bundleIdentifier": "com.hammerandchisel.discord",
+          "developerName": "Discord Inc.",
+          "version": "344.1",
+          "iconURL": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/3b/49/1d/3b491ddd-2b41-fd44-042f-f01b2899ecd2/AppIcon-0-0-1x_U007epad-0-1-0-85-220.png/512x512bb.jpg",
+          "subtitle": "The standard Discord app with no tweaks added."
+        }
+      ]
+    },
+    {
+      "id": "ytkace",
+      "name": "YTKace",
+      "appCount": 1,
+      "catalogLimited": false,
+      "iconURL": "https://img.lightshot.app/8gRG1MrsTPO7ZiwX_JfmbA.jpeg",
+      "apps": [
+        {
+          "name": "YTKace",
+          "bundleIdentifier": "com.google.ios.youtube",
+          "developerName": "itzzace",
+          "version": "0.9.3",
+          "iconURL": "https://img.lightshot.app/8gRG1MrsTPO7ZiwX_JfmbA.jpeg",
+          "subtitle": "Enhanced YouTube for iOS 17 and newer"
+        }
+      ]
+    },
+    {
+      "id": "heyfordy",
+      "name": "🍻 » Bitte ein Git! Repo 🗿",
+      "appCount": 8,
+      "catalogLimited": false,
+      "iconURL": "https://repo.heyfordy.dev/assets/repo.png",
+      "apps": [
+        {
+          "name": "YouTube+🗿",
+          "bundleIdentifier": "com.google.ios.youtube",
+          "developerName": "heyFordy",
+          "version": "21.13.6",
+          "iconURL": "http://repo.heyfordy.dev/assets/yt.png",
+          "subtitle": "iOS YouTube Vanced experience."
+        },
+        {
+          "name": "Spotify+🗿",
+          "bundleIdentifier": "com.spotify.client",
+          "developerName": "heyFordy",
+          "version": "6.2.2",
+          "iconURL": "http://repo.heyfordy.dev/assets/spot.png",
+          "subtitle": "Spotify • Ad-free / Premium Patch"
+        },
+        {
+          "name": "YT Music+🗿",
+          "bundleIdentifier": "com.google.ios.youtubemusic",
+          "developerName": "heyFordy",
+          "version": "9.06.4",
+          "iconURL": "http://repo.heyfordy.dev/assets/ytmusic.png",
+          "subtitle": "iOS YouTube Music Vanced experience."
+        },
+        {
+          "name": "Acrobat+🗿",
+          "bundleIdentifier": "com.adobe.Adobe-Reader",
+          "developerName": "heyFordy / Adobe",
+          "version": "24.05.01",
+          "iconURL": "https://repo.heyfordy.dev/assets/acrobat.png",
+          "subtitle": "Unlocked Adobe Acrobat Reader"
+        },
+        {
+          "name": "PicsArt+🗿",
+          "bundleIdentifier": "com.picsart.studio",
+          "developerName": "heyFordy",
+          "version": "28.4.3",
+          "iconURL": "https://repo.heyfordy.dev/assets/picsart.png",
+          "subtitle": "» Premium patched !"
+        },
+        {
+          "name": "Infuse+🗿",
+          "bundleIdentifier": "com.firecore.infuse",
+          "developerName": "Firecore, LLC • iOSGods",
+          "version": "8.5",
+          "iconURL": "http://repo.heyfordy.dev/assets/infuse-plus.png",
+          "subtitle": "An elegant video player | Enhanced & Unlocked"
+        },
+        {
+          "name": "Gopeed",
+          "bundleIdentifier": "com.gopeed.gopeed.app",
+          "developerName": "GopeedLab",
+          "version": "1.9.3",
+          "iconURL": "https://raw.githubusercontent.com/GopeedLab/gopeed/refs/heads/main/ui/flutter/assets/icon/icon_1024.png",
+          "subtitle": "🔥 Download Manager"
+        },
+        {
+          "name": "Twitch+🗿",
+          "bundleIdentifier": "tv.twitch",
+          "developerName": "heyFordy",
+          "version": "19.4",
+          "iconURL": "https://repo.heyfordy.dev/assets/ttv.png",
+          "subtitle": "Set your own proxy server !"
+        }
+      ]
+    },
+    {
+      "id": "ipalibrary",
+      "name": "IPALibrary Source",
+      "appCount": 834,
+      "catalogLimited": true,
+      "iconURL": "https://ipalibrary.me/favicon.ico",
+      "apps": [
+        {
+          "name": "Flappy Bird",
+          "bundleIdentifier": "me.ipalibrary.flappybird",
+          "developerName": "Crypticplank",
+          "version": "4.3",
+          "iconURL": "https://ipalibrary.me/wp-content/uploads/2022/08/FlappyBird-150x150.png",
+          "subtitle": ""
+        },
+        {
+          "name": "UTM",
+          "bundleIdentifier": "me.ipalibrary.utm",
+          "developerName": "UTM",
+          "version": "4.0.9",
+          "iconURL": "https://ipalibrary.me/wp-content/uploads/2022/08/UTM-150x150.png",
+          "subtitle": ""
+        },
+        {
+          "name": "PostBox Pocket",
+          "bundleIdentifier": "me.ipalibrary.postboxpocket",
+          "developerName": "Nathan Choi",
+          "version": "0.8.1",
+          "iconURL": "https://ipalibrary.me/wp-content/uploads/2022/11/PostBox-Pocket-150x150.jpeg",
+          "subtitle": ""
+        },
+        {
+          "name": "Human Anatomy Atlas",
+          "bundleIdentifier": "me.ipalibrary.humananatomyatlas",
+          "developerName": "Visible Body",
+          "version": "2023.0.03",
+          "iconURL": "https://ipalibrary.me/wp-content/uploads/2022/08/Human-Anatomy-Atlas-150x150.png",
+          "subtitle": ""
+        },
+        {
+          "name": "WallpapersCraft Pro",
+          "bundleIdentifier": "me.ipalibrary.wallpaperscraftpro",
+          "developerName": "VOLKRAFT",
+          "version": "2.8",
+          "iconURL": "https://ipalibrary.me/wp-content/uploads/2022/08/WallpapersCraft-Pro-150x150.png",
+          "subtitle": ""
+        },
+        {
+          "name": "VideoShow PRO",
+          "bundleIdentifier": "me.ipalibrary.videoshowpro",
+          "developerName": "VIDEOSHOW PTE. LTD.",
+          "version": "5.7.5 (5.9.0)",
+          "iconURL": "https://ipalibrary.me/wp-content/uploads/2022/08/VideoShow-PRO-150x150.png",
+          "subtitle": ""
+        },
+        {
+          "name": "Napster++",
+          "bundleIdentifier": "me.ipalibrary.napster",
+          "developerName": "Rhapsody International S.a.r.l",
+          "version": "7.4.6",
+          "iconURL": "https://ipalibrary.me/wp-content/uploads/2022/08/Napster-150x150.png",
+          "subtitle": ""
+        },
+        {
+          "name": "Instagram Plus",
+          "bundleIdentifier": "me.ipalibrary.instagramplus",
+          "developerName": "Instagram",
+          "version": "250.0 (T2.50)",
+          "iconURL": "https://ipalibrary.me/wp-content/uploads/2022/08/Instagram-Plus-150x150.png",
+          "subtitle": ""
+        },
+        {
+          "name": "Duet Display",
+          "bundleIdentifier": "me.ipalibrary.duetdisplay",
+          "developerName": "Duet, Inc.",
+          "version": "2.4.17",
+          "iconURL": "https://ipalibrary.me/wp-content/uploads/2022/08/Duet-Display-150x150.png",
+          "subtitle": ""
+        },
+        {
+          "name": "METAL SLUG X",
+          "bundleIdentifier": "me.ipalibrary.metalslugx",
+          "developerName": "SNK CORPORATION",
+          "version": "1.4.2",
+          "iconURL": "https://ipalibrary.me/wp-content/uploads/2022/08/METAL-SLUG-X-150x150.png",
+          "subtitle": ""
+        },
+        {
+          "name": "METAL SLUG 3",
+          "bundleIdentifier": "me.ipalibrary.metalslug3",
+          "developerName": "SNK CORPORATION",
+          "version": "1.5.1",
+          "iconURL": "https://ipalibrary.me/wp-content/uploads/2022/08/METAL-SLUG-3-150x150.png",
+          "subtitle": ""
+        },
+        {
+          "name": "METAL SLUG 2",
+          "bundleIdentifier": "me.ipalibrary.metalslug2",
+          "developerName": "SNK CORPORATION",
+          "version": "1.4.1",
+          "iconURL": "https://ipalibrary.me/wp-content/uploads/2022/08/METAL-SLUG-2-150x150.png",
+          "subtitle": ""
+        },
+        {
+          "name": "METAL SLUG 1",
+          "bundleIdentifier": "me.ipalibrary.metalslug1",
+          "developerName": "SNK CORPORATION",
+          "version": "1.4.1",
+          "iconURL": "https://ipalibrary.me/wp-content/uploads/2022/08/METAL-SLUG-1-150x150.png",
+          "subtitle": ""
+        },
+        {
+          "name": "Infltr++",
+          "bundleIdentifier": "me.ipalibrary.infltr",
+          "developerName": "Yooshr Ltd",
+          "version": "6.8",
+          "iconURL": "https://ipalibrary.me/wp-content/uploads/2022/08/Infltr-150x150.jpeg",
+          "subtitle": ""
+        },
+        {
+          "name": "Aftercut",
+          "bundleIdentifier": "me.ipalibrary.aftercut",
+          "developerName": "LI XUAN NIU",
+          "version": "6.0",
+          "iconURL": "https://ipalibrary.me/wp-content/uploads/2022/11/Aftercut-150x150.jpeg",
+          "subtitle": ""
+        },
+        {
+          "name": "Unruly Heroes",
+          "bundleIdentifier": "me.ipalibrary.unrulyheroes",
+          "developerName": "Perfect Game Speed",
+          "version": "3.2",
+          "iconURL": "https://ipalibrary.me/wp-content/uploads/2022/11/Unruly-Heroes-150x150.png",
+          "subtitle": ""
+        },
+        {
+          "name": "Lapse: A Forgotten Future",
+          "bundleIdentifier": "me.ipalibrary.lapseaforgottenfuture",
+          "developerName": "Stefano Cornago",
+          "version": "1.6",
+          "iconURL": "https://ipalibrary.me/wp-content/uploads/2022/11/Lapse-A-Forgotten-Future--150x150.png",
+          "subtitle": ""
+        },
+        {
+          "name": "Max Payne Mobile",
+          "bundleIdentifier": "me.ipalibrary.maxpaynemobile",
+          "developerName": "Rockstar Games",
+          "version": "2.0 (1.4.10)",
+          "iconURL": "https://ipalibrary.me/wp-content/uploads/2022/11/Max-Payne-Mobile-150x150.png",
+          "subtitle": ""
+        },
+        {
+          "name": "GTA: Liberty City Stories",
+          "bundleIdentifier": "me.ipalibrary.gtalibertycitystories",
+          "developerName": "Rockstar Games",
+          "version": "1.2 (1.14)",
+          "iconURL": "https://ipalibrary.me/wp-content/uploads/2022/11/GTA-Liberty-City-Stories-150x150.png",
+          "subtitle": ""
+        },
+        {
+          "name": "GTA: Chinatown Wars",
+          "bundleIdentifier": "me.ipalibrary.gtachinatownwars",
+          "developerName": "Rockstar Games",
+          "version": "4.5 (4.4.7)",
+          "iconURL": "https://ipalibrary.me/wp-content/uploads/2022/11/GTA-Chinatown-Wars-150x150.png",
+          "subtitle": ""
+        },
+        {
+          "name": "Bully: Anniversary Edition",
+          "bundleIdentifier": "me.ipalibrary.bullyanniversaryedition",
+          "developerName": "Rockstar Games",
+          "version": "1.1 (1.03.6)",
+          "iconURL": "https://ipalibrary.me/wp-content/uploads/2022/11/Bully-Anniversary-Edition-150x150.png",
+          "subtitle": ""
+        },
+        {
+          "name": "Grand Theft Auto: Vice City",
+          "bundleIdentifier": "me.ipalibrary.grandtheftautovicecity",
+          "developerName": "Rockstar Games",
+          "version": "1.8 (1.5.6)",
+          "iconURL": "https://ipalibrary.me/wp-content/uploads/2022/11/Grand-Theft-Auto-Vice-City-150x150.png",
+          "subtitle": ""
+        },
+        {
+          "name": "Grand Theft Auto III",
+          "bundleIdentifier": "me.ipalibrary.grandtheftautoiii",
+          "developerName": "Rockstar Games",
+          "version": "1.5 (1.3.13)",
+          "iconURL": "https://ipalibrary.me/wp-content/uploads/2022/11/Grand-Theft-Auto-III-150x150.png",
+          "subtitle": ""
+        },
+        {
+          "name": "Pocket City",
+          "bundleIdentifier": "me.ipalibrary.pocketcity",
+          "developerName": "Codebrew Games Inc.",
+          "version": "1.0.40",
+          "iconURL": "https://ipalibrary.me/wp-content/uploads/2022/11/Pocket-City-150x150.png",
+          "subtitle": ""
+        },
+        {
+          "name": "Geekbench 5 Pro",
+          "bundleIdentifier": "me.ipalibrary.geekbench5pro",
+          "developerName": "Primate Labs Inc.",
+          "version": "5.4.4",
+          "iconURL": "https://ipalibrary.me/wp-content/uploads/2022/11/Geekbench-5-Pro-150x150.png",
+          "subtitle": ""
+        },
+        {
+          "name": "Oceanhorn ™",
+          "bundleIdentifier": "me.ipalibrary.oceanhorn",
+          "developerName": "FDG Mobile Games",
+          "version": "3.4",
+          "iconURL": "https://ipalibrary.me/wp-content/uploads/2022/11/Oceanhorn-150x150.png",
+          "subtitle": ""
+        },
+        {
+          "name": "GSE SMART IPTV",
+          "bundleIdentifier": "me.ipalibrary.gsesmartiptv",
+          "developerName": "droidvision",
+          "version": "4.1",
+          "iconURL": "https://ipalibrary.me/wp-content/uploads/2022/10/GSE-SMART-IPTV-150x150.jpg",
+          "subtitle": ""
+        },
+        {
+          "name": "Picsew Pro – Picsew++",
+          "bundleIdentifier": "me.ipalibrary.picsewpropicsew",
+          "developerName": "Yojio",
+          "version": "3.9.4",
+          "iconURL": "https://ipalibrary.me/wp-content/uploads/2022/11/Picsew-150x150.jpeg",
+          "subtitle": ""
+        },
+        {
+          "name": "Hydra Pro – Hydra++",
+          "bundleIdentifier": "me.ipalibrary.hydraprohydra",
+          "developerName": "Creaceed SRL",
+          "version": "2.2",
+          "iconURL": "https://ipalibrary.me/wp-content/uploads/2022/11/Hydra-150x150.jpeg",
+          "subtitle": ""
+        },
+        {
+          "name": "Don’t Starve: Shipwrecked",
+          "bundleIdentifier": "me.ipalibrary.dontstarveshipwrecked",
+          "developerName": "Klei",
+          "version": "1.84",
+          "iconURL": "https://ipalibrary.me/wp-content/uploads/2022/11/Dont-Starve-Shipwrecked-150x150.png",
+          "subtitle": ""
+        },
+        {
+          "name": "Cat Quest",
+          "bundleIdentifier": "me.ipalibrary.catquest",
+          "developerName": "The Gentlebros.",
+          "version": "1.2.71",
+          "iconURL": "https://ipalibrary.me/wp-content/uploads/2022/11/Cat-Quest-150x150.png",
+          "subtitle": ""
+        },
+        {
+          "name": "Juicy Realm",
+          "bundleIdentifier": "me.ipalibrary.juicyrealm",
+          "developerName": "X.D. Network Inc.",
+          "version": "3.1.7",
+          "iconURL": "https://ipalibrary.me/wp-content/uploads/2022/11/Juicy-Realm-150x150.png",
+          "subtitle": ""
+        },
+        {
+          "name": "Kingdom Two Crowns",
+          "bundleIdentifier": "me.ipalibrary.kingdomtwocrowns",
+          "developerName": "Raw Fury",
+          "version": "2.3.0",
+          "iconURL": "https://ipalibrary.me/wp-content/uploads/2022/11/Kingdom-Two-Crowns-150x150.png",
+          "subtitle": ""
+        },
+        {
+          "name": "GSE SMART IPTV PRO",
+          "bundleIdentifier": "me.ipalibrary.gsesmartiptvpro",
+          "developerName": "droidvision",
+          "version": "1.0",
+          "iconURL": "https://ipalibrary.me/wp-content/uploads/2022/11/GSE-SMART-IPTV-PRO-150x150.png",
+          "subtitle": ""
+        },
+        {
+          "name": "Analog Portland",
+          "bundleIdentifier": "me.ipalibrary.analogportland",
+          "developerName": "ordinaryfactory Inc.",
+          "version": "1.0.992",
+          "iconURL": "https://ipalibrary.me/wp-content/uploads/2022/11/Analog-Portland-150x150.png",
+          "subtitle": ""
+        },
+        {
+          "name": "Analog Tokyo",
+          "bundleIdentifier": "me.ipalibrary.analogtokyo",
+          "developerName": "ordinaryfactory Inc.",
+          "version": "1.0.992",
+          "iconURL": "https://ipalibrary.me/wp-content/uploads/2022/11/Analog-Tokyo-150x150.png",
+          "subtitle": ""
+        },
+        {
+          "name": "Analog Beijing",
+          "bundleIdentifier": "me.ipalibrary.analogbeijing",
+          "developerName": "ordinaryfactory Inc.",
+          "version": "1.0.992",
+          "iconURL": "https://ipalibrary.me/wp-content/uploads/2022/11/Analog-Beijing-150x150.png",
+          "subtitle": ""
+        },
+        {
+          "name": "Analog Wedding",
+          "bundleIdentifier": "me.ipalibrary.analogwedding",
+          "developerName": "ordinaryfactory Inc.",
+          "version": "1.0.992",
+          "iconURL": "https://ipalibrary.me/wp-content/uploads/2022/11/Analog-Wedding-150x150.png",
+          "subtitle": ""
+        },
+        {
+          "name": "Analog Jeju",
+          "bundleIdentifier": "me.ipalibrary.analogjeju",
+          "developerName": "ordinaryfactory Inc.",
+          "version": "1.0.992",
+          "iconURL": "https://ipalibrary.me/wp-content/uploads/2022/11/Analog-Jeju-150x150.png",
+          "subtitle": ""
+        },
+        {
+          "name": "Analog London",
+          "bundleIdentifier": "me.ipalibrary.analoglondon",
+          "developerName": "ordinaryfactory Inc.",
+          "version": "1.0.992",
+          "iconURL": "https://ipalibrary.me/wp-content/uploads/2022/11/Analog-London-150x150.png",
+          "subtitle": ""
+        },
+        {
+          "name": "Analog Budapest",
+          "bundleIdentifier": "me.ipalibrary.analogbudapest",
+          "developerName": "ordinaryfactory Inc.",
+          "version": "1.0.992",
+          "iconURL": "https://ipalibrary.me/wp-content/uploads/2022/11/Analog-Budapest-150x150.png",
+          "subtitle": ""
+        },
+        {
+          "name": "Analog Paris",
+          "bundleIdentifier": "me.ipalibrary.analogparis",
+          "developerName": "ordinaryfactory Inc.",
+          "version": "1.0.992",
+          "iconURL": "https://ipalibrary.me/wp-content/uploads/2022/11/Analog-Paris-150x150.png",
+          "subtitle": ""
+        },
+        {
+          "name": "Analog Seoul",
+          "bundleIdentifier": "me.ipalibrary.analogseoul",
+          "developerName": "ordinaryfactory Inc.",
+          "version": "1.0.992",
+          "iconURL": "https://ipalibrary.me/wp-content/uploads/2022/11/Analog-Seoul-150x150.png",
+          "subtitle": ""
+        },
+        {
+          "name": "Analog Acoustic",
+          "bundleIdentifier": "me.ipalibrary.analogacoustic",
+          "developerName": "ordinaryfactory Inc.",
+          "version": "1.0.96",
+          "iconURL": "https://ipalibrary.me/wp-content/uploads/2022/11/Analog-Acoustic-150x150.png",
+          "subtitle": ""
+        },
+        {
+          "name": "Analog Brooklyn",
+          "bundleIdentifier": "me.ipalibrary.analogbrooklyn",
+          "developerName": "ordinaryfactory Inc.",
+          "version": "1.0.97",
+          "iconURL": "https://ipalibrary.me/wp-content/uploads/2022/11/Analog-Brooklyn-150x150.png",
+          "subtitle": ""
+        },
+        {
+          "name": "Color Accent",
+          "bundleIdentifier": "me.ipalibrary.coloraccent",
+          "developerName": "205L Studio",
+          "version": "3.9",
+          "iconURL": "https://ipalibrary.me/wp-content/uploads/2022/11/Color-Accent-150x150.png",
+          "subtitle": ""
+        },
+        {
+          "name": "Florence",
+          "bundleIdentifier": "me.ipalibrary.florence",
+          "developerName": "Annapurna Interactive",
+          "version": "1.0.5",
+          "iconURL": "https://ipalibrary.me/wp-content/uploads/2022/11/Florence-150x150.png",
+          "subtitle": ""
+        },
+        {
+          "name": "HDR Max – Photo Editor",
+          "bundleIdentifier": "me.ipalibrary.hdrmaxphotoeditor",
+          "developerName": "Petri Gronlund",
+          "version": "3.0",
+          "iconURL": "https://ipalibrary.me/wp-content/uploads/2022/11/HDR-Max-Photo-Editor-150x150.png",
+          "subtitle": ""
+        },
+        {
+          "name": "Streeme: IPTV Streaming",
+          "bundleIdentifier": "me.ipalibrary.streemeiptvstreaming",
+          "developerName": "AreaEngineering Ltd",
+          "version": "1.0.50",
+          "iconURL": "https://ipalibrary.me/wp-content/uploads/2022/11/Streeme-IPTV-Streaming-150x150.png",
+          "subtitle": ""
+        },
+        {
+          "name": "Tadaa SLR",
+          "bundleIdentifier": "me.ipalibrary.tadaaslr",
+          "developerName": "menschmaschine Publishing GmbH",
+          "version": "1.7",
+          "iconURL": "https://ipalibrary.me/wp-content/uploads/2022/11/Tadaa-SLR-150x150.png",
+          "subtitle": ""
+        },
+        {
+          "name": "Memrise Pro – Memrise++",
+          "bundleIdentifier": "me.ipalibrary.memrisepromemrise",
+          "developerName": "Memrise",
+          "version": "2021.5.24",
+          "iconURL": "https://ipalibrary.me/wp-content/uploads/2022/11/Memrise-150x150.jpeg",
+          "subtitle": ""
+        },
+        {
+          "name": "4K HDR Video Recorder – 4K Recorder++",
+          "bundleIdentifier": "me.ipalibrary.4khdrvideorecorder4krecorder",
+          "developerName": "Yong Chen",
+          "version": "2.3.1",
+          "iconURL": "https://ipalibrary.me/wp-content/uploads/2022/11/4K-HDR-Video-Recorder-150x150.jpeg",
+          "subtitle": ""
+        },
+        {
+          "name": "Artleap Premium – Artleap++",
+          "bundleIdentifier": "me.ipalibrary.artleappremiumartleap",
+          "developerName": "Lightricks Ltd.",
+          "version": "1.1.9",
+          "iconURL": "https://ipalibrary.me/wp-content/uploads/2022/11/Artleap-150x150.jpeg",
+          "subtitle": ""
+        },
+        {
+          "name": "Currenzy",
+          "bundleIdentifier": "me.ipalibrary.currenzy",
+          "developerName": "Raja V",
+          "version": "4.2.7",
+          "iconURL": "https://ipalibrary.me/wp-content/uploads/2022/11/Currenzy-150x150.png",
+          "subtitle": ""
+        },
+        {
+          "name": "Calzy",
+          "bundleIdentifier": "me.ipalibrary.calzy",
+          "developerName": "Raja V",
+          "version": "3.7.4",
+          "iconURL": "https://ipalibrary.me/wp-content/uploads/2022/11/Calzy-150x150.png",
+          "subtitle": ""
+        },
+        {
+          "name": "PlayerXtreme Pro – PlayerXtreme++",
+          "bundleIdentifier": "me.ipalibrary.playerxtremeproplayerxtreme",
+          "developerName": "Mind Cubes Apps",
+          "version": "1.4.19",
+          "iconURL": "https://ipalibrary.me/wp-content/uploads/2022/11/PlayerXtreme-150x150.jpeg",
+          "subtitle": ""
+        },
+        {
+          "name": "Oxford Learner’s Academic Dict – OLDAE++",
+          "bundleIdentifier": "me.ipalibrary.oxfordlearnersacademicdictoldae",
+          "developerName": "Oxford University Press",
+          "version": "1.3 (3.53.761)",
+          "iconURL": "https://ipalibrary.me/wp-content/uploads/2022/11/Oxford-Learners-Academic-Dict-150x150.png",
+          "subtitle": ""
+        },
+        {
+          "name": "Spectre Camera",
+          "bundleIdentifier": "me.ipalibrary.spectrecamera",
+          "developerName": "Lux Optics Incorporated",
+          "version": "1.1.11",
+          "iconURL": "https://ipalibrary.me/wp-content/uploads/2022/11/Spectre-Camera-150x150.png",
+          "subtitle": ""
+        },
+        {
+          "name": "Artstudio Pro",
+          "bundleIdentifier": "me.ipalibrary.artstudiopro",
+          "developerName": "Lucky Clan",
+          "version": "4.1.8",
+          "iconURL": "https://ipalibrary.me/wp-content/uploads/2022/11/Artstudio-Pro-150x150.png",
+          "subtitle": ""
+        },
+        {
+          "name": "Remote NumPad Keyboard",
+          "bundleIdentifier": "me.ipalibrary.remotenumpadkeyboard",
+          "developerName": "Evgeny Cherpak",
+          "version": "2022.18",
+          "iconURL": "https://ipalibrary.me/wp-content/uploads/2022/11/Remote-NumPad-Keyboard-150x150.png",
+          "subtitle": ""
+        },
+        {
+          "name": "Remote Mouse & Keyboard Pro",
+          "bundleIdentifier": "me.ipalibrary.remotemousekeyboardpro",
+          "developerName": "Evgeny Cherpak",
+          "version": "2022.71",
+          "iconURL": "https://ipalibrary.me/wp-content/uploads/2022/11/Remote-Mouse-Keyboard-Pro-150x150.jpeg",
+          "subtitle": ""
+        },
+        {
+          "name": "Affinity Photo",
+          "bundleIdentifier": "me.ipalibrary.affinityphoto",
+          "developerName": "Serif Labs",
+          "version": "1.10.5",
+          "iconURL": "https://ipalibrary.me/wp-content/uploads/2022/11/Affinity-Photo-150x150.png",
+          "subtitle": ""
+        },
+        {
+          "name": "Affinity Designer",
+          "bundleIdentifier": "me.ipalibrary.affinitydesigner",
+          "developerName": "Serif Labs",
+          "version": "1.10.5",
+          "iconURL": "https://ipalibrary.me/wp-content/uploads/2022/11/Affinity-Designer-150x150.png",
+          "subtitle": ""
+        },
+        {
+          "name": "White Balance Meter – KEV",
+          "bundleIdentifier": "me.ipalibrary.whitebalancemeterkev",
+          "developerName": "Satnam Singh",
+          "version": "6.2",
+          "iconURL": "https://ipalibrary.me/wp-content/uploads/2022/11/White-Balance-Meter-KEV-150x150.png",
+          "subtitle": ""
+        },
+        {
+          "name": "Apollo: Immersive illumination",
+          "bundleIdentifier": "me.ipalibrary.apolloimmersiveillumination",
+          "developerName": "INDICE S.A.",
+          "version": "2.3.5",
+          "iconURL": "https://ipalibrary.me/wp-content/uploads/2022/11/Apollo-Immersive-illumination-150x150.png",
+          "subtitle": ""
+        },
+        {
+          "name": "APlayer – Alook Player",
+          "bundleIdentifier": "me.ipalibrary.aplayeralookplayer",
+          "developerName": "Baoding Lehuo Network Technology Co., Ltd.",
+          "version": "5.1",
+          "iconURL": "https://ipalibrary.me/wp-content/uploads/2022/11/APlayer-Alook-Player-150x150.png",
+          "subtitle": ""
+        },
+        {
+          "name": "Moonlight Express: Fortnight",
+          "bundleIdentifier": "me.ipalibrary.moonlightexpressfortnight",
+          "developerName": "Damir Stuhec",
+          "version": "1.4.2",
+          "iconURL": "https://ipalibrary.me/wp-content/uploads/2022/11/Moonlight-Express-Fortnight-150x150.png",
+          "subtitle": ""
+        },
+        {
+          "name": "Musemage",
+          "bundleIdentifier": "me.ipalibrary.musemage",
+          "developerName": "Paraken Technology Co., Ltd.",
+          "version": "3.1.16",
+          "iconURL": "https://ipalibrary.me/wp-content/uploads/2022/11/Musemage-150x150.png",
+          "subtitle": ""
+        },
+        {
+          "name": "Yora Football++",
+          "bundleIdentifier": "me.ipalibrary.yorafootball",
+          "developerName": "Rabin Thapa",
+          "version": "1.1",
+          "iconURL": "https://ipalibrary.me/wp-content/uploads/2022/11/Yora-Football-150x150.png",
+          "subtitle": ""
+        },
+        {
+          "name": "Rollit – Photo Transfer App",
+          "bundleIdentifier": "me.ipalibrary.rollitphototransferapp",
+          "developerName": "chaman chlach",
+          "version": "3.1",
+          "iconURL": "https://ipalibrary.me/wp-content/uploads/2022/11/Rollit-150x150.png",
+          "subtitle": ""
+        },
+        {
+          "name": "The Room",
+          "bundleIdentifier": "me.ipalibrary.theroom",
+          "developerName": "Fireproof Studios Limited",
+          "version": "1.0.5",
+          "iconURL": "https://ipalibrary.me/wp-content/uploads/2022/11/The-Room-150x150.png",
+          "subtitle": ""
+        },
+        {
+          "name": "The Room Two",
+          "bundleIdentifier": "me.ipalibrary.theroomtwo",
+          "developerName": "Fireproof Studios Limited",
+          "version": "1.0.5",
+          "iconURL": "https://ipalibrary.me/wp-content/uploads/2022/11/The-Room-Two-150x150.png",
+          "subtitle": ""
+        },
+        {
+          "name": "The Room Three",
+          "bundleIdentifier": "me.ipalibrary.theroomthree",
+          "developerName": "Fireproof Studios Limited",
+          "version": "1.0.2",
+          "iconURL": "https://ipalibrary.me/wp-content/uploads/2022/11/The-Room-Three-150x150.png",
+          "subtitle": ""
+        },
+        {
+          "name": "The Room: Old Sins",
+          "bundleIdentifier": "me.ipalibrary.theroomoldsins",
+          "developerName": "Fireproof Studios Limited",
+          "version": "1.0.4",
+          "iconURL": "https://ipalibrary.me/wp-content/uploads/2022/11/The-Room-Old-Sins-150x150.png",
+          "subtitle": ""
+        },
+        {
+          "name": "Bright Memory Mobile",
+          "bundleIdentifier": "me.ipalibrary.brightmemorymobile",
+          "developerName": "Xiancheng Zeng",
+          "version": "1.26",
+          "iconURL": "https://ipalibrary.me/wp-content/uploads/2022/11/Bright-Memory-Mobile-150x150.png",
+          "subtitle": ""
+        },
+        {
+          "name": "Subtitles Viewer PRO",
+          "bundleIdentifier": "me.ipalibrary.subtitlesviewerpro",
+          "developerName": "Craig Grummitt",
+          "version": "3.1.0",
+          "iconURL": "https://ipalibrary.me/wp-content/uploads/2022/11/Subtitles-Viewer-PRO-150x150.png",
+          "subtitle": ""
+        },
+        {
+          "name": "Human Anatomy Atlas++",
+          "bundleIdentifier": "me.ipalibrary.humananatomyatlas",
+          "developerName": "Visible Body",
+          "version": "2.2.16",
+          "iconURL": "https://ipalibrary.me/wp-content/uploads/2022/11/Human-Anatomy-Atlas-150x150.jpeg",
+          "subtitle": ""
+        },
+        {
+          "name": "Ace Attorney Trilogy",
+          "bundleIdentifier": "me.ipalibrary.aceattorneytrilogy",
+          "developerName": "CAPCOM",
+          "version": "1.00.01",
+          "iconURL": "https://ipalibrary.me/wp-content/uploads/2022/11/Ace-Attorney-Trilogy-150x150.png",
+          "subtitle": ""
+        },
+        {
+          "name": "Football Manager 2023 Mobile",
+          "bundleIdentifier": "me.ipalibrary.footballmanager2023mobile",
+          "developerName": "SEGA",
+          "version": "14.0.4",
+          "iconURL": "https://ipalibrary.me/wp-content/uploads/2022/11/Football-Manager-2023-Mobile-150x150.png",
+          "subtitle": ""
+        },
+        {
+          "name": "iScanner – PDF Scanner App",
+          "bundleIdentifier": "me.ipalibrary.iscannerpdfscannerapp",
+          "developerName": "BPMobile",
+          "version": "4.53",
+          "iconURL": "https://ipalibrary.me/wp-content/uploads/2022/11/iScanner-PDF-Scanner-App-150x150.png",
+          "subtitle": ""
+        },
+        {
+          "name": "Townsmen Premium",
+          "bundleIdentifier": "me.ipalibrary.townsmenpremium",
+          "developerName": "HandyGames",
+          "version": "1.14.3",
+          "iconURL": "https://ipalibrary.me/wp-content/uploads/2022/12/Townsmen-Premium-150x150.png",
+          "subtitle": ""
+        },
+        {
+          "name": "1941 Frozen Front Premium",
+          "bundleIdentifier": "me.ipalibrary.1941frozenfrontpremium",
+          "developerName": "HandyGames",
+          "version": "1.12.1",
+          "iconURL": "https://ipalibrary.me/wp-content/uploads/2022/12/1941-Frozen-Front-Premium-150x150.png",
+          "subtitle": ""
+        },
+        {
+          "name": "BADLAND",
+          "bundleIdentifier": "me.ipalibrary.badland",
+          "developerName": "HypeHype Oy",
+          "version": "3.4.4",
+          "iconURL": "https://ipalibrary.me/wp-content/uploads/2022/12/BADLAND-150x150.png",
+          "subtitle": ""
+        },
+        {
+          "name": "Office Design 3D",
+          "bundleIdentifier": "me.ipalibrary.officedesign3d",
+          "developerName": "Anuman",
+          "version": "4.5.5",
+          "iconURL": "https://ipalibrary.me/wp-content/uploads/2022/12/Office-Design-3D-150x150.png",
+          "subtitle": ""
+        },
+        {
+          "name": "Bendy and the Ink Machine",
+          "bundleIdentifier": "me.ipalibrary.bendyandtheinkmachine",
+          "developerName": "Joey Drew Studios Inc.",
+          "version": "1.1.3",
+          "iconURL": "https://ipalibrary.me/wp-content/uploads/2022/12/Bendy-and-the-Ink-Machine-150x150.png",
+          "subtitle": ""
+        },
+        {
+          "name": "AirAttack 2",
+          "bundleIdentifier": "me.ipalibrary.airattack2",
+          "developerName": "Art In Games",
+          "version": "1.1",
+          "iconURL": "https://ipalibrary.me/wp-content/uploads/2022/12/AirAttack-2-150x150.png",
+          "subtitle": ""
+        },
+        {
+          "name": "Devils & Demons – Arena Wars Premium",
+          "bundleIdentifier": "me.ipalibrary.devilsdemonsarenawarspremium",
+          "developerName": "HandyGames",
+          "version": "1.2.3",
+          "iconURL": "https://ipalibrary.me/wp-content/uploads/2022/12/Devils-Demons-Arena-Wars-Premium-150x150.png",
+          "subtitle": ""
+        },
+        {
+          "name": "Dynamite Fishing World Games",
+          "bundleIdentifier": "me.ipalibrary.dynamitefishingworldgames",
+          "developerName": "HandyGames",
+          "version": "1.2.0",
+          "iconURL": "https://ipalibrary.me/wp-content/uploads/2022/12/Dynamite-Fishing-World-Games-150x150.png",
+          "subtitle": ""
+        },
+        {
+          "name": "1942 Pacific Front Premium",
+          "bundleIdentifier": "me.ipalibrary.1942pacificfrontpremium",
+          "developerName": "HandyGames",
+          "version": "1.7.0",
+          "iconURL": "https://ipalibrary.me/wp-content/uploads/2022/12/1942-Pacific-Front-Premium-150x150.png",
+          "subtitle": ""
+        },
+        {
+          "name": "Aces of the Luftwaffe",
+          "bundleIdentifier": "me.ipalibrary.acesoftheluftwaffe",
+          "developerName": "HandyGames",
+          "version": "1.3.10",
+          "iconURL": "https://ipalibrary.me/wp-content/uploads/2022/12/Aces-of-the-Luftwaffe-150x150.png",
+          "subtitle": ""
+        },
+        {
+          "name": "Remotix VNC, RDP & NEAR",
+          "bundleIdentifier": "me.ipalibrary.remotixvncrdpnear",
+          "developerName": "Nulana LTD",
+          "version": "8.4",
+          "iconURL": "https://ipalibrary.me/wp-content/uploads/2022/12/Remotix-VNC-RDP-NEAR-150x150.png",
+          "subtitle": ""
+        },
+        {
+          "name": "Human Anatomy Atlas 2023",
+          "bundleIdentifier": "me.ipalibrary.humananatomyatlas2023",
+          "developerName": "Visible Body",
+          "version": "2023.2.01",
+          "iconURL": "https://ipalibrary.me/wp-content/uploads/2022/12/Human-Anatomy-Atlas-150x150.png",
+          "subtitle": ""
+        },
+        {
+          "name": "Bridge Constructor Portal",
+          "bundleIdentifier": "me.ipalibrary.bridgeconstructorportal",
+          "developerName": "Headup GmbH",
+          "version": "5.2",
+          "iconURL": "https://ipalibrary.me/wp-content/uploads/2022/12/Bridge-Constructor-Portal-150x150.png",
+          "subtitle": ""
+        },
+        {
+          "name": "Bridge Constructor",
+          "bundleIdentifier": "me.ipalibrary.bridgeconstructor",
+          "developerName": "Headup GmbH",
+          "version": "11.4",
+          "iconURL": "https://ipalibrary.me/wp-content/uploads/2022/12/Bridge-Constructor-150x150.png",
+          "subtitle": ""
+        },
+        {
+          "name": "Bridge Constructor Playground",
+          "bundleIdentifier": "me.ipalibrary.bridgeconstructorplayground",
+          "developerName": "Headup GmbH",
+          "version": "2.0",
+          "iconURL": "https://ipalibrary.me/wp-content/uploads/2022/12/Bridge-Constructor-Playground-150x150.jpeg",
+          "subtitle": ""
+        },
+        {
+          "name": "Bridge Constructor Medieval",
+          "bundleIdentifier": "me.ipalibrary.bridgeconstructormedieval",
+          "developerName": "Headup GmbH",
+          "version": "1.5",
+          "iconURL": "https://ipalibrary.me/wp-content/uploads/2022/12/Bridge-Constructor-Medieval-150x150.png",
+          "subtitle": ""
+        },
+        {
+          "name": "Bridge Constructor Stunts",
+          "bundleIdentifier": "me.ipalibrary.bridgeconstructorstunts",
+          "developerName": "Headup GmbH",
+          "version": "2.7",
+          "iconURL": "https://ipalibrary.me/wp-content/uploads/2022/12/Bridge-Constructor-Stunts-150x150.png",
+          "subtitle": ""
+        },
+        {
+          "name": "Math Racer Deluxe",
+          "bundleIdentifier": "me.ipalibrary.mathracerdeluxe",
+          "developerName": "i4software",
+          "version": "3.1",
+          "iconURL": "https://ipalibrary.me/wp-content/uploads/2022/12/Math-Racer-Deluxe-150x150.png",
+          "subtitle": ""
+        },
+        {
+          "name": "SessionBand Jazz 2",
+          "bundleIdentifier": "me.ipalibrary.sessionbandjazz2",
+          "developerName": "UK Music Apps Ltd",
+          "version": "2.4.3",
+          "iconURL": "https://ipalibrary.me/wp-content/uploads/2022/12/SessionBand-Jazz-2-150x150.png",
+          "subtitle": ""
+        },
+        {
+          "name": "Morphing LED Banner",
+          "bundleIdentifier": "me.ipalibrary.morphingledbanner",
+          "developerName": "Yuanji Li",
+          "version": "2.6",
+          "iconURL": "https://ipalibrary.me/wp-content/uploads/2022/12/Morphing-LED-Banner-150x150.png",
+          "subtitle": ""
+        },
+        {
+          "name": "Implosion – Never Lose Hope",
+          "bundleIdentifier": "me.ipalibrary.implosionneverlosehope",
+          "developerName": "Rayark International Limited",
+          "version": "1.5.3",
+          "iconURL": "https://ipalibrary.me/wp-content/uploads/2022/12/Implosion-Never-Lose-Hope-150x150.png",
+          "subtitle": ""
+        },
+        {
+          "name": "MovieSpirit – Movie Maker Pro",
+          "bundleIdentifier": "me.ipalibrary.moviespiritmoviemakerpro",
+          "developerName": "Jacky Wu",
+          "version": "9.39",
+          "iconURL": "https://ipalibrary.me/wp-content/uploads/2022/12/MovieSpirit-Movie-Maker-Pro-150x150.png",
+          "subtitle": ""
+        },
+        {
+          "name": "Pictominoes®",
+          "bundleIdentifier": "me.ipalibrary.pictominoes",
+          "developerName": "Okidokico Entertainment Inc.",
+          "version": "2.1",
+          "iconURL": "https://ipalibrary.me/wp-content/uploads/2022/12/Pictominoes-150x150.png",
+          "subtitle": ""
+        },
+        {
+          "name": "Every Day Spirit® Lock Screens",
+          "bundleIdentifier": "me.ipalibrary.everydayspiritlockscreens",
+          "developerName": "Mary Davis",
+          "version": "1.9",
+          "iconURL": "https://ipalibrary.me/wp-content/uploads/2022/12/Every-Day-Spirit-Lock-Screens-150x150.png",
+          "subtitle": ""
+        },
+        {
+          "name": "Storm Rain Sounds",
+          "bundleIdentifier": "me.ipalibrary.stormrainsounds",
+          "developerName": "Adam Ware",
+          "version": "1.70",
+          "iconURL": "https://ipalibrary.me/wp-content/uploads/2022/12/Storm-Rain-Sounds-150x150.jpeg",
+          "subtitle": ""
+        },
+        {
+          "name": "Album Flow Pro",
+          "bundleIdentifier": "me.ipalibrary.albumflowpro",
+          "developerName": "Imre Katai",
+          "version": "6.4.0",
+          "iconURL": "https://ipalibrary.me/wp-content/uploads/2022/12/Album-Flow-Pro-150x150.jpeg",
+          "subtitle": ""
+        },
+        {
+          "name": "SessionBand Jazz 3",
+          "bundleIdentifier": "me.ipalibrary.sessionbandjazz3",
+          "developerName": "UK Music Apps Ltd",
+          "version": "2.5",
+          "iconURL": "https://ipalibrary.me/wp-content/uploads/2022/12/SessionBand-Jazz-3-150x150.png",
+          "subtitle": ""
+        },
+        {
+          "name": "My Sketch – Pencil Sketches",
+          "bundleIdentifier": "me.ipalibrary.mysketchpencilsketches",
+          "developerName": "Miinu Limited",
+          "version": "6.9",
+          "iconURL": "https://ipalibrary.me/wp-content/uploads/2022/12/My-Sketch-Pencil-Sketches-150x150.png",
+          "subtitle": ""
+        },
+        {
+          "name": "DU Recorder Premium – DU Recorder++",
+          "bundleIdentifier": "me.ipalibrary.durecorderpremiumdurecorder",
+          "developerName": "Beijing Xiaoxiong Bowang Technology Co.",
+          "version": "1.7.5",
+          "iconURL": "https://ipalibrary.me/wp-content/uploads/2022/12/DU-Recorder-150x150.jpeg",
+          "subtitle": ""
+        },
+        {
+          "name": "Ampere – battery charge info",
+          "bundleIdentifier": "me.ipalibrary.amperebatterychargeinfo",
+          "developerName": "CrioSoft LLC",
+          "version": "4.0.21",
+          "iconURL": "https://ipalibrary.me/wp-content/uploads/2022/12/Ampere-battery-charge-info-150x150.jpeg",
+          "subtitle": ""
+        },
+        {
+          "name": "Scrollit 2X – Visual messenger",
+          "bundleIdentifier": "me.ipalibrary.scrollit2xvisualmessenger",
+          "developerName": "AMAXIM APPS, INC",
+          "version": "2.2",
+          "iconURL": "https://ipalibrary.me/wp-content/uploads/2022/12/Scrollit-2X-Visual-messenger-150x150.png",
+          "subtitle": ""
+        },
+        {
+          "name": "Remove Background – Collart SE",
+          "bundleIdentifier": "me.ipalibrary.removebackgroundcollartse",
+          "developerName": "Spring Tech Co., Ltd.",
+          "version": "1.5.0",
+          "iconURL": "https://ipalibrary.me/wp-content/uploads/2022/12/Remove-Background-Collart-SE-150x150.png",
+          "subtitle": ""
+        },
+        {
+          "name": "VidList",
+          "bundleIdentifier": "me.ipalibrary.vidlist",
+          "developerName": "VidList Team",
+          "version": "0.6(1)",
+          "iconURL": "https://ipalibrary.me/wp-content/uploads/2022/11/VidList-150x150.png",
+          "subtitle": ""
+        },
+        {
+          "name": "Doppi",
+          "bundleIdentifier": "me.ipalibrary.doppi",
+          "developerName": "Radu Dutzan",
+          "version": "4.3.12",
+          "iconURL": "https://ipalibrary.me/wp-content/uploads/2022/12/Doppi-150x150.png",
+          "subtitle": ""
+        },
+        {
+          "name": "Pocket Earth PRO",
+          "bundleIdentifier": "me.ipalibrary.pocketearthpro",
+          "developerName": "GeoMagik LLC",
+          "version": "3.8.3",
+          "iconURL": "https://ipalibrary.me/wp-content/uploads/2022/12/Pocket-Earth-PRO-150x150.jpeg",
+          "subtitle": ""
+        },
+        {
+          "name": "Tiny Runner",
+          "bundleIdentifier": "me.ipalibrary.tinyrunner",
+          "developerName": "YUZHI MA",
+          "version": "2.81",
+          "iconURL": "https://ipalibrary.me/wp-content/uploads/2022/12/Tiny-Runner-150x150.png",
+          "subtitle": ""
+        },
+        {
+          "name": "StoryToys Jungle Book",
+          "bundleIdentifier": "me.ipalibrary.storytoysjunglebook",
+          "developerName": "StoryToys Entertainment Limited",
+          "version": "2.0.1",
+          "iconURL": "https://ipalibrary.me/wp-content/uploads/2022/12/StoryToys-Jungle-Book-150x150.png",
+          "subtitle": ""
+        },
+        {
+          "name": "Eric Carle’s Brown Bear Animal Parade",
+          "bundleIdentifier": "me.ipalibrary.ericcarlesbrownbearanimalparade",
+          "developerName": "StoryToys Entertainment Limited",
+          "version": "1.5.0",
+          "iconURL": "https://ipalibrary.me/wp-content/uploads/2022/12/Eric-Carles-Brown-Bear-Animal-Parade-150x150.png",
+          "subtitle": ""
+        },
+        {
+          "name": "Legacy 3 – The Hidden Relic",
+          "bundleIdentifier": "me.ipalibrary.legacy3thehiddenrelic",
+          "developerName": "David Adrian",
+          "version": "1.3.4",
+          "iconURL": "https://ipalibrary.me/wp-content/uploads/2022/12/Legacy-3-The-Hidden-Relic-150x150.png",
+          "subtitle": ""
+        },
+        {
+          "name": "Legacy 2 – The Ancient Curse",
+          "bundleIdentifier": "me.ipalibrary.legacy2theancientcurse",
+          "developerName": "David Adrian",
+          "version": "1.0.10",
+          "iconURL": "https://ipalibrary.me/wp-content/uploads/2022/12/Legacy-2-The-Ancient-Curse-150x150.png",
+          "subtitle": ""
+        },
+        {
+          "name": "Gravity Wallpaper Premium – Gravity Wallpaper++",
+          "bundleIdentifier": "me.ipalibrary.gravitywallpaperpremiumgravitywallpaper",
+          "developerName": "MWM",
+          "version": "4.02.09",
+          "iconURL": "https://ipalibrary.me/wp-content/uploads/2022/12/Gravity-Live-Wallpapers-3D-150x150.jpeg",
+          "subtitle": ""
+        },
+        {
+          "name": "Moments Premium – Moments++",
+          "bundleIdentifier": "me.ipalibrary.momentspremiummoments",
+          "developerName": "MWM",
+          "version": "2.02.05",
+          "iconURL": "https://ipalibrary.me/wp-content/uploads/2022/12/Moments-150x150.jpeg",
+          "subtitle": ""
+        },
+        {
+          "name": "Pixel Plus Premium – Pixel++",
+          "bundleIdentifier": "me.ipalibrary.pixelpluspremiumpixel",
+          "developerName": "MWM",
+          "version": "1.0",
+          "iconURL": "https://ipalibrary.me/wp-content/uploads/2022/12/Pixel-Plus-150x150.jpeg",
+          "subtitle": ""
+        },
+        {
+          "name": "Equalizer Premium – Equalizer++",
+          "bundleIdentifier": "me.ipalibrary.equalizerpremiumequalizer",
+          "developerName": "MWM",
+          "version": "2.09.04",
+          "iconURL": "https://ipalibrary.me/wp-content/uploads/2022/12/Equalizer-HD-music-player-150x150.jpeg",
+          "subtitle": ""
+        },
+        {
+          "name": "Pins Pro – Pins++",
+          "bundleIdentifier": "me.ipalibrary.pinspropins",
+          "developerName": "微咔世纪",
+          "version": "2.4.7",
+          "iconURL": "https://ipalibrary.me/wp-content/uploads/2023/01/Pins-Artistic-Effects-Camera-150x150.jpeg",
+          "subtitle": ""
+        },
+        {
+          "name": "Goat Simulator",
+          "bundleIdentifier": "me.ipalibrary.goatsimulator",
+          "developerName": "Coffee Stain Publishing",
+          "version": "2.0.6",
+          "iconURL": "https://ipalibrary.me/wp-content/uploads/2023/01/Goat-Simulator-150x150.png",
+          "subtitle": ""
+        },
+        {
+          "name": "Goat Simulator GoatZ",
+          "bundleIdentifier": "me.ipalibrary.goatsimulatorgoatz",
+          "developerName": "Coffee Stain Publishing",
+          "version": "2.0.6",
+          "iconURL": "https://ipalibrary.me/wp-content/uploads/2023/01/Goat-Simulator-GoatZ-150x150.png",
+          "subtitle": ""
+        },
+        {
+          "name": "Goat Simulator MMO Simulator",
+          "bundleIdentifier": "me.ipalibrary.goatsimulatormmosimulator",
+          "developerName": "Coffee Stain Publishing",
+          "version": "2.0.6",
+          "iconURL": "https://ipalibrary.me/wp-content/uploads/2023/01/Goat-Simulator-MMO-Simulator-150x150.png",
+          "subtitle": ""
+        },
+        {
+          "name": "Goat Simulator PAYDAY",
+          "bundleIdentifier": "me.ipalibrary.goatsimulatorpayday",
+          "developerName": "Coffee Stain Publishing",
+          "version": "2.0.6",
+          "iconURL": "https://ipalibrary.me/wp-content/uploads/2023/01/Goat-Simulator-PAYDAY-150x150.png",
+          "subtitle": ""
+        },
+        {
+          "name": "Goat Simulator Waste of Space",
+          "bundleIdentifier": "me.ipalibrary.goatsimulatorwasteofspace",
+          "developerName": "Coffee Stain Publishing",
+          "version": "2.0.6",
+          "iconURL": "https://ipalibrary.me/wp-content/uploads/2023/01/Goat-Simulator-Waste-of-Space-150x150.png",
+          "subtitle": ""
+        },
+        {
+          "name": "IPTV Player Pro",
+          "bundleIdentifier": "me.ipalibrary.iptvplayerpro",
+          "developerName": "Luong Hoang",
+          "version": "2.10",
+          "iconURL": "https://ipalibrary.me/wp-content/uploads/2022/08/IPTV-Player-Pro-150x150.png",
+          "subtitle": ""
+        },
+        {
+          "name": "AM3U Pro",
+          "bundleIdentifier": "me.ipalibrary.am3upro",
+          "developerName": "ruquan zhang",
+          "version": "1.0.0",
+          "iconURL": "https://ipalibrary.me/wp-content/uploads/2023/01/AM3U-Pro-150x150.png",
+          "subtitle": ""
+        },
+        {
+          "name": "Screen Mirroring + Chromecast",
+          "bundleIdentifier": "me.ipalibrary.screenmirroringchromecast",
+          "developerName": "Kraus und Karnath GbR 2Kit Consulting",
+          "version": "2.9",
+          "iconURL": "https://ipalibrary.me/wp-content/uploads/2023/01/TV-Mirror-for-Chromecast-150x150.png",
+          "subtitle": ""
+        },
+        {
+          "name": "Screen Mirroring+ for Fire TV",
+          "bundleIdentifier": "me.ipalibrary.screenmirroringforfiretv",
+          "developerName": "Kraus und Karnath GbR 2Kit Consulting",
+          "version": "3.2",
+          "iconURL": "https://ipalibrary.me/wp-content/uploads/2023/01/Screen-Mirroring-for-Fire-TV-150x150.png",
+          "subtitle": ""
+        },
+        {
+          "name": "Screen Mirroring + for Roku",
+          "bundleIdentifier": "me.ipalibrary.screenmirroringforroku",
+          "developerName": "Kraus und Karnath GbR 2Kit Consulting",
+          "version": "3.2",
+          "iconURL": "https://ipalibrary.me/wp-content/uploads/2023/01/Screen-Mirroring-for-Roku-150x150.png",
+          "subtitle": ""
+        },
+        {
+          "name": "Screen Mirroring+ App",
+          "bundleIdentifier": "me.ipalibrary.screenmirroringapp",
+          "developerName": "Kraus und Karnath GbR 2Kit Consulting",
+          "version": "2.13",
+          "iconURL": "https://ipalibrary.me/wp-content/uploads/2023/01/Screen-Mirroring-App-150x150.png",
+          "subtitle": ""
+        },
+        {
+          "name": "Paradeo Premium – Paradeo++",
+          "bundleIdentifier": "me.ipalibrary.paradeopremiumparadeo",
+          "developerName": "Leonid Ilyaev",
+          "version": "1.6",
+          "iconURL": "https://ipalibrary.me/wp-content/uploads/2023/01/Paradeo-150x150.jpeg",
+          "subtitle": ""
+        },
+        {
+          "name": "Focos Pro – Focos++",
+          "bundleIdentifier": "me.ipalibrary.focosprofocos",
+          "developerName": "Bending Spoons Apps ApS",
+          "version": "2.5.22",
+          "iconURL": "https://ipalibrary.me/wp-content/uploads/2022/09/Focos-150x150.png",
+          "subtitle": ""
+        },
+        {
+          "name": "Classic Drum Premium – Classic Drum++",
+          "bundleIdentifier": "me.ipalibrary.classicdrumpremiumclassicdrum",
+          "developerName": "KOLB SISTEMAS - EIRELI",
+          "version": "7.17.2",
+          "iconURL": "https://ipalibrary.me/wp-content/uploads/2023/01/CLASSIC-DRUM-150x150.jpeg",
+          "subtitle": ""
+        },
+        {
+          "name": "Real Drum Premium – Real Drum++",
+          "bundleIdentifier": "me.ipalibrary.realdrumpremiumrealdrum",
+          "developerName": "KOLB SISTEMAS - EIRELI",
+          "version": "9.30.3",
+          "iconURL": "https://ipalibrary.me/wp-content/uploads/2023/01/REAL-DRUM-150x150.jpeg",
+          "subtitle": ""
+        },
+        {
+          "name": "Real Pads Premium – Real Pads++",
+          "bundleIdentifier": "me.ipalibrary.realpadspremiumrealpads",
+          "developerName": "KOLB SISTEMAS - EIRELI",
+          "version": "6.13.0",
+          "iconURL": "https://ipalibrary.me/wp-content/uploads/2023/01/Real-Pads-150x150.jpeg",
+          "subtitle": ""
+        },
+        {
+          "name": "Real Bass Premium – Real Bass++",
+          "bundleIdentifier": "me.ipalibrary.realbasspremiumrealbass",
+          "developerName": "KOLB SISTEMAS - EIRELI",
+          "version": "6.12.5",
+          "iconURL": "https://ipalibrary.me/wp-content/uploads/2023/01/Real-Bass-150x150.jpeg",
+          "subtitle": ""
+        },
+        {
+          "name": "Real Guitar Premium – Real Guitar++",
+          "bundleIdentifier": "me.ipalibrary.realguitarpremiumrealguitar",
+          "developerName": "KOLB SISTEMAS - EIRELI",
+          "version": "7.13.1",
+          "iconURL": "https://ipalibrary.me/wp-content/uploads/2023/01/Real-Guitar-150x150.jpeg",
+          "subtitle": ""
+        },
+        {
+          "name": "Pixen – pixel art editor",
+          "bundleIdentifier": "me.ipalibrary.pixenpixelarteditor",
+          "developerName": "Matt Rajca",
+          "version": "1.6.7",
+          "iconURL": "https://ipalibrary.me/wp-content/uploads/2023/01/Pixen-150x150.png",
+          "subtitle": ""
+        },
+        {
+          "name": "CarTube",
+          "bundleIdentifier": "me.ipalibrary.cartube",
+          "developerName": "Avangelista",
+          "version": "1.3",
+          "iconURL": "https://ipalibrary.me/wp-content/uploads/2023/01/CarTube-150x150.png",
+          "subtitle": ""
+        },
+        {
+          "name": "KillMyOTA",
+          "bundleIdentifier": "me.ipalibrary.killmyota",
+          "developerName": "haxi0",
+          "version": "1.1",
+          "iconURL": "https://ipalibrary.me/wp-content/uploads/2023/01/KillMyOTA-150x150.png",
+          "subtitle": ""
+        },
+        {
+          "name": "Camera360 VIP – Camera360++",
+          "bundleIdentifier": "me.ipalibrary.camera360vipcamera360",
+          "developerName": "PinGuo Inc.",
+          "version": "9.80.00",
+          "iconURL": "https://ipalibrary.me/wp-content/uploads/2023/01/Camera360-150x150.jpeg",
+          "subtitle": ""
+        },
+        {
+          "name": "Teslagrad",
+          "bundleIdentifier": "me.ipalibrary.teslagrad",
+          "developerName": "Playdigious",
+          "version": "1.9",
+          "iconURL": "https://ipalibrary.me/wp-content/uploads/2023/02/Teslagrad-150x150.png",
+          "subtitle": ""
+        },
+        {
+          "name": "DaVinci Resolve for iPad",
+          "bundleIdentifier": "me.ipalibrary.davinciresolveforipad",
+          "developerName": "Blackmagic Design Inc",
+          "version": "18.1.2.2",
+          "iconURL": "https://ipalibrary.me/wp-content/uploads/2023/02/DaVinci-Resolve-for-iPad-150x150.png",
+          "subtitle": ""
+        },
+        {
+          "name": "Dwarf Journey",
+          "bundleIdentifier": "me.ipalibrary.dwarfjourney",
+          "developerName": "Orube Game Studio",
+          "version": "1.12",
+          "iconURL": "https://ipalibrary.me/wp-content/uploads/2023/02/Dwarf-Journey-150x150.png",
+          "subtitle": ""
+        },
+        {
+          "name": "StatusMagic",
+          "bundleIdentifier": "me.ipalibrary.statusmagic",
+          "developerName": "Avangelista",
+          "version": "1.0",
+          "iconURL": "https://ipalibrary.me/wp-content/uploads/2023/02/StatusMagic-150x150.png",
+          "subtitle": ""
+        },
+        {
+          "name": "WDBFontOverwrite",
+          "bundleIdentifier": "me.ipalibrary.wdbfontoverwrite",
+          "developerName": "GinsuDev",
+          "version": "1.10.8",
+          "iconURL": "https://ipalibrary.me/wp-content/uploads/2023/01/WDBFontOverwrite-150x150.png",
+          "subtitle": ""
+        },
+        {
+          "name": "Wizibel – Audio Visualizer",
+          "bundleIdentifier": "me.ipalibrary.wizibelaudiovisualizer",
+          "developerName": "Klevgränd produkter AB",
+          "version": "1.4.2",
+          "iconURL": "https://ipalibrary.me/wp-content/uploads/2023/02/Wizibel-150x150.png",
+          "subtitle": ""
+        },
+        {
+          "name": "foolcontrol",
+          "bundleIdentifier": "me.ipalibrary.foolcontrol",
+          "developerName": "Mikael Lubtchansky",
+          "version": "3.50",
+          "iconURL": "https://ipalibrary.me/wp-content/uploads/2023/02/foolcontrol-150x150.png",
+          "subtitle": ""
+        },
+        {
+          "name": "Fran Bow Chapter 1",
+          "bundleIdentifier": "me.ipalibrary.franbowchapter1",
+          "developerName": "Killmonday Games",
+          "version": "1.1",
+          "iconURL": "https://ipalibrary.me/wp-content/uploads/2023/02/Fran-Bow-Chapter-1-150x150.jpeg",
+          "subtitle": ""
+        },
+        {
+          "name": "Fran Bow Chapter 2",
+          "bundleIdentifier": "me.ipalibrary.franbowchapter2",
+          "developerName": "Killmonday Games",
+          "version": "1.1",
+          "iconURL": "https://ipalibrary.me/wp-content/uploads/2023/02/Fran-Bow-Chapter-2-150x150.jpeg",
+          "subtitle": ""
+        },
+        {
+          "name": "Fran Bow Chapter 3",
+          "bundleIdentifier": "me.ipalibrary.franbowchapter3",
+          "developerName": "Killmonday Games",
+          "version": "1.1",
+          "iconURL": "https://ipalibrary.me/wp-content/uploads/2023/02/Fran-Bow-Chapter-3-150x150.jpeg",
+          "subtitle": ""
+        },
+        {
+          "name": "Fran Bow Chapter 4",
+          "bundleIdentifier": "me.ipalibrary.franbowchapter4",
+          "developerName": "Killmonday Games",
+          "version": "1.1",
+          "iconURL": "https://ipalibrary.me/wp-content/uploads/2023/02/Fran-Bow-Chapter-4-150x150.jpeg",
+          "subtitle": ""
+        },
+        {
+          "name": "Fran Bow Chapter 5",
+          "bundleIdentifier": "me.ipalibrary.franbowchapter5",
+          "developerName": "Killmonday Games",
+          "version": "1.1",
+          "iconURL": "https://ipalibrary.me/wp-content/uploads/2023/02/Fran-Bow-Chapter-5-150x150.jpeg",
+          "subtitle": ""
+        },
+        {
+          "name": "CamToPlan PRO",
+          "bundleIdentifier": "me.ipalibrary.camtoplanpro",
+          "developerName": "Tasmanic Editions",
+          "version": "3.8",
+          "iconURL": "https://ipalibrary.me/wp-content/uploads/2023/02/CamToPlan-PRO-150x150.png",
+          "subtitle": ""
+        },
+        {
+          "name": "Poly Bridge",
+          "bundleIdentifier": "me.ipalibrary.polybridge",
+          "developerName": "Dry Cactus",
+          "version": "1.2.2",
+          "iconURL": "https://ipalibrary.me/wp-content/uploads/2023/02/Poly-Bridge-150x150.png",
+          "subtitle": ""
+        },
+        {
+          "name": "The House of Da Vinci 2",
+          "bundleIdentifier": "me.ipalibrary.thehouseofdavinci2",
+          "developerName": "Blue Brain Games",
+          "version": "1.0.9",
+          "iconURL": "https://ipalibrary.me/wp-content/uploads/2023/02/The-House-of-Da-Vinci-2-150x150.png",
+          "subtitle": ""
+        },
+        {
+          "name": "Leo’s Fortune",
+          "bundleIdentifier": "me.ipalibrary.leosfortune",
+          "developerName": "1337 & Senri LLC",
+          "version": "1.0.15",
+          "iconURL": "https://ipalibrary.me/wp-content/uploads/2023/02/Leos-Fortune-150x150.png",
+          "subtitle": ""
+        },
+        {
+          "name": "Slender Rising",
+          "bundleIdentifier": "me.ipalibrary.slenderrising",
+          "developerName": "Michael Hegemann",
+          "version": "1.7",
+          "iconURL": "https://ipalibrary.me/wp-content/uploads/2023/02/Slender-Rising-150x150.png",
+          "subtitle": ""
+        },
+        {
+          "name": "Slender Rising 2",
+          "bundleIdentifier": "me.ipalibrary.slenderrising2",
+          "developerName": "Michael Hegemann",
+          "version": "1.3",
+          "iconURL": "https://ipalibrary.me/wp-content/uploads/2023/02/Slender-Rising-2-150x150.png",
+          "subtitle": ""
+        },
+        {
+          "name": "Anatomy & Physiology",
+          "bundleIdentifier": "me.ipalibrary.anatomyphysiology",
+          "developerName": "Visible Body",
+          "version": "6.2",
+          "iconURL": "https://ipalibrary.me/wp-content/uploads/2023/02/Anatomy-Physiology-150x150.png",
+          "subtitle": ""
+        },
+        {
+          "name": "The House of Da Vinci 3",
+          "bundleIdentifier": "me.ipalibrary.thehouseofdavinci3",
+          "developerName": "Blue Brain Games",
+          "version": "1.1.1",
+          "iconURL": "https://ipalibrary.me/wp-content/uploads/2023/02/The-House-of-Da-Vinci-3-150x150.png",
+          "subtitle": ""
+        },
+        {
+          "name": "LightX : Background Remover",
+          "bundleIdentifier": "me.ipalibrary.lightxbackgroundremover",
+          "developerName": "Andor Communications Private Limited",
+          "version": "3.9",
+          "iconURL": "https://ipalibrary.me/wp-content/uploads/2023/02/LightX-Background-Remover-150x150.png",
+          "subtitle": ""
+        },
+        {
+          "name": "Brothers: A Tale of Two Sons",
+          "bundleIdentifier": "me.ipalibrary.brothersataleoftwosons",
+          "developerName": "505 Games (US), Inc.",
+          "version": "1.7.2",
+          "iconURL": "https://ipalibrary.me/wp-content/uploads/2023/02/Brothers-A-Tale-of-Two-Sons-150x150.jpeg",
+          "subtitle": ""
+        },
+        {
+          "name": "GAROU: MARK OF THE WOLVES",
+          "bundleIdentifier": "me.ipalibrary.garoumarkofthewolves",
+          "developerName": "SNK CORPORATION",
+          "version": "1.1.1",
+          "iconURL": "https://ipalibrary.me/wp-content/uploads/2023/02/GAROU-MARK-OF-THE-WOLVES-150x150.png",
+          "subtitle": ""
+        },
+        {
+          "name": "Jade Empire™: Special Edition",
+          "bundleIdentifier": "me.ipalibrary.jadeempirespecialedition",
+          "developerName": "Aspyr Media, Inc.",
+          "version": "1.0.2",
+          "iconURL": "https://ipalibrary.me/wp-content/uploads/2023/02/Jade-Empire-Special-Edition-150x150.png",
+          "subtitle": ""
+        },
+        {
+          "name": "THE KING OF FIGHTERS-i 2012",
+          "bundleIdentifier": "me.ipalibrary.thekingoffightersi2012",
+          "developerName": "SNK CORPORATION",
+          "version": "1.1.2",
+          "iconURL": "https://ipalibrary.me/wp-content/uploads/2023/02/THE-KING-OF-FIGHTERS-i-2012-150x150.png",
+          "subtitle": ""
+        },
+        {
+          "name": "Fieldrunners",
+          "bundleIdentifier": "me.ipalibrary.fieldrunners",
+          "developerName": "Subatomic Studios, LLC",
+          "version": "1.8.180368",
+          "iconURL": "https://ipalibrary.me/wp-content/uploads/2023/02/Fieldrunners-150x150.png",
+          "subtitle": ""
+        },
+        {
+          "name": "Fieldrunners 2",
+          "bundleIdentifier": "me.ipalibrary.fieldrunners2",
+          "developerName": "Subatomic Studios, LLC",
+          "version": "1.9.180445",
+          "iconURL": "https://ipalibrary.me/wp-content/uploads/2023/02/Fieldrunners-2-150x150.png",
+          "subtitle": ""
+        },
+        {
+          "name": "SAMURAI SHODOWN II",
+          "bundleIdentifier": "me.ipalibrary.samuraishodownii",
+          "developerName": "SNK CORPORATION",
+          "version": "1.2.1",
+          "iconURL": "https://ipalibrary.me/wp-content/uploads/2023/02/SAMURAI-SHODOWN-II-150x150.png",
+          "subtitle": ""
+        },
+        {
+          "name": "Street Kart: #1 Go Kart Game",
+          "bundleIdentifier": "me.ipalibrary.streetkart1gokartgame",
+          "developerName": "Fat Cigar Productions Ltd",
+          "version": "1.5.5",
+          "iconURL": "https://ipalibrary.me/wp-content/uploads/2023/02/Street-Kart-1-Go-Kart-Game-150x150.png",
+          "subtitle": ""
+        },
+        {
+          "name": "AI Art Generator",
+          "bundleIdentifier": "me.ipalibrary.aiartgenerator",
+          "developerName": "TAPUNIVERSE LLC",
+          "version": "2.0.2",
+          "iconURL": "https://ipalibrary.me/wp-content/uploads/2022/12/AI-Art-Generator-150x150.png",
+          "subtitle": ""
+        },
+        {
+          "name": "THE KING OF FIGHTERS ’98",
+          "bundleIdentifier": "me.ipalibrary.thekingoffighters98",
+          "developerName": "SNK CORPORATION",
+          "version": "1.3.1",
+          "iconURL": "https://ipalibrary.me/wp-content/uploads/2023/02/THE-KING-OF-FIGHTERS-98-150x150.png",
+          "subtitle": ""
+        },
+        {
+          "name": "THE KING OF FIGHTERS ’97",
+          "bundleIdentifier": "me.ipalibrary.thekingoffighters97",
+          "developerName": "SNK CORPORATION",
+          "version": "1.3.1",
+          "iconURL": "https://ipalibrary.me/wp-content/uploads/2023/02/THE-KING-OF-FIGHTERS-97-150x150.png",
+          "subtitle": ""
+        },
+        {
+          "name": "BADLAND 2",
+          "bundleIdentifier": "me.ipalibrary.badland2",
+          "developerName": "HypeHype Oy",
+          "version": "1.4.3",
+          "iconURL": "https://ipalibrary.me/wp-content/uploads/2023/02/BADLAND-2-150x150.png",
+          "subtitle": ""
+        },
+        {
+          "name": "Getting Over It",
+          "bundleIdentifier": "me.ipalibrary.gettingoverit",
+          "developerName": "Bennett Foddy",
+          "version": "1.14",
+          "iconURL": "https://ipalibrary.me/wp-content/uploads/2023/02/Getting-Over-It-150x150.png",
+          "subtitle": ""
+        },
+        {
+          "name": "iSwap Faces Pro",
+          "bundleIdentifier": "me.ipalibrary.iswapfacespro",
+          "developerName": "Black Frog Industries",
+          "version": "6.0",
+          "iconURL": "https://ipalibrary.me/wp-content/uploads/2023/02/iSwap-Faces-Pro-150x150.png",
+          "subtitle": ""
+        },
+        {
+          "name": "Space Marshals 2",
+          "bundleIdentifier": "me.ipalibrary.spacemarshals2",
+          "developerName": "Pixelbite",
+          "version": "1.4.7",
+          "iconURL": "https://ipalibrary.me/wp-content/uploads/2023/02/Space-Marshals-2-150x150.png",
+          "subtitle": ""
+        },
+        {
+          "name": "@picn2k camera",
+          "bundleIdentifier": "me.ipalibrary.picn2kcamera",
+          "developerName": "JIN WOOK KOO",
+          "version": "3.5.3",
+          "iconURL": "https://ipalibrary.me/wp-content/uploads/2023/02/picn2k-camera-150x150.png",
+          "subtitle": ""
+        },
+        {
+          "name": "Agent A: A puzzle in disguise",
+          "bundleIdentifier": "me.ipalibrary.agentaapuzzleindisguise",
+          "developerName": "Yak & co",
+          "version": "5.3.9",
+          "iconURL": "https://ipalibrary.me/wp-content/uploads/2023/02/Agent-A-A-puzzle-in-disguise-150x150.png",
+          "subtitle": ""
+        },
+        {
+          "name": "#filmphotography",
+          "bundleIdentifier": "me.ipalibrary.filmphotography",
+          "developerName": "Baglan Dosmagambetov",
+          "version": "1.4.2",
+          "iconURL": "https://ipalibrary.me/wp-content/uploads/2023/02/filmphotography-150x150.png",
+          "subtitle": ""
+        },
+        {
+          "name": "Phone Drive: File Storage Sync",
+          "bundleIdentifier": "me.ipalibrary.phonedrivefilestoragesync",
+          "developerName": "Eightythree Technology",
+          "version": "8.2.9",
+          "iconURL": "https://ipalibrary.me/wp-content/uploads/2023/02/Phone-Drive-File-Storage-Sync-150x150.png",
+          "subtitle": ""
+        },
+        {
+          "name": "Night Mode-Long Exposure Video",
+          "bundleIdentifier": "me.ipalibrary.nightmodelongexposurevideo",
+          "developerName": "Tigran Mkhitaryan",
+          "version": "3.0.3",
+          "iconURL": "https://ipalibrary.me/wp-content/uploads/2023/02/Night-Mode-Long-Exposure-Video-150x150.png",
+          "subtitle": ""
+        },
+        {
+          "name": "Color Splash",
+          "bundleIdentifier": "me.ipalibrary.colorsplash",
+          "developerName": "Pocket Pixels Inc.",
+          "version": "3.13",
+          "iconURL": "https://ipalibrary.me/wp-content/uploads/2023/02/Color-Splash-150x150.png",
+          "subtitle": ""
+        },
+        {
+          "name": "Toca Life: Pets",
+          "bundleIdentifier": "me.ipalibrary.tocalifepets",
+          "developerName": "Toca Boca AB",
+          "version": "1.4",
+          "iconURL": "https://ipalibrary.me/wp-content/uploads/2023/02/Toca-Life-Pets-150x150.png",
+          "subtitle": ""
+        },
+        {
+          "name": "Toca Life: Hospital",
+          "bundleIdentifier": "me.ipalibrary.tocalifehospital",
+          "developerName": "Toca Boca AB",
+          "version": "1.4",
+          "iconURL": "https://ipalibrary.me/wp-content/uploads/2023/02/Toca-Life-Hospital-150x150.png",
+          "subtitle": ""
+        },
+        {
+          "name": "Toca Nature",
+          "bundleIdentifier": "me.ipalibrary.tocanature",
+          "developerName": "Toca Boca AB",
+          "version": "2.1",
+          "iconURL": "https://ipalibrary.me/wp-content/uploads/2023/02/Toca-Nature-150x150.png",
+          "subtitle": ""
+        },
+        {
+          "name": "Toca Boo",
+          "bundleIdentifier": "me.ipalibrary.tocaboo",
+          "developerName": "Toca Boca AB",
+          "version": "2.1",
+          "iconURL": "https://ipalibrary.me/wp-content/uploads/2023/02/Toca-Boo-150x150.png",
+          "subtitle": ""
+        },
+        {
+          "name": "Toca Life: Vacation",
+          "bundleIdentifier": "me.ipalibrary.tocalifevacation",
+          "developerName": "Toca Boca AB",
+          "version": "1.5",
+          "iconURL": "https://ipalibrary.me/wp-content/uploads/2023/02/Toca-Life-Vacation-150x150.png",
+          "subtitle": ""
+        },
+        {
+          "name": "Toca Tailor",
+          "bundleIdentifier": "me.ipalibrary.tocatailor",
+          "developerName": "Toca Boca AB",
+          "version": "1.0.8",
+          "iconURL": "https://ipalibrary.me/wp-content/uploads/2023/02/Toca-Tailor-150x150.png",
+          "subtitle": ""
+        },
+        {
+          "name": "Toca Hair Salon Me",
+          "bundleIdentifier": "me.ipalibrary.tocahairsalonme",
+          "developerName": "Toca Boca AB",
+          "version": "2.1",
+          "iconURL": "https://ipalibrary.me/wp-content/uploads/2023/02/Toca-Hair-Salon-Me-150x150.png",
+          "subtitle": ""
+        },
+        {
+          "name": "Toca Kitchen 2",
+          "bundleIdentifier": "me.ipalibrary.tocakitchen2",
+          "developerName": "Toca Boca AB",
+          "version": "2.1",
+          "iconURL": "https://ipalibrary.me/wp-content/uploads/2023/02/Toca-Kitchen-2-150x150.png",
+          "subtitle": ""
+        },
+        {
+          "name": "Toca Hair Salon 2",
+          "bundleIdentifier": "me.ipalibrary.tocahairsalon2",
+          "developerName": "Toca Boca AB",
+          "version": "2.2",
+          "iconURL": "https://ipalibrary.me/wp-content/uploads/2023/02/Toca-Hair-Salon-2-150x150.png",
+          "subtitle": ""
+        },
+        {
+          "name": "Toca Mini",
+          "bundleIdentifier": "me.ipalibrary.tocamini",
+          "developerName": "Toca Boca AB",
+          "version": "2.1",
+          "iconURL": "https://ipalibrary.me/wp-content/uploads/2023/02/Toca-Mini-150x150.png",
+          "subtitle": ""
+        },
+        {
+          "name": "World Clock Pro Mobile",
+          "bundleIdentifier": "me.ipalibrary.worldclockpromobile",
+          "developerName": "Alex Komarov Inc.",
+          "version": "1.5.5",
+          "iconURL": "https://ipalibrary.me/wp-content/uploads/2023/02/World-Clock-Pro-Mobile-150x150.png",
+          "subtitle": ""
+        }
+      ]
+    },
+    {
+      "id": "armsx2",
+      "name": "ARMSX2 iOS",
+      "appCount": 2,
+      "catalogLimited": false,
+      "iconURL": "https://ios.armsx2.net/assets/icon.png?v=d83ffc2a",
+      "apps": [
+        {
+          "name": "ARMSX2 iOS",
+          "bundleIdentifier": "com.armsx2.ios",
+          "developerName": "ARMSX2",
+          "version": "2.5.2",
+          "iconURL": "https://ios.armsx2.net/assets/icon.png?v=d83ffc2a",
+          "subtitle": "PlayStation 2 games on iPhone and iPad. Needs JIT."
+        },
+        {
+          "name": "ARMSX2 Nightly",
+          "bundleIdentifier": "com.armsx2.ios.nightly",
+          "developerName": "ARMSX2",
+          "version": "2.5.3-nightly.20260913.1351",
+          "iconURL": "https://ios.armsx2.net/assets/icon-nightly.png?v=1ce15bef",
+          "subtitle": "The newest features, built most days. Installs beside the stable app."
         }
       ]
     }
