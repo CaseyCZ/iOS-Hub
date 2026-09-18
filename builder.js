@@ -220,7 +220,7 @@ function applyCopy() {
 function syncFilterUi() {
   $$('[data-exp-category-filter]').forEach(button => button.classList.toggle('active', button.dataset.expCategoryFilter === category));
   $$('[data-exp-genre-filter]').forEach(button => button.classList.toggle('active', button.dataset.expGenreFilter === genre));
-  $('[data-exp-target]').forEach(button => button.classList.toggle('active', button.dataset.expTarget === target));
+  $$('[data-exp-target]').forEach(button => button.classList.toggle('active', button.dataset.expTarget === target));
   $$('[data-exp-compat-filter]').forEach(button => button.classList.toggle('active', button.dataset.expCompatFilter === compatibility));
   const search = $('#expSourceSearch');
   if (search && search.value !== query) search.value = query;
@@ -538,7 +538,7 @@ async function init() {
     genre = GENRES.has(button.dataset.expGenreFilter) ? button.dataset.expGenreFilter : 'all';
     saveFilters(); render();
   }));
-  $('[data-exp-target]').forEach(button => button.addEventListener('click', () => {
+  $$('[data-exp-target]').forEach(button => button.addEventListener('click', () => {
     const nextTarget = TARGETS.has(button.dataset.expTarget) ? button.dataset.expTarget : 'altstore';
     if (nextTarget !== target) {
       target = nextTarget;
