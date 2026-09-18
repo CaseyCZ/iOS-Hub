@@ -101,3 +101,9 @@
 .resource-card .btn{margin-top:auto;min-width:170px}
 @media(max-width:900px){.resource-grid{grid-template-columns:1fr 1fr}}
 @media(max-width:640px){.resource-grid{grid-template-columns:1fr}.resource-card{min-height:220px}.resource-card .btn{width:100%}}
+
+/* v1.1.5 — verified free resources */
+.resource-free-note{max-width:900px;margin:0 auto 30px}
+.resource-section-head{margin-top:34px}
+.resource-badges{display:flex;gap:6px;flex-wrap:wrap;justify-content:center}
+.resource-card{min-height:275px}
