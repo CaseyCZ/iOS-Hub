@@ -14,7 +14,7 @@
   <meta property="og:description" content="iOS Hub — free sideloading guide, compatibility overview and troubleshooting for AltStore, SideStore, LiveContainer, Sideloadly and TrollStore.">
   <meta property="og:url" content="https://caseycz.github.io/iOS-Hub/guide.html">
   <meta name="twitter:card" content="summary">
-  <title>Sideloading Guide — iOS Hub</title>
+  <title>Sideloading Help Center — iOS Hub</title>
   <link rel="stylesheet" href="styles.css?v=1.1.5-20260918-audit2">
   <link rel="stylesheet" href="hub-extra.css?v=1.1.5-20260918-audit6">
 </head>
@@ -86,22 +86,22 @@
         <p data-help-copy="centerDesc">Start with one of the three paths below. You can change direction at any time without losing the rest of the guide.</p>
 
         <div class="guide-mode-tabs" role="tablist" aria-label="Help center modes">
-          <button type="button" class="guide-mode active" data-guide-mode="choose" role="tab" aria-selected="true">
+          <button id="guideModeChoose" type="button" class="guide-mode active" data-guide-mode="choose" role="tab" aria-selected="true" aria-controls="guidePanelChoose">
             <span class="guide-mode-icon">↗</span>
             <span><strong data-help-copy="modeChooseTitle">Choose a method</strong><small data-help-copy="modeChooseDesc">Tell us what you want to do</small></span>
           </button>
-          <button type="button" class="guide-mode" data-guide-mode="fix" role="tab" aria-selected="false">
+          <button id="guideModeFix" type="button" class="guide-mode" data-guide-mode="fix" role="tab" aria-selected="false" aria-controls="guidePanelFix">
             <span class="guide-mode-icon">⌁</span>
             <span><strong data-help-copy="modeFixTitle">Fix a problem</strong><small data-help-copy="modeFixDesc">Search by symptom or error</small></span>
           </button>
-          <button type="button" class="guide-mode" data-guide-mode="setup" role="tab" aria-selected="false">
+          <button id="guideModeSetup" type="button" class="guide-mode" data-guide-mode="setup" role="tab" aria-selected="false" aria-controls="guidePanelSetup">
             <span class="guide-mode-icon">✓</span>
             <span><strong data-help-copy="modeSetupTitle">My setup</strong><small data-help-copy="modeSetupDesc">Build a recommendation from your device</small></span>
           </button>
         </div>
 
         <div class="guide-mode-panels">
-          <section class="guide-mode-panel active" data-guide-panel="choose" role="tabpanel">
+          <section id="guidePanelChoose" class="guide-mode-panel active" data-guide-panel="choose" role="tabpanel" aria-labelledby="guideModeChoose">
             <div class="guide-panel-head">
               <h3 data-help-copy="chooseTitle">What do you want to do?</h3>
               <p data-help-copy="chooseDesc">Pick the closest goal. We will show a practical starting point and the next three steps.</p>
@@ -128,7 +128,7 @@
             </div>
           </section>
 
-          <section class="guide-mode-panel" data-guide-panel="fix" role="tabpanel" hidden>
+          <section id="guidePanelFix" class="guide-mode-panel" data-guide-panel="fix" role="tabpanel" aria-labelledby="guideModeFix" hidden>
             <div class="guide-panel-head">
               <h3 data-help-copy="fixTitle">What is not working?</h3>
               <p data-help-copy="fixDesc">Paste part of an error message or pick a common problem. We will narrow the troubleshooting list below.</p>
@@ -204,7 +204,7 @@
             <button id="assistantShowFixes" class="btn primary assistant-show-fixes" type="button" data-help-copy="fixShow">Show matching fixes ↓</button>
           </section>
 
-          <section class="guide-mode-panel" data-guide-panel="setup" role="tabpanel" hidden>
+          <section id="guidePanelSetup" class="guide-mode-panel" data-guide-panel="setup" role="tabpanel" aria-labelledby="guideModeSetup" hidden>
             <div class="guide-panel-head">
               <h3 data-help-copy="setupTitle">Tell us about your setup</h3>
               <p data-help-copy="setupDesc">Four quick choices are enough. The result stays on this page and does not send device information anywhere.</p>
@@ -653,7 +653,7 @@
     </div>
   </div>
 
-  <script type="module" src="guide.js?v=1.1.5-20260918-audit8"></script>
+  <script type="module" src="guide.js?v=1.1.5-20260918-audit9"></script>
   <script src="mobile-menu.js?v=1.1.5-20260918-audit1"></script>
   <script src="settings-menu.js?v=1.1.5-20260918-audit1"></script>
 </body>
