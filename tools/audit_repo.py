@@ -318,6 +318,25 @@ def validate_registry() -> None:
         if mode not in ALLOWED_MODES:
             error(f"registry source {source_id or index!r} has unsupported mode {mode!r}")
 
+        website = str(source.get("website") or "").strip()
+        if website:
+            website_url = urlparse(website)
+            if website_url.scheme != "https" or not website_url.netloc:
+                error(f"registry source {source_id or index!r} website must use an absolute HTTPS URL")
+
+        description = source.get("description")
+        if not isinstance(description, dict):
+            error(f"registry source {source_id or index!r} description must be an object")
+        else:
+            for language in ("en", "cs"):
+                if not str(description.get(language) or "").strip():
+                    error(f"registry source {source_id or index!r} is missing {language} description")
+
+        if source.get("cachePayload") is False and source.get("builder") is not False:
+            error(
+                f"registry source {source_id or index!r} disables cachePayload but remains available to Builder"
+            )
+
         if source.get("mergeable") is True and mode != "classic":
             error(f"registry source {source_id!r} is mergeable but mode is {mode!r}; only Classic sources may be pre-hosted")
 
