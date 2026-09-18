@@ -375,3 +375,53 @@
 
 /* Native hidden must always win */
 [hidden]{display:none!important}
+
+
+/* v1.1.5 — interactive sideloading guide */
+.guide-assistant{padding:24px;text-align:center;margin-bottom:14px}
+.guide-assistant>h2{margin:8px 0 7px;font-size:28px;letter-spacing:-.04em}
+.guide-assistant>p{max-width:760px;margin:0 auto;color:var(--muted);font-size:12px;line-height:1.65}
+.guide-goal-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;margin-top:18px}
+.guide-goal{min-width:0;min-height:74px;padding:10px 12px;border:1px solid var(--border);border-radius:13px;background:var(--panel2);color:var(--text);display:flex;align-items:center;justify-content:flex-start;gap:10px;text-align:left;font-size:11px;font-weight:850;cursor:pointer;transition:border-color .15s,background .15s,transform .15s}
+.guide-goal:hover{border-color:var(--accent);transform:translateY(-1px)}
+.guide-goal.active{border-color:var(--accent);background:var(--accent-soft);color:var(--accent)}
+.guide-goal-icon{width:34px;height:34px;border-radius:10px;display:grid;place-items:center;flex:0 0 auto;background:var(--input);border:1px solid var(--border);font-size:18px;color:var(--text)}
+.guide-goal.active .guide-goal-icon{border-color:color-mix(in srgb,var(--accent) 45%,var(--border));background:color-mix(in srgb,var(--accent-soft) 78%,var(--panel))}
+.guide-recommendation{margin-top:14px;padding:18px;border:1px solid color-mix(in srgb,var(--accent) 45%,var(--border));border-radius:15px;background:linear-gradient(180deg,color-mix(in srgb,var(--accent-soft) 62%,var(--panel)),var(--panel));text-align:left}
+.guide-recommendation-badge{color:var(--accent);font-size:9px;font-weight:950;letter-spacing:.08em}
+.guide-recommendation h3{margin:6px 0 6px;font-size:20px;letter-spacing:-.03em}
+.guide-recommendation>p{margin:0;color:var(--muted);font-size:11px;line-height:1.65}
+.guide-recommendation-steps{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:7px;margin-top:13px}
+.guide-recommendation-steps>div{min-width:0;padding:10px;border:1px solid var(--border);border-radius:11px;background:var(--panel2);display:flex;align-items:flex-start;gap:8px}
+.guide-recommendation-steps span{width:22px;height:22px;border-radius:7px;display:grid;place-items:center;flex:0 0 auto;background:var(--accent-soft);color:var(--accent);font-size:9px;font-weight:950}
+.guide-recommendation-steps p{margin:1px 0 0;color:var(--muted);font-size:9px;line-height:1.5}
+.guide-recommendation-actions{display:flex;gap:7px;flex-wrap:wrap;margin-top:13px}
+.guide-card-highlight{border-color:color-mix(in srgb,var(--accent) 45%,var(--border));background:linear-gradient(180deg,color-mix(in srgb,var(--accent-soft) 45%,var(--panel)),var(--panel))}
+.guide-icon-text{font-size:18px}
+.guide-safety-note{margin:10px 0 12px;padding:9px 10px;border:1px solid color-mix(in srgb,var(--warn) 35%,var(--border));border-radius:10px;background:color-mix(in srgb,var(--warn) 7%,var(--panel));color:var(--muted);font-size:9px;line-height:1.5}
+.trouble-quick{max-width:920px;margin:0 auto 10px;display:flex;gap:6px;justify-content:center;flex-wrap:wrap}
+.trouble-quick button{min-height:32px;padding:0 10px;border:1px solid var(--border);border-radius:999px;background:var(--panel2);color:var(--muted);font-size:9px;font-weight:850;cursor:pointer}
+.trouble-quick button:hover,.trouble-quick button.active{border-color:var(--accent);background:var(--accent-soft);color:var(--accent)}
+.guide-report{max-width:920px;margin:12px auto 0;padding:14px;display:flex;align-items:center;justify-content:space-between;gap:12px;text-align:left}
+.guide-report>div{min-width:0}
+.guide-report strong{display:block;font-size:12px}
+.guide-report span{display:block;margin-top:3px;color:var(--muted);font-size:10px;line-height:1.5}
+
+@media(max-width:900px){
+  .guide-goal-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .guide-recommendation-steps{grid-template-columns:1fr}
+}
+@media(max-width:640px){
+  .guide-assistant{padding:16px}
+  .guide-assistant>h2{font-size:24px}
+  .guide-goal-grid{grid-template-columns:1fr}
+  .guide-goal{min-height:60px}
+  .guide-recommendation{padding:14px}
+  .guide-recommendation-actions{display:grid}
+  .guide-recommendation-actions .btn{width:100%}
+  .trouble-quick{justify-content:flex-start;flex-wrap:nowrap;overflow-x:auto;padding-bottom:3px;scrollbar-width:none}
+  .trouble-quick::-webkit-scrollbar{display:none}
+  .trouble-quick button{flex:0 0 auto}
+  .guide-report{align-items:stretch;flex-direction:column}
+  .guide-report .btn{width:100%}
+}
