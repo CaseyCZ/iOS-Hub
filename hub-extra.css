@@ -184,3 +184,15 @@
   .beginner-actions{flex-direction:column}
   .beginner-actions .btn{width:100%;max-width:none;flex:auto}
 }
+
+
+/* v1.1.5 — official brand icons */
+.guide-icon-image,.resource-icon-image{overflow:hidden;padding:0;background:transparent;color:inherit;letter-spacing:0}
+.official-app-icon{width:100%;height:100%;object-fit:contain;display:block}
+.guide-icon-image>.official-app-icon,.resource-icon-image>.official-app-icon{width:100%;height:100%;border-radius:15px;object-fit:cover}
+.official-icon-stack{width:100%;height:100%;display:flex;align-items:center;justify-content:center;position:relative}
+.official-icon-stack .official-app-icon{width:38px;height:38px;border-radius:11px;box-shadow:0 0 0 2px var(--panel)}
+.official-icon-stack .official-app-icon+ .official-app-icon{margin-left:-12px}
+.brand-link{display:inline-flex;align-items:center;justify-content:center;gap:7px}
+.brand-link-icon{width:18px;height:18px;object-fit:contain;border-radius:5px;flex:0 0 auto}
+.resource-icon-image{border-color:var(--border);background:color-mix(in srgb,var(--panel2) 94%,transparent)}
