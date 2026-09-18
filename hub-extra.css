@@ -359,19 +359,20 @@
 .nav-support-primary{background:linear-gradient(135deg,var(--accent2),var(--accent))!important;border-color:var(--accent)!important;color:#fff!important;box-shadow:0 8px 22px color-mix(in srgb,var(--accent) 22%,transparent)}
 .nav-support-primary:hover{border-color:color-mix(in srgb,#fff 55%,var(--accent))!important}
 
-@media(max-width:640px){
+@media(max-width:900px){
   .settings-panel{
-    position:fixed;
-    left:10px;
-    right:10px;
-    top:70px;
-    bottom:10px;
-    width:auto;
-    max-height:none;
+    position:absolute;
+    left:auto;
+    right:0;
+    top:calc(100% + 8px);
+    bottom:auto;
+    width:min(360px,calc(100vw - 20px));
+    max-height:calc(100dvh - 88px);
     overflow-y:auto;
     overflow-x:hidden;
     -webkit-overflow-scrolling:touch;
     overscroll-behavior:contain;
+    touch-action:pan-y;
   }
 }
 
@@ -391,16 +392,11 @@
 
 @media(max-width:900px) and (orientation:landscape){
   .settings-panel{
-    position:fixed;
-    left:10px;
-    right:10px;
-    top:10px;
-    bottom:10px;
-    width:auto;
-    max-height:none;
-    overflow-y:auto;
-    overflow-x:hidden;
-    -webkit-overflow-scrolling:touch;
-    overscroll-behavior:contain;
+    top:calc(100% + 6px);
+    max-height:calc(100dvh - 82px);
   }
 }
+
+
+/* Native hidden must always win */
+[hidden]{display:none!important}
