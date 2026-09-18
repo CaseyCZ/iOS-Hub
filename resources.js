@@ -19,7 +19,7 @@ function applyLanguage(value) {
   applyTranslations(lang);
   const select = $('#languageSelect');
   if (select) select.value = lang;
-  document.title = `${t(lang, 'resourcesPageTitle')} — CaseyCZ iOS Hub`;
+  document.title = `${t(lang, 'resourcesPageTitle')} — iOS Hub`;
   safeSet('caseycz-language', lang);
 }
 
