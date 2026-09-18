@@ -1,4 +1,4 @@
-import { SUPPORTED_LANGUAGES, applyTranslations, normalizeLanguage, t } from './i18n.js';
+import { SUPPORTED_LANGUAGES, applyTranslations, normalizeLanguage, t } from './i18n.js?v=1.1.5-20260918-officialdocs2';
 
 const root = document.documentElement;
 const $ = selector => document.querySelector(selector);
@@ -88,7 +88,7 @@ const HELP_COPY = {
     fixTitle:'What is not working?', fixDesc:'Paste part of an error message or pick a common problem. We will narrow the troubleshooting list below.', fixPlaceholder:'Paste an error: 503, pairing, certificate, refresh…',
     fixRefresh:'Refresh', fixLogin:'Apple ID / 503', fixPairing:'Pairing', fixCertificate:'Certificate', fixLimits:'App limits', fixLiveContainer:'LiveContainer', fixAltServer:'AltServer', fixReady:'Choose a problem or paste an error above.', fixPrivacy:'Everything here is processed locally in your browser.', fixShow:'Show matching fixes ↓', fixCount:'Found {n} matching fixes.',
     setupTitle:'Tell us about your setup', setupDesc:'Four quick choices are enough. The result stays on this page and does not send device information anywhere.', setupDevice:'Device', deviceIphone:'iPhone / iPad', deviceTv:'Apple TV', setupVersion:'System version', versionOlder:'Older / supported legacy', versionUnknown:'Not sure', setupComputer:'Computer access', computerNone:'I want no PC', computerSetup:'PC only for setup', computerAvailable:'PC is fine', setupNeed:'Main goal', needIpa:'Install my own IPA', needMany:'Run many apps', needMarketplace:'Alternative marketplace', needPermanent:'Permanent install', setupResultLabel:'YOUR PATH', setupReset:'Start over',
-    jumpLabel:'Jump to:', jumpBasics:'Basics', jumpMethods:'Methods', jumpCompatibility:'Compatibility', jumpTroubleshooting:'Troubleshooting'
+    officialSources:'Official docs used',jumpLabel:'Jump to:', jumpBasics:'Basics', jumpMethods:'Methods', jumpCompatibility:'Compatibility', jumpTroubleshooting:'Troubleshooting'
   },
   cs: {
     pageEyebrow:'CENTRUM POMOCI · NÁVODY · ŘEŠENÍ', pageTitle:'Centrum pomoci se sideloadingem', pageDesc:'Vyber správnou metodu, najdi příčinu problému nebo popiš svoji konfiguraci a během pár klepnutí dostaneš konkrétní postup.',
@@ -98,7 +98,7 @@ const HELP_COPY = {
     fixTitle:'Co nefunguje?', fixDesc:'Vlož část chybové hlášky nebo vyber častý problém. Zúžíme seznam řešení níže.', fixPlaceholder:'Vlož chybu: 503, pairing, certificate, refresh…',
     fixRefresh:'Refresh', fixLogin:'Apple ID / 503', fixPairing:'Pairing', fixCertificate:'Certifikát', fixLimits:'Limity aplikací', fixLiveContainer:'LiveContainer', fixAltServer:'AltServer', fixReady:'Vyber problém nebo vlož chybu výše.', fixPrivacy:'Vše se zpracovává jen lokálně v prohlížeči.', fixShow:'Ukázat odpovídající řešení ↓', fixCount:'Nalezeno odpovídajících řešení: {n}.',
     setupTitle:'Popiš svoji konfiguraci', setupDesc:'Stačí čtyři rychlé volby. Výsledek zůstává na této stránce a informace o zařízení se nikam neposílají.', setupDevice:'Zařízení', deviceIphone:'iPhone / iPad', deviceTv:'Apple TV', setupVersion:'Verze systému', versionOlder:'Starší / podporovaný legacy', versionUnknown:'Nevím', setupComputer:'Přístup k počítači', computerNone:'Nechci PC', computerSetup:'PC jen pro nastavení', computerAvailable:'PC mi nevadí', setupNeed:'Hlavní cíl', needIpa:'Instalovat vlastní IPA', needMany:'Používat hodně aplikací', needMarketplace:'Alternativní marketplace', needPermanent:'Trvalá instalace', setupResultLabel:'TVÁ CESTA', setupReset:'Začít znovu',
-    jumpLabel:'Přejít na:', jumpBasics:'Základy', jumpMethods:'Metody', jumpCompatibility:'Kompatibilita', jumpTroubleshooting:'Řešení problémů'
+    officialSources:'Použité oficiální návody',jumpLabel:'Přejít na:', jumpBasics:'Základy', jumpMethods:'Metody', jumpCompatibility:'Kompatibilita', jumpTroubleshooting:'Řešení problémů'
   },
   de: {
     pageEyebrow:'HILFECENTER · ANLEITUNGEN · LÖSUNGEN', pageTitle:'Sideloading-Hilfecenter', pageDesc:'Wähle die passende Methode, diagnostiziere ein Problem oder beschreibe dein Setup und erhalte mit wenigen Klicks einen gezielten Weg.',
@@ -108,7 +108,7 @@ const HELP_COPY = {
     fixTitle:'Was funktioniert nicht?', fixDesc:'Füge einen Teil der Fehlermeldung ein oder wähle ein häufiges Problem. Wir grenzen die Lösungen unten ein.', fixPlaceholder:'Fehler einfügen: 503, Pairing, Zertifikat, Refresh…',
     fixRefresh:'Refresh', fixLogin:'Apple ID / 503', fixPairing:'Pairing', fixCertificate:'Zertifikat', fixLimits:'App-Limits', fixLiveContainer:'LiveContainer', fixAltServer:'AltServer', fixReady:'Wähle ein Problem oder füge oben einen Fehler ein.', fixPrivacy:'Alles wird lokal im Browser verarbeitet.', fixShow:'Passende Lösungen anzeigen ↓', fixCount:'{n} passende Lösungen gefunden.',
     setupTitle:'Beschreibe dein Setup', setupDesc:'Vier kurze Entscheidungen reichen. Das Ergebnis bleibt auf dieser Seite und sendet keine Gerätedaten.', setupDevice:'Gerät', deviceIphone:'iPhone / iPad', deviceTv:'Apple TV', setupVersion:'Systemversion', versionOlder:'Älter / unterstütztes Legacy', versionUnknown:'Nicht sicher', setupComputer:'Computerzugang', computerNone:'Ich will keinen PC', computerSetup:'PC nur fürs Setup', computerAvailable:'PC ist okay', setupNeed:'Hauptziel', needIpa:'Eigene IPA installieren', needMany:'Viele Apps ausführen', needMarketplace:'Alternativer Marketplace', needPermanent:'Dauerhafte Installation', setupResultLabel:'DEIN WEG', setupReset:'Neu starten',
-    jumpLabel:'Springen zu:', jumpBasics:'Grundlagen', jumpMethods:'Methoden', jumpCompatibility:'Kompatibilität', jumpTroubleshooting:'Fehlerbehebung'
+    officialSources:'Verwendete offizielle Doku',jumpLabel:'Springen zu:', jumpBasics:'Grundlagen', jumpMethods:'Methoden', jumpCompatibility:'Kompatibilität', jumpTroubleshooting:'Fehlerbehebung'
   },
   es: {
     pageEyebrow:'CENTRO DE AYUDA · GUÍAS · SOLUCIONES', pageTitle:'Centro de ayuda de sideloading', pageDesc:'Elige el método adecuado, diagnostica un problema o describe tu configuración y obtén una ruta concreta en pocos toques.',
@@ -118,7 +118,7 @@ const HELP_COPY = {
     fixTitle:'¿Qué no funciona?', fixDesc:'Pega parte del mensaje de error o elige un problema común. Reduciremos la lista de soluciones de abajo.', fixPlaceholder:'Pega un error: 503, pairing, certificado, refresh…',
     fixRefresh:'Refresh', fixLogin:'Apple ID / 503', fixPairing:'Pairing', fixCertificate:'Certificado', fixLimits:'Límites de apps', fixLiveContainer:'LiveContainer', fixAltServer:'AltServer', fixReady:'Elige un problema o pega un error arriba.', fixPrivacy:'Todo se procesa localmente en tu navegador.', fixShow:'Mostrar soluciones coincidentes ↓', fixCount:'Se encontraron {n} soluciones.',
     setupTitle:'Describe tu configuración', setupDesc:'Cuatro elecciones rápidas son suficientes. El resultado permanece en esta página y no envía datos del dispositivo.', setupDevice:'Dispositivo', deviceIphone:'iPhone / iPad', deviceTv:'Apple TV', setupVersion:'Versión del sistema', versionOlder:'Anterior / legacy compatible', versionUnknown:'No estoy seguro', setupComputer:'Acceso a ordenador', computerNone:'No quiero PC', computerSetup:'PC solo para configurar', computerAvailable:'PC está bien', setupNeed:'Objetivo principal', needIpa:'Instalar mi propia IPA', needMany:'Usar muchas apps', needMarketplace:'Marketplace alternativo', needPermanent:'Instalación permanente', setupResultLabel:'TU RUTA', setupReset:'Empezar de nuevo',
-    jumpLabel:'Ir a:', jumpBasics:'Conceptos básicos', jumpMethods:'Métodos', jumpCompatibility:'Compatibilidad', jumpTroubleshooting:'Solución de problemas'
+    officialSources:'Documentación oficial usada',jumpLabel:'Ir a:', jumpBasics:'Conceptos básicos', jumpMethods:'Métodos', jumpCompatibility:'Compatibilidad', jumpTroubleshooting:'Solución de problemas'
   },
   fr: {
     pageEyebrow:'CENTRE D’AIDE · GUIDES · SOLUTIONS', pageTitle:'Centre d’aide au sideloading', pageDesc:'Choisissez la bonne méthode, diagnostiquez un problème ou décrivez votre configuration et obtenez un parcours ciblé en quelques gestes.',
@@ -128,7 +128,7 @@ const HELP_COPY = {
     fixTitle:'Qu’est-ce qui ne fonctionne pas ?', fixDesc:'Collez une partie du message d’erreur ou choisissez un problème courant. Nous réduirons la liste des solutions ci-dessous.', fixPlaceholder:'Collez une erreur : 503, pairing, certificat, refresh…',
     fixRefresh:'Refresh', fixLogin:'Apple ID / 503', fixPairing:'Pairing', fixCertificate:'Certificat', fixLimits:'Limites d’apps', fixLiveContainer:'LiveContainer', fixAltServer:'AltServer', fixReady:'Choisissez un problème ou collez une erreur ci-dessus.', fixPrivacy:'Tout est traité localement dans votre navigateur.', fixShow:'Afficher les solutions correspondantes ↓', fixCount:'{n} solutions correspondantes trouvées.',
     setupTitle:'Décrivez votre configuration', setupDesc:'Quatre choix rapides suffisent. Le résultat reste sur cette page et n’envoie aucune donnée sur l’appareil.', setupDevice:'Appareil', deviceIphone:'iPhone / iPad', deviceTv:'Apple TV', setupVersion:'Version du système', versionOlder:'Ancien / legacy compatible', versionUnknown:'Je ne sais pas', setupComputer:'Accès à un ordinateur', computerNone:'Je ne veux pas de PC', computerSetup:'PC seulement pour configurer', computerAvailable:'Un PC me convient', setupNeed:'Objectif principal', needIpa:'Installer mes propres IPA', needMany:'Utiliser beaucoup d’apps', needMarketplace:'Marketplace alternatif', needPermanent:'Installation permanente', setupResultLabel:'VOTRE PARCOURS', setupReset:'Recommencer',
-    jumpLabel:'Aller à :', jumpBasics:'Bases', jumpMethods:'Méthodes', jumpCompatibility:'Compatibilité', jumpTroubleshooting:'Dépannage'
+    officialSources:'Documentation officielle utilisée',jumpLabel:'Aller à :', jumpBasics:'Bases', jumpMethods:'Méthodes', jumpCompatibility:'Compatibilité', jumpTroubleshooting:'Dépannage'
   }
 };
 
