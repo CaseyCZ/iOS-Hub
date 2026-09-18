@@ -1,6 +1,10 @@
 # Changelog
 
 ## 1.1.5 — 2026-09-18
+- Improved Mix validation so sources containing multiple app variants with the same bundle identifier are marked TRY instead of PASS, preventing the Builder from implying that variant-heavy feeds can be merged without loss.
+- Added mega-source safeguards: large feeds can cap catalog previews, skip committing multi-megabyte source caches, stay out of generated all-in-one packages, and be excluded from Custom Builder while still remaining available as standalone sources.
+- Restored per-source availability badges: green ONLINE for sources that passed the latest check, red OFFLINE for failed checks, and a neutral checking state before the first test. Offline sources remain visible instead of disappearing from the catalog.
+- Expanded the Community/Modified catalog again with Moe AltStore, YouMod Repo, YouProEXTRA, OwO Source, CyPwn IPA Library, AppTesters IPA Repo and the official YouTubeRebornPlus source.
 - Added eight new verified source candidates focused on Community/Modified apps: xN1ckuz SideBox, Dan's Workshop, WuXu's Library++, Baretsky Tweaked App Library, driftywinds AltStore Repo, IPA Vault, SideloadLabs Repo and the official YTLitePlus source.
 
 - Moved the compact Custom Builder card into the Tools grid beside the DEB → IPA Converter on desktop.
