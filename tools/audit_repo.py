@@ -6,7 +6,7 @@ import re
 import sys
 from html.parser import HTMLParser
 from pathlib import Path
-from urllib.parse import urlparse
+from urllib.parse import unquote, urlparse
 
 ROOT = Path(__file__).resolve().parents[1]
 REGISTRY = ROOT / "sources" / "registry.json"
@@ -376,6 +376,86 @@ def validate_interactive_guide() -> None:
             )
 
 
+
+SITE_PAGES = (
+    ROOT / "index.html",
+    ROOT / "builder.html",
+    ROOT / "converter.html",
+    ROOT / "guide.html",
+    ROOT / "resources.html",
+)
+
+
+def validate_internal_links() -> None:
+    page_ids: dict[Path, set[str]] = {}
+    graph: dict[Path, set[Path]] = {path: set() for path in SITE_PAGES}
+
+    for page in SITE_PAGES:
+        if not page.exists():
+            error(f"Missing site page: {page.relative_to(ROOT)}")
+            continue
+        text = page.read_text(encoding="utf-8")
+        page_ids[page] = set(re.findall(r'\bid=["\']([^"\']+)["\']', text))
+
+    for page in SITE_PAGES:
+        if not page.exists():
+            continue
+        text = page.read_text(encoding="utf-8")
+        refs = re.findall(r'\b(?:href|src)=["\']([^"\']+)["\']', text, flags=re.IGNORECASE)
+        for raw in refs:
+            value = raw.strip()
+            if not value or value == "#":
+                continue
+            parsed = urlparse(value)
+            if parsed.scheme or value.startswith("//"):
+                continue
+
+            clean_path = unquote(parsed.path)
+            target = page if not clean_path else (page.parent / clean_path).resolve()
+            try:
+                target = ROOT / target.relative_to(ROOT.resolve())
+            except ValueError:
+                error(f"{page.relative_to(ROOT)} references a path outside the repository: {value}")
+                continue
+
+            if not target.exists():
+                error(f"{page.relative_to(ROOT)} references missing local target: {value}")
+                continue
+
+            if target.suffix.lower() == ".html" and target in graph:
+                graph[page].add(target)
+
+            if parsed.fragment and target.suffix.lower() == ".html":
+                fragment = unquote(parsed.fragment)
+                ids = page_ids.get(target)
+                if ids is None:
+                    target_text = target.read_text(encoding="utf-8")
+                    ids = set(re.findall(r'\bid=["\']([^"\']+)["\']', target_text))
+                    page_ids[target] = ids
+                if fragment not in ids:
+                    error(
+                        f"{page.relative_to(ROOT)} references missing fragment "
+                        f"#{fragment} in {target.relative_to(ROOT)}"
+                    )
+
+    existing_pages = {path for path in SITE_PAGES if path.exists()}
+    for start in existing_pages:
+        seen = {start}
+        pending = [start]
+        while pending:
+            current = pending.pop()
+            for target in graph.get(current, set()):
+                if target not in seen:
+                    seen.add(target)
+                    pending.append(target)
+        unreachable = sorted(existing_pages - seen)
+        if unreachable:
+            error(
+                f"{start.relative_to(ROOT)} cannot reach site page(s) through internal links: "
+                + ", ".join(str(path.relative_to(ROOT)) for path in unreachable)
+            )
+
+
 def validate_layout() -> None:
     for path in LEGACY_PATHS:
         if path.exists():
@@ -427,6 +507,7 @@ def main() -> int:
     validate_registry()
     validate_generated_data()
     validate_layout()
+    validate_internal_links()
     validate_interactive_guide()
     validate_translations()
     validate_project_identity()
