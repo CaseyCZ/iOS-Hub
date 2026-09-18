@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-18T10:55:52Z",
+  "generatedAt": "2026-09-18T11:03:55Z",
   "mixes": {
     "dvntm0-workshop--wuxu-library-plus": [
       {
@@ -65,6 +65,30 @@
         "keptSource": "dvntm0-workshop",
         "otherSource": "ytliteplus",
         "keptVersion": "21.16.2"
+      }
+    ],
+    "fouad-source--wuxu-library-plus": [
+      {
+        "bundleIdentifier": "com.burbn.instagram",
+        "keptSource": "fouad-source",
+        "otherSource": "wuxu-library-plus",
+        "keptVersion": "406.1.0"
+      }
+    ],
+    "fouad-source--xn1ckuz-sidebox": [
+      {
+        "bundleIdentifier": "com.burbn.instagram",
+        "keptSource": "xn1ckuz-sidebox",
+        "otherSource": "fouad-source",
+        "keptVersion": "418.2.0"
+      }
+    ],
+    "neofreebird--wuxu-library-plus": [
+      {
+        "bundleIdentifier": "com.atebits.Tweetie2",
+        "keptSource": "neofreebird",
+        "otherSource": "wuxu-library-plus",
+        "keptVersion": "12.26"
       }
     ],
     "wuxu-library-plus--xn1ckuz-sidebox": [
@@ -265,6 +289,30 @@
         "keptVersion": "21.16.2"
       }
     ],
+    "apollo-reddit--fouad-source--wuxu-library-plus": [
+      {
+        "bundleIdentifier": "com.burbn.instagram",
+        "keptSource": "fouad-source",
+        "otherSource": "wuxu-library-plus",
+        "keptVersion": "406.1.0"
+      }
+    ],
+    "apollo-reddit--fouad-source--xn1ckuz-sidebox": [
+      {
+        "bundleIdentifier": "com.burbn.instagram",
+        "keptSource": "xn1ckuz-sidebox",
+        "otherSource": "fouad-source",
+        "keptVersion": "418.2.0"
+      }
+    ],
+    "apollo-reddit--neofreebird--wuxu-library-plus": [
+      {
+        "bundleIdentifier": "com.atebits.Tweetie2",
+        "keptSource": "neofreebird",
+        "otherSource": "wuxu-library-plus",
+        "keptVersion": "12.26"
+      }
+    ],
     "apollo-reddit--wuxu-library-plus--xn1ckuz-sidebox": [
       {
         "bundleIdentifier": "com.spotify.client",
@@ -461,6 +509,30 @@
         "keptSource": "dvntm0-workshop",
         "otherSource": "ytliteplus",
         "keptVersion": "21.16.2"
+      }
+    ],
+    "armsx2--fouad-source--wuxu-library-plus": [
+      {
+        "bundleIdentifier": "com.burbn.instagram",
+        "keptSource": "fouad-source",
+        "otherSource": "wuxu-library-plus",
+        "keptVersion": "406.1.0"
+      }
+    ],
+    "armsx2--fouad-source--xn1ckuz-sidebox": [
+      {
+        "bundleIdentifier": "com.burbn.instagram",
+        "keptSource": "xn1ckuz-sidebox",
+        "otherSource": "fouad-source",
+        "keptVersion": "418.2.0"
+      }
+    ],
+    "armsx2--neofreebird--wuxu-library-plus": [
+      {
+        "bundleIdentifier": "com.atebits.Tweetie2",
+        "keptSource": "neofreebird",
+        "otherSource": "wuxu-library-plus",
+        "keptVersion": "12.26"
       }
     ],
     "armsx2--wuxu-library-plus--xn1ckuz-sidebox": [
@@ -661,6 +733,30 @@
         "keptVersion": "21.16.2"
       }
     ],
+    "discord-appstore-builds--fouad-source--wuxu-library-plus": [
+      {
+        "bundleIdentifier": "com.burbn.instagram",
+        "keptSource": "fouad-source",
+        "otherSource": "wuxu-library-plus",
+        "keptVersion": "406.1.0"
+      }
+    ],
+    "discord-appstore-builds--fouad-source--xn1ckuz-sidebox": [
+      {
+        "bundleIdentifier": "com.burbn.instagram",
+        "keptSource": "xn1ckuz-sidebox",
+        "otherSource": "fouad-source",
+        "keptVersion": "418.2.0"
+      }
+    ],
+    "discord-appstore-builds--neofreebird--wuxu-library-plus": [
+      {
+        "bundleIdentifier": "com.atebits.Tweetie2",
+        "keptSource": "neofreebird",
+        "otherSource": "wuxu-library-plus",
+        "keptVersion": "12.26"
+      }
+    ],
     "discord-appstore-builds--wuxu-library-plus--xn1ckuz-sidebox": [
       {
         "bundleIdentifier": "com.spotify.client",
@@ -859,6 +955,84 @@
         "keptVersion": "21.16.2"
       }
     ],
+    "dvntm0-workshop--fouad-source--wuxu-library-plus": [
+      {
+        "bundleIdentifier": "com.facebook.Facebook",
+        "keptSource": "wuxu-library-plus",
+        "otherSource": "dvntm0-workshop",
+        "keptVersion": "1.3.1"
+      },
+      {
+        "bundleIdentifier": "com.burbn.instagram",
+        "keptSource": "fouad-source",
+        "otherSource": "wuxu-library-plus",
+        "keptVersion": "406.1.0"
+      },
+      {
+        "bundleIdentifier": "com.google.ios.youtube",
+        "keptSource": "dvntm0-workshop",
+        "otherSource": "wuxu-library-plus",
+        "keptVersion": "21.16.2"
+      },
+      {
+        "bundleIdentifier": "com.facebook.Messenger",
+        "keptSource": "dvntm0-workshop",
+        "otherSource": "wuxu-library-plus",
+        "keptVersion": "511.0.0"
+      }
+    ],
+    "dvntm0-workshop--fouad-source--xn1ckuz-sidebox": [
+      {
+        "bundleIdentifier": "com.google.ios.youtube",
+        "keptSource": "xn1ckuz-sidebox",
+        "otherSource": "dvntm0-workshop",
+        "keptVersion": "21.24.3"
+      },
+      {
+        "bundleIdentifier": "com.google.ios.youtubemusic",
+        "keptSource": "xn1ckuz-sidebox",
+        "otherSource": "dvntm0-workshop",
+        "keptVersion": "9.36.1"
+      },
+      {
+        "bundleIdentifier": "com.burbn.instagram",
+        "keptSource": "xn1ckuz-sidebox",
+        "otherSource": "fouad-source",
+        "keptVersion": "418.2.0"
+      }
+    ],
+    "dvntm0-workshop--fouad-source--youmod-repo": [
+      {
+        "bundleIdentifier": "com.google.ios.youtube",
+        "keptSource": "dvntm0-workshop",
+        "otherSource": "youmod-repo",
+        "keptVersion": "21.16.2"
+      }
+    ],
+    "dvntm0-workshop--fouad-source--youtuberebornplus": [
+      {
+        "bundleIdentifier": "com.google.ios.youtube",
+        "keptSource": "dvntm0-workshop",
+        "otherSource": "youtuberebornplus",
+        "keptVersion": "21.16.2"
+      }
+    ],
+    "dvntm0-workshop--fouad-source--ytkace": [
+      {
+        "bundleIdentifier": "com.google.ios.youtube",
+        "keptSource": "ytkace",
+        "otherSource": "dvntm0-workshop",
+        "keptVersion": "0.9.3"
+      }
+    ],
+    "dvntm0-workshop--fouad-source--ytliteplus": [
+      {
+        "bundleIdentifier": "com.google.ios.youtube",
+        "keptSource": "dvntm0-workshop",
+        "otherSource": "ytliteplus",
+        "keptVersion": "21.16.2"
+      }
+    ],
     "dvntm0-workshop--ignited--wuxu-library-plus": [
       {
         "bundleIdentifier": "com.facebook.Facebook",
@@ -1050,6 +1224,78 @@
       }
     ],
     "dvntm0-workshop--manicemu--ytliteplus": [
+      {
+        "bundleIdentifier": "com.google.ios.youtube",
+        "keptSource": "dvntm0-workshop",
+        "otherSource": "ytliteplus",
+        "keptVersion": "21.16.2"
+      }
+    ],
+    "dvntm0-workshop--neofreebird--wuxu-library-plus": [
+      {
+        "bundleIdentifier": "com.atebits.Tweetie2",
+        "keptSource": "neofreebird",
+        "otherSource": "wuxu-library-plus",
+        "keptVersion": "12.26"
+      },
+      {
+        "bundleIdentifier": "com.facebook.Facebook",
+        "keptSource": "wuxu-library-plus",
+        "otherSource": "dvntm0-workshop",
+        "keptVersion": "1.3.1"
+      },
+      {
+        "bundleIdentifier": "com.google.ios.youtube",
+        "keptSource": "dvntm0-workshop",
+        "otherSource": "wuxu-library-plus",
+        "keptVersion": "21.16.2"
+      },
+      {
+        "bundleIdentifier": "com.facebook.Messenger",
+        "keptSource": "dvntm0-workshop",
+        "otherSource": "wuxu-library-plus",
+        "keptVersion": "511.0.0"
+      }
+    ],
+    "dvntm0-workshop--neofreebird--xn1ckuz-sidebox": [
+      {
+        "bundleIdentifier": "com.google.ios.youtube",
+        "keptSource": "xn1ckuz-sidebox",
+        "otherSource": "dvntm0-workshop",
+        "keptVersion": "21.24.3"
+      },
+      {
+        "bundleIdentifier": "com.google.ios.youtubemusic",
+        "keptSource": "xn1ckuz-sidebox",
+        "otherSource": "dvntm0-workshop",
+        "keptVersion": "9.36.1"
+      }
+    ],
+    "dvntm0-workshop--neofreebird--youmod-repo": [
+      {
+        "bundleIdentifier": "com.google.ios.youtube",
+        "keptSource": "dvntm0-workshop",
+        "otherSource": "youmod-repo",
+        "keptVersion": "21.16.2"
+      }
+    ],
+    "dvntm0-workshop--neofreebird--youtuberebornplus": [
+      {
+        "bundleIdentifier": "com.google.ios.youtube",
+        "keptSource": "dvntm0-workshop",
+        "otherSource": "youtuberebornplus",
+        "keptVersion": "21.16.2"
+      }
+    ],
+    "dvntm0-workshop--neofreebird--ytkace": [
+      {
+        "bundleIdentifier": "com.google.ios.youtube",
+        "keptSource": "ytkace",
+        "otherSource": "dvntm0-workshop",
+        "keptVersion": "0.9.3"
+      }
+    ],
+    "dvntm0-workshop--neofreebird--ytliteplus": [
       {
         "bundleIdentifier": "com.google.ios.youtube",
         "keptSource": "dvntm0-workshop",
@@ -1699,6 +1945,30 @@
         "keptVersion": "0.9.3"
       }
     ],
+    "flycast--fouad-source--wuxu-library-plus": [
+      {
+        "bundleIdentifier": "com.burbn.instagram",
+        "keptSource": "fouad-source",
+        "otherSource": "wuxu-library-plus",
+        "keptVersion": "406.1.0"
+      }
+    ],
+    "flycast--fouad-source--xn1ckuz-sidebox": [
+      {
+        "bundleIdentifier": "com.burbn.instagram",
+        "keptSource": "xn1ckuz-sidebox",
+        "otherSource": "fouad-source",
+        "keptVersion": "418.2.0"
+      }
+    ],
+    "flycast--neofreebird--wuxu-library-plus": [
+      {
+        "bundleIdentifier": "com.atebits.Tweetie2",
+        "keptSource": "neofreebird",
+        "otherSource": "wuxu-library-plus",
+        "keptVersion": "12.26"
+      }
+    ],
     "flycast--wuxu-library-plus--xn1ckuz-sidebox": [
       {
         "bundleIdentifier": "com.spotify.client",
@@ -1829,6 +2099,350 @@
         "keptSource": "ytkace",
         "otherSource": "ytliteplus",
         "keptVersion": "0.9.3"
+      }
+    ],
+    "fouad-source--ignited--wuxu-library-plus": [
+      {
+        "bundleIdentifier": "com.burbn.instagram",
+        "keptSource": "fouad-source",
+        "otherSource": "wuxu-library-plus",
+        "keptVersion": "406.1.0"
+      }
+    ],
+    "fouad-source--ignited--xn1ckuz-sidebox": [
+      {
+        "bundleIdentifier": "com.burbn.instagram",
+        "keptSource": "xn1ckuz-sidebox",
+        "otherSource": "fouad-source",
+        "keptVersion": "418.2.0"
+      }
+    ],
+    "fouad-source--ish--wuxu-library-plus": [
+      {
+        "bundleIdentifier": "com.burbn.instagram",
+        "keptSource": "fouad-source",
+        "otherSource": "wuxu-library-plus",
+        "keptVersion": "406.1.0"
+      }
+    ],
+    "fouad-source--ish--xn1ckuz-sidebox": [
+      {
+        "bundleIdentifier": "com.burbn.instagram",
+        "keptSource": "xn1ckuz-sidebox",
+        "otherSource": "fouad-source",
+        "keptVersion": "418.2.0"
+      }
+    ],
+    "fouad-source--manicemu--wuxu-library-plus": [
+      {
+        "bundleIdentifier": "com.burbn.instagram",
+        "keptSource": "fouad-source",
+        "otherSource": "wuxu-library-plus",
+        "keptVersion": "406.1.0"
+      }
+    ],
+    "fouad-source--manicemu--xn1ckuz-sidebox": [
+      {
+        "bundleIdentifier": "com.burbn.instagram",
+        "keptSource": "xn1ckuz-sidebox",
+        "otherSource": "fouad-source",
+        "keptVersion": "418.2.0"
+      }
+    ],
+    "fouad-source--neofreebird--wuxu-library-plus": [
+      {
+        "bundleIdentifier": "com.atebits.Tweetie2",
+        "keptSource": "neofreebird",
+        "otherSource": "wuxu-library-plus",
+        "keptVersion": "12.26"
+      },
+      {
+        "bundleIdentifier": "com.burbn.instagram",
+        "keptSource": "fouad-source",
+        "otherSource": "wuxu-library-plus",
+        "keptVersion": "406.1.0"
+      }
+    ],
+    "fouad-source--neofreebird--xn1ckuz-sidebox": [
+      {
+        "bundleIdentifier": "com.burbn.instagram",
+        "keptSource": "xn1ckuz-sidebox",
+        "otherSource": "fouad-source",
+        "keptVersion": "418.2.0"
+      }
+    ],
+    "fouad-source--oatmealdome--wuxu-library-plus": [
+      {
+        "bundleIdentifier": "com.burbn.instagram",
+        "keptSource": "fouad-source",
+        "otherSource": "wuxu-library-plus",
+        "keptVersion": "406.1.0"
+      }
+    ],
+    "fouad-source--oatmealdome--xn1ckuz-sidebox": [
+      {
+        "bundleIdentifier": "com.burbn.instagram",
+        "keptSource": "xn1ckuz-sidebox",
+        "otherSource": "fouad-source",
+        "keptVersion": "418.2.0"
+      }
+    ],
+    "fouad-source--pokemmo--wuxu-library-plus": [
+      {
+        "bundleIdentifier": "com.burbn.instagram",
+        "keptSource": "fouad-source",
+        "otherSource": "wuxu-library-plus",
+        "keptVersion": "406.1.0"
+      }
+    ],
+    "fouad-source--pokemmo--xn1ckuz-sidebox": [
+      {
+        "bundleIdentifier": "com.burbn.instagram",
+        "keptSource": "xn1ckuz-sidebox",
+        "otherSource": "fouad-source",
+        "keptVersion": "418.2.0"
+      }
+    ],
+    "fouad-source--provenance--wuxu-library-plus": [
+      {
+        "bundleIdentifier": "com.burbn.instagram",
+        "keptSource": "fouad-source",
+        "otherSource": "wuxu-library-plus",
+        "keptVersion": "406.1.0"
+      }
+    ],
+    "fouad-source--provenance--xn1ckuz-sidebox": [
+      {
+        "bundleIdentifier": "com.burbn.instagram",
+        "keptSource": "xn1ckuz-sidebox",
+        "otherSource": "fouad-source",
+        "keptVersion": "418.2.0"
+      }
+    ],
+    "fouad-source--utm--wuxu-library-plus": [
+      {
+        "bundleIdentifier": "com.burbn.instagram",
+        "keptSource": "fouad-source",
+        "otherSource": "wuxu-library-plus",
+        "keptVersion": "406.1.0"
+      }
+    ],
+    "fouad-source--utm--xn1ckuz-sidebox": [
+      {
+        "bundleIdentifier": "com.burbn.instagram",
+        "keptSource": "xn1ckuz-sidebox",
+        "otherSource": "fouad-source",
+        "keptVersion": "418.2.0"
+      }
+    ],
+    "fouad-source--wuxu-library-plus--xn1ckuz-sidebox": [
+      {
+        "bundleIdentifier": "com.burbn.instagram",
+        "keptSource": "fouad-source",
+        "otherSource": "wuxu-library-plus",
+        "keptVersion": "406.1.0"
+      },
+      {
+        "bundleIdentifier": "com.spotify.client",
+        "keptSource": "xn1ckuz-sidebox",
+        "otherSource": "wuxu-library-plus",
+        "keptVersion": "9.1.80"
+      },
+      {
+        "bundleIdentifier": "com.google.ios.youtube",
+        "keptSource": "xn1ckuz-sidebox",
+        "otherSource": "wuxu-library-plus",
+        "keptVersion": "21.24.3"
+      },
+      {
+        "bundleIdentifier": "com.burbn.instagram",
+        "keptSource": "xn1ckuz-sidebox",
+        "otherSource": "fouad-source",
+        "keptVersion": "418.2.0"
+      }
+    ],
+    "fouad-source--wuxu-library-plus--yattee": [
+      {
+        "bundleIdentifier": "com.burbn.instagram",
+        "keptSource": "fouad-source",
+        "otherSource": "wuxu-library-plus",
+        "keptVersion": "406.1.0"
+      }
+    ],
+    "fouad-source--wuxu-library-plus--youmod-repo": [
+      {
+        "bundleIdentifier": "com.burbn.instagram",
+        "keptSource": "fouad-source",
+        "otherSource": "wuxu-library-plus",
+        "keptVersion": "406.1.0"
+      },
+      {
+        "bundleIdentifier": "com.google.ios.youtube",
+        "keptSource": "youmod-repo",
+        "otherSource": "wuxu-library-plus",
+        "keptVersion": "21.18.4"
+      }
+    ],
+    "fouad-source--wuxu-library-plus--youtuberebornplus": [
+      {
+        "bundleIdentifier": "com.burbn.instagram",
+        "keptSource": "fouad-source",
+        "otherSource": "wuxu-library-plus",
+        "keptVersion": "406.1.0"
+      },
+      {
+        "bundleIdentifier": "com.google.ios.youtube",
+        "keptSource": "youtuberebornplus",
+        "otherSource": "wuxu-library-plus",
+        "keptVersion": "20.05.4"
+      }
+    ],
+    "fouad-source--wuxu-library-plus--ytkace": [
+      {
+        "bundleIdentifier": "com.burbn.instagram",
+        "keptSource": "fouad-source",
+        "otherSource": "wuxu-library-plus",
+        "keptVersion": "406.1.0"
+      },
+      {
+        "bundleIdentifier": "com.google.ios.youtube",
+        "keptSource": "ytkace",
+        "otherSource": "wuxu-library-plus",
+        "keptVersion": "0.9.3"
+      }
+    ],
+    "fouad-source--wuxu-library-plus--ytliteplus": [
+      {
+        "bundleIdentifier": "com.burbn.instagram",
+        "keptSource": "fouad-source",
+        "otherSource": "wuxu-library-plus",
+        "keptVersion": "406.1.0"
+      },
+      {
+        "bundleIdentifier": "com.google.ios.youtube",
+        "keptSource": "wuxu-library-plus",
+        "otherSource": "ytliteplus",
+        "keptVersion": "20.09.3"
+      }
+    ],
+    "fouad-source--xn1ckuz-sidebox--yattee": [
+      {
+        "bundleIdentifier": "com.burbn.instagram",
+        "keptSource": "xn1ckuz-sidebox",
+        "otherSource": "fouad-source",
+        "keptVersion": "418.2.0"
+      }
+    ],
+    "fouad-source--xn1ckuz-sidebox--youmod-repo": [
+      {
+        "bundleIdentifier": "com.burbn.instagram",
+        "keptSource": "xn1ckuz-sidebox",
+        "otherSource": "fouad-source",
+        "keptVersion": "418.2.0"
+      },
+      {
+        "bundleIdentifier": "com.google.ios.youtube",
+        "keptSource": "xn1ckuz-sidebox",
+        "otherSource": "youmod-repo",
+        "keptVersion": "21.24.3"
+      }
+    ],
+    "fouad-source--xn1ckuz-sidebox--youtuberebornplus": [
+      {
+        "bundleIdentifier": "com.burbn.instagram",
+        "keptSource": "xn1ckuz-sidebox",
+        "otherSource": "fouad-source",
+        "keptVersion": "418.2.0"
+      },
+      {
+        "bundleIdentifier": "com.google.ios.youtube",
+        "keptSource": "xn1ckuz-sidebox",
+        "otherSource": "youtuberebornplus",
+        "keptVersion": "21.24.3"
+      }
+    ],
+    "fouad-source--xn1ckuz-sidebox--ytkace": [
+      {
+        "bundleIdentifier": "com.burbn.instagram",
+        "keptSource": "xn1ckuz-sidebox",
+        "otherSource": "fouad-source",
+        "keptVersion": "418.2.0"
+      },
+      {
+        "bundleIdentifier": "com.google.ios.youtube",
+        "keptSource": "ytkace",
+        "otherSource": "xn1ckuz-sidebox",
+        "keptVersion": "0.9.3"
+      }
+    ],
+    "fouad-source--xn1ckuz-sidebox--ytliteplus": [
+      {
+        "bundleIdentifier": "com.burbn.instagram",
+        "keptSource": "xn1ckuz-sidebox",
+        "otherSource": "fouad-source",
+        "keptVersion": "418.2.0"
+      },
+      {
+        "bundleIdentifier": "com.google.ios.youtube",
+        "keptSource": "xn1ckuz-sidebox",
+        "otherSource": "ytliteplus",
+        "keptVersion": "21.24.3"
+      }
+    ],
+    "fouad-source--youmod-repo--youtuberebornplus": [
+      {
+        "bundleIdentifier": "com.google.ios.youtube",
+        "keptSource": "youmod-repo",
+        "otherSource": "youtuberebornplus",
+        "keptVersion": "21.18.4"
+      }
+    ],
+    "fouad-source--youmod-repo--ytkace": [
+      {
+        "bundleIdentifier": "com.google.ios.youtube",
+        "keptSource": "ytkace",
+        "otherSource": "youmod-repo",
+        "keptVersion": "0.9.3"
+      }
+    ],
+    "fouad-source--youmod-repo--ytliteplus": [
+      {
+        "bundleIdentifier": "com.google.ios.youtube",
+        "keptSource": "youmod-repo",
+        "otherSource": "ytliteplus",
+        "keptVersion": "21.18.4"
+      }
+    ],
+    "fouad-source--youtuberebornplus--ytkace": [
+      {
+        "bundleIdentifier": "com.google.ios.youtube",
+        "keptSource": "ytkace",
+        "otherSource": "youtuberebornplus",
+        "keptVersion": "0.9.3"
+      }
+    ],
+    "fouad-source--youtuberebornplus--ytliteplus": [
+      {
+        "bundleIdentifier": "com.google.ios.youtube",
+        "keptSource": "youtuberebornplus",
+        "otherSource": "ytliteplus",
+        "keptVersion": "20.05.4"
+      }
+    ],
+    "fouad-source--ytkace--ytliteplus": [
+      {
+        "bundleIdentifier": "com.google.ios.youtube",
+        "keptSource": "ytkace",
+        "otherSource": "ytliteplus",
+        "keptVersion": "0.9.3"
+      }
+    ],
+    "ignited--neofreebird--wuxu-library-plus": [
+      {
+        "bundleIdentifier": "com.atebits.Tweetie2",
+        "keptSource": "neofreebird",
+        "otherSource": "wuxu-library-plus",
+        "keptVersion": "12.26"
       }
     ],
     "ignited--wuxu-library-plus--xn1ckuz-sidebox": [
@@ -1963,6 +2577,14 @@
         "keptVersion": "0.9.3"
       }
     ],
+    "ish--neofreebird--wuxu-library-plus": [
+      {
+        "bundleIdentifier": "com.atebits.Tweetie2",
+        "keptSource": "neofreebird",
+        "otherSource": "wuxu-library-plus",
+        "keptVersion": "12.26"
+      }
+    ],
     "ish--wuxu-library-plus--xn1ckuz-sidebox": [
       {
         "bundleIdentifier": "com.spotify.client",
@@ -2095,6 +2717,14 @@
         "keptVersion": "0.9.3"
       }
     ],
+    "manicemu--neofreebird--wuxu-library-plus": [
+      {
+        "bundleIdentifier": "com.atebits.Tweetie2",
+        "keptSource": "neofreebird",
+        "otherSource": "wuxu-library-plus",
+        "keptVersion": "12.26"
+      }
+    ],
     "manicemu--wuxu-library-plus--xn1ckuz-sidebox": [
       {
         "bundleIdentifier": "com.spotify.client",
@@ -2220,6 +2850,208 @@
       }
     ],
     "manicemu--ytkace--ytliteplus": [
+      {
+        "bundleIdentifier": "com.google.ios.youtube",
+        "keptSource": "ytkace",
+        "otherSource": "ytliteplus",
+        "keptVersion": "0.9.3"
+      }
+    ],
+    "neofreebird--oatmealdome--wuxu-library-plus": [
+      {
+        "bundleIdentifier": "com.atebits.Tweetie2",
+        "keptSource": "neofreebird",
+        "otherSource": "wuxu-library-plus",
+        "keptVersion": "12.26"
+      }
+    ],
+    "neofreebird--pokemmo--wuxu-library-plus": [
+      {
+        "bundleIdentifier": "com.atebits.Tweetie2",
+        "keptSource": "neofreebird",
+        "otherSource": "wuxu-library-plus",
+        "keptVersion": "12.26"
+      }
+    ],
+    "neofreebird--provenance--wuxu-library-plus": [
+      {
+        "bundleIdentifier": "com.atebits.Tweetie2",
+        "keptSource": "neofreebird",
+        "otherSource": "wuxu-library-plus",
+        "keptVersion": "12.26"
+      }
+    ],
+    "neofreebird--utm--wuxu-library-plus": [
+      {
+        "bundleIdentifier": "com.atebits.Tweetie2",
+        "keptSource": "neofreebird",
+        "otherSource": "wuxu-library-plus",
+        "keptVersion": "12.26"
+      }
+    ],
+    "neofreebird--wuxu-library-plus--xn1ckuz-sidebox": [
+      {
+        "bundleIdentifier": "com.atebits.Tweetie2",
+        "keptSource": "neofreebird",
+        "otherSource": "wuxu-library-plus",
+        "keptVersion": "12.26"
+      },
+      {
+        "bundleIdentifier": "com.spotify.client",
+        "keptSource": "xn1ckuz-sidebox",
+        "otherSource": "wuxu-library-plus",
+        "keptVersion": "9.1.80"
+      },
+      {
+        "bundleIdentifier": "com.google.ios.youtube",
+        "keptSource": "xn1ckuz-sidebox",
+        "otherSource": "wuxu-library-plus",
+        "keptVersion": "21.24.3"
+      },
+      {
+        "bundleIdentifier": "com.burbn.instagram",
+        "keptSource": "xn1ckuz-sidebox",
+        "otherSource": "wuxu-library-plus",
+        "keptVersion": "418.2.0"
+      }
+    ],
+    "neofreebird--wuxu-library-plus--yattee": [
+      {
+        "bundleIdentifier": "com.atebits.Tweetie2",
+        "keptSource": "neofreebird",
+        "otherSource": "wuxu-library-plus",
+        "keptVersion": "12.26"
+      }
+    ],
+    "neofreebird--wuxu-library-plus--youmod-repo": [
+      {
+        "bundleIdentifier": "com.atebits.Tweetie2",
+        "keptSource": "neofreebird",
+        "otherSource": "wuxu-library-plus",
+        "keptVersion": "12.26"
+      },
+      {
+        "bundleIdentifier": "com.google.ios.youtube",
+        "keptSource": "youmod-repo",
+        "otherSource": "wuxu-library-plus",
+        "keptVersion": "21.18.4"
+      }
+    ],
+    "neofreebird--wuxu-library-plus--youtuberebornplus": [
+      {
+        "bundleIdentifier": "com.atebits.Tweetie2",
+        "keptSource": "neofreebird",
+        "otherSource": "wuxu-library-plus",
+        "keptVersion": "12.26"
+      },
+      {
+        "bundleIdentifier": "com.google.ios.youtube",
+        "keptSource": "youtuberebornplus",
+        "otherSource": "wuxu-library-plus",
+        "keptVersion": "20.05.4"
+      }
+    ],
+    "neofreebird--wuxu-library-plus--ytkace": [
+      {
+        "bundleIdentifier": "com.atebits.Tweetie2",
+        "keptSource": "neofreebird",
+        "otherSource": "wuxu-library-plus",
+        "keptVersion": "12.26"
+      },
+      {
+        "bundleIdentifier": "com.google.ios.youtube",
+        "keptSource": "ytkace",
+        "otherSource": "wuxu-library-plus",
+        "keptVersion": "0.9.3"
+      }
+    ],
+    "neofreebird--wuxu-library-plus--ytliteplus": [
+      {
+        "bundleIdentifier": "com.atebits.Tweetie2",
+        "keptSource": "neofreebird",
+        "otherSource": "wuxu-library-plus",
+        "keptVersion": "12.26"
+      },
+      {
+        "bundleIdentifier": "com.google.ios.youtube",
+        "keptSource": "wuxu-library-plus",
+        "otherSource": "ytliteplus",
+        "keptVersion": "20.09.3"
+      }
+    ],
+    "neofreebird--xn1ckuz-sidebox--youmod-repo": [
+      {
+        "bundleIdentifier": "com.google.ios.youtube",
+        "keptSource": "xn1ckuz-sidebox",
+        "otherSource": "youmod-repo",
+        "keptVersion": "21.24.3"
+      }
+    ],
+    "neofreebird--xn1ckuz-sidebox--youtuberebornplus": [
+      {
+        "bundleIdentifier": "com.google.ios.youtube",
+        "keptSource": "xn1ckuz-sidebox",
+        "otherSource": "youtuberebornplus",
+        "keptVersion": "21.24.3"
+      }
+    ],
+    "neofreebird--xn1ckuz-sidebox--ytkace": [
+      {
+        "bundleIdentifier": "com.google.ios.youtube",
+        "keptSource": "ytkace",
+        "otherSource": "xn1ckuz-sidebox",
+        "keptVersion": "0.9.3"
+      }
+    ],
+    "neofreebird--xn1ckuz-sidebox--ytliteplus": [
+      {
+        "bundleIdentifier": "com.google.ios.youtube",
+        "keptSource": "xn1ckuz-sidebox",
+        "otherSource": "ytliteplus",
+        "keptVersion": "21.24.3"
+      }
+    ],
+    "neofreebird--youmod-repo--youtuberebornplus": [
+      {
+        "bundleIdentifier": "com.google.ios.youtube",
+        "keptSource": "youmod-repo",
+        "otherSource": "youtuberebornplus",
+        "keptVersion": "21.18.4"
+      }
+    ],
+    "neofreebird--youmod-repo--ytkace": [
+      {
+        "bundleIdentifier": "com.google.ios.youtube",
+        "keptSource": "ytkace",
+        "otherSource": "youmod-repo",
+        "keptVersion": "0.9.3"
+      }
+    ],
+    "neofreebird--youmod-repo--ytliteplus": [
+      {
+        "bundleIdentifier": "com.google.ios.youtube",
+        "keptSource": "youmod-repo",
+        "otherSource": "ytliteplus",
+        "keptVersion": "21.18.4"
+      }
+    ],
+    "neofreebird--youtuberebornplus--ytkace": [
+      {
+        "bundleIdentifier": "com.google.ios.youtube",
+        "keptSource": "ytkace",
+        "otherSource": "youtuberebornplus",
+        "keptVersion": "0.9.3"
+      }
+    ],
+    "neofreebird--youtuberebornplus--ytliteplus": [
+      {
+        "bundleIdentifier": "com.google.ios.youtube",
+        "keptSource": "youtuberebornplus",
+        "otherSource": "ytliteplus",
+        "keptVersion": "20.05.4"
+      }
+    ],
+    "neofreebird--ytkace--ytliteplus": [
       {
         "bundleIdentifier": "com.google.ios.youtube",
         "keptSource": "ytkace",
@@ -3259,6 +4091,12 @@
         "keptVersion": "31.2.4"
       },
       {
+        "bundleIdentifier": "com.burbn.instagram",
+        "keptSource": "driftywinds",
+        "otherSource": "fouad-source",
+        "keptVersion": "447.0.0"
+      },
+      {
         "bundleIdentifier": "com.hammerandchisel.discord",
         "keptSource": "ipa-vault",
         "otherSource": "discord-appstore-builds",
@@ -3331,6 +4169,12 @@
         "keptVersion": "3.8.10"
       },
       {
+        "bundleIdentifier": "com.atebits.Tweetie2",
+        "keptSource": "neofreebird",
+        "otherSource": "ipa-vault",
+        "keptVersion": "12.26"
+      },
+      {
         "bundleIdentifier": "com.spotify.client",
         "keptSource": "sideloadlabs",
         "otherSource": "driftywinds",
@@ -3338,7 +4182,7 @@
       },
       {
         "bundleIdentifier": "com.atebits.Tweetie2",
-        "keptSource": "ipa-vault",
+        "keptSource": "neofreebird",
         "otherSource": "wuxu-library-plus",
         "keptVersion": "12.26"
       },
@@ -3477,6 +4321,12 @@
         "keptVersion": "31.2.4"
       },
       {
+        "bundleIdentifier": "com.burbn.instagram",
+        "keptSource": "driftywinds",
+        "otherSource": "fouad-source",
+        "keptVersion": "447.0.0"
+      },
+      {
         "bundleIdentifier": "com.hammerandchisel.discord",
         "keptSource": "ipa-vault",
         "otherSource": "discord-appstore-builds",
@@ -3543,6 +4393,12 @@
         "keptVersion": "3.8.0"
       },
       {
+        "bundleIdentifier": "com.atebits.Tweetie2",
+        "keptSource": "neofreebird",
+        "otherSource": "ipa-vault",
+        "keptVersion": "12.26"
+      },
+      {
         "bundleIdentifier": "com.spotify.client",
         "keptSource": "sideloadlabs",
         "otherSource": "driftywinds",
@@ -3550,7 +4406,7 @@
       },
       {
         "bundleIdentifier": "com.atebits.Tweetie2",
-        "keptSource": "ipa-vault",
+        "keptSource": "neofreebird",
         "otherSource": "wuxu-library-plus",
         "keptVersion": "12.26"
       },
@@ -3689,6 +4545,12 @@
         "keptVersion": "31.2.4"
       },
       {
+        "bundleIdentifier": "com.burbn.instagram",
+        "keptSource": "driftywinds",
+        "otherSource": "fouad-source",
+        "keptVersion": "447.0.0"
+      },
+      {
         "bundleIdentifier": "com.hammerandchisel.discord",
         "keptSource": "ipa-vault",
         "otherSource": "discord-appstore-builds",
@@ -3755,6 +4617,12 @@
         "keptVersion": "3.8.0"
       },
       {
+        "bundleIdentifier": "com.atebits.Tweetie2",
+        "keptSource": "neofreebird",
+        "otherSource": "ipa-vault",
+        "keptVersion": "12.26"
+      },
+      {
         "bundleIdentifier": "com.spotify.client",
         "keptSource": "sideloadlabs",
         "otherSource": "driftywinds",
@@ -3774,7 +4642,7 @@
       },
       {
         "bundleIdentifier": "com.atebits.Tweetie2",
-        "keptSource": "ipa-vault",
+        "keptSource": "neofreebird",
         "otherSource": "wuxu-library-plus",
         "keptVersion": "12.26"
       },

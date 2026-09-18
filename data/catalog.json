@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-18T10:55:52Z",
+  "generatedAt": "2026-09-18T11:03:55Z",
   "sources": [
     {
       "id": "utm",
@@ -8174,6 +8174,80 @@
           "version": "2.5.3-nightly.20260913.1351",
           "iconURL": "https://ios.armsx2.net/assets/icon-nightly.png?v=1ce15bef",
           "subtitle": "The newest features, built most days. Installs beside the stable app."
+        }
+      ]
+    },
+    {
+      "id": "fouad-source",
+      "name": "Fouad's Source",
+      "appCount": 6,
+      "catalogLimited": false,
+      "iconURL": "https://raw.githubusercontent.com/FouadRaheb/Watusi-for-WhatsApp/master/altstore/icon.png",
+      "apps": [
+        {
+          "name": "Regram",
+          "bundleIdentifier": "com.burbn.instagram",
+          "developerName": "Fouad Raheb",
+          "version": "406.1.0",
+          "iconURL": "https://raw.githubusercontent.com/FouadRaheb/Watusi-for-WhatsApp/master/altstore/regram/ig.png",
+          "subtitle": "The all-in-one tweak for Instagram"
+        },
+        {
+          "name": "Regram (Duplicate)",
+          "bundleIdentifier": "com.fouadraheb.regram",
+          "developerName": "Fouad Raheb",
+          "version": "406.1.0",
+          "iconURL": "https://raw.githubusercontent.com/FouadRaheb/Watusi-for-WhatsApp/master/altstore/regram/ig.png",
+          "subtitle": "The all-in-one tweak for Instagram"
+        },
+        {
+          "name": "Watusi",
+          "bundleIdentifier": "net.whatsapp.WhatsApp",
+          "developerName": "Fouad Raheb",
+          "version": "25.33.73",
+          "iconURL": "https://raw.githubusercontent.com/FouadRaheb/Watusi-for-WhatsApp/master/altstore/watusi/wa.png",
+          "subtitle": "The all-in-one tweak for WhatsApp Messenger"
+        },
+        {
+          "name": "Watusi (Duplicate)",
+          "bundleIdentifier": "com.fouadraheb.watusi",
+          "developerName": "Fouad Raheb",
+          "version": "25.33.73",
+          "iconURL": "https://raw.githubusercontent.com/FouadRaheb/Watusi-for-WhatsApp/master/altstore/watusi/wa.png",
+          "subtitle": "Your all-in-one tweak for WhatsApp Messenger"
+        },
+        {
+          "name": "Watusi (Business)",
+          "bundleIdentifier": "net.whatsapp.WhatsAppSMB",
+          "developerName": "Fouad Raheb",
+          "version": "25.33.74",
+          "iconURL": "https://raw.githubusercontent.com/FouadRaheb/Watusi-for-WhatsApp/master/altstore/watusi/business.png",
+          "subtitle": "Your all-in-one tweak for WhatsApp Messenger"
+        },
+        {
+          "name": "Watusi (Business Duplicate)",
+          "bundleIdentifier": "com.fouadraheb.watusiSMB",
+          "developerName": "Fouad Raheb",
+          "version": "25.33.74",
+          "iconURL": "https://raw.githubusercontent.com/FouadRaheb/Watusi-for-WhatsApp/master/altstore/watusi/business.png",
+          "subtitle": "Your all-in-one tweak for WhatsApp Messenger"
+        }
+      ]
+    },
+    {
+      "id": "neofreebird",
+      "name": "NeoFreeBird",
+      "appCount": 1,
+      "catalogLimited": false,
+      "iconURL": "https://raw.githubusercontent.com/orionblur/NeoFreeBird/v6/icon_rounded.png",
+      "apps": [
+        {
+          "name": "Twitter",
+          "bundleIdentifier": "com.atebits.Tweetie2",
+          "developerName": "actuallyaridan, nyaathea, timi2506, theacrat, orionblur",
+          "version": "12.26",
+          "iconURL": "https://raw.githubusercontent.com/orionblur/NeoFreeBird/v6/icon_rounded.png",
+          "subtitle": "NeoFreeBird version 6.7.0"
         }
       ]
     }
