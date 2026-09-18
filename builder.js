@@ -91,9 +91,9 @@ function lang() {
 function tr(key) { return copy[lang()][key] || copy.en[key] || key; }
 function escapeHtml(value) { return String(value ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c])); }
 const INSTALLER_ICONS = {
-  alt: 'https://2606795771-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FAfe8qEztjcTjsjjaMBY2%2Fuploads%2FQGRbFk9rdQ37ddG4uK5S%2FAltStoreIcon_Rounded.png?alt=media&token=1dd5cf66-df1e-4a07-8e8a-1039c4f22ff9',
-  side: 'https://sidestore.io/assets/icon.png',
-  live: 'https://raw.githubusercontent.com/LiveContainer/LiveContainer/main/screenshots/AppIcon1024.png'
+  alt: 'assets/icons/altstore.svg',
+  side: 'assets/icons/sidestore.svg',
+  live: 'assets/icons/livecontainer.svg'
 };
 function installerIcon(type) {
   const src = INSTALLER_ICONS[type];
