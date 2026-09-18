@@ -18,10 +18,59 @@ function setupSettingsMenu() {
   const langButtons = [...panel.querySelectorAll('[data-settings-language]')];
   const themeButtons = [...panel.querySelectorAll('[data-settings-theme]')];
 
+  // Safari iOS creates a containing block around the blurred sticky header.
+  // Move the panel to <body> so fixed positioning and scrolling use the real viewport.
+  if (panel.parentElement !== document.body) document.body.appendChild(panel);
+
+  const positionPanel = () => {
+    if (!panel.classList.contains('open')) return;
+
+    const rect = button.getBoundingClientRect();
+    const viewportWidth = window.innerWidth;
+    const viewportHeight = window.innerHeight;
+    const edge = 10;
+    const gap = 8;
+    const compact = viewportWidth <= 640;
+
+    const width = Math.min(compact ? 360 : 310, viewportWidth - edge * 2);
+    let left = rect.right - width;
+    left = Math.max(edge, Math.min(left, viewportWidth - width - edge));
+
+    let top = rect.bottom + gap;
+    let available = viewportHeight - top - edge;
+
+    // On short landscape screens use almost the full viewport and scroll inside it.
+    if (available < 220) {
+      top = edge;
+      available = viewportHeight - edge * 2;
+    }
+
+    panel.style.width = `${width}px`;
+    panel.style.left = `${Math.round(left)}px`;
+    panel.style.right = 'auto';
+    panel.style.top = `${Math.round(top)}px`;
+    panel.style.bottom = 'auto';
+    panel.style.maxHeight = `${Math.max(120, Math.floor(available))}px`;
+  };
+
   const close = () => {
     menu.classList.remove('open');
+    panel.classList.remove('open');
     button.setAttribute('aria-expanded', 'false');
     panel.setAttribute('aria-hidden', 'true');
+  };
+
+  const open = () => {
+    document.querySelector('.topbar')?.classList.remove('mobile-menu-open');
+    document.getElementById('mobileNavPanel')?.setAttribute('aria-hidden', 'true');
+    document.getElementById('mobileMenuButton')?.setAttribute('aria-expanded', 'false');
+
+    menu.classList.add('open');
+    panel.classList.add('open');
+    button.setAttribute('aria-expanded', 'true');
+    panel.setAttribute('aria-hidden', 'false');
+    panel.scrollTop = 0;
+    positionPanel();
   };
 
   const syncLanguage = () => {
@@ -59,13 +108,7 @@ function setupSettingsMenu() {
 
   button.addEventListener('click', event => {
     event.stopPropagation();
-    const open = !menu.classList.contains('open');
-    document.querySelector('.topbar')?.classList.remove('mobile-menu-open');
-    document.getElementById('mobileNavPanel')?.setAttribute('aria-hidden', 'true');
-    document.getElementById('mobileMenuButton')?.setAttribute('aria-expanded', 'false');
-    menu.classList.toggle('open', open);
-    button.setAttribute('aria-expanded', String(open));
-    panel.setAttribute('aria-hidden', String(!open));
+    panel.classList.contains('open') ? close() : open();
   });
 
   panel.addEventListener('click', event => event.stopPropagation());
@@ -94,11 +137,16 @@ function setupSettingsMenu() {
   themeProxy.addEventListener('click', () => requestAnimationFrame(syncTheme));
 
   document.addEventListener('click', event => {
-    if (!menu.contains(event.target)) close();
+    if (!menu.contains(event.target) && !panel.contains(event.target)) close();
   });
   document.addEventListener('keydown', event => {
     if (event.key === 'Escape') close();
   });
+
+  window.addEventListener('resize', positionPanel, { passive:true });
+  window.addEventListener('orientationchange', () => setTimeout(positionPanel, 120), { passive:true });
+  window.visualViewport?.addEventListener('resize', positionPanel, { passive:true });
+  window.visualViewport?.addEventListener('scroll', positionPanel, { passive:true });
 
   syncLanguage();
   syncTheme();
