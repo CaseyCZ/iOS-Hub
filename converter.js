@@ -123,7 +123,9 @@ async function isExecutableFile(file) {
 function setProgress(percent, title, detail = '') {
   $('#progressPanel').hidden = false;
   $('#progressPercent').textContent = `${Math.max(0, Math.min(100, Math.round(percent)))}%`;
-  $('#progressBar').style.width = `${Math.max(0, Math.min(100, percent))}%`;
+  const safePercent = Math.max(0, Math.min(100, percent));
+  $('#progressBar').style.width = `${safePercent}%`;
+  $('#progressTrack')?.setAttribute('aria-valuenow', String(Math.round(safePercent)));
   $('#progressTitle').textContent = title;
   $('#progressDetail').textContent = detail;
 }
