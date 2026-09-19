@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-19T04:40:23Z",
+  "generatedAt": "2026-09-19T11:02:05Z",
   "mixes": {
     "dvntm0-workshop--wuxu-library-plus": [
       {
@@ -4127,6 +4127,12 @@
         "keptVersion": "579.0.0"
       },
       {
+        "bundleIdentifier": "com.spotify.client",
+        "keptSource": "ipa-vault",
+        "otherSource": "driftywinds",
+        "keptVersion": "9.1.84"
+      },
+      {
         "bundleIdentifier": "com.zhiliaoapp.musically",
         "keptSource": "ipa-vault",
         "otherSource": "baretsky-tweaked",
@@ -4142,7 +4148,7 @@
         "bundleIdentifier": "com.atebits.Tweetie2",
         "keptSource": "ipa-vault",
         "otherSource": "baretsky-tweaked",
-        "keptVersion": "12.26"
+        "keptVersion": "12.27.1"
       },
       {
         "bundleIdentifier": "com.google.ios.youtube",
@@ -4170,21 +4176,21 @@
       },
       {
         "bundleIdentifier": "com.atebits.Tweetie2",
-        "keptSource": "neofreebird",
-        "otherSource": "ipa-vault",
-        "keptVersion": "12.26"
+        "keptSource": "ipa-vault",
+        "otherSource": "neofreebird",
+        "keptVersion": "12.27.1"
       },
       {
         "bundleIdentifier": "com.spotify.client",
-        "keptSource": "sideloadlabs",
-        "otherSource": "driftywinds",
-        "keptVersion": "9.1.76"
+        "keptSource": "ipa-vault",
+        "otherSource": "sideloadlabs",
+        "keptVersion": "9.1.84"
       },
       {
         "bundleIdentifier": "com.atebits.Tweetie2",
-        "keptSource": "neofreebird",
+        "keptSource": "ipa-vault",
         "otherSource": "wuxu-library-plus",
-        "keptVersion": "12.26"
+        "keptVersion": "12.27.1"
       },
       {
         "bundleIdentifier": "com.facebook.Facebook",
@@ -4212,9 +4218,9 @@
       },
       {
         "bundleIdentifier": "com.spotify.client",
-        "keptSource": "sideloadlabs",
+        "keptSource": "ipa-vault",
         "otherSource": "wuxu-library-plus",
-        "keptVersion": "9.1.76"
+        "keptVersion": "9.1.84"
       },
       {
         "bundleIdentifier": "com.google.ios.youtube",
@@ -4230,9 +4236,9 @@
       },
       {
         "bundleIdentifier": "com.spotify.client",
-        "keptSource": "xn1ckuz-sidebox",
-        "otherSource": "sideloadlabs",
-        "keptVersion": "9.1.80"
+        "keptSource": "ipa-vault",
+        "otherSource": "xn1ckuz-sidebox",
+        "keptVersion": "9.1.84"
       },
       {
         "bundleIdentifier": "com.google.ios.youtube",
@@ -4357,6 +4363,12 @@
         "keptVersion": "579.0.0"
       },
       {
+        "bundleIdentifier": "com.spotify.client",
+        "keptSource": "ipa-vault",
+        "otherSource": "driftywinds",
+        "keptVersion": "9.1.84"
+      },
+      {
         "bundleIdentifier": "com.zhiliaoapp.musically",
         "keptSource": "ipa-vault",
         "otherSource": "baretsky-tweaked",
@@ -4372,7 +4384,7 @@
         "bundleIdentifier": "com.atebits.Tweetie2",
         "keptSource": "ipa-vault",
         "otherSource": "baretsky-tweaked",
-        "keptVersion": "12.26"
+        "keptVersion": "12.27.1"
       },
       {
         "bundleIdentifier": "com.google.ios.youtube",
@@ -4394,21 +4406,21 @@
       },
       {
         "bundleIdentifier": "com.atebits.Tweetie2",
-        "keptSource": "neofreebird",
-        "otherSource": "ipa-vault",
-        "keptVersion": "12.26"
+        "keptSource": "ipa-vault",
+        "otherSource": "neofreebird",
+        "keptVersion": "12.27.1"
       },
       {
         "bundleIdentifier": "com.spotify.client",
-        "keptSource": "sideloadlabs",
-        "otherSource": "driftywinds",
-        "keptVersion": "9.1.76"
+        "keptSource": "ipa-vault",
+        "otherSource": "sideloadlabs",
+        "keptVersion": "9.1.84"
       },
       {
         "bundleIdentifier": "com.atebits.Tweetie2",
-        "keptSource": "neofreebird",
+        "keptSource": "ipa-vault",
         "otherSource": "wuxu-library-plus",
-        "keptVersion": "12.26"
+        "keptVersion": "12.27.1"
       },
       {
         "bundleIdentifier": "com.facebook.Facebook",
@@ -4436,9 +4448,9 @@
       },
       {
         "bundleIdentifier": "com.spotify.client",
-        "keptSource": "sideloadlabs",
+        "keptSource": "ipa-vault",
         "otherSource": "wuxu-library-plus",
-        "keptVersion": "9.1.76"
+        "keptVersion": "9.1.84"
       },
       {
         "bundleIdentifier": "com.google.ios.youtube",
@@ -4454,9 +4466,9 @@
       },
       {
         "bundleIdentifier": "com.spotify.client",
-        "keptSource": "xn1ckuz-sidebox",
-        "otherSource": "sideloadlabs",
-        "keptVersion": "9.1.80"
+        "keptSource": "ipa-vault",
+        "otherSource": "xn1ckuz-sidebox",
+        "keptVersion": "9.1.84"
       },
       {
         "bundleIdentifier": "com.google.ios.youtube",
@@ -4581,6 +4593,12 @@
         "keptVersion": "579.0.0"
       },
       {
+        "bundleIdentifier": "com.spotify.client",
+        "keptSource": "ipa-vault",
+        "otherSource": "driftywinds",
+        "keptVersion": "9.1.84"
+      },
+      {
         "bundleIdentifier": "com.zhiliaoapp.musically",
         "keptSource": "ipa-vault",
         "otherSource": "baretsky-tweaked",
@@ -4596,7 +4614,7 @@
         "bundleIdentifier": "com.atebits.Tweetie2",
         "keptSource": "ipa-vault",
         "otherSource": "baretsky-tweaked",
-        "keptVersion": "12.26"
+        "keptVersion": "12.27.1"
       },
       {
         "bundleIdentifier": "com.google.ios.youtube",
@@ -4618,15 +4636,15 @@
       },
       {
         "bundleIdentifier": "com.atebits.Tweetie2",
-        "keptSource": "neofreebird",
-        "otherSource": "ipa-vault",
-        "keptVersion": "12.26"
+        "keptSource": "ipa-vault",
+        "otherSource": "neofreebird",
+        "keptVersion": "12.27.1"
       },
       {
         "bundleIdentifier": "com.spotify.client",
-        "keptSource": "sideloadlabs",
-        "otherSource": "driftywinds",
-        "keptVersion": "9.1.76"
+        "keptSource": "ipa-vault",
+        "otherSource": "sideloadlabs",
+        "keptVersion": "9.1.84"
       },
       {
         "bundleIdentifier": "app.ish.iSH",
@@ -4642,9 +4660,9 @@
       },
       {
         "bundleIdentifier": "com.atebits.Tweetie2",
-        "keptSource": "neofreebird",
+        "keptSource": "ipa-vault",
         "otherSource": "wuxu-library-plus",
-        "keptVersion": "12.26"
+        "keptVersion": "12.27.1"
       },
       {
         "bundleIdentifier": "com.facebook.Facebook",
@@ -4672,9 +4690,9 @@
       },
       {
         "bundleIdentifier": "com.spotify.client",
-        "keptSource": "sideloadlabs",
+        "keptSource": "ipa-vault",
         "otherSource": "wuxu-library-plus",
-        "keptVersion": "9.1.76"
+        "keptVersion": "9.1.84"
       },
       {
         "bundleIdentifier": "com.google.ios.youtube",
@@ -4690,9 +4708,9 @@
       },
       {
         "bundleIdentifier": "com.spotify.client",
-        "keptSource": "xn1ckuz-sidebox",
-        "otherSource": "sideloadlabs",
-        "keptVersion": "9.1.80"
+        "keptSource": "ipa-vault",
+        "otherSource": "xn1ckuz-sidebox",
+        "keptVersion": "9.1.84"
       },
       {
         "bundleIdentifier": "com.google.ios.youtube",
