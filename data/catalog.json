@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-18T20:56:06Z",
+  "generatedAt": "2026-09-19T04:40:23Z",
   "sources": [
     {
       "id": "utm",
@@ -1147,7 +1147,7 @@
           "name": "YouMod + Tweaks (driftywinds)",
           "bundleIdentifier": "com.google.ios.youtube",
           "developerName": "Tonwalter888",
-          "version": "21.37.4",
+          "version": "21.37.5",
           "iconURL": "https://raw.githubusercontent.com/YTLitePlus/YTLitePlus-Altstore/main/Youtube_logo-512.png",
           "subtitle": "A flexible enhancer for YouTube on iOS | If you want to donate: - https://ko-fi.com/driftywinds"
         },
@@ -3347,18 +3347,10 @@
     {
       "id": "cypwn-ipa",
       "name": "CyPwn IPA Library",
-      "appCount": 210,
+      "appCount": 209,
       "catalogLimited": true,
       "iconURL": "https://repo.cypwn.xyz/assets/images/cypwn_small.png",
       "apps": [
-        {
-          "name": "Stremio-2.0.7",
-          "bundleIdentifier": "com.stremio.pal",
-          "developerName": "Stremio-2.0.7 x CyPwn",
-          "version": "2.0.7",
-          "iconURL": "https://ipa.cypwn.xyz/serve/icons/Stremio-2.0.7.png",
-          "subtitle": ""
-        },
         {
           "name": "Stremio-2.0.6",
           "bundleIdentifier": "com.stremio.pal",
@@ -4790,16 +4782,56 @@
           "version": "2.6",
           "iconURL": "https://ipa.cypwn.xyz/serve/icons/Star_Map_2.6_Satella.png",
           "subtitle": ""
+        },
+        {
+          "name": "RefacePro_3.12.0",
+          "bundleIdentifier": "cypwn.RefacePro_3.12.0.3.12.0",
+          "developerName": "RefacePro_3.12.0 x CyPwn",
+          "version": "3.12.0",
+          "iconURL": "https://ipa.cypwn.xyz/serve/icons/RefacePro_3.12.0.png",
+          "subtitle": ""
         }
       ]
     },
     {
       "id": "apptesters",
       "name": "AppTesters IPA Repo",
-      "appCount": 9190,
+      "appCount": 9194,
       "catalogLimited": true,
       "iconURL": "https://apptesters.org/apptesters-512x512.png",
       "apps": [
+        {
+          "name": "Peachy",
+          "bundleIdentifier": "com.camerasideas.Peachy",
+          "developerName": "",
+          "version": "2.16.0",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.camerasideas.Peachy.png",
+          "subtitle": ""
+        },
+        {
+          "name": "PREQUEL",
+          "bundleIdentifier": "com.aiarlabs.prequel",
+          "developerName": "",
+          "version": "2.100.2",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.aiarlabs.prequel.png",
+          "subtitle": ""
+        },
+        {
+          "name": "VlogNow",
+          "bundleIdentifier": "com.frontrow.vlog",
+          "developerName": "",
+          "version": "2.20.0",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.frontrow.vlog.png",
+          "subtitle": ""
+        },
+        {
+          "name": "ProCCD",
+          "bundleIdentifier": "com.yengshine.proccd",
+          "developerName": "",
+          "version": "6.8.1",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.yengshine.proccd.png",
+          "subtitle": ""
+        },
         {
           "name": "Pigment",
           "bundleIdentifier": "com.pixite.pigment",
@@ -6366,38 +6398,6 @@
           "developerName": "",
           "version": "2026.9.25",
           "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/solutions.wzp.translator.png",
-          "subtitle": ""
-        },
-        {
-          "name": "BoldVoice",
-          "bundleIdentifier": "com.wellocution.iosapp",
-          "developerName": "",
-          "version": "4.4.1",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.wellocution.iosapp.png",
-          "subtitle": ""
-        },
-        {
-          "name": "PUSH",
-          "bundleIdentifier": "com.ADPTVLTD.push",
-          "developerName": "",
-          "version": "4.0.3",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.ADPTVLTD.push.png",
-          "subtitle": ""
-        },
-        {
-          "name": "RiseSleep",
-          "bundleIdentifier": "com.risesci.nyx",
-          "developerName": "",
-          "version": "0.1.627",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.risesci.nyx.png",
-          "subtitle": ""
-        },
-        {
-          "name": "Stemz",
-          "bundleIdentifier": "com.mwm.stems",
-          "developerName": "",
-          "version": "5.07.00",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.mwm.stems.png",
           "subtitle": ""
         }
       ]
