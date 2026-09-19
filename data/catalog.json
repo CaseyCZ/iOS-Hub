@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-19T11:02:05Z",
+  "generatedAt": "2026-09-19T15:54:31Z",
   "sources": [
     {
       "id": "utm",
@@ -1090,7 +1090,7 @@
           "name": "YouTube",
           "bundleIdentifier": "com.google.ios.youtube",
           "developerName": "",
-          "version": "21.37.4",
+          "version": "21.37.5",
           "iconURL": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ef/Youtube_logo.png/512px-Youtube_logo.png",
           "subtitle": ""
         },
@@ -4812,10 +4812,34 @@
     {
       "id": "apptesters",
       "name": "AppTesters IPA Repo",
-      "appCount": 9195,
+      "appCount": 9198,
       "catalogLimited": true,
       "iconURL": "https://apptesters.org/apptesters-512x512.png",
       "apps": [
+        {
+          "name": "SkyGuide",
+          "bundleIdentifier": "com.fifthstarlabs.skyguide",
+          "developerName": "",
+          "version": "13.0.1",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.fifthstarlabs.skyguide.png",
+          "subtitle": ""
+        },
+        {
+          "name": "DaVinci",
+          "bundleIdentifier": "com.hubx.imagination",
+          "developerName": "",
+          "version": "5.0.8",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.hubx.imagination.png",
+          "subtitle": ""
+        },
+        {
+          "name": "Crsel",
+          "bundleIdentifier": "com.frameoneapps.Crsel",
+          "developerName": "",
+          "version": "1.5.1",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.frameoneapps.Crsel.png",
+          "subtitle": ""
+        },
         {
           "name": "Thenx",
           "bundleIdentifier": "com.calisthenics.thenx",
@@ -6390,30 +6414,6 @@
           "developerName": "",
           "version": "8.4.5",
           "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.neo.NeoMan.png",
-          "subtitle": ""
-        },
-        {
-          "name": "Picsart",
-          "bundleIdentifier": "com.picsart.studio",
-          "developerName": "",
-          "version": "30.7.2",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.picsart.studio.png",
-          "subtitle": ""
-        },
-        {
-          "name": "Runestone",
-          "bundleIdentifier": "dk.simonbs.RunestoneEditor",
-          "developerName": "",
-          "version": "1.6.2",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/dk.simonbs.RunestoneEditor.png",
-          "subtitle": ""
-        },
-        {
-          "name": "Tripsy",
-          "bundleIdentifier": "app.tripsy.ios",
-          "developerName": "",
-          "version": "3.9.3",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/app.tripsy.ios.png",
           "subtitle": ""
         }
       ]

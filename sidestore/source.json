@@ -5894,38 +5894,14 @@
       }
     },
     {
-      "beta": false,
+      "name": "YouTube",
       "bundleIdentifier": "com.google.ios.youtube",
-      "developerName": "Tonwalter888",
-      "META": {
-        "repoName": "driftywinds' AltStore Repo"
-      },
-      "contact": {
-        "web": "https://github.com/driftywinds/"
-      },
-      "downloadURL": "https://github.com/ramramzz/descfsr/releases/download/v0.32/9c9431a1-fda3-4476-8dc5-e9c8fe1bfYM2.ipa",
-      "iconURL": "https://raw.githubusercontent.com/YTLitePlus/YTLitePlus-Altstore/main/Youtube_logo-512.png",
-      "localizedDescription": "https://t.me/+rvcObIvOpctiMDI9\n\nA modified version of Youtube",
-      "name": "YouMod + Tweaks (driftywinds)",
-      "screenshotURLs": [
-        "https://raw.githubusercontent.com/dayanch96/YTLite/refs/heads/main/Resources/scr1.jpg",
-        "https://raw.githubusercontent.com/dayanch96/YTLite/refs/heads/main/Resources/scr2.jpg",
-        "https://raw.githubusercontent.com/dayanch96/YTLite/refs/heads/main/Resources/scr3.jpg"
-      ],
-      "size": 130097628,
-      "subtitle": "A flexible enhancer for YouTube on iOS | If you want to donate: - https://ko-fi.com/driftywinds",
-      "tintColor": "e22a41",
       "version": "21.37.5",
       "versionDate": "2026-09-19",
-      "versionDescription": "• Updated YouTube to 21.37.5\n • Tweak is using 2.0.0",
-      "appPermissions": {
-        "entitlements": [
-          "com.apple.developer.siri"
-        ],
-        "privacy": {
-          "NSUserTrackingUsageDescription": "This app requires tracking permission to deliver personalized content and advertisements."
-        }
-      }
+      "size": 144730875,
+      "downloadURL": "https://github.com/baretsky/baretsky-tweaked-ipas-library/releases/download/builds/youtube_21.37.5_YTLite_sideloaded.ipa",
+      "localizedDescription": "YouTube enhanced with YTLite.\n\nFeatures:\n- Ad-free playback\n- Background play\n- SponsorBlock integration\n- OLEDBLACK mode\n\nYTLite settings can be found in YouTube settings.",
+      "iconURL": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ef/Youtube_logo.png/512px-Youtube_logo.png"
     },
     {
       "name": "YouTube (YouMod 2.0.0)",
