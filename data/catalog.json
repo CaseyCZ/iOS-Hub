@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-20T16:09:22Z",
+  "generatedAt": "2026-09-20T20:51:05Z",
   "sources": [
     {
       "id": "utm",
@@ -567,7 +567,7 @@
           "name": "Mona - HRT journal",
           "bundleIdentifier": "com.deliacheminot.mona",
           "developerName": "Délia Cheminot",
-          "version": "1.21.1",
+          "version": "1.22.0",
           "iconURL": "https://i.imgur.com/Xb9A1Lh.png",
           "subtitle": "Your hormonal journal"
         }
@@ -4812,10 +4812,26 @@
     {
       "id": "apptesters",
       "name": "AppTesters IPA Repo",
-      "appCount": 9209,
+      "appCount": 9211,
       "catalogLimited": true,
       "iconURL": "https://apptesters.org/apptesters-512x512.png",
       "apps": [
+        {
+          "name": "RiseSleep",
+          "bundleIdentifier": "com.risesci.nyx",
+          "developerName": "",
+          "version": "0.1.631",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.risesci.nyx.png",
+          "subtitle": ""
+        },
+        {
+          "name": "GrowMe",
+          "bundleIdentifier": "com.book.summaries.reading",
+          "developerName": "",
+          "version": "1.3.8",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.book.summaries.reading.png",
+          "subtitle": ""
+        },
         {
           "name": "Analogue",
           "bundleIdentifier": "Cristian-Teichner.Analogue",
@@ -6398,22 +6414,6 @@
           "developerName": "",
           "version": "8.10.0",
           "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.alohabrowser.alohabrowser.png",
-          "subtitle": ""
-        },
-        {
-          "name": "Drafts",
-          "bundleIdentifier": "com.agiletortoise.Drafts5",
-          "developerName": "",
-          "version": "54.0",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.agiletortoise.Drafts5.png",
-          "subtitle": ""
-        },
-        {
-          "name": "Mindllama",
-          "bundleIdentifier": "com.vitalii.mind",
-          "developerName": "",
-          "version": "2.5.9",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.vitalii.mind.png",
           "subtitle": ""
         }
       ]
