@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-20T04:56:14Z",
+  "generatedAt": "2026-09-20T11:27:19Z",
   "sources": [
     {
       "id": "utm",
@@ -3363,18 +3363,10 @@
     {
       "id": "cypwn-ipa",
       "name": "CyPwn IPA Library",
-      "appCount": 210,
+      "appCount": 209,
       "catalogLimited": true,
       "iconURL": "https://repo.cypwn.xyz/assets/images/cypwn_small.png",
       "apps": [
-        {
-          "name": "Stremio-2.0.7",
-          "bundleIdentifier": "com.stremio.pal",
-          "developerName": "Stremio-2.0.7 x CyPwn",
-          "version": "2.0.7",
-          "iconURL": "https://ipa.cypwn.xyz/serve/icons/Stremio-2.0.7.png",
-          "subtitle": ""
-        },
         {
           "name": "Stremio-2.0.6",
           "bundleIdentifier": "com.stremio.pal",
@@ -4806,16 +4798,56 @@
           "version": "2.6",
           "iconURL": "https://ipa.cypwn.xyz/serve/icons/Star_Map_2.6_Satella.png",
           "subtitle": ""
+        },
+        {
+          "name": "RefacePro_3.12.0",
+          "bundleIdentifier": "cypwn.RefacePro_3.12.0.3.12.0",
+          "developerName": "RefacePro_3.12.0 x CyPwn",
+          "version": "3.12.0",
+          "iconURL": "https://ipa.cypwn.xyz/serve/icons/RefacePro_3.12.0.png",
+          "subtitle": ""
         }
       ]
     },
     {
       "id": "apptesters",
       "name": "AppTesters IPA Repo",
-      "appCount": 9203,
+      "appCount": 9207,
       "catalogLimited": true,
       "iconURL": "https://apptesters.org/apptesters-512x512.png",
       "apps": [
+        {
+          "name": "Shapeyard",
+          "bundleIdentifier": "app.chudo",
+          "developerName": "",
+          "version": "5.28",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/app.chudo.png",
+          "subtitle": ""
+        },
+        {
+          "name": "MobileScanner",
+          "bundleIdentifier": "com.glority.everlens",
+          "developerName": "",
+          "version": "2.26.1",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.glority.everlens.png",
+          "subtitle": ""
+        },
+        {
+          "name": "Unknown app",
+          "bundleIdentifier": "com.intsig.CamScannerLite",
+          "developerName": "",
+          "version": "7.26.5",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.intsig.CamScannerLite.png",
+          "subtitle": ""
+        },
+        {
+          "name": "Thenx",
+          "bundleIdentifier": "com.calisthenics.thenx",
+          "developerName": "",
+          "version": "6.7.10",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.calisthenics.thenx.png",
+          "subtitle": ""
+        },
         {
           "name": "Mockview",
           "bundleIdentifier": "com.kavsoft.MockviewApp",
@@ -4930,10 +4962,10 @@
         },
         {
           "name": "Unknown app",
-          "bundleIdentifier": "com.madarsoft.fitness",
+          "bundleIdentifier": "com.intsig.CamScannerLite",
           "developerName": "",
           "version": "19.6",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.madarsoft.fitness.png",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.intsig.CamScannerLite.png",
           "subtitle": ""
         },
         {
@@ -4962,10 +4994,10 @@
         },
         {
           "name": "Unknown app",
-          "bundleIdentifier": "com.madarsoft.fitness",
+          "bundleIdentifier": "com.intsig.CamScannerLite",
           "developerName": "",
           "version": "4.3.1",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.madarsoft.fitness.png",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.intsig.CamScannerLite.png",
           "subtitle": ""
         },
         {
@@ -5074,10 +5106,10 @@
         },
         {
           "name": "Unknown app",
-          "bundleIdentifier": "com.madarsoft.fitness",
+          "bundleIdentifier": "com.intsig.CamScannerLite",
           "developerName": "",
           "version": "19.5",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.madarsoft.fitness.png",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.intsig.CamScannerLite.png",
           "subtitle": ""
         },
         {
@@ -5298,10 +5330,10 @@
         },
         {
           "name": "Unknown app",
-          "bundleIdentifier": "com.madarsoft.fitness",
+          "bundleIdentifier": "com.intsig.CamScannerLite",
           "developerName": "",
           "version": "19.3",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.madarsoft.fitness.png",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.intsig.CamScannerLite.png",
           "subtitle": ""
         },
         {
@@ -5378,10 +5410,10 @@
         },
         {
           "name": "Unknown app",
-          "bundleIdentifier": "com.madarsoft.fitness",
+          "bundleIdentifier": "com.intsig.CamScannerLite",
           "developerName": "",
           "version": "19.2",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.madarsoft.fitness.png",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.intsig.CamScannerLite.png",
           "subtitle": ""
         },
         {
@@ -5618,10 +5650,10 @@
         },
         {
           "name": "Unknown app",
-          "bundleIdentifier": "com.madarsoft.fitness",
+          "bundleIdentifier": "com.intsig.CamScannerLite",
           "developerName": "",
           "version": "19.1",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.madarsoft.fitness.png",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.intsig.CamScannerLite.png",
           "subtitle": ""
         },
         {
@@ -6106,10 +6138,10 @@
         },
         {
           "name": "Unknown app",
-          "bundleIdentifier": "com.madarsoft.fitness",
+          "bundleIdentifier": "com.intsig.CamScannerLite",
           "developerName": "",
           "version": "4.3",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.madarsoft.fitness.png",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.intsig.CamScannerLite.png",
           "subtitle": ""
         },
         {
@@ -6382,38 +6414,6 @@
           "developerName": "",
           "version": "26.36.2",
           "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.yazio.ios.YAZIO.png",
-          "subtitle": ""
-        },
-        {
-          "name": "AlightMotion",
-          "bundleIdentifier": "com.alightcreative.motion",
-          "developerName": "",
-          "version": "6.2.59",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.alightcreative.motion.png",
-          "subtitle": ""
-        },
-        {
-          "name": "SleepCycle",
-          "bundleIdentifier": "com.lexwarelabs.goodmorning",
-          "developerName": "",
-          "version": "6.26.37",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.lexwarelabs.goodmorning.png",
-          "subtitle": ""
-        },
-        {
-          "name": "SCRL",
-          "bundleIdentifier": "com.dopedevelopment.Panels",
-          "developerName": "",
-          "version": "9.53",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.dopedevelopment.Panels.png",
-          "subtitle": ""
-        },
-        {
-          "name": "BEAT",
-          "bundleIdentifier": "reels-maker-one",
-          "developerName": "",
-          "version": "1.26.1",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/reels-maker-one.png",
           "subtitle": ""
         }
       ]
