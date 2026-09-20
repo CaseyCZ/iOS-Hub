@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-19T20:43:03Z",
+  "generatedAt": "2026-09-20T04:56:14Z",
   "sources": [
     {
       "id": "utm",
@@ -4812,10 +4812,42 @@
     {
       "id": "apptesters",
       "name": "AppTesters IPA Repo",
-      "appCount": 9199,
+      "appCount": 9203,
       "catalogLimited": true,
       "iconURL": "https://apptesters.org/apptesters-512x512.png",
       "apps": [
+        {
+          "name": "Mockview",
+          "bundleIdentifier": "com.kavsoft.MockviewApp",
+          "developerName": "",
+          "version": "5.0",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.kavsoft.MockviewApp.png",
+          "subtitle": ""
+        },
+        {
+          "name": "InCollage",
+          "bundleIdentifier": "PhotoEditor.PhotoCollage.inCollage",
+          "developerName": "",
+          "version": "2.2.70",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/PhotoEditor.PhotoCollage.inCollage.png",
+          "subtitle": ""
+        },
+        {
+          "name": "Crsel",
+          "bundleIdentifier": "com.frameoneapps.Crsel",
+          "developerName": "",
+          "version": "1.5.2",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.frameoneapps.Crsel.png",
+          "subtitle": ""
+        },
+        {
+          "name": "Mockup",
+          "bundleIdentifier": "com.hasankassem.mockup",
+          "developerName": "",
+          "version": "4.4.2",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.hasankassem.mockup.png",
+          "subtitle": ""
+        },
         {
           "name": "Tripsy",
           "bundleIdentifier": "app.tripsy.ios",
@@ -6382,38 +6414,6 @@
           "developerName": "",
           "version": "1.26.1",
           "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/reels-maker-one.png",
-          "subtitle": ""
-        },
-        {
-          "name": "CollaNote",
-          "bundleIdentifier": "net.quochuywdm.collanote496",
-          "developerName": "",
-          "version": "5.0.2",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/net.quochuywdm.collanote496.png",
-          "subtitle": ""
-        },
-        {
-          "name": "FujiXWeekly",
-          "bundleIdentifier": "com.fujixweekly.fujixweeklyrecipes",
-          "developerName": "",
-          "version": "1.15.5",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.fujixweekly.fujixweeklyrecipes.png",
-          "subtitle": ""
-        },
-        {
-          "name": "AIRetouch",
-          "bundleIdentifier": "com.picretouch.photoeditor",
-          "developerName": "",
-          "version": "1.2.1",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.picretouch.photoeditor.png",
-          "subtitle": ""
-        },
-        {
-          "name": "HiWidget",
-          "bundleIdentifier": "com.zerone.hidesktop",
-          "developerName": "",
-          "version": "5.1.05",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.zerone.hidesktop.png",
           "subtitle": ""
         }
       ]
