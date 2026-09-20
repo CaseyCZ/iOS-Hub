@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-20T11:27:19Z",
+  "generatedAt": "2026-09-20T16:09:22Z",
   "sources": [
     {
       "id": "utm",
@@ -4812,10 +4812,26 @@
     {
       "id": "apptesters",
       "name": "AppTesters IPA Repo",
-      "appCount": 9207,
+      "appCount": 9209,
       "catalogLimited": true,
       "iconURL": "https://apptesters.org/apptesters-512x512.png",
       "apps": [
+        {
+          "name": "Analogue",
+          "bundleIdentifier": "Cristian-Teichner.Analogue",
+          "developerName": "",
+          "version": "1.6.0",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/Cristian-Teichner.Analogue.png",
+          "subtitle": ""
+        },
+        {
+          "name": "BoldVoice",
+          "bundleIdentifier": "com.wellocution.iosapp",
+          "developerName": "",
+          "version": "4.4.4",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.wellocution.iosapp.png",
+          "subtitle": ""
+        },
         {
           "name": "Shapeyard",
           "bundleIdentifier": "app.chudo",
@@ -6398,22 +6414,6 @@
           "developerName": "",
           "version": "2.5.9",
           "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.vitalii.mind.png",
-          "subtitle": ""
-        },
-        {
-          "name": "Calendars",
-          "bundleIdentifier": "com.readdle.CalendarsLite",
-          "developerName": "",
-          "version": "5.37.38",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.readdle.CalendarsLite.png",
-          "subtitle": ""
-        },
-        {
-          "name": "Yazio",
-          "bundleIdentifier": "com.yazio.ios.YAZIO",
-          "developerName": "",
-          "version": "26.36.2",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.yazio.ios.YAZIO.png",
           "subtitle": ""
         }
       ]
