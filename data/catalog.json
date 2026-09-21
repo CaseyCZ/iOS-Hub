@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-20T20:51:05Z",
+  "generatedAt": "2026-09-21T04:58:46Z",
   "sources": [
     {
       "id": "utm",
@@ -4812,10 +4812,50 @@
     {
       "id": "apptesters",
       "name": "AppTesters IPA Repo",
-      "appCount": 9211,
+      "appCount": 9216,
       "catalogLimited": true,
       "iconURL": "https://apptesters.org/apptesters-512x512.png",
       "apps": [
+        {
+          "name": "Stndrd",
+          "bundleIdentifier": "uni.cbum",
+          "developerName": "",
+          "version": "4.1.59",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/uni.cbum.png",
+          "subtitle": ""
+        },
+        {
+          "name": "Paste",
+          "bundleIdentifier": "com.wiheads.paste",
+          "developerName": "",
+          "version": "7.0.0",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.wiheads.paste.png",
+          "subtitle": ""
+        },
+        {
+          "name": "NotePlan",
+          "bundleIdentifier": "co.noteplan.NotePlan3",
+          "developerName": "",
+          "version": "3.21.3",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/co.noteplan.NotePlan3.png",
+          "subtitle": ""
+        },
+        {
+          "name": "Mockview",
+          "bundleIdentifier": "com.kavsoft.MockviewApp",
+          "developerName": "",
+          "version": "5.0.1",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.kavsoft.MockviewApp.png",
+          "subtitle": ""
+        },
+        {
+          "name": "ShutEye",
+          "bundleIdentifier": "health.sleep.sounds.tracker.alarm.calm",
+          "developerName": "",
+          "version": "3.5.4",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/health.sleep.sounds.tracker.alarm.calm.png",
+          "subtitle": ""
+        },
         {
           "name": "RiseSleep",
           "bundleIdentifier": "com.risesci.nyx",
@@ -6375,46 +6415,6 @@
           "version": "1.27",
           "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.andyworks.vibes.png",
           "subtitle": ""
-        },
-        {
-          "name": "andyworkscalculator",
-          "bundleIdentifier": "com.andyworks.calculator",
-          "developerName": "",
-          "version": "3.23",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.andyworks.calculator.png",
-          "subtitle": ""
-        },
-        {
-          "name": "Fing",
-          "bundleIdentifier": "overlook.fing",
-          "developerName": "",
-          "version": "12.13.4",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/overlook.fing.png",
-          "subtitle": ""
-        },
-        {
-          "name": "Tripsy",
-          "bundleIdentifier": "app.tripsy.ios",
-          "developerName": "",
-          "version": "3.9.4",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/app.tripsy.ios.png",
-          "subtitle": ""
-        },
-        {
-          "name": "Mercury",
-          "bundleIdentifier": "com.tripleglazedstudios.Weather",
-          "developerName": "",
-          "version": "3.7",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.tripleglazedstudios.Weather.png",
-          "subtitle": ""
-        },
-        {
-          "name": "Aloha",
-          "bundleIdentifier": "com.alohabrowser.alohabrowser",
-          "developerName": "",
-          "version": "8.10.0",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.alohabrowser.alohabrowser.png",
-          "subtitle": ""
         }
       ]
     },
@@ -6480,7 +6480,7 @@
           "name": "YTKace",
           "bundleIdentifier": "com.google.ios.youtube",
           "developerName": "itzzace",
-          "version": "0.9.3",
+          "version": "1.0.0",
           "iconURL": "https://img.lightshot.app/8gRG1MrsTPO7ZiwX_JfmbA.jpeg",
           "subtitle": "Enhanced YouTube for iOS 17 and newer"
         }
