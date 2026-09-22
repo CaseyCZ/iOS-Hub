@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-22T04:59:15Z",
+  "generatedAt": "2026-09-22T11:41:36Z",
   "sources": [
     {
       "id": "utm",
@@ -1090,7 +1090,7 @@
           "name": "YouTube",
           "bundleIdentifier": "com.google.ios.youtube",
           "developerName": "",
-          "version": "21.37.5",
+          "version": "21.38.2",
           "iconURL": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ef/Youtube_logo.png/512px-Youtube_logo.png",
           "subtitle": ""
         },
@@ -3371,18 +3371,10 @@
     {
       "id": "cypwn-ipa",
       "name": "CyPwn IPA Library",
-      "appCount": 210,
+      "appCount": 209,
       "catalogLimited": true,
       "iconURL": "https://repo.cypwn.xyz/assets/images/cypwn_small.png",
       "apps": [
-        {
-          "name": "Stremio-2.0.7",
-          "bundleIdentifier": "com.stremio.pal",
-          "developerName": "Stremio-2.0.7 x CyPwn",
-          "version": "2.0.7",
-          "iconURL": "https://ipa.cypwn.xyz/serve/icons/Stremio-2.0.7.png",
-          "subtitle": ""
-        },
         {
           "name": "Stremio-2.0.6",
           "bundleIdentifier": "com.stremio.pal",
@@ -4814,16 +4806,80 @@
           "version": "2.6",
           "iconURL": "https://ipa.cypwn.xyz/serve/icons/Star_Map_2.6_Satella.png",
           "subtitle": ""
+        },
+        {
+          "name": "RefacePro_3.12.0",
+          "bundleIdentifier": "cypwn.RefacePro_3.12.0.3.12.0",
+          "developerName": "RefacePro_3.12.0 x CyPwn",
+          "version": "3.12.0",
+          "iconURL": "https://ipa.cypwn.xyz/serve/icons/RefacePro_3.12.0.png",
+          "subtitle": ""
         }
       ]
     },
     {
       "id": "apptesters",
       "name": "AppTesters IPA Repo",
-      "appCount": 9245,
+      "appCount": 9252,
       "catalogLimited": true,
       "iconURL": "https://apptesters.org/apptesters-512x512.png",
       "apps": [
+        {
+          "name": "SnoreLab",
+          "bundleIdentifier": "com.revivasoftworks.Snore-Lab",
+          "developerName": "",
+          "version": "6.4.12",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.revivasoftworks.Snore-Lab.png",
+          "subtitle": ""
+        },
+        {
+          "name": "Mojo",
+          "bundleIdentifier": "archery.storify",
+          "developerName": "",
+          "version": "1.279.0",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/archery.storify.png",
+          "subtitle": ""
+        },
+        {
+          "name": "Moonly",
+          "bundleIdentifier": "com.moonly.Moonly",
+          "developerName": "",
+          "version": "2.9.2",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.moonly.Moonly.png",
+          "subtitle": ""
+        },
+        {
+          "name": "OraWeather",
+          "bundleIdentifier": "com.itwcalculator.worldradarfree",
+          "developerName": "",
+          "version": "6.2.1",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.itwcalculator.worldradarfree.png",
+          "subtitle": ""
+        },
+        {
+          "name": "Sketchar",
+          "bundleIdentifier": "tech.sketchar.ios",
+          "developerName": "",
+          "version": "10.9",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/tech.sketchar.ios.png",
+          "subtitle": ""
+        },
+        {
+          "name": "Unknown app",
+          "bundleIdentifier": "com.intsig.CamScannerLite",
+          "developerName": "",
+          "version": "7.26.6",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.intsig.CamScannerLite.png",
+          "subtitle": ""
+        },
+        {
+          "name": "ThePiano",
+          "bundleIdentifier": "com.impalastudios.pianofree",
+          "developerName": "",
+          "version": "2.23.4",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.impalastudios.pianofree.png",
+          "subtitle": ""
+        },
         {
           "name": "Elevate",
           "bundleIdentifier": "com.elevateapp.elevate",
@@ -5274,10 +5330,10 @@
         },
         {
           "name": "Unknown app",
-          "bundleIdentifier": "com.madarsoft.fitness",
+          "bundleIdentifier": "com.intsig.CamScannerLite",
           "developerName": "",
           "version": "19.6",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.madarsoft.fitness.png",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.intsig.CamScannerLite.png",
           "subtitle": ""
         },
         {
@@ -5306,10 +5362,10 @@
         },
         {
           "name": "Unknown app",
-          "bundleIdentifier": "com.madarsoft.fitness",
+          "bundleIdentifier": "com.intsig.CamScannerLite",
           "developerName": "",
           "version": "4.3.1",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.madarsoft.fitness.png",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.intsig.CamScannerLite.png",
           "subtitle": ""
         },
         {
@@ -5418,10 +5474,10 @@
         },
         {
           "name": "Unknown app",
-          "bundleIdentifier": "com.madarsoft.fitness",
+          "bundleIdentifier": "com.intsig.CamScannerLite",
           "developerName": "",
           "version": "19.5",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.madarsoft.fitness.png",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.intsig.CamScannerLite.png",
           "subtitle": ""
         },
         {
@@ -5642,10 +5698,10 @@
         },
         {
           "name": "Unknown app",
-          "bundleIdentifier": "com.madarsoft.fitness",
+          "bundleIdentifier": "com.intsig.CamScannerLite",
           "developerName": "",
           "version": "19.3",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.madarsoft.fitness.png",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.intsig.CamScannerLite.png",
           "subtitle": ""
         },
         {
@@ -5722,10 +5778,10 @@
         },
         {
           "name": "Unknown app",
-          "bundleIdentifier": "com.madarsoft.fitness",
+          "bundleIdentifier": "com.intsig.CamScannerLite",
           "developerName": "",
           "version": "19.2",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.madarsoft.fitness.png",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.intsig.CamScannerLite.png",
           "subtitle": ""
         },
         {
@@ -5962,10 +6018,10 @@
         },
         {
           "name": "Unknown app",
-          "bundleIdentifier": "com.madarsoft.fitness",
+          "bundleIdentifier": "com.intsig.CamScannerLite",
           "developerName": "",
           "version": "19.1",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.madarsoft.fitness.png",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.intsig.CamScannerLite.png",
           "subtitle": ""
         },
         {
@@ -6366,62 +6422,6 @@
           "developerName": "",
           "version": "2026.7",
           "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.frontpocketsoftware.happyscale.png",
-          "subtitle": ""
-        },
-        {
-          "name": "MDClock",
-          "bundleIdentifier": "tech.miidii.MDClock",
-          "developerName": "",
-          "version": "2.73",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/tech.miidii.MDClock.png",
-          "subtitle": ""
-        },
-        {
-          "name": "Athlytic",
-          "bundleIdentifier": "myndarc.newFitnessApp",
-          "developerName": "",
-          "version": "27.0.0",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/myndarc.newFitnessApp.png",
-          "subtitle": ""
-        },
-        {
-          "name": "Encode",
-          "bundleIdentifier": "com.upskew.encode.ios",
-          "developerName": "",
-          "version": "6.22.0",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.upskew.encode.ios.png",
-          "subtitle": ""
-        },
-        {
-          "name": "Stemz",
-          "bundleIdentifier": "com.mwm.stems",
-          "developerName": "",
-          "version": "5.07.01",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.mwm.stems.png",
-          "subtitle": ""
-        },
-        {
-          "name": "SnoreLab",
-          "bundleIdentifier": "com.revivasoftworks.Snore-Lab",
-          "developerName": "",
-          "version": "6.4.11",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.revivasoftworks.Snore-Lab.png",
-          "subtitle": ""
-        },
-        {
-          "name": "Clarity",
-          "bundleIdentifier": "com.moodtools.thoughtdiary",
-          "developerName": "",
-          "version": "5.5.26",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.moodtools.thoughtdiary.png",
-          "subtitle": ""
-        },
-        {
-          "name": "Stndrd",
-          "bundleIdentifier": "uni.cbum",
-          "developerName": "",
-          "version": "4.1.58",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/uni.cbum.png",
           "subtitle": ""
         }
       ]
