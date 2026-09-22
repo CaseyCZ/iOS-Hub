@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-22T11:41:36Z",
+  "generatedAt": "2026-09-22T16:59:22Z",
   "sources": [
     {
       "id": "utm",
@@ -1114,7 +1114,7 @@
           "name": "Twitch",
           "bundleIdentifier": "tv.twitch",
           "developerName": "",
-          "version": "31.2.4",
+          "version": "31.3",
           "iconURL": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Twitch_Glitch_Logo_Purple.svg/640px-Twitch_Glitch_Logo_Purple.svg.png",
           "subtitle": ""
         },
@@ -4820,10 +4820,90 @@
     {
       "id": "apptesters",
       "name": "AppTesters IPA Repo",
-      "appCount": 9252,
+      "appCount": 9262,
       "catalogLimited": true,
       "iconURL": "https://apptesters.org/apptesters-512x512.png",
       "apps": [
+        {
+          "name": "Vibes",
+          "bundleIdentifier": "com.andyworks.vibes",
+          "developerName": "",
+          "version": "1.28",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.andyworks.vibes.png",
+          "subtitle": ""
+        },
+        {
+          "name": "Duolingo",
+          "bundleIdentifier": "com.duolingo.DuolingoMobile",
+          "developerName": "",
+          "version": "7.141.0",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.duolingo.DuolingoMobile.png",
+          "subtitle": ""
+        },
+        {
+          "name": "swipewipe",
+          "bundleIdentifier": "com.aoklab.fewerphotos",
+          "developerName": "",
+          "version": "3.4.16",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.aoklab.fewerphotos.png",
+          "subtitle": ""
+        },
+        {
+          "name": "Picsew",
+          "bundleIdentifier": "com.sugarmo.ScrollClip",
+          "developerName": "",
+          "version": "3.19.1",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.sugarmo.ScrollClip.png",
+          "subtitle": ""
+        },
+        {
+          "name": "Labbet",
+          "bundleIdentifier": "app.labbet.labbet",
+          "developerName": "",
+          "version": "2.69",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/app.labbet.labbet.png",
+          "subtitle": ""
+        },
+        {
+          "name": "MapleReadCX",
+          "bundleIdentifier": "com.maplepop.bmcx",
+          "developerName": "",
+          "version": "7.1",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.maplepop.bmcx.png",
+          "subtitle": ""
+        },
+        {
+          "name": "Widgetsmith",
+          "bundleIdentifier": "com.crossforward.WidgetSmith",
+          "developerName": "",
+          "version": "8.6.1",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.crossforward.WidgetSmith.png",
+          "subtitle": ""
+        },
+        {
+          "name": "Bazaart",
+          "bundleIdentifier": "co.bazaart.app",
+          "developerName": "",
+          "version": "27.0.2",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/co.bazaart.app.png",
+          "subtitle": ""
+        },
+        {
+          "name": "Moovit",
+          "bundleIdentifier": "com.tranzmate.tranzmate1",
+          "developerName": "",
+          "version": "5.201.0",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.tranzmate.tranzmate1.png",
+          "subtitle": ""
+        },
+        {
+          "name": "Cleanup",
+          "bundleIdentifier": "com.codeway.cleanerplus",
+          "developerName": "",
+          "version": "6.22.0",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.codeway.cleanerplus.png",
+          "subtitle": ""
+        },
         {
           "name": "SnoreLab",
           "bundleIdentifier": "com.revivasoftworks.Snore-Lab",
@@ -6342,86 +6422,6 @@
           "developerName": "",
           "version": "1.278.0",
           "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/archery.storify.png",
-          "subtitle": ""
-        },
-        {
-          "name": "Splice",
-          "bundleIdentifier": "com.path36.SpliceFree",
-          "developerName": "",
-          "version": "4.28.69",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.path36.SpliceFree.png",
-          "subtitle": ""
-        },
-        {
-          "name": "HabitKit",
-          "bundleIdentifier": "com.roehl.habitkit",
-          "developerName": "",
-          "version": "1.17.3",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.roehl.habitkit.png",
-          "subtitle": ""
-        },
-        {
-          "name": "Unfold",
-          "bundleIdentifier": "com.moonlab.unfoldstories",
-          "developerName": "",
-          "version": "8.164.0",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.moonlab.unfoldstories.png",
-          "subtitle": ""
-        },
-        {
-          "name": "SCRL",
-          "bundleIdentifier": "com.dopedevelopment.Panels",
-          "developerName": "",
-          "version": "9.54",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.dopedevelopment.Panels.png",
-          "subtitle": ""
-        },
-        {
-          "name": "Thenx",
-          "bundleIdentifier": "com.calisthenics.thenx",
-          "developerName": "",
-          "version": "6.7.8",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.calisthenics.thenx.png",
-          "subtitle": ""
-        },
-        {
-          "name": "Sofa",
-          "bundleIdentifier": "com.astrio.Sofa",
-          "developerName": "",
-          "version": "5.3",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.astrio.Sofa.png",
-          "subtitle": ""
-        },
-        {
-          "name": "CARROT",
-          "bundleIdentifier": "com.grailr.CARROTweather",
-          "developerName": "",
-          "version": "6.9",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.grailr.CARROTweather.png",
-          "subtitle": ""
-        },
-        {
-          "name": "SquareDude",
-          "bundleIdentifier": "tech.miidii.SquareDude",
-          "developerName": "",
-          "version": "1.6",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/tech.miidii.SquareDude.png",
-          "subtitle": ""
-        },
-        {
-          "name": "KKPhoto",
-          "bundleIdentifier": "tech.miidii.AlbumManager",
-          "developerName": "",
-          "version": "2.3",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/tech.miidii.AlbumManager.png",
-          "subtitle": ""
-        },
-        {
-          "name": "HappyScale",
-          "bundleIdentifier": "com.frontpocketsoftware.happyscale",
-          "developerName": "",
-          "version": "2026.7",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.frontpocketsoftware.happyscale.png",
           "subtitle": ""
         }
       ]
