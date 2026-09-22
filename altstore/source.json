@@ -1175,32 +1175,21 @@
       ],
       "versions": [
         {
-          "version": "alpha-ios",
-          "buildVersion": "2026.09.19.0549",
-          "date": "2026-09-19T05:49:39.000Z",
+          "version": "1.0.0",
+          "buildVersion": "105",
+          "date": "2026-09-22T03:24:11.014Z",
           "localizedDescription": "Rolling CI alpha from GitHub Releases. Unsigned; replaced on every successful default-branch or develop build.",
-          "downloadURL": "https://github.com/Provenance-Emu/iCube/releases/download/alpha/Non-Jailbroken.ipa",
-          "size": 91362699,
+          "downloadURL": "https://github.com/Provenance-Emu/iCube/releases/download/alpha-105/Non-Jailbroken.ipa",
+          "size": 91506928,
           "minOSVersion": "17.0",
           "platform": "iOS",
           "isBeta": true
         },
         {
-          "version": "1.0.0-ios",
-          "buildVersion": "1.0.0-ios",
-          "date": "2026-09-19",
-          "localizedDescription": "iCube 1.0.0 for iOS",
-          "downloadURL": "https://icube-emu.com/builds-versioned/1.0.0/iOS/iCube.ipa",
-          "size": 91362735,
-          "minOSVersion": "15.0",
-          "platform": "iOS",
-          "isBeta": false
-        },
-        {
           "version": "1.0.0-beta9-ios",
           "buildVersion": "1.0.0-beta9-ios",
-          "date": "2026-09-19",
-          "localizedDescription": "iCube 1.0.0 Beta 9 for iOS",
+          "date": "2026-09-22",
+          "localizedDescription": "iCube 1.0.0-beta9-ios Beta 9 for iOS",
           "downloadURL": "https://icube-emu.com/builds-versioned/1.0.0/iOS-Beta9/iCube.ipa",
           "size": 82799373,
           "minOSVersion": "15.0",
@@ -1211,8 +1200,8 @@
         {
           "version": "1.0.0-beta8-ios",
           "buildVersion": "1.0.0-beta8-ios",
-          "date": "2026-09-19",
-          "localizedDescription": "iCube 1.0.0 Beta 8 for iOS",
+          "date": "2026-09-22",
+          "localizedDescription": "iCube 1.0.0-beta8-ios Beta 8 for iOS",
           "downloadURL": "https://icube-emu.com/builds-versioned/1.0.0/iOS-Beta8/iCube.ipa",
           "size": 82893911,
           "minOSVersion": "15.0",
@@ -1223,11 +1212,11 @@
         {
           "version": "1.0.0-beta7-ios",
           "buildVersion": "1.0.0-beta7-ios",
-          "date": "2026-09-19",
-          "localizedDescription": "iCube 1.0.0 Beta 7 for iOS",
+          "date": "2026-09-22",
+          "localizedDescription": "iCube 1.0.0-beta7-ios Beta 7 for iOS",
           "downloadURL": "https://icube-emu.com/builds-versioned/1.0.0/iOS-Beta7/iCube.ipa",
           "size": 82893502,
-          "minOSVersion": "15.0",
+          "minOSVersion": "15.6",
           "platform": "iOS",
           "isBeta": true,
           "betaNumber": 7
@@ -1403,18 +1392,64 @@
       "versionDescription": "IPA Vault build for Instagram (RyukGram No Plugins), version 448.0.0"
     },
     {
-      "name": "Instagram (RyukGram)",
+      "beta": false,
       "bundleIdentifier": "com.burbn.instagram",
-      "developerName": "faroukbmiled & IPA Vault",
-      "downloadURL": "https://pub-dd800571175348b6a2745b3396360028.r2.dev/Instagram-448.0.0-RyukGram.ipa",
-      "iconURL": "https://pub-dd800571175348b6a2745b3396360028.r2.dev/App%20Icons/Instagram-Icons/Instagram-AppStore-1024x1024.png",
-      "localizedDescription": "Instagram 448.0.0 with RyukGram 1.4.0",
-      "size": 324729745,
-      "subtitle": "Instagram 448.0.0 with RyukGram 1.4.0",
-      "tintColor": "#000000",
+      "developerName": "Ryuk",
+      "downloadURL": "https://github.com/ramramzz/descfsr/releases/download/v0.33/5f009b76-d1ea-4659-a3ce-e5c2100367cR.ipa",
+      "iconURL": "https://raw.githubusercontent.com/qnblackcat/AltStore/main/ScreenShot/800px-Instagram_logo_2016.svg.png",
+      "localizedDescription": "Just look up information for SCInsta if you're confused about usage",
+      "name": "Instagram (RyukGram)",
+      "screenshotURLs": [
+        "https://apt.alfhaily.me/cdn/assets/rocket-screenshot1.jpg",
+        "https://apt.alfhaily.me/cdn/assets/rocket-screenshot2.jpg",
+        "https://apt.alfhaily.me/cdn/assets/rocket-screenshot3.jpg",
+        "https://apt.alfhaily.me/cdn/assets/rocket-screenshot4.jpg"
+      ],
+      "size": 91750400,
+      "subtitle": "Additional features and fixes by Ryuk based on SCInsta | If you want to donate: - https://ko-fi.com/driftywinds",
+      "tintColor": "C13584",
       "version": "448.0.0",
-      "versionDate": "2026-09-21",
-      "versionDescription": "IPA Vault build for Instagram (RyukGram), version 448.0.0"
+      "versionDate": "2026-09-22",
+      "versionDescription": "Updated to v448.0.0, RyukGram v1.4.0",
+      "appPermissions": {
+        "entitlements": [
+          "com.apple.developer.associated-appclip-app-identifiers",
+          "com.apple.security.application-groups",
+          "com.apple.developer.associated-domains",
+          "com.apple.developer.storekit.request-data",
+          "com.apple.developer.ubiquity-container-identifiers",
+          "com.apple.developer.usernotifications.communication",
+          "com.apple.developer.usernotifications.time-sensitive",
+          "get-task-allow",
+          "com.apple.developer.kernel.extended-virtual-addressing",
+          "com.apple.developer.networking.HotspotConfiguration",
+          "com.apple.developer.icloud-container-environment",
+          "com.apple.developer.icloud-container-identifiers",
+          "com.apple.developer.ubiquity-kvstore-identifier",
+          "com.apple.developer.icloud-services",
+          "com.apple.developer.kernel.increased-memory-limit",
+          "keychain-access-groups",
+          "com.apple.developer.avfoundation.multitasking-camera-access",
+          "com.apple.developer.usernotifications.filtering",
+          "aps-environment",
+          "com.apple.developer.networking.wifi-info"
+        ],
+        "privacy": {
+          "NSBluetoothAlwaysUsageDescription": "This app requires Bluetooth access for connecting to nearby devices.",
+          "NSCalendarsUsageDescription": "This app requires access to your calendars for social event integration.",
+          "NSCameraUsageDescription": "This app requires camera access to capture photos and videos.",
+          "NSContactsUsageDescription": "This app requires access to your contacts for enhanced social features.",
+          "NSFaceIDUsageDescription": "This app requires Face ID for secure authentication.",
+          "NSLocationAlwaysAndWhenInUseUsageDescription": "This app requires location access even when in the background for geotagging.",
+          "NSLocationUsageDescription": "This app requires location access to provide local content.",
+          "NSLocationWhenInUseUsageDescription": "This app requires location access while using the app.",
+          "NSMicrophoneUsageDescription": "This app requires microphone access for recording audio and videos.",
+          "NSFocusStatusUsageDescription": "This app uses focus status to optimize notifications.",
+          "NSPhotoLibraryAddUsageDescription": "This app requires access to add photos to your library.",
+          "NSPhotoLibraryUsageDescription": "This app requires access to your photo library.",
+          "NSUserTrackingUsageDescription": "This app uses tracking to deliver personalized content."
+        }
+      }
     },
     {
       "name": "Instagram (Sparkle No Plugins)",
@@ -5100,6 +5135,40 @@
       }
     },
     {
+      "beta": false,
+      "bundleIdentifier": "com.google.ios.youtube",
+      "developerName": "Tonwalter888",
+      "META": {
+        "repoName": "driftywinds' AltStore Repo"
+      },
+      "contact": {
+        "web": "https://github.com/driftywinds/"
+      },
+      "downloadURL": "https://github.com/ramramzz/descfsr/releases/download/v0.33/300acd75-b5dd-4e6f-bf94-ced3deb9ecYM.ipa",
+      "iconURL": "https://raw.githubusercontent.com/YTLitePlus/YTLitePlus-Altstore/main/Youtube_logo-512.png",
+      "localizedDescription": "https://t.me/+rvcObIvOpctiMDI9\n\nA modified version of Youtube",
+      "name": "YouMod + Tweaks (driftywinds)",
+      "screenshotURLs": [
+        "https://raw.githubusercontent.com/dayanch96/YTLite/refs/heads/main/Resources/scr1.jpg",
+        "https://raw.githubusercontent.com/dayanch96/YTLite/refs/heads/main/Resources/scr2.jpg",
+        "https://raw.githubusercontent.com/dayanch96/YTLite/refs/heads/main/Resources/scr3.jpg"
+      ],
+      "size": 130097628,
+      "subtitle": "A flexible enhancer for YouTube on iOS | If you want to donate: - https://ko-fi.com/driftywinds",
+      "tintColor": "e22a41",
+      "version": "21.38.2",
+      "versionDate": "2026-09-22",
+      "versionDescription": "• Updated YouTube to 21.38.2\n • Tweak is using 2.0.0",
+      "appPermissions": {
+        "entitlements": [
+          "com.apple.developer.siri"
+        ],
+        "privacy": {
+          "NSUserTrackingUsageDescription": "This app requires tracking permission to deliver personalized content and advertisements."
+        }
+      }
+    },
+    {
       "name": "YouTube (YouMod 2.0.0)",
       "bundleIdentifier": "com.google.ios.youtube.youmod",
       "developerName": "Tonwalter888 & IPA Vault",
@@ -5126,20 +5195,6 @@
       "version": "21.33.6",
       "versionDate": "2026-09-01",
       "versionDescription": "IPA Vault build for YouTube (YouMod 21.33.6), version 21.33.6"
-    },
-    {
-      "name": "YouTube (YTKACE 1.0.1)",
-      "bundleIdentifier": "com.google.ios.youtube",
-      "developerName": "itzzace0 & IPA Vault",
-      "downloadURL": "https://pub-dd800571175348b6a2745b3396360028.r2.dev/YouTube-21.38.2-YTKACE.ipa",
-      "iconURL": "https://pub-dd800571175348b6a2745b3396360028.r2.dev/App%20Icons/YouTube-Icons/YouTube-AppStore-1024x1024.png",
-      "localizedDescription": "YouTube 21.38.2 with YTKACE 1.0.1\n\nAdded Tweaks:\nYTABConfig, YTweaks, YouPIP, VolumeBoostYT, DontEatMyContent, ReturnYouTubeDislike, Gonerino, LowContrastMode, VideoOverlay, YouGetCaption, YouTubeNativeShare, YouQuality, YouChooseQuality, YTHoldForSpeed, YouGroupSettings",
-      "size": 135943468,
-      "subtitle": "YouTube 21.38.2 with YTKACE 1.0.1",
-      "tintColor": "#FF0000",
-      "version": "21.38.2",
-      "versionDate": "2026-09-21",
-      "versionDescription": "IPA Vault build for YouTube (YTKACE 1.0.1), version 21.38.2"
     },
     {
       "name": "YouTube (YTKACE 1.0.1) (iOS 16+)",

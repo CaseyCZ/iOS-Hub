@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-21T22:00:14Z",
+  "generatedAt": "2026-09-22T04:59:15Z",
   "sources": [
     {
       "id": "utm",
@@ -53,7 +53,7 @@
           "name": "iCube",
           "bundleIdentifier": "com.joemattiello.iCube",
           "developerName": "Provenance Emu",
-          "version": "alpha-ios",
+          "version": "1.0.0",
           "iconURL": "https://icube-emu.com/icon-1024.png",
           "subtitle": "GameCube & Wii Emulator for iOS & tvOS"
         }
@@ -1147,7 +1147,7 @@
           "name": "YouMod + Tweaks (driftywinds)",
           "bundleIdentifier": "com.google.ios.youtube",
           "developerName": "Tonwalter888",
-          "version": "21.37.5",
+          "version": "21.38.2",
           "iconURL": "https://raw.githubusercontent.com/YTLitePlus/YTLitePlus-Altstore/main/Youtube_logo-512.png",
           "subtitle": "A flexible enhancer for YouTube on iOS | If you want to donate: - https://ko-fi.com/driftywinds"
         },
@@ -1171,7 +1171,7 @@
           "name": "Instagram (RyukGram)",
           "bundleIdentifier": "com.burbn.instagram",
           "developerName": "Ryuk",
-          "version": "447.0.0",
+          "version": "448.0.0",
           "iconURL": "https://raw.githubusercontent.com/qnblackcat/AltStore/main/ScreenShot/800px-Instagram_logo_2016.svg.png",
           "subtitle": "Additional features and fixes by Ryuk based on SCInsta | If you want to donate: - https://ko-fi.com/driftywinds"
         },
@@ -2097,7 +2097,7 @@
           "name": "YTKillerPlus",
           "bundleIdentifier": "com.google.ios.youtube",
           "developerName": "iKarwan",
-          "version": "21.37.5",
+          "version": "21.38.2",
           "iconURL": "https://raw.githubusercontent.com/mrdrvt99/Altstore-Repository/main/assets/YouTube.png",
           "subtitle": ""
         },
@@ -2105,7 +2105,7 @@
           "name": "YTKACE",
           "bundleIdentifier": "com.google.ios.youtube",
           "developerName": "itzzace0",
-          "version": "21.37.5",
+          "version": "21.38.2",
           "iconURL": "https://raw.githubusercontent.com/mrdrvt99/Altstore-Repository/main/assets/YouTube.png",
           "subtitle": ""
         },
@@ -2113,7 +2113,7 @@
           "name": "YouPro",
           "bundleIdentifier": "com.google.ios.youtube",
           "developerName": "alibusut",
-          "version": "21.37.5",
+          "version": "21.38.2",
           "iconURL": "https://raw.githubusercontent.com/mrdrvt99/Altstore-Repository/main/assets/YouTube.png",
           "subtitle": ""
         },
@@ -2121,7 +2121,7 @@
           "name": "YouMod",
           "bundleIdentifier": "com.google.ios.youtube",
           "developerName": "Tonwalter888",
-          "version": "21.37.5",
+          "version": "21.38.2",
           "iconURL": "https://raw.githubusercontent.com/mrdrvt99/Altstore-Repository/main/assets/YouTube.png",
           "subtitle": ""
         }
@@ -3371,10 +3371,18 @@
     {
       "id": "cypwn-ipa",
       "name": "CyPwn IPA Library",
-      "appCount": 209,
+      "appCount": 210,
       "catalogLimited": true,
       "iconURL": "https://repo.cypwn.xyz/assets/images/cypwn_small.png",
       "apps": [
+        {
+          "name": "Stremio-2.0.7",
+          "bundleIdentifier": "com.stremio.pal",
+          "developerName": "Stremio-2.0.7 x CyPwn",
+          "version": "2.0.7",
+          "iconURL": "https://ipa.cypwn.xyz/serve/icons/Stremio-2.0.7.png",
+          "subtitle": ""
+        },
         {
           "name": "Stremio-2.0.6",
           "bundleIdentifier": "com.stremio.pal",
@@ -4806,24 +4814,56 @@
           "version": "2.6",
           "iconURL": "https://ipa.cypwn.xyz/serve/icons/Star_Map_2.6_Satella.png",
           "subtitle": ""
-        },
-        {
-          "name": "RefacePro_3.12.0",
-          "bundleIdentifier": "cypwn.RefacePro_3.12.0.3.12.0",
-          "developerName": "RefacePro_3.12.0 x CyPwn",
-          "version": "3.12.0",
-          "iconURL": "https://ipa.cypwn.xyz/serve/icons/RefacePro_3.12.0.png",
-          "subtitle": ""
         }
       ]
     },
     {
       "id": "apptesters",
       "name": "AppTesters IPA Repo",
-      "appCount": 9240,
+      "appCount": 9245,
       "catalogLimited": true,
       "iconURL": "https://apptesters.org/apptesters-512x512.png",
       "apps": [
+        {
+          "name": "Elevate",
+          "bundleIdentifier": "com.elevateapp.elevate",
+          "developerName": "",
+          "version": "5.258.0",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.elevateapp.elevate.png",
+          "subtitle": ""
+        },
+        {
+          "name": "Drafts",
+          "bundleIdentifier": "com.agiletortoise.Drafts5",
+          "developerName": "",
+          "version": "54.0.4",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.agiletortoise.Drafts5.png",
+          "subtitle": ""
+        },
+        {
+          "name": "ProCCD",
+          "bundleIdentifier": "com.yengshine.proccd",
+          "developerName": "",
+          "version": "6.8.2",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.yengshine.proccd.png",
+          "subtitle": ""
+        },
+        {
+          "name": "ColoringBook",
+          "bundleIdentifier": "com.apalonapps.clrbook",
+          "developerName": "",
+          "version": "1.5.8",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.apalonapps.clrbook.png",
+          "subtitle": ""
+        },
+        {
+          "name": "RiseSleep",
+          "bundleIdentifier": "com.risesci.nyx",
+          "developerName": "",
+          "version": "0.1.632",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.risesci.nyx.png",
+          "subtitle": ""
+        },
         {
           "name": "SODA",
           "bundleIdentifier": "com.snowcorp.soda",
@@ -6383,46 +6423,6 @@
           "version": "4.1.58",
           "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/uni.cbum.png",
           "subtitle": ""
-        },
-        {
-          "name": "Detail",
-          "bundleIdentifier": "co.detail.duo",
-          "developerName": "",
-          "version": "6.0.0",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/co.detail.duo.png",
-          "subtitle": ""
-        },
-        {
-          "name": "Widgy",
-          "bundleIdentifier": "boomer.Smart-Video",
-          "developerName": "",
-          "version": "27",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/boomer.Smart-Video.png",
-          "subtitle": ""
-        },
-        {
-          "name": "Thenx",
-          "bundleIdentifier": "com.calisthenics.thenx",
-          "developerName": "",
-          "version": "6.7.7",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.calisthenics.thenx.png",
-          "subtitle": ""
-        },
-        {
-          "name": "Unknown app",
-          "bundleIdentifier": "com.madarsoft.fitness",
-          "developerName": "",
-          "version": "4.3",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.madarsoft.fitness.png",
-          "subtitle": ""
-        },
-        {
-          "name": "DtdSounds",
-          "bundleIdentifier": "com.dtd.aroundu",
-          "developerName": "",
-          "version": "2.5",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.dtd.aroundu.png",
-          "subtitle": ""
         }
       ]
     },
@@ -6488,7 +6488,7 @@
           "name": "YTKace",
           "bundleIdentifier": "com.google.ios.youtube",
           "developerName": "itzzace",
-          "version": "1.0.0",
+          "version": "1.0.1",
           "iconURL": "https://img.lightshot.app/8gRG1MrsTPO7ZiwX_JfmbA.jpeg",
           "subtitle": "Enhanced YouTube for iOS 17 and newer"
         }
