@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-23T17:02:50Z",
+  "generatedAt": "2026-09-23T21:31:50Z",
   "sources": [
     {
       "id": "utm",
@@ -1807,7 +1807,7 @@
           "name": "MoeReddit",
           "bundleIdentifier": "com.reddit.Reddit",
           "developerName": "Moe Apps",
-          "version": "2026.37.0 (4.2)",
+          "version": "2026.38.0 (4.3)",
           "iconURL": "https://raw.githubusercontent.com/MountainofPenguin/moe-altstore/main/icons/moereddit.png",
           "subtitle": "Reddit client, MoeReddit build"
         },
@@ -1903,7 +1903,7 @@
           "name": "YouTube Music",
           "bundleIdentifier": "com.google.ios.youtubemusic",
           "developerName": "Moe Apps",
-          "version": "9.37.2 (2.4.1)",
+          "version": "9.38.1 (2.4.1)",
           "iconURL": "https://raw.githubusercontent.com/MountainofPenguin/moe-altstore/main/icons/youtube-music.png",
           "subtitle": "Ultimate Enhanced tweak build"
         },
@@ -2047,7 +2047,7 @@
           "name": "Twitch (Moe TwitchControl)",
           "bundleIdentifier": "tv.twitch",
           "developerName": "Moe Apps",
-          "version": "31.3 (0.0.6)",
+          "version": "31.3.2 (0.0.6)",
           "iconURL": "https://raw.githubusercontent.com/MountainofPenguin/moe-altstore/main/icons/twitch-twitchcontrol.png",
           "subtitle": "TwitchControl tweak build"
         },
@@ -2055,7 +2055,7 @@
           "name": "Twitch (Twitchv, Moe Tweach)",
           "bundleIdentifier": "tv.twitch",
           "developerName": "Moe Apps",
-          "version": "31.3 (2.4.1)",
+          "version": "31.3.2 (2.4.1)",
           "iconURL": "https://raw.githubusercontent.com/MountainofPenguin/moe-altstore/main/icons/twitchv-tweach.png",
           "subtitle": "Tweach tweak build"
         }
@@ -3371,18 +3371,10 @@
     {
       "id": "cypwn-ipa",
       "name": "CyPwn IPA Library",
-      "appCount": 210,
+      "appCount": 209,
       "catalogLimited": true,
       "iconURL": "https://repo.cypwn.xyz/assets/images/cypwn_small.png",
       "apps": [
-        {
-          "name": "Stremio-2.0.7",
-          "bundleIdentifier": "com.stremio.pal",
-          "developerName": "Stremio-2.0.7 x CyPwn",
-          "version": "2.0.7",
-          "iconURL": "https://ipa.cypwn.xyz/serve/icons/Stremio-2.0.7.png",
-          "subtitle": ""
-        },
         {
           "name": "Stremio-2.0.6",
           "bundleIdentifier": "com.stremio.pal",
@@ -4814,16 +4806,72 @@
           "version": "2.6",
           "iconURL": "https://ipa.cypwn.xyz/serve/icons/Star_Map_2.6_Satella.png",
           "subtitle": ""
+        },
+        {
+          "name": "RefacePro_3.12.0",
+          "bundleIdentifier": "cypwn.RefacePro_3.12.0.3.12.0",
+          "developerName": "RefacePro_3.12.0 x CyPwn",
+          "version": "3.12.0",
+          "iconURL": "https://ipa.cypwn.xyz/serve/icons/RefacePro_3.12.0.png",
+          "subtitle": ""
         }
       ]
     },
     {
       "id": "apptesters",
       "name": "AppTesters IPA Repo",
-      "appCount": 9285,
+      "appCount": 9291,
       "catalogLimited": true,
       "iconURL": "https://apptesters.org/apptesters-512x512.png",
       "apps": [
+        {
+          "name": "Balance",
+          "bundleIdentifier": "com.elevateapp.kamino.kamino",
+          "developerName": "",
+          "version": "1.212.0",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.elevateapp.kamino.kamino.png",
+          "subtitle": ""
+        },
+        {
+          "name": "B612",
+          "bundleIdentifier": "com.linecorp.b612",
+          "developerName": "",
+          "version": "15.4.1",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.linecorp.b612.png",
+          "subtitle": ""
+        },
+        {
+          "name": "BoldVoice",
+          "bundleIdentifier": "com.wellocution.iosapp",
+          "developerName": "",
+          "version": "4.4.5",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.wellocution.iosapp.png",
+          "subtitle": ""
+        },
+        {
+          "name": "CLIME",
+          "bundleIdentifier": "com.apalonapps.radarfree",
+          "developerName": "",
+          "version": "5.13.70",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.apalonapps.radarfree.png",
+          "subtitle": ""
+        },
+        {
+          "name": "Notability",
+          "bundleIdentifier": "com.gingerlabs.Notability",
+          "developerName": "",
+          "version": "16.12.3",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.gingerlabs.Notability.png",
+          "subtitle": ""
+        },
+        {
+          "name": "SkyGuide",
+          "bundleIdentifier": "com.fifthstarlabs.skyguide",
+          "developerName": "",
+          "version": "13.0.2",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.fifthstarlabs.skyguide.png",
+          "subtitle": ""
+        },
         {
           "name": "Lifesum",
           "bundleIdentifier": "com.sillens.iShape",
@@ -6374,54 +6422,6 @@
           "developerName": "",
           "version": "3.19",
           "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.sugarmo.ScrollClip.png",
-          "subtitle": ""
-        },
-        {
-          "name": "Lightroom",
-          "bundleIdentifier": "com.adobe.lrmobilephone",
-          "developerName": "",
-          "version": "11.5.30",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.adobe.lrmobilephone.png",
-          "subtitle": ""
-        },
-        {
-          "name": "Infuse",
-          "bundleIdentifier": "com.firecore.infuse",
-          "developerName": "",
-          "version": "8.5.4",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.firecore.infuse.png",
-          "subtitle": ""
-        },
-        {
-          "name": "Calendars",
-          "bundleIdentifier": "com.readdle.CalendarsLite",
-          "developerName": "",
-          "version": "5.39.0",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.readdle.CalendarsLite.png",
-          "subtitle": ""
-        },
-        {
-          "name": "Notability",
-          "bundleIdentifier": "com.gingerlabs.Notability",
-          "developerName": "",
-          "version": "16.12.1",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.gingerlabs.Notability.png",
-          "subtitle": ""
-        },
-        {
-          "name": "PDFExpert",
-          "bundleIdentifier": "com.readdle.PDFExpert5",
-          "developerName": "",
-          "version": "7.26",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.readdle.PDFExpert5.png",
-          "subtitle": ""
-        },
-        {
-          "name": "ScannerPro",
-          "bundleIdentifier": "com.readdle.Scanner",
-          "developerName": "",
-          "version": "9.0.0",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.readdle.Scanner.png",
           "subtitle": ""
         }
       ]
