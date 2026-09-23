@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-23T04:47:42Z",
+  "generatedAt": "2026-09-23T11:40:08Z",
   "sources": [
     {
       "id": "utm",
@@ -4820,10 +4820,58 @@
     {
       "id": "apptesters",
       "name": "AppTesters IPA Repo",
-      "appCount": 9273,
+      "appCount": 9279,
       "catalogLimited": true,
       "iconURL": "https://apptesters.org/apptesters-512x512.png",
       "apps": [
+        {
+          "name": "Documents",
+          "bundleIdentifier": "com.readdle.ReaddleDocsIPad",
+          "developerName": "",
+          "version": "8.22.6",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.readdle.ReaddleDocsIPad.png",
+          "subtitle": ""
+        },
+        {
+          "name": "Athlytic",
+          "bundleIdentifier": "myndarc.newFitnessApp",
+          "developerName": "",
+          "version": "27.0.1",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/myndarc.newFitnessApp.png",
+          "subtitle": ""
+        },
+        {
+          "name": "Luminar",
+          "bundleIdentifier": "com.skylum.luminaripad",
+          "developerName": "",
+          "version": "4.4.1",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.skylum.luminaripad.png",
+          "subtitle": ""
+        },
+        {
+          "name": "WeatherLive",
+          "bundleIdentifier": "com.apalonapps.wlf",
+          "developerName": "",
+          "version": "7.24.44",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.apalonapps.wlf.png",
+          "subtitle": ""
+        },
+        {
+          "name": "Fitia",
+          "bundleIdentifier": "com.ulisesolave.Fitia",
+          "developerName": "",
+          "version": "25.0.3",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.ulisesolave.Fitia.png",
+          "subtitle": ""
+        },
+        {
+          "name": "SCRL",
+          "bundleIdentifier": "com.dopedevelopment.Panels",
+          "developerName": "",
+          "version": "9.56",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.dopedevelopment.Panels.png",
+          "subtitle": ""
+        },
         {
           "name": "wpsoffice",
           "bundleIdentifier": "com.kingsoft.office.g.wpsoffice",
@@ -6374,54 +6422,6 @@
           "developerName": "",
           "version": "5.257.0",
           "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.elevateapp.elevate.png",
-          "subtitle": ""
-        },
-        {
-          "name": "Balance",
-          "bundleIdentifier": "com.elevateapp.kamino.kamino",
-          "developerName": "",
-          "version": "1.211.0",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.elevateapp.kamino.kamino.png",
-          "subtitle": ""
-        },
-        {
-          "name": "Flightradar24",
-          "bundleIdentifier": "se.resenatverket.FlightRadar24-Free",
-          "developerName": "",
-          "version": "11.11.0",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/se.resenatverket.FlightRadar24-Free.png",
-          "subtitle": ""
-        },
-        {
-          "name": "Pigment",
-          "bundleIdentifier": "com.pixite.pigment",
-          "developerName": "",
-          "version": "3.15",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.pixite.pigment.png",
-          "subtitle": ""
-        },
-        {
-          "name": "Yazio",
-          "bundleIdentifier": "com.yazio.ios.YAZIO",
-          "developerName": "",
-          "version": "26.37.1",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.yazio.ios.YAZIO.png",
-          "subtitle": ""
-        },
-        {
-          "name": "Widgetsmith",
-          "bundleIdentifier": "com.crossforward.WidgetSmith",
-          "developerName": "",
-          "version": "8.5",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.crossforward.WidgetSmith.png",
-          "subtitle": ""
-        },
-        {
-          "name": "Slopes",
-          "bundleIdentifier": "com.consumedbycode.slopes",
-          "developerName": "",
-          "version": "2026.14",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.consumedbycode.slopes.png",
           "subtitle": ""
         }
       ]
