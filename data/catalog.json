@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-22T21:21:24Z",
+  "generatedAt": "2026-09-23T04:47:42Z",
   "sources": [
     {
       "id": "utm",
@@ -4820,10 +4820,50 @@
     {
       "id": "apptesters",
       "name": "AppTesters IPA Repo",
-      "appCount": 9268,
+      "appCount": 9273,
       "catalogLimited": true,
       "iconURL": "https://apptesters.org/apptesters-512x512.png",
       "apps": [
+        {
+          "name": "wpsoffice",
+          "bundleIdentifier": "com.kingsoft.office.g.wpsoffice",
+          "developerName": "",
+          "version": "26.9.2",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.kingsoft.office.g.wpsoffice.png",
+          "subtitle": ""
+        },
+        {
+          "name": "Locket",
+          "bundleIdentifier": "com.locket.Locket",
+          "developerName": "",
+          "version": "2.65.1",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.locket.Locket.png",
+          "subtitle": ""
+        },
+        {
+          "name": "SHRED",
+          "bundleIdentifier": "com.shred.shredlabs",
+          "developerName": "",
+          "version": "5.5.4",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.shred.shredlabs.png",
+          "subtitle": ""
+        },
+        {
+          "name": "Lyfta",
+          "bundleIdentifier": "com.lyftaios",
+          "developerName": "",
+          "version": "1.161",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.lyftaios.png",
+          "subtitle": ""
+        },
+        {
+          "name": "InShot",
+          "bundleIdentifier": "com.camerasideas.InstaShot",
+          "developerName": "",
+          "version": "2.0.0",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.camerasideas.InstaShot.png",
+          "subtitle": ""
+        },
         {
           "name": "Clipboard",
           "bundleIdentifier": "com.zeus.EasyCopy",
@@ -6382,46 +6422,6 @@
           "developerName": "",
           "version": "2026.14",
           "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.consumedbycode.slopes.png",
-          "subtitle": ""
-        },
-        {
-          "name": "LookUp",
-          "bundleIdentifier": "in.muditbhargava.LookUp",
-          "developerName": "",
-          "version": "13",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/in.muditbhargava.LookUp.png",
-          "subtitle": ""
-        },
-        {
-          "name": "Ketoapp",
-          "bundleIdentifier": "com.lappir.keto",
-          "developerName": "",
-          "version": "9.2.2",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.lappir.keto.png",
-          "subtitle": ""
-        },
-        {
-          "name": "PREQUEL",
-          "bundleIdentifier": "com.aiarlabs.prequel",
-          "developerName": "",
-          "version": "2.100.0",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.aiarlabs.prequel.png",
-          "subtitle": ""
-        },
-        {
-          "name": "GentlerStreak",
-          "bundleIdentifier": "app.gentler.activity",
-          "developerName": "",
-          "version": "5.13.0",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/app.gentler.activity.png",
-          "subtitle": ""
-        },
-        {
-          "name": "swipewipe",
-          "bundleIdentifier": "com.aoklab.fewerphotos",
-          "developerName": "",
-          "version": "3.4.14",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.aoklab.fewerphotos.png",
           "subtitle": ""
         }
       ]
