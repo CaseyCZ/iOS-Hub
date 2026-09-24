@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-24T11:48:55Z",
+  "generatedAt": "2026-09-24T17:13:40Z",
   "sources": [
     {
       "id": "utm",
@@ -1228,7 +1228,7 @@
     {
       "id": "ipa-vault",
       "name": "IPA Vault Source Repo",
-      "appCount": 61,
+      "appCount": 60,
       "catalogLimited": false,
       "iconURL": "https://pub-dd800571175348b6a2745b3396360028.r2.dev/ipavault-altstore-repo-logo.png",
       "apps": [
@@ -1236,25 +1236,25 @@
           "name": "Discord (RainTweak)",
           "bundleIdentifier": "com.hammerandchisel.discord",
           "developerName": "Ra1ncord & Moe & IPA Vault",
-          "version": "345.0",
+          "version": "346.0",
           "iconURL": "https://pub-dd800571175348b6a2745b3396360028.r2.dev/App%20Icons/Discord-Icons/Discord-AppStore-1024x1024.png",
-          "subtitle": "Discord 345.0 with RainTweak 0.9.6"
-        },
-        {
-          "name": "Facebook (Glow)",
-          "bundleIdentifier": "com.facebook.Facebook.glow",
-          "developerName": "dvntms & IPA Vault",
-          "version": "577.1",
-          "iconURL": "https://pub-dd800571175348b6a2745b3396360028.r2.dev/App%20Icons/Facebook-Icons/Facebook-AppStore-1024x1024.png",
-          "subtitle": "Facebook 577.1 with Glow"
+          "subtitle": "Discord 346.0 with RainTweak 0.9.6"
         },
         {
           "name": "Facebook (iQFace)",
           "bundleIdentifier": "com.facebook.Facebook",
           "developerName": "7MD & IPA Vault & lucaspedrosa",
-          "version": "579.0.0",
+          "version": "580.0.0",
           "iconURL": "https://pub-dd800571175348b6a2745b3396360028.r2.dev/App%20Icons/Facebook-Icons/Facebook-AppStore-1024x1024.png",
-          "subtitle": "Facebook 579.0.0 with iQFace 1.1"
+          "subtitle": "Facebook 580.0.0 with iQFace 1.1"
+        },
+        {
+          "name": "Facebook (Facebook Plus)",
+          "bundleIdentifier": "com.facebook.Facebook.facebookplus",
+          "developerName": "IPA Vault",
+          "version": "580.0.0",
+          "iconURL": "https://pub-dd800571175348b6a2745b3396360028.r2.dev/App%20Icons/Facebook-Icons/Facebook-AppStore-1024x1024.png",
+          "subtitle": "Facebook 580.0.0 with Facebook Plus 1.0.1"
         },
         {
           "name": "Google Photos (Gunshot) (iOS 16.1+)",
@@ -1262,7 +1262,7 @@
           "developerName": "tqmane & IPA Vault",
           "version": "7.20.2",
           "iconURL": "https://pub-dd800571175348b6a2745b3396360028.r2.dev/App%20Icons/Google-Photos-Icons/Google-Photos-AppStore-1024x1024.png",
-          "subtitle": "Google Photos 7.20.2 with Gunshot 0.2.4 (iOS 16.1+)"
+          "subtitle": "Google Photos 7.20.2 with Gunshot 0.2.5 (iOS 16.1+)"
         },
         {
           "name": "Google Photos (Gunshot) (iOS 17+)",
@@ -1270,7 +1270,7 @@
           "developerName": "tqmane & IPA Vault",
           "version": "7.44.0",
           "iconURL": "https://pub-dd800571175348b6a2745b3396360028.r2.dev/App%20Icons/Google-Photos-Icons/Google-Photos-AppStore-1024x1024.png",
-          "subtitle": "Google Photos 7.44.0 with Gunshot 0.2.4 (iOS 17+)"
+          "subtitle": "Google Photos 7.44.0 with Gunshot 0.2.5 (iOS 17+)"
         },
         {
           "name": "Google Photos (Gunshot)",
@@ -1278,7 +1278,7 @@
           "developerName": "tqmane & IPA Vault",
           "version": "7.93.0",
           "iconURL": "https://pub-dd800571175348b6a2745b3396360028.r2.dev/App%20Icons/Google-Photos-Icons/Google-Photos-AppStore-1024x1024.png",
-          "subtitle": "Google Photos 7.93.0 with Gunshot 0.2.4"
+          "subtitle": "Google Photos 7.93.0 with Gunshot 0.2.5"
         },
         {
           "name": "iMe (MxGram)",
@@ -1372,9 +1372,9 @@
           "name": "Messenger (Flow)",
           "bundleIdentifier": "com.facebook.Messenger.flow",
           "developerName": "dvntms & IPA Vault",
-          "version": "579.0.0",
+          "version": "580.0.0",
           "iconURL": "https://pub-dd800571175348b6a2745b3396360028.r2.dev/App%20Icons/Messenger-Icons/Messenger-AppStore-1024x1024.png",
-          "subtitle": "Messenger 579.0.0 with Flow 1.0"
+          "subtitle": "Messenger 580.0.0 with Flow 1.0"
         },
         {
           "name": "Messenger (Login)",
@@ -1388,9 +1388,9 @@
           "name": "Messenger (MSGPlusX)",
           "bundleIdentifier": "com.facebook.Messenger",
           "developerName": "Dens0r & IPA Vault & lucaspedrosa",
-          "version": "579.0.0",
+          "version": "580.0.0",
           "iconURL": "https://pub-dd800571175348b6a2745b3396360028.r2.dev/App%20Icons/Messenger-Icons/Messenger-AppStore-1024x1024.png",
-          "subtitle": "Messenger 579.0.0 with MSGPlusX 1.1"
+          "subtitle": "Messenger 580.0.0 with MSGPlusX 1.1"
         },
         {
           "name": "Nagram (Lead)",
@@ -1436,9 +1436,9 @@
           "name": "Reddit (RedditFilter)",
           "bundleIdentifier": "com.reddit.Reddit",
           "developerName": "Moe & IPA Vault",
-          "version": "2026.37.0",
+          "version": "2026.38.0",
           "iconURL": "https://pub-dd800571175348b6a2745b3396360028.r2.dev/App%20Icons/Reddit-Icons/Reddit-AppStore-1024x1024.png",
-          "subtitle": "Reddit 2026.37.0 with RedditFilter 3.3"
+          "subtitle": "Reddit 2026.38.0 with RedditFilter 4.3"
         },
         {
           "name": "SoundCloud (NexaSC) (iOS 16.0-16.3)",
@@ -1521,20 +1521,20 @@
           "subtitle": "Telegram 12.9.4 with TGExtra 1.7.8"
         },
         {
-          "name": "Spotify (Spoti.pw 0.21.1)",
+          "name": "Spotify (EeveeSpotify 6.6.8 + Spoti.pw 0.22.0)",
           "bundleIdentifier": "com.spotify.client",
           "developerName": "skopevoj & IPA Vault",
-          "version": "9.1.84",
+          "version": "9.1.86",
           "iconURL": "https://pub-dd800571175348b6a2745b3396360028.r2.dev/App%20Icons/Spotify-Icons/Spotify-AppStore-1024x1024.png",
-          "subtitle": "Spotify 9.1.84 with Spoti.pw 0.21.1"
+          "subtitle": "Spotify 9.1.86 with EeveeSpotify 6.6.8 + Spoti.pw 0.22.0"
         },
         {
-          "name": "Spotify (Spoti.pw 0.21.1) (No Plugins)",
+          "name": "Spotify (EeveeSpotify 6.6.8 + Spoti.pw 0.22.0) (No Plugins)",
           "bundleIdentifier": "com.spotify.client.spotipw.noplugins",
           "developerName": "skopevoj & IPA Vault",
-          "version": "9.1.84",
+          "version": "9.1.86",
           "iconURL": "https://pub-dd800571175348b6a2745b3396360028.r2.dev/App%20Icons/Spotify-Icons/Spotify-AppStore-1024x1024.png",
-          "subtitle": "Spotify 9.1.84 with Spoti.pw 0.20.0 (No Plugins)"
+          "subtitle": "Spotify 9.1.86 with EeveeSpotify 6.6.8 + Spoti.pw 0.22.0 (No Plugins)"
         },
         {
           "name": "Threads (ThreadSaver)",
@@ -1548,9 +1548,9 @@
           "name": "TikTok (Infinitok)",
           "bundleIdentifier": "com.zhiliaoapp.musically",
           "developerName": "Mod4 & IPA Vault",
-          "version": "46.9.0",
+          "version": "47.0.0",
           "iconURL": "https://pub-dd800571175348b6a2745b3396360028.r2.dev/App%20Icons/TikTok-Icons/TikTok-AppStore-1024x1024.png",
-          "subtitle": "TikTok 46.9.0 with Infinitok 0.0.2"
+          "subtitle": "TikTok 47.0.0 with Infinitok 0.0.2"
         },
         {
           "name": "Turrit (Lead)",
@@ -1588,33 +1588,25 @@
           "name": "Twitch",
           "bundleIdentifier": "tv.twitch",
           "developerName": "dvntms/zeroxdeadbeef/canpng/IPA Vault",
-          "version": "31.2.4",
+          "version": "31.3.2",
           "iconURL": "https://pub-dd800571175348b6a2745b3396360028.r2.dev/App%20Icons/Twitch-Tweach-TC-Icons/Twitch-AppStore-1024x1024.png",
-          "subtitle": "Twitch 31.2.4 with Tweach 2.4.1 + Twitch Control 0.0.6"
+          "subtitle": "Twitch 31.3.2 with Tweach 2.4.1 + Twitch Control 0.0.6"
         },
         {
           "name": "Twitch (Glass)",
           "bundleIdentifier": "tv.twitch.glass",
           "developerName": "dvntms/zeroxdeadbeef/canpng/IPA Vault",
-          "version": "31.2.4",
+          "version": "31.3.2",
           "iconURL": "https://pub-dd800571175348b6a2745b3396360028.r2.dev/App%20Icons/Twitch-Tweach-TC-Icons/Twitch-AppStore-1024x1024.png",
-          "subtitle": "Twitch 31.2.4 with Tweach 2.4.1 + Twitch Control 0.0.6 (Glass)"
-        },
-        {
-          "name": "Twitter (Login)",
-          "bundleIdentifier": "com.atebits.Tweetie2.twitter.login.v9-67",
-          "developerName": "IPA Vault",
-          "version": "9.67",
-          "iconURL": "https://pub-dd800571175348b6a2745b3396360028.r2.dev/App%20Icons/Twitter-12.14-Icons/Twitter-AppStore-1024x1024.png",
-          "subtitle": "Twitter 9.67 login build"
+          "subtitle": "Twitch 31.3.2 with Tweach 2.4.1 + Twitch Control 0.0.6 (Glass)"
         },
         {
           "name": "Twitter NFB",
           "bundleIdentifier": "com.atebits.Tweetie2.twitter",
           "developerName": "orionblur & IPA Vault",
-          "version": "12.27.1",
+          "version": "12.28.1",
           "iconURL": "https://pub-dd800571175348b6a2745b3396360028.r2.dev/App%20Icons/Twitter-12.14-Icons/Twitter-AppStore-1024x1024.png",
-          "subtitle": "Twitter 12.27.1 with NFB 6.7.0"
+          "subtitle": "Twitter 12.28.1 with NFB 7.0.0"
         },
         {
           "name": "Twitter NFB (Glass)",
@@ -1628,9 +1620,9 @@
           "name": "Twitter NFB + TWI",
           "bundleIdentifier": "com.atebits.Tweetie2.twittertwi",
           "developerName": "orionblur & dens0r & IPA Vault",
-          "version": "12.27.1",
+          "version": "12.28.1",
           "iconURL": "https://pub-dd800571175348b6a2745b3396360028.r2.dev/App%20Icons/Twitter-12.14-Icons/Twitter-AppStore-1024x1024.png",
-          "subtitle": "Twitter 12.27.1 with NFB 6.7.0 + TWIGalaxy 1.14"
+          "subtitle": "Twitter 12.28.1 with NFB 7.0.0 + TWIGalaxy 1.14"
         },
         {
           "name": "Twitter NFB + TWI (Glass)",
@@ -1644,9 +1636,9 @@
           "name": "X NFB",
           "bundleIdentifier": "com.atebits.Tweetie2",
           "developerName": "orionblur & IPA Vault",
-          "version": "12.27.1",
+          "version": "12.28.1",
           "iconURL": "https://pub-dd800571175348b6a2745b3396360028.r2.dev/App%20Icons/X-Icons/X-AppStore-1024x1024.png",
-          "subtitle": "X 12.27.1 with NFB 6.7.0"
+          "subtitle": "X 12.28.1 with NFB 7.0.0"
         },
         {
           "name": "X NFB (Glass)",
@@ -1660,9 +1652,9 @@
           "name": "X NFB + TWI",
           "bundleIdentifier": "com.atebits.Tweetie2.twi",
           "developerName": "orionblur & dens0r & IPA Vault",
-          "version": "12.27.1",
+          "version": "12.28.1",
           "iconURL": "https://pub-dd800571175348b6a2745b3396360028.r2.dev/App%20Icons/X-Icons/X-AppStore-1024x1024.png",
-          "subtitle": "X 12.27.1 with NFB 6.7.0 + TWIGalaxy 1.14"
+          "subtitle": "X 12.28.1 with NFB 7.0.0 + TWIGalaxy 1.14"
         },
         {
           "name": "X NFB + TWI (Glass)",
@@ -1684,9 +1676,9 @@
           "name": "YouTube (YouMod 2.0.0)",
           "bundleIdentifier": "com.google.ios.youtube.youmod",
           "developerName": "Tonwalter888 & IPA Vault",
-          "version": "21.37.5",
+          "version": "21.38.2",
           "iconURL": "https://pub-dd800571175348b6a2745b3396360028.r2.dev/App%20Icons/YouTube-Icons/YouTube-AppStore-1024x1024.png",
-          "subtitle": "YouTube 21.37.5 with YouMod 2.0.0"
+          "subtitle": "YouTube 21.38.2 with YouMod 2.0.0"
         },
         {
           "name": "YouTube (YTKACE 1.0.1) (iOS 16+)",
@@ -1708,17 +1700,17 @@
           "name": "YTMUltimate+",
           "bundleIdentifier": "com.google.ios.youtubemusic.ytmultimateplus",
           "developerName": "dvntms & IPA Vault",
-          "version": "9.37.2",
+          "version": "9.38.2",
           "iconURL": "https://pub-dd800571175348b6a2745b3396360028.r2.dev/App%20Icons/YouTube-Music-Icons/YouTube-Music-AppStore-1024x1024.png",
-          "subtitle": "YouTube Music 9.37.2 with YTMUltimate+ 2.4.1"
+          "subtitle": "YouTube Music 9.38.2 with YTMUltimate+ 2.4.1"
         },
         {
           "name": "YTMUltimate+ (No PiP)",
           "bundleIdentifier": "com.google.ios.youtubemusic",
           "developerName": "dvntms & IPA Vault",
-          "version": "9.37.2",
+          "version": "9.38.2",
           "iconURL": "https://pub-dd800571175348b6a2745b3396360028.r2.dev/App%20Icons/YouTube-Music-Icons/YouTube-Music-AppStore-1024x1024.png",
-          "subtitle": "YouTube Music 9.37.2 with YTMUltimate+ 2.4.1 No PiP"
+          "subtitle": "YouTube Music 9.38.2 with YTMUltimate+ 2.4.1 No PiP"
         }
       ]
     },
@@ -4820,10 +4812,42 @@
     {
       "id": "apptesters",
       "name": "AppTesters IPA Repo",
-      "appCount": 9307,
+      "appCount": 9311,
       "catalogLimited": true,
       "iconURL": "https://apptesters.org/apptesters-512x512.png",
       "apps": [
+        {
+          "name": "VSCO",
+          "bundleIdentifier": "co.visualsupply.cam",
+          "developerName": "",
+          "version": "461.9.0",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/co.visualsupply.cam.png",
+          "subtitle": ""
+        },
+        {
+          "name": "Thenx",
+          "bundleIdentifier": "com.calisthenics.thenx",
+          "developerName": "",
+          "version": "6.8.1",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.calisthenics.thenx.png",
+          "subtitle": ""
+        },
+        {
+          "name": "NutriCoach",
+          "bundleIdentifier": "nutrition.coach",
+          "developerName": "",
+          "version": "2.4.0",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/nutrition.coach.png",
+          "subtitle": ""
+        },
+        {
+          "name": "fGet",
+          "bundleIdentifier": "com.penguinbit.fastdownload",
+          "developerName": "",
+          "version": "1.6.1",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.penguinbit.fastdownload.png",
+          "subtitle": ""
+        },
         {
           "name": "PSExpress",
           "bundleIdentifier": "com.adobe.PSMobile",
@@ -6390,38 +6414,6 @@
           "developerName": "",
           "version": "4.01.05",
           "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.mwm.guitartuner.png",
-          "subtitle": ""
-        },
-        {
-          "name": "Scanner",
-          "bundleIdentifier": "com.apalonapps.pdffree",
-          "developerName": "",
-          "version": "2.12.3",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.apalonapps.pdffree.png",
-          "subtitle": ""
-        },
-        {
-          "name": "edjingMix",
-          "bundleIdentifier": "com.edjing.edjingdjturntable",
-          "developerName": "",
-          "version": "9.2.0",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.edjing.edjingdjturntable.png",
-          "subtitle": ""
-        },
-        {
-          "name": "Bearable",
-          "bundleIdentifier": "co.codeleap.bearable",
-          "developerName": "",
-          "version": "1.0.611",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/co.codeleap.bearable.png",
-          "subtitle": ""
-        },
-        {
-          "name": "1Blocker",
-          "bundleIdentifier": "com.khanov.BlockerX",
-          "developerName": "",
-          "version": "6.6.3",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.khanov.BlockerX.png",
           "subtitle": ""
         }
       ]
@@ -8276,5 +8268,5 @@
       ]
     }
   ],
-  "uniqueAppCount": 1893
+  "uniqueAppCount": 1892
 }
