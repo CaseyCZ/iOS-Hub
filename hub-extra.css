@@ -952,3 +952,14 @@ body{
     transition-duration:.01ms!important;
   }
 }
+
+/* v1.1.5 — mobile horizontal filter overflow fix */
+@media(max-width:640px){
+  .filter-tabs{
+    justify-content:flex-start;
+    -webkit-overflow-scrolling:touch;
+    overscroll-behavior-inline:contain;
+  }
+  .filter-tabs>:first-child{margin-inline-start:auto}
+  .filter-tabs>:last-child{margin-inline-end:auto}
+}
