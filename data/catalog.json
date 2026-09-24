@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-23T21:31:50Z",
+  "generatedAt": "2026-09-24T04:54:31Z",
   "sources": [
     {
       "id": "utm",
@@ -314,7 +314,7 @@
           "name": "StikDebug",
           "bundleIdentifier": "com.stik.stikdebug",
           "developerName": "StikDebug",
-          "version": "3.1.10",
+          "version": "3.1.11",
           "iconURL": "https://github.com/StikDebug/StikDebug/blob/main/assets/StikDebug.png?raw=true",
           "subtitle": "On-device JIT enabler and device toolbox."
         },
@@ -4820,10 +4820,34 @@
     {
       "id": "apptesters",
       "name": "AppTesters IPA Repo",
-      "appCount": 9291,
+      "appCount": 9294,
       "catalogLimited": true,
       "iconURL": "https://apptesters.org/apptesters-512x512.png",
       "apps": [
+        {
+          "name": "fGet",
+          "bundleIdentifier": "com.penguinbit.fastdownload",
+          "developerName": "",
+          "version": "1.6.0",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.penguinbit.fastdownload.png",
+          "subtitle": ""
+        },
+        {
+          "name": "iScreen",
+          "bundleIdentifier": "com.zerone.hidesktop",
+          "developerName": "",
+          "version": "5.1.10",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.zerone.hidesktop.png",
+          "subtitle": ""
+        },
+        {
+          "name": "LookUp",
+          "bundleIdentifier": "in.muditbhargava.LookUp",
+          "developerName": "",
+          "version": "13.0.3",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/in.muditbhargava.LookUp.png",
+          "subtitle": ""
+        },
         {
           "name": "Balance",
           "bundleIdentifier": "com.elevateapp.kamino.kamino",
@@ -6399,30 +6423,6 @@
           "version": "5.5.1",
           "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/club.boxbox.widgets-ios.png",
           "subtitle": ""
-        },
-        {
-          "name": "PeakVisor",
-          "bundleIdentifier": "ru.routes.peakvisor",
-          "developerName": "",
-          "version": "5.113",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/ru.routes.peakvisor.png",
-          "subtitle": ""
-        },
-        {
-          "name": "Documents",
-          "bundleIdentifier": "com.readdle.ReaddleDocsIPad",
-          "developerName": "",
-          "version": "8.22.4",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.readdle.ReaddleDocsIPad.png",
-          "subtitle": ""
-        },
-        {
-          "name": "Picsew",
-          "bundleIdentifier": "com.sugarmo.ScrollClip",
-          "developerName": "",
-          "version": "3.19",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.sugarmo.ScrollClip.png",
-          "subtitle": ""
         }
       ]
     },
@@ -6570,7 +6570,7 @@
     {
       "id": "ipalibrary",
       "name": "IPALibrary Source",
-      "appCount": 834,
+      "appCount": 814,
       "catalogLimited": true,
       "iconURL": "https://ipalibrary.me/favicon.ico",
       "apps": [
@@ -7319,14 +7319,6 @@
           "subtitle": ""
         },
         {
-          "name": "Bridge Constructor",
-          "bundleIdentifier": "me.ipalibrary.bridgeconstructor",
-          "developerName": "Headup GmbH",
-          "version": "11.4",
-          "iconURL": "https://ipalibrary.me/wp-content/uploads/2022/12/Bridge-Constructor-150x150.png",
-          "subtitle": ""
-        },
-        {
           "name": "Bridge Constructor Playground",
           "bundleIdentifier": "me.ipalibrary.bridgeconstructorplayground",
           "developerName": "Headup GmbH",
@@ -7364,22 +7356,6 @@
           "developerName": "UK Music Apps Ltd",
           "version": "2.4.3",
           "iconURL": "https://ipalibrary.me/wp-content/uploads/2022/12/SessionBand-Jazz-2-150x150.png",
-          "subtitle": ""
-        },
-        {
-          "name": "Morphing LED Banner",
-          "bundleIdentifier": "me.ipalibrary.morphingledbanner",
-          "developerName": "Yuanji Li",
-          "version": "2.6",
-          "iconURL": "https://ipalibrary.me/wp-content/uploads/2022/12/Morphing-LED-Banner-150x150.png",
-          "subtitle": ""
-        },
-        {
-          "name": "Implosion – Never Lose Hope",
-          "bundleIdentifier": "me.ipalibrary.implosionneverlosehope",
-          "developerName": "Rayark International Limited",
-          "version": "1.5.3",
-          "iconURL": "https://ipalibrary.me/wp-content/uploads/2022/12/Implosion-Never-Lose-Hope-150x150.png",
           "subtitle": ""
         },
         {
@@ -7428,14 +7404,6 @@
           "developerName": "UK Music Apps Ltd",
           "version": "2.5",
           "iconURL": "https://ipalibrary.me/wp-content/uploads/2022/12/SessionBand-Jazz-3-150x150.png",
-          "subtitle": ""
-        },
-        {
-          "name": "My Sketch – Pencil Sketches",
-          "bundleIdentifier": "me.ipalibrary.mysketchpencilsketches",
-          "developerName": "Miinu Limited",
-          "version": "6.9",
-          "iconURL": "https://ipalibrary.me/wp-content/uploads/2022/12/My-Sketch-Pencil-Sketches-150x150.png",
           "subtitle": ""
         },
         {
@@ -7551,14 +7519,6 @@
           "subtitle": ""
         },
         {
-          "name": "Pixel Plus Premium – Pixel++",
-          "bundleIdentifier": "me.ipalibrary.pixelpluspremiumpixel",
-          "developerName": "MWM",
-          "version": "1.0",
-          "iconURL": "https://ipalibrary.me/wp-content/uploads/2022/12/Pixel-Plus-150x150.jpeg",
-          "subtitle": ""
-        },
-        {
           "name": "Equalizer Premium – Equalizer++",
           "bundleIdentifier": "me.ipalibrary.equalizerpremiumequalizer",
           "developerName": "MWM",
@@ -7567,51 +7527,11 @@
           "subtitle": ""
         },
         {
-          "name": "Pins Pro – Pins++",
-          "bundleIdentifier": "me.ipalibrary.pinspropins",
-          "developerName": "微咔世纪",
-          "version": "2.4.7",
-          "iconURL": "https://ipalibrary.me/wp-content/uploads/2023/01/Pins-Artistic-Effects-Camera-150x150.jpeg",
-          "subtitle": ""
-        },
-        {
-          "name": "Goat Simulator",
-          "bundleIdentifier": "me.ipalibrary.goatsimulator",
-          "developerName": "Coffee Stain Publishing",
-          "version": "2.0.6",
-          "iconURL": "https://ipalibrary.me/wp-content/uploads/2023/01/Goat-Simulator-150x150.png",
-          "subtitle": ""
-        },
-        {
-          "name": "Goat Simulator GoatZ",
-          "bundleIdentifier": "me.ipalibrary.goatsimulatorgoatz",
-          "developerName": "Coffee Stain Publishing",
-          "version": "2.0.6",
-          "iconURL": "https://ipalibrary.me/wp-content/uploads/2023/01/Goat-Simulator-GoatZ-150x150.png",
-          "subtitle": ""
-        },
-        {
-          "name": "Goat Simulator MMO Simulator",
-          "bundleIdentifier": "me.ipalibrary.goatsimulatormmosimulator",
-          "developerName": "Coffee Stain Publishing",
-          "version": "2.0.6",
-          "iconURL": "https://ipalibrary.me/wp-content/uploads/2023/01/Goat-Simulator-MMO-Simulator-150x150.png",
-          "subtitle": ""
-        },
-        {
           "name": "Goat Simulator PAYDAY",
           "bundleIdentifier": "me.ipalibrary.goatsimulatorpayday",
           "developerName": "Coffee Stain Publishing",
           "version": "2.0.6",
           "iconURL": "https://ipalibrary.me/wp-content/uploads/2023/01/Goat-Simulator-PAYDAY-150x150.png",
-          "subtitle": ""
-        },
-        {
-          "name": "Goat Simulator Waste of Space",
-          "bundleIdentifier": "me.ipalibrary.goatsimulatorwasteofspace",
-          "developerName": "Coffee Stain Publishing",
-          "version": "2.0.6",
-          "iconURL": "https://ipalibrary.me/wp-content/uploads/2023/01/Goat-Simulator-Waste-of-Space-150x150.png",
           "subtitle": ""
         },
         {
@@ -7628,14 +7548,6 @@
           "developerName": "ruquan zhang",
           "version": "1.0.0",
           "iconURL": "https://ipalibrary.me/wp-content/uploads/2023/01/AM3U-Pro-150x150.png",
-          "subtitle": ""
-        },
-        {
-          "name": "Screen Mirroring + Chromecast",
-          "bundleIdentifier": "me.ipalibrary.screenmirroringchromecast",
-          "developerName": "Kraus und Karnath GbR 2Kit Consulting",
-          "version": "2.9",
-          "iconURL": "https://ipalibrary.me/wp-content/uploads/2023/01/TV-Mirror-for-Chromecast-150x150.png",
           "subtitle": ""
         },
         {
@@ -7668,14 +7580,6 @@
           "developerName": "Leonid Ilyaev",
           "version": "1.6",
           "iconURL": "https://ipalibrary.me/wp-content/uploads/2023/01/Paradeo-150x150.jpeg",
-          "subtitle": ""
-        },
-        {
-          "name": "Focos Pro – Focos++",
-          "bundleIdentifier": "me.ipalibrary.focosprofocos",
-          "developerName": "Bending Spoons Apps ApS",
-          "version": "2.5.22",
-          "iconURL": "https://ipalibrary.me/wp-content/uploads/2022/09/Focos-150x150.png",
           "subtitle": ""
         },
         {
@@ -7735,14 +7639,6 @@
           "subtitle": ""
         },
         {
-          "name": "KillMyOTA",
-          "bundleIdentifier": "me.ipalibrary.killmyota",
-          "developerName": "haxi0",
-          "version": "1.1",
-          "iconURL": "https://ipalibrary.me/wp-content/uploads/2023/01/KillMyOTA-150x150.png",
-          "subtitle": ""
-        },
-        {
           "name": "Camera360 VIP – Camera360++",
           "bundleIdentifier": "me.ipalibrary.camera360vipcamera360",
           "developerName": "PinGuo Inc.",
@@ -7756,14 +7652,6 @@
           "developerName": "Playdigious",
           "version": "1.9",
           "iconURL": "https://ipalibrary.me/wp-content/uploads/2023/02/Teslagrad-150x150.png",
-          "subtitle": ""
-        },
-        {
-          "name": "DaVinci Resolve for iPad",
-          "bundleIdentifier": "me.ipalibrary.davinciresolveforipad",
-          "developerName": "Blackmagic Design Inc",
-          "version": "18.1.2.2",
-          "iconURL": "https://ipalibrary.me/wp-content/uploads/2023/02/DaVinci-Resolve-for-iPad-150x150.png",
           "subtitle": ""
         },
         {
@@ -7799,14 +7687,6 @@
           "subtitle": ""
         },
         {
-          "name": "foolcontrol",
-          "bundleIdentifier": "me.ipalibrary.foolcontrol",
-          "developerName": "Mikael Lubtchansky",
-          "version": "3.50",
-          "iconURL": "https://ipalibrary.me/wp-content/uploads/2023/02/foolcontrol-150x150.png",
-          "subtitle": ""
-        },
-        {
           "name": "Fran Bow Chapter 1",
           "bundleIdentifier": "me.ipalibrary.franbowchapter1",
           "developerName": "Killmonday Games",
@@ -7836,14 +7716,6 @@
           "developerName": "Killmonday Games",
           "version": "1.1",
           "iconURL": "https://ipalibrary.me/wp-content/uploads/2023/02/Fran-Bow-Chapter-4-150x150.jpeg",
-          "subtitle": ""
-        },
-        {
-          "name": "Fran Bow Chapter 5",
-          "bundleIdentifier": "me.ipalibrary.franbowchapter5",
-          "developerName": "Killmonday Games",
-          "version": "1.1",
-          "iconURL": "https://ipalibrary.me/wp-content/uploads/2023/02/Fran-Bow-Chapter-5-150x150.jpeg",
           "subtitle": ""
         },
         {
@@ -7884,14 +7756,6 @@
           "developerName": "Michael Hegemann",
           "version": "1.7",
           "iconURL": "https://ipalibrary.me/wp-content/uploads/2023/02/Slender-Rising-150x150.png",
-          "subtitle": ""
-        },
-        {
-          "name": "Slender Rising 2",
-          "bundleIdentifier": "me.ipalibrary.slenderrising2",
-          "developerName": "Michael Hegemann",
-          "version": "1.3",
-          "iconURL": "https://ipalibrary.me/wp-content/uploads/2023/02/Slender-Rising-2-150x150.png",
           "subtitle": ""
         },
         {
@@ -7991,14 +7855,6 @@
           "subtitle": ""
         },
         {
-          "name": "THE KING OF FIGHTERS ’98",
-          "bundleIdentifier": "me.ipalibrary.thekingoffighters98",
-          "developerName": "SNK CORPORATION",
-          "version": "1.3.1",
-          "iconURL": "https://ipalibrary.me/wp-content/uploads/2023/02/THE-KING-OF-FIGHTERS-98-150x150.png",
-          "subtitle": ""
-        },
-        {
           "name": "THE KING OF FIGHTERS ’97",
           "bundleIdentifier": "me.ipalibrary.thekingoffighters97",
           "developerName": "SNK CORPORATION",
@@ -8028,14 +7884,6 @@
           "developerName": "Black Frog Industries",
           "version": "6.0",
           "iconURL": "https://ipalibrary.me/wp-content/uploads/2023/02/iSwap-Faces-Pro-150x150.png",
-          "subtitle": ""
-        },
-        {
-          "name": "Space Marshals 2",
-          "bundleIdentifier": "me.ipalibrary.spacemarshals2",
-          "developerName": "Pixelbite",
-          "version": "1.4.7",
-          "iconURL": "https://ipalibrary.me/wp-content/uploads/2023/02/Space-Marshals-2-150x150.png",
           "subtitle": ""
         },
         {
@@ -8111,14 +7959,6 @@
           "subtitle": ""
         },
         {
-          "name": "Toca Boo",
-          "bundleIdentifier": "me.ipalibrary.tocaboo",
-          "developerName": "Toca Boca AB",
-          "version": "2.1",
-          "iconURL": "https://ipalibrary.me/wp-content/uploads/2023/02/Toca-Boo-150x150.png",
-          "subtitle": ""
-        },
-        {
           "name": "Toca Life: Vacation",
           "bundleIdentifier": "me.ipalibrary.tocalifevacation",
           "developerName": "Toca Boca AB",
@@ -8172,6 +8012,166 @@
           "developerName": "Alex Komarov Inc.",
           "version": "1.5.5",
           "iconURL": "https://ipalibrary.me/wp-content/uploads/2023/02/World-Clock-Pro-Mobile-150x150.png",
+          "subtitle": ""
+        },
+        {
+          "name": "Evoland",
+          "bundleIdentifier": "me.ipalibrary.evoland",
+          "developerName": "Playdigious",
+          "version": "1.6.3",
+          "iconURL": "https://ipalibrary.me/wp-content/uploads/2023/02/Evoland-150x150.png",
+          "subtitle": ""
+        },
+        {
+          "name": "Evoland 2",
+          "bundleIdentifier": "me.ipalibrary.evoland2",
+          "developerName": "Playdigious",
+          "version": "2.1.1",
+          "iconURL": "https://ipalibrary.me/wp-content/uploads/2023/02/Evoland-2-150x150.png",
+          "subtitle": ""
+        },
+        {
+          "name": "White Night",
+          "bundleIdentifier": "me.ipalibrary.whitenight",
+          "developerName": "Playdigious",
+          "version": "1.3",
+          "iconURL": "https://ipalibrary.me/wp-content/uploads/2023/02/White-Night-150x150.png",
+          "subtitle": ""
+        },
+        {
+          "name": "Hdo Play No Ads – Hdo Play++",
+          "bundleIdentifier": "me.ipalibrary.hdoplaynoadshdoplay",
+          "developerName": "Lê Tí",
+          "version": "1.0.2",
+          "iconURL": "https://ipalibrary.me/wp-content/uploads/2023/02/Hdo-Play-150x150.jpeg",
+          "subtitle": ""
+        },
+        {
+          "name": "Luca – Photo Editor & Filters",
+          "bundleIdentifier": "me.ipalibrary.lucaphotoeditorfilters",
+          "developerName": "Digital Hole Pvt. Ltd.",
+          "version": "1.4",
+          "iconURL": "https://ipalibrary.me/wp-content/uploads/2023/02/Luca-Photo-Editor-Filters-150x150.jpeg",
+          "subtitle": ""
+        },
+        {
+          "name": "Nocton Hill – Chat story",
+          "bundleIdentifier": "me.ipalibrary.noctonhillchatstory",
+          "developerName": "Eugeny Popov",
+          "version": "1.6.4",
+          "iconURL": "https://ipalibrary.me/wp-content/uploads/2023/02/Nocton-Hill-Chat-story-150x150.png",
+          "subtitle": ""
+        },
+        {
+          "name": "Glitch Art Studio Pro – Glitch Art Studio++",
+          "bundleIdentifier": "me.ipalibrary.glitchartstudioproglitchartstudio",
+          "developerName": "NET Sigma",
+          "version": "4.7",
+          "iconURL": "https://ipalibrary.me/wp-content/uploads/2023/02/Glitch-Art-Studio-Pro-150x150.jpeg",
+          "subtitle": ""
+        },
+        {
+          "name": "Groovo Premium – Groovo++",
+          "bundleIdentifier": "me.ipalibrary.groovopremiumgroovo",
+          "developerName": "BUZZMUSIQ INC",
+          "version": "4.8",
+          "iconURL": "https://ipalibrary.me/wp-content/uploads/2023/02/Groovo-150x150.jpeg",
+          "subtitle": ""
+        },
+        {
+          "name": "BiCam Pro – BiCam++",
+          "bundleIdentifier": "me.ipalibrary.bicamprobicam",
+          "developerName": "Brilic Media LLC",
+          "version": "1.1.1",
+          "iconURL": "https://ipalibrary.me/wp-content/uploads/2023/02/BiCam-150x150.jpeg",
+          "subtitle": ""
+        },
+        {
+          "name": "Cercube",
+          "bundleIdentifier": "me.ipalibrary.cercube",
+          "developerName": "Google LLC",
+          "version": "17.49.6 (T5.3.12)",
+          "iconURL": "https://ipalibrary.me/wp-content/uploads/2022/08/cercube-150x150.png",
+          "subtitle": ""
+        },
+        {
+          "name": "Twitter No Ads",
+          "bundleIdentifier": "me.ipalibrary.twitternoads",
+          "developerName": "Twitter",
+          "version": "9.46 (T1.5.0)",
+          "iconURL": "https://ipalibrary.me/wp-content/uploads/2022/11/Twitter-No-Ads-150x150.png",
+          "subtitle": ""
+        },
+        {
+          "name": "MoshUp Full Version – MoshUp++",
+          "bundleIdentifier": "me.ipalibrary.moshupfullversionmoshup",
+          "developerName": "Johannes Pfahler",
+          "version": "1.3",
+          "iconURL": "https://ipalibrary.me/wp-content/uploads/2023/02/MoshUp-150x150.jpeg",
+          "subtitle": ""
+        },
+        {
+          "name": "Glitch FX Pro – Glitch FX++",
+          "bundleIdentifier": "me.ipalibrary.glitchfxproglitchfx",
+          "developerName": "宇 叶",
+          "version": "1.7.1",
+          "iconURL": "https://ipalibrary.me/wp-content/uploads/2023/02/Glitch-FX-150x150.jpeg",
+          "subtitle": ""
+        },
+        {
+          "name": "SAMURAI SHODOWN IV ACA NEOGEO",
+          "bundleIdentifier": "me.ipalibrary.samuraishodownivacaneogeo",
+          "developerName": "SNK CORPORATION",
+          "version": "1.0",
+          "iconURL": "https://ipalibrary.me/wp-content/uploads/2023/03/SAMURAI-SHODOWN-IV-ACA-NEOGEO-150x150.jpeg",
+          "subtitle": ""
+        },
+        {
+          "name": "NOAA Marine Forecast & Weather",
+          "bundleIdentifier": "me.ipalibrary.noaamarineforecastweather",
+          "developerName": "LW Brands, LLC",
+          "version": "1.2",
+          "iconURL": "https://ipalibrary.me/wp-content/uploads/2023/03/NOAA-Marine-Forecast-Weather-150x150.jpeg",
+          "subtitle": ""
+        },
+        {
+          "name": "Scanner Pro – OCR Text Scanner",
+          "bundleIdentifier": "me.ipalibrary.scannerproocrtextscanner",
+          "developerName": "Beesoft Apps",
+          "version": "2.1.5",
+          "iconURL": "https://ipalibrary.me/wp-content/uploads/2023/03/Scanner-Pro-OCR-Text-Scanner-150x150.png",
+          "subtitle": ""
+        },
+        {
+          "name": "Focos Live Pro – Focos Live++",
+          "bundleIdentifier": "me.ipalibrary.focosliveprofocoslive",
+          "developerName": "Bending Spoons Apps ApS",
+          "version": "1.4.9",
+          "iconURL": "https://ipalibrary.me/wp-content/uploads/2022/09/Focos-Live-150x150.png",
+          "subtitle": ""
+        },
+        {
+          "name": "Pro Camera by Moment",
+          "bundleIdentifier": "me.ipalibrary.procamerabymoment",
+          "developerName": "Moment Inc.",
+          "version": "4.3.21",
+          "iconURL": "https://ipalibrary.me/wp-content/uploads/2023/03/Pro-Camera-by-Moment-150x150.png",
+          "subtitle": ""
+        },
+        {
+          "name": "PPSSPP",
+          "bundleIdentifier": "me.ipalibrary.ppsspp",
+          "developerName": "Henrik Rydgård",
+          "version": "1.14.4",
+          "iconURL": "https://ipalibrary.me/wp-content/uploads/2022/11/ppsspp-150x150.jpeg",
+          "subtitle": ""
+        },
+        {
+          "name": "Blacklist",
+          "bundleIdentifier": "me.ipalibrary.blacklist",
+          "developerName": "AppInstalleriOS",
+          "version": "1.0",
+          "iconURL": "https://ipalibrary.me/wp-content/uploads/2023/03/Blacklist-150x150.jpeg",
           "subtitle": ""
         }
       ]
@@ -8269,12 +8269,12 @@
           "name": "Twitter",
           "bundleIdentifier": "com.atebits.Tweetie2",
           "developerName": "actuallyaridan, nyaathea, timi2506, theacrat, orionblur",
-          "version": "12.26",
+          "version": "12.28.1",
           "iconURL": "https://raw.githubusercontent.com/orionblur/NeoFreeBird/v6/icon_rounded.png",
-          "subtitle": "NeoFreeBird version 6.7.0"
+          "subtitle": "NeoFreeBird version 6.7.1"
         }
       ]
     }
   ],
-  "uniqueAppCount": 1913
+  "uniqueAppCount": 1893
 }
