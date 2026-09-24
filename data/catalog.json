@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-24T17:13:40Z",
+  "generatedAt": "2026-09-24T21:32:59Z",
   "sources": [
     {
       "id": "utm",
@@ -1831,7 +1831,7 @@
           "name": "YouTube (Moe YTK)",
           "bundleIdentifier": "com.google.ios.youtube",
           "developerName": "Moe Apps",
-          "version": "21.38.2 (6.5.6)",
+          "version": "21.38.2 (6.5.8)",
           "iconURL": "https://raw.githubusercontent.com/MountainofPenguin/moe-altstore/main/icons/youtube-moe-ytk.png",
           "subtitle": "YTKillerPlus tweak build"
         },
@@ -1943,7 +1943,7 @@
           "name": "Instagram (INK Plus)",
           "bundleIdentifier": "com.burbn.instagram",
           "developerName": "Moe Apps",
-          "version": "448.0.0 (5.2.7)",
+          "version": "448.0.0 (5.2.9)",
           "iconURL": "https://raw.githubusercontent.com/MountainofPenguin/moe-altstore/main/icons/instagram-ink-plus.png",
           "subtitle": "INK Plus tweak build"
         },
@@ -3363,10 +3363,18 @@
     {
       "id": "cypwn-ipa",
       "name": "CyPwn IPA Library",
-      "appCount": 209,
+      "appCount": 210,
       "catalogLimited": true,
       "iconURL": "https://repo.cypwn.xyz/assets/images/cypwn_small.png",
       "apps": [
+        {
+          "name": "Stremio-2.0.7",
+          "bundleIdentifier": "com.stremio.pal",
+          "developerName": "Stremio-2.0.7 x CyPwn",
+          "version": "2.0.7",
+          "iconURL": "https://ipa.cypwn.xyz/serve/icons/Stremio-2.0.7.png",
+          "subtitle": ""
+        },
         {
           "name": "Stremio-2.0.6",
           "bundleIdentifier": "com.stremio.pal",
@@ -4798,24 +4806,56 @@
           "version": "2.6",
           "iconURL": "https://ipa.cypwn.xyz/serve/icons/Star_Map_2.6_Satella.png",
           "subtitle": ""
-        },
-        {
-          "name": "RefacePro_3.12.0",
-          "bundleIdentifier": "cypwn.RefacePro_3.12.0.3.12.0",
-          "developerName": "RefacePro_3.12.0 x CyPwn",
-          "version": "3.12.0",
-          "iconURL": "https://ipa.cypwn.xyz/serve/icons/RefacePro_3.12.0.png",
-          "subtitle": ""
         }
       ]
     },
     {
       "id": "apptesters",
       "name": "AppTesters IPA Repo",
-      "appCount": 9311,
+      "appCount": 9316,
       "catalogLimited": true,
       "iconURL": "https://apptesters.org/apptesters-512x512.png",
       "apps": [
+        {
+          "name": "Captions",
+          "bundleIdentifier": "boomer.Smart-Video",
+          "developerName": "",
+          "version": "13.36.0",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/boomer.Smart-Video.png",
+          "subtitle": ""
+        },
+        {
+          "name": "Polish",
+          "bundleIdentifier": "com.photoeditor.polish",
+          "developerName": "",
+          "version": "2.10.0",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.photoeditor.polish.png",
+          "subtitle": ""
+        },
+        {
+          "name": "Pillow",
+          "bundleIdentifier": "com.neybox.Pillow",
+          "developerName": "",
+          "version": "6.6",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.neybox.Pillow.png",
+          "subtitle": ""
+        },
+        {
+          "name": "Mockview",
+          "bundleIdentifier": "com.kavsoft.MockviewApp",
+          "developerName": "",
+          "version": "5.0.3",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.kavsoft.MockviewApp.png",
+          "subtitle": ""
+        },
+        {
+          "name": "Dictionary",
+          "bundleIdentifier": "com.mobisystems.OxfordDictionaryOfEnglishFree",
+          "developerName": "",
+          "version": "16.6.1",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.mobisystems.OxfordDictionaryOfEnglishFree.png",
+          "subtitle": ""
+        },
         {
           "name": "VSCO",
           "bundleIdentifier": "co.visualsupply.cam",
@@ -6374,46 +6414,6 @@
           "developerName": "",
           "version": "3.4.15",
           "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.aoklab.fewerphotos.png",
-          "subtitle": ""
-        },
-        {
-          "name": "MyFitnessPal",
-          "bundleIdentifier": "com.myfitnesspal.mfp",
-          "developerName": "",
-          "version": "26.37.0",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.myfitnesspal.mfp.png",
-          "subtitle": ""
-        },
-        {
-          "name": "Drafts",
-          "bundleIdentifier": "com.agiletortoise.Drafts5",
-          "developerName": "",
-          "version": "54.0.2",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.agiletortoise.Drafts5.png",
-          "subtitle": ""
-        },
-        {
-          "name": "Calendars",
-          "bundleIdentifier": "com.readdle.CalendarsLite",
-          "developerName": "",
-          "version": "5.39.1",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.readdle.CalendarsLite.png",
-          "subtitle": ""
-        },
-        {
-          "name": "Camera",
-          "bundleIdentifier": "com.andyworks.camera",
-          "developerName": "",
-          "version": "1.59",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.andyworks.camera.png",
-          "subtitle": ""
-        },
-        {
-          "name": "TunerPro",
-          "bundleIdentifier": "com.mwm.guitartuner",
-          "developerName": "",
-          "version": "4.01.05",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.mwm.guitartuner.png",
           "subtitle": ""
         }
       ]
