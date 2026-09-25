@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-25T17:14:12Z",
+  "generatedAt": "2026-09-25T21:36:51Z",
   "sources": [
     {
       "id": "utm",
@@ -4820,10 +4820,66 @@
     {
       "id": "apptesters",
       "name": "AppTesters IPA Repo",
-      "appCount": 9325,
+      "appCount": 9332,
       "catalogLimited": true,
       "iconURL": "https://apptesters.org/apptesters-512x512.png",
       "apps": [
+        {
+          "name": "Dazz",
+          "bundleIdentifier": "dazz.camera.vintagecamera",
+          "developerName": "",
+          "version": "2.17.7",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/dazz.camera.vintagecamera.png",
+          "subtitle": ""
+        },
+        {
+          "name": "Fitia",
+          "bundleIdentifier": "com.ulisesolave.Fitia",
+          "developerName": "",
+          "version": "25.0.4",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.ulisesolave.Fitia.png",
+          "subtitle": ""
+        },
+        {
+          "name": "Locket",
+          "bundleIdentifier": "com.locket.Locket",
+          "developerName": "",
+          "version": "2.66.0",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.locket.Locket.png",
+          "subtitle": ""
+        },
+        {
+          "name": "Encode",
+          "bundleIdentifier": "com.upskew.encode.ios",
+          "developerName": "",
+          "version": "6.23.0",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.upskew.encode.ios.png",
+          "subtitle": ""
+        },
+        {
+          "name": "BoldVoice",
+          "bundleIdentifier": "com.wellocution.iosapp",
+          "developerName": "",
+          "version": "4.4.6",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.wellocution.iosapp.png",
+          "subtitle": ""
+        },
+        {
+          "name": "Dictionary",
+          "bundleIdentifier": "com.mobisystems.OxfordDictionaryOfEnglishFree",
+          "developerName": "",
+          "version": "16.7",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.mobisystems.OxfordDictionaryOfEnglishFree.png",
+          "subtitle": ""
+        },
+        {
+          "name": "Calendars",
+          "bundleIdentifier": "com.readdle.CalendarsLite",
+          "developerName": "",
+          "version": "5.39.3",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.readdle.CalendarsLite.png",
+          "subtitle": ""
+        },
         {
           "name": "InCollage",
           "bundleIdentifier": "PhotoEditor.PhotoCollage.inCollage",
@@ -6366,62 +6422,6 @@
           "developerName": "",
           "version": "19.2",
           "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.intsig.CamScannerLite.png",
-          "subtitle": ""
-        },
-        {
-          "name": "KineMaster",
-          "bundleIdentifier": "com.kinemaster.kios",
-          "developerName": "",
-          "version": "8.2.2",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.kinemaster.kios.png",
-          "subtitle": ""
-        },
-        {
-          "name": "LUTStudio",
-          "bundleIdentifier": "com.solveit.lut-studio",
-          "developerName": "",
-          "version": "4.0.5",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.solveit.lut-studio.png",
-          "subtitle": ""
-        },
-        {
-          "name": "Crsel",
-          "bundleIdentifier": "com.frameoneapps.Crsel",
-          "developerName": "",
-          "version": "1.5.0",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.frameoneapps.Crsel.png",
-          "subtitle": ""
-        },
-        {
-          "name": "Sketchar",
-          "bundleIdentifier": "tech.sketchar.ios",
-          "developerName": "",
-          "version": "10.8.2",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/tech.sketchar.ios.png",
-          "subtitle": ""
-        },
-        {
-          "name": "wpsoffice",
-          "bundleIdentifier": "com.kingsoft.office.g.wpsoffice",
-          "developerName": "",
-          "version": "26.9.1",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.kingsoft.office.g.wpsoffice.png",
-          "subtitle": ""
-        },
-        {
-          "name": "SnapEdit",
-          "bundleIdentifier": "com.sfun.snapedit",
-          "developerName": "",
-          "version": "6.27.2",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.sfun.snapedit.png",
-          "subtitle": ""
-        },
-        {
-          "name": "HiWidget",
-          "bundleIdentifier": "com.zerone.hidesktop",
-          "developerName": "",
-          "version": "5.1.06",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.zerone.hidesktop.png",
           "subtitle": ""
         }
       ]
