@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-25T05:00:43Z",
+  "generatedAt": "2026-09-25T11:53:25Z",
   "sources": [
     {
       "id": "utm",
@@ -2122,10 +2122,18 @@
     {
       "id": "owo-source",
       "name": "OwO Source",
-      "appCount": 154,
+      "appCount": 155,
       "catalogLimited": false,
       "iconURL": "https://raw.githubusercontent.com/OwO-Network/Repo/main/icons/owo.repo.icon.png",
       "apps": [
+        {
+          "name": "PiliPlus",
+          "bundleIdentifier": "com.example.piliplus",
+          "developerName": "",
+          "version": "2.1.5",
+          "iconURL": "https://raw.githubusercontent.com/owo-network/Repo/main/icons/com.example.piliplus.png",
+          "subtitle": ""
+        },
         {
           "name": "PiliPlus",
           "bundleIdentifier": "com.example.piliplus",
@@ -4812,10 +4820,34 @@
     {
       "id": "apptesters",
       "name": "AppTesters IPA Repo",
-      "appCount": 9320,
+      "appCount": 9323,
       "catalogLimited": true,
       "iconURL": "https://apptesters.org/apptesters-512x512.png",
       "apps": [
+        {
+          "name": "Crsel",
+          "bundleIdentifier": "com.frameoneapps.Crsel",
+          "developerName": "",
+          "version": "1.5.4",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.frameoneapps.Crsel.png",
+          "subtitle": ""
+        },
+        {
+          "name": "PDFExpert",
+          "bundleIdentifier": "com.readdle.PDFExpert5",
+          "developerName": "",
+          "version": "7.26.1",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.readdle.PDFExpert5.png",
+          "subtitle": ""
+        },
+        {
+          "name": "Mockup",
+          "bundleIdentifier": "com.hasankassem.mockup",
+          "developerName": "",
+          "version": "4.5",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.hasankassem.mockup.png",
+          "subtitle": ""
+        },
         {
           "name": "WaterReminder",
           "bundleIdentifier": "com.vgfit.waterreminder",
@@ -6390,30 +6422,6 @@
           "developerName": "",
           "version": "5.39.2",
           "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.readdle.CalendarsLite.png",
-          "subtitle": ""
-        },
-        {
-          "name": "FujiXWeekly",
-          "bundleIdentifier": "com.fujixweekly.fujixweeklyrecipes",
-          "developerName": "",
-          "version": "1.16.1",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.fujixweekly.fujixweeklyrecipes.png",
-          "subtitle": ""
-        },
-        {
-          "name": "GentlerStreak",
-          "bundleIdentifier": "app.gentler.activity",
-          "developerName": "",
-          "version": "5.13.1",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/app.gentler.activity.png",
-          "subtitle": ""
-        },
-        {
-          "name": "AdobeFresco",
-          "bundleIdentifier": "com.adobe.fresco.ios",
-          "developerName": "",
-          "version": "7.7.1",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.adobe.fresco.ios.png",
           "subtitle": ""
         }
       ]
