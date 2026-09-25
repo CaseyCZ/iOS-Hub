@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-25T11:53:25Z",
+  "generatedAt": "2026-09-25T17:14:12Z",
   "sources": [
     {
       "id": "utm",
@@ -4820,10 +4820,26 @@
     {
       "id": "apptesters",
       "name": "AppTesters IPA Repo",
-      "appCount": 9323,
+      "appCount": 9325,
       "catalogLimited": true,
       "iconURL": "https://apptesters.org/apptesters-512x512.png",
       "apps": [
+        {
+          "name": "InCollage",
+          "bundleIdentifier": "PhotoEditor.PhotoCollage.inCollage",
+          "developerName": "",
+          "version": "2.2.71",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/PhotoEditor.PhotoCollage.inCollage.png",
+          "subtitle": ""
+        },
+        {
+          "name": "AdobeExpress",
+          "bundleIdentifier": "com.adobe.post",
+          "developerName": "",
+          "version": "31.1.0",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.adobe.post.png",
+          "subtitle": ""
+        },
         {
           "name": "Crsel",
           "bundleIdentifier": "com.frameoneapps.Crsel",
@@ -6407,22 +6423,6 @@
           "version": "5.1.06",
           "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.zerone.hidesktop.png",
           "subtitle": ""
-        },
-        {
-          "name": "VDIT",
-          "bundleIdentifier": "me.imgbase.videoday",
-          "developerName": "",
-          "version": "4.3.0",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/me.imgbase.videoday.png",
-          "subtitle": ""
-        },
-        {
-          "name": "Calendars",
-          "bundleIdentifier": "com.readdle.CalendarsLite",
-          "developerName": "",
-          "version": "5.39.2",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.readdle.CalendarsLite.png",
-          "subtitle": ""
         }
       ]
     },
@@ -6465,14 +6465,14 @@
       "name": "Discord",
       "appCount": 1,
       "catalogLimited": false,
-      "iconURL": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/eb/6a/f7/eb6af7ed-f71c-61b8-0a16-0773bd68ea77/AppIcon-0-0-1x_U007epad-0-1-0-85-220.png/512x512bb.jpg",
+      "iconURL": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/7c/c1/d5/7cc1d552-fca9-bc19-a585-28644c009f4b/AppIcon-0-0-1x_U007epad-0-1-0-sRGB-85-220.png/512x512bb.jpg",
       "apps": [
         {
           "name": "Discord - Talk, Play, Hang Out",
           "bundleIdentifier": "com.hammerandchisel.discord",
           "developerName": "Discord Inc.",
-          "version": "345.0",
-          "iconURL": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/eb/6a/f7/eb6af7ed-f71c-61b8-0a16-0773bd68ea77/AppIcon-0-0-1x_U007epad-0-1-0-85-220.png/512x512bb.jpg",
+          "version": "346.0",
+          "iconURL": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/7c/c1/d5/7cc1d552-fca9-bc19-a585-28644c009f4b/AppIcon-0-0-1x_U007epad-0-1-0-sRGB-85-220.png/512x512bb.jpg",
           "subtitle": "The standard Discord app with no tweaks added."
         }
       ]
