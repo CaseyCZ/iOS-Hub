@@ -4582,16 +4582,12 @@
     {
       "name": "Twitch",
       "bundleIdentifier": "tv.twitch",
-      "developerName": "dvntms/zeroxdeadbeef/canpng/IPA Vault",
-      "downloadURL": "https://pub-dd800571175348b6a2745b3396360028.r2.dev/Twitch-31.3.2-Tweach-TC.ipa",
-      "iconURL": "https://pub-dd800571175348b6a2745b3396360028.r2.dev/App%20Icons/Twitch-Tweach-TC-Icons/Twitch-AppStore-1024x1024.png",
-      "localizedDescription": "Twitch 31.3.2 with Tweach 2.4.1 + Twitch Control 0.0.6",
-      "size": 196628726,
-      "subtitle": "Twitch 31.3.2 with Tweach 2.4.1 + Twitch Control 0.0.6",
-      "tintColor": "#9146FF",
-      "version": "31.3.2",
-      "versionDate": "2026-09-24",
-      "versionDescription": "IPA Vault build for Twitch, version 31.3.2"
+      "version": "31.3.4",
+      "versionDate": "2026-09-26",
+      "size": 180790305,
+      "downloadURL": "https://github.com/baretsky/baretsky-tweaked-ipas-library/releases/download/builds/twitch_31.3.4_TwitchAdBlock_sideloaded.ipa",
+      "localizedDescription": "Twitch with AdBlock.\n\nFeatures:\n- Full Ad-Blocking",
+      "iconURL": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Twitch_Glitch_Logo_Purple.svg/640px-Twitch_Glitch_Logo_Purple.svg.png"
     },
     {
       "name": "Twitch (Glass)",
@@ -6077,6 +6073,40 @@
       }
     },
     {
+      "beta": false,
+      "bundleIdentifier": "com.google.ios.youtube",
+      "developerName": "Tonwalter888",
+      "META": {
+        "repoName": "driftywinds' AltStore Repo"
+      },
+      "contact": {
+        "web": "https://github.com/driftywinds/"
+      },
+      "downloadURL": "https://github.com/ramramzz/descfsr/releases/download/v0.34/b811fc29-a1ea-43b5-b469-5608acb912YM.ipa",
+      "iconURL": "https://raw.githubusercontent.com/YTLitePlus/YTLitePlus-Altstore/main/Youtube_logo-512.png",
+      "localizedDescription": "https://t.me/+rvcObIvOpctiMDI9\n\nA modified version of Youtube",
+      "name": "YouMod + Tweaks (driftywinds)",
+      "screenshotURLs": [
+        "https://raw.githubusercontent.com/dayanch96/YTLite/refs/heads/main/Resources/scr1.jpg",
+        "https://raw.githubusercontent.com/dayanch96/YTLite/refs/heads/main/Resources/scr2.jpg",
+        "https://raw.githubusercontent.com/dayanch96/YTLite/refs/heads/main/Resources/scr3.jpg"
+      ],
+      "size": 130097628,
+      "subtitle": "A flexible enhancer for YouTube on iOS | If you want to donate: - https://ko-fi.com/driftywinds",
+      "tintColor": "e22a41",
+      "version": "21.38.3",
+      "versionDate": "2026-09-26",
+      "versionDescription": "• Updated YouTube to 21.38.3\n • Tweak is using 2.0.0",
+      "appPermissions": {
+        "entitlements": [
+          "com.apple.developer.siri"
+        ],
+        "privacy": {
+          "NSUserTrackingUsageDescription": "This app requires tracking permission to deliver personalized content and advertisements."
+        }
+      }
+    },
+    {
       "name": "YouTube (YouMod 2.0.0)",
       "bundleIdentifier": "com.google.ios.youtube.youmod",
       "developerName": "Tonwalter888 & IPA Vault",
@@ -6117,22 +6147,6 @@
       "version": "21.33.6",
       "versionDate": "2026-09-24",
       "versionDescription": "IPA Vault build for YouTube (YTKACE 1.0.1), version 21.33.6"
-    },
-    {
-      "name": "YTKace",
-      "bundleIdentifier": "com.google.ios.youtube",
-      "developerName": "itzzace",
-      "version": "1.1.0",
-      "versionDate": "2026-09-26",
-      "versionDescription": "by @itzzace0\n\nWhat's new:\n• Updated to YouTube 21.38.3\n• Redesigned the YTKACE library player with a floating mini player, PiP and YouTube style controls\n• SponsorBlock now skips segments in downloaded videos\n• New Download Method option with Direct downloads\n• Modify YouTube's video zoom\n• Keep Shorts in Subscriptions\n• Option to disable PiP for Shorts\n• Speed menu button\n• Options to disable HDR, remove 1080p Premium and set a separate Shorts speed\n• Layout mode option\n• Choose the subtitle language for downloads\n\nFixed:\n• PiP not working for music videos\n• Gap left by hidden comment guidelines, topic chips and community posts\n• Download and queue buttons on older YouTube versions\n• Autoplay in queues\n• Improved Playback Fix and download retrying\n\nThanks to @Ganeron11 and @kes158 for contributions\n\nYouTube 21.38.3 requires iOS 17, so there are two IPAs:\n• `YTKACE_1.1.0_YouTube_21.38.3.ipa` for iOS 17 and newer\n• `YTKACE_1.1.0_YouTube_iOS16_21.33.6.ipa` for iOS 16\n",
-      "downloadURL": "https://github.com/itzzace/ytkace/releases/download/v1.1.0/YTKACE_1.1.0_YouTube_21.38.3.ipa",
-      "iconURL": "https://img.lightshot.app/8gRG1MrsTPO7ZiwX_JfmbA.jpeg",
-      "size": 137203351,
-      "screenshotURLs": [],
-      "localizedDescription": "YTKace – a modified YouTube client with extra features. This build requires iOS 17 or newer.",
-      "subtitle": "Enhanced YouTube for iOS 17 and newer",
-      "tintColor": "FF0000",
-      "beta": false
     },
     {
       "name": "YTMUltimate+",
