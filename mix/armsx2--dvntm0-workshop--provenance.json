@@ -73,8 +73,19 @@
       ],
       "tintColor": "#954CD5",
       "category": "games",
-      "size": 26819817,
+      "size": 30554077,
       "versions": [
+        {
+          "version": "2.5.3-nightly.20260926.1322",
+          "buildVersion": "253",
+          "buildNumber": "253",
+          "date": "2026-09-26",
+          "localizedDescription": "https://github.com/ARMSX2/ARMSX2/releases/tag/nightly-20260926\n\n- GunCon 2: a calibration shot for touch, and aim in surface pixels\n- USB devices: stop the keyboard switch unplugging Port 1\n- USB devices: keep the device list between games on Android\n- GunCon 2: its buttons join the touch layout, and aiming leaves the face buttons alone\n- USB devices: the port row says Not Connected, like the list below it\n- USB devices: list them with no game running, and pick one per port from a dropdown\n- Network: typing a DNS address switches that slot to Manual\n- Texture packs: make deleting a pack reliable\n- Texture packs: install a multi-region pack under the player's own serial\n- Library music: defer to media playback, not to another app's game audio\n- DEV9: bring back the Android HDD image handling\n- Keyboard: type addresses and paths\n- GameDB panel: name the copy-road blending cap and the field shift",
+          "downloadURL": "https://ios.armsx2.net/ipas/nightly/ARMSX2-Nightly-20260926-247fa6f094.ipa",
+          "size": 30554077,
+          "sha256": "ac5c1885295b604d2b9fb7992a2c1f45d39c14a6fe5675d136950f20fffdb4f9",
+          "minOSVersion": "17.4"
+        },
         {
           "version": "2.5.3-nightly.20260913.1351",
           "buildVersion": "253",
@@ -117,17 +128,6 @@
           "downloadURL": "https://ios.armsx2.net/ipas/nightly/ARMSX2-Nightly-20260909-cb6f53582a.ipa",
           "size": 26818640,
           "sha256": "323a3976b7abb649c3d7f2474548edaaba5886e18a5c1cd4668725dc37a22a1e",
-          "minOSVersion": "17.0"
-        },
-        {
-          "version": "2.5.3-nightly.20260908.1322",
-          "buildVersion": "253",
-          "buildNumber": "253",
-          "date": "2026-09-08",
-          "localizedDescription": "https://github.com/ARMSX2/ARMSX2/releases/tag/nightly-20260908\n\n- Android: add --application-id passthrough to the universal-page build\n- Android: install tar+zstd texture packs through the in-tree zstd decoder\n- GS: KTX1 mip-chain replacement textures for ASTC\n- GS: let the libretro core carry shaderc instead of dlopening one\n- libretro: send the emulator's own warnings and errors to the frontend\n- GS, GameDB, Patch: carry the resources in the binary, so none are needed on disk\n- Android: keep the host stubs out of the libretro core",
-          "downloadURL": "https://ios.armsx2.net/ipas/nightly/ARMSX2-Nightly-20260908-fd8a8403bc.ipa",
-          "size": 26819360,
-          "sha256": "074760e1fafde665ae5f54f32db10eb24ab9d75e59ec9c6708633f8ad0761604",
           "minOSVersion": "17.0"
         }
       ],
@@ -305,11 +305,11 @@
       "versions": [
         {
           "version": "1.0.0",
-          "buildVersion": "151",
-          "date": "2026-09-25T11:18:53.987Z",
+          "buildVersion": "169",
+          "date": "2026-09-26T17:37:45.977Z",
           "localizedDescription": "Rolling CI alpha from GitHub Releases. Unsigned; replaced on every successful default-branch or develop build.",
-          "downloadURL": "https://github.com/Provenance-Emu/iCube/releases/download/alpha-151/Non-Jailbroken.ipa",
-          "size": 92903453,
+          "downloadURL": "https://github.com/Provenance-Emu/iCube/releases/download/alpha-169/Non-Jailbroken.ipa",
+          "size": 93305526,
           "minOSVersion": "17.0",
           "platform": "iOS",
           "isBeta": true
@@ -317,7 +317,7 @@
         {
           "version": "1.0.0-beta9-ios",
           "buildVersion": "1.0.0-beta9-ios",
-          "date": "2026-09-25",
+          "date": "2026-09-26",
           "localizedDescription": "iCube 1.0.0-beta9-ios Beta 9 for iOS",
           "downloadURL": "https://icube-emu.com/builds-versioned/1.0.0/iOS-Beta9/iCube.ipa",
           "size": 82799373,
@@ -329,7 +329,7 @@
         {
           "version": "1.0.0-beta8-ios",
           "buildVersion": "1.0.0-beta8-ios",
-          "date": "2026-09-25",
+          "date": "2026-09-26",
           "localizedDescription": "iCube 1.0.0-beta8-ios Beta 8 for iOS",
           "downloadURL": "https://icube-emu.com/builds-versioned/1.0.0/iOS-Beta8/iCube.ipa",
           "size": 82893911,
@@ -341,7 +341,7 @@
         {
           "version": "1.0.0-beta7-ios",
           "buildVersion": "1.0.0-beta7-ios",
-          "date": "2026-09-25",
+          "date": "2026-09-26",
           "localizedDescription": "iCube 1.0.0-beta7-ios Beta 7 for iOS",
           "downloadURL": "https://icube-emu.com/builds-versioned/1.0.0/iOS-Beta7/iCube.ipa",
           "size": 82893502,
@@ -591,12 +591,12 @@
       "versions": [
         {
           "version": "3.4.0",
-          "buildVersion": "10191",
-          "marketingVersion": "3.4.0-alpha.20260926.89f166d",
+          "buildVersion": "10222",
+          "marketingVersion": "3.4.0-alpha.20260926.d27b8be",
           "date": "2026-09-26",
-          "localizedDescription": "Alpha build 89f166d · 2026-09-26\n\nChanges in this build:\n• fix(topshelf): drop unused iCloud entitlements (ITMS-90575)\n• fix(controls): keep type_body_length disable adjacent to its class\n• fix(controls): move OSD timing constants out of the generic controller\n• fix(controls): classic OSD visibility, drag isolation, top bar, record stop\n• fix(cloudsync): stop blocking game launch on the battery-save restore\n• fix(dolphin): apply Metal screen filters to GameCube/Wii\n• fix(dolphin): declare audio visualizer unsupported for GC/Wii\n\nInstalls alongside the stable app. Built automatically from develop — expect rough edges.",
+          "localizedDescription": "Alpha build d27b8be · 2026-09-26\n\nChanges in this build:\n• [Agent] Bound on-demand BIOS downloads in the launch path (#3700)\n• [Agent] Replace stale thin-wrapper BIOS copies atomically (#3699)\n• [Agent] fix(video): apply scaling mode in Dolphin, PPSSPP and RetroArch wrapper (#3695)\n• build(dolphin): bump dolphin-ios (bench loadStateSlot deadlock fix, perf matrix results)\n• [Agent] Show iCloud BIOS availability and download status in the BIOS list (#3698)\n• [Agent] Fix stale thin-wrapper BIOS copies and slow optional-BIOS launch check (#3697)\n• [Agent] test(pvui): get PVUI unit tests compiling and passing in CI (#3696)\n• update dolphin core\n\nInstalls alongside the stable app. Built automatically from develop — expect rough edges.",
           "downloadURL": "https://github.com/Provenance-Emu/Provenance/releases/download/alpha/Provenance-iOS-NoExtensions.ipa",
-          "size": 730480960,
+          "size": 730535894,
           "minOSVersion": "17.0"
         }
       ],

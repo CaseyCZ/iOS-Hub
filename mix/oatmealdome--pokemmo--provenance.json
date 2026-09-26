@@ -155,11 +155,11 @@
       "versions": [
         {
           "version": "1.0.0",
-          "buildVersion": "151",
-          "date": "2026-09-25T11:18:53.987Z",
+          "buildVersion": "169",
+          "date": "2026-09-26T17:37:45.977Z",
           "localizedDescription": "Rolling CI alpha from GitHub Releases. Unsigned; replaced on every successful default-branch or develop build.",
-          "downloadURL": "https://github.com/Provenance-Emu/iCube/releases/download/alpha-151/Non-Jailbroken.ipa",
-          "size": 92903453,
+          "downloadURL": "https://github.com/Provenance-Emu/iCube/releases/download/alpha-169/Non-Jailbroken.ipa",
+          "size": 93305526,
           "minOSVersion": "17.0",
           "platform": "iOS",
           "isBeta": true
@@ -167,7 +167,7 @@
         {
           "version": "1.0.0-beta9-ios",
           "buildVersion": "1.0.0-beta9-ios",
-          "date": "2026-09-25",
+          "date": "2026-09-26",
           "localizedDescription": "iCube 1.0.0-beta9-ios Beta 9 for iOS",
           "downloadURL": "https://icube-emu.com/builds-versioned/1.0.0/iOS-Beta9/iCube.ipa",
           "size": 82799373,
@@ -179,7 +179,7 @@
         {
           "version": "1.0.0-beta8-ios",
           "buildVersion": "1.0.0-beta8-ios",
-          "date": "2026-09-25",
+          "date": "2026-09-26",
           "localizedDescription": "iCube 1.0.0-beta8-ios Beta 8 for iOS",
           "downloadURL": "https://icube-emu.com/builds-versioned/1.0.0/iOS-Beta8/iCube.ipa",
           "size": 82893911,
@@ -191,7 +191,7 @@
         {
           "version": "1.0.0-beta7-ios",
           "buildVersion": "1.0.0-beta7-ios",
-          "date": "2026-09-25",
+          "date": "2026-09-26",
           "localizedDescription": "iCube 1.0.0-beta7-ios Beta 7 for iOS",
           "downloadURL": "https://icube-emu.com/builds-versioned/1.0.0/iOS-Beta7/iCube.ipa",
           "size": 82893502,
@@ -324,12 +324,12 @@
       "versions": [
         {
           "version": "3.4.0",
-          "buildVersion": "10191",
-          "marketingVersion": "3.4.0-alpha.20260926.89f166d",
+          "buildVersion": "10222",
+          "marketingVersion": "3.4.0-alpha.20260926.d27b8be",
           "date": "2026-09-26",
-          "localizedDescription": "Alpha build 89f166d · 2026-09-26\n\nChanges in this build:\n• fix(topshelf): drop unused iCloud entitlements (ITMS-90575)\n• fix(controls): keep type_body_length disable adjacent to its class\n• fix(controls): move OSD timing constants out of the generic controller\n• fix(controls): classic OSD visibility, drag isolation, top bar, record stop\n• fix(cloudsync): stop blocking game launch on the battery-save restore\n• fix(dolphin): apply Metal screen filters to GameCube/Wii\n• fix(dolphin): declare audio visualizer unsupported for GC/Wii\n\nInstalls alongside the stable app. Built automatically from develop — expect rough edges.",
+          "localizedDescription": "Alpha build d27b8be · 2026-09-26\n\nChanges in this build:\n• [Agent] Bound on-demand BIOS downloads in the launch path (#3700)\n• [Agent] Replace stale thin-wrapper BIOS copies atomically (#3699)\n• [Agent] fix(video): apply scaling mode in Dolphin, PPSSPP and RetroArch wrapper (#3695)\n• build(dolphin): bump dolphin-ios (bench loadStateSlot deadlock fix, perf matrix results)\n• [Agent] Show iCloud BIOS availability and download status in the BIOS list (#3698)\n• [Agent] Fix stale thin-wrapper BIOS copies and slow optional-BIOS launch check (#3697)\n• [Agent] test(pvui): get PVUI unit tests compiling and passing in CI (#3696)\n• update dolphin core\n\nInstalls alongside the stable app. Built automatically from develop — expect rough edges.",
           "downloadURL": "https://github.com/Provenance-Emu/Provenance/releases/download/alpha/Provenance-iOS-NoExtensions.ipa",
-          "size": 730480960,
+          "size": 730535894,
           "minOSVersion": "17.0"
         }
       ],
