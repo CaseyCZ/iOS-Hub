@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-25T21:36:51Z",
+  "generatedAt": "2026-09-26T05:00:29Z",
   "sources": [
     {
       "id": "utm",
@@ -4820,10 +4820,26 @@
     {
       "id": "apptesters",
       "name": "AppTesters IPA Repo",
-      "appCount": 9332,
+      "appCount": 9334,
       "catalogLimited": true,
       "iconURL": "https://apptesters.org/apptesters-512x512.png",
       "apps": [
+        {
+          "name": "Thenx",
+          "bundleIdentifier": "com.calisthenics.thenx",
+          "developerName": "",
+          "version": "6.8.2",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.calisthenics.thenx.png",
+          "subtitle": ""
+        },
+        {
+          "name": "Most",
+          "bundleIdentifier": "com.most.stories",
+          "developerName": "",
+          "version": "3.5.6",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.most.stories.png",
+          "subtitle": ""
+        },
         {
           "name": "Dazz",
           "bundleIdentifier": "dazz.camera.vintagecamera",
@@ -6407,22 +6423,6 @@
           "version": "3.10.1",
           "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/app.tripsy.ios.png",
           "subtitle": ""
-        },
-        {
-          "name": "GentlerStreak",
-          "bundleIdentifier": "app.gentler.activity",
-          "developerName": "",
-          "version": "5.13.2",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/app.gentler.activity.png",
-          "subtitle": ""
-        },
-        {
-          "name": "Unknown app",
-          "bundleIdentifier": "com.intsig.CamScannerLite",
-          "developerName": "",
-          "version": "19.2",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.intsig.CamScannerLite.png",
-          "subtitle": ""
         }
       ]
     },
@@ -6488,7 +6488,7 @@
           "name": "YTKace",
           "bundleIdentifier": "com.google.ios.youtube",
           "developerName": "itzzace",
-          "version": "1.0.1",
+          "version": "1.1.0",
           "iconURL": "https://img.lightshot.app/8gRG1MrsTPO7ZiwX_JfmbA.jpeg",
           "subtitle": "Enhanced YouTube for iOS 17 and newer"
         }
