@@ -31,12 +31,21 @@
         "https://i.imgur.com/vuSqW2l.png",
         "https://i.imgur.com/5cjzlB0.png"
       ],
-      "downloadURL": "https://github.com/mona-hrt/mona/releases/download/v1.22.0/mona-1.22.0.ipa",
-      "size": 11728505,
-      "version": "1.22.0",
-      "versionDate": "2026-09-20T17:24:03Z",
-      "versionDescription": "New:\r\n\r\n- The graph page got a UI refresh\r\n- Units for estradiol and testosterone can be chosen independently\r\n- You can now reorder your schedules\r\n- New language: Simplified Chinese\r\n\r\nFix:\r\n\r\n- Upcoming intakes now display in chronological order\r\n- Adjusted padding around pharmacy page button group\r\n- Fixed a black screen issue when using the back gesture right after an intake",
+      "downloadURL": "https://github.com/mona-hrt/mona/releases/download/v1.23.0/mona-1.23.0.ipa",
+      "size": 11765788,
+      "version": "1.23.0",
+      "versionDate": "2026-09-27T14:56:14Z",
+      "versionDescription": "New:\r\n\r\n- Patches now support a dosing rate (µg/day)\r\n- Added a \"getting involved\" section in the settings\r\n- New language: Hindi\r\n\r\nFix:\r\n\r\n- Centered the estradiol graph in the window",
       "versions": [
+        {
+          "downloadURL": "https://github.com/mona-hrt/mona/releases/download/v1.23.0/mona-1.23.0.ipa",
+          "size": 11765788,
+          "version": "1.23.0",
+          "buildVersion": "29",
+          "date": "2026-09-27T14:56:14Z",
+          "localizedDescription": "New:\r\n\r\n- Patches now support a dosing rate (µg/day)\r\n- Added a \"getting involved\" section in the settings\r\n- New language: Hindi\r\n\r\nFix:\r\n\r\n- Centered the estradiol graph in the window",
+          "minOSVersion": "13.0"
+        },
         {
           "downloadURL": "https://github.com/mona-hrt/mona/releases/download/v1.22.0/mona-1.22.0.ipa",
           "size": 11728505,

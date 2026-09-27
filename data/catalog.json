@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-27T12:05:49Z",
+  "generatedAt": "2026-09-27T17:00:06Z",
   "sources": [
     {
       "id": "utm",
@@ -567,7 +567,7 @@
           "name": "Mona - HRT journal",
           "bundleIdentifier": "com.deliacheminot.mona",
           "developerName": "Délia Cheminot",
-          "version": "1.22.0",
+          "version": "1.23.0",
           "iconURL": "https://i.imgur.com/Xb9A1Lh.png",
           "subtitle": "Your hormonal journal"
         }
@@ -660,7 +660,7 @@
           "name": "eSound",
           "bundleIdentifier": "com.appstore.esound",
           "developerName": "Spicy Sparks",
-          "version": "5.2.5",
+          "version": "5.2.16",
           "iconURL": "https://esound.app/images/altstore/esound/esound-icon.png?v=4",
           "subtitle": "Music player powered by YouTube"
         }
@@ -3387,18 +3387,10 @@
     {
       "id": "cypwn-ipa",
       "name": "CyPwn IPA Library",
-      "appCount": 210,
+      "appCount": 209,
       "catalogLimited": true,
       "iconURL": "https://repo.cypwn.xyz/assets/images/cypwn_small.png",
       "apps": [
-        {
-          "name": "Stremio-2.0.7",
-          "bundleIdentifier": "com.stremio.pal",
-          "developerName": "Stremio-2.0.7 x CyPwn",
-          "version": "2.0.7",
-          "iconURL": "https://ipa.cypwn.xyz/serve/icons/Stremio-2.0.7.png",
-          "subtitle": ""
-        },
         {
           "name": "Stremio-2.0.6",
           "bundleIdentifier": "com.stremio.pal",
@@ -4830,16 +4822,88 @@
           "version": "2.6",
           "iconURL": "https://ipa.cypwn.xyz/serve/icons/Star_Map_2.6_Satella.png",
           "subtitle": ""
+        },
+        {
+          "name": "RefacePro_3.12.0",
+          "bundleIdentifier": "cypwn.RefacePro_3.12.0.3.12.0",
+          "developerName": "RefacePro_3.12.0 x CyPwn",
+          "version": "3.12.0",
+          "iconURL": "https://ipa.cypwn.xyz/serve/icons/RefacePro_3.12.0.png",
+          "subtitle": ""
         }
       ]
     },
     {
       "id": "apptesters",
       "name": "AppTesters IPA Repo",
-      "appCount": 9334,
+      "appCount": 9342,
       "catalogLimited": true,
       "iconURL": "https://apptesters.org/apptesters-512x512.png",
       "apps": [
+        {
+          "name": "Facelab",
+          "bundleIdentifier": "com.lyrebirdstudio.facelab",
+          "developerName": "",
+          "version": "2.95",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.lyrebirdstudio.facelab.png",
+          "subtitle": ""
+        },
+        {
+          "name": "SimplyGuitar",
+          "bundleIdentifier": "com.joytunes.SimplyGuitar",
+          "developerName": "",
+          "version": "10.30",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.joytunes.SimplyGuitar.png",
+          "subtitle": ""
+        },
+        {
+          "name": "Detail",
+          "bundleIdentifier": "co.detail.duo",
+          "developerName": "",
+          "version": "6.0.2",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/co.detail.duo.png",
+          "subtitle": ""
+        },
+        {
+          "name": "ScannerPro",
+          "bundleIdentifier": "com.readdle.Scanner",
+          "developerName": "",
+          "version": "9.0.1",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.readdle.Scanner.png",
+          "subtitle": ""
+        },
+        {
+          "name": "InShot",
+          "bundleIdentifier": "com.camerasideas.InstaShot",
+          "developerName": "",
+          "version": "2.0.1",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.camerasideas.InstaShot.png",
+          "subtitle": ""
+        },
+        {
+          "name": "SimplyDraw",
+          "bundleIdentifier": "com.joytunes.Draw",
+          "developerName": "",
+          "version": "1.14.0",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.joytunes.Draw.png",
+          "subtitle": ""
+        },
+        {
+          "name": "Bazaart",
+          "bundleIdentifier": "co.bazaart.app",
+          "developerName": "",
+          "version": "27.0.3",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/co.bazaart.app.png",
+          "subtitle": ""
+        },
+        {
+          "name": "WaterReminder",
+          "bundleIdentifier": "com.vgfit.waterreminder",
+          "developerName": "",
+          "version": "1.11.3",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.vgfit.waterreminder.png",
+          "subtitle": ""
+        },
         {
           "name": "Thenx",
           "bundleIdentifier": "com.calisthenics.thenx",
@@ -6374,70 +6438,6 @@
           "developerName": "",
           "version": "19.3",
           "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.intsig.CamScannerLite.png",
-          "subtitle": ""
-        },
-        {
-          "name": "Hevy",
-          "bundleIdentifier": "com.hevyapp.hevy",
-          "developerName": "",
-          "version": "3.1.14",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.hevyapp.hevy.png",
-          "subtitle": ""
-        },
-        {
-          "name": "BoldVoice",
-          "bundleIdentifier": "com.wellocution.iosapp",
-          "developerName": "",
-          "version": "4.4.3",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.wellocution.iosapp.png",
-          "subtitle": ""
-        },
-        {
-          "name": "Fitia",
-          "bundleIdentifier": "com.ulisesolave.Fitia",
-          "developerName": "",
-          "version": "25.0.2",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.ulisesolave.Fitia.png",
-          "subtitle": ""
-        },
-        {
-          "name": "ThePiano",
-          "bundleIdentifier": "com.impalastudios.pianofree",
-          "developerName": "",
-          "version": "2.23.3",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.impalastudios.pianofree.png",
-          "subtitle": ""
-        },
-        {
-          "name": "Premiere",
-          "bundleIdentifier": "com.adobe.premiere.ios",
-          "developerName": "",
-          "version": "26.20.0",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.adobe.premiere.ios.png",
-          "subtitle": ""
-        },
-        {
-          "name": "SimplyDraw",
-          "bundleIdentifier": "com.joytunes.Draw",
-          "developerName": "",
-          "version": "1.11.4",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.joytunes.Draw.png",
-          "subtitle": ""
-        },
-        {
-          "name": "Mockup",
-          "bundleIdentifier": "com.hasankassem.mockup",
-          "developerName": "",
-          "version": "4.4.1",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.hasankassem.mockup.png",
-          "subtitle": ""
-        },
-        {
-          "name": "Tripsy",
-          "bundleIdentifier": "app.tripsy.ios",
-          "developerName": "",
-          "version": "3.10.1",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/app.tripsy.ios.png",
           "subtitle": ""
         }
       ]
