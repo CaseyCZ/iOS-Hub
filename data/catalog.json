@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-27T17:00:06Z",
+  "generatedAt": "2026-09-27T21:23:11Z",
   "sources": [
     {
       "id": "utm",
@@ -314,7 +314,7 @@
           "name": "StikDebug",
           "bundleIdentifier": "com.stik.stikdebug",
           "developerName": "StikDebug",
-          "version": "3.1.11",
+          "version": "3.1.12",
           "iconURL": "https://github.com/StikDebug/StikDebug/blob/main/assets/StikDebug.png?raw=true",
           "subtitle": "On-device JIT enabler and device toolbox."
         },
@@ -3387,10 +3387,18 @@
     {
       "id": "cypwn-ipa",
       "name": "CyPwn IPA Library",
-      "appCount": 209,
+      "appCount": 210,
       "catalogLimited": true,
       "iconURL": "https://repo.cypwn.xyz/assets/images/cypwn_small.png",
       "apps": [
+        {
+          "name": "Stremio-2.0.7",
+          "bundleIdentifier": "com.stremio.pal",
+          "developerName": "Stremio-2.0.7 x CyPwn",
+          "version": "2.0.7",
+          "iconURL": "https://ipa.cypwn.xyz/serve/icons/Stremio-2.0.7.png",
+          "subtitle": ""
+        },
         {
           "name": "Stremio-2.0.6",
           "bundleIdentifier": "com.stremio.pal",
@@ -4822,24 +4830,32 @@
           "version": "2.6",
           "iconURL": "https://ipa.cypwn.xyz/serve/icons/Star_Map_2.6_Satella.png",
           "subtitle": ""
-        },
-        {
-          "name": "RefacePro_3.12.0",
-          "bundleIdentifier": "cypwn.RefacePro_3.12.0.3.12.0",
-          "developerName": "RefacePro_3.12.0 x CyPwn",
-          "version": "3.12.0",
-          "iconURL": "https://ipa.cypwn.xyz/serve/icons/RefacePro_3.12.0.png",
-          "subtitle": ""
         }
       ]
     },
     {
       "id": "apptesters",
       "name": "AppTesters IPA Repo",
-      "appCount": 9342,
+      "appCount": 9344,
       "catalogLimited": true,
       "iconURL": "https://apptesters.org/apptesters-512x512.png",
       "apps": [
+        {
+          "name": "Clipboard",
+          "bundleIdentifier": "com.zeus.EasyCopy",
+          "developerName": "",
+          "version": "4.1.1",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.zeus.EasyCopy.png",
+          "subtitle": ""
+        },
+        {
+          "name": "Busuu",
+          "bundleIdentifier": "com.busuu.english.app",
+          "developerName": "",
+          "version": "30.28.0",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.busuu.english.app.png",
+          "subtitle": ""
+        },
         {
           "name": "Facelab",
           "bundleIdentifier": "com.lyrebirdstudio.facelab",
@@ -6422,22 +6438,6 @@
           "developerName": "",
           "version": "6.0.1",
           "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/co.detail.duo.png",
-          "subtitle": ""
-        },
-        {
-          "name": "Infuse",
-          "bundleIdentifier": "com.firecore.infuse",
-          "developerName": "",
-          "version": "8.5.5",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.firecore.infuse.png",
-          "subtitle": ""
-        },
-        {
-          "name": "Unknown app",
-          "bundleIdentifier": "com.intsig.CamScannerLite",
-          "developerName": "",
-          "version": "19.3",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.intsig.CamScannerLite.png",
           "subtitle": ""
         }
       ]
@@ -8211,7 +8211,7 @@
           "name": "ARMSX2 Nightly",
           "bundleIdentifier": "com.armsx2.ios.nightly",
           "developerName": "ARMSX2",
-          "version": "2.5.3-nightly.20260926.1322",
+          "version": "2.5.3-nightly.20260927.1423",
           "iconURL": "https://ios.armsx2.net/assets/icon-nightly.png?v=1ce15bef",
           "subtitle": "The newest features, built most days. Installs beside the stable app."
         }
