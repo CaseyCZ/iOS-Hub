@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-26T21:12:20Z",
+  "generatedAt": "2026-09-27T05:21:18Z",
   "sources": [
     {
       "id": "utm",
@@ -1090,7 +1090,7 @@
           "name": "YouTube",
           "bundleIdentifier": "com.google.ios.youtube",
           "developerName": "",
-          "version": "21.38.2",
+          "version": "21.38.3",
           "iconURL": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ef/Youtube_logo.png/512px-Youtube_logo.png",
           "subtitle": ""
         },
@@ -1228,7 +1228,7 @@
     {
       "id": "ipa-vault",
       "name": "IPA Vault Source Repo",
-      "appCount": 60,
+      "appCount": 62,
       "catalogLimited": false,
       "iconURL": "https://pub-dd800571175348b6a2745b3396360028.r2.dev/ipavault-altstore-repo-logo.png",
       "apps": [
@@ -1246,7 +1246,7 @@
           "developerName": "7MD & IPA Vault & lucaspedrosa",
           "version": "580.0.0",
           "iconURL": "https://pub-dd800571175348b6a2745b3396360028.r2.dev/App%20Icons/Facebook-Icons/Facebook-AppStore-1024x1024.png",
-          "subtitle": "Facebook 580.0.0 with iQFace 1.1"
+          "subtitle": "Facebook 580.0.0 with iQFace 1.2"
         },
         {
           "name": "Facebook (Facebook Plus)",
@@ -1278,7 +1278,7 @@
           "developerName": "tqmane & IPA Vault",
           "version": "7.93.0",
           "iconURL": "https://pub-dd800571175348b6a2745b3396360028.r2.dev/App%20Icons/Google-Photos-Icons/Google-Photos-AppStore-1024x1024.png",
-          "subtitle": "Google Photos 7.93.0 with Gunshot 0.2.5"
+          "subtitle": "Google Photos 7.94.0 with Gunshot 0.2.5"
         },
         {
           "name": "iMe (MxGram)",
@@ -1358,7 +1358,7 @@
           "developerName": "efibalogh & CieLogic & IPA Vault",
           "version": "448.0.0",
           "iconURL": "https://pub-dd800571175348b6a2745b3396360028.r2.dev/App%20Icons/Instagram-Icons/Instagram-AppStore-1024x1024.png",
-          "subtitle": "Instagram 448.0.0 with Sparkle 1.3.1 (No Plugins)"
+          "subtitle": "Instagram 448.0.0 with Sparkle 1.4.0 (No Plugins)"
         },
         {
           "name": "Instagram (Sparkle)",
@@ -1366,7 +1366,7 @@
           "developerName": "efibalogh & CieLogic & IPA Vault",
           "version": "448.0.0",
           "iconURL": "https://pub-dd800571175348b6a2745b3396360028.r2.dev/App%20Icons/Instagram-Icons/Instagram-AppStore-1024x1024.png",
-          "subtitle": "Instagram 448.0.0 with Sparkle 1.3.1"
+          "subtitle": "Instagram 448.0.0 with Sparkle 1.4.0"
         },
         {
           "name": "Messenger (Flow)",
@@ -1588,25 +1588,25 @@
           "name": "Twitch",
           "bundleIdentifier": "tv.twitch",
           "developerName": "dvntms/zeroxdeadbeef/canpng/IPA Vault",
-          "version": "31.3.2",
+          "version": "31.3.4",
           "iconURL": "https://pub-dd800571175348b6a2745b3396360028.r2.dev/App%20Icons/Twitch-Tweach-TC-Icons/Twitch-AppStore-1024x1024.png",
-          "subtitle": "Twitch 31.3.2 with Tweach 2.4.1 + Twitch Control 0.0.6"
+          "subtitle": "Twitch 31.3.4 with Tweach 2.4.1 + Twitch Control 0.0.6"
         },
         {
           "name": "Twitch (Glass)",
           "bundleIdentifier": "tv.twitch.glass",
           "developerName": "dvntms/zeroxdeadbeef/canpng/IPA Vault",
-          "version": "31.3.2",
+          "version": "31.3.4",
           "iconURL": "https://pub-dd800571175348b6a2745b3396360028.r2.dev/App%20Icons/Twitch-Tweach-TC-Icons/Twitch-AppStore-1024x1024.png",
-          "subtitle": "Twitch 31.3.2 with Tweach 2.4.1 + Twitch Control 0.0.6 (Glass)"
+          "subtitle": "Twitch 31.3.4 with Tweach 2.4.1 + Twitch Control 0.0.6 (Glass)"
         },
         {
           "name": "Twitter NFB",
           "bundleIdentifier": "com.atebits.Tweetie2.twitter",
           "developerName": "orionblur & IPA Vault",
-          "version": "12.28.1",
+          "version": "12.29",
           "iconURL": "https://pub-dd800571175348b6a2745b3396360028.r2.dev/App%20Icons/Twitter-12.14-Icons/Twitter-AppStore-1024x1024.png",
-          "subtitle": "Twitter 12.28.1 with NFB 7.0.0"
+          "subtitle": "Twitter 12.29 with NFB 7.0.0"
         },
         {
           "name": "Twitter NFB (Glass)",
@@ -1620,9 +1620,9 @@
           "name": "Twitter NFB + TWI",
           "bundleIdentifier": "com.atebits.Tweetie2.twittertwi",
           "developerName": "orionblur & dens0r & IPA Vault",
-          "version": "12.28.1",
+          "version": "12.29",
           "iconURL": "https://pub-dd800571175348b6a2745b3396360028.r2.dev/App%20Icons/Twitter-12.14-Icons/Twitter-AppStore-1024x1024.png",
-          "subtitle": "Twitter 12.28.1 with NFB 7.0.0 + TWIGalaxy 1.14"
+          "subtitle": "Twitter 12.29 with NFB 7.0.0 + TWIGalaxy 1.14"
         },
         {
           "name": "Twitter NFB + TWI (Glass)",
@@ -1636,9 +1636,9 @@
           "name": "X NFB",
           "bundleIdentifier": "com.atebits.Tweetie2",
           "developerName": "orionblur & IPA Vault",
-          "version": "12.28.1",
+          "version": "12.29",
           "iconURL": "https://pub-dd800571175348b6a2745b3396360028.r2.dev/App%20Icons/X-Icons/X-AppStore-1024x1024.png",
-          "subtitle": "X 12.28.1 with NFB 7.0.0"
+          "subtitle": "X 12.29 with NFB 7.0.0"
         },
         {
           "name": "X NFB (Glass)",
@@ -1652,9 +1652,9 @@
           "name": "X NFB + TWI",
           "bundleIdentifier": "com.atebits.Tweetie2.twi",
           "developerName": "orionblur & dens0r & IPA Vault",
-          "version": "12.28.1",
+          "version": "12.29",
           "iconURL": "https://pub-dd800571175348b6a2745b3396360028.r2.dev/App%20Icons/X-Icons/X-AppStore-1024x1024.png",
-          "subtitle": "X 12.28.1 with NFB 7.0.0 + TWIGalaxy 1.14"
+          "subtitle": "X 12.29 with NFB 7.0.0 + TWIGalaxy 1.14"
         },
         {
           "name": "X NFB + TWI (Glass)",
@@ -1676,25 +1676,41 @@
           "name": "YouTube (YouMod 2.0.0)",
           "bundleIdentifier": "com.google.ios.youtube.youmod",
           "developerName": "Tonwalter888 & IPA Vault",
-          "version": "21.38.2",
+          "version": "21.38.3",
           "iconURL": "https://pub-dd800571175348b6a2745b3396360028.r2.dev/App%20Icons/YouTube-Icons/YouTube-AppStore-1024x1024.png",
-          "subtitle": "YouTube 21.38.2 with YouMod 2.0.0"
+          "subtitle": "YouTube 21.38.3 with YouMod 2.0.0"
         },
         {
-          "name": "YouTube (YTKACE 1.0.1) (iOS 16+)",
+          "name": "YouTube (YTKACE 1.1.0) (iOS 16+)",
           "bundleIdentifier": "com.google.ios.youtube.ytkace",
           "developerName": "itzzace0 & IPA Vault",
           "version": "21.33.6",
           "iconURL": "https://pub-dd800571175348b6a2745b3396360028.r2.dev/App%20Icons/YouTube-Icons/YouTube-AppStore-1024x1024.png",
-          "subtitle": "YouTube 21.33.6 with YTKACE 1.0.1"
+          "subtitle": "YouTube 21.33.6 with YTKACE 1.1.0"
         },
         {
-          "name": "YouTube (YTKACE 1.0.1)",
+          "name": "YouTube (YTKACE 1.1.0)",
           "bundleIdentifier": "com.google.ios.youtube",
           "developerName": "itzzace0 & IPA Vault",
-          "version": "21.38.2",
+          "version": "21.38.3",
           "iconURL": "https://pub-dd800571175348b6a2745b3396360028.r2.dev/App%20Icons/YouTube-Icons/YouTube-AppStore-1024x1024.png",
-          "subtitle": "YouTube 21.38.2 with YTKACE 1.0.1"
+          "subtitle": "YouTube 21.38.3 with YTKACE 1.1.0"
+        },
+        {
+          "name": "YouTube (YTPlus 6.0 b1) (iOS 16+)",
+          "bundleIdentifier": "com.google.ios.youtube.ytplus.21-33-6",
+          "developerName": "dvntms & itzzace0 & IPA Vault",
+          "version": "21.33.6",
+          "iconURL": "https://pub-dd800571175348b6a2745b3396360028.r2.dev/App%20Icons/YouTube-Icons/YouTube-AppStore-1024x1024.png",
+          "subtitle": "YouTube 21.33.6 with YTPlus 6.0 b1"
+        },
+        {
+          "name": "YouTube (YTPlus 6.0 b1)",
+          "bundleIdentifier": "com.google.ios.youtube.ytplus",
+          "developerName": "dvntms & itzzace0 & IPA Vault",
+          "version": "21.38.3",
+          "iconURL": "https://pub-dd800571175348b6a2745b3396360028.r2.dev/App%20Icons/YouTube-Icons/YouTube-AppStore-1024x1024.png",
+          "subtitle": "YouTube 21.38.3 with YTPlus 6.0 b1"
         },
         {
           "name": "YTMUltimate+",
@@ -2089,7 +2105,7 @@
           "name": "YTKillerPlus",
           "bundleIdentifier": "com.google.ios.youtube",
           "developerName": "iKarwan",
-          "version": "21.38.2",
+          "version": "21.38.3",
           "iconURL": "https://raw.githubusercontent.com/mrdrvt99/Altstore-Repository/main/assets/YouTube.png",
           "subtitle": ""
         },
@@ -2113,7 +2129,7 @@
           "name": "YouMod",
           "bundleIdentifier": "com.google.ios.youtube",
           "developerName": "Tonwalter888",
-          "version": "21.38.2",
+          "version": "21.38.3",
           "iconURL": "https://raw.githubusercontent.com/mrdrvt99/Altstore-Repository/main/assets/YouTube.png",
           "subtitle": ""
         }
@@ -8276,5 +8292,5 @@
       ]
     }
   ],
-  "uniqueAppCount": 1912
+  "uniqueAppCount": 1914
 }
