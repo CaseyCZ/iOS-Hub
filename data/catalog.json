@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-27T21:23:11Z",
+  "generatedAt": "2026-09-28T05:26:54Z",
   "sources": [
     {
       "id": "utm",
@@ -4836,10 +4836,26 @@
     {
       "id": "apptesters",
       "name": "AppTesters IPA Repo",
-      "appCount": 9344,
+      "appCount": 9346,
       "catalogLimited": true,
       "iconURL": "https://apptesters.org/apptesters-512x512.png",
       "apps": [
+        {
+          "name": "Thenx",
+          "bundleIdentifier": "com.calisthenics.thenx",
+          "developerName": "",
+          "version": "6.8.3",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.calisthenics.thenx.png",
+          "subtitle": ""
+        },
+        {
+          "name": "Drafts",
+          "bundleIdentifier": "com.agiletortoise.Drafts5",
+          "developerName": "",
+          "version": "54.0.5",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.agiletortoise.Drafts5.png",
+          "subtitle": ""
+        },
         {
           "name": "Clipboard",
           "bundleIdentifier": "com.zeus.EasyCopy",
@@ -6422,22 +6438,6 @@
           "developerName": "",
           "version": "24.0",
           "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.jakemor.firness-ai.png",
-          "subtitle": ""
-        },
-        {
-          "name": "LookUp",
-          "bundleIdentifier": "in.muditbhargava.LookUp",
-          "developerName": "",
-          "version": "13.0.2",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/in.muditbhargava.LookUp.png",
-          "subtitle": ""
-        },
-        {
-          "name": "Detail",
-          "bundleIdentifier": "co.detail.duo",
-          "developerName": "",
-          "version": "6.0.1",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/co.detail.duo.png",
           "subtitle": ""
         }
       ]
