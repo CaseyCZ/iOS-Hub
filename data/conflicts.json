@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-28T05:26:54Z",
+  "generatedAt": "2026-09-28T13:58:58Z",
   "mixes": {
     "dvntm0-workshop--wuxu-library-plus": [
       {
@@ -4050,9 +4050,9 @@
     "all-compatible": [
       {
         "bundleIdentifier": "com.google.ios.youtube",
-        "keptSource": "baretsky-tweaked",
-        "otherSource": "driftywinds",
-        "keptVersion": "21.38.3"
+        "keptSource": "driftywinds",
+        "otherSource": "baretsky-tweaked",
+        "keptVersion": "21.39.4"
       },
       {
         "bundleIdentifier": "com.burbn.instagram",
@@ -4074,9 +4074,9 @@
       },
       {
         "bundleIdentifier": "com.google.ios.youtube",
-        "keptSource": "baretsky-tweaked",
+        "keptSource": "driftywinds",
         "otherSource": "dvntm0-workshop",
-        "keptVersion": "21.38.3"
+        "keptVersion": "21.39.4"
       },
       {
         "bundleIdentifier": "com.google.ios.youtubemusic",
@@ -4148,13 +4148,7 @@
         "bundleIdentifier": "com.atebits.Tweetie2",
         "keptSource": "ipa-vault",
         "otherSource": "baretsky-tweaked",
-        "keptVersion": "12.29"
-      },
-      {
-        "bundleIdentifier": "com.google.ios.youtube",
-        "keptSource": "baretsky-tweaked",
-        "otherSource": "ipa-vault",
-        "keptVersion": "21.38.3"
+        "keptVersion": "12.30"
       },
       {
         "bundleIdentifier": "com.google.ios.youtubemusic",
@@ -4178,7 +4172,7 @@
         "bundleIdentifier": "com.atebits.Tweetie2",
         "keptSource": "ipa-vault",
         "otherSource": "neofreebird",
-        "keptVersion": "12.29"
+        "keptVersion": "12.30"
       },
       {
         "bundleIdentifier": "com.spotify.client",
@@ -4190,7 +4184,7 @@
         "bundleIdentifier": "com.atebits.Tweetie2",
         "keptSource": "ipa-vault",
         "otherSource": "wuxu-library-plus",
-        "keptVersion": "12.29"
+        "keptVersion": "12.30"
       },
       {
         "bundleIdentifier": "com.facebook.Facebook",
@@ -4214,7 +4208,7 @@
         "bundleIdentifier": "com.soundcloud.TouchApp",
         "keptSource": "ipa-vault",
         "otherSource": "wuxu-library-plus",
-        "keptVersion": "8.79.0"
+        "keptVersion": "8.80.0"
       },
       {
         "bundleIdentifier": "com.spotify.client",
@@ -4224,9 +4218,9 @@
       },
       {
         "bundleIdentifier": "com.google.ios.youtube",
-        "keptSource": "baretsky-tweaked",
+        "keptSource": "driftywinds",
         "otherSource": "wuxu-library-plus",
-        "keptVersion": "21.38.3"
+        "keptVersion": "21.39.4"
       },
       {
         "bundleIdentifier": "com.facebook.Messenger",
@@ -4242,9 +4236,9 @@
       },
       {
         "bundleIdentifier": "com.google.ios.youtube",
-        "keptSource": "baretsky-tweaked",
+        "keptSource": "driftywinds",
         "otherSource": "xn1ckuz-sidebox",
-        "keptVersion": "21.38.3"
+        "keptVersion": "21.39.4"
       },
       {
         "bundleIdentifier": "com.google.ios.youtubemusic",
@@ -4260,35 +4254,35 @@
       },
       {
         "bundleIdentifier": "com.google.ios.youtube",
-        "keptSource": "baretsky-tweaked",
+        "keptSource": "driftywinds",
         "otherSource": "youmod-repo",
-        "keptVersion": "21.38.3"
+        "keptVersion": "21.39.4"
       },
       {
         "bundleIdentifier": "com.google.ios.youtube",
-        "keptSource": "baretsky-tweaked",
+        "keptSource": "driftywinds",
         "otherSource": "youtuberebornplus",
-        "keptVersion": "21.38.3"
+        "keptVersion": "21.39.4"
       },
       {
         "bundleIdentifier": "com.google.ios.youtube",
-        "keptSource": "baretsky-tweaked",
+        "keptSource": "driftywinds",
         "otherSource": "ytkace",
-        "keptVersion": "21.38.3"
+        "keptVersion": "21.39.4"
       },
       {
         "bundleIdentifier": "com.google.ios.youtube",
-        "keptSource": "baretsky-tweaked",
+        "keptSource": "driftywinds",
         "otherSource": "ytliteplus",
-        "keptVersion": "21.38.3"
+        "keptVersion": "21.39.4"
       }
     ],
     "altstore-official": [
       {
         "bundleIdentifier": "com.google.ios.youtube",
-        "keptSource": "baretsky-tweaked",
-        "otherSource": "driftywinds",
-        "keptVersion": "21.38.3"
+        "keptSource": "driftywinds",
+        "otherSource": "baretsky-tweaked",
+        "keptVersion": "21.39.4"
       },
       {
         "bundleIdentifier": "com.burbn.instagram",
@@ -4310,9 +4304,9 @@
       },
       {
         "bundleIdentifier": "com.google.ios.youtube",
-        "keptSource": "baretsky-tweaked",
+        "keptSource": "driftywinds",
         "otherSource": "dvntm0-workshop",
-        "keptVersion": "21.38.3"
+        "keptVersion": "21.39.4"
       },
       {
         "bundleIdentifier": "com.google.ios.youtubemusic",
@@ -4384,13 +4378,7 @@
         "bundleIdentifier": "com.atebits.Tweetie2",
         "keptSource": "ipa-vault",
         "otherSource": "baretsky-tweaked",
-        "keptVersion": "12.29"
-      },
-      {
-        "bundleIdentifier": "com.google.ios.youtube",
-        "keptSource": "baretsky-tweaked",
-        "otherSource": "ipa-vault",
-        "keptVersion": "21.38.3"
+        "keptVersion": "12.30"
       },
       {
         "bundleIdentifier": "com.google.ios.youtubemusic",
@@ -4408,7 +4396,7 @@
         "bundleIdentifier": "com.atebits.Tweetie2",
         "keptSource": "ipa-vault",
         "otherSource": "neofreebird",
-        "keptVersion": "12.29"
+        "keptVersion": "12.30"
       },
       {
         "bundleIdentifier": "com.spotify.client",
@@ -4420,7 +4408,7 @@
         "bundleIdentifier": "com.atebits.Tweetie2",
         "keptSource": "ipa-vault",
         "otherSource": "wuxu-library-plus",
-        "keptVersion": "12.29"
+        "keptVersion": "12.30"
       },
       {
         "bundleIdentifier": "com.facebook.Facebook",
@@ -4444,7 +4432,7 @@
         "bundleIdentifier": "com.soundcloud.TouchApp",
         "keptSource": "ipa-vault",
         "otherSource": "wuxu-library-plus",
-        "keptVersion": "8.79.0"
+        "keptVersion": "8.80.0"
       },
       {
         "bundleIdentifier": "com.spotify.client",
@@ -4454,9 +4442,9 @@
       },
       {
         "bundleIdentifier": "com.google.ios.youtube",
-        "keptSource": "baretsky-tweaked",
+        "keptSource": "driftywinds",
         "otherSource": "wuxu-library-plus",
-        "keptVersion": "21.38.3"
+        "keptVersion": "21.39.4"
       },
       {
         "bundleIdentifier": "com.facebook.Messenger",
@@ -4472,9 +4460,9 @@
       },
       {
         "bundleIdentifier": "com.google.ios.youtube",
-        "keptSource": "baretsky-tweaked",
+        "keptSource": "driftywinds",
         "otherSource": "xn1ckuz-sidebox",
-        "keptVersion": "21.38.3"
+        "keptVersion": "21.39.4"
       },
       {
         "bundleIdentifier": "com.google.ios.youtubemusic",
@@ -4490,35 +4478,35 @@
       },
       {
         "bundleIdentifier": "com.google.ios.youtube",
-        "keptSource": "baretsky-tweaked",
+        "keptSource": "driftywinds",
         "otherSource": "youmod-repo",
-        "keptVersion": "21.38.3"
+        "keptVersion": "21.39.4"
       },
       {
         "bundleIdentifier": "com.google.ios.youtube",
-        "keptSource": "baretsky-tweaked",
+        "keptSource": "driftywinds",
         "otherSource": "youtuberebornplus",
-        "keptVersion": "21.38.3"
+        "keptVersion": "21.39.4"
       },
       {
         "bundleIdentifier": "com.google.ios.youtube",
-        "keptSource": "baretsky-tweaked",
+        "keptSource": "driftywinds",
         "otherSource": "ytkace",
-        "keptVersion": "21.38.3"
+        "keptVersion": "21.39.4"
       },
       {
         "bundleIdentifier": "com.google.ios.youtube",
-        "keptSource": "baretsky-tweaked",
+        "keptSource": "driftywinds",
         "otherSource": "ytliteplus",
-        "keptVersion": "21.38.3"
+        "keptVersion": "21.39.4"
       }
     ],
     "sidestore-official": [
       {
         "bundleIdentifier": "com.google.ios.youtube",
-        "keptSource": "baretsky-tweaked",
-        "otherSource": "driftywinds",
-        "keptVersion": "21.38.3"
+        "keptSource": "driftywinds",
+        "otherSource": "baretsky-tweaked",
+        "keptVersion": "21.39.4"
       },
       {
         "bundleIdentifier": "com.burbn.instagram",
@@ -4540,9 +4528,9 @@
       },
       {
         "bundleIdentifier": "com.google.ios.youtube",
-        "keptSource": "baretsky-tweaked",
+        "keptSource": "driftywinds",
         "otherSource": "dvntm0-workshop",
-        "keptVersion": "21.38.3"
+        "keptVersion": "21.39.4"
       },
       {
         "bundleIdentifier": "com.google.ios.youtubemusic",
@@ -4614,13 +4602,7 @@
         "bundleIdentifier": "com.atebits.Tweetie2",
         "keptSource": "ipa-vault",
         "otherSource": "baretsky-tweaked",
-        "keptVersion": "12.29"
-      },
-      {
-        "bundleIdentifier": "com.google.ios.youtube",
-        "keptSource": "baretsky-tweaked",
-        "otherSource": "ipa-vault",
-        "keptVersion": "21.38.3"
+        "keptVersion": "12.30"
       },
       {
         "bundleIdentifier": "com.google.ios.youtubemusic",
@@ -4638,7 +4620,7 @@
         "bundleIdentifier": "com.atebits.Tweetie2",
         "keptSource": "ipa-vault",
         "otherSource": "neofreebird",
-        "keptVersion": "12.29"
+        "keptVersion": "12.30"
       },
       {
         "bundleIdentifier": "com.spotify.client",
@@ -4662,7 +4644,7 @@
         "bundleIdentifier": "com.atebits.Tweetie2",
         "keptSource": "ipa-vault",
         "otherSource": "wuxu-library-plus",
-        "keptVersion": "12.29"
+        "keptVersion": "12.30"
       },
       {
         "bundleIdentifier": "com.facebook.Facebook",
@@ -4686,7 +4668,7 @@
         "bundleIdentifier": "com.soundcloud.TouchApp",
         "keptSource": "ipa-vault",
         "otherSource": "wuxu-library-plus",
-        "keptVersion": "8.79.0"
+        "keptVersion": "8.80.0"
       },
       {
         "bundleIdentifier": "com.spotify.client",
@@ -4696,9 +4678,9 @@
       },
       {
         "bundleIdentifier": "com.google.ios.youtube",
-        "keptSource": "baretsky-tweaked",
+        "keptSource": "driftywinds",
         "otherSource": "wuxu-library-plus",
-        "keptVersion": "21.38.3"
+        "keptVersion": "21.39.4"
       },
       {
         "bundleIdentifier": "com.facebook.Messenger",
@@ -4714,9 +4696,9 @@
       },
       {
         "bundleIdentifier": "com.google.ios.youtube",
-        "keptSource": "baretsky-tweaked",
+        "keptSource": "driftywinds",
         "otherSource": "xn1ckuz-sidebox",
-        "keptVersion": "21.38.3"
+        "keptVersion": "21.39.4"
       },
       {
         "bundleIdentifier": "com.google.ios.youtubemusic",
@@ -4732,27 +4714,27 @@
       },
       {
         "bundleIdentifier": "com.google.ios.youtube",
-        "keptSource": "baretsky-tweaked",
+        "keptSource": "driftywinds",
         "otherSource": "youmod-repo",
-        "keptVersion": "21.38.3"
+        "keptVersion": "21.39.4"
       },
       {
         "bundleIdentifier": "com.google.ios.youtube",
-        "keptSource": "baretsky-tweaked",
+        "keptSource": "driftywinds",
         "otherSource": "youtuberebornplus",
-        "keptVersion": "21.38.3"
+        "keptVersion": "21.39.4"
       },
       {
         "bundleIdentifier": "com.google.ios.youtube",
-        "keptSource": "baretsky-tweaked",
+        "keptSource": "driftywinds",
         "otherSource": "ytkace",
-        "keptVersion": "21.38.3"
+        "keptVersion": "21.39.4"
       },
       {
         "bundleIdentifier": "com.google.ios.youtube",
-        "keptSource": "baretsky-tweaked",
+        "keptSource": "driftywinds",
         "otherSource": "ytliteplus",
-        "keptVersion": "21.38.3"
+        "keptVersion": "21.39.4"
       }
     ]
   }
