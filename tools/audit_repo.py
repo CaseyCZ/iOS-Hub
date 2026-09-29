@@ -1262,7 +1262,7 @@ def validate_layout() -> None:
     registry_driven_tool_scripts = {
         "resources.js": ("SIDELOAD_TOOLS", "resourceBadgeSpecs", "resourceSideloadTools", "resourceDescriptionKey", "sideloadToolURL", "buildResourceSideloadCard", "renderSideloadResourceCards", "sideloadResourceGrid", "hydrateSideloadToolCards", "renderSideloadToolBadges", "dataset.toolType", "dataset.capabilities", "dataset.targets", "dataset.hostPlatforms", "dataset.computerMode", "dataset.sourceSupport", "dataset.openSource", "dataset.resourceBadges"),
         "credits.js": ("SIDELOAD_TOOLS", "CORE_SIDELOAD_RESOURCE_NAMES", "creditSideloadTools", "creditDescriptionKey", "creditBadge", "creditLinkKey", "sideloadToolURL", "buildSideloadCreditCard", "renderSideloadCreditCards", "sideloadCreditGrid", "hydrateSideloadCreditCards", "dataset.toolType", "dataset.capabilities", "dataset.targets", "dataset.hostPlatforms", "dataset.computerMode", "dataset.sourceSupport", "dataset.openSource", "dataset.resourceBadges"),
-        "guide.js": ("sideloadToolForRole", "sideloadToolURL", "troubleshootingSideloadTools", "renderOfficialToolReferences", "officialHelpSources", "guideOfficialLinks", "GUIDE_RECOMMENDATION_ROUTES", "recommendationToolURL", "SETUP_RESULT_ROUTES", "setupResultToolURL", "routeToolURL"),
+        "guide.js": ("sideloadToolForRole", "sideloadToolURL", "troubleshootingSideloadTools", "renderOfficialToolReferences", "officialHelpSources", "guideOfficialLinks", "troubleTermMatches", "GUIDE_RECOMMENDATION_ROUTES", "recommendationToolURL", "SETUP_RESULT_ROUTES", "setupResultToolURL", "routeToolURL"),
     }
     for script_name, required_parts in registry_driven_tool_scripts.items():
         script = JS_DIR / script_name
