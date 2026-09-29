@@ -1262,7 +1262,7 @@ def validate_layout() -> None:
     registry_driven_tool_scripts = {
         "resources.js": ("SIDELOAD_TOOLS", "resourceBadgeSpecs", "resourceSideloadTools", "resourceDescriptionKey", "sideloadToolURL", "buildResourceSideloadCard", "renderSideloadResourceCards", "sideloadResourceGrid", "hydrateSideloadToolCards", "renderSideloadToolBadges", "dataset.toolType", "dataset.capabilities", "dataset.targets", "dataset.hostPlatforms", "dataset.computerMode", "dataset.sourceSupport", "dataset.openSource", "dataset.resourceBadges"),
         "credits.js": ("SIDELOAD_TOOLS", "CORE_SIDELOAD_RESOURCE_NAMES", "creditSideloadTools", "creditDescriptionKey", "creditBadge", "creditLinkKey", "sideloadToolURL", "buildSideloadCreditCard", "renderSideloadCreditCards", "sideloadCreditGrid", "hydrateSideloadCreditCards", "dataset.toolType", "dataset.capabilities", "dataset.targets", "dataset.hostPlatforms", "dataset.computerMode", "dataset.sourceSupport", "dataset.openSource", "dataset.resourceBadges"),
-        "guide.js": ("sideloadToolForRole", "sideloadToolURL", "troubleshootingSideloadTools", "renderOfficialToolReferences", "officialHelpSources", "guideOfficialLinks", "troubleTermMatches", "GUIDE_RECOMMENDATION_ROUTES", "recommendationToolURL", "SETUP_RESULT_ROUTES", "setupResultToolURL", "routeToolURL"),
+        "guide.js": ("sideloadToolForRole", "sideloadToolURL", "troubleshootingSideloadTools", "renderOfficialToolReferences", "officialHelpSources", "guideOfficialLinks", "troubleTermMatches", "troubleshootingToolForQuery", "scopedTroubleQuery", "toolBoost", "$('.trouble-item')", "GUIDE_RECOMMENDATION_ROUTES", "recommendationToolURL", "SETUP_RESULT_ROUTES", "setupResultToolURL", "routeToolURL"),
     }
     for script_name, required_parts in registry_driven_tool_scripts.items():
         script = JS_DIR / script_name
@@ -1282,9 +1282,9 @@ def validate_layout() -> None:
             if required_host not in guide_page_text:
                 error(f"guide.html is missing registry-driven official reference host {required_host!r}")
 
-        trouble_search_values = re.findall(r'<details\s+class="trouble-item[^"]*"\s+data-search="([^"]+)"', guide_page_text)
+        trouble_search_values = re.findall(r'<details\\b[^>]*data-search="([^"]+)"', guide_page_text)
         trouble_search_text = " ".join(trouble_search_values).lower()
-        for tool_token in (
+        expected_trouble_tokens = (
             "altstore",
             "altstore pal",
             "sidestore",
@@ -1297,16 +1297,40 @@ def validate_layout() -> None:
             "iloader",
             "impactor",
             "trollstore",
-        ):
+        )
+        for tool_token in expected_trouble_tokens:
             if tool_token not in trouble_search_text:
                 error(
                     "Guide troubleshooting must cover every central installer by name; "
                     f"missing searchable diagnostics for {tool_token!r}"
                 )
 
+        trouble_tool_ids = set(re.findall(r'<details\\b[^>]*data-tool="([^"]+)"', guide_page_text))
+        for tool_id in (
+            "altstore",
+            "altstore-pal",
+            "sidestore",
+            "livecontainer",
+            "flarestore",
+            "feather",
+            "sideinstaller",
+            "sideloadly",
+            "atvloadly",
+            "iloader",
+            "impactor",
+            "trollstore",
+        ):
+            if tool_id not in trouble_tool_ids:
+                error(
+                    "Guide troubleshooting must tag at least one diagnostic with each installer id; "
+                    f"missing data-tool for {tool_id!r}"
+                )
+
     guide_script = JS_DIR / "guide.js"
     if guide_script.exists():
         guide_text = guide_script.read_text(encoding="utf-8")
+        if "return $('.trouble-item')" in guide_text:
+            error("guide.js must use querySelectorAll helper $ for troubleshooting lists, not single-element $")
         setup_start = guide_text.find("const SETUP_RESULTS = {")
         setup_end = guide_text.find("const SETUP_RESULT_ROUTES", setup_start)
         recommendation_start = guide_text.find("const GUIDE_RECOMMENDATIONS = {")
