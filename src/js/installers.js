@@ -49,6 +49,9 @@ export const INSTALLERS = Object.freeze({
     resourceName: 'AltStore Classic',
     creditName: 'AltStore',
     toolType: 'source-installer',
+    recommendationRoles: Object.freeze({
+      'marketplace-fallback': 10
+    }),
     targets: Object.freeze(['iphone', 'ipad']),
     hostPlatforms: Object.freeze(['windows', 'macos']),
     computerMode: 'required',
@@ -113,6 +116,10 @@ export const INSTALLERS = Object.freeze({
     resourceName: 'LiveContainer',
     creditName: 'LiveContainer',
     toolType: 'source-installer',
+    recommendationRoles: Object.freeze({
+      'many-apps': 10,
+      'many-apps-setup': 20
+    }),
     targets: Object.freeze(['iphone', 'ipad']),
     hostPlatforms: Object.freeze(['ios', 'ipados']),
     computerMode: 'depends',
@@ -144,6 +151,9 @@ export const INSTALLERS = Object.freeze({
     resourceName: 'AltStore PAL',
     creditName: 'AltStore PAL',
     toolType: 'marketplace-source',
+    recommendationRoles: Object.freeze({
+      'marketplace': 10
+    }),
     targets: Object.freeze(['iphone', 'ipad']),
     hostPlatforms: Object.freeze(['ios', 'ipados']),
     computerMode: 'none',
@@ -175,6 +185,7 @@ export const INSTALLERS = Object.freeze({
     resourceName: 'FlareStore',
     creditName: 'FlareStore',
     toolType: 'source-installer',
+    recommendationRoles: Object.freeze({}),
     targets: Object.freeze(['iphone', 'ipad']),
     hostPlatforms: Object.freeze(['ios', 'ipados']),
     computerMode: 'varies',
@@ -205,6 +216,7 @@ export const INSTALLERS = Object.freeze({
     resourceName: 'Feather',
     creditName: 'Feather',
     toolType: 'source-installer',
+    recommendationRoles: Object.freeze({}),
     targets: Object.freeze(['iphone', 'ipad']),
     hostPlatforms: Object.freeze(['ios', 'ipados']),
     computerMode: 'none',
@@ -243,6 +255,11 @@ const AUXILIARY_SIDELOAD_TOOLS = Object.freeze({
     resourceName: 'SideInstaller',
     creditName: 'SideInstaller',
     toolType: 'setup-installer',
+    recommendationRoles: Object.freeze({
+      'iphone-refresh': 20,
+      'on-device-setup': 10,
+      'many-apps-setup': 10
+    }),
     targets: Object.freeze(['iphone', 'ipad']),
     hostPlatforms: Object.freeze(['ios', 'ipados']),
     computerMode: 'none-ios27-pairing-legacy',
@@ -275,6 +292,10 @@ const AUXILIARY_SIDELOAD_TOOLS = Object.freeze({
     resourceName: 'Sideloadly',
     creditName: 'Sideloadly',
     toolType: 'ipa-installer',
+    recommendationRoles: Object.freeze({
+      'desktop-install': 10,
+      'apple-tv': 10
+    }),
     targets: Object.freeze(['iphone', 'ipad', 'apple-tv', 'apple-silicon-mac']),
     hostPlatforms: Object.freeze(['windows', 'macos']),
     computerMode: 'required',
@@ -299,6 +320,9 @@ const AUXILIARY_SIDELOAD_TOOLS = Object.freeze({
     resourceName: 'atvloadly',
     creditName: 'atvloadly',
     toolType: 'ipa-installer',
+    recommendationRoles: Object.freeze({
+      'apple-tv': 20
+    }),
     targets: Object.freeze(['apple-tv']),
     hostPlatforms: Object.freeze(['linux', 'openwrt', 'docker']),
     computerMode: 'self-hosted',
@@ -325,6 +349,9 @@ const AUXILIARY_SIDELOAD_TOOLS = Object.freeze({
     resourceName: 'iloader',
     creditName: 'iloader',
     toolType: 'pairing-tool',
+    recommendationRoles: Object.freeze({
+      'pairing-bootstrap': 10
+    }),
     targets: Object.freeze(['iphone', 'ipad']),
     hostPlatforms: Object.freeze(['desktop']),
     computerMode: 'required',
@@ -349,6 +376,9 @@ const AUXILIARY_SIDELOAD_TOOLS = Object.freeze({
     resourceName: 'Impactor',
     creditName: 'Impactor',
     toolType: 'ipa-installer',
+    recommendationRoles: Object.freeze({
+      'pairing-bootstrap': 20
+    }),
     targets: Object.freeze(['iphone', 'ipad']),
     hostPlatforms: Object.freeze(['windows', 'macos', 'linux']),
     computerMode: 'required',
@@ -375,6 +405,9 @@ const AUXILIARY_SIDELOAD_TOOLS = Object.freeze({
     resourceName: 'TrollStore',
     creditName: 'TrollStore',
     toolType: 'permanent-installer',
+    recommendationRoles: Object.freeze({
+      'permanent': 10
+    }),
     targets: Object.freeze(['iphone', 'ipad']),
     hostPlatforms: Object.freeze(['ios', 'ipados']),
     computerMode: 'varies',
@@ -439,6 +472,18 @@ export function sideloadToolsForTarget(target) {
   return Object.values(SIDELOAD_TOOLS).filter(tool => tool.targets?.includes(target));
 }
 
+export function sideloadToolsForRole(role) {
+  return Object.values(SIDELOAD_TOOLS)
+    .filter(tool => Number.isFinite(Number(tool.recommendationRoles?.[role])))
+    .sort((a, b) =>
+      Number(a.recommendationRoles[role]) - Number(b.recommendationRoles[role])
+    );
+}
+
+export function sideloadToolForRole(role, index = 0) {
+  return sideloadToolsForRole(role)[Math.max(0, index)] || null;
+}
+
 export function sideloadToolProfile(toolId) {
   const tool = sideloadTool(toolId);
   if (!tool) return null;
@@ -450,7 +495,8 @@ export function sideloadToolProfile(toolId) {
     hostPlatforms: [...(tool.hostPlatforms || [])],
     computerMode: tool.computerMode || 'unknown',
     openSource: tool.openSource ?? null,
-    sourceSupport: tool.sourceSupport || 'none'
+    sourceSupport: tool.sourceSupport || 'none',
+    recommendationRoles: {...(tool.recommendationRoles || {})}
   };
 }
 
