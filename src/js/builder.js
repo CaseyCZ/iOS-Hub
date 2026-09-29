@@ -10,7 +10,7 @@ import {
   sourceInstallerIds,
   sourceVariantURL,
   sourceFormatLabel
-} from './installers.js?v=1.1.5-20260929-installers14';
+} from './installers.js?v=1.1.5-20260929-installers15';
 
 const $ = selector => document.querySelector(selector);
 const $$ = selector => [...document.querySelectorAll(selector)];
