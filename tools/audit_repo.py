@@ -1019,10 +1019,11 @@ def validate_layout() -> None:
             "feather",
             "flarestore://source?url=",
             "feather://source/",
-            "PRIMARY_INSTALLER_IDS",
-            "MORE_INSTALLER_IDS",
             "BUILDER_INSTALLER_IDS",
             "mixTarget",
+            "catalogPriority",
+            "overflowPriority",
+            "groupInstallerIds",
             "sourceInstallerDeepLink",
             "sourceVariantURL",
         ):
