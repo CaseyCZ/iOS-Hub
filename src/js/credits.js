@@ -277,6 +277,33 @@ function externalLink(name, url) {
   return a;
 }
 
+function sourceCreditGroup(developer, sources) {
+  const group = document.createElement('span');
+  group.className = 'pill mode source-credit-group';
+
+  const maintainer = document.createElement('strong');
+  maintainer.textContent = developer;
+  group.appendChild(maintainer);
+
+  const separator = document.createElement('span');
+  separator.textContent = ' · ';
+  separator.setAttribute('aria-hidden', 'true');
+  group.appendChild(separator);
+
+  sources.forEach((source, index) => {
+    if (index) group.appendChild(document.createTextNode(', '));
+    const link = document.createElement('a');
+    link.className = 'source-credit-link';
+    link.href = source.website || source.url;
+    link.target = '_blank';
+    link.rel = 'noopener noreferrer';
+    link.textContent = source.name;
+    group.appendChild(link);
+  });
+
+  return group;
+}
+
 async function loadFeaturedCredits() {
   const host = $('#featuredCredits');
   if (!host) return;
@@ -321,14 +348,24 @@ async function loadCredits() {
     if (sourcesHost) {
       sourcesHost.replaceChildren();
       const sources = Array.isArray(registry.sources) ? registry.sources : [];
-      sources
-        .slice()
-        .sort((a, b) => String(a.name || '').localeCompare(String(b.name || '')))
-        .forEach(source => {
-          const url = source.website || source.url;
-          const developer = String(source.developer || '').trim();
-          const label = developer ? source.name + ' · ' + developer : source.name;
-          if (source.name && url) sourcesHost.appendChild(externalLink(label, url));
+      const maintainerGroups = new Map();
+      sources.forEach(source => {
+        const url = source.website || source.url;
+        const developer = String(source.developer || '').trim();
+        if (!source.name || !url || !developer) return;
+
+        const key = developer.toLocaleLowerCase();
+        if (!maintainerGroups.has(key)) {
+          maintainerGroups.set(key, { developer, sources: [] });
+        }
+        maintainerGroups.get(key).sources.push(source);
+      });
+
+      [...maintainerGroups.values()]
+        .sort((a, b) => a.developer.localeCompare(b.developer))
+        .forEach(group => {
+          group.sources.sort((a, b) => String(a.name || '').localeCompare(String(b.name || '')));
+          sourcesHost.appendChild(sourceCreditGroup(group.developer, group.sources));
         });
 
       if (!sourcesHost.children.length) {
