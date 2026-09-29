@@ -461,6 +461,12 @@ def validate_generated_data() -> None:
             for item in registry["sources"]
             if isinstance(item, dict) and item.get("id")
         }
+        registry_by_id = {
+            str(item.get("id")): item
+            for item in registry["sources"]
+            if isinstance(item, dict) and item.get("id")
+        }
+
         status_ids = set(status["sources"])
         if registry_ids != status_ids:
             missing = sorted(registry_ids - status_ids)
@@ -469,6 +475,58 @@ def validate_generated_data() -> None:
                 error("data/status.json is missing registry ids: " + ", ".join(missing))
             if extra:
                 error("data/status.json contains unknown ids: " + ", ".join(extra))
+
+        for source_id, source in registry_by_id.items():
+            item = status["sources"].get(source_id)
+            if not isinstance(item, dict):
+                continue
+
+            configured_urls = source.get("urls")
+            mode = str(source.get("mode") or "classic")
+            expected_variants: set[str] = set()
+            if isinstance(configured_urls, dict):
+                expected_variants.update(
+                    variant
+                    for variant in ("classic", "pal")
+                    if str(configured_urls.get(variant) or "").strip()
+                )
+            if str(source.get("url") or "").strip():
+                expected_variants.add("pal" if mode == "pal" else "classic")
+
+            variants = item.get("variants")
+            if expected_variants:
+                if not isinstance(variants, dict):
+                    error(f"data/status.json source {source_id!r} is missing variants status")
+                else:
+                    actual_variants = set(variants)
+                    if expected_variants != actual_variants:
+                        error(
+                            f"data/status.json source {source_id!r} variants differ from registry; "
+                            f"missing={sorted(expected_variants - actual_variants)}, "
+                            f"extra={sorted(actual_variants - expected_variants)}"
+                        )
+                    for variant, variant_status in variants.items():
+                        if not isinstance(variant_status, dict):
+                            error(
+                                f"data/status.json source {source_id!r} variant {variant!r} must be an object"
+                            )
+                            continue
+                        if not isinstance(variant_status.get("online"), bool):
+                            error(
+                                f"data/status.json source {source_id!r} variant {variant!r} "
+                                "must contain boolean online"
+                            )
+
+            preferred = item.get("preferredVariant")
+            if item.get("online") is True:
+                if preferred not in expected_variants:
+                    error(
+                        f"data/status.json source {source_id!r} has invalid preferredVariant {preferred!r}"
+                    )
+                elif isinstance(variants, dict) and variants.get(preferred, {}).get("online") is not True:
+                    error(
+                        f"data/status.json source {source_id!r} preferredVariant {preferred!r} is not online"
+                    )
 
         online_ids = {
             source_id
@@ -514,6 +572,31 @@ def validate_generated_data() -> None:
                     f"missing={sorted(expected_ids - actual_ids)}, "
                     f"extra={sorted(actual_ids - expected_ids)}"
                 )
+
+            source_ids = user_info.get("sourceIDs") if isinstance(user_info, dict) else None
+            source_urls = user_info.get("sourceURLs") if isinstance(user_info, dict) else None
+            if isinstance(source_ids, list) and isinstance(source_urls, list):
+                if len(source_ids) != len(source_urls):
+                    error(
+                        f"{package_path.relative_to(ROOT)} userInfo sourceIDs/sourceURLs length mismatch"
+                    )
+                else:
+                    for source_id, source_url in zip(source_ids, source_urls):
+                        source = registry_by_id.get(str(source_id))
+                        if not isinstance(source, dict):
+                            continue
+                        configured_urls = source.get("urls")
+                        mode = str(source.get("mode") or "classic")
+                        expected_url = (
+                            str(configured_urls.get("classic") or "").strip()
+                            if isinstance(configured_urls, dict)
+                            else (str(source.get("url") or "").strip() if mode != "pal" else "")
+                        )
+                        if expected_url and source_url != expected_url:
+                            error(
+                                f"{package_path.relative_to(ROOT)} uses non-Classic source URL "
+                                f"for {source_id!r}: {source_url!r}"
+                            )
 
         all_compatible_path = ROOT / "mix" / "all-compatible.json"
         all_compatible = load_json(all_compatible_path)
