@@ -1275,7 +1275,7 @@ def validate_layout() -> None:
     registry_driven_tool_scripts = {
         "resources.js": ("SIDELOAD_TOOLS", "resourceBadgeSpecs", "resourceSideloadTools", "resourceDescriptionKey", "sideloadToolURL", "buildResourceSideloadCard", "renderSideloadResourceCards", "sideloadResourceGrid", "hydrateSideloadToolCards", "renderSideloadToolBadges", "dataset.toolType", "dataset.capabilities", "dataset.targets", "dataset.hostPlatforms", "dataset.computerMode", "dataset.sourceSupport", "dataset.openSource", "dataset.resourceBadges"),
         "credits.js": ("SIDELOAD_TOOLS", "CORE_SIDELOAD_RESOURCE_NAMES", "creditSideloadTools", "creditDescriptionKey", "creditBadge", "creditLinkKey", "sideloadToolURL", "buildSideloadCreditCard", "renderSideloadCreditCards", "sideloadCreditGrid", "hydrateSideloadCreditCards", "dataset.toolType", "dataset.capabilities", "dataset.targets", "dataset.hostPlatforms", "dataset.computerMode", "dataset.sourceSupport", "dataset.openSource", "dataset.resourceBadges"),
-        "guide.js": ("sideloadTool", "sideloadToolForRole", "sideloadToolURL", "troubleshootingSideloadTools", "hydrateGuideToolRegistryReferences", "data-guide-tool-link", "data-guide-tool-icon", "renderOfficialToolReferences", "officialHelpSources", "guideOfficialLinks", "selectedTroubleToolId", "renderToolScopePicker", "setToolScope", "data-guide-tool-scope", "url.searchParams.set('tool'", "troubleTermMatches", "troubleshootingToolForQuery", "scopedTroubleQuery", "toolBoost", "document.querySelectorAll('.trouble-item')", "document.querySelectorAll('[data-guide-mode]')", "document.querySelectorAll('.assistant-tried-options [data-tried-key]')", "GUIDE_RECOMMENDATION_ROUTES", "recommendationToolURL", "SETUP_RESULT_ROUTES", "setupResultToolURL", "routeToolURL"),
+        "guide.js": ("sideloadTool", "sideloadToolForRole", "sideloadToolURL", "troubleshootingSideloadTools", "hydrateGuideToolRegistryReferences", "data-guide-tool-link", "data-guide-tool-icon", "renderOfficialToolReferences", "officialHelpSources", "guideOfficialLinks", "selectedTroubleToolId", "renderToolScopePicker", "setToolScope", "data-guide-tool-scope", "url.searchParams.set('tool'", "troubleTermMatches", "troubleshootingToolAliases", "troubleshootingToolForQuery", "scopedTroubleQuery", "symptomScore > 0", "/install|installation|instal|nainstal/", "toolBoost", "document.querySelectorAll('.trouble-item')", "document.querySelectorAll('[data-guide-mode]')", "document.querySelectorAll('.assistant-tried-options [data-tried-key]')", "GUIDE_RECOMMENDATION_ROUTES", "recommendationToolURL", "SETUP_RESULT_ROUTES", "setupResultToolURL", "routeToolURL"),
     }
     for script_name, required_parts in registry_driven_tool_scripts.items():
         script = JS_DIR / script_name
@@ -1379,15 +1379,122 @@ def validate_layout() -> None:
                     f"missing data-tool for {tool_id!r}"
                 )
 
-        for phrase, expected_tool in (
-            ("nejde mi instalovat aplikaci na Feather", "feather"),
-            ("FlareStore mi neotevře instalaci", "flarestore"),
-            ("atvloadly nevidí Apple TV", "atvloadly"),
+        trouble_items = []
+        for match in re.finditer(
+            r'<details class="([^"]*\\btrouble-item\\b[^"]*)"([^>]*)>([\\s\\S]*?)</details>',
+            guide_page_text,
         ):
-            normalized_phrase = re.sub(r"[^a-z0-9]+", " ", phrase.lower()).strip()
-            normalized_tool = re.sub(r"[^a-z0-9]+", " ", expected_tool.lower()).strip()
-            if normalized_tool not in normalized_phrase or expected_tool not in trouble_tool_ids:
-                error(f"Guide troubleshooting regression is missing route for {phrase!r}")
+            classes, attrs, body = match.groups()
+            tool_match = re.search(r'data-tool="([^"]+)"', attrs)
+            search_match = re.search(r'data-search="([^"]*)"', attrs)
+            title_match = re.search(r"<summary[^>]*>([\\s\\S]*?)</summary>", body)
+            trouble_items.append(
+                {
+                    "classes": classes,
+                    "tool": tool_match.group(1) if tool_match else "",
+                    "search": (search_match.group(1) if search_match else "").lower(),
+                    "title": re.sub(r"<[^>]+>", " ", title_match.group(1) if title_match else "").strip(),
+                    "text": re.sub(r"<[^>]+>", " ", body).lower(),
+                }
+            )
+
+        trouble_aliases = {
+            "altstore": ("altstore", "altstore classic"),
+            "altstore-pal": ("altstore pal", "altstore-pal"),
+            "sidestore": ("sidestore",),
+            "livecontainer": ("livecontainer",),
+            "flarestore": ("flarestore",),
+            "feather": ("feather",),
+            "sideinstaller": ("sideinstaller",),
+            "sideloadly": ("sideloadly",),
+            "atvloadly": ("atvloadly",),
+            "iloader": ("iloader",),
+            "impactor": ("impactor",),
+            "trollstore": ("trollstore",),
+        }
+
+        def normalize_trouble_tool_text(value: str) -> str:
+            return re.sub(r"\\s+", " ", re.sub(r"[^a-z0-9]+", " ", value.lower())).strip()
+
+        def audit_tool_for_query(query: str) -> str:
+            normalized_query = normalize_trouble_tool_text(query)
+            matches = []
+            for tool_id, aliases in trouble_aliases.items():
+                for alias in aliases:
+                    normalized_alias = normalize_trouble_tool_text(alias)
+                    if normalized_alias and normalized_alias in normalized_query:
+                        matches.append((len(normalized_alias), tool_id))
+            return max(matches)[1] if matches else ""
+
+        def audit_term_matches(haystack: str, term: str) -> bool:
+            if not term:
+                return False
+            if re.fullmatch(r"[a-z0-9_-]+", term, re.IGNORECASE):
+                return term in re.findall(r"[a-z0-9_-]+", haystack, re.IGNORECASE)
+            return term in haystack
+
+        def audit_trouble_top(query: str, selected_tool: str = "") -> tuple[str, str]:
+            terms = list(dict.fromkeys(term for term in query.lower().split() if term))
+            preferred_tool = selected_tool or audit_tool_for_query(query)
+            preferred_terms = {
+                token
+                for alias in trouble_aliases.get(preferred_tool, ())
+                for token in normalize_trouble_tool_text(alias).split()
+            }
+            symptom_terms = [term for term in terms if term not in preferred_terms]
+            ranked = []
+            for index, item in enumerate(trouble_items):
+                if selected_tool and item["tool"] and item["tool"] != selected_tool:
+                    continue
+
+                def score_terms(values):
+                    score = 0
+                    for term in values:
+                        if audit_term_matches(item["search"], term):
+                            score += 4 if any(ch.isdigit() for ch in term) else 2
+                        elif audit_term_matches(item["text"], term):
+                            score += 3 if any(ch.isdigit() for ch in term) else 1
+                    return score
+
+                base_score = score_terms(terms)
+                if base_score <= 0:
+                    continue
+                symptom_score = score_terms(symptom_terms)
+                tool_boost = 12 if preferred_tool and item["tool"] == preferred_tool and symptom_score > 0 else 0
+                competing_penalty = 0.75 if preferred_tool and item["tool"] and item["tool"] != preferred_tool else 0
+                community_penalty = 0.15 if "community-item" in item["classes"] else 0
+                ranked.append(
+                    (
+                        base_score + tool_boost - competing_penalty - community_penalty,
+                        base_score,
+                        -index,
+                        item["tool"],
+                        item["title"],
+                    )
+                )
+            if not ranked:
+                return "", ""
+            ranked.sort(reverse=True)
+            return ranked[0][3], ranked[0][4]
+
+        trouble_regressions = (
+            ("Feather install", "feather install ipa app", "", "feather", ""),
+            ("FlareStore install", "flarestore install ipa app", "", "flarestore", ""),
+            ("atvloadly Apple TV", "atvloadly apple tv", "", "atvloadly", ""),
+            ("SideInstaller HTTP 503", "sideinstaller apple login 503 2fa 1004 verification code", "", "sideinstaller", ""),
+            ("AltStore 7-day expiry", "altstore refresh", "", "", "expired after 7 days"),
+            ("AltStore app limit", "altstore 3 app limit app ids 1009 2009", "", "", "3-app or App ID limit"),
+            ("selected SideStore refresh", "sidestore refresh", "sidestore", "sidestore", ""),
+            ("selected AltStore PAL install", "altstore pal install ipa app", "altstore-pal", "altstore-pal", ""),
+            ("selected Feather integrity", "feather integrity", "feather", "feather", ""),
+        )
+        for label, query, selected_tool, expected_tool, expected_title in trouble_regressions:
+            actual_tool, actual_title = audit_trouble_top(query, selected_tool)
+            if actual_tool != expected_tool or (expected_title and expected_title.lower() not in actual_title.lower()):
+                error(
+                    "Guide troubleshooting matcher regression failed for "
+                    f"{label!r}: got tool={actual_tool!r}, title={actual_title!r}"
+                )
 
     guide_script = JS_DIR / "guide.js"
     if guide_script.exists():
