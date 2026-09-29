@@ -384,8 +384,18 @@ async function loadCredits() {
         card.className = 'panel resource-card';
 
         const icon = document.createElement('div');
-        icon.className = 'resource-icon';
-        icon.textContent = 'REF';
+        icon.className = 'resource-icon resource-icon-image';
+        const iconImage = document.createElement('img');
+        iconImage.className = 'official-app-icon';
+        iconImage.alt = '';
+        iconImage.loading = 'lazy';
+        iconImage.referrerPolicy = 'no-referrer';
+        try {
+          iconImage.src = `https://www.google.com/s2/favicons?domain=${encodeURIComponent(new URL(ref.url).hostname)}&sz=128`;
+        } catch (_) {
+          iconImage.src = 'https://www.google.com/s2/favicons?domain=github.com&sz=128';
+        }
+        icon.appendChild(iconImage);
 
         const badges = document.createElement('div');
         badges.className = 'resource-badges';
@@ -405,11 +415,16 @@ async function loadCredits() {
         try { domain.textContent = new URL(ref.url).hostname; } catch (_) { domain.textContent = ref.url || ''; }
 
         const link = document.createElement('a');
-        link.className = 'btn primary';
+        link.className = 'btn primary brand-link';
         link.href = ref.url;
         link.target = '_blank';
         link.rel = 'noopener noreferrer';
-        link.textContent = creditText('openReference');
+
+        const linkIcon = iconImage.cloneNode(true);
+        linkIcon.className = 'brand-link-icon';
+        const linkText = document.createElement('span');
+        linkText.textContent = creditText('openReference');
+        link.append(linkIcon, linkText);
 
         card.append(icon, badges, title, note, domain, link);
         refsHost.appendChild(card);

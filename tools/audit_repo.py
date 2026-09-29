@@ -852,7 +852,7 @@ def validate_layout() -> None:
     dynamic_source_scripts = {
         "app.js": ("sources/registry.json", "data/status.json", "data/catalog.json", "sourceWebsiteIcon", "data-source-website-icon"),
         "builder.js": ("sources/registry.json", "data/status.json", "data/catalog.json"),
-        "credits.js": ("sources/registry.json", "sourceCredits", "source.developer", "maintainerGroups", "sourceCreditGroup"),
+        "credits.js": ("sources/registry.json", "sourceCredits", "source.developer", "maintainerGroups", "sourceCreditGroup", "brand-link-icon", "iconImage"),
     }
     for script_name, required_parts in dynamic_source_scripts.items():
         script = JS_DIR / script_name
@@ -931,6 +931,22 @@ def validate_layout() -> None:
                     "credits.js must keep Featured apps & services generated from resources.html; "
                     f"missing {required_part!r}"
                 )
+
+    if credits_page.exists():
+        credits_text = credits_page.read_text(encoding="utf-8")
+        for match in re.finditer(r'<article class="panel resource-card">([\s\S]*?)</article>', credits_text):
+            card = match.group(1)
+            if 'btn primary' not in card:
+                continue
+            name_match = re.search(r'<h3[^>]*>([\s\S]*?)</h3>', card)
+            name = re.sub(r"<[^>]+>", "", name_match.group(1)).strip() if name_match else "unknown"
+            icon_match = re.search(r'<div class="resource-icon[^"]*">([\s\S]*?)</div>', card)
+            icon_html = icon_match.group(1) if icon_match else ""
+            if "<img" not in icon_html and "hotkeyz-app-icon" not in icon_html:
+                error(f"credits.html card {name!r} is missing a real icon")
+            button_match = re.search(r'<a class="[^"]*btn primary[^"]*"[^>]*>([\s\S]*?)</a>', card)
+            if button_match and "brand-link-icon" not in button_match.group(1) and "hotkeyz-app-icon-small" not in button_match.group(1):
+                error(f"credits.html card {name!r} button is missing its icon")
 
     for path in LEGACY_PATHS:
         if path.exists():

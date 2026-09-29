@@ -1856,6 +1856,30 @@
         "official"
       ],
       "developer": "Majd Alfhaily"
+    },
+    {
+      "id": "reynard-browser",
+      "name": "Reynard Browser",
+      "url": "https://github.com/minh-ton/reynard-browser/releases/download/0.0.1-a1/source.json",
+      "website": "https://github.com/minh-ton/reynard-browser",
+      "mode": "classic",
+      "mergeable": false,
+      "official": true,
+      "trusted": false,
+      "recommended": false,
+      "developer": "Minh Ton",
+      "description": {
+        "cs": "Oficiální AltStore/SideStore source pro Reynard Browser, experimentální Gecko prohlížeč pro iOS.",
+        "en": "Official AltStore/SideStore source for Reynard Browser, an experimental Gecko-based browser for iOS."
+      },
+      "tags": [
+        "browser",
+        "gecko",
+        "altstore",
+        "sidestore",
+        "official",
+        "open-source"
+      ]
     }
   ]
 }
