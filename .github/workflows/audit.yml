@@ -3,12 +3,13 @@ name: Audit iOS Hub
 on:
   workflow_dispatch:
   push:
-    branches: [main]
+    branches: [main, installer-refactor]
     paths:
       - "src/**/*.js"
       - "*.html"
       - "src/**/*.css"
       - "tools/**"
+      - "sources/**"
       - "altstore/**"
       - "sidestore/**"
       - "mix/**"
