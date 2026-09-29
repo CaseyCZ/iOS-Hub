@@ -177,6 +177,10 @@
           <p id="expResultNote" class="notice" style="margin-top:10px"></p>
           <div class="builder-actions">
             <a id="expAddTarget" class="btn small primary" href="#" hidden>＋ Add</a>
+            <details id="expAddSources" class="builder-install-sources" hidden>
+              <summary id="expAddSourcesSummary" class="btn small primary">＋ Add sources</summary>
+              <div id="expAddSourcesMenu" class="builder-install-sources-menu"></div>
+            </details>
             <button id="expCopyUrl" class="btn small secondary" type="button" hidden>Copy URL</button>
             <a id="expDownload" class="btn small secondary" href="#">Download JSON</a>
             <a id="expPreview" class="btn small ghost" href="#" target="_blank" rel="noopener">Preview JSON</a>
@@ -209,7 +213,7 @@
   </div>
 
   <script type="module" src="src/js/builder-page.js?v=1.1.5-20260918-fullaudit2"></script>
-  <script type="module" src="src/js/builder.js?v=1.1.5-20260929-installers1"></script>
+  <script type="module" src="src/js/builder.js?v=1.1.5-20260929-installers2"></script>
   <script type="module" src="src/js/collapsible.js?v=1.1.5-20260918-audit1"></script>
   <script src="src/js/support-dialog.js?v=1.1.5-20260918-a11y1"></script>
   <script src="src/js/mobile-menu.js?v=1.1.5-20260918-a11y1"></script>
