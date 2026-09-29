@@ -128,7 +128,7 @@ reportHelpTitle:'Toujours en panne ?', reportHelpDesc:'Ouvrez un rapport GitHub 
 const HELP_COPY = {
   en: {
     pageEyebrow:'HELP CENTER · GUIDES · FIXES', pageTitle:'Sideloading Help Center', pageDesc:'Choose the right sideloading method, diagnose a problem or describe your setup and get a focused path in a few taps.',
-    centerEyebrow:'IOS HUB HELP CENTER', centerTitle:'How can we help?', centerDesc:'Start with one of the three paths below. You can change direction at any time without losing the rest of the guide.', toolScopeEyebrow:'FOCUSED HELP', toolScopeTitle:'Help with a selected installer', toolScopeDesc:'Already know which installer you use or want to set up? Select it for focused help, installation guidance and fixes. If not, leave Help me choose selected and iOS Hub will guide you.', toolScopeAll:'Help me choose',
+    centerEyebrow:'IOS HUB HELP CENTER', centerTitle:'How can we help?', centerDesc:'Start with one of the three paths below. You can change direction at any time without losing the rest of the guide.', toolScopeEyebrow:'FOCUSED HELP', toolScopeTitle:'Help with a selected installer', toolScopeDesc:'Already know which installer you use or want to set up? Select it for focused help, installation guidance and fixes. If not, leave Help me choose selected and iOS Hub will guide you.', toolScopeAll:'Help me choose', toolScopeActive:'Guide content below is filtered for {tool}: installation methods, compatibility, fixes and official references.',
     modeChooseTitle:'Choose a method', modeChooseDesc:'Tell us what you want to do', modeFixTitle:'Fix a problem', modeFixDesc:'Search by symptom or error', modeSetupTitle:'My setup', modeSetupDesc:'Build a recommendation from your device',
     chooseTitle:'What do you want to do?', chooseDesc:'Pick the closest goal. We will show a practical starting point and the next three steps.',
     fixTitle:'What is not working?', fixDesc:'Paste part of an error message or pick a common problem. We will narrow the troubleshooting list below.', fixPlaceholder:'Paste an error: 503, pairing, certificate, refresh…',
@@ -138,7 +138,7 @@ const HELP_COPY = {
   },
   cs: {
     pageEyebrow:'CENTRUM POMOCI · NÁVODY · ŘEŠENÍ', pageTitle:'Centrum pomoci se sideloadingem', pageDesc:'Vyber správnou metodu, najdi příčinu problému nebo popiš svoji konfiguraci a během pár klepnutí dostaneš konkrétní postup.',
-    centerEyebrow:'IOS HUB CENTRUM POMOCI', centerTitle:'S čím potřebuješ pomoct?', centerDesc:'Začni jednou ze tří cest níže. Kdykoliv můžeš přepnout jinam a zbytek průvodce zůstane dostupný.', toolScopeEyebrow:'ZAMĚŘENÁ POMOC', toolScopeTitle:'Pomoc s vybraným instalátorem', toolScopeDesc:'Víš, který instalátor používáš nebo chceš nainstalovat? Vyber ho pro cílenou pomoc, návod k instalaci a řešení problémů. Pokud ne, nech Pomoz mi vybrat a iOS Hub tě provede výběrem.', toolScopeAll:'Pomoz mi vybrat',
+    centerEyebrow:'IOS HUB CENTRUM POMOCI', centerTitle:'S čím potřebuješ pomoct?', centerDesc:'Začni jednou ze tří cest níže. Kdykoliv můžeš přepnout jinam a zbytek průvodce zůstane dostupný.', toolScopeEyebrow:'ZAMĚŘENÁ POMOC', toolScopeTitle:'Pomoc s vybraným instalátorem', toolScopeDesc:'Víš, který instalátor používáš nebo chceš nainstalovat? Vyber ho pro cílenou pomoc, návod k instalaci a řešení problémů. Pokud ne, nech Pomoz mi vybrat a iOS Hub tě provede výběrem.', toolScopeAll:'Pomoz mi vybrat', toolScopeActive:'Obsah průvodce níže je filtrovaný pro {tool}: instalační metody, kompatibilita, řešení problémů a oficiální odkazy.',
     modeChooseTitle:'Vybrat metodu', modeChooseDesc:'Řekni, co chceš udělat', modeFixTitle:'Vyřešit problém', modeFixDesc:'Hledej podle chyby nebo příznaku', modeSetupTitle:'Moje konfigurace', modeSetupDesc:'Doporučení podle tvého zařízení',
     chooseTitle:'Co chceš udělat?', chooseDesc:'Vyber nejbližší cíl. Ukážeme ti praktický začátek a tři další kroky.',
     fixTitle:'Co nefunguje?', fixDesc:'Vlož část chybové hlášky nebo vyber častý problém. Zúžíme seznam řešení níže.', fixPlaceholder:'Vlož chybu: 503, pairing, certificate, refresh…',
@@ -148,7 +148,7 @@ const HELP_COPY = {
   },
   de: {
     pageEyebrow:'HILFECENTER · ANLEITUNGEN · LÖSUNGEN', pageTitle:'Sideloading-Hilfecenter', pageDesc:'Wähle die passende Methode, diagnostiziere ein Problem oder beschreibe dein Setup und erhalte mit wenigen Klicks einen gezielten Weg.',
-    centerEyebrow:'IOS HUB HILFECENTER', centerTitle:'Wobei können wir helfen?', centerDesc:'Starte mit einem der drei Wege. Du kannst jederzeit wechseln, ohne den restlichen Guide zu verlieren.', toolScopeEyebrow:'GEZIELTE HILFE', toolScopeTitle:'Hilfe für einen ausgewählten Installer', toolScopeDesc:'Wenn du weißt, welchen Installer du nutzt oder einrichten möchtest, wähle ihn für gezielte Hilfe, Installation und Fehlerbehebung. Sonst lass Hilf mir wählen ausgewählt.', toolScopeAll:'Hilf mir wählen',
+    centerEyebrow:'IOS HUB HILFECENTER', centerTitle:'Wobei können wir helfen?', centerDesc:'Starte mit einem der drei Wege. Du kannst jederzeit wechseln, ohne den restlichen Guide zu verlieren.', toolScopeEyebrow:'GEZIELTE HILFE', toolScopeTitle:'Hilfe für einen ausgewählten Installer', toolScopeDesc:'Wenn du weißt, welchen Installer du nutzt oder einrichten möchtest, wähle ihn für gezielte Hilfe, Installation und Fehlerbehebung. Sonst lass Hilf mir wählen ausgewählt.', toolScopeAll:'Hilf mir wählen', toolScopeActive:'Der Guide unten ist für {tool} gefiltert: Installationsmethoden, Kompatibilität, Fehlerbehebung und offizielle Verweise.',
     modeChooseTitle:'Methode wählen', modeChooseDesc:'Sag uns, was du tun möchtest', modeFixTitle:'Problem beheben', modeFixDesc:'Nach Symptom oder Fehler suchen', modeSetupTitle:'Mein Setup', modeSetupDesc:'Empfehlung anhand deines Geräts',
     chooseTitle:'Was möchtest du tun?', chooseDesc:'Wähle das passendste Ziel. Wir zeigen einen praktischen Startpunkt und die nächsten drei Schritte.',
     fixTitle:'Was funktioniert nicht?', fixDesc:'Füge einen Teil der Fehlermeldung ein oder wähle ein häufiges Problem. Wir grenzen die Lösungen unten ein.', fixPlaceholder:'Fehler einfügen: 503, Pairing, Zertifikat, Refresh…',
@@ -158,7 +158,7 @@ const HELP_COPY = {
   },
   es: {
     pageEyebrow:'CENTRO DE AYUDA · GUÍAS · SOLUCIONES', pageTitle:'Centro de ayuda de sideloading', pageDesc:'Elige el método adecuado, diagnostica un problema o describe tu configuración y obtén una ruta concreta en pocos toques.',
-    centerEyebrow:'CENTRO DE AYUDA IOS HUB', centerTitle:'¿En qué podemos ayudarte?', centerDesc:'Empieza con una de las tres rutas. Puedes cambiar en cualquier momento sin perder el resto de la guía.', toolScopeEyebrow:'AYUDA ENFOCADA', toolScopeTitle:'Ayuda con un instalador seleccionado', toolScopeDesc:'Si ya sabes qué instalador usas o quieres instalar, selecciónalo para obtener ayuda, instalación y solución de problemas. Si no, deja Ayúdame a elegir.', toolScopeAll:'Ayúdame a elegir',
+    centerEyebrow:'CENTRO DE AYUDA IOS HUB', centerTitle:'¿En qué podemos ayudarte?', centerDesc:'Empieza con una de las tres rutas. Puedes cambiar en cualquier momento sin perder el resto de la guía.', toolScopeEyebrow:'AYUDA ENFOCADA', toolScopeTitle:'Ayuda con un instalador seleccionado', toolScopeDesc:'Si ya sabes qué instalador usas o quieres instalar, selecciónalo para obtener ayuda, instalación y solución de problemas. Si no, deja Ayúdame a elegir.', toolScopeAll:'Ayúdame a elegir', toolScopeActive:'El contenido de la guía está filtrado para {tool}: métodos de instalación, compatibilidad, soluciones y referencias oficiales.',
     modeChooseTitle:'Elegir método', modeChooseDesc:'Dinos qué quieres hacer', modeFixTitle:'Resolver un problema', modeFixDesc:'Buscar por síntoma o error', modeSetupTitle:'Mi configuración', modeSetupDesc:'Recomendación según tu dispositivo',
     chooseTitle:'¿Qué quieres hacer?', chooseDesc:'Elige el objetivo más cercano. Mostraremos un punto de partida práctico y los tres pasos siguientes.',
     fixTitle:'¿Qué no funciona?', fixDesc:'Pega parte del mensaje de error o elige un problema común. Reduciremos la lista de soluciones de abajo.', fixPlaceholder:'Pega un error: 503, pairing, certificado, refresh…',
@@ -168,7 +168,7 @@ const HELP_COPY = {
   },
   fr: {
     pageEyebrow:'CENTRE D’AIDE · GUIDES · SOLUTIONS', pageTitle:'Centre d’aide au sideloading', pageDesc:'Choisissez la bonne méthode, diagnostiquez un problème ou décrivez votre configuration et obtenez un parcours ciblé en quelques gestes.',
-    centerEyebrow:'CENTRE D’AIDE IOS HUB', centerTitle:'Comment pouvons-nous vous aider ?', centerDesc:'Commencez par l’un des trois parcours. Vous pouvez changer à tout moment sans perdre le reste du guide.', toolScopeEyebrow:'AIDE CIBLÉE', toolScopeTitle:'Aide pour un installateur sélectionné', toolScopeDesc:'Si vous savez quel installateur vous utilisez ou voulez installer, sélectionnez-le pour une aide ciblée, l’installation et le dépannage. Sinon, laissez Aidez-moi à choisir.', toolScopeAll:'Aidez-moi à choisir',
+    centerEyebrow:'CENTRE D’AIDE IOS HUB', centerTitle:'Comment pouvons-nous vous aider ?', centerDesc:'Commencez par l’un des trois parcours. Vous pouvez changer à tout moment sans perdre le reste du guide.', toolScopeEyebrow:'AIDE CIBLÉE', toolScopeTitle:'Aide pour un installateur sélectionné', toolScopeDesc:'Si vous savez quel installateur vous utilisez ou voulez installer, sélectionnez-le pour une aide ciblée, l’installation et le dépannage. Sinon, laissez Aidez-moi à choisir.', toolScopeAll:'Aidez-moi à choisir', toolScopeActive:'Le guide ci-dessous est filtré pour {tool} : méthodes d’installation, compatibilité, dépannage et références officielles.',
     modeChooseTitle:'Choisir une méthode', modeChooseDesc:'Dites ce que vous voulez faire', modeFixTitle:'Résoudre un problème', modeFixDesc:'Rechercher par symptôme ou erreur', modeSetupTitle:'Ma configuration', modeSetupDesc:'Recommandation selon votre appareil',
     chooseTitle:'Que voulez-vous faire ?', chooseDesc:'Choisissez l’objectif le plus proche. Nous afficherons un point de départ pratique et les trois étapes suivantes.',
     fixTitle:'Qu’est-ce qui ne fonctionne pas ?', fixDesc:'Collez une partie du message d’erreur ou choisissez un problème courant. Nous réduirons la liste des solutions ci-dessous.', fixPlaceholder:'Collez une erreur : 503, pairing, certificat, refresh…',
@@ -351,7 +351,7 @@ function scopedTroubleshootingTools() {
 }
 
 function updateTroubleScopeControls() {
-  $$('[data-assistant-tool], [data-trouble-tool]').forEach(button => {
+  $('[data-assistant-tool], [data-trouble-tool]').forEach(button => {
     const toolId = button.dataset.assistantTool || button.dataset.troubleTool || '';
     const hidden = Boolean(selectedTroubleToolId && toolId && toolId !== selectedTroubleToolId);
     button.hidden = hidden;
@@ -362,13 +362,40 @@ function updateTroubleScopeControls() {
   });
 }
 
+function guideNodeSupportsTool(node, toolId) {
+  return String(node?.dataset?.guideTools || '')
+    .split(/\s+/)
+    .filter(Boolean)
+    .includes(toolId);
+}
+
+function updateGuideScopeContent() {
+  const selected = selectedTroubleshootingTool();
+  const scopedNodes = $('[data-guide-tools]');
+  const hasMatchingContent = Boolean(
+    selected && scopedNodes.some(node => guideNodeSupportsTool(node, selected.id))
+  );
+
+  scopedNodes.forEach(node => {
+    node.hidden = Boolean(
+      selected && hasMatchingContent && !guideNodeSupportsTool(node, selected.id)
+    );
+  });
+}
+
 function updateToolScopeDisplay() {
   const selected = selectedTroubleshootingTool();
   const copy = helpCopyForLanguage();
   const label = $('#guideToolScopeLabel');
   const icon = $('#guideToolScopeIcon');
   const allIcon = $('#guideToolScopeAllIcon');
+  const description = $('[data-help-copy="toolScopeDesc"]');
   if (label) label.textContent = selected?.label || copy.toolScopeAll;
+  if (description) {
+    description.textContent = selected
+      ? copy.toolScopeActive.replace('{tool}', selected.label)
+      : copy.toolScopeDesc;
+  }
   if (icon) {
     icon.hidden = !selected?.icon;
     icon.src = selected?.icon || '';
@@ -502,6 +529,7 @@ function setToolScope(toolId, syncUrl = true) {
   closeToolScopePicker();
   updateToolScopeDisplay();
   updateTroubleScopeControls();
+  updateGuideScopeContent();
   renderOfficialToolReferences();
   filterTroubleshooting();
   updateAssistantTroubleSummary();
