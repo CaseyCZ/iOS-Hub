@@ -232,7 +232,7 @@ export const INSTALLERS = Object.freeze({
     computerMode: 'varies',
     openSource: null,
     sourceSupport: 'classic',
-    resourceBadges: Object.freeze(['resourceSideloading', 'Sources']),
+    resourceBadges: Object.freeze(['freeVerified', 'resourceSideloading', 'Sources']),
     capabilities: Object.freeze(['source', 'ipa-install', 'signing']),
     website: 'https://flarestore.app/',
     guideURL: 'https://flarestore.app/',
