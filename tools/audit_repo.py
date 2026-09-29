@@ -990,8 +990,8 @@ def validate_layout() -> None:
     # Source-facing pages must stay registry-driven so adding one source updates
     # the catalog, Builder and Credits without maintaining duplicate hard-coded lists.
     dynamic_source_scripts = {
-        "app.js": ("sources/registry.json", "data/status.json", "data/catalog.json", "sourceWebsiteIcon", "data-source-website-icon", "installers.js"),
-        "builder.js": ("sources/registry.json", "data/status.json", "data/catalog.json", "installers.js", "BUILDER_INSTALLER_IDS"),
+        "app.js": ("sources/registry.json", "data/status.json", "data/catalog.json", "sourceWebsiteIcon", "data-source-website-icon", "installers.js", "SOURCE_VARIANT_IDS", "sourceVariantLabel", "sourceModeLabel"),
+        "builder.js": ("sources/registry.json", "data/status.json", "data/catalog.json", "installers.js", "BUILDER_INSTALLER_IDS", "sourceFormatLabel", "targetVariant"),
         "credits.js": ("sources/registry.json", "sourceCredits", "source.developer", "maintainerGroups", "sourceCreditGroup", "brand-link-icon", "iconImage"),
     }
     for script_name, required_parts in dynamic_source_scripts.items():
@@ -1019,6 +1019,9 @@ def validate_layout() -> None:
             "feather",
             "flarestore://source?url=",
             "feather://source/",
+            "SOURCE_VARIANTS",
+            "SOURCE_VARIANT_IDS",
+            "SOURCE_MODES",
             "BUILDER_INSTALLER_IDS",
             "mixTarget",
             "catalogPriority",
@@ -1026,6 +1029,10 @@ def validate_layout() -> None:
             "groupInstallerIds",
             "sourceInstallerDeepLink",
             "sourceVariantURL",
+            "sourceVariantIds",
+            "sourceVariantLabel",
+            "sourceModeLabel",
+            "sourceFormatLabel",
         ):
             if required not in installers_text:
                 error(f"installers.js is missing installer architecture part: {required!r}")
