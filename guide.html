@@ -19,7 +19,7 @@
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-SZTERTRTCE"></script>
   <script src="src/js/analytics.js?v=1.1.5-20260929-titlefix1"></script>
   <link rel="stylesheet" href="src/css/styles.css?v=1.1.5-20260918-fullaudit3">
-  <link rel="stylesheet" href="src/css/hub-extra.css?v=1.1.5-20260924-scrollfix1">
+  <link rel="stylesheet" href="src/css/hub-extra.css?v=1.1.5-20260929-guide-scope1">
 </head>
 <body>
   <a class="skip-link" href="#top" data-i18n="skipToContent">Skip to content</a>
@@ -81,6 +81,25 @@
       <div class="eyebrow" data-help-copy="pageEyebrow">HELP CENTER · GUIDES · FIXES</div>
       <h1 data-help-copy="pageTitle">Sideloading Help Center</h1>
       <p data-help-copy="pageDesc">Choose the right sideloading method, diagnose a problem or describe your setup and get a focused path in a few taps.</p>
+    </section>
+
+    <section class="wrap guide-tool-scope-wrap" aria-labelledby="guideToolScopeTitle">
+      <div id="guideToolScope" class="guide-tool-scope panel">
+        <div class="guide-tool-scope-copy">
+          <div class="eyebrow" data-help-copy="toolScopeEyebrow">FOCUSED HELP</div>
+          <strong id="guideToolScopeTitle" data-help-copy="toolScopeTitle">Help with a selected installer</strong>
+          <span data-help-copy="toolScopeDesc">Choose an installer to focus troubleshooting and official references, or leave All selected for a mixed view.</span>
+        </div>
+        <div class="guide-tool-picker">
+          <button id="guideToolScopeButton" class="guide-tool-scope-button" type="button" aria-haspopup="listbox" aria-expanded="false" aria-controls="guideToolScopeMenu">
+            <span id="guideToolScopeAllIcon" class="guide-tool-scope-all-icon" aria-hidden="true">▦</span>
+            <img id="guideToolScopeIcon" class="guide-tool-scope-icon" src="" alt="" hidden referrerpolicy="no-referrer">
+            <span id="guideToolScopeLabel" class="guide-tool-scope-label">All installers</span>
+            <span class="guide-tool-scope-chevron" aria-hidden="true">⌄</span>
+          </button>
+          <div id="guideToolScopeMenu" class="guide-tool-scope-menu" role="listbox" aria-labelledby="guideToolScopeTitle" hidden></div>
+        </div>
+      </div>
     </section>
 
     <section class="section wrap guide-page-section">
@@ -721,7 +740,7 @@
     </div>
   </div>
 
-  <script type="module" src="src/js/guide.js?v=1.1.5-20260929-troubleshooting6"></script>
+  <script type="module" src="src/js/guide.js?v=1.1.5-20260929-troubleshooting7"></script>
   <script src="src/js/support-dialog.js?v=1.1.5-20260918-a11y1"></script>
   <script src="src/js/mobile-menu.js?v=1.1.5-20260918-a11y1"></script>
   <script src="src/js/settings-menu.js?v=1.1.5-20260918-a11y1"></script>
