@@ -245,7 +245,7 @@
 .builder-target-tabs{
   width:min(680px,100%);
   display:grid;
-  grid-template-columns:repeat(3,minmax(0,1fr));
+  grid-template-columns:repeat(auto-fit,minmax(118px,1fr));
   gap:8px;
   margin:2px auto 0;
 }
@@ -279,7 +279,7 @@
 #mixTargetBadge{display:inline-flex;align-items:center;gap:6px}
 #mixTargetBadge .installer-icon{width:14px;height:14px}
 @media(max-width:640px){
-  .builder-target-tabs{grid-template-columns:1fr}
+  .builder-target-tabs{grid-template-columns:repeat(2,minmax(0,1fr))}
   .builder-target{min-height:46px}
 }
 
