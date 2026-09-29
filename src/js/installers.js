@@ -87,6 +87,7 @@ export const INSTALLERS = Object.freeze({
     variant: 'classic',
     mixTarget: true,
     mixHelpKey: 'targetHelpAlt',
+    mixPackage: 'altstore',
     catalogPriority: 10,
     overflowPriority: 10,
     icon: 'assets/icons/altstore.svg',
@@ -172,6 +173,7 @@ export const INSTALLERS = Object.freeze({
     variant: 'classic',
     mixTarget: true,
     mixHelpKey: 'targetHelpLive',
+    mixPackage: 'altstore',
     catalogPriority: 30,
     overflowPriority: 30,
     icon: 'assets/icons/livecontainer.svg',
@@ -249,6 +251,7 @@ export const INSTALLERS = Object.freeze({
     variant: 'classic',
     mixTarget: true,
     mixHelpKey: 'targetHelpFlare',
+    mixPackage: 'altstore',
     catalogPriority: 50,
     overflowPriority: 40,
     icon: 'https://flarestore.app/favicon.ico',
@@ -287,6 +290,7 @@ export const INSTALLERS = Object.freeze({
     variant: 'classic',
     mixTarget: true,
     mixHelpKey: 'targetHelpFeather',
+    mixPackage: 'altstore',
     catalogPriority: 60,
     overflowPriority: 50,
     icon: 'https://raw.githubusercontent.com/claration/Feather/v1.x/iOS/Resources/Icons/Main/Mac@3x.png',
@@ -297,6 +301,74 @@ export const INSTALLERS = Object.freeze({
 export const BUILDER_INSTALLER_IDS = Object.freeze(
   Object.values(INSTALLERS).filter(installer => installer.mixTarget).map(installer => installer.id)
 );
+
+export const DEFAULT_MIX_PACKAGE_ID = 'altstore';
+
+export const MIX_PACKAGES = Object.freeze({
+  altstore: Object.freeze({
+    id: 'altstore',
+    statusKey: 'altstore',
+    sourceURLKey: 'sourceURL',
+    sourceIDsKey: 'sourceIDs',
+    appCountKey: 'appCount',
+    fallbackSourceURL: Object.freeze(['mixes', 'allCompatibleURL']),
+    fallbackSourceIDs: Object.freeze(['mixes', 'autoCompatibleSourceIDs']),
+    targetInstallerIds: Object.freeze([...BUILDER_INSTALLER_IDS])
+  }),
+  sidestore: Object.freeze({
+    id: 'sidestore',
+    statusKey: 'sidestore',
+    sourceURLKey: 'sourceURL',
+    sourceIDsKey: 'sourceIDs',
+    appCountKey: 'appCount',
+    targetInstallerIds: Object.freeze(['sidestore', 'livecontainer'])
+  })
+});
+
+export const MIX_PACKAGE_IDS = Object.freeze(Object.keys(MIX_PACKAGES));
+
+function nestedValue(object, path) {
+  return (path || []).reduce((value, key) => value?.[key], object);
+}
+
+export function mixPackageData(status, packageId, {fallbacks = true} = {}) {
+  const config = MIX_PACKAGES[packageId];
+  if (!config) return {id:packageId, sourceURL:'', sourceIDs:[], appCount:0};
+
+  const section = status?.[config.statusKey] || {};
+  const directURL = section?.[config.sourceURLKey] || '';
+  const directIDs = Array.isArray(section?.[config.sourceIDsKey]) ? section[config.sourceIDsKey] : [];
+  const appCount = Number(section?.[config.appCountKey] || 0);
+
+  const fallbackURL = fallbacks ? (nestedValue(status, config.fallbackSourceURL) || '') : '';
+  const fallbackIDsValue = fallbacks ? nestedValue(status, config.fallbackSourceIDs) : null;
+  const fallbackIDs = Array.isArray(fallbackIDsValue) ? fallbackIDsValue : [];
+
+  return {
+    id: config.id,
+    sourceURL: directURL || fallbackURL,
+    sourceIDs: directIDs.length ? directIDs : fallbackIDs,
+    appCount
+  };
+}
+
+export function mixPackageTargetIds(packageId) {
+  const ids = MIX_PACKAGES[packageId]?.targetInstallerIds || [];
+  return ids.filter(id => BUILDER_INSTALLER_IDS.includes(id));
+}
+
+export function installerMixPackageData(status, installerId) {
+  const installer = INSTALLERS[installerId];
+  if (!installer?.mixTarget) return null;
+
+  const preferredId = installer.mixPackage || DEFAULT_MIX_PACKAGE_ID;
+  const preferred = mixPackageData(status, preferredId);
+  if (preferred.sourceURL) return preferred;
+
+  return preferredId === DEFAULT_MIX_PACKAGE_ID
+    ? preferred
+    : mixPackageData(status, DEFAULT_MIX_PACKAGE_ID);
+}
 
 const AUXILIARY_SIDELOAD_TOOLS = Object.freeze({
   sideinstaller: Object.freeze({
