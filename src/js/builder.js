@@ -4,7 +4,7 @@ import {
   sourceInstallerIds,
   sourceVariantURL,
   sourceFormatLabel
-} from './installers.js?v=1.1.5-20260929-installers5';
+} from './installers.js?v=1.1.5-20260929-installers6';
 
 const $ = selector => document.querySelector(selector);
 const $$ = selector => [...document.querySelectorAll(selector)];
