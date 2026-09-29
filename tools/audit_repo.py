@@ -991,7 +991,7 @@ def validate_layout() -> None:
     # the catalog, Builder and Credits without maintaining duplicate hard-coded lists.
     dynamic_source_scripts = {
         "app.js": ("sources/registry.json", "data/status.json", "data/catalog.json", "sourceWebsiteIcon", "data-source-website-icon", "installers.js", "SOURCE_VARIANT_IDS", "sourceVariantLabel", "sourceModeLabel", "sourceInstallerCompatibility", "sourceInstallerDirectAvailable", "data-blocked-installers"),
-        "builder.js": ("sources/registry.json", "data/status.json", "data/catalog.json", "installers.js", "BUILDER_INSTALLER_IDS", "DEFAULT_BUILDER_INSTALLER_ID", "MIX_PACKAGE_IDS", "mixPackageData", "mixPackageTargetIds", "installerMixPackageData", "sourceInstallerDirectAvailable", "directSourceAvailable", "sourceFormatLabel", "targetVariant", "dedupeHelp", "dedupeResult", "mixDedupeHelp"),
+        "builder.js": ("sources/registry.json", "data/status.json", "data/catalog.json", "installers.js", "BUILDER_INSTALLER_IDS", "DEFAULT_BUILDER_INSTALLER_ID", "MIX_PACKAGE_IDS", "mixPackageData", "mixPackageTargetIds", "installerMixPackageData", "sourceInstallerDirectAvailable", "directSourceAvailable", "sourceFormatLabel", "targetVariant", "bundleKey = bundle.toLowerCase()", "dedupeHelp", "dedupeResult", "mixDedupeHelp"),
         "credits.js": ("sources/registry.json", "sourceCredits", "source.developer", "maintainerGroups", "sourceCreditGroup", "brand-link-icon", "iconImage", "CORE_SIDELOAD_RESOURCE_NAMES", "SIDELOAD_TOOLS"),
     }
     for script_name, required_parts in dynamic_source_scripts.items():
@@ -1188,6 +1188,7 @@ def validate_layout() -> None:
             "STRICT_DUPLICATE_BUNDLE_INSTALLERS",
             "TOLERANT_DUPLICATE_BUNDLE_INSTALLERS",
             "DUPLICATE_BUNDLE_EXAMPLE_LIMIT",
+            "bundle_key = bundle.lower()",
             '"duplicateBundleIdentifiers"',
             '"installerCompatibility"',
             '"directSource": "fail"',
