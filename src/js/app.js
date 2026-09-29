@@ -83,8 +83,18 @@ function sourceInstallerButton(source, installerId, {primary = false, disabled =
   return `<a class="btn small ${primary ? 'primary' : 'secondary'} installer-link" href="${escapeHtml(href)}">${icon}${escapeHtml(installer.label)}</a>`;
 }
 
+function sourceInstallerVariantAvailable(source, installerId) {
+  const variant = INSTALLERS[installerId]?.variant;
+  if (!variant) return false;
+  const variants = getStatus(source.id)?.variants;
+  if (!variants || typeof variants !== 'object' || !(variant in variants)) return true;
+  return variants[variant]?.online === true;
+}
+
 function sourceInstallerGroups(source) {
-  const available = new Set(sourceInstallerIds(source));
+  const available = new Set(
+    sourceInstallerIds(source).filter(installerId => sourceInstallerVariantAvailable(source, installerId))
+  );
   const main = [];
 
   for (const installerId of PRIMARY_INSTALLER_IDS) {
