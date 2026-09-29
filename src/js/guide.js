@@ -128,7 +128,7 @@ reportHelpTitle:'Toujours en panne ?', reportHelpDesc:'Ouvrez un rapport GitHub 
 const HELP_COPY = {
   en: {
     pageEyebrow:'HELP CENTER · GUIDES · FIXES', pageTitle:'Sideloading Help Center', pageDesc:'Choose the right sideloading method, diagnose a problem or describe your setup and get a focused path in a few taps.',
-    centerEyebrow:'IOS HUB HELP CENTER', centerTitle:'How can we help?', centerDesc:'Start with one of the three paths below. You can change direction at any time without losing the rest of the guide.',
+    centerEyebrow:'IOS HUB HELP CENTER', centerTitle:'How can we help?', centerDesc:'Start with one of the three paths below. You can change direction at any time without losing the rest of the guide.', toolScopeEyebrow:'FOCUSED HELP', toolScopeTitle:'Help with a selected installer', toolScopeDesc:'Choose an installer to focus troubleshooting and official references, or leave All selected for a mixed view.', toolScopeAll:'All installers',
     modeChooseTitle:'Choose a method', modeChooseDesc:'Tell us what you want to do', modeFixTitle:'Fix a problem', modeFixDesc:'Search by symptom or error', modeSetupTitle:'My setup', modeSetupDesc:'Build a recommendation from your device',
     chooseTitle:'What do you want to do?', chooseDesc:'Pick the closest goal. We will show a practical starting point and the next three steps.',
     fixTitle:'What is not working?', fixDesc:'Paste part of an error message or pick a common problem. We will narrow the troubleshooting list below.', fixPlaceholder:'Paste an error: 503, pairing, certificate, refresh…',
@@ -138,7 +138,7 @@ const HELP_COPY = {
   },
   cs: {
     pageEyebrow:'CENTRUM POMOCI · NÁVODY · ŘEŠENÍ', pageTitle:'Centrum pomoci se sideloadingem', pageDesc:'Vyber správnou metodu, najdi příčinu problému nebo popiš svoji konfiguraci a během pár klepnutí dostaneš konkrétní postup.',
-    centerEyebrow:'IOS HUB CENTRUM POMOCI', centerTitle:'S čím potřebuješ pomoct?', centerDesc:'Začni jednou ze tří cest níže. Kdykoliv můžeš přepnout jinam a zbytek průvodce zůstane dostupný.',
+    centerEyebrow:'IOS HUB CENTRUM POMOCI', centerTitle:'S čím potřebuješ pomoct?', centerDesc:'Začni jednou ze tří cest níže. Kdykoliv můžeš přepnout jinam a zbytek průvodce zůstane dostupný.', toolScopeEyebrow:'ZAMĚŘENÁ POMOC', toolScopeTitle:'Pomoc s vybraným instalátorem', toolScopeDesc:'Vyber instalátor a zobrazíme hlavně jeho řešení problémů a oficiální odkazy. Volba Všechny zachová současný mix.', toolScopeAll:'Všechny instalátory',
     modeChooseTitle:'Vybrat metodu', modeChooseDesc:'Řekni, co chceš udělat', modeFixTitle:'Vyřešit problém', modeFixDesc:'Hledej podle chyby nebo příznaku', modeSetupTitle:'Moje konfigurace', modeSetupDesc:'Doporučení podle tvého zařízení',
     chooseTitle:'Co chceš udělat?', chooseDesc:'Vyber nejbližší cíl. Ukážeme ti praktický začátek a tři další kroky.',
     fixTitle:'Co nefunguje?', fixDesc:'Vlož část chybové hlášky nebo vyber častý problém. Zúžíme seznam řešení níže.', fixPlaceholder:'Vlož chybu: 503, pairing, certificate, refresh…',
@@ -148,7 +148,7 @@ const HELP_COPY = {
   },
   de: {
     pageEyebrow:'HILFECENTER · ANLEITUNGEN · LÖSUNGEN', pageTitle:'Sideloading-Hilfecenter', pageDesc:'Wähle die passende Methode, diagnostiziere ein Problem oder beschreibe dein Setup und erhalte mit wenigen Klicks einen gezielten Weg.',
-    centerEyebrow:'IOS HUB HILFECENTER', centerTitle:'Wobei können wir helfen?', centerDesc:'Starte mit einem der drei Wege. Du kannst jederzeit wechseln, ohne den restlichen Guide zu verlieren.',
+    centerEyebrow:'IOS HUB HILFECENTER', centerTitle:'Wobei können wir helfen?', centerDesc:'Starte mit einem der drei Wege. Du kannst jederzeit wechseln, ohne den restlichen Guide zu verlieren.', toolScopeEyebrow:'GEZIELTE HILFE', toolScopeTitle:'Hilfe für einen ausgewählten Installer', toolScopeDesc:'Wähle einen Installer, um Fehlerbehebung und offizielle Verweise darauf zu fokussieren. Alle zeigt weiterhin den Mix.', toolScopeAll:'Alle Installer',
     modeChooseTitle:'Methode wählen', modeChooseDesc:'Sag uns, was du tun möchtest', modeFixTitle:'Problem beheben', modeFixDesc:'Nach Symptom oder Fehler suchen', modeSetupTitle:'Mein Setup', modeSetupDesc:'Empfehlung anhand deines Geräts',
     chooseTitle:'Was möchtest du tun?', chooseDesc:'Wähle das passendste Ziel. Wir zeigen einen praktischen Startpunkt und die nächsten drei Schritte.',
     fixTitle:'Was funktioniert nicht?', fixDesc:'Füge einen Teil der Fehlermeldung ein oder wähle ein häufiges Problem. Wir grenzen die Lösungen unten ein.', fixPlaceholder:'Fehler einfügen: 503, Pairing, Zertifikat, Refresh…',
@@ -158,7 +158,7 @@ const HELP_COPY = {
   },
   es: {
     pageEyebrow:'CENTRO DE AYUDA · GUÍAS · SOLUCIONES', pageTitle:'Centro de ayuda de sideloading', pageDesc:'Elige el método adecuado, diagnostica un problema o describe tu configuración y obtén una ruta concreta en pocos toques.',
-    centerEyebrow:'CENTRO DE AYUDA IOS HUB', centerTitle:'¿En qué podemos ayudarte?', centerDesc:'Empieza con una de las tres rutas. Puedes cambiar en cualquier momento sin perder el resto de la guía.',
+    centerEyebrow:'CENTRO DE AYUDA IOS HUB', centerTitle:'¿En qué podemos ayudarte?', centerDesc:'Empieza con una de las tres rutas. Puedes cambiar en cualquier momento sin perder el resto de la guía.', toolScopeEyebrow:'AYUDA ENFOCADA', toolScopeTitle:'Ayuda con un instalador seleccionado', toolScopeDesc:'Elige un instalador para centrar la solución de problemas y las referencias oficiales. Todos mantiene la vista mixta.', toolScopeAll:'Todos los instaladores',
     modeChooseTitle:'Elegir método', modeChooseDesc:'Dinos qué quieres hacer', modeFixTitle:'Resolver un problema', modeFixDesc:'Buscar por síntoma o error', modeSetupTitle:'Mi configuración', modeSetupDesc:'Recomendación según tu dispositivo',
     chooseTitle:'¿Qué quieres hacer?', chooseDesc:'Elige el objetivo más cercano. Mostraremos un punto de partida práctico y los tres pasos siguientes.',
     fixTitle:'¿Qué no funciona?', fixDesc:'Pega parte del mensaje de error o elige un problema común. Reduciremos la lista de soluciones de abajo.', fixPlaceholder:'Pega un error: 503, pairing, certificado, refresh…',
@@ -168,7 +168,7 @@ const HELP_COPY = {
   },
   fr: {
     pageEyebrow:'CENTRE D’AIDE · GUIDES · SOLUTIONS', pageTitle:'Centre d’aide au sideloading', pageDesc:'Choisissez la bonne méthode, diagnostiquez un problème ou décrivez votre configuration et obtenez un parcours ciblé en quelques gestes.',
-    centerEyebrow:'CENTRE D’AIDE IOS HUB', centerTitle:'Comment pouvons-nous vous aider ?', centerDesc:'Commencez par l’un des trois parcours. Vous pouvez changer à tout moment sans perdre le reste du guide.',
+    centerEyebrow:'CENTRE D’AIDE IOS HUB', centerTitle:'Comment pouvons-nous vous aider ?', centerDesc:'Commencez par l’un des trois parcours. Vous pouvez changer à tout moment sans perdre le reste du guide.', toolScopeEyebrow:'AIDE CIBLÉE', toolScopeTitle:'Aide pour un installateur sélectionné', toolScopeDesc:'Choisissez un installateur pour cibler le dépannage et les références officielles. Tous conserve la vue mixte.', toolScopeAll:'Tous les installateurs',
     modeChooseTitle:'Choisir une méthode', modeChooseDesc:'Dites ce que vous voulez faire', modeFixTitle:'Résoudre un problème', modeFixDesc:'Rechercher par symptôme ou erreur', modeSetupTitle:'Ma configuration', modeSetupDesc:'Recommandation selon votre appareil',
     chooseTitle:'Que voulez-vous faire ?', chooseDesc:'Choisissez l’objectif le plus proche. Nous afficherons un point de départ pratique et les trois étapes suivantes.',
     fixTitle:'Qu’est-ce qui ne fonctionne pas ?', fixDesc:'Collez une partie du message d’erreur ou choisissez un problème courant. Nous réduirons la liste des solutions ci-dessous.', fixPlaceholder:'Collez une erreur : 503, pairing, certificat, refresh…',
@@ -319,8 +319,119 @@ function setupResultsForLanguage() {
 }
 
 let activeHelpMode = 'choose';
+let selectedTroubleToolId = '';
 const setupState = { device:null, version:null, computer:null, need:null };
 const diagnosisState = { tried:new Set(), dismissed:new Set(), currentKey:null };
+
+function selectedTroubleshootingTool() {
+  if (!selectedTroubleToolId) return null;
+  return troubleshootingSideloadTools().find(tool => tool.id === selectedTroubleToolId) || null;
+}
+
+function scopedTroubleshootingTools() {
+  const selected = selectedTroubleshootingTool();
+  return selected ? [selected] : troubleshootingSideloadTools();
+}
+
+function updateToolScopeDisplay() {
+  const selected = selectedTroubleshootingTool();
+  const copy = helpCopyForLanguage();
+  const label = $('#guideToolScopeLabel');
+  const icon = $('#guideToolScopeIcon');
+  const allIcon = $('#guideToolScopeAllIcon');
+  if (label) label.textContent = selected?.label || copy.toolScopeAll;
+  if (icon) {
+    icon.hidden = !selected?.icon;
+    icon.src = selected?.icon || '';
+  }
+  if (allIcon) allIcon.hidden = Boolean(selected?.icon);
+  $('[data-guide-tool-scope]').forEach(option => {
+    const active = (option.dataset.guideToolScope || '') === (selected?.id || '');
+    option.classList.toggle('active', active);
+    option.setAttribute('aria-selected', String(active));
+  });
+}
+
+function renderToolScopePicker() {
+  const menu = $('#guideToolScopeMenu');
+  if (!menu) return;
+  menu.replaceChildren();
+
+  const addOption = (tool = null) => {
+    const button = document.createElement('button');
+    button.type = 'button';
+    button.className = 'guide-tool-scope-option';
+    button.dataset.guideToolScope = tool?.id || '';
+    button.setAttribute('role', 'option');
+    button.setAttribute('aria-selected', 'false');
+
+    if (tool?.icon) {
+      const icon = document.createElement('img');
+      icon.className = 'guide-tool-scope-icon';
+      icon.src = tool.icon;
+      icon.alt = '';
+      icon.loading = 'lazy';
+      icon.referrerPolicy = 'no-referrer';
+      button.appendChild(icon);
+    } else {
+      const icon = document.createElement('span');
+      icon.className = 'guide-tool-scope-all-icon';
+      icon.textContent = '▦';
+      icon.setAttribute('aria-hidden', 'true');
+      button.appendChild(icon);
+    }
+
+    const label = document.createElement('span');
+    label.dataset.toolScopeOptionLabel = tool ? 'tool' : 'all';
+    label.textContent = tool?.label || helpCopyForLanguage().toolScopeAll;
+    button.appendChild(label);
+    menu.appendChild(button);
+  };
+
+  addOption();
+  troubleshootingSideloadTools().forEach(addOption);
+  updateToolScopeDisplay();
+}
+
+function closeToolScopePicker() {
+  const button = $('#guideToolScopeButton');
+  const menu = $('#guideToolScopeMenu');
+  if (button) button.setAttribute('aria-expanded', 'false');
+  if (menu) menu.hidden = true;
+}
+
+function toggleToolScopePicker() {
+  const button = $('#guideToolScopeButton');
+  const menu = $('#guideToolScopeMenu');
+  if (!button || !menu) return;
+  const opening = menu.hidden;
+  menu.hidden = !opening;
+  button.setAttribute('aria-expanded', String(opening));
+  if (opening) requestAnimationFrame(() => menu.querySelector('[aria-selected="true"]')?.focus());
+}
+
+function syncToolScopeDeepLink() {
+  const url = new URL(window.location.href);
+  if (selectedTroubleToolId) url.searchParams.set('tool', selectedTroubleToolId);
+  else url.searchParams.delete('tool');
+  history.replaceState(null, '', url.pathname + url.search + url.hash);
+}
+
+function setToolScope(toolId, syncUrl = true) {
+  const requested = String(toolId || '').trim();
+  const valid = requested && troubleshootingSideloadTools().some(tool => tool.id === requested);
+  selectedTroubleToolId = valid ? requested : '';
+  diagnosisState.dismissed.clear();
+  diagnosisState.currentKey = null;
+  closeToolScopePicker();
+  updateToolScopeDisplay();
+  renderOfficialToolReferences();
+  filterTroubleshooting();
+  updateAssistantTroubleSummary();
+  if ($('#assistantTroubleSearch')?.value.trim()) renderAssistantDiagnosis(false);
+  updateReportLink();
+  if (syncUrl) syncToolScopeDeepLink();
+}
 
 function appendToolReference(container, tool, purpose, className = '', withIcon = false) {
   const href = sideloadToolURL(tool.id, purpose);
@@ -349,7 +460,7 @@ function appendToolReference(container, tool, purpose, className = '', withIcon 
 }
 
 function renderOfficialToolReferences() {
-  const tools = troubleshootingSideloadTools();
+  const tools = scopedTroubleshootingTools();
 
   const help = $('#officialHelpSources');
   if (help) {
@@ -378,6 +489,9 @@ function applyHelpCopy() {
     const value = copy[node.dataset.helpAriaLabel];
     if (value) node.setAttribute('aria-label', value);
   });
+  const allScopeLabel = $('[data-tool-scope-option-label="all"]');
+  if (allScopeLabel) allScopeLabel.textContent = copy.toolScopeAll;
+  updateToolScopeDisplay();
   updateAssistantTroubleSummary();
   if (Object.values(setupState).every(Boolean)) renderSetupResult();
   if (!$('#assistantDiagnosis')?.hidden) renderAssistantDiagnosis(false);
@@ -478,9 +592,10 @@ function getTroubleMatches(query) {
   if (!q) return [];
   const terms = [...new Set(q.split(/\s+/).filter(Boolean))];
   const triedTags = diagnosisTriedTags();
-  const preferredTool = troubleshootingToolForQuery(q);
+  const preferredTool = selectedTroubleshootingTool() || troubleshootingToolForQuery(q);
 
   return [...document.querySelectorAll('.trouble-item')]
+    .filter(item => !selectedTroubleToolId || !item.dataset.tool || item.dataset.tool === selectedTroubleToolId)
     .map((item, index) => {
       const haystack = [item.dataset.search || '', item.textContent || ''].join(' ').toLowerCase();
       const baseScore = terms.reduce((sum, term) => sum + (troubleTermMatches(haystack, term) ? (/[0-9]/.test(term) ? 3 : 1) : 0), 0);
@@ -966,6 +1081,7 @@ function updateReportLink() {
     '',
     `- Language: ${root.lang || 'en'}`,
     `- Selected guide path: ${goalText}`,
+    `- Installer focus: ${selectedTroubleshootingTool()?.label || 'All installers'}`,
     `- Troubleshooting match: ${queryLabel}`,
     `- Diagnostic code/key: ${diagnosticKey}`,
     `- Current diagnosis: ${$('#assistantDiagnosisTitle')?.textContent?.trim() || '—'}`,
@@ -1036,7 +1152,8 @@ function filterTroubleshooting() {
   $$('.trouble-item').forEach(item => {
     const haystack = [item.dataset.search || '', item.textContent || ''].join(' ').toLowerCase();
     const terms = q.split(/\s+/).filter(Boolean);
-    const show = !q || terms.some(term => haystack.includes(term));
+    const inToolScope = !selectedTroubleToolId || !item.dataset.tool || item.dataset.tool === selectedTroubleToolId;
+    const show = inToolScope && (!q || terms.some(term => haystack.includes(term)));
     item.hidden = !show;
     if (show) visible += 1;
   });
@@ -1049,6 +1166,19 @@ function filterTroubleshooting() {
 }
 
 document.addEventListener('click', event => {
+  if (!event.target.closest('#guideToolScope')) closeToolScopePicker();
+
+  if (event.target.closest('#guideToolScopeButton')) {
+    toggleToolScopePicker();
+    return;
+  }
+
+  const toolScopeOption = event.target.closest('[data-guide-tool-scope]');
+  if (toolScopeOption) {
+    setToolScope(toolScopeOption.dataset.guideToolScope || '');
+    return;
+  }
+
   if (event.target.closest('[data-support-open]')) return void openSupport();
   if (event.target.closest('[data-support-close]')) return void closeSupport();
   if (event.target.id === 'supportModal') closeSupport();
@@ -1161,15 +1291,22 @@ $('#languageSelect')?.addEventListener('change', event => {
   applyLanguage(event.target.value);
   filterTroubleshooting();
 });
-document.addEventListener('keydown', event => { if (event.key === 'Escape') closeSupport(); });
+document.addEventListener('keydown', event => {
+  if (event.key !== 'Escape') return;
+  closeToolScopePicker();
+  closeSupport();
+});
 
 const savedTheme = safeGet('caseycz-theme');
 const systemDark = window.matchMedia?.('(prefers-color-scheme: dark)').matches;
 applyTheme(savedTheme === 'light' || savedTheme === 'dark' ? savedTheme : (systemDark ? 'dark' : 'light'));
 
 const savedLang = safeGet('caseycz-language');
-renderOfficialToolReferences();
+renderToolScopePicker();
 applyLanguage(SUPPORTED_LANGUAGES.includes(savedLang) ? savedLang : 'en');
+
+const initialParams = new URLSearchParams(window.location.search);
+setToolScope(initialParams.get('tool') || '', false);
 
 if ($('#year')) $('#year').textContent = new Date().getFullYear();
 setHelpMode('choose');
@@ -1177,7 +1314,6 @@ updateSetupProgress();
 updateAssistantTroubleSummary();
 filterTroubleshooting();
 
-const initialParams = new URLSearchParams(window.location.search);
 const initialFix = initialParams.get('fix');
 const initialSetup = initialParams.get('setup');
 const initialTried = (initialParams.get('tried') || '').split(',').filter(Boolean);
