@@ -86,6 +86,7 @@ export const INSTALLERS = Object.freeze({
     creditLinkKey: 'officialWebsite',
     variant: 'classic',
     mixTarget: true,
+    builderDefault: true,
     mixHelpKey: 'targetHelpAlt',
     mixPackage: 'altstore',
     catalogPriority: 10,
@@ -301,6 +302,11 @@ export const INSTALLERS = Object.freeze({
 export const BUILDER_INSTALLER_IDS = Object.freeze(
   Object.values(INSTALLERS).filter(installer => installer.mixTarget).map(installer => installer.id)
 );
+
+export const DEFAULT_BUILDER_INSTALLER_ID =
+  Object.values(INSTALLERS).find(installer => installer.mixTarget && installer.builderDefault)?.id
+  || BUILDER_INSTALLER_IDS[0]
+  || '';
 
 export const DEFAULT_MIX_PACKAGE_ID = 'altstore';
 
