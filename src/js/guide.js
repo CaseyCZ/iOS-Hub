@@ -1,5 +1,5 @@
 import { SUPPORTED_LANGUAGES, applyTranslations, normalizeLanguage, t } from './i18n.js?v=1.1.5-20260929-guide-methods1';
-import { sideloadToolForRole, sideloadToolURL } from './installers.js?v=1.1.5-20260929-installers15';
+import { sideloadToolForRole, sideloadToolURL, troubleshootingSideloadTools } from './installers.js?v=1.1.5-20260929-installers16';
 
 const root = document.documentElement;
 const $ = selector => document.querySelector(selector);
@@ -276,6 +276,38 @@ function setupResultsForLanguage() {
 let activeHelpMode = 'choose';
 const setupState = { device:null, version:null, computer:null, need:null };
 const diagnosisState = { tried:new Set(), dismissed:new Set(), currentKey:null };
+
+function appendToolReference(container, tool, purpose, className = '') {
+  const href = sideloadToolURL(tool.id, purpose);
+  if (!container || !href) return;
+  const link = document.createElement('a');
+  link.href = href;
+  link.target = '_blank';
+  link.rel = 'noopener noreferrer';
+  if (className) link.className = className;
+  link.dataset.toolReference = tool.id;
+
+  const label = document.createElement('span');
+  label.textContent = `${tool.label} ↗`;
+  link.appendChild(label);
+  container.appendChild(link);
+}
+
+function renderOfficialToolReferences() {
+  const tools = troubleshootingSideloadTools();
+
+  const help = $('#officialHelpSources');
+  if (help) {
+    help.querySelectorAll('[data-tool-reference]').forEach(node => node.remove());
+    tools.forEach(tool => appendToolReference(help, tool, 'troubleshooting'));
+  }
+
+  const references = $('#guideOfficialLinks');
+  if (references) {
+    references.replaceChildren();
+    tools.forEach(tool => appendToolReference(references, tool, 'guide', 'btn small secondary'));
+  }
+}
 
 function applyHelpCopy() {
   const copy = helpCopyForLanguage();
@@ -1022,6 +1054,7 @@ const systemDark = window.matchMedia?.('(prefers-color-scheme: dark)').matches;
 applyTheme(savedTheme === 'light' || savedTheme === 'dark' ? savedTheme : (systemDark ? 'dark' : 'light'));
 
 const savedLang = safeGet('caseycz-language');
+renderOfficialToolReferences();
 applyLanguage(SUPPORTED_LANGUAGES.includes(savedLang) ? savedLang : 'en');
 
 if ($('#year')) $('#year').textContent = new Date().getFullYear();
