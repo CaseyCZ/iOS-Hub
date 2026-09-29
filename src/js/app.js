@@ -6,7 +6,7 @@ import {
   sourceInstallerIds,
   sourceInstallerDeepLink,
   sourceVariantURL
-} from './installers.js?v=1.1.5-20260929-installers1';
+} from './installers.js?v=1.1.5-20260929-installers2';
 
 const root = document.documentElement;
 const $ = (selector, scope = document) => scope.querySelector(selector);
