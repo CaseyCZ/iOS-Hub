@@ -29,6 +29,15 @@ export const SOURCE_MODES = Object.freeze({
   sidestore: {
     id: 'sidestore',
     label: 'SideStore',
+    resourceName: 'SideStore',
+    creditName: 'SideStore',
+    toolType: 'source-installer',
+    capabilities: Object.freeze(['source', 'ipa-install', 'refresh', 'on-device']),
+    website: 'https://sidestore.io/',
+    guideURL: 'https://docs.sidestore.io/',
+    domain: 'sidestore.io',
+    coreCredit: true,
+    resourceCard: true,
     variant: 'classic',
     formatLabel: 'SideStore Source',
     installerIds: Object.freeze(['sidestore'])
@@ -46,6 +55,15 @@ export const INSTALLERS = Object.freeze({
   altstore: {
     id: 'altstore',
     label: 'AltStore',
+    resourceName: 'AltStore Classic',
+    creditName: 'AltStore',
+    toolType: 'source-installer',
+    capabilities: Object.freeze(['source', 'ipa-install', 'refresh']),
+    website: 'https://altstore.io/',
+    guideURL: 'https://altstore.io/',
+    domain: 'altstore.io',
+    coreCredit: true,
+    resourceCard: true,
     variant: 'classic',
     mixTarget: true,
     mixHelpKey: 'targetHelpAlt',
@@ -69,6 +87,15 @@ export const INSTALLERS = Object.freeze({
   livecontainer: {
     id: 'livecontainer',
     label: 'LiveContainer',
+    resourceName: 'LiveContainer',
+    creditName: 'LiveContainer',
+    toolType: 'source-installer',
+    capabilities: Object.freeze(['source', 'ipa-run', 'container']),
+    website: 'https://github.com/LiveContainer/LiveContainer',
+    guideURL: 'https://livecontainer.github.io/docs/installation/lc_sidestore',
+    domain: 'github.com/LiveContainer/LiveContainer',
+    coreCredit: true,
+    resourceCard: true,
     variant: 'classic',
     mixTarget: true,
     mixHelpKey: 'targetHelpLive',
@@ -80,6 +107,15 @@ export const INSTALLERS = Object.freeze({
   'altstore-pal': {
     id: 'altstore-pal',
     label: 'AltStore PAL',
+    resourceName: 'AltStore PAL',
+    creditName: 'AltStore PAL',
+    toolType: 'marketplace-source',
+    capabilities: Object.freeze(['source', 'marketplace']),
+    website: 'https://altstore.io/',
+    guideURL: 'https://altstore.io/',
+    domain: 'altstore.io',
+    coreCredit: false,
+    resourceCard: false,
     variant: 'pal',
     mixTarget: false,
     catalogPriority: 40,
@@ -90,6 +126,15 @@ export const INSTALLERS = Object.freeze({
   flarestore: {
     id: 'flarestore',
     label: 'FlareStore',
+    resourceName: 'FlareStore',
+    creditName: 'FlareStore',
+    toolType: 'source-installer',
+    capabilities: Object.freeze(['source', 'ipa-install', 'signing']),
+    website: 'https://flarestore.app/',
+    guideURL: 'https://flarestore.app/',
+    domain: 'flarestore.app',
+    coreCredit: true,
+    resourceCard: true,
     variant: 'classic',
     mixTarget: true,
     mixHelpKey: 'targetHelpFlare',
@@ -101,6 +146,15 @@ export const INSTALLERS = Object.freeze({
   feather: {
     id: 'feather',
     label: 'Feather',
+    resourceName: 'Feather',
+    creditName: 'Feather',
+    toolType: 'source-installer',
+    capabilities: Object.freeze(['source', 'ipa-install', 'signing']),
+    website: 'https://github.com/claration/Feather',
+    guideURL: 'https://github.com/claration/Feather',
+    domain: 'github.com/claration/Feather',
+    coreCredit: true,
+    resourceCard: true,
     variant: 'classic',
     mixTarget: true,
     mixHelpKey: 'targetHelpFeather',
@@ -114,6 +168,127 @@ export const INSTALLERS = Object.freeze({
 export const BUILDER_INSTALLER_IDS = Object.freeze(
   Object.values(INSTALLERS).filter(installer => installer.mixTarget).map(installer => installer.id)
 );
+
+const AUXILIARY_SIDELOAD_TOOLS = Object.freeze({
+  sideinstaller: Object.freeze({
+    id: 'sideinstaller',
+    label: 'SideInstaller',
+    resourceName: 'SideInstaller',
+    creditName: 'SideInstaller',
+    toolType: 'setup-installer',
+    capabilities: Object.freeze(['bootstrap', 'pairing', 'on-device-setup']),
+    website: 'https://sideinstaller.net/',
+    repository: 'https://github.com/FrizzleM/SideInstaller',
+    guideURL: 'https://sideinstaller.net/',
+    domain: 'sideinstaller.net',
+    creditDomain: 'github.com/FrizzleM/SideInstaller',
+    icon: 'https://raw.githubusercontent.com/FrizzleM/SideInstaller/main/app-icon.png',
+    coreCredit: true,
+    resourceCard: true
+  }),
+  sideloadly: Object.freeze({
+    id: 'sideloadly',
+    label: 'Sideloadly',
+    resourceName: 'Sideloadly',
+    creditName: 'Sideloadly',
+    toolType: 'ipa-installer',
+    capabilities: Object.freeze(['ipa-install', 'desktop', 'tv', 'refresh']),
+    website: 'https://sideloadly.io/',
+    guideURL: 'https://sideloadly.io/',
+    domain: 'sideloadly.io',
+    icon: 'https://sideloadly.io/favicon.ico',
+    coreCredit: true,
+    resourceCard: true
+  }),
+  atvloadly: Object.freeze({
+    id: 'atvloadly',
+    label: 'atvloadly',
+    resourceName: 'atvloadly',
+    creditName: 'atvloadly',
+    toolType: 'ipa-installer',
+    capabilities: Object.freeze(['ipa-install', 'pairing', 'tv', 'self-hosted']),
+    website: 'https://github.com/bitxeno/atvloadly',
+    repository: 'https://github.com/bitxeno/atvloadly',
+    guideURL: 'https://github.com/bitxeno/atvloadly',
+    domain: 'github.com/bitxeno/atvloadly',
+    icon: 'assets/icons/atvloadly.svg',
+    coreCredit: true,
+    resourceCard: true
+  }),
+  iloader: Object.freeze({
+    id: 'iloader',
+    label: 'iloader',
+    resourceName: 'iloader',
+    creditName: 'iloader',
+    toolType: 'pairing-tool',
+    capabilities: Object.freeze(['bootstrap', 'pairing', 'desktop']),
+    website: 'https://iloader.app/',
+    guideURL: 'https://iloader.app/',
+    domain: 'iloader.app',
+    icon: 'assets/icons/iloader.svg',
+    coreCredit: true,
+    resourceCard: true
+  }),
+  impactor: Object.freeze({
+    id: 'impactor',
+    label: 'Impactor',
+    resourceName: 'Impactor',
+    creditName: 'Impactor',
+    toolType: 'ipa-installer',
+    capabilities: Object.freeze(['ipa-install', 'bootstrap', 'pairing', 'desktop']),
+    website: 'https://github.com/claration/Impactor',
+    repository: 'https://github.com/claration/Impactor',
+    guideURL: 'https://github.com/claration/Impactor',
+    domain: 'github.com/claration/Impactor',
+    icon: 'https://raw.githubusercontent.com/claration/Impactor/main/package/linux/icons/hicolor/512x512/apps/dev.khcrysalis.PlumeImpactor.png',
+    coreCredit: true,
+    resourceCard: true
+  }),
+  trollstore: Object.freeze({
+    id: 'trollstore',
+    label: 'TrollStore',
+    resourceName: 'TrollStore',
+    creditName: 'TrollStore',
+    toolType: 'permanent-installer',
+    capabilities: Object.freeze(['ipa-install', 'permanent']),
+    website: 'https://github.com/opa334/TrollStore',
+    repository: 'https://github.com/opa334/TrollStore',
+    guideURL: 'https://github.com/opa334/TrollStore',
+    domain: 'github.com/opa334/TrollStore',
+    icon: 'assets/icons/trollstore.svg',
+    coreCredit: true,
+    resourceCard: true
+  })
+});
+
+export const SIDELOAD_TOOLS = Object.freeze({
+  ...INSTALLERS,
+  ...AUXILIARY_SIDELOAD_TOOLS
+});
+
+export const CORE_SIDELOAD_TOOL_IDS = Object.freeze(
+  Object.values(SIDELOAD_TOOLS).filter(tool => tool.coreCredit).map(tool => tool.id)
+);
+
+export const CORE_SIDELOAD_RESOURCE_NAMES = Object.freeze(
+  CORE_SIDELOAD_TOOL_IDS.map(id => SIDELOAD_TOOLS[id]?.resourceName).filter(Boolean)
+);
+
+export function sideloadTool(toolId) {
+  return SIDELOAD_TOOLS[toolId] || null;
+}
+
+export function sideloadToolURL(toolId, purpose = 'website') {
+  const tool = sideloadTool(toolId);
+  if (!tool) return '';
+  if (purpose === 'guide') return tool.guideURL || tool.website || tool.repository || '';
+  if (purpose === 'credit') return tool.repository || tool.website || '';
+  return tool.website || tool.repository || '';
+}
+
+export function sideloadToolSupports(toolId, capability) {
+  return Boolean(sideloadTool(toolId)?.capabilities?.includes(capability));
+}
 
 function installerOrder(installerId, key) {
   const value = Number(INSTALLERS[installerId]?.[key]);
