@@ -435,6 +435,39 @@ def validate_generated_data() -> None:
             if unknown:
                 error(f"data/status.json {package_name}.sourceIDs contains unknown ids: " + ", ".join(unknown))
 
+        # Keep generated installable packages in lockstep with status.json.
+        # This catches a new registry source being validated but accidentally omitted
+        # from the published AltStore/SideStore package output.
+        for package_name in ("altstore", "sidestore"):
+            package_status = status.get(package_name, {})
+            package_path = ROOT / package_name / "source.json"
+            package_payload = load_json(package_path)
+            if not isinstance(package_status, dict) or not isinstance(package_payload, dict):
+                continue
+            expected_ids = set(package_status.get("sourceIDs") or [])
+            user_info = package_payload.get("userInfo")
+            actual_ids = set(user_info.get("sourceIDs") or []) if isinstance(user_info, dict) else set()
+            if expected_ids != actual_ids:
+                error(
+                    f"{package_path.relative_to(ROOT)} sourceIDs differ from data/status.json; "
+                    f"missing={sorted(expected_ids - actual_ids)}, "
+                    f"extra={sorted(actual_ids - expected_ids)}"
+                )
+
+        all_compatible_path = ROOT / "mix" / "all-compatible.json"
+        all_compatible = load_json(all_compatible_path)
+        mixes_status = status.get("mixes", {})
+        if isinstance(all_compatible, dict) and isinstance(mixes_status, dict):
+            expected_ids = set(mixes_status.get("autoCompatibleSourceIDs") or [])
+            user_info = all_compatible.get("userInfo")
+            actual_ids = set(user_info.get("sourceIDs") or []) if isinstance(user_info, dict) else set()
+            if expected_ids != actual_ids:
+                error(
+                    "mix/all-compatible.json sourceIDs differ from data/status.json; "
+                    f"missing={sorted(expected_ids - actual_ids)}, "
+                    f"extra={sorted(actual_ids - expected_ids)}"
+                )
+
         registry_sources = [item for item in registry["sources"] if isinstance(item, dict)]
         expected_cache_ids = {
             str(item.get("id"))
@@ -810,6 +843,28 @@ def validate_page_quality() -> None:
 
 
 def validate_layout() -> None:
+    # Source-facing pages must stay registry-driven so adding one source updates
+    # the catalog, Builder and Credits without maintaining duplicate hard-coded lists.
+    dynamic_source_scripts = {
+        "app.js": ("sources/registry.json", "data/status.json", "data/catalog.json"),
+        "builder.js": ("sources/registry.json", "data/status.json", "data/catalog.json"),
+        "credits.js": ("sources/registry.json", "sourceCredits"),
+    }
+    for script_name, required_parts in dynamic_source_scripts.items():
+        script = JS_DIR / script_name
+        if not script.exists():
+            continue
+        script_text = script.read_text(encoding="utf-8")
+        for required_part in required_parts:
+            if required_part not in script_text:
+                error(
+                    f"{script_name} must remain registry-driven; missing {required_part!r}"
+                )
+
+    credits_page = ROOT / "credits.html"
+    if credits_page.exists() and 'id="sourceCredits"' not in credits_page.read_text(encoding="utf-8"):
+        error("credits.html must contain the dynamic Source catalogue credits host")
+
     for path in LEGACY_PATHS:
         if path.exists():
             error(f"Legacy/Cydia artifact must not exist on main: {path.relative_to(ROOT)}")
