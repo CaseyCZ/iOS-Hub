@@ -1327,7 +1327,7 @@ def validate_layout() -> None:
     registry_driven_tool_scripts = {
         "resources.js": ("SIDELOAD_TOOLS", "resourceBadgeSpecs", "resourceSideloadTools", "resourceDescriptionKey", "sideloadToolURL", "buildResourceSideloadCard", "renderSideloadResourceCards", "sideloadResourceGrid", "hydrateSideloadToolCards", "renderSideloadToolBadges", "dataset.toolType", "dataset.capabilities", "dataset.targets", "dataset.hostPlatforms", "dataset.computerMode", "dataset.sourceSupport", "dataset.openSource", "dataset.resourceBadges"),
         "credits.js": ("SIDELOAD_TOOLS", "CORE_SIDELOAD_RESOURCE_NAMES", "creditSideloadTools", "creditDescriptionKey", "creditBadge", "creditLinkKey", "sideloadToolURL", "buildSideloadCreditCard", "renderSideloadCreditCards", "sideloadCreditGrid", "hydrateSideloadCreditCards", "dataset.toolType", "dataset.capabilities", "dataset.targets", "dataset.hostPlatforms", "dataset.computerMode", "dataset.sourceSupport", "dataset.openSource", "dataset.resourceBadges"),
-        "guide.js": ("sideloadTool", "sideloadToolForRole", "sideloadToolURL", "troubleshootingSideloadTools", "hydrateGuideToolRegistryReferences", "handleToolScopeKeydown", "data-guide-tool-link", "data-guide-tool-icon", "renderOfficialToolReferences", "officialHelpSources", "guideOfficialLinks", "selectedTroubleToolId", "guideTroubleshootingTools", "catalogPriority", "resourceOrder", "updateTroubleScopeControls", "data-assistant-tool", "data-trouble-tool", "renderToolScopePicker", "setToolScope", "data-guide-tool-scope", "url.searchParams.set('tool'", "troubleTermMatches", "troubleshootingToolAliases", "troubleshootingToolForQuery", "scopedTroubleQuery", "symptomScore > 0", "/install|installation|instal|nainstal/", "toolBoost", "document.querySelectorAll('.trouble-item')", "document.querySelectorAll('[data-guide-mode]')", "document.querySelectorAll('.assistant-tried-options [data-tried-key]')", "GUIDE_RECOMMENDATION_ROUTES", "recommendationToolURL", "SETUP_RESULT_ROUTES", "setupResultToolURL", "routeToolURL"),
+        "guide.js": ("sideloadTool", "sideloadToolForRole", "sideloadToolURL", "troubleshootingSideloadTools", "hydrateGuideToolRegistryReferences", "handleToolScopeKeydown", "guideNodeSupportsTool", "filterGuideScopeGroup", "updateGuideScopeContent", "toolScopeActive", "data-guide-tool-link", "data-guide-tool-icon", "renderOfficialToolReferences", "officialHelpSources", "guideOfficialLinks", "selectedTroubleToolId", "guideTroubleshootingTools", "catalogPriority", "resourceOrder", "updateTroubleScopeControls", "data-assistant-tool", "data-trouble-tool", "renderToolScopePicker", "setToolScope", "data-guide-tool-scope", "url.searchParams.set('tool'", "troubleTermMatches", "troubleshootingToolAliases", "troubleshootingToolForQuery", "scopedTroubleQuery", "symptomScore > 0", "/install|installation|instal|nainstal/", "toolBoost", "document.querySelectorAll('.trouble-item')", "document.querySelectorAll('[data-guide-mode]')", "document.querySelectorAll('.assistant-tried-options [data-tried-key]')", "GUIDE_RECOMMENDATION_ROUTES", "recommendationToolURL", "SETUP_RESULT_ROUTES", "setupResultToolURL", "routeToolURL"),
     }
     for script_name, required_parts in registry_driven_tool_scripts.items():
         script = JS_DIR / script_name
@@ -1399,6 +1399,18 @@ def validate_layout() -> None:
                     "Guide general installer links must be registry-driven; "
                     f"missing {tool_id!r}/{purpose!r}"
                 )
+        if 'id="source-installers"' in guide_page_text:
+            error("Guide must keep Source-capable installers in the shared Installation methods grid")
+        if 'href="#source-installers"' in guide_page_text:
+            error("Guide jumpbar must not link to the removed separate Source installers section")
+        for scoped_tool in ("flarestore", "feather"):
+            marker = f'data-guide-tools="{scoped_tool}"'
+            if guide_page_text.count(marker) < 2:
+                error(
+                    "Guide must include each Source-capable installer in both the shared methods grid "
+                    f"and compatibility table; missing repeated scope marker for {scoped_tool!r}"
+                )
+
         altstore_classic_marker = 'data-guide-tool-link="altstore" data-guide-tool-purpose="classicGuide"'
         if guide_page_text.count(altstore_classic_marker) < 2:
             error("Guide beginner cards must keep both AltStore Classic links registry-driven")
@@ -1573,6 +1585,8 @@ def validate_layout() -> None:
             "return $('.assistant-tried-options [data-tried-key]').find",
             "return $('.trouble-item')",
             "const options = $('[data-guide-tool-scope]')",
+            "$('[data-assistant-tool], [data-trouble-tool]').forEach",
+            "const scopedNodes = $('[data-guide-tools]')",
         )
         for forbidden_selector in forbidden_single_collection_selectors:
             if forbidden_selector in guide_text:
