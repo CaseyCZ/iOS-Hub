@@ -755,6 +755,14 @@ export function sourceInstallerIds(source) {
     : [];
 }
 
+export function sourceInstallerCompatibility(sourceStatus, installerId) {
+  return sourceStatus?.installerCompatibility?.[installerId] || null;
+}
+
+export function sourceInstallerDirectAvailable(sourceStatus, installerId) {
+  return sourceInstallerCompatibility(sourceStatus, installerId)?.directSource !== 'fail';
+}
+
 export function sourceInstallerDeepLink(source, installerId) {
   const installer = INSTALLERS[installerId];
   if (!installer) return null;
