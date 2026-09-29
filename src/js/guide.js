@@ -402,7 +402,7 @@ function handleHelpTabKeydown(event) {
   const current = event.target.closest('[data-guide-mode]');
   if (!current || !['ArrowLeft','ArrowRight','ArrowUp','ArrowDown','Home','End'].includes(event.key)) return;
 
-  const tabs = $('[data-guide-mode]');
+  const tabs = [...document.querySelectorAll('[data-guide-mode]')];
   const index = tabs.indexOf(current);
   if (index < 0) return;
 
@@ -419,7 +419,7 @@ function handleHelpTabKeydown(event) {
 }
 
 function triedButtonForKey(key) {
-  return $('.assistant-tried-options [data-tried-key]').find(button => button.dataset.triedKey === key) || null;
+  return [...document.querySelectorAll('.assistant-tried-options [data-tried-key]')].find(button => button.dataset.triedKey === key) || null;
 }
 
 function diagnosisTriedTags() {
@@ -480,7 +480,7 @@ function getTroubleMatches(query) {
   const triedTags = diagnosisTriedTags();
   const preferredTool = troubleshootingToolForQuery(q);
 
-  return $('.trouble-item')
+  return [...document.querySelectorAll('.trouble-item')]
     .map((item, index) => {
       const haystack = [item.dataset.search || '', item.textContent || ''].join(' ').toLowerCase();
       const baseScore = terms.reduce((sum, term) => sum + (troubleTermMatches(haystack, term) ? (/[0-9]/.test(term) ? 3 : 1) : 0), 0);
