@@ -351,7 +351,7 @@ function scopedTroubleshootingTools() {
 }
 
 function updateTroubleScopeControls() {
-  $('[data-assistant-tool], [data-trouble-tool]').forEach(button => {
+  $$('[data-assistant-tool], [data-trouble-tool]').forEach(button => {
     const toolId = button.dataset.assistantTool || button.dataset.troubleTool || '';
     const hidden = Boolean(selectedTroubleToolId && toolId && toolId !== selectedTroubleToolId);
     button.hidden = hidden;
@@ -369,18 +369,19 @@ function guideNodeSupportsTool(node, toolId) {
     .includes(toolId);
 }
 
+function filterGuideScopeGroup(nodes, toolId) {
+  const items = [...nodes];
+  const hasMatch = Boolean(toolId && items.some(node => guideNodeSupportsTool(node, toolId)));
+  items.forEach(node => {
+    node.hidden = Boolean(toolId && hasMatch && !guideNodeSupportsTool(node, toolId));
+  });
+}
+
 function updateGuideScopeContent() {
   const selected = selectedTroubleshootingTool();
-  const scopedNodes = $('[data-guide-tools]');
-  const hasMatchingContent = Boolean(
-    selected && scopedNodes.some(node => guideNodeSupportsTool(node, selected.id))
-  );
-
-  scopedNodes.forEach(node => {
-    node.hidden = Boolean(
-      selected && hasMatchingContent && !guideNodeSupportsTool(node, selected.id)
-    );
-  });
+  const toolId = selected?.id || '';
+  filterGuideScopeGroup($$('article.guide-card[data-guide-tools]'), toolId);
+  filterGuideScopeGroup($$('.compat-table tbody tr[data-guide-tools]'), toolId);
 }
 
 function updateToolScopeDisplay() {
