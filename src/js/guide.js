@@ -429,16 +429,25 @@ function diagnosisTriedTags() {
   });
 }
 
+function troubleTermMatches(haystack, term) {
+  if (!term) return false;
+  if (/^[a-z0-9_-]+$/i.test(term)) {
+    const tokens = haystack.match(/[a-z0-9_-]+/gi) || [];
+    return tokens.includes(term);
+  }
+  return haystack.includes(term);
+}
+
 function getTroubleMatches(query) {
   const q = (query || '').trim().toLowerCase();
   if (!q) return [];
   const terms = [...new Set(q.split(/\s+/).filter(Boolean))];
   const triedTags = diagnosisTriedTags();
 
-  return $$('.trouble-item')
+  return $('.trouble-item')
     .map((item, index) => {
       const haystack = [item.dataset.search || '', item.textContent || ''].join(' ').toLowerCase();
-      const baseScore = terms.reduce((sum, term) => sum + (haystack.includes(term) ? (/[0-9]/.test(term) ? 3 : 1) : 0), 0);
+      const baseScore = terms.reduce((sum, term) => sum + (troubleTermMatches(haystack, term) ? (/[0-9]/.test(term) ? 3 : 1) : 0), 0);
       const triedPenalty = triedTags.reduce((sum, tag) => sum + (haystack.includes(tag) ? 0.35 : 0), 0);
       const communityPenalty = item.classList.contains('community-item') ? 0.15 : 0;
       return { item, score:baseScore - triedPenalty - communityPenalty, baseScore, index, key:item.dataset.search || String(index) };
