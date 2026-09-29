@@ -5,7 +5,6 @@ import {
   MORE_INSTALLER_IDS,
   sourceInstallerIds,
   sourceInstallerDeepLink,
-  sourceUtilityURL,
   sourceVariantURL
 } from './installers.js?v=1.1.5-20260929-installers1';
 
@@ -141,6 +140,57 @@ function sourceMoreInstallers(source, installerIds) {
     <summary class="btn small secondary">${escapeHtml(moreInstallersLabel())} ▾</summary>
     <div class="source-more-menu">${links}</div>
   </details>` : '';
+}
+
+function sourceAvailableVariants(source) {
+  const statusVariants = getStatus(source.id)?.variants;
+  return [
+    ['classic', 'Classic'],
+    ['pal', 'AltStore PAL']
+  ].map(([variant, label]) => {
+    const url = sourceVariantURL(source, variant);
+    if (!url) return null;
+    if (statusVariants && typeof statusVariants === 'object' && variant in statusVariants) {
+      if (statusVariants[variant]?.online !== true) return null;
+    }
+    return {variant, label, url};
+  }).filter(Boolean);
+}
+
+function sourceCopyControl(source) {
+  const variants = sourceAvailableVariants(source);
+  if (!variants.length) return '';
+
+  if (variants.length === 1) {
+    return `<button class="btn small secondary" type="button" data-copy-source="${escapeHtml(variants[0].url)}">${escapeHtml(tr('copyUrl'))}</button>`;
+  }
+
+  const actions = variants.map(item =>
+    `<button class="btn small secondary" type="button" data-copy-source="${escapeHtml(item.url)}">${escapeHtml(item.label)}</button>`
+  ).join('');
+
+  return `<details class="source-more source-variant-menu">
+    <summary class="btn small secondary">${escapeHtml(tr('copyUrl'))} ▾</summary>
+    <div class="source-more-menu">${actions}</div>
+  </details>`;
+}
+
+function sourceJsonControl(source) {
+  const variants = sourceAvailableVariants(source);
+  if (!variants.length) return '';
+
+  if (variants.length === 1) {
+    return `<a class="btn small ghost" href="${escapeHtml(variants[0].url)}" target="_blank" rel="noopener">JSON ↗</a>`;
+  }
+
+  const actions = variants.map(item =>
+    `<a class="btn small ghost" href="${escapeHtml(item.url)}" target="_blank" rel="noopener">${escapeHtml(item.label)} ↗</a>`
+  ).join('');
+
+  return `<details class="source-more source-variant-menu">
+    <summary class="btn small ghost">JSON ▾</summary>
+    <div class="source-more-menu">${actions}</div>
+  </details>`;
 }
 
 function loadPersistedSettings() {
@@ -376,7 +426,8 @@ function renderSources() {
       .filter(Boolean)
       .join('');
     const moreInstallerMenu = checkedOffline ? '' : sourceMoreInstallers(source, installerGroups.more);
-    const utilityURL = sourceUtilityURL(source);
+    const copyControl = checkedOffline ? '' : sourceCopyControl(source);
+    const jsonControl = checkedOffline ? '' : sourceJsonControl(source);
     return `<article class="source-card${checkedOffline ? ' is-offline' : ''}" data-source-id="${escapeHtml(source.id)}">
       <div class="source-top">
         <div class="source-icon">${sourceIcon(source)}</div>
@@ -399,8 +450,8 @@ function renderSources() {
       ${installerButtons ? `<div class="source-installers" aria-label="Install source">${installerButtons}</div>` : ''}
       <div class="source-actions source-utilities">
         ${moreInstallerMenu}
-        ${utilityURL ? `<button class="btn small secondary" type="button" data-copy-source="${escapeHtml(utilityURL)}">${escapeHtml(tr('copyUrl'))}</button>` : ''}
-        ${utilityURL ? `<a class="btn small ghost" href="${escapeHtml(utilityURL)}" target="_blank" rel="noopener">JSON ↗</a>` : ''}
+        ${copyControl}
+        ${jsonControl}
         ${source.website ? `<a class="btn small ghost" href="${escapeHtml(source.website)}" target="_blank" rel="noopener">Web ↗</a>` : ''}
       </div>
     </article>`;
@@ -555,7 +606,10 @@ document.addEventListener('click', event => {
   }
 
   const copy = event.target.closest('[data-copy-source]');
-  if (copy) return void copyText(copy.dataset.copySource, tr('sourceCopied'));
+  if (copy) {
+    copy.closest('.source-more[open]')?.removeAttribute('open');
+    return void copyText(copy.dataset.copySource, tr('sourceCopied'));
+  }
   if (event.target.closest('[data-support-open]')) return void openSupport();
   if (event.target.closest('[data-support-close]')) return void closeSupport();
   if (event.target.id === 'supportModal') closeSupport();
