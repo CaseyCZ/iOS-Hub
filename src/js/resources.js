@@ -1,5 +1,5 @@
 import { SUPPORTED_LANGUAGES, applyTranslations, normalizeLanguage, t } from './i18n.js?v=1.1.5-20260918-fullaudit2';
-import { SIDELOAD_TOOLS, sideloadToolURL } from './installers.js?v=1.1.5-20260929-installers9';
+import { SIDELOAD_TOOLS, resourceBadgeSpecs, sideloadToolURL } from './installers.js?v=1.1.5-20260929-installers10';
 
 const root = document.documentElement;
 const RESOURCE_EXTRA_COPY = {
@@ -43,6 +43,24 @@ function applyResourceExtraCopy(lang) {
   });
 }
 
+function renderSideloadToolBadges(card, toolId) {
+  const host = card.querySelector('.resource-badges');
+  if (!host) return;
+
+  const badges = resourceBadgeSpecs(toolId);
+  host.replaceChildren(...badges.map(spec => {
+    const badge = document.createElement('span');
+    badge.className = `pill ${spec.className || 'mode'}`;
+    if (spec.key) {
+      badge.dataset.i18n = spec.key;
+      badge.textContent = t(root.lang, spec.key);
+    } else {
+      badge.textContent = spec.label || '';
+    }
+    return badge;
+  }));
+}
+
 function hydrateSideloadToolCards() {
   document.querySelectorAll('[data-sideload-tool]').forEach(card => {
     const tool = SIDELOAD_TOOLS[card.dataset.sideloadTool];
@@ -56,6 +74,7 @@ function hydrateSideloadToolCards() {
     card.dataset.sourceSupport = tool.sourceSupport || 'none';
     card.dataset.openSource = tool.openSource === true ? 'true' : (tool.openSource === false ? 'false' : 'unknown');
     card.dataset.resourceBadges = (tool.resourceBadges || []).join(' ');
+    renderSideloadToolBadges(card, tool.id);
 
     const title = card.querySelector('h3');
     if (title && tool.resourceName) title.textContent = tool.resourceName;
