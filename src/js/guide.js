@@ -1,5 +1,5 @@
 import { SUPPORTED_LANGUAGES, applyTranslations, normalizeLanguage, t } from './i18n.js?v=1.1.5-20260929-guide-methods1';
-import { sideloadToolForRole, sideloadToolURL, troubleshootingSideloadTools } from './installers.js?v=1.1.5-20260929-installers20';
+import { sideloadTool, sideloadToolForRole, sideloadToolURL, troubleshootingSideloadTools } from './installers.js?v=1.1.5-20260929-installers20';
 
 const root = document.documentElement;
 const $ = selector => document.querySelector(selector);
@@ -431,6 +431,21 @@ function setToolScope(toolId, syncUrl = true) {
   if ($('#assistantTroubleSearch')?.value.trim()) renderAssistantDiagnosis(false);
   updateReportLink();
   if (syncUrl) syncToolScopeDeepLink();
+}
+
+function hydrateGuideToolRegistryReferences() {
+  $('[data-guide-tool-link]').forEach(link => {
+    const toolId = link.dataset.guideToolLink || '';
+    const purpose = link.dataset.guideToolPurpose || 'guide';
+    const href = sideloadToolURL(toolId, purpose);
+    if (href) link.href = href;
+  });
+
+  $('[data-guide-tool-icon]').forEach(icon => {
+    const tool = sideloadTool(icon.dataset.guideToolIcon || '');
+    if (!tool?.icon) return;
+    icon.src = tool.icon;
+  });
 }
 
 function appendToolReference(container, tool, purpose, className = '', withIcon = false) {
@@ -1310,6 +1325,7 @@ const systemDark = window.matchMedia?.('(prefers-color-scheme: dark)').matches;
 applyTheme(savedTheme === 'light' || savedTheme === 'dark' ? savedTheme : (systemDark ? 'dark' : 'light'));
 
 const savedLang = safeGet('caseycz-language');
+hydrateGuideToolRegistryReferences();
 renderToolScopePicker();
 applyLanguage(SUPPORTED_LANGUAGES.includes(savedLang) ? savedLang : 'en');
 
