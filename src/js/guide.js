@@ -1,5 +1,5 @@
 import { SUPPORTED_LANGUAGES, applyTranslations, normalizeLanguage, t } from './i18n.js?v=1.1.5-20260929-guide-methods1';
-import { sideloadToolForRole, sideloadToolURL, troubleshootingSideloadTools } from './installers.js?v=1.1.5-20260929-installers17';
+import { sideloadToolForRole, sideloadToolURL, troubleshootingSideloadTools } from './installers.js?v=1.1.5-20260929-installers20';
 
 const root = document.documentElement;
 const $ = selector => document.querySelector(selector);
