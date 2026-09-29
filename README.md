@@ -8,7 +8,7 @@
 </p>
 
 <p align="center">
-  Katalog pro <strong>AltStore / SideStore / LiveContainer zdroje, Source Builder a praktické iOS nástroje</strong>.
+  Katalog pro <strong>kompatibilní iOS zdroje, Source Builder a praktické iOS nástroje</strong>.
 </p>
 
 <p align="center">
@@ -21,22 +21,24 @@
 
 ## Hlavní funkce
 
-- AltStore Classic, AltStore PAL, SideStore a LiveContainer zdroje
+- kompatibilní Classic/PAL iOS zdroje s installer podporou řízenou z jednoho centrálního registru
 - filtry podle typu zdroje, žánru, platformy a Mix kompatibility
 - vyhledávání podle zdroje i názvu aplikace
 - samostatná stránka **Custom Source Builder** pro všechny online zdroje
 - interaktivní **Help Center** s výběrem metody, diagnostikou chyb, průvodcem konfigurací a odkazy na oficiální dokumentaci
 - automatický stav `PASS / TRY`
-- hotový **CaseyCZ AltStore Source**, **CaseyCZ SideStore Source** a **CaseyCZ LiveContainer Source**
+- hotové kompatibilní source balíčky a přímé deep-linky pro podporované instalátory
 - automatická deduplikace aplikací podle `bundleIdentifier`
 - kontrola zdrojů každých 6 hodin
 - EN / CZ / DE / ES / FR, výchozí jazyk EN
 - uložený jazyk, vzhled, filtry a výběr Builderu
 - **DEB → IPA Converter (Beta)** pro iPhone, iPad, Mac a PC
 
-## AltStore, SideStore a LiveContainer
+## Kompatibilní source instalátory
 
 Hotové CaseyCZ zdroje se generují automaticky z aktuálně dostupných kompatibilních zdrojů. Stabilní buildy mají ve výchozích balíčcích přednost; Nightly zdroje zůstávají dostupné pro ruční výběr v samostatném Builderu.
+
+Podpora instalátorů, jejich pořadí a deep-linky jsou definované centrálně v `src/js/installers.js`, takže další installer není potřeba ručně doplňovat do každé source karty.
 
 CaseyCZ iOS Hub cizí IPA soubory nerehostuje. Výsledné source JSONy zachovávají původní veřejné download URL jednotlivých projektů.
 
