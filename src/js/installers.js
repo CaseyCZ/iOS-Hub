@@ -5,6 +5,8 @@ export const INSTALLERS = Object.freeze({
     variant: 'classic',
     mixTarget: true,
     mixHelpKey: 'targetHelpAlt',
+    catalogPriority: 10,
+    overflowPriority: 10,
     icon: 'assets/icons/altstore.svg',
     buildLink: url => `altstore://source?url=${encodeURIComponent(url)}`
   },
@@ -15,6 +17,8 @@ export const INSTALLERS = Object.freeze({
     mixTarget: true,
     mixHelpKey: 'targetHelpSide',
     mixPackage: 'sidestore',
+    catalogPriority: 20,
+    overflowPriority: 20,
     icon: 'assets/icons/sidestore.svg?v=1.1.5-20260918-audit13',
     buildLink: url => `sidestore://source?url=${encodeURIComponent(url)}`
   },
@@ -24,6 +28,8 @@ export const INSTALLERS = Object.freeze({
     variant: 'classic',
     mixTarget: true,
     mixHelpKey: 'targetHelpLive',
+    catalogPriority: 30,
+    overflowPriority: 30,
     icon: 'assets/icons/livecontainer.svg',
     buildLink: url => `livecontainer://source?url=${encodeURIComponent(url)}`
   },
@@ -32,6 +38,8 @@ export const INSTALLERS = Object.freeze({
     label: 'AltStore PAL',
     variant: 'pal',
     mixTarget: false,
+    catalogPriority: 40,
+    overflowPriority: 60,
     icon: 'assets/icons/altstore.svg',
     buildLink: url => `altstore-pal://source?url=${encodeURIComponent(url)}`
   },
@@ -41,6 +49,8 @@ export const INSTALLERS = Object.freeze({
     variant: 'classic',
     mixTarget: true,
     mixHelpKey: 'targetHelpFlare',
+    catalogPriority: 50,
+    overflowPriority: 40,
     icon: 'https://flarestore.app/favicon.ico',
     buildLink: url => `flarestore://source?url=${encodeURIComponent(url)}`
   },
@@ -50,26 +60,36 @@ export const INSTALLERS = Object.freeze({
     variant: 'classic',
     mixTarget: true,
     mixHelpKey: 'targetHelpFeather',
+    catalogPriority: 60,
+    overflowPriority: 50,
     icon: 'https://raw.githubusercontent.com/claration/Feather/v1.x/iOS/Resources/Icons/Main/Mac@3x.png',
     buildLink: url => `feather://source/${url}`
   }
 });
 
-export const PRIMARY_INSTALLER_IDS = Object.freeze([
-  'altstore',
-  'sidestore',
-  'livecontainer',
-  'altstore-pal'
-]);
-
-export const MORE_INSTALLER_IDS = Object.freeze([
-  'flarestore',
-  'feather'
-]);
-
 export const BUILDER_INSTALLER_IDS = Object.freeze(
   Object.values(INSTALLERS).filter(installer => installer.mixTarget).map(installer => installer.id)
 );
+
+function installerOrder(installerId, key) {
+  const value = Number(INSTALLERS[installerId]?.[key]);
+  return Number.isFinite(value) ? value : Number.MAX_SAFE_INTEGER;
+}
+
+export function groupInstallerIds(installerIds, maxMain = 3) {
+  const unique = [...new Set((installerIds || []).filter(id => INSTALLERS[id]))];
+  const ordered = [...unique].sort((a, b) =>
+    installerOrder(a, 'catalogPriority') - installerOrder(b, 'catalogPriority')
+  );
+  const main = ordered.slice(0, Math.max(0, maxMain));
+  const mainSet = new Set(main);
+  const more = ordered
+    .filter(id => !mainSet.has(id))
+    .sort((a, b) =>
+      installerOrder(a, 'overflowPriority') - installerOrder(b, 'overflowPriority')
+    );
+  return { main, more };
+}
 
 const CLASSIC_DEFAULT_INSTALLERS = Object.freeze([
   'altstore',
