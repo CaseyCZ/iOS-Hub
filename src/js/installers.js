@@ -38,7 +38,7 @@ export const INSTALLERS = Object.freeze({
     id: 'feather',
     label: 'Feather',
     variant: 'classic',
-    icon: 'https://github.com/khcrysalis/Feather/blob/v1.x/iOS/Resources/Icons/Main/Mac@3x.png?raw=true',
+    icon: 'https://raw.githubusercontent.com/claration/Feather/v1.x/iOS/Resources/Icons/Main/Mac@3x.png',
     buildLink: url => `feather://source/${url}`
   }
 });
