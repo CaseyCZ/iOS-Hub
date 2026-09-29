@@ -1,11 +1,14 @@
 import { SUPPORTED_LANGUAGES, applyTranslations, normalizeLanguage, t } from './i18n.js?v=1.1.5-20260918-fullaudit2';
 import {
   INSTALLERS,
+  SOURCE_VARIANT_IDS,
   groupInstallerIds,
   sourceInstallerIds,
   sourceInstallerDeepLink,
-  sourceVariantURL
-} from './installers.js?v=1.1.5-20260929-installers3';
+  sourceVariantURL,
+  sourceVariantLabel,
+  sourceModeLabel
+} from './installers.js?v=1.1.5-20260929-installers4';
 
 const root = document.documentElement;
 const $ = (selector, scope = document) => scope.querySelector(selector);
@@ -110,16 +113,13 @@ function sourceMoreInstallers(source, installerIds) {
 
 function sourceAvailableVariants(source) {
   const statusVariants = getStatus(source.id)?.variants;
-  return [
-    ['classic', 'Classic'],
-    ['pal', 'AltStore PAL']
-  ].map(([variant, label]) => {
+  return SOURCE_VARIANT_IDS.map(variant => {
     const url = sourceVariantURL(source, variant);
     if (!url) return null;
     if (statusVariants && typeof statusVariants === 'object' && variant in statusVariants) {
       if (statusVariants[variant]?.online !== true) return null;
     }
-    return {variant, label, url};
+    return {variant, label:sourceVariantLabel(variant), url};
   }).filter(Boolean);
 }
 
@@ -193,12 +193,7 @@ function applyLanguage(value) {
 }
 
 function modeLabel(source) {
-  const hasClassic = Boolean(sourceVariantURL(source, 'classic'));
-  const hasPal = Boolean(sourceVariantURL(source, 'pal'));
-  if (hasClassic && hasPal) return 'Classic + PAL';
-  if (source.mode === 'sidestore') return 'SideStore';
-  if (hasPal && !hasClassic) return 'AltStore PAL';
-  return 'AltStore Classic';
+  return sourceModeLabel(source);
 }
 
 function getStatus(id) {
