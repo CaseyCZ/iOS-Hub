@@ -1041,6 +1041,9 @@ def validate_layout() -> None:
             "sideloadToolSupports",
             "RESOURCE_BADGES",
             "resourceBadgeSpecs",
+            "orderedSideloadTools",
+            "resourceSideloadTools",
+            "creditSideloadTools",
             "sideloadToolsWithCapability",
             "sideloadToolsForTarget",
             "sideloadToolsForRole",
@@ -1100,6 +1103,12 @@ def validate_layout() -> None:
             "sourceSupport:",
             "resourceBadges: Object.freeze",
             "recommendationRoles: Object.freeze",
+            "resourceOrder:",
+            "creditOrder:",
+            "resourceDescriptionKey:",
+            "creditDescriptionKey:",
+            "creditBadge:",
+            "creditLinkKey:",
         ):
             field_count = tool_definitions_text.count(field)
             if field_count != tool_count:
@@ -1138,8 +1147,8 @@ def validate_layout() -> None:
     guide_script = JS_DIR / "guide.js"
 
     registry_driven_tool_scripts = {
-        "resources.js": ("SIDELOAD_TOOLS", "resourceBadgeSpecs", "sideloadToolURL", "data-sideload-tool", "hydrateSideloadToolCards", "renderSideloadToolBadges", "dataset.toolType", "dataset.capabilities", "dataset.targets", "dataset.hostPlatforms", "dataset.computerMode", "dataset.sourceSupport", "dataset.openSource", "dataset.resourceBadges"),
-        "credits.js": ("SIDELOAD_TOOLS", "CORE_SIDELOAD_RESOURCE_NAMES", "sideloadToolURL", "hydrateSideloadCreditCards", "dataset.toolType", "dataset.capabilities", "dataset.targets", "dataset.hostPlatforms", "dataset.computerMode", "dataset.sourceSupport", "dataset.openSource", "dataset.resourceBadges"),
+        "resources.js": ("SIDELOAD_TOOLS", "resourceBadgeSpecs", "resourceSideloadTools", "resourceDescriptionKey", "sideloadToolURL", "data-sideload-tool", "hydrateSideloadToolCards", "renderSideloadToolBadges", "dataset.toolType", "dataset.capabilities", "dataset.targets", "dataset.hostPlatforms", "dataset.computerMode", "dataset.sourceSupport", "dataset.openSource", "dataset.resourceBadges"),
+        "credits.js": ("SIDELOAD_TOOLS", "CORE_SIDELOAD_RESOURCE_NAMES", "creditSideloadTools", "creditDescriptionKey", "creditBadge", "creditLinkKey", "sideloadToolURL", "hydrateSideloadCreditCards", "dataset.toolType", "dataset.capabilities", "dataset.targets", "dataset.hostPlatforms", "dataset.computerMode", "dataset.sourceSupport", "dataset.openSource", "dataset.resourceBadges"),
         "guide.js": ("sideloadToolForRole", "sideloadToolURL", "GUIDE_RECOMMENDATION_ROUTES", "recommendationToolURL", "SETUP_RESULT_ROUTES", "setupResultToolURL", "routeToolURL"),
     }
     for script_name, required_parts in registry_driven_tool_scripts.items():
