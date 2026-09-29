@@ -991,7 +991,7 @@ def validate_layout() -> None:
     # the catalog, Builder and Credits without maintaining duplicate hard-coded lists.
     dynamic_source_scripts = {
         "app.js": ("sources/registry.json", "data/status.json", "data/catalog.json", "sourceWebsiteIcon", "data-source-website-icon", "installers.js", "SOURCE_VARIANT_IDS", "sourceVariantLabel", "sourceModeLabel"),
-        "builder.js": ("sources/registry.json", "data/status.json", "data/catalog.json", "installers.js", "BUILDER_INSTALLER_IDS", "sourceFormatLabel", "targetVariant"),
+        "builder.js": ("sources/registry.json", "data/status.json", "data/catalog.json", "installers.js", "BUILDER_INSTALLER_IDS", "MIX_PACKAGE_IDS", "mixPackageData", "mixPackageTargetIds", "installerMixPackageData", "sourceFormatLabel", "targetVariant"),
         "credits.js": ("sources/registry.json", "sourceCredits", "source.developer", "maintainerGroups", "sourceCreditGroup", "brand-link-icon", "iconImage", "CORE_SIDELOAD_RESOURCE_NAMES", "SIDELOAD_TOOLS"),
     }
     for script_name, required_parts in dynamic_source_scripts.items():
@@ -1023,7 +1023,14 @@ def validate_layout() -> None:
             "SOURCE_VARIANT_IDS",
             "SOURCE_MODES",
             "BUILDER_INSTALLER_IDS",
+            "DEFAULT_MIX_PACKAGE_ID",
+            "MIX_PACKAGES",
+            "MIX_PACKAGE_IDS",
+            "mixPackageData",
+            "mixPackageTargetIds",
+            "installerMixPackageData",
             "mixTarget",
+            "mixPackage",
             "catalogPriority",
             "overflowPriority",
             "groupInstallerIds",
@@ -1125,6 +1132,33 @@ def validate_layout() -> None:
                 error(
                     "SideInstaller compatibility profile is incomplete; "
                     f"missing {required_sideinstaller_profile!r}"
+                )
+
+        builder_installer_end = installers_text.find("export const BUILDER_INSTALLER_IDS")
+        builder_installer_text = installers_text[:builder_installer_end] if builder_installer_end >= 0 else installers_text
+        mix_target_count = builder_installer_text.count("mixTarget: true")
+        mix_package_count = builder_installer_text.count("mixPackage:")
+        if mix_package_count != mix_target_count:
+            error(
+                "Every Builder Mix target must declare its hosted mixPackage; "
+                f"found {mix_package_count} mixPackage entries for {mix_target_count} mixTarget entries"
+            )
+
+    builder_script = JS_DIR / "builder.js"
+    if builder_script.exists():
+        builder_text = builder_script.read_text(encoding="utf-8")
+        for forbidden in (
+            "status?.altstore?.sourceURL",
+            "status?.altstore?.sourceIDs",
+            "status?.sidestore?.sourceURL",
+            "status?.sidestore?.sourceIDs",
+            "new Set(['sidestore','livecontainer'])",
+            'new Set(["sidestore","livecontainer"])',
+        ):
+            if forbidden in builder_text:
+                error(
+                    "builder.js still hard-codes hosted Mix package behavior; "
+                    f"found {forbidden!r}; use MIX_PACKAGES from installers.js"
                 )
 
     legacy_brand = "AltStore · SideStore · LiveContainer"
