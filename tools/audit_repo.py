@@ -1078,7 +1078,13 @@ def validate_layout() -> None:
                         f"found misplaced tool metadata {misplaced!r}"
                     )
 
-        tool_count = installers_text.count("toolType:")
+        profile_helper_start = installers_text.find("export function sideloadToolProfile")
+        tool_definitions_text = (
+            installers_text[:profile_helper_start]
+            if profile_helper_start >= 0
+            else installers_text
+        )
+        tool_count = tool_definitions_text.count("toolType:")
         if tool_count < 12:
             error(f"Central sideload registry unexpectedly contains only {tool_count} tool profiles")
         for field in (
@@ -1089,7 +1095,7 @@ def validate_layout() -> None:
             "sourceSupport:",
             "resourceBadges: Object.freeze",
         ):
-            field_count = installers_text.count(field)
+            field_count = tool_definitions_text.count(field)
             if field_count != tool_count:
                 error(
                     "Every central sideload tool must have a complete profile; "
