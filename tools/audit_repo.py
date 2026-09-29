@@ -1041,7 +1041,10 @@ def validate_layout() -> None:
             "sideloadToolSupports",
             "sideloadToolsWithCapability",
             "sideloadToolsForTarget",
+            "sideloadToolsForRole",
+            "sideloadToolForRole",
             "sideloadToolProfile",
+            "recommendationRoles: Object.freeze",
             "targets: Object.freeze",
             "hostPlatforms: Object.freeze",
             "computerMode",
@@ -1094,6 +1097,7 @@ def validate_layout() -> None:
             "openSource:",
             "sourceSupport:",
             "resourceBadges: Object.freeze",
+            "recommendationRoles: Object.freeze",
         ):
             field_count = tool_definitions_text.count(field)
             if field_count != tool_count:
@@ -1134,7 +1138,7 @@ def validate_layout() -> None:
     registry_driven_tool_scripts = {
         "resources.js": ("SIDELOAD_TOOLS", "sideloadToolURL", "data-sideload-tool", "hydrateSideloadToolCards", "dataset.toolType", "dataset.capabilities", "dataset.targets", "dataset.hostPlatforms", "dataset.computerMode", "dataset.sourceSupport", "dataset.openSource", "dataset.resourceBadges"),
         "credits.js": ("SIDELOAD_TOOLS", "CORE_SIDELOAD_RESOURCE_NAMES", "sideloadToolURL", "hydrateSideloadCreditCards", "dataset.toolType", "dataset.capabilities", "dataset.targets", "dataset.hostPlatforms", "dataset.computerMode", "dataset.sourceSupport", "dataset.openSource", "dataset.resourceBadges"),
-        "guide.js": ("sideloadToolURL", "GUIDE_RECOMMENDATION_TOOLS", "recommendationToolURL", "SETUP_RESULT_TOOLS", "setupResultToolURL"),
+        "guide.js": ("sideloadToolForRole", "sideloadToolURL", "GUIDE_RECOMMENDATION_ROUTES", "recommendationToolURL", "SETUP_RESULT_ROUTES", "setupResultToolURL", "routeToolURL"),
     }
     for script_name, required_parts in registry_driven_tool_scripts.items():
         script = JS_DIR / script_name
@@ -1151,9 +1155,9 @@ def validate_layout() -> None:
     if guide_script.exists():
         guide_text = guide_script.read_text(encoding="utf-8")
         setup_start = guide_text.find("const SETUP_RESULTS = {")
-        setup_end = guide_text.find("const SETUP_RESULT_TOOLS", setup_start)
+        setup_end = guide_text.find("const SETUP_RESULT_ROUTES", setup_start)
         recommendation_start = guide_text.find("const GUIDE_RECOMMENDATIONS = {")
-        recommendation_end = guide_text.find("const GUIDE_RECOMMENDATION_TOOLS", recommendation_start)
+        recommendation_end = guide_text.find("const GUIDE_RECOMMENDATION_ROUTES", recommendation_start)
 
         for block_name, start, end in (
             ("SETUP_RESULTS", setup_start, setup_end),
@@ -1171,7 +1175,7 @@ def validate_layout() -> None:
                     continue
                 error(
                     f"guide.js {block_name} still contains a direct external tool URL; "
-                    "use SETUP_RESULT_TOOLS / GUIDE_RECOMMENDATION_TOOLS and installers.js instead"
+                    "use SETUP_RESULT_ROUTES / GUIDE_RECOMMENDATION_ROUTES and installers.js roles instead"
                 )
                 break
 
