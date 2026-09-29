@@ -1,4 +1,4 @@
-import { SUPPORTED_LANGUAGES, applyTranslations, normalizeLanguage, t } from './i18n.js?v=1.1.5-20260918-fullaudit2';
+import { SUPPORTED_LANGUAGES, applyTranslations, normalizeLanguage, t } from './i18n.js?v=1.1.5-20260929-guide-methods1';
 import {
   INSTALLERS,
   SOURCE_VARIANT_IDS,
