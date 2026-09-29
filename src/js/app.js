@@ -111,18 +111,37 @@ const SOURCE_ICON_OVERRIDES = {
   'bringyour': 'assets/source-icons/bringyour.svg'
 };
 
+function sourceWebsiteIcon(source) {
+  try {
+    const target = new URL(source.website || source.url);
+    return `https://www.google.com/s2/favicons?domain=${encodeURIComponent(target.hostname)}&sz=128`;
+  } catch (_) {
+    return '';
+  }
+}
+
 function sourceIcon(source) {
   const status = getStatus(source.id);
   const fallback = source.name.slice(0,2).toUpperCase();
-  const icon = SOURCE_ICON_OVERRIDES[source.id] || source.iconURL || status.iconURL || catalogSource(source.id)?.iconURL;
+  const websiteIcon = sourceWebsiteIcon(source);
+  const icon = SOURCE_ICON_OVERRIDES[source.id] || source.iconURL || status.iconURL || catalogSource(source.id)?.iconURL || websiteIcon;
+
   return icon
-    ? `<img src="${escapeHtml(icon)}" alt="" loading="lazy" referrerpolicy="no-referrer" data-source-fallback="${escapeHtml(fallback)}">`
+    ? `<img src="${escapeHtml(icon)}" alt="" loading="lazy" referrerpolicy="no-referrer" data-source-fallback="${escapeHtml(fallback)}"${websiteIcon && icon !== websiteIcon ? ` data-source-website-icon="${escapeHtml(websiteIcon)}"` : ''}>`
     : escapeHtml(fallback);
 }
 
 document.addEventListener('error', event => {
   const img = event.target;
   if (!(img instanceof HTMLImageElement) || !img.matches('.source-icon img[data-source-fallback]')) return;
+
+  const websiteIcon = img.dataset.sourceWebsiteIcon;
+  if (websiteIcon) {
+    delete img.dataset.sourceWebsiteIcon;
+    img.src = websiteIcon;
+    return;
+  }
+
   const host = img.closest('.source-icon');
   if (host) host.textContent = img.dataset.sourceFallback || '?';
 }, true);
