@@ -257,7 +257,7 @@ function applyCopy() {
 function syncFilterUi() {
   $$('[data-exp-category-filter]').forEach(button => button.classList.toggle('active', button.dataset.expCategoryFilter === category));
   $$('[data-exp-genre-filter]').forEach(button => button.classList.toggle('active', button.dataset.expGenreFilter === genre));
-  $('[data-exp-target]').forEach(button => {
+  $$('[data-exp-target]').forEach(button => {
     const active = button.dataset.expTarget === target;
     button.classList.toggle('active', active);
     button.setAttribute('aria-selected', String(active));
