@@ -318,20 +318,21 @@ def dedupe_apps(source_payloads: list[tuple[dict, dict]]) -> tuple[list[dict], l
         for app in payload.get("apps", []):
             if not isinstance(app, dict):
                 continue
-            bundle = app.get("bundleIdentifier") or app.get("bundleID")
+            bundle = str(app.get("bundleIdentifier") or app.get("bundleID") or "").strip()
             if not bundle:
                 continue
-            if bundle not in merged:
-                merged[bundle] = (source_meta, app)
+            bundle_key = bundle.lower()
+            if bundle_key not in merged:
+                merged[bundle_key] = (source_meta, app)
                 continue
 
-            old_meta, old_app = merged[bundle]
+            old_meta, old_app = merged[bundle_key]
             old_date = app_date(old_app)
             new_date = app_date(app)
             winner_meta, winner_app = old_meta, old_app
             if new_date > old_date:
                 winner_meta, winner_app = source_meta, app
-                merged[bundle] = (source_meta, app)
+                merged[bundle_key] = (source_meta, app)
 
             conflicts.append({
                 "bundleIdentifier": bundle,
