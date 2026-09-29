@@ -868,6 +868,42 @@ def validate_layout() -> None:
     credits_page = ROOT / "credits.html"
     if credits_page.exists() and 'id="sourceCredits"' not in credits_page.read_text(encoding="utf-8"):
         error("credits.html must contain the dynamic Source catalogue credits host")
+    if credits_page.exists() and 'id="featuredCredits"' not in credits_page.read_text(encoding="utf-8"):
+        error("credits.html must contain the dynamic Featured apps & services host")
+
+    resources_page = ROOT / "resources.html"
+    credits_script = JS_DIR / "credits.js"
+    if resources_page.exists() and credits_script.exists():
+        resources_text = resources_page.read_text(encoding="utf-8")
+        credits_text = credits_script.read_text(encoding="utf-8")
+
+        resource_names = re.findall(
+            r'<article class="panel resource-card">[\s\S]*?<h3[^>]*>(.*?)</h3>',
+            resources_text,
+        )
+        cleaned_resource_names = [
+            re.sub(r"<[^>]+>", "", name).strip()
+            for name in resource_names
+            if re.sub(r"<[^>]+>", "", name).strip()
+        ]
+        duplicates = sorted({
+            name for name in cleaned_resource_names
+            if cleaned_resource_names.count(name) > 1
+        })
+        if duplicates:
+            error("resources.html contains duplicate resource cards: " + ", ".join(duplicates))
+
+        for required_part in (
+            "loadFeaturedCredits",
+            "fetch('resources.html'",
+            "article.resource-card",
+            "CORE_RESOURCE_NAMES",
+        ):
+            if required_part not in credits_text:
+                error(
+                    "credits.js must keep Featured apps & services generated from resources.html; "
+                    f"missing {required_part!r}"
+                )
 
     for path in LEGACY_PATHS:
         if path.exists():
