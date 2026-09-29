@@ -1,4 +1,5 @@
 import { SUPPORTED_LANGUAGES, applyTranslations, normalizeLanguage, t } from './i18n.js?v=1.1.5-20260918-fullaudit2';
+import { SIDELOAD_TOOLS, sideloadToolURL } from './installers.js?v=1.1.5-20260929-installers5';
 
 const root = document.documentElement;
 const RESOURCE_EXTRA_COPY = {
@@ -39,6 +40,28 @@ function applyResourceExtraCopy(lang) {
   document.querySelectorAll('[data-resource-copy]').forEach(node => {
     const key = node.dataset.resourceCopy;
     if (copy[key]) node.textContent = copy[key];
+  });
+}
+
+function hydrateSideloadToolCards() {
+  document.querySelectorAll('[data-sideload-tool]').forEach(card => {
+    const tool = SIDELOAD_TOOLS[card.dataset.sideloadTool];
+    if (!tool) return;
+
+    const title = card.querySelector('h3');
+    if (title && tool.resourceName) title.textContent = tool.resourceName;
+
+    const domain = card.querySelector('.resource-domain');
+    if (domain && tool.domain) domain.textContent = tool.domain;
+
+    const href = sideloadToolURL(tool.id);
+    const link = card.querySelector('a.btn.primary');
+    if (link && href) link.href = href;
+
+    card.querySelectorAll('img.official-app-icon, img.brand-link-icon').forEach(img => {
+      if (tool.icon) img.src = tool.icon;
+      if (img.classList.contains('official-app-icon')) img.alt = tool.resourceName || tool.label || '';
+    });
   });
 }
 
@@ -99,6 +122,8 @@ document.addEventListener('click', event => {
 $('#themeToggle')?.addEventListener('click', () => applyTheme(root.dataset.theme === 'dark' ? 'light' : 'dark'));
 $('#languageSelect')?.addEventListener('change', event => applyLanguage(event.target.value));
 document.addEventListener('keydown', event => { if (event.key === 'Escape') closeSupport(); });
+
+hydrateSideloadToolCards();
 
 const savedTheme = safeGet('caseycz-theme');
 const systemDark = window.matchMedia?.('(prefers-color-scheme: dark)').matches;
