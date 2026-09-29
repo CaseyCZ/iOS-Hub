@@ -11,6 +11,7 @@ from urllib.parse import unquote, urlparse
 ROOT = Path(__file__).resolve().parents[1]
 REGISTRY = ROOT / "sources" / "registry.json"
 STATUS = ROOT / "data" / "status.json"
+STATUS_MOBILE_PAYLOAD_LIMIT_BYTES = 350 * 1024
 CATALOG = ROOT / "data" / "catalog.json"
 JS_DIR = ROOT / "src" / "js"
 CSS_DIR = ROOT / "src" / "css"
@@ -1203,7 +1204,13 @@ def validate_layout() -> None:
     status_file = ROOT / "data" / "status.json"
     if status_file.exists():
         try:
-            status_payload = json.loads(status_file.read_text(encoding="utf-8"))
+            status_text = status_file.read_text(encoding="utf-8")
+            if len(status_text.encode("utf-8")) > STATUS_MOBILE_PAYLOAD_LIMIT_BYTES:
+                error(
+                    "data/status.json is too large for the mobile runtime payload; "
+                    f"keep it below {STATUS_MOBILE_PAYLOAD_LIMIT_BYTES // 1024} KB"
+                )
+            status_payload = json.loads(status_text)
             for source_id, source_status in (status_payload.get("sources") or {}).items():
                 duplicate_report = source_status.get("duplicateBundleIdentifiers") or {}
                 items = duplicate_report.get("items") or []
