@@ -1,5 +1,5 @@
 import { SUPPORTED_LANGUAGES, applyTranslations, normalizeLanguage } from './i18n.js?v=1.1.5-20260918-fullaudit2';
-import { SIDELOAD_TOOLS, CORE_SIDELOAD_RESOURCE_NAMES, sideloadToolURL } from './installers.js?v=1.1.5-20260929-installers10';
+import { SIDELOAD_TOOLS, CORE_SIDELOAD_RESOURCE_NAMES, creditSideloadTools, sideloadToolURL } from './installers.js?v=1.1.5-20260929-installers11';
 
 const root = document.documentElement;
 const $ = selector => document.querySelector(selector);
@@ -273,6 +273,14 @@ function hydrateSideloadCreditCards() {
     const title = card.querySelector('h3');
     if (title && tool.creditName) title.textContent = tool.creditName;
 
+    const description = card.querySelector('p[data-credit-copy]');
+    if (description && tool.creditDescriptionKey) {
+      description.dataset.creditCopy = tool.creditDescriptionKey;
+    }
+
+    const badge = card.querySelector('.resource-badges .pill');
+    if (badge && tool.creditBadge) badge.textContent = tool.creditBadge;
+
     const domain = card.querySelector('.resource-domain');
     const creditDomain = tool.creditDomain || tool.domain;
     if (domain && creditDomain) domain.textContent = creditDomain;
@@ -280,12 +288,27 @@ function hydrateSideloadCreditCards() {
     const href = sideloadToolURL(tool.id, 'credit');
     const link = card.querySelector('a.btn.primary');
     if (link && href) link.href = href;
+    const linkLabel = link?.querySelector('[data-credit-copy]');
+    if (linkLabel && tool.creditLinkKey) linkLabel.dataset.creditCopy = tool.creditLinkKey;
 
     card.querySelectorAll('img.official-app-icon, img.brand-link-icon').forEach(img => {
       if (tool.icon) img.src = tool.icon;
       if (img.classList.contains('official-app-icon')) img.alt = tool.creditName || tool.label || '';
     });
   });
+
+  const cards = new Map(
+    [...document.querySelectorAll('[data-sideload-tool]')]
+      .map(card => [card.dataset.sideloadTool, card])
+  );
+  const first = creditSideloadTools().map(tool => cards.get(tool.id)).find(Boolean);
+  const host = first?.parentElement;
+  if (host) {
+    creditSideloadTools().forEach(tool => {
+      const card = cards.get(tool.id);
+      if (card && card.parentElement === host) host.appendChild(card);
+    });
+  }
 }
 
 function applyTheme(theme) {
