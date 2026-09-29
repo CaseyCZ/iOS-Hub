@@ -322,7 +322,7 @@ let activeHelpMode = 'choose';
 const setupState = { device:null, version:null, computer:null, need:null };
 const diagnosisState = { tried:new Set(), dismissed:new Set(), currentKey:null };
 
-function appendToolReference(container, tool, purpose, className = '') {
+function appendToolReference(container, tool, purpose, className = '', withIcon = false) {
   const href = sideloadToolURL(tool.id, purpose);
   if (!container || !href) return;
   const link = document.createElement('a');
@@ -331,6 +331,16 @@ function appendToolReference(container, tool, purpose, className = '') {
   link.rel = 'noopener noreferrer';
   if (className) link.className = className;
   link.dataset.toolReference = tool.id;
+
+  if (withIcon && tool.icon) {
+    const icon = document.createElement('img');
+    icon.className = 'brand-link-icon';
+    icon.src = tool.icon;
+    icon.alt = '';
+    icon.loading = 'lazy';
+    icon.referrerPolicy = 'no-referrer';
+    link.appendChild(icon);
+  }
 
   const label = document.createElement('span');
   label.textContent = `${tool.label} ↗`;
@@ -350,7 +360,7 @@ function renderOfficialToolReferences() {
   const references = $('#guideOfficialLinks');
   if (references) {
     references.replaceChildren();
-    tools.forEach(tool => appendToolReference(references, tool, 'guide', 'btn small secondary'));
+    tools.forEach(tool => appendToolReference(references, tool, 'guide', 'btn small secondary brand-link', true));
   }
 }
 
