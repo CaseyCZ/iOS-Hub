@@ -1,10 +1,14 @@
 import {
   INSTALLERS,
   BUILDER_INSTALLER_IDS,
+  MIX_PACKAGE_IDS,
+  installerMixPackageData,
+  mixPackageData,
+  mixPackageTargetIds,
   sourceInstallerIds,
   sourceVariantURL,
   sourceFormatLabel
-} from './installers.js?v=1.1.5-20260929-installers11';
+} from './installers.js?v=1.1.5-20260929-installers12';
 
 const $ = selector => document.querySelector(selector);
 const $$ = selector => [...document.querySelectorAll(selector)];
@@ -253,20 +257,15 @@ function packageCard(name, url, meta, installerId) {
 function renderOfficialPackages() {
   const node = $('#officialSourcePackages');
   if (!node) return;
-  const altUrl = status?.altstore?.sourceURL || status?.mixes?.allCompatibleURL || '';
-  const altSources = status?.altstore?.sourceIDs?.length || status?.mixes?.autoCompatibleSourceIDs?.length || 0;
-  const altApps = status?.altstore?.appCount || 0;
-  const sideUrl = status?.sidestore?.sourceURL || '';
-  const sideSources = status?.sidestore?.sourceIDs?.length || 0;
-  const sideApps = status?.sidestore?.appCount || 0;
-  const altMeta = altApps ? `${altSources} ${tr('sources')} · ${altApps} ${tr('apps')}` : `${altSources} ${tr('sources')}`;
-  const sideMeta = `${sideSources} ${tr('sources')} · ${sideApps} ${tr('apps')}`;
   node.innerHTML = BUILDER_INSTALLER_IDS.map(installerId => {
-    const useSidePackage = INSTALLERS[installerId]?.mixPackage === 'sidestore' && sideUrl;
-    const url = useSidePackage ? sideUrl : altUrl;
-    const meta = useSidePackage ? sideMeta : altMeta;
+    const data = installerMixPackageData(status, installerId);
+    if (!data) return '';
+    const sourceCount = data.sourceIDs.length;
+    const meta = data.appCount
+      ? `${sourceCount} ${tr('sources')} · ${data.appCount} ${tr('apps')}`
+      : `${sourceCount} ${tr('sources')}`;
     const name = `${INSTALLERS[installerId].label} Source`;
-    return packageCard(name, url, meta, installerId);
+    return packageCard(name, data.sourceURL, meta, installerId);
   }).join('');
 }
 
@@ -367,14 +366,14 @@ function hostedTarget(ids) {
     return {url:status?.mixes?.allCompatibleURL || null, targets:classicTargets};
   }
 
-  const altIds = status?.altstore?.sourceIDs || [];
-  if (altIds.length && sameIds(sorted, altIds)) {
-    return {url:status?.altstore?.sourceURL || null, targets:classicTargets};
-  }
-
-  const sideIds = status?.sidestore?.sourceIDs || [];
-  if (sideIds.length && sameIds(sorted, sideIds)) {
-    return {url:status?.sidestore?.sourceURL || null, targets:new Set(['sidestore','livecontainer'])};
+  for (const packageId of MIX_PACKAGE_IDS) {
+    const data = mixPackageData(status, packageId, {fallbacks:false});
+    if (data.sourceIDs.length && sameIds(sorted, data.sourceIDs)) {
+      return {
+        url:data.sourceURL || null,
+        targets:new Set(mixPackageTargetIds(packageId))
+      };
+    }
   }
 
   return {url:null, targets:new Set()};
