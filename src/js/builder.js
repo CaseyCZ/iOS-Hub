@@ -159,7 +159,9 @@ function matchesGenre(source) {
   return (GENRE_RULES[genre] || []).some(rule => tags.includes(rule));
 }
 function targetName() {
-  return INSTALLERS[target]?.label || 'AltStore';
+  return INSTALLERS[target]?.label
+    || INSTALLERS[DEFAULT_BUILDER_INSTALLER_ID]?.label
+    || 'Installer';
 }
 function targetHelpKey() {
   return INSTALLERS[target]?.mixHelpKey || 'targetHelpGeneric';
