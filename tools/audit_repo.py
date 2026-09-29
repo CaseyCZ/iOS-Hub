@@ -1532,6 +1532,7 @@ def validate_layout() -> None:
             "const tabs = $('[data-guide-mode]')",
             "return $('.assistant-tried-options [data-tried-key]').find",
             "return $('.trouble-item')",
+            "const options = $('[data-guide-tool-scope]')",
         )
         for forbidden_selector in forbidden_single_collection_selectors:
             if forbidden_selector in guide_text:
