@@ -74,6 +74,16 @@
       },
       "versions": [
         {
+          "version": "448.0.0",
+          "marketingVersion": "4.21.0",
+          "date": "2026-09-29T16:14:56Z",
+          "localizedDescription": "This update adds an OLED theme, refreshes your media libraries, and improves compatibility! ✨\n\n- Added an OLED theme with pure-black backgrounds in dark mode.\n- Refreshed Downloads and Call Recordings to match the overall app design.\n- Fixed Story viewer lists not scrolling fully to the bottom when viewer search is enabled.\n- Fixed an issue where certain downloaded videos were not playable.",
+          "downloadURL": "https://api.getrocketapp.io/download/sideload/2acfb090",
+          "size": 242828154,
+          "minOSVersion": "16.0",
+          "buildVersion": "1072661965"
+        },
+        {
           "version": "447.0.0",
           "marketingVersion": "4.20.0",
           "date": "2026-09-23T21:11:29Z",
@@ -82,35 +92,25 @@
           "size": 239159162,
           "minOSVersion": "16.0",
           "buildVersion": "1065993619"
-        },
-        {
-          "version": "447.0.0",
-          "marketingVersion": "4.19.0",
-          "date": "2026-09-18T16:05:21Z",
-          "localizedDescription": "This update adds deleted message retention! ✨\n\n- Added “Retain deleted messages” to keep received messages on your device when the sender unsends them.\n- Fixed Reels switching to the Home feed when returning to the app.\n- Fixed “Mark as seen” being blocked in group conversations containing someone excluded from anonymous viewing.",
-          "downloadURL": "https://api.getrocketapp.io/download/sideload/0e2a72c0",
-          "size": 239059824,
-          "minOSVersion": "16.0",
-          "buildVersion": "1065993611"
         }
       ],
-      "version": "447.0.0",
-      "versionDate": "2026-09-23T21:11:29Z",
+      "version": "448.0.0",
+      "versionDate": "2026-09-29T16:14:56Z",
       "versionDescription": "",
-      "downloadURL": "https://api.getrocketapp.io/download/sideload/366d9b09",
-      "size": 239159162
+      "downloadURL": "https://api.getrocketapp.io/download/sideload/2acfb090",
+      "size": 242828154
     }
   ],
   "news": [
     {
       "title": "Rocket for Instagram",
-      "identifier": "rocket-for-instagram-4.20.0",
-      "caption": "Version 4.20.0 is now available!",
+      "identifier": "rocket-for-instagram-4.21.0",
+      "caption": "Version 4.21.0 is now available!",
       "tintColor": "#F99131",
       "imageURL": "https://cdn.getrocketapp.io/assets/altstore-header.jpg",
       "url": "https://getrocketapp.io",
       "appID": "com.burbn.instagram",
-      "date": "2026-09-29T16:24:09.903Z",
+      "date": "2026-09-29T19:46:04.592Z",
       "notify": false
     }
   ]

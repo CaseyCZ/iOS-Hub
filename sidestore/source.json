@@ -6699,6 +6699,16 @@
       },
       "versions": [
         {
+          "version": "448.0.0",
+          "marketingVersion": "4.21.0",
+          "date": "2026-09-29T16:14:56Z",
+          "localizedDescription": "This update adds an OLED theme, refreshes your media libraries, and improves compatibility! ✨\n\n- Added an OLED theme with pure-black backgrounds in dark mode.\n- Refreshed Downloads and Call Recordings to match the overall app design.\n- Fixed Story viewer lists not scrolling fully to the bottom when viewer search is enabled.\n- Fixed an issue where certain downloaded videos were not playable.",
+          "downloadURL": "https://api.getrocketapp.io/download/sideload/2acfb090",
+          "size": 242828154,
+          "minOSVersion": "16.0",
+          "buildVersion": "1072661965"
+        },
+        {
           "version": "447.0.0",
           "marketingVersion": "4.20.0",
           "date": "2026-09-23T21:11:29Z",
@@ -6707,23 +6717,13 @@
           "size": 239159162,
           "minOSVersion": "16.0",
           "buildVersion": "1065993619"
-        },
-        {
-          "version": "447.0.0",
-          "marketingVersion": "4.19.0",
-          "date": "2026-09-18T16:05:21Z",
-          "localizedDescription": "This update adds deleted message retention! ✨\n\n- Added “Retain deleted messages” to keep received messages on your device when the sender unsends them.\n- Fixed Reels switching to the Home feed when returning to the app.\n- Fixed “Mark as seen” being blocked in group conversations containing someone excluded from anonymous viewing.",
-          "downloadURL": "https://api.getrocketapp.io/download/sideload/0e2a72c0",
-          "size": 239059824,
-          "minOSVersion": "16.0",
-          "buildVersion": "1065993611"
         }
       ],
-      "version": "447.0.0",
-      "versionDate": "2026-09-23T21:11:29Z",
+      "version": "448.0.0",
+      "versionDate": "2026-09-29T16:14:56Z",
       "versionDescription": "",
-      "downloadURL": "https://api.getrocketapp.io/download/sideload/366d9b09",
-      "size": 239159162
+      "downloadURL": "https://api.getrocketapp.io/download/sideload/2acfb090",
+      "size": 242828154
     },
     {
       "appPermissions": {
@@ -11324,20 +11324,6 @@
       "versionDescription": "IPA Vault build for YouTube (YouMod 21.33.6), version 21.33.6"
     },
     {
-      "name": "YouTube (YTKACE 1.1.0) (Glass)",
-      "bundleIdentifier": "com.google.ios.youtube.ytkace.glass",
-      "developerName": "itzzace0 & IPA Vault",
-      "downloadURL": "https://pub-dd800571175348b6a2745b3396360028.r2.dev/YouTube-21.38.3-YTKACE-Glass.ipa",
-      "iconURL": "https://pub-dd800571175348b6a2745b3396360028.r2.dev/App%20Icons/YouTube-Icons/YouTube-AppStore-1024x1024.png",
-      "localizedDescription": "YouTube 21.38.3 with YTKACE 1.1.0 (Glass)\n\nAdded Tweaks:\nYTABConfig, YTweaks, YouPIP, VolumeBoostYT, DontEatMyContent, ReturnYouTubeDislike, Gonerino, LowContrastMode, VideoOverlay, YouGetCaption, YouQuality, YouChooseQuality, YTHoldForSpeed, YouGroupSettings",
-      "size": 137961055,
-      "subtitle": "YouTube 21.38.3 with YTKACE 1.1.0 (Glass)",
-      "tintColor": "#FF0000",
-      "version": "21.38.3",
-      "versionDate": "2026-09-27",
-      "versionDescription": "IPA Vault build for YouTube (YTKACE 1.1.0) (Glass), version 21.38.3"
-    },
-    {
       "name": "YouTube (YTKACE 1.1.0) (iOS 16+)",
       "bundleIdentifier": "com.google.ios.youtube.ytkace",
       "developerName": "itzzace0 & IPA Vault",
@@ -11350,6 +11336,20 @@
       "version": "21.33.6",
       "versionDate": "2026-09-27",
       "versionDescription": "IPA Vault build for YouTube (YTKACE 1.1.0), version 21.33.6"
+    },
+    {
+      "name": "YouTube (YTKACE 1.1.1)",
+      "bundleIdentifier": "com.google.ios.youtube",
+      "developerName": "itzzace0 & IPA Vault",
+      "downloadURL": "https://pub-dd800571175348b6a2745b3396360028.r2.dev/YouTube%2021.39.4%20(YTKACE%201.1.1)%20%5B%40ipavault%5D.ipa",
+      "iconURL": "https://pub-dd800571175348b6a2745b3396360028.r2.dev/App%20Icons/YouTube-Icons/YouTube-AppStore-1024x1024.png",
+      "localizedDescription": "YouTube 21.39.4 with YTKACE 1.1.1\n\nAdded Tweaks:\nYTABConfig, YTweaks, YouPIP, VolumeBoostYT, DontEatMyContent, ReturnYouTubeDislike, Gonerino, LowContrastMode, VideoOverlay, YouGetCaption, YouQuality, YouChooseQuality, YTHoldForSpeed, YouGroupSettings",
+      "size": 137961055,
+      "subtitle": "YouTube 21.39.4 with YTKACE 1.1.1",
+      "tintColor": "#FF0000",
+      "version": "21.39.4",
+      "versionDate": "2026-09-29",
+      "versionDescription": "IPA Vault build for YouTube (YTKACE 1.1.1) (Glass), version 21.39.4"
     },
     {
       "developerName": "dvntms & itzzace0 & IPA Vault",
@@ -11378,65 +11378,6 @@
       "subtitle": "YouTube 21.33.6 with YTPlus 6.0 b1",
       "version": "21.33.6",
       "versionDescription": "IPA Vault build for YouTube (YTPlus 21.33.6), version 21.33.6"
-    },
-    {
-      "name": "YouTube Plus",
-      "bundleIdentifier": "com.google.ios.youtube",
-      "developerName": "Dayanch96",
-      "subtitle": "YouTube Premium Tweak.",
-      "localizedDescription": "A flexible enhancer for YouTube on iOS, featuring over hundred customizable options.\nMain Features:\n• Download videos, audio (including audio track selection), thumbnails, posts, and profile pictures\n• Copy video, comment, and post information\n• Interface customization: Remove feed elements, reorder tabs, enable OLED mode, and as use Shorts-only mode\n• Player settings: Gestures, default quality, preferred audio track\n• Save, Load and Restore settings. Clear cache once or automatically on app startup\n• Built-in SponsorBlock\nYouTube Plus preferences can be found in the YouTube Settings.",
-      "iconURL": "https://raw.githubusercontent.com/xN1ckuz/xN1ckuz-Sidestore-Repo/refs/heads/main/Resources/YouTubePlus/icon.png",
-      "tintColor": "#F90505",
-      "category": "Entertainment",
-      "screenshots": [
-        "https://raw.githubusercontent.com/xN1ckuz/xN1ckuz-Sidestore-Repo/refs/heads/main/Resources/YouTubePlus/screenshot_0.jpg",
-        "https://raw.githubusercontent.com/xN1ckuz/xN1ckuz-Sidestore-Repo/refs/heads/main/Resources/YouTubePlus/screenshot_1.jpg",
-        "https://raw.githubusercontent.com/xN1ckuz/xN1ckuz-Sidestore-Repo/refs/heads/main/Resources/YouTubePlus/screenshot_2.jpg",
-        "https://raw.githubusercontent.com/xN1ckuz/xN1ckuz-Sidestore-Repo/refs/heads/main/Resources/YouTubePlus/screenshot_3.jpg",
-        "https://raw.githubusercontent.com/xN1ckuz/xN1ckuz-Sidestore-Repo/refs/heads/main/Resources/YouTubePlus/screenshot_4.jpg"
-      ],
-      "versions": [
-        {
-          "version": "21.39.4",
-          "date": "2026-09-28T12:51:00",
-          "size": 148152391,
-          "downloadURL": "https://github.com/xN1ckuz/xN1ckuz-Sidestore-Repo/raw/refs/heads/main/IPAs/YouTubePlus/YouTubePlus_21.39.4_6.0b1.ipa",
-          "localizedDescription": "• Updated Tweak to 6.0b1\n"
-        },
-        {
-          "version": "21.24.3",
-          "date": "2026-07-17T16:05:00",
-          "size": 128835584,
-          "downloadURL": "https://github.com/xN1ckuz/xN1ckuz-Sidestore-Repo/raw/refs/heads/main/IPAs/YouTubePlus/YouTubePlus_21.24.3_5.2.2.ipa",
-          "localizedDescription": "• Updated Tweak to 5.2.2\n• Working Casting Feature\n• YTUHD is back now (you can view 4K videos in download manager)\n• Functional download manager.\n• +21.25.5 versions are not supported"
-        }
-      ],
-      "appPermissions": {
-        "entitlements": [
-          "com.apple.developer.usernotifications.communication",
-          "com.apple.developer.usernotifications.time-sensitive",
-          "com.apple.developer.group-session",
-          "com.apple.developer.networking.multicast",
-          "com.apple.developer.networking.wifi-info",
-          "com.apple.developer.coremedia.allow-alternate-video-decoder-selection",
-          "com.apple.developer.associated-domains",
-          "com.apple.developer.device-information.user-assigned-device-name",
-          "com.apple.developer.siri",
-          "com.apple.developer.storekit.request-data",
-          "com.apple.security.application-groups"
-        ],
-        "privacy": {
-          "NSCameraUsageDescription": "This lets you create videos using the app.",
-          "NSUserTrackingUsageDescription": "To personalize ads and provide ad measurement, YouTube will link activity from this app with activity from non-Google apps and websites.",
-          "NSBluetoothPeripheralUsageDescription": "YouTube needs bluetooth access to scan for nearby Cast devices.",
-          "NSLocalNetworkUsageDescription": "Access to your network allows YouTube to discover and connect to devices such as your TV.",
-          "NSAppleMusicUsageDescription": "This lets you add your own audio files to your videos.",
-          "NSMicrophoneUsageDescription": "This lets you include audio with your videos and search using your voice.",
-          "NSLocationWhenInUseUsageDescription": "Makes it easier for you to attach location information to your videos and live streams and allows for features such as improved recommendations and ads.",
-          "NSContactsUsageDescription": "Your contacts will be sent to YouTube servers to help you find friends to share videos with.",
-          "NSPhotoLibraryUsageDescription": "This lets you upload media you've already created."
-        }
-      }
     },
     {
       "name": "YTMUltimate+",
