@@ -952,6 +952,63 @@
       "appID": "com.grailr.CARROTweather"
     },
     {
+      "name": "Cercube (Legacy)",
+      "bundleIdentifier": "com.google.ios.youtube-",
+      "developerName": "Cercube",
+      "subtitle": "The all-in-one jailbreak tweak",
+      "localizedDescription": "Compatible with iOS 15-16. Use \"Cercube\" for newer iOS versions.\n\nCache media for offline playback, use Picture in Picture and background playback, block ads, and customize your app experience.\n\n- Cache media for offline playback.\n- Use Picture in Picture from the YouTube player.\n- Keep video and audio playing in the background.\n- Block supported video, feed, and Shorts ads.\n- Choose default playback quality separately for Wi-Fi and cellular data.\n- Reorder or hide tabs and select a startup page.\n- Automatically replay videos.\n- Skip sponsored segments automatically.\n- Show dislike counts on videos.\n- Add support for queuing videos.\n- Available in 14 languages, including English, Spanish, and Arabic.",
+      "iconURL": "https://cdn.cercube.com/assets/icon.png",
+      "tintColor": "#e62117",
+      "category": "entertainment",
+      "screenshotURLs": [],
+      "screenshots": [],
+      "appPermissions": {
+        "entitlements": [],
+        "privacy": {
+          "NSAppleMusicUsageDescription": "This lets you add your own audio files to your videos.",
+          "NSBluetoothPeripheralUsageDescription": "YouTube needs bluetooth access to scan for nearby Cast devices.",
+          "NSCameraUsageDescription": "This lets you create videos using the app.",
+          "NSContactsUsageDescription": "Your contacts will be sent to YouTube servers to help you find friends to share videos with.",
+          "NSLocalNetworkUsageDescription": "Access to your network allows YouTube to discover and connect to devices such as your TV.",
+          "NSLocationWhenInUseUsageDescription": "Makes it easier for you to attach location information to your videos and live streams and allows for features such as improved recommendations and ads.",
+          "NSMicrophoneUsageDescription": "This lets you include audio with your videos and search using your voice.",
+          "NSPhotoLibraryUsageDescription": "This lets you upload media you've already created.",
+          "NSUserTrackingUsageDescription": "To personalize ads and provide ad measurement, YouTube will link activity from this app with activity from non-Google apps and websites."
+        }
+      },
+      "version": "20.21.6",
+      "versionDate": "2026-09-19T21:33:19Z",
+      "versionDescription": "",
+      "downloadURL": "https://api.cercube.com/download/sideload/71313245",
+      "size": 111760695,
+      "versions": [
+        {
+          "version": "20.21.6",
+          "marketingVersion": "6.2.0",
+          "buildVersion": "20.21.7",
+          "date": "2026-09-19T21:33:19Z",
+          "localizedDescription": "This release brings Cercube actions to Shorts and improves overall performance. ✨\n\n- Added a Cercube actions button to Shorts, with Cache and Picture-in-Picture options.\n- Fixed minor issues.",
+          "downloadURL": "https://api.cercube.com/download/sideload/71313245",
+          "size": 111760695,
+          "sha256": "713132457ac031a3caa67a3592708d13a7769509fe2b5dfb68acdc879b5540a6",
+          "minOSVersion": "15.0",
+          "maxOSVersion": "16.99.99"
+        },
+        {
+          "version": "20.21.6",
+          "marketingVersion": "6.1.3",
+          "buildVersion": "20.21.6",
+          "date": "2026-09-14T13:37:27Z",
+          "localizedDescription": "This release improves caching, ad blocking, and compatibility with older iOS versions. ✨\n\n- Added compatibility for iOS 15-16.\n- Minor bug fixes and improvements.",
+          "downloadURL": "https://api.cercube.com/download/sideload/82181972",
+          "size": 111752382,
+          "sha256": "82181972cbe4221b176b977ccc8a7a21e739ebbfba5584b34154c1268a1914a0",
+          "minOSVersion": "15.0",
+          "maxOSVersion": "16.99.99"
+        }
+      ]
+    },
+    {
       "name": "Cercube+",
       "bundleIdentifier": "com.google.ios.youtube.cercube",
       "developerName": "Majd Alfhaily",
@@ -2533,11 +2590,11 @@
       "versions": [
         {
           "version": "1.0.0",
-          "buildVersion": "172",
-          "date": "2026-09-29T04:37:40.754Z",
+          "buildVersion": "174",
+          "date": "2026-09-29T07:29:03.715Z",
           "localizedDescription": "Rolling CI alpha from GitHub Releases. Unsigned; replaced on every successful default-branch or develop build.",
-          "downloadURL": "https://github.com/Provenance-Emu/iCube/releases/download/alpha-172/Non-Jailbroken.ipa",
-          "size": 93317310,
+          "downloadURL": "https://github.com/Provenance-Emu/iCube/releases/download/alpha-174/Non-Jailbroken.ipa",
+          "size": 93317628,
           "minOSVersion": "17.0",
           "platform": "iOS",
           "isBeta": true
@@ -2923,66 +2980,6 @@
       "version": "448.0.0",
       "versionDate": "2026-09-21",
       "versionDescription": "IPA Vault build for Instagram (RyukGram No Plugins), version 448.0.0"
-    },
-    {
-      "beta": false,
-      "bundleIdentifier": "com.burbn.instagram",
-      "developerName": "Ryuk",
-      "downloadURL": "https://github.com/ramramzz/descfsr/releases/download/v0.33/5f009b76-d1ea-4659-a3ce-e5c2100367cR.ipa",
-      "iconURL": "https://raw.githubusercontent.com/qnblackcat/AltStore/main/ScreenShot/800px-Instagram_logo_2016.svg.png",
-      "localizedDescription": "Just look up information for SCInsta if you're confused about usage",
-      "name": "Instagram (RyukGram)",
-      "screenshotURLs": [
-        "https://apt.alfhaily.me/cdn/assets/rocket-screenshot1.jpg",
-        "https://apt.alfhaily.me/cdn/assets/rocket-screenshot2.jpg",
-        "https://apt.alfhaily.me/cdn/assets/rocket-screenshot3.jpg",
-        "https://apt.alfhaily.me/cdn/assets/rocket-screenshot4.jpg"
-      ],
-      "size": 91750400,
-      "subtitle": "Additional features and fixes by Ryuk based on SCInsta | If you want to donate: - https://ko-fi.com/driftywinds",
-      "tintColor": "C13584",
-      "version": "448.0.0",
-      "versionDate": "2026-09-22",
-      "versionDescription": "Updated to v448.0.0, RyukGram v1.4.0",
-      "appPermissions": {
-        "entitlements": [
-          "com.apple.developer.associated-appclip-app-identifiers",
-          "com.apple.security.application-groups",
-          "com.apple.developer.associated-domains",
-          "com.apple.developer.storekit.request-data",
-          "com.apple.developer.ubiquity-container-identifiers",
-          "com.apple.developer.usernotifications.communication",
-          "com.apple.developer.usernotifications.time-sensitive",
-          "get-task-allow",
-          "com.apple.developer.kernel.extended-virtual-addressing",
-          "com.apple.developer.networking.HotspotConfiguration",
-          "com.apple.developer.icloud-container-environment",
-          "com.apple.developer.icloud-container-identifiers",
-          "com.apple.developer.ubiquity-kvstore-identifier",
-          "com.apple.developer.icloud-services",
-          "com.apple.developer.kernel.increased-memory-limit",
-          "keychain-access-groups",
-          "com.apple.developer.avfoundation.multitasking-camera-access",
-          "com.apple.developer.usernotifications.filtering",
-          "aps-environment",
-          "com.apple.developer.networking.wifi-info"
-        ],
-        "privacy": {
-          "NSBluetoothAlwaysUsageDescription": "This app requires Bluetooth access for connecting to nearby devices.",
-          "NSCalendarsUsageDescription": "This app requires access to your calendars for social event integration.",
-          "NSCameraUsageDescription": "This app requires camera access to capture photos and videos.",
-          "NSContactsUsageDescription": "This app requires access to your contacts for enhanced social features.",
-          "NSFaceIDUsageDescription": "This app requires Face ID for secure authentication.",
-          "NSLocationAlwaysAndWhenInUseUsageDescription": "This app requires location access even when in the background for geotagging.",
-          "NSLocationUsageDescription": "This app requires location access to provide local content.",
-          "NSLocationWhenInUseUsageDescription": "This app requires location access while using the app.",
-          "NSMicrophoneUsageDescription": "This app requires microphone access for recording audio and videos.",
-          "NSFocusStatusUsageDescription": "This app uses focus status to optimize notifications.",
-          "NSPhotoLibraryAddUsageDescription": "This app requires access to add photos to your library.",
-          "NSPhotoLibraryUsageDescription": "This app requires access to your photo library.",
-          "NSUserTrackingUsageDescription": "This app uses tracking to deliver personalized content."
-        }
-      }
     },
     {
       "name": "Instagram (Sparkle No Plugins)",
@@ -5563,12 +5560,12 @@
       "versions": [
         {
           "version": "3.4.0",
-          "buildVersion": "10224",
-          "marketingVersion": "3.4.0-alpha.20260928.aeb1a03",
-          "date": "2026-09-28",
-          "localizedDescription": "Alpha build aeb1a03 · 2026-09-28\n\nChanges in this build:\n• [Agent] Register touch clicks and hardware keys on thin-wrapper cores (Atari ST) (#3704)\n\nInstalls alongside the stable app. Built automatically from develop — expect rough edges.",
+          "buildVersion": "10232",
+          "marketingVersion": "3.4.0-alpha.20260929.77c77e7",
+          "date": "2026-09-29",
+          "localizedDescription": "Alpha build 77c77e7 · 2026-09-29\n\nChanges in this build:\n• [Agent] fix(build): add RelativeMouseScaler.swift to PVCoreBridgeRetro project (#3710)\n• [Agent] MSX trackpad scale on the thin wrapper (blueMSX mouse) (#3711)\n• build(dolphin): bump dolphin-ios to 519ee560ff (refreshed prebuilts)\n• build(dolphin): bump dolphin-ios to 760e9e8e19\n• [Agent] MSX mouse on the touch trackpad (native fMSX) (#3709)\n• [Agent] Atari ST, DOS and Amiga mouse: range, speed, cursor overlay (#3708)\n• [Agent] Tap-then-drag on the touch trackpad (Atari ST window dragging) (#3707)\n• [Agent] feat(file-provider): add save state & screenshot enumeration (#3618)\n\nInstalls alongside the stable app. Built automatically from develop — expect rough edges.",
           "downloadURL": "https://github.com/Provenance-Emu/Provenance/releases/download/alpha/Provenance-iOS-NoExtensions.ipa",
-          "size": 730847376,
+          "size": 730896245,
           "minOSVersion": "17.0"
         }
       ],
@@ -6169,6 +6166,94 @@
           "minOSVersion": "27.0"
         }
       ]
+    },
+    {
+      "developerName": "Rocket",
+      "bundleIdentifier": "com.burbn.instagram",
+      "name": "Rocket for Instagram",
+      "subtitle": "All-in-one tweak for Instagram",
+      "localizedDescription": "Download and repost Instagram media, browse Stories and DMs privately, hide ads, customize the app, and record calls—all inside Instagram.\n\n- Hide Rocket buttons from screenshots with Discreet mode\n- Prevent videos from playing automatically in the Home feed\n- Download Feed media, Reels, profile videos, Stories, Instants, and supported DM visual messages\n- Replay Instants without limits and upload Instants from your Photos library\n- Manage account-specific downloads with previews, filters, sharing, retries, and bulk deletion\n- Repost Feed posts and Reels, copy captions, comments, and media links, and open media full-screen\n- Browse Stories and DMs privately with control over seen, playback, typing, and screenshot behavior\n- Search story viewers list on your Stories\n- Hide sponsored posts, Reels, and Stories\n- Switch the home feed between List and Grid layouts\n- Watch Reels in Picture in Picture\n- Prevent doomscrolling by disabling infinite scrolling Reels\n- Make web addresses clickable\n- Create settings profiles and automatically apply them to mapped Instagram accounts\n- Customize Instagram with themes, custom fonts, and custom icons\n- Customize Feed layouts, Reels auto-scroll, like confirmations, dates, and the tab bar\n- See follow-back status, enlarge profile pictures, and locally customize your profile stats\n- Record Instagram voice calls as audio and video calls with participant video and call audio",
+      "iconURL": "https://cdn.getrocketapp.io/assets/icon.png",
+      "screenshotURLs": [
+        "https://cdn.getrocketapp.io/metadata/screenshots/01-post-action-menu.webp",
+        "https://cdn.getrocketapp.io/metadata/screenshots/02-reels-action-menu.webp",
+        "https://cdn.getrocketapp.io/metadata/screenshots/03-profile-tools.webp",
+        "https://cdn.getrocketapp.io/metadata/screenshots/04-grid-feed-customization.webp",
+        "https://cdn.getrocketapp.io/metadata/screenshots/05-story-save-actions.webp",
+        "https://cdn.getrocketapp.io/metadata/screenshots/06-tab-bar-settings.webp"
+      ],
+      "screenshots": [
+        {
+          "imageURL": "https://cdn.getrocketapp.io/metadata/screenshots/01-post-action-menu.webp"
+        },
+        {
+          "imageURL": "https://cdn.getrocketapp.io/metadata/screenshots/02-reels-action-menu.webp"
+        },
+        {
+          "imageURL": "https://cdn.getrocketapp.io/metadata/screenshots/03-profile-tools.webp"
+        },
+        {
+          "imageURL": "https://cdn.getrocketapp.io/metadata/screenshots/04-grid-feed-customization.webp"
+        },
+        {
+          "imageURL": "https://cdn.getrocketapp.io/metadata/screenshots/05-story-save-actions.webp"
+        },
+        {
+          "imageURL": "https://cdn.getrocketapp.io/metadata/screenshots/06-tab-bar-settings.webp"
+        }
+      ],
+      "category": "social",
+      "tintColor": "#F99131",
+      "appPermissions": {
+        "entitlements": [
+          "aps-environment"
+        ],
+        "privacy": {
+          "NSAdvertisingAttributionReportEndpoint": "https://facebook.com",
+          "NSBluetoothAlwaysUsageDescription": "This allows your phone to find and connect to the glasses using a Bluetooth connection.",
+          "NSFocusStatusUsageDescription": "This allows Instagram to check to see if you’ve been missing notifications from friends. You can always change this later in settings.",
+          "NSCameraUsageDescription": "Instagram uses your device's camera to do things like help you take photos, record videos and use effects.",
+          "NSUserTrackingUsageDescription": "This helps Instagram personalize ads we show you.",
+          "NSPhotoLibraryAddUsageDescription": "This lets you save photos and videos to your Camera Roll.",
+          "NSLocalNetworkUsageDescription": "Used to discover and connect to compatible streaming devices on your Wi-Fi network.",
+          "NSLocationUsageDescription": "Instagram uses this to make some features work, personalize content and help people find places. You can change your preferences at any time in your device settings.",
+          "NSCalendarsUsageDescription": "This will let Instagram sync events to your calendar.",
+          "NSMicrophoneUsageDescription": "Instagram uses your device's microphone to do things like help you record videos and preview audio effects.",
+          "NSLocationWhenInUseUsageDescription": "Instagram uses this to make some features work, personalize content and help people find places. You can change your preferences at any time in your device settings.",
+          "NSCalendarsWriteOnlyAccessUsageDescription": "This will let Instagram sync events to your calendar.",
+          "NSFaceIDUsageDescription": "Enable Face ID for quick and secure authentication on Instagram.",
+          "NSLocationAlwaysAndWhenInUseUsageDescription": "Instagram uses this to make some features work, personalize content and help people find places. You can change your preferences at any time in your device settings.",
+          "NSContactsUsageDescription": "Instagram will use your contacts to suggest people and things you care about, and offer a better service. Your contacts will be periodically synced and securely stored on Instagram’s servers.",
+          "NSPhotoLibraryUsageDescription": "Instagram uses access to your camera roll to do things like help you share photos and videos to Instagram, apply effects and suggest photos and videos to share."
+        }
+      },
+      "versions": [
+        {
+          "version": "447.0.0",
+          "marketingVersion": "4.20.0",
+          "date": "2026-09-23T21:11:29Z",
+          "localizedDescription": "This update adds profile watching, bulk profile downloads, and cache cleanup! ✨\n\n- Added “Watch profile” to automatically save new posts, Stories, and Reels from selected profiles.\n- Added “Save all posts” to download a profile’s posts, including every carousel item.\n- Added “Clean cache” to view cache storage usage and clear cached files from Rocket settings.\n- Added separate controls for showing profile image, clipboard, and profile stats actions.\n- Refreshed Rocket settings to match Instagram’s design, with direct shortcuts to downloads and call recordings.",
+          "downloadURL": "https://api.getrocketapp.io/download/sideload/366d9b09",
+          "size": 239159162,
+          "minOSVersion": "16.0",
+          "buildVersion": "1065993619"
+        },
+        {
+          "version": "447.0.0",
+          "marketingVersion": "4.19.0",
+          "date": "2026-09-18T16:05:21Z",
+          "localizedDescription": "This update adds deleted message retention! ✨\n\n- Added “Retain deleted messages” to keep received messages on your device when the sender unsends them.\n- Fixed Reels switching to the Home feed when returning to the app.\n- Fixed “Mark as seen” being blocked in group conversations containing someone excluded from anonymous viewing.",
+          "downloadURL": "https://api.getrocketapp.io/download/sideload/0e2a72c0",
+          "size": 239059824,
+          "minOSVersion": "16.0",
+          "buildVersion": "1065993611"
+        }
+      ],
+      "version": "447.0.0",
+      "versionDate": "2026-09-23T21:11:29Z",
+      "versionDescription": "",
+      "downloadURL": "https://api.getrocketapp.io/download/sideload/366d9b09",
+      "size": 239159162
     },
     {
       "appPermissions": {
@@ -10741,30 +10826,6 @@
       }
     },
     {
-      "name": "YouProEXTRA",
-      "bundleIdentifier": "com.google.ios.youtube",
-      "developerName": "alibusut",
-      "subtitle": "YouTube mod with customizable tweaks",
-      "localizedDescription": "YouPro mod of YouTube for iOS. Includes no ads, background playback, downloads, iSponsorBlock, PiP, and a host of customizable tweaks.",
-      "iconURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/YouProEXTRA/icon.png",
-      "screenshots": [
-        "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/YouProEXTRA/images/list.jpg",
-        "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/YouProEXTRA/images/play.jpg"
-      ],
-      "tintColor": "#FF0000",
-      "versions": [
-        {
-          "version": "21.39.4",
-          "buildVersion": "21.39.4",
-          "date": "2026-09-28",
-          "localizedDescription": "### Latest Release, ENJOY!!\r\n> [!NOTE]\r\n> - **YTUHD** is not included. 4K60HDR is available.\r\n> - if you're signed out you can sign in manually. \r\n> - no iSponsorBlock. (unstable in newer builds)\r\n> - for <A15 devices press share button in the arrow down panel and use external player for AV1 videos.\r\n> - - -\r\n> #### Extra Tweaks:\r\n> - `YouPip` `YouSlider` `YTweaks` `YouSpeed` `YouMute` `YouLoop` `YTABConfig` `YouQuality` `YouChooseQuality`  `YouGetCaption` \r\n> -  `Return-YouTube-Dislikes` `DontEatMyContent` `Open in YouTube (Safari Extension)` `Gonerino` \r\n\r\n> [!WARNING]\r\n> - 21.34.3+ builds require iOS 17+ now.",
-          "downloadURL": "https://github.com/mrdrvt99/YouProEXTRA/releases/download/youproextra-ipa2/YouProExtra_21.39.4_1.3.1.ipa",
-          "size": 130023447,
-          "minOSVersion": "16.0"
-        }
-      ]
-    },
-    {
       "name": "YouTube (YouMod 2.0.0)",
       "bundleIdentifier": "com.google.ios.youtube.youmod",
       "developerName": "Tonwalter888 & IPA Vault",
@@ -10847,6 +10908,65 @@
       "subtitle": "YouTube 21.33.6 with YTPlus 6.0 b1",
       "version": "21.33.6",
       "versionDescription": "IPA Vault build for YouTube (YTPlus 21.33.6), version 21.33.6"
+    },
+    {
+      "name": "YouTube Plus",
+      "bundleIdentifier": "com.google.ios.youtube",
+      "developerName": "Dayanch96",
+      "subtitle": "YouTube Premium Tweak.",
+      "localizedDescription": "A flexible enhancer for YouTube on iOS, featuring over hundred customizable options.\nMain Features:\n• Download videos, audio (including audio track selection), thumbnails, posts, and profile pictures\n• Copy video, comment, and post information\n• Interface customization: Remove feed elements, reorder tabs, enable OLED mode, and as use Shorts-only mode\n• Player settings: Gestures, default quality, preferred audio track\n• Save, Load and Restore settings. Clear cache once or automatically on app startup\n• Built-in SponsorBlock\nYouTube Plus preferences can be found in the YouTube Settings.",
+      "iconURL": "https://raw.githubusercontent.com/xN1ckuz/xN1ckuz-Sidestore-Repo/refs/heads/main/Resources/YouTubePlus/icon.png",
+      "tintColor": "#F90505",
+      "category": "Entertainment",
+      "screenshots": [
+        "https://raw.githubusercontent.com/xN1ckuz/xN1ckuz-Sidestore-Repo/refs/heads/main/Resources/YouTubePlus/screenshot_0.jpg",
+        "https://raw.githubusercontent.com/xN1ckuz/xN1ckuz-Sidestore-Repo/refs/heads/main/Resources/YouTubePlus/screenshot_1.jpg",
+        "https://raw.githubusercontent.com/xN1ckuz/xN1ckuz-Sidestore-Repo/refs/heads/main/Resources/YouTubePlus/screenshot_2.jpg",
+        "https://raw.githubusercontent.com/xN1ckuz/xN1ckuz-Sidestore-Repo/refs/heads/main/Resources/YouTubePlus/screenshot_3.jpg",
+        "https://raw.githubusercontent.com/xN1ckuz/xN1ckuz-Sidestore-Repo/refs/heads/main/Resources/YouTubePlus/screenshot_4.jpg"
+      ],
+      "versions": [
+        {
+          "version": "21.39.4",
+          "date": "2026-09-28T12:51:00",
+          "size": 148152391,
+          "downloadURL": "https://github.com/xN1ckuz/xN1ckuz-Sidestore-Repo/raw/refs/heads/main/IPAs/YouTubePlus/YouTubePlus_21.39.4_6.0b1.ipa",
+          "localizedDescription": "• Updated Tweak to 6.0b1\n"
+        },
+        {
+          "version": "21.24.3",
+          "date": "2026-07-17T16:05:00",
+          "size": 128835584,
+          "downloadURL": "https://github.com/xN1ckuz/xN1ckuz-Sidestore-Repo/raw/refs/heads/main/IPAs/YouTubePlus/YouTubePlus_21.24.3_5.2.2.ipa",
+          "localizedDescription": "• Updated Tweak to 5.2.2\n• Working Casting Feature\n• YTUHD is back now (you can view 4K videos in download manager)\n• Functional download manager.\n• +21.25.5 versions are not supported"
+        }
+      ],
+      "appPermissions": {
+        "entitlements": [
+          "com.apple.developer.usernotifications.communication",
+          "com.apple.developer.usernotifications.time-sensitive",
+          "com.apple.developer.group-session",
+          "com.apple.developer.networking.multicast",
+          "com.apple.developer.networking.wifi-info",
+          "com.apple.developer.coremedia.allow-alternate-video-decoder-selection",
+          "com.apple.developer.associated-domains",
+          "com.apple.developer.device-information.user-assigned-device-name",
+          "com.apple.developer.siri",
+          "com.apple.developer.storekit.request-data",
+          "com.apple.security.application-groups"
+        ],
+        "privacy": {
+          "NSCameraUsageDescription": "This lets you create videos using the app.",
+          "NSUserTrackingUsageDescription": "To personalize ads and provide ad measurement, YouTube will link activity from this app with activity from non-Google apps and websites.",
+          "NSBluetoothPeripheralUsageDescription": "YouTube needs bluetooth access to scan for nearby Cast devices.",
+          "NSLocalNetworkUsageDescription": "Access to your network allows YouTube to discover and connect to devices such as your TV.",
+          "NSAppleMusicUsageDescription": "This lets you add your own audio files to your videos.",
+          "NSMicrophoneUsageDescription": "This lets you include audio with your videos and search using your voice.",
+          "NSLocationWhenInUseUsageDescription": "Makes it easier for you to attach location information to your videos and live streams and allows for features such as improved recommendations and ads.",
+          "NSContactsUsageDescription": "Your contacts will be sent to YouTube servers to help you find friends to share videos with.",
+          "NSPhotoLibraryUsageDescription": "This lets you upload media you've already created."
+        }
+      }
     },
     {
       "name": "YTMUltimate+",
@@ -10935,6 +11055,7 @@
       "armsx2",
       "baretsky-tweaked",
       "burrito-source",
+      "cercube",
       "crystall1ne",
       "discord-appstore-builds",
       "driftywinds",
@@ -10964,6 +11085,7 @@
       "quantum-source",
       "retrosekai",
       "ripestore",
+      "rocket",
       "salupov-altrepo",
       "sideloadlabs",
       "sidestore-community",
@@ -10989,6 +11111,7 @@
       "https://raw.githubusercontent.com/ARMSX2/Armsx2-Repo/main/apps.json",
       "https://raw.githubusercontent.com/baretsky/baretsky-tweaked-ipas-library/main/apps.json",
       "https://burritosoftware.github.io/altstore/channels/burritosource.json",
+      "https://altstore.cercube.com",
       "https://alt.crystall1ne.dev",
       "https://raw.githubusercontent.com/AlfaActa/discord-altstore-source/main/source.json",
       "https://raw.githubusercontent.com/driftywinds/driftywinds.github.io/master/AltStore/apps.json",
@@ -11018,6 +11141,7 @@
       "https://quarksources.github.io/quantumsource.json",
       "https://repo.untitledcharts.com",
       "https://raw.githubusercontent.com/RipeStore/repos/main/RipeStore.json",
+      "https://altstore.getrocketapp.io",
       "https://adp.salupovteam.com/altrepo.json",
       "https://raw.githubusercontent.com/SideloadLabs/SideloasLabs-AltSource/main/apps.json",
       "https://community-apps.sidestore.io/sidecommunity.json",

@@ -1,0 +1,117 @@
+{
+  "name": "Rocket",
+  "identifier": "io.getrocketapp.altstore",
+  "sourceURL": "https://altstore.getrocketapp.io",
+  "subtitle": "Supercharge your Instagram app",
+  "description": "Download and repost Instagram media, browse Stories and DMs privately, hide ads, customize the app, and record calls—all inside Instagram.",
+  "iconURL": "https://cdn.getrocketapp.io/assets/icon.png",
+  "headerURL": "https://cdn.getrocketapp.io/assets/altstore-header.jpg",
+  "website": "https://getrocketapp.io",
+  "tintColor": "#F99131",
+  "featuredApps": [
+    "com.burbn.instagram"
+  ],
+  "apps": [
+    {
+      "developerName": "Rocket",
+      "bundleIdentifier": "com.burbn.instagram",
+      "name": "Rocket for Instagram",
+      "subtitle": "All-in-one tweak for Instagram",
+      "localizedDescription": "Download and repost Instagram media, browse Stories and DMs privately, hide ads, customize the app, and record calls—all inside Instagram.\n\n- Hide Rocket buttons from screenshots with Discreet mode\n- Prevent videos from playing automatically in the Home feed\n- Download Feed media, Reels, profile videos, Stories, Instants, and supported DM visual messages\n- Replay Instants without limits and upload Instants from your Photos library\n- Manage account-specific downloads with previews, filters, sharing, retries, and bulk deletion\n- Repost Feed posts and Reels, copy captions, comments, and media links, and open media full-screen\n- Browse Stories and DMs privately with control over seen, playback, typing, and screenshot behavior\n- Search story viewers list on your Stories\n- Hide sponsored posts, Reels, and Stories\n- Switch the home feed between List and Grid layouts\n- Watch Reels in Picture in Picture\n- Prevent doomscrolling by disabling infinite scrolling Reels\n- Make web addresses clickable\n- Create settings profiles and automatically apply them to mapped Instagram accounts\n- Customize Instagram with themes, custom fonts, and custom icons\n- Customize Feed layouts, Reels auto-scroll, like confirmations, dates, and the tab bar\n- See follow-back status, enlarge profile pictures, and locally customize your profile stats\n- Record Instagram voice calls as audio and video calls with participant video and call audio",
+      "iconURL": "https://cdn.getrocketapp.io/assets/icon.png",
+      "screenshotURLs": [
+        "https://cdn.getrocketapp.io/metadata/screenshots/01-post-action-menu.webp",
+        "https://cdn.getrocketapp.io/metadata/screenshots/02-reels-action-menu.webp",
+        "https://cdn.getrocketapp.io/metadata/screenshots/03-profile-tools.webp",
+        "https://cdn.getrocketapp.io/metadata/screenshots/04-grid-feed-customization.webp",
+        "https://cdn.getrocketapp.io/metadata/screenshots/05-story-save-actions.webp",
+        "https://cdn.getrocketapp.io/metadata/screenshots/06-tab-bar-settings.webp"
+      ],
+      "screenshots": [
+        {
+          "imageURL": "https://cdn.getrocketapp.io/metadata/screenshots/01-post-action-menu.webp"
+        },
+        {
+          "imageURL": "https://cdn.getrocketapp.io/metadata/screenshots/02-reels-action-menu.webp"
+        },
+        {
+          "imageURL": "https://cdn.getrocketapp.io/metadata/screenshots/03-profile-tools.webp"
+        },
+        {
+          "imageURL": "https://cdn.getrocketapp.io/metadata/screenshots/04-grid-feed-customization.webp"
+        },
+        {
+          "imageURL": "https://cdn.getrocketapp.io/metadata/screenshots/05-story-save-actions.webp"
+        },
+        {
+          "imageURL": "https://cdn.getrocketapp.io/metadata/screenshots/06-tab-bar-settings.webp"
+        }
+      ],
+      "category": "social",
+      "tintColor": "#F99131",
+      "appPermissions": {
+        "entitlements": [
+          "aps-environment"
+        ],
+        "privacy": {
+          "NSAdvertisingAttributionReportEndpoint": "https://facebook.com",
+          "NSBluetoothAlwaysUsageDescription": "This allows your phone to find and connect to the glasses using a Bluetooth connection.",
+          "NSFocusStatusUsageDescription": "This allows Instagram to check to see if you’ve been missing notifications from friends. You can always change this later in settings.",
+          "NSCameraUsageDescription": "Instagram uses your device's camera to do things like help you take photos, record videos and use effects.",
+          "NSUserTrackingUsageDescription": "This helps Instagram personalize ads we show you.",
+          "NSPhotoLibraryAddUsageDescription": "This lets you save photos and videos to your Camera Roll.",
+          "NSLocalNetworkUsageDescription": "Used to discover and connect to compatible streaming devices on your Wi-Fi network.",
+          "NSLocationUsageDescription": "Instagram uses this to make some features work, personalize content and help people find places. You can change your preferences at any time in your device settings.",
+          "NSCalendarsUsageDescription": "This will let Instagram sync events to your calendar.",
+          "NSMicrophoneUsageDescription": "Instagram uses your device's microphone to do things like help you record videos and preview audio effects.",
+          "NSLocationWhenInUseUsageDescription": "Instagram uses this to make some features work, personalize content and help people find places. You can change your preferences at any time in your device settings.",
+          "NSCalendarsWriteOnlyAccessUsageDescription": "This will let Instagram sync events to your calendar.",
+          "NSFaceIDUsageDescription": "Enable Face ID for quick and secure authentication on Instagram.",
+          "NSLocationAlwaysAndWhenInUseUsageDescription": "Instagram uses this to make some features work, personalize content and help people find places. You can change your preferences at any time in your device settings.",
+          "NSContactsUsageDescription": "Instagram will use your contacts to suggest people and things you care about, and offer a better service. Your contacts will be periodically synced and securely stored on Instagram’s servers.",
+          "NSPhotoLibraryUsageDescription": "Instagram uses access to your camera roll to do things like help you share photos and videos to Instagram, apply effects and suggest photos and videos to share."
+        }
+      },
+      "versions": [
+        {
+          "version": "447.0.0",
+          "marketingVersion": "4.20.0",
+          "date": "2026-09-23T21:11:29Z",
+          "localizedDescription": "This update adds profile watching, bulk profile downloads, and cache cleanup! ✨\n\n- Added “Watch profile” to automatically save new posts, Stories, and Reels from selected profiles.\n- Added “Save all posts” to download a profile’s posts, including every carousel item.\n- Added “Clean cache” to view cache storage usage and clear cached files from Rocket settings.\n- Added separate controls for showing profile image, clipboard, and profile stats actions.\n- Refreshed Rocket settings to match Instagram’s design, with direct shortcuts to downloads and call recordings.",
+          "downloadURL": "https://api.getrocketapp.io/download/sideload/366d9b09",
+          "size": 239159162,
+          "minOSVersion": "16.0",
+          "buildVersion": "1065993619"
+        },
+        {
+          "version": "447.0.0",
+          "marketingVersion": "4.19.0",
+          "date": "2026-09-18T16:05:21Z",
+          "localizedDescription": "This update adds deleted message retention! ✨\n\n- Added “Retain deleted messages” to keep received messages on your device when the sender unsends them.\n- Fixed Reels switching to the Home feed when returning to the app.\n- Fixed “Mark as seen” being blocked in group conversations containing someone excluded from anonymous viewing.",
+          "downloadURL": "https://api.getrocketapp.io/download/sideload/0e2a72c0",
+          "size": 239059824,
+          "minOSVersion": "16.0",
+          "buildVersion": "1065993611"
+        }
+      ],
+      "version": "447.0.0",
+      "versionDate": "2026-09-23T21:11:29Z",
+      "versionDescription": "",
+      "downloadURL": "https://api.getrocketapp.io/download/sideload/366d9b09",
+      "size": 239159162
+    }
+  ],
+  "news": [
+    {
+      "title": "Rocket for Instagram",
+      "identifier": "rocket-for-instagram-4.20.0",
+      "caption": "Version 4.20.0 is now available!",
+      "tintColor": "#F99131",
+      "imageURL": "https://cdn.getrocketapp.io/assets/altstore-header.jpg",
+      "url": "https://getrocketapp.io",
+      "appID": "com.burbn.instagram",
+      "date": "2026-09-29T10:31:45.923Z",
+      "notify": false
+    }
+  ]
+}

@@ -182,19 +182,19 @@
       ],
       "versions": [
         {
+          "version": "9.39.2",
+          "date": "2026-09-26T20:24:00",
+          "size": 105625853,
+          "downloadURL": "https://github.com/xN1ckuz/xN1ckuz-Sidestore-Repo/raw/refs/heads/main/IPAs/YTMusicUltimate/YTMusicUltimate_9.39.2_2.4.1.ipa",
+          "localizedDescription": "• Updated YouTube Music Ultimate to 9.39.2\n• Updated tweak to v2.4.1",
+          "minOSVersion": "16.0"
+        },
+        {
           "version": "9.36.1",
           "date": "2026-09-13T07:18:00",
           "size": 104992686,
           "downloadURL": "https://github.com/xN1ckuz/xN1ckuz-Sidestore-Repo/raw/refs/heads/main/IPAs/YTMusicUltimate/YTMusicUltimate_9.36.1_2.4.1.ipa",
           "localizedDescription": "• Updated YouTube Music Ultimate to 9.36.1\n• Updated tweak to v2.4.1",
-          "minOSVersion": "16.0"
-        },
-        {
-          "version": "9.33.3",
-          "date": "2026-08-18T09:17:00",
-          "size": 102367696,
-          "downloadURL": "https://github.com/xN1ckuz/xN1ckuz-Sidestore-Repo/raw/refs/heads/main/IPAs/YTMusicUltimate/YTMusicUltimate_9.33.3_2.4.1.ipa",
-          "localizedDescription": "• Updated YouTube Music Ultimate to 9.33.3\n• Updated tweak to v2.4.1",
           "minOSVersion": "16.0"
         }
       ],
@@ -222,20 +222,63 @@
       }
     },
     {
-      "name": "YTKace",
+      "name": "YouTube Plus",
       "bundleIdentifier": "com.google.ios.youtube",
-      "developerName": "itzzace",
-      "version": "1.1.1",
-      "versionDate": "2026-09-28",
-      "versionDescription": "by @itzzace0\n\nWhat's new:\n• Updated to YouTube 21.39.4\n• Liquid Glass on iOS 26 for the tab bar, top bar buttons, menus, sheets, player buttons and YTKACE popups\n• Liquid Glass settings page with a toggle for each part\n• Selected Tab Color for the tab text or the text and icon\n• Added HLS mode in Playback Fix\n• Added 5x speed in the speed menu\n• Improved native share sheet\n\nFixed:\n• Multiple scrubber dots on feed videos with a custom scrubber\n• Direct downloads using an outdated client\n\nYouTube 21.39.4 requires iOS 17, so there are two IPAs:\n• `YTKACE_1.1.1_YouTube_21.39.4.ipa` for iOS 17 and newer\n• `YTKACE_1.1.1_YouTube_iOS16_21.33.6.ipa` for iOS 16\n",
-      "downloadURL": "https://github.com/itzzace/ytkace/releases/download/v1.1.1/YTKACE_1.1.1_YouTube_21.39.4.ipa",
-      "iconURL": "https://img.lightshot.app/8gRG1MrsTPO7ZiwX_JfmbA.jpeg",
-      "size": 137241058,
-      "screenshotURLs": [],
-      "localizedDescription": "YTKace – a modified YouTube client with extra features. This build requires iOS 17 or newer.",
-      "subtitle": "Enhanced YouTube for iOS 17 and newer",
-      "tintColor": "FF0000",
-      "beta": false
+      "developerName": "Dayanch96",
+      "subtitle": "YouTube Premium Tweak.",
+      "localizedDescription": "A flexible enhancer for YouTube on iOS, featuring over hundred customizable options.\nMain Features:\n• Download videos, audio (including audio track selection), thumbnails, posts, and profile pictures\n• Copy video, comment, and post information\n• Interface customization: Remove feed elements, reorder tabs, enable OLED mode, and as use Shorts-only mode\n• Player settings: Gestures, default quality, preferred audio track\n• Save, Load and Restore settings. Clear cache once or automatically on app startup\n• Built-in SponsorBlock\nYouTube Plus preferences can be found in the YouTube Settings.",
+      "iconURL": "https://raw.githubusercontent.com/xN1ckuz/xN1ckuz-Sidestore-Repo/refs/heads/main/Resources/YouTubePlus/icon.png",
+      "tintColor": "#F90505",
+      "category": "Entertainment",
+      "screenshots": [
+        "https://raw.githubusercontent.com/xN1ckuz/xN1ckuz-Sidestore-Repo/refs/heads/main/Resources/YouTubePlus/screenshot_0.jpg",
+        "https://raw.githubusercontent.com/xN1ckuz/xN1ckuz-Sidestore-Repo/refs/heads/main/Resources/YouTubePlus/screenshot_1.jpg",
+        "https://raw.githubusercontent.com/xN1ckuz/xN1ckuz-Sidestore-Repo/refs/heads/main/Resources/YouTubePlus/screenshot_2.jpg",
+        "https://raw.githubusercontent.com/xN1ckuz/xN1ckuz-Sidestore-Repo/refs/heads/main/Resources/YouTubePlus/screenshot_3.jpg",
+        "https://raw.githubusercontent.com/xN1ckuz/xN1ckuz-Sidestore-Repo/refs/heads/main/Resources/YouTubePlus/screenshot_4.jpg"
+      ],
+      "versions": [
+        {
+          "version": "21.39.4",
+          "date": "2026-09-28T12:51:00",
+          "size": 148152391,
+          "downloadURL": "https://github.com/xN1ckuz/xN1ckuz-Sidestore-Repo/raw/refs/heads/main/IPAs/YouTubePlus/YouTubePlus_21.39.4_6.0b1.ipa",
+          "localizedDescription": "• Updated Tweak to 6.0b1\n"
+        },
+        {
+          "version": "21.24.3",
+          "date": "2026-07-17T16:05:00",
+          "size": 128835584,
+          "downloadURL": "https://github.com/xN1ckuz/xN1ckuz-Sidestore-Repo/raw/refs/heads/main/IPAs/YouTubePlus/YouTubePlus_21.24.3_5.2.2.ipa",
+          "localizedDescription": "• Updated Tweak to 5.2.2\n• Working Casting Feature\n• YTUHD is back now (you can view 4K videos in download manager)\n• Functional download manager.\n• +21.25.5 versions are not supported"
+        }
+      ],
+      "appPermissions": {
+        "entitlements": [
+          "com.apple.developer.usernotifications.communication",
+          "com.apple.developer.usernotifications.time-sensitive",
+          "com.apple.developer.group-session",
+          "com.apple.developer.networking.multicast",
+          "com.apple.developer.networking.wifi-info",
+          "com.apple.developer.coremedia.allow-alternate-video-decoder-selection",
+          "com.apple.developer.associated-domains",
+          "com.apple.developer.device-information.user-assigned-device-name",
+          "com.apple.developer.siri",
+          "com.apple.developer.storekit.request-data",
+          "com.apple.security.application-groups"
+        ],
+        "privacy": {
+          "NSCameraUsageDescription": "This lets you create videos using the app.",
+          "NSUserTrackingUsageDescription": "To personalize ads and provide ad measurement, YouTube will link activity from this app with activity from non-Google apps and websites.",
+          "NSBluetoothPeripheralUsageDescription": "YouTube needs bluetooth access to scan for nearby Cast devices.",
+          "NSLocalNetworkUsageDescription": "Access to your network allows YouTube to discover and connect to devices such as your TV.",
+          "NSAppleMusicUsageDescription": "This lets you add your own audio files to your videos.",
+          "NSMicrophoneUsageDescription": "This lets you include audio with your videos and search using your voice.",
+          "NSLocationWhenInUseUsageDescription": "Makes it easier for you to attach location information to your videos and live streams and allows for features such as improved recommendations and ads.",
+          "NSContactsUsageDescription": "Your contacts will be sent to YouTube servers to help you find friends to share videos with.",
+          "NSPhotoLibraryUsageDescription": "This lets you upload media you've already created."
+        }
+      }
     }
   ],
   "userInfo": {

@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-29T07:36:59Z",
+  "generatedAt": "2026-09-29T10:31:51Z",
   "sources": [
     {
       "id": "utm",
@@ -871,7 +871,7 @@
           "name": "YouTube Plus",
           "bundleIdentifier": "com.google.ios.youtube",
           "developerName": "Dayanch96",
-          "version": "21.24.3",
+          "version": "21.39.4",
           "iconURL": "https://raw.githubusercontent.com/xN1ckuz/xN1ckuz-Sidestore-Repo/refs/heads/main/Resources/YouTubePlus/icon.png",
           "subtitle": "YouTube Premium Tweak."
         },
@@ -879,7 +879,7 @@
           "name": "YouTube Music Ultimate",
           "bundleIdentifier": "com.google.ios.youtubemusic",
           "developerName": "Dayanch96",
-          "version": "9.36.1",
+          "version": "9.39.2",
           "iconURL": "https://raw.githubusercontent.com/xN1ckuz/xN1ckuz-Sidestore-Repo/refs/heads/main/Resources/YTMusicUltimate/icon.png",
           "subtitle": "YouTube Music Premium Tweak."
         },
@@ -3387,18 +3387,10 @@
     {
       "id": "cypwn-ipa",
       "name": "CyPwn IPA Library",
-      "appCount": 210,
+      "appCount": 209,
       "catalogLimited": true,
       "iconURL": "https://repo.cypwn.xyz/assets/images/cypwn_small.png",
       "apps": [
-        {
-          "name": "Stremio-2.0.7",
-          "bundleIdentifier": "com.stremio.pal",
-          "developerName": "Stremio-2.0.7 x CyPwn",
-          "version": "2.0.7",
-          "iconURL": "https://ipa.cypwn.xyz/serve/icons/Stremio-2.0.7.png",
-          "subtitle": ""
-        },
         {
           "name": "Stremio-2.0.6",
           "bundleIdentifier": "com.stremio.pal",
@@ -4829,6 +4821,14 @@
           "developerName": "Star_Map_2.6_Satella x CyPwn",
           "version": "2.6",
           "iconURL": "https://ipa.cypwn.xyz/serve/icons/Star_Map_2.6_Satella.png",
+          "subtitle": ""
+        },
+        {
+          "name": "RefacePro_3.12.0",
+          "bundleIdentifier": "cypwn.RefacePro_3.12.0.3.12.0",
+          "developerName": "RefacePro_3.12.0 x CyPwn",
+          "version": "3.12.0",
+          "iconURL": "https://ipa.cypwn.xyz/serve/icons/RefacePro_3.12.0.png",
           "subtitle": ""
         }
       ]
@@ -10087,7 +10087,49 @@
           "subtitle": "Bluetooth toolkit"
         }
       ]
+    },
+    {
+      "id": "cercube",
+      "name": "Cercube",
+      "appCount": 2,
+      "catalogLimited": false,
+      "iconURL": "https://cdn.cercube.com/assets/icon.png",
+      "apps": [
+        {
+          "name": "Cercube",
+          "bundleIdentifier": "com.google.ios.youtube",
+          "developerName": "Cercube",
+          "version": "21.35.3",
+          "iconURL": "https://cdn.cercube.com/assets/icon.png",
+          "subtitle": "The all-in-one jailbreak tweak"
+        },
+        {
+          "name": "Cercube (Legacy)",
+          "bundleIdentifier": "com.google.ios.youtube-",
+          "developerName": "Cercube",
+          "version": "20.21.6",
+          "iconURL": "https://cdn.cercube.com/assets/icon.png",
+          "subtitle": "The all-in-one jailbreak tweak"
+        }
+      ]
+    },
+    {
+      "id": "rocket",
+      "name": "Rocket",
+      "appCount": 1,
+      "catalogLimited": false,
+      "iconURL": "https://cdn.getrocketapp.io/assets/icon.png",
+      "apps": [
+        {
+          "name": "Rocket for Instagram",
+          "bundleIdentifier": "com.burbn.instagram",
+          "developerName": "Rocket",
+          "version": "447.0.0",
+          "iconURL": "https://cdn.getrocketapp.io/assets/icon.png",
+          "subtitle": "All-in-one tweak for Instagram"
+        }
+      ]
     }
   ],
-  "uniqueAppCount": 4539
+  "uniqueAppCount": 4540
 }
