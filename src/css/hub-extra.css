@@ -963,3 +963,15 @@ body{
   .filter-tabs>:first-child{margin-inline-start:auto}
   .filter-tabs>:last-child{margin-inline-end:auto}
 }
+
+
+/* Installer refactor preview */
+.source-more{position:relative}
+.source-more>summary{list-style:none;user-select:none}
+.source-more>summary::-webkit-details-marker{display:none}
+.source-more-menu{position:absolute;left:0;bottom:calc(100% + 7px);z-index:40;display:grid;gap:5px;min-width:170px;padding:7px;border:1px solid var(--border);border-radius:11px;background:var(--panel);box-shadow:var(--shadow)}
+.source-more-menu .installer-link{width:100%;justify-content:flex-start;white-space:nowrap}
+.source-more[open]>summary{border-color:color-mix(in srgb,var(--accent) 55%,var(--border));color:var(--accent)}
+@media(max-width:640px){
+  .source-more-menu{left:50%;transform:translateX(-50%);min-width:160px}
+}
