@@ -29,21 +29,6 @@ export const SOURCE_MODES = Object.freeze({
   sidestore: {
     id: 'sidestore',
     label: 'SideStore',
-    resourceName: 'SideStore',
-    creditName: 'SideStore',
-    toolType: 'source-installer',
-    capabilities: Object.freeze(['source', 'ipa-install', 'refresh', 'on-device']),
-    website: 'https://sidestore.io/',
-    guideURL: 'https://docs.sidestore.io/',
-    links: Object.freeze({
-      website: 'https://sidestore.io/',
-      guide: 'https://docs.sidestore.io/',
-      prerequisites: 'https://docs.sidestore.io/docs/installation/prerequisites',
-      pairing: 'https://docs.sidestore.io/docs/advanced/pairing-file'
-    }),
-    domain: 'sidestore.io',
-    coreCredit: true,
-    resourceCard: true,
     variant: 'classic',
     formatLabel: 'SideStore Source',
     installerIds: Object.freeze(['sidestore'])
@@ -86,6 +71,21 @@ export const INSTALLERS = Object.freeze({
   sidestore: {
     id: 'sidestore',
     label: 'SideStore',
+    resourceName: 'SideStore',
+    creditName: 'SideStore',
+    toolType: 'source-installer',
+    capabilities: Object.freeze(['source', 'ipa-install', 'refresh', 'on-device']),
+    website: 'https://sidestore.io/',
+    guideURL: 'https://docs.sidestore.io/',
+    links: Object.freeze({
+      website: 'https://sidestore.io/',
+      guide: 'https://docs.sidestore.io/',
+      prerequisites: 'https://docs.sidestore.io/docs/installation/prerequisites',
+      pairing: 'https://docs.sidestore.io/docs/advanced/pairing-file'
+    }),
+    domain: 'sidestore.io',
+    coreCredit: true,
+    resourceCard: true,
     variant: 'classic',
     mixTarget: true,
     mixHelpKey: 'targetHelpSide',
@@ -154,6 +154,10 @@ export const INSTALLERS = Object.freeze({
     capabilities: Object.freeze(['source', 'ipa-install', 'signing']),
     website: 'https://flarestore.app/',
     guideURL: 'https://flarestore.app/',
+    links: Object.freeze({
+      website: 'https://flarestore.app/',
+      guide: 'https://flarestore.app/'
+    }),
     domain: 'flarestore.app',
     coreCredit: true,
     resourceCard: true,
@@ -174,6 +178,11 @@ export const INSTALLERS = Object.freeze({
     capabilities: Object.freeze(['source', 'ipa-install', 'signing']),
     website: 'https://github.com/claration/Feather',
     guideURL: 'https://github.com/claration/Feather',
+    links: Object.freeze({
+      website: 'https://github.com/claration/Feather',
+      guide: 'https://github.com/claration/Feather',
+      repository: 'https://github.com/claration/Feather'
+    }),
     domain: 'github.com/claration/Feather',
     coreCredit: true,
     resourceCard: true,
