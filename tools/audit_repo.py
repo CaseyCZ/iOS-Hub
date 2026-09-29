@@ -1503,9 +1503,6 @@ def validate_layout() -> None:
         forbidden_single_collection_selectors = (
             "const tabs = $('[data-guide-mode]')",
             "return $('.assistant-tried-options [data-tried-key]').find",
-            "$('[data-guide-tool-scope]').forEach",
-            "$('[data-guide-tool-link]').forEach",
-            "$('[data-guide-tool-icon]').forEach",
             "return $('.trouble-item')",
         )
         for forbidden_selector in forbidden_single_collection_selectors:
@@ -1513,6 +1510,18 @@ def validate_layout() -> None:
                 error(
                     "guide.js uses a single-element selector where a collection is required; "
                     f"found {forbidden_selector!r}"
+                )
+
+        for selector in (
+            "[data-guide-tool-scope]",
+            "[data-guide-tool-link]",
+            "[data-guide-tool-icon]",
+        ):
+            pattern = rf"(?<!\$)\$\('{re.escape(selector)}'\)\.forEach"
+            if re.search(pattern, guide_text):
+                error(
+                    "guide.js uses a single-element selector where a collection is required; "
+                    f"found single-element forEach selector {selector!r}"
                 )
         setup_start = guide_text.find("const SETUP_RESULTS = {")
         setup_end = guide_text.find("const SETUP_RESULT_ROUTES", setup_start)
