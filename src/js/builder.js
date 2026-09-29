@@ -1,6 +1,7 @@
 import {
   INSTALLERS,
   BUILDER_INSTALLER_IDS,
+  DEFAULT_BUILDER_INSTALLER_ID,
   MIX_PACKAGE_IDS,
   installerMixPackageData,
   mixPackageData,
@@ -98,7 +99,7 @@ let selected = new Set();
 let blobUrl = null;
 let category = 'all';
 let genre = 'all';
-let target = 'altstore';
+let target = DEFAULT_BUILDER_INSTALLER_ID;
 let compatibility = 'all';
 let query = '';
 
@@ -201,7 +202,7 @@ function restoreSettings() {
   const savedCompatibility = safeGet(STORAGE.compatibility);
   category = SOURCE_CATEGORIES.has(savedCategory) ? savedCategory : 'all';
   genre = GENRES.has(savedGenre) ? savedGenre : 'all';
-  target = TARGETS.has(savedTarget) ? savedTarget : 'altstore';
+  target = TARGETS.has(savedTarget) ? savedTarget : DEFAULT_BUILDER_INSTALLER_ID;
   compatibility = COMPATIBILITY.has(savedCompatibility) ? savedCompatibility : 'all';
   query = safeGet(STORAGE.query) || '';
 }
@@ -594,7 +595,7 @@ async function init() {
     saveFilters(); render();
   }));
   $$('[data-exp-target]').forEach(button => button.addEventListener('click', () => {
-    const nextTarget = TARGETS.has(button.dataset.expTarget) ? button.dataset.expTarget : 'altstore';
+    const nextTarget = TARGETS.has(button.dataset.expTarget) ? button.dataset.expTarget : DEFAULT_BUILDER_INSTALLER_ID;
     if (nextTarget !== target) {
       target = nextTarget;
       selected.clear();
