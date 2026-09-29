@@ -626,6 +626,58 @@
           <div class="trouble-answer" data-i18n="guideT9A">Sideloadly supports Apple TV from Windows/macOS. If you want a self-hosted Linux/OpenWrt service, atvloadly is the more specialized route.</div>
           <div class="trouble-docs"><a href="https://sideloadly.io/" target="_blank" rel="noopener noreferrer">Sideloadly FAQ ↗</a></div>
         </details>
+        <details class="trouble-item" data-search="sideinstaller install sidestore fails failed certificate revoked http 503 apple id 2fa pairing ios 27 ios 17 26">
+          <summary data-guide-copy="troubleSideInstallerInstallQ">SideInstaller cannot install SideStore</summary>
+          <div class="trouble-answer" data-guide-copy="troubleSideInstallerInstallA">Use the current official SideInstaller build and check the exact iOS version first. On iOS 27 the setup can run on-device; iOS 17–26 needs an existing pairing file. If Apple sign-in returns HTTP 503 or certificates are revoked, check the current SideInstaller release notes before retrying.</div>
+          <div class="trouble-docs"><a href="https://github.com/FrizzleM/SideInstaller/releases/tag/v1.0.0" target="_blank" rel="noopener noreferrer">SideInstaller v1.0.0 ↗</a></div>
+        </details>
+        <details class="trouble-item" data-search="feather install app unable integrity cannot be verified certificate revoked expired udid bad corrupted ipa idevice pairing heartbeat localdevvpn source">
+          <summary data-guide-copy="troubleFeatherQ">Feather cannot install an app or says integrity cannot be verified</summary>
+          <div class="trouble-answer" data-guide-copy="troubleFeatherA">Check the certificate pair first. Feather documents revoked or expired certificates, a certificate that does not include your device UDID, and a damaged IPA as common causes. If you use the idevice installation method, also verify the pairing file, LocalDevVPN and that Heartbeat is green.</div>
+          <div class="trouble-docs"><a href="https://github.com/claration/Feather/wiki/Troubleshooting" target="_blank" rel="noopener noreferrer">Feather Troubleshooting ↗</a></div>
+        </details>
+        <details class="trouble-item" data-search="flarestore install ipa prompt failed domain lookup localhost flarestore vip certificate p12 mobile provision signing source repository vpn dns ad blocker">
+          <summary data-guide-copy="troubleFlareQ">FlareStore signs the IPA but the install prompt fails</summary>
+          <div class="trouble-answer" data-guide-copy="troubleFlareA">Verify that a signing certificate is imported in FlareStore. If the install prompt does not appear or you get a domain lookup error, allow *.flarestore.vip and localhost.flarestore.vip through your VPN, DNS or ad blocker and retry the install.</div>
+          <div class="trouble-docs"><a href="https://flarestore.app/guide/ios/" target="_blank" rel="noopener noreferrer">FlareStore iOS Guide ↗</a></div>
+        </details>
+        <details class="trouble-item" data-search="sideloadly anisette failed 500 internal server provisioning profile identity sign signing executable invalid argument ipa developer cannot be verified install">
+          <summary data-guide-copy="troubleSideloadlyQ">Sideloadly fails with Anisette, provisioning or signing errors</summary>
+          <div class="trouble-answer" data-guide-copy="troubleSideloadlyA">Start with the official Sideloadly FAQ for the exact message. Remote Anisette server errors can require retrying later or switching Anisette mode; invalid IPA paths, provisioning-profile errors and invalid signing identity each have separate documented checks.</div>
+          <div class="trouble-docs"><a href="https://sideloadly.io/faq" target="_blank" rel="noopener noreferrer">Sideloadly FAQ ↗</a></div>
+        </details>
+        <details class="trouble-item community-item" data-search="sideloadly macos 27 anisette failed no otp guru meditation remote local workaround">
+          <summary data-guide-copy="communitySideloadlyMacQ">macOS 27: Sideloadly reports Anisette failed: No OTP</summary>
+          <div class="trouble-source-badge community" data-guide-copy="communityLabel">COMMUNITY WORKAROUND</div>
+          <div class="trouble-answer" data-guide-copy="communitySideloadlyMacA">A recent community workaround is to switch Sideloadly Advanced Options → Anisette Authentication from Local to Remote. This is a community workaround for the current macOS 27 behavior, not an official requirement, so check the official FAQ and newer releases first.</div>
+          <div class="trouble-docs">
+            <a href="https://www.reddit.com/r/sideloadly/comments/1wkjb2g/fix_sideloadly_on_macos_27_anisette_failed_no_otp/" target="_blank" rel="noopener noreferrer">Reddit workaround ↗</a>
+            <a href="https://sideloadly.io/faq" target="_blank" rel="noopener noreferrer">Official Sideloadly FAQ ↗</a>
+          </div>
+        </details>
+        <details class="trouble-item" data-search="atvloadly apple tv tvos not found pairing remotepairing avahi mdns docker privileged login apple id ipa crash system upgrade install">
+          <summary data-guide-copy="troubleAtvloadlyQ">atvloadly cannot find or install to Apple TV</summary>
+          <div class="trouble-answer" data-guide-copy="troubleAtvloadlyA">Use the official atvloadly FAQ. Turn off VPN, restart Apple TV, enter pairing mode again and confirm mDNS/Avahi discovery works. Docker installs may need privileged mode. After a tvOS upgrade, pairing may need to be recreated.</div>
+          <div class="trouble-docs"><a href="https://github.com/bitxeno/atvloadly/wiki/FAQ" target="_blank" rel="noopener noreferrer">atvloadly FAQ ↗</a></div>
+        </details>
+        <details class="trouble-item" data-search="impactor install ipa device not detected verification failed application verification 0xe8008018 identity sign no longer valid itunes usbmuxd pairing windows linux">
+          <summary data-guide-copy="troubleImpactorQ">Impactor cannot detect the device or installation verification fails</summary>
+          <div class="trouble-answer" data-guide-copy="troubleImpactorA">On Windows, make sure Apple device drivers from iTunes are available. On Linux, check usbmuxd and reconnect the device before restarting Impactor. Pairing-file installation requires USB. For verification errors such as 0xe8008018, also check that the computer and device time are correct and sign in again.</div>
+          <div class="trouble-docs">
+            <a href="https://github.com/claration/Impactor/releases" target="_blank" rel="noopener noreferrer">Impactor Releases ↗</a>
+            <a href="https://github.com/claration/Impactor/issues/233" target="_blank" rel="noopener noreferrer">Impactor issue 0xe8008018 ↗</a>
+          </div>
+        </details>
+        <details class="trouble-item" data-search="trollstore install ipa error 175 ldid failed sign app already exists force install unsupported macho coretrust">
+          <summary data-guide-copy="troubleTrollInstallQ">TrollStore cannot install an IPA or shows install error 175 / ldid</summary>
+          <div class="trouble-answer" data-guide-copy="troubleTrollInstallA">First confirm your exact iOS version is supported and update TrollStore. Install error 175 is an ldid signing failure and can also be caused by an IPA binary that TrollStore cannot process. Use the official issue tracker with the exact TrollStore version, iOS version and install log if the error remains.</div>
+          <div class="trouble-docs"><a href="https://github.com/opa334/TrollStore/issues" target="_blank" rel="noopener noreferrer">TrollStore Issues ↗</a></div>
+        </details>
+        <details class="trouble-item" data-search="altstore pal install download source nsurl error safari region marketplace not supported version vpn eu japan brazil">
+          <summary data-guide-copy="troublePalQ">AltStore PAL will not install, download or add a Source</summary>
+          <div class="trouble-answer" data-guide-copy="troublePalA">Use the official AltStore PAL troubleshooting page. Check the supported region and iOS version, use Safari for marketplace installation, disable a VPN if downloads return NSURLError, and update AltStore PAL if a Source reports that the installed version is unsupported.</div>
+          <div class="trouble-docs"><a href="https://faq.altstore.io/altstore-pal/troubleshooting" target="_blank" rel="noopener noreferrer">AltStore PAL Troubleshooting ↗</a></div>
+        </details>
         <div id="troubleEmpty" class="trouble-empty" hidden data-i18n="guideNoTrouble">No troubleshooting item matches your search.</div>
       </div>
 
