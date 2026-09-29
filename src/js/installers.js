@@ -19,6 +19,15 @@ export const SOURCE_VARIANTS = Object.freeze({
 
 export const SOURCE_VARIANT_IDS = Object.freeze(Object.keys(SOURCE_VARIANTS));
 
+export const RESOURCE_BADGES = Object.freeze({
+  freeVerified: Object.freeze({ key: 'freeVerified', className: 'online' }),
+  resourceSideloading: Object.freeze({ key: 'resourceSideloading', className: 'mode' }),
+  resourceAppleTV: Object.freeze({ key: 'resourceAppleTV', className: 'mode' }),
+  Sources: Object.freeze({ label: 'Sources', className: 'mode' }),
+  'iOS 27': Object.freeze({ label: 'iOS 27', className: 'mode' }),
+  marketplace: Object.freeze({ label: 'Marketplace', className: 'mode' })
+});
+
 export const SOURCE_MODES = Object.freeze({
   classic: {
     id: 'classic',
@@ -467,6 +476,13 @@ export function sideloadToolURL(toolId, purpose = 'website') {
 
 export function sideloadToolSupports(toolId, capability) {
   return Boolean(sideloadTool(toolId)?.capabilities?.includes(capability));
+}
+
+export function resourceBadgeSpecs(toolId) {
+  const tool = sideloadTool(toolId);
+  return (tool?.resourceBadges || [])
+    .map(id => RESOURCE_BADGES[id])
+    .filter(Boolean);
 }
 
 export function sideloadToolsWithCapability(capability) {
