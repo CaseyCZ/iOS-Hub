@@ -256,6 +256,67 @@ function applyCreditCopy(lang) {
   document.title = creditText('heroTitle') + ' — iOS Hub';
 }
 
+function buildSideloadCreditCard(tool) {
+  const card = document.createElement('article');
+  card.className = 'panel resource-card';
+  card.dataset.sideloadTool = tool.id;
+
+  const icon = document.createElement('div');
+  icon.className = 'resource-icon resource-icon-image';
+  const iconImage = document.createElement('img');
+  iconImage.className = 'official-app-icon';
+  iconImage.src = tool.icon || '';
+  iconImage.alt = tool.creditName || tool.label || '';
+  iconImage.loading = 'lazy';
+  iconImage.referrerPolicy = 'no-referrer';
+  icon.appendChild(iconImage);
+
+  const badges = document.createElement('div');
+  badges.className = 'resource-badges';
+  const badge = document.createElement('span');
+  badge.className = 'pill mode';
+  badge.textContent = tool.creditBadge || 'Project';
+  badges.appendChild(badge);
+
+  const title = document.createElement('h3');
+  title.textContent = tool.creditName || tool.label || tool.id;
+
+  const description = document.createElement('p');
+  if (tool.creditDescriptionKey) description.dataset.creditCopy = tool.creditDescriptionKey;
+  description.textContent = tool.creditDescriptionKey ? creditText(tool.creditDescriptionKey) : '';
+
+  const domain = document.createElement('div');
+  domain.className = 'resource-domain';
+  domain.textContent = tool.creditDomain || tool.domain || '';
+
+  const link = document.createElement('a');
+  link.className = 'btn primary brand-link';
+  link.href = sideloadToolURL(tool.id, 'credit');
+  link.target = '_blank';
+  link.rel = 'noopener noreferrer';
+
+  const linkIcon = document.createElement('img');
+  linkIcon.className = 'brand-link-icon';
+  linkIcon.src = tool.icon || '';
+  linkIcon.alt = '';
+  linkIcon.loading = 'lazy';
+  linkIcon.referrerPolicy = 'no-referrer';
+
+  const linkText = document.createElement('span');
+  if (tool.creditLinkKey) linkText.dataset.creditCopy = tool.creditLinkKey;
+  linkText.textContent = tool.creditLinkKey ? creditText(tool.creditLinkKey) : creditText('officialWebsite');
+
+  link.append(linkIcon, linkText);
+  card.append(icon, badges, title, description, domain, link);
+  return card;
+}
+
+function renderSideloadCreditCards() {
+  const host = document.querySelector('#sideloadCreditGrid');
+  if (!host) return;
+  host.replaceChildren(...creditSideloadTools().map(buildSideloadCreditCard));
+}
+
 function hydrateSideloadCreditCards() {
   document.querySelectorAll('[data-sideload-tool]').forEach(card => {
     const tool = SIDELOAD_TOOLS[card.dataset.sideloadTool];
@@ -525,6 +586,7 @@ $('#languageSelect')?.addEventListener('change', event => {
   loadCredits();
 });
 
+renderSideloadCreditCards();
 hydrateSideloadCreditCards();
 
 const savedTheme = safeGet('caseycz-theme');
