@@ -1074,7 +1074,7 @@ def validate_layout() -> None:
         )
         if source_modes_match:
             source_modes_text = source_modes_match.group(1)
-            for misplaced in ("toolType", "capabilities", "website", "guideURL", "coreCredit", "resourceCard"):
+            for misplaced in ("toolType", "capabilities", "recommendationRoles", "website", "guideURL", "coreCredit", "resourceCard"):
                 if misplaced in source_modes_text:
                     error(
                         "SOURCE_MODES must contain source-format metadata only; "
