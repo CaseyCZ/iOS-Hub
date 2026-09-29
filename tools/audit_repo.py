@@ -990,7 +990,7 @@ def validate_layout() -> None:
     # Source-facing pages must stay registry-driven so adding one source updates
     # the catalog, Builder and Credits without maintaining duplicate hard-coded lists.
     dynamic_source_scripts = {
-        "app.js": ("sources/registry.json", "data/status.json", "data/catalog.json", "sourceWebsiteIcon", "data-source-website-icon", "installers.js", "SOURCE_VARIANT_IDS", "sourceVariantLabel", "sourceModeLabel"),
+        "app.js": ("sources/registry.json", "data/status.json", "data/catalog.json", "sourceWebsiteIcon", "data-source-website-icon", "installers.js", "SOURCE_VARIANT_IDS", "sourceVariantLabel", "sourceModeLabel", "sourceInstallerCompatibility", "sourceInstallerDirectAvailable", "data-blocked-installers"),
         "builder.js": ("sources/registry.json", "data/status.json", "data/catalog.json", "installers.js", "BUILDER_INSTALLER_IDS", "MIX_PACKAGE_IDS", "mixPackageData", "mixPackageTargetIds", "installerMixPackageData", "sourceFormatLabel", "targetVariant"),
         "credits.js": ("sources/registry.json", "sourceCredits", "source.developer", "maintainerGroups", "sourceCreditGroup", "brand-link-icon", "iconImage", "CORE_SIDELOAD_RESOURCE_NAMES", "SIDELOAD_TOOLS"),
     }
@@ -1034,6 +1034,8 @@ def validate_layout() -> None:
             "catalogPriority",
             "overflowPriority",
             "groupInstallerIds",
+            "sourceInstallerCompatibility",
+            "sourceInstallerDirectAvailable",
             "sourceInstallerDeepLink",
             "sourceVariantURL",
             "sourceVariantIds",
@@ -1159,6 +1161,26 @@ def validate_layout() -> None:
                 error(
                     "builder.js still hard-codes hosted Mix package behavior; "
                     f"found {forbidden!r}; use MIX_PACKAGES from installers.js"
+                )
+
+    source_updater = ROOT / "tools" / "update_sources.py"
+    if source_updater.exists():
+        updater_text = source_updater.read_text(encoding="utf-8")
+        for required in (
+            "duplicate_bundle_report",
+            "direct_installer_compatibility",
+            "DIRECT_SOURCE_INSTALLERS",
+            "STRICT_DUPLICATE_BUNDLE_INSTALLERS",
+            "TOLERANT_DUPLICATE_BUNDLE_INSTALLERS",
+            '"duplicateBundleIdentifiers"',
+            '"installerCompatibility"',
+            '"directSource": "fail"',
+            '"installVariants": "try"',
+        ):
+            if required not in updater_text:
+                error(
+                    "update_sources.py must expose per-installer duplicate bundle compatibility; "
+                    f"missing {required!r}"
                 )
 
     legacy_brand = "AltStore · SideStore · LiveContainer"
