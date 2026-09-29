@@ -115,20 +115,20 @@ function sourceMoreInstallers(source, installerIds) {
   </details>` : '';
 }
 
-function sourceAvailableVariants(source) {
+function sourceAvailableVariants(source, {includeOffline = false} = {}) {
   const statusVariants = getStatus(source.id)?.variants;
   return SOURCE_VARIANT_IDS.map(variant => {
     const url = sourceVariantURL(source, variant);
     if (!url) return null;
-    if (statusVariants && typeof statusVariants === 'object' && variant in statusVariants) {
+    if (!includeOffline && statusVariants && typeof statusVariants === 'object' && variant in statusVariants) {
       if (statusVariants[variant]?.online !== true) return null;
     }
     return {variant, label:sourceVariantLabel(variant), url};
   }).filter(Boolean);
 }
 
-function sourceCopyControl(source) {
-  const variants = sourceAvailableVariants(source);
+function sourceCopyControl(source, options = {}) {
+  const variants = sourceAvailableVariants(source, options);
   if (!variants.length) return '';
 
   if (variants.length === 1) {
@@ -145,8 +145,8 @@ function sourceCopyControl(source) {
   </details>`;
 }
 
-function sourceJsonControl(source) {
-  const variants = sourceAvailableVariants(source);
+function sourceJsonControl(source, options = {}) {
+  const variants = sourceAvailableVariants(source, options);
   if (!variants.length) return '';
 
   if (variants.length === 1) {
@@ -382,7 +382,9 @@ function renderSources() {
     const appCount = Number.isFinite(status.appCount) ? status.appCount : '—';
     const desc = source.description?.[state.lang] || source.description?.en || source.description?.cs || '';
     const checkedOffline = status.online === false && Boolean(status.checkedAt);
-    const installerGroups = sourceInstallerGroups(source);
+    const installerGroups = checkedOffline
+      ? groupInstallerIds(sourceInstallerIds(source), 3)
+      : sourceInstallerGroups(source);
     const installerButtons = installerGroups.main
       .map((installerId, index) => sourceInstallerButton(source, installerId, {
         primary: index === 0,
@@ -391,8 +393,8 @@ function renderSources() {
       .filter(Boolean)
       .join('');
     const moreInstallerMenu = checkedOffline ? '' : sourceMoreInstallers(source, installerGroups.more);
-    const copyControl = checkedOffline ? '' : sourceCopyControl(source);
-    const jsonControl = checkedOffline ? '' : sourceJsonControl(source);
+    const copyControl = sourceCopyControl(source, {includeOffline:checkedOffline});
+    const jsonControl = sourceJsonControl(source, {includeOffline:checkedOffline});
     const blockedInstallers = sourceInstallerIds(source)
       .filter(installerId => sourceInstallerCompatibility(status, installerId)?.directSource === 'fail');
     return `<article class="source-card${checkedOffline ? ' is-offline' : ''}" data-source-id="${escapeHtml(source.id)}"${blockedInstallers.length ? ` data-blocked-installers="${escapeHtml(blockedInstallers.join(' '))}"` : ''}>
