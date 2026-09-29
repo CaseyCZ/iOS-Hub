@@ -575,19 +575,22 @@ function normalizeTroubleToolText(value) {
     .trim();
 }
 
+function troubleshootingToolAliases(tool) {
+  if (!tool) return [];
+  return [...new Set([
+    tool.id,
+    tool.label,
+    tool.resourceName,
+    tool.creditName
+  ].map(normalizeTroubleToolText).filter(Boolean))];
+}
+
 function troubleshootingToolForQuery(query) {
   const normalizedQuery = normalizeTroubleToolText(query);
   if (!normalizedQuery) return null;
 
   const matches = troubleshootingSideloadTools().flatMap(tool => {
-    const aliases = [...new Set([
-      tool.id,
-      tool.label,
-      tool.resourceName,
-      tool.creditName
-    ].map(normalizeTroubleToolText).filter(Boolean))];
-
-    return aliases
+    return troubleshootingToolAliases(tool)
       .filter(alias => normalizedQuery.includes(alias))
       .map(alias => ({tool, alias}));
   });
@@ -608,6 +611,11 @@ function getTroubleMatches(query) {
   const terms = [...new Set(q.split(/\s+/).filter(Boolean))];
   const triedTags = diagnosisTriedTags();
   const preferredTool = selectedTroubleshootingTool() || troubleshootingToolForQuery(q);
+  const preferredToolTerms = new Set(
+    troubleshootingToolAliases(preferredTool)
+      .flatMap(alias => alias.split(/\s+/).filter(Boolean))
+  );
+  const symptomTerms = terms.filter(term => !preferredToolTerms.has(term));
 
   return [...document.querySelectorAll('.trouble-item')]
     .filter(item => !selectedTroubleToolId || !item.dataset.tool || item.dataset.tool === selectedTroubleToolId)
@@ -615,12 +623,14 @@ function getTroubleMatches(query) {
       const searchHaystack = (item.dataset.search || '').toLowerCase();
       const textHaystack = (item.textContent || '').toLowerCase();
       const haystack = [searchHaystack, textHaystack].join(' ');
-      const baseScore = terms.reduce((sum, term) => {
+      const scoreTerms = scoreTermsToUse => scoreTermsToUse.reduce((sum, term) => {
         if (troubleTermMatches(searchHaystack, term)) return sum + (/[0-9]/.test(term) ? 4 : 2);
         if (troubleTermMatches(textHaystack, term)) return sum + (/[0-9]/.test(term) ? 3 : 1);
         return sum;
       }, 0);
-      const toolBoost = preferredTool && item.dataset.tool === preferredTool.id ? 12 : 0;
+      const baseScore = scoreTerms(terms);
+      const symptomScore = scoreTerms(symptomTerms);
+      const toolBoost = preferredTool && item.dataset.tool === preferredTool.id && symptomScore > 0 ? 12 : 0;
       const competingToolPenalty = preferredTool && item.dataset.tool && item.dataset.tool !== preferredTool.id ? 0.75 : 0;
       const triedPenalty = triedTags.reduce((sum, tag) => sum + (haystack.includes(tag) ? 0.35 : 0), 0);
       const communityPenalty = item.classList.contains('community-item') ? 0.15 : 0;
@@ -818,6 +828,7 @@ function resolvedTroubleQuery(raw) {
   if (/shortcut|resign|long.?press|background.*sidestore/.test(q)) return scopedTroubleQuery(q, 'ios 27 shortcut resign long press background refresh all');
   if (/1414|minimuxer.*27|afc|vpn|localdevvpn/.test(q)) return scopedTroubleQuery(q, 'refresh 1414 minimuxer 27 afc localdevvpn');
   if (/altserver|server not found|remote server/.test(q)) return scopedTroubleQuery(q, 'altserver');
+  if (/install|installation|instal|nainstal/.test(q)) return scopedTroubleQuery(q, 'install ipa app');
   if (/cert|certificate|provision/.test(q)) {
     const certificateTerms = ['certificate', 'provision'];
     if (/revoked|revoke/.test(q)) certificateTerms.push('revoked');
