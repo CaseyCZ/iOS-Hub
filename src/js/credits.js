@@ -1,4 +1,5 @@
 import { SUPPORTED_LANGUAGES, applyTranslations, normalizeLanguage } from './i18n.js?v=1.1.5-20260918-fullaudit2';
+import { SIDELOAD_TOOLS, CORE_SIDELOAD_RESOURCE_NAMES, sideloadToolURL } from './installers.js?v=1.1.5-20260929-installers5';
 
 const root = document.documentElement;
 const $ = selector => document.querySelector(selector);
@@ -238,10 +239,7 @@ const CREDITS_COPY = {
   }
 };
 
-const CORE_RESOURCE_NAMES = new Set([
-  'AltStore Classic', 'AltStore', 'SideStore', 'SideInstaller', 'LiveContainer',
-  'Sideloadly', 'atvloadly', 'iloader', 'Impactor', 'TrollStore'
-]);
+const CORE_RESOURCE_NAMES = new Set(CORE_SIDELOAD_RESOURCE_NAMES);
 
 let currentLang = 'en';
 
@@ -256,6 +254,29 @@ function applyCreditCopy(lang) {
     if (value) node.textContent = value;
   });
   document.title = creditText('heroTitle') + ' — iOS Hub';
+}
+
+function hydrateSideloadCreditCards() {
+  document.querySelectorAll('[data-sideload-tool]').forEach(card => {
+    const tool = SIDELOAD_TOOLS[card.dataset.sideloadTool];
+    if (!tool) return;
+
+    const title = card.querySelector('h3');
+    if (title && tool.creditName) title.textContent = tool.creditName;
+
+    const domain = card.querySelector('.resource-domain');
+    const creditDomain = tool.creditDomain || tool.domain;
+    if (domain && creditDomain) domain.textContent = creditDomain;
+
+    const href = sideloadToolURL(tool.id, 'credit');
+    const link = card.querySelector('a.btn.primary');
+    if (link && href) link.href = href;
+
+    card.querySelectorAll('img.official-app-icon, img.brand-link-icon').forEach(img => {
+      if (tool.icon) img.src = tool.icon;
+      if (img.classList.contains('official-app-icon')) img.alt = tool.creditName || tool.label || '';
+    });
+  });
 }
 
 function applyTheme(theme) {
@@ -471,6 +492,8 @@ $('#languageSelect')?.addEventListener('change', event => {
   loadFeaturedCredits();
   loadCredits();
 });
+
+hydrateSideloadCreditCards();
 
 const savedTheme = safeGet('caseycz-theme');
 const systemDark = window.matchMedia?.('(prefers-color-scheme: dark)').matches;
