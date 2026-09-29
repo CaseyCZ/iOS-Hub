@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-labelledby="title">
+  <title id="title">FlareStore</title>
+  <defs>
+    <linearGradient id="bg" x1="16" y1="112" x2="112" y2="16" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#0f766e"/>
+      <stop offset=".52" stop-color="#0891b2"/>
+      <stop offset="1" stop-color="#2563eb"/>
+    </linearGradient>
+    <linearGradient id="flare" x1="48" y1="86" x2="84" y2="36" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#e0f2fe"/>
+      <stop offset="1" stop-color="#ffffff"/>
+    </linearGradient>
+  </defs>
+  <rect x="4" y="4" width="120" height="120" rx="28" fill="url(#bg)"/>
+  <path d="M77 26c-3 16-11 24-27 30 10 2 16 7 20 15-1-13 4-25 17-36-3 12-2 21 5 29-8-2-16 0-23 8-5 6-8 14-8 25-14-9-22-22-22-37 0-16 8-29 24-39-2 12 2 21 14 27z" fill="url(#flare)"/>
+  <path d="M44 92h40" stroke="#fff" stroke-width="7" stroke-linecap="round" opacity=".92"/>
+</svg>
