@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-18",
+  "updated": "2026-09-29",
   "attribution": {
     "references": [
       {
@@ -1732,6 +1732,54 @@
         "community",
         "apps",
         "altstore"
+      ]
+    },
+    {
+      "id": "cercube",
+      "name": "Cercube",
+      "url": "https://altstore.cercube.com",
+      "website": "https://cercube.com/",
+      "mode": "classic",
+      "mergeable": false,
+      "official": true,
+      "trusted": false,
+      "recommended": false,
+      "modified": true,
+      "description": {
+        "cs": "Oficiální AltStore source pro Cercube, tweak rozšiřující YouTube na iOS o další funkce.",
+        "en": "Official AltStore source for Cercube, a tweak that adds extra features to YouTube on iOS."
+      },
+      "tags": [
+        "modified",
+        "youtube",
+        "tweak",
+        "altstore",
+        "sidestore",
+        "official"
+      ]
+    },
+    {
+      "id": "rocket",
+      "name": "Rocket",
+      "url": "https://altstore.getrocketapp.io",
+      "website": "https://getrocketapp.io/",
+      "mode": "classic",
+      "mergeable": false,
+      "official": true,
+      "trusted": false,
+      "recommended": false,
+      "modified": true,
+      "description": {
+        "cs": "Oficiální AltStore source pro Rocket, tweak rozšiřující Instagram na iOS o další funkce.",
+        "en": "Official AltStore source for Rocket, a tweak that adds extra features to Instagram on iOS."
+      },
+      "tags": [
+        "modified",
+        "instagram",
+        "tweak",
+        "altstore",
+        "sidestore",
+        "official"
       ]
     }
   ]
