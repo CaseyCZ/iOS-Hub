@@ -4,11 +4,13 @@ import {
   SOURCE_VARIANT_IDS,
   groupInstallerIds,
   sourceInstallerIds,
+  sourceInstallerCompatibility,
+  sourceInstallerDirectAvailable,
   sourceInstallerDeepLink,
   sourceVariantURL,
   sourceVariantLabel,
   sourceModeLabel
-} from './installers.js?v=1.1.5-20260929-installers12';
+} from './installers.js?v=1.1.5-20260929-installers13';
 
 const root = document.documentElement;
 const $ = (selector, scope = document) => scope.querySelector(selector);
@@ -93,8 +95,10 @@ function sourceInstallerVariantAvailable(source, installerId) {
 }
 
 function sourceInstallerGroups(source) {
+  const sourceStatus = getStatus(source.id);
   const available = sourceInstallerIds(source)
-    .filter(installerId => sourceInstallerVariantAvailable(source, installerId));
+    .filter(installerId => sourceInstallerVariantAvailable(source, installerId))
+    .filter(installerId => sourceInstallerDirectAvailable(sourceStatus, installerId));
   return groupInstallerIds(available, 3);
 }
 
@@ -389,7 +393,9 @@ function renderSources() {
     const moreInstallerMenu = checkedOffline ? '' : sourceMoreInstallers(source, installerGroups.more);
     const copyControl = checkedOffline ? '' : sourceCopyControl(source);
     const jsonControl = checkedOffline ? '' : sourceJsonControl(source);
-    return `<article class="source-card${checkedOffline ? ' is-offline' : ''}" data-source-id="${escapeHtml(source.id)}">
+    const blockedInstallers = sourceInstallerIds(source)
+      .filter(installerId => sourceInstallerCompatibility(status, installerId)?.directSource === 'fail');
+    return `<article class="source-card${checkedOffline ? ' is-offline' : ''}" data-source-id="${escapeHtml(source.id)}"${blockedInstallers.length ? ` data-blocked-installers="${escapeHtml(blockedInstallers.join(' '))}"` : ''}>
       <div class="source-top">
         <div class="source-icon">${sourceIcon(source)}</div>
         <div class="source-title">
