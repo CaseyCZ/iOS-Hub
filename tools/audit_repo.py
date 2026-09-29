@@ -1491,6 +1491,7 @@ def validate_layout() -> None:
             ("selected SideStore refresh", "sidestore refresh", "sidestore", "sidestore", ""),
             ("selected AltStore PAL install", "altstore pal install ipa app", "altstore-pal", "altstore-pal", ""),
             ("selected Feather integrity", "feather integrity", "feather", "feather", ""),
+            ("selected Sideloadly provisioning", "sideloadly certificate provision provisioning", "sideloadly", "sideloadly", "Sideloadly fails"),
         )
         for label, query, selected_tool, expected_tool, expected_title in trouble_regressions:
             actual_tool, actual_title = audit_trouble_top(query, selected_tool)
