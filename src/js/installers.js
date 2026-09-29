@@ -73,7 +73,8 @@ export const INSTALLERS = Object.freeze({
     links: Object.freeze({
       website: 'https://altstore.io/',
       guide: 'https://altstore.io/',
-      classicGuide: 'https://faq.altstore.io/altstore-classic'
+      classicGuide: 'https://faq.altstore.io/altstore-classic',
+      troubleshooting: 'https://faq.altstore.io/altstore-classic/troubleshooting-guide'
     }),
     domain: 'altstore.io',
     coreCredit: true,
@@ -118,7 +119,8 @@ export const INSTALLERS = Object.freeze({
       website: 'https://sidestore.io/',
       guide: 'https://docs.sidestore.io/',
       prerequisites: 'https://docs.sidestore.io/docs/installation/prerequisites',
-      pairing: 'https://docs.sidestore.io/docs/advanced/pairing-file'
+      pairing: 'https://docs.sidestore.io/docs/advanced/pairing-file',
+      troubleshooting: 'https://docs.sidestore.io/docs/troubleshooting'
     }),
     domain: 'sidestore.io',
     coreCredit: true,
@@ -160,7 +162,8 @@ export const INSTALLERS = Object.freeze({
     links: Object.freeze({
       website: 'https://github.com/LiveContainer/LiveContainer',
       guide: 'https://livecontainer.github.io/docs/installation/lc_sidestore',
-      lcSideStore: 'https://livecontainer.github.io/docs/installation/lc_sidestore'
+      lcSideStore: 'https://livecontainer.github.io/docs/installation/lc_sidestore',
+      troubleshooting: 'https://livecontainer.github.io/docs/faq'
     }),
     domain: 'github.com/LiveContainer/LiveContainer',
     coreCredit: true,
@@ -202,7 +205,8 @@ export const INSTALLERS = Object.freeze({
       website: 'https://altstore.io/',
       guide: 'https://altstore.io/download',
       download: 'https://altstore.io/download',
-      requirements: 'https://altstore.io/download'
+      requirements: 'https://altstore.io/download',
+      troubleshooting: 'https://faq.altstore.io/altstore-pal/troubleshooting'
     }),
     domain: 'altstore.io',
     coreCredit: false,
@@ -238,7 +242,8 @@ export const INSTALLERS = Object.freeze({
     guideURL: 'https://flarestore.app/',
     links: Object.freeze({
       website: 'https://flarestore.app/',
-      guide: 'https://flarestore.app/'
+      guide: 'https://flarestore.app/guide/ios/',
+      troubleshooting: 'https://flarestore.app/guide/ios/'
     }),
     domain: 'flarestore.app',
     coreCredit: true,
@@ -277,7 +282,8 @@ export const INSTALLERS = Object.freeze({
     links: Object.freeze({
       website: 'https://github.com/claration/Feather',
       guide: 'https://github.com/claration/Feather',
-      repository: 'https://github.com/claration/Feather'
+      repository: 'https://github.com/claration/Feather',
+      troubleshooting: 'https://github.com/claration/Feather/wiki/Troubleshooting'
     }),
     domain: 'github.com/claration/Feather',
     coreCredit: true,
@@ -406,7 +412,8 @@ const AUXILIARY_SIDELOAD_TOOLS = Object.freeze({
       website: 'https://sideinstaller.net/',
       guide: 'https://sideinstaller.net/',
       repository: 'https://github.com/FrizzleM/SideInstaller',
-      release: 'https://github.com/FrizzleM/SideInstaller/releases/tag/v1.0.0'
+      release: 'https://github.com/FrizzleM/SideInstaller/releases/tag/v1.0.0',
+      troubleshooting: 'https://github.com/FrizzleM/SideInstaller/releases/tag/v1.0.0'
     }),
     domain: 'sideinstaller.net',
     creditDomain: 'github.com/FrizzleM/SideInstaller',
@@ -441,7 +448,8 @@ const AUXILIARY_SIDELOAD_TOOLS = Object.freeze({
     guideURL: 'https://sideloadly.io/',
     links: Object.freeze({
       website: 'https://sideloadly.io/',
-      guide: 'https://sideloadly.io/'
+      guide: 'https://sideloadly.io/',
+      troubleshooting: 'https://sideloadly.io/faq'
     }),
     domain: 'sideloadly.io',
     icon: 'https://sideloadly.io/favicon.ico',
@@ -472,6 +480,7 @@ const AUXILIARY_SIDELOAD_TOOLS = Object.freeze({
     capabilities: Object.freeze(['ipa-install', 'pairing', 'tv', 'self-hosted']),
     website: 'https://github.com/bitxeno/atvloadly',
     repository: 'https://github.com/bitxeno/atvloadly',
+      troubleshooting: 'https://github.com/bitxeno/atvloadly/wiki/FAQ',
     guideURL: 'https://github.com/bitxeno/atvloadly',
     links: Object.freeze({
       website: 'https://github.com/bitxeno/atvloadly',
@@ -509,7 +518,8 @@ const AUXILIARY_SIDELOAD_TOOLS = Object.freeze({
     guideURL: 'https://iloader.app/',
     links: Object.freeze({
       website: 'https://iloader.app/',
-      guide: 'https://iloader.app/'
+      guide: 'https://iloader.app/',
+      troubleshooting: 'https://iloader.app/'
     }),
     domain: 'iloader.app',
     icon: 'assets/icons/iloader.svg',
@@ -540,6 +550,7 @@ const AUXILIARY_SIDELOAD_TOOLS = Object.freeze({
     capabilities: Object.freeze(['ipa-install', 'bootstrap', 'pairing', 'desktop']),
     website: 'https://github.com/claration/Impactor',
     repository: 'https://github.com/claration/Impactor',
+      troubleshooting: 'https://github.com/claration/Impactor/issues',
     guideURL: 'https://github.com/claration/Impactor',
     links: Object.freeze({
       website: 'https://github.com/claration/Impactor',
@@ -575,6 +586,7 @@ const AUXILIARY_SIDELOAD_TOOLS = Object.freeze({
     capabilities: Object.freeze(['ipa-install', 'permanent']),
     website: 'https://github.com/opa334/TrollStore',
     repository: 'https://github.com/opa334/TrollStore',
+      troubleshooting: 'https://github.com/opa334/TrollStore/issues',
     guideURL: 'https://github.com/opa334/TrollStore',
     links: Object.freeze({
       website: 'https://github.com/opa334/TrollStore',
@@ -647,6 +659,17 @@ export function resourceSideloadTools() {
 
 export function creditSideloadTools() {
   return orderedSideloadTools('creditOrder', tool => tool.coreCredit === true);
+}
+
+export function troubleshootingSideloadTools() {
+  return Object.values(SIDELOAD_TOOLS)
+    .filter(tool => Boolean(tool.links?.troubleshooting))
+    .sort((a, b) => {
+      const aOrder = Number.isFinite(Number(a.resourceOrder)) ? Number(a.resourceOrder) : Number.MAX_SAFE_INTEGER;
+      const bOrder = Number.isFinite(Number(b.resourceOrder)) ? Number(b.resourceOrder) : Number.MAX_SAFE_INTEGER;
+      if (aOrder !== bOrder) return aOrder - bOrder;
+      return String(a.label || a.id).localeCompare(String(b.label || b.id));
+    });
 }
 
 export function sideloadToolsWithCapability(capability) {
