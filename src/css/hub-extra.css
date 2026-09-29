@@ -242,45 +242,82 @@
 
 /* v1.1.5 — builder destination selector */
 .builder-target-group{width:100%}
-.builder-target-tabs{
-  width:min(680px,100%);
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(118px,1fr));
-  gap:8px;
-  margin:2px auto 0;
-}
-.builder-target{
+.builder-target-picker-host{width:min(430px,100%);margin:2px auto 0}
+.builder-target-picker{position:relative;width:100%}
+.builder-target-picker>summary{list-style:none;user-select:none}
+.builder-target-picker>summary::-webkit-details-marker{display:none}
+.builder-target-select{
+  width:100%;
   min-height:52px;
   padding:8px 12px;
   border:1px solid var(--border);
   border-radius:12px;
   background:var(--panel2);
-  color:var(--muted);
-  display:flex;
+  color:var(--text);
+  display:grid;
+  grid-template-columns:28px minmax(0,1fr) 20px;
   align-items:center;
-  justify-content:center;
-  gap:8px;
+  gap:9px;
+  text-align:left;
   font:inherit;
   font-size:10px;
   font-weight:900;
   cursor:pointer;
 }
-.builder-target:hover{border-color:color-mix(in srgb,var(--accent) 52%,var(--border));color:var(--text)}
-.builder-target.active{
+.builder-target-select:hover,.builder-target-picker[open]>.builder-target-select{
   border-color:var(--accent);
   background:var(--accent-soft);
   color:var(--accent);
-  box-shadow:0 0 0 2px color-mix(in srgb,var(--accent) 10%,transparent);
 }
-.builder-target .installer-icon{width:22px;height:22px;border-radius:6px}
+.builder-target-select .installer-icon{width:28px;height:28px;border-radius:7px}
+.builder-target-chevron{text-align:center;font-size:15px;transition:transform .15s ease}
+.builder-target-picker[open] .builder-target-chevron{transform:rotate(180deg)}
+.builder-target-menu{
+  position:absolute;
+  left:0;
+  right:0;
+  top:calc(100% + 6px);
+  z-index:70;
+  display:grid;
+  gap:5px;
+  max-height:min(360px,55vh);
+  overflow-y:auto;
+  padding:7px;
+  border:1px solid var(--border);
+  border-radius:12px;
+  background:var(--panel);
+  box-shadow:var(--shadow);
+  overscroll-behavior:contain;
+}
+.builder-target-option{
+  width:100%;
+  min-height:44px;
+  padding:6px 9px;
+  border:1px solid transparent;
+  border-radius:9px;
+  background:transparent;
+  color:var(--text);
+  display:grid;
+  grid-template-columns:28px minmax(0,1fr);
+  align-items:center;
+  gap:9px;
+  text-align:left;
+  font:inherit;
+  font-size:10px;
+  font-weight:850;
+  cursor:pointer;
+}
+.builder-target-option .installer-icon{width:28px;height:28px;border-radius:7px}
+.builder-target-option:hover,.builder-target-option:focus-visible{background:var(--panel2);border-color:var(--border);outline:none}
+.builder-target-option.active{background:var(--accent-soft);border-color:var(--accent);color:var(--accent)}
 .builder-target-help{max-width:700px;margin:3px auto 0;text-align:center}
 .builder-target-pal-note{max-width:700px;margin:2px auto 0;text-align:center;font-size:9px;opacity:.82}
 .builder-result-badges{display:flex;gap:7px;flex-wrap:wrap;justify-content:center}
 #mixTargetBadge{display:inline-flex;align-items:center;gap:6px}
 #mixTargetBadge .installer-icon{width:14px;height:14px}
 @media(max-width:640px){
-  .builder-target-tabs{grid-template-columns:repeat(2,minmax(0,1fr))}
-  .builder-target{min-height:46px}
+  .builder-target-picker-host{width:100%}
+  .builder-target-select{min-height:48px}
 }
 
 
@@ -953,15 +990,30 @@ body{
   }
 }
 
-/* v1.1.5 — mobile horizontal filter overflow fix */
+/* v1.1.5 — mobile horizontal scrollers */
 @media(max-width:640px){
-  .filter-tabs{
+  .filter-tabs,.trouble-quick,.assistant-tried-options{
     justify-content:flex-start;
+    overflow-x:auto;
+    padding-inline:8px;
+    scroll-padding-inline:8px;
     -webkit-overflow-scrolling:touch;
     overscroll-behavior-inline:contain;
   }
-  .filter-tabs>:first-child{margin-inline-start:auto}
-  .filter-tabs>:last-child{margin-inline-end:auto}
+  .filter-tabs>:first-child,.trouble-quick>:first-child,.assistant-tried-options>:first-child{margin-inline-start:0}
+  .filter-tabs>:last-child,.trouble-quick>:last-child,.assistant-tried-options>:last-child{margin-inline-end:0}
+}
+@media(max-width:760px){
+  .assistant-trouble-chips,.guide-jumpbar{
+    justify-content:flex-start;
+    overflow-x:auto;
+    padding-inline:8px;
+    scroll-padding-inline:8px;
+    -webkit-overflow-scrolling:touch;
+    overscroll-behavior-inline:contain;
+  }
+  .assistant-trouble-chips>:first-child,.guide-jumpbar>:first-child{margin-inline-start:0}
+  .assistant-trouble-chips>:last-child,.guide-jumpbar>:last-child{margin-inline-end:0}
 }
 
 
