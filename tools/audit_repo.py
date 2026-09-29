@@ -1114,7 +1114,6 @@ def validate_layout() -> None:
             "openSource:",
             "sourceSupport:",
             "resourceBadges: Object.freeze",
-            "resourceBadges: Object.freeze(['freeVerified', 'resourceSideloading', 'Sources'])",
             "recommendationRoles: Object.freeze",
             "resourceOrder:",
             "creditOrder:",
@@ -1129,6 +1128,9 @@ def validate_layout() -> None:
                     "Every central sideload tool must have a complete profile; "
                     f"{field!r} appears {field_count} times for {tool_count} tools"
                 )
+
+        if "resourceBadges: Object.freeze(['freeVerified', 'resourceSideloading', 'Sources'])" not in installers_text:
+            error("FlareStore Resources profile must keep FREE verified, Sideloading and Sources badges")
 
         for required_sideinstaller_profile in (
             "ios27: 'on-device'",
