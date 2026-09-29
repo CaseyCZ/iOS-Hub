@@ -260,7 +260,7 @@ export const INSTALLERS = Object.freeze({
     mixPackage: 'altstore',
     catalogPriority: 50,
     overflowPriority: 40,
-    icon: 'https://flarestore.app/favicon.ico',
+    icon: 'assets/icons/flarestore.svg',
     buildLink: url => `flarestore://source?url=${encodeURIComponent(url)}`
   },
   feather: {
