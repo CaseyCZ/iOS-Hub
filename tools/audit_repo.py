@@ -1185,6 +1185,12 @@ def validate_layout() -> None:
         builder_page_text = builder_page.read_text(encoding="utf-8")
         if 'id="mixDedupeHelp"' not in builder_page_text:
             error("builder.html must explain bundle-ID deduplication in the Mix UI")
+        for required_action_host in ('id="expAddTarget"', 'id="expAddSources"', 'id="expAddSourcesSummary"', 'id="expAddSourcesMenu"'):
+            if required_action_host not in builder_page_text:
+                error(
+                    "builder.html must keep installer-aware Add actions in the result UI; "
+                    f"missing {required_action_host!r}"
+                )
 
     builder_script = JS_DIR / "builder.js"
     if builder_script.exists():
@@ -1193,6 +1199,19 @@ def validate_layout() -> None:
             error("Builder single-source fallback must respect per-installer direct Source compatibility")
         if "!directSourceAvailable(id, target)" not in builder_text:
             error("Builder multi-source fallback must filter incompatible direct Source actions")
+        for required_action in (
+            "const addTarget = $('#expAddTarget')",
+            "const addSources = $('#expAddSources')",
+            "installer.buildLink(hosted.url)",
+            "addTarget.innerHTML = `${installerIcon(target)}",
+            "addSourcesSummary.innerHTML = `${installerIcon(target)}",
+            "addSourcesMenu.innerHTML = sourceActions.join('')",
+        ):
+            if required_action not in builder_text:
+                error(
+                    "Builder result must expose installer-aware Add actions before JSON-only fallbacks; "
+                    f"missing {required_action!r}"
+                )
         for forbidden in (
             "let target = 'altstore'",
             "savedTarget : 'altstore'",
