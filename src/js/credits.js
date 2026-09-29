@@ -326,7 +326,9 @@ async function loadCredits() {
         .sort((a, b) => String(a.name || '').localeCompare(String(b.name || '')))
         .forEach(source => {
           const url = source.website || source.url;
-          if (source.name && url) sourcesHost.appendChild(externalLink(source.name, url));
+          const developer = String(source.developer || '').trim();
+          const label = developer ? source.name + ' · ' + developer : source.name;
+          if (source.name && url) sourcesHost.appendChild(externalLink(label, url));
         });
 
       if (!sourcesHost.children.length) {
