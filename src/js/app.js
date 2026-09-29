@@ -159,7 +159,7 @@ function applyLanguage(value) {
   const select = $('#languageSelect');
   if (select) select.value = state.lang;
   document.title = state.lang === 'en'
-    ? 'iOS Hub — AltStore · SideStore · LiveContainer'
+    ? 'iOS Hub — iOS Sources · Sideloading'
     : `iOS Hub — ${tr('sources')} · ${tr('tools')}`;
   safeSet(STORAGE.language, state.lang);
   renderSources();
