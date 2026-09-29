@@ -1396,6 +1396,8 @@ def validate_layout() -> None:
             "const tabs = $('[data-guide-mode]')",
             "return $('.assistant-tried-options [data-tried-key]').find",
             "$('[data-guide-tool-scope]').forEach",
+            "$('[data-guide-tool-link]').forEach",
+            "$('[data-guide-tool-icon]').forEach",
             "return $('.trouble-item')",
         )
         for forbidden_selector in forbidden_single_collection_selectors:
