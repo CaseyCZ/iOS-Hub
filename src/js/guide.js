@@ -345,7 +345,7 @@ function updateToolScopeDisplay() {
     icon.src = selected?.icon || '';
   }
   if (allIcon) allIcon.hidden = Boolean(selected?.icon);
-  $('[data-guide-tool-scope]').forEach(option => {
+  $$('[data-guide-tool-scope]').forEach(option => {
     const active = (option.dataset.guideToolScope || '') === (selected?.id || '');
     option.classList.toggle('active', active);
     option.setAttribute('aria-selected', String(active));
@@ -434,14 +434,14 @@ function setToolScope(toolId, syncUrl = true) {
 }
 
 function hydrateGuideToolRegistryReferences() {
-  $('[data-guide-tool-link]').forEach(link => {
+  $$('[data-guide-tool-link]').forEach(link => {
     const toolId = link.dataset.guideToolLink || '';
     const purpose = link.dataset.guideToolPurpose || 'guide';
     const href = sideloadToolURL(toolId, purpose);
     if (href) link.href = href;
   });
 
-  $('[data-guide-tool-icon]').forEach(icon => {
+  $$('[data-guide-tool-icon]').forEach(icon => {
     const tool = sideloadTool(icon.dataset.guideToolIcon || '');
     if (!tool?.icon) return;
     icon.src = tool.icon;
