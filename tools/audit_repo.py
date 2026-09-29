@@ -850,7 +850,7 @@ def validate_layout() -> None:
     # Source-facing pages must stay registry-driven so adding one source updates
     # the catalog, Builder and Credits without maintaining duplicate hard-coded lists.
     dynamic_source_scripts = {
-        "app.js": ("sources/registry.json", "data/status.json", "data/catalog.json"),
+        "app.js": ("sources/registry.json", "data/status.json", "data/catalog.json", "sourceWebsiteIcon", "data-source-website-icon"),
         "builder.js": ("sources/registry.json", "data/status.json", "data/catalog.json"),
         "credits.js": ("sources/registry.json", "sourceCredits", "source.developer", "maintainerGroups", "sourceCreditGroup"),
     }
@@ -873,6 +873,33 @@ def validate_layout() -> None:
 
     resources_page = ROOT / "resources.html"
     credits_script = JS_DIR / "credits.js"
+
+    if resources_page.exists():
+        resources_text = resources_page.read_text(encoding="utf-8")
+        for match in re.finditer(r'<article class="panel resource-card">([\s\S]*?)</article>', resources_text):
+            card = match.group(1)
+            name_match = re.search(r'<h3[^>]*>([\s\S]*?)</h3>', card)
+            name = re.sub(r"<[^>]+>", "", name_match.group(1)).strip() if name_match else "unknown"
+            icon_match = re.search(r'<div class="resource-icon[^"]*">([\s\S]*?)</div>', card)
+            icon_html = icon_match.group(1) if icon_match else ""
+            if "<img" not in icon_html and "hotkeyz-app-icon" not in icon_html:
+                error(f"resources.html card {name!r} is missing a real icon")
+
+    if credits_page.exists():
+        credits_text = credits_page.read_text(encoding="utf-8")
+        core_start = credits_text.find('data-credit-copy="coreTitle"')
+        featured_start = credits_text.find('data-credit-copy="featuredTitle"')
+        if core_start >= 0 and featured_start > core_start:
+            core_block = credits_text[core_start:featured_start]
+            for match in re.finditer(r'<article class="panel resource-card">([\s\S]*?)</article>', core_block):
+                card = match.group(1)
+                name_match = re.search(r'<h3[^>]*>([\s\S]*?)</h3>', card)
+                name = re.sub(r"<[^>]+>", "", name_match.group(1)).strip() if name_match else "unknown"
+                icon_match = re.search(r'<div class="resource-icon[^"]*">([\s\S]*?)</div>', card)
+                icon_html = icon_match.group(1) if icon_match else ""
+                if "<img" not in icon_html:
+                    error(f"credits.html Core card {name!r} is missing a real icon")
+
     if resources_page.exists() and credits_script.exists():
         resources_text = resources_page.read_text(encoding="utf-8")
         credits_text = credits_script.read_text(encoding="utf-8")
