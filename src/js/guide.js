@@ -597,8 +597,14 @@ function getTroubleMatches(query) {
   return [...document.querySelectorAll('.trouble-item')]
     .filter(item => !selectedTroubleToolId || !item.dataset.tool || item.dataset.tool === selectedTroubleToolId)
     .map((item, index) => {
-      const haystack = [item.dataset.search || '', item.textContent || ''].join(' ').toLowerCase();
-      const baseScore = terms.reduce((sum, term) => sum + (troubleTermMatches(haystack, term) ? (/[0-9]/.test(term) ? 3 : 1) : 0), 0);
+      const searchHaystack = (item.dataset.search || '').toLowerCase();
+      const textHaystack = (item.textContent || '').toLowerCase();
+      const haystack = [searchHaystack, textHaystack].join(' ');
+      const baseScore = terms.reduce((sum, term) => {
+        if (troubleTermMatches(searchHaystack, term)) return sum + (/[0-9]/.test(term) ? 4 : 2);
+        if (troubleTermMatches(textHaystack, term)) return sum + (/[0-9]/.test(term) ? 3 : 1);
+        return sum;
+      }, 0);
       const toolBoost = preferredTool && item.dataset.tool === preferredTool.id ? 8 : 0;
       const competingToolPenalty = preferredTool && item.dataset.tool && item.dataset.tool !== preferredTool.id ? 0.75 : 0;
       const triedPenalty = triedTags.reduce((sum, tag) => sum + (haystack.includes(tag) ? 0.35 : 0), 0);
@@ -805,7 +811,7 @@ function resolvedTroubleQuery(raw) {
     return scopedTroubleQuery(q, certificateTerms.join(' '));
   }
   if (/livecontainer|jit|jitless|invalid.?signature|entitlement/.test(q)) return scopedTroubleQuery(q, 'livecontainer jit jitless invalid signature entitlements');
-  if (/refresh|expire|7.?day|renew/.test(q)) return scopedTroubleQuery(q, 'refresh');
+  if (/refresh|expire|expir|7.?day|7.?dn|renew|neobnov|obnovit|obnova/.test(q)) return scopedTroubleQuery(q, 'refresh');
   const selected = selectedTroubleshootingTool();
   const selectedTerm = normalizeTroubleToolText(selected?.label || selected?.id);
   return [selectedTerm, q].filter(Boolean).join(' ').trim();
