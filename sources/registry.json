@@ -49,7 +49,8 @@
         "emulator",
         "ipa",
         "utility"
-      ]
+      ],
+      "developer": "UTM Team"
     },
     {
       "id": "provenance",
@@ -70,7 +71,8 @@
         "games",
         "retro",
         "ipa"
-      ]
+      ],
+      "developer": "Provenance Team"
     },
     {
       "id": "ish",
@@ -91,7 +93,8 @@
         "terminal",
         "developer",
         "utility"
-      ]
+      ],
+      "developer": "iSH Team"
     },
     {
       "id": "flycast",
@@ -113,7 +116,8 @@
         "dreamcast",
         "retro",
         "ipa"
-      ]
+      ],
+      "developer": "Flycast Team"
     },
     {
       "id": "sidestore-community",
@@ -135,7 +139,8 @@
         "catalog",
         "apps",
         "games"
-      ]
+      ],
+      "developer": "SideStore Team"
     },
     {
       "id": "sidestore-official",
@@ -156,7 +161,8 @@
         "official",
         "utility",
         "signing"
-      ]
+      ],
+      "developer": "SideStore Team"
     },
     {
       "id": "stikdebug",
@@ -177,7 +183,8 @@
         "debug",
         "utility",
         "trusted"
-      ]
+      ],
+      "developer": "StikDebug"
     },
     {
       "id": "livecontainer",
@@ -199,7 +206,8 @@
         "sideload",
         "trusted",
         "official"
-      ]
+      ],
+      "developer": "LiveContainer Team"
     },
     {
       "id": "livecontainer-nightly",
@@ -221,7 +229,8 @@
         "sideload",
         "nightly",
         "official"
-      ]
+      ],
+      "developer": "LiveContainer Team"
     },
     {
       "id": "manicemu",
@@ -242,7 +251,8 @@
         "emulator",
         "retro",
         "trusted"
-      ]
+      ],
+      "developer": "Manic EMU"
     },
     {
       "id": "flycast-ios",
@@ -263,7 +273,8 @@
         "emulator",
         "dreamcast",
         "trusted"
-      ]
+      ],
+      "developer": "chachillie"
     },
     {
       "id": "geode-ios",
@@ -284,7 +295,8 @@
         "mods",
         "geometry-dash",
         "trusted"
-      ]
+      ],
+      "developer": "Geode Team"
     },
     {
       "id": "retrosekai",
@@ -305,7 +317,8 @@
         "retro",
         "community",
         "trusted"
-      ]
+      ],
+      "developer": "RetroSekaï"
     },
     {
       "id": "oatmealdome",
@@ -326,7 +339,8 @@
         "emulator",
         "dolphinios",
         "trusted"
-      ]
+      ],
+      "developer": "OatmealDome"
     },
     {
       "id": "crystall1ne",
@@ -346,7 +360,8 @@
         "apps",
         "utility",
         "trusted"
-      ]
+      ],
+      "developer": "crystall1ne"
     },
     {
       "id": "pokemmo",
@@ -367,7 +382,8 @@
         "pokemon",
         "mmo",
         "trusted"
-      ]
+      ],
+      "developer": "PokeMMO Team"
     },
     {
       "id": "odyssey",
@@ -387,7 +403,8 @@
         "utility",
         "ios",
         "trusted"
-      ]
+      ],
+      "developer": "Odyssey Team"
     },
     {
       "id": "yattee",
@@ -409,7 +426,8 @@
         "media",
         "privacy",
         "open-source"
-      ]
+      ],
+      "developer": "Yattee Team"
     },
     {
       "id": "ignited",
@@ -430,7 +448,8 @@
         "emulator",
         "retro",
         "trusted"
-      ]
+      ],
+      "developer": "litritt"
     },
     {
       "id": "mona",
@@ -449,7 +468,8 @@
       "tags": [
         "app",
         "trusted"
-      ]
+      ],
+      "developer": "delia-cheminot"
     },
     {
       "id": "vortx",
@@ -471,7 +491,8 @@
         "stremio",
         "media",
         "open-source"
-      ]
+      ],
+      "developer": "VortXTV"
     },
     {
       "id": "stremio-official-pal",
@@ -494,7 +515,8 @@
         "stremio",
         "media",
         "official"
-      ]
+      ],
+      "developer": "Stremio Team"
     },
     {
       "id": "stremio-ios",
@@ -517,7 +539,8 @@
         "media",
         "community",
         "ipa"
-      ]
+      ],
+      "developer": "gorlev"
     },
     {
       "id": "kodi-ios",
@@ -539,7 +562,8 @@
         "kodi",
         "ipa",
         "community"
-      ]
+      ],
+      "developer": "ohaiibuzzle"
     },
     {
       "id": "nineanimator",
@@ -560,7 +584,8 @@
         "anime",
         "streaming",
         "open-source"
-      ]
+      ],
+      "developer": "SuperMarcus"
     },
     {
       "id": "esound",
@@ -582,7 +607,8 @@
         "youtube",
         "pal",
         "official"
-      ]
+      ],
+      "developer": "eSound"
     },
     {
       "id": "partyknights",
@@ -601,7 +627,8 @@
       "tags": [
         "games",
         "official"
-      ]
+      ],
+      "developer": "Party Knights"
     },
     {
       "id": "bringyour",
@@ -621,7 +648,8 @@
         "network",
         "privacy",
         "utility"
-      ]
+      ],
+      "developer": "BringYour"
     },
     {
       "id": "itorrent",
@@ -642,7 +670,8 @@
         "utility",
         "open-source",
         "download"
-      ]
+      ],
+      "developer": "XITRIX"
     },
     {
       "id": "qbitconnect",
@@ -663,7 +692,8 @@
         "qbittorrent",
         "torrent",
         "utility"
-      ]
+      ],
+      "developer": "RajnishOne"
     },
     {
       "id": "artemis",
@@ -685,7 +715,8 @@
         "anime",
         "streaming",
         "open-source"
-      ]
+      ],
+      "developer": "Auties00"
     },
     {
       "id": "hackerwebapp",
@@ -705,7 +736,8 @@
         "pal",
         "news",
         "developer"
-      ]
+      ],
+      "developer": "Hacker Web App"
     },
     {
       "id": "courtpredict",
@@ -725,7 +757,8 @@
         "pal",
         "sports",
         "utility"
-      ]
+      ],
+      "developer": "CourtPredict"
     },
     {
       "id": "wayfarer",
@@ -745,7 +778,8 @@
         "games",
         "niantic",
         "community"
-      ]
+      ],
+      "developer": "lao.sb"
     },
     {
       "id": "qbitcontrol",
@@ -765,7 +799,8 @@
         "pal",
         "utility",
         "qbittorrent"
-      ]
+      ],
+      "developer": "Michael-128"
     },
     {
       "id": "iphanpy",
@@ -785,7 +820,8 @@
         "pal",
         "mastodon",
         "social"
-      ]
+      ],
+      "developer": "matfantinel"
     },
     {
       "id": "epic-games",
@@ -807,7 +843,8 @@
         "fortnite",
         "fall-guys",
         "official"
-      ]
+      ],
+      "developer": "Epic Games"
     },
     {
       "id": "xn1ckuz-sidebox",
@@ -835,7 +872,8 @@
         "instagram",
         "social",
         "video"
-      ]
+      ],
+      "developer": "xN1ckuz"
     },
     {
       "id": "dvntm0-workshop",
@@ -862,7 +900,8 @@
         "video",
         "social",
         "apps"
-      ]
+      ],
+      "developer": "dvntm0"
     },
     {
       "id": "wuxu-library-plus",
@@ -891,7 +930,8 @@
         "social",
         "tiktok",
         "instagram"
-      ]
+      ],
+      "developer": "WuXu1"
     },
     {
       "id": "baretsky-tweaked",
@@ -920,7 +960,8 @@
         "tiktok",
         "instagram",
         "twitch"
-      ]
+      ],
+      "developer": "baretsky"
     },
     {
       "id": "driftywinds",
@@ -949,7 +990,8 @@
         "social",
         "instagram",
         "twitter"
-      ]
+      ],
+      "developer": "driftywinds"
     },
     {
       "id": "ipa-vault",
@@ -976,7 +1018,8 @@
         "video",
         "music",
         "utility"
-      ]
+      ],
+      "developer": "927tx"
     },
     {
       "id": "sideloadlabs",
@@ -1000,7 +1043,8 @@
         "tweaks",
         "spotify",
         "music"
-      ]
+      ],
+      "developer": "SideloadLabs"
     },
     {
       "id": "ytliteplus",
@@ -1024,7 +1068,8 @@
         "tweaks",
         "youtube",
         "video"
-      ]
+      ],
+      "developer": "YTLitePlus"
     },
     {
       "id": "moe-altstore",
@@ -1052,7 +1097,8 @@
         "social",
         "reddit",
         "utility"
-      ]
+      ],
+      "developer": "MountainofPenguin"
     },
     {
       "id": "youmod-repo",
@@ -1076,7 +1122,8 @@
         "tweaks",
         "youtube",
         "video"
-      ]
+      ],
+      "developer": "MountainofPenguin"
     },
     {
       "id": "youproextra",
@@ -1101,7 +1148,8 @@
         "tweaks",
         "youtube",
         "video"
-      ]
+      ],
+      "developer": "mrdrvt99"
     },
     {
       "id": "owo-source",
@@ -1130,7 +1178,8 @@
         "video",
         "music",
         "utility"
-      ]
+      ],
+      "developer": "OwO Network"
     },
     {
       "id": "cypwn-ipa",
@@ -1162,7 +1211,8 @@
         "video",
         "music",
         "utility"
-      ]
+      ],
+      "developer": "CyPwn"
     },
     {
       "id": "apptesters",
@@ -1195,7 +1245,8 @@
         "video",
         "music",
         "utility"
-      ]
+      ],
+      "developer": "AppTesters"
     },
     {
       "id": "youtuberebornplus",
@@ -1219,7 +1270,8 @@
         "tweaks",
         "youtube",
         "video"
-      ]
+      ],
+      "developer": "arichornlover"
     },
     {
       "id": "apollo-reddit",
@@ -1243,7 +1295,8 @@
         "tweaks",
         "reddit",
         "social"
-      ]
+      ],
+      "developer": "Balackburn"
     },
     {
       "id": "discord-appstore-builds",
@@ -1266,7 +1319,8 @@
         "discord",
         "social",
         "sideload"
-      ]
+      ],
+      "developer": "AlfaActa"
     },
     {
       "id": "ytkace",
@@ -1292,7 +1346,8 @@
         "video",
         "sidestore",
         "livecontainer"
-      ]
+      ],
+      "developer": "xKatsumi"
     },
     {
       "id": "heyfordy",
@@ -1321,7 +1376,8 @@
         "video",
         "twitch",
         "utility"
-      ]
+      ],
+      "developer": "heyFordy"
     },
     {
       "id": "ipalibrary",
@@ -1354,7 +1410,8 @@
         "video",
         "music",
         "utility"
-      ]
+      ],
+      "developer": "2nkn0w"
     },
     {
       "id": "armsx2",
@@ -1378,7 +1435,8 @@
         "emulator",
         "playstation",
         "ps2"
-      ]
+      ],
+      "developer": "ARMSX2"
     },
     {
       "id": "fouad-source",
@@ -1405,7 +1463,8 @@
         "social",
         "regram",
         "watusi"
-      ]
+      ],
+      "developer": "FouadRaheb"
     },
     {
       "id": "neofreebird",
@@ -1431,7 +1490,8 @@
         "x",
         "social",
         "bhtwitter"
-      ]
+      ],
+      "developer": "orionblur"
     },
     {
       "id": "melonx",
@@ -1454,7 +1514,8 @@
         "jit",
         "trusted",
         "official"
-      ]
+      ],
+      "developer": "AzureDominus"
     },
     {
       "id": "altgallery",
@@ -1481,7 +1542,8 @@
         "altstore",
         "sidestore",
         "livecontainer"
-      ]
+      ],
+      "developer": "bebound"
     },
     {
       "id": "ripestore",
@@ -1504,7 +1566,8 @@
         "ipa",
         "altstore",
         "sidestore"
-      ]
+      ],
+      "developer": "RipeStore"
     },
     {
       "id": "feather",
@@ -1526,7 +1589,8 @@
         "installer",
         "open-source",
         "official"
-      ]
+      ],
+      "developer": "claration"
     },
     {
       "id": "quantum-source",
@@ -1550,7 +1614,8 @@
         "utility",
         "apps",
         "altstore"
-      ]
+      ],
+      "developer": "QuarkSources"
     },
     {
       "id": "spotc",
@@ -1573,7 +1638,8 @@
         "spotify",
         "community",
         "altstore"
-      ]
+      ],
+      "developer": "SpotCompiled"
     },
     {
       "id": "foxster-altsource",
@@ -1596,7 +1662,8 @@
         "community",
         "youtube",
         "altstore"
-      ]
+      ],
+      "developer": "therealFoxster"
     },
     {
       "id": "fastsign",
@@ -1623,7 +1690,8 @@
       "catalogLimit": 50,
       "cachePayload": false,
       "autoPackage": false,
-      "builder": false
+      "builder": false,
+      "developer": "FastSign"
     },
     {
       "id": "quantum-plus",
@@ -1648,7 +1716,8 @@
         "apps",
         "streaming",
         "altstore"
-      ]
+      ],
+      "developer": "QuarkSources"
     },
     {
       "id": "wuxu-standard",
@@ -1670,7 +1739,8 @@
         "apps",
         "ipa",
         "altstore"
-      ]
+      ],
+      "developer": "WuXu1"
     },
     {
       "id": "taurine",
@@ -1690,7 +1760,8 @@
         "jailbreak",
         "legacy",
         "official"
-      ]
+      ],
+      "developer": "Taurine Team"
     },
     {
       "id": "burrito-source",
@@ -1711,7 +1782,8 @@
         "community",
         "apps",
         "altstore"
-      ]
+      ],
+      "developer": "Burrito Software"
     },
     {
       "id": "salupov-altrepo",
@@ -1732,7 +1804,8 @@
         "community",
         "apps",
         "altstore"
-      ]
+      ],
+      "developer": "Salupov Team"
     },
     {
       "id": "cercube",
