@@ -1203,6 +1203,7 @@ def validate_layout() -> None:
             "status?.sidestore?.sourceIDs",
             "new Set(['sidestore','livecontainer'])",
             'new Set(["sidestore","livecontainer"])',
+            "INSTALLERS[target]?.label || 'AltStore'",
         ):
             if forbidden in builder_text:
                 error(
