@@ -43,6 +43,45 @@ def fetch_json(url: str) -> tuple[dict, int]:
     return payload, status
 
 
+def source_variant_urls(source: dict) -> dict[str, str]:
+    """Return normalized Classic/PAL endpoints for a registry source."""
+    urls: dict[str, str] = {}
+    configured = source.get("urls")
+    if isinstance(configured, dict):
+        for variant in ("classic", "pal"):
+            value = configured.get(variant)
+            if isinstance(value, str) and value.strip():
+                urls[variant] = value.strip()
+
+    primary = str(source.get("url") or "").strip()
+    mode = str(source.get("mode") or "classic")
+    if primary:
+        if mode == "pal":
+            urls.setdefault("pal", primary)
+        else:
+            urls.setdefault("classic", primary)
+    return urls
+
+
+def source_variant_url(source: dict, variant: str) -> str:
+    return source_variant_urls(source).get(variant, "")
+
+
+def source_supports_installer(source: dict, installer: str) -> bool:
+    configured = source.get("installers")
+    if isinstance(configured, list):
+        return installer in configured
+
+    mode = str(source.get("mode") or "classic")
+    if installer == "altstore-pal":
+        return mode == "pal"
+    if mode == "pal":
+        return False
+    if mode == "sidestore":
+        return installer == "sidestore"
+    return installer in {"altstore", "sidestore", "livecontainer", "flarestore", "feather"}
+
+
 def parse_date(value: object) -> float:
     if not isinstance(value, str) or not value.strip():
         return 0.0
@@ -103,7 +142,7 @@ def has_classic_download(app: dict) -> bool:
     return False
 
 
-def assess_mix_compatibility(source: dict, payload: dict) -> tuple[str, str]:
+def assess_mix_compatibility(source: dict, payload: dict, variant: str | None = None) -> tuple[str, str]:
     apps = [app for app in payload.get("apps", []) if isinstance(app, dict)]
     if not apps:
         return "fail", "Source contains no application entries."
@@ -120,7 +159,7 @@ def assess_mix_compatibility(source: dict, payload: dict) -> tuple[str, str]:
     duplicate_bundles = len(bundles) - len(set(bundles))
 
     classic_downloads = sum(1 for app in apps if has_classic_download(app))
-    mode = source.get("mode") or "classic"
+    mode = "classic" if variant == "classic" else (source.get("mode") or "classic")
 
     if mode == "classic" and duplicate_bundles:
         return "experimental", f"{duplicate_bundles} app entries share a bundle identifier; a Mix would collapse variants to one app."
@@ -136,8 +175,10 @@ def assess_mix_compatibility(source: dict, payload: dict) -> tuple[str, str]:
 
 
 def is_sidestore_compatible(source: dict, payload: dict) -> bool:
-    """Conservative SideStore pool: AltSource-compatible direct IPA entries only."""
-    if (source.get("mode") or "classic") not in {"classic", "sidestore"}:
+    """Conservative SideStore pool: Classic AltSource-compatible direct IPA entries only."""
+    if not source_supports_installer(source, "sidestore"):
+        return False
+    if not source_variant_url(source, "classic"):
         return False
     apps = [app for app in payload.get("apps", []) if isinstance(app, dict)]
     if not apps:
@@ -233,7 +274,7 @@ def make_mix(selected: list[tuple[dict, dict]], filename: str, identifier_suffix
         "apps": apps,
         "userInfo": {
             "sourceIDs": [meta["id"] for meta, _ in selected],
-            "sourceURLs": [meta["url"] for meta, _ in selected],
+            "sourceURLs": [source_variant_url(meta, "classic") or meta["url"] for meta, _ in selected],
         },
     }, conflicts
 
@@ -259,7 +300,7 @@ def make_store_source(selected: list[tuple[dict, dict]], store: str) -> tuple[di
         "userInfo": {
             "generatedBy": "iOS Hub",
             "sourceIDs": [meta["id"] for meta, _ in selected],
-            "sourceURLs": [meta["url"] for meta, _ in selected],
+            "sourceURLs": [source_variant_url(meta, "classic") or meta["url"] for meta, _ in selected],
         },
     }, conflicts
 
@@ -278,6 +319,8 @@ def main() -> None:
     status = {"generatedAt": generated_at, "sources": {}}
     catalog = {"generatedAt": generated_at, "sources": []}
     loaded: dict[str, tuple[dict, dict]] = {}
+    loaded_classic: dict[str, tuple[dict, dict]] = {}
+    loaded_pal: dict[str, tuple[dict, dict]] = {}
 
     for source in sources:
         source_id = source["id"]
@@ -290,23 +333,71 @@ def main() -> None:
             "error": None,
             "mixTest": "fail",
             "mixReason": "Source has not passed the latest check.",
+            "variants": {},
         }
-        try:
-            payload, http_status = fetch_json(source["url"])
+
+        variant_payloads: dict[str, dict] = {}
+        variant_urls = source_variant_urls(source)
+        for variant, variant_url in variant_urls.items():
+            variant_result = {
+                "online": False,
+                "httpStatus": None,
+                "appCount": None,
+                "error": None,
+            }
+            try:
+                payload, http_status = fetch_json(variant_url)
+                apps = [app for app in payload.get("apps", []) if isinstance(app, dict)]
+                variant_payloads[variant] = payload
+                variant_result.update({
+                    "online": True,
+                    "httpStatus": http_status,
+                    "appCount": len(apps),
+                    "error": None,
+                })
+            except (urllib.error.URLError, urllib.error.HTTPError, TimeoutError, ValueError, json.JSONDecodeError, UnicodeDecodeError) as exc:
+                variant_result["error"] = f"{type(exc).__name__}: {exc}"[:300]
+            except Exception as exc:
+                variant_result["error"] = f"{type(exc).__name__}: {exc}"[:300]
+            result["variants"][variant] = variant_result
+
+        if "classic" in variant_payloads:
+            loaded_classic[source_id] = (source, variant_payloads["classic"])
+        if "pal" in variant_payloads:
+            loaded_pal[source_id] = (source, variant_payloads["pal"])
+
+        preferred_variant = (
+            "classic" if "classic" in variant_payloads
+            else "pal" if "pal" in variant_payloads
+            else next(iter(variant_payloads), None)
+        )
+
+        if preferred_variant is not None:
+            payload = variant_payloads[preferred_variant]
             apps = [app for app in payload.get("apps", []) if isinstance(app, dict)]
-            mix_test, mix_reason = assess_mix_compatibility(source, payload)
+            variant_result = result["variants"][preferred_variant]
+            assessment_variant = "classic" if "classic" in variant_payloads else preferred_variant
+            assessment_payload = variant_payloads.get(assessment_variant, payload)
+            mix_test, mix_reason = assess_mix_compatibility(
+                source,
+                assessment_payload,
+                variant=assessment_variant,
+            )
             result.update({
                 "online": True,
-                "httpStatus": http_status,
+                "httpStatus": variant_result.get("httpStatus"),
                 "appCount": len(apps),
                 "iconURL": payload.get("iconURL") or (apps[0].get("iconURL") if apps else "") or "",
                 "error": None,
                 "mixTest": mix_test,
                 "mixReason": mix_reason,
+                "preferredVariant": preferred_variant,
             })
             loaded[source_id] = (source, payload)
+
             if source.get("cachePayload", True):
-                write_json(SOURCE_CACHE_DIR / f"{source_id}.json", payload)
+                cache_payload = variant_payloads.get("classic", payload)
+                write_json(SOURCE_CACHE_DIR / f"{source_id}.json", cache_payload)
 
             catalog_limit = source.get("catalogLimit")
             catalog_apps = apps
@@ -319,12 +410,17 @@ def main() -> None:
                 "appCount": len(apps),
                 "catalogLimited": len(catalog_apps) < len(apps),
                 "iconURL": result["iconURL"],
+                "variants": sorted(variant_payloads),
                 "apps": [app_summary(app) for app in catalog_apps],
             })
-        except (urllib.error.URLError, urllib.error.HTTPError, TimeoutError, ValueError, json.JSONDecodeError, UnicodeDecodeError) as exc:
-            result["error"] = f"{type(exc).__name__}: {exc}"[:300]
-        except Exception as exc:
-            result["error"] = f"{type(exc).__name__}: {exc}"[:300]
+        else:
+            errors = [
+                f"{variant}: {item.get('error')}"
+                for variant, item in result["variants"].items()
+                if item.get("error")
+            ]
+            result["error"] = "; ".join(errors)[:300] if errors else "No source variant URL is configured."
+
         status["sources"][source_id] = result
 
     unique_app_keys: set[str] = set()
@@ -353,13 +449,12 @@ def main() -> None:
 
     mergeable_ids = sorted(
         source["id"] for source in sources
-        if source.get("mergeable") and source.get("mode") == "classic" and source["id"] in loaded
+        if source.get("mergeable") and source["id"] in loaded_classic
     )
 
     auto_compatible_ids = sorted(
-        source_id for source_id, (source, _payload) in loaded.items()
+        source_id for source_id, (source, _payload) in loaded_classic.items()
         if status["sources"][source_id]["mixTest"] == "pass"
-        and source.get("mode") == "classic"
         and source.get("autoPackage", True)
     )
     experimental_ids = sorted(
@@ -372,7 +467,7 @@ def main() -> None:
         if is_default_package_source(loaded[source_id][0])
     )
     sidestore_compatible_ids = sorted(
-        source_id for source_id, (source, payload) in loaded.items()
+        source_id for source_id, (source, payload) in loaded_classic.items()
         if is_sidestore_compatible(source, payload)
         and source_id != "sidestore-official"
         and source.get("autoPackage", True)
@@ -389,7 +484,7 @@ def main() -> None:
             slug = "--".join(combo)
             filename = f"{slug}.json"
             expected_mix_files.add(filename)
-            selected = [loaded[source_id] for source_id in combo]
+            selected = [loaded_classic[source_id] for source_id in combo]
             digest = hashlib.sha1(slug.encode("utf-8")).hexdigest()[:12]
             mix, conflicts = make_mix(selected, filename, digest)
             write_json(MIX_DIR / filename, mix)
@@ -401,7 +496,7 @@ def main() -> None:
     if auto_compatible_ids:
         filename = "all-compatible.json"
         expected_mix_files.add(filename)
-        selected = [loaded[source_id] for source_id in auto_compatible_ids]
+        selected = [loaded_classic[source_id] for source_id in auto_compatible_ids]
         mix, conflicts = make_mix(selected, filename, "all-compatible")
         mix["name"] = "Mix · All compatible Classic sources"
         write_json(MIX_DIR / filename, mix)
@@ -417,7 +512,7 @@ def main() -> None:
     altstore_app_count = 0
     altstore_conflict_count = 0
     if altstore_package_ids:
-        altstore_selected = [loaded[source_id] for source_id in altstore_package_ids]
+        altstore_selected = [loaded_classic[source_id] for source_id in altstore_package_ids]
         altstore_source, altstore_conflicts = make_store_source(altstore_selected, "altstore")
         write_json(ALTSTORE_DIR / "source.json", altstore_source)
         altstore_url = f"{BASE_URL}altstore/source.json"
@@ -430,7 +525,7 @@ def main() -> None:
     sidestore_app_count = 0
     sidestore_conflict_count = 0
     if sidestore_compatible_ids:
-        sidestore_selected = [loaded[source_id] for source_id in sidestore_compatible_ids]
+        sidestore_selected = [loaded_classic[source_id] for source_id in sidestore_compatible_ids]
         sidestore_source, sidestore_conflicts = make_store_source(sidestore_selected, "sidestore")
         write_json(SIDESTORE_DIR / "source.json", sidestore_source)
         sidestore_url = f"{BASE_URL}sidestore/source.json"
