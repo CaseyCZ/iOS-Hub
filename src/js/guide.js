@@ -582,7 +582,7 @@ function troubleshootingToolForQuery(query) {
 }
 
 function scopedTroubleQuery(rawQuery, normalizedTerms) {
-  const tool = troubleshootingToolForQuery(rawQuery);
+  const tool = selectedTroubleshootingTool() || troubleshootingToolForQuery(rawQuery);
   const toolTerm = normalizeTroubleToolText(tool?.label || tool?.id);
   return [toolTerm, normalizedTerms].filter(Boolean).join(' ').trim();
 }
@@ -806,7 +806,9 @@ function resolvedTroubleQuery(raw) {
   }
   if (/livecontainer|jit|jitless|invalid.?signature|entitlement/.test(q)) return scopedTroubleQuery(q, 'livecontainer jit jitless invalid signature entitlements');
   if (/refresh|expire|7.?day|renew/.test(q)) return scopedTroubleQuery(q, 'refresh');
-  return q;
+  const selected = selectedTroubleshootingTool();
+  const selectedTerm = normalizeTroubleToolText(selected?.label || selected?.id);
+  return [selectedTerm, q].filter(Boolean).join(' ').trim();
 }
 
 function updateAssistantTroubleSummary() {
