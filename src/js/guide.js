@@ -427,6 +427,53 @@ function toggleToolScopePicker() {
   if (opening) requestAnimationFrame(() => menu.querySelector('[aria-selected="true"]')?.focus());
 }
 
+function handleToolScopeKeydown(event) {
+  const button = $('#guideToolScopeButton');
+  const menu = $('#guideToolScopeMenu');
+  if (!button || !menu) return;
+
+  const options = $('[data-guide-tool-scope]');
+  if (!options.length) return;
+
+  if (event.currentTarget === button) {
+    if (!['ArrowDown','ArrowUp','Home','End'].includes(event.key)) return;
+    event.preventDefault();
+    if (menu.hidden) {
+      menu.hidden = false;
+      button.setAttribute('aria-expanded', 'true');
+    }
+    const activeIndex = Math.max(0, options.findIndex(option => option.getAttribute('aria-selected') === 'true'));
+    const nextIndex = event.key === 'ArrowUp' || event.key === 'End'
+      ? options.length - 1
+      : event.key === 'Home'
+        ? 0
+        : activeIndex;
+    options[nextIndex]?.focus();
+    return;
+  }
+
+  const current = event.target.closest('[data-guide-tool-scope]');
+  if (!current) return;
+  const index = options.indexOf(current);
+  if (index < 0) return;
+
+  if (event.key === 'Escape') {
+    event.preventDefault();
+    closeToolScopePicker();
+    button.focus();
+    return;
+  }
+  if (!['ArrowDown','ArrowUp','Home','End'].includes(event.key)) return;
+
+  event.preventDefault();
+  let nextIndex = index;
+  if (event.key === 'Home') nextIndex = 0;
+  else if (event.key === 'End') nextIndex = options.length - 1;
+  else if (event.key === 'ArrowUp') nextIndex = (index - 1 + options.length) % options.length;
+  else nextIndex = (index + 1) % options.length;
+  options[nextIndex]?.focus();
+}
+
 function syncToolScopeDeepLink() {
   const url = new URL(window.location.href);
   if (selectedTroubleToolId) url.searchParams.set('tool', selectedTroubleToolId);
@@ -1328,6 +1375,8 @@ document.addEventListener('click', event => {
 });
 
 document.querySelector('.guide-mode-tabs')?.addEventListener('keydown', handleHelpTabKeydown);
+$('#guideToolScopeButton')?.addEventListener('keydown', handleToolScopeKeydown);
+$('#guideToolScopeMenu')?.addEventListener('keydown', handleToolScopeKeydown);
 
 $('#assistantTroubleSearch')?.addEventListener('input', () => {
   diagnosisState.dismissed.clear();
