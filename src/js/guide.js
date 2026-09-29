@@ -1,4 +1,5 @@
 import { SUPPORTED_LANGUAGES, applyTranslations, normalizeLanguage, t } from './i18n.js?v=1.1.5-20260918-fullaudit2';
+import { sideloadToolURL } from './installers.js?v=1.1.5-20260929-installers5';
 
 const root = document.documentElement;
 const $ = selector => document.querySelector(selector);
@@ -655,6 +656,19 @@ GUIDE_RECOMMENDATIONS.fr = {
   permanent:{title:'Vérifier d’abord la compatibilité TrollStore',text:'TrollStore ne peut installer des IPA de façon permanente que sur les versions iOS/iPadOS prises en charge. Ne supposez pas qu’une version plus récente est compatible.',steps:['Vérifier la version exacte d’iOS/iPadOS.','La comparer aux informations officielles TrollStore.','Utiliser une autre méthode de sideloading si elle n’est pas prise en charge.'],primary:'Ouvrir TrollStore ↗',url:'https://github.com/opa334/TrollStore'}
 };
 
+const GUIDE_RECOMMENDATION_TOOLS = Object.freeze({
+  iphone: Object.freeze({ primary: 'sidestore', secondary: 'sideinstaller' }),
+  many: Object.freeze({ primary: 'livecontainer' }),
+  desktop: Object.freeze({ primary: 'sideloadly' }),
+  tv: Object.freeze({ primary: 'sideloadly', secondary: 'atvloadly' }),
+  permanent: Object.freeze({ primary: 'trollstore' })
+});
+
+function recommendationToolURL(goal, slot, fallback) {
+  const toolId = GUIDE_RECOMMENDATION_TOOLS[goal]?.[slot];
+  return toolId ? (sideloadToolURL(toolId, 'guide') || fallback) : fallback;
+}
+
 function copyForLanguage() {
   return GUIDE_COPY[root.lang] || GUIDE_COPY.en;
 }
@@ -703,8 +717,16 @@ function renderRecommendation(goal) {
   $('#guideRecommendationTitle').textContent = rec.title;
   $('#guideRecommendationText').textContent = rec.text;
   $('#guideRecommendationSteps').innerHTML = rec.steps.map((step, index) => `<div><span>${index + 1}</span><p>${step}</p></div>`).join('');
-  setRecommendationLink($('#guideRecommendationPrimary'), rec.primary, rec.url);
-  setRecommendationLink($('#guideRecommendationSecondary'), rec.secondary, rec.secondaryUrl);
+  setRecommendationLink(
+    $('#guideRecommendationPrimary'),
+    rec.primary,
+    recommendationToolURL(goal, 'primary', rec.url)
+  );
+  setRecommendationLink(
+    $('#guideRecommendationSecondary'),
+    rec.secondary,
+    recommendationToolURL(goal, 'secondary', rec.secondaryUrl)
+  );
   box.hidden = false;
 }
 
