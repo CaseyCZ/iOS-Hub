@@ -1104,6 +1104,34 @@ def validate_layout() -> None:
                     f"{script_name} must use the central sideload tool registry; missing {required_part!r}"
                 )
 
+    guide_script = JS_DIR / "guide.js"
+    if guide_script.exists():
+        guide_text = guide_script.read_text(encoding="utf-8")
+        setup_start = guide_text.find("const SETUP_RESULTS = {")
+        setup_end = guide_text.find("const SETUP_RESULT_TOOLS", setup_start)
+        recommendation_start = guide_text.find("const GUIDE_RECOMMENDATIONS = {")
+        recommendation_end = guide_text.find("const GUIDE_RECOMMENDATION_TOOLS", recommendation_start)
+
+        for block_name, start, end in (
+            ("SETUP_RESULTS", setup_start, setup_end),
+            ("GUIDE_RECOMMENDATIONS", recommendation_start, recommendation_end),
+        ):
+            if start < 0 or end <= start:
+                error(f"guide.js is missing {block_name} boundaries for registry audit")
+                continue
+
+            block = guide_text[start:end]
+            for line in block.splitlines():
+                if "url:'https://" not in line and "secondaryUrl:'https://" not in line:
+                    continue
+                if block_name == "SETUP_RESULTS" and "pairingNeeded:{" in line:
+                    continue
+                error(
+                    f"guide.js {block_name} still contains a direct external tool URL; "
+                    "use SETUP_RESULT_TOOLS / GUIDE_RECOMMENDATION_TOOLS and installers.js instead"
+                )
+                break
+
     for page_name in ("resources.html", "credits.html"):
         page = ROOT / page_name
         if not page.exists():
