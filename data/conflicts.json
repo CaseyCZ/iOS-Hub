@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-29T12:56:21Z",
+  "generatedAt": "2026-09-29T22:17:46Z",
   "mixes": {
     "dvntm0-workshop--wuxu-library-plus": [
       {
@@ -4280,7 +4280,7 @@
         "bundleIdentifier": "com.armsx2.ios",
         "keptSource": "altgallery",
         "otherSource": "armsx2",
-        "keptVersion": "nightly-20260928"
+        "keptVersion": "nightly-20260929"
       },
       {
         "bundleIdentifier": "com.google.ios.youtube",
@@ -4415,6 +4415,12 @@
         "keptVersion": "12.30"
       },
       {
+        "bundleIdentifier": "com.google.ios.youtube",
+        "keptSource": "ipa-vault",
+        "otherSource": "altgallery",
+        "keptVersion": "21.39.4"
+      },
+      {
         "bundleIdentifier": "com.google.ios.youtubemusic",
         "keptSource": "ipa-vault",
         "otherSource": "driftywinds",
@@ -4470,7 +4476,7 @@
       },
       {
         "bundleIdentifier": "com.google.ios.youtube",
-        "keptSource": "altgallery",
+        "keptSource": "ipa-vault",
         "otherSource": "quantum-plus",
         "keptVersion": "21.39.4"
       },
@@ -4610,7 +4616,7 @@
         "bundleIdentifier": "com.burbn.instagram",
         "keptSource": "rocket",
         "otherSource": "driftywinds",
-        "keptVersion": "447.0.0"
+        "keptVersion": "448.0.0"
       },
       {
         "bundleIdentifier": "com.spotify.client",
@@ -4658,7 +4664,7 @@
         "bundleIdentifier": "com.burbn.instagram",
         "keptSource": "rocket",
         "otherSource": "wuxu-library-plus",
-        "keptVersion": "447.0.0"
+        "keptVersion": "448.0.0"
       },
       {
         "bundleIdentifier": "AlexisBarreyat.BeReal",
@@ -4686,7 +4692,7 @@
       },
       {
         "bundleIdentifier": "com.google.ios.youtube",
-        "keptSource": "altgallery",
+        "keptSource": "ipa-vault",
         "otherSource": "wuxu-library-plus",
         "keptVersion": "21.39.4"
       },
@@ -4758,8 +4764,8 @@
       },
       {
         "bundleIdentifier": "com.google.ios.youtube",
-        "keptSource": "xn1ckuz-sidebox",
-        "otherSource": "altgallery",
+        "keptSource": "ipa-vault",
+        "otherSource": "xn1ckuz-sidebox",
         "keptVersion": "21.39.4"
       },
       {
@@ -4772,7 +4778,7 @@
         "bundleIdentifier": "com.burbn.instagram",
         "keptSource": "rocket",
         "otherSource": "xn1ckuz-sidebox",
-        "keptVersion": "447.0.0"
+        "keptVersion": "448.0.0"
       },
       {
         "bundleIdentifier": "stream.yattee.app",
@@ -4782,25 +4788,25 @@
       },
       {
         "bundleIdentifier": "com.google.ios.youtube",
-        "keptSource": "xn1ckuz-sidebox",
+        "keptSource": "ipa-vault",
         "otherSource": "youmod-repo",
         "keptVersion": "21.39.4"
       },
       {
         "bundleIdentifier": "com.google.ios.youtube",
-        "keptSource": "xn1ckuz-sidebox",
+        "keptSource": "ipa-vault",
         "otherSource": "youtuberebornplus",
         "keptVersion": "21.39.4"
       },
       {
         "bundleIdentifier": "com.google.ios.youtube",
-        "keptSource": "xn1ckuz-sidebox",
+        "keptSource": "ipa-vault",
         "otherSource": "ytkace",
         "keptVersion": "21.39.4"
       },
       {
         "bundleIdentifier": "com.google.ios.youtube",
-        "keptSource": "xn1ckuz-sidebox",
+        "keptSource": "ipa-vault",
         "otherSource": "ytliteplus",
         "keptVersion": "21.39.4"
       }
@@ -4816,7 +4822,7 @@
         "bundleIdentifier": "com.armsx2.ios",
         "keptSource": "altgallery",
         "otherSource": "armsx2",
-        "keptVersion": "nightly-20260928"
+        "keptVersion": "nightly-20260929"
       },
       {
         "bundleIdentifier": "com.google.ios.youtube",
@@ -4951,6 +4957,12 @@
         "keptVersion": "12.30"
       },
       {
+        "bundleIdentifier": "com.google.ios.youtube",
+        "keptSource": "ipa-vault",
+        "otherSource": "altgallery",
+        "keptVersion": "21.39.4"
+      },
+      {
         "bundleIdentifier": "com.google.ios.youtubemusic",
         "keptSource": "ipa-vault",
         "otherSource": "driftywinds",
@@ -5000,7 +5012,7 @@
       },
       {
         "bundleIdentifier": "com.google.ios.youtube",
-        "keptSource": "altgallery",
+        "keptSource": "ipa-vault",
         "otherSource": "quantum-plus",
         "keptVersion": "21.39.4"
       },
@@ -5140,7 +5152,7 @@
         "bundleIdentifier": "com.burbn.instagram",
         "keptSource": "rocket",
         "otherSource": "driftywinds",
-        "keptVersion": "447.0.0"
+        "keptVersion": "448.0.0"
       },
       {
         "bundleIdentifier": "com.spotify.client",
@@ -5188,7 +5200,7 @@
         "bundleIdentifier": "com.burbn.instagram",
         "keptSource": "rocket",
         "otherSource": "wuxu-library-plus",
-        "keptVersion": "447.0.0"
+        "keptVersion": "448.0.0"
       },
       {
         "bundleIdentifier": "AlexisBarreyat.BeReal",
@@ -5216,7 +5228,7 @@
       },
       {
         "bundleIdentifier": "com.google.ios.youtube",
-        "keptSource": "altgallery",
+        "keptSource": "ipa-vault",
         "otherSource": "wuxu-library-plus",
         "keptVersion": "21.39.4"
       },
@@ -5288,8 +5300,8 @@
       },
       {
         "bundleIdentifier": "com.google.ios.youtube",
-        "keptSource": "xn1ckuz-sidebox",
-        "otherSource": "altgallery",
+        "keptSource": "ipa-vault",
+        "otherSource": "xn1ckuz-sidebox",
         "keptVersion": "21.39.4"
       },
       {
@@ -5302,7 +5314,7 @@
         "bundleIdentifier": "com.burbn.instagram",
         "keptSource": "rocket",
         "otherSource": "xn1ckuz-sidebox",
-        "keptVersion": "447.0.0"
+        "keptVersion": "448.0.0"
       },
       {
         "bundleIdentifier": "stream.yattee.app",
@@ -5312,25 +5324,25 @@
       },
       {
         "bundleIdentifier": "com.google.ios.youtube",
-        "keptSource": "xn1ckuz-sidebox",
+        "keptSource": "ipa-vault",
         "otherSource": "youmod-repo",
         "keptVersion": "21.39.4"
       },
       {
         "bundleIdentifier": "com.google.ios.youtube",
-        "keptSource": "xn1ckuz-sidebox",
+        "keptSource": "ipa-vault",
         "otherSource": "youtuberebornplus",
         "keptVersion": "21.39.4"
       },
       {
         "bundleIdentifier": "com.google.ios.youtube",
-        "keptSource": "xn1ckuz-sidebox",
+        "keptSource": "ipa-vault",
         "otherSource": "ytkace",
         "keptVersion": "21.39.4"
       },
       {
         "bundleIdentifier": "com.google.ios.youtube",
-        "keptSource": "xn1ckuz-sidebox",
+        "keptSource": "ipa-vault",
         "otherSource": "ytliteplus",
         "keptVersion": "21.39.4"
       }
@@ -5346,7 +5358,7 @@
         "bundleIdentifier": "com.armsx2.ios",
         "keptSource": "altgallery",
         "otherSource": "armsx2",
-        "keptVersion": "nightly-20260928"
+        "keptVersion": "nightly-20260929"
       },
       {
         "bundleIdentifier": "com.google.ios.youtube",
@@ -5481,6 +5493,12 @@
         "keptVersion": "12.30"
       },
       {
+        "bundleIdentifier": "com.google.ios.youtube",
+        "keptSource": "ipa-vault",
+        "otherSource": "altgallery",
+        "keptVersion": "21.39.4"
+      },
+      {
         "bundleIdentifier": "com.google.ios.youtubemusic",
         "keptSource": "ipa-vault",
         "otherSource": "driftywinds",
@@ -5530,7 +5548,7 @@
       },
       {
         "bundleIdentifier": "com.google.ios.youtube",
-        "keptSource": "altgallery",
+        "keptSource": "ipa-vault",
         "otherSource": "quantum-plus",
         "keptVersion": "21.39.4"
       },
@@ -5670,7 +5688,7 @@
         "bundleIdentifier": "com.burbn.instagram",
         "keptSource": "rocket",
         "otherSource": "driftywinds",
-        "keptVersion": "447.0.0"
+        "keptVersion": "448.0.0"
       },
       {
         "bundleIdentifier": "com.spotify.client",
@@ -5826,7 +5844,7 @@
         "bundleIdentifier": "com.burbn.instagram",
         "keptSource": "rocket",
         "otherSource": "wuxu-library-plus",
-        "keptVersion": "447.0.0"
+        "keptVersion": "448.0.0"
       },
       {
         "bundleIdentifier": "AlexisBarreyat.BeReal",
@@ -5854,7 +5872,7 @@
       },
       {
         "bundleIdentifier": "com.google.ios.youtube",
-        "keptSource": "altgallery",
+        "keptSource": "ipa-vault",
         "otherSource": "wuxu-library-plus",
         "keptVersion": "21.39.4"
       },
@@ -5926,8 +5944,8 @@
       },
       {
         "bundleIdentifier": "com.google.ios.youtube",
-        "keptSource": "xn1ckuz-sidebox",
-        "otherSource": "altgallery",
+        "keptSource": "ipa-vault",
+        "otherSource": "xn1ckuz-sidebox",
         "keptVersion": "21.39.4"
       },
       {
@@ -5940,7 +5958,7 @@
         "bundleIdentifier": "com.burbn.instagram",
         "keptSource": "rocket",
         "otherSource": "xn1ckuz-sidebox",
-        "keptVersion": "447.0.0"
+        "keptVersion": "448.0.0"
       },
       {
         "bundleIdentifier": "stream.yattee.app",
@@ -5950,25 +5968,25 @@
       },
       {
         "bundleIdentifier": "com.google.ios.youtube",
-        "keptSource": "xn1ckuz-sidebox",
+        "keptSource": "ipa-vault",
         "otherSource": "youmod-repo",
         "keptVersion": "21.39.4"
       },
       {
         "bundleIdentifier": "com.google.ios.youtube",
-        "keptSource": "xn1ckuz-sidebox",
+        "keptSource": "ipa-vault",
         "otherSource": "youtuberebornplus",
         "keptVersion": "21.39.4"
       },
       {
         "bundleIdentifier": "com.google.ios.youtube",
-        "keptSource": "xn1ckuz-sidebox",
+        "keptSource": "ipa-vault",
         "otherSource": "ytkace",
         "keptVersion": "21.39.4"
       },
       {
         "bundleIdentifier": "com.google.ios.youtube",
-        "keptSource": "xn1ckuz-sidebox",
+        "keptSource": "ipa-vault",
         "otherSource": "ytliteplus",
         "keptVersion": "21.39.4"
       }

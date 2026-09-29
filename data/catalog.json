@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-29T12:56:21Z",
+  "generatedAt": "2026-09-29T22:17:46Z",
   "sources": [
     {
       "id": "utm",
@@ -1689,12 +1689,12 @@
           "subtitle": "YouTube 21.33.6 with YTKACE 1.1.0"
         },
         {
-          "name": "YouTube (YTKACE 1.1.0) (Glass)",
-          "bundleIdentifier": "com.google.ios.youtube.ytkace.glass",
+          "name": "YouTube (YTKACE 1.1.1)",
+          "bundleIdentifier": "com.google.ios.youtube",
           "developerName": "itzzace0 & IPA Vault",
-          "version": "21.38.3",
+          "version": "21.39.4",
           "iconURL": "https://pub-dd800571175348b6a2745b3396360028.r2.dev/App%20Icons/YouTube-Icons/YouTube-AppStore-1024x1024.png",
-          "subtitle": "YouTube 21.38.3 with YTKACE 1.1.0 (Glass)"
+          "subtitle": "YouTube 21.39.4 with YTKACE 1.1.1"
         },
         {
           "name": "YouTube (YTPlus 6.0 b1) (iOS 16+)",
@@ -1815,7 +1815,7 @@
           "name": "MoeReddit",
           "bundleIdentifier": "com.reddit.Reddit",
           "developerName": "Moe Apps",
-          "version": "2026.38.0 (4.5)",
+          "version": "2026.39.0 (4.5)",
           "iconURL": "https://raw.githubusercontent.com/MountainofPenguin/moe-altstore/main/icons/moereddit.png",
           "subtitle": "Reddit client, MoeReddit build"
         },
@@ -2055,7 +2055,7 @@
           "name": "Twitch (Moe TwitchControl)",
           "bundleIdentifier": "tv.twitch",
           "developerName": "Moe Apps",
-          "version": "31.3.2 (0.0.6)",
+          "version": "31.4 (0.0.6)",
           "iconURL": "https://raw.githubusercontent.com/MountainofPenguin/moe-altstore/main/icons/twitch-twitchcontrol.png",
           "subtitle": "TwitchControl tweak build"
         },
@@ -2063,7 +2063,7 @@
           "name": "Twitch (Twitchv, Moe Tweach)",
           "bundleIdentifier": "tv.twitch",
           "developerName": "Moe Apps",
-          "version": "31.3.2 (2.4.1)",
+          "version": "31.4 (2.4.1)",
           "iconURL": "https://raw.githubusercontent.com/MountainofPenguin/moe-altstore/main/icons/twitchv-tweach.png",
           "subtitle": "Tweach tweak build"
         }
@@ -3387,10 +3387,18 @@
     {
       "id": "cypwn-ipa",
       "name": "CyPwn IPA Library",
-      "appCount": 209,
+      "appCount": 210,
       "catalogLimited": true,
       "iconURL": "https://repo.cypwn.xyz/assets/images/cypwn_small.png",
       "apps": [
+        {
+          "name": "Stremio-2.0.7",
+          "bundleIdentifier": "com.stremio.pal",
+          "developerName": "Stremio-2.0.7 x CyPwn",
+          "version": "2.0.7",
+          "iconURL": "https://ipa.cypwn.xyz/serve/icons/Stremio-2.0.7.png",
+          "subtitle": ""
+        },
         {
           "name": "Stremio-2.0.6",
           "bundleIdentifier": "com.stremio.pal",
@@ -4822,24 +4830,96 @@
           "version": "2.6",
           "iconURL": "https://ipa.cypwn.xyz/serve/icons/Star_Map_2.6_Satella.png",
           "subtitle": ""
-        },
-        {
-          "name": "RefacePro_3.12.0",
-          "bundleIdentifier": "cypwn.RefacePro_3.12.0.3.12.0",
-          "developerName": "RefacePro_3.12.0 x CyPwn",
-          "version": "3.12.0",
-          "iconURL": "https://ipa.cypwn.xyz/serve/icons/RefacePro_3.12.0.png",
-          "subtitle": ""
         }
       ]
     },
     {
       "id": "apptesters",
       "name": "AppTesters IPA Repo",
-      "appCount": 9390,
+      "appCount": 9400,
       "catalogLimited": true,
       "iconURL": "https://apptesters.org/apptesters-512x512.png",
       "apps": [
+        {
+          "name": "Foodie",
+          "bundleIdentifier": "com.linecorp.Foodie",
+          "developerName": "",
+          "version": "8.3.2",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.linecorp.Foodie.png",
+          "subtitle": ""
+        },
+        {
+          "name": "MyFitnessPal",
+          "bundleIdentifier": "com.myfitnesspal.mfp",
+          "developerName": "",
+          "version": "26.39.0",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.myfitnesspal.mfp.png",
+          "subtitle": ""
+        },
+        {
+          "name": "AdobeFresco",
+          "bundleIdentifier": "com.adobe.fresco.ios",
+          "developerName": "",
+          "version": "7.8.0",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.adobe.fresco.ios.png",
+          "subtitle": ""
+        },
+        {
+          "name": "LUTStudio",
+          "bundleIdentifier": "com.solveit.lut-studio",
+          "developerName": "",
+          "version": "4.0.7",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.solveit.lut-studio.png",
+          "subtitle": ""
+        },
+        {
+          "name": "GrowMe",
+          "bundleIdentifier": "com.book.summaries.reading",
+          "developerName": "",
+          "version": "1.4.0",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.book.summaries.reading.png",
+          "subtitle": ""
+        },
+        {
+          "name": "RiseSleep",
+          "bundleIdentifier": "com.risesci.nyx",
+          "developerName": "",
+          "version": "0.1.633",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.risesci.nyx.png",
+          "subtitle": ""
+        },
+        {
+          "name": "Dehancer",
+          "bundleIdentifier": "com.dehancer.film.ios-app",
+          "developerName": "",
+          "version": "7.1",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.dehancer.film.ios-app.png",
+          "subtitle": ""
+        },
+        {
+          "name": "Athlytic",
+          "bundleIdentifier": "myndarc.newFitnessApp",
+          "developerName": "",
+          "version": "27.0.2",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/myndarc.newFitnessApp.png",
+          "subtitle": ""
+        },
+        {
+          "name": "Yazio",
+          "bundleIdentifier": "com.yazio.ios.YAZIO",
+          "developerName": "",
+          "version": "26.39.2",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.yazio.ios.YAZIO.png",
+          "subtitle": ""
+        },
+        {
+          "name": "Captions",
+          "bundleIdentifier": "boomer.Smart-Video",
+          "developerName": "",
+          "version": "13.36.1",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/boomer.Smart-Video.png",
+          "subtitle": ""
+        },
         {
           "name": "Wallpapers",
           "bundleIdentifier": "com.apalonapps.wallpaperspys",
@@ -6358,86 +6438,6 @@
           "developerName": "",
           "version": "1.5.2",
           "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.frameoneapps.Crsel.png",
-          "subtitle": ""
-        },
-        {
-          "name": "Mockup",
-          "bundleIdentifier": "com.hasankassem.mockup",
-          "developerName": "",
-          "version": "4.4.2",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.hasankassem.mockup.png",
-          "subtitle": ""
-        },
-        {
-          "name": "Tripsy",
-          "bundleIdentifier": "app.tripsy.ios",
-          "developerName": "",
-          "version": "3.10.2",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/app.tripsy.ios.png",
-          "subtitle": ""
-        },
-        {
-          "name": "SkyGuide",
-          "bundleIdentifier": "com.fifthstarlabs.skyguide",
-          "developerName": "",
-          "version": "13.0.1",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.fifthstarlabs.skyguide.png",
-          "subtitle": ""
-        },
-        {
-          "name": "DaVinci",
-          "bundleIdentifier": "com.hubx.imagination",
-          "developerName": "",
-          "version": "5.0.8",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.hubx.imagination.png",
-          "subtitle": ""
-        },
-        {
-          "name": "Crsel",
-          "bundleIdentifier": "com.frameoneapps.Crsel",
-          "developerName": "",
-          "version": "1.5.1",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.frameoneapps.Crsel.png",
-          "subtitle": ""
-        },
-        {
-          "name": "Thenx",
-          "bundleIdentifier": "com.calisthenics.thenx",
-          "developerName": "",
-          "version": "6.7.9",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.calisthenics.thenx.png",
-          "subtitle": ""
-        },
-        {
-          "name": "Peachy",
-          "bundleIdentifier": "com.camerasideas.Peachy",
-          "developerName": "",
-          "version": "2.16.0",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.camerasideas.Peachy.png",
-          "subtitle": ""
-        },
-        {
-          "name": "PREQUEL",
-          "bundleIdentifier": "com.aiarlabs.prequel",
-          "developerName": "",
-          "version": "2.100.2",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.aiarlabs.prequel.png",
-          "subtitle": ""
-        },
-        {
-          "name": "VlogNow",
-          "bundleIdentifier": "com.frontrow.vlog",
-          "developerName": "",
-          "version": "2.20.0",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.frontrow.vlog.png",
-          "subtitle": ""
-        },
-        {
-          "name": "ProCCD",
-          "bundleIdentifier": "com.yengshine.proccd",
-          "developerName": "",
-          "version": "6.8.1",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.yengshine.proccd.png",
           "subtitle": ""
         }
       ]
@@ -8367,7 +8367,7 @@
           "name": "ARMSX2",
           "bundleIdentifier": "com.armsx2.ios",
           "developerName": "ARMSX2",
-          "version": "nightly-20260928",
+          "version": "nightly-20260929",
           "iconURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/ARMSX2/icon.png",
           "subtitle": "PlayStation 2 emulator for ARM64"
         },
@@ -8607,7 +8607,7 @@
           "name": "VeneraNext",
           "bundleIdentifier": "com.github.cyrilpeng.veneranext",
           "developerName": "CyrilPeng",
-          "version": "1.16.0",
+          "version": "1.17.0",
           "iconURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/Venera-Next/icon.png",
           "subtitle": "跨平台漫画阅读器"
         },
@@ -10124,7 +10124,7 @@
           "name": "Rocket for Instagram",
           "bundleIdentifier": "com.burbn.instagram",
           "developerName": "Rocket",
-          "version": "447.0.0",
+          "version": "448.0.0",
           "iconURL": "https://cdn.getrocketapp.io/assets/icon.png",
           "subtitle": "All-in-one tweak for Instagram"
         }
@@ -10148,5 +10148,5 @@
       ]
     }
   ],
-  "uniqueAppCount": 4541
+  "uniqueAppCount": 4540
 }
