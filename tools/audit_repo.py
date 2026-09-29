@@ -367,6 +367,11 @@ def validate_registry() -> None:
         )
 
         installers = source.get("installers")
+        if classic_url and pal_url and installers is None:
+            error(
+                f"registry source {source_id or index!r} exposes both Classic and PAL URLs "
+                "and must declare installers explicitly"
+            )
         if installers is not None:
             if not isinstance(installers, list) or not installers:
                 error(f"registry source {source_id or index!r} installers must be a non-empty array")
