@@ -1262,7 +1262,7 @@ def validate_layout() -> None:
     registry_driven_tool_scripts = {
         "resources.js": ("SIDELOAD_TOOLS", "resourceBadgeSpecs", "resourceSideloadTools", "resourceDescriptionKey", "sideloadToolURL", "buildResourceSideloadCard", "renderSideloadResourceCards", "sideloadResourceGrid", "hydrateSideloadToolCards", "renderSideloadToolBadges", "dataset.toolType", "dataset.capabilities", "dataset.targets", "dataset.hostPlatforms", "dataset.computerMode", "dataset.sourceSupport", "dataset.openSource", "dataset.resourceBadges"),
         "credits.js": ("SIDELOAD_TOOLS", "CORE_SIDELOAD_RESOURCE_NAMES", "creditSideloadTools", "creditDescriptionKey", "creditBadge", "creditLinkKey", "sideloadToolURL", "buildSideloadCreditCard", "renderSideloadCreditCards", "sideloadCreditGrid", "hydrateSideloadCreditCards", "dataset.toolType", "dataset.capabilities", "dataset.targets", "dataset.hostPlatforms", "dataset.computerMode", "dataset.sourceSupport", "dataset.openSource", "dataset.resourceBadges"),
-        "guide.js": ("sideloadToolForRole", "sideloadToolURL", "troubleshootingSideloadTools", "renderOfficialToolReferences", "officialHelpSources", "guideOfficialLinks", "troubleTermMatches", "troubleshootingToolForQuery", "scopedTroubleQuery", "toolBoost", "$('.trouble-item')", "GUIDE_RECOMMENDATION_ROUTES", "recommendationToolURL", "SETUP_RESULT_ROUTES", "setupResultToolURL", "routeToolURL"),
+        "guide.js": ("sideloadToolForRole", "sideloadToolURL", "troubleshootingSideloadTools", "renderOfficialToolReferences", "officialHelpSources", "guideOfficialLinks", "troubleTermMatches", "troubleshootingToolForQuery", "scopedTroubleQuery", "toolBoost", "document.querySelectorAll('.trouble-item')", "document.querySelectorAll('[data-guide-mode]')", "document.querySelectorAll('.assistant-tried-options [data-tried-key]')", "GUIDE_RECOMMENDATION_ROUTES", "recommendationToolURL", "SETUP_RESULT_ROUTES", "setupResultToolURL", "routeToolURL"),
     }
     for script_name, required_parts in registry_driven_tool_scripts.items():
         script = JS_DIR / script_name
@@ -1329,8 +1329,17 @@ def validate_layout() -> None:
     guide_script = JS_DIR / "guide.js"
     if guide_script.exists():
         guide_text = guide_script.read_text(encoding="utf-8")
-        if "return $('.trouble-item')" in guide_text:
-            error("guide.js must use querySelectorAll helper $ for troubleshooting lists, not single-element $")
+        forbidden_single_collection_selectors = (
+            "const tabs = $('[data-guide-mode]')",
+            "return $('.assistant-tried-options [data-tried-key]').find",
+            "return $('.trouble-item')",
+        )
+        for forbidden_selector in forbidden_single_collection_selectors:
+            if forbidden_selector in guide_text:
+                error(
+                    "guide.js uses a single-element selector where a collection is required; "
+                    f"found {forbidden_selector!r}"
+                )
         setup_start = guide_text.find("const SETUP_RESULTS = {")
         setup_end = guide_text.find("const SETUP_RESULT_ROUTES", setup_start)
         recommendation_start = guide_text.find("const GUIDE_RECOMMENDATIONS = {")
