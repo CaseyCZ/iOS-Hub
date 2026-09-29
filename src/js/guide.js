@@ -432,7 +432,7 @@ function handleToolScopeKeydown(event) {
   const menu = $('#guideToolScopeMenu');
   if (!button || !menu) return;
 
-  const options = $('[data-guide-tool-scope]');
+  const options = $$('[data-guide-tool-scope]');
   if (!options.length) return;
 
   if (event.currentTarget === button) {
