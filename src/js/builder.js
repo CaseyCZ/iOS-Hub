@@ -333,14 +333,15 @@ function dedupe(payloads) {
   for (const {source,payload} of payloads) {
     for (const app of (Array.isArray(payload.apps) ? payload.apps : [])) {
       if (!app || typeof app !== 'object') continue;
-      const bundle = app.bundleIdentifier || app.bundleID;
+      const bundle = String(app.bundleIdentifier || app.bundleID || '').trim();
       if (!bundle) continue;
-      if (!merged.has(bundle)) {
-        merged.set(bundle, {source,app});
+      const bundleKey = bundle.toLowerCase();
+      if (!merged.has(bundleKey)) {
+        merged.set(bundleKey, {source,app});
       } else {
         conflicts += 1;
-        const old = merged.get(bundle);
-        if (appDate(app) > appDate(old.app)) merged.set(bundle, {source,app});
+        const old = merged.get(bundleKey);
+        if (appDate(app) > appDate(old.app)) merged.set(bundleKey, {source,app});
       }
     }
   }
