@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-29T19:46:09Z",
+  "generatedAt": "2026-09-29T20:08:10Z",
   "sources": [
     {
       "id": "utm",
@@ -4983,13 +4983,21 @@
     {
       "id": "apptesters",
       "name": "AppTesters IPA Repo",
-      "appCount": 9397,
+      "appCount": 9398,
       "catalogLimited": true,
       "iconURL": "https://apptesters.org/apptesters-512x512.png",
       "variants": [
         "classic"
       ],
       "apps": [
+        {
+          "name": "AdobeFresco",
+          "bundleIdentifier": "com.adobe.fresco.ios",
+          "developerName": "",
+          "version": "7.8.0",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.adobe.fresco.ios.png",
+          "subtitle": ""
+        },
         {
           "name": "LUTStudio",
           "bundleIdentifier": "com.solveit.lut-studio",
@@ -6580,14 +6588,6 @@
           "developerName": "",
           "version": "3.10.2",
           "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/app.tripsy.ios.png",
-          "subtitle": ""
-        },
-        {
-          "name": "SkyGuide",
-          "bundleIdentifier": "com.fifthstarlabs.skyguide",
-          "developerName": "",
-          "version": "13.0.1",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.fifthstarlabs.skyguide.png",
           "subtitle": ""
         }
       ]
