@@ -8,7 +8,7 @@ import {
   sourceVariantURL,
   sourceVariantLabel,
   sourceModeLabel
-} from './installers.js?v=1.1.5-20260929-installers9';
+} from './installers.js?v=1.1.5-20260929-installers10';
 
 const root = document.documentElement;
 const $ = (selector, scope = document) => scope.querySelector(selector);
