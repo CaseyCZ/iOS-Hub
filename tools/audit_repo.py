@@ -1275,7 +1275,7 @@ def validate_layout() -> None:
     registry_driven_tool_scripts = {
         "resources.js": ("SIDELOAD_TOOLS", "resourceBadgeSpecs", "resourceSideloadTools", "resourceDescriptionKey", "sideloadToolURL", "buildResourceSideloadCard", "renderSideloadResourceCards", "sideloadResourceGrid", "hydrateSideloadToolCards", "renderSideloadToolBadges", "dataset.toolType", "dataset.capabilities", "dataset.targets", "dataset.hostPlatforms", "dataset.computerMode", "dataset.sourceSupport", "dataset.openSource", "dataset.resourceBadges"),
         "credits.js": ("SIDELOAD_TOOLS", "CORE_SIDELOAD_RESOURCE_NAMES", "creditSideloadTools", "creditDescriptionKey", "creditBadge", "creditLinkKey", "sideloadToolURL", "buildSideloadCreditCard", "renderSideloadCreditCards", "sideloadCreditGrid", "hydrateSideloadCreditCards", "dataset.toolType", "dataset.capabilities", "dataset.targets", "dataset.hostPlatforms", "dataset.computerMode", "dataset.sourceSupport", "dataset.openSource", "dataset.resourceBadges"),
-        "guide.js": ("sideloadToolForRole", "sideloadToolURL", "troubleshootingSideloadTools", "renderOfficialToolReferences", "officialHelpSources", "guideOfficialLinks", "troubleTermMatches", "troubleshootingToolForQuery", "scopedTroubleQuery", "toolBoost", "document.querySelectorAll('.trouble-item')", "document.querySelectorAll('[data-guide-mode]')", "document.querySelectorAll('.assistant-tried-options [data-tried-key]')", "GUIDE_RECOMMENDATION_ROUTES", "recommendationToolURL", "SETUP_RESULT_ROUTES", "setupResultToolURL", "routeToolURL"),
+        "guide.js": ("sideloadToolForRole", "sideloadToolURL", "troubleshootingSideloadTools", "renderOfficialToolReferences", "officialHelpSources", "guideOfficialLinks", "selectedTroubleToolId", "renderToolScopePicker", "setToolScope", "data-guide-tool-scope", "url.searchParams.set('tool'", "troubleTermMatches", "troubleshootingToolForQuery", "scopedTroubleQuery", "toolBoost", "document.querySelectorAll('.trouble-item')", "document.querySelectorAll('[data-guide-mode]')", "document.querySelectorAll('.assistant-tried-options [data-tried-key]')", "GUIDE_RECOMMENDATION_ROUTES", "recommendationToolURL", "SETUP_RESULT_ROUTES", "setupResultToolURL", "routeToolURL"),
     }
     for script_name, required_parts in registry_driven_tool_scripts.items():
         script = JS_DIR / script_name
@@ -1291,9 +1291,11 @@ def validate_layout() -> None:
     guide_page = ROOT / "guide.html"
     if guide_page.exists():
         guide_page_text = guide_page.read_text(encoding="utf-8")
-        for required_host in ('id="officialHelpSources"', 'id="guideOfficialLinks"'):
+        for required_host in ('id="officialHelpSources"', 'id="guideOfficialLinks"', 'id="guideToolScope"', 'id="guideToolScopeButton"', 'id="guideToolScopeMenu"'):
             if required_host not in guide_page_text:
                 error(f"guide.html is missing registry-driven official reference host {required_host!r}")
+        if 'data-guide-tool-scope=' in guide_page_text:
+            error("guide.html must keep installer focus options registry-driven; do not hard-code installer choices in HTML")
 
         trouble_search_values = re.findall(r'<details\b[^>]*data-search="([^"]+)"', guide_page_text)
         trouble_search_text = " ".join(trouble_search_values).lower()
