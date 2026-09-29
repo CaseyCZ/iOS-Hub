@@ -351,7 +351,7 @@ function scopedTroubleshootingTools() {
 }
 
 function updateTroubleScopeControls() {
-  $('[data-assistant-tool], [data-trouble-tool]').forEach(button => {
+  $$('[data-assistant-tool], [data-trouble-tool]').forEach(button => {
     const toolId = button.dataset.assistantTool || button.dataset.troubleTool || '';
     const hidden = Boolean(selectedTroubleToolId && toolId && toolId !== selectedTroubleToolId);
     button.hidden = hidden;
