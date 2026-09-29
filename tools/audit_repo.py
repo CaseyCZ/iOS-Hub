@@ -1088,6 +1088,7 @@ def validate_layout() -> None:
             "lcSideStore",
             "download",
             "requirements",
+            "troubleshootingSideloadTools",
             "sideinstaller",
             "sideloadly",
             "atvloadly",
@@ -1134,6 +1135,7 @@ def validate_layout() -> None:
             "creditDescriptionKey:",
             "creditBadge:",
             "creditLinkKey:",
+            "troubleshooting:",
         ):
             field_count = tool_definitions_text.count(field)
             if field_count != tool_count:
@@ -1260,7 +1262,7 @@ def validate_layout() -> None:
     registry_driven_tool_scripts = {
         "resources.js": ("SIDELOAD_TOOLS", "resourceBadgeSpecs", "resourceSideloadTools", "resourceDescriptionKey", "sideloadToolURL", "buildResourceSideloadCard", "renderSideloadResourceCards", "sideloadResourceGrid", "hydrateSideloadToolCards", "renderSideloadToolBadges", "dataset.toolType", "dataset.capabilities", "dataset.targets", "dataset.hostPlatforms", "dataset.computerMode", "dataset.sourceSupport", "dataset.openSource", "dataset.resourceBadges"),
         "credits.js": ("SIDELOAD_TOOLS", "CORE_SIDELOAD_RESOURCE_NAMES", "creditSideloadTools", "creditDescriptionKey", "creditBadge", "creditLinkKey", "sideloadToolURL", "buildSideloadCreditCard", "renderSideloadCreditCards", "sideloadCreditGrid", "hydrateSideloadCreditCards", "dataset.toolType", "dataset.capabilities", "dataset.targets", "dataset.hostPlatforms", "dataset.computerMode", "dataset.sourceSupport", "dataset.openSource", "dataset.resourceBadges"),
-        "guide.js": ("sideloadToolForRole", "sideloadToolURL", "GUIDE_RECOMMENDATION_ROUTES", "recommendationToolURL", "SETUP_RESULT_ROUTES", "setupResultToolURL", "routeToolURL"),
+        "guide.js": ("sideloadToolForRole", "sideloadToolURL", "troubleshootingSideloadTools", "renderOfficialToolReferences", "officialHelpSources", "guideOfficialLinks", "GUIDE_RECOMMENDATION_ROUTES", "recommendationToolURL", "SETUP_RESULT_ROUTES", "setupResultToolURL", "routeToolURL"),
     }
     for script_name, required_parts in registry_driven_tool_scripts.items():
         script = JS_DIR / script_name
@@ -1271,6 +1273,35 @@ def validate_layout() -> None:
             if required_part not in script_text:
                 error(
                     f"{script_name} must use the central sideload tool registry; missing {required_part!r}"
+                )
+
+    guide_page = ROOT / "guide.html"
+    if guide_page.exists():
+        guide_page_text = guide_page.read_text(encoding="utf-8")
+        for required_host in ('id="officialHelpSources"', 'id="guideOfficialLinks"'):
+            if required_host not in guide_page_text:
+                error(f"guide.html is missing registry-driven official reference host {required_host!r}")
+
+        trouble_search_values = re.findall(r'<details\s+class="trouble-item[^"]*"\s+data-search="([^"]+)"', guide_page_text)
+        trouble_search_text = " ".join(trouble_search_values).lower()
+        for tool_token in (
+            "altstore",
+            "altstore pal",
+            "sidestore",
+            "livecontainer",
+            "flarestore",
+            "feather",
+            "sideinstaller",
+            "sideloadly",
+            "atvloadly",
+            "iloader",
+            "impactor",
+            "trollstore",
+        ):
+            if tool_token not in trouble_search_text:
+                error(
+                    "Guide troubleshooting must cover every central installer by name; "
+                    f"missing searchable diagnostics for {tool_token!r}"
                 )
 
     guide_script = JS_DIR / "guide.js"
