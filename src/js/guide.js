@@ -206,6 +206,58 @@ const SETUP_RESULTS = {
   }
 };
 
+const SETUP_RESULT_TOOLS = Object.freeze({
+  tv: Object.freeze({
+    primary: Object.freeze(['sideloadly', 'guide']),
+    secondary: Object.freeze(['atvloadly', 'guide'])
+  }),
+  marketplace: Object.freeze({
+    primary: Object.freeze(['altstore-pal', 'download']),
+    secondary: Object.freeze(['altstore', 'classicGuide'])
+  }),
+  marketplaceCheck: Object.freeze({
+    primary: Object.freeze(['altstore-pal', 'requirements']),
+    secondary: Object.freeze(['altstore', 'classicGuide'])
+  }),
+  marketplaceUnsupported: Object.freeze({
+    primary: Object.freeze(['altstore', 'classicGuide']),
+    secondary: Object.freeze(['altstore-pal', 'requirements'])
+  }),
+  permanent: Object.freeze({
+    primary: Object.freeze(['trollstore', 'guide'])
+  }),
+  sideinstaller: Object.freeze({
+    primary: Object.freeze(['sideinstaller', 'guide']),
+    secondary: Object.freeze(['sidestore', 'guide'])
+  }),
+  sideinstallerMany: Object.freeze({
+    primary: Object.freeze(['sideinstaller', 'guide']),
+    secondary: Object.freeze(['livecontainer', 'lcSideStore'])
+  }),
+  livecontainer: Object.freeze({
+    primary: Object.freeze(['livecontainer', 'lcSideStore'])
+  }),
+  sideloadly: Object.freeze({
+    primary: Object.freeze(['sideloadly', 'guide'])
+  }),
+  pairingNeeded: Object.freeze({
+    secondary: Object.freeze(['sidestore', 'pairing'])
+  }),
+  checkVersionNoPc: Object.freeze({
+    primary: Object.freeze(['sidestore', 'prerequisites'])
+  }),
+  sidestore: Object.freeze({
+    primary: Object.freeze(['sidestore', 'guide'])
+  })
+});
+
+function setupResultToolURL(resultKey, slot, fallback) {
+  const config = SETUP_RESULT_TOOLS[resultKey]?.[slot];
+  if (!config) return fallback;
+  const [toolId, purpose] = config;
+  return sideloadToolURL(toolId, purpose) || fallback;
+}
+
 function preferredScrollBehavior() {
   return window.matchMedia?.('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth';
 }
@@ -549,7 +601,8 @@ function chooseSetupResultKey() {
 
 function renderSetupResult() {
   if (!Object.values(setupState).every(Boolean)) return;
-  const result = setupResultsForLanguage()[chooseSetupResultKey()] || SETUP_RESULTS.en[chooseSetupResultKey()];
+  const resultKey = chooseSetupResultKey();
+  const result = setupResultsForLanguage()[resultKey] || SETUP_RESULTS.en[resultKey];
   const box = $('#setupResult');
   if (!result || !box) return;
   $('#setupResultTitle').textContent = result.title;
@@ -561,8 +614,16 @@ function renderSetupResult() {
     setupState.computer === 'none' ? 'NO PC' : (setupState.computer === 'setup' ? 'SETUP PC' : 'PC OK')
   ];
   $('#setupResultBadges').innerHTML = badges.map(value => `<span class="pill mode">${value}</span>`).join('');
-  setRecommendationLink($('#setupResultPrimary'), result.primary, result.url);
-  setRecommendationLink($('#setupResultSecondary'), result.secondary, result.secondaryUrl);
+  setRecommendationLink(
+    $('#setupResultPrimary'),
+    result.primary,
+    setupResultToolURL(resultKey, 'primary', result.url)
+  );
+  setRecommendationLink(
+    $('#setupResultSecondary'),
+    result.secondary,
+    setupResultToolURL(resultKey, 'secondary', result.secondaryUrl)
+  );
   box.hidden = false;
   box.scrollIntoView({behavior:preferredScrollBehavior(),block:'nearest'});
   updateReportLink();
