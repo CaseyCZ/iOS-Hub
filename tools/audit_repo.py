@@ -686,6 +686,12 @@ def validate_interactive_guide() -> None:
             'id="source-installers"',
             'data-i18n="guideSourceInstallersTitle"',
             'href="#source-installers" data-help-copy="jumpSources"',
+            '<td>AltStore PAL</td>',
+            'data-i18n="guidePalBest"',
+            '<td>FlareStore</td>',
+            'data-i18n="guideFlareBest"',
+            '<td>Feather</td>',
+            'data-i18n="guideFeatherBest"',
         ):
             if required_guide_structure not in text:
                 error(
