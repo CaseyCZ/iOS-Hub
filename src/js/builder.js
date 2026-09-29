@@ -2,8 +2,9 @@ import {
   INSTALLERS,
   BUILDER_INSTALLER_IDS,
   sourceInstallerIds,
-  sourceVariantURL
-} from './installers.js?v=1.1.5-20260929-installers3';
+  sourceVariantURL,
+  sourceFormatLabel
+} from './installers.js?v=1.1.5-20260929-installers4';
 
 const $ = selector => document.querySelector(selector);
 const $$ = selector => [...document.querySelectorAll(selector)];
@@ -149,8 +150,12 @@ function targetName() {
 function targetHelpKey() {
   return INSTALLERS[target]?.mixHelpKey || 'targetHelpGeneric';
 }
+function targetVariant() {
+  return INSTALLERS[target]?.variant || null;
+}
 function matchesTarget(source) {
-  return Boolean(sourceVariantURL(source, 'classic')) && sourceInstallerIds(source).includes(target);
+  const variant = targetVariant();
+  return Boolean(variant && sourceVariantURL(source, variant)) && sourceInstallerIds(source).includes(target);
 }
 function matchesCompatibility(source) {
   if (compatibility === 'all') return true;
@@ -266,7 +271,7 @@ function renderOfficialPackages() {
 }
 
 function modeName(source) {
-  return source.mode === 'sidestore' ? 'SideStore Source' : 'Classic AltSource';
+  return sourceFormatLabel(source);
 }
 
 function render() {
@@ -438,7 +443,7 @@ async function buildMix() {
       website:'https://caseycz.github.io/iOS-Hub/',
       tintColor:'#38BDF8',
       apps,
-      userInfo:{sourceIDs:ids, sourceURLs:ids.map(id => sourceVariantURL(registry.find(source => source.id === id), 'classic') || ''), experimental:hasTry}
+      userInfo:{sourceIDs:ids, sourceURLs:ids.map(id => sourceVariantURL(registry.find(source => source.id === id), targetVariant()) || ''), experimental:hasTry}
     };
 
     if (blobUrl) URL.revokeObjectURL(blobUrl);
@@ -471,7 +476,7 @@ async function buildMix() {
       addTarget.innerHTML = `${installerIcon(target)}${escapeHtml(tr('addTo'))} ${escapeHtml(targetName())}`;
     } else if (installer && ids.length === 1) {
       const source = registry.find(item => item.id === ids[0]);
-      const sourceUrl = sourceVariantURL(source, 'classic');
+      const sourceUrl = sourceVariantURL(source, targetVariant());
       if (sourceUrl) {
         addTarget.hidden = false;
         addTarget.href = installer.buildLink(sourceUrl);
@@ -480,7 +485,7 @@ async function buildMix() {
     } else if (installer && ids.length > 1) {
       const sourceActions = ids.map(id => {
         const source = registry.find(item => item.id === id);
-        const sourceUrl = sourceVariantURL(source, 'classic');
+        const sourceUrl = sourceVariantURL(source, targetVariant());
         if (!source || !sourceUrl) return '';
         return `<a class="btn small secondary installer-action" href="${escapeHtml(installer.buildLink(sourceUrl))}">${installerIcon(target)}${escapeHtml(source.name || id)}</a>`;
       }).filter(Boolean);
