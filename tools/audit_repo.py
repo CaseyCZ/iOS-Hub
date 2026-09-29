@@ -215,6 +215,7 @@ def validate_translations() -> None:
 
     for script in (
         JS_DIR / "app.js",
+        JS_DIR / "installers.js",
         JS_DIR / "builder-page.js",
         JS_DIR / "converter.js",
         JS_DIR / "guide.js",
@@ -906,7 +907,7 @@ def validate_layout() -> None:
     # the catalog, Builder and Credits without maintaining duplicate hard-coded lists.
     dynamic_source_scripts = {
         "app.js": ("sources/registry.json", "data/status.json", "data/catalog.json", "sourceWebsiteIcon", "data-source-website-icon", "installers.js"),
-        "builder.js": ("sources/registry.json", "data/status.json", "data/catalog.json"),
+        "builder.js": ("sources/registry.json", "data/status.json", "data/catalog.json", "installers.js", "BUILDER_TARGET_IDS"),
         "credits.js": ("sources/registry.json", "sourceCredits", "source.developer", "maintainerGroups", "sourceCreditGroup", "brand-link-icon", "iconImage"),
     }
     for script_name, required_parts in dynamic_source_scripts.items():
@@ -919,6 +920,36 @@ def validate_layout() -> None:
                 error(
                     f"{script_name} must remain registry-driven; missing {required_part!r}"
                 )
+
+    installers_script = JS_DIR / "installers.js"
+    if not installers_script.exists():
+        error("Missing central installer configuration: src/js/installers.js")
+    else:
+        installers_text = installers_script.read_text(encoding="utf-8")
+        for required in (
+            "altstore",
+            "sidestore",
+            "livecontainer",
+            "altstore-pal",
+            "flarestore",
+            "feather",
+            "flarestore://source?url=",
+            "feather://source/",
+            "PRIMARY_INSTALLER_IDS",
+            "MORE_INSTALLER_IDS",
+            "sourceInstallerDeepLink",
+            "sourceVariantURL",
+        ):
+            if required not in installers_text:
+                error(f"installers.js is missing installer architecture part: {required!r}")
+
+    legacy_brand = "AltStore · SideStore · LiveContainer"
+    for page in SITE_PAGES:
+        if page.exists() and legacy_brand in page.read_text(encoding="utf-8"):
+            error(
+                f"{page.name} still hard-codes the legacy installer trio in site branding; "
+                "use installer-neutral branding"
+            )
 
     credits_page = ROOT / "credits.html"
     if credits_page.exists() and 'id="sourceCredits"' not in credits_page.read_text(encoding="utf-8"):
