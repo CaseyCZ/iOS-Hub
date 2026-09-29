@@ -1144,6 +1144,19 @@ def validate_layout() -> None:
                     f"{field!r} appears {field_count} times for {tool_count} tools"
                 )
 
+        for tool_id, troubleshooting_url in (
+            ("atvloadly", "https://github.com/bitxeno/atvloadly/wiki/FAQ"),
+            ("impactor", "https://github.com/claration/Impactor/issues"),
+            ("trollstore", "https://github.com/opa334/TrollStore/issues"),
+        ):
+            marker = f"id: '{tool_id}'"
+            start = tool_definitions_text.find(marker)
+            next_profile = tool_definitions_text.find("\n    id: '", start + len(marker)) if start >= 0 else -1
+            block = tool_definitions_text[start:next_profile if next_profile >= 0 else len(tool_definitions_text)] if start >= 0 else ""
+            links_match = re.search(r"links:\s*Object\.freeze\(\{([\s\S]*?)\}\)", block)
+            if not links_match or troubleshooting_url not in links_match.group(1):
+                error(f"{tool_id} troubleshooting URL must live inside links.troubleshooting")
+
         if "resourceBadges: Object.freeze(['freeVerified', 'resourceSideloading', 'Sources'])" not in installers_text:
             error("FlareStore Resources profile must keep FREE verified, Sideloading and Sources badges")
 
@@ -1325,6 +1338,16 @@ def validate_layout() -> None:
                     "Guide troubleshooting must tag at least one diagnostic with each installer id; "
                     f"missing data-tool for {tool_id!r}"
                 )
+
+        for phrase, expected_tool in (
+            ("nejde mi instalovat aplikaci na Feather", "feather"),
+            ("FlareStore mi neotevře instalaci", "flarestore"),
+            ("atvloadly nevidí Apple TV", "atvloadly"),
+        ):
+            normalized_phrase = re.sub(r"[^a-z0-9]+", " ", phrase.lower()).strip()
+            normalized_tool = re.sub(r"[^a-z0-9]+", " ", expected_tool.lower()).strip()
+            if normalized_tool not in normalized_phrase or expected_tool not in trouble_tool_ids:
+                error(f"Guide troubleshooting regression is missing route for {phrase!r}")
 
     guide_script = JS_DIR / "guide.js"
     if guide_script.exists():
