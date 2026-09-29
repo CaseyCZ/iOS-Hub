@@ -78,6 +78,12 @@ export const INSTALLERS = Object.freeze({
     domain: 'altstore.io',
     coreCredit: true,
     resourceCard: true,
+    resourceOrder: 10,
+    creditOrder: 10,
+    resourceDescriptionKey: 'resourceAltStoreDesc',
+    creditDescriptionKey: 'altstoreDesc',
+    creditBadge: 'Project',
+    creditLinkKey: 'officialWebsite',
     variant: 'classic',
     mixTarget: true,
     mixHelpKey: 'targetHelpAlt',
@@ -115,6 +121,12 @@ export const INSTALLERS = Object.freeze({
     domain: 'sidestore.io',
     coreCredit: true,
     resourceCard: true,
+    resourceOrder: 20,
+    creditOrder: 20,
+    resourceDescriptionKey: 'resourceSideStoreDesc',
+    creditDescriptionKey: 'sidestoreDesc',
+    creditBadge: 'Project',
+    creditLinkKey: 'officialWebsite',
     variant: 'classic',
     mixTarget: true,
     mixHelpKey: 'targetHelpSide',
@@ -151,6 +163,12 @@ export const INSTALLERS = Object.freeze({
     domain: 'github.com/LiveContainer/LiveContainer',
     coreCredit: true,
     resourceCard: true,
+    resourceOrder: 40,
+    creditOrder: 40,
+    resourceDescriptionKey: 'resourceLiveContainerDesc',
+    creditDescriptionKey: 'livecontainerDesc',
+    creditBadge: 'Open source',
+    creditLinkKey: 'officialRepository',
     variant: 'classic',
     mixTarget: true,
     mixHelpKey: 'targetHelpLive',
@@ -186,6 +204,12 @@ export const INSTALLERS = Object.freeze({
     domain: 'altstore.io',
     coreCredit: false,
     resourceCard: false,
+    resourceOrder: null,
+    creditOrder: null,
+    resourceDescriptionKey: null,
+    creditDescriptionKey: null,
+    creditBadge: null,
+    creditLinkKey: null,
     variant: 'pal',
     mixTarget: false,
     catalogPriority: 40,
@@ -216,6 +240,12 @@ export const INSTALLERS = Object.freeze({
     domain: 'flarestore.app',
     coreCredit: true,
     resourceCard: true,
+    resourceOrder: 50,
+    creditOrder: 50,
+    resourceDescriptionKey: 'resourceFlareStoreDesc',
+    creditDescriptionKey: 'flarestoreDesc',
+    creditBadge: 'Project',
+    creditLinkKey: 'officialWebsite',
     variant: 'classic',
     mixTarget: true,
     mixHelpKey: 'targetHelpFlare',
@@ -248,6 +278,12 @@ export const INSTALLERS = Object.freeze({
     domain: 'github.com/claration/Feather',
     coreCredit: true,
     resourceCard: true,
+    resourceOrder: 60,
+    creditOrder: 60,
+    resourceDescriptionKey: 'resourceFeatherDesc',
+    creditDescriptionKey: 'featherDesc',
+    creditBadge: 'Open source',
+    creditLinkKey: 'officialRepository',
     variant: 'classic',
     mixTarget: true,
     mixHelpKey: 'targetHelpFeather',
@@ -298,7 +334,13 @@ const AUXILIARY_SIDELOAD_TOOLS = Object.freeze({
     creditDomain: 'github.com/FrizzleM/SideInstaller',
     icon: 'https://raw.githubusercontent.com/FrizzleM/SideInstaller/main/app-icon.png',
     coreCredit: true,
-    resourceCard: true
+    resourceCard: true,
+    resourceOrder: 30,
+    creditOrder: 30,
+    resourceDescriptionKey: 'resourceSideInstallerDesc',
+    creditDescriptionKey: 'sideinstallerDesc',
+    creditBadge: 'FrizzleM',
+    creditLinkKey: 'officialRepository',
   }),
   sideloadly: Object.freeze({
     id: 'sideloadly',
@@ -326,7 +368,13 @@ const AUXILIARY_SIDELOAD_TOOLS = Object.freeze({
     domain: 'sideloadly.io',
     icon: 'https://sideloadly.io/favicon.ico',
     coreCredit: true,
-    resourceCard: true
+    resourceCard: true,
+    resourceOrder: 70,
+    creditOrder: 110,
+    resourceDescriptionKey: 'resourceSideloadlyDesc',
+    creditDescriptionKey: 'sideloadlyDesc',
+    creditBadge: 'Project',
+    creditLinkKey: 'officialWebsite',
   }),
   atvloadly: Object.freeze({
     id: 'atvloadly',
@@ -355,7 +403,13 @@ const AUXILIARY_SIDELOAD_TOOLS = Object.freeze({
     domain: 'github.com/bitxeno/atvloadly',
     icon: 'assets/icons/atvloadly.svg',
     coreCredit: true,
-    resourceCard: true
+    resourceCard: true,
+    resourceOrder: 80,
+    creditOrder: 80,
+    resourceDescriptionKey: 'resourceAtvloadlyDesc',
+    creditDescriptionKey: 'atvloadlyDesc',
+    creditBadge: 'bitxeno',
+    creditLinkKey: 'officialRepository',
   }),
   iloader: Object.freeze({
     id: 'iloader',
@@ -382,7 +436,13 @@ const AUXILIARY_SIDELOAD_TOOLS = Object.freeze({
     domain: 'iloader.app',
     icon: 'assets/icons/iloader.svg',
     coreCredit: true,
-    resourceCard: true
+    resourceCard: true,
+    resourceOrder: 90,
+    creditOrder: 90,
+    resourceDescriptionKey: 'resourceIloaderDesc',
+    creditDescriptionKey: 'iloaderDesc',
+    creditBadge: 'Project',
+    creditLinkKey: 'officialWebsite',
   }),
   impactor: Object.freeze({
     id: 'impactor',
@@ -411,7 +471,13 @@ const AUXILIARY_SIDELOAD_TOOLS = Object.freeze({
     domain: 'github.com/claration/Impactor',
     icon: 'https://raw.githubusercontent.com/claration/Impactor/main/package/linux/icons/hicolor/512x512/apps/dev.khcrysalis.PlumeImpactor.png',
     coreCredit: true,
-    resourceCard: true
+    resourceCard: true,
+    resourceOrder: 100,
+    creditOrder: 100,
+    resourceDescriptionKey: 'resourceImpactorDesc',
+    creditDescriptionKey: 'impactorDesc',
+    creditBadge: 'claration',
+    creditLinkKey: 'officialRepository',
   }),
   trollstore: Object.freeze({
     id: 'trollstore',
@@ -440,7 +506,13 @@ const AUXILIARY_SIDELOAD_TOOLS = Object.freeze({
     domain: 'github.com/opa334/TrollStore',
     icon: 'assets/icons/trollstore.svg',
     coreCredit: true,
-    resourceCard: true
+    resourceCard: true,
+    resourceOrder: 110,
+    creditOrder: 70,
+    resourceDescriptionKey: 'resourceTrollStoreDesc',
+    creditDescriptionKey: 'trollstoreDesc',
+    creditBadge: 'opa334',
+    creditLinkKey: 'officialRepository',
   })
 });
 
@@ -485,6 +557,20 @@ export function resourceBadgeSpecs(toolId) {
     .filter(Boolean);
 }
 
+export function orderedSideloadTools(orderKey, predicate = () => true) {
+  return Object.values(SIDELOAD_TOOLS)
+    .filter(tool => Number.isFinite(Number(tool?.[orderKey])) && predicate(tool))
+    .sort((a, b) => Number(a[orderKey]) - Number(b[orderKey]));
+}
+
+export function resourceSideloadTools() {
+  return orderedSideloadTools('resourceOrder', tool => tool.resourceCard === true);
+}
+
+export function creditSideloadTools() {
+  return orderedSideloadTools('creditOrder', tool => tool.coreCredit === true);
+}
+
 export function sideloadToolsWithCapability(capability) {
   return Object.values(SIDELOAD_TOOLS).filter(tool => tool.capabilities?.includes(capability));
 }
@@ -517,7 +603,13 @@ export function sideloadToolProfile(toolId) {
     computerMode: tool.computerMode || 'unknown',
     openSource: tool.openSource ?? null,
     sourceSupport: tool.sourceSupport || 'none',
-    recommendationRoles: {...(tool.recommendationRoles || {})}
+    recommendationRoles: {...(tool.recommendationRoles || {})},
+    resourceOrder: tool.resourceOrder ?? null,
+    creditOrder: tool.creditOrder ?? null,
+    resourceDescriptionKey: tool.resourceDescriptionKey || null,
+    creditDescriptionKey: tool.creditDescriptionKey || null,
+    creditBadge: tool.creditBadge || null,
+    creditLinkKey: tool.creditLinkKey || null
   };
 }
 
