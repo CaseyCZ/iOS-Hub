@@ -20,6 +20,10 @@ BASE_URL = "https://caseycz.github.io/iOS-Hub/"
 MAX_MIX_SOURCES = 3
 USER_AGENT = "CaseyCZ-iOS-Hub (+https://caseycz.github.io/iOS-Hub/)"
 
+DIRECT_SOURCE_INSTALLERS = ("altstore", "sidestore", "livecontainer", "flarestore", "feather")
+STRICT_DUPLICATE_BUNDLE_INSTALLERS = {"altstore", "sidestore"}
+TOLERANT_DUPLICATE_BUNDLE_INSTALLERS = {"livecontainer", "feather"}
+
 
 def now_iso() -> str:
     return datetime.now(timezone.utc).replace(microsecond=0).isoformat().replace("+00:00", "Z")
@@ -140,6 +144,92 @@ def has_classic_download(app: dict) -> bool:
             for version in versions
         )
     return False
+
+
+def duplicate_bundle_report(payload: dict) -> dict:
+    grouped: dict[str, dict] = {}
+    for app in payload.get("apps", []):
+        if not isinstance(app, dict):
+            continue
+        raw_bundle = str(app.get("bundleIdentifier") or app.get("bundleID") or "").strip()
+        if not raw_bundle:
+            continue
+        key = raw_bundle.lower()
+        item = grouped.setdefault(
+            key,
+            {
+                "bundleIdentifier": raw_bundle,
+                "count": 0,
+                "names": [],
+            },
+        )
+        item["count"] += 1
+        name = str(app.get("name") or "Unknown app").strip()
+        if name and name not in item["names"]:
+            item["names"].append(name)
+
+    items = [
+        {
+            "bundleIdentifier": item["bundleIdentifier"],
+            "count": item["count"],
+            "names": item["names"][:8],
+        }
+        for item in grouped.values()
+        if item["count"] > 1
+    ]
+    items.sort(key=lambda item: (-item["count"], item["bundleIdentifier"].lower()))
+    return {
+        "count": len(items),
+        "duplicateAppEntries": sum(item["count"] for item in items),
+        "extraEntries": sum(item["count"] - 1 for item in items),
+        "items": items,
+    }
+
+
+def direct_installer_compatibility(source: dict, payload: dict) -> tuple[dict, dict]:
+    report = duplicate_bundle_report(payload)
+    duplicate_count = report["count"]
+    checks: dict[str, dict] = {}
+
+    for installer in DIRECT_SOURCE_INSTALLERS:
+        if not source_supports_installer(source, installer):
+            continue
+
+        if not duplicate_count:
+            checks[installer] = {
+                "directSource": "pass",
+                "reason": "No duplicate bundle identifiers were detected in the source.",
+            }
+            continue
+
+        if installer in STRICT_DUPLICATE_BUNDLE_INSTALLERS:
+            checks[installer] = {
+                "directSource": "fail",
+                "reason": (
+                    f"{duplicate_count} bundle identifiers occur more than once; "
+                    f"{installer} requires unique apps when adding the original source."
+                ),
+            }
+        elif installer in TOLERANT_DUPLICATE_BUNDLE_INSTALLERS:
+            checks[installer] = {
+                "directSource": "pass",
+                "installVariants": "try",
+                "reason": (
+                    f"{duplicate_count} duplicate bundle identifiers are present. "
+                    "The source parser can keep separate entries, but installing multiple variants "
+                    "with the same bundle identifier can still conflict."
+                ),
+            }
+        else:
+            checks[installer] = {
+                "directSource": "try",
+                "reason": (
+                    f"{duplicate_count} duplicate bundle identifiers are present; "
+                    "direct-source behavior is not verified for this installer."
+                ),
+            }
+
+    return report, checks
 
 
 def assess_mix_compatibility(source: dict, payload: dict, variant: str | None = None) -> tuple[str, str]:
@@ -349,11 +439,13 @@ def main() -> None:
                 payload, http_status = fetch_json(variant_url)
                 apps = [app for app in payload.get("apps", []) if isinstance(app, dict)]
                 variant_payloads[variant] = payload
+                duplicate_report = duplicate_bundle_report(payload)
                 variant_result.update({
                     "online": True,
                     "httpStatus": http_status,
                     "appCount": len(apps),
                     "error": None,
+                    "duplicateBundleIdentifiers": duplicate_report,
                 })
             except (urllib.error.URLError, urllib.error.HTTPError, TimeoutError, ValueError, json.JSONDecodeError, UnicodeDecodeError) as exc:
                 variant_result["error"] = f"{type(exc).__name__}: {exc}"[:300]
@@ -383,6 +475,10 @@ def main() -> None:
                 assessment_payload,
                 variant=assessment_variant,
             )
+            duplicate_report, installer_compatibility = direct_installer_compatibility(
+                source,
+                assessment_payload,
+            )
             result.update({
                 "online": True,
                 "httpStatus": variant_result.get("httpStatus"),
@@ -391,6 +487,8 @@ def main() -> None:
                 "error": None,
                 "mixTest": mix_test,
                 "mixReason": mix_reason,
+                "duplicateBundleIdentifiers": duplicate_report,
+                "installerCompatibility": installer_compatibility,
                 "preferredVariant": preferred_variant,
             })
             loaded[source_id] = (source, payload)
