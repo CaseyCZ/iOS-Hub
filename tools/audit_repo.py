@@ -992,7 +992,7 @@ def validate_layout() -> None:
     dynamic_source_scripts = {
         "app.js": ("sources/registry.json", "data/status.json", "data/catalog.json", "sourceWebsiteIcon", "data-source-website-icon", "installers.js", "SOURCE_VARIANT_IDS", "sourceVariantLabel", "sourceModeLabel"),
         "builder.js": ("sources/registry.json", "data/status.json", "data/catalog.json", "installers.js", "BUILDER_INSTALLER_IDS", "sourceFormatLabel", "targetVariant"),
-        "credits.js": ("sources/registry.json", "sourceCredits", "source.developer", "maintainerGroups", "sourceCreditGroup", "brand-link-icon", "iconImage"),
+        "credits.js": ("sources/registry.json", "sourceCredits", "source.developer", "maintainerGroups", "sourceCreditGroup", "brand-link-icon", "iconImage", "CORE_SIDELOAD_RESOURCE_NAMES", "SIDELOAD_TOOLS"),
     }
     for script_name, required_parts in dynamic_source_scripts.items():
         script = JS_DIR / script_name
@@ -1033,6 +1033,18 @@ def validate_layout() -> None:
             "sourceVariantLabel",
             "sourceModeLabel",
             "sourceFormatLabel",
+            "SIDELOAD_TOOLS",
+            "AUXILIARY_SIDELOAD_TOOLS",
+            "CORE_SIDELOAD_TOOL_IDS",
+            "CORE_SIDELOAD_RESOURCE_NAMES",
+            "sideloadToolURL",
+            "sideloadToolSupports",
+            "sideinstaller",
+            "sideloadly",
+            "atvloadly",
+            "iloader",
+            "impactor",
+            "trollstore",
         ):
             if required not in installers_text:
                 error(f"installers.js is missing installer architecture part: {required!r}")
@@ -1053,10 +1065,40 @@ def validate_layout() -> None:
 
     resources_page = ROOT / "resources.html"
     credits_script = JS_DIR / "credits.js"
+    resources_script = JS_DIR / "resources.js"
+    guide_script = JS_DIR / "guide.js"
+
+    registry_driven_tool_scripts = {
+        "resources.js": ("SIDELOAD_TOOLS", "sideloadToolURL", "data-sideload-tool", "hydrateSideloadToolCards"),
+        "credits.js": ("SIDELOAD_TOOLS", "CORE_SIDELOAD_RESOURCE_NAMES", "sideloadToolURL", "hydrateSideloadCreditCards"),
+        "guide.js": ("sideloadToolURL", "GUIDE_RECOMMENDATION_TOOLS", "recommendationToolURL"),
+    }
+    for script_name, required_parts in registry_driven_tool_scripts.items():
+        script = JS_DIR / script_name
+        if not script.exists():
+            continue
+        script_text = script.read_text(encoding="utf-8")
+        for required_part in required_parts:
+            if required_part not in script_text:
+                error(
+                    f"{script_name} must use the central sideload tool registry; missing {required_part!r}"
+                )
+
+    for page_name in ("resources.html", "credits.html"):
+        page = ROOT / page_name
+        if not page.exists():
+            continue
+        page_text = page.read_text(encoding="utf-8")
+        for tool_id in (
+            "altstore", "sidestore", "sideinstaller", "livecontainer", "flarestore",
+            "feather", "sideloadly", "atvloadly", "iloader", "impactor", "trollstore",
+        ):
+            if f'data-sideload-tool="{tool_id}"' not in page_text:
+                error(f"{page_name} is missing central sideload tool binding for {tool_id!r}")
 
     if resources_page.exists():
         resources_text = resources_page.read_text(encoding="utf-8")
-        for match in re.finditer(r'<article class="panel resource-card">([\s\S]*?)</article>', resources_text):
+        for match in re.finditer(r'<article class="panel resource-card"[^>]*>([\s\S]*?)</article>', resources_text):
             card = match.group(1)
             name_match = re.search(r'<h3[^>]*>([\s\S]*?)</h3>', card)
             name = re.sub(r"<[^>]+>", "", name_match.group(1)).strip() if name_match else "unknown"
@@ -1071,7 +1113,7 @@ def validate_layout() -> None:
         featured_start = credits_text.find('data-credit-copy="featuredTitle"')
         if core_start >= 0 and featured_start > core_start:
             core_block = credits_text[core_start:featured_start]
-            for match in re.finditer(r'<article class="panel resource-card">([\s\S]*?)</article>', core_block):
+            for match in re.finditer(r'<article class="panel resource-card"[^>]*>([\s\S]*?)</article>', core_block):
                 card = match.group(1)
                 name_match = re.search(r'<h3[^>]*>([\s\S]*?)</h3>', card)
                 name = re.sub(r"<[^>]+>", "", name_match.group(1)).strip() if name_match else "unknown"
@@ -1085,7 +1127,7 @@ def validate_layout() -> None:
         credits_text = credits_script.read_text(encoding="utf-8")
 
         resource_names = re.findall(
-            r'<article class="panel resource-card">[\s\S]*?<h3[^>]*>(.*?)</h3>',
+            r'<article class="panel resource-card"[^>]*>[\s\S]*?<h3[^>]*>(.*?)</h3>',
             resources_text,
         )
         cleaned_resource_names = [
@@ -1114,7 +1156,7 @@ def validate_layout() -> None:
 
     if credits_page.exists():
         credits_text = credits_page.read_text(encoding="utf-8")
-        for match in re.finditer(r'<article class="panel resource-card">([\s\S]*?)</article>', credits_text):
+        for match in re.finditer(r'<article class="panel resource-card"[^>]*>([\s\S]*?)</article>', credits_text):
             card = match.group(1)
             if 'btn primary' not in card:
                 continue
