@@ -1,0 +1,904 @@
+#!/usr/bin/env python3
+from __future__ import annotations
+
+import json
+import re
+import sys
+from html.parser import HTMLParser
+from pathlib import Path
+from urllib.parse import unquote, urlparse
+
+ROOT = Path(__file__).resolve().parents[1]
+REGISTRY = ROOT / "sources" / "registry.json"
+STATUS = ROOT / "data" / "status.json"
+CATALOG = ROOT / "data" / "catalog.json"
+JS_DIR = ROOT / "src" / "js"
+CSS_DIR = ROOT / "src" / "css"
+
+EXPECTED_SITE_URL = "https://caseycz.github.io/iOS-Hub/"
+EXPECTED_REPO_URL = "https://github.com/CaseyCZ/iOS-Hub"
+EXPECTED_PROJECT_NAME = "CaseyCZ iOS Hub"
+EXPECTED_PUBLIC_SITE_NAME = "iOS Hub"
+OLD_PUBLIC_REFERENCES = (
+    "https://caseycz.github.io/repo",
+    "https://github.com/CaseyCZ/repo",
+)
+OWNED_REFERENCE_FILES = (
+    ROOT / "README.md",
+    ROOT / "README_EN.md",
+    ROOT / "index.html",
+    ROOT / "builder.html",
+    ROOT / "converter.html",
+    ROOT / "guide.html",
+    ROOT / "resources.html",
+    ROOT / "credits.html",
+    JS_DIR / "app.js",
+    JS_DIR / "builder-page.js",
+    JS_DIR / "builder.js",
+    JS_DIR / "guide.js",
+    JS_DIR / "resources.js",
+    JS_DIR / "i18n.js",
+    ROOT / "tools" / "update_sources.py",
+    ROOT / ".github" / "workflows" / "update-sources.yml",
+)
+
+LANGUAGES = ("en", "cs", "de", "es", "fr")
+ALLOWED_MODES = {"classic", "pal", "sidestore"}
+ID_RE = re.compile(r"^[a-z0-9][a-z0-9-]*$")
+LEGACY_PATHS = [
+    ROOT / "Packages",
+    ROOT / "Packages.gz",
+    ROOT / "Release",
+    ROOT / "repo.xml",
+    ROOT / "debs",
+    ROOT / "depictions",
+]
+REQUIRED_CSP_PARTS = (
+    "default-src 'self'",
+    "script-src 'self' 'wasm-unsafe-eval'",
+    "connect-src 'self'",
+    "worker-src 'self' blob:",
+    "object-src 'none'",
+    "base-uri 'self'",
+    "form-action 'none'",
+)
+
+errors: list[str] = []
+warnings: list[str] = []
+
+
+def error(message: str) -> None:
+    errors.append(message)
+
+
+def warn(message: str) -> None:
+    warnings.append(message)
+
+
+def load_json(path: Path) -> object:
+    try:
+        return json.loads(path.read_text(encoding="utf-8"))
+    except FileNotFoundError:
+        error(f"Missing required JSON file: {path.relative_to(ROOT)}")
+    except json.JSONDecodeError as exc:
+        error(f"Invalid JSON in {path.relative_to(ROOT)}: {exc}")
+    return {}
+
+
+def validate_alt_source(path: Path, *, required: bool = True) -> tuple[int, int]:
+    if not path.exists():
+        if required:
+            error(f"Missing generated source: {path.relative_to(ROOT)}")
+        return 0, 0
+
+    payload = load_json(path)
+    if not isinstance(payload, dict):
+        error(f"{path.relative_to(ROOT)} root must be an object")
+        return 0, 0
+
+    apps = payload.get("apps")
+    if not isinstance(apps, list):
+        error(f"{path.relative_to(ROOT)} must contain an apps array")
+        return 0, 0
+
+    seen: dict[str, str] = {}
+    duplicate_count = 0
+    valid_apps = 0
+    for index, app in enumerate(apps):
+        if not isinstance(app, dict):
+            error(f"{path.relative_to(ROOT)} apps[{index}] is not an object")
+            continue
+        valid_apps += 1
+        bundle = app.get("bundleIdentifier") or app.get("bundleID")
+        if not bundle:
+            error(f"{path.relative_to(ROOT)} apps[{index}] has no bundle identifier")
+            continue
+        bundle = str(bundle)
+        if bundle in seen:
+            duplicate_count += 1
+            error(
+                f"{path.relative_to(ROOT)} contains duplicate bundleIdentifier {bundle!r} "
+                f"({seen[bundle]} and index {index})"
+            )
+        else:
+            seen[bundle] = f"index {index}"
+
+    return valid_apps, duplicate_count
+
+
+class PageParser(HTMLParser):
+    def __init__(self) -> None:
+        super().__init__()
+        self.scripts: list[str] = []
+        self.i18n_keys: set[str] = set()
+
+    def handle_starttag(self, tag: str, attrs: list[tuple[str, str | None]]) -> None:
+        values = dict(attrs)
+        if tag.lower() == "script":
+            src = values.get("src")
+            if src:
+                self.scripts.append(src)
+        for attr in ("data-i18n", "data-i18n-placeholder", "data-i18n-title", "data-i18n-aria-label"):
+            key = values.get(attr)
+            if key:
+                self.i18n_keys.add(key)
+
+
+def parse_page(path: Path) -> PageParser | None:
+    if not path.exists():
+        error(f"Missing HTML file: {path.relative_to(ROOT)}")
+        return None
+    parser = PageParser()
+    parser.feed(path.read_text(encoding="utf-8"))
+    return parser
+
+
+def validate_html_scripts(path: Path) -> None:
+    parser = parse_page(path)
+    if parser is None:
+        return
+    for src in parser.scripts:
+        parsed = urlparse(src)
+        if parsed.scheme or src.startswith("//"):
+            continue
+        clean = src.split("?", 1)[0].split("#", 1)[0]
+        target = (path.parent / clean).resolve()
+        try:
+            target.relative_to(ROOT.resolve())
+        except ValueError:
+            error(f"{path.relative_to(ROOT)} references a script outside the repository: {src}")
+            continue
+        if not target.exists():
+            error(f"{path.relative_to(ROOT)} references missing local script: {src}")
+
+
+def validate_security_policy(path: Path) -> None:
+    if not path.exists():
+        return
+    text = path.read_text(encoding="utf-8")
+    label = path.relative_to(ROOT)
+    if 'name="referrer" content="no-referrer"' not in text:
+        error(f"{label} must set referrer policy to no-referrer")
+    csp_match = re.search(
+        r'<meta\s+http-equiv="Content-Security-Policy"\s+content="([^"]+)"',
+        text,
+        flags=re.IGNORECASE,
+    )
+    if not csp_match:
+        error(f"{label} is missing a Content-Security-Policy meta tag")
+        return
+    csp = csp_match.group(1)
+    required_parts = list(REQUIRED_CSP_PARTS)
+    if path.name != "converter.html":
+        required_parts = [
+            part for part in required_parts
+            if part not in ("script-src 'self' 'wasm-unsafe-eval'", "worker-src 'self' blob:")
+        ]
+        required_parts.append("script-src 'self'")
+    for part in required_parts:
+        if part not in csp:
+            error(f"{label} CSP is missing required directive: {part}")
+
+
+def validate_translations() -> None:
+    i18n_path = JS_DIR / "i18n.js"
+    if not i18n_path.exists():
+        error("Missing i18n.js")
+        return
+
+    used: set[str] = set()
+    for html in SITE_PAGES:
+        parser = parse_page(html)
+        if parser:
+            used.update(parser.i18n_keys)
+
+    for script in (
+        JS_DIR / "app.js",
+        JS_DIR / "builder-page.js",
+        JS_DIR / "converter.js",
+        JS_DIR / "guide.js",
+        JS_DIR / "resources.js",
+        JS_DIR / "credits.js",
+    ):
+        if not script.exists():
+            continue
+        text = script.read_text(encoding="utf-8")
+        used.update(re.findall(r"\btr\(\s*['\"]([A-Za-z0-9_]+)['\"]\s*\)", text))
+        used.update(re.findall(r"\bt\(\s*[A-Za-z0-9_]+\s*,\s*['\"]([A-Za-z0-9_]+)['\"]\s*\)", text))
+
+    i18n_text = i18n_path.read_text(encoding="utf-8")
+    for key in sorted(used):
+        occurrences = len(re.findall(rf"(?:\b{re.escape(key)}|[\"']{re.escape(key)}[\"'])\s*:", i18n_text))
+        if occurrences < len(LANGUAGES):
+            error(
+                f"Translation key {key!r} is used by the UI but appears in only "
+                f"{occurrences}/{len(LANGUAGES)} language dictionaries"
+            )
+
+
+def validate_project_identity() -> None:
+    for path in OWNED_REFERENCE_FILES:
+        if not path.exists():
+            continue
+        text = path.read_text(encoding="utf-8")
+        label = path.relative_to(ROOT)
+        for old in OLD_PUBLIC_REFERENCES:
+            if old in text:
+                error(f"{label} still contains old public reference: {old}")
+
+    readme = ROOT / "README.md"
+    if readme.exists():
+        text = readme.read_text(encoding="utf-8")
+        if EXPECTED_SITE_URL not in text:
+            error(f"README.md must link to current site {EXPECTED_SITE_URL}")
+        if EXPECTED_PROJECT_NAME not in text:
+            error(f"README.md must use current project name {EXPECTED_PROJECT_NAME!r}")
+
+    index = ROOT / "index.html"
+    if index.exists():
+        text = index.read_text(encoding="utf-8")
+        if EXPECTED_REPO_URL not in text:
+            error(f"index.html must link to current repository {EXPECTED_REPO_URL}")
+        if EXPECTED_PUBLIC_SITE_NAME not in text:
+            error(f"index.html must use current public site name {EXPECTED_PUBLIC_SITE_NAME!r}")
+
+    update_workflow = ROOT / ".github" / "workflows" / "update-sources.yml"
+    if update_workflow.exists():
+        workflow_text = update_workflow.read_text(encoding="utf-8")
+        if workflow_text.count("python tools/audit_repo.py") < 2:
+            error("update-sources workflow must audit generated data before each publish attempt")
+
+    generator = ROOT / "tools" / "update_sources.py"
+    if generator.exists():
+        text = generator.read_text(encoding="utf-8")
+        expected_base = f'BASE_URL = "{EXPECTED_SITE_URL}"'
+        if expected_base not in text:
+            error(f"tools/update_sources.py must define {expected_base}")
+
+    expected_sources = {
+        ROOT / "altstore" / "source.json": f"{EXPECTED_SITE_URL}altstore/source.json",
+        ROOT / "sidestore" / "source.json": f"{EXPECTED_SITE_URL}sidestore/source.json",
+    }
+    for path, expected_source_url in expected_sources.items():
+        payload = load_json(path)
+        if not isinstance(payload, dict):
+            continue
+        if payload.get("website") != EXPECTED_SITE_URL:
+            error(f"{path.relative_to(ROOT)} website must be {EXPECTED_SITE_URL}")
+        if payload.get("sourceURL") != expected_source_url:
+            error(f"{path.relative_to(ROOT)} sourceURL must be {expected_source_url}")
+
+
+def validate_registry() -> None:
+    payload = load_json(REGISTRY)
+    if not isinstance(payload, dict) or not isinstance(payload.get("sources"), list):
+        error("sources/registry.json must contain a sources array")
+        return
+
+    ids: dict[str, int] = {}
+    urls: dict[str, int] = {}
+    partially_localized: list[str] = []
+    for index, source in enumerate(payload["sources"]):
+        if not isinstance(source, dict):
+            error(f"registry sources[{index}] is not an object")
+            continue
+
+        source_id = str(source.get("id") or "")
+        name = str(source.get("name") or "")
+        url = str(source.get("url") or "")
+        mode = str(source.get("mode") or "classic")
+
+        if not source_id or not ID_RE.fullmatch(source_id):
+            error(f"registry sources[{index}] has invalid id {source_id!r}")
+        elif source_id in ids:
+            error(f"duplicate registry id {source_id!r} at indexes {ids[source_id]} and {index}")
+        else:
+            ids[source_id] = index
+
+        if not name.strip():
+            error(f"registry source {source_id or index!r} has no name")
+
+        parsed = urlparse(url)
+        if parsed.scheme != "https" or not parsed.netloc:
+            error(f"registry source {source_id or index!r} must use an absolute HTTPS URL")
+        elif url in urls:
+            error(f"duplicate registry URL at indexes {urls[url]} and {index}: {url}")
+        else:
+            urls[url] = index
+
+        if mode not in ALLOWED_MODES:
+            error(f"registry source {source_id or index!r} has unsupported mode {mode!r}")
+
+        website = str(source.get("website") or "").strip()
+        if website:
+            website_url = urlparse(website)
+            if website_url.scheme != "https" or not website_url.netloc:
+                error(f"registry source {source_id or index!r} website must use an absolute HTTPS URL")
+
+        description = source.get("description")
+        if not isinstance(description, dict):
+            error(f"registry source {source_id or index!r} description must be an object")
+        else:
+            for language in ("en", "cs"):
+                if not str(description.get(language) or "").strip():
+                    error(f"registry source {source_id or index!r} is missing {language} description")
+            missing_optional = [
+                language for language in ("de", "es", "fr")
+                if not str(description.get(language) or "").strip()
+            ]
+            if missing_optional:
+                partially_localized.append(source_id or str(index))
+
+        if source.get("cachePayload") is False and source.get("builder") is not False:
+            error(
+                f"registry source {source_id or index!r} disables cachePayload but remains available to Builder"
+            )
+
+        if source.get("mergeable") is True and mode != "classic":
+            error(f"registry source {source_id!r} is mergeable but mode is {mode!r}; only Classic sources may be pre-hosted")
+
+        for key in ("official", "trusted", "recommended", "mergeable", "community", "modified"):
+            if key in source and not isinstance(source[key], bool):
+                error(f"registry source {source_id!r} field {key!r} must be boolean")
+
+
+    if partially_localized:
+        warn(
+            f"{len(partially_localized)} registry source descriptions still fall back to English "
+            "for one or more of DE/ES/FR"
+        )
+
+
+def validate_generated_data() -> None:
+    status = load_json(STATUS)
+    if isinstance(status, dict):
+        if not isinstance(status.get("sources"), dict):
+            error("data/status.json must contain a sources object")
+        mixes = status.get("mixes", {})
+        if not isinstance(mixes, dict):
+            error("data/status.json mixes must be an object")
+        else:
+            max_sources = mixes.get("maxSourcesPerMix")
+            if max_sources is not None and (not isinstance(max_sources, int) or max_sources < 0):
+                error("data/status.json maxSourcesPerMix must be a non-negative integer")
+
+    catalog = load_json(CATALOG)
+    if isinstance(catalog, dict) and not isinstance(catalog.get("sources"), list):
+        error("data/catalog.json must contain a sources array")
+
+    registry = load_json(REGISTRY)
+    if (
+        isinstance(registry, dict)
+        and isinstance(registry.get("sources"), list)
+        and isinstance(status, dict)
+        and isinstance(status.get("sources"), dict)
+        and isinstance(catalog, dict)
+        and isinstance(catalog.get("sources"), list)
+    ):
+        registry_ids = {
+            str(item.get("id"))
+            for item in registry["sources"]
+            if isinstance(item, dict) and item.get("id")
+        }
+        status_ids = set(status["sources"])
+        if registry_ids != status_ids:
+            missing = sorted(registry_ids - status_ids)
+            extra = sorted(status_ids - registry_ids)
+            if missing:
+                error("data/status.json is missing registry ids: " + ", ".join(missing))
+            if extra:
+                error("data/status.json contains unknown ids: " + ", ".join(extra))
+
+        online_ids = {
+            source_id
+            for source_id, item in status["sources"].items()
+            if isinstance(item, dict) and item.get("online") is True
+        }
+        catalog_ids = {
+            str(item.get("id"))
+            for item in catalog["sources"]
+            if isinstance(item, dict) and item.get("id")
+        }
+        if catalog_ids != online_ids:
+            missing = sorted(online_ids - catalog_ids)
+            extra = sorted(catalog_ids - online_ids)
+            if missing:
+                error("data/catalog.json is missing online source ids: " + ", ".join(missing))
+            if extra:
+                error("data/catalog.json contains non-online/unknown source ids: " + ", ".join(extra))
+
+        for package_name in ("altstore", "sidestore"):
+            package = status.get(package_name, {})
+            if not isinstance(package, dict):
+                continue
+            unknown = sorted(set(package.get("sourceIDs") or []) - registry_ids)
+            if unknown:
+                error(f"data/status.json {package_name}.sourceIDs contains unknown ids: " + ", ".join(unknown))
+
+        registry_sources = [item for item in registry["sources"] if isinstance(item, dict)]
+        expected_cache_ids = {
+            str(item.get("id"))
+            for item in registry_sources
+            if item.get("id") in online_ids and item.get("cachePayload", True)
+        }
+        cache_dir = ROOT / "data" / "source-cache"
+        if cache_dir.is_dir():
+            actual_cache_ids = {path.stem for path in cache_dir.glob("*.json")}
+            if expected_cache_ids != actual_cache_ids:
+                error(
+                    "source cache IDs differ from expected online cache; "
+                    f"missing={sorted(expected_cache_ids - actual_cache_ids)}, "
+                    f"extra={sorted(actual_cache_ids - expected_cache_ids)}"
+                )
+
+        mixes = status.get("mixes", {})
+        mix_dir = ROOT / "mix"
+        if isinstance(mixes, dict) and mix_dir.is_dir():
+            combo_files = [path for path in mix_dir.glob("*.json") if path.name != "all-compatible.json"]
+            expected_mix_count = mixes.get("count")
+            if isinstance(expected_mix_count, int) and expected_mix_count != len(combo_files):
+                error(
+                    f"data/status.json mix count {expected_mix_count} does not match "
+                    f"{len(combo_files)} generated combination files"
+                )
+            if not (mix_dir / "all-compatible.json").exists():
+                error("Missing mix/all-compatible.json")
+
+    validate_alt_source(ROOT / "altstore" / "source.json")
+    validate_alt_source(ROOT / "sidestore" / "source.json")
+
+    mix_dir = ROOT / "mix"
+    if not mix_dir.is_dir():
+        error("Missing generated mix directory")
+    else:
+        mix_files = sorted(mix_dir.glob("*.json"))
+        if not mix_files:
+            error("No generated Mix JSON files found")
+        for path in mix_files:
+            validate_alt_source(path)
+
+    cache_dir = ROOT / "data" / "source-cache"
+    if not cache_dir.is_dir():
+        error("Missing data/source-cache directory")
+    else:
+        for path in sorted(cache_dir.glob("*.json")):
+            payload = load_json(path)
+            if not isinstance(payload, dict) or not isinstance(payload.get("apps"), list):
+                error(f"{path.relative_to(ROOT)} is not a valid source cache with an apps array")
+
+
+
+def validate_interactive_guide() -> None:
+    html = ROOT / "guide.html"
+    if html.exists():
+        text = html.read_text(encoding="utf-8")
+        ids = re.findall(r'\bid="([^"]+)"', text)
+        duplicates = sorted({value for value in ids if ids.count(value) > 1})
+        for value in duplicates:
+            error(f"guide.html contains duplicate id {value!r}")
+
+    first_party_scripts = (
+        "app.js",
+        "builder-page.js",
+        "builder.js",
+        "collapsible.js",
+        "converter.js",
+        "guide.js",
+        "resources.js",
+        "credits.js",
+        "mobile-menu.js",
+        "settings-menu.js",
+    )
+    for script_name in first_party_scripts:
+        script = JS_DIR / script_name
+        if not script.exists():
+            continue
+        text = script.read_text(encoding="utf-8")
+        if "$" * 3 + "(" in text:
+            error(f"{script_name} contains an undefined triple-dollar selector helper")
+        if "(?<=" in text or "(?<!" in text:
+            error(f"{script_name} uses RegExp lookbehind, which breaks older Safari versions targeted by the site")
+        bad_loop = re.search(
+            r"(?<!\$)\$\([^\n]+?\)\.(?:forEach|filter|map|some)\(",
+            text,
+        )
+        if bad_loop:
+            line = text.count("\n", 0, bad_loop.start()) + 1
+            error(
+                f"{script_name} line {line} calls an array method on $() / querySelector; "
+                "use the querySelectorAll helper instead"
+            )
+
+    guide = JS_DIR / "guide.js"
+    if guide.exists():
+        text = guide.read_text(encoding="utf-8")
+
+        if html.exists():
+            html_text = html.read_text(encoding="utf-8")
+            guide_copy_keys = set(re.findall(r'data-guide-copy=["\']([^"\']+)["\']', html_text))
+            help_copy_keys = set(re.findall(r'data-help-(?:copy|placeholder|aria-label)=["\']([^"\']+)["\']', html_text))
+
+            guide_copy_start = text.find("const GUIDE_COPY")
+            help_copy_start = text.find("const HELP_COPY")
+            setup_results_start = text.find("const SETUP_RESULTS")
+            guide_copy_block = text[guide_copy_start:help_copy_start] if guide_copy_start >= 0 and help_copy_start > guide_copy_start else ""
+            help_copy_block = text[help_copy_start:setup_results_start] if help_copy_start >= 0 and setup_results_start > help_copy_start else ""
+
+            for key in sorted(guide_copy_keys):
+                count = len(re.findall(rf"\b{re.escape(key)}\s*:", guide_copy_block))
+                if count < len(LANGUAGES):
+                    error(f"guide.js GUIDE_COPY key {key!r} appears in only {count}/{len(LANGUAGES)} languages")
+            for key in sorted(help_copy_keys):
+                count = len(re.findall(rf"\b{re.escape(key)}\s*:", help_copy_block))
+                if count < len(LANGUAGES):
+                    error(f"guide.js HELP_COPY key {key!r} appears in only {count}/{len(LANGUAGES)} languages")
+
+        start = text.find("const GUIDE_RECOMMENDATIONS")
+        end = text.find("function recommendationsForLanguage", start)
+        block = text[start:end] if start >= 0 and end > start else ""
+        goals = ("iphone", "refresh", "many", "desktop", "tv", "permanent")
+        for lang in LANGUAGES:
+            if lang in ("en", "cs"):
+                marker = re.search(rf"\b{lang}\s*:\s*\{{", block)
+            else:
+                marker = re.search(rf"GUIDE_RECOMMENDATIONS\.{lang}\s*=\s*\{{", block)
+            if not marker:
+                error(f"guide.js GUIDE_RECOMMENDATIONS is missing language {lang!r}")
+                continue
+            lang_start = marker.end()
+            later = [
+                pos for pos in (
+                    block.find("GUIDE_RECOMMENDATIONS.", lang_start),
+                    block.find("\n  en:", lang_start),
+                    block.find("\n  cs:", lang_start),
+                )
+                if pos >= 0
+            ]
+            lang_end = min(later) if later else len(block)
+            lang_block = block[lang_start:lang_end]
+            for goal in goals:
+                if not re.search(rf"\b{goal}\s*:", lang_block):
+                    error(f"guide.js recommendations for {lang!r} are missing goal {goal!r}")
+
+
+
+SITE_PAGES = (
+    ROOT / "index.html",
+    ROOT / "builder.html",
+    ROOT / "converter.html",
+    ROOT / "guide.html",
+    ROOT / "resources.html",
+    ROOT / "credits.html",
+)
+
+
+def validate_internal_links() -> None:
+    page_ids: dict[Path, set[str]] = {}
+    graph: dict[Path, set[Path]] = {path: set() for path in SITE_PAGES}
+
+    for page in SITE_PAGES:
+        if not page.exists():
+            error(f"Missing site page: {page.relative_to(ROOT)}")
+            continue
+        text = page.read_text(encoding="utf-8")
+        page_ids[page] = set(re.findall(r'\bid=["\']([^"\']+)["\']', text))
+
+    for page in SITE_PAGES:
+        if not page.exists():
+            continue
+        text = page.read_text(encoding="utf-8")
+        refs = re.findall(r'\b(?:href|src)=["\']([^"\']+)["\']', text, flags=re.IGNORECASE)
+        for raw in refs:
+            value = raw.strip()
+            if not value or value == "#":
+                continue
+            parsed = urlparse(value)
+            if parsed.scheme or value.startswith("//"):
+                continue
+
+            clean_path = unquote(parsed.path)
+            target = page if not clean_path else (page.parent / clean_path).resolve()
+            try:
+                target = ROOT / target.relative_to(ROOT.resolve())
+            except ValueError:
+                error(f"{page.relative_to(ROOT)} references a path outside the repository: {value}")
+                continue
+
+            if not target.exists():
+                error(f"{page.relative_to(ROOT)} references missing local target: {value}")
+                continue
+
+            if target.suffix.lower() == ".html" and target in graph:
+                graph[page].add(target)
+
+            if parsed.fragment and target.suffix.lower() == ".html":
+                fragment = unquote(parsed.fragment)
+                ids = page_ids.get(target)
+                if ids is None:
+                    target_text = target.read_text(encoding="utf-8")
+                    ids = set(re.findall(r'\bid=["\']([^"\']+)["\']', target_text))
+                    page_ids[target] = ids
+                if fragment not in ids:
+                    error(
+                        f"{page.relative_to(ROOT)} references missing fragment "
+                        f"#{fragment} in {target.relative_to(ROOT)}"
+                    )
+
+    existing_pages = {path for path in SITE_PAGES if path.exists()}
+    for start in existing_pages:
+        seen = {start}
+        pending = [start]
+        while pending:
+            current = pending.pop()
+            for target in graph.get(current, set()):
+                if target not in seen:
+                    seen.add(target)
+                    pending.append(target)
+        unreachable = sorted(existing_pages - seen)
+        if unreachable:
+            error(
+                f"{start.relative_to(ROOT)} cannot reach site page(s) through internal links: "
+                + ", ".join(str(path.relative_to(ROOT)) for path in unreachable)
+            )
+
+
+
+def validate_page_quality() -> None:
+    expected_canonical = {
+        ROOT / "index.html": EXPECTED_SITE_URL,
+        ROOT / "builder.html": EXPECTED_SITE_URL + "builder.html",
+        ROOT / "converter.html": EXPECTED_SITE_URL + "converter.html",
+        ROOT / "guide.html": EXPECTED_SITE_URL + "guide.html",
+        ROOT / "resources.html": EXPECTED_SITE_URL + "resources.html",
+        ROOT / "credits.html": EXPECTED_SITE_URL + "credits.html",
+    }
+    for page in SITE_PAGES:
+        if not page.exists():
+            continue
+        text = page.read_text(encoding="utf-8")
+        label = page.relative_to(ROOT)
+        if len(re.findall(r"<main\b", text, flags=re.IGNORECASE)) != 1:
+            error(f"{label} must contain exactly one <main>")
+        if len(re.findall(r"<h1\b", text, flags=re.IGNORECASE)) != 1:
+            error(f"{label} must contain exactly one <h1>")
+        if 'class="skip-link"' not in text or 'href="#top"' not in text:
+            error(f"{label} is missing the skip-to-content link")
+
+        canonical = expected_canonical[page]
+        if f'rel="canonical" href="{canonical}"' not in text:
+            error(f"{label} is missing canonical URL {canonical}")
+        for required_meta in ('property="og:title"', 'property="og:description"', 'property="og:url"', 'name="twitter:card"'):
+            if required_meta not in text:
+                error(f"{label} is missing social metadata {required_meta}")
+
+        if page.name == "guide.html":
+            tab_pairs = (
+                ("guideModeChoose", "guidePanelChoose"),
+                ("guideModeFix", "guidePanelFix"),
+                ("guideModeSetup", "guidePanelSetup"),
+            )
+            for tab_id, panel_id in tab_pairs:
+                tab = re.search(rf'<button\s+id="{tab_id}"[^>]*>', text)
+                panel = re.search(rf'<section\s+id="{panel_id}"[^>]*>', text)
+                if not tab or f'aria-controls="{panel_id}"' not in tab.group(0):
+                    error(f"guide.html tab {tab_id} must reference {panel_id} with aria-controls")
+                if not panel or f'aria-labelledby="{tab_id}"' not in panel.group(0):
+                    error(f"guide.html panel {panel_id} must reference {tab_id} with aria-labelledby")
+
+        settings = re.search(r'<div\s+id="settingsPanel"[^>]*>', text)
+        if not settings or 'role="dialog"' not in settings.group(0) or 'aria-labelledby=' not in settings.group(0):
+            error(f"{label} settingsPanel must expose dialog semantics")
+
+        for match in re.finditer(r'<input\b[^>]*type="search"[^>]*>', text, flags=re.IGNORECASE):
+            tag = match.group(0)
+            if 'aria-label=' not in tag and 'aria-labelledby=' not in tag:
+                error(f"{label} contains an unlabeled search input: {tag[:120]}")
+
+        for match in re.finditer(r'<a\b[^>]*target="_blank"[^>]*>', text, flags=re.IGNORECASE):
+            tag = match.group(0)
+            if not re.search(r'rel="[^"]*\bnoopener\b', tag, flags=re.IGNORECASE):
+                error(f"{label} opens a new tab without rel=noopener")
+
+        expected_nav = {
+            "index.html": ["#tools", "builder.html", "guide.html", "resources.html", "#sources", "credits.html"],
+            "builder.html": ["index.html#tools", "builder.html", "guide.html", "resources.html", "index.html#sources", "credits.html"],
+            "converter.html": ["index.html#tools", "builder.html", "guide.html", "resources.html", "index.html#sources", "credits.html"],
+            "guide.html": ["index.html#tools", "builder.html", "guide.html", "resources.html", "index.html#sources", "credits.html"],
+            "resources.html": ["index.html#tools", "builder.html", "guide.html", "resources.html", "index.html#sources", "credits.html"],
+            "credits.html": ["index.html#tools", "builder.html", "guide.html", "resources.html", "index.html#sources", "credits.html"],
+        }
+        nav_match = re.search(r'<nav\s+class="nav"[^>]*>(.*?)</nav>', text, flags=re.IGNORECASE | re.DOTALL)
+        if not nav_match:
+            error(f"{label} is missing primary navigation")
+        else:
+            hrefs = re.findall(r'<a\b[^>]*href=["\']([^"\']+)["\']', nav_match.group(1), flags=re.IGNORECASE)
+            if hrefs != expected_nav[page.name]:
+                error(f"{label} primary navigation differs from expected targets/order: {hrefs}")
+
+        version_path = ROOT / "VERSION"
+        if version_path.exists():
+            version = version_path.read_text(encoding="utf-8").strip()
+            if version and f"iOS Hub · v{version}" not in text:
+                error(f"{label} footer version does not match VERSION ({version})")
+
+        for shared_script in ("support-dialog.js", "mobile-menu.js", "settings-menu.js"):
+            if f"{shared_script}?v=" not in text:
+                error(f"{label} must load cache-versioned {shared_script}")
+
+        for _attr, asset in re.findall(
+            r'\b(href|src)=["\']([^"\']+\.(?:css|js)(?:\?[^"\']*)?)["\']',
+            text,
+            flags=re.IGNORECASE,
+        ):
+            parsed = urlparse(asset)
+            if parsed.scheme or asset.startswith("//") or parsed.path.startswith("vendor/"):
+                continue
+            if "?v=" not in asset:
+                error(f"{label} local runtime asset is not cache-versioned: {asset}")
+
+    support_scripts = ("app.js", "builder-page.js", "converter.js", "guide.js", "resources.js")
+    for script_name in support_scripts:
+        script = JS_DIR / script_name
+        if not script.exists():
+            continue
+        script_text = script.read_text(encoding="utf-8")
+        for required in (
+            "supportReturnFocus = document.activeElement",
+            "querySelector('[data-support-close]')?.focus()",
+            "target.focus?.()",
+        ):
+            if required not in script_text:
+                error(f"{script_name} support dialog is missing focus-management step: {required}")
+
+    support_focus = JS_DIR / "support-dialog.js"
+    if not support_focus.exists():
+        error("Missing support-dialog.js")
+    else:
+        support_focus_text = support_focus.read_text(encoding="utf-8")
+        for required in ("event.key !== 'Tab'", "modal.contains(active)", "last.focus()", "first.focus()"):
+            if required not in support_focus_text:
+                error(f"support-dialog.js must trap Tab focus inside the modal: missing {required}")
+
+    settings_script = JS_DIR / "settings-menu.js"
+    if settings_script.exists():
+        settings_text = settings_script.read_text(encoding="utf-8")
+        for required in ("returnFocus = document.activeElement", "target.focus?.()", "panel.querySelector('[data-settings-theme].active"):
+            if required not in settings_text:
+                error(f"settings-menu.js is missing keyboard focus handling: {required}")
+
+    mobile_script = JS_DIR / "mobile-menu.js"
+    if mobile_script.exists():
+        mobile_text = mobile_script.read_text(encoding="utf-8")
+        if "setOpen(false, true)" not in mobile_text or "button.focus()" not in mobile_text:
+            error("mobile-menu.js must restore focus to the menu button when Escape closes it")
+
+    importers = ("app.js", "builder-page.js", "converter.js", "guide.js", "resources.js", "credits.js")
+    versions: set[str] = set()
+    for script_name in importers:
+        script = JS_DIR / script_name
+        if not script.exists():
+            continue
+        text = script.read_text(encoding="utf-8")
+        match = re.search(r"from\s+['\"]\.\/i18n\.js\?v=([^'\"]+)['\"]", text)
+        if not match:
+            error(f"{script_name} must import i18n.js with an explicit cache version")
+        else:
+            versions.add(match.group(1))
+    if len(versions) > 1:
+        error("i18n.js import cache versions are inconsistent: " + ", ".join(sorted(versions)))
+
+
+
+def validate_layout() -> None:
+    for path in LEGACY_PATHS:
+        if path.exists():
+            error(f"Legacy/Cydia artifact must not exist on main: {path.relative_to(ROOT)}")
+
+    index = ROOT / "index.html"
+    if index.exists():
+        text = index.read_text(encoding="utf-8")
+        if "experimental-mix.js" in text:
+            error("index.html still references obsolete experimental-mix.js")
+        if "builder.js" not in text:
+            error("index.html does not reference builder.js")
+
+    for html in SITE_PAGES:
+        validate_html_scripts(html)
+        validate_security_policy(html)
+
+    shared_css = CSS_DIR / "hub-extra.css"
+    if shared_css.exists():
+        shared_css_text = shared_css.read_text(encoding="utf-8")
+        for required_css in ("safe-area-inset-left", "safe-area-inset-right", "prefers-reduced-motion"):
+            if required_css not in shared_css_text:
+                error(f"hub-extra.css is missing full-site mobile/accessibility guard: {required_css}")
+
+    for search_script in ("app.js", "builder.js"):
+        path = JS_DIR / search_script
+        if path.exists() and "Object.values(source.description || {})" not in path.read_text(encoding="utf-8"):
+            error(f"{search_script} must search every localized source description")
+
+    for script_name in ("app.js", "builder.js"):
+        script = JS_DIR / script_name
+        if script.exists():
+            script_text = script.read_text(encoding="utf-8")
+            if "livecontainer://sources?url=" in script_text or "? 'sources' : 'source'" in script_text:
+                error(f"{script_name} uses obsolete LiveContainer deep link; use livecontainer://source?url=")
+
+    generator = ROOT / "tools" / "update_sources.py"
+    if generator.exists():
+        generator_text = generator.read_text(encoding="utf-8")
+        if 'cleaned.pop("marketplaceID", None)' not in generator_text:
+            error("tools/update_sources.py must strip marketplaceID from Classic generated sources")
+        if 'item.pop("Build", None)' not in generator_text:
+            error("tools/update_sources.py must strip custom Build fields from Classic generated sources")
+
+    for required in (
+        JS_DIR / "app.js",
+        JS_DIR / "builder-page.js",
+        JS_DIR / "builder.js",
+        JS_DIR / "converter.js",
+        JS_DIR / "guide.js",
+        JS_DIR / "resources.js",
+        JS_DIR / "credits.js",
+        JS_DIR / "support-dialog.js",
+        JS_DIR / "mobile-menu.js",
+        JS_DIR / "settings-menu.js",
+        JS_DIR / "i18n.js",
+        CSS_DIR / "styles.css",
+        CSS_DIR / "hub-extra.css",
+        CSS_DIR / "collapsible.css",
+        CSS_DIR / "converter.css",
+        ROOT / "vendor" / "libarchive" / "libarchive.js",
+        ROOT / "vendor" / "libarchive" / "worker-bundle.js",
+        ROOT / "vendor" / "libarchive" / "libarchive.wasm",
+        ROOT / "vendor" / "jszip" / "jszip.min.js",
+    ):
+        if not required.exists():
+            error(f"Missing required runtime file: {required.relative_to(ROOT)}")
+
+
+def main() -> int:
+    validate_registry()
+    validate_generated_data()
+    validate_layout()
+    validate_internal_links()
+    validate_interactive_guide()
+    validate_page_quality()
+    validate_translations()
+    validate_project_identity()
+
+    for message in warnings:
+        print(f"WARNING: {message}")
+    if errors:
+        for message in errors:
+            print(f"ERROR: {message}", file=sys.stderr)
+        print(f"Audit failed with {len(errors)} error(s).", file=sys.stderr)
+        return 1
+
+    print("Repository audit passed.")
+    return 0
+
+
+if __name__ == "__main__":
+    raise SystemExit(main())

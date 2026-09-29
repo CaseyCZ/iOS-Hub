@@ -1,0 +1,306 @@
+{
+  "name": "xN1ckuz's SideBox",
+  "subtitle": "Tweaked & Custom Apps, All in One Repo.",
+  "description": "Welcome to my source! 🎉\nHere you'll find IPA apps and tweaks, always updated and ready for download via Sidestore/AltStore.",
+  "iconURL": "https://avatars.githubusercontent.com/u/74825012?v=4",
+  "headerURL": "https://raw.githubusercontent.com/xN1ckuz/xN1ckuz-Sidestore-Repo/refs/heads/main/Resources/Repo/sidestore_header.png",
+  "website": "https://github.com/xN1ckuz",
+  "tintColor": "#0CB2B2",
+  "featuredApps": [
+    "com.spotify.client",
+    "com.google.ios.youtube",
+    "com.google.ios.youtubemusic",
+    "com.burbn.instagram"
+  ],
+  "apps": [
+    {
+      "name": "Spotify Premium",
+      "bundleIdentifier": "com.spotify.client",
+      "developerName": "Eevee",
+      "subtitle": "Spotify Premium Tweak.",
+      "localizedDescription": "Eevee Spotify\nThis tweak makes Spotify think you have a Premium subscription, granting free listening, just like Spotilife, and provides some additional features like custom lyrics.\nRestrictions\n• Very High audio quality\n• Native playlist downloading (you can download podcast episodes though)\n• Jam (hosting a Spotify Jam and joining it remotely requires Premium; only joining in-person works)\n• AI DJ/Playlist\n• Spotify Connect (When using Spotify Connect, the device will act as a remote control and stream directly to the connected device. This is a server-sided limitation and is beyond the control of EeveeSpotify, so it will behave as if you have a Free subscription while using this feature.)\nLyrics Support\nEeveeSpotify replaces Spotify monthly limited lyrics with one of the following four lyrics providers:\n• Genius: Offers the best quality lyrics, provides the most songs, and updates lyrics the fastest. Does not and will never be time-synced.\n• LRCLIB: The most open service, offering time-synced lyrics. However, it lacks lyrics for many songs.\n• Musixmatch: The service Spotify uses. Provides time-synced lyrics for many songs, but you'll need a user token to use this source. To obtain the token, download Musixmatch from the App Store, sign up, then go to Settings > Get help > Copy debug info, and paste it into EeveeSpotify alert. You can also extract the token using MITM.\n• PetitLyrics: Offers plenty of time-synced Japanese and some international lyrics.\nIf the tweak is unable to find a song or process the lyrics, you'll see a \"Couldn't load the lyrics for this song\" message. The lyrics might be wrong for some songs when using Genius due to how the tweak searches songs. While I've made it work in most cases, kindly refrain from opening issues about it.",
+      "iconURL": "https://raw.githubusercontent.com/xN1ckuz/xN1ckuz-Sidestore-Repo/refs/heads/main/Resources/EeveeSpotify/icon.png",
+      "tintColor": "#1FD362",
+      "category": "Entertainment",
+      "screenshots": [
+        "https://raw.githubusercontent.com/xN1ckuz/xN1ckuz-Sidestore-Repo/refs/heads/main/Resources/EeveeSpotify/screenshot_0.png",
+        "https://raw.githubusercontent.com/xN1ckuz/xN1ckuz-Sidestore-Repo/refs/heads/main/Resources/EeveeSpotify/screenshot_1.png",
+        "https://raw.githubusercontent.com/xN1ckuz/xN1ckuz-Sidestore-Repo/refs/heads/main/Resources/EeveeSpotify/screenshot_2.png",
+        "https://raw.githubusercontent.com/xN1ckuz/xN1ckuz-Sidestore-Repo/refs/heads/main/Resources/EeveeSpotify/screenshot_3.png",
+        "https://raw.githubusercontent.com/xN1ckuz/xN1ckuz-Sidestore-Repo/refs/heads/main/Resources/EeveeSpotify/screenshot_4.png",
+        "https://raw.githubusercontent.com/xN1ckuz/xN1ckuz-Sidestore-Repo/refs/heads/main/Resources/EeveeSpotify/screenshot_5.png",
+        "https://raw.githubusercontent.com/xN1ckuz/xN1ckuz-Sidestore-Repo/refs/heads/main/Resources/EeveeSpotify/screenshot_6.png",
+        "https://raw.githubusercontent.com/xN1ckuz/xN1ckuz-Sidestore-Repo/refs/heads/main/Resources/EeveeSpotify/screenshot_7.png",
+        "https://raw.githubusercontent.com/xN1ckuz/xN1ckuz-Sidestore-Repo/refs/heads/main/Resources/EeveeSpotify/screenshot_8.png"
+      ],
+      "versions": [
+        {
+          "version": "9.1.80",
+          "date": "2026-09-09T13:38:00",
+          "size": 132087025,
+          "downloadURL": "https://github.com/xN1ckuz/xN1ckuz-Sidestore-Repo/raw/refs/heads/main/IPAs/EeveeSpotify/EeveeSpotify-9.1.80.ipa",
+          "localizedDescription": "• Updated Spotify to 9.1.80\n• Updated Swift v6.6.8\n• OpenSpotifySafariExtension included",
+          "minOSVersion": "16.1"
+        },
+        {
+          "version": "9.1.74",
+          "date": "2026-08-19T15:47:03",
+          "size": 130340595,
+          "downloadURL": "https://github.com/xN1ckuz/xN1ckuz-Sidestore-Repo/raw/refs/heads/main/IPAs/EeveeSpotify/EeveeSpotify-9.1.74.ipa",
+          "localizedDescription": "• Updated Spotify to 9.1.74\n• Updated Swift v6.6.8\n• OpenSpotifySafariExtension included\n• Added Clean Share Links\n• Added Prank for my friend",
+          "minOSVersion": "16.1"
+        }
+      ],
+      "appPermissions": {
+        "entitlements": [
+          "com.apple.security.application-groups",
+          "com.apple.developer.associated-domains",
+          "com.apple.developer.carplay-audio",
+          "get-task-allow",
+          "com.apple.developer.group-session",
+          "com.apple.developer.healthkit",
+          "keychain-access-groups",
+          "com.apple.developer.networking.multicast",
+          "aps-environment",
+          "com.apple.developer.healthkit.access",
+          "com.apple.developer.applesignin",
+          "com.apple.developer.siri",
+          "com.apple.developer.networking.wifi-info"
+        ],
+        "privacy": {
+          "NSBluetoothAlwaysUsageDescription": "This lets you unlock new ways of interacting with other devices compatible with Spotify via Bluetooth.",
+          "NSCameraUsageDescription": "This lets you scan Spotify Codes.",
+          "NSUserTrackingUsageDescription": "Your data will be used to deliver personalized ads or content to you.",
+          "NSHealthUpdateUsageDescription": "Spotify will use HealthKit data to provide personalised audio recommendations for your workouts.",
+          "NSMotionUsageDescription": "We will use this to understand which audio motivates you most.",
+          "NSBluetoothPeripheralUsageDescription": "This lets you unlock new ways of interacting with other devices compatible with Spotify via Bluetooth.",
+          "NSPhotoLibraryAddUsageDescription": "This lets you save images to your Photo Library.",
+          "NSLocalNetworkUsageDescription": "This lets you listen on different devices. Spotify will also get access to local audio files.",
+          "NSHealthShareUsageDescription": "Spotify will use HealthKit data to provide personalised audio recommendations for your workouts.",
+          "NSAppleMusicUsageDescription": "This will let you play your imported music on Spotify.",
+          "NSCalendarsUsageDescription": "This lets Spotify view and add events to your calendar.",
+          "NSMicrophoneUsageDescription": "This lets you control Spotify using your voice.",
+          "NSCalendarsWriteOnlyAccessUsageDescription": "This lets Spotify add events to your calendar.",
+          "NSFaceIDUsageDescription": "This lets you set access restrictions using Face ID.",
+          "NSContactsUsageDescription": "This lets Spotify access calendars you may have shared with your contacts.",
+          "NSPhotoLibraryUsageDescription": "This lets you select images from your Photo Library."
+        }
+      }
+    },
+    {
+      "name": "YouTube Plus",
+      "bundleIdentifier": "com.google.ios.youtube",
+      "developerName": "Dayanch96",
+      "subtitle": "YouTube Premium Tweak.",
+      "localizedDescription": "A flexible enhancer for YouTube on iOS, featuring over hundred customizable options.\nMain Features:\n• Download videos, audio (including audio track selection), thumbnails, posts, and profile pictures\n• Copy video, comment, and post information\n• Interface customization: Remove feed elements, reorder tabs, enable OLED mode, and as use Shorts-only mode\n• Player settings: Gestures, default quality, preferred audio track\n• Save, Load and Restore settings. Clear cache once or automatically on app startup\n• Built-in SponsorBlock\nYouTube Plus preferences can be found in the YouTube Settings.",
+      "iconURL": "https://raw.githubusercontent.com/xN1ckuz/xN1ckuz-Sidestore-Repo/refs/heads/main/Resources/YouTubePlus/icon.png",
+      "tintColor": "#F90505",
+      "category": "Entertainment",
+      "screenshots": [
+        "https://raw.githubusercontent.com/xN1ckuz/xN1ckuz-Sidestore-Repo/refs/heads/main/Resources/YouTubePlus/screenshot_0.jpg",
+        "https://raw.githubusercontent.com/xN1ckuz/xN1ckuz-Sidestore-Repo/refs/heads/main/Resources/YouTubePlus/screenshot_1.jpg",
+        "https://raw.githubusercontent.com/xN1ckuz/xN1ckuz-Sidestore-Repo/refs/heads/main/Resources/YouTubePlus/screenshot_2.jpg",
+        "https://raw.githubusercontent.com/xN1ckuz/xN1ckuz-Sidestore-Repo/refs/heads/main/Resources/YouTubePlus/screenshot_3.jpg",
+        "https://raw.githubusercontent.com/xN1ckuz/xN1ckuz-Sidestore-Repo/refs/heads/main/Resources/YouTubePlus/screenshot_4.jpg"
+      ],
+      "versions": [
+        {
+          "version": "21.24.3",
+          "date": "2026-07-17T16:05:00",
+          "size": 128835584,
+          "downloadURL": "https://github.com/xN1ckuz/xN1ckuz-Sidestore-Repo/raw/refs/heads/main/IPAs/YouTubePlus/YouTubePlus_21.24.3_5.2.2.ipa",
+          "localizedDescription": "• Updated Tweak to 5.2.2\n• Working Casting Feature\n• YTUHD is back now (you can view 4K videos in download manager)\n• Functional download manager.\n• +21.25.5 versions are not supported"
+        }
+      ],
+      "appPermissions": {
+        "entitlements": [
+          "com.apple.developer.usernotifications.communication",
+          "com.apple.developer.usernotifications.time-sensitive",
+          "com.apple.developer.group-session",
+          "com.apple.developer.networking.multicast",
+          "com.apple.developer.networking.wifi-info",
+          "com.apple.developer.coremedia.allow-alternate-video-decoder-selection",
+          "com.apple.developer.associated-domains",
+          "com.apple.developer.device-information.user-assigned-device-name",
+          "com.apple.developer.siri",
+          "com.apple.developer.storekit.request-data",
+          "com.apple.security.application-groups"
+        ],
+        "privacy": {
+          "NSCameraUsageDescription": "This lets you create videos using the app.",
+          "NSUserTrackingUsageDescription": "To personalize ads and provide ad measurement, YouTube will link activity from this app with activity from non-Google apps and websites.",
+          "NSBluetoothPeripheralUsageDescription": "YouTube needs bluetooth access to scan for nearby Cast devices.",
+          "NSLocalNetworkUsageDescription": "Access to your network allows YouTube to discover and connect to devices such as your TV.",
+          "NSAppleMusicUsageDescription": "This lets you add your own audio files to your videos.",
+          "NSMicrophoneUsageDescription": "This lets you include audio with your videos and search using your voice.",
+          "NSLocationWhenInUseUsageDescription": "Makes it easier for you to attach location information to your videos and live streams and allows for features such as improved recommendations and ads.",
+          "NSContactsUsageDescription": "Your contacts will be sent to YouTube servers to help you find friends to share videos with.",
+          "NSPhotoLibraryUsageDescription": "This lets you upload media you've already created."
+        }
+      }
+    },
+    {
+      "name": "YouTube Music Ultimate",
+      "bundleIdentifier": "com.google.ios.youtubemusic",
+      "developerName": "Dayanch96",
+      "subtitle": "YouTube Music Premium Tweak.",
+      "localizedDescription": "The best tweak for the YouTube Music on iOS.",
+      "iconURL": "https://raw.githubusercontent.com/xN1ckuz/xN1ckuz-Sidestore-Repo/refs/heads/main/Resources/YTMusicUltimate/icon.png",
+      "tintColor": "#D3675A",
+      "category": "Entertainment",
+      "screenshots": [
+        "https://raw.githubusercontent.com/xN1ckuz/xN1ckuz-Sidestore-Repo/refs/heads/main/Resources/YTMusicUltimate/screenshot_0.png",
+        "https://raw.githubusercontent.com/xN1ckuz/xN1ckuz-Sidestore-Repo/refs/heads/main/Resources/YTMusicUltimate/screenshot_1.png",
+        "https://raw.githubusercontent.com/xN1ckuz/xN1ckuz-Sidestore-Repo/refs/heads/main/Resources/YTMusicUltimate/screenshot_2.png",
+        "https://raw.githubusercontent.com/xN1ckuz/xN1ckuz-Sidestore-Repo/refs/heads/main/Resources/YTMusicUltimate/screenshot_3.png",
+        "https://raw.githubusercontent.com/xN1ckuz/xN1ckuz-Sidestore-Repo/refs/heads/main/Resources/YTMusicUltimate/screenshot_4.png"
+      ],
+      "versions": [
+        {
+          "version": "9.36.1",
+          "date": "2026-09-13T07:18:00",
+          "size": 104992686,
+          "downloadURL": "https://github.com/xN1ckuz/xN1ckuz-Sidestore-Repo/raw/refs/heads/main/IPAs/YTMusicUltimate/YTMusicUltimate_9.36.1_2.4.1.ipa",
+          "localizedDescription": "• Updated YouTube Music Ultimate to 9.36.1\n• Updated tweak to v2.4.1",
+          "minOSVersion": "16.0"
+        },
+        {
+          "version": "9.33.3",
+          "date": "2026-08-18T09:17:00",
+          "size": 102367696,
+          "downloadURL": "https://github.com/xN1ckuz/xN1ckuz-Sidestore-Repo/raw/refs/heads/main/IPAs/YTMusicUltimate/YTMusicUltimate_9.33.3_2.4.1.ipa",
+          "localizedDescription": "• Updated YouTube Music Ultimate to 9.33.3\n• Updated tweak to v2.4.1",
+          "minOSVersion": "16.0"
+        }
+      ],
+      "appPermissions": {
+        "entitlements": [
+          "com.apple.developer.networking.wifi-info",
+          "com.apple.developer.siri",
+          "com.apple.developer.networking.multicast",
+          "com.apple.security.application-groups",
+          "com.apple.developer.coremedia.allow-alternate-video-decoder-selection",
+          "com.apple.developer.carplay-audio",
+          "com.apple.developer.associated-domains",
+          "com.apple.developer.mediasetup"
+        ],
+        "privacy": {
+          "NSBluetoothAlwaysUsageDescription": "YouTube Music uses Bluetooth to locate and connect to Chromecast and other devices.",
+          "NSBluetoothPeripheralUsageDescription": "YouTube Music uses Bluetooth to locate and connect to Chromecast and other devices.",
+          "NSCameraUsageDescription": "To take a profile picture, allow YouTube Music to access your camera.",
+          "NSContactsUsageDescription": "This will allow you to invite your family into your membership plan.",
+          "NSLocalNetworkUsageDescription": "Access to your network allows YouTube Music to discover and connect to devices such as your TV.",
+          "NSMicrophoneUsageDescription": "This lets you include audio with your videos.",
+          "NSPhotoLibraryAddUsageDescription": "To save images, allow YouTube Music to access your photo library.",
+          "NSPhotoLibraryUsageDescription": "To choose a profile picture, allow YouTube Music to access your photos."
+        }
+      }
+    },
+    {
+      "name": "Instagram Plus",
+      "bundleIdentifier": "com.burbn.instagram",
+      "developerName": "SoCuul",
+      "subtitle": "Instagram Plus Tweak.",
+      "localizedDescription": "A powerful enhancement for Instagram on iOS, adding extensive customization, privacy, download, and quality-of-life features.\nMain Features:\n• Hide ads, Meta AI, suggested users, suggested posts, suggested reels, and other unwanted content\n• Customize the interface: Reorder tabs, hide navigation tabs, enable Liquid Glass buttons, native color picker, teen app icons, and custom Notes themes\n• Feed & Reels controls: Disable autoplay, modify tap controls, always show progress scrubber, prevent doom scrolling, and customize Reels behavior\n• Download posts, reels, stories, profile pictures, and customize long-press gestures\n• Privacy features: Disable typing indicators, story seen receipts, screenshot detection, view-once limitations, and replay stories unlimited times\n• Message enhancements: Keep deleted messages, manually mark messages as seen, and disable instant creation\n• Confirmation prompts for likes, follows, reposts, calls, comments, voice messages, and other actions\n• Performance optimization: Automatically clears unnecessary cache folders to reduce app storage usage\n• Instagram Plus preferences can be found in the Instagram Settings.",
+      "iconURL": "https://raw.githubusercontent.com/xN1ckuz/xN1ckuz-Sidestore-Repo/refs/heads/main/Resources/SCInstagram/icon.png",
+      "tintColor": "#E1306C",
+      "category": "Entertainment",
+      "screenshots": [
+        "https://raw.githubusercontent.com/xN1ckuz/xN1ckuz-Sidestore-Repo/refs/heads/main/Resources/SCInstagram/screenshot_0.png",
+        "https://raw.githubusercontent.com/xN1ckuz/xN1ckuz-Sidestore-Repo/refs/heads/main/Resources/SCInstagram/screenshot_1.png",
+        "https://raw.githubusercontent.com/xN1ckuz/xN1ckuz-Sidestore-Repo/refs/heads/main/Resources/SCInstagram/screenshot_2.png",
+        "https://raw.githubusercontent.com/xN1ckuz/xN1ckuz-Sidestore-Repo/refs/heads/main/Resources/SCInstagram/screenshot_3.png",
+        "https://raw.githubusercontent.com/xN1ckuz/xN1ckuz-Sidestore-Repo/refs/heads/main/Resources/SCInstagram/screenshot_4.png",
+        "https://raw.githubusercontent.com/xN1ckuz/xN1ckuz-Sidestore-Repo/refs/heads/main/Resources/SCInstagram/screenshot_5.png",
+        "https://raw.githubusercontent.com/xN1ckuz/xN1ckuz-Sidestore-Repo/refs/heads/main/Resources/SCInstagram/screenshot_6.png"
+      ],
+      "versions": [
+        {
+          "version": "418.2.0",
+          "date": "2026-03-01T00:00:00",
+          "size": 289011681,
+          "downloadURL": "https://github.com/xN1ckuz/xN1ckuz-Sidestore-Repo/raw/refs/heads/main/IPAs/SCInstagram/SCInstagram_418.2.0_2.4.1.ipa",
+          "localizedDescription": "• Updated SCInsta to 418.2.0\n• Updated tweak to v1.1.1\n• Hide MetaAI\n• Hide imagine background option in story editor\n• Hides AI restyle & rewrite during story creation",
+          "minOSVersion": "16.3"
+        }
+      ],
+      "appPermissions": {
+        "entitlements": [
+          "com.apple.developer.usernotifications.communication",
+          "com.apple.developer.declared-age-range",
+          "com.apple.developer.icloud-container-identifiers",
+          "com.apple.developer.avfoundation.multitasking-camera-access",
+          "aps-environment",
+          "com.apple.developer.icloud-container-environment",
+          "com.apple.developer.usernotifications.time-sensitive",
+          "com.apple.developer.associated-domains",
+          "com.apple.developer.networking.wifi-info",
+          "keychain-access-groups",
+          "com.apple.developer.ubiquity-container-identifiers",
+          "com.apple.developer.storekit.request-data",
+          "com.apple.developer.icloud-services",
+          "com.apple.security.application-groups"
+        ],
+        "privacy": {
+          "NSBluetoothAlwaysUsageDescription": "This allows your phone to find and connect to the glasses using a Bluetooth connection.",
+          "NSCalendarsUsageDescription": "This will let Instagram sync events to your calendar.",
+          "NSCalendarsWriteOnlyAccessUsageDescription": "This will let Instagram sync events to your calendar.",
+          "NSCameraUsageDescription": "Instagram uses your device's camera to do things like help you take photos, record videos and use effects.",
+          "NSContactsUsageDescription": "Instagram will use your contacts to suggest people and things you care about, and offer a better service. Your contacts will be periodically synced and securely stored on Instagram’s servers.",
+          "NSFaceIDUsageDescription": "Enable Face ID for quick and secure authentication on Instagram.",
+          "NSFocusStatusUsageDescription": "This allows Instagram to check to see if you’ve been missing notifications from friends. You can always change this later in settings.",
+          "NSLocalNetworkUsageDescription": "Used to discover and connect to compatible streaming devices on your Wi-Fi network.",
+          "NSLocationAlwaysAndWhenInUseUsageDescription": "Instagram uses this to make some features work, personalize content and help people find places. You can change your preferences at any time in your device settings.",
+          "NSLocationUsageDescription": "Instagram uses this to make some features work, personalize content and help people find places. You can change your preferences at any time in your device settings.",
+          "NSLocationWhenInUseUsageDescription": "Instagram uses this to make some features work, personalize content and help people find places. You can change your preferences at any time in your device settings.",
+          "NSMicrophoneUsageDescription": "Instagram uses your device's microphone to do things like help you record videos and preview audio effects.",
+          "NSPhotoLibraryAddUsageDescription": "This lets you save photos and videos to your Camera Roll.",
+          "NSPhotoLibraryUsageDescription": "Instagram uses access to your camera roll to do things like help you share photos and videos to Instagram, apply effects and suggest photos and videos to share.",
+          "NSUserTrackingUsageDescription": "This helps Instagram personalize ads we show you."
+        }
+      }
+    }
+  ],
+  "news": [
+    {
+      "title": "Spotify Update - 9.1.80\n09/09/2026",
+      "identifier": "spotify_update",
+      "caption": "Spotify Premium Tweak Updated by Eevee",
+      "date": "2026-09-09",
+      "tintColor": "#1FD362",
+      "imageURL": "https://raw.githubusercontent.com/xN1ckuz/xN1ckuz-Sidestore-Repo/refs/heads/main/Resources/EeveeSpotify/news.png",
+      "notify": true,
+      "appID": "com.spotify.client"
+    },
+    {
+      "title": "YouTubePlus Update - 21.24.3\n17/07/2026",
+      "identifier": "ytplus_update",
+      "caption": "YouTubePlus Tweak Updated by Dayanch96",
+      "date": "2026-07-17",
+      "tintColor": "#F90505",
+      "imageURL": "https://raw.githubusercontent.com/xN1ckuz/xN1ckuz-Sidestore-Repo/refs/heads/main/Resources/YouTubePlus/news.png",
+      "notify": true,
+      "appID": "com.google.ios.youtube"
+    },
+    {
+      "title": "YTMusic Ultimate Update - 9.36.1\n13/09/2026",
+      "identifier": "ytmusic_update",
+      "caption": "YTMusic Ultimate Tweak Updated by Dayanch96",
+      "date": "2026-09-13",
+      "tintColor": "#D3675A",
+      "imageURL": "https://raw.githubusercontent.com/xN1ckuz/xN1ckuz-Sidestore-Repo/refs/heads/main/Resources/YTMusicUltimate/news.png",
+      "notify": true,
+      "appID": "com.google.ios.youtubemusic"
+    },
+    {
+      "title": "Instagram Plus Update - 418.2.0\n01/03/2026",
+      "identifier": "instagram_update",
+      "caption": "Instagram Plus Tweak Updated by SoCuul",
+      "date": "2026-03-01",
+      "tintColor": "#E1306C",
+      "imageURL": "https://raw.githubusercontent.com/xN1ckuz/xN1ckuz-Sidestore-Repo/refs/heads/main/Resources/SCInstagram/news.png",
+      "notify": true,
+      "appID": "com.burbn.instagram"
+    }
+  ]
+}

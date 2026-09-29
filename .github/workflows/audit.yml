@@ -1,0 +1,55 @@
+name: Audit iOS Hub
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - "src/**/*.js"
+      - "*.html"
+      - "src/**/*.css"
+      - "tools/**"
+      - "altstore/**"
+      - "sidestore/**"
+      - "mix/**"
+      - "data/**"
+      - "vendor/**"
+      - "assets/**"
+      - "VERSION"
+      - "README*.md"
+      - "robots.txt"
+      - "sitemap.xml"
+      - ".github/workflows/audit.yml"
+      - ".github/workflows/update-sources.yml"
+      - ".github/workflows/vendor-converter.yml"
+
+permissions:
+  contents: read
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v7
+
+      - name: Set up Python
+        uses: actions/setup-python@v7
+        with:
+          python-version: "3.12"
+
+      - name: Check JavaScript syntax
+        run: |
+          for file in src/js/*.js; do
+            echo "Checking $file"
+            node --input-type=module --check < "$file"
+          done
+
+      - name: Check Python syntax
+        run: python -m py_compile tools/update_sources.py tools/audit_repo.py tools/patch_libarchive_runtime.py
+
+      - name: Validate registry JSON
+        run: python -m json.tool sources/registry.json >/dev/null
+
+      - name: Audit repository consistency
+        run: python tools/audit_repo.py

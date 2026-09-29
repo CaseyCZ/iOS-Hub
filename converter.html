@@ -1,0 +1,194 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-SZTERTRTCE"></script>
+<script src="src/js/analytics.js?v=1.1.5-20260929-credits1"></script>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#070b14">
+  <meta name="referrer" content="no-referrer">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'wasm-unsafe-eval'; style-src 'self' 'unsafe-inline'; img-src 'self' https: data:; connect-src 'self' https://*.google-analytics.com https://*.analytics.google.com https://*.googletagmanager.com; worker-src 'self' blob:; object-src 'none'; base-uri 'self'; form-action 'none'">
+  <meta name="description" content="DEB → IPA Converter — convert compatible iOS application .deb packages locally in your browser on iPhone, Mac and PC.">
+  <link rel="canonical" href="https://caseycz.github.io/iOS-Hub/converter.html">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="iOS Hub">
+  <meta property="og:title" content="DEB → IPA Converter — iOS Hub">
+  <meta property="og:description" content="DEB → IPA Converter — convert compatible iOS application .deb packages locally in your browser on iPhone, Mac and PC.">
+  <meta property="og:url" content="https://caseycz.github.io/iOS-Hub/converter.html">
+  <meta name="twitter:card" content="summary">
+  <title>DEB → IPA Converter — iOS Hub</title>
+  <link rel="stylesheet" href="src/css/styles.css?v=1.1.5-20260918-fullaudit3">
+  <link rel="stylesheet" href="src/css/hub-extra.css?v=1.1.5-20260924-scrollfix1">
+  <link rel="stylesheet" href="src/css/converter.css?v=1.1.5-20260918-audit2">
+</head>
+<body>
+  <a class="skip-link" href="#top" data-i18n="skipToContent">Skip to content</a>
+  <header class="topbar">
+    <div class="wrap topbar-inner">
+      <a class="brand" href="index.html" aria-label="iOS Hub">
+        <span class="brand-mark">iOS</span>
+        <span>iOS Hub<small>AltStore · SideStore · LiveContainer</small></span>
+      </a>
+      <nav class="nav" aria-label="Primary">
+        <a href="index.html#tools" class="active" data-i18n="tools">Tools</a>
+        <a href="builder.html">Source Builder</a>
+        <a href="guide.html" data-i18n="guideNav">Guide</a>
+        <a href="resources.html" data-i18n="resourcesNav">Useful</a>
+        <a href="index.html#sources" data-i18n="sources">Sources</a>
+        <a href="credits.html">Credits</a>
+      </nav>
+      <div class="nav-actions">
+        <select id="languageSelect" class="language-select-native" aria-hidden="true" tabindex="-1">
+          <option value="en">EN</option>
+          <option value="cs">CZ</option>
+          <option value="de">DE</option>
+          <option value="es">ES</option>
+          <option value="fr">FR</option>
+        </select>
+        <div class="settings-menu" data-settings-menu>
+          <button id="settingsButton" class="icon-btn settings-button" type="button" aria-haspopup="dialog" aria-expanded="false" aria-controls="settingsPanel" aria-label="Settings" title="Settings">⚙</button>
+          <div id="settingsPanel" class="settings-panel" role="dialog" aria-labelledby="settingsTitle" aria-hidden="true">
+            <div id="settingsTitle" class="settings-title" data-settings-copy="title">Settings</div>
+
+            <div class="settings-label" data-settings-copy="appearance">APPEARANCE</div>
+            <div class="settings-theme-seg">
+              <button type="button" data-settings-theme="dark" aria-pressed="false">☾ <span data-settings-copy="dark">Dark</span></button>
+              <button type="button" data-settings-theme="light" aria-pressed="false">☀ <span data-settings-copy="light">Light</span></button>
+            </div>
+
+            <div class="settings-label" data-settings-copy="language">LANGUAGE</div>
+            <div class="settings-language-list">
+              <button type="button" data-settings-language="cs" role="radio" aria-checked="false"><img src="assets/flags/cz.svg" alt=""><span>Čeština</span></button>
+              <button type="button" data-settings-language="en" role="radio" aria-checked="false"><img src="assets/flags/gb.svg" alt=""><span>English</span></button>
+              <button type="button" data-settings-language="de" role="radio" aria-checked="false"><img src="assets/flags/de.svg" alt=""><span>Deutsch</span></button>
+              <button type="button" data-settings-language="es" role="radio" aria-checked="false"><img src="assets/flags/es.svg" alt=""><span>Español</span></button>
+              <button type="button" data-settings-language="fr" role="radio" aria-checked="false"><img src="assets/flags/fr.svg" alt=""><span>Français</span></button>
+            </div>
+
+            <div class="settings-label" data-settings-copy="report">REPORT ISSUE</div>
+            <a class="settings-report-link report-bug-btn" href="https://github.com/CaseyCZ/iOS-Hub/issues/new" target="_blank" rel="noopener" aria-label="Report a bug" title="Report a bug" data-i18n-title="reportBug" data-i18n-aria-label="reportBug"><span aria-hidden="true">🐞</span><span data-i18n="reportBug">Report a bug</span></a>
+          </div>
+        </div>
+        <button id="themeToggle" class="settings-theme-proxy" type="button" aria-hidden="true" tabindex="-1">☀</button>
+        <button class="compact-btn nav-support-primary" type="button" data-support-open><img class="compact-brand-icon" src="https://cdn.buymeacoffee.com/buttons/bmc-new-btn-logo.svg" alt="" referrerpolicy="no-referrer"><span class="support-label" data-i18n="support">Support</span></button>
+
+      </div>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero converter-hero wrap">
+      <div class="eyebrow">BETA · LOCAL · PRIVATE · WEBASSEMBLY</div>
+      <h1>DEB → IPA</h1>
+      <p data-i18n="converterIntro">Convert an iOS application from a .deb package to .ipa directly in your browser. Works on Windows, macOS and iPhone — your file is never uploaded.</p>
+      <div class="privacy-strip">
+        <span>🔒 <strong data-i18n="local100">100% local</strong></span>
+        <span>🖥️ Windows / Mac</span>
+        <span>📱 iPhone / iPad</span>
+        <span>☁️ <strong data-i18n="noUpload">No upload</strong></span>
+      </div>
+      <div id="metadataWarning" class="notice" style="max-width:820px;margin:16px auto 0"></div>
+    </section>
+
+    <section class="section wrap converter-section">
+      <div class="converter-layout">
+        <div class="panel converter-main">
+          <div class="converter-step-head">
+            <div><span class="step-number">1</span><div><strong data-i18n="chooseDeb">Choose a .deb file</strong><small data-i18n="chooseDebHelp">It must contain an actual iOS .app application.</small></div></div>
+          </div>
+
+          <label id="dropZone" class="drop-zone" for="debFile">
+            <input id="debFile" type="file" accept=".deb,application/vnd.debian.binary-package,application/x-deb" hidden>
+            <div class="drop-icon">⇩</div>
+            <strong data-i18n="dropDeb">Drop .deb here</strong>
+            <span data-i18n="tapChoose">or tap to choose a file</span>
+          </label>
+
+          <div id="fileCard" class="file-card" hidden>
+            <div class="file-icon">DEB</div>
+            <div class="file-info"><strong id="fileName"></strong><span id="fileSize"></span></div>
+            <button id="removeFile" class="icon-btn" type="button" aria-label="Remove file" data-i18n-aria-label="removeFile">×</button>
+          </div>
+
+          <div id="mobileWarning" class="notice converter-warning" hidden>
+            <strong data-i18n="largeIphone">Large file on iPhone:</strong>
+            <span data-i18n="largeIphoneDesc">Safari has limited working memory. Very large .deb files may be more reliable on Mac or PC.</span>
+          </div>
+
+          <button id="convertButton" class="btn primary converter-submit" type="button" disabled><span data-i18n="convertToIpa">Convert to IPA</span><span>→</span></button>
+
+          <div id="progressPanel" class="conversion-progress" hidden>
+            <div class="progress-head"><strong id="progressTitle" data-i18n="preparing">Preparing conversion…</strong><span id="progressPercent">0%</span></div>
+            <div id="progressTrack" class="progress-track" role="progressbar" aria-label="Conversion progress" data-i18n-aria-label="conversionProgressLabel" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"><div id="progressBar" class="progress-bar"></div></div>
+            <div id="progressDetail" class="progress-detail"></div>
+          </div>
+
+          <div id="resultPanel" class="conversion-result" hidden>
+            <div class="result-check">✓</div>
+            <div class="result-copy"><span class="pill online" data-i18n="done">DONE</span><h2 id="resultName">App.ipa</h2><p id="resultMeta"></p></div>
+            <div class="result-actions">
+              <a id="downloadIpa" class="btn primary" href="#" download>⬇ <span data-i18n="downloadIpa">Download IPA</span></a>
+              <button id="shareIpa" class="btn secondary" type="button" hidden>↗ <span data-i18n="shareIpa">Share IPA</span></button>
+              <button id="newConversion" class="btn ghost" type="button" data-i18n="convertAnother">Convert another</button>
+            </div>
+          </div>
+
+          <div id="errorPanel" class="conversion-error" hidden>
+            <strong data-i18n="conversionFailed">Conversion failed</strong>
+            <p id="errorMessage"></p>
+            <button id="retryButton" class="btn secondary small" type="button" data-i18n="tryAgain">Try again</button>
+          </div>
+        </div>
+
+        <aside class="panel converter-side">
+          <div class="side-block">
+            <span class="step-number">2</span>
+            <div><strong data-i18n="whatWebDoes">What the web app does</strong>
+              <ul>
+                <li data-i18n="stepDeb">Opens the Debian .deb / AR package.</li>
+                <li data-i18n="stepData">Finds data.tar and the actual .app inside.</li>
+                <li data-i18n="stepPayload">Creates the required Payload/App.app structure.</li>
+                <li data-i18n="stepIpa">Packages the result as .ipa.</li>
+              </ul>
+            </div>
+          </div>
+          <div class="notice"><strong data-i18n="important">Important:</strong> <span data-i18n="importantDesc">Only .deb packages containing an .app can be converted. Jailbreak tweaks, libraries and system packages cannot become an IPA by repackaging alone.</span></div>
+          <div class="notice"><strong data-i18n="signing">Signing:</strong> <span data-i18n="signingDesc">The resulting IPA is not automatically signed. Install it afterwards using AltStore, SideStore, LiveContainer or another compatible installer.</span></div>
+          <div class="runtime-status"><span id="runtimeDot" class="runtime-dot"></span><span id="runtimeText" data-i18n="loadingEngine">Loading conversion engine…</span></div>
+        </aside>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap footer-inner">
+      <span>© <span id="year"></span> iOS Hub · v1.1.5</span>
+      <div class="footer-links">
+        <a href="https://caseycz.github.io/" target="_blank" rel="noopener">Website</a>
+        <a href="https://github.com/CaseyCZ/iOS-Hub" target="_blank" rel="noopener">GitHub · iOS-Hub</a>
+        <a href="credits.html">Credits</a>
+      </div>
+    </div>
+  </footer>
+
+  <div id="supportModal" class="support-backdrop" role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="supportTitle">
+    <div class="support-dialog">
+      <button class="support-close" type="button" data-support-close aria-label="Close" data-i18n-aria-label="close">×</button>
+      <div class="eyebrow" data-i18n="supportEyebrow">SUPPORT THE PROJECT</div>
+      <h2 id="supportTitle" data-i18n="supportTitle">Support further development.</h2>
+      <p data-i18n="supportDesc">If iOS Hub saves you time, you can support further development through Buy Me a Coffee.</p>
+      <a href="https://www.buymeacoffee.com/caseycz" target="_blank" rel="noopener"><img class="support-qr" src="https://caseycz.github.io/support-qr.svg" alt="Buy Me a Coffee QR code"></a>
+      <a class="btn primary brand-link" style="width:100%" href="https://www.buymeacoffee.com/caseycz" target="_blank" rel="noopener"><img class="brand-link-icon brand-link-icon-contain" src="https://cdn.buymeacoffee.com/buttons/bmc-new-btn-logo.svg" alt="" referrerpolicy="no-referrer"><span data-i18n="openCoffee">Open Buy Me a Coffee ↗</span></a>
+    </div>
+  </div>
+
+  <div id="toast" class="pill online" role="status" aria-live="polite" hidden style="position:fixed;z-index:400;left:50%;bottom:22px;transform:translateX(-50%);padding:9px 12px;background:var(--panel);box-shadow:var(--shadow)"></div>
+  <script src="vendor/jszip/jszip.min.js"></script>
+  <script type="module" src="src/js/converter.js?v=1.1.5-20260929-kodi2"></script>
+  <script src="src/js/support-dialog.js?v=1.1.5-20260918-a11y1"></script>
+  <script src="src/js/mobile-menu.js?v=1.1.5-20260918-a11y1"></script>
+  <script src="src/js/settings-menu.js?v=1.1.5-20260918-a11y1"></script>
+</body>
+</html>

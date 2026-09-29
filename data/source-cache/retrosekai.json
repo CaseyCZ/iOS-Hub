@@ -1,0 +1,70 @@
+{
+  "name": "UntitledCharts",
+  "subtitle": "A source for the PJSK community.",
+  "description": "Welcome to the UntitledCharts source! The place to download all our public projects.",
+  "iconURL": "https://repo.untitledcharts.com/assets/logo.png",
+  "headerURL": "https://repo.untitledcharts.com/assets/banner.png",
+  "website": "https://discord.gg/UntitledCharts",
+  "tintColor": "#86CECB",
+  "featuredApps": [
+    "com.lila.retrosekai.beta"
+  ],
+  "apps": [
+    {
+      "name": "Retro Sekai!",
+      "bundleIdentifier": "com.lila.retrosekai.beta",
+      "developerName": "0x1b1b",
+      "subtitle": "Project Sekai but RETRO STYLE.",
+      "localizedDescription": "RetroSekai is in beta! Join the Discord server: https://discord.gg/bVnBx9rDwU\n\nWelcome to RetroSekai!\n\nRetroSekai is a private server for the popular game Project Sekai (プロセカ, officially HATSUNE MIKU: COLORFUL STAGE) that brings back the game's 2.8.0 version. This version is the last version that has the game's \"old UI\", a nostalgic and cool UI that was modernized after version 3.0.0 (also known as the 3rd anniversary update).\n\nFor more information, join our Discord! You can ask questions or discuss RetroSekai with others.\n\nDeveloper: 0x1b1b",
+      "iconURL": "https://repo.untitledcharts.com/assets/retrosekai/icon.png",
+      "tintColor": "#AE34EB",
+      "category": "games",
+      "screenshotURLs": [
+        "https://repo.untitledcharts.com/assets/retrosekai/title.png",
+        "https://repo.untitledcharts.com/assets/retrosekai/gameplay.png"
+      ],
+      "versions": [
+        {
+          "version": "2026.0.1",
+          "buildVersion": "2026.0.1",
+          "date": "2026-03-19",
+          "localizedDescription": "More English translations, and a data reset!",
+          "downloadURL": "https://repo.untitledcharts.com/assets/ipas/retrosekai_2026_0_1.ipa",
+          "size": 159727169,
+          "minOSVersion": "11.0"
+        },
+        {
+          "version": "2026.0.0",
+          "buildVersion": "2026.0.0",
+          "date": "2026-03-06",
+          "localizedDescription": "RetroSEKAI v2 is out, featuring a new rewrite and English translations.",
+          "downloadURL": "https://repo.untitledcharts.com/assets/ipas/retrosekai.ipa",
+          "size": 158859297,
+          "minOSVersion": "11.0"
+        },
+        {
+          "version": "2.8.0",
+          "buildVersion": "140",
+          "date": "2026-02-04",
+          "localizedDescription": "Welcome to RetroSekai. Listed on AltStore/SideStore.",
+          "downloadURL": "https://repo.untitledcharts.com/assets/ipas/retrosekai.ipa",
+          "size": 154019955,
+          "minOSVersion": "11.0"
+        }
+      ],
+      "appPermissions": {
+        "entitlements": [
+          "com.apple.developer.game-center",
+          "aps-environment"
+        ],
+        "privacy": {
+          "NSPhotoLibraryAddUsageDescription": "RetroSekai needs access to your Photo Library in order to save screenshots taken during virtual live events. / バーチャルライブで撮影したスクリーンショットを保存できるようにします",
+          "NSCameraUsageDescription": "RetroSekai needs access to your phone's camera in order to scan QR codes.",
+          "NSPhotoLibraryUsageDescription": "RetroSekai needs access to your Photo Library in order to save screenshots taken during virtual live events. / バーチャルライブで撮影したスクリーンショットを保存できるようにします",
+          "NSUserTrackingUsageDescription": "\"tracking\" but we disable it, it's still part of the app though (sob)."
+        }
+      }
+    }
+  ],
+  "news": []
+}

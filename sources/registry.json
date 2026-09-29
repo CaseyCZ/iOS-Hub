@@ -1,9 +1,33 @@
 {
-  "updated": "2026-09-17",
+  "updated": "2026-09-18",
   "attribution": {
-    "name": "awesome-altstore",
-    "url": "https://github.com/victordedomenico/awesome-altstore",
-    "note": "Used as a discovery reference. Source URLs are independently checked before being listed here."
+    "references": [
+      {
+        "name": "AltStore Trusted Sources",
+        "url": "https://github.com/altstoreio/FAQ/blob/main/altstore-world/trusted-sources.md",
+        "note": "Official AltStore list of trusted sources reviewed against AltStore's safety standards."
+      },
+      {
+        "name": "SideStore trustedapps.json",
+        "url": "https://github.com/SideStore/SideStore/blob/develop/trustedapps.json",
+        "note": "Official SideStore trusted-source list; iOS Hub still checks current availability and source validity independently."
+      },
+      {
+        "name": "awesome-altstore",
+        "url": "https://github.com/victordedomenico/awesome-altstore",
+        "note": "Discovery reference; sources are independently checked before being listed."
+      },
+      {
+        "name": "SideStore default sources",
+        "url": "https://github.com/SideStore/default-sources/blob/main/sources.json",
+        "note": "Official SideStore default-source list used for discovery and cross-checking; live validity is checked independently."
+      },
+      {
+        "name": "AltStore PAL Directory",
+        "url": "https://explore.alt.store/directory",
+        "note": "Official AltStore PAL directory for verified marketplace apps and sources."
+      }
+    ]
   },
   "sources": [
     {
@@ -14,12 +38,18 @@
       "mode": "classic",
       "mergeable": true,
       "official": true,
+      "trusted": true,
       "recommended": true,
       "description": {
         "cs": "Oficiální zdroj UTM a UTM SE pro virtualizaci a emulaci na iOS.",
         "en": "Official UTM and UTM SE source for virtualization and emulation on iOS."
       },
-      "tags": ["virtualization", "emulator", "ipa"]
+      "tags": [
+        "virtualization",
+        "emulator",
+        "ipa",
+        "utility"
+      ]
     },
     {
       "id": "provenance",
@@ -29,12 +59,18 @@
       "mode": "classic",
       "mergeable": true,
       "official": true,
+      "trusted": true,
       "recommended": true,
       "description": {
         "cs": "Oficiální zdroj emulátoru Provenance pro více retro platforem.",
         "en": "Official Provenance multi-system retro emulator source."
       },
-      "tags": ["emulator", "games", "ipa"]
+      "tags": [
+        "emulator",
+        "games",
+        "retro",
+        "ipa"
+      ]
     },
     {
       "id": "ish",
@@ -44,12 +80,18 @@
       "mode": "classic",
       "mergeable": true,
       "official": true,
+      "trusted": false,
       "recommended": true,
       "description": {
         "cs": "Oficiální zdroj iSH — linuxové shell prostředí běžící lokálně na iOS.",
         "en": "Official iSH source — a Linux shell environment running locally on iOS."
       },
-      "tags": ["linux", "terminal", "developer"]
+      "tags": [
+        "linux",
+        "terminal",
+        "developer",
+        "utility"
+      ]
     },
     {
       "id": "flycast",
@@ -59,27 +101,651 @@
       "mode": "classic",
       "mergeable": true,
       "official": true,
+      "trusted": true,
       "recommended": true,
       "description": {
-        "cs": "Projektový zdroj Flycast pro emulaci Dreamcast, Naomi a Atomiswave.",
-        "en": "Project source for Flycast, a Dreamcast, Naomi and Atomiswave emulator."
+        "cs": "Zdroj Flycast pro emulaci Dreamcast, Naomi a Atomiswave.",
+        "en": "Flycast source for Dreamcast, Naomi and Atomiswave emulation."
       },
-      "tags": ["emulator", "dreamcast", "ipa"]
+      "tags": [
+        "emulator",
+        "games",
+        "dreamcast",
+        "retro",
+        "ipa"
+      ]
     },
     {
       "id": "sidestore-community",
-      "name": "SideStore Team Picks",
+      "name": "SideStore Community",
       "url": "https://community-apps.sidestore.io/sidecommunity.json",
       "website": "https://sidestore.io/",
       "mode": "sidestore",
       "mergeable": false,
       "official": true,
+      "trusted": true,
       "recommended": true,
       "description": {
-        "cs": "Velký komunitní katalog SideStore. Kvůli velikosti se přidává přímo a nemíchá se do CaseyCZ Mixu.",
-        "en": "Large SideStore community catalog. Because of its size it is added directly and is not merged into CaseyCZ Mix."
+        "cs": "Velký komunitní katalog SideStore s aplikacemi a emulátory od různých vývojářů.",
+        "en": "Large SideStore community catalog with apps and emulators from multiple developers."
       },
-      "tags": ["sidestore", "community", "catalog"]
+      "tags": [
+        "sidestore",
+        "community",
+        "catalog",
+        "apps",
+        "games"
+      ]
+    },
+    {
+      "id": "sidestore-official",
+      "name": "SideStore Official",
+      "url": "https://apps.sidestore.io/",
+      "website": "https://sidestore.io/",
+      "mode": "sidestore",
+      "mergeable": false,
+      "official": true,
+      "trusted": true,
+      "recommended": true,
+      "description": {
+        "cs": "Oficiální source SideStore a dalších aplikací týmu SideStore.",
+        "en": "Official source for SideStore and other SideStore team apps."
+      },
+      "tags": [
+        "sidestore",
+        "official",
+        "utility",
+        "signing"
+      ]
+    },
+    {
+      "id": "stikdebug",
+      "name": "StikDebug",
+      "url": "https://stikdebug.xyz/index.json",
+      "website": "https://stikdebug.xyz/",
+      "mode": "classic",
+      "mergeable": false,
+      "official": true,
+      "trusted": true,
+      "recommended": false,
+      "description": {
+        "cs": "Trusted source projektu StikDebug pro vývojářské a diagnostické nástroje.",
+        "en": "Trusted StikDebug project source for developer and diagnostic tools."
+      },
+      "tags": [
+        "developer",
+        "debug",
+        "utility",
+        "trusted"
+      ]
+    },
+    {
+      "id": "livecontainer",
+      "name": "LiveContainer Stable",
+      "url": "https://github.com/LiveContainer/LiveContainer/releases/download/1.0/apps.json",
+      "website": "https://github.com/LiveContainer/LiveContainer",
+      "mode": "classic",
+      "mergeable": false,
+      "official": true,
+      "trusted": true,
+      "recommended": true,
+      "description": {
+        "cs": "Oficiální stabilní source pro LiveContainer — launcher iOS aplikací bez samostatné instalace každé aplikace.",
+        "en": "Official stable source for LiveContainer — an iOS app launcher that runs apps without installing each one separately."
+      },
+      "tags": [
+        "livecontainer",
+        "utility",
+        "sideload",
+        "trusted",
+        "official"
+      ]
+    },
+    {
+      "id": "livecontainer-nightly",
+      "name": "LiveContainer Nightly",
+      "url": "https://github.com/LiveContainer/LiveContainer/releases/download/nightly/apps_nightly.json",
+      "website": "https://github.com/LiveContainer/LiveContainer",
+      "mode": "classic",
+      "mergeable": false,
+      "official": true,
+      "trusted": true,
+      "recommended": false,
+      "description": {
+        "cs": "Oficiální nightly source LiveContainer s nejnovějšími testovacími buildy.",
+        "en": "Official LiveContainer nightly source with the latest development builds."
+      },
+      "tags": [
+        "livecontainer",
+        "utility",
+        "sideload",
+        "nightly",
+        "official"
+      ]
+    },
+    {
+      "id": "manicemu",
+      "name": "Manic EMU",
+      "url": "https://apps.manicemu.site/altstore",
+      "website": "https://manicemu.site/",
+      "mode": "classic",
+      "mergeable": true,
+      "official": true,
+      "trusted": true,
+      "recommended": true,
+      "description": {
+        "cs": "Trusted source pro Manic EMU a herní emulaci na iOS.",
+        "en": "Trusted source for Manic EMU and game emulation on iOS."
+      },
+      "tags": [
+        "games",
+        "emulator",
+        "retro",
+        "trusted"
+      ]
+    },
+    {
+      "id": "flycast-ios",
+      "name": "Flycast iOS",
+      "url": "https://github.com/chachillie/Flycast-iOS/raw/refs/heads/main/flycast-ios.json",
+      "website": "https://github.com/chachillie/Flycast-iOS",
+      "mode": "classic",
+      "mergeable": false,
+      "official": true,
+      "trusted": true,
+      "recommended": false,
+      "description": {
+        "cs": "Trusted iOS source pro alternativní Flycast buildy.",
+        "en": "Trusted iOS source for alternative Flycast builds."
+      },
+      "tags": [
+        "games",
+        "emulator",
+        "dreamcast",
+        "trusted"
+      ]
+    },
+    {
+      "id": "geode-ios",
+      "name": "Geode iOS",
+      "url": "https://ios-repo.geode-sdk.org/altsource/main.json",
+      "website": "https://geode-sdk.org/",
+      "mode": "classic",
+      "mergeable": false,
+      "official": true,
+      "trusted": true,
+      "recommended": false,
+      "description": {
+        "cs": "Trusted source projektu Geode pro iOS.",
+        "en": "Trusted source for the Geode iOS project."
+      },
+      "tags": [
+        "games",
+        "mods",
+        "geometry-dash",
+        "trusted"
+      ]
+    },
+    {
+      "id": "retrosekai",
+      "name": "RetroSekaï",
+      "url": "https://repo.untitledcharts.com",
+      "website": "https://repo.untitledcharts.com",
+      "mode": "classic",
+      "mergeable": false,
+      "official": false,
+      "trusted": true,
+      "recommended": false,
+      "description": {
+        "cs": "Trusted komunitní source zaměřený na retro a herní aplikace.",
+        "en": "Trusted community source focused on retro and gaming apps."
+      },
+      "tags": [
+        "games",
+        "retro",
+        "community",
+        "trusted"
+      ]
+    },
+    {
+      "id": "oatmealdome",
+      "name": "OatmealDome",
+      "url": "https://altstore.oatmealdome.me",
+      "website": "https://oatmealdome.me/",
+      "mode": "classic",
+      "mergeable": true,
+      "official": true,
+      "trusted": true,
+      "recommended": true,
+      "description": {
+        "cs": "Trusted source OatmealDome, známý hlavně díky DolphiniOS.",
+        "en": "Trusted OatmealDome source, best known for DolphiniOS."
+      },
+      "tags": [
+        "games",
+        "emulator",
+        "dolphinios",
+        "trusted"
+      ]
+    },
+    {
+      "id": "crystall1ne",
+      "name": "crystall1ne",
+      "url": "https://alt.crystall1ne.dev",
+      "website": "https://crystall1ne.dev/",
+      "mode": "classic",
+      "mergeable": false,
+      "official": true,
+      "trusted": true,
+      "recommended": false,
+      "description": {
+        "cs": "Trusted AltStore source vývojáře crystall1ne.",
+        "en": "Trusted AltStore source by crystall1ne."
+      },
+      "tags": [
+        "apps",
+        "utility",
+        "trusted"
+      ]
+    },
+    {
+      "id": "pokemmo",
+      "name": "PokeMMO",
+      "url": "https://pokemmo.eu/altstore/",
+      "website": "https://pokemmo.com/",
+      "mode": "classic",
+      "mergeable": true,
+      "official": true,
+      "trusted": true,
+      "recommended": true,
+      "description": {
+        "cs": "Oficiální trusted source pro PokeMMO na iOS.",
+        "en": "Official trusted source for PokeMMO on iOS."
+      },
+      "tags": [
+        "games",
+        "pokemon",
+        "mmo",
+        "trusted"
+      ]
+    },
+    {
+      "id": "odyssey",
+      "name": "Odyssey",
+      "url": "https://theodyssey.dev/altstore/odysseysource.json",
+      "website": "https://theodyssey.dev/",
+      "mode": "classic",
+      "mergeable": false,
+      "official": true,
+      "trusted": true,
+      "recommended": false,
+      "description": {
+        "cs": "Trusted source projektu Odyssey.",
+        "en": "Trusted source for the Odyssey project."
+      },
+      "tags": [
+        "utility",
+        "ios",
+        "trusted"
+      ]
+    },
+    {
+      "id": "yattee",
+      "name": "Yattee",
+      "url": "https://raw.githubusercontent.com/yattee/yattee/main/altstore-source.json",
+      "website": "https://github.com/yattee/yattee",
+      "mode": "classic",
+      "mergeable": true,
+      "official": true,
+      "trusted": false,
+      "recommended": true,
+      "description": {
+        "cs": "Open-source video klient: YouTube přes Invidious/Piped, PiP, background audio, SponsorBlock a další funkce.",
+        "en": "Open-source video client with YouTube via Invidious/Piped, PiP, background audio, SponsorBlock and more."
+      },
+      "tags": [
+        "youtube",
+        "video",
+        "media",
+        "privacy",
+        "open-source"
+      ]
+    },
+    {
+      "id": "ignited",
+      "name": "Ignited",
+      "url": "https://altstore.ignitedemulator.com/",
+      "website": "https://github.com/litritt/Ignited",
+      "mode": "classic",
+      "mergeable": true,
+      "official": true,
+      "trusted": true,
+      "recommended": true,
+      "description": {
+        "cs": "Trusted source pro multi-system herní emulátor Ignited.",
+        "en": "Trusted source for the Ignited multi-system game emulator."
+      },
+      "tags": [
+        "games",
+        "emulator",
+        "retro",
+        "trusted"
+      ]
+    },
+    {
+      "id": "mona",
+      "name": "Mona",
+      "url": "https://raw.githubusercontent.com/delia-cheminot/mona-hrt/refs/heads/main/ios_source.json",
+      "website": "https://github.com/delia-cheminot/mona-hrt",
+      "mode": "classic",
+      "mergeable": false,
+      "official": true,
+      "trusted": true,
+      "recommended": false,
+      "description": {
+        "cs": "Trusted source projektu Mona.",
+        "en": "Trusted source for the Mona project."
+      },
+      "tags": [
+        "app",
+        "trusted"
+      ]
+    },
+    {
+      "id": "vortx",
+      "name": "VortX",
+      "url": "https://raw.githubusercontent.com/VortXTV/VortX/main/altstore/source.json",
+      "website": "https://vortx.tv/",
+      "mode": "classic",
+      "mergeable": false,
+      "official": true,
+      "trusted": false,
+      "recommended": false,
+      "description": {
+        "cs": "Open-source nativní streaming klient pro Apple zařízení postavený na stremio-core a libmpv.",
+        "en": "Open-source native streaming client for Apple devices built on stremio-core and libmpv."
+      },
+      "tags": [
+        "video",
+        "streaming",
+        "stremio",
+        "media",
+        "open-source"
+      ]
+    },
+    {
+      "id": "stremio-official-pal",
+      "name": "Stremio Official",
+      "url": "https://dl.strem.io/apple/altstore/source.json",
+      "website": "https://www.stremio.com/",
+      "mode": "pal",
+      "mergeable": false,
+      "official": true,
+      "trusted": false,
+      "recommended": true,
+      "description": {
+        "cs": "Oficiální AltStore PAL source Stremio pro iOS.",
+        "en": "Official Stremio AltStore PAL source for iOS."
+      },
+      "tags": [
+        "pal",
+        "video",
+        "streaming",
+        "stremio",
+        "media",
+        "official"
+      ]
+    },
+    {
+      "id": "stremio-ios",
+      "name": "Stremio iOS Source",
+      "url": "https://gorlev.github.io/stremio-altstore/stremio-ios.json",
+      "website": "https://github.com/gorlev/stremio-altstore",
+      "mode": "classic",
+      "mergeable": false,
+      "official": false,
+      "trusted": false,
+      "recommended": false,
+      "description": {
+        "cs": "Komunitní AltStore source pro Stremio iOS s automaticky aktualizovanými IPA buildy.",
+        "en": "Community AltStore source for Stremio iOS with automatically updated IPA builds."
+      },
+      "tags": [
+        "video",
+        "streaming",
+        "stremio",
+        "media",
+        "community",
+        "ipa"
+      ]
+    },
+    {
+      "id": "kodi-ios",
+      "name": "Kodi iOS IPA",
+      "url": "https://github.com/ohaiibuzzle/kodi-ios-ipa-builds/releases/latest/download/source.json",
+      "website": "https://github.com/ohaiibuzzle/kodi-ios-ipa-builds",
+      "mode": "classic",
+      "mergeable": false,
+      "official": false,
+      "trusted": false,
+      "recommended": true,
+      "description": {
+        "cs": "AltStore/SideStore source, který automaticky převádí oficiální Kodi iOS .deb release na IPA. Build není oficiálně provozovaný Kodi Teamem.",
+        "en": "AltStore/SideStore source that automatically converts the official Kodi iOS .deb release to an IPA. The build source is not operated by Kodi Team."
+      },
+      "tags": [
+        "video",
+        "media",
+        "kodi",
+        "ipa",
+        "community"
+      ]
+    },
+    {
+      "id": "nineanimator",
+      "name": "NineAnimator",
+      "url": "https://9ani.app/api/altstore",
+      "website": "https://github.com/SuperMarcus/NineAnimator",
+      "mode": "classic",
+      "mergeable": false,
+      "official": true,
+      "trusted": false,
+      "recommended": true,
+      "description": {
+        "cs": "Oficiální source pro open-source anime přehrávač NineAnimator.",
+        "en": "Official source for the open-source NineAnimator anime player."
+      },
+      "tags": [
+        "video",
+        "anime",
+        "streaming",
+        "open-source"
+      ]
+    },
+    {
+      "id": "esound",
+      "name": "eSound",
+      "url": "https://esound.app/downloads/source.json",
+      "website": "https://esound.app/",
+      "mode": "pal",
+      "mergeable": false,
+      "official": true,
+      "trusted": false,
+      "recommended": true,
+      "description": {
+        "cs": "Oficiální AltStore PAL source hudební aplikace eSound.",
+        "en": "Official AltStore PAL source for the eSound music app."
+      },
+      "tags": [
+        "music",
+        "audio",
+        "youtube",
+        "pal",
+        "official"
+      ]
+    },
+    {
+      "id": "partyknights",
+      "name": "Party Knights",
+      "url": "https://partyknights.app/source",
+      "website": "https://partyknights.app/",
+      "mode": "classic",
+      "mergeable": false,
+      "official": true,
+      "trusted": false,
+      "recommended": false,
+      "description": {
+        "cs": "Oficiální source pro iOS hru Party Knights.",
+        "en": "Official source for the Party Knights iOS game."
+      },
+      "tags": [
+        "games",
+        "official"
+      ]
+    },
+    {
+      "id": "bringyour",
+      "name": "BringYour",
+      "url": "https://bringyour.com/altstore/source.json",
+      "website": "https://bringyour.com/",
+      "mode": "classic",
+      "mergeable": false,
+      "official": true,
+      "trusted": false,
+      "recommended": false,
+      "description": {
+        "cs": "Projektový source pro BringYour, aplikaci pro privátní síťové připojení a sdílení.",
+        "en": "Project source for BringYour, a private networking and connection-sharing app."
+      },
+      "tags": [
+        "network",
+        "privacy",
+        "utility"
+      ]
+    },
+    {
+      "id": "itorrent",
+      "name": "iTorrent",
+      "url": "https://xitrix.github.io/iTorrent/AltStore.json",
+      "website": "https://github.com/XITRIX/iTorrent",
+      "mode": "classic",
+      "mergeable": false,
+      "official": true,
+      "trusted": false,
+      "recommended": true,
+      "description": {
+        "cs": "Oficiální AltStore source open-source torrent klienta iTorrent pro iOS.",
+        "en": "Official AltStore source for the open-source iTorrent client for iOS."
+      },
+      "tags": [
+        "torrent",
+        "utility",
+        "open-source",
+        "download"
+      ]
+    },
+    {
+      "id": "qbitconnect",
+      "name": "qBitConnect",
+      "url": "https://raw.githubusercontent.com/RajnishOne/qbitconnect-releases/main/altstore-pal.json",
+      "website": "https://github.com/RajnishOne/qbitconnect-releases",
+      "mode": "pal",
+      "mergeable": false,
+      "official": true,
+      "trusted": false,
+      "recommended": false,
+      "description": {
+        "cs": "AltStore PAL source pro moderní vzdálenou správu qBittorrentu.",
+        "en": "AltStore PAL source for a modern qBittorrent remote client."
+      },
+      "tags": [
+        "pal",
+        "qbittorrent",
+        "torrent",
+        "utility"
+      ]
+    },
+    {
+      "id": "artemis",
+      "name": "Artemis",
+      "url": "https://raw.githubusercontent.com/auties00/artemis/refs/heads/main/source_pal.json",
+      "website": "https://github.com/Auties00/Artemis",
+      "mode": "pal",
+      "mergeable": false,
+      "official": true,
+      "trusted": false,
+      "recommended": false,
+      "description": {
+        "cs": "Open-source alternativní klient pro streamovací službu HIDIVE.",
+        "en": "Open-source alternative client for the HIDIVE streaming service."
+      },
+      "tags": [
+        "pal",
+        "video",
+        "anime",
+        "streaming",
+        "open-source"
+      ]
+    },
+    {
+      "id": "hackerwebapp",
+      "name": "Hacker Web App",
+      "url": "https://alt.hackerwebapp.com/PALSource.json",
+      "website": "https://hackerwebapp.com/",
+      "mode": "pal",
+      "mergeable": false,
+      "official": true,
+      "trusted": false,
+      "recommended": false,
+      "description": {
+        "cs": "AltStore PAL source projektu Hacker Web App.",
+        "en": "AltStore PAL source for Hacker Web App."
+      },
+      "tags": [
+        "pal",
+        "news",
+        "developer"
+      ]
+    },
+    {
+      "id": "courtpredict",
+      "name": "CourtPredict",
+      "url": "https://courtpredict-ios.web.app/PALSource.json",
+      "website": "https://courtpredict-ios.web.app/",
+      "mode": "pal",
+      "mergeable": false,
+      "official": true,
+      "trusted": false,
+      "recommended": false,
+      "description": {
+        "cs": "AltStore PAL source aplikace CourtPredict.",
+        "en": "AltStore PAL source for CourtPredict."
+      },
+      "tags": [
+        "pal",
+        "sports",
+        "utility"
+      ]
+    },
+    {
+      "id": "wayfarer",
+      "name": "Niantic Wayfarer",
+      "url": "https://alts.lao.sb",
+      "website": "https://alts.lao.sb",
+      "mode": "classic",
+      "mergeable": false,
+      "official": false,
+      "trusted": false,
+      "recommended": false,
+      "description": {
+        "cs": "Komunitní source pro Niantic Wayfarer klienta na iOS.",
+        "en": "Community source for a Niantic Wayfarer client on iOS."
+      },
+      "tags": [
+        "games",
+        "niantic",
+        "community"
+      ]
     },
     {
       "id": "qbitcontrol",
@@ -89,12 +755,17 @@
       "mode": "pal",
       "mergeable": false,
       "official": true,
+      "trusted": false,
       "recommended": false,
       "description": {
         "cs": "Projektový AltStore PAL zdroj pro qBitControl, vzdálenou správu qBittorrentu.",
         "en": "Project AltStore PAL source for qBitControl, a qBittorrent remote client."
       },
-      "tags": ["pal", "utility", "qbittorrent"]
+      "tags": [
+        "pal",
+        "utility",
+        "qbittorrent"
+      ]
     },
     {
       "id": "iphanpy",
@@ -104,12 +775,17 @@
       "mode": "pal",
       "mergeable": false,
       "official": true,
+      "trusted": false,
       "recommended": false,
       "description": {
-        "cs": "Projektový AltStore PAL zdroj pro iPhanpy, nativně zabaleného klienta Mastodon.",
-        "en": "Project AltStore PAL source for iPhanpy, a native-wrapped Mastodon client."
+        "cs": "Projektový AltStore PAL zdroj pro iPhanpy, klienta Mastodon.",
+        "en": "Project AltStore PAL source for iPhanpy, a Mastodon client."
       },
-      "tags": ["pal", "mastodon", "social"]
+      "tags": [
+        "pal",
+        "mastodon",
+        "social"
+      ]
     },
     {
       "id": "epic-games",
@@ -119,12 +795,944 @@
       "mode": "pal",
       "mergeable": false,
       "official": true,
+      "trusted": false,
       "recommended": true,
       "description": {
-        "cs": "Oficiální iOS zdroj Epic Games. Přidává se přímo a není součástí Classic mixu.",
-        "en": "Official Epic Games iOS source. Added directly and not included in the Classic mix."
+        "cs": "Oficiální iOS zdroj Epic Games pro Fortnite, Fall Guys a další podporované hry.",
+        "en": "Official Epic Games iOS source for Fortnite, Fall Guys and other supported games."
       },
-      "tags": ["pal", "games", "official"]
+      "tags": [
+        "pal",
+        "games",
+        "fortnite",
+        "fall-guys",
+        "official"
+      ]
+    },
+    {
+      "id": "xn1ckuz-sidebox",
+      "name": "xN1ckuz SideBox",
+      "url": "https://raw.githubusercontent.com/xN1ckuz/xN1ckuz-Sidestore-Repo/main/repo.json",
+      "website": "https://github.com/xN1ckuz/xN1ckuz-Sidestore-Repo",
+      "mode": "classic",
+      "mergeable": true,
+      "official": false,
+      "trusted": false,
+      "recommended": true,
+      "community": true,
+      "modified": true,
+      "description": {
+        "cs": "Komunitní modified source s aktuálními buildy EeveeSpotify, YouTube Plus, YTMusicUltimate a SCInsta.",
+        "en": "Community modified source with current EeveeSpotify, YouTube Plus, YTMusicUltimate and SCInsta builds."
+      },
+      "tags": [
+        "community",
+        "modified",
+        "tweaks",
+        "spotify",
+        "youtube",
+        "music",
+        "instagram",
+        "social",
+        "video"
+      ]
+    },
+    {
+      "id": "dvntm0-workshop",
+      "name": "Dan's Workshop",
+      "url": "https://raw.githubusercontent.com/dvntm0/AltStore/main/repo.json",
+      "website": "https://github.com/dvntm0/AltStore",
+      "mode": "classic",
+      "mergeable": true,
+      "official": false,
+      "trusted": false,
+      "recommended": true,
+      "community": true,
+      "modified": true,
+      "description": {
+        "cs": "Komunitní modified source od dvntm0 s YouTube Plus, YTMusicUltimate, Infuse Plus, Glow, Flow, Tweach a dalšími upravenými aplikacemi.",
+        "en": "Community modified source by dvntm0 with YouTube Plus, YTMusicUltimate, Infuse Plus, Glow, Flow, Tweach and other modified apps."
+      },
+      "tags": [
+        "community",
+        "modified",
+        "tweaks",
+        "youtube",
+        "music",
+        "video",
+        "social",
+        "apps"
+      ]
+    },
+    {
+      "id": "wuxu-library-plus",
+      "name": "WuXu's Library++",
+      "url": "https://raw.githubusercontent.com/WuXu1/WuXu1.github.io/main/wuxu-complete-plus.json",
+      "website": "https://wuxu1.github.io/",
+      "mode": "classic",
+      "mergeable": true,
+      "official": false,
+      "trusted": false,
+      "recommended": true,
+      "community": true,
+      "modified": true,
+      "description": {
+        "cs": "Komunitní modified knihovna s upravenými buildy TikTok, Instagram, Spotify, YouTube, Deezer, SoundCloud, Duolingo a dalšími.",
+        "en": "Community modified library with tweaked TikTok, Instagram, Spotify, YouTube, Deezer, SoundCloud, Duolingo and more."
+      },
+      "tags": [
+        "community",
+        "modified",
+        "tweaks",
+        "spotify",
+        "youtube",
+        "music",
+        "video",
+        "social",
+        "tiktok",
+        "instagram"
+      ]
+    },
+    {
+      "id": "baretsky-tweaked",
+      "name": "Baretsky Tweaked App Library",
+      "url": "https://raw.githubusercontent.com/baretsky/baretsky-tweaked-ipas-library/main/apps.json",
+      "website": "https://github.com/baretsky/baretsky-tweaked-ipas-library",
+      "mode": "classic",
+      "mergeable": false,
+      "official": false,
+      "trusted": false,
+      "recommended": true,
+      "community": true,
+      "modified": true,
+      "description": {
+        "cs": "Aktivně aktualizovaná komunitní knihovna tweaked IPA pro TikTok, YouTube, X/Twitter, Instagram, Twitch, YouTube Music a další.",
+        "en": "Actively updated community library of tweaked IPAs for TikTok, YouTube, X/Twitter, Instagram, Twitch, YouTube Music and more."
+      },
+      "tags": [
+        "community",
+        "modified",
+        "tweaks",
+        "youtube",
+        "music",
+        "video",
+        "social",
+        "tiktok",
+        "instagram",
+        "twitch"
+      ]
+    },
+    {
+      "id": "driftywinds",
+      "name": "driftywinds AltStore Repo",
+      "url": "https://raw.githubusercontent.com/driftywinds/driftywinds.github.io/master/AltStore/apps.json",
+      "website": "https://github.com/driftywinds/driftywinds.github.io",
+      "mode": "classic",
+      "mergeable": false,
+      "official": false,
+      "trusted": false,
+      "recommended": true,
+      "community": true,
+      "modified": true,
+      "description": {
+        "cs": "Komunitní source s tweaked buildy YouTube, EeveeSpotify, Instagram, X/Twitter, YouTube Music a dalšími sideload aplikacemi.",
+        "en": "Community source with tweaked YouTube, EeveeSpotify, Instagram, X/Twitter, YouTube Music and other sideload apps."
+      },
+      "tags": [
+        "community",
+        "modified",
+        "tweaks",
+        "spotify",
+        "youtube",
+        "music",
+        "video",
+        "social",
+        "instagram",
+        "twitter"
+      ]
+    },
+    {
+      "id": "ipa-vault",
+      "name": "IPA Vault",
+      "url": "https://raw.githubusercontent.com/927tx/IPA-Vault/main/ipavaultsource.json",
+      "website": "https://github.com/927tx/IPA-Vault",
+      "mode": "classic",
+      "mergeable": false,
+      "official": false,
+      "trusted": false,
+      "recommended": false,
+      "community": true,
+      "modified": true,
+      "description": {
+        "cs": "Větší komunitní modified IPA knihovna s desítkami upravených aplikací, včetně sociálních, médií a utilit.",
+        "en": "Larger community modified IPA library with dozens of tweaked social, media and utility apps."
+      },
+      "tags": [
+        "community",
+        "modified",
+        "tweaks",
+        "apps",
+        "social",
+        "video",
+        "music",
+        "utility"
+      ]
+    },
+    {
+      "id": "sideloadlabs",
+      "name": "SideloadLabs Repo",
+      "url": "https://raw.githubusercontent.com/SideloadLabs/SideloasLabs-AltSource/main/apps.json",
+      "website": "https://github.com/SideloadLabs/SideloasLabs-AltSource",
+      "mode": "classic",
+      "mergeable": false,
+      "official": false,
+      "trusted": false,
+      "recommended": false,
+      "community": true,
+      "modified": true,
+      "description": {
+        "cs": "Komunitní source zaměřený na EeveeSpotify Reincarnated, včetně patched a Liquid Glass variant.",
+        "en": "Community source focused on EeveeSpotify Reincarnated, including patched and Liquid Glass variants."
+      },
+      "tags": [
+        "community",
+        "modified",
+        "tweaks",
+        "spotify",
+        "music"
+      ]
+    },
+    {
+      "id": "ytliteplus",
+      "name": "YTLitePlus",
+      "url": "https://raw.githubusercontent.com/YTLitePlus/YTLitePlus-Altstore/main/apps.json",
+      "website": "https://github.com/YTLitePlus/YTLitePlus",
+      "mode": "classic",
+      "mergeable": true,
+      "official": true,
+      "trusted": false,
+      "recommended": true,
+      "community": false,
+      "modified": true,
+      "description": {
+        "cs": "Oficiální AltStore source projektu YTLitePlus pro upravený YouTube klient s blokováním reklam a dalšími funkcemi.",
+        "en": "Official YTLitePlus AltStore source for a modified YouTube client with ad blocking and additional features."
+      },
+      "tags": [
+        "official",
+        "modified",
+        "tweaks",
+        "youtube",
+        "video"
+      ]
+    },
+    {
+      "id": "moe-altstore",
+      "name": "Moe AltStore",
+      "url": "https://raw.githubusercontent.com/MountainofPenguin/moe-altstore/main/apps.json",
+      "website": "https://github.com/MountainofPenguin/moe-altstore",
+      "mode": "classic",
+      "mergeable": false,
+      "official": false,
+      "trusted": false,
+      "recommended": true,
+      "community": true,
+      "modified": true,
+      "autoPackage": false,
+      "description": {
+        "cs": "Aktivně aktualizovaný komunitní mirror upravených IPA z Moe Apps, včetně YouTube, Redditu, Infuse a dalších aplikací.",
+        "en": "Actively updated community mirror of modified Moe Apps IPAs, including YouTube, Reddit, Infuse and more."
+      },
+      "tags": [
+        "community",
+        "modified",
+        "tweaked",
+        "youtube",
+        "video",
+        "social",
+        "reddit",
+        "utility"
+      ]
+    },
+    {
+      "id": "youmod-repo",
+      "name": "YouMod Repo",
+      "url": "https://raw.githubusercontent.com/MountainofPenguin/Altstore-Repository/main/apps.json",
+      "website": "https://github.com/MountainofPenguin/Altstore-Repository",
+      "mode": "classic",
+      "mergeable": true,
+      "official": false,
+      "trusted": false,
+      "recommended": true,
+      "community": true,
+      "modified": true,
+      "description": {
+        "cs": "Komunitní automaticky sestavovaný source pro YouMod a upravený YouTube.",
+        "en": "Community auto-built source for YouMod and modified YouTube."
+      },
+      "tags": [
+        "community",
+        "modified",
+        "tweaks",
+        "youtube",
+        "video"
+      ]
+    },
+    {
+      "id": "youproextra",
+      "name": "YouProEXTRA",
+      "url": "https://raw.githubusercontent.com/mrdrvt99/Altstore-Repository/main/apps.json",
+      "website": "https://github.com/mrdrvt99/Altstore-Repository",
+      "mode": "classic",
+      "mergeable": false,
+      "official": false,
+      "trusted": false,
+      "recommended": true,
+      "community": true,
+      "modified": true,
+      "autoPackage": false,
+      "description": {
+        "cs": "Komunitní source s několika variantami upraveného YouTube: YTLite, YTKillerPlus, YTKACE, YouPro a YouMod.",
+        "en": "Community source with several modified YouTube variants: YTLite, YTKillerPlus, YTKACE, YouPro and YouMod."
+      },
+      "tags": [
+        "community",
+        "modified",
+        "tweaks",
+        "youtube",
+        "video"
+      ]
+    },
+    {
+      "id": "owo-source",
+      "name": "OwO Source",
+      "url": "https://repo.owo.network/",
+      "website": "https://owo.network/",
+      "mode": "classic",
+      "mergeable": false,
+      "official": false,
+      "trusted": false,
+      "recommended": true,
+      "community": true,
+      "modified": true,
+      "autoPackage": false,
+      "catalogLimit": 160,
+      "description": {
+        "cs": "Velká a aktivní komunitní knihovna upravených IPA pro sideloading; obsahuje sociální aplikace, utility i další modified buildy.",
+        "en": "Large active community library of modified IPAs for sideloading, including social apps, utilities and other tweaked builds."
+      },
+      "tags": [
+        "community",
+        "modified",
+        "tweaked",
+        "apps",
+        "social",
+        "video",
+        "music",
+        "utility"
+      ]
+    },
+    {
+      "id": "cypwn-ipa",
+      "name": "CyPwn IPA Library",
+      "url": "https://ipa.cypwn.xyz/cypwn.json",
+      "website": "https://www.cypwn.com/sources",
+      "mode": "classic",
+      "mergeable": false,
+      "official": false,
+      "trusted": false,
+      "recommended": true,
+      "community": true,
+      "modified": true,
+      "autoPackage": false,
+      "cachePayload": false,
+      "builder": false,
+      "catalogLimit": 180,
+      "description": {
+        "cs": "Velká komunitní IPA knihovna s přibližně 180 aplikacemi, včetně tweaked, modified a TrollStore/sideload buildů.",
+        "en": "Large community IPA library with roughly 180 apps, including tweaked, modified and TrollStore/sideload builds."
+      },
+      "tags": [
+        "community",
+        "modified",
+        "tweaked",
+        "mega",
+        "apps",
+        "social",
+        "video",
+        "music",
+        "utility"
+      ]
+    },
+    {
+      "id": "apptesters",
+      "name": "AppTesters IPA Repo",
+      "url": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/apps.json",
+      "website": "https://apptesters.org/",
+      "mode": "classic",
+      "mergeable": false,
+      "official": false,
+      "trusted": false,
+      "recommended": false,
+      "community": true,
+      "modified": true,
+      "autoPackage": false,
+      "cachePayload": false,
+      "builder": false,
+      "catalogLimit": 200,
+      "description": {
+        "cs": "Rozsáhlá a velmi aktivní komunitní IPA databáze s čistými i upravenými aplikacemi. Kvůli velikosti se v Hubu načítá jen omezený náhled katalogu.",
+        "en": "Large and very active community IPA database with clean and modified apps. Due to its size, iOS Hub only indexes a limited catalog preview."
+      },
+      "tags": [
+        "community",
+        "modified",
+        "tweaked",
+        "mega",
+        "apps",
+        "games",
+        "social",
+        "video",
+        "music",
+        "utility"
+      ]
+    },
+    {
+      "id": "youtuberebornplus",
+      "name": "YouTubeRebornPlus",
+      "url": "https://raw.githubusercontent.com/arichornlover/arichornlover.github.io/main/apps2.json",
+      "website": "https://github.com/arichornlover/YouTubeRebornPlus",
+      "mode": "classic",
+      "mergeable": true,
+      "official": true,
+      "trusted": false,
+      "recommended": true,
+      "community": false,
+      "modified": true,
+      "description": {
+        "cs": "Oficiální AltStore source projektu YouTubeRebornPlus pro upravený YouTube klient.",
+        "en": "Official AltStore source for the modified YouTubeRebornPlus client."
+      },
+      "tags": [
+        "official",
+        "modified",
+        "tweaks",
+        "youtube",
+        "video"
+      ]
+    },
+    {
+      "id": "apollo-reddit",
+      "name": "Apollo for Reddit",
+      "url": "https://raw.githubusercontent.com/Balackburn/Apollo/main/apps.json",
+      "website": "https://balackburn.github.io/Apollo/",
+      "mode": "classic",
+      "mergeable": true,
+      "official": false,
+      "trusted": false,
+      "recommended": true,
+      "community": true,
+      "modified": true,
+      "description": {
+        "cs": "Aktivně udržovaný komunitní source pro Apollo for Reddit s Apollo-Reborn úpravami a vlastním API.",
+        "en": "Actively maintained community source for Apollo for Reddit with Apollo-Reborn modifications and custom API support."
+      },
+      "tags": [
+        "community",
+        "modified",
+        "tweaks",
+        "reddit",
+        "social"
+      ]
+    },
+    {
+      "id": "discord-appstore-builds",
+      "name": "Discord App Store Builds",
+      "url": "https://raw.githubusercontent.com/AlfaActa/discord-altstore-source/main/source.json",
+      "website": "https://github.com/AlfaActa/discord-altstore-source",
+      "mode": "classic",
+      "mergeable": true,
+      "official": false,
+      "trusted": false,
+      "recommended": false,
+      "community": true,
+      "modified": false,
+      "description": {
+        "cs": "Komunitní automatizovaný AltSource s dešifrovanými App Store buildy Discordu připravenými pro sideloading.",
+        "en": "Community automated AltSource with decrypted Discord App Store builds prepared for sideloading."
+      },
+      "tags": [
+        "community",
+        "discord",
+        "social",
+        "sideload"
+      ]
+    },
+    {
+      "id": "ytkace",
+      "name": "YTKACE",
+      "url": "https://raw.githubusercontent.com/xKatsumi/YTKACE-SideStore-Repo/main/ytkace.json",
+      "website": "https://github.com/xKatsumi/YTKACE-SideStore-Repo",
+      "mode": "classic",
+      "mergeable": true,
+      "official": false,
+      "trusted": false,
+      "recommended": true,
+      "community": true,
+      "modified": true,
+      "description": {
+        "cs": "Komunitní SideStore/LiveContainer source pro upravený YouTube klient YTKACE.",
+        "en": "Community SideStore/LiveContainer source for the modified YTKACE YouTube client."
+      },
+      "tags": [
+        "community",
+        "modified",
+        "tweaks",
+        "youtube",
+        "video",
+        "sidestore",
+        "livecontainer"
+      ]
+    },
+    {
+      "id": "heyfordy",
+      "name": "heyFordy SideStore Repo",
+      "url": "https://raw.githubusercontent.com/Bitte-ein-Git/sidestore-repo/main/apps.json",
+      "website": "https://repo.heyfordy.dev/",
+      "mode": "classic",
+      "mergeable": false,
+      "official": false,
+      "trusted": false,
+      "recommended": false,
+      "community": true,
+      "modified": true,
+      "autoPackage": false,
+      "description": {
+        "cs": "Komunitní modified source s YouTube+, Spotify+, YT Music+, Twitch+, Infuse+ a dalšími aplikacemi.",
+        "en": "Community modified source with YouTube+, Spotify+, YT Music+, Twitch+, Infuse+ and other apps."
+      },
+      "tags": [
+        "community",
+        "modified",
+        "tweaks",
+        "youtube",
+        "spotify",
+        "music",
+        "video",
+        "twitch",
+        "utility"
+      ]
+    },
+    {
+      "id": "ipalibrary",
+      "name": "IPALibrary Source",
+      "url": "https://raw.githubusercontent.com/2nkn0w/ipalibrary.me-source/main/ipalibrary_source.json",
+      "website": "https://github.com/2nkn0w/ipalibrary.me-source",
+      "mode": "classic",
+      "mergeable": false,
+      "official": false,
+      "trusted": false,
+      "recommended": false,
+      "community": true,
+      "modified": true,
+      "autoPackage": false,
+      "cachePayload": false,
+      "builder": false,
+      "catalogLimit": 200,
+      "description": {
+        "cs": "Velká automaticky generovaná komunitní IPA knihovna. V Hubu se indexuje omezený náhled, aby katalog zůstal rychlý.",
+        "en": "Large automatically generated community IPA library. iOS Hub indexes a limited preview to keep the catalog fast."
+      },
+      "tags": [
+        "community",
+        "modified",
+        "tweaked",
+        "mega",
+        "apps",
+        "games",
+        "social",
+        "video",
+        "music",
+        "utility"
+      ]
+    },
+    {
+      "id": "armsx2",
+      "name": "ARMSX2 iOS",
+      "url": "https://raw.githubusercontent.com/ARMSX2/Armsx2-Repo/main/apps.json",
+      "website": "https://ios.armsx2.net/",
+      "mode": "classic",
+      "mergeable": true,
+      "official": true,
+      "trusted": false,
+      "recommended": true,
+      "community": false,
+      "modified": false,
+      "description": {
+        "cs": "Oficiální AltStore/SideStore source emulátoru PlayStation 2 ARMSX2 pro iPhone a iPad.",
+        "en": "Official AltStore/SideStore source for the ARMSX2 PlayStation 2 emulator on iPhone and iPad."
+      },
+      "tags": [
+        "official",
+        "games",
+        "emulator",
+        "playstation",
+        "ps2"
+      ]
+    },
+    {
+      "id": "fouad-source",
+      "name": "Fouad's Source",
+      "url": "https://raw.githubusercontent.com/FouadRaheb/Watusi-for-WhatsApp/master/altstore/source.json",
+      "website": "https://github.com/FouadRaheb/Watusi-for-WhatsApp",
+      "mode": "classic",
+      "mergeable": true,
+      "official": true,
+      "trusted": false,
+      "recommended": true,
+      "community": false,
+      "modified": true,
+      "description": {
+        "cs": "Oficiální modified source Fouada Raheba pro Watusi (WhatsApp) a Regram (Instagram), včetně duplicate a Business variant.",
+        "en": "Official Fouad Raheb modified source for Watusi (WhatsApp) and Regram (Instagram), including duplicate and Business variants."
+      },
+      "tags": [
+        "official",
+        "modified",
+        "tweaks",
+        "whatsapp",
+        "instagram",
+        "social",
+        "regram",
+        "watusi"
+      ]
+    },
+    {
+      "id": "neofreebird",
+      "name": "NeoFreeBird",
+      "url": "https://raw.githubusercontent.com/orionblur/NeoFreeBird/v6/AltSource.json",
+      "website": "https://github.com/orionblur/NeoFreeBird",
+      "mode": "classic",
+      "mergeable": true,
+      "official": true,
+      "trusted": false,
+      "recommended": true,
+      "community": false,
+      "modified": true,
+      "description": {
+        "cs": "Oficiální source NeoFreeBird pro upravený X/Twitter klient s BHTwitter a dalšími QoL úpravami.",
+        "en": "Official NeoFreeBird source for a modified X/Twitter client with BHTwitter and additional quality-of-life tweaks."
+      },
+      "tags": [
+        "official",
+        "modified",
+        "tweaks",
+        "twitter",
+        "x",
+        "social",
+        "bhtwitter"
+      ]
+    },
+    {
+      "id": "melonx",
+      "name": "MeloNX",
+      "url": "https://raw.githubusercontent.com/AzureDominus/melonx/refs/heads/XC-ios-ht/source.json",
+      "website": "https://MeloNX.org",
+      "mode": "classic",
+      "mergeable": true,
+      "official": true,
+      "trusted": true,
+      "recommended": true,
+      "description": {
+        "cs": "Oficiální source pro MeloNX, emulátor Nintendo Switch pro iOS. Pro spuštění her vyžaduje JIT a vlastní systémové soubory.",
+        "en": "Official source for MeloNX, a Nintendo Switch emulator for iOS. Running games requires JIT and your own system files."
+      },
+      "tags": [
+        "games",
+        "emulator",
+        "switch",
+        "jit",
+        "trusted",
+        "official"
+      ]
+    },
+    {
+      "id": "altgallery",
+      "name": "AltGallery",
+      "url": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/all-apps.json",
+      "website": "https://github.com/bebound/AltGallery",
+      "mode": "classic",
+      "mergeable": false,
+      "official": true,
+      "trusted": false,
+      "recommended": true,
+      "community": true,
+      "catalogLimit": 200,
+      "description": {
+        "cs": "Kurátorovaná galerie open-source iOS aplikací z GitHub Releases. Source je generovaný projektem AltGallery a funguje s AltStore, SideStore i LiveContainer.",
+        "en": "Curated gallery of open-source iOS apps from GitHub Releases. The source is generated by AltGallery and works with AltStore, SideStore and LiveContainer."
+      },
+      "tags": [
+        "community",
+        "catalog",
+        "apps",
+        "open-source",
+        "github",
+        "altstore",
+        "sidestore",
+        "livecontainer"
+      ]
+    },
+    {
+      "id": "ripestore",
+      "name": "RipeStore",
+      "url": "https://raw.githubusercontent.com/RipeStore/repos/main/RipeStore.json",
+      "website": "https://ripestore.github.io/",
+      "mode": "classic",
+      "mergeable": false,
+      "official": true,
+      "trusted": false,
+      "recommended": false,
+      "community": true,
+      "description": {
+        "cs": "Aktivně udržovaný komunitní AltStore source zaměřený hlavně na nepřepatchované IPA aplikace a projekty pro sideloading.",
+        "en": "Actively maintained community AltStore source focused mainly on unpatched IPA apps and sideloading projects."
+      },
+      "tags": [
+        "community",
+        "apps",
+        "ipa",
+        "altstore",
+        "sidestore"
+      ]
+    },
+    {
+      "id": "feather",
+      "name": "Feather Repository",
+      "url": "https://raw.githubusercontent.com/claration/Feather/main/app-repo.json",
+      "website": "https://github.com/claration/Feather",
+      "mode": "classic",
+      "mergeable": false,
+      "official": true,
+      "trusted": false,
+      "recommended": false,
+      "description": {
+        "cs": "Oficiální source aplikace Feather, správce a on-device podepisovač iOS aplikací.",
+        "en": "Official source for Feather, an on-device iOS app manager and signing utility."
+      },
+      "tags": [
+        "utility",
+        "signing",
+        "installer",
+        "open-source",
+        "official"
+      ]
+    },
+    {
+      "id": "quantum-source",
+      "name": "Quantum Source",
+      "url": "https://quarksources.github.io/quantumsource.json",
+      "website": "https://quarksources.github.io/",
+      "mode": "classic",
+      "mergeable": false,
+      "official": true,
+      "trusted": false,
+      "recommended": false,
+      "community": true,
+      "description": {
+        "cs": "Automaticky aktualizovaný komunitní source s emulátory, utilitami, hrami a dalšími iOS projekty.",
+        "en": "Automatically updated community source with emulators, utilities, games and other iOS projects."
+      },
+      "tags": [
+        "community",
+        "emulator",
+        "games",
+        "utility",
+        "apps",
+        "altstore"
+      ]
+    },
+    {
+      "id": "spotc",
+      "name": "SpotCompiled",
+      "url": "https://raw.githubusercontent.com/SpotCompiled/SpotC-AltStore-Repo/main/AltStore%20Repo.json",
+      "website": "https://spotc.yodaluca.dev/",
+      "mode": "classic",
+      "mergeable": false,
+      "official": true,
+      "trusted": false,
+      "recommended": false,
+      "modified": true,
+      "description": {
+        "cs": "Oficiální source projektu SpotCompiled pro upravené Spotify buildy na iOS.",
+        "en": "Official SpotCompiled source for modified Spotify builds on iOS."
+      },
+      "tags": [
+        "modified",
+        "music",
+        "spotify",
+        "community",
+        "altstore"
+      ]
+    },
+    {
+      "id": "foxster-altsource",
+      "name": "Foxster's AltSource",
+      "url": "https://therealfoxster.github.io/altsource/apps.json",
+      "website": "https://github.com/therealFoxster/altsource",
+      "mode": "classic",
+      "mergeable": false,
+      "official": true,
+      "trusted": false,
+      "recommended": false,
+      "modified": true,
+      "description": {
+        "cs": "Aktivní AltStore source od Foxster s upravenými aplikacemi a aktuálními buildy.",
+        "en": "Active AltStore source by Foxster with modified apps and current builds."
+      },
+      "tags": [
+        "modified",
+        "apps",
+        "community",
+        "youtube",
+        "altstore"
+      ]
+    },
+    {
+      "id": "fastsign",
+      "name": "FastSign",
+      "url": "https://fastsign.dev/repo.json",
+      "website": "https://fastsign.dev/",
+      "mode": "classic",
+      "mergeable": false,
+      "official": true,
+      "trusted": false,
+      "recommended": false,
+      "community": true,
+      "description": {
+        "cs": "Velký komunitní source FastSign pro sideloading. iOS Hub zobrazuje jen 50 aplikací jako náhled z celého katalogu, aby stránka zůstala rychlá.",
+        "en": "Large community FastSign source for sideloading. iOS Hub shows only 50 apps as a preview of the full catalog to keep the page fast."
+      },
+      "tags": [
+        "community",
+        "apps",
+        "ipa",
+        "signing",
+        "altstore"
+      ],
+      "catalogLimit": 50,
+      "cachePayload": false,
+      "autoPackage": false,
+      "builder": false
+    },
+    {
+      "id": "quantum-plus",
+      "name": "Quantum Source++",
+      "url": "https://quarksources.github.io/quantumsource++.json",
+      "website": "https://quarksources.github.io/",
+      "mode": "classic",
+      "mergeable": false,
+      "official": true,
+      "trusted": false,
+      "recommended": false,
+      "community": true,
+      "modified": true,
+      "description": {
+        "cs": "Rozšířená komunitní varianta Quantum Source s upravenými aplikacemi, streamingem a dalšími tweaked buildy.",
+        "en": "Expanded community variant of Quantum Source with modified apps, streaming apps and other tweaked builds."
+      },
+      "tags": [
+        "community",
+        "modified",
+        "tweaked",
+        "apps",
+        "streaming",
+        "altstore"
+      ]
+    },
+    {
+      "id": "wuxu-standard",
+      "name": "WuXu's Library",
+      "url": "https://wuxu1.github.io/wuxu-complete.json",
+      "website": "https://wuxu1.github.io/",
+      "mode": "classic",
+      "mergeable": false,
+      "official": false,
+      "trusted": false,
+      "recommended": false,
+      "community": true,
+      "description": {
+        "cs": "Standardní komunitní WuXu knihovna iOS aplikací a nástrojů pro sideloading.",
+        "en": "Standard community WuXu library of iOS apps and sideloading utilities."
+      },
+      "tags": [
+        "community",
+        "apps",
+        "ipa",
+        "altstore"
+      ]
+    },
+    {
+      "id": "taurine",
+      "name": "Taurine",
+      "url": "https://taurine.app/altstore/taurinestore.json",
+      "website": "https://taurine.app/",
+      "mode": "classic",
+      "mergeable": false,
+      "official": true,
+      "trusted": false,
+      "recommended": false,
+      "description": {
+        "cs": "Oficiální historický source jailbreaku Taurine pro podporované verze iOS 14.",
+        "en": "Official historical source for the Taurine jailbreak on supported iOS 14 versions."
+      },
+      "tags": [
+        "jailbreak",
+        "legacy",
+        "official"
+      ]
+    },
+    {
+      "id": "burrito-source",
+      "name": "Burrito's Source",
+      "url": "https://burritosoftware.github.io/altstore/channels/burritosource.json",
+      "website": "https://burritosoftware.github.io/",
+      "mode": "classic",
+      "mergeable": false,
+      "official": true,
+      "trusted": false,
+      "recommended": false,
+      "community": true,
+      "description": {
+        "cs": "Komunitní AltStore source projektu Burrito Software.",
+        "en": "Community AltStore source from Burrito Software."
+      },
+      "tags": [
+        "community",
+        "apps",
+        "altstore"
+      ]
+    },
+    {
+      "id": "salupov-altrepo",
+      "name": "Salupov Team AltRepo",
+      "url": "https://adp.salupovteam.com/altrepo.json",
+      "website": "https://salupovteam.com/",
+      "mode": "classic",
+      "mergeable": false,
+      "official": true,
+      "trusted": false,
+      "recommended": false,
+      "community": true,
+      "description": {
+        "cs": "AltStore source Salupov Team s aplikacemi a nástroji pro iOS.",
+        "en": "Salupov Team AltStore source with iOS apps and utilities."
+      },
+      "tags": [
+        "community",
+        "apps",
+        "altstore"
+      ]
     }
   ]
 }
