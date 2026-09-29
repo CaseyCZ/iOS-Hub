@@ -83,6 +83,11 @@ export const INSTALLERS = Object.freeze({
     resourceName: 'SideStore',
     creditName: 'SideStore',
     toolType: 'source-installer',
+    recommendationRoles: Object.freeze({
+      'iphone-refresh': 10,
+      'setup-refresh': 20,
+      'pairing-guide': 10
+    }),
     targets: Object.freeze(['iphone', 'ipad']),
     hostPlatforms: Object.freeze(['ios', 'ipados']),
     computerMode: 'setup',
