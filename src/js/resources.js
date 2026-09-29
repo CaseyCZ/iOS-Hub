@@ -43,6 +43,65 @@ function applyResourceExtraCopy(lang) {
   });
 }
 
+function buildResourceSideloadCard(tool) {
+  const card = document.createElement('article');
+  card.className = 'panel resource-card';
+  card.dataset.sideloadTool = tool.id;
+
+  const icon = document.createElement('div');
+  icon.className = 'resource-icon resource-icon-image';
+  const iconImage = document.createElement('img');
+  iconImage.className = 'official-app-icon';
+  iconImage.src = tool.icon || '';
+  iconImage.alt = tool.resourceName || tool.label || '';
+  iconImage.loading = 'lazy';
+  iconImage.referrerPolicy = 'no-referrer';
+  icon.appendChild(iconImage);
+
+  const badges = document.createElement('div');
+  badges.className = 'resource-badges';
+
+  const title = document.createElement('h3');
+  title.textContent = tool.resourceName || tool.label || tool.id;
+
+  const description = document.createElement('p');
+  if (tool.resourceDescriptionKey) description.dataset.i18n = tool.resourceDescriptionKey;
+  description.textContent = tool.resourceDescriptionKey
+    ? t(root.lang, tool.resourceDescriptionKey)
+    : '';
+
+  const domain = document.createElement('div');
+  domain.className = 'resource-domain';
+  domain.textContent = tool.domain || '';
+
+  const link = document.createElement('a');
+  link.className = 'btn primary brand-link';
+  link.href = sideloadToolURL(tool.id);
+  link.target = '_blank';
+  link.rel = 'noopener noreferrer';
+
+  const linkIcon = document.createElement('img');
+  linkIcon.className = 'brand-link-icon';
+  linkIcon.src = tool.icon || '';
+  linkIcon.alt = '';
+  linkIcon.loading = 'lazy';
+  linkIcon.referrerPolicy = 'no-referrer';
+
+  const linkText = document.createElement('span');
+  linkText.dataset.i18n = 'openWebsite';
+  linkText.textContent = t(root.lang, 'openWebsite');
+
+  link.append(linkIcon, linkText);
+  card.append(icon, badges, title, description, domain, link);
+  return card;
+}
+
+function renderSideloadResourceCards() {
+  const host = document.querySelector('#sideloadResourceGrid');
+  if (!host) return;
+  host.replaceChildren(...resourceSideloadTools().map(buildResourceSideloadCard));
+}
+
 function renderSideloadToolBadges(card, toolId) {
   const host = card.querySelector('.resource-badges');
   if (!host) return;
@@ -170,6 +229,7 @@ $('#themeToggle')?.addEventListener('click', () => applyTheme(root.dataset.theme
 $('#languageSelect')?.addEventListener('change', event => applyLanguage(event.target.value));
 document.addEventListener('keydown', event => { if (event.key === 'Escape') closeSupport(); });
 
+renderSideloadResourceCards();
 hydrateSideloadToolCards();
 
 const savedTheme = safeGet('caseycz-theme');
