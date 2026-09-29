@@ -1288,6 +1288,24 @@ def validate_layout() -> None:
                     f"{script_name} must use the central sideload tool registry; missing {required_part!r}"
                 )
 
+    installer_registry_consumers = ("app.js", "builder.js", "resources.js", "credits.js", "guide.js")
+    installer_registry_versions = {}
+    for script_name in installer_registry_consumers:
+        script = JS_DIR / script_name
+        if not script.exists():
+            continue
+        script_text = script.read_text(encoding="utf-8")
+        match = re.search(r"\./installers\.js\?v=([^'\"]+)", script_text)
+        if not match:
+            error(f"{script_name} must import installers.js with an explicit cache version")
+            continue
+        installer_registry_versions[script_name] = match.group(1)
+    if len(set(installer_registry_versions.values())) > 1:
+        error(
+            "Central installers.js consumers use different cache versions: "
+            + ", ".join(f"{name}={version}" for name, version in sorted(installer_registry_versions.items()))
+        )
+
     guide_page = ROOT / "guide.html"
     if guide_page.exists():
         guide_page_text = guide_page.read_text(encoding="utf-8")
