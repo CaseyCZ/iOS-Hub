@@ -1,4 +1,13 @@
 import { SUPPORTED_LANGUAGES, applyTranslations, normalizeLanguage, t } from './i18n.js?v=1.1.5-20260918-fullaudit2';
+import {
+  INSTALLERS,
+  PRIMARY_INSTALLER_IDS,
+  MORE_INSTALLER_IDS,
+  sourceInstallerIds,
+  sourceInstallerDeepLink,
+  sourceUtilityURL,
+  sourceVariantURL
+} from './installers.js?v=1.1.5-20260929-installers1';
 
 const root = document.documentElement;
 const $ = (selector, scope = document) => scope.querySelector(selector);
@@ -43,14 +52,85 @@ const safeGet = key => { try { return localStorage.getItem(key); } catch (_) { r
 const safeSet = (key, value) => { try { localStorage.setItem(key, value); } catch (_) {} };
 const escapeHtml = value => String(value ?? '').replace(/[&<>'\"]/g, char => ({'&':'&amp;','<':'&lt;','>':'&gt;',"'":'&#39;','\"':'&quot;'}[char]));
 const tr = key => t(state.lang, key);
-const INSTALLER_ICONS = {
-  altstore: 'assets/icons/altstore.svg',
-  sidestore: 'assets/icons/sidestore.svg?v=1.1.5-20260918-audit13',
-  livecontainer: 'assets/icons/livecontainer.svg'
-};
-function installerIcon(installer) {
-  const src = INSTALLER_ICONS[installer];
+function installerIcon(installerId) {
+  const src = INSTALLERS[installerId]?.icon;
   return src ? `<img class="installer-icon" src="${escapeHtml(src)}" alt="" loading="lazy" referrerpolicy="no-referrer">` : '';
+}
+
+const MORE_INSTALLERS_LABELS = {
+  en: 'More',
+  cs: 'Další',
+  de: 'Mehr',
+  es: 'Más',
+  fr: 'Plus'
+};
+
+function moreInstallersLabel() {
+  return MORE_INSTALLERS_LABELS[state.lang] || MORE_INSTALLERS_LABELS.en;
+}
+
+function sourceInstallerButton(source, installerId, {primary = false, disabled = false} = {}) {
+  const installer = INSTALLERS[installerId];
+  if (!installer) return '';
+
+  const icon = installerIcon(installerId);
+  if (disabled) {
+    return `<span class="btn small secondary installer-link is-disabled" aria-disabled="true">${icon}${escapeHtml(installer.label)}</span>`;
+  }
+
+  const href = sourceInstallerDeepLink(source, installerId);
+  if (!href) return '';
+  return `<a class="btn small ${primary ? 'primary' : 'secondary'} installer-link" href="${escapeHtml(href)}">${icon}${escapeHtml(installer.label)}</a>`;
+}
+
+function sourceInstallerGroups(source) {
+  const available = new Set(sourceInstallerIds(source));
+  const main = [];
+
+  for (const installerId of PRIMARY_INSTALLER_IDS) {
+    if (available.has(installerId) && main.length < 3) {
+      main.push(installerId);
+      available.delete(installerId);
+    }
+  }
+
+  for (const installerId of MORE_INSTALLER_IDS) {
+    if (available.has(installerId) && main.length < 3) {
+      main.push(installerId);
+      available.delete(installerId);
+    }
+  }
+
+  const more = [];
+  for (const installerId of MORE_INSTALLER_IDS) {
+    if (available.has(installerId)) {
+      more.push(installerId);
+      available.delete(installerId);
+    }
+  }
+  if (available.has('altstore-pal')) {
+    more.push('altstore-pal');
+    available.delete('altstore-pal');
+  }
+
+  for (const installerId of sourceInstallerIds(source)) {
+    if (available.has(installerId)) more.push(installerId);
+  }
+
+  return {main, more};
+}
+
+function sourceMoreInstallers(source, installerIds) {
+  if (!installerIds.length) return '';
+  const links = installerIds
+    .map(installerId => sourceInstallerButton(source, installerId))
+    .filter(Boolean)
+    .join('');
+
+  return links ? `<details class="source-more">
+    <summary class="btn small secondary">${escapeHtml(moreInstallersLabel())} ▾</summary>
+    <div class="source-more-menu">${links}</div>
+  </details>` : '';
 }
 
 function loadPersistedSettings() {
@@ -86,9 +166,12 @@ function applyLanguage(value) {
   updateStats();
 }
 
-function modeLabel(mode) {
-  if (mode === 'pal') return 'AltStore PAL';
-  if (mode === 'sidestore') return 'SideStore';
+function modeLabel(source) {
+  const hasClassic = Boolean(sourceVariantURL(source, 'classic'));
+  const hasPal = Boolean(sourceVariantURL(source, 'pal'));
+  if (hasClassic && hasPal) return 'Classic + PAL';
+  if (source.mode === 'sidestore') return 'SideStore';
+  if (hasPal && !hasClassic) return 'AltStore PAL';
   return 'AltStore Classic';
 }
 
@@ -146,14 +229,6 @@ document.addEventListener('error', event => {
   const host = img.closest('.source-icon');
   if (host) host.textContent = img.dataset.sourceFallback || '?';
 }, true);
-
-function sourceInstallerLink(installer, source) {
-  if (installer === 'altstore') {
-    const scheme = source.mode === 'pal' ? 'altstore-pal' : 'altstore';
-    return `${scheme}://source?url=${encodeURIComponent(source.url)}`;
-  }
-  return `${installer}://source?url=${encodeURIComponent(source.url)}`;
-}
 
 function sourceTags(source) {
   return new Set((source.tags || []).map(tag => String(tag).toLowerCase()));
@@ -282,26 +357,23 @@ function renderSources() {
     const appCount = Number.isFinite(status.appCount) ? status.appCount : '—';
     const desc = source.description?.[state.lang] || source.description?.en || source.description?.cs || '';
     const checkedOffline = status.online === false && Boolean(status.checkedAt);
-    const palOnly = source.mode === 'pal';
-    const altStoreLabel = palOnly ? 'AltStore PAL' : 'AltStore';
-    const installerButtons = checkedOffline
-      ? `<span class="btn small secondary installer-link is-disabled" aria-disabled="true">${installerIcon('altstore')}${altStoreLabel}</span>
-        <span class="btn small secondary installer-link is-disabled" aria-disabled="true">${installerIcon('sidestore')}SideStore</span>
-        <span class="btn small secondary installer-link is-disabled" aria-disabled="true">${installerIcon('livecontainer')}LiveContainer</span>`
-      : palOnly
-        ? `<a class="btn small primary installer-link" href="${escapeHtml(sourceInstallerLink('altstore', source))}">${installerIcon('altstore')}${altStoreLabel}</a>
-          <span class="btn small secondary installer-link is-disabled" aria-disabled="true" title="${escapeHtml(tr('palOnlyInstaller'))}">${installerIcon('sidestore')}SideStore</span>
-          <span class="btn small secondary installer-link is-disabled" aria-disabled="true" title="${escapeHtml(tr('palOnlyInstaller'))}">${installerIcon('livecontainer')}LiveContainer</span>`
-        : `<a class="btn small primary installer-link" href="${escapeHtml(sourceInstallerLink('altstore', source))}">${installerIcon('altstore')}${altStoreLabel}</a>
-          <a class="btn small secondary installer-link" href="${escapeHtml(sourceInstallerLink('sidestore', source))}">${installerIcon('sidestore')}SideStore</a>
-          <a class="btn small secondary installer-link" href="${escapeHtml(sourceInstallerLink('livecontainer', source))}">${installerIcon('livecontainer')}LiveContainer</a>`;
+    const installerGroups = sourceInstallerGroups(source);
+    const installerButtons = installerGroups.main
+      .map((installerId, index) => sourceInstallerButton(source, installerId, {
+        primary: index === 0,
+        disabled: checkedOffline
+      }))
+      .filter(Boolean)
+      .join('');
+    const moreInstallerMenu = checkedOffline ? '' : sourceMoreInstallers(source, installerGroups.more);
+    const utilityURL = sourceUtilityURL(source);
     return `<article class="source-card${checkedOffline ? ' is-offline' : ''}" data-source-id="${escapeHtml(source.id)}">
       <div class="source-top">
         <div class="source-icon">${sourceIcon(source)}</div>
         <div class="source-title">
           <h3>${escapeHtml(source.name)}</h3>
           <div class="source-meta">
-            <span class="pill mode">${escapeHtml(modeLabel(source.mode))}</span>
+            <span class="pill mode">${escapeHtml(modeLabel(source))}</span>
             ${status.online === true
               ? `<span class="pill online">● ${escapeHtml(tr('online'))}</span>`
               : status.checkedAt
@@ -314,10 +386,11 @@ function renderSources() {
       <p>${escapeHtml(desc)}</p>
       <div class="source-stats">${sourceAppsDisclosure(source)}${status.checkedAt ? `<span class="source-checked">${escapeHtml(tr('checked'))}: ${escapeHtml(formatDate(status.checkedAt))}</span>` : ''}</div>
       ${checkedOffline && status.error ? `<div class="source-offline-reason">${escapeHtml(status.error)}</div>` : ''}
-      <div class="source-installers" aria-label="Install source">${installerButtons}</div>
+      ${installerButtons ? `<div class="source-installers" aria-label="Install source">${installerButtons}</div>` : ''}
       <div class="source-actions source-utilities">
-        <button class="btn small secondary" type="button" data-copy-source="${escapeHtml(source.url)}">${escapeHtml(tr('copyUrl'))}</button>
-        <a class="btn small ghost" href="${escapeHtml(source.url)}" target="_blank" rel="noopener">JSON ↗</a>
+        ${moreInstallerMenu}
+        ${utilityURL ? `<button class="btn small secondary" type="button" data-copy-source="${escapeHtml(utilityURL)}">${escapeHtml(tr('copyUrl'))}</button>` : ''}
+        ${utilityURL ? `<a class="btn small ghost" href="${escapeHtml(utilityURL)}" target="_blank" rel="noopener">JSON ↗</a>` : ''}
         ${source.website ? `<a class="btn small ghost" href="${escapeHtml(source.website)}" target="_blank" rel="noopener">Web ↗</a>` : ''}
       </div>
     </article>`;
@@ -440,6 +513,10 @@ function closeSupport() {
 }
 
 document.addEventListener('click', event => {
+  document.querySelectorAll('.source-more[open]').forEach(details => {
+    if (!details.contains(event.target)) details.removeAttribute('open');
+  });
+
   const category = event.target.closest('[data-category-filter]');
   if (category) {
     state.sourceCategory = SOURCE_CATEGORIES.has(category.dataset.categoryFilter) ? category.dataset.categoryFilter : 'all';
