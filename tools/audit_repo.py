@@ -1039,6 +1039,15 @@ def validate_layout() -> None:
             "CORE_SIDELOAD_RESOURCE_NAMES",
             "sideloadToolURL",
             "sideloadToolSupports",
+            "sideloadToolsWithCapability",
+            "sideloadToolsForTarget",
+            "sideloadToolProfile",
+            "targets: Object.freeze",
+            "hostPlatforms: Object.freeze",
+            "computerMode",
+            "openSource",
+            "sourceSupport",
+            "resourceBadges: Object.freeze",
             "links: Object.freeze",
             "classicGuide",
             "prerequisites",
@@ -1069,6 +1078,34 @@ def validate_layout() -> None:
                         f"found misplaced tool metadata {misplaced!r}"
                     )
 
+        tool_count = installers_text.count("toolType:")
+        if tool_count < 12:
+            error(f"Central sideload registry unexpectedly contains only {tool_count} tool profiles")
+        for field in (
+            "targets: Object.freeze",
+            "hostPlatforms: Object.freeze",
+            "computerMode:",
+            "openSource:",
+            "sourceSupport:",
+            "resourceBadges: Object.freeze",
+        ):
+            field_count = installers_text.count(field)
+            if field_count != tool_count:
+                error(
+                    "Every central sideload tool must have a complete profile; "
+                    f"{field!r} appears {field_count} times for {tool_count} tools"
+                )
+
+        for required_sideinstaller_profile in (
+            "ios27: 'on-device'",
+            "ios17to26: 'pairing-file-required'",
+        ):
+            if required_sideinstaller_profile not in installers_text:
+                error(
+                    "SideInstaller compatibility profile is incomplete; "
+                    f"missing {required_sideinstaller_profile!r}"
+                )
+
     legacy_brand = "AltStore · SideStore · LiveContainer"
     for page in SITE_PAGES:
         if page.exists() and legacy_brand in page.read_text(encoding="utf-8"):
@@ -1089,8 +1126,8 @@ def validate_layout() -> None:
     guide_script = JS_DIR / "guide.js"
 
     registry_driven_tool_scripts = {
-        "resources.js": ("SIDELOAD_TOOLS", "sideloadToolURL", "data-sideload-tool", "hydrateSideloadToolCards"),
-        "credits.js": ("SIDELOAD_TOOLS", "CORE_SIDELOAD_RESOURCE_NAMES", "sideloadToolURL", "hydrateSideloadCreditCards"),
+        "resources.js": ("SIDELOAD_TOOLS", "sideloadToolURL", "data-sideload-tool", "hydrateSideloadToolCards", "dataset.toolType", "dataset.capabilities", "dataset.targets", "dataset.hostPlatforms", "dataset.computerMode", "dataset.sourceSupport", "dataset.openSource", "dataset.resourceBadges"),
+        "credits.js": ("SIDELOAD_TOOLS", "CORE_SIDELOAD_RESOURCE_NAMES", "sideloadToolURL", "hydrateSideloadCreditCards", "dataset.toolType", "dataset.capabilities", "dataset.targets", "dataset.hostPlatforms", "dataset.computerMode", "dataset.sourceSupport", "dataset.openSource", "dataset.resourceBadges"),
         "guide.js": ("sideloadToolURL", "GUIDE_RECOMMENDATION_TOOLS", "recommendationToolURL", "SETUP_RESULT_TOOLS", "setupResultToolURL"),
     }
     for script_name, required_parts in registry_driven_tool_scripts.items():
