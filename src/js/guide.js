@@ -350,6 +350,18 @@ function scopedTroubleshootingTools() {
   return selected ? [selected] : guideTroubleshootingTools();
 }
 
+function updateTroubleScopeControls() {
+  $('[data-assistant-tool], [data-trouble-tool]').forEach(button => {
+    const toolId = button.dataset.assistantTool || button.dataset.troubleTool || '';
+    const hidden = Boolean(selectedTroubleToolId && toolId && toolId !== selectedTroubleToolId);
+    button.hidden = hidden;
+    if (hidden) {
+      button.classList.remove('active');
+      button.setAttribute('aria-pressed', 'false');
+    }
+  });
+}
+
 function updateToolScopeDisplay() {
   const selected = selectedTroubleshootingTool();
   const copy = helpCopyForLanguage();
@@ -489,6 +501,7 @@ function setToolScope(toolId, syncUrl = true) {
   diagnosisState.currentKey = null;
   closeToolScopePicker();
   updateToolScopeDisplay();
+  updateTroubleScopeControls();
   renderOfficialToolReferences();
   filterTroubleshooting();
   updateAssistantTroubleSummary();
