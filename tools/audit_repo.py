@@ -1187,6 +1187,7 @@ def validate_layout() -> None:
             "DIRECT_SOURCE_INSTALLERS",
             "STRICT_DUPLICATE_BUNDLE_INSTALLERS",
             "TOLERANT_DUPLICATE_BUNDLE_INSTALLERS",
+            "DUPLICATE_BUNDLE_EXAMPLE_LIMIT",
             '"duplicateBundleIdentifiers"',
             '"installerCompatibility"',
             '"directSource": "fail"',
@@ -1197,6 +1198,21 @@ def validate_layout() -> None:
                     "update_sources.py must expose per-installer duplicate bundle compatibility; "
                     f"missing {required!r}"
                 )
+
+    status_file = ROOT / "data" / "status.json"
+    if status_file.exists():
+        try:
+            status_payload = json.loads(status_file.read_text(encoding="utf-8"))
+            for source_id, source_status in (status_payload.get("sources") or {}).items():
+                duplicate_report = source_status.get("duplicateBundleIdentifiers") or {}
+                items = duplicate_report.get("items") or []
+                if len(items) > 20:
+                    error(
+                        f"data/status.json stores too many duplicate bundle examples for {source_id!r}; "
+                        "keep diagnostics capped to avoid bloating the mobile status payload"
+                    )
+        except (json.JSONDecodeError, OSError) as exc:
+            error(f"Unable to validate data/status.json duplicate bundle diagnostics: {exc}")
 
     legacy_brand = "AltStore · SideStore · LiveContainer"
     for page in SITE_PAGES:
