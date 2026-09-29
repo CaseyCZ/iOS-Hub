@@ -1255,6 +1255,7 @@ def validate_layout() -> None:
             "new Set(['sidestore','livecontainer'])",
             'new Set(["sidestore","livecontainer"])',
             "INSTALLERS[target]?.label || 'AltStore'",
+            "$('[data-exp-target]').forEach",
         ):
             if forbidden in builder_text:
                 error(
