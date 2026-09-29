@@ -1,5 +1,5 @@
 import { SUPPORTED_LANGUAGES, applyTranslations, normalizeLanguage, t } from './i18n.js?v=1.1.5-20260929-guide-methods1';
-import { SIDELOAD_TOOLS, resourceBadgeSpecs, resourceSideloadTools, sideloadToolURL } from './installers.js?v=1.1.5-20260929-installers16';
+import { SIDELOAD_TOOLS, resourceBadgeSpecs, resourceSideloadTools, sideloadToolURL } from './installers.js?v=1.1.5-20260929-installers20';
 
 const root = document.documentElement;
 const RESOURCE_EXTRA_COPY = {
