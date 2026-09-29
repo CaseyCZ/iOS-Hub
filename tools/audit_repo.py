@@ -1335,6 +1335,9 @@ def validate_layout() -> None:
                     "Guide general installer links must be registry-driven; "
                     f"missing {tool_id!r}/{purpose!r}"
                 )
+        altstore_classic_marker = 'data-guide-tool-link="altstore" data-guide-tool-purpose="classicGuide"'
+        if guide_page_text.count(altstore_classic_marker) < 2:
+            error("Guide beginner cards must keep both AltStore Classic links registry-driven")
 
         trouble_search_values = re.findall(r'<details\b[^>]*data-search="([^"]+)"', guide_page_text)
         trouble_search_text = " ".join(trouble_search_values).lower()
