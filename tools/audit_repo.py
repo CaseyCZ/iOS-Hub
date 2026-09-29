@@ -1381,13 +1381,13 @@ def validate_layout() -> None:
 
         trouble_items = []
         for match in re.finditer(
-            r'<details class="([^"]*\\btrouble-item\\b[^"]*)"([^>]*)>([\\s\\S]*?)</details>',
+            r'<details class="([^"]*\btrouble-item\b[^"]*)"([^>]*)>([\s\S]*?)</details>',
             guide_page_text,
         ):
             classes, attrs, body = match.groups()
             tool_match = re.search(r'data-tool="([^"]+)"', attrs)
             search_match = re.search(r'data-search="([^"]*)"', attrs)
-            title_match = re.search(r"<summary[^>]*>([\\s\\S]*?)</summary>", body)
+            title_match = re.search(r"<summary[^>]*>([\s\S]*?)</summary>", body)
             trouble_items.append(
                 {
                     "classes": classes,
@@ -1414,7 +1414,7 @@ def validate_layout() -> None:
         }
 
         def normalize_trouble_tool_text(value: str) -> str:
-            return re.sub(r"\\s+", " ", re.sub(r"[^a-z0-9]+", " ", value.lower())).strip()
+            return re.sub(r"\s+", " ", re.sub(r"[^a-z0-9]+", " ", value.lower())).strip()
 
         def audit_tool_for_query(query: str) -> str:
             normalized_query = normalize_trouble_tool_text(query)
