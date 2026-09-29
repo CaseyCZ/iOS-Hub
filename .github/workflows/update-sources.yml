@@ -5,7 +5,7 @@ on:
   schedule:
     - cron: "17 */6 * * *"
   push:
-    branches: [main]
+    branches: [main, installer-refactor]
     paths:
       - "sources/registry.json"
       - "tools/update_sources.py"
@@ -15,7 +15,7 @@ permissions:
   contents: write
 
 concurrency:
-  group: update-ios-sources
+  group: update-ios-sources-${{ github.ref_name }}
   cancel-in-progress: true
 
 jobs:
@@ -43,11 +43,17 @@ jobs:
           git config user.email "25530709+CaseyCZ@users.noreply.github.com"
 
           # Generated files can race with normal website commits. For every
-          # attempt start from the newest main and regenerate instead of
-          # rebasing generated timestamps/caches and creating conflicts.
+          # attempt start from the newest target branch and regenerate instead
+          # of rebasing generated timestamps/caches and creating conflicts.
+          TARGET_BRANCH="${GITHUB_REF_NAME:-main}"
+          if [ "${GITHUB_EVENT_NAME}" = "schedule" ]; then
+            TARGET_BRANCH="main"
+          fi
+          echo "Updating generated data on branch: ${TARGET_BRANCH}"
+
           for attempt in 1 2 3 4 5; do
-            git fetch origin main
-            git reset --hard origin/main
+            git fetch origin "${TARGET_BRANCH}"
+            git reset --hard "origin/${TARGET_BRANCH}"
             python tools/update_sources.py
             python tools/audit_repo.py
             git add data mix altstore sidestore
@@ -58,11 +64,11 @@ jobs:
             fi
 
             git commit -m "Update iOS source cache"
-            if git push origin HEAD:main; then
+            if git push origin HEAD:"${TARGET_BRANCH}"; then
               exit 0
             fi
 
-            echo "Push raced with another commit; regenerating on latest main ($attempt/5)..."
+            echo "Push raced with another commit; regenerating on latest ${TARGET_BRANCH} ($attempt/5)..."
             sleep 2
           done
 
