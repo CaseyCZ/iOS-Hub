@@ -1,5 +1,5 @@
 import { SUPPORTED_LANGUAGES, applyTranslations, normalizeLanguage, t } from './i18n.js?v=1.1.5-20260918-fullaudit2';
-import { SIDELOAD_TOOLS, resourceBadgeSpecs, resourceSideloadTools, sideloadToolURL } from './installers.js?v=1.1.5-20260929-installers13';
+import { SIDELOAD_TOOLS, resourceBadgeSpecs, resourceSideloadTools, sideloadToolURL } from './installers.js?v=1.1.5-20260929-installers14';
 
 const root = document.documentElement;
 const RESOURCE_EXTRA_COPY = {
