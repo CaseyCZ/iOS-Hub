@@ -117,13 +117,25 @@ function installerIcon(installerId) {
 function renderTargetButtons() {
   const host = $('#builderTargets');
   if (!host) return;
-  host.innerHTML = BUILDER_INSTALLER_IDS.map(installerId => {
+  const current = INSTALLERS[target] || INSTALLERS[DEFAULT_BUILDER_INSTALLER_ID];
+  const options = BUILDER_INSTALLER_IDS.map(installerId => {
     const installer = INSTALLERS[installerId];
-    return `<button class="builder-target${target === installerId ? ' active' : ''}" type="button" data-exp-target="${escapeHtml(installerId)}">
+    const active = target === installerId;
+    return `<button class="builder-target-option${active ? ' active' : ''}" type="button" role="option" aria-selected="${String(active)}" data-exp-target="${escapeHtml(installerId)}">
       ${installerIcon(installerId)}
       <span>${escapeHtml(installer.label)}</span>
     </button>`;
   }).join('');
+  host.innerHTML = `<details class="builder-target-picker">
+    <summary class="builder-target-select" aria-labelledby="mixTargetLabel">
+      ${installerIcon(target)}
+      <span>${escapeHtml(current?.label || targetName())}</span>
+      <span class="builder-target-chevron" aria-hidden="true">⌄</span>
+    </summary>
+    <div class="builder-target-menu" role="listbox" aria-labelledby="mixTargetLabel">
+      ${options}
+    </div>
+  </details>`;
 }
 function getStatus(id) { return status?.sources?.[id] || {}; }
 function directSourceAvailable(sourceId, installerId = target) {
@@ -245,7 +257,11 @@ function applyCopy() {
 function syncFilterUi() {
   $$('[data-exp-category-filter]').forEach(button => button.classList.toggle('active', button.dataset.expCategoryFilter === category));
   $$('[data-exp-genre-filter]').forEach(button => button.classList.toggle('active', button.dataset.expGenreFilter === genre));
-  $$('[data-exp-target]').forEach(button => button.classList.toggle('active', button.dataset.expTarget === target));
+  $('[data-exp-target]').forEach(button => {
+    const active = button.dataset.expTarget === target;
+    button.classList.toggle('active', active);
+    button.setAttribute('aria-selected', String(active));
+  });
   $$('[data-exp-compat-filter]').forEach(button => button.classList.toggle('active', button.dataset.expCompatFilter === compatibility));
   const search = $('#expSourceSearch');
   if (search && search.value !== query) search.value = query;
@@ -597,7 +613,9 @@ async function init() {
     genre = GENRES.has(button.dataset.expGenreFilter) ? button.dataset.expGenreFilter : 'all';
     saveFilters(); render();
   }));
-  $$('[data-exp-target]').forEach(button => button.addEventListener('click', () => {
+  $('#builderTargets')?.addEventListener('click', event => {
+    const button = event.target.closest('[data-exp-target]');
+    if (!button) return;
     const nextTarget = TARGETS.has(button.dataset.expTarget) ? button.dataset.expTarget : DEFAULT_BUILDER_INSTALLER_ID;
     if (nextTarget !== target) {
       target = nextTarget;
@@ -607,7 +625,7 @@ async function init() {
     }
     saveFilters();
     render();
-  }));
+  });
   $$('[data-exp-compat-filter]').forEach(button => button.addEventListener('click', () => {
     compatibility = COMPATIBILITY.has(button.dataset.expCompatFilter) ? button.dataset.expCompatFilter : 'all';
     saveFilters(); render();
