@@ -991,7 +991,7 @@ def validate_layout() -> None:
     # the catalog, Builder and Credits without maintaining duplicate hard-coded lists.
     dynamic_source_scripts = {
         "app.js": ("sources/registry.json", "data/status.json", "data/catalog.json", "sourceWebsiteIcon", "data-source-website-icon", "installers.js", "SOURCE_VARIANT_IDS", "sourceVariantLabel", "sourceModeLabel", "sourceInstallerCompatibility", "sourceInstallerDirectAvailable", "data-blocked-installers"),
-        "builder.js": ("sources/registry.json", "data/status.json", "data/catalog.json", "installers.js", "BUILDER_INSTALLER_IDS", "MIX_PACKAGE_IDS", "mixPackageData", "mixPackageTargetIds", "installerMixPackageData", "sourceFormatLabel", "targetVariant"),
+        "builder.js": ("sources/registry.json", "data/status.json", "data/catalog.json", "installers.js", "BUILDER_INSTALLER_IDS", "MIX_PACKAGE_IDS", "mixPackageData", "mixPackageTargetIds", "installerMixPackageData", "sourceFormatLabel", "targetVariant", "dedupeHelp", "dedupeResult", "mixDedupeHelp"),
         "credits.js": ("sources/registry.json", "sourceCredits", "source.developer", "maintainerGroups", "sourceCreditGroup", "brand-link-icon", "iconImage", "CORE_SIDELOAD_RESOURCE_NAMES", "SIDELOAD_TOOLS"),
     }
     for script_name, required_parts in dynamic_source_scripts.items():
@@ -1145,6 +1145,12 @@ def validate_layout() -> None:
                 "Every Builder Mix target must declare its hosted mixPackage; "
                 f"found {mix_package_count} mixPackage entries for {mix_target_count} mixTarget entries"
             )
+
+    builder_page = ROOT / "builder.html"
+    if builder_page.exists():
+        builder_page_text = builder_page.read_text(encoding="utf-8")
+        if 'id="mixDedupeHelp"' not in builder_page_text:
+            error("builder.html must explain bundle-ID deduplication in the Mix UI")
 
     builder_script = JS_DIR / "builder.js"
     if builder_script.exists():
