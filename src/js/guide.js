@@ -438,19 +438,63 @@ function troubleTermMatches(haystack, term) {
   return haystack.includes(term);
 }
 
+function normalizeTroubleToolText(value) {
+  return String(value || '')
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, ' ')
+    .replace(/\s+/g, ' ')
+    .trim();
+}
+
+function troubleshootingToolForQuery(query) {
+  const normalizedQuery = normalizeTroubleToolText(query);
+  if (!normalizedQuery) return null;
+
+  const matches = troubleshootingSideloadTools().flatMap(tool => {
+    const aliases = [...new Set([
+      tool.id,
+      tool.label,
+      tool.resourceName,
+      tool.creditName
+    ].map(normalizeTroubleToolText).filter(Boolean))];
+
+    return aliases
+      .filter(alias => normalizedQuery.includes(alias))
+      .map(alias => ({tool, alias}));
+  });
+
+  matches.sort((a, b) => b.alias.length - a.alias.length);
+  return matches[0]?.tool || null;
+}
+
+function scopedTroubleQuery(rawQuery, normalizedTerms) {
+  const tool = troubleshootingToolForQuery(rawQuery);
+  const toolTerm = normalizeTroubleToolText(tool?.label || tool?.id);
+  return [toolTerm, normalizedTerms].filter(Boolean).join(' ').trim();
+}
+
 function getTroubleMatches(query) {
   const q = (query || '').trim().toLowerCase();
   if (!q) return [];
   const terms = [...new Set(q.split(/\s+/).filter(Boolean))];
   const triedTags = diagnosisTriedTags();
+  const preferredTool = troubleshootingToolForQuery(q);
 
   return $('.trouble-item')
     .map((item, index) => {
       const haystack = [item.dataset.search || '', item.textContent || ''].join(' ').toLowerCase();
       const baseScore = terms.reduce((sum, term) => sum + (troubleTermMatches(haystack, term) ? (/[0-9]/.test(term) ? 3 : 1) : 0), 0);
+      const toolBoost = preferredTool && item.dataset.tool === preferredTool.id ? 6 : 0;
+      const competingToolPenalty = preferredTool && item.dataset.tool && item.dataset.tool !== preferredTool.id ? 0.75 : 0;
       const triedPenalty = triedTags.reduce((sum, tag) => sum + (haystack.includes(tag) ? 0.35 : 0), 0);
       const communityPenalty = item.classList.contains('community-item') ? 0.15 : 0;
-      return { item, score:baseScore - triedPenalty - communityPenalty, baseScore, index, key:item.dataset.search || String(index) };
+      return {
+        item,
+        score:baseScore + toolBoost - competingToolPenalty - triedPenalty - communityPenalty,
+        baseScore,
+        index,
+        key:item.dataset.search || String(index)
+      };
     })
     .filter(match => match.baseScore > 0)
     .sort((a,b) => b.score - a.score || b.baseScore - a.baseScore || a.index - b.index);
@@ -629,18 +673,18 @@ async function copyDiagnosisLink() {
 function resolvedTroubleQuery(raw) {
   const q = (raw || '').trim().toLowerCase();
   if (!q) return '';
-  if (/1005|1007|invalid.?ipa|app.?not.?found/.test(q)) return '1005 1007 invalid format ipa app not found';
-  if (/1412|anisette/.test(q)) return 'apple login anisette 1412';
-  if (/1004|503|2fa|two.?factor|apple.?id|sign.?in|login|verification.?code/.test(q)) return 'apple login 503 2fa 1004 verification code';
-  if (/1006|udid|pair|pairing/.test(q)) return 'pairing 1006 udid';
-  if (/1009|2009|maximum.*app|app.?id|3.?app|limit/.test(q)) return '3 app limit app ids 1009 2009';
-  if (/10\.7\.0\.2|10\.7\.0\.1|tunnel.?ip|device.?ip/.test(q)) return '10.7.0.2/30 10.7.0.1/32 localdevvpn tunnel device ip workaround';
-  if (/shortcut|resign|long.?press|background.*sidestore/.test(q)) return 'ios 27 shortcut resign long press background refresh all';
-  if (/1414|minimuxer.*27|afc|vpn|localdevvpn/.test(q)) return 'refresh 1414 minimuxer 27 afc localdevvpn';
-  if (/altserver|server not found|remote server/.test(q)) return 'altserver';
-  if (/cert|certificate|provision/.test(q)) return 'certificate';
-  if (/livecontainer|jit|jitless|invalid.?signature|entitlement/.test(q)) return 'livecontainer jit jitless invalid signature entitlements';
-  if (/refresh|expire|7.?day|renew/.test(q)) return 'refresh';
+  if (/1005|1007|invalid.?ipa|app.?not.?found/.test(q)) return scopedTroubleQuery(q, '1005 1007 invalid format ipa app not found');
+  if (/1412|anisette/.test(q)) return scopedTroubleQuery(q, 'apple login anisette 1412');
+  if (/1004|503|2fa|two.?factor|apple.?id|sign.?in|login|verification.?code/.test(q)) return scopedTroubleQuery(q, 'apple login 503 2fa 1004 verification code');
+  if (/1006|udid|pair|pairing/.test(q)) return scopedTroubleQuery(q, 'pairing 1006 udid');
+  if (/1009|2009|maximum.*app|app.?id|3.?app|limit/.test(q)) return scopedTroubleQuery(q, '3 app limit app ids 1009 2009');
+  if (/10\.7\.0\.2|10\.7\.0\.1|tunnel.?ip|device.?ip/.test(q)) return scopedTroubleQuery(q, '10.7.0.2/30 10.7.0.1/32 localdevvpn tunnel device ip workaround');
+  if (/shortcut|resign|long.?press|background.*sidestore/.test(q)) return scopedTroubleQuery(q, 'ios 27 shortcut resign long press background refresh all');
+  if (/1414|minimuxer.*27|afc|vpn|localdevvpn/.test(q)) return scopedTroubleQuery(q, 'refresh 1414 minimuxer 27 afc localdevvpn');
+  if (/altserver|server not found|remote server/.test(q)) return scopedTroubleQuery(q, 'altserver');
+  if (/cert|certificate|provision/.test(q)) return scopedTroubleQuery(q, 'certificate provision revoked expired');
+  if (/livecontainer|jit|jitless|invalid.?signature|entitlement/.test(q)) return scopedTroubleQuery(q, 'livecontainer jit jitless invalid signature entitlements');
+  if (/refresh|expire|7.?day|renew/.test(q)) return scopedTroubleQuery(q, 'refresh');
   return q;
 }
 
