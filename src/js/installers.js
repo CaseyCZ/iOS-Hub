@@ -3,6 +3,8 @@ export const INSTALLERS = Object.freeze({
     id: 'altstore',
     label: 'AltStore',
     variant: 'classic',
+    mixTarget: true,
+    mixHelpKey: 'targetHelpAlt',
     icon: 'assets/icons/altstore.svg',
     buildLink: url => `altstore://source?url=${encodeURIComponent(url)}`
   },
@@ -10,6 +12,9 @@ export const INSTALLERS = Object.freeze({
     id: 'sidestore',
     label: 'SideStore',
     variant: 'classic',
+    mixTarget: true,
+    mixHelpKey: 'targetHelpSide',
+    mixPackage: 'sidestore',
     icon: 'assets/icons/sidestore.svg?v=1.1.5-20260918-audit13',
     buildLink: url => `sidestore://source?url=${encodeURIComponent(url)}`
   },
@@ -17,6 +22,8 @@ export const INSTALLERS = Object.freeze({
     id: 'livecontainer',
     label: 'LiveContainer',
     variant: 'classic',
+    mixTarget: true,
+    mixHelpKey: 'targetHelpLive',
     icon: 'assets/icons/livecontainer.svg',
     buildLink: url => `livecontainer://source?url=${encodeURIComponent(url)}`
   },
@@ -24,6 +31,7 @@ export const INSTALLERS = Object.freeze({
     id: 'altstore-pal',
     label: 'AltStore PAL',
     variant: 'pal',
+    mixTarget: false,
     icon: 'assets/icons/altstore.svg',
     buildLink: url => `altstore-pal://source?url=${encodeURIComponent(url)}`
   },
@@ -31,6 +39,8 @@ export const INSTALLERS = Object.freeze({
     id: 'flarestore',
     label: 'FlareStore',
     variant: 'classic',
+    mixTarget: true,
+    mixHelpKey: 'targetHelpFlare',
     icon: 'https://flarestore.app/favicon.ico',
     buildLink: url => `flarestore://source?url=${encodeURIComponent(url)}`
   },
@@ -38,6 +48,8 @@ export const INSTALLERS = Object.freeze({
     id: 'feather',
     label: 'Feather',
     variant: 'classic',
+    mixTarget: true,
+    mixHelpKey: 'targetHelpFeather',
     icon: 'https://raw.githubusercontent.com/claration/Feather/v1.x/iOS/Resources/Icons/Main/Mac@3x.png',
     buildLink: url => `feather://source/${url}`
   }
@@ -54,6 +66,10 @@ export const MORE_INSTALLER_IDS = Object.freeze([
   'flarestore',
   'feather'
 ]);
+
+export const BUILDER_INSTALLER_IDS = Object.freeze(
+  Object.values(INSTALLERS).filter(installer => installer.mixTarget).map(installer => installer.id)
+);
 
 const CLASSIC_DEFAULT_INSTALLERS = Object.freeze([
   'altstore',
