@@ -108,7 +108,8 @@ const SOURCE_ICON_OVERRIDES = {
   'youtuberebornplus': 'assets/source-icons/youtuberebornplus.svg',
   'ipalibrary': 'assets/source-icons/ipalibrary.svg',
   'nineanimator': 'assets/source-icons/nineanimator.svg',
-  'bringyour': 'assets/source-icons/bringyour.svg'
+  'bringyour': 'assets/source-icons/bringyour.svg',
+  'salupov-altrepo': 'https://www.google.com/s2/favicons?domain=salupovteam.com&sz=128'
 };
 
 function sourceWebsiteIcon(source) {
