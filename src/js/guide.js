@@ -128,7 +128,7 @@ reportHelpTitle:'Toujours en panne ?', reportHelpDesc:'Ouvrez un rapport GitHub 
 const HELP_COPY = {
   en: {
     pageEyebrow:'HELP CENTER · GUIDES · FIXES', pageTitle:'Sideloading Help Center', pageDesc:'Choose the right sideloading method, diagnose a problem or describe your setup and get a focused path in a few taps.',
-    centerEyebrow:'IOS HUB HELP CENTER', centerTitle:'How can we help?', centerDesc:'Start with one of the three paths below. You can change direction at any time without losing the rest of the guide.', toolScopeEyebrow:'FOCUSED HELP', toolScopeTitle:'Help with a selected installer', toolScopeDesc:'Choose an installer to focus troubleshooting and official references, or leave All selected for a mixed view.', toolScopeAll:'All installers',
+    centerEyebrow:'IOS HUB HELP CENTER', centerTitle:'How can we help?', centerDesc:'Start with one of the three paths below. You can change direction at any time without losing the rest of the guide.', toolScopeEyebrow:'FOCUSED HELP', toolScopeTitle:'Help with a selected installer', toolScopeDesc:'Already know which installer you use? Select it for focused help. If not, leave Help me choose selected and iOS Hub will guide you.', toolScopeAll:'Help me choose',
     modeChooseTitle:'Choose a method', modeChooseDesc:'Tell us what you want to do', modeFixTitle:'Fix a problem', modeFixDesc:'Search by symptom or error', modeSetupTitle:'My setup', modeSetupDesc:'Build a recommendation from your device',
     chooseTitle:'What do you want to do?', chooseDesc:'Pick the closest goal. We will show a practical starting point and the next three steps.',
     fixTitle:'What is not working?', fixDesc:'Paste part of an error message or pick a common problem. We will narrow the troubleshooting list below.', fixPlaceholder:'Paste an error: 503, pairing, certificate, refresh…',
@@ -138,7 +138,7 @@ const HELP_COPY = {
   },
   cs: {
     pageEyebrow:'CENTRUM POMOCI · NÁVODY · ŘEŠENÍ', pageTitle:'Centrum pomoci se sideloadingem', pageDesc:'Vyber správnou metodu, najdi příčinu problému nebo popiš svoji konfiguraci a během pár klepnutí dostaneš konkrétní postup.',
-    centerEyebrow:'IOS HUB CENTRUM POMOCI', centerTitle:'S čím potřebuješ pomoct?', centerDesc:'Začni jednou ze tří cest níže. Kdykoliv můžeš přepnout jinam a zbytek průvodce zůstane dostupný.', toolScopeEyebrow:'ZAMĚŘENÁ POMOC', toolScopeTitle:'Pomoc s vybraným instalátorem', toolScopeDesc:'Vyber instalátor a zobrazíme hlavně jeho řešení problémů a oficiální odkazy. Volba Všechny zachová současný mix.', toolScopeAll:'Všechny instalátory',
+    centerEyebrow:'IOS HUB CENTRUM POMOCI', centerTitle:'S čím potřebuješ pomoct?', centerDesc:'Začni jednou ze tří cest níže. Kdykoliv můžeš přepnout jinam a zbytek průvodce zůstane dostupný.', toolScopeEyebrow:'ZAMĚŘENÁ POMOC', toolScopeTitle:'Pomoc s vybraným instalátorem', toolScopeDesc:'Víš, který instalátor používáš? Vyber ho pro cílenou pomoc. Pokud ne, nech Pomoz mi vybrat a iOS Hub tě provede výběrem.', toolScopeAll:'Pomoz mi vybrat',
     modeChooseTitle:'Vybrat metodu', modeChooseDesc:'Řekni, co chceš udělat', modeFixTitle:'Vyřešit problém', modeFixDesc:'Hledej podle chyby nebo příznaku', modeSetupTitle:'Moje konfigurace', modeSetupDesc:'Doporučení podle tvého zařízení',
     chooseTitle:'Co chceš udělat?', chooseDesc:'Vyber nejbližší cíl. Ukážeme ti praktický začátek a tři další kroky.',
     fixTitle:'Co nefunguje?', fixDesc:'Vlož část chybové hlášky nebo vyber častý problém. Zúžíme seznam řešení níže.', fixPlaceholder:'Vlož chybu: 503, pairing, certificate, refresh…',
@@ -148,7 +148,7 @@ const HELP_COPY = {
   },
   de: {
     pageEyebrow:'HILFECENTER · ANLEITUNGEN · LÖSUNGEN', pageTitle:'Sideloading-Hilfecenter', pageDesc:'Wähle die passende Methode, diagnostiziere ein Problem oder beschreibe dein Setup und erhalte mit wenigen Klicks einen gezielten Weg.',
-    centerEyebrow:'IOS HUB HILFECENTER', centerTitle:'Wobei können wir helfen?', centerDesc:'Starte mit einem der drei Wege. Du kannst jederzeit wechseln, ohne den restlichen Guide zu verlieren.', toolScopeEyebrow:'GEZIELTE HILFE', toolScopeTitle:'Hilfe für einen ausgewählten Installer', toolScopeDesc:'Wähle einen Installer, um Fehlerbehebung und offizielle Verweise darauf zu fokussieren. Alle zeigt weiterhin den Mix.', toolScopeAll:'Alle Installer',
+    centerEyebrow:'IOS HUB HILFECENTER', centerTitle:'Wobei können wir helfen?', centerDesc:'Starte mit einem der drei Wege. Du kannst jederzeit wechseln, ohne den restlichen Guide zu verlieren.', toolScopeEyebrow:'GEZIELTE HILFE', toolScopeTitle:'Hilfe für einen ausgewählten Installer', toolScopeDesc:'Wenn du deinen Installer kennst, wähle ihn für gezielte Hilfe. Sonst lass Hilf mir wählen ausgewählt und iOS Hub führt dich durch die Auswahl.', toolScopeAll:'Hilf mir wählen',
     modeChooseTitle:'Methode wählen', modeChooseDesc:'Sag uns, was du tun möchtest', modeFixTitle:'Problem beheben', modeFixDesc:'Nach Symptom oder Fehler suchen', modeSetupTitle:'Mein Setup', modeSetupDesc:'Empfehlung anhand deines Geräts',
     chooseTitle:'Was möchtest du tun?', chooseDesc:'Wähle das passendste Ziel. Wir zeigen einen praktischen Startpunkt und die nächsten drei Schritte.',
     fixTitle:'Was funktioniert nicht?', fixDesc:'Füge einen Teil der Fehlermeldung ein oder wähle ein häufiges Problem. Wir grenzen die Lösungen unten ein.', fixPlaceholder:'Fehler einfügen: 503, Pairing, Zertifikat, Refresh…',
@@ -158,7 +158,7 @@ const HELP_COPY = {
   },
   es: {
     pageEyebrow:'CENTRO DE AYUDA · GUÍAS · SOLUCIONES', pageTitle:'Centro de ayuda de sideloading', pageDesc:'Elige el método adecuado, diagnostica un problema o describe tu configuración y obtén una ruta concreta en pocos toques.',
-    centerEyebrow:'CENTRO DE AYUDA IOS HUB', centerTitle:'¿En qué podemos ayudarte?', centerDesc:'Empieza con una de las tres rutas. Puedes cambiar en cualquier momento sin perder el resto de la guía.', toolScopeEyebrow:'AYUDA ENFOCADA', toolScopeTitle:'Ayuda con un instalador seleccionado', toolScopeDesc:'Elige un instalador para centrar la solución de problemas y las referencias oficiales. Todos mantiene la vista mixta.', toolScopeAll:'Todos los instaladores',
+    centerEyebrow:'CENTRO DE AYUDA IOS HUB', centerTitle:'¿En qué podemos ayudarte?', centerDesc:'Empieza con una de las tres rutas. Puedes cambiar en cualquier momento sin perder el resto de la guía.', toolScopeEyebrow:'AYUDA ENFOCADA', toolScopeTitle:'Ayuda con un instalador seleccionado', toolScopeDesc:'Si ya sabes qué instalador usas, selecciónalo para obtener ayuda específica. Si no, deja Ayúdame a elegir y iOS Hub te guiará.', toolScopeAll:'Ayúdame a elegir',
     modeChooseTitle:'Elegir método', modeChooseDesc:'Dinos qué quieres hacer', modeFixTitle:'Resolver un problema', modeFixDesc:'Buscar por síntoma o error', modeSetupTitle:'Mi configuración', modeSetupDesc:'Recomendación según tu dispositivo',
     chooseTitle:'¿Qué quieres hacer?', chooseDesc:'Elige el objetivo más cercano. Mostraremos un punto de partida práctico y los tres pasos siguientes.',
     fixTitle:'¿Qué no funciona?', fixDesc:'Pega parte del mensaje de error o elige un problema común. Reduciremos la lista de soluciones de abajo.', fixPlaceholder:'Pega un error: 503, pairing, certificado, refresh…',
@@ -168,7 +168,7 @@ const HELP_COPY = {
   },
   fr: {
     pageEyebrow:'CENTRE D’AIDE · GUIDES · SOLUTIONS', pageTitle:'Centre d’aide au sideloading', pageDesc:'Choisissez la bonne méthode, diagnostiquez un problème ou décrivez votre configuration et obtenez un parcours ciblé en quelques gestes.',
-    centerEyebrow:'CENTRE D’AIDE IOS HUB', centerTitle:'Comment pouvons-nous vous aider ?', centerDesc:'Commencez par l’un des trois parcours. Vous pouvez changer à tout moment sans perdre le reste du guide.', toolScopeEyebrow:'AIDE CIBLÉE', toolScopeTitle:'Aide pour un installateur sélectionné', toolScopeDesc:'Choisissez un installateur pour cibler le dépannage et les références officielles. Tous conserve la vue mixte.', toolScopeAll:'Tous les installateurs',
+    centerEyebrow:'CENTRE D’AIDE IOS HUB', centerTitle:'Comment pouvons-nous vous aider ?', centerDesc:'Commencez par l’un des trois parcours. Vous pouvez changer à tout moment sans perdre le reste du guide.', toolScopeEyebrow:'AIDE CIBLÉE', toolScopeTitle:'Aide pour un installateur sélectionné', toolScopeDesc:'Si vous connaissez votre installateur, sélectionnez-le pour une aide ciblée. Sinon, laissez Aidez-moi à choisir et iOS Hub vous guidera.', toolScopeAll:'Aidez-moi à choisir',
     modeChooseTitle:'Choisir une méthode', modeChooseDesc:'Dites ce que vous voulez faire', modeFixTitle:'Résoudre un problème', modeFixDesc:'Rechercher par symptôme ou erreur', modeSetupTitle:'Ma configuration', modeSetupDesc:'Recommandation selon votre appareil',
     chooseTitle:'Que voulez-vous faire ?', chooseDesc:'Choisissez l’objectif le plus proche. Nous afficherons un point de départ pratique et les trois étapes suivantes.',
     fixTitle:'Qu’est-ce qui ne fonctionne pas ?', fixDesc:'Collez une partie du message d’erreur ou choisissez un problème courant. Nous réduirons la liste des solutions ci-dessous.', fixPlaceholder:'Collez une erreur : 503, pairing, certificat, refresh…',
@@ -376,7 +376,7 @@ function renderToolScopePicker() {
     } else {
       const icon = document.createElement('span');
       icon.className = 'guide-tool-scope-all-icon';
-      icon.textContent = '▦';
+      icon.textContent = '✨';
       icon.setAttribute('aria-hidden', 'true');
       button.appendChild(icon);
     }
@@ -1089,7 +1089,7 @@ function updateReportLink() {
     '',
     `- Language: ${root.lang || 'en'}`,
     `- Selected guide path: ${goalText}`,
-    `- Installer focus: ${selectedTroubleshootingTool()?.label || 'All installers'}`,
+    `- Installer focus: ${selectedTroubleshootingTool()?.label || 'Help me choose'}`,
     `- Troubleshooting match: ${queryLabel}`,
     `- Diagnostic code/key: ${diagnosticKey}`,
     `- Current diagnosis: ${$('#assistantDiagnosisTitle')?.textContent?.trim() || '—'}`,
