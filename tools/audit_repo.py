@@ -991,7 +991,7 @@ def validate_layout() -> None:
     # the catalog, Builder and Credits without maintaining duplicate hard-coded lists.
     dynamic_source_scripts = {
         "app.js": ("sources/registry.json", "data/status.json", "data/catalog.json", "sourceWebsiteIcon", "data-source-website-icon", "installers.js"),
-        "builder.js": ("sources/registry.json", "data/status.json", "data/catalog.json", "installers.js", "BUILDER_TARGET_IDS"),
+        "builder.js": ("sources/registry.json", "data/status.json", "data/catalog.json", "installers.js", "BUILDER_INSTALLER_IDS"),
         "credits.js": ("sources/registry.json", "sourceCredits", "source.developer", "maintainerGroups", "sourceCreditGroup", "brand-link-icon", "iconImage"),
     }
     for script_name, required_parts in dynamic_source_scripts.items():
@@ -1021,6 +1021,8 @@ def validate_layout() -> None:
             "feather://source/",
             "PRIMARY_INSTALLER_IDS",
             "MORE_INSTALLER_IDS",
+            "BUILDER_INSTALLER_IDS",
+            "mixTarget",
             "sourceInstallerDeepLink",
             "sourceVariantURL",
         ):
