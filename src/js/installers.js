@@ -35,6 +35,12 @@ export const SOURCE_MODES = Object.freeze({
     capabilities: Object.freeze(['source', 'ipa-install', 'refresh', 'on-device']),
     website: 'https://sidestore.io/',
     guideURL: 'https://docs.sidestore.io/',
+    links: Object.freeze({
+      website: 'https://sidestore.io/',
+      guide: 'https://docs.sidestore.io/',
+      prerequisites: 'https://docs.sidestore.io/docs/installation/prerequisites',
+      pairing: 'https://docs.sidestore.io/docs/advanced/pairing-file'
+    }),
     domain: 'sidestore.io',
     coreCredit: true,
     resourceCard: true,
@@ -61,6 +67,11 @@ export const INSTALLERS = Object.freeze({
     capabilities: Object.freeze(['source', 'ipa-install', 'refresh']),
     website: 'https://altstore.io/',
     guideURL: 'https://altstore.io/',
+    links: Object.freeze({
+      website: 'https://altstore.io/',
+      guide: 'https://altstore.io/',
+      classicGuide: 'https://faq.altstore.io/altstore-classic'
+    }),
     domain: 'altstore.io',
     coreCredit: true,
     resourceCard: true,
@@ -93,6 +104,11 @@ export const INSTALLERS = Object.freeze({
     capabilities: Object.freeze(['source', 'ipa-run', 'container']),
     website: 'https://github.com/LiveContainer/LiveContainer',
     guideURL: 'https://livecontainer.github.io/docs/installation/lc_sidestore',
+    links: Object.freeze({
+      website: 'https://github.com/LiveContainer/LiveContainer',
+      guide: 'https://livecontainer.github.io/docs/installation/lc_sidestore',
+      lcSideStore: 'https://livecontainer.github.io/docs/installation/lc_sidestore'
+    }),
     domain: 'github.com/LiveContainer/LiveContainer',
     coreCredit: true,
     resourceCard: true,
@@ -112,7 +128,13 @@ export const INSTALLERS = Object.freeze({
     toolType: 'marketplace-source',
     capabilities: Object.freeze(['source', 'marketplace']),
     website: 'https://altstore.io/',
-    guideURL: 'https://altstore.io/',
+    guideURL: 'https://altstore.io/download',
+    links: Object.freeze({
+      website: 'https://altstore.io/',
+      guide: 'https://altstore.io/download',
+      download: 'https://altstore.io/download',
+      requirements: 'https://altstore.io/download'
+    }),
     domain: 'altstore.io',
     coreCredit: false,
     resourceCard: false,
@@ -180,6 +202,12 @@ const AUXILIARY_SIDELOAD_TOOLS = Object.freeze({
     website: 'https://sideinstaller.net/',
     repository: 'https://github.com/FrizzleM/SideInstaller',
     guideURL: 'https://sideinstaller.net/',
+    links: Object.freeze({
+      website: 'https://sideinstaller.net/',
+      guide: 'https://sideinstaller.net/',
+      repository: 'https://github.com/FrizzleM/SideInstaller',
+      release: 'https://github.com/FrizzleM/SideInstaller/releases/tag/v1.0.0'
+    }),
     domain: 'sideinstaller.net',
     creditDomain: 'github.com/FrizzleM/SideInstaller',
     icon: 'https://raw.githubusercontent.com/FrizzleM/SideInstaller/main/app-icon.png',
@@ -195,6 +223,10 @@ const AUXILIARY_SIDELOAD_TOOLS = Object.freeze({
     capabilities: Object.freeze(['ipa-install', 'desktop', 'tv', 'refresh']),
     website: 'https://sideloadly.io/',
     guideURL: 'https://sideloadly.io/',
+    links: Object.freeze({
+      website: 'https://sideloadly.io/',
+      guide: 'https://sideloadly.io/'
+    }),
     domain: 'sideloadly.io',
     icon: 'https://sideloadly.io/favicon.ico',
     coreCredit: true,
@@ -210,6 +242,11 @@ const AUXILIARY_SIDELOAD_TOOLS = Object.freeze({
     website: 'https://github.com/bitxeno/atvloadly',
     repository: 'https://github.com/bitxeno/atvloadly',
     guideURL: 'https://github.com/bitxeno/atvloadly',
+    links: Object.freeze({
+      website: 'https://github.com/bitxeno/atvloadly',
+      guide: 'https://github.com/bitxeno/atvloadly',
+      repository: 'https://github.com/bitxeno/atvloadly'
+    }),
     domain: 'github.com/bitxeno/atvloadly',
     icon: 'assets/icons/atvloadly.svg',
     coreCredit: true,
@@ -224,6 +261,10 @@ const AUXILIARY_SIDELOAD_TOOLS = Object.freeze({
     capabilities: Object.freeze(['bootstrap', 'pairing', 'desktop']),
     website: 'https://iloader.app/',
     guideURL: 'https://iloader.app/',
+    links: Object.freeze({
+      website: 'https://iloader.app/',
+      guide: 'https://iloader.app/'
+    }),
     domain: 'iloader.app',
     icon: 'assets/icons/iloader.svg',
     coreCredit: true,
@@ -239,6 +280,11 @@ const AUXILIARY_SIDELOAD_TOOLS = Object.freeze({
     website: 'https://github.com/claration/Impactor',
     repository: 'https://github.com/claration/Impactor',
     guideURL: 'https://github.com/claration/Impactor',
+    links: Object.freeze({
+      website: 'https://github.com/claration/Impactor',
+      guide: 'https://github.com/claration/Impactor',
+      repository: 'https://github.com/claration/Impactor'
+    }),
     domain: 'github.com/claration/Impactor',
     icon: 'https://raw.githubusercontent.com/claration/Impactor/main/package/linux/icons/hicolor/512x512/apps/dev.khcrysalis.PlumeImpactor.png',
     coreCredit: true,
@@ -254,6 +300,11 @@ const AUXILIARY_SIDELOAD_TOOLS = Object.freeze({
     website: 'https://github.com/opa334/TrollStore',
     repository: 'https://github.com/opa334/TrollStore',
     guideURL: 'https://github.com/opa334/TrollStore',
+    links: Object.freeze({
+      website: 'https://github.com/opa334/TrollStore',
+      guide: 'https://github.com/opa334/TrollStore',
+      repository: 'https://github.com/opa334/TrollStore'
+    }),
     domain: 'github.com/opa334/TrollStore',
     icon: 'assets/icons/trollstore.svg',
     coreCredit: true,
@@ -281,8 +332,13 @@ export function sideloadTool(toolId) {
 export function sideloadToolURL(toolId, purpose = 'website') {
   const tool = sideloadTool(toolId);
   if (!tool) return '';
+
+  const explicit = tool.links?.[purpose];
+  if (typeof explicit === 'string' && explicit) return explicit;
+
   if (purpose === 'guide') return tool.guideURL || tool.website || tool.repository || '';
   if (purpose === 'credit') return tool.repository || tool.website || '';
+  if (purpose === 'repository') return tool.repository || tool.website || '';
   return tool.website || tool.repository || '';
 }
 
