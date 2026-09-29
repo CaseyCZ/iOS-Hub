@@ -318,6 +318,10 @@ def validate_registry() -> None:
         if not name.strip():
             error(f"registry source {source_id or index!r} has no name")
 
+        developer = str(source.get("developer") or "").strip()
+        if not developer:
+            error(f"registry source {source_id or index!r} is missing developer/maintainer credit")
+
         parsed = urlparse(url)
         if parsed.scheme != "https" or not parsed.netloc:
             error(f"registry source {source_id or index!r} must use an absolute HTTPS URL")
@@ -848,7 +852,7 @@ def validate_layout() -> None:
     dynamic_source_scripts = {
         "app.js": ("sources/registry.json", "data/status.json", "data/catalog.json"),
         "builder.js": ("sources/registry.json", "data/status.json", "data/catalog.json"),
-        "credits.js": ("sources/registry.json", "sourceCredits"),
+        "credits.js": ("sources/registry.json", "sourceCredits", "source.developer"),
     }
     for script_name, required_parts in dynamic_source_scripts.items():
         script = JS_DIR / script_name
