@@ -484,7 +484,7 @@ function getTroubleMatches(query) {
     .map((item, index) => {
       const haystack = [item.dataset.search || '', item.textContent || ''].join(' ').toLowerCase();
       const baseScore = terms.reduce((sum, term) => sum + (troubleTermMatches(haystack, term) ? (/[0-9]/.test(term) ? 3 : 1) : 0), 0);
-      const toolBoost = preferredTool && item.dataset.tool === preferredTool.id ? 6 : 0;
+      const toolBoost = preferredTool && item.dataset.tool === preferredTool.id ? 8 : 0;
       const competingToolPenalty = preferredTool && item.dataset.tool && item.dataset.tool !== preferredTool.id ? 0.75 : 0;
       const triedPenalty = triedTags.reduce((sum, tag) => sum + (haystack.includes(tag) ? 0.35 : 0), 0);
       const communityPenalty = item.classList.contains('community-item') ? 0.15 : 0;
@@ -682,7 +682,13 @@ function resolvedTroubleQuery(raw) {
   if (/shortcut|resign|long.?press|background.*sidestore/.test(q)) return scopedTroubleQuery(q, 'ios 27 shortcut resign long press background refresh all');
   if (/1414|minimuxer.*27|afc|vpn|localdevvpn/.test(q)) return scopedTroubleQuery(q, 'refresh 1414 minimuxer 27 afc localdevvpn');
   if (/altserver|server not found|remote server/.test(q)) return scopedTroubleQuery(q, 'altserver');
-  if (/cert|certificate|provision/.test(q)) return scopedTroubleQuery(q, 'certificate provision revoked expired');
+  if (/cert|certificate|provision/.test(q)) {
+    const certificateTerms = ['certificate', 'provision'];
+    if (/revoked|revoke/.test(q)) certificateTerms.push('revoked');
+    if (/expired|expire/.test(q)) certificateTerms.push('expired');
+    if (/mismatch|missing|import/.test(q)) certificateTerms.push('mismatch', 'missing', 'import');
+    return scopedTroubleQuery(q, certificateTerms.join(' '));
+  }
   if (/livecontainer|jit|jitless|invalid.?signature|entitlement/.test(q)) return scopedTroubleQuery(q, 'livecontainer jit jitless invalid signature entitlements');
   if (/refresh|expire|7.?day|renew/.test(q)) return scopedTroubleQuery(q, 'refresh');
   return q;
