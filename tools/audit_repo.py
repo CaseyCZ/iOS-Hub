@@ -1147,8 +1147,8 @@ def validate_layout() -> None:
     guide_script = JS_DIR / "guide.js"
 
     registry_driven_tool_scripts = {
-        "resources.js": ("SIDELOAD_TOOLS", "resourceBadgeSpecs", "resourceSideloadTools", "resourceDescriptionKey", "sideloadToolURL", "data-sideload-tool", "hydrateSideloadToolCards", "renderSideloadToolBadges", "dataset.toolType", "dataset.capabilities", "dataset.targets", "dataset.hostPlatforms", "dataset.computerMode", "dataset.sourceSupport", "dataset.openSource", "dataset.resourceBadges"),
-        "credits.js": ("SIDELOAD_TOOLS", "CORE_SIDELOAD_RESOURCE_NAMES", "creditSideloadTools", "creditDescriptionKey", "creditBadge", "creditLinkKey", "sideloadToolURL", "hydrateSideloadCreditCards", "dataset.toolType", "dataset.capabilities", "dataset.targets", "dataset.hostPlatforms", "dataset.computerMode", "dataset.sourceSupport", "dataset.openSource", "dataset.resourceBadges"),
+        "resources.js": ("SIDELOAD_TOOLS", "resourceBadgeSpecs", "resourceSideloadTools", "resourceDescriptionKey", "sideloadToolURL", "buildResourceSideloadCard", "renderSideloadResourceCards", "sideloadResourceGrid", "hydrateSideloadToolCards", "renderSideloadToolBadges", "dataset.toolType", "dataset.capabilities", "dataset.targets", "dataset.hostPlatforms", "dataset.computerMode", "dataset.sourceSupport", "dataset.openSource", "dataset.resourceBadges"),
+        "credits.js": ("SIDELOAD_TOOLS", "CORE_SIDELOAD_RESOURCE_NAMES", "creditSideloadTools", "creditDescriptionKey", "creditBadge", "creditLinkKey", "sideloadToolURL", "buildSideloadCreditCard", "renderSideloadCreditCards", "sideloadCreditGrid", "hydrateSideloadCreditCards", "dataset.toolType", "dataset.capabilities", "dataset.targets", "dataset.hostPlatforms", "dataset.computerMode", "dataset.sourceSupport", "dataset.openSource", "dataset.resourceBadges"),
         "guide.js": ("sideloadToolForRole", "sideloadToolURL", "GUIDE_RECOMMENDATION_ROUTES", "recommendationToolURL", "SETUP_RESULT_ROUTES", "setupResultToolURL", "routeToolURL"),
     }
     for script_name, required_parts in registry_driven_tool_scripts.items():
@@ -1190,42 +1190,22 @@ def validate_layout() -> None:
                 )
                 break
 
-    for page_name in ("resources.html", "credits.html"):
+    dynamic_sideload_hosts = {
+        "resources.html": 'id="sideloadResourceGrid"',
+        "credits.html": 'id="sideloadCreditGrid"',
+    }
+    for page_name, host_marker in dynamic_sideload_hosts.items():
         page = ROOT / page_name
         if not page.exists():
             continue
         page_text = page.read_text(encoding="utf-8")
-        for tool_id in (
-            "altstore", "sidestore", "sideinstaller", "livecontainer", "flarestore",
-            "feather", "sideloadly", "atvloadly", "iloader", "impactor", "trollstore",
-        ):
-            if f'data-sideload-tool="{tool_id}"' not in page_text:
-                error(f"{page_name} is missing central sideload tool binding for {tool_id!r}")
-
-    if resources_page.exists():
-        resources_text = resources_page.read_text(encoding="utf-8")
-        for tool_id in (
-            "altstore", "sidestore", "sideinstaller", "livecontainer", "flarestore",
-            "feather", "sideloadly", "atvloadly", "iloader", "impactor", "trollstore",
-        ):
-            card_match = re.search(
-                rf'<article class="panel resource-card" data-sideload-tool="{re.escape(tool_id)}">([\s\S]*?)</article>',
-                resources_text,
+        if host_marker not in page_text:
+            error(f"{page_name} is missing its registry-driven sideload card host {host_marker!r}")
+        if 'data-sideload-tool=' in page_text:
+            error(
+                f"{page_name} still contains static sideload tool cards; "
+                "generate them from installers.js instead"
             )
-            if not card_match:
-                continue
-            badges_match = re.search(
-                r'<div class="resource-badges">([\s\S]*?)</div>',
-                card_match.group(1),
-            )
-            if not badges_match:
-                error(f"resources.html sideload card {tool_id!r} is missing the dynamic badge host")
-                continue
-            if badges_match.group(1).strip():
-                error(
-                    f"resources.html sideload card {tool_id!r} still hard-codes badge markup; "
-                    "render it from installers.js RESOURCE_BADGES instead"
-                )
 
     if resources_page.exists():
         resources_text = resources_page.read_text(encoding="utf-8")
