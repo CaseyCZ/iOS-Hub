@@ -154,6 +154,7 @@
                     <button id="expClear" class="btn small ghost" type="button">Clear selection</button>
                   </div>
                   <div id="mixPassHelp" class="muted builder-pass-help">PASS means the source passed the automated Mix merge test. It does not mean every app is compatible with every iOS device.</div>
+                  <div id="mixDedupeHelp" class="muted builder-pass-help">If multiple app entries use the same bundle ID, the generated Mix keeps only one entry, normally the newest by date. Different variants of the same app can therefore be merged.</div>
                 </div>
               </div>
             </div>
@@ -213,7 +214,7 @@
   </div>
 
   <script type="module" src="src/js/builder-page.js?v=1.1.5-20260918-fullaudit2"></script>
-  <script type="module" src="src/js/builder.js?v=1.1.5-20260929-installers13"></script>
+  <script type="module" src="src/js/builder.js?v=1.1.5-20260929-installers14"></script>
   <script type="module" src="src/js/collapsible.js?v=1.1.5-20260918-audit1"></script>
   <script src="src/js/support-dialog.js?v=1.1.5-20260918-a11y1"></script>
   <script src="src/js/mobile-menu.js?v=1.1.5-20260918-a11y1"></script>
