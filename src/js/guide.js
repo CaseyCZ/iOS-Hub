@@ -328,9 +328,26 @@ function selectedTroubleshootingTool() {
   return troubleshootingSideloadTools().find(tool => tool.id === selectedTroubleToolId) || null;
 }
 
+function guideTroubleshootingTools() {
+  const orderFor = tool => {
+    const catalogOrder = Number(tool?.catalogPriority);
+    if (tool?.catalogPriority !== null && tool?.catalogPriority !== undefined && Number.isFinite(catalogOrder)) {
+      return catalogOrder;
+    }
+    const resourceOrder = Number(tool?.resourceOrder);
+    return 1000 + (Number.isFinite(resourceOrder) ? resourceOrder : 999);
+  };
+
+  return [...troubleshootingSideloadTools()].sort((a, b) => {
+    const orderDiff = orderFor(a) - orderFor(b);
+    if (orderDiff) return orderDiff;
+    return String(a.label || a.id).localeCompare(String(b.label || b.id));
+  });
+}
+
 function scopedTroubleshootingTools() {
   const selected = selectedTroubleshootingTool();
-  return selected ? [selected] : troubleshootingSideloadTools();
+  return selected ? [selected] : guideTroubleshootingTools();
 }
 
 function updateToolScopeDisplay() {
@@ -389,7 +406,7 @@ function renderToolScopePicker() {
   };
 
   addOption();
-  troubleshootingSideloadTools().forEach(addOption);
+  guideTroubleshootingTools().forEach(addOption);
   updateToolScopeDisplay();
 }
 
