@@ -43,7 +43,7 @@ const copy = {
     altPackage:'AltStore Source', sidePackage:'SideStore Source', livePackage:'LiveContainer Source', customMix:'Custom Mix', filters:'⚙ Filters · 🔎 Search · ☑ Selection',
     addTo:'＋ Add to', copyUrl:'Copy URL', json:'JSON ↗', apps:'apps', sources:'sources',
     hosted:'Hosted Mix ready', local:'Local Mix ready', experimental:'Experimental Mix ready', localNote:'This PASS Mix was built locally. The installer action below can add the selected sources individually; Download JSON keeps the merged and deduplicated Mix.', tryNote:'This Mix contains one or more TRY sources. The installer action below can add the selected sources individually, while Download JSON keeps the experimental merged Mix for testing.',
-    conflicts:'duplicates resolved', download:'Download JSON', preview:'Preview JSON', building:'Testing and combining sources…', failed:'The selected Mix could not be built.', copied:'Source URL copied.', empty:'No sources match the current filters.'
+    conflicts:'duplicates resolved', download:'Download JSON', preview:'Preview JSON', building:'Testing and combining sources…', failed:'The selected Mix could not be built.', copied:'Source URL copied.', empty:'No sources match the current filters.', directMixUnavailable:'Direct add of one combined Mix is not available.', notHostedRepos:'Not hosted for Mix', tryRepos:'TRY sources', mixLimit:'Hosted Mix limit', selectedCount:'selected'
   },
   cs: {
     title:'Custom Source Builder', desc:'Filtruj kontrolované online zdroje, vyber libovolnou kombinaci a vytvoř vlastní Mix pro podporované instalátory Classic zdrojů.',
@@ -52,7 +52,7 @@ const copy = {
     altPackage:'AltStore Source', sidePackage:'SideStore Source', livePackage:'LiveContainer Source', customMix:'Vlastní Mix', filters:'⚙ Filtry · 🔎 Hledání · ☑ Výběr',
     addTo:'＋ Přidat do', copyUrl:'Kopírovat URL', json:'JSON ↗', apps:'aplikací', sources:'zdrojů',
     hosted:'Veřejný Mix je připraven', local:'Lokální Mix je připraven', experimental:'Experimentální Mix je připraven', localNote:'Tento PASS Mix vznikl lokálně. Akce instalátoru níže umí přidat vybrané zdroje jednotlivě; Stáhnout JSON zachová sloučený Mix s vyřešenými duplicitami.', tryNote:'Tento Mix obsahuje jeden nebo více zdrojů ZKUSIT. Akce instalátoru níže umí přidat vybrané zdroje jednotlivě, zatímco Stáhnout JSON zachová experimentální sloučený Mix pro testování.',
-    conflicts:'duplicit vyřešeno', download:'Stáhnout JSON', preview:'Náhled JSON', building:'Testuji a spojuji zdroje…', failed:'Vybraný Mix se nepodařilo vytvořit.', copied:'URL zdroje zkopírována.', empty:'Aktuálním filtrům neodpovídá žádný zdroj.'
+    conflicts:'duplicit vyřešeno', download:'Stáhnout JSON', preview:'Náhled JSON', building:'Testuji a spojuji zdroje…', failed:'Vybraný Mix se nepodařilo vytvořit.', copied:'URL zdroje zkopírována.', empty:'Aktuálním filtrům neodpovídá žádný zdroj.', directMixUnavailable:'Přímé přidání jednoho společného Mixu není dostupné.', notHostedRepos:'Nehostované pro Mix', tryRepos:'Zdroje ZKUSIT', mixLimit:'Limit hostovaného Mixu', selectedCount:'vybráno'
   },
   de: {
     title:'Custom Source Builder', desc:'Filtere geprüfte Online-Quellen, wähle eine beliebige Kombination und erstelle deinen eigenen Mix für unterstützte Classic-Source-Installer.',
@@ -60,7 +60,7 @@ const copy = {
     mixStatus:'Merge-Test', targetLabel:'Wo möchtest du den Mix hinzufügen?', targetHelpAlt:'Der fertige Mix wird eine Classic AltSource für AltStore Classic. SideStore-only- und PAL-Marketplace-Quellen werden ausgeblendet.', targetHelpSide:'SideStore ist vollständig mit AltStore Sources (AltSources) kompatibel. Hier zeigen wir Classic-IPA-Quellen und entfernen PAL-only Marketplace-Metadaten aus dem erzeugten Mix.', targetHelpLive:'LiveContainer kann AltStore-ähnliche Quellen durchsuchen und Apps über die Download-URL der neuesten Version installieren. Hier zeigen wir zusammenführbare Classic-IPA-Quellen.', targetHelpFlare:'FlareStore akzeptiert AltStore-kompatible Repositories. Der Mix bleibt eine Classic AltSource und wird direkt in FlareStore geöffnet.', targetHelpFeather:'Feather akzeptiert AltStore-kompatible Repositories. Der Mix bleibt eine Classic AltSource und wird direkt in Feather geöffnet.', palNote:'AltStore PAL ist kein Ziel für Custom Mix, da PAL notarized Marketplace-Pakete und andere Metadaten als Classic-IPA-Quellen verwendet.', targetPrefix:'Ziel', statusAll:'Alle', statusPass:'Nur PASS', statusTry:'Nur TEST', platform:'Plattform', platformAll:'Alle', classic:'AltStore Classic', pal:'AltStore PAL', sidestore:'SideStore', livecontainer:'LiveContainer', autoTested:'Automatisch geprüft',
     altPackage:'AltStore Source', sidePackage:'SideStore Source', livePackage:'LiveContainer Source', customMix:'Eigener Mix', filters:'⚙ Filter · 🔎 Suche · ☑ Auswahl',
     addTo:'＋ Zu', copyUrl:'URL kopieren', json:'JSON ↗', apps:'Apps', sources:'Quellen',
-    hosted:'Gehosteter Mix bereit', local:'Lokaler Mix bereit', experimental:'Experimenteller Mix bereit', localNote:'Dieser PASS-Mix wurde lokal erstellt. Die Installer-Aktion unten kann die ausgewählten Quellen einzeln hinzufügen; JSON herunterladen behält den zusammengeführten und bereinigten Mix.', tryNote:'Dieser Mix enthält TEST-Quellen. Die Installer-Aktion unten kann die ausgewählten Quellen einzeln hinzufügen; JSON herunterladen behält den experimentellen zusammengeführten Mix zum Testen.', conflicts:'Duplikate gelöst', download:'JSON laden', preview:'JSON ansehen', building:'Quellen werden getestet…', failed:'Der ausgewählte Mix konnte nicht erstellt werden.', copied:'URL kopiert.', empty:'Keine Quellen entsprechen den Filtern.'
+    hosted:'Gehosteter Mix bereit', local:'Lokaler Mix bereit', experimental:'Experimenteller Mix bereit', localNote:'Dieser PASS-Mix wurde lokal erstellt. Die Installer-Aktion unten kann die ausgewählten Quellen einzeln hinzufügen; JSON herunterladen behält den zusammengeführten und bereinigten Mix.', tryNote:'Dieser Mix enthält TEST-Quellen. Die Installer-Aktion unten kann die ausgewählten Quellen einzeln hinzufügen; JSON herunterladen behält den experimentellen zusammengeführten Mix zum Testen.', conflicts:'Duplikate gelöst', download:'JSON laden', preview:'JSON ansehen', building:'Quellen werden getestet…', failed:'Der ausgewählte Mix konnte nicht erstellt werden.', copied:'URL kopiert.', empty:'Keine Quellen entsprechen den Filtern.', directMixUnavailable:'Das direkte Hinzufügen eines gemeinsamen Mixes ist nicht verfügbar.', notHostedRepos:'Nicht für Mix gehostet', tryRepos:'TEST-Quellen', mixLimit:'Hosted-Mix-Limit', selectedCount:'ausgewählt'
   },
   es: {
     title:'Custom Source Builder', desc:'Filtra fuentes online comprobadas, elige cualquier combinación y crea tu propio Mix para instaladores compatibles con fuentes Classic.',
@@ -68,7 +68,7 @@ const copy = {
     mixStatus:'Prueba de combinación', targetLabel:'¿Dónde quieres añadir el Mix?', targetHelpAlt:'El Mix final será una Classic AltSource para AltStore Classic. Se ocultan las fuentes exclusivas de SideStore y las de marketplace PAL.', targetHelpSide:'SideStore es totalmente compatible con AltStore Sources (AltSources). Aquí mostramos fuentes IPA Classic y eliminamos del Mix generado los metadatos exclusivos de PAL.', targetHelpLive:'LiveContainer puede navegar fuentes estilo AltStore e instalar apps desde la URL de descarga de su versión más reciente. Aquí mostramos fuentes IPA Classic combinables.', targetHelpFlare:'FlareStore acepta repositorios compatibles con AltStore. El Mix sigue siendo una Classic AltSource y se abre directamente en FlareStore.', targetHelpFeather:'Feather acepta repositorios compatibles con AltStore. El Mix sigue siendo una Classic AltSource y se abre directamente en Feather.', palNote:'AltStore PAL no es un destino de Custom Mix porque usa paquetes notarizados de marketplace y metadatos diferentes a las fuentes IPA Classic.', targetPrefix:'Destino', statusAll:'Todo', statusPass:'Solo PASS', statusTry:'Solo PROBAR', platform:'Plataforma', platformAll:'Todo', classic:'AltStore Classic', pal:'AltStore PAL', sidestore:'SideStore', livecontainer:'LiveContainer', autoTested:'Prueba automática',
     altPackage:'AltStore Source', sidePackage:'SideStore Source', livePackage:'LiveContainer Source', customMix:'Mix personalizado', filters:'⚙ Filtros · 🔎 Búsqueda · ☑ Selección',
     addTo:'＋ Añadir a', copyUrl:'Copiar URL', json:'JSON ↗', apps:'apps', sources:'fuentes',
-    hosted:'Mix alojado listo', local:'Mix local listo', experimental:'Mix experimental listo', localNote:'Este Mix PASS se creó localmente. La acción del instalador puede añadir las fuentes seleccionadas una a una; Descargar JSON conserva el Mix combinado y sin duplicados.', tryNote:'Este Mix contiene fuentes PROBAR. La acción del instalador puede añadir las fuentes seleccionadas una a una; Descargar JSON conserva el Mix experimental combinado para probarlo.', conflicts:'duplicados resueltos', download:'Descargar JSON', preview:'Ver JSON', building:'Probando fuentes…', failed:'No se pudo crear el Mix.', copied:'URL copiada.', empty:'Ninguna fuente coincide con los filtros.'
+    hosted:'Mix alojado listo', local:'Mix local listo', experimental:'Mix experimental listo', localNote:'Este Mix PASS se creó localmente. La acción del instalador puede añadir las fuentes seleccionadas una a una; Descargar JSON conserva el Mix combinado y sin duplicados.', tryNote:'Este Mix contiene fuentes PROBAR. La acción del instalador puede añadir las fuentes seleccionadas una a una; Descargar JSON conserva el Mix experimental combinado para probarlo.', conflicts:'duplicados resueltos', download:'Descargar JSON', preview:'Ver JSON', building:'Probando fuentes…', failed:'No se pudo crear el Mix.', copied:'URL copiada.', empty:'Ninguna fuente coincide con los filtros.', directMixUnavailable:'No está disponible añadir directamente un único Mix combinado.', notHostedRepos:'No alojados para Mix', tryRepos:'Fuentes PROBAR', mixLimit:'Límite del Mix alojado', selectedCount:'seleccionadas'
   },
   fr: {
     title:'Custom Source Builder', desc:'Filtrez les sources en ligne vérifiées, choisissez n’importe quelle combinaison et créez votre propre Mix pour les installateurs compatibles avec les sources Classic.',
@@ -76,7 +76,7 @@ const copy = {
     mixStatus:'Test de fusion', targetLabel:'Où voulez-vous ajouter le Mix ?', targetHelpAlt:'Le Mix final sera une Classic AltSource pour AltStore Classic. Les sources réservées à SideStore et les marketplaces PAL sont masquées.', targetHelpSide:'SideStore est entièrement compatible avec les AltStore Sources (AltSources). Nous affichons ici les sources IPA Classic et retirons du Mix généré les métadonnées réservées à PAL.', targetHelpLive:'LiveContainer peut parcourir les sources de style AltStore et installer les apps depuis l’URL de téléchargement de leur dernière version. Nous affichons ici les sources IPA Classic fusionnables.', targetHelpFlare:'FlareStore accepte les dépôts compatibles AltStore. Le Mix reste une Classic AltSource et s’ouvre directement dans FlareStore.', targetHelpFeather:'Feather accepte les dépôts compatibles AltStore. Le Mix reste une Classic AltSource et s’ouvre directement dans Feather.', palNote:'AltStore PAL n’est pas une cible du Custom Mix car PAL utilise des paquets marketplace notariés et des métadonnées différentes des sources IPA Classic.', targetPrefix:'Cible', statusAll:'Tout', statusPass:'PASS seulement', statusTry:'TEST seulement', platform:'Plateforme', platformAll:'Tout', classic:'AltStore Classic', pal:'AltStore PAL', sidestore:'SideStore', livecontainer:'LiveContainer', autoTested:'Test automatique',
     altPackage:'AltStore Source', sidePackage:'SideStore Source', livePackage:'LiveContainer Source', customMix:'Mix personnalisé', filters:'⚙ Filtres · 🔎 Recherche · ☑ Sélection',
     addTo:'＋ Ajouter à', copyUrl:'Copier URL', json:'JSON ↗', apps:'apps', sources:'sources',
-    hosted:'Mix hébergé prêt', local:'Mix local prêt', experimental:'Mix expérimental prêt', localNote:'Ce Mix PASS a été créé localement. L’action de l’installateur peut ajouter les sources sélectionnées une par une ; Télécharger JSON conserve le Mix fusionné et dédupliqué.', tryNote:'Ce Mix contient des sources TEST. L’action de l’installateur peut ajouter les sources sélectionnées une par une ; Télécharger JSON conserve le Mix expérimental fusionné pour le test.', conflicts:'doublons résolus', download:'Télécharger JSON', preview:'Aperçu JSON', building:'Test des sources…', failed:'Impossible de créer le Mix.', copied:'URL copiée.', empty:'Aucune source ne correspond aux filtres.'
+    hosted:'Mix hébergé prêt', local:'Mix local prêt', experimental:'Mix expérimental prêt', localNote:'Ce Mix PASS a été créé localement. L’action de l’installateur peut ajouter les sources sélectionnées une par une ; Télécharger JSON conserve le Mix fusionné et dédupliqué.', tryNote:'Ce Mix contient des sources TEST. L’action de l’installateur peut ajouter les sources sélectionnées une par une ; Télécharger JSON conserve le Mix expérimental fusionné pour le test.', conflicts:'doublons résolus', download:'Télécharger JSON', preview:'Aperçu JSON', building:'Test des sources…', failed:'Impossible de créer le Mix.', copied:'URL copiée.', empty:'Aucune source ne correspond aux filtres.', directMixUnavailable:'L’ajout direct d’un Mix combiné unique n’est pas disponible.', notHostedRepos:'Non hébergés pour le Mix', tryRepos:'Sources TEST', mixLimit:'Limite du Mix hébergé', selectedCount:'sélectionnées'
   }
 };
 
@@ -379,6 +379,35 @@ function hostedTarget(ids) {
   return {url:null, targets:new Set()};
 }
 
+function localMixDiagnostic(ids, hasTry) {
+  const parts = [tr('directMixUnavailable')];
+  const manual = hostedIds();
+  const max = Number(status?.mixes?.maxSourcesPerMix || 0);
+
+  const unhosted = ids
+    .filter(id => !manual.has(id))
+    .map(id => registry.find(source => source.id === id)?.name || id);
+
+  const trySources = hasTry
+    ? ids
+        .filter(id => getStatus(id).mixTest !== 'pass')
+        .map(id => registry.find(source => source.id === id)?.name || id)
+    : [];
+
+  if (unhosted.length) {
+    parts.push(`${tr('notHostedRepos')}: ${unhosted.join(', ')}.`);
+  }
+  if (max > 0 && ids.length > max) {
+    parts.push(`${tr('mixLimit')}: ${max}; ${tr('selectedCount')}: ${ids.length}.`);
+  }
+  if (trySources.length) {
+    parts.push(`${tr('tryRepos')}: ${trySources.join(', ')}.`);
+  }
+
+  parts.push(hasTry ? tr('tryNote') : tr('localNote'));
+  return parts.join(' ');
+}
+
 async function buildMix() {
   const button = $('#expBuild');
   const message = $('#expMessage');
@@ -421,7 +450,7 @@ async function buildMix() {
 
     $('#expResultTitle').textContent = hosted.url ? tr('hosted') : (hasTry ? tr('experimental') : tr('local'));
     $('#expResultInfo').textContent = `${apps.length} ${tr('apps')} · ${conflicts} ${tr('conflicts')}`;
-    $('#expResultNote').textContent = hosted.url ? '' : (hasTry ? tr('tryNote') : tr('localNote'));
+    $('#expResultNote').textContent = hosted.url ? '' : localMixDiagnostic(ids, hasTry);
     $('#expDownload').href = blobUrl;
     $('#expDownload').download = `iOS-Hub-Mix-${hashIds(ids)}.json`;
     $('#expDownload').textContent = tr('download');
