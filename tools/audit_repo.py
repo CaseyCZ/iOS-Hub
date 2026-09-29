@@ -852,7 +852,7 @@ def validate_layout() -> None:
     dynamic_source_scripts = {
         "app.js": ("sources/registry.json", "data/status.json", "data/catalog.json"),
         "builder.js": ("sources/registry.json", "data/status.json", "data/catalog.json"),
-        "credits.js": ("sources/registry.json", "sourceCredits", "source.developer"),
+        "credits.js": ("sources/registry.json", "sourceCredits", "source.developer", "maintainerGroups", "sourceCreditGroup"),
     }
     for script_name, required_parts in dynamic_source_scripts.items():
         script = JS_DIR / script_name
