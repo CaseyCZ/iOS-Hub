@@ -1,3 +1,9 @@
+import {
+  INSTALLERS,
+  sourceInstallerIds,
+  sourceVariantURL
+} from './installers.js?v=1.1.5-20260929-installers1';
+
 const $ = selector => document.querySelector(selector);
 const $$ = selector => [...document.querySelectorAll(selector)];
 const safeGet = key => { try { return localStorage.getItem(key); } catch (_) { return null; } };
@@ -14,7 +20,8 @@ const STORAGE = {
 
 const SOURCE_CATEGORIES = new Set(['all', 'official', 'trusted', 'community', 'modified']);
 const GENRES = new Set(['all', 'games', 'emulators', 'video', 'music', 'anime', 'social', 'downloads', 'sideload', 'utilities']);
-const TARGETS = new Set(['altstore', 'sidestore', 'livecontainer']);
+const BUILDER_TARGET_IDS = ['altstore', 'sidestore', 'livecontainer', 'flarestore', 'feather'];
+const TARGETS = new Set(BUILDER_TARGET_IDS);
 const COMPATIBILITY = new Set(['all', 'pass', 'try']);
 const GENRE_RULES = {
   games: ['games','pokemon','mmo','geometry-dash','game'],
@@ -30,45 +37,45 @@ const GENRE_RULES = {
 
 const copy = {
   en: {
-    title:'Custom Source Builder', desc:'Filter checked online sources, select any combination and build your own Mix for AltStore, SideStore or LiveContainer.',
+    title:'Custom Source Builder', desc:'Filter checked online sources, select any combination and build your own Mix for any supported Classic source installer.',
     selectPass:'Select PASS for', selectAll:'Select all shown', clear:'Clear selection', build:'Build Mix', selected:'selected', shown:'shown', pass:'PASS', try:'TRY', passHelp:'The list is already limited to the selected destination. PASS additionally means the source passed the automated Mix merge test; it does not guarantee every app will run on every iOS device.',
-    mixStatus:'Merge test', targetLabel:'Where do you want to add the Mix?', targetHelpAlt:'The finished Mix will be a Classic AltSource for AltStore Classic. SideStore-only and PAL marketplace sources are hidden.', targetHelpSide:'SideStore is fully compatible with AltStore Sources (AltSources). We show Classic IPA-style sources here and remove PAL-only marketplace metadata from the generated Mix.', targetHelpLive:'LiveContainer can browse AltStore-style sources and install apps from their latest version download URL. We show mergeable Classic IPA-style sources here.', palNote:'AltStore PAL is not a Custom Mix target because PAL uses notarized marketplace packages and different source metadata than Classic IPA sources.', targetPrefix:'Target', statusAll:'All', statusPass:'PASS only', statusTry:'TRY only', platform:'Platform', platformAll:'All', classic:'AltStore Classic', pal:'AltStore PAL', sidestore:'SideStore', livecontainer:'LiveContainer', autoTested:'Auto tested',
+    mixStatus:'Merge test', targetLabel:'Where do you want to add the Mix?', targetHelpAlt:'The finished Mix will be a Classic AltSource for AltStore Classic. SideStore-only and PAL marketplace sources are hidden.', targetHelpSide:'SideStore is fully compatible with AltStore Sources (AltSources). We show Classic IPA-style sources here and remove PAL-only marketplace metadata from the generated Mix.', targetHelpLive:'LiveContainer can browse AltStore-style sources and install apps from their latest version download URL. We show mergeable Classic IPA-style sources here.', targetHelpFlare:'FlareStore accepts AltStore-compatible repositories. The Mix stays a Classic AltSource and opens directly in FlareStore.', targetHelpFeather:'Feather accepts AltStore-compatible repositories. The Mix stays a Classic AltSource and opens directly in Feather.', palNote:'AltStore PAL is not a Custom Mix target because PAL uses notarized marketplace packages and different source metadata than Classic IPA sources.', targetPrefix:'Target', statusAll:'All', statusPass:'PASS only', statusTry:'TRY only', platform:'Platform', platformAll:'All', classic:'AltStore Classic', pal:'AltStore PAL', sidestore:'SideStore', livecontainer:'LiveContainer', autoTested:'Auto tested',
     altPackage:'AltStore Source', sidePackage:'SideStore Source', livePackage:'LiveContainer Source', customMix:'Custom Mix', filters:'⚙ Filters · 🔎 Search · ☑ Selection',
-    addAlt:'＋ Add to AltStore', addSide:'＋ Add to SideStore', addLive:'＋ Add to LiveContainer', copyUrl:'Copy URL', json:'JSON ↗', apps:'apps', sources:'sources',
+    addTo:'＋ Add to', copyUrl:'Copy URL', json:'JSON ↗', apps:'apps', sources:'sources',
     hosted:'Hosted Mix ready', local:'Local Mix ready', experimental:'Experimental Mix ready', localNote:'This PASS combination is valid but is not pre-hosted. Download the JSON to inspect or host it; direct Add requires a public source URL.', tryNote:'This Mix contains one or more TRY sources. Download and test the JSON first; PAL or installer-specific metadata may not work after merging.',
     conflicts:'duplicates resolved', download:'Download JSON', preview:'Preview JSON', building:'Testing and combining sources…', failed:'The selected Mix could not be built.', copied:'Source URL copied.', empty:'No sources match the current filters.'
   },
   cs: {
-    title:'Custom Source Builder', desc:'Filtruj kontrolované online zdroje, vyber libovolnou kombinaci a vytvoř vlastní Mix pro AltStore, SideStore nebo LiveContainer.',
+    title:'Custom Source Builder', desc:'Filtruj kontrolované online zdroje, vyber libovolnou kombinaci a vytvoř vlastní Mix pro podporované instalátory Classic zdrojů.',
     selectPass:'Vybrat PASS pro', selectAll:'Vybrat vše zobrazené', clear:'Zrušit výběr', build:'Vytvořit Mix', selected:'vybráno', shown:'zobrazeno', pass:'PASS', try:'ZKUSIT', passHelp:'Seznam je už omezený podle zvoleného cíle. PASS navíc znamená, že zdroj prošel automatickým testem sloučení do Mixu; neznamená to, že každá aplikace poběží na každém iOS zařízení.',
-    mixStatus:'Test sloučení', targetLabel:'Kam chceš výsledný Mix přidat?', targetHelpAlt:'Výsledný Mix bude Classic AltSource pro AltStore Classic. SideStore-only a PAL marketplace zdroje se skryjí.', targetHelpSide:'SideStore je plně kompatibilní s AltStore Sources (AltSources). Zobrazujeme zde Classic IPA zdroje a z výsledného Mixu odstraňujeme metadata určená jen pro PAL marketplace.', targetHelpLive:'LiveContainer umí procházet AltStore-style zdroje a instalovat aplikace z download URL jejich nejnovější verze. Zobrazujeme zde sloučitelné Classic IPA zdroje.', palNote:'AltStore PAL není cílem pro Vlastní Mix, protože PAL používá notarizované marketplace balíčky a jiná metadata než Classic IPA zdroje.', targetPrefix:'Cíl', statusAll:'Vše', statusPass:'Jen PASS', statusTry:'Jen ZKUSIT', platform:'Platforma', platformAll:'Vše', classic:'AltStore Classic', pal:'AltStore PAL', sidestore:'SideStore', livecontainer:'LiveContainer', autoTested:'Automaticky testováno',
+    mixStatus:'Test sloučení', targetLabel:'Kam chceš výsledný Mix přidat?', targetHelpAlt:'Výsledný Mix bude Classic AltSource pro AltStore Classic. SideStore-only a PAL marketplace zdroje se skryjí.', targetHelpSide:'SideStore je plně kompatibilní s AltStore Sources (AltSources). Zobrazujeme zde Classic IPA zdroje a z výsledného Mixu odstraňujeme metadata určená jen pro PAL marketplace.', targetHelpLive:'LiveContainer umí procházet AltStore-style zdroje a instalovat aplikace z download URL jejich nejnovější verze. Zobrazujeme zde sloučitelné Classic IPA zdroje.', targetHelpFlare:'FlareStore přijímá AltStore-kompatibilní repozitáře. Mix zůstává Classic AltSource a otevře se přímo ve FlareStore.', targetHelpFeather:'Feather přijímá AltStore-kompatibilní repozitáře. Mix zůstává Classic AltSource a otevře se přímo ve Feather.', palNote:'AltStore PAL není cílem pro Vlastní Mix, protože PAL používá notarizované marketplace balíčky a jiná metadata než Classic IPA zdroje.', targetPrefix:'Cíl', statusAll:'Vše', statusPass:'Jen PASS', statusTry:'Jen ZKUSIT', platform:'Platforma', platformAll:'Vše', classic:'AltStore Classic', pal:'AltStore PAL', sidestore:'SideStore', livecontainer:'LiveContainer', autoTested:'Automaticky testováno',
     altPackage:'AltStore Source', sidePackage:'SideStore Source', livePackage:'LiveContainer Source', customMix:'Vlastní Mix', filters:'⚙ Filtry · 🔎 Hledání · ☑ Výběr',
-    addAlt:'＋ Přidat do AltStore', addSide:'＋ Přidat do SideStore', addLive:'＋ Přidat do LiveContainer', copyUrl:'Kopírovat URL', json:'JSON ↗', apps:'aplikací', sources:'zdrojů',
+    addTo:'＋ Přidat do', copyUrl:'Kopírovat URL', json:'JSON ↗', apps:'aplikací', sources:'zdrojů',
     hosted:'Veřejný Mix je připraven', local:'Lokální Mix je připraven', experimental:'Experimentální Mix je připraven', localNote:'Tato PASS kombinace je validní, ale není předem hostovaná. JSON můžeš stáhnout nebo hostovat; přímé přidání vyžaduje veřejnou URL.', tryNote:'Tento Mix obsahuje jeden nebo více zdrojů ZKUSIT. JSON nejdřív stáhni a otestuj; PAL nebo installer-specifická metadata se po sloučení nemusí chovat stejně.',
     conflicts:'duplicit vyřešeno', download:'Stáhnout JSON', preview:'Náhled JSON', building:'Testuji a spojuji zdroje…', failed:'Vybraný Mix se nepodařilo vytvořit.', copied:'URL zdroje zkopírována.', empty:'Aktuálním filtrům neodpovídá žádný zdroj.'
   },
   de: {
-    title:'Custom Source Builder', desc:'Filtere geprüfte Online-Quellen, wähle eine beliebige Kombination und erstelle deinen eigenen Mix für AltStore, SideStore oder LiveContainer.',
+    title:'Custom Source Builder', desc:'Filtere geprüfte Online-Quellen, wähle eine beliebige Kombination und erstelle deinen eigenen Mix für unterstützte Classic-Source-Installer.',
     selectPass:'PASS wählen für', selectAll:'Alle sichtbaren wählen', clear:'Auswahl löschen', build:'Mix erstellen', selected:'ausgewählt', shown:'sichtbar', pass:'PASS', try:'TEST', passHelp:'Die Liste ist bereits auf das gewählte Ziel beschränkt. PASS bedeutet zusätzlich, dass die Quelle den automatischen iOS-Hub-Mix-Zusammenführungstest bestanden hat; nicht, dass jede App auf jedem iOS-Gerät läuft.',
-    mixStatus:'Merge-Test', targetLabel:'Wo möchtest du den Mix hinzufügen?', targetHelpAlt:'Der fertige Mix wird eine Classic AltSource für AltStore Classic. SideStore-only- und PAL-Marketplace-Quellen werden ausgeblendet.', targetHelpSide:'SideStore ist vollständig mit AltStore Sources (AltSources) kompatibel. Hier zeigen wir Classic-IPA-Quellen und entfernen PAL-only Marketplace-Metadaten aus dem erzeugten Mix.', targetHelpLive:'LiveContainer kann AltStore-ähnliche Quellen durchsuchen und Apps über die Download-URL der neuesten Version installieren. Hier zeigen wir zusammenführbare Classic-IPA-Quellen.', palNote:'AltStore PAL ist kein Ziel für Custom Mix, da PAL notarized Marketplace-Pakete und andere Metadaten als Classic-IPA-Quellen verwendet.', targetPrefix:'Ziel', statusAll:'Alle', statusPass:'Nur PASS', statusTry:'Nur TEST', platform:'Plattform', platformAll:'Alle', classic:'AltStore Classic', pal:'AltStore PAL', sidestore:'SideStore', livecontainer:'LiveContainer', autoTested:'Automatisch geprüft',
+    mixStatus:'Merge-Test', targetLabel:'Wo möchtest du den Mix hinzufügen?', targetHelpAlt:'Der fertige Mix wird eine Classic AltSource für AltStore Classic. SideStore-only- und PAL-Marketplace-Quellen werden ausgeblendet.', targetHelpSide:'SideStore ist vollständig mit AltStore Sources (AltSources) kompatibel. Hier zeigen wir Classic-IPA-Quellen und entfernen PAL-only Marketplace-Metadaten aus dem erzeugten Mix.', targetHelpLive:'LiveContainer kann AltStore-ähnliche Quellen durchsuchen und Apps über die Download-URL der neuesten Version installieren. Hier zeigen wir zusammenführbare Classic-IPA-Quellen.', targetHelpFlare:'FlareStore akzeptiert AltStore-kompatible Repositories. Der Mix bleibt eine Classic AltSource und wird direkt in FlareStore geöffnet.', targetHelpFeather:'Feather akzeptiert AltStore-kompatible Repositories. Der Mix bleibt eine Classic AltSource und wird direkt in Feather geöffnet.', palNote:'AltStore PAL ist kein Ziel für Custom Mix, da PAL notarized Marketplace-Pakete und andere Metadaten als Classic-IPA-Quellen verwendet.', targetPrefix:'Ziel', statusAll:'Alle', statusPass:'Nur PASS', statusTry:'Nur TEST', platform:'Plattform', platformAll:'Alle', classic:'AltStore Classic', pal:'AltStore PAL', sidestore:'SideStore', livecontainer:'LiveContainer', autoTested:'Automatisch geprüft',
     altPackage:'AltStore Source', sidePackage:'SideStore Source', livePackage:'LiveContainer Source', customMix:'Eigener Mix', filters:'⚙ Filter · 🔎 Suche · ☑ Auswahl',
-    addAlt:'＋ Zu AltStore', addSide:'＋ Zu SideStore', addLive:'＋ Zu LiveContainer', copyUrl:'URL kopieren', json:'JSON ↗', apps:'Apps', sources:'Quellen',
+    addTo:'＋ Zu', copyUrl:'URL kopieren', json:'JSON ↗', apps:'Apps', sources:'Quellen',
     hosted:'Gehosteter Mix bereit', local:'Lokaler Mix bereit', experimental:'Experimenteller Mix bereit', localNote:'Diese PASS-Kombination ist gültig, aber nicht vorab gehostet. Für direktes Hinzufügen ist eine öffentliche URL nötig.', tryNote:'Dieser Mix enthält TEST-Quellen. Lade die JSON-Datei herunter und teste sie zuerst.', conflicts:'Duplikate gelöst', download:'JSON laden', preview:'JSON ansehen', building:'Quellen werden getestet…', failed:'Der ausgewählte Mix konnte nicht erstellt werden.', copied:'URL kopiert.', empty:'Keine Quellen entsprechen den Filtern.'
   },
   es: {
-    title:'Custom Source Builder', desc:'Filtra fuentes online comprobadas, elige cualquier combinación y crea tu propio Mix para AltStore, SideStore o LiveContainer.',
+    title:'Custom Source Builder', desc:'Filtra fuentes online comprobadas, elige cualquier combinación y crea tu propio Mix para instaladores compatibles con fuentes Classic.',
     selectPass:'Seleccionar PASS para', selectAll:'Seleccionar visibles', clear:'Borrar selección', build:'Crear Mix', selected:'seleccionadas', shown:'visibles', pass:'PASS', try:'PROBAR', passHelp:'La lista ya está limitada al destino seleccionado. PASS además significa que la fuente superó la prueba automática de combinación de Mix; no garantiza que cada app funcione en todos los dispositivos iOS.',
-    mixStatus:'Prueba de combinación', targetLabel:'¿Dónde quieres añadir el Mix?', targetHelpAlt:'El Mix final será una Classic AltSource para AltStore Classic. Se ocultan las fuentes exclusivas de SideStore y las de marketplace PAL.', targetHelpSide:'SideStore es totalmente compatible con AltStore Sources (AltSources). Aquí mostramos fuentes IPA Classic y eliminamos del Mix generado los metadatos exclusivos de PAL.', targetHelpLive:'LiveContainer puede navegar fuentes estilo AltStore e instalar apps desde la URL de descarga de su versión más reciente. Aquí mostramos fuentes IPA Classic combinables.', palNote:'AltStore PAL no es un destino de Custom Mix porque usa paquetes notarizados de marketplace y metadatos diferentes a las fuentes IPA Classic.', targetPrefix:'Destino', statusAll:'Todo', statusPass:'Solo PASS', statusTry:'Solo PROBAR', platform:'Plataforma', platformAll:'Todo', classic:'AltStore Classic', pal:'AltStore PAL', sidestore:'SideStore', livecontainer:'LiveContainer', autoTested:'Prueba automática',
+    mixStatus:'Prueba de combinación', targetLabel:'¿Dónde quieres añadir el Mix?', targetHelpAlt:'El Mix final será una Classic AltSource para AltStore Classic. Se ocultan las fuentes exclusivas de SideStore y las de marketplace PAL.', targetHelpSide:'SideStore es totalmente compatible con AltStore Sources (AltSources). Aquí mostramos fuentes IPA Classic y eliminamos del Mix generado los metadatos exclusivos de PAL.', targetHelpLive:'LiveContainer puede navegar fuentes estilo AltStore e instalar apps desde la URL de descarga de su versión más reciente. Aquí mostramos fuentes IPA Classic combinables.', targetHelpFlare:'FlareStore acepta repositorios compatibles con AltStore. El Mix sigue siendo una Classic AltSource y se abre directamente en FlareStore.', targetHelpFeather:'Feather acepta repositorios compatibles con AltStore. El Mix sigue siendo una Classic AltSource y se abre directamente en Feather.', palNote:'AltStore PAL no es un destino de Custom Mix porque usa paquetes notarizados de marketplace y metadatos diferentes a las fuentes IPA Classic.', targetPrefix:'Destino', statusAll:'Todo', statusPass:'Solo PASS', statusTry:'Solo PROBAR', platform:'Plataforma', platformAll:'Todo', classic:'AltStore Classic', pal:'AltStore PAL', sidestore:'SideStore', livecontainer:'LiveContainer', autoTested:'Prueba automática',
     altPackage:'AltStore Source', sidePackage:'SideStore Source', livePackage:'LiveContainer Source', customMix:'Mix personalizado', filters:'⚙ Filtros · 🔎 Búsqueda · ☑ Selección',
-    addAlt:'＋ Añadir a AltStore', addSide:'＋ Añadir a SideStore', addLive:'＋ Añadir a LiveContainer', copyUrl:'Copiar URL', json:'JSON ↗', apps:'apps', sources:'fuentes',
+    addTo:'＋ Añadir a', copyUrl:'Copiar URL', json:'JSON ↗', apps:'apps', sources:'fuentes',
     hosted:'Mix alojado listo', local:'Mix local listo', experimental:'Mix experimental listo', localNote:'Esta combinación PASS es válida pero no está alojada. Añadir directamente requiere una URL pública.', tryNote:'Este Mix contiene fuentes PROBAR. Descarga y prueba primero el JSON.', conflicts:'duplicados resueltos', download:'Descargar JSON', preview:'Ver JSON', building:'Probando fuentes…', failed:'No se pudo crear el Mix.', copied:'URL copiada.', empty:'Ninguna fuente coincide con los filtros.'
   },
   fr: {
-    title:'Custom Source Builder', desc:'Filtrez les sources en ligne vérifiées, choisissez n’importe quelle combinaison et créez votre propre Mix pour AltStore, SideStore ou LiveContainer.',
+    title:'Custom Source Builder', desc:'Filtrez les sources en ligne vérifiées, choisissez n’importe quelle combinaison et créez votre propre Mix pour les installateurs compatibles avec les sources Classic.',
     selectPass:'Sélectionner les PASS pour', selectAll:'Tout sélectionner affiché', clear:'Effacer la sélection', build:'Créer Mix', selected:'sélectionnées', shown:'affichées', pass:'PASS', try:'TEST', passHelp:'La liste est déjà limitée à la cible choisie. PASS signifie en plus que la source a réussi le test automatique de fusion Mix; cela ne garantit pas que chaque app fonctionne sur chaque appareil iOS.',
-    mixStatus:'Test de fusion', targetLabel:'Où voulez-vous ajouter le Mix ?', targetHelpAlt:'Le Mix final sera une Classic AltSource pour AltStore Classic. Les sources réservées à SideStore et les marketplaces PAL sont masquées.', targetHelpSide:'SideStore est entièrement compatible avec les AltStore Sources (AltSources). Nous affichons ici les sources IPA Classic et retirons du Mix généré les métadonnées réservées à PAL.', targetHelpLive:'LiveContainer peut parcourir les sources de style AltStore et installer les apps depuis l’URL de téléchargement de leur dernière version. Nous affichons ici les sources IPA Classic fusionnables.', palNote:'AltStore PAL n’est pas une cible du Custom Mix car PAL utilise des paquets marketplace notariés et des métadonnées différentes des sources IPA Classic.', targetPrefix:'Cible', statusAll:'Tout', statusPass:'PASS seulement', statusTry:'TEST seulement', platform:'Plateforme', platformAll:'Tout', classic:'AltStore Classic', pal:'AltStore PAL', sidestore:'SideStore', livecontainer:'LiveContainer', autoTested:'Test automatique',
+    mixStatus:'Test de fusion', targetLabel:'Où voulez-vous ajouter le Mix ?', targetHelpAlt:'Le Mix final sera une Classic AltSource pour AltStore Classic. Les sources réservées à SideStore et les marketplaces PAL sont masquées.', targetHelpSide:'SideStore est entièrement compatible avec les AltStore Sources (AltSources). Nous affichons ici les sources IPA Classic et retirons du Mix généré les métadonnées réservées à PAL.', targetHelpLive:'LiveContainer peut parcourir les sources de style AltStore et installer les apps depuis l’URL de téléchargement de leur dernière version. Nous affichons ici les sources IPA Classic fusionnables.', targetHelpFlare:'FlareStore accepte les dépôts compatibles AltStore. Le Mix reste une Classic AltSource et s’ouvre directement dans FlareStore.', targetHelpFeather:'Feather accepte les dépôts compatibles AltStore. Le Mix reste une Classic AltSource et s’ouvre directement dans Feather.', palNote:'AltStore PAL n’est pas une cible du Custom Mix car PAL utilise des paquets marketplace notariés et des métadonnées différentes des sources IPA Classic.', targetPrefix:'Cible', statusAll:'Tout', statusPass:'PASS seulement', statusTry:'TEST seulement', platform:'Plateforme', platformAll:'Tout', classic:'AltStore Classic', pal:'AltStore PAL', sidestore:'SideStore', livecontainer:'LiveContainer', autoTested:'Test automatique',
     altPackage:'AltStore Source', sidePackage:'SideStore Source', livePackage:'LiveContainer Source', customMix:'Mix personnalisé', filters:'⚙ Filtres · 🔎 Recherche · ☑ Sélection',
-    addAlt:'＋ Ajouter à AltStore', addSide:'＋ Ajouter à SideStore', addLive:'＋ Ajouter à LiveContainer', copyUrl:'Copier URL', json:'JSON ↗', apps:'apps', sources:'sources',
+    addTo:'＋ Ajouter à', copyUrl:'Copier URL', json:'JSON ↗', apps:'apps', sources:'sources',
     hosted:'Mix hébergé prêt', local:'Mix local prêt', experimental:'Mix expérimental prêt', localNote:'Cette combinaison PASS est valide mais non hébergée. L’ajout direct nécessite une URL publique.', tryNote:'Ce Mix contient des sources TEST. Téléchargez et testez d’abord le JSON.', conflicts:'doublons résolus', download:'Télécharger JSON', preview:'Aperçu JSON', building:'Test des sources…', failed:'Impossible de créer le Mix.', copied:'URL copiée.', empty:'Aucune source ne correspond aux filtres.'
   }
 };
@@ -90,14 +97,21 @@ function lang() {
 }
 function tr(key) { return copy[lang()][key] || copy.en[key] || key; }
 function escapeHtml(value) { return String(value ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c])); }
-const INSTALLER_ICONS = {
-  alt: 'assets/icons/altstore.svg',
-  side: 'assets/icons/sidestore.svg?v=1.1.5-20260918-audit13',
-  live: 'assets/icons/livecontainer.svg'
-};
-function installerIcon(type) {
-  const src = INSTALLER_ICONS[type];
+function installerIcon(installerId) {
+  const src = INSTALLERS[installerId]?.icon;
   return src ? `<img class="installer-icon" src="${escapeHtml(src)}" alt="" loading="lazy" referrerpolicy="no-referrer">` : '';
+}
+
+function renderTargetButtons() {
+  const host = $('#builderTargets');
+  if (!host) return;
+  host.innerHTML = BUILDER_TARGET_IDS.map(installerId => {
+    const installer = INSTALLERS[installerId];
+    return `<button class="builder-target${target === installerId ? ' active' : ''}" type="button" data-exp-target="${escapeHtml(installerId)}">
+      ${installerIcon(installerId)}
+      <span>${escapeHtml(installer.label)}</span>
+    </button>`;
+  }).join('');
 }
 function getStatus(id) { return status?.sources?.[id] || {}; }
 function catalogSource(id) { return catalog?.sources?.find(item => item.id === id) || null; }
@@ -130,25 +144,17 @@ function matchesGenre(source) {
   return (GENRE_RULES[genre] || []).some(rule => tags.includes(rule));
 }
 function targetName() {
-  if (target === 'sidestore') return 'SideStore';
-  if (target === 'livecontainer') return 'LiveContainer';
-  return 'AltStore Classic';
-}
-function targetIconType() {
-  if (target === 'sidestore') return 'side';
-  if (target === 'livecontainer') return 'live';
-  return 'alt';
+  return INSTALLERS[target]?.label || 'AltStore';
 }
 function targetHelpKey() {
   if (target === 'sidestore') return 'targetHelpSide';
   if (target === 'livecontainer') return 'targetHelpLive';
+  if (target === 'flarestore') return 'targetHelpFlare';
+  if (target === 'feather') return 'targetHelpFeather';
   return 'targetHelpAlt';
 }
 function matchesTarget(source) {
-  const mode = source.mode || 'classic';
-  if (mode === 'pal') return false;
-  if (target === 'sidestore') return mode === 'classic' || mode === 'sidestore';
-  return mode === 'classic';
+  return Boolean(sourceVariantURL(source, 'classic')) && sourceInstallerIds(source).includes(target);
 }
 function matchesCompatibility(source) {
   if (compatibility === 'all') return true;
@@ -211,7 +217,8 @@ function applyCopy() {
   if ($('#mixTestBadge')) $('#mixTestBadge').textContent = tr('autoTested');
   if ($('#mixPassHelp')) $('#mixPassHelp').textContent = tr('passHelp');
   const targetBadge = $('#mixTargetBadge');
-  if (targetBadge) targetBadge.innerHTML = `${installerIcon(targetIconType())}${escapeHtml(tr('targetPrefix'))}: ${escapeHtml(targetName())}`;
+  if (targetBadge) targetBadge.innerHTML = `${installerIcon(target)}${escapeHtml(tr('targetPrefix'))}: ${escapeHtml(targetName())}`;
+  renderTargetButtons();
 
   const statusLabels = {all:'statusAll', pass:'statusPass', try:'statusTry'};
   $$('[data-exp-compat-filter]').forEach(button => { button.textContent = tr(statusLabels[button.dataset.expCompatFilter] || 'statusAll'); });
@@ -226,26 +233,16 @@ function syncFilterUi() {
   if (search && search.value !== query) search.value = query;
 }
 
-function packageCard(name, url, meta, type) {
-  if (!url) return '';
-  let install = `altstore://source?url=${encodeURIComponent(url)}`;
-  let addLabel = tr('addAlt');
-  let badge = 'AltStore';
-  if (type === 'side') {
-    install = `sidestore://source?url=${encodeURIComponent(url)}`;
-    addLabel = tr('addSide');
-    badge = 'SideStore';
-  } else if (type === 'live') {
-    install = `livecontainer://source?url=${encodeURIComponent(url)}`;
-    addLabel = tr('addLive');
-    badge = 'LiveContainer';
-  }
+function packageCard(name, url, meta, installerId) {
+  if (!url || !INSTALLERS[installerId]) return '';
+  const installer = INSTALLERS[installerId];
+  const install = installer.buildLink(url);
   return `<article class="official-source-card">
-    <span class="pill mode service-pill">${installerIcon(type)}${badge}</span>
+    <span class="pill mode service-pill">${installerIcon(installerId)}${escapeHtml(installer.label)}</span>
     <h4>${escapeHtml(name)}</h4>
     <div class="muted">${escapeHtml(meta)}</div>
     <div class="official-source-actions">
-      <a class="btn small primary installer-action" href="${escapeHtml(install)}">${installerIcon(type)}${escapeHtml(addLabel)}</a>
+      <a class="btn small primary installer-action" href="${escapeHtml(install)}">${installerIcon(installerId)}${escapeHtml(tr('addTo'))} ${escapeHtml(installer.label)}</a>
       <button class="btn small secondary" type="button" data-copy-source="${escapeHtml(url)}">${escapeHtml(tr('copyUrl'))}</button>
       <a class="btn small ghost" target="_blank" rel="noopener" href="${escapeHtml(url)}">${escapeHtml(tr('json'))}</a>
     </div>
@@ -263,11 +260,13 @@ function renderOfficialPackages() {
   const sideApps = status?.sidestore?.appCount || 0;
   const altMeta = altApps ? `${altSources} ${tr('sources')} · ${altApps} ${tr('apps')}` : `${altSources} ${tr('sources')}`;
   const sideMeta = `${sideSources} ${tr('sources')} · ${sideApps} ${tr('apps')}`;
-  node.innerHTML = [
-    packageCard(tr('altPackage'), altUrl, altMeta, 'alt'),
-    packageCard(tr('sidePackage'), sideUrl, sideMeta, 'side'),
-    packageCard(tr('livePackage'), altUrl, altMeta, 'live')
-  ].join('');
+  node.innerHTML = BUILDER_TARGET_IDS.map(installerId => {
+    const useSidePackage = installerId === 'sidestore' && sideUrl;
+    const url = useSidePackage ? sideUrl : altUrl;
+    const meta = useSidePackage ? sideMeta : altMeta;
+    const name = `${INSTALLERS[installerId].label} Source`;
+    return packageCard(name, url, meta, installerId);
+  }).join('');
 }
 
 function modeName(source) {
@@ -352,28 +351,32 @@ function sameIds(ids, expected) {
 
 function hostedTarget(ids) {
   const sorted = [...ids].sort();
+  const classicTargets = new Set(BUILDER_TARGET_IDS);
   const manual = hostedIds();
   const max = Number(status?.mixes?.maxSourcesPerMix || 0);
   if (sorted.length && sorted.length <= max && sorted.every(id => manual.has(id))) {
-    return {url:new URL(`mix/${sorted.join('--')}.json`, window.location.href).href.split('#')[0], alt:true, side:true, live:true};
+    return {
+      url:new URL(`mix/${sorted.join('--')}.json`, window.location.href).href.split('#')[0],
+      targets:classicTargets
+    };
   }
 
   const auto = [...autoCompatibleIds()];
   if (auto.length && sameIds(sorted, auto)) {
-    return {url:status?.mixes?.allCompatibleURL || null, alt:true, side:true, live:true};
+    return {url:status?.mixes?.allCompatibleURL || null, targets:classicTargets};
   }
 
   const altIds = status?.altstore?.sourceIDs || [];
   if (altIds.length && sameIds(sorted, altIds)) {
-    return {url:status?.altstore?.sourceURL || null, alt:true, side:true, live:true};
+    return {url:status?.altstore?.sourceURL || null, targets:classicTargets};
   }
 
   const sideIds = status?.sidestore?.sourceIDs || [];
   if (sideIds.length && sameIds(sorted, sideIds)) {
-    return {url:status?.sidestore?.sourceURL || null, alt:false, side:true, live:true};
+    return {url:status?.sidestore?.sourceURL || null, targets:new Set(['sidestore','livecontainer'])};
   }
 
-  return {url:null, alt:false, side:false, live:false};
+  return {url:null, targets:new Set()};
 }
 
 async function buildMix() {
@@ -425,33 +428,15 @@ async function buildMix() {
     $('#expPreview').href = blobUrl;
     $('#expPreview').textContent = tr('preview');
 
-    const alt = $('#expAdd');
-    const side = $('#expAddSideStore');
-    const live = $('#expAddLiveContainer');
+    const addTarget = $('#expAddTarget');
     const copyButton = $('#expCopyUrl');
 
-    if (hosted.url && hosted.alt && target === 'altstore') {
-      alt.hidden = false;
-      alt.href = `altstore://source?url=${encodeURIComponent(hosted.url)}`;
-      alt.innerHTML = `${installerIcon('alt')}${escapeHtml(tr('addAlt'))}`;
+    if (hosted.url && hosted.targets.has(target) && INSTALLERS[target]) {
+      addTarget.hidden = false;
+      addTarget.href = INSTALLERS[target].buildLink(hosted.url);
+      addTarget.innerHTML = `${installerIcon(target)}${escapeHtml(tr('addTo'))} ${escapeHtml(targetName())}`;
     } else {
-      alt.hidden = true;
-    }
-
-    if (hosted.url && hosted.side && target === 'sidestore') {
-      side.hidden = false;
-      side.href = `sidestore://source?url=${encodeURIComponent(hosted.url)}`;
-      side.innerHTML = `${installerIcon('side')}${escapeHtml(tr('addSide'))}`;
-    } else {
-      side.hidden = true;
-    }
-
-    if (hosted.url && hosted.live && target === 'livecontainer') {
-      live.hidden = false;
-      live.href = `livecontainer://source?url=${encodeURIComponent(hosted.url)}`;
-      live.innerHTML = `${installerIcon('live')}${escapeHtml(tr('addLive'))}`;
-    } else {
-      live.hidden = true;
+      addTarget.hidden = true;
     }
 
     if (hosted.url) {
