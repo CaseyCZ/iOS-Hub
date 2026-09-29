@@ -5,9 +5,9 @@ on:
   push:
     branches: [main]
     paths:
-      - "*.js"
+      - "src/**/*.js"
       - "*.html"
-      - "*.css"
+      - "src/**/*.css"
       - "sources/**"
       - "tools/**"
       - "altstore/**"
@@ -41,7 +41,7 @@ jobs:
 
       - name: Check JavaScript syntax
         run: |
-          for file in *.js; do
+          for file in src/js/*.js; do
             echo "Checking $file"
             node --input-type=module --check < "$file"
           done

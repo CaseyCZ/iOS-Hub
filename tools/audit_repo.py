@@ -12,6 +12,8 @@ ROOT = Path(__file__).resolve().parents[1]
 REGISTRY = ROOT / "sources" / "registry.json"
 STATUS = ROOT / "data" / "status.json"
 CATALOG = ROOT / "data" / "catalog.json"
+JS_DIR = ROOT / "src" / "js"
+CSS_DIR = ROOT / "src" / "css"
 
 EXPECTED_SITE_URL = "https://caseycz.github.io/iOS-Hub/"
 EXPECTED_REPO_URL = "https://github.com/CaseyCZ/iOS-Hub"
@@ -29,12 +31,12 @@ OWNED_REFERENCE_FILES = (
     ROOT / "converter.html",
     ROOT / "guide.html",
     ROOT / "resources.html",
-    ROOT / "app.js",
-    ROOT / "builder-page.js",
-    ROOT / "builder.js",
-    ROOT / "guide.js",
-    ROOT / "resources.js",
-    ROOT / "i18n.js",
+    JS_DIR / "app.js",
+    JS_DIR / "builder-page.js",
+    JS_DIR / "builder.js",
+    JS_DIR / "guide.js",
+    JS_DIR / "resources.js",
+    JS_DIR / "i18n.js",
     ROOT / "tools" / "update_sources.py",
     ROOT / ".github" / "workflows" / "update-sources.yml",
 )
@@ -198,7 +200,7 @@ def validate_security_policy(path: Path) -> None:
 
 
 def validate_translations() -> None:
-    i18n_path = ROOT / "i18n.js"
+    i18n_path = JS_DIR / "i18n.js"
     if not i18n_path.exists():
         error("Missing i18n.js")
         return
@@ -210,11 +212,11 @@ def validate_translations() -> None:
             used.update(parser.i18n_keys)
 
     for script in (
-        ROOT / "app.js",
-        ROOT / "builder-page.js",
-        ROOT / "converter.js",
-        ROOT / "guide.js",
-        ROOT / "resources.js",
+        JS_DIR / "app.js",
+        JS_DIR / "builder-page.js",
+        JS_DIR / "converter.js",
+        JS_DIR / "guide.js",
+        JS_DIR / "resources.js",
     ):
         if not script.exists():
             continue
@@ -505,7 +507,7 @@ def validate_interactive_guide() -> None:
         "settings-menu.js",
     )
     for script_name in first_party_scripts:
-        script = ROOT / script_name
+        script = JS_DIR / script_name
         if not script.exists():
             continue
         text = script.read_text(encoding="utf-8")
@@ -524,7 +526,7 @@ def validate_interactive_guide() -> None:
                 "use the querySelectorAll helper instead"
             )
 
-    guide = ROOT / "guide.js"
+    guide = JS_DIR / "guide.js"
     if guide.exists():
         text = guide.read_text(encoding="utf-8")
 
@@ -750,7 +752,7 @@ def validate_page_quality() -> None:
 
     support_scripts = ("app.js", "builder-page.js", "converter.js", "guide.js", "resources.js")
     for script_name in support_scripts:
-        script = ROOT / script_name
+        script = JS_DIR / script_name
         if not script.exists():
             continue
         script_text = script.read_text(encoding="utf-8")
@@ -762,7 +764,7 @@ def validate_page_quality() -> None:
             if required not in script_text:
                 error(f"{script_name} support dialog is missing focus-management step: {required}")
 
-    support_focus = ROOT / "support-dialog.js"
+    support_focus = JS_DIR / "support-dialog.js"
     if not support_focus.exists():
         error("Missing support-dialog.js")
     else:
@@ -771,14 +773,14 @@ def validate_page_quality() -> None:
             if required not in support_focus_text:
                 error(f"support-dialog.js must trap Tab focus inside the modal: missing {required}")
 
-    settings_script = ROOT / "settings-menu.js"
+    settings_script = JS_DIR / "settings-menu.js"
     if settings_script.exists():
         settings_text = settings_script.read_text(encoding="utf-8")
         for required in ("returnFocus = document.activeElement", "target.focus?.()", "panel.querySelector('[data-settings-theme].active"):
             if required not in settings_text:
                 error(f"settings-menu.js is missing keyboard focus handling: {required}")
 
-    mobile_script = ROOT / "mobile-menu.js"
+    mobile_script = JS_DIR / "mobile-menu.js"
     if mobile_script.exists():
         mobile_text = mobile_script.read_text(encoding="utf-8")
         if "setOpen(false, true)" not in mobile_text or "button.focus()" not in mobile_text:
@@ -787,7 +789,7 @@ def validate_page_quality() -> None:
     importers = ("app.js", "builder-page.js", "converter.js", "guide.js", "resources.js")
     versions: set[str] = set()
     for script_name in importers:
-        script = ROOT / script_name
+        script = JS_DIR / script_name
         if not script.exists():
             continue
         text = script.read_text(encoding="utf-8")
@@ -818,7 +820,7 @@ def validate_layout() -> None:
         validate_html_scripts(html)
         validate_security_policy(html)
 
-    shared_css = ROOT / "hub-extra.css"
+    shared_css = CSS_DIR / "hub-extra.css"
     if shared_css.exists():
         shared_css_text = shared_css.read_text(encoding="utf-8")
         for required_css in ("safe-area-inset-left", "safe-area-inset-right", "prefers-reduced-motion"):
@@ -826,12 +828,12 @@ def validate_layout() -> None:
                 error(f"hub-extra.css is missing full-site mobile/accessibility guard: {required_css}")
 
     for search_script in ("app.js", "builder.js"):
-        path = ROOT / search_script
+        path = JS_DIR / search_script
         if path.exists() and "Object.values(source.description || {})" not in path.read_text(encoding="utf-8"):
             error(f"{search_script} must search every localized source description")
 
     for script_name in ("app.js", "builder.js"):
-        script = ROOT / script_name
+        script = JS_DIR / script_name
         if script.exists():
             script_text = script.read_text(encoding="utf-8")
             if "livecontainer://sources?url=" in script_text or "? 'sources' : 'source'" in script_text:
@@ -846,16 +848,16 @@ def validate_layout() -> None:
             error("tools/update_sources.py must strip custom Build fields from Classic generated sources")
 
     for required in (
-        ROOT / "app.js",
-        ROOT / "builder-page.js",
-        ROOT / "builder.js",
-        ROOT / "converter.js",
-        ROOT / "guide.js",
-        ROOT / "resources.js",
-        ROOT / "support-dialog.js",
-        ROOT / "mobile-menu.js",
-        ROOT / "settings-menu.js",
-        ROOT / "i18n.js",
+        JS_DIR / "app.js",
+        JS_DIR / "builder-page.js",
+        JS_DIR / "builder.js",
+        JS_DIR / "converter.js",
+        JS_DIR / "guide.js",
+        JS_DIR / "resources.js",
+        JS_DIR / "support-dialog.js",
+        JS_DIR / "mobile-menu.js",
+        JS_DIR / "settings-menu.js",
+        JS_DIR / "i18n.js",
         ROOT / "vendor" / "libarchive" / "libarchive.js",
         ROOT / "vendor" / "libarchive" / "worker-bundle.js",
         ROOT / "vendor" / "libarchive" / "libarchive.wasm",

@@ -1,4 +1,4 @@
-import { Archive } from './vendor/libarchive/libarchive.js';
+import { Archive } from '../../vendor/libarchive/libarchive.js';
 import { SUPPORTED_LANGUAGES, applyTranslations, normalizeLanguage, t } from './i18n.js?v=1.1.5-20260918-fullaudit2';
 
 const root = document.documentElement;
@@ -23,7 +23,7 @@ const tr = key => t(lang, key);
 const safeGet = key => { try { return localStorage.getItem(key); } catch (_) { return null; } };
 const safeSet = (key, value) => { try { localStorage.setItem(key, value); } catch (_) {} };
 
-Archive.init({ workerUrl: new URL('./vendor/libarchive/worker-bundle.js', import.meta.url).href });
+Archive.init({ workerUrl: new URL('../../vendor/libarchive/worker-bundle.js', import.meta.url).href });
 
 function applyTheme(theme) {
   const value = theme === 'light' ? 'light' : 'dark';
