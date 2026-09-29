@@ -354,6 +354,17 @@ def validate_registry() -> None:
                             "must use an absolute HTTPS URL"
                         )
 
+        classic_url = (
+            str(source_urls.get("classic") or "").strip()
+            if isinstance(source_urls, dict)
+            else (url if mode != "pal" else "")
+        )
+        pal_url = (
+            str(source_urls.get("pal") or "").strip()
+            if isinstance(source_urls, dict)
+            else (url if mode == "pal" else "")
+        )
+
         installers = source.get("installers")
         if installers is not None:
             if not isinstance(installers, list) or not installers:
@@ -369,16 +380,6 @@ def validate_registry() -> None:
                 if len(normalized_installers) != len(set(normalized_installers)):
                     error(f"registry source {source_id or index!r} installers contains duplicates")
 
-                classic_url = (
-                    str(source_urls.get("classic") or "").strip()
-                    if isinstance(source_urls, dict)
-                    else (url if mode != "pal" else "")
-                )
-                pal_url = (
-                    str(source_urls.get("pal") or "").strip()
-                    if isinstance(source_urls, dict)
-                    else (url if mode == "pal" else "")
-                )
                 for installer in normalized_installers:
                     if installer == "altstore-pal" and not pal_url:
                         error(
@@ -414,8 +415,8 @@ def validate_registry() -> None:
                 f"registry source {source_id or index!r} disables cachePayload but remains available to Builder"
             )
 
-        if source.get("mergeable") is True and mode != "classic":
-            error(f"registry source {source_id!r} is mergeable but mode is {mode!r}; only Classic sources may be pre-hosted")
+        if source.get("mergeable") is True and not classic_url:
+            error(f"registry source {source_id!r} is mergeable but has no Classic source URL")
 
         for key in ("official", "trusted", "recommended", "mergeable", "community", "modified"):
             if key in source and not isinstance(source[key], bool):
