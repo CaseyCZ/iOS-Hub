@@ -1,5 +1,5 @@
 import { SUPPORTED_LANGUAGES, applyTranslations, normalizeLanguage, t } from './i18n.js?v=1.1.5-20260918-fullaudit2';
-import { sideloadToolURL } from './installers.js?v=1.1.5-20260929-installers7';
+import { sideloadToolForRole, sideloadToolURL } from './installers.js?v=1.1.5-20260929-installers8';
 
 const root = document.documentElement;
 const $ = selector => document.querySelector(selector);
@@ -206,56 +206,59 @@ const SETUP_RESULTS = {
   }
 };
 
-const SETUP_RESULT_TOOLS = Object.freeze({
+const SETUP_RESULT_ROUTES = Object.freeze({
   tv: Object.freeze({
-    primary: Object.freeze(['sideloadly', 'guide']),
-    secondary: Object.freeze(['atvloadly', 'guide'])
+    primary: Object.freeze({role:'apple-tv', index:0, purpose:'guide'}),
+    secondary: Object.freeze({role:'apple-tv', index:1, purpose:'guide'})
   }),
   marketplace: Object.freeze({
-    primary: Object.freeze(['altstore-pal', 'download']),
-    secondary: Object.freeze(['altstore', 'classicGuide'])
+    primary: Object.freeze({role:'marketplace', index:0, purpose:'download'}),
+    secondary: Object.freeze({role:'marketplace-fallback', index:0, purpose:'classicGuide'})
   }),
   marketplaceCheck: Object.freeze({
-    primary: Object.freeze(['altstore-pal', 'requirements']),
-    secondary: Object.freeze(['altstore', 'classicGuide'])
+    primary: Object.freeze({role:'marketplace', index:0, purpose:'requirements'}),
+    secondary: Object.freeze({role:'marketplace-fallback', index:0, purpose:'classicGuide'})
   }),
   marketplaceUnsupported: Object.freeze({
-    primary: Object.freeze(['altstore', 'classicGuide']),
-    secondary: Object.freeze(['altstore-pal', 'requirements'])
+    primary: Object.freeze({role:'marketplace-fallback', index:0, purpose:'classicGuide'}),
+    secondary: Object.freeze({role:'marketplace', index:0, purpose:'requirements'})
   }),
   permanent: Object.freeze({
-    primary: Object.freeze(['trollstore', 'guide'])
+    primary: Object.freeze({role:'permanent', index:0, purpose:'guide'})
   }),
   sideinstaller: Object.freeze({
-    primary: Object.freeze(['sideinstaller', 'guide']),
-    secondary: Object.freeze(['sidestore', 'guide'])
+    primary: Object.freeze({role:'on-device-setup', index:0, purpose:'guide'}),
+    secondary: Object.freeze({role:'setup-refresh', index:0, purpose:'guide'})
   }),
   sideinstallerMany: Object.freeze({
-    primary: Object.freeze(['sideinstaller', 'guide']),
-    secondary: Object.freeze(['livecontainer', 'lcSideStore'])
+    primary: Object.freeze({role:'many-apps-setup', index:0, purpose:'guide'}),
+    secondary: Object.freeze({role:'many-apps-setup', index:1, purpose:'lcSideStore'})
   }),
   livecontainer: Object.freeze({
-    primary: Object.freeze(['livecontainer', 'lcSideStore'])
+    primary: Object.freeze({role:'many-apps', index:0, purpose:'lcSideStore'})
   }),
   sideloadly: Object.freeze({
-    primary: Object.freeze(['sideloadly', 'guide'])
+    primary: Object.freeze({role:'desktop-install', index:0, purpose:'guide'})
   }),
   pairingNeeded: Object.freeze({
-    secondary: Object.freeze(['sidestore', 'pairing'])
+    secondary: Object.freeze({role:'pairing-guide', index:0, purpose:'pairing'})
   }),
   checkVersionNoPc: Object.freeze({
-    primary: Object.freeze(['sidestore', 'prerequisites'])
+    primary: Object.freeze({role:'setup-refresh', index:0, purpose:'prerequisites'})
   }),
   sidestore: Object.freeze({
-    primary: Object.freeze(['sidestore', 'guide'])
+    primary: Object.freeze({role:'setup-refresh', index:0, purpose:'guide'})
   })
 });
 
-function setupResultToolURL(resultKey, slot, fallback) {
-  const config = SETUP_RESULT_TOOLS[resultKey]?.[slot];
+function routeToolURL(config, fallback) {
   if (!config) return fallback;
-  const [toolId, purpose] = config;
-  return sideloadToolURL(toolId, purpose) || fallback;
+  const tool = sideloadToolForRole(config.role, config.index || 0);
+  return tool ? (sideloadToolURL(tool.id, config.purpose || 'guide') || fallback) : fallback;
+}
+
+function setupResultToolURL(resultKey, slot, fallback) {
+  return routeToolURL(SETUP_RESULT_ROUTES[resultKey]?.[slot], fallback);
 }
 
 function preferredScrollBehavior() {
@@ -717,17 +720,28 @@ GUIDE_RECOMMENDATIONS.fr = {
   permanent:{title:'Vérifier d’abord la compatibilité TrollStore',text:'TrollStore ne peut installer des IPA de façon permanente que sur les versions iOS/iPadOS prises en charge. Ne supposez pas qu’une version plus récente est compatible.',steps:['Vérifier la version exacte d’iOS/iPadOS.','La comparer aux informations officielles TrollStore.','Utiliser une autre méthode de sideloading si elle n’est pas prise en charge.'],primary:'Ouvrir TrollStore ↗'}
 };
 
-const GUIDE_RECOMMENDATION_TOOLS = Object.freeze({
-  iphone: Object.freeze({ primary: 'sidestore', secondary: 'sideinstaller' }),
-  many: Object.freeze({ primary: 'livecontainer' }),
-  desktop: Object.freeze({ primary: 'sideloadly' }),
-  tv: Object.freeze({ primary: 'sideloadly', secondary: 'atvloadly' }),
-  permanent: Object.freeze({ primary: 'trollstore' })
+const GUIDE_RECOMMENDATION_ROUTES = Object.freeze({
+  iphone: Object.freeze({
+    primary: Object.freeze({role:'iphone-refresh', index:0}),
+    secondary: Object.freeze({role:'iphone-refresh', index:1})
+  }),
+  many: Object.freeze({
+    primary: Object.freeze({role:'many-apps', index:0})
+  }),
+  desktop: Object.freeze({
+    primary: Object.freeze({role:'desktop-install', index:0})
+  }),
+  tv: Object.freeze({
+    primary: Object.freeze({role:'apple-tv', index:0}),
+    secondary: Object.freeze({role:'apple-tv', index:1})
+  }),
+  permanent: Object.freeze({
+    primary: Object.freeze({role:'permanent', index:0})
+  })
 });
 
 function recommendationToolURL(goal, slot, fallback) {
-  const toolId = GUIDE_RECOMMENDATION_TOOLS[goal]?.[slot];
-  return toolId ? (sideloadToolURL(toolId, 'guide') || fallback) : fallback;
+  return routeToolURL(GUIDE_RECOMMENDATION_ROUTES[goal]?.[slot], fallback);
 }
 
 function copyForLanguage() {
