@@ -1282,7 +1282,7 @@ def validate_layout() -> None:
             if required_host not in guide_page_text:
                 error(f"guide.html is missing registry-driven official reference host {required_host!r}")
 
-        trouble_search_values = re.findall(r'<details\\b[^>]*data-search="([^"]+)"', guide_page_text)
+        trouble_search_values = re.findall(r'<details\b[^>]*data-search="([^"]+)"', guide_page_text)
         trouble_search_text = " ".join(trouble_search_values).lower()
         expected_trouble_tokens = (
             "altstore",
@@ -1305,7 +1305,7 @@ def validate_layout() -> None:
                     f"missing searchable diagnostics for {tool_token!r}"
                 )
 
-        trouble_tool_ids = set(re.findall(r'<details\\b[^>]*data-tool="([^"]+)"', guide_page_text))
+        trouble_tool_ids = set(re.findall(r'<details\b[^>]*data-tool="([^"]+)"', guide_page_text))
         for tool_id in (
             "altstore",
             "altstore-pal",
