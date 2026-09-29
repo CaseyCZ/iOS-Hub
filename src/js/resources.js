@@ -1,5 +1,5 @@
 import { SUPPORTED_LANGUAGES, applyTranslations, normalizeLanguage, t } from './i18n.js?v=1.1.5-20260918-fullaudit2';
-import { SIDELOAD_TOOLS, resourceBadgeSpecs, sideloadToolURL } from './installers.js?v=1.1.5-20260929-installers10';
+import { SIDELOAD_TOOLS, resourceBadgeSpecs, resourceSideloadTools, sideloadToolURL } from './installers.js?v=1.1.5-20260929-installers11';
 
 const root = document.documentElement;
 const RESOURCE_EXTRA_COPY = {
@@ -79,6 +79,12 @@ function hydrateSideloadToolCards() {
     const title = card.querySelector('h3');
     if (title && tool.resourceName) title.textContent = tool.resourceName;
 
+    const description = card.querySelector('p[data-i18n]');
+    if (description && tool.resourceDescriptionKey) {
+      description.dataset.i18n = tool.resourceDescriptionKey;
+      description.textContent = t(root.lang, tool.resourceDescriptionKey);
+    }
+
     const domain = card.querySelector('.resource-domain');
     if (domain && tool.domain) domain.textContent = tool.domain;
 
@@ -91,6 +97,19 @@ function hydrateSideloadToolCards() {
       if (img.classList.contains('official-app-icon')) img.alt = tool.resourceName || tool.label || '';
     });
   });
+
+  const cards = new Map(
+    [...document.querySelectorAll('[data-sideload-tool]')]
+      .map(card => [card.dataset.sideloadTool, card])
+  );
+  const first = resourceSideloadTools().map(tool => cards.get(tool.id)).find(Boolean);
+  const host = first?.parentElement;
+  if (host) {
+    resourceSideloadTools().forEach(tool => {
+      const card = cards.get(tool.id);
+      if (card && card.parentElement === host) host.appendChild(card);
+    });
+  }
 }
 
 const $ = selector => document.querySelector(selector);
