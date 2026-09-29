@@ -7,6 +7,39 @@
   "tintColor": "#38BDF8",
   "apps": [
     {
+      "name": "3Speak.tv - Acela",
+      "bundleIdentifier": "com.example.acela",
+      "developerName": "sagarkothari88",
+      "subtitle": "Tokenized Video Communities",
+      "version": "1.0.3",
+      "versionDate": "2022-12-08",
+      "versionDescription": "https://ecency.com/hive-181335/@sagarkothari88/3speak-development-update-from-sagarkothari88-7cd51a3b88448",
+      "downloadURL": "https://github.com/spknetwork/Android-App/releases/download/v1.0.3_48/Runner.ipa",
+      "localizedDescription": "The build which was also submitted to the Apple for TestFlight review",
+      "iconURL": "https://github.com/spknetwork/Android-App/releases/download/v1.0.3_48/AppIcon-512.png",
+      "tintColor": "AFEEEE",
+      "size": 857669,
+      "permissions": [],
+      "screenshotURLs": [
+        "https://github.com/spknetwork/Android-App/releases/download/v1.0.3_48/IMG_5651.PNG",
+        "https://github.com/spknetwork/Android-App/releases/download/v1.0.3_48/IMG_5652.PNG",
+        "https://github.com/spknetwork/Android-App/releases/download/v1.0.3_48/IMG_5653.PNG",
+        "https://github.com/spknetwork/Android-App/releases/download/v1.0.3_48/IMG_5654.PNG",
+        "https://github.com/spknetwork/Android-App/releases/download/v1.0.3_48/IMG_5655.PNG"
+      ],
+      "beta": false,
+      "versions": [
+        {
+          "version": "1.0.3",
+          "date": "2022-12-08",
+          "downloadURL": "https://github.com/spknetwork/Android-App/releases/download/v1.0.3_48/Runner.ipa",
+          "localizedDescription": "https://ecency.com/hive-181335/@sagarkothari88/3speak-development-update-from-sagarkothari88-7cd51a3b88448",
+          "size": 857669
+        }
+      ],
+      "appID": "com.example.acela"
+    },
+    {
       "name": "ActiveGS iOS",
       "bundleIdentifier": "com.yoshisuga.activeGS",
       "developerName": "yoshisuga & Olivier Goguel",
@@ -640,6 +673,70 @@
       }
     },
     {
+      "name": "Artemis",
+      "bundleIdentifier": "com.github.auties00.artemis",
+      "developerName": "Auties00",
+      "subtitle": "Alternative client for HIDIVE",
+      "localizedDescription": "Artemis is an alternative and open source streaming client for HIDIVE",
+      "iconURL": "https://github.com/Auties00/Artemis/blob/main/Artemis/Assets.xcassets/AppIcon.appiconset/appstore.png?raw=true",
+      "tintColor": "0A84FF",
+      "category": "entertainment",
+      "screenshots": [
+        {
+          "imageURL": "https://github.com/user-attachments/assets/88bd1a37-0f10-4fba-b6e9-6bf3174b87a8"
+        },
+        {
+          "imageURL": "https://github.com/user-attachments/assets/99249893-1532-40ca-8c61-f65869e1ecca"
+        },
+        {
+          "imageURL": "https://github.com/user-attachments/assets/ee6fc0aa-2a3b-4abe-bab6-0eaa6019547b"
+        },
+        {
+          "imageURL": "https://github.com/user-attachments/assets/2d053217-3b56-482e-a7af-2baa006d545a"
+        },
+        {
+          "imageURL": "https://github.com/user-attachments/assets/ea555ebc-95d1-435b-b840-fbe82184892a"
+        }
+      ],
+      "versions": [
+        {
+          "version": "3.0",
+          "date": "2024-10-31T02:52:14+01:00",
+          "localizedDescription": "Bug fixes and improvements.",
+          "downloadURL": "https://github.com/Auties00/Artemis/releases/download/3.0-19/Artemis.ipa",
+          "size": 2839462,
+          "sha256": "cd1091f584db78e81ef6b24fd72b41192247363fed4913b9612bf3dc9403ab1a",
+          "minOSVersion": "17.0"
+        },
+        {
+          "version": "2.0",
+          "buildVersion": "16",
+          "date": "2024-09-28T11:39:01+02:00",
+          "localizedDescription": "Bug fixes and improvements.",
+          "downloadURL": "https://github.com/Auties00/Artemis/releases/download/2.0-16/artemis.ipa",
+          "size": 2832019,
+          "sha256": "c714ab0cc5611c148b591e53e5eba80aef25e4a7c6742a4488f19a68ebc61f36",
+          "minOSVersion": "17.0"
+        },
+        {
+          "version": "2.0",
+          "buildVersion": "15",
+          "date": "2024-09-06T12:05:38+02:00",
+          "localizedDescription": "First AltStore release",
+          "downloadURL": "https://github.com/Auties00/Artemis/releases/download/2.0/Artemis.ipa",
+          "size": 1690819,
+          "sha256": "de48ea0fdcd0241aaeb37fcad72797f9d16caf611dab42bc889f6597304a5ece",
+          "minOSVersion": "17.0"
+        }
+      ],
+      "appPermissions": {
+        "privacy": {},
+        "entitlements": [
+          "beta-reports-active"
+        ]
+      }
+    },
+    {
       "appPermissions": {
         "entitlements": [
           "application-identifier",
@@ -836,6 +933,57 @@
           "size": 29200000
         }
       ]
+    },
+    {
+      "name": "blurt.blog",
+      "bundleIdentifier": "blog.blurt.blurt",
+      "developerName": "sagarkothari88",
+      "subtitle": "A fair world of social liberty",
+      "version": "1.0.7",
+      "versionDate": "2023-01-01",
+      "versionDescription": "https://blurt.blog/blurt/@sagarkothari88/h350a80ssgii-ct0j-9x",
+      "downloadURL": "https://github.com/sag333ar/blurt-releases/releases/download/1.0.7(36)/Runner.ipa",
+      "localizedDescription": "The build which was also submitted to the Apple for AppStore review",
+      "iconURL": "https://gitlab.com/blurt/openblurt/blurt-mobile-app/-/raw/main/appstore-screenshots/512x512.png",
+      "tintColor": "8A28F7",
+      "size": 857669,
+      "permissions": [],
+      "screenshotURLs": [
+        "https://gitlab.com/blurt/openblurt/blurt-mobile-app/-/raw/main/appstore-screenshots/se/01.png",
+        "https://gitlab.com/blurt/openblurt/blurt-mobile-app/-/raw/main/appstore-screenshots/se/02.png",
+        "https://gitlab.com/blurt/openblurt/blurt-mobile-app/-/raw/main/appstore-screenshots/se/03.png",
+        "https://gitlab.com/blurt/openblurt/blurt-mobile-app/-/raw/main/appstore-screenshots/se/04.png",
+        "https://gitlab.com/blurt/openblurt/blurt-mobile-app/-/raw/main/appstore-screenshots/se/05.png",
+        "https://gitlab.com/blurt/openblurt/blurt-mobile-app/-/raw/main/appstore-screenshots/se/06.png",
+        "https://gitlab.com/blurt/openblurt/blurt-mobile-app/-/raw/main/appstore-screenshots/se/07.png",
+        "https://gitlab.com/blurt/openblurt/blurt-mobile-app/-/raw/main/appstore-screenshots/se/08.png",
+        "https://gitlab.com/blurt/openblurt/blurt-mobile-app/-/raw/main/appstore-screenshots/se/09.png"
+      ],
+      "beta": false,
+      "versions": [
+        {
+          "version": "1.0.7",
+          "date": "2023-01-01",
+          "downloadURL": "https://github.com/sag333ar/blurt-releases/releases/download/1.0.7(36)/Runner.ipa",
+          "localizedDescription": "https://blurt.blog/blurt/@sagarkothari88/h350a80ssgii-ct0j-9x",
+          "size": 857669
+        },
+        {
+          "version": "1.0.6",
+          "date": "2020-11-20",
+          "downloadURL": "https://github.com/sag333ar/blurt-releases/releases/download/1.0.6(35)/Runner.ipa",
+          "localizedDescription": "https://blurt.blog/blurt/@sagarkothari88/we-are-ready-to-submit-to-appstore-and-curation-report-18th-and-19th-nov-2022",
+          "size": 857669
+        },
+        {
+          "version": "1.0.3",
+          "date": "2020-11-20",
+          "downloadURL": "https://gitlab.com/blurt/openblurt/blurt-mobile-app/-/raw/main/ios/releases/1.0.3/app.ipa",
+          "localizedDescription": "https://blurt.blog/blurt/@sagarkothari88/we-are-ready-to-submit-to-appstore-and-curation-report-18th-and-19th-nov-2022",
+          "size": 857669
+        }
+      ],
+      "appID": "blog.blurt.blurt"
     },
     {
       "name": "CARROT Weather",
@@ -1084,6 +1232,37 @@
         "privacy": []
       },
       "appID": "net.rinsuki.slapps.citra"
+    },
+    {
+      "name": "Countdown",
+      "bundleIdentifier": "com.neo.countdown",
+      "developerName": "neoarz",
+      "version": "1.6",
+      "versionDate": "2025-02-22T21:37:29-05:00",
+      "versionDescription": "Added new animation!",
+      "downloadURL": "https://github.com/neoarz/Countdown-App/releases/download/1.6/Countdown.ipa",
+      "localizedDescription": "This app is purely for entertainment purposes and is not intended to predict or influence real-life events. Any countdown generated by the app is entirely fictional and should not be taken seriously. I am not affiliated with the creators of the movie Countdown and is not responsible for any emotional, psychological, or other effects caused by the use of this app. By using this app, you agree to do so at your own discretion and risk.",
+      "iconURL": "https://github.com/neoarz/Countdown-App/raw/main/Assets/CountdownLogo.jpg",
+      "tintColor": "000",
+      "size": 720000,
+      "screenshotURLs": [
+        "https://raw.githubusercontent.com/neoarz/Countdown-App/main/RepoAssets/Clock.jpeg",
+        "https://raw.githubusercontent.com/neoarz/Countdown-App/main/RepoAssets/UserAgreementBroken.jpeg",
+        "https://raw.githubusercontent.com/neoarz/Countdown-App/main/RepoAssets/AcceptTOC.jpeg"
+      ],
+      "subtitle": "If you could know exactly when you're going to die, would you want to know?",
+      "absoluteVersion": "1.6",
+      "appID": "com.neo.countdown",
+      "versions": [
+        {
+          "version": "1.6",
+          "date": "2025-02-22T21:37:29-05:00",
+          "downloadURL": "https://github.com/neoarz/Countdown-App/releases/download/1.6/Countdown.ipa",
+          "localizedDescription": "Added new animation!",
+          "size": 720000,
+          "absoluteVersion": "1.6"
+        }
+      ]
     },
     {
       "appPermissions": {
@@ -2009,32 +2188,32 @@
     {
       "name": "Flappy Bird",
       "bundleIdentifier": "org.brandonplank.flappybird",
-      "developerName": "BrandonPlank",
-      "subtitle": "A simple but infuriatingly difficult game",
-      "localizedDescription": "Flappy Bird is an infuriatingly difficult casual game in which you need to steer a hapless pixelated bird through tubes.\n\nFlap Through the Gap :\n\nThe principle of Flappy Bird is very simple - to fly through as many gaps as you can without hitting a pipe. It's a similar gaming mechanic to the popular tap-to-hover helicopter genre of games like iCopter TNG. It's fun - but insanely frustrating!\n\nTap to Flap :\n\nThe controls in Flappy Bird are simple - you just tap to flap - but the game is so hard that you can spend an hour practicing and you'll still only have made it through five or six gaps. Sometimes you'll think that you've made it through a gap only to clip the edge of the pipe on your way back and then it's back to the beginning for you.\n\nA 90s Throwback :\nGraphically, Flappy Bird is very basic and looks like its come straight out of an 8-bit console. The bird himself is cute and his little pixelated face makes you feel all the sorrier when you smack him into a pipe for the 500th time. \n\nThe background in Flappy Bird is unimaginative and looks like it's been lifted from any of the countless cutesy platformers of the early 1990s. Don't expect any lavish animation either, Flappy Bird is pretty jerky.\n\nCrazy Fun :\n\nFlappy Bird can be so annoying that you'll want to throw your phone out of the window, and at the same time it hooks you into coming back as you think \"surely I'll get the hang of it now\". Once you've installed Flappy Bird you'll wish you hadn't!\n\nThis is a Swift remake of the original game. You can find the source at https://github.com/brandonplank/flappybird",
-      "iconURL": "https://cdn.jsdelivr.net/gh/RipeStore/icons/FLAPPY/icon_FLAPPYBIRD.png",
-      "tintColor": "#7ce49c",
-      "category": "games",
+      "developerName": "Brandon Plank",
+      "subtitle": "A revival of the once popular game.",
+      "version": "4.3",
+      "versionDate": "2022-06-14T20:54:11Z",
+      "versionDescription": "# 4.3\n\n**Full Changelog**: https://github.com/crypticplank/flappybird/compare/4.2.0...4.3\r\n* Removed Leaderboard\r\n* Removed Accounts\r\n* Removed Anti-Cheat",
+      "downloadURL": "https://github.com/crypticplank/flappybird/releases/download/4.3/org.brandonplank.flappybird.ipa",
+      "localizedDescription": "This Flappy Bird is a revival of the original Flappy Bird by Dong Nguyen. There are a many new features to enhance gameplay as well!\n\n• Tap to flap\n• Avoid the hitting the pipes\n• Flap for infinity!",
+      "iconURL": "https://i.imgur.com/tIUJeSs.png",
+      "tintColor": "#49cc48",
+      "size": 2099365,
       "screenshotURLs": [
-        "https://cdn.jsdelivr.net/gh/RipeStore/icons/FLAPPY/01.PNG",
-        "https://cdn.jsdelivr.net/gh/RipeStore/icons/FLAPPY/02.PNG",
-        "https://cdn.jsdelivr.net/gh/RipeStore/icons/FLAPPY/03.PNG",
-        "https://cdn.jsdelivr.net/gh/RipeStore/icons/FLAPPY/04.PNG"
+        "https://i.imgur.com/nIq1VVv.png",
+        "https://i.imgur.com/TZBdg7M.png",
+        "https://i.imgur.com/41u9JUh.png"
       ],
+      "absoluteVersion": "4.3",
       "versions": [
         {
           "version": "4.3",
-          "date": "2022-06-14T07:44:00Z",
-          "localizedDescription": "• Removed Leaderboard\n• Removed Accounts\n• Removed Anti-Cheat",
-          "downloadURL": "https://cdn.yemoja.xyz/flappybird/4.3/org.brandonplank.flappybird.ipa",
-          "size": 2100000,
-          "minOSVersion": "13.0"
+          "date": "2022-06-14T20:54:11Z",
+          "downloadURL": "https://github.com/crypticplank/flappybird/releases/download/4.3/org.brandonplank.flappybird.ipa",
+          "localizedDescription": "# 4.3\n\n**Full Changelog**: https://github.com/crypticplank/flappybird/compare/4.2.0...4.3\r\n* Removed Leaderboard\r\n* Removed Accounts\r\n* Removed Anti-Cheat",
+          "size": 2099365,
+          "absoluteVersion": "4.3"
         }
-      ],
-      "appPermissions": {
-        "entitlements": [],
-        "privacy": {}
-      }
+      ]
     },
     {
       "beta": false,
@@ -4467,6 +4646,64 @@
       "appID": "com.zurac.OldOS"
     },
     {
+      "name": "OldOS",
+      "bundleIdentifier": "com.zurac.OldOS",
+      "developerName": "zzanehip",
+      "subtitle": "OldOS is a testament to the days of iOS 4.",
+      "version": "1.0",
+      "versionDate": "2021-11-23T19:01:37Z",
+      "versionDescription": "# IPA V1.0 Build 18\n\n1.0 (18):\r\n- Mail is here! This is a full-blown email client, no ifs, ands, or buts\r\n- View mailboxes, read emails, move emails, manage inbox, and send emails\r\n- Fixes to YouTube backend\r\n- Other bug fixes",
+      "downloadURL": "https://github.com/zzanehip/The-OldOS-Project/releases/download/1.0_18/OldOS.ipa",
+      "localizedDescription": "OldOS is a testament to the days of yesteryear, showcasing what iOS once was ten years ago. The ethos of the app is to merge the technologies of today with a pixel-perfect recreation of the user experience of the past. The vast majority of apps in OldOS are fully functional — meaning they seamlessly integrate with the data on your phone to deliver a live, emulator-esque experience. What does this mean? Well, you can play your music in iPod, get directions in Maps, surf the web in Safari, view the current weather in Weather, and much more. By the same token, no shortcuts were taken in fully fleshing out the operating system. You can change your background, adjust settings, search apps, et cetera. There are a few apps still not ready for primetime but don't worry, they're coming soon.\n\nWith OldOS, you no longer need to worry about securing a legacy iPhone to experience nostalgia — it's available on your daily driver.\n\nPart of the goal with OldOS is to enable anyone to understand how iOS works and demonstrate just how powerful SwiftUI truly is. For that reason, the entire app is open-sourced — enabling developers to learn about, modify, and add to the app. I thought building this over my last six or so months in high school and sharing it with the world would be a fun and productive endeavor.\n\nSpecial Features:\n* 🧑‍💻 Built almost entirely using SwiftUI.\n* 🎨 Designed to be as close to pixel-perfect as possible.\n* 📱 Fully functional, perhaps even usable as a second OS.\n* ❤️ A testament to the work of Apple employees of both the past and the present.\n* 🗺️ Fully open source for all to learn, modify, and build on.",
+      "iconURL": "https://raw.githubusercontent.com/zzanehip/The-OldOS-Project/master/OldOS/OldOS/Assets.xcassets/AppIcon.appiconset/1024.png",
+      "tintColor": "#181818",
+      "size": 88173533,
+      "screenshotURLs": [
+        "https://github.com/zzanehip/The-OldOS-Project/raw/master/Images/Market_1.jpg",
+        "https://github.com/zzanehip/The-OldOS-Project/raw/master/Images/Market_2.jpg",
+        "https://github.com/zzanehip/The-OldOS-Project/raw/master/Images/Market_3.jpg",
+        "https://github.com/zzanehip/The-OldOS-Project/raw/master/Images/Market_4.jpg",
+        "https://github.com/zzanehip/The-OldOS-Project/raw/master/Images/Market_5.jpg"
+      ],
+      "permissions": [
+        {
+          "type": "camera",
+          "usageDescription": "To take photos in OldOS, please enable access to your camera."
+        },
+        {
+          "type": "photos",
+          "usageDescription": "To view, manage, and add photos to your photo library in OldOS, please enable access. Then close and re-open the Photos app."
+        },
+        {
+          "type": "music",
+          "usageDescription": "To view, play, and experience your music in OldOS, please enable access to your music library."
+        },
+        {
+          "type": "location",
+          "usageDescription": "To enable maps to work properly, and see your current wifi network in Settings, please enable access to your location. Then close and re-open the Maps app."
+        },
+        {
+          "type": "microphone",
+          "usageDescription": "To record your audio while filming a video in OldOS, please in enable microphone access."
+        },
+        {
+          "type": "contacts",
+          "usageDescription": "To view and manage your contacts in OldOS, please enable access to your contacts list."
+        }
+      ],
+      "absoluteVersion": "1.0_18",
+      "versions": [
+        {
+          "version": "1.0",
+          "date": "2021-11-23T19:01:37Z",
+          "downloadURL": "https://github.com/zzanehip/The-OldOS-Project/releases/download/1.0_18/OldOS.ipa",
+          "localizedDescription": "# IPA V1.0 Build 18\n\n1.0 (18):\r\n- Mail is here! This is a full-blown email client, no ifs, ands, or buts\r\n- View mailboxes, read emails, move emails, manage inbox, and send emails\r\n- Fixes to YouTube backend\r\n- Other bug fixes",
+          "size": 88173533,
+          "absoluteVersion": "1.0_18"
+        }
+      ]
+    },
+    {
       "name": "Opaline",
       "bundleIdentifier": "com.verback.YTLite",
       "developerName": "verback2308",
@@ -4925,37 +5162,52 @@
     {
       "name": "Play!",
       "bundleIdentifier": "com.virtualapplications.play",
+      "appID": "com.virtualapplications.play",
       "developerName": "Jean-Philip Desjardins",
       "subtitle": "PlayStation 2 Games on iOS.",
+      "version": "0.58-8-g70a126e3",
+      "versionDate": "2023-01-10",
+      "versionDescription": "Update submodules. [70a126e3]",
+      "downloadURL": "https://s3.us-east-2.amazonaws.com/playbuilds/70a126e3/Play.ipa",
       "localizedDescription": "Play! is a portable PlayStation2 emulator. The focus of the project is on making PlayStation2 emulation easy and accessible. Just pop in your favorite game's disc and have fun!\n\n• No BIOS required. Play! is an high-level emulator.\n• Easy configuration. No custom settings to fix specific games.\n• Available on many platforms, making sure the experience is the same quality everywhere.",
       "iconURL": "https://i.imgur.com/NOi1cdl.png",
       "tintColor": "#5f5fff",
-      "screenshotURLs": [],
+      "size": 33200000,
+      "screenshotURLs": [
+        "https://user-images.githubusercontent.com/64176728/209461585-74b856e0-ae30-41be-91ce-d3eb262be260.png",
+        "https://user-images.githubusercontent.com/64176728/209461763-c122f9f6-5103-4c59-b730-0e5b34b5937b.png",
+        "https://user-images.githubusercontent.com/64176728/209461593-f771a49d-a44d-4d9c-8bb7-dfab48c5dd25.png"
+      ],
       "versions": [
         {
-          "version": "0.58",
-          "date": "2022-12-22",
-          "localizedDescription": "Bug fixes.",
-          "downloadURL": "https://purei.org/downloads/play/stable/0.58/Play.ipa",
-          "size": 13389347,
-          "sha256": "7ab7dc4cbc9202594188ef6d378753b9cc4ed4ecf595d7ed047d6f4419952597"
+          "version": "0.58-8-g70a126e3",
+          "date": "2023-01-10",
+          "downloadURL": "https://s3.us-east-2.amazonaws.com/playbuilds/70a126e3/Play.ipa",
+          "localizedDescription": "Update submodules. [70a126e3]",
+          "size": 33200000
         },
         {
-          "version": "0.56",
-          "date": "2022-09-13",
-          "localizedDescription": "Bug fixes.",
-          "downloadURL": "https://purei.org/downloads/play/stable/0.56/Play.ipa",
+          "version": "0.58-7-gdf46379d",
+          "date": "2023-01-03",
+          "downloadURL": "https://s3.us-east-2.amazonaws.com/playbuilds/df46379d/Play.ipa",
+          "localizedDescription": "Add copy Qt DLL phase. [df46379d]",
+          "size": 33200000
+        },
+        {
+          "version": "0.57-22-g1126c39c",
+          "date": "2022-10-17",
+          "downloadURL": "https://s3.us-east-2.amazonaws.com/playbuilds/1126c39c/Play.ipa",
+          "localizedDescription": "Bug fixes and improvements.",
           "size": 13371703
         },
         {
-          "version": "0.50",
+          "version": "0.5",
           "date": "2022-03-07",
-          "localizedDescription": "Bug fixes.",
           "downloadURL": "https://github.com/QuarkSources/quarksources.github.io/releases/download/v1.0/Play.ipa",
+          "localizedDescription": "Bug fixes.",
           "size": 12346902
         }
-      ],
-      "appID": "com.virtualapplications.play"
+      ]
     },
     {
       "name": "PojavLauncher iOS",
@@ -5504,6 +5756,212 @@
       ]
     },
     {
+      "name": "qBitConnect",
+      "bundleIdentifier": "com.bluematter.qbitconnect",
+      "developerName": "RajnishOne",
+      "subtitle": "Modern qBittorrent remote client.",
+      "localizedDescription": "qBitConnect is a modern, cross-platform remote client for managing your qBittorrent downloads on iOS devices.\n\nKey Features:\n\n• Add torrents via magnet links or files\n• Browse and manage torrent files\n• Real-time download progress monitoring\n• Control your torrents from anywhere\n• Multiple theme options (Light, Dark, OLED)\n• Advanced filtering and sorting\n• Batch operations for multiple torrents\n• Detailed statistics and graphs\n• Beautiful native iOS interface built with Flutter",
+      "iconURL": "https://raw.githubusercontent.com/RajnishOne/altstore-releases/main/icons/qBitConnect/AppIcon-40%403x.png",
+      "tintColor": "#2196F3",
+      "category": "utilities",
+      "screenshots": [
+        "https://raw.githubusercontent.com/RajnishOne/altstore-releases/main/screenshots/1.png",
+        "https://raw.githubusercontent.com/RajnishOne/altstore-releases/main/screenshots/2.png",
+        "https://raw.githubusercontent.com/RajnishOne/altstore-releases/main/screenshots/3.png",
+        "https://raw.githubusercontent.com/RajnishOne/altstore-releases/main/screenshots/4.png",
+        "https://raw.githubusercontent.com/RajnishOne/altstore-releases/main/screenshots/5.png",
+        "https://raw.githubusercontent.com/RajnishOne/altstore-releases/main/screenshots/6.png",
+        "https://raw.githubusercontent.com/RajnishOne/altstore-releases/main/screenshots/7.png",
+        "https://raw.githubusercontent.com/RajnishOne/altstore-releases/main/screenshots/8.png"
+      ],
+      "versions": [
+        {
+          "version": "1.6.9",
+          "date": "2025-12-04",
+          "buildVersion": "35",
+          "localizedDescription": "This release includes:\n\n• Bug fixes and improvements\n• Performance optimizations",
+          "downloadURL": "https://github.com/RajnishOne/altstore-releases/raw/main/ipas/1.6.9/qBitConnect.ipa",
+          "size": 27468967,
+          "minOSVersion": "15.0"
+        },
+        {
+          "version": "1.6.3",
+          "date": "2025-10-14",
+          "buildVersion": "25",
+          "localizedDescription": "This release includes:\n\n• Analytics screen updates\n• Torrent details page UI update\n• Peers for each torrent in torrent details page\n• App level language localization",
+          "downloadURL": "https://github.com/RajnishOne/qbitconnect/releases/download/v1.6.3/qBitConnect.ipa",
+          "size": 11429647,
+          "minOSVersion": "12.0"
+        },
+        {
+          "version": "1.5.1",
+          "date": "2025-10-13",
+          "buildVersion": "24",
+          "localizedDescription": "This release includes:\n\n• Minor Bug fixes and improvement\n• Set locaton for saving or updating torrents from recent locations",
+          "downloadURL": "https://github.com/RajnishOne/qbitconnect/releases/download/v1.5.1/qBitConnect.ipa",
+          "size": 11118283,
+          "minOSVersion": "12.0"
+        },
+        {
+          "version": "1.5.0",
+          "date": "2025-10-13",
+          "buildVersion": "23",
+          "localizedDescription": "This release includes:\n\n• Minor Bug fixes and improvement\n• Graphs and stats in torrent details page\n• Multiple server support",
+          "downloadURL": "https://github.com/RajnishOne/qbitconnect/releases/download/v1.5.0/qBitConnect.ipa",
+          "size": 11100906,
+          "minOSVersion": "12.0"
+        },
+        {
+          "version": "1.4.9",
+          "date": "2025-10-12",
+          "buildVersion": "22",
+          "localizedDescription": "This release includes:\n\n• Minor Bug fixes and improvement\n• Graphs and stats in torrent details page\n• Multiple server support",
+          "downloadURL": "https://github.com/RajnishOne/qbitconnect/releases/download/v1.4.9/qBitConnect.ipa",
+          "size": 11100579,
+          "minOSVersion": "12.0"
+        },
+        {
+          "version": "1.4.8",
+          "date": "2025-10-11",
+          "buildVersion": "21",
+          "localizedDescription": "Latest improvements:\n\n• Minor Bug fixes and improvement\n• Graphs and stats in torrent details page\n• Multiple server support",
+          "downloadURL": "https://github.com/RajnishOne/qbitconnect/releases/download/1.4.8/qBitConnect-1.4.8.ipa",
+          "size": 11099845,
+          "minOSVersion": "12.0"
+        },
+        {
+          "version": "1.4.7",
+          "date": "2025-10-11",
+          "buildVersion": "20",
+          "localizedDescription": "Latest improvements:\n\n• Minor Bug fixes and improvement\n• Graphs and stats in torrent details page",
+          "downloadURL": "https://github.com/RajnishOne/qbitconnect/releases/download/v1.4.7/qBitConnect.ipa",
+          "size": 11037327,
+          "minOSVersion": "12.0"
+        },
+        {
+          "version": "1.4.6",
+          "date": "2025-10-10",
+          "buildVersion": "19",
+          "localizedDescription": "Latest improvements:\n\n• Enhanced real-time monitoring and updates\n• Improved connection stability and error handling\n• Better performance and memory optimization\n• UI/UX refinements and bug fixes\n• Updated dependencies for better compatibility",
+          "downloadURL": "https://github.com/RajnishOne/qbitconnect/releases/download/v1.4.6/qBitConnect.ipa",
+          "size": 10923335,
+          "minOSVersion": "12.0"
+        }
+      ],
+      "appPermissions": {
+        "entitlements": [],
+        "privacy": [
+          {
+            "name": "LocalNetwork",
+            "usageDescription": "This app needs access to your local network to connect to qBittorrent servers on your network."
+          }
+        ]
+      }
+    },
+    {
+      "name": "qBitControl",
+      "bundleIdentifier": "MikeMichael225.qBitControl",
+      "developerName": "Michael-128",
+      "subtitle": "Remote client for qBittorrent.",
+      "localizedDescription": "qBitControl is the definitive remote client for managing your qBittorrent downloads on iOS devices. With qBitControl, you can effortlessly add torrents, browse files, monitor your download progress, and manage your torrents, all while enjoying real-time statistics and a native iOS user interface.",
+      "iconURL": "https://raw.githubusercontent.com/Michael-128/qBitControl/main/qBitControl/Assets.xcassets/AppIcon.appiconset/logo1.png",
+      "tintColor": "#449FFF",
+      "category": "utilities",
+      "screenshots": [
+        "https://raw.githubusercontent.com/Michael-128/qBitControl-releases/main/screenshots/1.4.1/sc1.png",
+        "https://raw.githubusercontent.com/Michael-128/qBitControl-releases/main/screenshots/1.4.1/sc2.png",
+        "https://raw.githubusercontent.com/Michael-128/qBitControl-releases/main/screenshots/1.4.1/sc3.png",
+        "https://raw.githubusercontent.com/Michael-128/qBitControl-releases/main/screenshots/1.4.1/sc4.png",
+        "https://raw.githubusercontent.com/Michael-128/qBitControl-releases/main/screenshots/1.4.1/sc5.png"
+      ],
+      "versions": [
+        {
+          "version": "1.4.2",
+          "date": "2026-08-23",
+          "buildVersion": "22",
+          "localizedDescription": "This release aims to fix major performance bugs for users with large torrent libraries.",
+          "downloadURL": "https://michael-128.github.io/qBitControl-releases/IPAS/1.4.2/qBitControl.ipa",
+          "size": 4792089,
+          "minOSVersion": "16.0"
+        },
+        {
+          "version": "1.4.1",
+          "date": "2026-07-23",
+          "buildVersion": "21",
+          "localizedDescription": "## Release Notes\n\n- Reduced Data Usage: Network traffic was reduced by 93% due to optimized data syncing.\n- Custom Headers: Added the ability to specify custom HTTP headers for your server connections - important for Zero-Trust services. \n- Limit Configuration: You can now configure precise speed/seeding/share limits for torrents. \n- Self-Signed Certificate Support: Added full support for untrusted and self-signed SSL certificates. \n- In-App Logs: Added a built-in log viewer to review and easily share system events. \n- And many more...\n\nCheck out the full changelog on Patreon!",
+          "downloadURL": "https://michael-128.github.io/qBitControl-releases/IPAS/1.4.1/qBitControl.ipa",
+          "size": 4777723,
+          "minOSVersion": "16.0"
+        },
+        {
+          "version": "1.3.5",
+          "date": "2026-06-25",
+          "buildVersion": "19",
+          "localizedDescription": "Features\n- Resume current tasks (by @kambala-decapitator)\n- Sanitize server URL for trailing slashes when adding a server (by @danpiths)\n\nBug Fixes\n- Resolve single task deletion from context menu and use standard alert (#92) (by @Michael-128)\n- Fix stats showing up as zeros on qBittorrent >5.2 (by @Michael-128)\n- Fix peers JSON decoding (by @kambala-decapitator)\n- Fix ServersHelper thread safety warning (by @Michael-128)\n\nCode Refactoring\n- Sanitize inputs before running validations (by @Michael-128)\n\nChores\n- localization: Update Polish & Japanese localizations\n- l10n: Add & complete Chinese (zh-Hans/Hant) translations (by @XaoflySho)\n- Automated build setup & pipeline fixes\n- Remove obsolete Xcode workspace (by @kambala-decapitator)\n- Bump version to 1.3.5 (build 19)",
+          "downloadURL": "https://michael-128.github.io/qBitControl-releases/IPAS/1.3.5/qBitControl.ipa",
+          "size": 4302381,
+          "minOSVersion": "16.0"
+        },
+        {
+          "version": "1.3.4",
+          "date": "2025-12-30",
+          "buildVersion": "18",
+          "localizedDescription": "New:\n• Add 'Advanced' page to 'Add Server' view & Add basic authentication\n• Add animation when selecting torrents\n\nFixes:\n• iOS 26 UI issues with select multiple\n\nImprovements\n• Add AltStore source badges in README (Mehdi Kharraz)\n• Alternative README badges (Mehdi Kharraz)\n• Add torrent list scroll down behavior for iOS 26\n• Improve tab view to meet standard of iOS 26",
+          "downloadURL": "https://michael-128.github.io/qBitControl-releases/IPAS/1.3.4/qBitControl.ipa",
+          "size": 3870732,
+          "minOSVersion": "16.0"
+        },
+        {
+          "version": "1.3.3",
+          "date": "2025-04-21",
+          "buildVersion": "17",
+          "localizedDescription": "New:\n• Add Search Functionality to RSS Tab\n\nImprovements:\n• Improve Charts in Stats Tab\n\nFixes:\n• Fix Translation Related Bugs\n• Update Translation\n• Add a Missing Uncategorized Option in Category Selection View",
+          "downloadURL": "https://michael-128.github.io/qBitControl-releases/IPAS/1.3.3/qBitControl.ipa",
+          "size": 4321496,
+          "minOSVersion": "16.0"
+        },
+        {
+          "version": "1.3.2",
+          "date": "2025-02-13",
+          "buildVersion": "14",
+          "localizedDescription": "New:\n• Added New Category & Tag Selection System\n• Added RSS Feed & Folder Renaming & Deleting\n• Updated Translations\n\nImprovements:\n• Enhance Tips when Adding Server (by: @MrNocole in #62)\n• Improve Naming to Match qBitttorrent\n\nFixes:\n• Fixed Pause Option for qBittorrent 5.0.X in 'Torrent Add Sheet'",
+          "downloadURL": "https://michael-128.github.io/qBitControl-releases/IPAS/1.3.2/qBitControl.ipa",
+          "size": 4222623,
+          "minOSVersion": "16.0"
+        },
+        {
+          "version": "1.3.1",
+          "date": "2025-01-09",
+          "buildVersion": "10",
+          "localizedDescription": "New:\n- Added RSS Support\n- Added 'Add Tracker' Option\n- Added Option to Download First & Last Pieces First\n- Added Force Start Option\n- Added 'Help with Translation' Button in About Section\n- Added Chinese Simplified Localization (by @peaynan)\n\nImprovements:\n- Rearranged Torrent Details & Added ETA\n- Updated Localizations\n\nFixes:\n- Fixed Compatibility with qBittorrent 5.0.0 API",
+          "downloadURL": "https://michael-128.github.io/qBitControl-releases/IPAS/1.3.1/qBitControl.ipa",
+          "size": 4178946,
+          "minOSVersion": "16.0"
+        },
+        {
+          "version": "1.2.2",
+          "date": "2024-10-01",
+          "buildVersion": "8",
+          "localizedDescription": "New:\n- Added Server Editing\n\nFixed:\n- Disabled Category Path Auto-Fill if Automatic Torrent Management is Enabled\n- Fixed Compatibility for Older qBittorrent Clients",
+          "downloadURL": "https://michael-128.github.io/qBitControl-releases/IPAS/1.2.2/qBitControl.ipa",
+          "size": 2141712,
+          "minOSVersion": "16.0"
+        }
+      ],
+      "appPermissions": {
+        "entitlements": [],
+        "privacy": [
+          {
+            "name": "LocalNetwork",
+            "usageDescription": "qBitControl uses the local network to communicate with qBittorrent's API."
+          }
+        ]
+      },
+      "patreon": {
+        "pledge": 2
+      }
+    },
+    {
       "name": "RamBench",
       "bundleIdentifier": "com.Autumn.RamBench",
       "developerName": "Propenchiefer",
@@ -5896,9 +6354,14 @@
       "bundleIdentifier": "com.libretro.RetroArchiOS11",
       "developerName": "libretro",
       "subtitle": "Cross-platform, sophisticated frontend for emulation.",
+      "version": "1.12.0",
+      "versionDate": "2022-10-17",
+      "versionDescription": "Many bug fixes and quality of life improvements. See full changelog for details: https://github.com/libretro/RetroArch/blob/master/CHANGES.md",
+      "downloadURL": "https://buildbot.libretro.com/stable/1.12.0/apple/ios-arm64/RetroArch.ipa",
       "localizedDescription": "RetroArch is a frontend for a plethora of emulators. Almost every Retro console can be run using one of RetroArch's downloadable cores.\n\nThere are several ways to customize your experience by installing different themes, rearranging your touchscreen controls, and downloading game box art.\nRetroArch enables you to run classic games on a wide range of computers and consoles through its slick graphical interface. Settings are also unified so configuration is done once and for all.\n\nIn addition to this, you will soon be able to run original game discs (CDs) from RetroArch.\n\nRetroArch has advanced features like shaders, netplay, rewinding, next-frame response times, runahead, machine translation, blind accessibility features, and more!\n\nCheck out all of RetroArch's awesome features at our website: https://www.retroarch.com/",
       "iconURL": "https://i.imgur.com/pqgVB0v.png",
       "tintColor": "#000000",
+      "size": 435770036,
       "screenshotURLs": [
         "https://i.imgur.com/uv1x1c4.png",
         "https://i.imgur.com/qJdyNl2.png",
@@ -5909,17 +6372,16 @@
       "versions": [
         {
           "version": "1.12.0",
-          "date": "2022-10-17",
-          "localizedDescription": "Many bug fixes and quality of life improvements. See full changelog for details: https://github.com/libretro/RetroArch/blob/master/CHANGES.md",
+          "date": "2022-10-18",
           "downloadURL": "https://buildbot.libretro.com/stable/1.12.0/apple/ios-arm64/RetroArch.ipa",
-          "size": 435770036,
-          "sha256": "d790ce8ef9c2b8f9cd2c974f4e70690aa24c0a99cdb8c65ed235b790c1f0c47e"
+          "localizedDescription": "Many bug fixes and quality of life improvements. See full changelog for details: https://github.com/libretro/RetroArch/blob/master/CHANGES.md",
+          "size": 255389680
         },
         {
           "version": "1.9.0",
           "date": "2020-08-07",
-          "localizedDescription": "Many bug fixes and quality of life improvements. See full changelog for details: https://github.com/libretro/RetroArch/blob/master/CHANGES.md",
           "downloadURL": "https://github.com/QuarkSources/quarksources.github.io/releases/download/v1.0/RetroArch.ipa",
+          "localizedDescription": "Many bug fixes and quality of life improvements. See full changelog for details: https://github.com/libretro/RetroArch/blob/master/CHANGES.md",
           "size": 255389680
         }
       ],
@@ -6389,6 +6851,124 @@
         }
       ],
       "appID": "org.scummvm.scummvm"
+    },
+    {
+      "name": "SideStore",
+      "bundleIdentifier": "com.SideStore.SideStore",
+      "developerName": "SideStore Team",
+      "version": "0.6.2",
+      "versionDate": "2025-07-01T01:20:17Z",
+      "versionDescription": "Hey there side commmunity. This is a patch to improve stability of sidestore. more specifically for sources.",
+      "beta": true,
+      "size": 28873303,
+      "localizedDescription": "SideStore is an alternative app store for non-jailbroken devices. \n\nSideStore allows you to sideload other .ipa files and apps from the Files app or via the SideStore Library",
+      "iconURL": "https://apps.sidestore.io/apps/sidestore/v0.1.1/icon.png",
+      "tintColor": "A405FA",
+      "downloadURL": "https://github.com/SideStore/SideStore/releases/download/0.6.2/SideStore.ipa",
+      "screenshotURLs": [
+        "https://apps.sidestore.io/apps/sidestore/v0.1.1/browse-dark.png",
+        "https://apps.sidestore.io/apps/sidestore/v0.1.1/apps-dark.png",
+        "https://apps.sidestore.io/apps/sidestore/v0.1.1/news-dark.png",
+        "https://apps.sidestore.io/apps/sidestore/v0.1.1/browse-light.png",
+        "https://apps.sidestore.io/apps/sidestore/v0.1.1/apps-light.png",
+        "https://apps.sidestore.io/apps/sidestore/v0.1.1/news-light.png"
+      ],
+      "versions": [
+        {
+          "version": "0.6.2",
+          "date": "2025-07-01T01:20:17Z",
+          "localizedDescription": "## Build Info\nBuilt at (UTC): `Tue Jul  1 01:20:17 2025`\nBuilt at (UTC date): `2025-07-01`\nCommit SHA: `685d9567752c6b7396304f8b64f0f713f52cf936`\nVersion: `0.6.2`\n\n## What's Changed\n* Rebase 2.0 wip by @nythepegasus in https://github.com/SideStore/SideStore/pull/794\n* [Refresh]: Remove install stuffs from refresh since in refresh should only renew provisioning profiles by @mahee96 in https://github.com/SideStore/SideStore/pull/846\n* [Settings]: Fix: DisableAppLimit switch reverting back to off state even if on iOS where sparseRestore is not patched yet by @mahee96 in https://github.com/SideStore/SideStore/pull/850\n* Update trustedapps.json by @neoarz in https://github.com/SideStore/SideStore/pull/853\n* [Backup]: Fix: update logic during install missed since override keyword was missing by @mahee96 in https://github.com/SideStore/SideStore/pull/857\n* Fix Repository App Previews by @neoarz in https://github.com/SideStore/SideStore/pull/871\n* Feature: Bulk sources-add in sources screen with capability to stage them before persisting into database by @mahee96 in https://github.com/SideStore/SideStore/pull/888\n* Version 0.6.0: CoreData Migrations fix including xcdatamodels and xcmappingmodels by @mahee96 in https://github.com/SideStore/SideStore/pull/894\n* Feature: Render in-app update description as (full) markdown by @mahee96 in https://github.com/SideStore/SideStore/pull/897\n* fix: typo in hasUpdate comparison by @l2dy in https://github.com/SideStore/SideStore/pull/900\n* Update SettingsViewController.swift by @neoarz in https://github.com/SideStore/SideStore/pull/915\n* WIP: Fixes for migration issues when migrating from 0.5.9 to 0.6.0  by @mahee96 in https://github.com/SideStore/SideStore/pull/920\n* Fix typo \"levaraging\" -> \"leveraging\" by @lafrenierejm in https://github.com/SideStore/SideStore/pull/926\n* Added StosVPN to the EM Proxy part. by @Br0des in https://github.com/SideStore/SideStore/pull/940\n* StosVPN-integration: Removed em_proxy and EmotionalDamage module in favour of stosVPN by @mahee96 in https://github.com/SideStore/SideStore/pull/945\n* Disable minimuxer ready check which shows NO WIFI/VPN error since stosVPN can work on cellular too by @mahee96 in https://github.com/SideStore/SideStore/pull/935\n* Add iOS 17.4+ JIT and mounting by @jkcoxson in https://github.com/SideStore/SideStore/pull/953\n* Add export certificate feature by @hugeBlack in https://github.com/SideStore/SideStore/pull/959\n* Feat: Add Pairing File Export URL callback and replace Wireguard with StosVPN by @stossy11 in https://github.com/SideStore/SideStore/pull/962\n* Change front-facing references to AltStore by @owoellen in https://github.com/SideStore/SideStore/pull/987\n* Update OperationError.swift for idevice_pair by @CelloSerenity in https://github.com/SideStore/SideStore/pull/995\n* Add import/export certificate feature by @hugeBlack in https://github.com/SideStore/SideStore/pull/1008\n* Fix pairing file doc link by @CelloSerenity in https://github.com/SideStore/SideStore/pull/1011\n* Add option for using main bundle's profile for app extensions, update AltSign & libmd by @hugeBlack in https://github.com/SideStore/SideStore/pull/1012\n* Use main profile when refreshing by @hugeBlack in https://github.com/SideStore/SideStore/pull/1013\n\n## New Contributors\n* @l2dy made their first contribution in https://github.com/SideStore/SideStore/pull/900\n* @lafrenierejm made their first contribution in https://github.com/SideStore/SideStore/pull/926\n* @Br0des made their first contribution in https://github.com/SideStore/SideStore/pull/940\n* @hugeBlack made their first contribution in https://github.com/SideStore/SideStore/pull/959\n* @owoellen made their first contribution in https://github.com/SideStore/SideStore/pull/987\n* @CelloSerenity made their first contribution in https://github.com/SideStore/SideStore/pull/995\n\n**Full Changelog**: https://github.com/SideStore/SideStore/compare/0.5.9...0.6.2\n",
+          "downloadURL": "https://github.com/SideStore/SideStore/releases/download/0.6.2/SideStore.ipa",
+          "size": 28873303
+        },
+        {
+          "version": "0.5.10",
+          "date": "2024-12-27T01:01:50Z",
+          "localizedDescription": "Hey there side commmunity. This is a patch to improve stability of sidestore. more specifically for sources.",
+          "downloadURL": "https://github.com/SideStore/SideStore/releases/download/0.5.10/SideStore.ipa",
+          "size": 9300000
+        },
+        {
+          "version": "0.5.9",
+          "date": "2024-12-24T14:01:50Z",
+          "localizedDescription": "We got another update, just in time for Christmas! (depending on where you live)\n\nBefore we bring in 0.6.0 with AltStore 2.0 fully merged, consider this as a point update for all the fun things we made before it!\n\n## What's Changed\n* feat: show custom anisette server list if set by @moonsn in https://github.com/SideStore/SideStore/pull/717\n* Fix for Refresh Operation causing renewal/install of provisioning profiles for removed app extensions by @mahee96 in https://github.com/SideStore/SideStore/pull/727\n* Fix-regression: restored update-check logic(2a392dd) in InstalledApp.swift which was dropped in (1713fcc) by @mahee96 in https://github.com/SideStore/SideStore/pull/728\n* xcode: Debug dylib support is still broken in iOS 18 causing No Entry Point Found. checked(null) by @mahee96 in https://github.com/SideStore/SideStore/pull/729\n* refresh-app: enhanced error logging when app extension validation check fails by @mahee96 in https://github.com/SideStore/SideStore/pull/730\n* diagnostics: improved error logging for OperationError.invalidParameters by @mahee96 in https://github.com/SideStore/SideStore/pull/736\n* -[cleanup]: restore changes dropped from altstore-1.6.3 merge by 1713fcc by @mahee96 in https://github.com/SideStore/SideStore/pull/738\n* Add missing = sign by @TheMasterOfMike in https://github.com/SideStore/SideStore/pull/739\n* minor fixes for Remove Refreshed.ipa removal and posting from background thread by @mahee96 in https://github.com/SideStore/SideStore/pull/740\n* Diagnostics & cleanup: Added diagnostics for RefreshAppOperation failure and removed stale entries in pbxproj by @mahee96 in https://github.com/SideStore/SideStore/pull/741\n* Partial-Fix for #723: Error on refresh operation must be set on self.context instead of group.context by @mahee96 in https://github.com/SideStore/SideStore/pull/742\n* Background and shortcut refresh fix - remove only excess extensions from new package during install by @mahee96 in https://github.com/SideStore/SideStore/pull/743\n* Widgets-Fix: Ported Widget compatibility for ios 18+ from altstore  by @mahee96 in https://github.com/SideStore/SideStore/pull/746\n* Update message about Disable Idle Timeout setting by @kaoneko in https://github.com/SideStore/SideStore/pull/747\n* Change gitignore, add package.resolve by @JoeMatt in https://github.com/SideStore/SideStore/pull/748\n* Twitter Updates & Email Support by @0-Blu in https://github.com/SideStore/SideStore/pull/762\n* -[xcode]: revert enabling debug dylib support for widgets by @mahee96 in https://github.com/SideStore/SideStore/pull/769\n* Fix: update sign-in screen toast text color to be primary color by @mahee96 in https://github.com/SideStore/SideStore/pull/770\n* - Fix: DatabaseManager.migrateDatabaseToAppGroupIfNeeded() src and dest for replaceItemAt() cannot be same by @mahee96 in https://github.com/SideStore/SideStore/pull/772\n* -[Feature]: client-side: Anisette server fallback impl when current server is unreachable by @mahee96 in https://github.com/SideStore/SideStore/pull/773\n* - Fix: Anisette-server-fallback: Try currently selected server first by @mahee96 in https://github.com/SideStore/SideStore/pull/775\n* - Fix: refresh(): app was being accessed after de-alloc causing EXC_BREAKPOINT by @mahee96 in https://github.com/SideStore/SideStore/pull/776\n* - Fix: AnisetteServers: refresh server request shouldn't use local cache to get proper updates by @mahee96 in https://github.com/SideStore/SideStore/pull/777\n* - [Partial-fix]: Show Toast regarding server switch due to fallback if UI context is available by @mahee96 in https://github.com/SideStore/SideStore/pull/779\n* Added launch arguments for coredata debugging and updated Scheme from AltStore to SideStore by @mahee96 in https://github.com/SideStore/SideStore/pull/785\n* Renamed libem_proxy.a to libem_proxy-ios.a for iOS builds and added echo to print the lib path being used in the run script by @mahee96 in https://github.com/SideStore/SideStore/pull/786\n* Updated LIB_FILE_NAME used in minimuxer shell script to link the binary by @mahee96 in https://github.com/SideStore/SideStore/pull/787\n* updated fetch-prebuilt.sh to reflect libem_proxy-ios.a renaming by @mahee96 in https://github.com/SideStore/SideStore/pull/788\n* [fetch-prebuilt.sh] - retain checked-in files from minimuxer repo by @mahee96 in https://github.com/SideStore/SideStore/pull/789\n* [fetch-prebuilt.sh]: force download when libs are missing locally and skip file is absent by @mahee96 in https://github.com/SideStore/SideStore/pull/796\n* [settings]: Fix: siri shortcut missing from settings by @mahee96 in https://github.com/SideStore/SideStore/pull/797\n* [dependencies]: updated Package.resolved to use latest commit for altsign package by @mahee96 in https://github.com/SideStore/SideStore/pull/798\n* added fix for downloadURL error + todo by @wynwxst in https://github.com/SideStore/SideStore/pull/807\n* Add entitlements by @junepark678 in https://github.com/SideStore/SideStore/pull/809\n* Update README.md by @neoarz in https://github.com/SideStore/SideStore/pull/803\n\n## New Contributors\n* @moonsn made their first contribution in https://github.com/SideStore/SideStore/pull/717\n* @TheMasterOfMike made their first contribution in https://github.com/SideStore/SideStore/pull/739\n* @kaoneko made their first contribution in https://github.com/SideStore/SideStore/pull/747\n* @wynwxst made their first contribution in https://github.com/SideStore/SideStore/pull/807\n* @neoarz made their first contribution in https://github.com/SideStore/SideStore/pull/803\n\n**Full Changelog**: https://github.com/SideStore/SideStore/compare/0.5.8...0.5.9\n",
+          "downloadURL": "https://github.com/SideStore/SideStore/releases/download/0.5.9/SideStore.ipa",
+          "size": 9300000
+        },
+        {
+          "version": "0.5.8",
+          "date": "2024-9-07T18:30:00Z",
+          "localizedDescription": "Ah, September! You are a doorway to the season that awakens another sidestore update! We have been very busy with doing quality of life changes and fixing bugs everyone’s been having. \n\n\n What's Changed: \n\n - UI Improvements for the Anisette Servers View. by @0-Blu in #672 \n\n - Added more feedback options. by @0-Blu in #673 \n\n - Fix SideJITServer Support for iOS 17+ by @stossy11 in #674 \n\n - Makes revoking optional by @junepark678 in #675 \n\n -  Better pairing file info by @bogotesr in #676  \n\n -  Selective app extension removal by @junepark678 in #677 \n\n -  legal: developer's certificate of origin 1.1 by @polymo1 in #686 \n\n Thanks to all of the community’s support to keep this project alive and motivated. We have more planned ahead and are doing our best to keep up with updates to make it a seamless/stress free experience. Stay tuned to our progress on future endeavors for SideStore on our discord! \n\n Discord: https://discord.gg/sidestore-949183273383395328",
+          "downloadURL": "https://github.com/SideStore/SideStore/releases/download/0.5.8/SideStore.ipa",
+          "size": 9300000
+        },
+        {
+          "version": "0.5.7",
+          "date": "2024-8-05T18:30:00Z",
+          "localizedDescription": "Happy August! We have been very busy with doing quality of life changes and fixing bugs everyone’s been having. \n\n\n What's Changed: \n\n - Added Stossy11 Anisette Server by stossy11 \n\n - Added SideJITServer Support for Enabling JIT on iOS 17+ by @stossy11 \n\n - Change AltStore Expiring Soon to SideStore Expiring Soon by therealFoxster \n\n - Add Dynamic anisette intervention \n\n -  Update to altstore 1.6.3 by @junepark678  \n\n -  Include Enable JIT errors in Error Log \n\n -  Fix minimuxer status checking \n\n -  Update no wifi message to include VPN \n\n -  Opens Error Log when tapping ToastView \n\n -  Fixes Error Log context menu covering cell content \n\n -  Fixes Error Log context menu appearing while scrolling \n\n -  Fixes incorrect Search FAQ URL \n\n -  Fix Error Log showing UIAlertController on iOS 14 + \n\n -  Fix Error Log not showing UIAlertController on iOS <=13 \n\n -  Fix wrong color in AuthenticationViewController \n\n Thanks to all of the community’s support to keep this project alive and motivated. We have more planned ahead and are doing our best to keep up with updates to make it a seamless/stress free experience. Stay tuned to our progress on future endeavors for SideStore on our discord! \n\n Discord: https://discord.gg/sidestore-949183273383395328",
+          "downloadURL": "https://github.com/SideStore/SideStore/releases/download/0.5.7/SideStore.ipa",
+          "size": 9300000
+        },
+        {
+          "version": "0.5.6",
+          "date": "2024-4-22T13:30:00Z",
+          "localizedDescription": "Happy April! This update we have some stability fixes and some improvement with sources page text. /n/n/n What has been changed: /n/n - Add description on what disable idle timeout toggle + change add to Siri text for accuracy by @Spidy123222 in #550 /n/n - Remove patreon exclusivity message for sources by @Spidy123222 in #594 /n/n Add ani.wesbryie.com to Anisette list by @WesleyBryie in #604 /n/n - Attempt to (hackily) fix embedded pairing file issues @nythepegasus",
+          "downloadURL": "https://github.com/SideStore/SideStore/releases/download/0.5.6/SideStore.ipa",
+          "size": 9195339
+        },
+        {
+          "version": "0.5.4",
+          "date": "2023-11-27T13:30:00Z",
+          "localizedDescription": "Happy November! Since we had to do a quick fix this update. We have been very busy with doing quality of life changes and fixing bugs everyone’s been having. \n\n\n What's Changed: \n\n - Clear cache button to help with the large size issues. \n\n - Fix: Fix AppID Crash \n\n - Version in settings showing as develop \n\n - Added Timeout Feature so when you install an app. Your device will not time out and mess up the install. \n\n - Remove the heavy reliance on Info.plist for UDID. \n\n - Better formatted dates so for example instead of it being 0 days it'll say 19 hours/30 minutes. \n\n - fix: fix AltWidget AppGroup Issue. \n\n - fix: Use forked libplist",
+          "downloadURL": "https://github.com/SideStore/SideStore/releases/download/0.5.4/SideStore.ipa",
+          "size": 9195339
+        },
+        {
+          "version": "0.5.2",
+          "date": "2023-10-20T22:30:00Z",
+          "localizedDescription": "Having a spooky October? We have too while working on stability improvements and better error logging for SideStore!\n\n# Changelog\n* Remove the buggy retry code finally (@nythepegasus)\n* Recompile and update AltBackup to make it function again (@nythepegasus)\n* Update submodule dependencies (@naturecodevoid and @nythepegasus)\n* Remove emuthreeds from trusted sources (down too frequently) (@Spidy123222)\n* Use provisioning profile details instead of guessing active app limit by @bogsen in https://github.com/SideStore/SideStore/pull/508\n**Full Changelog**: https://github.com/SideStore/SideStore/compare/0.5.1...0.5.2",
+          "downloadURL": "https://github.com/SideStore/SideStore/releases/download/0.5.2/SideStore.ipa",
+          "size": 9195339
+        },
+        {
+          "version": "0.5.1",
+          "date": "2023-09-17T18:50:00Z",
+          "localizedDescription": "Having a good September? We have been hard at work on stability improvements and better error logging for SideStore!\n\n# Changes \n\n * The Unable to install app (aka staging error) error message has been split into explicit error messages. This should allow people who get the error to troubleshoot more easily. (Dadoum for initial implementation, naturecodevoid for fixes)\n* AltSign and all other dependencies were updated. This should help fix some issues. (spidy123222 and Joelle Lonkell for AltSign, naturecodevoided for everything else)\n* The notification and alert explaining SideStore needing to be in the background to refresh was shortened and made clearer. (spidy123322)\nFull Changelog: https://github.com/SideStore/SideStore/compare/0.5.0..0.5.1",
+          "downloadURL": "https://github.com/SideStore/SideStore/releases/download/0.5.1/SideStore.ipa",
+          "size": 9157428
+        },
+        {
+          "version": "0.5.0",
+          "date": "2023-07-27T06:00:00-5:00",
+          "localizedDescription": "Happy July! We have been hard at work on stability improvements for SideStore!\n\n# Changes \n\n * [bugfix] Widget now functions properly from Github Actions builds\n* [bugfix] Installing and refreshing apps should be much more stable\n* [bugfix] Reintroduce notification when refreshing SideStore\n* [feature] Add retries to enabling JIT to make it a little more stable\n* [feature] Change the default anisette server to be https://ani.sidestore.io/ instead of the 6969 port (which no longer exists)\n* [UI] Change the Patreon screen to display our different social media accounts\n* [upstream] Fix many deprecation warnings\n* [upstream] Fix \"Open in..\" file dialog not working for SideStore\n* [upstream] Fix various UI elements to be more performant/less buggy\nFull Changelog: https://github.com/SideStore/SideStore/compare/0.4.0..0.5.0",
+          "downloadURL": "https://github.com/SideStore/SideStore/releases/download/0.5.0/SideStore.ipa",
+          "size": 9157428
+        },
+        {
+          "version": "0.4.0",
+          "date": "2023-05-29T19:00:00-05:00",
+          "localizedDescription": "Happy May! We have been very busy with doing quality of life changes and fixing bugs everyone’s been having. WE RECOMMEND FRESH INSTALL ON THIS UPDATE. it took this long as there was some problems that were hard and some things needed fixed before releasing and testing, but this should make sidestore much better to use. If you ever want to test sidestore versions use nightly version of sidestore. If you’re into even more experimental join our discord and try our ipas we ask for testing. \n\n For people that want to use MDC no3applimit (MacDirtyCow). It’s currently not ready as it includes the patch not needing any external apps. So for any brave people that really want it you will have to look at this pull request and use the ipa downloads from GitHub actions  https://github.com/SideStore/SideStore/pull/259 or get it from our site as a ipa labeled MDC.\n\n What's Changed: \n\n - Fix: Fix expire early issue (it will open safari to finish refreshing sidestore now.) \n\n - Updated to Anisette V3, this is much better than version 1 as it prevents locking and other anisette issues. \n\n - Fix: no provisioning profile with the requested identifier. \n\n - Remove jkcoxson anisette server from preferred servers. \n\n - Update store check to check for AltServer or SideServer installation \n\n - refactor minimuxer to use swift-bridge (#321) \n\n - Change the default anisette server \n\n - fix: hopefully reduce ApplicationVerificationFailed errors by removing _CodeSignature folders since those may cause a problems. \n\n - Fix: 'The name for this app is invalid' error(#361). \n\n - Remove app groups that contain AltStore \n\n - Change SideStore Anisette server url to use https. Full Commit Changelog: https://github.com/SideStore/SideStore/compare/0.3.1...0.4.0",
+          "downloadURL": "https://github.com/SideStore/SideStore/releases/download/0.4.0/SideStore.ipa",
+          "size": 5465976
+        },
+        {
+          "version": "0.3.1",
+          "downloadURL": "https://github.com/SideStore/SideStore/releases/download/0.3.1/SideStore.ipa",
+          "date": "2023-03-01T14:00:00-05:00",
+          "localizedDescription": "Happy March! We have been busy with doing quality of life changes and getting stuff up and running like deactivating and getting bugs fixed that you guys found in nightly. We don’t currently have a fix for expiring early issue but is in the works like anisette issues. This should allow basic support for all functions.\n\n For people that want to use MDC no3applimit (MacDirtyCow). It’s currently not ready as it includes the patch not needing any external apps. So for any brave people that really want it you will have to look at this pull request and use the ipa downloads from GitHub actions  https://github.com/SideStore/SideStore/pull/259 . We don’t recommend relying on pull requests as because a commit could break the app so be warned, this is the same for nightly but with nightly has latest develop branch changes.\n\n What's Changed: \n\n - Fix beta apps not refreshing \n\n - Fix beta apps on the my apps view \n\n - Fix deactivating/activating apps \n\n - Merge all of Riley's new error handling stuff \n\n - add easy anisette server selector iOS Settings app \n\n - added toggle for custom anisette server \n\n - Change the default anisette server \n\n - Add a bit more logging throughout the signing process to help us pin down issues \n\n - Allow for .mobiledevicepairing and .plist files to be selected, try and pin down why users can't select either \n\n - Hopefully fix AltWidget issues \n\n - Add analytics to help developers understand current demographic of users (and hopefully pin down version specific bugs) \n\n - Icon change (thanks LittRitt!) \n\n - Sidestore directory accessible in files \n\n - Reset pairing file button \n\n - Advanced settings button \n\n - Browse icon change \n\n - Credit adjustment \n\n - Background color fixes \n\n - Added more permission types for sources \n\n - Join Patreon button crash fix \n\n - Turned off background notification refreshes \n\n - Sidestore Logger \n\n - Minimuxer logger \n\n - Additional logging for minimuxer for sidestore for troubleshooting \n\n - Replace Placeholder video for pairing instructions. \n\n - Fix BundleId issues on parts of sidestore \n\n - Fix trusted sources if one app has problems that it shouldn’t take down the full list. \n\n \n\n Full Commit Changelog: https://github.com/SideStore/SideStore/compare/0.1.1...0.3.1",
+          "size": 5465976
+        }
+      ],
+      "permissions": [
+        {
+          "type": "background-fetch",
+          "usageDescription": "SideStore periodically refreshes apps in the background to prevent them from expiring."
+        },
+        {
+          "type": "background-audio",
+          "usageDescription": "Allows SideStore to run longer than 30 seconds when refreshing apps in background."
+        }
+      ]
     },
     {
       "name": "Sileo Demo",
@@ -8162,6 +8742,48 @@
           "downloadURL": "https://github.com/StikDebug/StikDebug/releases/download/3.1.13/StikDebug-3.1.13.ipa",
           "size": 13544310,
           "minOSVersion": "17.4"
+        }
+      ]
+    },
+    {
+      "name": "StikNES",
+      "bundleIdentifier": "com.stik.StikNES",
+      "developerName": "StikNES Team",
+      "version": "5.2",
+      "versionDate": "2025-02-22T21:37:29-05:00",
+      "versionDescription": "StikNES Comes to Sidestore!",
+      "downloadURL": "https://github.com/StikEMU/StikNES-2.0/releases/download/v2.0.2/StikNES.ipa",
+      "localizedDescription": "StikNES is a SwiftUI-based NES emulator designed for iOS devices. It leverages the power of SwiftUI to deliver a clean, modern interface while emulating the classic NES gaming experience using the nes-rust library.",
+      "iconURL": "https://github.com/StikEMU/StikNES-Site/blob/main/Website/logo.png?raw=true",
+      "tintColor": "293B45",
+      "size": 490000,
+      "screenshotURLs": [
+        "https://github.com/StikEMU/StikNES-Site/blob/main/Website/screenshot1.png?raw=true",
+        "https://github.com/StikEMU/StikNES-Site/blob/main/Website/screenshot2.png?raw=true",
+        "https://github.com/StikEMU/StikNES-Site/blob/main/Website/screenshot3.png?raw=true"
+      ],
+      "appPermissions": {
+        "entitlements": [
+          "com.apple.developer.sustained-execution",
+          "com.apple.developer.kernel.extended-virtual-addressing",
+          "com.apple.developer.kernel.increased-memory-limit"
+        ],
+        "privacy": {
+          "NSPhotoLibraryAddUsageDescription": "The guest app is requesting for this permission.",
+          "NSPhotoLibraryUsageDescription": "The guest app is requesting for this permission."
+        }
+      },
+      "subtitle": "SwiftUI NES Emulator for iOS",
+      "absoluteVersion": "5.2",
+      "appID": "com.stik.StikNES",
+      "versions": [
+        {
+          "version": "5.2",
+          "date": "2025-02-22T21:37:29-05:00",
+          "downloadURL": "https://github.com/StikEMU/StikNES-2.0/releases/download/v2.0.2/StikNES.ipa",
+          "localizedDescription": "StikNES Comes to Sidestore!",
+          "size": 490000,
+          "absoluteVersion": "5.2"
         }
       ]
     },
@@ -11019,6 +11641,7 @@
       "altgallery",
       "apollo-reddit",
       "armsx2",
+      "artemis",
       "baretsky-tweaked",
       "burrito-source",
       "cercube",
@@ -11047,6 +11670,8 @@
       "partyknights",
       "pokemmo",
       "provenance",
+      "qbitconnect",
+      "qbitcontrol",
       "quantum-plus",
       "quantum-source",
       "retrosekai",
@@ -11055,6 +11680,8 @@
       "rocket",
       "salupov-altrepo",
       "sideloadlabs",
+      "sidestore-community",
+      "sidestore-official",
       "spotc",
       "stikdebug",
       "stremio-ios",
@@ -11075,6 +11702,7 @@
       "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/all-apps.json",
       "https://raw.githubusercontent.com/Balackburn/Apollo/main/apps.json",
       "https://raw.githubusercontent.com/ARMSX2/Armsx2-Repo/main/apps.json",
+      "https://raw.githubusercontent.com/auties00/artemis/refs/heads/main/source.json",
       "https://raw.githubusercontent.com/baretsky/baretsky-tweaked-ipas-library/main/apps.json",
       "https://burritosoftware.github.io/altstore/channels/burritosource.json",
       "https://altstore.cercube.com",
@@ -11103,6 +11731,8 @@
       "https://partyknights.app/source",
       "https://pokemmo.eu/altstore/",
       "https://provenance-emu.com/apps.json",
+      "https://raw.githubusercontent.com/RajnishOne/altstore-releases/main/altstore.json",
+      "https://raw.githubusercontent.com/Michael-128/qBitControl-releases/main/source-classic.json",
       "https://quarksources.github.io/quantumsource++.json",
       "https://quarksources.github.io/quantumsource.json",
       "https://repo.untitledcharts.com",
@@ -11111,6 +11741,8 @@
       "https://altstore.getrocketapp.io",
       "https://adp.salupovteam.com/altrepo.json",
       "https://raw.githubusercontent.com/SideloadLabs/SideloasLabs-AltSource/main/apps.json",
+      "https://community-apps.sidestore.io/sidecommunity.json",
+      "https://apps.sidestore.io/",
       "https://raw.githubusercontent.com/SpotCompiled/SpotC-AltStore-Repo/main/AltStore%20Repo.json",
       "https://stikdebug.xyz/index.json",
       "https://gorlev.github.io/stremio-altstore/stremio-ios.json",

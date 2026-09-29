@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-29T12:56:21Z",
+  "generatedAt": "2026-09-29T16:24:14Z",
   "mixes": {
     "dvntm0-workshop--wuxu-library-plus": [
       {
@@ -4619,6 +4619,114 @@
         "keptVersion": "9.1.86"
       },
       {
+        "bundleIdentifier": "org.ppsspp.ppsspp",
+        "keptSource": "quantum-source",
+        "otherSource": "sidestore-community",
+        "keptVersion": "1.13.2"
+      },
+      {
+        "bundleIdentifier": "com.libretro.RetroArchiOS11",
+        "keptSource": "sidestore-community",
+        "otherSource": "quantum-source",
+        "keptVersion": "1.12.0"
+      },
+      {
+        "bundleIdentifier": "org.brandonplank.flappybird",
+        "keptSource": "sidestore-community",
+        "otherSource": "ripestore",
+        "keptVersion": "4.3"
+      },
+      {
+        "bundleIdentifier": "app.ish.iSH",
+        "keptSource": "ish",
+        "otherSource": "sidestore-community",
+        "keptVersion": "Build 813"
+      },
+      {
+        "bundleIdentifier": "net.nerd.iNDS",
+        "keptSource": "quantum-source",
+        "otherSource": "sidestore-community",
+        "keptVersion": "1.10.8"
+      },
+      {
+        "bundleIdentifier": "com.virtualapplications.play",
+        "keptSource": "sidestore-community",
+        "otherSource": "quantum-source",
+        "keptVersion": "0.58-8-g70a126e3"
+      },
+      {
+        "bundleIdentifier": "com.litchie.idosgames",
+        "keptSource": "quantum-source",
+        "otherSource": "sidestore-community",
+        "keptVersion": "2.1"
+      },
+      {
+        "bundleIdentifier": "com.adriweb.firebird-emu",
+        "keptSource": "quantum-source",
+        "otherSource": "sidestore-community",
+        "keptVersion": "1.6"
+      },
+      {
+        "bundleIdentifier": "com.yoshisuga.activeGS",
+        "keptSource": "quantum-source",
+        "otherSource": "sidestore-community",
+        "keptVersion": "2021.9"
+      },
+      {
+        "bundleIdentifier": "at.spiderlab.c64",
+        "keptSource": "quantum-source",
+        "otherSource": "sidestore-community",
+        "keptVersion": "1.6.1"
+      },
+      {
+        "bundleIdentifier": "com.example.mame4ios",
+        "keptSource": "quantum-source",
+        "otherSource": "sidestore-community",
+        "keptVersion": "2022.5"
+      },
+      {
+        "bundleIdentifier": "science.xnu.undecimus",
+        "keptSource": "quantum-source",
+        "otherSource": "sidestore-community",
+        "keptVersion": "8.0.2"
+      },
+      {
+        "bundleIdentifier": "com.xitrix.iTorrent2",
+        "keptSource": "itorrent",
+        "otherSource": "sidestore-community",
+        "keptVersion": "2.2.0"
+      },
+      {
+        "bundleIdentifier": "com.louisanslow.record",
+        "keptSource": "quantum-source",
+        "otherSource": "sidestore-community",
+        "keptVersion": "2019.7"
+      },
+      {
+        "bundleIdentifier": "org.scummvm.scummvm",
+        "keptSource": "quantum-source",
+        "otherSource": "sidestore-community",
+        "keptVersion": "2.6.0"
+      },
+      {
+        "bundleIdentifier": "net.namedfork.minivmac",
+        "keptSource": "quantum-source",
+        "otherSource": "sidestore-community",
+        "keptVersion": "2.6"
+      },
+      {
+        "bundleIdentifier": "com.wh0ba.xpatcher",
+        "keptSource": "quantum-source",
+        "otherSource": "sidestore-community",
+        "keptVersion": "2.2"
+      },
+      {
+        "bundleIdentifier": "eu.vcmi.vcmiclient",
+        "keptSource": "quantum-source",
+        "otherSource": "sidestore-community",
+        "keptVersion": "1.7.1"
+      },
+      {
         "bundleIdentifier": "com.odysseyteam.taurine",
         "keptSource": "taurine",
         "otherSource": "odyssey",
@@ -5147,6 +5255,114 @@
         "keptSource": "ipa-vault",
         "otherSource": "sideloadlabs",
         "keptVersion": "9.1.86"
+      },
+      {
+        "bundleIdentifier": "org.ppsspp.ppsspp",
+        "keptSource": "quantum-source",
+        "otherSource": "sidestore-community",
+        "keptVersion": "1.13.2"
+      },
+      {
+        "bundleIdentifier": "com.libretro.RetroArchiOS11",
+        "keptSource": "sidestore-community",
+        "otherSource": "quantum-source",
+        "keptVersion": "1.12.0"
+      },
+      {
+        "bundleIdentifier": "org.brandonplank.flappybird",
+        "keptSource": "sidestore-community",
+        "otherSource": "ripestore",
+        "keptVersion": "4.3"
+      },
+      {
+        "bundleIdentifier": "app.ish.iSH",
+        "keptSource": "ish",
+        "otherSource": "sidestore-community",
+        "keptVersion": "Build 813"
+      },
+      {
+        "bundleIdentifier": "net.nerd.iNDS",
+        "keptSource": "quantum-source",
+        "otherSource": "sidestore-community",
+        "keptVersion": "1.10.8"
+      },
+      {
+        "bundleIdentifier": "com.virtualapplications.play",
+        "keptSource": "sidestore-community",
+        "otherSource": "quantum-source",
+        "keptVersion": "0.58-8-g70a126e3"
+      },
+      {
+        "bundleIdentifier": "com.litchie.idosgames",
+        "keptSource": "quantum-source",
+        "otherSource": "sidestore-community",
+        "keptVersion": "2.1"
+      },
+      {
+        "bundleIdentifier": "com.adriweb.firebird-emu",
+        "keptSource": "quantum-source",
+        "otherSource": "sidestore-community",
+        "keptVersion": "1.6"
+      },
+      {
+        "bundleIdentifier": "com.yoshisuga.activeGS",
+        "keptSource": "quantum-source",
+        "otherSource": "sidestore-community",
+        "keptVersion": "2021.9"
+      },
+      {
+        "bundleIdentifier": "at.spiderlab.c64",
+        "keptSource": "quantum-source",
+        "otherSource": "sidestore-community",
+        "keptVersion": "1.6.1"
+      },
+      {
+        "bundleIdentifier": "com.example.mame4ios",
+        "keptSource": "quantum-source",
+        "otherSource": "sidestore-community",
+        "keptVersion": "2022.5"
+      },
+      {
+        "bundleIdentifier": "science.xnu.undecimus",
+        "keptSource": "quantum-source",
+        "otherSource": "sidestore-community",
+        "keptVersion": "8.0.2"
+      },
+      {
+        "bundleIdentifier": "com.xitrix.iTorrent2",
+        "keptSource": "itorrent",
+        "otherSource": "sidestore-community",
+        "keptVersion": "2.2.0"
+      },
+      {
+        "bundleIdentifier": "com.louisanslow.record",
+        "keptSource": "quantum-source",
+        "otherSource": "sidestore-community",
+        "keptVersion": "2019.7"
+      },
+      {
+        "bundleIdentifier": "org.scummvm.scummvm",
+        "keptSource": "quantum-source",
+        "otherSource": "sidestore-community",
+        "keptVersion": "2.6.0"
+      },
+      {
+        "bundleIdentifier": "net.namedfork.minivmac",
+        "keptSource": "quantum-source",
+        "otherSource": "sidestore-community",
+        "keptVersion": "2.6"
+      },
+      {
+        "bundleIdentifier": "com.wh0ba.xpatcher",
+        "keptSource": "quantum-source",
+        "otherSource": "sidestore-community",
+        "keptVersion": "2.2"
+      },
+      {
+        "bundleIdentifier": "eu.vcmi.vcmiclient",
+        "keptSource": "quantum-source",
+        "otherSource": "sidestore-community",
+        "keptVersion": "1.7.1"
       },
       {
         "bundleIdentifier": "com.odysseyteam.taurine",

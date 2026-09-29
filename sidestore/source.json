@@ -673,6 +673,70 @@
       }
     },
     {
+      "name": "Artemis",
+      "bundleIdentifier": "com.github.auties00.artemis",
+      "developerName": "Auties00",
+      "subtitle": "Alternative client for HIDIVE",
+      "localizedDescription": "Artemis is an alternative and open source streaming client for HIDIVE",
+      "iconURL": "https://github.com/Auties00/Artemis/blob/main/Artemis/Assets.xcassets/AppIcon.appiconset/appstore.png?raw=true",
+      "tintColor": "0A84FF",
+      "category": "entertainment",
+      "screenshots": [
+        {
+          "imageURL": "https://github.com/user-attachments/assets/88bd1a37-0f10-4fba-b6e9-6bf3174b87a8"
+        },
+        {
+          "imageURL": "https://github.com/user-attachments/assets/99249893-1532-40ca-8c61-f65869e1ecca"
+        },
+        {
+          "imageURL": "https://github.com/user-attachments/assets/ee6fc0aa-2a3b-4abe-bab6-0eaa6019547b"
+        },
+        {
+          "imageURL": "https://github.com/user-attachments/assets/2d053217-3b56-482e-a7af-2baa006d545a"
+        },
+        {
+          "imageURL": "https://github.com/user-attachments/assets/ea555ebc-95d1-435b-b840-fbe82184892a"
+        }
+      ],
+      "versions": [
+        {
+          "version": "3.0",
+          "date": "2024-10-31T02:52:14+01:00",
+          "localizedDescription": "Bug fixes and improvements.",
+          "downloadURL": "https://github.com/Auties00/Artemis/releases/download/3.0-19/Artemis.ipa",
+          "size": 2839462,
+          "sha256": "cd1091f584db78e81ef6b24fd72b41192247363fed4913b9612bf3dc9403ab1a",
+          "minOSVersion": "17.0"
+        },
+        {
+          "version": "2.0",
+          "buildVersion": "16",
+          "date": "2024-09-28T11:39:01+02:00",
+          "localizedDescription": "Bug fixes and improvements.",
+          "downloadURL": "https://github.com/Auties00/Artemis/releases/download/2.0-16/artemis.ipa",
+          "size": 2832019,
+          "sha256": "c714ab0cc5611c148b591e53e5eba80aef25e4a7c6742a4488f19a68ebc61f36",
+          "minOSVersion": "17.0"
+        },
+        {
+          "version": "2.0",
+          "buildVersion": "15",
+          "date": "2024-09-06T12:05:38+02:00",
+          "localizedDescription": "First AltStore release",
+          "downloadURL": "https://github.com/Auties00/Artemis/releases/download/2.0/Artemis.ipa",
+          "size": 1690819,
+          "sha256": "de48ea0fdcd0241aaeb37fcad72797f9d16caf611dab42bc889f6597304a5ece",
+          "minOSVersion": "17.0"
+        }
+      ],
+      "appPermissions": {
+        "privacy": {},
+        "entitlements": [
+          "beta-reports-active"
+        ]
+      }
+    },
+    {
       "appPermissions": {
         "entitlements": [
           "application-identifier",
@@ -5690,6 +5754,212 @@
           "minOSVersion": "15.6"
         }
       ]
+    },
+    {
+      "name": "qBitConnect",
+      "bundleIdentifier": "com.bluematter.qbitconnect",
+      "developerName": "RajnishOne",
+      "subtitle": "Modern qBittorrent remote client.",
+      "localizedDescription": "qBitConnect is a modern, cross-platform remote client for managing your qBittorrent downloads on iOS devices.\n\nKey Features:\n\n• Add torrents via magnet links or files\n• Browse and manage torrent files\n• Real-time download progress monitoring\n• Control your torrents from anywhere\n• Multiple theme options (Light, Dark, OLED)\n• Advanced filtering and sorting\n• Batch operations for multiple torrents\n• Detailed statistics and graphs\n• Beautiful native iOS interface built with Flutter",
+      "iconURL": "https://raw.githubusercontent.com/RajnishOne/altstore-releases/main/icons/qBitConnect/AppIcon-40%403x.png",
+      "tintColor": "#2196F3",
+      "category": "utilities",
+      "screenshots": [
+        "https://raw.githubusercontent.com/RajnishOne/altstore-releases/main/screenshots/1.png",
+        "https://raw.githubusercontent.com/RajnishOne/altstore-releases/main/screenshots/2.png",
+        "https://raw.githubusercontent.com/RajnishOne/altstore-releases/main/screenshots/3.png",
+        "https://raw.githubusercontent.com/RajnishOne/altstore-releases/main/screenshots/4.png",
+        "https://raw.githubusercontent.com/RajnishOne/altstore-releases/main/screenshots/5.png",
+        "https://raw.githubusercontent.com/RajnishOne/altstore-releases/main/screenshots/6.png",
+        "https://raw.githubusercontent.com/RajnishOne/altstore-releases/main/screenshots/7.png",
+        "https://raw.githubusercontent.com/RajnishOne/altstore-releases/main/screenshots/8.png"
+      ],
+      "versions": [
+        {
+          "version": "1.6.9",
+          "date": "2025-12-04",
+          "buildVersion": "35",
+          "localizedDescription": "This release includes:\n\n• Bug fixes and improvements\n• Performance optimizations",
+          "downloadURL": "https://github.com/RajnishOne/altstore-releases/raw/main/ipas/1.6.9/qBitConnect.ipa",
+          "size": 27468967,
+          "minOSVersion": "15.0"
+        },
+        {
+          "version": "1.6.3",
+          "date": "2025-10-14",
+          "buildVersion": "25",
+          "localizedDescription": "This release includes:\n\n• Analytics screen updates\n• Torrent details page UI update\n• Peers for each torrent in torrent details page\n• App level language localization",
+          "downloadURL": "https://github.com/RajnishOne/qbitconnect/releases/download/v1.6.3/qBitConnect.ipa",
+          "size": 11429647,
+          "minOSVersion": "12.0"
+        },
+        {
+          "version": "1.5.1",
+          "date": "2025-10-13",
+          "buildVersion": "24",
+          "localizedDescription": "This release includes:\n\n• Minor Bug fixes and improvement\n• Set locaton for saving or updating torrents from recent locations",
+          "downloadURL": "https://github.com/RajnishOne/qbitconnect/releases/download/v1.5.1/qBitConnect.ipa",
+          "size": 11118283,
+          "minOSVersion": "12.0"
+        },
+        {
+          "version": "1.5.0",
+          "date": "2025-10-13",
+          "buildVersion": "23",
+          "localizedDescription": "This release includes:\n\n• Minor Bug fixes and improvement\n• Graphs and stats in torrent details page\n• Multiple server support",
+          "downloadURL": "https://github.com/RajnishOne/qbitconnect/releases/download/v1.5.0/qBitConnect.ipa",
+          "size": 11100906,
+          "minOSVersion": "12.0"
+        },
+        {
+          "version": "1.4.9",
+          "date": "2025-10-12",
+          "buildVersion": "22",
+          "localizedDescription": "This release includes:\n\n• Minor Bug fixes and improvement\n• Graphs and stats in torrent details page\n• Multiple server support",
+          "downloadURL": "https://github.com/RajnishOne/qbitconnect/releases/download/v1.4.9/qBitConnect.ipa",
+          "size": 11100579,
+          "minOSVersion": "12.0"
+        },
+        {
+          "version": "1.4.8",
+          "date": "2025-10-11",
+          "buildVersion": "21",
+          "localizedDescription": "Latest improvements:\n\n• Minor Bug fixes and improvement\n• Graphs and stats in torrent details page\n• Multiple server support",
+          "downloadURL": "https://github.com/RajnishOne/qbitconnect/releases/download/1.4.8/qBitConnect-1.4.8.ipa",
+          "size": 11099845,
+          "minOSVersion": "12.0"
+        },
+        {
+          "version": "1.4.7",
+          "date": "2025-10-11",
+          "buildVersion": "20",
+          "localizedDescription": "Latest improvements:\n\n• Minor Bug fixes and improvement\n• Graphs and stats in torrent details page",
+          "downloadURL": "https://github.com/RajnishOne/qbitconnect/releases/download/v1.4.7/qBitConnect.ipa",
+          "size": 11037327,
+          "minOSVersion": "12.0"
+        },
+        {
+          "version": "1.4.6",
+          "date": "2025-10-10",
+          "buildVersion": "19",
+          "localizedDescription": "Latest improvements:\n\n• Enhanced real-time monitoring and updates\n• Improved connection stability and error handling\n• Better performance and memory optimization\n• UI/UX refinements and bug fixes\n• Updated dependencies for better compatibility",
+          "downloadURL": "https://github.com/RajnishOne/qbitconnect/releases/download/v1.4.6/qBitConnect.ipa",
+          "size": 10923335,
+          "minOSVersion": "12.0"
+        }
+      ],
+      "appPermissions": {
+        "entitlements": [],
+        "privacy": [
+          {
+            "name": "LocalNetwork",
+            "usageDescription": "This app needs access to your local network to connect to qBittorrent servers on your network."
+          }
+        ]
+      }
+    },
+    {
+      "name": "qBitControl",
+      "bundleIdentifier": "MikeMichael225.qBitControl",
+      "developerName": "Michael-128",
+      "subtitle": "Remote client for qBittorrent.",
+      "localizedDescription": "qBitControl is the definitive remote client for managing your qBittorrent downloads on iOS devices. With qBitControl, you can effortlessly add torrents, browse files, monitor your download progress, and manage your torrents, all while enjoying real-time statistics and a native iOS user interface.",
+      "iconURL": "https://raw.githubusercontent.com/Michael-128/qBitControl/main/qBitControl/Assets.xcassets/AppIcon.appiconset/logo1.png",
+      "tintColor": "#449FFF",
+      "category": "utilities",
+      "screenshots": [
+        "https://raw.githubusercontent.com/Michael-128/qBitControl-releases/main/screenshots/1.4.1/sc1.png",
+        "https://raw.githubusercontent.com/Michael-128/qBitControl-releases/main/screenshots/1.4.1/sc2.png",
+        "https://raw.githubusercontent.com/Michael-128/qBitControl-releases/main/screenshots/1.4.1/sc3.png",
+        "https://raw.githubusercontent.com/Michael-128/qBitControl-releases/main/screenshots/1.4.1/sc4.png",
+        "https://raw.githubusercontent.com/Michael-128/qBitControl-releases/main/screenshots/1.4.1/sc5.png"
+      ],
+      "versions": [
+        {
+          "version": "1.4.2",
+          "date": "2026-08-23",
+          "buildVersion": "22",
+          "localizedDescription": "This release aims to fix major performance bugs for users with large torrent libraries.",
+          "downloadURL": "https://michael-128.github.io/qBitControl-releases/IPAS/1.4.2/qBitControl.ipa",
+          "size": 4792089,
+          "minOSVersion": "16.0"
+        },
+        {
+          "version": "1.4.1",
+          "date": "2026-07-23",
+          "buildVersion": "21",
+          "localizedDescription": "## Release Notes\n\n- Reduced Data Usage: Network traffic was reduced by 93% due to optimized data syncing.\n- Custom Headers: Added the ability to specify custom HTTP headers for your server connections - important for Zero-Trust services. \n- Limit Configuration: You can now configure precise speed/seeding/share limits for torrents. \n- Self-Signed Certificate Support: Added full support for untrusted and self-signed SSL certificates. \n- In-App Logs: Added a built-in log viewer to review and easily share system events. \n- And many more...\n\nCheck out the full changelog on Patreon!",
+          "downloadURL": "https://michael-128.github.io/qBitControl-releases/IPAS/1.4.1/qBitControl.ipa",
+          "size": 4777723,
+          "minOSVersion": "16.0"
+        },
+        {
+          "version": "1.3.5",
+          "date": "2026-06-25",
+          "buildVersion": "19",
+          "localizedDescription": "Features\n- Resume current tasks (by @kambala-decapitator)\n- Sanitize server URL for trailing slashes when adding a server (by @danpiths)\n\nBug Fixes\n- Resolve single task deletion from context menu and use standard alert (#92) (by @Michael-128)\n- Fix stats showing up as zeros on qBittorrent >5.2 (by @Michael-128)\n- Fix peers JSON decoding (by @kambala-decapitator)\n- Fix ServersHelper thread safety warning (by @Michael-128)\n\nCode Refactoring\n- Sanitize inputs before running validations (by @Michael-128)\n\nChores\n- localization: Update Polish & Japanese localizations\n- l10n: Add & complete Chinese (zh-Hans/Hant) translations (by @XaoflySho)\n- Automated build setup & pipeline fixes\n- Remove obsolete Xcode workspace (by @kambala-decapitator)\n- Bump version to 1.3.5 (build 19)",
+          "downloadURL": "https://michael-128.github.io/qBitControl-releases/IPAS/1.3.5/qBitControl.ipa",
+          "size": 4302381,
+          "minOSVersion": "16.0"
+        },
+        {
+          "version": "1.3.4",
+          "date": "2025-12-30",
+          "buildVersion": "18",
+          "localizedDescription": "New:\n• Add 'Advanced' page to 'Add Server' view & Add basic authentication\n• Add animation when selecting torrents\n\nFixes:\n• iOS 26 UI issues with select multiple\n\nImprovements\n• Add AltStore source badges in README (Mehdi Kharraz)\n• Alternative README badges (Mehdi Kharraz)\n• Add torrent list scroll down behavior for iOS 26\n• Improve tab view to meet standard of iOS 26",
+          "downloadURL": "https://michael-128.github.io/qBitControl-releases/IPAS/1.3.4/qBitControl.ipa",
+          "size": 3870732,
+          "minOSVersion": "16.0"
+        },
+        {
+          "version": "1.3.3",
+          "date": "2025-04-21",
+          "buildVersion": "17",
+          "localizedDescription": "New:\n• Add Search Functionality to RSS Tab\n\nImprovements:\n• Improve Charts in Stats Tab\n\nFixes:\n• Fix Translation Related Bugs\n• Update Translation\n• Add a Missing Uncategorized Option in Category Selection View",
+          "downloadURL": "https://michael-128.github.io/qBitControl-releases/IPAS/1.3.3/qBitControl.ipa",
+          "size": 4321496,
+          "minOSVersion": "16.0"
+        },
+        {
+          "version": "1.3.2",
+          "date": "2025-02-13",
+          "buildVersion": "14",
+          "localizedDescription": "New:\n• Added New Category & Tag Selection System\n• Added RSS Feed & Folder Renaming & Deleting\n• Updated Translations\n\nImprovements:\n• Enhance Tips when Adding Server (by: @MrNocole in #62)\n• Improve Naming to Match qBitttorrent\n\nFixes:\n• Fixed Pause Option for qBittorrent 5.0.X in 'Torrent Add Sheet'",
+          "downloadURL": "https://michael-128.github.io/qBitControl-releases/IPAS/1.3.2/qBitControl.ipa",
+          "size": 4222623,
+          "minOSVersion": "16.0"
+        },
+        {
+          "version": "1.3.1",
+          "date": "2025-01-09",
+          "buildVersion": "10",
+          "localizedDescription": "New:\n- Added RSS Support\n- Added 'Add Tracker' Option\n- Added Option to Download First & Last Pieces First\n- Added Force Start Option\n- Added 'Help with Translation' Button in About Section\n- Added Chinese Simplified Localization (by @peaynan)\n\nImprovements:\n- Rearranged Torrent Details & Added ETA\n- Updated Localizations\n\nFixes:\n- Fixed Compatibility with qBittorrent 5.0.0 API",
+          "downloadURL": "https://michael-128.github.io/qBitControl-releases/IPAS/1.3.1/qBitControl.ipa",
+          "size": 4178946,
+          "minOSVersion": "16.0"
+        },
+        {
+          "version": "1.2.2",
+          "date": "2024-10-01",
+          "buildVersion": "8",
+          "localizedDescription": "New:\n- Added Server Editing\n\nFixed:\n- Disabled Category Path Auto-Fill if Automatic Torrent Management is Enabled\n- Fixed Compatibility for Older qBittorrent Clients",
+          "downloadURL": "https://michael-128.github.io/qBitControl-releases/IPAS/1.2.2/qBitControl.ipa",
+          "size": 2141712,
+          "minOSVersion": "16.0"
+        }
+      ],
+      "appPermissions": {
+        "entitlements": [],
+        "privacy": [
+          {
+            "name": "LocalNetwork",
+            "usageDescription": "qBitControl uses the local network to communicate with qBittorrent's API."
+          }
+        ]
+      },
+      "patreon": {
+        "pledge": 2
+      }
     },
     {
       "name": "RamBench",
@@ -11253,6 +11523,7 @@
       "altgallery",
       "apollo-reddit",
       "armsx2",
+      "artemis",
       "baretsky-tweaked",
       "burrito-source",
       "cercube",
@@ -11281,6 +11552,8 @@
       "partyknights",
       "pokemmo",
       "provenance",
+      "qbitconnect",
+      "qbitcontrol",
       "quantum-plus",
       "quantum-source",
       "retrosekai",
@@ -11310,6 +11583,7 @@
       "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/all-apps.json",
       "https://raw.githubusercontent.com/Balackburn/Apollo/main/apps.json",
       "https://raw.githubusercontent.com/ARMSX2/Armsx2-Repo/main/apps.json",
+      "https://raw.githubusercontent.com/auties00/artemis/refs/heads/main/source.json",
       "https://raw.githubusercontent.com/baretsky/baretsky-tweaked-ipas-library/main/apps.json",
       "https://burritosoftware.github.io/altstore/channels/burritosource.json",
       "https://altstore.cercube.com",
@@ -11338,6 +11612,8 @@
       "https://partyknights.app/source",
       "https://pokemmo.eu/altstore/",
       "https://provenance-emu.com/apps.json",
+      "https://raw.githubusercontent.com/RajnishOne/altstore-releases/main/altstore.json",
+      "https://raw.githubusercontent.com/Michael-128/qBitControl-releases/main/source-classic.json",
       "https://quarksources.github.io/quantumsource++.json",
       "https://quarksources.github.io/quantumsource.json",
       "https://repo.untitledcharts.com",

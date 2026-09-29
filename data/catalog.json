@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-29T12:56:21Z",
+  "generatedAt": "2026-09-29T16:24:14Z",
   "sources": [
     {
       "id": "utm",
@@ -7,6 +7,9 @@
       "appCount": 2,
       "catalogLimited": false,
       "iconURL": "https://alt.getutm.app/icon.png",
+      "variants": [
+        "classic"
+      ],
       "apps": [
         {
           "name": "UTM",
@@ -32,6 +35,9 @@
       "appCount": 3,
       "catalogLimited": false,
       "iconURL": "https://raw.githubusercontent.com/Provenance-Emu/Provenance/develop/Provenance/Resources/Assets.xcassets/AppIcon.appiconset/iTunesArtwork%402x.png",
+      "variants": [
+        "classic"
+      ],
       "apps": [
         {
           "name": "Provenance",
@@ -65,6 +71,9 @@
       "appCount": 1,
       "catalogLimited": false,
       "iconURL": "https://ish.app/assets/icon-full.png",
+      "variants": [
+        "classic"
+      ],
       "apps": [
         {
           "name": "iSH",
@@ -82,6 +91,9 @@
       "appCount": 1,
       "catalogLimited": false,
       "iconURL": "https://github.com/flyinghead/flycast/raw/master/shell/linux/flycast.png",
+      "variants": [
+        "classic"
+      ],
       "apps": [
         {
           "name": "Flycast",
@@ -99,6 +111,9 @@
       "appCount": 23,
       "catalogLimited": false,
       "iconURL": "https://sidestore.io/assets/icon.png",
+      "variants": [
+        "classic"
+      ],
       "apps": [
         {
           "name": "PPSSPP",
@@ -292,6 +307,9 @@
       "appCount": 1,
       "catalogLimited": false,
       "iconURL": "https://apps.sidestore.io/apps/sidestore/v0.1.1/icon.png",
+      "variants": [
+        "classic"
+      ],
       "apps": [
         {
           "name": "SideStore",
@@ -309,6 +327,9 @@
       "appCount": 2,
       "catalogLimited": false,
       "iconURL": "https://github.com/StikDebug/StikDebug/blob/main/assets/StikDebug.png?raw=true",
+      "variants": [
+        "classic"
+      ],
       "apps": [
         {
           "name": "StikDebug",
@@ -334,6 +355,9 @@
       "appCount": 1,
       "catalogLimited": false,
       "iconURL": "https://raw.githubusercontent.com/LiveContainer/LiveContainer/main/screenshots/AppIcon1024.png",
+      "variants": [
+        "classic"
+      ],
       "apps": [
         {
           "name": "LiveContainer",
@@ -351,6 +375,9 @@
       "appCount": 1,
       "catalogLimited": false,
       "iconURL": "https://raw.githubusercontent.com/LiveContainer/LiveContainer/main/screenshots/AppIcon1024.png",
+      "variants": [
+        "classic"
+      ],
       "apps": [
         {
           "name": "LiveContainer (nightly)",
@@ -368,6 +395,9 @@
       "appCount": 1,
       "catalogLimited": false,
       "iconURL": "https://apps.manicemu.site/images/manicicon.jpg",
+      "variants": [
+        "classic"
+      ],
       "apps": [
         {
           "name": "Manic EMU v2.0.1",
@@ -385,6 +415,9 @@
       "appCount": 1,
       "catalogLimited": false,
       "iconURL": "https://github.com/chachillie/Flycast-iOS/raw/main/shell/linux/flycast.png",
+      "variants": [
+        "classic"
+      ],
       "apps": [
         {
           "name": "Flycast",
@@ -402,6 +435,9 @@
       "appCount": 1,
       "catalogLimited": false,
       "iconURL": "https://ios-repo.geode-sdk.org/img/AltSourceIcon.png",
+      "variants": [
+        "classic"
+      ],
       "apps": [
         {
           "name": "Geode",
@@ -419,6 +455,9 @@
       "appCount": 1,
       "catalogLimited": false,
       "iconURL": "https://repo.untitledcharts.com/assets/logo.png",
+      "variants": [
+        "classic"
+      ],
       "apps": [
         {
           "name": "Retro Sekai!",
@@ -436,6 +475,9 @@
       "appCount": 2,
       "catalogLimited": false,
       "iconURL": "https://cdn.oatmealdome.me/dolphinios/AppIcon.appiconset/ios_marketing1024x1024.png",
+      "variants": [
+        "classic"
+      ],
       "apps": [
         {
           "name": "DolphiniOS",
@@ -461,6 +503,9 @@
       "appCount": 2,
       "catalogLimited": false,
       "iconURL": "https://alt.crystall1ne.dev/resources/media/the_icon.png",
+      "variants": [
+        "classic"
+      ],
       "apps": [
         {
           "name": "Angel Aura Amethyst",
@@ -486,6 +531,9 @@
       "appCount": 1,
       "catalogLimited": false,
       "iconURL": "https://pokemmo.com/build/images/altstore.f5930b35.png",
+      "variants": [
+        "classic"
+      ],
       "apps": [
         {
           "name": "PokeMMO",
@@ -503,6 +551,9 @@
       "appCount": 2,
       "catalogLimited": false,
       "iconURL": "https://theodyssey.dev/assets/images/icon.png",
+      "variants": [
+        "classic"
+      ],
       "apps": [
         {
           "name": "Odyssey",
@@ -528,6 +579,9 @@
       "appCount": 1,
       "catalogLimited": false,
       "iconURL": "https://raw.githubusercontent.com/yattee/yattee/main/Assets/yattee-icon-512.png",
+      "variants": [
+        "classic"
+      ],
       "apps": [
         {
           "name": "Yattee",
@@ -545,6 +599,9 @@
       "appCount": 1,
       "catalogLimited": false,
       "iconURL": "https://cdn.ignitedemulator.com/assets/altstore-icon.png",
+      "variants": [
+        "classic"
+      ],
       "apps": [
         {
           "name": "Ignited",
@@ -562,6 +619,9 @@
       "appCount": 1,
       "catalogLimited": false,
       "iconURL": "https://i.imgur.com/PeIdqwy.png",
+      "variants": [
+        "classic"
+      ],
       "apps": [
         {
           "name": "Mona - HRT journal",
@@ -579,6 +639,9 @@
       "appCount": 2,
       "catalogLimited": false,
       "iconURL": "https://raw.githubusercontent.com/VortXTV/VortX/main/docs/logo.png",
+      "variants": [
+        "classic"
+      ],
       "apps": [
         {
           "name": "VortX",
@@ -604,6 +667,9 @@
       "appCount": 1,
       "catalogLimited": false,
       "iconURL": "https://i.imgur.com/ykZuH0r.png",
+      "variants": [
+        "pal"
+      ],
       "apps": [
         {
           "name": "Stremio",
@@ -621,6 +687,9 @@
       "appCount": 1,
       "catalogLimited": false,
       "iconURL": "https://www.stremio.com/website/stremio-logo-small.png",
+      "variants": [
+        "classic"
+      ],
       "apps": [
         {
           "name": "Stremio",
@@ -638,6 +707,9 @@
       "appCount": 1,
       "catalogLimited": false,
       "iconURL": "https://kodi.tv/images/kodi-logo.svg",
+      "variants": [
+        "classic"
+      ],
       "apps": [
         {
           "name": "Kodi iOS",
@@ -655,6 +727,9 @@
       "appCount": 1,
       "catalogLimited": false,
       "iconURL": "https://esound.app/images/altstore/source-icon.png?v=4",
+      "variants": [
+        "pal"
+      ],
       "apps": [
         {
           "name": "eSound",
@@ -672,6 +747,9 @@
       "appCount": 1,
       "catalogLimited": false,
       "iconURL": "https://partyknights.app/assets/img/icon_128.webp",
+      "variants": [
+        "classic"
+      ],
       "apps": [
         {
           "name": "Party Knights - Drinking Game",
@@ -689,6 +767,9 @@
       "appCount": 1,
       "catalogLimited": false,
       "iconURL": "https://raw.githubusercontent.com/XITRIX/xitrix.github.io/master/sourceIcon.png",
+      "variants": [
+        "classic"
+      ],
       "apps": [
         {
           "name": "iTorrent",
@@ -705,12 +786,16 @@
       "name": "BlueMatter",
       "appCount": 1,
       "catalogLimited": false,
-      "iconURL": "https://raw.githubusercontent.com/RajnishOne/altstore-releases/main/icons/general/bluematter.png",
+      "iconURL": "https://raw.githubusercontent.com/RajnishOne/altstore-releases/main//icons/general/bluematter.png",
+      "variants": [
+        "classic",
+        "pal"
+      ],
       "apps": [
         {
           "name": "qBitConnect",
           "bundleIdentifier": "com.bluematter.qbitconnect",
-          "developerName": "Rajnish Sharma",
+          "developerName": "RajnishOne",
           "version": "1.6.9",
           "iconURL": "https://raw.githubusercontent.com/RajnishOne/altstore-releases/main/icons/qBitConnect/AppIcon-40%403x.png",
           "subtitle": "Modern qBittorrent remote client."
@@ -723,6 +808,10 @@
       "appCount": 1,
       "catalogLimited": false,
       "iconURL": "https://avatars.githubusercontent.com/u/28218457?v=4",
+      "variants": [
+        "classic",
+        "pal"
+      ],
       "apps": [
         {
           "name": "Artemis",
@@ -740,6 +829,9 @@
       "appCount": 1,
       "catalogLimited": false,
       "iconURL": "https://raw.githubusercontent.com/cheeaun/hackerweb-native-2/main/assets/icon.png",
+      "variants": [
+        "pal"
+      ],
       "apps": [
         {
           "name": "HackerWeb",
@@ -757,6 +849,9 @@
       "appCount": 1,
       "catalogLimited": false,
       "iconURL": "https://courtpredict-ios.web.app/icons/source.png",
+      "variants": [
+        "pal"
+      ],
       "apps": [
         {
           "name": "CourtPredict",
@@ -774,6 +869,9 @@
       "appCount": 1,
       "catalogLimited": false,
       "iconURL": "https://stor-cdn.f8d.rocks/wf/icon.png",
+      "variants": [
+        "classic"
+      ],
       "apps": [
         {
           "name": "Wayfurther",
@@ -791,12 +889,16 @@
       "appCount": 1,
       "catalogLimited": false,
       "iconURL": "https://raw.githubusercontent.com/Michael-128/qBitControl/main/qBitControl/Assets.xcassets/AppIcon.appiconset/logo1.png",
+      "variants": [
+        "classic",
+        "pal"
+      ],
       "apps": [
         {
           "name": "qBitControl",
           "bundleIdentifier": "MikeMichael225.qBitControl",
           "developerName": "Michael-128",
-          "version": "1.4.1",
+          "version": "1.4.2",
           "iconURL": "https://raw.githubusercontent.com/Michael-128/qBitControl/main/qBitControl/Assets.xcassets/AppIcon.appiconset/logo1.png",
           "subtitle": "Remote client for qBittorrent."
         }
@@ -808,6 +910,9 @@
       "appCount": 1,
       "catalogLimited": false,
       "iconURL": "https://i.imgur.com/AAsffEA.png",
+      "variants": [
+        "pal"
+      ],
       "apps": [
         {
           "name": "iPhanpy",
@@ -825,6 +930,9 @@
       "appCount": 3,
       "catalogLimited": false,
       "iconURL": "https://content-download-egs.distro.on.epicgames.com/.well-known/EG-Shield-2023-Black-dual-tone-expanded.png",
+      "variants": [
+        "pal"
+      ],
       "apps": [
         {
           "name": "Fortnite",
@@ -858,6 +966,9 @@
       "appCount": 4,
       "catalogLimited": false,
       "iconURL": "https://avatars.githubusercontent.com/u/74825012?v=4",
+      "variants": [
+        "classic"
+      ],
       "apps": [
         {
           "name": "Spotify Premium",
@@ -899,6 +1010,9 @@
       "appCount": 7,
       "catalogLimited": false,
       "iconURL": "https://raw.githubusercontent.com/dayanch96/YTLite/refs/heads/main/Resources/icon.png",
+      "variants": [
+        "classic"
+      ],
       "apps": [
         {
           "name": "Glow for Facebook",
@@ -964,6 +1078,9 @@
       "appCount": 13,
       "catalogLimited": false,
       "iconURL": "https://external-content.duckduckgo.com/iu/?u=https://i.imgur.com/g17kMl9.jpeg",
+      "variants": [
+        "classic"
+      ],
       "apps": [
         {
           "name": "HD Flix (No Ads)",
@@ -1077,6 +1194,9 @@
       "appCount": 7,
       "catalogLimited": false,
       "iconURL": "https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png",
+      "variants": [
+        "classic"
+      ],
       "apps": [
         {
           "name": "TikTok",
@@ -1142,6 +1262,9 @@
       "appCount": 10,
       "catalogLimited": false,
       "iconURL": "https://i.postimg.cc/Kcdr62dc/dp-rounded.png",
+      "variants": [
+        "classic"
+      ],
       "apps": [
         {
           "name": "YouMod + Tweaks (driftywinds)",
@@ -1231,6 +1354,9 @@
       "appCount": 62,
       "catalogLimited": false,
       "iconURL": "https://pub-dd800571175348b6a2745b3396360028.r2.dev/ipavault-altstore-repo-logo.png",
+      "variants": [
+        "classic"
+      ],
       "apps": [
         {
           "name": "Discord (RainTweak)",
@@ -1736,6 +1862,9 @@
       "appCount": 4,
       "catalogLimited": false,
       "iconURL": "https://avatars.githubusercontent.com/u/312393257?s=96&v=4",
+      "variants": [
+        "classic"
+      ],
       "apps": [
         {
           "name": "EeveeSpotifyReincarnated",
@@ -1777,6 +1906,9 @@
       "appCount": 1,
       "catalogLimited": false,
       "iconURL": "https://raw.githubusercontent.com/YTLitePlus/YTLitePlus-Altstore/main/Youtube_logo-512.png",
+      "variants": [
+        "classic"
+      ],
       "apps": [
         {
           "name": "YTLitePlus",
@@ -1794,6 +1926,9 @@
       "appCount": 34,
       "catalogLimited": false,
       "iconURL": "https://raw.githubusercontent.com/MountainofPenguin/moe-altstore/main/icons/moe_icon.png",
+      "variants": [
+        "classic"
+      ],
       "apps": [
         {
           "name": "Carrot",
@@ -2075,6 +2210,9 @@
       "appCount": 1,
       "catalogLimited": false,
       "iconURL": "https://raw.githubusercontent.com/MountainofPenguin/Altstore-Repository/main/assets/IMG_2642.png",
+      "variants": [
+        "classic"
+      ],
       "apps": [
         {
           "name": "YouMod",
@@ -2092,6 +2230,9 @@
       "appCount": 5,
       "catalogLimited": false,
       "iconURL": "https://raw.githubusercontent.com/mrdrvt99/Altstore-Repository/main/assets/YouTube.png",
+      "variants": [
+        "classic"
+      ],
       "apps": [
         {
           "name": "YoutubePlus (YTLite)",
@@ -2141,6 +2282,9 @@
       "appCount": 155,
       "catalogLimited": false,
       "iconURL": "https://raw.githubusercontent.com/OwO-Network/Repo/main/icons/owo.repo.icon.png",
+      "variants": [
+        "classic"
+      ],
       "apps": [
         {
           "name": "PiliPlus",
@@ -3390,6 +3534,9 @@
       "appCount": 209,
       "catalogLimited": true,
       "iconURL": "https://repo.cypwn.xyz/assets/images/cypwn_small.png",
+      "variants": [
+        "classic"
+      ],
       "apps": [
         {
           "name": "Stremio-2.0.6",
@@ -4836,10 +4983,37 @@
     {
       "id": "apptesters",
       "name": "AppTesters IPA Repo",
-      "appCount": 9390,
+      "appCount": 9393,
       "catalogLimited": true,
       "iconURL": "https://apptesters.org/apptesters-512x512.png",
+      "variants": [
+        "classic"
+      ],
       "apps": [
+        {
+          "name": "Athlytic",
+          "bundleIdentifier": "myndarc.newFitnessApp",
+          "developerName": "",
+          "version": "27.0.2",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/myndarc.newFitnessApp.png",
+          "subtitle": ""
+        },
+        {
+          "name": "Yazio",
+          "bundleIdentifier": "com.yazio.ios.YAZIO",
+          "developerName": "",
+          "version": "26.39.2",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.yazio.ios.YAZIO.png",
+          "subtitle": ""
+        },
+        {
+          "name": "Captions",
+          "bundleIdentifier": "boomer.Smart-Video",
+          "developerName": "",
+          "version": "13.36.1",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/boomer.Smart-Video.png",
+          "subtitle": ""
+        },
         {
           "name": "Wallpapers",
           "bundleIdentifier": "com.apalonapps.wallpaperspys",
@@ -6415,30 +6589,6 @@
           "version": "2.16.0",
           "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.camerasideas.Peachy.png",
           "subtitle": ""
-        },
-        {
-          "name": "PREQUEL",
-          "bundleIdentifier": "com.aiarlabs.prequel",
-          "developerName": "",
-          "version": "2.100.2",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.aiarlabs.prequel.png",
-          "subtitle": ""
-        },
-        {
-          "name": "VlogNow",
-          "bundleIdentifier": "com.frontrow.vlog",
-          "developerName": "",
-          "version": "2.20.0",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.frontrow.vlog.png",
-          "subtitle": ""
-        },
-        {
-          "name": "ProCCD",
-          "bundleIdentifier": "com.yengshine.proccd",
-          "developerName": "",
-          "version": "6.8.1",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.yengshine.proccd.png",
-          "subtitle": ""
         }
       ]
     },
@@ -6448,6 +6598,9 @@
       "appCount": 1,
       "catalogLimited": false,
       "iconURL": "https://raw.githubusercontent.com/arichornlover/YouTube-Reborn-v5/main/layout/Library/Application%20Support/YouTubeReborn.bundle/ytrebornbuttonblack.png",
+      "variants": [
+        "classic"
+      ],
       "apps": [
         {
           "name": "YouTubeRebornPlus",
@@ -6465,6 +6618,9 @@
       "appCount": 1,
       "catalogLimited": false,
       "iconURL": "https://raw.githubusercontent.com/Balackburn/Apollo/main/public/images/image_0.webp",
+      "variants": [
+        "classic"
+      ],
       "apps": [
         {
           "name": "Apollo for Reddit",
@@ -6482,6 +6638,9 @@
       "appCount": 1,
       "catalogLimited": false,
       "iconURL": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/7c/c1/d5/7cc1d552-fca9-bc19-a585-28644c009f4b/AppIcon-0-0-1x_U007epad-0-1-0-sRGB-85-220.png/512x512bb.jpg",
+      "variants": [
+        "classic"
+      ],
       "apps": [
         {
           "name": "Discord - Talk, Play, Hang Out",
@@ -6499,6 +6658,9 @@
       "appCount": 1,
       "catalogLimited": false,
       "iconURL": "https://img.lightshot.app/8gRG1MrsTPO7ZiwX_JfmbA.jpeg",
+      "variants": [
+        "classic"
+      ],
       "apps": [
         {
           "name": "YTKace",
@@ -6516,6 +6678,9 @@
       "appCount": 8,
       "catalogLimited": false,
       "iconURL": "https://repo.heyfordy.dev/assets/repo.png",
+      "variants": [
+        "classic"
+      ],
       "apps": [
         {
           "name": "YouTube+🗿",
@@ -6589,6 +6754,9 @@
       "appCount": 834,
       "catalogLimited": true,
       "iconURL": "https://ipalibrary.me/favicon.ico",
+      "variants": [
+        "classic"
+      ],
       "apps": [
         {
           "name": "Flappy Bird",
@@ -8198,6 +8366,9 @@
       "appCount": 2,
       "catalogLimited": false,
       "iconURL": "https://ios.armsx2.net/assets/icon.png?v=d83ffc2a",
+      "variants": [
+        "classic"
+      ],
       "apps": [
         {
           "name": "ARMSX2 iOS",
@@ -8223,6 +8394,9 @@
       "appCount": 6,
       "catalogLimited": false,
       "iconURL": "https://raw.githubusercontent.com/FouadRaheb/Watusi-for-WhatsApp/master/altstore/icon.png",
+      "variants": [
+        "classic"
+      ],
       "apps": [
         {
           "name": "Regram",
@@ -8280,6 +8454,9 @@
       "appCount": 1,
       "catalogLimited": false,
       "iconURL": "https://raw.githubusercontent.com/orionblur/NeoFreeBird/v6/icon_rounded.png",
+      "variants": [
+        "classic"
+      ],
       "apps": [
         {
           "name": "Twitter",
@@ -8297,6 +8474,9 @@
       "appCount": 1,
       "catalogLimited": false,
       "iconURL": "https://git.743378673.xyz/CycloKid/assets/media/branch/main/Melo/AppIcons/MeloNX.png",
+      "variants": [
+        "classic"
+      ],
       "apps": [
         {
           "name": "MeloNX",
@@ -8314,6 +8494,9 @@
       "appCount": 39,
       "catalogLimited": false,
       "iconURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/assets/icon.png",
+      "variants": [
+        "classic"
+      ],
       "apps": [
         {
           "name": "Aidoku",
@@ -8635,6 +8818,9 @@
       "appCount": 11,
       "catalogLimited": false,
       "iconURL": "https://i.imgur.com/pqIZoZo.jpeg",
+      "variants": [
+        "classic"
+      ],
       "apps": [
         {
           "name": "SimpleFrontend",
@@ -8732,6 +8918,9 @@
       "appCount": 1,
       "catalogLimited": false,
       "iconURL": "https://github.com/khcrysalis/Feather/blob/v1.x/iOS/Resources/Icons/Main/Mac@3x.png?raw=true",
+      "variants": [
+        "classic"
+      ],
       "apps": [
         {
           "name": "Feather",
@@ -8749,6 +8938,9 @@
       "appCount": 38,
       "catalogLimited": false,
       "iconURL": "https://quarksources.github.io/assets/ElementQ-Circled.png",
+      "variants": [
+        "classic"
+      ],
       "apps": [
         {
           "name": "emuThreeDS",
@@ -9062,6 +9254,9 @@
       "appCount": 3,
       "catalogLimited": false,
       "iconURL": "https://raw.githubusercontent.com/SpotCompiled/.github/main/SpotC%20Icon.png",
+      "variants": [
+        "classic"
+      ],
       "apps": [
         {
           "name": "SpotC++",
@@ -9095,6 +9290,9 @@
       "appCount": 2,
       "catalogLimited": false,
       "iconURL": "https://avatars.githubusercontent.com/u/77606385",
+      "variants": [
+        "classic"
+      ],
       "apps": [
         {
           "name": "uYouPlus",
@@ -9120,6 +9318,9 @@
       "appCount": 16275,
       "catalogLimited": true,
       "iconURL": "https://fastsign.dev/icon.png",
+      "variants": [
+        "classic"
+      ],
       "apps": [
         {
           "name": "MD_Widgets_Live_Wallpaper_v4_3_2_Pro_Unlocked_blatant_Patched",
@@ -9529,6 +9730,9 @@
       "appCount": 35,
       "catalogLimited": false,
       "iconURL": "https://quarksources.github.io/assets/ElementQ-Circled.png",
+      "variants": [
+        "classic"
+      ],
       "apps": [
         {
           "name": "Emnity",
@@ -9818,6 +10022,9 @@
       "appCount": 20,
       "catalogLimited": false,
       "iconURL": "https://external-content.duckduckgo.com/iu/?u=https://external-content.duckduckgo.com/iu/?u=https://i.imgur.com/g17kMl9.png",
+      "variants": [
+        "classic"
+      ],
       "apps": [
         {
           "name": "LiveContainer",
@@ -9987,6 +10194,9 @@
       "appCount": 1,
       "catalogLimited": false,
       "iconURL": "https://taurine.app/assets/images/icon.png",
+      "variants": [
+        "classic"
+      ],
       "apps": [
         {
           "name": "Taurine",
@@ -10004,6 +10214,9 @@
       "appCount": 7,
       "catalogLimited": false,
       "iconURL": "https://inds.nerd.net/Resources/required/AppIcon256.png",
+      "variants": [
+        "classic"
+      ],
       "apps": [
         {
           "name": "iNDS",
@@ -10069,6 +10282,9 @@
       "appCount": 2,
       "catalogLimited": false,
       "iconURL": "https://adp.salupovteam.com/pal/icon.png",
+      "variants": [
+        "classic"
+      ],
       "apps": [
         {
           "name": "Remind",
@@ -10094,6 +10310,9 @@
       "appCount": 2,
       "catalogLimited": false,
       "iconURL": "https://cdn.cercube.com/assets/icon.png",
+      "variants": [
+        "classic"
+      ],
       "apps": [
         {
           "name": "Cercube",
@@ -10119,6 +10338,9 @@
       "appCount": 1,
       "catalogLimited": false,
       "iconURL": "https://cdn.getrocketapp.io/assets/icon.png",
+      "variants": [
+        "classic"
+      ],
       "apps": [
         {
           "name": "Rocket for Instagram",
@@ -10136,6 +10358,9 @@
       "appCount": 1,
       "catalogLimited": false,
       "iconURL": "https://github.com/user-attachments/assets/1c42dda2-b778-4342-9f94-8f852c3ad652",
+      "variants": [
+        "classic"
+      ],
       "apps": [
         {
           "name": "Reynard Browser",

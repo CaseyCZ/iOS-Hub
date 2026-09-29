@@ -2,10 +2,10 @@
   "name": "BlueMatter",
   "subtitle": "A source for qBitConnect, and other apps from RajnishOne",
   "description": "Welcome to my source! Here you'll find qBitConnect, and my other future apps.",
-  "iconURL": "https://raw.githubusercontent.com/RajnishOne/altstore-releases/main/icons/general/bluematter.png",
-  "headerURL": "https://raw.githubusercontent.com/RajnishOne/altstore-releases/main/icons/general/bluematter.png",
+  "iconURL": "https://raw.githubusercontent.com/RajnishOne/altstore-releases/main//icons/general/bluematter.png",
+  "headerURL": "https://raw.githubusercontent.com/RajnishOne/altstore-releases/main//icons/general/bluematter.png",
   "website": "https://github.com/RajnishOne/RajnishOne",
-  "sourceURL": "https://raw.githubusercontent.com/RajnishOne/altstore-releases/main/altstore-pal.json",
+  "fediUsername": "rajnishsharma",
   "tintColor": "#2196F3",
   "featuredApps": [
     "com.bluematter.qbitconnect"
@@ -14,112 +14,104 @@
     {
       "name": "qBitConnect",
       "bundleIdentifier": "com.bluematter.qbitconnect",
-      "marketplaceID": "6756112692",
-      "developerName": "Rajnish Sharma",
+      "developerName": "RajnishOne",
       "subtitle": "Modern qBittorrent remote client.",
       "localizedDescription": "qBitConnect is a modern, cross-platform remote client for managing your qBittorrent downloads on iOS devices.\n\nKey Features:\n\n• Add torrents via magnet links or files\n• Browse and manage torrent files\n• Real-time download progress monitoring\n• Control your torrents from anywhere\n• Multiple theme options (Light, Dark, OLED)\n• Advanced filtering and sorting\n• Batch operations for multiple torrents\n• Detailed statistics and graphs\n• Beautiful native iOS interface built with Flutter",
       "iconURL": "https://raw.githubusercontent.com/RajnishOne/altstore-releases/main/icons/qBitConnect/AppIcon-40%403x.png",
       "tintColor": "#2196F3",
       "category": "utilities",
-      "screenshots": {
-        "iphone": [
-          {
-            "imageURL": "https://raw.githubusercontent.com/RajnishOne/altstore-releases/main/screenshots/1.png",
-            "width": 1242,
-            "height": 2688
-          },
-          {
-            "imageURL": "https://raw.githubusercontent.com/RajnishOne/altstore-releases/main/screenshots/2.png",
-            "width": 1242,
-            "height": 2688
-          },
-          {
-            "imageURL": "https://raw.githubusercontent.com/RajnishOne/altstore-releases/main/screenshots/3.png",
-            "width": 1242,
-            "height": 2688
-          },
-          {
-            "imageURL": "https://raw.githubusercontent.com/RajnishOne/altstore-releases/main/screenshots/4.png",
-            "width": 1242,
-            "height": 2688
-          },
-          {
-            "imageURL": "https://raw.githubusercontent.com/RajnishOne/altstore-releases/main/screenshots/5.png",
-            "width": 1242,
-            "height": 2688
-          },
-          {
-            "imageURL": "https://raw.githubusercontent.com/RajnishOne/altstore-releases/main/screenshots/6.png",
-            "width": 1242,
-            "height": 2688
-          },
-          {
-            "imageURL": "https://raw.githubusercontent.com/RajnishOne/altstore-releases/main/screenshots/7.png",
-            "width": 1242,
-            "height": 2688
-          },
-          {
-            "imageURL": "https://raw.githubusercontent.com/RajnishOne/altstore-releases/main/screenshots/8.png",
-            "width": 1242,
-            "height": 2688
-          }
-        ],
-        "ipad": [
-          {
-            "imageURL": "https://raw.githubusercontent.com/RajnishOne/altstore-releases/main/screenshots/ipad/1.png",
-            "width": 2048,
-            "height": 2732
-          },
-          {
-            "imageURL": "https://raw.githubusercontent.com/RajnishOne/altstore-releases/main/screenshots/ipad/2.png",
-            "width": 2048,
-            "height": 2732
-          },
-          {
-            "imageURL": "https://raw.githubusercontent.com/RajnishOne/altstore-releases/main/screenshots/ipad/3.png",
-            "width": 2048,
-            "height": 2732
-          },
-          {
-            "imageURL": "https://raw.githubusercontent.com/RajnishOne/altstore-releases/main/screenshots/ipad/4.png",
-            "width": 2048,
-            "height": 2732
-          },
-          {
-            "imageURL": "https://raw.githubusercontent.com/RajnishOne/altstore-releases/main/screenshots/ipad/5.png",
-            "width": 2048,
-            "height": 2732
-          },
-          {
-            "imageURL": "https://raw.githubusercontent.com/RajnishOne/altstore-releases/main/screenshots/ipad/6.png",
-            "width": 2048,
-            "height": 2732
-          }
-        ]
-      },
+      "screenshots": [
+        "https://raw.githubusercontent.com/RajnishOne/altstore-releases/main/screenshots/1.png",
+        "https://raw.githubusercontent.com/RajnishOne/altstore-releases/main/screenshots/2.png",
+        "https://raw.githubusercontent.com/RajnishOne/altstore-releases/main/screenshots/3.png",
+        "https://raw.githubusercontent.com/RajnishOne/altstore-releases/main/screenshots/4.png",
+        "https://raw.githubusercontent.com/RajnishOne/altstore-releases/main/screenshots/5.png",
+        "https://raw.githubusercontent.com/RajnishOne/altstore-releases/main/screenshots/6.png",
+        "https://raw.githubusercontent.com/RajnishOne/altstore-releases/main/screenshots/7.png",
+        "https://raw.githubusercontent.com/RajnishOne/altstore-releases/main/screenshots/8.png"
+      ],
       "versions": [
         {
-          "downloadURL": "https://raw.githubusercontent.com/RajnishOne/altstore-releases/main/adps/1.6.9/",
-          "size": 13200000,
           "version": "1.6.9",
-          "buildVersion": "36",
-          "date": "2025-12-05",
-          "localizedDescription": "This release includes: • Minor improvements and bug fixes",
+          "date": "2025-12-04",
+          "buildVersion": "35",
+          "localizedDescription": "This release includes:\n\n• Bug fixes and improvements\n• Performance optimizations",
+          "downloadURL": "https://github.com/RajnishOne/altstore-releases/raw/main/ipas/1.6.9/qBitConnect.ipa",
+          "size": 27468967,
           "minOSVersion": "15.0"
+        },
+        {
+          "version": "1.6.3",
+          "date": "2025-10-14",
+          "buildVersion": "25",
+          "localizedDescription": "This release includes:\n\n• Analytics screen updates\n• Torrent details page UI update\n• Peers for each torrent in torrent details page\n• App level language localization",
+          "downloadURL": "https://github.com/RajnishOne/qbitconnect/releases/download/v1.6.3/qBitConnect.ipa",
+          "size": 11429647,
+          "minOSVersion": "12.0"
+        },
+        {
+          "version": "1.5.1",
+          "date": "2025-10-13",
+          "buildVersion": "24",
+          "localizedDescription": "This release includes:\n\n• Minor Bug fixes and improvement\n• Set locaton for saving or updating torrents from recent locations",
+          "downloadURL": "https://github.com/RajnishOne/qbitconnect/releases/download/v1.5.1/qBitConnect.ipa",
+          "size": 11118283,
+          "minOSVersion": "12.0"
+        },
+        {
+          "version": "1.5.0",
+          "date": "2025-10-13",
+          "buildVersion": "23",
+          "localizedDescription": "This release includes:\n\n• Minor Bug fixes and improvement\n• Graphs and stats in torrent details page\n• Multiple server support",
+          "downloadURL": "https://github.com/RajnishOne/qbitconnect/releases/download/v1.5.0/qBitConnect.ipa",
+          "size": 11100906,
+          "minOSVersion": "12.0"
+        },
+        {
+          "version": "1.4.9",
+          "date": "2025-10-12",
+          "buildVersion": "22",
+          "localizedDescription": "This release includes:\n\n• Minor Bug fixes and improvement\n• Graphs and stats in torrent details page\n• Multiple server support",
+          "downloadURL": "https://github.com/RajnishOne/qbitconnect/releases/download/v1.4.9/qBitConnect.ipa",
+          "size": 11100579,
+          "minOSVersion": "12.0"
+        },
+        {
+          "version": "1.4.8",
+          "date": "2025-10-11",
+          "buildVersion": "21",
+          "localizedDescription": "Latest improvements:\n\n• Minor Bug fixes and improvement\n• Graphs and stats in torrent details page\n• Multiple server support",
+          "downloadURL": "https://github.com/RajnishOne/qbitconnect/releases/download/1.4.8/qBitConnect-1.4.8.ipa",
+          "size": 11099845,
+          "minOSVersion": "12.0"
+        },
+        {
+          "version": "1.4.7",
+          "date": "2025-10-11",
+          "buildVersion": "20",
+          "localizedDescription": "Latest improvements:\n\n• Minor Bug fixes and improvement\n• Graphs and stats in torrent details page",
+          "downloadURL": "https://github.com/RajnishOne/qbitconnect/releases/download/v1.4.7/qBitConnect.ipa",
+          "size": 11037327,
+          "minOSVersion": "12.0"
+        },
+        {
+          "version": "1.4.6",
+          "date": "2025-10-10",
+          "buildVersion": "19",
+          "localizedDescription": "Latest improvements:\n\n• Enhanced real-time monitoring and updates\n• Improved connection stability and error handling\n• Better performance and memory optimization\n• UI/UX refinements and bug fixes\n• Updated dependencies for better compatibility",
+          "downloadURL": "https://github.com/RajnishOne/qbitconnect/releases/download/v1.4.6/qBitConnect.ipa",
+          "size": 10923335,
+          "minOSVersion": "12.0"
         }
       ],
       "appPermissions": {
-        "entitlements": [
-          "application-identifier",
-          "get-task-allow",
-          "beta-reports-active",
-          "com.apple.developer.team-identifier"
-        ],
-        "privacy": {
-          "NSLocalNetworkUsageDescription": "This app needs access to your local network to connect to qBittorrent servers on your network.",
-          "NSFaceIDUsageDescription": "Use Face ID to unlock qBitConnect and protect your torrent management access.",
-          "NSPhotoLibraryUsageDescription": "qBitConnect needs access to your photo library to allow you to select torrent files and images from your device."
-        }
+        "entitlements": [],
+        "privacy": [
+          {
+            "name": "LocalNetwork",
+            "usageDescription": "This app needs access to your local network to connect to qBittorrent servers on your network."
+          }
+        ]
       }
     }
   ],
