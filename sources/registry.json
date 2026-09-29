@@ -140,7 +140,17 @@
         "apps",
         "games"
       ],
-      "developer": "SideStore Team"
+      "developer": "SideStore Team",
+      "urls": {
+        "classic": "https://community-apps.sidestore.io/sidecommunity.json"
+      },
+      "installers": [
+        "altstore",
+        "sidestore",
+        "livecontainer",
+        "flarestore",
+        "feather"
+      ]
     },
     {
       "id": "sidestore-official",
@@ -162,7 +172,17 @@
         "utility",
         "signing"
       ],
-      "developer": "SideStore Team"
+      "developer": "SideStore Team",
+      "urls": {
+        "classic": "https://apps.sidestore.io/"
+      },
+      "installers": [
+        "altstore",
+        "sidestore",
+        "livecontainer",
+        "flarestore",
+        "feather"
+      ]
     },
     {
       "id": "stikdebug",
@@ -676,8 +696,8 @@
     {
       "id": "qbitconnect",
       "name": "qBitConnect",
-      "url": "https://raw.githubusercontent.com/RajnishOne/qbitconnect-releases/main/altstore-pal.json",
-      "website": "https://github.com/RajnishOne/qbitconnect-releases",
+      "url": "https://raw.githubusercontent.com/RajnishOne/altstore-releases/main/altstore-pal.json",
+      "website": "https://github.com/RajnishOne/qbitconnect",
       "mode": "pal",
       "mergeable": false,
       "official": true,
@@ -693,7 +713,19 @@
         "torrent",
         "utility"
       ],
-      "developer": "RajnishOne"
+      "developer": "RajnishOne",
+      "urls": {
+        "classic": "https://raw.githubusercontent.com/RajnishOne/altstore-releases/main/altstore.json",
+        "pal": "https://raw.githubusercontent.com/RajnishOne/altstore-releases/main/altstore-pal.json"
+      },
+      "installers": [
+        "altstore",
+        "sidestore",
+        "livecontainer",
+        "altstore-pal",
+        "flarestore",
+        "feather"
+      ]
     },
     {
       "id": "artemis",
@@ -716,7 +748,19 @@
         "streaming",
         "open-source"
       ],
-      "developer": "Auties00"
+      "developer": "Auties00",
+      "urls": {
+        "classic": "https://raw.githubusercontent.com/auties00/artemis/refs/heads/main/source.json",
+        "pal": "https://raw.githubusercontent.com/auties00/artemis/refs/heads/main/source_pal.json"
+      },
+      "installers": [
+        "altstore",
+        "sidestore",
+        "livecontainer",
+        "altstore-pal",
+        "flarestore",
+        "feather"
+      ]
     },
     {
       "id": "hackerwebapp",
@@ -800,7 +844,19 @@
         "utility",
         "qbittorrent"
       ],
-      "developer": "Michael-128"
+      "developer": "Michael-128",
+      "urls": {
+        "classic": "https://raw.githubusercontent.com/Michael-128/qBitControl-releases/main/source-classic.json",
+        "pal": "https://raw.githubusercontent.com/Michael-128/qBitControl-releases/main/source.json"
+      },
+      "installers": [
+        "altstore",
+        "sidestore",
+        "livecontainer",
+        "altstore-pal",
+        "flarestore",
+        "feather"
+      ]
     },
     {
       "id": "iphanpy",
