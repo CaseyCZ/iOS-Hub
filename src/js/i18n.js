@@ -428,6 +428,97 @@ const GUIDE_FR_FULL = {
 };
 Object.assign(messages.fr, GUIDE_FR_FULL);
 
+const GUIDE_COMPATIBILITY_INSTALLER_COPY = {
+  en: {
+    guidePalBest:'Alternative marketplace in supported regions',
+    guidePalDevice:'iPhone / iPad · iOS/iPadOS 18+ · supported region',
+    guidePalComputer:'Not required',
+    guidePalRefresh:'Marketplace apps do not use the normal 7-day sideload refresh cycle',
+    guidePalAccount:'Matching App Store account required; free developer signing is not used',
+    guideFlareBest:'On-device signing and Source browsing',
+    guideFlareDevice:'iPhone / iPad',
+    guideFlareComputer:'Depends on certificate and setup',
+    guideFlareRefresh:'Depends on the signing certificate / profile used',
+    guideFlareAccount:'Depends on the signing method',
+    guideFeatherBest:'On-device IPA signing and AltStore-compatible Sources',
+    guideFeatherDevice:'iPhone / iPad',
+    guideFeatherComputer:'Not required for normal on-device use',
+    guideFeatherRefresh:'Depends on the signing certificate / profile used',
+    guideFeatherAccount:'Depends on the signing method'
+  },
+  cs: {
+    guidePalBest:'Alternativní marketplace v podporovaných regionech',
+    guidePalDevice:'iPhone / iPad · iOS/iPadOS 18+ · podporovaný region',
+    guidePalComputer:'Není potřeba',
+    guidePalRefresh:'Marketplace aplikace nepoužívají běžný 7denní cyklus obnovování sideloadu',
+    guidePalAccount:'Je potřeba odpovídající App Store účet; bezplatné vývojářské podepisování se nepoužívá',
+    guideFlareBest:'Podepisování v zařízení a procházení Sources',
+    guideFlareDevice:'iPhone / iPad',
+    guideFlareComputer:'Záleží na certifikátu a způsobu nastavení',
+    guideFlareRefresh:'Záleží na použitém podepisovacím certifikátu / profilu',
+    guideFlareAccount:'Záleží na způsobu podepisování',
+    guideFeatherBest:'Podepisování IPA v zařízení a AltStore-kompatibilní Sources',
+    guideFeatherDevice:'iPhone / iPad',
+    guideFeatherComputer:'Pro běžné použití přímo v zařízení není potřeba',
+    guideFeatherRefresh:'Záleží na použitém podepisovacím certifikátu / profilu',
+    guideFeatherAccount:'Záleží na způsobu podepisování'
+  },
+  de: {
+    guidePalBest:'Alternativer Marketplace in unterstützten Regionen',
+    guidePalDevice:'iPhone / iPad · iOS/iPadOS 18+ · unterstützte Region',
+    guidePalComputer:'Nicht erforderlich',
+    guidePalRefresh:'Marketplace-Apps verwenden nicht den normalen 7-Tage-Sideload-Refresh-Zyklus',
+    guidePalAccount:'Passendes App-Store-Konto erforderlich; kostenloses Entwickler-Signing wird nicht verwendet',
+    guideFlareBest:'Signing auf dem Gerät und Source-Browsing',
+    guideFlareDevice:'iPhone / iPad',
+    guideFlareComputer:'Abhängig von Zertifikat und Einrichtung',
+    guideFlareRefresh:'Abhängig vom verwendeten Signing-Zertifikat / Profil',
+    guideFlareAccount:'Abhängig von der Signing-Methode',
+    guideFeatherBest:'IPA-Signing auf dem Gerät und AltStore-kompatible Sources',
+    guideFeatherDevice:'iPhone / iPad',
+    guideFeatherComputer:'Für die normale Nutzung auf dem Gerät nicht erforderlich',
+    guideFeatherRefresh:'Abhängig vom verwendeten Signing-Zertifikat / Profil',
+    guideFeatherAccount:'Abhängig von der Signing-Methode'
+  },
+  es: {
+    guidePalBest:'Marketplace alternativo en regiones compatibles',
+    guidePalDevice:'iPhone / iPad · iOS/iPadOS 18+ · región compatible',
+    guidePalComputer:'No es necesario',
+    guidePalRefresh:'Las apps de marketplace no usan el ciclo normal de renovación de sideload de 7 días',
+    guidePalAccount:'Se necesita una cuenta de App Store compatible; no se usa la firma gratuita de desarrollador',
+    guideFlareBest:'Firma en el dispositivo y exploración de Sources',
+    guideFlareDevice:'iPhone / iPad',
+    guideFlareComputer:'Depende del certificado y la configuración',
+    guideFlareRefresh:'Depende del certificado / perfil de firma utilizado',
+    guideFlareAccount:'Depende del método de firma',
+    guideFeatherBest:'Firma de IPA en el dispositivo y Sources compatibles con AltStore',
+    guideFeatherDevice:'iPhone / iPad',
+    guideFeatherComputer:'No es necesario para el uso normal en el dispositivo',
+    guideFeatherRefresh:'Depende del certificado / perfil de firma utilizado',
+    guideFeatherAccount:'Depende del método de firma'
+  },
+  fr: {
+    guidePalBest:'Marketplace alternatif dans les régions prises en charge',
+    guidePalDevice:'iPhone / iPad · iOS/iPadOS 18+ · région prise en charge',
+    guidePalComputer:'Non requis',
+    guidePalRefresh:'Les apps de marketplace n’utilisent pas le cycle normal de refresh sideload de 7 jours',
+    guidePalAccount:'Un compte App Store correspondant est requis ; la signature développeur gratuite n’est pas utilisée',
+    guideFlareBest:'Signature sur l’appareil et navigation dans les Sources',
+    guideFlareDevice:'iPhone / iPad',
+    guideFlareComputer:'Dépend du certificat et de la configuration',
+    guideFlareRefresh:'Dépend du certificat / profil de signature utilisé',
+    guideFlareAccount:'Dépend de la méthode de signature',
+    guideFeatherBest:'Signature d’IPA sur l’appareil et Sources compatibles AltStore',
+    guideFeatherDevice:'iPhone / iPad',
+    guideFeatherComputer:'Non requis pour l’utilisation normale sur l’appareil',
+    guideFeatherRefresh:'Dépend du certificat / profil de signature utilisé',
+    guideFeatherAccount:'Dépend de la méthode de signature'
+  }
+};
+for (const [lang, copy] of Object.entries(GUIDE_COMPATIBILITY_INSTALLER_COPY)) {
+  Object.assign(messages[lang], copy);
+}
+
 export function normalizeLanguage(value) {
   return SUPPORTED_LANGUAGES.includes(value) ? value : 'en';
 }
