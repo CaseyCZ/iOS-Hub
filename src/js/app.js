@@ -1,12 +1,11 @@
 import { SUPPORTED_LANGUAGES, applyTranslations, normalizeLanguage, t } from './i18n.js?v=1.1.5-20260918-fullaudit2';
 import {
   INSTALLERS,
-  PRIMARY_INSTALLER_IDS,
-  MORE_INSTALLER_IDS,
+  groupInstallerIds,
   sourceInstallerIds,
   sourceInstallerDeepLink,
   sourceVariantURL
-} from './installers.js?v=1.1.5-20260929-installers2';
+} from './installers.js?v=1.1.5-20260929-installers3';
 
 const root = document.documentElement;
 const $ = (selector, scope = document) => scope.querySelector(selector);
@@ -91,42 +90,9 @@ function sourceInstallerVariantAvailable(source, installerId) {
 }
 
 function sourceInstallerGroups(source) {
-  const available = new Set(
-    sourceInstallerIds(source).filter(installerId => sourceInstallerVariantAvailable(source, installerId))
-  );
-  const main = [];
-
-  for (const installerId of PRIMARY_INSTALLER_IDS) {
-    if (available.has(installerId) && main.length < 3) {
-      main.push(installerId);
-      available.delete(installerId);
-    }
-  }
-
-  for (const installerId of MORE_INSTALLER_IDS) {
-    if (available.has(installerId) && main.length < 3) {
-      main.push(installerId);
-      available.delete(installerId);
-    }
-  }
-
-  const more = [];
-  for (const installerId of MORE_INSTALLER_IDS) {
-    if (available.has(installerId)) {
-      more.push(installerId);
-      available.delete(installerId);
-    }
-  }
-  if (available.has('altstore-pal')) {
-    more.push('altstore-pal');
-    available.delete('altstore-pal');
-  }
-
-  for (const installerId of sourceInstallerIds(source)) {
-    if (available.has(installerId)) more.push(installerId);
-  }
-
-  return {main, more};
+  const available = sourceInstallerIds(source)
+    .filter(installerId => sourceInstallerVariantAvailable(source, installerId));
+  return groupInstallerIds(available, 3);
 }
 
 function sourceMoreInstallers(source, installerIds) {
