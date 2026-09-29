@@ -261,6 +261,15 @@ function hydrateSideloadCreditCards() {
     const tool = SIDELOAD_TOOLS[card.dataset.sideloadTool];
     if (!tool) return;
 
+    card.dataset.toolType = tool.toolType || '';
+    card.dataset.capabilities = (tool.capabilities || []).join(' ');
+    card.dataset.targets = (tool.targets || []).join(' ');
+    card.dataset.hostPlatforms = (tool.hostPlatforms || []).join(' ');
+    card.dataset.computerMode = tool.computerMode || 'unknown';
+    card.dataset.sourceSupport = tool.sourceSupport || 'none';
+    card.dataset.openSource = tool.openSource === true ? 'true' : (tool.openSource === false ? 'false' : 'unknown');
+    card.dataset.resourceBadges = (tool.resourceBadges || []).join(' ');
+
     const title = card.querySelector('h3');
     if (title && tool.creditName) title.textContent = tool.creditName;
 
