@@ -44,6 +44,7 @@ OWNED_REFERENCE_FILES = (
 
 LANGUAGES = ("en", "cs", "de", "es", "fr")
 ALLOWED_MODES = {"classic", "pal", "sidestore"}
+ALLOWED_INSTALLERS = {"altstore", "sidestore", "livecontainer", "altstore-pal", "flarestore", "feather"}
 ID_RE = re.compile(r"^[a-z0-9][a-z0-9-]*$")
 LEGACY_PATHS = [
     ROOT / "Packages",
@@ -332,6 +333,60 @@ def validate_registry() -> None:
 
         if mode not in ALLOWED_MODES:
             error(f"registry source {source_id or index!r} has unsupported mode {mode!r}")
+
+        source_urls = source.get("urls")
+        if source_urls is not None:
+            if not isinstance(source_urls, dict):
+                error(f"registry source {source_id or index!r} urls must be an object")
+            else:
+                unknown_variants = sorted(set(source_urls) - {"classic", "pal"})
+                if unknown_variants:
+                    error(
+                        f"registry source {source_id or index!r} has unsupported URL variants: "
+                        + ", ".join(unknown_variants)
+                    )
+                for variant, variant_url in source_urls.items():
+                    parsed_variant = urlparse(str(variant_url or ""))
+                    if parsed_variant.scheme != "https" or not parsed_variant.netloc:
+                        error(
+                            f"registry source {source_id or index!r} urls.{variant} "
+                            "must use an absolute HTTPS URL"
+                        )
+
+        installers = source.get("installers")
+        if installers is not None:
+            if not isinstance(installers, list) or not installers:
+                error(f"registry source {source_id or index!r} installers must be a non-empty array")
+            else:
+                normalized_installers = [str(item) for item in installers]
+                unknown_installers = sorted(set(normalized_installers) - ALLOWED_INSTALLERS)
+                if unknown_installers:
+                    error(
+                        f"registry source {source_id or index!r} has unsupported installers: "
+                        + ", ".join(unknown_installers)
+                    )
+                if len(normalized_installers) != len(set(normalized_installers)):
+                    error(f"registry source {source_id or index!r} installers contains duplicates")
+
+                classic_url = (
+                    str(source_urls.get("classic") or "").strip()
+                    if isinstance(source_urls, dict)
+                    else (url if mode != "pal" else "")
+                )
+                pal_url = (
+                    str(source_urls.get("pal") or "").strip()
+                    if isinstance(source_urls, dict)
+                    else (url if mode == "pal" else "")
+                )
+                for installer in normalized_installers:
+                    if installer == "altstore-pal" and not pal_url:
+                        error(
+                            f"registry source {source_id or index!r} enables altstore-pal without a PAL URL"
+                        )
+                    if installer != "altstore-pal" and not classic_url:
+                        error(
+                            f"registry source {source_id or index!r} enables {installer} without a Classic URL"
+                        )
 
         website = str(source.get("website") or "").strip()
         if website:
@@ -850,7 +905,7 @@ def validate_layout() -> None:
     # Source-facing pages must stay registry-driven so adding one source updates
     # the catalog, Builder and Credits without maintaining duplicate hard-coded lists.
     dynamic_source_scripts = {
-        "app.js": ("sources/registry.json", "data/status.json", "data/catalog.json", "sourceWebsiteIcon", "data-source-website-icon"),
+        "app.js": ("sources/registry.json", "data/status.json", "data/catalog.json", "sourceWebsiteIcon", "data-source-website-icon", "installers.js"),
         "builder.js": ("sources/registry.json", "data/status.json", "data/catalog.json"),
         "credits.js": ("sources/registry.json", "sourceCredits", "source.developer", "maintainerGroups", "sourceCreditGroup", "brand-link-icon", "iconImage"),
     }
