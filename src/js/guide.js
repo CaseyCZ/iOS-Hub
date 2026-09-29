@@ -847,7 +847,7 @@ function resolvedTroubleQuery(raw) {
   if (/altserver|server not found|remote server/.test(q)) return scopedTroubleQuery(q, 'altserver');
   if (/install|installation|instal|nainstal/.test(q)) return scopedTroubleQuery(q, 'install ipa app');
   if (/cert|certificate|provision/.test(q)) {
-    const certificateTerms = ['certificate', 'provision'];
+    const certificateTerms = ['certificate', 'provision', 'provisioning'];
     if (/revoked|revoke/.test(q)) certificateTerms.push('revoked');
     if (/expired|expire/.test(q)) certificateTerms.push('expired');
     if (/mismatch|missing|import/.test(q)) certificateTerms.push('mismatch', 'missing', 'import');
