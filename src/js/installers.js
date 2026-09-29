@@ -480,12 +480,12 @@ const AUXILIARY_SIDELOAD_TOOLS = Object.freeze({
     capabilities: Object.freeze(['ipa-install', 'pairing', 'tv', 'self-hosted']),
     website: 'https://github.com/bitxeno/atvloadly',
     repository: 'https://github.com/bitxeno/atvloadly',
-      troubleshooting: 'https://github.com/bitxeno/atvloadly/wiki/FAQ',
     guideURL: 'https://github.com/bitxeno/atvloadly',
     links: Object.freeze({
       website: 'https://github.com/bitxeno/atvloadly',
       guide: 'https://github.com/bitxeno/atvloadly',
-      repository: 'https://github.com/bitxeno/atvloadly'
+      repository: 'https://github.com/bitxeno/atvloadly',
+      troubleshooting: 'https://github.com/bitxeno/atvloadly/wiki/FAQ'
     }),
     domain: 'github.com/bitxeno/atvloadly',
     icon: 'assets/icons/atvloadly.svg',
@@ -550,12 +550,12 @@ const AUXILIARY_SIDELOAD_TOOLS = Object.freeze({
     capabilities: Object.freeze(['ipa-install', 'bootstrap', 'pairing', 'desktop']),
     website: 'https://github.com/claration/Impactor',
     repository: 'https://github.com/claration/Impactor',
-      troubleshooting: 'https://github.com/claration/Impactor/issues',
     guideURL: 'https://github.com/claration/Impactor',
     links: Object.freeze({
       website: 'https://github.com/claration/Impactor',
       guide: 'https://github.com/claration/Impactor',
-      repository: 'https://github.com/claration/Impactor'
+      repository: 'https://github.com/claration/Impactor',
+      troubleshooting: 'https://github.com/claration/Impactor/issues'
     }),
     domain: 'github.com/claration/Impactor',
     icon: 'https://raw.githubusercontent.com/claration/Impactor/main/package/linux/icons/hicolor/512x512/apps/dev.khcrysalis.PlumeImpactor.png',
@@ -586,12 +586,12 @@ const AUXILIARY_SIDELOAD_TOOLS = Object.freeze({
     capabilities: Object.freeze(['ipa-install', 'permanent']),
     website: 'https://github.com/opa334/TrollStore',
     repository: 'https://github.com/opa334/TrollStore',
-      troubleshooting: 'https://github.com/opa334/TrollStore/issues',
     guideURL: 'https://github.com/opa334/TrollStore',
     links: Object.freeze({
       website: 'https://github.com/opa334/TrollStore',
       guide: 'https://github.com/opa334/TrollStore',
-      repository: 'https://github.com/opa334/TrollStore'
+      repository: 'https://github.com/opa334/TrollStore',
+      troubleshooting: 'https://github.com/opa334/TrollStore/issues'
     }),
     domain: 'github.com/opa334/TrollStore',
     icon: 'assets/icons/trollstore.svg',
