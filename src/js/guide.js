@@ -605,7 +605,7 @@ function getTroubleMatches(query) {
         if (troubleTermMatches(textHaystack, term)) return sum + (/[0-9]/.test(term) ? 3 : 1);
         return sum;
       }, 0);
-      const toolBoost = preferredTool && item.dataset.tool === preferredTool.id ? 8 : 0;
+      const toolBoost = preferredTool && item.dataset.tool === preferredTool.id ? 12 : 0;
       const competingToolPenalty = preferredTool && item.dataset.tool && item.dataset.tool !== preferredTool.id ? 0.75 : 0;
       const triedPenalty = triedTags.reduce((sum, tag) => sum + (haystack.includes(tag) ? 0.35 : 0), 0);
       const communityPenalty = item.classList.contains('community-item') ? 0.15 : 0;
