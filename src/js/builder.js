@@ -5,6 +5,7 @@ import {
   installerMixPackageData,
   mixPackageData,
   mixPackageTargetIds,
+  sourceInstallerDirectAvailable,
   sourceInstallerIds,
   sourceVariantURL,
   sourceFormatLabel
@@ -124,6 +125,9 @@ function renderTargetButtons() {
   }).join('');
 }
 function getStatus(id) { return status?.sources?.[id] || {}; }
+function directSourceAvailable(sourceId, installerId = target) {
+  return sourceInstallerDirectAvailable(getStatus(sourceId), installerId);
+}
 function catalogSource(id) { return catalog?.sources?.find(item => item.id === id) || null; }
 function allCandidates() { return registry.filter(source => source.builder !== false && getStatus(source.id).online === true && getStatus(source.id).mixTest !== 'fail'); }
 function autoCompatibleIds() { return new Set(status?.mixes?.autoCompatibleSourceIDs || []); }
@@ -485,7 +489,7 @@ async function buildMix() {
     } else if (installer && ids.length === 1) {
       const source = registry.find(item => item.id === ids[0]);
       const sourceUrl = sourceVariantURL(source, targetVariant());
-      if (sourceUrl) {
+      if (sourceUrl && directSourceAvailable(ids[0], target)) {
         addTarget.hidden = false;
         addTarget.href = installer.buildLink(sourceUrl);
         addTarget.innerHTML = `${installerIcon(target)}${escapeHtml(tr('addTo'))} ${escapeHtml(targetName())}`;
@@ -494,7 +498,7 @@ async function buildMix() {
       const sourceActions = ids.map(id => {
         const source = registry.find(item => item.id === id);
         const sourceUrl = sourceVariantURL(source, targetVariant());
-        if (!source || !sourceUrl) return '';
+        if (!source || !sourceUrl || !directSourceAvailable(id, target)) return '';
         return `<a class="btn small secondary installer-action" href="${escapeHtml(installer.buildLink(sourceUrl))}">${installerIcon(target)}${escapeHtml(source.name || id)}</a>`;
       }).filter(Boolean);
 
