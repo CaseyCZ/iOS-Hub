@@ -1,3 +1,47 @@
+export const SOURCE_VARIANTS = Object.freeze({
+  classic: {
+    id: 'classic',
+    label: 'Classic',
+    shortLabel: 'Classic',
+    modeLabel: 'AltStore Classic',
+    utilityPriority: 10,
+    fallbackURL: source => source?.mode === 'pal' ? null : (source?.url || null)
+  },
+  pal: {
+    id: 'pal',
+    label: 'AltStore PAL',
+    shortLabel: 'PAL',
+    modeLabel: 'AltStore PAL',
+    utilityPriority: 20,
+    fallbackURL: source => source?.mode === 'pal' ? (source?.url || null) : null
+  }
+});
+
+export const SOURCE_VARIANT_IDS = Object.freeze(Object.keys(SOURCE_VARIANTS));
+
+export const SOURCE_MODES = Object.freeze({
+  classic: {
+    id: 'classic',
+    label: 'AltStore Classic',
+    variant: 'classic',
+    formatLabel: 'Classic AltSource'
+  },
+  sidestore: {
+    id: 'sidestore',
+    label: 'SideStore',
+    variant: 'classic',
+    formatLabel: 'SideStore Source',
+    installerIds: Object.freeze(['sidestore'])
+  },
+  pal: {
+    id: 'pal',
+    label: 'AltStore PAL',
+    variant: 'pal',
+    formatLabel: 'AltStore PAL Source',
+    installerIds: Object.freeze(['altstore-pal'])
+  }
+});
+
 export const INSTALLERS = Object.freeze({
   altstore: {
     id: 'altstore',
@@ -91,27 +135,39 @@ export function groupInstallerIds(installerIds, maxMain = 3) {
   return { main, more };
 }
 
-const CLASSIC_DEFAULT_INSTALLERS = Object.freeze([
-  'altstore',
-  'sidestore',
-  'livecontainer',
-  'flarestore',
-  'feather'
-]);
+export function sourceVariantURL(source, variantId) {
+  const variant = SOURCE_VARIANTS[variantId];
+  if (!variant) return source?.url || null;
 
-export function sourceVariantURL(source, variant) {
-  const configured = source?.urls?.[variant];
+  const configured = source?.urls?.[variantId];
   if (typeof configured === 'string' && configured.trim()) return configured.trim();
 
-  if (variant === 'classic') {
-    return source?.mode === 'pal' ? null : (source?.url || null);
+  return variant.fallbackURL(source);
+}
+
+export function sourceVariantIds(source) {
+  return SOURCE_VARIANT_IDS.filter(variantId => Boolean(sourceVariantURL(source, variantId)));
+}
+
+export function sourceVariantLabel(variantId) {
+  return SOURCE_VARIANTS[variantId]?.label || variantId;
+}
+
+export function sourceModeLabel(source) {
+  const variants = sourceVariantIds(source);
+  if (variants.length > 1) {
+    return variants.map(variantId => SOURCE_VARIANTS[variantId]?.shortLabel || variantId).join(' + ');
   }
 
-  if (variant === 'pal') {
-    return source?.mode === 'pal' ? (source?.url || null) : null;
-  }
+  const mode = SOURCE_MODES[source?.mode];
+  if (mode?.label) return mode.label;
 
-  return source?.url || null;
+  const variantId = variants[0];
+  return SOURCE_VARIANTS[variantId]?.modeLabel || SOURCE_MODES.classic.label;
+}
+
+export function sourceFormatLabel(source) {
+  return SOURCE_MODES[source?.mode]?.formatLabel || SOURCE_MODES.classic.formatLabel;
 }
 
 export function sourceInstallerIds(source) {
@@ -119,9 +175,14 @@ export function sourceInstallerIds(source) {
     return [...new Set(source.installers.filter(id => INSTALLERS[id]))];
   }
 
-  if (source?.mode === 'pal') return ['altstore-pal'];
-  if (source?.mode === 'sidestore') return ['sidestore'];
-  return sourceVariantURL(source, 'classic') ? [...CLASSIC_DEFAULT_INSTALLERS] : [];
+  const mode = SOURCE_MODES[source?.mode] || SOURCE_MODES.classic;
+  if (Array.isArray(mode.installerIds)) {
+    return mode.installerIds.filter(id => INSTALLERS[id]);
+  }
+
+  return sourceVariantURL(source, mode.variant)
+    ? Object.values(INSTALLERS).filter(installer => installer.variant === mode.variant).map(installer => installer.id)
+    : [];
 }
 
 export function sourceInstallerDeepLink(source, installerId) {
@@ -135,8 +196,13 @@ export function sourceInstallerDeepLink(source, installerId) {
 }
 
 export function sourceUtilityURL(source) {
-  return sourceVariantURL(source, 'classic')
-    || sourceVariantURL(source, 'pal')
-    || source?.url
-    || '';
+  const ordered = [...SOURCE_VARIANT_IDS].sort((a, b) =>
+    (SOURCE_VARIANTS[a]?.utilityPriority || Number.MAX_SAFE_INTEGER)
+    - (SOURCE_VARIANTS[b]?.utilityPriority || Number.MAX_SAFE_INTEGER)
+  );
+  for (const variantId of ordered) {
+    const url = sourceVariantURL(source, variantId);
+    if (url) return url;
+  }
+  return source?.url || '';
 }
