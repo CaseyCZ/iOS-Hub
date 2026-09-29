@@ -675,6 +675,19 @@ def validate_interactive_guide() -> None:
         for value in duplicates:
             error(f"guide.html contains duplicate id {value!r}")
 
+        for required_guide_structure in (
+            'id="methods"',
+            'data-i18n="guideQuickTitle"',
+            'id="source-installers"',
+            'data-i18n="guideSourceInstallersTitle"',
+            'href="#source-installers" data-help-copy="jumpSources"',
+        ):
+            if required_guide_structure not in text:
+                error(
+                    "guide.html must keep installation methods and Source-compatible installers as distinct sections; "
+                    f"missing {required_guide_structure!r}"
+                )
+
     first_party_scripts = (
         "app.js",
         "builder-page.js",
