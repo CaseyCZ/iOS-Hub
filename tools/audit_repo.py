@@ -1170,6 +1170,10 @@ def validate_layout() -> None:
 
         if "resourceBadges: Object.freeze(['freeVerified', 'resourceSideloading', 'Sources'])" not in installers_text:
             error("FlareStore Resources profile must keep FREE verified, Sideloading and Sources badges")
+        if "icon: 'assets/icons/flarestore.svg'" not in installers_text:
+            error("FlareStore must use the local stable icon asset")
+        if "https://flarestore.app/favicon.ico" in installers_text:
+            error("FlareStore must not depend on the external favicon")
 
         for required_sideinstaller_profile in (
             "ios27: 'on-device'",
@@ -1202,6 +1206,10 @@ def validate_layout() -> None:
                     "builder.html must keep installer-aware Add actions in the result UI; "
                     f"missing {required_action_host!r}"
                 )
+        if 'id="builderTargets" class="builder-target-picker-host"' not in builder_page_text:
+            error("Builder installer target must use the compact dropdown host")
+        if 'class="builder-target-tabs"' in builder_page_text:
+            error("Builder must not restore the large installer target card grid")
 
     builder_script = JS_DIR / "builder.js"
     if builder_script.exists():
@@ -1210,6 +1218,19 @@ def validate_layout() -> None:
             error("Builder single-source fallback must respect per-installer direct Source compatibility")
         if "!directSourceAvailable(id, target)" not in builder_text:
             error("Builder multi-source fallback must filter incompatible direct Source actions")
+        for picker_required in (
+            'class="builder-target-picker"',
+            'class="builder-target-menu"',
+            "role=\"option\"",
+            "$('#builderTargets')?.addEventListener('click'",
+        ):
+            if picker_required not in builder_text:
+                error(
+                    "Builder installer target dropdown is incomplete; "
+                    f"missing {picker_required!r}"
+                )
+        if "$('[data-exp-target]').forEach(button => button.addEventListener" in builder_text:
+            error("Builder target picker must use delegated events so re-rendered options keep working")
         for required_action in (
             "const addTarget = $('#expAddTarget')",
             "const addSources = $('#expAddSources')",
@@ -1709,6 +1730,25 @@ def validate_layout() -> None:
         for required_css in ("safe-area-inset-left", "safe-area-inset-right", "prefers-reduced-motion"):
             if required_css not in shared_css_text:
                 error(f"hub-extra.css is missing full-site mobile/accessibility guard: {required_css}")
+        for forbidden_mobile_scroll in (
+            ".filter-tabs>:first-child{margin-inline-start:auto}",
+            ".filter-tabs>:last-child{margin-inline-end:auto}",
+        ):
+            if forbidden_mobile_scroll in shared_css_text:
+                error(
+                    "Mobile horizontal filters must keep both edges reachable; "
+                    f"found {forbidden_mobile_scroll!r}"
+                )
+        for required_mobile_scroll in (
+            "scroll-padding-inline:8px",
+            ".filter-tabs,.trouble-quick,.assistant-tried-options",
+            ".assistant-trouble-chips,.guide-jumpbar",
+        ):
+            if required_mobile_scroll not in shared_css_text:
+                error(
+                    "hub-extra.css is missing the shared mobile horizontal scroller guard; "
+                    f"missing {required_mobile_scroll!r}"
+                )
 
     for search_script in ("app.js", "builder.js"):
         path = JS_DIR / search_script
