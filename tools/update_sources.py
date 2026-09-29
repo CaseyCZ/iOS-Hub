@@ -23,6 +23,7 @@ USER_AGENT = "CaseyCZ-iOS-Hub (+https://caseycz.github.io/iOS-Hub/)"
 DIRECT_SOURCE_INSTALLERS = ("altstore", "sidestore", "livecontainer", "flarestore", "feather")
 STRICT_DUPLICATE_BUNDLE_INSTALLERS = {"altstore", "sidestore"}
 TOLERANT_DUPLICATE_BUNDLE_INSTALLERS = {"livecontainer", "feather"}
+DUPLICATE_BUNDLE_EXAMPLE_LIMIT = 20
 
 
 def now_iso() -> str:
@@ -182,7 +183,8 @@ def duplicate_bundle_report(payload: dict) -> dict:
         "count": len(items),
         "duplicateAppEntries": sum(item["count"] for item in items),
         "extraEntries": sum(item["count"] - 1 for item in items),
-        "items": items,
+        "items": items[:DUPLICATE_BUNDLE_EXAMPLE_LIMIT],
+        "itemsTruncated": len(items) > DUPLICATE_BUNDLE_EXAMPLE_LIMIT,
     }
 
 
