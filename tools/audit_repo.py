@@ -1039,6 +1039,13 @@ def validate_layout() -> None:
             "CORE_SIDELOAD_RESOURCE_NAMES",
             "sideloadToolURL",
             "sideloadToolSupports",
+            "links: Object.freeze",
+            "classicGuide",
+            "prerequisites",
+            "pairing",
+            "lcSideStore",
+            "download",
+            "requirements",
             "sideinstaller",
             "sideloadly",
             "atvloadly",
@@ -1048,6 +1055,19 @@ def validate_layout() -> None:
         ):
             if required not in installers_text:
                 error(f"installers.js is missing installer architecture part: {required!r}")
+
+        source_modes_match = re.search(
+            r"export const SOURCE_MODES = Object\.freeze\((\{[\s\S]*?\})\);\s*export const INSTALLERS",
+            installers_text,
+        )
+        if source_modes_match:
+            source_modes_text = source_modes_match.group(1)
+            for misplaced in ("toolType", "capabilities", "website", "guideURL", "coreCredit", "resourceCard"):
+                if misplaced in source_modes_text:
+                    error(
+                        "SOURCE_MODES must contain source-format metadata only; "
+                        f"found misplaced tool metadata {misplaced!r}"
+                    )
 
     legacy_brand = "AltStore · SideStore · LiveContainer"
     for page in SITE_PAGES:
@@ -1071,7 +1091,7 @@ def validate_layout() -> None:
     registry_driven_tool_scripts = {
         "resources.js": ("SIDELOAD_TOOLS", "sideloadToolURL", "data-sideload-tool", "hydrateSideloadToolCards"),
         "credits.js": ("SIDELOAD_TOOLS", "CORE_SIDELOAD_RESOURCE_NAMES", "sideloadToolURL", "hydrateSideloadCreditCards"),
-        "guide.js": ("sideloadToolURL", "GUIDE_RECOMMENDATION_TOOLS", "recommendationToolURL"),
+        "guide.js": ("sideloadToolURL", "GUIDE_RECOMMENDATION_TOOLS", "recommendationToolURL", "SETUP_RESULT_TOOLS", "setupResultToolURL"),
     }
     for script_name, required_parts in registry_driven_tool_scripts.items():
         script = JS_DIR / script_name
