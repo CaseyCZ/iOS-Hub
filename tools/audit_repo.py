@@ -991,7 +991,7 @@ def validate_layout() -> None:
     # Source-facing pages must stay registry-driven so adding one source updates
     # the catalog, Builder and Credits without maintaining duplicate hard-coded lists.
     dynamic_source_scripts = {
-        "app.js": ("sources/registry.json", "data/status.json", "data/catalog.json", "sourceWebsiteIcon", "data-source-website-icon", "installers.js", "SOURCE_VARIANT_IDS", "sourceVariantLabel", "sourceModeLabel", "sourceInstallerCompatibility", "sourceInstallerDirectAvailable", "data-blocked-installers"),
+        "app.js": ("sources/registry.json", "data/status.json", "data/catalog.json", "sourceWebsiteIcon", "data-source-website-icon", "installers.js", "SOURCE_VARIANT_IDS", "sourceVariantLabel", "sourceModeLabel", "sourceInstallerCompatibility", "sourceInstallerDirectAvailable", "data-blocked-installers", "includeOffline:checkedOffline", "groupInstallerIds(sourceInstallerIds(source), 3)"),
         "builder.js": ("sources/registry.json", "data/status.json", "data/catalog.json", "installers.js", "BUILDER_INSTALLER_IDS", "DEFAULT_BUILDER_INSTALLER_ID", "MIX_PACKAGE_IDS", "mixPackageData", "mixPackageTargetIds", "installerMixPackageData", "sourceInstallerDirectAvailable", "directSourceAvailable", "sourceFormatLabel", "targetVariant", "bundleKey = bundle.toLowerCase()", "dedupeHelp", "dedupeResult", "mixDedupeHelp"),
         "credits.js": ("sources/registry.json", "sourceCredits", "source.developer", "maintainerGroups", "sourceCreditGroup", "brand-link-icon", "iconImage", "CORE_SIDELOAD_RESOURCE_NAMES", "SIDELOAD_TOOLS"),
     }
@@ -1114,6 +1114,7 @@ def validate_layout() -> None:
             "openSource:",
             "sourceSupport:",
             "resourceBadges: Object.freeze",
+            "resourceBadges: Object.freeze(['freeVerified', 'resourceSideloading', 'Sources'])",
             "recommendationRoles: Object.freeze",
             "resourceOrder:",
             "creditOrder:",
