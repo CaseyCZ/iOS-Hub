@@ -2,7 +2,7 @@
 
 .catalog-filters{padding:14px;margin-bottom:14px;display:grid;gap:12px}.filter-group{display:grid;grid-template-columns:100px 1fr;gap:10px;align-items:start}.filter-label{padding-top:9px;color:var(--muted);font-size:10px;font-weight:900;text-transform:uppercase;letter-spacing:.05em}.catalog-filters .search{width:100%;min-width:0;margin-top:2px}
 .filter-disclosure{margin:0 0 14px}.filter-disclosure>.disclosure-body{padding:12px}.filter-disclosure .catalog-filters{padding:0;margin:0}.builder-filter-disclosure{margin:12px 0 0}
-.source-installers{display:flex;gap:6px;flex-wrap:wrap;margin-top:12px}.source-installers .installer-link{flex:1 1 auto;min-width:max-content;white-space:nowrap}.source-utilities{margin-top:7px}
+.source-installers{display:grid;grid-template-columns:repeat(auto-fit,minmax(88px,1fr));gap:6px;margin-top:12px;width:100%}.source-installers .installer-link{width:100%;min-width:0;white-space:nowrap}.source-utilities{display:grid;grid-template-columns:repeat(auto-fit,minmax(64px,1fr));gap:6px;margin-top:7px;width:100%;align-items:stretch}.source-utilities>.btn,.source-utilities>.source-more{width:100%;min-width:0}.source-utilities>.source-more>summary{width:100%;min-width:0;white-space:nowrap}
 .toast-message{position:fixed;z-index:400;left:50%;bottom:22px;transform:translateX(-50%);max-width:min(420px,calc(100% - 28px));padding:9px 12px;border:1px solid var(--border);border-radius:10px;background:var(--panel);color:var(--text);box-shadow:var(--shadow);font-size:10px;font-weight:800;text-align:center}.toast-message[hidden]{display:none!important}
 .tools-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.tool-card{padding:18px;display:grid;grid-template-columns:auto 1fr auto;gap:15px;align-items:center}.tool-icon{width:58px;height:58px;border:1px solid color-mix(in srgb,var(--accent) 42%,var(--border));border-radius:16px;display:grid;place-items:center;background:var(--accent-soft);color:var(--accent);font-weight:950;letter-spacing:.03em}.tool-copy{min-width:0}.tool-copy h3{margin:8px 0 4px;font-size:18px;letter-spacing:-.03em}.tool-copy p{margin:0;color:var(--muted);font-size:11px;line-height:1.55}.nav a.active{background:var(--accent-soft);color:var(--accent)}
 .muted{color:var(--muted);font-size:11px;line-height:1.5}
@@ -348,11 +348,11 @@
 @media(min-width:641px) and (max-width:1100px){
   .source-grid{grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}
   .source-card{padding:12px}
-  .source-installers{display:grid;grid-template-columns:.9fr 1fr 1.2fr;gap:4px;width:100%;align-items:stretch}
+  .source-installers{grid-template-columns:repeat(auto-fit,minmax(78px,1fr));gap:4px;width:100%;align-items:stretch}
   .source-installers .installer-link{width:100%;min-width:0;padding:0 4px;font-size:9px;gap:4px;white-space:nowrap}
   .source-installers .installer-icon{width:13px;height:13px}
-  .source-utilities{display:grid;grid-template-columns:1.35fr .8fr .8fr;gap:4px;width:100%}
-  .source-utilities .btn{width:100%;min-width:0;padding:0 5px;font-size:9px;white-space:nowrap}
+  .source-utilities{grid-template-columns:repeat(auto-fit,minmax(58px,1fr));gap:4px;width:100%}
+  .source-utilities .btn,.source-utilities summary{width:100%;min-width:0;padding:0 4px;font-size:9px;white-space:nowrap}
 }
 @media(max-width:640px){
   .source-installers .installer-link{min-width:0;white-space:nowrap}
@@ -970,7 +970,7 @@ body{
 .source-more>summary{list-style:none;user-select:none}
 .source-more>summary::-webkit-details-marker{display:none}
 .source-more-menu{position:absolute;left:0;bottom:calc(100% + 7px);z-index:40;display:grid;gap:5px;min-width:170px;padding:7px;border:1px solid var(--border);border-radius:11px;background:var(--panel);box-shadow:var(--shadow)}
-.source-more-menu .installer-link{width:100%;justify-content:flex-start;white-space:nowrap}
+.source-more-menu .installer-link,.source-more-menu .btn{width:100%;justify-content:flex-start;white-space:nowrap}
 .source-more[open]>summary{border-color:color-mix(in srgb,var(--accent) 55%,var(--border));color:var(--accent)}
 @media(max-width:640px){
   .source-more-menu{left:50%;transform:translateX(-50%);min-width:160px}
