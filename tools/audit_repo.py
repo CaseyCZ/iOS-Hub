@@ -1039,6 +1039,8 @@ def validate_layout() -> None:
             "CORE_SIDELOAD_RESOURCE_NAMES",
             "sideloadToolURL",
             "sideloadToolSupports",
+            "RESOURCE_BADGES",
+            "resourceBadgeSpecs",
             "sideloadToolsWithCapability",
             "sideloadToolsForTarget",
             "sideloadToolsForRole",
@@ -1136,7 +1138,7 @@ def validate_layout() -> None:
     guide_script = JS_DIR / "guide.js"
 
     registry_driven_tool_scripts = {
-        "resources.js": ("SIDELOAD_TOOLS", "sideloadToolURL", "data-sideload-tool", "hydrateSideloadToolCards", "dataset.toolType", "dataset.capabilities", "dataset.targets", "dataset.hostPlatforms", "dataset.computerMode", "dataset.sourceSupport", "dataset.openSource", "dataset.resourceBadges"),
+        "resources.js": ("SIDELOAD_TOOLS", "resourceBadgeSpecs", "sideloadToolURL", "data-sideload-tool", "hydrateSideloadToolCards", "renderSideloadToolBadges", "dataset.toolType", "dataset.capabilities", "dataset.targets", "dataset.hostPlatforms", "dataset.computerMode", "dataset.sourceSupport", "dataset.openSource", "dataset.resourceBadges"),
         "credits.js": ("SIDELOAD_TOOLS", "CORE_SIDELOAD_RESOURCE_NAMES", "sideloadToolURL", "hydrateSideloadCreditCards", "dataset.toolType", "dataset.capabilities", "dataset.targets", "dataset.hostPlatforms", "dataset.computerMode", "dataset.sourceSupport", "dataset.openSource", "dataset.resourceBadges"),
         "guide.js": ("sideloadToolForRole", "sideloadToolURL", "GUIDE_RECOMMENDATION_ROUTES", "recommendationToolURL", "SETUP_RESULT_ROUTES", "setupResultToolURL", "routeToolURL"),
     }
@@ -1190,6 +1192,31 @@ def validate_layout() -> None:
         ):
             if f'data-sideload-tool="{tool_id}"' not in page_text:
                 error(f"{page_name} is missing central sideload tool binding for {tool_id!r}")
+
+    if resources_page.exists():
+        resources_text = resources_page.read_text(encoding="utf-8")
+        for tool_id in (
+            "altstore", "sidestore", "sideinstaller", "livecontainer", "flarestore",
+            "feather", "sideloadly", "atvloadly", "iloader", "impactor", "trollstore",
+        ):
+            card_match = re.search(
+                rf'<article class="panel resource-card" data-sideload-tool="{re.escape(tool_id)}">([\s\S]*?)</article>',
+                resources_text,
+            )
+            if not card_match:
+                continue
+            badges_match = re.search(
+                r'<div class="resource-badges">([\s\S]*?)</div>',
+                card_match.group(1),
+            )
+            if not badges_match:
+                error(f"resources.html sideload card {tool_id!r} is missing the dynamic badge host")
+                continue
+            if badges_match.group(1).strip():
+                error(
+                    f"resources.html sideload card {tool_id!r} still hard-codes badge markup; "
+                    "render it from installers.js RESOURCE_BADGES instead"
+                )
 
     if resources_page.exists():
         resources_text = resources_page.read_text(encoding="utf-8")
