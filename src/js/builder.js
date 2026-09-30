@@ -283,7 +283,7 @@ function applyCopy() {
 function syncFilterUi() {
   $$('[data-exp-category-filter]').forEach(button => button.classList.toggle('active', button.dataset.expCategoryFilter === category));
   $$('[data-exp-genre-filter]').forEach(button => button.classList.toggle('active', button.dataset.expGenreFilter === genre));
-  $$('[data-exp-target]').forEach(button => {
+  document.querySelectorAll('[data-exp-target]').forEach(button => {
     const active = button.dataset.expTarget === target;
     button.classList.toggle('active', active);
     button.setAttribute('aria-selected', String(active));
@@ -414,15 +414,7 @@ function hostedTarget(ids) {
   const sorted = [...ids].sort();
   const classicTargets = new Set(BUILDER_INSTALLER_IDS);
   const manual = hostedIds();
-  const hostedPairs = new Set(status?.mixes?.hostedPairSourceIDs || []);
   const max = Number(status?.mixes?.maxSourcesPerMix || 0);
-
-  if (sorted.length === 2 && sorted.every(id => hostedPairs.has(id))) {
-    return {
-      url:new URL(`mix/${sorted.join('--')}.json`, window.location.href).href.split('#')[0],
-      targets:classicTargets
-    };
-  }
 
   if (sorted.length && sorted.length <= max && sorted.every(id => manual.has(id))) {
     return {
