@@ -574,6 +574,20 @@ def validate_registry() -> None:
             if website_url.scheme != "https" or not website_url.netloc:
                 error(f"registry source {source_id or index!r} website must use an absolute HTTPS URL")
 
+        icon_url = str(source.get("iconURL") or "").strip()
+        if not icon_url:
+            error(f"registry source {source_id or index!r} is missing iconURL")
+        elif icon_url.startswith("assets/"):
+            if not (ROOT / icon_url).exists():
+                error(f"registry source {source_id or index!r} iconURL points to missing local asset {icon_url!r}")
+        else:
+            parsed_icon = urlparse(icon_url)
+            if parsed_icon.scheme != "https" or not parsed_icon.netloc:
+                error(
+                    f"registry source {source_id or index!r} iconURL must use HTTPS "
+                    "or a local assets/ path"
+                )
+
         description = source.get("description")
         if not isinstance(description, dict):
             error(f"registry source {source_id or index!r} description must be an object")
