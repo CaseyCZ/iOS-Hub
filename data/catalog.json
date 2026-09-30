@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-29T22:17:46Z",
+  "generatedAt": "2026-09-30T05:35:25Z",
   "sources": [
     {
       "id": "utm",
@@ -1228,17 +1228,17 @@
     {
       "id": "ipa-vault",
       "name": "IPA Vault Source Repo",
-      "appCount": 62,
+      "appCount": 63,
       "catalogLimited": false,
       "iconURL": "https://pub-dd800571175348b6a2745b3396360028.r2.dev/ipavault-altstore-repo-logo.png",
       "apps": [
         {
           "name": "Discord (RainTweak)",
           "bundleIdentifier": "com.hammerandchisel.discord",
-          "developerName": "Ra1ncord & Moe & IPA Vault",
-          "version": "346.0",
+          "developerName": "Ra1ncord & IPA Vault",
+          "version": "347.0",
           "iconURL": "https://pub-dd800571175348b6a2745b3396360028.r2.dev/App%20Icons/Discord-Icons/Discord-AppStore-1024x1024.png",
-          "subtitle": "Discord 346.0 with RainTweak 0.9.6"
+          "subtitle": "Discord 347.0 with RainTweak 0.10.0"
         },
         {
           "name": "Facebook (iQFace)",
@@ -1262,7 +1262,7 @@
           "developerName": "tqmane & IPA Vault",
           "version": "7.20.2",
           "iconURL": "https://pub-dd800571175348b6a2745b3396360028.r2.dev/App%20Icons/Google-Photos-Icons/Google-Photos-AppStore-1024x1024.png",
-          "subtitle": "Google Photos 7.20.2 with Gunshot 0.2.5 (iOS 16.1+)"
+          "subtitle": "Google Photos 7.20.2 with Gunshot 0.2.6 (iOS 16.1+)"
         },
         {
           "name": "Google Photos (Gunshot) (iOS 17+)",
@@ -1270,15 +1270,15 @@
           "developerName": "tqmane & IPA Vault",
           "version": "7.44.0",
           "iconURL": "https://pub-dd800571175348b6a2745b3396360028.r2.dev/App%20Icons/Google-Photos-Icons/Google-Photos-AppStore-1024x1024.png",
-          "subtitle": "Google Photos 7.44.0 with Gunshot 0.2.5 (iOS 17+)"
+          "subtitle": "Google Photos 7.44.0 with Gunshot 0.2.6 (iOS 17+)"
         },
         {
           "name": "Google Photos (Gunshot)",
           "bundleIdentifier": "com.google.Photos",
           "developerName": "tqmane & IPA Vault",
-          "version": "7.93.0",
+          "version": "7.94.0",
           "iconURL": "https://pub-dd800571175348b6a2745b3396360028.r2.dev/App%20Icons/Google-Photos-Icons/Google-Photos-AppStore-1024x1024.png",
-          "subtitle": "Google Photos 7.94.0 with Gunshot 0.2.5"
+          "subtitle": "Google Photos 7.94.0 with Gunshot 0.2.6"
         },
         {
           "name": "iMe (MxGram)",
@@ -1436,9 +1436,9 @@
           "name": "Reddit (RedditFilter)",
           "bundleIdentifier": "com.reddit.Reddit",
           "developerName": "Moe & IPA Vault",
-          "version": "2026.38.0",
+          "version": "2026.39.0",
           "iconURL": "https://pub-dd800571175348b6a2745b3396360028.r2.dev/App%20Icons/Reddit-Icons/Reddit-AppStore-1024x1024.png",
-          "subtitle": "Reddit 2026.38.0 with RedditFilter 4.3"
+          "subtitle": "Reddit 2026.39.0 with RedditFilter 4.5"
         },
         {
           "name": "SoundCloud (NexaSC) (iOS 16.0-16.3)",
@@ -1478,7 +1478,7 @@
           "developerName": "7MD & IPA Vault",
           "version": "12.9.3",
           "iconURL": "https://pub-dd800571175348b6a2745b3396360028.r2.dev/App%20Icons/Swiftgram-Icons/Swiftgram-AppStore-1024x1024.png",
-          "subtitle": "Swiftgram 12.9.3 with iQTele 1.3"
+          "subtitle": "Swiftgram 12.9.3 with iQTele 1.4"
         },
         {
           "name": "Swiftgram (TGExtra)",
@@ -1540,9 +1540,9 @@
           "name": "Threads (ThreadSaver)",
           "bundleIdentifier": "com.burbn.barcelona",
           "developerName": "swiftleopard & IPA Vault",
-          "version": "448.0",
+          "version": "449.0",
           "iconURL": "https://pub-dd800571175348b6a2745b3396360028.r2.dev/App%20Icons/Threads-Icons/Threads-AppStore-1024x1024.png",
-          "subtitle": "Threads 448.0 with ThreadSaver"
+          "subtitle": "Threads 449.0 with ThreadSaver"
         },
         {
           "name": "TikTok (Infinitok)",
@@ -1588,17 +1588,17 @@
           "name": "Twitch",
           "bundleIdentifier": "tv.twitch",
           "developerName": "dvntms/zeroxdeadbeef/canpng/IPA Vault",
-          "version": "31.3.4",
+          "version": "31.4",
           "iconURL": "https://pub-dd800571175348b6a2745b3396360028.r2.dev/App%20Icons/Twitch-Tweach-TC-Icons/Twitch-AppStore-1024x1024.png",
-          "subtitle": "Twitch 31.3.4 with Tweach 2.4.1 + Twitch Control 0.0.6"
+          "subtitle": "Twitch 31.4 with Tweach 2.4.1 + Twitch Control 0.0.6"
         },
         {
           "name": "Twitch (Glass)",
           "bundleIdentifier": "tv.twitch.glass",
           "developerName": "dvntms/zeroxdeadbeef/canpng/IPA Vault",
-          "version": "31.3.4",
+          "version": "31.4",
           "iconURL": "https://pub-dd800571175348b6a2745b3396360028.r2.dev/App%20Icons/Twitch-Tweach-TC-Icons/Twitch-AppStore-1024x1024.png",
-          "subtitle": "Twitch 31.3.4 with Tweach 2.4.1 + Twitch Control 0.0.6 (Glass)"
+          "subtitle": "Twitch 31.4 with Tweach 2.4.1 + Twitch Control 0.0.6 (Glass)"
         },
         {
           "name": "Twitter NFB",
@@ -1676,17 +1676,17 @@
           "name": "YouTube (YouMod 2.0.0)",
           "bundleIdentifier": "com.google.ios.youtube.youmod",
           "developerName": "Tonwalter888 & IPA Vault",
-          "version": "21.38.3",
+          "version": "21.39.4",
           "iconURL": "https://pub-dd800571175348b6a2745b3396360028.r2.dev/App%20Icons/YouTube-Icons/YouTube-AppStore-1024x1024.png",
-          "subtitle": "YouTube 21.38.3 with YouMod 2.0.0"
+          "subtitle": "YouTube 21.39.4 with YouMod 2.0.0"
         },
         {
-          "name": "YouTube (YTKACE 1.1.0) (iOS 16+)",
+          "name": "YouTube (YTKACE 1.1.1) (iOS 16+)",
           "bundleIdentifier": "com.google.ios.youtube.ytkace",
           "developerName": "itzzace0 & IPA Vault",
           "version": "21.33.6",
           "iconURL": "https://pub-dd800571175348b6a2745b3396360028.r2.dev/App%20Icons/YouTube-Icons/YouTube-AppStore-1024x1024.png",
-          "subtitle": "YouTube 21.33.6 with YTKACE 1.1.0"
+          "subtitle": "YouTube 21.33.6 with YTKACE 1.1.1"
         },
         {
           "name": "YouTube (YTKACE 1.1.1)",
@@ -1695,6 +1695,14 @@
           "version": "21.39.4",
           "iconURL": "https://pub-dd800571175348b6a2745b3396360028.r2.dev/App%20Icons/YouTube-Icons/YouTube-AppStore-1024x1024.png",
           "subtitle": "YouTube 21.39.4 with YTKACE 1.1.1"
+        },
+        {
+          "name": "YouTube (YTPlus 6.0 b1) (iOS 15+)",
+          "bundleIdentifier": "com.google.ios.youtube.ytplus.20-21-6",
+          "developerName": "dvntms & itzzace0 & IPA Vault",
+          "version": "20.21.6",
+          "iconURL": "https://pub-dd800571175348b6a2745b3396360028.r2.dev/App%20Icons/YouTube-Icons/YouTube-AppStore-1024x1024.png",
+          "subtitle": "YouTube 20.21.6 with YTPlus 6.0 b1"
         },
         {
           "name": "YouTube (YTPlus 6.0 b1) (iOS 16+)",
@@ -1708,9 +1716,9 @@
           "name": "YouTube (YTPlus 6.0 b1)",
           "bundleIdentifier": "com.google.ios.youtube.ytplus",
           "developerName": "dvntms & itzzace0 & IPA Vault",
-          "version": "21.38.3",
+          "version": "21.39.4",
           "iconURL": "https://pub-dd800571175348b6a2745b3396360028.r2.dev/App%20Icons/YouTube-Icons/YouTube-AppStore-1024x1024.png",
-          "subtitle": "YouTube 21.38.3 with YTPlus 6.0 b1"
+          "subtitle": "YouTube 21.39.4 with YTPlus 6.0 b1"
         },
         {
           "name": "YTMUltimate+",
@@ -4836,10 +4844,18 @@
     {
       "id": "apptesters",
       "name": "AppTesters IPA Repo",
-      "appCount": 9400,
+      "appCount": 9401,
       "catalogLimited": true,
       "iconURL": "https://apptesters.org/apptesters-512x512.png",
       "apps": [
+        {
+          "name": "PureStatus",
+          "bundleIdentifier": "com.damtechdesigns.wa.story",
+          "developerName": "",
+          "version": "2026.06",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.damtechdesigns.wa.story.png",
+          "subtitle": ""
+        },
         {
           "name": "Foodie",
           "bundleIdentifier": "com.linecorp.Foodie",
@@ -6430,14 +6446,6 @@
           "developerName": "",
           "version": "2.2.70",
           "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/PhotoEditor.PhotoCollage.inCollage.png",
-          "subtitle": ""
-        },
-        {
-          "name": "Crsel",
-          "bundleIdentifier": "com.frameoneapps.Crsel",
-          "developerName": "",
-          "version": "1.5.2",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.frameoneapps.Crsel.png",
           "subtitle": ""
         }
       ]
@@ -9117,168 +9125,80 @@
     {
       "id": "fastsign",
       "name": "Alan's Gigantic Repo",
-      "appCount": 16275,
+      "appCount": 16272,
       "catalogLimited": true,
       "iconURL": "https://fastsign.dev/icon.png",
       "apps": [
         {
-          "name": "MD_Widgets_Live_Wallpaper_v4_3_2_Pro_Unlocked_blatant_Patched",
-          "bundleIdentifier": "tech.miidii.MDBlank",
-          "developerName": "@blatants",
-          "version": "4.3.2",
-          "iconURL": "https://fastsign.dev/tg-icon/blatants/12523.png",
-          "subtitle": "@blatants | MD Widgets: Live Wallpaper  • Bundle ID: tech.miidii.MDBlank • Updated to: 4.3.2 • Minimum iOS: 17.0 • Patched • Modifier: Pro Unlocked • "
+          "name": "AdGuard Pro",
+          "bundleIdentifier": "com.adguard.AdguardPro",
+          "developerName": "scholars lounge",
+          "version": "4.5.23",
+          "iconURL": "https://fastsign.dev/tg-icon/scholars-lounge/76837.png",
+          "subtitle": "scholars lounge | Adguard Pro (Beta) Version: 4.5.23 (1054) Bundle ID: com.adguard.AdguardPro TestFlight: https://testflight.apple.com/join/Eita1W29 I"
         },
         {
-          "name": "Lightroom",
-          "bundleIdentifier": "com.adobe.lrmobilephone",
+          "name": "GrowMe",
+          "bundleIdentifier": "com.book.summaries.reading",
           "developerName": "AppTesters IPA Repo",
-          "version": "11.6",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.adobe.lrmobilephone.png",
-          "subtitle": "@blatants | Lightroom: AI Photo Editor  • Bundle ID: com.adobe.lrmobilephone • Updated to: 11.6 • Minimum iOS: 18.0 • Patched • Modifier: Subscription"
-        },
-        {
-          "name": "Duolingo",
-          "bundleIdentifier": "com.duolingo.DuolingoMobile",
-          "developerName": "AppTesters IPA Repo",
-          "version": "7.142.0",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.duolingo.DuolingoMobile.png",
-          "subtitle": "Injected with Premium"
-        },
-        {
-          "name": "Rest",
-          "bundleIdentifier": "com.evolve.helm",
-          "developerName": "AppTesters IPA Repo",
-          "version": "3.204.0",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.evolve.helm.png",
+          "version": "1.4.0",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.book.summaries.reading.png",
           "subtitle": "Injected with Subscription Unlocked"
         },
         {
-          "name": "superagent",
-          "bundleIdentifier": "com.agent.super.extension.safari",
+          "name": "LUTStudio",
+          "bundleIdentifier": "com.solveit.lut-studio",
           "developerName": "AppTesters IPA Repo",
-          "version": "4.6.7",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.agent.super.extension.safari.png",
-          "subtitle": "Injected with Subscription Unlocked"
-        },
-        {
-          "name": "ProCCD",
-          "bundleIdentifier": "com.yengshine.proccd",
-          "developerName": "AppTesters IPA Repo",
-          "version": "6.8.3",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.yengshine.proccd.png",
+          "version": "4.0.7",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.solveit.lut-studio.png",
           "subtitle": "Injected with Pro"
         },
         {
-          "name": "Buddy",
-          "bundleIdentifier": "com.iPwners.Plonkan",
+          "name": "AdobeFresco",
+          "bundleIdentifier": "com.adobe.fresco.ios",
           "developerName": "AppTesters IPA Repo",
-          "version": "13.47",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.iPwners.Plonkan.png",
-          "subtitle": "Injected with Premium"
+          "version": "7.8.0",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.adobe.fresco.ios.png",
+          "subtitle": "@blatants | Adobe Fresco: Draw & Paint App  • Bundle ID: com.adobe.fresco.ios • Updated to: 7.8.0 • Minimum iOS: 18.0 • Patched • Modifier: Subscripti"
         },
         {
-          "name": "LookUp",
-          "bundleIdentifier": "in.muditbhargava.LookUp",
+          "name": "MyFitnessPal",
+          "bundleIdentifier": "com.myfitnesspal.mfp",
           "developerName": "AppTesters IPA Repo",
-          "version": "13.0.4",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/in.muditbhargava.LookUp.png",
-          "subtitle": "Injected with Premium"
-        },
-        {
-          "name": "Flacbox",
-          "bundleIdentifier": "com.leshko.flap",
-          "developerName": "AppTesters IPA Repo",
-          "version": "7.7",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.leshko.flap.png",
+          "version": "26.39.0",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.myfitnesspal.mfp.png",
           "subtitle": "Injected with Subscription Unlocked"
         },
         {
-          "name": "Flightradar24",
-          "bundleIdentifier": "se.resenatverket.FlightRadar24-Free",
+          "name": "Foodie",
+          "bundleIdentifier": "com.linecorp.Foodie",
           "developerName": "AppTesters IPA Repo",
-          "version": "11.12.0",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/se.resenatverket.FlightRadar24-Free.png",
-          "subtitle": "Injected with Gold"
+          "version": "8.3.2",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.linecorp.Foodie.png",
+          "subtitle": "Injected with Subscription Unlocked"
         },
         {
-          "name": "VlogNow",
-          "bundleIdentifier": "com.frontrow.vlog",
+          "name": "PureStatus",
+          "bundleIdentifier": "com.damtechdesigns.wa.story",
           "developerName": "AppTesters IPA Repo",
-          "version": "2.21.0",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.frontrow.vlog.png",
-          "subtitle": "@blatants | VN: Photo & Video Editor  • Bundle ID: com.frontrow.vlog • Updated to: 2.21.0 • Minimum iOS: 16.0 • Patched • Modifier: Subscription Unloc"
-        },
-        {
-          "name": "ShutEye",
-          "bundleIdentifier": "health.sleep.sounds.tracker.alarm.calm",
-          "developerName": "AppTesters IPA Repo",
-          "version": "3.5.5",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/health.sleep.sounds.tracker.alarm.calm.png",
-          "subtitle": "@blatants | ShutEye®: Sleep Tracker, Sound  • Bundle ID: health.sleep.sounds.tracker.alarm.calm • Updated to: 3.5.5 • Minimum iOS: 16.0 • Patched • Mo"
-        },
-        {
-          "name": "NFCTools",
-          "bundleIdentifier": "com.wakdev.wdnfc",
-          "developerName": "AppTesters IPA Repo",
-          "version": "3.4",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.wakdev.wdnfc.png",
-          "subtitle": "@blatants | NFC Tools  • Bundle ID: com.wakdev.wdnfc • Updated to: 3.4 • Minimum iOS: 15.6 • Patched • Modifier: Pro Unlocked • Tweaked by @blatants  "
-        },
-        {
-          "name": "Notability",
-          "bundleIdentifier": "com.gingerlabs.Notability",
-          "developerName": "AppTesters IPA Repo",
-          "version": "16.12.4",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.gingerlabs.Notability.png",
+          "version": "2026.06",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.damtechdesigns.wa.story.png",
           "subtitle": "Injected with Pro"
-        },
-        {
-          "name": "Car Parking",
-          "bundleIdentifier": "com.aidana.cardriving.ios",
-          "developerName": "@kamohacks",
-          "version": "4.9.11",
-          "iconURL": "https://fastsign.dev/tg-icon/kamohacks/16676.png",
-          "subtitle": "@kamohacks | Car Parking 1 🆕⬆️⬆️  ⚙️Hack Features⚙️ ✅Original iPA File  🛒 Tutorial 🛒  RULES 📝  📄Buy Your Own Certificate Tap Here 📱Apple ID With Paid "
         },
         {
           "name": "YouTube",
           "bundleIdentifier": "com.google.ios.youtube",
-          "developerName": "scholars lounge",
+          "developerName": "@ipavault",
           "version": "21.39.4",
-          "iconURL": "https://fastsign.dev/tg-icon/scholars-lounge/76688.png",
-          "subtitle": "@compiledipas | YTKACE v1.1.1 by @itzzace0  What's new: • Updated to YouTube 21.39.4 • Liquid Glass on iOS 26 for the tab bar, top bar buttons, menus,"
+          "iconURL": "https://fastsign.dev/tg-icon/ipavault/667.png",
+          "subtitle": "Variant: YTPlus 6.0~b1"
         },
         {
           "name": "YouTube",
           "bundleIdentifier": "com.google.ios.youtube",
-          "developerName": "scholars lounge",
+          "developerName": "@ipavault",
           "version": "21.33.6",
-          "iconURL": "https://fastsign.dev/tg-icon/scholars-lounge/76687.png",
-          "subtitle": "scholars lounge | YouTube + YTKACE YouTube version: 21.33.6 ⚠️for iOS 16 YTKACE version: 1.1.1 App by itzzace  YTKACE is a free, open-source YouTube e"
-        },
-        {
-          "name": "Discord",
-          "bundleIdentifier": "com.hammerandchisel.discord",
-          "developerName": "@ipavault",
-          "version": "347.0",
-          "iconURL": "https://fastsign.dev/tg-icon/ipavault/661.png",
-          "subtitle": "Variant: RainTweak"
-        },
-        {
-          "name": "Reddit",
-          "bundleIdentifier": "com.reddit.Reddit",
-          "developerName": "@ipavault",
-          "version": "2026.39.0",
-          "iconURL": "https://fastsign.dev/tg-icon/ipavault/660.png",
-          "subtitle": "Variant: RedditFilter"
-        },
-        {
-          "name": "YouTube",
-          "bundleIdentifier": "com.google.ios.youtube",
-          "developerName": "@ipavault",
-          "version": "21.39.4",
-          "iconURL": "https://fastsign.dev/tg-icon/ipavault/657.png",
+          "iconURL": "https://fastsign.dev/tg-icon/ipavault/668.png",
           "subtitle": "Variant: YTPlus 6.0~b1"
         },
         {
@@ -9286,47 +9206,15 @@
           "bundleIdentifier": "com.google.ios.youtube",
           "developerName": "@ipavault",
           "version": "20.21.6",
-          "iconURL": "https://fastsign.dev/tg-icon/ipavault/659.png",
+          "iconURL": "https://fastsign.dev/tg-icon/ipavault/669.png",
           "subtitle": "Variant: YTPlus 6.0~b1"
-        },
-        {
-          "name": "YouTube",
-          "bundleIdentifier": "com.google.ios.youtube",
-          "developerName": "@ipavault",
-          "version": "21.33.6",
-          "iconURL": "https://fastsign.dev/tg-icon/ipavault/623.png",
-          "subtitle": "Variant: YTPlus 6.0~b1"
-        },
-        {
-          "name": "Notability",
-          "bundleIdentifier": "com.gingerlabs.Notability",
-          "developerName": "@blatants",
-          "version": "16.12.4",
-          "iconURL": "https://fastsign.dev/tg-icon/blatants/12522.png",
-          "subtitle": "@blatants | Notability: AI Notes & Planner  • Bundle ID: com.gingerlabs.Notability • Updated to: 16.12.4 • Minimum iOS: 17.5 • Patched • Modifier: Pro"
-        },
-        {
-          "name": "Flightradar24",
-          "bundleIdentifier": "se.resenatverket.FlightRadar24-Free",
-          "developerName": "@blatants",
-          "version": "11.12.0",
-          "iconURL": "https://fastsign.dev/tg-icon/blatants/12518.png",
-          "subtitle": "@blatants | Flightradar24 | Flight Tracker  • Bundle ID: se.resenatverket.FlightRadar24-Free • Updated to: 11.12.0 • Minimum iOS: 16.0 • Patched • Mod"
-        },
-        {
-          "name": "Flacbox",
-          "bundleIdentifier": "com.leshko.flap",
-          "developerName": "@blatants",
-          "version": "7.7",
-          "iconURL": "https://fastsign.dev/tg-icon/blatants/12517.png",
-          "subtitle": "@blatants | Flacbox: Hi-Res Music Player  • Bundle ID: com.leshko.flap • Updated to: 7.7 • Minimum iOS: 15.5 • Patched • Modifier: Subscription Unlock"
         },
         {
           "name": "YouTube",
           "bundleIdentifier": "com.google.ios.youtube",
           "developerName": "@ipavault",
           "version": "21.39.4",
-          "iconURL": "https://fastsign.dev/tg-icon/ipavault/655.png",
+          "iconURL": "https://fastsign.dev/tg-icon/ipavault/665.png",
           "subtitle": "Variant: YTKACE 1.1.1"
         },
         {
@@ -9334,192 +9222,312 @@
           "bundleIdentifier": "com.google.ios.youtube",
           "developerName": "@ipavault",
           "version": "21.33.6",
-          "iconURL": "https://fastsign.dev/tg-icon/ipavault/656.png",
+          "iconURL": "https://fastsign.dev/tg-icon/ipavault/666.png",
           "subtitle": "Variant: YTKACE 1.1.1"
         },
         {
-          "name": "Boltgun Boom",
-          "bundleIdentifier": "com.nitrogames.boltgunboom",
-          "developerName": "@kamohacks",
-          "version": "1.0.2",
-          "iconURL": "https://fastsign.dev/tg-icon/kamohacks/16674.png",
-          "subtitle": "@kamohacks | Warhammer 40,000: Boltgun 🆕  🔩Hack Features🔩 ✅Damage Multiplier → amplify your firepower against all enemies ✅Never Die → survive any enc"
-        },
-        {
-          "name": "DCKO",
-          "bundleIdentifier": "com.dropfake.wb.dcko",
-          "developerName": "@kamohacks",
-          "version": "0.2.0",
-          "iconURL": "https://fastsign.dev/tg-icon/kamohacks/16673.png",
-          "subtitle": "@kamohacks | DCKO: Super Hero Fighting 🆕  🔩Hack Features🔩 ✅Damage Multiplier → amplify your attacks ✅Defense Multiplier → reduce incoming harm ✅Skills"
-        },
-        {
-          "name": "Bleach",
-          "bundleIdentifier": "com.klab.bleach",
-          "developerName": "@kamohacks",
-          "version": "18.1.1",
-          "iconURL": "https://fastsign.dev/tg-icon/kamohacks/16672.png",
-          "subtitle": "@kamohacks | Bleach: Brave Souls Anime 🆕  🔩Hack Features🔩 ✅AI No Attack → enemies stand idle ✅God Mode / Never Die → take no damage ✅One Hit Kill / Hi"
-        },
-        {
-          "name": "High Seas Hero",
-          "bundleIdentifier": "com.wwv.global",
-          "developerName": "@kamohacks",
-          "version": "1.161911.127067",
-          "iconURL": "https://fastsign.dev/tg-icon/kamohacks/16671.png",
-          "subtitle": "@kamohacks | High Seas Hero: Dig & Build 🆕⬆️⬆️  🔩Hack Features🔩 ✅Multiply Attack ✅Multiply Defense ✅God Mode ✅One Hit Kill  📝Note:If your power lower "
-        },
-        {
-          "name": "Pocket Scout FC",
-          "bundleIdentifier": "com.EylulGames.PocketScoutFC",
-          "developerName": "@kamohacks",
-          "version": "0.2.5",
-          "iconURL": "https://fastsign.dev/tg-icon/kamohacks/16670.png",
-          "subtitle": "@kamohacks | Pocket Scout FC 🆕⬆️⬆️  🔩Hack Features🔩 ✅1 bil cash → massive in-game currency for player upgrades and team development ✅1 bil premium cas"
-        },
-        {
-          "name": "Royal Match",
-          "bundleIdentifier": "com.dreamgames.royalmatch",
-          "developerName": "@kamohacks",
-          "version": "38911",
-          "iconURL": "https://fastsign.dev/tg-icon/kamohacks/16669.png",
-          "subtitle": "@kamohacks | Royal Match 🆕⬆️⬆️  🔩Hack Features🔩 ✅Coins ✅Stars Freeze ✅Lives Free ✅ViP Frame Unlocked ✅ViP Badge Unlocked ✅ViP Name Style ✅Moves Max ✅B"
-        },
-        {
-          "name": "Soccer Champs",
-          "bundleIdentifier": "com.monkeyibrowstudios.worldsoccerchamps",
-          "developerName": "@kamohacks",
-          "version": "2026.12",
-          "iconURL": "https://fastsign.dev/tg-icon/kamohacks/16668.png",
-          "subtitle": "@kamohacks | Soccer Champs 🆕⬆️⬆️  🔩Hack Features🔩 ✅Free iAP ⚽️  ✅Bux Modifier  ✍️Note: Restart the game After every purchase   📄Buy Your Own Certifica"
-        },
-        {
-          "name": "Travel Town",
-          "bundleIdentifier": "io.randomco.travel",
-          "developerName": "@kamohacks",
-          "version": "2.12.1761",
-          "iconURL": "https://fastsign.dev/tg-icon/kamohacks/16667.png",
-          "subtitle": "@kamohacks | Travel Town - Merge Adventure 🆕⬆️⬆️  🔩Hack Features🔩 ✅Freeze Energy  📄Buy Your Own Certificate Tap Here 🛒Apple ID With Paid Games Tap her"
-        },
-        {
           "name": "YouTube",
           "bundleIdentifier": "com.google.ios.youtube",
           "developerName": "@ipavault",
           "version": "21.39.4",
-          "iconURL": "https://fastsign.dev/tg-icon/ipavault/654.png",
-          "subtitle": "Variant: YTKACE 1.1.1"
-        },
-        {
-          "name": "LookUp",
-          "bundleIdentifier": "in.muditbhargava.LookUp",
-          "developerName": "@blatants",
-          "version": "13.0.4",
-          "iconURL": "https://fastsign.dev/tg-icon/blatants/12516.png",
-          "subtitle": "@blatants | LookUp: English Dictionary App  • Bundle ID: in.muditbhargava.LookUp • Updated to: 13.0.4 • Minimum iOS: 26.0 • Patched • Modifier: LookUp"
-        },
-        {
-          "name": "Twitch",
-          "bundleIdentifier": "tv.twitch",
-          "developerName": "@ipavault",
-          "version": "31.4",
-          "iconURL": "https://fastsign.dev/tg-icon/ipavault/653.png",
-          "subtitle": "Variant: Tweach+TC Glass"
-        },
-        {
-          "name": "Twitch",
-          "bundleIdentifier": "tv.twitch",
-          "developerName": "@ipavault",
-          "version": "31.4",
-          "iconURL": "https://fastsign.dev/tg-icon/ipavault/652.png",
-          "subtitle": "Variant: Tweach+TC"
-        },
-        {
-          "name": "Twitch",
-          "bundleIdentifier": "tv.twitch",
-          "developerName": "@ipavault",
-          "version": "31.4",
-          "iconURL": "https://fastsign.dev/tg-icon/ipavault/651.png",
-          "subtitle": "Variant: Tweach 2.4.1 Glass"
-        },
-        {
-          "name": "Twitch",
-          "bundleIdentifier": "tv.twitch",
-          "developerName": "@ipavault",
-          "version": "31.4",
-          "iconURL": "https://fastsign.dev/tg-icon/ipavault/650.png",
-          "subtitle": "Variant: Tweach 2.4.1"
-        },
-        {
-          "name": "ProCCD",
-          "bundleIdentifier": "com.yengshine.proccd",
-          "developerName": "@blatants",
-          "version": "6.8.3",
-          "iconURL": "https://fastsign.dev/tg-icon/blatants/12515.png",
-          "subtitle": "@blatants | ProCCD - Digital Film Camera  • Bundle ID: com.yengshine.proccd • Updated to: 6.8.3 • Minimum iOS: 15.0 • Patched • Modifier: Subscription"
-        },
-        {
-          "name": "Buddy",
-          "bundleIdentifier": "com.iPwners.Plonkan",
-          "developerName": "@blatants",
-          "version": "13.47",
-          "iconURL": "https://fastsign.dev/tg-icon/blatants/12514.png",
-          "subtitle": "@blatants | Buddy: Budget Planner App  • Bundle ID: com.iPwners.Plonkan • Updated to: 13.47 • Minimum iOS: 18.0 • Patched • Modifier: Premium Unlocked"
-        },
-        {
-          "name": "superagent",
-          "bundleIdentifier": "com.agent.super.extension.safari",
-          "developerName": "@blatants",
-          "version": "4.6.7",
-          "iconURL": "https://fastsign.dev/tg-icon/blatants/12513.png",
-          "subtitle": "@blatants | Super Agent for Safari  • Bundle ID: com.agent.super.extension.safari • Updated to: 4.6.7 • Minimum iOS: 17 • Patched • Modifier: Subscrip"
-        },
-        {
-          "name": "Rest",
-          "bundleIdentifier": "com.evolve.helm",
-          "developerName": "@blatants",
-          "version": "3.204.0",
-          "iconURL": "https://fastsign.dev/tg-icon/blatants/12512.png",
-          "subtitle": "@blatants | Rest: Fix Your Sleep For Good  • Bundle ID: com.evolve.helm • Updated to: 3.204.0 • Minimum iOS: 15.0 • Patched • Modifier: Subscription U"
-        },
-        {
-          "name": "Duolingo",
-          "bundleIdentifier": "com.duolingo.DuolingoMobile",
-          "developerName": "@blatants",
-          "version": "7.142.0",
-          "iconURL": "https://fastsign.dev/tg-icon/blatants/12511.png",
-          "subtitle": "@blatants | Duolingo: Language Lessons  • Bundle ID: com.duolingo.DuolingoMobile • Updated to: 7.142.0 • Minimum iOS: 17.0 • Patched • Modifier: Duoli"
-        },
-        {
-          "name": "YouTube",
-          "bundleIdentifier": "com.google.ios.youtube",
-          "developerName": "@ipavault",
-          "version": "21.39.4",
-          "iconURL": "https://fastsign.dev/tg-icon/ipavault/648.png",
-          "subtitle": "Variant: YTKACE Glass"
-        },
-        {
-          "name": "YouTube",
-          "bundleIdentifier": "com.google.ios.youtube",
-          "developerName": "@ipavault",
-          "version": "21.39.4",
-          "iconURL": "https://fastsign.dev/tg-icon/ipavault/649.png",
+          "iconURL": "https://fastsign.dev/tg-icon/ipavault/663.png",
           "subtitle": "Variant: YouMod 2.0.0"
         },
         {
-          "name": "YouTube Music",
-          "bundleIdentifier": "com.google.ios.youtubemusic",
-          "developerName": "scholars lounge",
-          "version": "9.39.2",
-          "iconURL": "https://fastsign.dev/tg-icon/scholars-lounge/76633.png",
-          "subtitle": "scholars lounge | YT Music Ultimate+ No PIP 9.39  - YouTube Music 9.39 - YTMusicUltimate - Return YouTube Music Dislike - YTMABConfig -YTVolume - Info"
+          "name": "YouTube",
+          "bundleIdentifier": "com.google.ios.youtube",
+          "developerName": "@ipavault",
+          "version": "21.33.6",
+          "iconURL": "https://fastsign.dev/tg-icon/ipavault/664.png",
+          "subtitle": "Variant: YouMod 2.0.0"
         },
         {
-          "name": "YouTube Music",
-          "bundleIdentifier": "com.google.ios.youtubemusic",
+          "name": "Discord",
+          "bundleIdentifier": "com.hammerandchisel.discord",
+          "developerName": "@ipavault",
+          "version": "347.0",
+          "iconURL": "https://fastsign.dev/tg-icon/ipavault/662.png",
+          "subtitle": "Variant: RainTweak"
+        },
+        {
+          "name": "Pearla V4",
+          "bundleIdentifier": "io.houseofmars.Pearla",
+          "developerName": "@Sa1y0miii",
+          "version": "4.1.0",
+          "iconURL": "https://fastsign.dev/tg-icon/sa1y0miii/13650.png",
+          "subtitle": "@Sa1y0miii | Pearla - Pro Filmic Camera 🧸 Min.iOS: [18.0+] 🧀 App version: [4.1.0] !upd  🪼 App Store: https://apps.apple.com/app/id6477783991 📮 Notes: "
+        },
+        {
+          "name": "Bannrs",
+          "bundleIdentifier": "app.bannrs.ios",
+          "developerName": "@Sa1y0miii",
+          "version": "4.6.3",
+          "iconURL": "https://fastsign.dev/tg-icon/sa1y0miii/13647.png",
+          "subtitle": "@Sa1y0miii | LED Banner Maker: Bannrs 🧸 Min.iOS: [26.0+] 🧀 App version: [4.6.3] !upd  🪼 App Store: https://apps.apple.com/app/id6749514945 📮 Notes: Su"
+        },
+        {
+          "name": "Wheelz",
+          "bundleIdentifier": "com.gigamow.Wheelz",
+          "developerName": "@Sa1y0miii",
+          "version": "5.2",
+          "iconURL": "https://fastsign.dev/tg-icon/sa1y0miii/13644.png",
+          "subtitle": "@Sa1y0miii | Wheelz - Speed & Drive Tracker 🧸 Min.iOS: [18.0+] 🧀 App version: [5.2] !upd  🪼 App Store: https://apps.apple.com/app/id6774287184 📮 Notes"
+        },
+        {
+          "name": "Splash",
+          "bundleIdentifier": "app.cranberry.splash",
+          "developerName": "@Sa1y0miii",
+          "version": "2.7.2",
+          "iconURL": "https://fastsign.dev/tg-icon/sa1y0miii/13641.png",
+          "subtitle": "@Sa1y0miii | Splash - Party & Group Games 🧸 Min.iOS: [16.6+] 🧀 App version: [2.7.2] !upd  🪼 App Store: https://apps.apple.com/app/id6744290388 📮 Notes"
+        },
+        {
+          "name": "Retro",
+          "bundleIdentifier": "io.lonepalm.Retro",
+          "developerName": "@Sa1y0miii",
+          "version": "123.0",
+          "iconURL": "https://fastsign.dev/tg-icon/sa1y0miii/13638.png",
+          "subtitle": "@Sa1y0miii | Retro – Ad‑Free Social  🧸 Min.iOS: [17.0+]   🧀 App version: [123.0] !upd  🪼 App Store: https://apps.apple.com/ua/app/retro-ad-free-social"
+        },
+        {
+          "name": "Foodie",
+          "bundleIdentifier": "com.linecorp.Foodie",
+          "developerName": "@blatants",
+          "version": "8.3.2",
+          "iconURL": "https://fastsign.dev/tg-icon/blatants/12543.png",
+          "subtitle": "@blatants | Foodie - Filter & Film Camera  • Bundle ID: com.linecorp.Foodie • Updated to: 8.3.2 • Minimum iOS: 16.0 • Patched • Modifier: Subscription"
+        },
+        {
+          "name": "RepCount",
+          "bundleIdentifier": "com.simonpersson.repsapp",
+          "developerName": "@Sa1y0miii",
+          "version": "10.8.0",
+          "iconURL": "https://fastsign.dev/tg-icon/sa1y0miii/13635.png",
+          "subtitle": "@Sa1y0miii | RepCount - Gym Workout Tracker 🧸 Min.iOS: [18.0+] 🧀 App version: [10.8.0] !upd  🪼 App Store: https://apps.apple.com/app/id594982044 📮 Not"
+        },
+        {
+          "name": "Amble",
+          "bundleIdentifier": "com.sprrrint.amble",
+          "developerName": "@Sa1y0miii",
+          "version": "1.0.13",
+          "iconURL": "https://fastsign.dev/tg-icon/sa1y0miii/13632.png",
+          "subtitle": "@Sa1y0miii | Amble: Step Counter & Race 🧸 Min.iOS: [18.0+] 🧀 App version: [1.0.13] !upd  🪼 App Store: https://apps.apple.com/app/id6795489364 📮 Notes:"
+        },
+        {
+          "name": "Budget Bestie",
+          "bundleIdentifier": "app.budgetbestie.budgetbestie",
+          "developerName": "@Sa1y0miii",
+          "version": "1.7.0",
+          "iconURL": "https://fastsign.dev/tg-icon/sa1y0miii/13629.png",
+          "subtitle": "@Sa1y0miii | Budget Bestie 🧸 Min.iOS: [16.0+] 🧀 App version: [1.7.0] !upd  🪼 App Store: https://apps.apple.com/app/id6460258044 📮 Notes: Subscription "
+        },
+        {
+          "name": "Televise",
+          "bundleIdentifier": "me.mumtaz.numan.televiseapp",
+          "developerName": "@Sa1y0miii",
+          "version": "1.9.1",
+          "iconURL": "https://fastsign.dev/tg-icon/sa1y0miii/13626.png",
+          "subtitle": "@Sa1y0miii | Televise: TV & Movie Tracker 🧸 Min.iOS: [17.0+] 🧀 App version: [1.9.1] !upd  🪼 App Store: https://apps.apple.com/app/id6765939187 📮 Notes"
+        },
+        {
+          "name": "Unprompted",
+          "bundleIdentifier": "com.whiostudios.UnpromptedWriting",
+          "developerName": "@Sa1y0miii",
+          "version": "1.32",
+          "iconURL": "https://fastsign.dev/tg-icon/sa1y0miii/13623.png",
+          "subtitle": "@Sa1y0miii | Creative Writing: Unprompted 🧸 Min.iOS: [17.6+] 🧀 App version: [1.32] !upd  🪼 App Store: https://apps.apple.com/app/id6746424858 📮 Notes:"
+        },
+        {
+          "name": "MyFitnessPal",
+          "bundleIdentifier": "com.myfitnesspal.mfp",
+          "developerName": "@blatants",
+          "version": "26.39.0",
+          "iconURL": "https://fastsign.dev/tg-icon/blatants/12542.png",
+          "subtitle": "@blatants | MyFitnessPal: Calorie Counter  • Bundle ID: com.myfitnesspal.mfp • Updated to: 26.39.0 • Minimum iOS: 18.0 • Patched • Modifier: Subscript"
+        },
+        {
+          "name": "LUT-Studio",
+          "bundleIdentifier": "com.solveit.lut-studio",
+          "developerName": "@blatants",
+          "version": "4.0.7",
+          "iconURL": "https://fastsign.dev/tg-icon/blatants/12540.png",
+          "subtitle": "@blatants | LUT Studio: Color Grading App  • Bundle ID: com.solveit.lut-studio • Updated to: 4.0.7 • Minimum iOS: 17.0 • Patched • Modifier: Pro Unloc"
+        },
+        {
+          "name": "GrowMe",
+          "bundleIdentifier": "com.book.summaries.reading",
+          "developerName": "@blatants",
+          "version": "1.4.0",
+          "iconURL": "https://fastsign.dev/tg-icon/blatants/12539.png",
+          "subtitle": "@blatants | GrowMe: Lazy Reading  • Bundle ID: com.book.summaries.reading • Updated to: 1.4.0 • Minimum iOS: 17.0 • Patched • Modifier: Subscription U"
+        },
+        {
+          "name": "Rise Sleep",
+          "bundleIdentifier": "com.risesci.nyx",
+          "developerName": "@blatants",
+          "version": "0.1.633",
+          "iconURL": "https://fastsign.dev/tg-icon/blatants/12538.png",
+          "subtitle": "@blatants | RISE: Sleep Tracker  • Bundle ID: com.risesci.nyx • Updated to: 1.633.0 • Minimum iOS: 15.1 • Patched • Modifier: Subscription Unlocked • "
+        },
+        {
+          "name": "Structured",
+          "bundleIdentifier": "com.leomehlig.today",
+          "developerName": "@blatants",
+          "version": "4.6.4",
+          "iconURL": "https://fastsign.dev/tg-icon/blatants/12537.png",
+          "subtitle": "@blatants | Structured: Daily Planner Todo  • Bundle ID: com.leomehlig.today • Updated to: 4.6.4 • Minimum iOS: 18.0 • Patched • Modifier: Subscriptio"
+        },
+        {
+          "name": "Dehancer",
+          "bundleIdentifier": "com.dehancer.film.ios-app",
+          "developerName": "@blatants",
+          "version": "7.1",
+          "iconURL": "https://fastsign.dev/tg-icon/blatants/12536.png",
+          "subtitle": "@blatants | Dehancer Film Emulation  • Bundle ID: com.dehancer.film.ios-app • Updated to: 7.1 • Minimum iOS: 26.0 • Patched • Modifier: Subscription U"
+        },
+        {
+          "name": "Reddit",
+          "bundleIdentifier": "com.reddit.Reddit",
           "developerName": "scholars lounge",
-          "version": "9.39.2",
-          "iconURL": "https://fastsign.dev/tg-icon/scholars-lounge/76632.png",
-          "subtitle": "scholars lounge | YT Music Ultimate+ 9.39  - YouTube Music 9.39 - YTMusicUltimate - Return YouTube Music Dislike - YTMABConfig - YouMusicPIP - YTVolum"
+          "version": "2026.39.0",
+          "iconURL": "https://fastsign.dev/tg-icon/scholars-lounge/76801.png",
+          "subtitle": "scholars lounge | RedditDeluxe 2026.39.0  - Reddit 2026.39.0 - RedditFilter (MoeReddit) hold 3 fingers down to get the menu - redditColorComments - Ol"
+        },
+        {
+          "name": "Athlytic",
+          "bundleIdentifier": "myndarc.newFitnessApp",
+          "developerName": "@blatants",
+          "version": "27.0.2",
+          "iconURL": "https://fastsign.dev/tg-icon/blatants/12535.png",
+          "subtitle": "@blatants | Athlytic: Fitness & Recovery  • Bundle ID: myndarc.newFitnessApp • Updated to: 27.0.2 • Minimum iOS: 17.0 • Patched • Modifier: Subscripti"
+        },
+        {
+          "name": "Chunk (patched)",
+          "bundleIdentifier": "com.curiousminds.chunkapp",
+          "developerName": "iOSDecrypted",
+          "version": "2.6.1",
+          "iconURL": "https://fastsign.dev/tg-icon/iosdecrypted/223848.png",
+          "subtitle": "iOSDecrypted | ✔️ Successfully processed IPA File ⚙️ Description Satella: Unlocks In-App Purchases in some apps and games. --- Auto RevenueCat: Unlock"
+        },
+        {
+          "name": "Yazio",
+          "bundleIdentifier": "com.yazio.ios.YAZIO",
+          "developerName": "@blatants",
+          "version": "26.39.2",
+          "iconURL": "https://fastsign.dev/tg-icon/blatants/12534.png",
+          "subtitle": "@blatants | AI Calorie Tracker by Yazio  • Bundle ID: com.yazio.ios.YAZIO • Updated to: 26.39.2 • Minimum iOS: 16.0 • Patched • Modifier: Subscription"
+        },
+        {
+          "name": "Peachy",
+          "bundleIdentifier": "com.camerasideas.Peachy",
+          "developerName": "@ipa_dark",
+          "version": "2.16.0",
+          "iconURL": "https://fastsign.dev/tg-icon/ipa-dark/1783.png",
+          "subtitle": "@ipa_dark | 🔄 Peachy - Редактор лица и тела - appstore  🇷🇺 Фоторедактор для ретуши лица и тела с инструментами коррекции фигуры, кожи, черт лица, маки"
+        },
+        {
+          "name": "PREQUEL",
+          "bundleIdentifier": "com.aiarlabs.prequel",
+          "developerName": "@ipa_dark",
+          "version": "2.101.0",
+          "iconURL": "https://fastsign.dev/tg-icon/ipa-dark/1782.png",
+          "subtitle": "@ipa_dark | 🔄 Prequel: Редактор фото и видео - appstore  🇷🇺 Редактор фото и видео с фильтрами, эффектами, ретушью, шаблонами и инструментами для стили"
+        },
+        {
+          "name": "Picsart",
+          "bundleIdentifier": "com.picsart.studio",
+          "developerName": "@ipa_dark",
+          "version": "30.8.2",
+          "iconURL": "https://fastsign.dev/tg-icon/ipa-dark/1781.png",
+          "subtitle": "@ipa_dark | 🔄 Picsart фото и видео редактор - appstore   🇷🇺 Популярный фоторедактор и создатель коллажей с множеством фильтров, эффектов и инструменто"
+        },
+        {
+          "name": "InShot",
+          "bundleIdentifier": "com.camerasideas.InstaShot",
+          "developerName": "@blatants",
+          "version": "2.0.1",
+          "iconURL": "https://fastsign.dev/tg-icon/blatants/12477.png",
+          "subtitle": "@ipa_dark | 🔄 InShot - Видео редактор и фото - appstore  🇷🇺 Редактор фото и видео с инструментами обрезки, монтажа, добавления музыки, эффектов, фильт"
+        },
+        {
+          "name": "Captions",
+          "bundleIdentifier": "boomer.Smart-Video",
+          "developerName": "AppTesters IPA Repo",
+          "version": "13.36.1",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/boomer.Smart-Video.png",
+          "subtitle": "@blatants | Captions: AI Edits Your Video  • Bundle ID: boomer.Smart-Video • Updated to: 13.36.1 • Minimum iOS: 16.0 • Patched • Modifier: Scale Subsc"
+        },
+        {
+          "name": "Airbrush",
+          "bundleIdentifier": "com.magicv.AirBrush",
+          "developerName": "@ipa_dark",
+          "version": "8.16.0",
+          "iconURL": "https://fastsign.dev/tg-icon/ipa-dark/1779.png",
+          "subtitle": "@ipa_dark | 🔄 Airbrush - фоторедактор - appstore  🇷🇺 Фоторедактор с инструментами ретуши, улучшения кожи, удаления объектов, коррекции лица, фильтрами"
+        },
+        {
+          "name": "Wallpapers",
+          "bundleIdentifier": "com.ispazio.Wallpapers-Central",
+          "developerName": "@blatants",
+          "version": "2.6",
+          "iconURL": "https://fastsign.dev/tg-icon/blatants/12532.png",
+          "subtitle": "@blatants | Wallpapers Central  • Bundle ID: com.ispazio.Wallpapers-Central • Updated to: 2.6 • Minimum iOS: 18.0 • Patched • Modifier: Subscription U"
+        },
+        {
+          "name": "Uplens",
+          "bundleIdentifier": "app.uplens",
+          "developerName": "@blatants",
+          "version": "4.3.1",
+          "iconURL": "https://fastsign.dev/tg-icon/blatants/12531.png",
+          "subtitle": "@blatants | Uplens: Photo & Video Editor  • Bundle ID: app.uplens • Updated to: 4.3.1 • Minimum iOS: 15.0 • Patched • Modifier: Subscription Unlocked "
+        },
+        {
+          "name": "Luminar",
+          "bundleIdentifier": "com.skylum.luminaripad",
+          "developerName": "AppTesters IPA Repo",
+          "version": "4.4.2",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.skylum.luminaripad.png",
+          "subtitle": "@blatants | Luminar: Photo Editor Pro  • Bundle ID: com.skylum.luminaripad • Updated to: 4.4.2 • Minimum iOS: 17.0 • Patched • Modifier: Subscription "
+        },
+        {
+          "name": "iScreen",
+          "bundleIdentifier": "com.zerone.hidesktop",
+          "developerName": "@blatants",
+          "version": "5.1.11",
+          "iconURL": "https://fastsign.dev/tg-icon/blatants/12529.png",
+          "subtitle": "@blatants | iScreen - Widgets & Wallpaper  • Bundle ID: com.zerone.hidesktop • Updated to: 5.1.11 • Minimum iOS: 15.0 • Patched • Modifier: Subscripti"
+        },
+        {
+          "name": "PREQUEL",
+          "bundleIdentifier": "com.aiarlabs.prequel",
+          "developerName": "@blatants",
+          "version": "2.101.0",
+          "iconURL": "https://fastsign.dev/tg-icon/blatants/12528.png",
+          "subtitle": "@blatants | Prequel: Photo & Video Editor  • Bundle ID: com.aiarlabs.prequel • Updated to: 2.101.0 • Minimum iOS: 16.0 • Patched • Modifier: Subscript"
+        },
+        {
+          "name": "Fitia",
+          "bundleIdentifier": "com.ulisesolave.Fitia",
+          "developerName": "@blatants",
+          "version": "25.0.5",
+          "iconURL": "https://fastsign.dev/tg-icon/blatants/12527.png",
+          "subtitle": "@blatants | Fitia: Calorie Counter & Diet  • Bundle ID: com.ulisesolave.Fitia • Updated to: 25.0.5 • Minimum iOS: 16 • Patched • Modifier: Subscriptio"
+        },
+        {
+          "name": "MapleRead CX",
+          "bundleIdentifier": "com.maplepop.bmcx",
+          "developerName": "@blatants",
+          "version": "7.1.1",
+          "iconURL": "https://fastsign.dev/tg-icon/blatants/12526.png",
+          "subtitle": "@blatants | MapleRead CX  • Bundle ID: com.maplepop.bmcx • Updated to: 7.1.1 • Minimum iOS: 15.0 • Patched • Modifier: Subscription Unlocked • Tweaked"
+        },
+        {
+          "name": "Video Lite",
+          "bundleIdentifier": "com.videobrowser.ios",
+          "developerName": "@blatants",
+          "version": "624200",
+          "iconURL": "https://fastsign.dev/tg-icon/blatants/12525.png",
+          "subtitle": "@blatants | Video Lite  • Bundle ID: com.videobrowser.ios • Updated to: 6.24.200 • Minimum iOS: 15.0 • Patched • Modifier: Pro Unlocked • Tweaked by @"
         }
       ]
     },
@@ -10148,5 +10156,5 @@
       ]
     }
   ],
-  "uniqueAppCount": 4540
+  "uniqueAppCount": 4539
 }
