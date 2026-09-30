@@ -384,6 +384,25 @@ function appDate(app) {
   }
   return best;
 }
+function sanitizeClassicApp(app) {
+  const cleaned = {...app};
+  delete cleaned.marketplaceID;
+  delete cleaned.Build;
+  delete cleaned.build;
+
+  if (Array.isArray(cleaned.versions)) {
+    cleaned.versions = cleaned.versions.map(version => {
+      if (!version || typeof version !== 'object' || Array.isArray(version)) return version;
+      const item = {...version};
+      delete item.Build;
+      delete item.build;
+      return item;
+    });
+  }
+
+  return cleaned;
+}
+
 function dedupe(payloads) {
   const merged = new Map();
   let conflicts = 0;
@@ -403,7 +422,9 @@ function dedupe(payloads) {
     }
   }
   return {
-    apps:[...merged.values()].map(item => item.app).sort((a,b) => String(a.name || '').localeCompare(String(b.name || ''))),
+    apps:[...merged.values()]
+      .map(item => sanitizeClassicApp(item.app))
+      .sort((a,b) => String(a.name || '').localeCompare(String(b.name || ''))),
     conflicts
   };
 }
