@@ -281,12 +281,12 @@ function applyCopy() {
 }
 
 function syncFilterUi() {
-  $('[data-exp-category-filter]').forEach(button => {
+  $$('[data-exp-category-filter]').forEach(button => {
     const active = button.dataset.expCategoryFilter === category;
     button.classList.toggle('active', active);
     button.setAttribute('aria-pressed', String(active));
   });
-  $('[data-exp-genre-filter]').forEach(button => {
+  $$('[data-exp-genre-filter]').forEach(button => {
     const active = button.dataset.expGenreFilter === genre;
     button.classList.toggle('active', active);
     button.setAttribute('aria-pressed', String(active));
@@ -674,12 +674,12 @@ async function init() {
     render();
   });
 
-  $('[data-exp-category-filter]').forEach(button => button.addEventListener('click', () => {
+  $$('[data-exp-category-filter]').forEach(button => button.addEventListener('click', () => {
     const requested = SOURCE_CATEGORIES.has(button.dataset.expCategoryFilter) ? button.dataset.expCategoryFilter : 'all';
     category = requested !== 'all' && requested === category ? 'all' : requested;
     saveFilters(); render();
   }));
-  $('[data-exp-genre-filter]').forEach(button => button.addEventListener('click', () => {
+  $$('[data-exp-genre-filter]').forEach(button => button.addEventListener('click', () => {
     const requested = GENRES.has(button.dataset.expGenreFilter) ? button.dataset.expGenreFilter : 'all';
     genre = requested !== 'all' && requested === genre ? 'all' : requested;
     saveFilters(); render();
