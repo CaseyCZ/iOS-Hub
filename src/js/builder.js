@@ -43,7 +43,7 @@ const GENRE_RULES = {
 const copy = {
   en: {
     title:'Custom Source Builder',
-    desc:'Choose an installer and original Sources. The original plan to merge several Sources into one universal Mix is currently not reliably supported across installers, so the Builder keeps every Source separate and passes the original URLs through iOS Hub Source Import. Manual one-by-one opening stays available below, and JSON export is optional.',
+    desc:'Choose an installer and original Sources. The Builder does not merge them into one universal Mix. Instead, iOS Hub Source Import sends the original Source URLs one after another in a single Shortcut run; when the selected installer supports this flow, multiple Sources can be added in that one run. If it does not, confirmation or the manual one-by-one fallback may still be needed. JSON export is optional.',
     selectCompatible:'Select all compatible',
     selectAll:'Select compatible shown',
     clear:'Clear selection',
@@ -93,7 +93,7 @@ const copy = {
   },
   cs: {
     title:'Custom Source Builder',
-    desc:'Vyber instalátor a původní Sources. Původní plán sloučit více Sources do jednoho univerzálního Mixu aktuálně není spolehlivě možný napříč podporovanými instalátory, takže Builder ponechá každou Source samostatně a předá původní URL přes iOS Hub Source Import. Dole zůstává ruční otevření po jedné a export JSONu je volitelný.',
+    desc:'Vyber instalátor a původní Sources. Builder je neslučuje do jednoho univerzálního Mixu. Místo toho iOS Hub Source Import pošle původní URL Sources postupně v jednom spuštění zkratky; pokud to zvolený instalátor podporuje, může se tak v jednom běhu přidat více Sources. Pokud ne, může být potřeba potvrzení nebo ruční otevření po jedné. Export JSONu je volitelný.',
     selectCompatible:'Vybrat všechny kompatibilní',
     selectAll:'Vybrat kompatibilní zobrazené',
     clear:'Zrušit výběr',
@@ -143,7 +143,7 @@ const copy = {
   },
   de: {
     title:'Custom Source Builder',
-    desc:'Installer und originale Sources auswählen. Der ursprüngliche Plan, mehrere Sources zu einem universellen Mix zusammenzuführen, wird derzeit nicht zuverlässig von allen unterstützten Installern unterstützt. Deshalb bleiben die Sources getrennt und ihre Original-URLs werden über iOS Hub Source Import übergeben. Manuelles Öffnen einzeln und JSON-Export bleiben verfügbar.',
+    desc:'Installer und originale Sources auswählen. Der Builder führt sie nicht zu einem universellen Mix zusammen. Stattdessen sendet iOS Hub Source Import die Original-URLs nacheinander in einem einzigen Kurzbefehl-Lauf; wenn der gewählte Installer diesen Ablauf unterstützt, können mehrere Sources in diesem Lauf hinzugefügt werden. Andernfalls kann eine Bestätigung oder das manuelle Öffnen einzeln erforderlich sein. Der JSON-Export ist optional.',
     selectCompatible:'Alle kompatiblen wählen',
     selectAll:'Sichtbare kompatible wählen',
     clear:'Auswahl löschen',
@@ -193,7 +193,7 @@ const copy = {
   },
   es: {
     title:'Custom Source Builder',
-    desc:'Elige un instalador y Sources originales. El plan original de combinar varias Sources en un único Mix universal no es actualmente fiable en todos los instaladores compatibles, así que el Builder mantiene cada Source separada y envía las URL originales mediante iOS Hub Source Import. La apertura manual una por una y el JSON opcional siguen disponibles.',
+    desc:'Elige un instalador y Sources originales. El Builder no las combina en un único Mix universal. iOS Hub Source Import envía las URL originales una tras otra en una sola ejecución del atajo; si el instalador seleccionado admite este flujo, se pueden añadir varias Sources en esa ejecución. Si no, puede hacer falta confirmación o usar la apertura manual una por una. El JSON es opcional.',
     selectCompatible:'Seleccionar compatibles',
     selectAll:'Seleccionar compatibles visibles',
     clear:'Borrar selección',
@@ -243,7 +243,7 @@ const copy = {
   },
   fr: {
     title:'Custom Source Builder',
-    desc:'Choisissez un installateur et les Sources originales. Le projet initial de fusionner plusieurs Sources dans un Mix universel n’est actuellement pas fiable avec tous les installateurs pris en charge ; le Builder conserve donc chaque Source séparément et transmet les URL originales via iOS Hub Source Import. L’ouverture manuelle une par une et l’export JSON facultatif restent disponibles.',
+    desc:'Choisissez un installateur et les Sources originales. Le Builder ne les fusionne pas dans un Mix universel. iOS Hub Source Import envoie les URL originales l’une après l’autre dans une seule exécution du raccourci ; si l’installateur choisi prend en charge ce flux, plusieurs Sources peuvent être ajoutées pendant cette exécution. Sinon, une confirmation ou l’ouverture manuelle une par une peut être nécessaire. L’export JSON reste facultatif.',
     selectCompatible:'Sélectionner les compatibles',
     selectAll:'Sélectionner les compatibles affichées',
     clear:'Effacer la sélection',
