@@ -50,7 +50,12 @@
         "ipa",
         "utility"
       ],
-      "developer": "UTM Team"
+      "developer": "UTM Team",
+      "compliance": {
+        "reviewStatus": "unreviewed",
+        "usage": "metadata-and-original-links",
+        "binaryRehost": false
+      }
     },
     {
       "id": "provenance",
@@ -72,7 +77,12 @@
         "retro",
         "ipa"
       ],
-      "developer": "Provenance Team"
+      "developer": "Provenance Team",
+      "compliance": {
+        "reviewStatus": "unreviewed",
+        "usage": "metadata-and-original-links",
+        "binaryRehost": false
+      }
     },
     {
       "id": "ish",
@@ -94,7 +104,12 @@
         "developer",
         "utility"
       ],
-      "developer": "iSH Team"
+      "developer": "iSH Team",
+      "compliance": {
+        "reviewStatus": "unreviewed",
+        "usage": "metadata-and-original-links",
+        "binaryRehost": false
+      }
     },
     {
       "id": "flycast",
@@ -117,7 +132,12 @@
         "retro",
         "ipa"
       ],
-      "developer": "Flycast Team"
+      "developer": "Flycast Team",
+      "compliance": {
+        "reviewStatus": "unreviewed",
+        "usage": "metadata-and-original-links",
+        "binaryRehost": false
+      }
     },
     {
       "id": "sidestore-community",
@@ -150,7 +170,12 @@
         "livecontainer",
         "flarestore",
         "feather"
-      ]
+      ],
+      "compliance": {
+        "reviewStatus": "unreviewed",
+        "usage": "metadata-and-original-links",
+        "binaryRehost": false
+      }
     },
     {
       "id": "sidestore-official",
@@ -182,7 +207,12 @@
         "livecontainer",
         "flarestore",
         "feather"
-      ]
+      ],
+      "compliance": {
+        "reviewStatus": "unreviewed",
+        "usage": "metadata-and-original-links",
+        "binaryRehost": false
+      }
     },
     {
       "id": "stikdebug",
@@ -204,7 +234,12 @@
         "utility",
         "trusted"
       ],
-      "developer": "StikDebug"
+      "developer": "StikDebug",
+      "compliance": {
+        "reviewStatus": "unreviewed",
+        "usage": "metadata-and-original-links",
+        "binaryRehost": false
+      }
     },
     {
       "id": "livecontainer",
@@ -227,7 +262,12 @@
         "trusted",
         "official"
       ],
-      "developer": "LiveContainer Team"
+      "developer": "LiveContainer Team",
+      "compliance": {
+        "reviewStatus": "unreviewed",
+        "usage": "metadata-and-original-links",
+        "binaryRehost": false
+      }
     },
     {
       "id": "livecontainer-nightly",
@@ -250,7 +290,12 @@
         "nightly",
         "official"
       ],
-      "developer": "LiveContainer Team"
+      "developer": "LiveContainer Team",
+      "compliance": {
+        "reviewStatus": "unreviewed",
+        "usage": "metadata-and-original-links",
+        "binaryRehost": false
+      }
     },
     {
       "id": "manicemu",
@@ -272,7 +317,12 @@
         "retro",
         "trusted"
       ],
-      "developer": "Manic EMU"
+      "developer": "Manic EMU",
+      "compliance": {
+        "reviewStatus": "unreviewed",
+        "usage": "metadata-and-original-links",
+        "binaryRehost": false
+      }
     },
     {
       "id": "flycast-ios",
@@ -294,7 +344,12 @@
         "dreamcast",
         "trusted"
       ],
-      "developer": "chachillie"
+      "developer": "chachillie",
+      "compliance": {
+        "reviewStatus": "unreviewed",
+        "usage": "metadata-and-original-links",
+        "binaryRehost": false
+      }
     },
     {
       "id": "geode-ios",
@@ -316,7 +371,12 @@
         "geometry-dash",
         "trusted"
       ],
-      "developer": "Geode Team"
+      "developer": "Geode Team",
+      "compliance": {
+        "reviewStatus": "unreviewed",
+        "usage": "metadata-and-original-links",
+        "binaryRehost": false
+      }
     },
     {
       "id": "retrosekai",
@@ -338,7 +398,12 @@
         "community",
         "trusted"
       ],
-      "developer": "RetroSekaï"
+      "developer": "RetroSekaï",
+      "compliance": {
+        "reviewStatus": "unreviewed",
+        "usage": "metadata-and-original-links",
+        "binaryRehost": false
+      }
     },
     {
       "id": "oatmealdome",
@@ -360,7 +425,12 @@
         "dolphinios",
         "trusted"
       ],
-      "developer": "OatmealDome"
+      "developer": "OatmealDome",
+      "compliance": {
+        "reviewStatus": "unreviewed",
+        "usage": "metadata-and-original-links",
+        "binaryRehost": false
+      }
     },
     {
       "id": "crystall1ne",
@@ -381,7 +451,12 @@
         "utility",
         "trusted"
       ],
-      "developer": "crystall1ne"
+      "developer": "crystall1ne",
+      "compliance": {
+        "reviewStatus": "unreviewed",
+        "usage": "metadata-and-original-links",
+        "binaryRehost": false
+      }
     },
     {
       "id": "pokemmo",
@@ -403,7 +478,12 @@
         "mmo",
         "trusted"
       ],
-      "developer": "PokeMMO Team"
+      "developer": "PokeMMO Team",
+      "compliance": {
+        "reviewStatus": "unreviewed",
+        "usage": "metadata-and-original-links",
+        "binaryRehost": false
+      }
     },
     {
       "id": "odyssey",
@@ -424,7 +504,12 @@
         "ios",
         "trusted"
       ],
-      "developer": "Odyssey Team"
+      "developer": "Odyssey Team",
+      "compliance": {
+        "reviewStatus": "unreviewed",
+        "usage": "metadata-and-original-links",
+        "binaryRehost": false
+      }
     },
     {
       "id": "yattee",
@@ -447,7 +532,12 @@
         "privacy",
         "open-source"
       ],
-      "developer": "Yattee Team"
+      "developer": "Yattee Team",
+      "compliance": {
+        "reviewStatus": "unreviewed",
+        "usage": "metadata-and-original-links",
+        "binaryRehost": false
+      }
     },
     {
       "id": "ignited",
@@ -469,7 +559,12 @@
         "retro",
         "trusted"
       ],
-      "developer": "litritt"
+      "developer": "litritt",
+      "compliance": {
+        "reviewStatus": "unreviewed",
+        "usage": "metadata-and-original-links",
+        "binaryRehost": false
+      }
     },
     {
       "id": "mona",
@@ -489,7 +584,12 @@
         "app",
         "trusted"
       ],
-      "developer": "delia-cheminot"
+      "developer": "delia-cheminot",
+      "compliance": {
+        "reviewStatus": "unreviewed",
+        "usage": "metadata-and-original-links",
+        "binaryRehost": false
+      }
     },
     {
       "id": "vortx",
@@ -512,7 +612,12 @@
         "media",
         "open-source"
       ],
-      "developer": "VortXTV"
+      "developer": "VortXTV",
+      "compliance": {
+        "reviewStatus": "unreviewed",
+        "usage": "metadata-and-original-links",
+        "binaryRehost": false
+      }
     },
     {
       "id": "stremio-official-pal",
@@ -536,7 +641,12 @@
         "media",
         "official"
       ],
-      "developer": "Stremio Team"
+      "developer": "Stremio Team",
+      "compliance": {
+        "reviewStatus": "unreviewed",
+        "usage": "metadata-and-original-links",
+        "binaryRehost": false
+      }
     },
     {
       "id": "stremio-ios",
@@ -560,7 +670,12 @@
         "community",
         "ipa"
       ],
-      "developer": "gorlev"
+      "developer": "gorlev",
+      "compliance": {
+        "reviewStatus": "unreviewed",
+        "usage": "metadata-and-original-links",
+        "binaryRehost": false
+      }
     },
     {
       "id": "kodi-ios",
@@ -583,7 +698,12 @@
         "ipa",
         "community"
       ],
-      "developer": "ohaiibuzzle"
+      "developer": "ohaiibuzzle",
+      "compliance": {
+        "reviewStatus": "unreviewed",
+        "usage": "metadata-and-original-links",
+        "binaryRehost": false
+      }
     },
     {
       "id": "nineanimator",
@@ -605,7 +725,12 @@
         "streaming",
         "open-source"
       ],
-      "developer": "SuperMarcus"
+      "developer": "SuperMarcus",
+      "compliance": {
+        "reviewStatus": "unreviewed",
+        "usage": "metadata-and-original-links",
+        "binaryRehost": false
+      }
     },
     {
       "id": "esound",
@@ -628,7 +753,12 @@
         "pal",
         "official"
       ],
-      "developer": "eSound"
+      "developer": "eSound",
+      "compliance": {
+        "reviewStatus": "unreviewed",
+        "usage": "metadata-and-original-links",
+        "binaryRehost": false
+      }
     },
     {
       "id": "partyknights",
@@ -648,7 +778,12 @@
         "games",
         "official"
       ],
-      "developer": "Party Knights"
+      "developer": "Party Knights",
+      "compliance": {
+        "reviewStatus": "unreviewed",
+        "usage": "metadata-and-original-links",
+        "binaryRehost": false
+      }
     },
     {
       "id": "bringyour",
@@ -669,7 +804,12 @@
         "privacy",
         "utility"
       ],
-      "developer": "BringYour"
+      "developer": "BringYour",
+      "compliance": {
+        "reviewStatus": "unreviewed",
+        "usage": "metadata-and-original-links",
+        "binaryRehost": false
+      }
     },
     {
       "id": "itorrent",
@@ -691,7 +831,12 @@
         "open-source",
         "download"
       ],
-      "developer": "XITRIX"
+      "developer": "XITRIX",
+      "compliance": {
+        "reviewStatus": "unreviewed",
+        "usage": "metadata-and-original-links",
+        "binaryRehost": false
+      }
     },
     {
       "id": "qbitconnect",
@@ -725,7 +870,12 @@
         "altstore-pal",
         "flarestore",
         "feather"
-      ]
+      ],
+      "compliance": {
+        "reviewStatus": "unreviewed",
+        "usage": "metadata-and-original-links",
+        "binaryRehost": false
+      }
     },
     {
       "id": "artemis",
@@ -760,7 +910,12 @@
         "altstore-pal",
         "flarestore",
         "feather"
-      ]
+      ],
+      "compliance": {
+        "reviewStatus": "unreviewed",
+        "usage": "metadata-and-original-links",
+        "binaryRehost": false
+      }
     },
     {
       "id": "hackerwebapp",
@@ -781,7 +936,12 @@
         "news",
         "developer"
       ],
-      "developer": "Hacker Web App"
+      "developer": "Hacker Web App",
+      "compliance": {
+        "reviewStatus": "unreviewed",
+        "usage": "metadata-and-original-links",
+        "binaryRehost": false
+      }
     },
     {
       "id": "courtpredict",
@@ -802,7 +962,12 @@
         "sports",
         "utility"
       ],
-      "developer": "CourtPredict"
+      "developer": "CourtPredict",
+      "compliance": {
+        "reviewStatus": "unreviewed",
+        "usage": "metadata-and-original-links",
+        "binaryRehost": false
+      }
     },
     {
       "id": "wayfarer",
@@ -823,7 +988,12 @@
         "niantic",
         "community"
       ],
-      "developer": "lao.sb"
+      "developer": "lao.sb",
+      "compliance": {
+        "reviewStatus": "unreviewed",
+        "usage": "metadata-and-original-links",
+        "binaryRehost": false
+      }
     },
     {
       "id": "qbitcontrol",
@@ -856,7 +1026,12 @@
         "altstore-pal",
         "flarestore",
         "feather"
-      ]
+      ],
+      "compliance": {
+        "reviewStatus": "unreviewed",
+        "usage": "metadata-and-original-links",
+        "binaryRehost": false
+      }
     },
     {
       "id": "iphanpy",
@@ -877,7 +1052,12 @@
         "mastodon",
         "social"
       ],
-      "developer": "matfantinel"
+      "developer": "matfantinel",
+      "compliance": {
+        "reviewStatus": "unreviewed",
+        "usage": "metadata-and-original-links",
+        "binaryRehost": false
+      }
     },
     {
       "id": "epic-games",
@@ -900,7 +1080,12 @@
         "fall-guys",
         "official"
       ],
-      "developer": "Epic Games"
+      "developer": "Epic Games",
+      "compliance": {
+        "reviewStatus": "unreviewed",
+        "usage": "metadata-and-original-links",
+        "binaryRehost": false
+      }
     },
     {
       "id": "xn1ckuz-sidebox",
@@ -929,7 +1114,12 @@
         "social",
         "video"
       ],
-      "developer": "xN1ckuz"
+      "developer": "xN1ckuz",
+      "compliance": {
+        "reviewStatus": "unreviewed",
+        "usage": "metadata-and-original-links",
+        "binaryRehost": false
+      }
     },
     {
       "id": "dvntm0-workshop",
@@ -957,7 +1147,12 @@
         "social",
         "apps"
       ],
-      "developer": "dvntm0"
+      "developer": "dvntm0",
+      "compliance": {
+        "reviewStatus": "unreviewed",
+        "usage": "metadata-and-original-links",
+        "binaryRehost": false
+      }
     },
     {
       "id": "wuxu-library-plus",
@@ -987,7 +1182,12 @@
         "tiktok",
         "instagram"
       ],
-      "developer": "WuXu1"
+      "developer": "WuXu1",
+      "compliance": {
+        "reviewStatus": "unreviewed",
+        "usage": "metadata-and-original-links",
+        "binaryRehost": false
+      }
     },
     {
       "id": "baretsky-tweaked",
@@ -1017,7 +1217,12 @@
         "instagram",
         "twitch"
       ],
-      "developer": "baretsky"
+      "developer": "baretsky",
+      "compliance": {
+        "reviewStatus": "unreviewed",
+        "usage": "metadata-and-original-links",
+        "binaryRehost": false
+      }
     },
     {
       "id": "driftywinds",
@@ -1047,7 +1252,12 @@
         "instagram",
         "twitter"
       ],
-      "developer": "driftywinds"
+      "developer": "driftywinds",
+      "compliance": {
+        "reviewStatus": "unreviewed",
+        "usage": "metadata-and-original-links",
+        "binaryRehost": false
+      }
     },
     {
       "id": "ipa-vault",
@@ -1075,7 +1285,12 @@
         "music",
         "utility"
       ],
-      "developer": "927tx"
+      "developer": "927tx",
+      "compliance": {
+        "reviewStatus": "unreviewed",
+        "usage": "metadata-and-original-links",
+        "binaryRehost": false
+      }
     },
     {
       "id": "sideloadlabs",
@@ -1100,7 +1315,12 @@
         "spotify",
         "music"
       ],
-      "developer": "SideloadLabs"
+      "developer": "SideloadLabs",
+      "compliance": {
+        "reviewStatus": "unreviewed",
+        "usage": "metadata-and-original-links",
+        "binaryRehost": false
+      }
     },
     {
       "id": "ytliteplus",
@@ -1125,7 +1345,12 @@
         "youtube",
         "video"
       ],
-      "developer": "YTLitePlus"
+      "developer": "YTLitePlus",
+      "compliance": {
+        "reviewStatus": "unreviewed",
+        "usage": "metadata-and-original-links",
+        "binaryRehost": false
+      }
     },
     {
       "id": "moe-altstore",
@@ -1154,7 +1379,12 @@
         "reddit",
         "utility"
       ],
-      "developer": "MountainofPenguin"
+      "developer": "MountainofPenguin",
+      "compliance": {
+        "reviewStatus": "unreviewed",
+        "usage": "metadata-and-original-links",
+        "binaryRehost": false
+      }
     },
     {
       "id": "youmod-repo",
@@ -1179,7 +1409,12 @@
         "youtube",
         "video"
       ],
-      "developer": "MountainofPenguin"
+      "developer": "MountainofPenguin",
+      "compliance": {
+        "reviewStatus": "unreviewed",
+        "usage": "metadata-and-original-links",
+        "binaryRehost": false
+      }
     },
     {
       "id": "youproextra",
@@ -1205,7 +1440,12 @@
         "youtube",
         "video"
       ],
-      "developer": "mrdrvt99"
+      "developer": "mrdrvt99",
+      "compliance": {
+        "reviewStatus": "unreviewed",
+        "usage": "metadata-and-original-links",
+        "binaryRehost": false
+      }
     },
     {
       "id": "owo-source",
@@ -1235,7 +1475,12 @@
         "music",
         "utility"
       ],
-      "developer": "OwO Network"
+      "developer": "OwO Network",
+      "compliance": {
+        "reviewStatus": "unreviewed",
+        "usage": "metadata-and-original-links",
+        "binaryRehost": false
+      }
     },
     {
       "id": "cypwn-ipa",
@@ -1268,7 +1513,12 @@
         "music",
         "utility"
       ],
-      "developer": "CyPwn"
+      "developer": "CyPwn",
+      "compliance": {
+        "reviewStatus": "unreviewed",
+        "usage": "metadata-and-original-links",
+        "binaryRehost": false
+      }
     },
     {
       "id": "apptesters",
@@ -1302,7 +1552,12 @@
         "music",
         "utility"
       ],
-      "developer": "AppTesters"
+      "developer": "AppTesters",
+      "compliance": {
+        "reviewStatus": "unreviewed",
+        "usage": "metadata-and-original-links",
+        "binaryRehost": false
+      }
     },
     {
       "id": "youtuberebornplus",
@@ -1327,7 +1582,12 @@
         "youtube",
         "video"
       ],
-      "developer": "arichornlover"
+      "developer": "arichornlover",
+      "compliance": {
+        "reviewStatus": "unreviewed",
+        "usage": "metadata-and-original-links",
+        "binaryRehost": false
+      }
     },
     {
       "id": "apollo-reddit",
@@ -1352,7 +1612,12 @@
         "reddit",
         "social"
       ],
-      "developer": "Balackburn"
+      "developer": "Balackburn",
+      "compliance": {
+        "reviewStatus": "unreviewed",
+        "usage": "metadata-and-original-links",
+        "binaryRehost": false
+      }
     },
     {
       "id": "discord-appstore-builds",
@@ -1376,7 +1641,12 @@
         "social",
         "sideload"
       ],
-      "developer": "AlfaActa"
+      "developer": "AlfaActa",
+      "compliance": {
+        "reviewStatus": "unreviewed",
+        "usage": "metadata-and-original-links",
+        "binaryRehost": false
+      }
     },
     {
       "id": "ytkace",
@@ -1403,7 +1673,12 @@
         "sidestore",
         "livecontainer"
       ],
-      "developer": "xKatsumi"
+      "developer": "xKatsumi",
+      "compliance": {
+        "reviewStatus": "unreviewed",
+        "usage": "metadata-and-original-links",
+        "binaryRehost": false
+      }
     },
     {
       "id": "heyfordy",
@@ -1433,7 +1708,12 @@
         "twitch",
         "utility"
       ],
-      "developer": "heyFordy"
+      "developer": "heyFordy",
+      "compliance": {
+        "reviewStatus": "unreviewed",
+        "usage": "metadata-and-original-links",
+        "binaryRehost": false
+      }
     },
     {
       "id": "ipalibrary",
@@ -1467,7 +1747,12 @@
         "music",
         "utility"
       ],
-      "developer": "2nkn0w"
+      "developer": "2nkn0w",
+      "compliance": {
+        "reviewStatus": "unreviewed",
+        "usage": "metadata-and-original-links",
+        "binaryRehost": false
+      }
     },
     {
       "id": "armsx2",
@@ -1492,7 +1777,12 @@
         "playstation",
         "ps2"
       ],
-      "developer": "ARMSX2"
+      "developer": "ARMSX2",
+      "compliance": {
+        "reviewStatus": "unreviewed",
+        "usage": "metadata-and-original-links",
+        "binaryRehost": false
+      }
     },
     {
       "id": "fouad-source",
@@ -1520,7 +1810,12 @@
         "regram",
         "watusi"
       ],
-      "developer": "FouadRaheb"
+      "developer": "FouadRaheb",
+      "compliance": {
+        "reviewStatus": "unreviewed",
+        "usage": "metadata-and-original-links",
+        "binaryRehost": false
+      }
     },
     {
       "id": "neofreebird",
@@ -1547,7 +1842,12 @@
         "social",
         "bhtwitter"
       ],
-      "developer": "orionblur"
+      "developer": "orionblur",
+      "compliance": {
+        "reviewStatus": "unreviewed",
+        "usage": "metadata-and-original-links",
+        "binaryRehost": false
+      }
     },
     {
       "id": "melonx",
@@ -1571,7 +1871,12 @@
         "trusted",
         "official"
       ],
-      "developer": "AzureDominus"
+      "developer": "AzureDominus",
+      "compliance": {
+        "reviewStatus": "unreviewed",
+        "usage": "metadata-and-original-links",
+        "binaryRehost": false
+      }
     },
     {
       "id": "altgallery",
@@ -1599,7 +1904,12 @@
         "sidestore",
         "livecontainer"
       ],
-      "developer": "bebound"
+      "developer": "bebound",
+      "compliance": {
+        "reviewStatus": "unreviewed",
+        "usage": "metadata-and-original-links",
+        "binaryRehost": false
+      }
     },
     {
       "id": "ripestore",
@@ -1623,7 +1933,12 @@
         "altstore",
         "sidestore"
       ],
-      "developer": "RipeStore"
+      "developer": "RipeStore",
+      "compliance": {
+        "reviewStatus": "unreviewed",
+        "usage": "metadata-and-original-links",
+        "binaryRehost": false
+      }
     },
     {
       "id": "feather",
@@ -1646,7 +1961,12 @@
         "open-source",
         "official"
       ],
-      "developer": "claration"
+      "developer": "claration",
+      "compliance": {
+        "reviewStatus": "unreviewed",
+        "usage": "metadata-and-original-links",
+        "binaryRehost": false
+      }
     },
     {
       "id": "quantum-source",
@@ -1671,7 +1991,12 @@
         "apps",
         "altstore"
       ],
-      "developer": "QuarkSources"
+      "developer": "QuarkSources",
+      "compliance": {
+        "reviewStatus": "unreviewed",
+        "usage": "metadata-and-original-links",
+        "binaryRehost": false
+      }
     },
     {
       "id": "spotc",
@@ -1695,7 +2020,12 @@
         "community",
         "altstore"
       ],
-      "developer": "SpotCompiled"
+      "developer": "SpotCompiled",
+      "compliance": {
+        "reviewStatus": "unreviewed",
+        "usage": "metadata-and-original-links",
+        "binaryRehost": false
+      }
     },
     {
       "id": "foxster-altsource",
@@ -1719,7 +2049,12 @@
         "youtube",
         "altstore"
       ],
-      "developer": "therealFoxster"
+      "developer": "therealFoxster",
+      "compliance": {
+        "reviewStatus": "unreviewed",
+        "usage": "metadata-and-original-links",
+        "binaryRehost": false
+      }
     },
     {
       "id": "fastsign",
@@ -1747,7 +2082,12 @@
       "cachePayload": false,
       "autoPackage": false,
       "builder": false,
-      "developer": "FastSign"
+      "developer": "FastSign",
+      "compliance": {
+        "reviewStatus": "unreviewed",
+        "usage": "metadata-and-original-links",
+        "binaryRehost": false
+      }
     },
     {
       "id": "quantum-plus",
@@ -1773,7 +2113,12 @@
         "streaming",
         "altstore"
       ],
-      "developer": "QuarkSources"
+      "developer": "QuarkSources",
+      "compliance": {
+        "reviewStatus": "unreviewed",
+        "usage": "metadata-and-original-links",
+        "binaryRehost": false
+      }
     },
     {
       "id": "wuxu-standard",
@@ -1796,7 +2141,12 @@
         "ipa",
         "altstore"
       ],
-      "developer": "WuXu1"
+      "developer": "WuXu1",
+      "compliance": {
+        "reviewStatus": "unreviewed",
+        "usage": "metadata-and-original-links",
+        "binaryRehost": false
+      }
     },
     {
       "id": "taurine",
@@ -1817,7 +2167,12 @@
         "legacy",
         "official"
       ],
-      "developer": "Taurine Team"
+      "developer": "Taurine Team",
+      "compliance": {
+        "reviewStatus": "unreviewed",
+        "usage": "metadata-and-original-links",
+        "binaryRehost": false
+      }
     },
     {
       "id": "burrito-source",
@@ -1839,7 +2194,12 @@
         "apps",
         "altstore"
       ],
-      "developer": "Burrito Software"
+      "developer": "Burrito Software",
+      "compliance": {
+        "reviewStatus": "unreviewed",
+        "usage": "metadata-and-original-links",
+        "binaryRehost": false
+      }
     },
     {
       "id": "salupov-altrepo",
@@ -1861,7 +2221,12 @@
         "apps",
         "altstore"
       ],
-      "developer": "Salupov Team"
+      "developer": "Salupov Team",
+      "compliance": {
+        "reviewStatus": "unreviewed",
+        "usage": "metadata-and-original-links",
+        "binaryRehost": false
+      }
     },
     {
       "id": "cercube",
@@ -1886,7 +2251,12 @@
         "sidestore",
         "official"
       ],
-      "developer": "Majd Alfhaily"
+      "developer": "Majd Alfhaily",
+      "compliance": {
+        "reviewStatus": "unreviewed",
+        "usage": "metadata-and-original-links",
+        "binaryRehost": false
+      }
     },
     {
       "id": "rocket",
@@ -1911,7 +2281,12 @@
         "sidestore",
         "official"
       ],
-      "developer": "Majd Alfhaily"
+      "developer": "Majd Alfhaily",
+      "compliance": {
+        "reviewStatus": "unreviewed",
+        "usage": "metadata-and-original-links",
+        "binaryRehost": false
+      }
     },
     {
       "id": "reynard-browser",
@@ -1935,7 +2310,12 @@
         "sidestore",
         "official",
         "open-source"
-      ]
+      ],
+      "compliance": {
+        "reviewStatus": "unreviewed",
+        "usage": "metadata-and-original-links",
+        "binaryRehost": false
+      }
     }
   ]
 }
