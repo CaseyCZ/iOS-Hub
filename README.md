@@ -22,13 +22,10 @@
 ## Hlavní funkce
 
 - kompatibilní Classic/PAL iOS zdroje s installer podporou řízenou z jednoho centrálního registru
-- filtry podle typu zdroje, žánru, platformy a Mix kompatibility
-- vyhledávání podle zdroje i názvu aplikace
+- filtry podle typu zdroje, žánru a kompatibility s instalátorem
+- vyhledávání podle Source a jejích metadat
 - samostatná stránka **Custom Source Builder** pro všechny online zdroje
 - interaktivní **Help Center** s výběrem metody, diagnostikou chyb, průvodcem konfigurací a odkazy na oficiální dokumentaci
-- automatický stav `PASS / TRY`
-- hotové kompatibilní source balíčky a přímé deep-linky pro podporované instalátory
-- automatická deduplikace aplikací podle `bundleIdentifier`
 - kontrola zdrojů každých 6 hodin
 - EN / CZ / DE / ES / FR, výchozí jazyk EN
 - uložený jazyk, vzhled, filtry a výběr Builderu
@@ -36,17 +33,17 @@
 
 ## Kompatibilní source instalátory
 
-Hotové CaseyCZ zdroje a Hosted Mixy se generují pouze ze Sources s výslovně evidovaným `aggregationApproved: true`. Veřejné Sources bez doloženého práva k agregaci zůstávají v katalogu jen jako odkazy na originální endpoint a jejich app metadata se v iOS Hubu neukládají ani neslučují.
+Source Builder nevytváří žádný nový feed ani Mix JSON. Uživatel vybere instalátor a původní Sources; iOS Hub pak otevře jejich originální URL přímo ve zvolené aplikaci. Tím zůstávají zachované běžné aktualizace z původních Sources.
 
 Podpora instalátorů, jejich pořadí a deep-linky jsou definované centrálně v `src/js/installers.js`, takže další installer není potřeba ručně doplňovat do každé source karty.
 
-CaseyCZ iOS Hub cizí IPA soubory nerehostuje. Výsledné source JSONy zachovávají původní veřejné download URL jednotlivých projektů.
+CaseyCZ iOS Hub cizí IPA soubory ani cizí Source JSONy nerehostuje. Builder pouze předává původní veřejné Source URL podporovaným instalátorům.
 
 ## Soukromí a obsah třetích stran
 
 Google Analytics se načítá až po výslovném souhlasu uživatele. Volbu lze kdykoli změnit přes **Cookie settings** a podrobnosti jsou na stránce `privacy.html`.
 
-iOS Hub je nezávislý projekt a není přidružený k AltStore, SideStore, LiveContainer, Feather, FlareStore ani k autorům katalogizovaných Sources, pokud to výslovně neuvádí původní projekt. Registry u každého Source sleduje stav compliance kontroly, důkazní URL, datum kontroly a samostatný příznak `aggregationApproved`. Všechny aktuální Sources jsou klasifikované v [COMPLIANCE.md](COMPLIANCE.md). Source bez výslovného schválení agregace je pouze link-only: iOS Hub ho může zkontrolovat na dostupnost/formát, ale neukládá jeho plný feed ani app metadata do cache, Mixů nebo generovaných balíčků.
+iOS Hub je nezávislý projekt a není přidružený k AltStore, SideStore, LiveContainer, Feather, FlareStore ani k autorům katalogizovaných Sources, pokud to výslovně neuvádí původní projekt. Registry u každého Source sleduje stav compliance kontroly, důkazní URL, datum kontroly a samostatný příznak `aggregationApproved`. Všechny aktuální Sources jsou klasifikované v [COMPLIANCE.md](COMPLIANCE.md). Sources jsou v Builderu používány jako link-only: iOS Hub může zkontrolovat jejich dostupnost a formát, ale jejich plný feed ani app metadata se pro Builder nekopírují, neslučují ani nerehostují.
 
 ## DEB → IPA Beta
 
