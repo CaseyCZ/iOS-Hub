@@ -356,6 +356,8 @@ def validate_project_identity() -> None:
         ROOT / "sidestore" / "source.json": f"{EXPECTED_SITE_URL}sidestore/source.json",
     }
     for path, expected_source_url in expected_sources.items():
+        if not path.exists():
+            continue
         payload = load_json(path)
         if not isinstance(payload, dict):
             continue
@@ -693,15 +695,39 @@ def validate_generated_data() -> None:
                 error(f"data/status.json {package_name}.sourceIDs contains unknown ids: " + ", ".join(unknown))
 
         # Keep generated installable packages in lockstep with status.json.
-        # This catches a new registry source being validated but accidentally omitted
-        # from the published AltStore/SideStore package output.
+        # An empty rights-approved set must remove stale package files completely.
         for package_name in ("altstore", "sidestore"):
             package_status = status.get(package_name, {})
             package_path = ROOT / package_name / "source.json"
-            package_payload = load_json(package_path)
-            if not isinstance(package_status, dict) or not isinstance(package_payload, dict):
+            if not isinstance(package_status, dict):
                 continue
+
             expected_ids = set(package_status.get("sourceIDs") or [])
+            expected_url = package_status.get("sourceURL")
+
+            if not expected_ids:
+                if expected_url not in (None, ""):
+                    error(
+                        f"data/status.json {package_name}.sourceURL must be null when sourceIDs is empty"
+                    )
+                if package_path.exists():
+                    error(
+                        f"{package_path.relative_to(ROOT)} is stale and must be removed when no "
+                        "rights-approved Sources are published"
+                    )
+                continue
+
+            if not package_path.exists():
+                error(
+                    f"Missing {package_path.relative_to(ROOT)} for "
+                    f"{len(expected_ids)} rights-approved Source(s)"
+                )
+                continue
+
+            package_payload = load_json(package_path)
+            if not isinstance(package_payload, dict):
+                continue
+
             user_info = package_payload.get("userInfo")
             source_ids_raw = user_info.get("sourceIDs") if isinstance(user_info, dict) else None
             source_urls_raw = user_info.get("sourceURLs") if isinstance(user_info, dict) else None
@@ -734,35 +760,46 @@ def validate_generated_data() -> None:
                         continue
                     configured_urls = source.get("urls")
                     mode = str(source.get("mode") or "classic")
-                    expected_url = (
+                    configured_url = (
                         str(configured_urls.get("classic") or "").strip()
                         if isinstance(configured_urls, dict)
                         else (str(source.get("url") or "").strip() if mode != "pal" else "")
                     )
-                    if expected_url and source_url != expected_url:
+                    if configured_url and source_url != configured_url:
                         error(
                             f"{package_path.relative_to(ROOT)} uses non-Classic source URL "
                             f"for {source_id!r}: {source_url!r}"
                         )
 
         all_compatible_path = ROOT / "mix" / "all-compatible.json"
-        all_compatible = load_json(all_compatible_path)
         mixes_status = status.get("mixes", {})
-        if isinstance(all_compatible, dict) and isinstance(mixes_status, dict):
+        if isinstance(mixes_status, dict):
             expected_ids = set(mixes_status.get("autoCompatibleSourceIDs") or [])
-            user_info = all_compatible.get("userInfo")
-            source_ids_raw = user_info.get("sourceIDs") if isinstance(user_info, dict) else None
-            actual_ids = (
-                {item.strip() for item in source_ids_raw.split(",") if item.strip()}
-                if isinstance(source_ids_raw, str)
-                else set()
-            )
-            if expected_ids != actual_ids:
-                error(
-                    "mix/all-compatible.json sourceIDs differ from data/status.json; "
-                    f"missing={sorted(expected_ids - actual_ids)}, "
-                    f"extra={sorted(actual_ids - expected_ids)}"
-                )
+            expected_url = mixes_status.get("allCompatibleURL")
+            if not expected_ids:
+                if expected_url not in (None, ""):
+                    error("data/status.json mixes.allCompatibleURL must be null when no Sources are approved")
+                if all_compatible_path.exists():
+                    error("mix/all-compatible.json is stale when no rights-approved Sources exist")
+            else:
+                if not all_compatible_path.exists():
+                    error("Missing mix/all-compatible.json")
+                else:
+                    all_compatible = load_json(all_compatible_path)
+                    if isinstance(all_compatible, dict):
+                        user_info = all_compatible.get("userInfo")
+                        source_ids_raw = user_info.get("sourceIDs") if isinstance(user_info, dict) else None
+                        actual_ids = (
+                            {item.strip() for item in source_ids_raw.split(",") if item.strip()}
+                            if isinstance(source_ids_raw, str)
+                            else set()
+                        )
+                        if expected_ids != actual_ids:
+                            error(
+                                "mix/all-compatible.json sourceIDs differ from data/status.json; "
+                                f"missing={sorted(expected_ids - actual_ids)}, "
+                                f"extra={sorted(actual_ids - expected_ids)}"
+                            )
 
         registry_sources = [item for item in registry["sources"] if isinstance(item, dict)]
         expected_cache_ids = {
@@ -782,29 +819,42 @@ def validate_generated_data() -> None:
 
         mixes = status.get("mixes", {})
         mix_dir = ROOT / "mix"
-        if isinstance(mixes, dict) and mix_dir.is_dir():
-            combo_files = [path for path in mix_dir.glob("*.json") if path.name != "all-compatible.json"]
+        if isinstance(mixes, dict):
+            combo_files = list(mix_dir.glob("*.json")) if mix_dir.is_dir() else []
+            combination_files = [path for path in combo_files if path.name != "all-compatible.json"]
             expected_mix_count = mixes.get("count")
-            if isinstance(expected_mix_count, int) and expected_mix_count != len(combo_files):
+            if isinstance(expected_mix_count, int) and expected_mix_count != len(combination_files):
                 error(
                     f"data/status.json mix count {expected_mix_count} does not match "
-                    f"{len(combo_files)} generated combination files"
+                    f"{len(combination_files)} generated combination files"
                 )
-            if not (mix_dir / "all-compatible.json").exists():
-                error("Missing mix/all-compatible.json")
 
-    validate_alt_source(ROOT / "altstore" / "source.json")
-    validate_alt_source(ROOT / "sidestore" / "source.json")
+    altstore_required = bool(
+        isinstance(status, dict)
+        and isinstance(status.get("altstore"), dict)
+        and status["altstore"].get("sourceIDs")
+    )
+    sidestore_required = bool(
+        isinstance(status, dict)
+        and isinstance(status.get("sidestore"), dict)
+        and status["sidestore"].get("sourceIDs")
+    )
+    validate_alt_source(ROOT / "altstore" / "source.json", required=altstore_required)
+    validate_alt_source(ROOT / "sidestore" / "source.json", required=sidestore_required)
 
     mix_dir = ROOT / "mix"
-    if not mix_dir.is_dir():
-        error("Missing generated mix directory")
-    else:
-        mix_files = sorted(mix_dir.glob("*.json"))
-        if not mix_files:
-            error("No generated Mix JSON files found")
-        for path in mix_files:
+    if mix_dir.is_dir():
+        for path in sorted(mix_dir.glob("*.json")):
             validate_alt_source(path)
+    elif isinstance(status, dict):
+        mixes_status = status.get("mixes", {})
+        if isinstance(mixes_status, dict):
+            expected_any_mix = bool(
+                (mixes_status.get("count") or 0)
+                or (mixes_status.get("autoCompatibleSourceIDs") or [])
+            )
+            if expected_any_mix:
+                error("Missing generated mix directory")
 
     cache_dir = ROOT / "data" / "source-cache"
     if not cache_dir.is_dir():
