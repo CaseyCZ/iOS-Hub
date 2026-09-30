@@ -383,7 +383,16 @@ function hostedTarget(ids) {
   const sorted = [...ids].sort();
   const classicTargets = new Set(BUILDER_INSTALLER_IDS);
   const manual = hostedIds();
+  const hostedPairs = new Set(status?.mixes?.hostedPairSourceIDs || []);
   const max = Number(status?.mixes?.maxSourcesPerMix || 0);
+
+  if (sorted.length === 2 && sorted.every(id => hostedPairs.has(id))) {
+    return {
+      url:new URL(`mix/${sorted.join('--')}.json`, window.location.href).href.split('#')[0],
+      targets:classicTargets
+    };
+  }
+
   if (sorted.length && sorted.length <= max && sorted.every(id => manual.has(id))) {
     return {
       url:new URL(`mix/${sorted.join('--')}.json`, window.location.href).href.split('#')[0],
