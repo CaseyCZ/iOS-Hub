@@ -408,7 +408,6 @@ def validate_registry() -> None:
     ids: dict[str, int] = {}
     urls: dict[str, int] = {}
     partially_localized: list[str] = []
-    unreviewed_compliance: list[str] = []
     for index, source in enumerate(payload["sources"]):
         if not isinstance(source, dict):
             error(f"registry sources[{index}] is not an object")
@@ -444,6 +443,29 @@ def validate_registry() -> None:
                     f"registry source {source_id or index!r} has invalid compliance.reviewStatus "
                     f"{review_status!r}"
                 )
+            if review_status == "unreviewed":
+                error(
+                    f"registry source {source_id or index!r} is still unreviewed; "
+                    "every Source must be classified before release"
+                )
+            else:
+                evidence_url = str(compliance.get("evidenceURL") or "").strip()
+                parsed_evidence = urlparse(evidence_url)
+                if parsed_evidence.scheme != "https" or not parsed_evidence.netloc:
+                    error(
+                        f"reviewed registry source {source_id or index!r} must include "
+                        "an absolute HTTPS compliance.evidenceURL"
+                    )
+                reviewed_at = str(compliance.get("reviewedAt") or "").strip()
+                if not re.fullmatch(r"\d{4}-\d{2}-\d{2}", reviewed_at):
+                    error(
+                        f"reviewed registry source {source_id or index!r} must include "
+                        "compliance.reviewedAt in YYYY-MM-DD format"
+                    )
+                if not str(compliance.get("note") or "").strip():
+                    error(
+                        f"reviewed registry source {source_id or index!r} must include compliance.note"
+                    )
             if usage not in ALLOWED_COMPLIANCE_USAGE:
                 error(
                     f"registry source {source_id or index!r} has invalid compliance.usage {usage!r}"
@@ -492,8 +514,6 @@ def validate_registry() -> None:
                     "and must be link-only"
                 )
 
-            if review_status == "unreviewed":
-                unreviewed_compliance.append(source_id or str(index))
             if review_status == "restricted":
                 if source.get("builder") is not False:
                     error(f"restricted registry source {source_id or index!r} must set builder=false")
@@ -610,11 +630,6 @@ def validate_registry() -> None:
         warn(
             f"{len(partially_localized)} registry source descriptions still fall back to English "
             "for one or more of DE/ES/FR"
-        )
-    if unreviewed_compliance:
-        warn(
-            f"{len(unreviewed_compliance)} registry Sources still have compliance.reviewStatus=unreviewed; "
-            "do not describe them as legally verified until reviewed individually"
         )
 
 
