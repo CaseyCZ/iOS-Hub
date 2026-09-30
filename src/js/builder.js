@@ -589,7 +589,7 @@ async function startShortcutImport() {
   const entries = queueEntries();
   if (!entries.length) return;
 
-  const payload = entries.map(entry => entry.deepLink).join('\n');
+  const payload = [target, ...entries.map(entry => entry.sourceUrl)].join('\n');
   const shortcutBase = `shortcuts://run-shortcut?name=${encodeURIComponent(SHORTCUT_NAME)}`;
   const message = $('#expMessage');
   if (message) message.textContent = tr('queueHelp');
