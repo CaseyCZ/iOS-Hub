@@ -1232,15 +1232,17 @@ def validate_layout() -> None:
                     "Builder compatibility UX is incomplete; "
                     f"missing {compatibility_ui_required!r}"
                 )
-        for hosted_pair_required in (
-            "hostedPairSourceIDs",
-            "sorted.length === 2",
-            "sorted.every(id => hostedPairs.has(id))",
+        for hosted_api_required in (
+            "fetch('data/mix-api.json'",
+            "async function hostCustomMix(mix)",
+            "body:JSON.stringify(mix)",
+            "const hostedMix = await hostCustomMix(mix)",
+            "hostedMix?.url",
         ):
-            if hosted_pair_required not in builder_text:
+            if hosted_api_required not in builder_text:
                 error(
-                    "Builder PASS pair deep-link support is incomplete; "
-                    f"missing {hosted_pair_required!r}"
+                    "Builder hosted Mix API integration is incomplete; "
+                    f"missing {hosted_api_required!r}"
                 )
         for picker_required in (
             'class="builder-target-picker"',
@@ -1294,6 +1296,24 @@ def validate_layout() -> None:
                     "builder.js still hard-codes hosted Mix package behavior; "
                     f"found {forbidden!r}; use MIX_PACKAGES from installers.js"
                 )
+
+    mix_api_config = ROOT / "data" / "mix-api.json"
+    if not mix_api_config.exists():
+        error("Missing data/mix-api.json for hosted Custom Builder Mixes")
+    else:
+        try:
+            mix_api_payload = load_json(mix_api_config)
+            mix_api_url = str(mix_api_payload.get("apiURL") or "").strip()
+            if not mix_api_url.startswith("https://"):
+                error("data/mix-api.json apiURL must be a public HTTPS endpoint")
+            ttl_hours = mix_api_payload.get("ttlHours")
+            max_sources = mix_api_payload.get("maxSources")
+            if not isinstance(ttl_hours, (int, float)) or ttl_hours <= 0:
+                error("data/mix-api.json ttlHours must be a positive number")
+            if not isinstance(max_sources, int) or max_sources <= 0:
+                error("data/mix-api.json maxSources must be a positive integer")
+        except (json.JSONDecodeError, OSError, AttributeError) as exc:
+            error(f"Unable to validate data/mix-api.json: {exc}")
 
     source_updater = ROOT / "tools" / "update_sources.py"
     if source_updater.exists():
@@ -1432,15 +1452,21 @@ def validate_layout() -> None:
                     "Guide general installer links must be registry-driven; "
                     f"missing {tool_id!r}/{purpose!r}"
                 )
-        if 'id="source-installers"' in guide_page_text:
-            error("Guide must keep Source-capable installers in the shared Installation methods grid")
-        if 'href="#source-installers"' in guide_page_text:
-            error("Guide jumpbar must not link to the removed separate Source installers section")
+        source_section_start = guide_page_text.find('id="source-installers"')
+        compatibility_start = guide_page_text.find('id="compatibility"')
+        if source_section_start < 0 or compatibility_start <= source_section_start:
+            error("Guide must keep Source-capable installers in a separate section before Compatibility")
         for scoped_tool in ("flarestore", "feather"):
             marker = f'data-guide-tools="{scoped_tool}"'
+            source_card_start = guide_page_text.find(marker, source_section_start, compatibility_start)
+            if source_card_start < 0:
+                error(
+                    "Guide Source-compatible installers section is incomplete; "
+                    f"missing Source card for {scoped_tool!r}"
+                )
             if guide_page_text.count(marker) < 2:
                 error(
-                    "Guide must include each Source-capable installer in both the shared methods grid "
+                    "Guide must include each Source-capable installer in both the Source installer section "
                     f"and compatibility table; missing repeated scope marker for {scoped_tool!r}"
                 )
 
