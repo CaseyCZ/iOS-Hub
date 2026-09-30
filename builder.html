@@ -154,9 +154,12 @@
           <div class="builder-control-footer">
             <div class="builder-result-badges">
               <span id="mixTargetBadge" class="pill mode"><img class="installer-icon" src="assets/icons/altstore.svg" alt=""> AltStore Classic</span>
-              
             </div>
-            <button id="expBuild" class="btn primary" type="button" disabled>Add selected Sources</button>
+            <div class="builder-actions">
+              <button id="expBuild" class="btn primary" type="button" disabled>Add selected Sources</button>
+              <a id="expInstallShortcut" class="btn secondary" href="https://www.icloud.com/shortcuts/b8a48606455246389f066fc4f35af057" target="_blank" rel="noopener">Install Shortcut</a>
+            </div>
+            <span id="shortcutHelp" class="muted">Bulk import uses the iOS Hub Source Import Shortcut. Install it once; you can reinstall it here later if you delete it.</span>
             <span id="expMessage" class="muted"></span>
           </div>
         </article>
@@ -171,6 +174,8 @@
           <div class="builder-actions">
             <a id="expAddTarget" class="btn small primary" href="#" hidden>Open next</a>
             <button id="expCopyUrl" class="btn small secondary" type="button" hidden>Copy Source URLs</button>
+            <button id="expDownload" class="btn small secondary" type="button">Download JSON</button>
+            <button id="expPreview" class="btn small ghost" type="button">Preview JSON</button>
             <button id="expRestartQueue" class="btn small ghost" type="button" hidden>Restart queue</button>
           </div>
         </div>
@@ -203,7 +208,7 @@
   </div>
 
   <script type="module" src="src/js/builder-page.js?v=1.1.5-20260929-guide-methods1"></script>
-  <script type="module" src="src/js/builder.js?v=1.1.5-20260930-shortcut-batch1"></script>
+  <script type="module" src="src/js/builder.js?v=1.1.5-20260930-shortcut-share2"></script>
   <script type="module" src="src/js/collapsible.js?v=1.1.5-20260918-audit1"></script>
   <script src="src/js/horizontal-scroll.js?v=1.1.5-20260930-scroll-hardfix1"></script>
   <script src="src/js/support-dialog.js?v=1.1.5-20260918-a11y1"></script>
