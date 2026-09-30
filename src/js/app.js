@@ -468,7 +468,7 @@ function updateStats() {
 }
 
 function syncFilterButtons() {
-  $('[data-category-filter]').forEach(btn => {
+  document.querySelectorAll('[data-category-filter]').forEach(btn => {
     const active = btn.dataset.categoryFilter === state.sourceCategory;
     btn.classList.toggle('active', active);
     btn.setAttribute('aria-pressed', String(active));
