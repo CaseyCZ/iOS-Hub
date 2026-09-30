@@ -594,6 +594,16 @@ async function startShortcutImport() {
   const message = $('#expMessage');
   if (message) message.textContent = tr('queueHelp');
 
+  const encodedPayload = encodeURIComponent(payload);
+
+  // Prefer direct text input so the Shortcut receives the installer key on the
+  // very first run. Clipboard handoff on iOS can race with the app switch.
+  if (encodedPayload.length <= 6000) {
+    window.location.href = `${shortcutBase}&input=text&text=${encodedPayload}`;
+    return;
+  }
+
+  // Large batches fall back to the clipboard to avoid an oversized URL scheme.
   try {
     if (navigator.clipboard?.writeText) {
       await navigator.clipboard.writeText(payload);
@@ -601,10 +611,10 @@ async function startShortcutImport() {
       return;
     }
   } catch (_) {
-    // Fall back to direct text input when clipboard access is unavailable.
+    // If clipboard access is unavailable, use direct text as a last resort.
   }
 
-  window.location.href = `${shortcutBase}&input=text&text=${encodeURIComponent(payload)}`;
+  window.location.href = `${shortcutBase}&input=text&text=${encodedPayload}`;
 }
 
 async function copyQueueUrls(button) {
