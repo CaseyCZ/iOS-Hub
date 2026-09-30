@@ -281,6 +281,38 @@ def validate_privacy_compliance() -> None:
             if required_privacy not in privacy_text:
                 error(f"privacy.html is missing required disclosure: {required_privacy!r}")
 
+    builder_path = JS_DIR / "builder.js"
+    if not builder_path.exists():
+        error("Missing builder.js")
+    else:
+        builder_text = builder_path.read_text(encoding="utf-8")
+        for required_builder_policy in (
+            "source.compliance?.aggregationApproved === true",
+            "['licensed','permission'].includes(source.compliance?.reviewStatus)",
+            "source.compliance?.usage === 'metadata-and-original-links'",
+        ):
+            if required_builder_policy not in builder_text:
+                error(
+                    "builder.js is missing rights-gated aggregation policy: "
+                    f"{required_builder_policy!r}"
+                )
+
+    generator_path = ROOT / "tools" / "update_sources.py"
+    if not generator_path.exists():
+        error("Missing Source generator")
+    else:
+        generator_text = generator_path.read_text(encoding="utf-8")
+        for required_generator_policy in (
+            'compliance.get("aggregationApproved") is True',
+            'compliance.get("reviewStatus") in {"licensed", "permission"}',
+            'compliance.get("usage") == "metadata-and-original-links"',
+        ):
+            if required_generator_policy not in generator_text:
+                error(
+                    "update_sources.py is missing rights-gated aggregation policy: "
+                    f"{required_generator_policy!r}"
+                )
+
     analytics_path = JS_DIR / "analytics.js"
     if not analytics_path.exists():
         error("Missing analytics consent runtime")
@@ -421,13 +453,16 @@ def validate_registry() -> None:
                     f"registry source {source_id or index!r} must explicitly keep binaryRehost=false"
                 )
 
-            distributable = review_status in {"licensed", "permission"}
-            if distributable:
-                if usage != "metadata-and-original-links":
-                    error(
-                        f"rights-reviewed registry source {source_id or index!r} must use "
-                        "metadata-and-original-links"
-                    )
+            aggregation_approved = compliance.get("aggregationApproved")
+            if not isinstance(aggregation_approved, bool):
+                error(
+                    f"registry source {source_id or index!r} must define boolean "
+                    "compliance.aggregationApproved"
+                )
+                aggregation_approved = False
+
+            rights_reviewed = review_status in {"licensed", "permission"}
+            if rights_reviewed:
                 evidence_url = str(compliance.get("evidenceURL") or "").strip()
                 parsed_evidence = urlparse(evidence_url)
                 if parsed_evidence.scheme != "https" or not parsed_evidence.netloc:
@@ -439,9 +474,22 @@ def validate_registry() -> None:
                     error(
                         f"licensed registry source {source_id or index!r} must record compliance.license"
                     )
+
+            if aggregation_approved:
+                if not rights_reviewed:
+                    error(
+                        f"aggregation-approved registry source {source_id or index!r} must be "
+                        "licensed or permission-reviewed"
+                    )
+                if usage != "metadata-and-original-links":
+                    error(
+                        f"aggregation-approved registry source {source_id or index!r} must use "
+                        "metadata-and-original-links"
+                    )
             elif usage != "link-only":
                 error(
-                    f"registry source {source_id or index!r} is not rights-reviewed and must be link-only"
+                    f"registry source {source_id or index!r} is not aggregation-approved "
+                    "and must be link-only"
                 )
 
             if review_status == "unreviewed":
