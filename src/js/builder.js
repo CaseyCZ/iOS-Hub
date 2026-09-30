@@ -582,7 +582,7 @@ async function buildMix() {
     const {apps,conflicts} = dedupe(payloads);
     if (!apps.length) throw new Error('No mergeable app entries were found.');
 
-    let hosted = hostedTarget(ids);
+    let hosted = {url:null, targets:new Set()};
     const names = ids.map(id => registry.find(source => source.id === id)?.name || id);
     const hasTry = ids.some(id => getStatus(id).mixTest !== 'pass');
     const mix = {
@@ -604,19 +604,21 @@ async function buildMix() {
     if (blobUrl) URL.revokeObjectURL(blobUrl);
     blobUrl = URL.createObjectURL(new Blob([JSON.stringify(mix,null,2) + '\n'], {type:'application/json'}));
 
-    if (!hosted.url) {
-      try {
-        const hostedMix = await hostCustomMix(mix);
-        if (hostedMix?.url) {
-          hosted = {
-            url: hostedMix.url,
-            targets: new Set([target]),
-            expiresAt: hostedMix.expiresAt || null
-          };
-        }
-      } catch (hostError) {
-        console.warn('Custom Mix hosting failed; keeping Download / Preview fallback.', hostError);
+    try {
+      const hostedMix = await hostCustomMix(mix);
+      if (hostedMix?.url) {
+        hosted = {
+          url: hostedMix.url,
+          targets: new Set([target]),
+          expiresAt: hostedMix.expiresAt || null
+        };
       }
+    } catch (hostError) {
+      console.warn('Target-specific Mix hosting failed; trying static fallback.', hostError);
+    }
+
+    if (!hosted.url) {
+      hosted = hostedTarget(ids);
     }
 
     $('#expResultTitle').textContent = hosted.url ? tr('hosted') : (hasTry ? tr('experimental') : tr('local'));
