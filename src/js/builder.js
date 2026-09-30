@@ -50,7 +50,7 @@ const copy = {
     altPackage:'AltStore Source', sidePackage:'SideStore Source', livePackage:'LiveContainer Source', customMix:'Custom Mix', filters:'⚙ Filters · 🔎 Search · ☑ Selection',
     dedupeHelp:'When multiple app entries use the same bundle ID, the generated Mix keeps only one entry — normally the newest by date. Different variants of the same app can therefore be merged into one.', dedupeResult:'Some app variants shared the same bundle ID and were merged; only one entry per bundle ID remains in the Mix.',
     addTo:'＋ Add to', copyUrl:'Copy URL', json:'JSON ↗', apps:'apps', sources:'sources',
-    hosted:'Hosted Mix ready', local:'Local Mix ready', experimental:'Experimental Mix ready', localNote:'This PASS Mix was built locally. The installer action below can add the selected sources individually; Download JSON keeps the merged and deduplicated Mix.', tryNote:'This Mix contains one or more TRY sources. The installer action below can add the selected sources individually, while Download JSON keeps the experimental merged Mix for testing.',
+    hosted:'Hosted Mix ready', local:'Mix built locally — not installable yet', experimental:'Experimental Mix built locally', localNote:'The Mix was created successfully, but it currently exists only inside this browser. To open it directly in the selected installer, the combined JSON must first have a public HTTPS URL. Download / Preview remain available.', tryNote:'This Mix contains one or more TRY sources and was created locally. Direct Add requires a public HTTPS URL for the combined JSON; Download / Preview remain available for testing.',
     conflicts:'duplicates resolved', download:'Download JSON', preview:'Preview JSON', building:'Testing and combining sources…', failed:'The selected Mix could not be built.', copied:'Source URL copied.', empty:'No sources match the current filters.', directMixUnavailable:'Direct add of one combined Mix is not available.', notHostedRepos:'Not hosted for Mix', tryRepos:'TRY sources', mixLimit:'Hosted Mix limit', selectedCount:'selected'
   },
   cs: {
@@ -60,7 +60,7 @@ const copy = {
     altPackage:'AltStore Source', sidePackage:'SideStore Source', livePackage:'LiveContainer Source', customMix:'Vlastní Mix', filters:'⚙ Filtry · 🔎 Hledání · ☑ Výběr',
     dedupeHelp:'Pokud má více položek aplikace stejné bundle ID, vygenerovaný Mix ponechá jen jednu — zpravidla nejnovější podle data. Různé varianty stejné aplikace se tím mohou sloučit do jedné.', dedupeResult:'Některé varianty aplikací měly stejné bundle ID a byly sloučeny; v Mixu zůstává jen jedna položka pro každé bundle ID.',
     addTo:'＋ Přidat do', copyUrl:'Kopírovat URL', json:'JSON ↗', apps:'aplikací', sources:'zdrojů',
-    hosted:'Veřejný Mix je připraven', local:'Lokální Mix je připraven', experimental:'Experimentální Mix je připraven', localNote:'Tento PASS Mix vznikl lokálně. Akce instalátoru níže umí přidat vybrané zdroje jednotlivě; Stáhnout JSON zachová sloučený Mix s vyřešenými duplicitami.', tryNote:'Tento Mix obsahuje jeden nebo více zdrojů ZKUSIT. Akce instalátoru níže umí přidat vybrané zdroje jednotlivě, zatímco Stáhnout JSON zachová experimentální sloučený Mix pro testování.',
+    hosted:'Veřejný Mix je připraven', local:'Mix vytvořen lokálně — zatím nejde přímo nainstalovat', experimental:'Experimentální Mix vytvořen lokálně', localNote:'Mix se vytvořil správně, ale zatím existuje jen v tomto prohlížeči. Aby šel otevřít přímo ve zvoleném instalátoru, musí mít sloučený JSON veřejnou HTTPS adresu. Stáhnout / Náhled zůstává dostupný.', tryNote:'Mix obsahuje jeden nebo více Sources ZKUSIT a byl vytvořen lokálně. Přímé Přidat do… vyžaduje veřejnou HTTPS adresu sloučeného JSONu; Stáhnout / Náhled zůstává dostupný pro test.',
     conflicts:'duplicit vyřešeno', download:'Stáhnout JSON', preview:'Náhled JSON', building:'Testuji a spojuji zdroje…', failed:'Vybraný Mix se nepodařilo vytvořit.', copied:'URL zdroje zkopírována.', empty:'Aktuálním filtrům neodpovídá žádný zdroj.', directMixUnavailable:'Přímé přidání jednoho společného Mixu není dostupné.', notHostedRepos:'Nehostované pro Mix', tryRepos:'Zdroje ZKUSIT', mixLimit:'Limit hostovaného Mixu', selectedCount:'vybráno'
   },
   de: {
@@ -70,7 +70,7 @@ const copy = {
     altPackage:'AltStore Source', sidePackage:'SideStore Source', livePackage:'LiveContainer Source', customMix:'Eigener Mix', filters:'⚙ Filter · 🔎 Suche · ☑ Auswahl',
     dedupeHelp:'Wenn mehrere App-Einträge dieselbe Bundle-ID verwenden, behält der erzeugte Mix nur einen Eintrag – normalerweise den neuesten nach Datum. Unterschiedliche Varianten derselben App können dadurch zusammengeführt werden.', dedupeResult:'Einige App-Varianten verwendeten dieselbe Bundle-ID und wurden zusammengeführt; im Mix bleibt nur ein Eintrag pro Bundle-ID.',
     addTo:'＋ Zu', copyUrl:'URL kopieren', json:'JSON ↗', apps:'Apps', sources:'Quellen',
-    hosted:'Gehosteter Mix bereit', local:'Lokaler Mix bereit', experimental:'Experimenteller Mix bereit', localNote:'Dieser PASS-Mix wurde lokal erstellt. Die Installer-Aktion unten kann die ausgewählten Quellen einzeln hinzufügen; JSON herunterladen behält den zusammengeführten und bereinigten Mix.', tryNote:'Dieser Mix enthält TEST-Quellen. Die Installer-Aktion unten kann die ausgewählten Quellen einzeln hinzufügen; JSON herunterladen behält den experimentellen zusammengeführten Mix zum Testen.', conflicts:'Duplikate gelöst', download:'JSON laden', preview:'JSON ansehen', building:'Quellen werden getestet…', failed:'Der ausgewählte Mix konnte nicht erstellt werden.', copied:'URL kopiert.', empty:'Keine Quellen entsprechen den Filtern.', directMixUnavailable:'Das direkte Hinzufügen eines gemeinsamen Mixes ist nicht verfügbar.', notHostedRepos:'Nicht für Mix gehostet', tryRepos:'TEST-Quellen', mixLimit:'Hosted-Mix-Limit', selectedCount:'ausgewählt'
+    hosted:'Gehosteter Mix bereit', local:'Mix lokal erstellt — noch nicht direkt installierbar', experimental:'Experimenteller Mix lokal erstellt', localNote:'Der Mix wurde erfolgreich erstellt, existiert aber nur in diesem Browser. Direktes Öffnen im gewählten Installer benötigt eine öffentliche HTTPS-URL für das kombinierte JSON. Download / Vorschau bleiben verfügbar.', tryNote:'Dieser Mix enthält TEST-Quellen und wurde lokal erstellt. Direktes Hinzufügen benötigt eine öffentliche HTTPS-URL für das kombinierte JSON; Download / Vorschau bleiben verfügbar.', conflicts:'Duplikate gelöst', download:'JSON laden', preview:'JSON ansehen', building:'Quellen werden getestet…', failed:'Der ausgewählte Mix konnte nicht erstellt werden.', copied:'URL kopiert.', empty:'Keine Quellen entsprechen den Filtern.', directMixUnavailable:'Das direkte Hinzufügen eines gemeinsamen Mixes ist nicht verfügbar.', notHostedRepos:'Nicht für Mix gehostet', tryRepos:'TEST-Quellen', mixLimit:'Hosted-Mix-Limit', selectedCount:'ausgewählt'
   },
   es: {
     title:'Custom Source Builder', desc:'Filtra fuentes online comprobadas, elige cualquier combinación y crea tu propio Mix para instaladores compatibles con fuentes Classic.',
@@ -79,7 +79,7 @@ const copy = {
     altPackage:'AltStore Source', sidePackage:'SideStore Source', livePackage:'LiveContainer Source', customMix:'Mix personalizado', filters:'⚙ Filtros · 🔎 Búsqueda · ☑ Selección',
     dedupeHelp:'Si varias entradas de una app usan el mismo bundle ID, el Mix generado conserva solo una — normalmente la más reciente por fecha. Por eso, distintas variantes de la misma app pueden fusionarse en una sola.', dedupeResult:'Algunas variantes compartían el mismo bundle ID y se fusionaron; en el Mix queda solo una entrada por bundle ID.',
     addTo:'＋ Añadir a', copyUrl:'Copiar URL', json:'JSON ↗', apps:'apps', sources:'fuentes',
-    hosted:'Mix alojado listo', local:'Mix local listo', experimental:'Mix experimental listo', localNote:'Este Mix PASS se creó localmente. La acción del instalador puede añadir las fuentes seleccionadas una a una; Descargar JSON conserva el Mix combinado y sin duplicados.', tryNote:'Este Mix contiene fuentes PROBAR. La acción del instalador puede añadir las fuentes seleccionadas una a una; Descargar JSON conserva el Mix experimental combinado para probarlo.', conflicts:'duplicados resueltos', download:'Descargar JSON', preview:'Ver JSON', building:'Probando fuentes…', failed:'No se pudo crear el Mix.', copied:'URL copiada.', empty:'Ninguna fuente coincide con los filtros.', directMixUnavailable:'No está disponible añadir directamente un único Mix combinado.', notHostedRepos:'No alojados para Mix', tryRepos:'Fuentes PROBAR', mixLimit:'Límite del Mix alojado', selectedCount:'seleccionadas'
+    hosted:'Mix alojado listo', local:'Mix creado localmente — aún no se puede instalar directamente', experimental:'Mix experimental creado localmente', localNote:'El Mix se creó correctamente, pero por ahora solo existe en este navegador. Para abrirlo directamente en el instalador seleccionado, el JSON combinado necesita una URL HTTPS pública. Descargar / Vista previa siguen disponibles.', tryNote:'Este Mix contiene Sources PROBAR y se creó localmente. Añadir directamente requiere una URL HTTPS pública del JSON combinado; Descargar / Vista previa siguen disponibles.', conflicts:'duplicados resueltos', download:'Descargar JSON', preview:'Ver JSON', building:'Probando fuentes…', failed:'No se pudo crear el Mix.', copied:'URL copiada.', empty:'Ninguna fuente coincide con los filtros.', directMixUnavailable:'No está disponible añadir directamente un único Mix combinado.', notHostedRepos:'No alojados para Mix', tryRepos:'Fuentes PROBAR', mixLimit:'Límite del Mix alojado', selectedCount:'seleccionadas'
   },
   fr: {
     title:'Custom Source Builder', desc:'Filtrez les sources en ligne vérifiées, choisissez n’importe quelle combinaison et créez votre propre Mix pour les installateurs compatibles avec les sources Classic.',
@@ -88,7 +88,7 @@ const copy = {
     altPackage:'AltStore Source', sidePackage:'SideStore Source', livePackage:'LiveContainer Source', customMix:'Mix personnalisé', filters:'⚙ Filtres · 🔎 Recherche · ☑ Sélection',
     dedupeHelp:'Si plusieurs entrées d’une app utilisent le même bundle ID, le Mix généré n’en conserve qu’une — généralement la plus récente selon la date. Différentes variantes d’une même app peuvent donc être fusionnées.', dedupeResult:'Certaines variantes partageaient le même bundle ID et ont été fusionnées ; le Mix ne conserve qu’une entrée par bundle ID.',
     addTo:'＋ Ajouter à', copyUrl:'Copier URL', json:'JSON ↗', apps:'apps', sources:'sources',
-    hosted:'Mix hébergé prêt', local:'Mix local prêt', experimental:'Mix expérimental prêt', localNote:'Ce Mix PASS a été créé localement. L’action de l’installateur peut ajouter les sources sélectionnées une par une ; Télécharger JSON conserve le Mix fusionné et dédupliqué.', tryNote:'Ce Mix contient des sources TEST. L’action de l’installateur peut ajouter les sources sélectionnées une par une ; Télécharger JSON conserve le Mix expérimental fusionné pour le test.', conflicts:'doublons résolus', download:'Télécharger JSON', preview:'Aperçu JSON', building:'Test des sources…', failed:'Impossible de créer le Mix.', copied:'URL copiée.', empty:'Aucune source ne correspond aux filtres.', directMixUnavailable:'L’ajout direct d’un Mix combiné unique n’est pas disponible.', notHostedRepos:'Non hébergés pour le Mix', tryRepos:'Sources TEST', mixLimit:'Limite du Mix hébergé', selectedCount:'sélectionnées'
+    hosted:'Mix hébergé prêt', local:'Mix créé localement — pas encore installable directement', experimental:'Mix expérimental créé localement', localNote:'Le Mix a été créé correctement, mais il existe seulement dans ce navigateur. Pour l’ouvrir directement dans l’installateur choisi, le JSON combiné doit avoir une URL HTTPS publique. Télécharger / Aperçu restent disponibles.', tryNote:'Ce Mix contient des Sources TEST et a été créé localement. L’ajout direct nécessite une URL HTTPS publique pour le JSON combiné ; Télécharger / Aperçu restent disponibles.', conflicts:'doublons résolus', download:'Télécharger JSON', preview:'Aperçu JSON', building:'Test des sources…', failed:'Impossible de créer le Mix.', copied:'URL copiée.', empty:'Aucune source ne correspond aux filtres.', directMixUnavailable:'L’ajout direct d’un Mix combiné unique n’est pas disponible.', notHostedRepos:'Non hébergés pour le Mix', tryRepos:'Sources TEST', mixLimit:'Limite du Mix hébergé', selectedCount:'sélectionnées'
   }
 };
 
@@ -450,25 +450,12 @@ function hostedTarget(ids) {
 
 function localMixDiagnostic(ids, hasTry) {
   const parts = [tr('directMixUnavailable')];
-  const manual = hostedIds();
-  const max = Number(status?.mixes?.maxSourcesPerMix || 0);
-
-  const unhosted = ids
-    .filter(id => !manual.has(id))
-    .map(id => registry.find(source => source.id === id)?.name || id);
-
   const trySources = hasTry
     ? ids
         .filter(id => getStatus(id).mixTest !== 'pass')
         .map(id => registry.find(source => source.id === id)?.name || id)
     : [];
 
-  if (unhosted.length) {
-    parts.push(`${tr('notHostedRepos')}: ${unhosted.join(', ')}.`);
-  }
-  if (max > 0 && ids.length > max) {
-    parts.push(`${tr('mixLimit')}: ${max}; ${tr('selectedCount')}: ${ids.length}.`);
-  }
   if (trySources.length) {
     parts.push(`${tr('tryRepos')}: ${trySources.join(', ')}.`);
   }
