@@ -1,4 +1,4 @@
-import { SUPPORTED_LANGUAGES, applyTranslations, normalizeLanguage, t } from './i18n.js?v=1.1.5-20260929-guide-compat1';
+import { SUPPORTED_LANGUAGES, applyTranslations, normalizeLanguage, t } from './i18n.js?v=1.1.5-20260929-guide-methods1';
 import { sideloadTool, sideloadToolForRole, sideloadToolURL, troubleshootingSideloadTools } from './installers.js?v=1.1.5-20260929-installers21';
 
 const root = document.documentElement;
@@ -351,7 +351,7 @@ function scopedTroubleshootingTools() {
 }
 
 function updateTroubleScopeControls() {
-  $$('[data-assistant-tool], [data-trouble-tool]').forEach(button => {
+  document.querySelectorAll('[data-assistant-tool], [data-trouble-tool]').forEach(button => {
     const toolId = button.dataset.assistantTool || button.dataset.troubleTool || '';
     const hidden = Boolean(selectedTroubleToolId && toolId && toolId !== selectedTroubleToolId);
     button.hidden = hidden;
