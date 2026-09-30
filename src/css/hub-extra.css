@@ -1054,18 +1054,10 @@ body{
 }
 
 
-/* Builder local-mix installer fallback */
-.builder-install-sources{position:relative}
-.builder-install-sources>summary{list-style:none;user-select:none}
-.builder-install-sources>summary::-webkit-details-marker{display:none}
-.builder-install-sources-menu{position:absolute;left:50%;bottom:calc(100% + 7px);z-index:45;display:grid;gap:5px;min-width:min(300px,82vw);padding:7px;border:1px solid var(--border);border-radius:11px;background:var(--panel);box-shadow:var(--shadow);transform:translateX(-50%)}
-.builder-install-sources-menu .btn{width:100%;justify-content:flex-start;white-space:normal;text-align:left}
-.builder-install-sources[open]>summary{border-color:color-mix(in srgb,var(--accent) 55%,var(--border))}
+/* Builder action layout */
 @media(max-width:640px){
   .builder-actions{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:7px;width:100%}
-  .builder-actions>.btn,.builder-actions>.builder-install-sources{width:100%;min-width:0}
-  .builder-install-sources>summary{width:100%;min-width:0}
-  .builder-install-sources-menu{min-width:min(320px,88vw)}
+  .builder-actions>.btn{width:100%;min-width:0}
 }
 
 
