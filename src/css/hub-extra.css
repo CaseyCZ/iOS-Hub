@@ -30,6 +30,10 @@
   scrollbar-width:none;
   -webkit-overflow-scrolling:touch;
   overscroll-behavior-inline:contain;
+  overscroll-behavior-x:contain;
+  touch-action:pan-x pan-y;
+  scroll-behavior:smooth;
+  user-select:none;
 }
 .filter-tabs::-webkit-scrollbar{display:none}
 .filter-tabs>.filter{flex:0 0 auto}
