@@ -33,6 +33,8 @@ OWNED_REFERENCE_FILES = (
     ROOT / "guide.html",
     ROOT / "resources.html",
     ROOT / "credits.html",
+    ROOT / "privacy.html",
+    JS_DIR / "analytics.js",
     JS_DIR / "app.js",
     JS_DIR / "builder-page.js",
     JS_DIR / "builder.js",
@@ -46,6 +48,8 @@ OWNED_REFERENCE_FILES = (
 LANGUAGES = ("en", "cs", "de", "es", "fr")
 ALLOWED_MODES = {"classic", "pal", "sidestore"}
 ALLOWED_INSTALLERS = {"altstore", "sidestore", "livecontainer", "altstore-pal", "flarestore", "feather"}
+ALLOWED_COMPLIANCE_STATUSES = {"unreviewed", "licensed", "permission", "public-metadata", "restricted"}
+ALLOWED_COMPLIANCE_USAGE = {"metadata-and-original-links", "link-only"}
 ID_RE = re.compile(r"^[a-z0-9][a-z0-9-]*$")
 LEGACY_PATHS = [
     ROOT / "Packages",
@@ -251,6 +255,63 @@ def validate_translations() -> None:
             )
 
 
+def validate_privacy_compliance() -> None:
+    license_path = ROOT / "LICENSE"
+    if not license_path.exists():
+        error("Missing LICENSE")
+    else:
+        license_text = license_path.read_text(encoding="utf-8")
+        if "[year]" in license_text or "[fullname]" in license_text:
+            error("LICENSE still contains template placeholders")
+        if "Copyright (c) 2026 CaseyCZ" not in license_text:
+            error("LICENSE must contain the current CaseyCZ copyright notice")
+
+    privacy_path = ROOT / "privacy.html"
+    if not privacy_path.exists():
+        error("Missing privacy.html")
+    else:
+        privacy_text = privacy_path.read_text(encoding="utf-8")
+        for required_privacy in (
+            "Google Analytics is optional",
+            "not loaded until you explicitly choose",
+            "Hosted Mix files are intended to expire after approximately 24 hours",
+            "does not rehost third-party IPA binaries",
+            "data-cookie-settings",
+        ):
+            if required_privacy not in privacy_text:
+                error(f"privacy.html is missing required disclosure: {required_privacy!r}")
+
+    analytics_path = JS_DIR / "analytics.js"
+    if not analytics_path.exists():
+        error("Missing analytics consent runtime")
+    else:
+        analytics_text = analytics_path.read_text(encoding="utf-8")
+        for required_analytics in (
+            "ioshub-analytics-consent-v1",
+            "function loadAnalytics()",
+            "document.createElement('script')",
+            "data-consent-accept",
+            "data-consent-reject",
+            "analytics_storage: 'denied'",
+        ):
+            if required_analytics not in analytics_text:
+                error(f"analytics.js is missing consent guard: {required_analytics!r}")
+
+    for page in SITE_PAGES:
+        if not page.exists():
+            continue
+        text = page.read_text(encoding="utf-8")
+        label = page.relative_to(ROOT)
+        if "https://www.googletagmanager.com/gtag/js?" in text:
+            error(f"{label} loads Google Analytics before consent")
+        if "src/js/analytics.js?v=" not in text:
+            error(f"{label} is missing the consent-gated analytics runtime")
+        if 'href="privacy.html"' not in text:
+            error(f"{label} footer must link to privacy.html")
+        if "data-cookie-settings" not in text:
+            error(f"{label} must provide a Cookie settings control")
+
+
 def validate_project_identity() -> None:
     for path in OWNED_REFERENCE_FILES:
         if not path.exists():
@@ -313,6 +374,7 @@ def validate_registry() -> None:
     ids: dict[str, int] = {}
     urls: dict[str, int] = {}
     partially_localized: list[str] = []
+    unreviewed_compliance: list[str] = []
     for index, source in enumerate(payload["sources"]):
         if not isinstance(source, dict):
             error(f"registry sources[{index}] is not an object")
@@ -336,6 +398,35 @@ def validate_registry() -> None:
         developer = str(source.get("developer") or "").strip()
         if not developer:
             error(f"registry source {source_id or index!r} is missing developer/maintainer credit")
+
+        compliance = source.get("compliance")
+        if not isinstance(compliance, dict):
+            error(f"registry source {source_id or index!r} is missing compliance metadata")
+        else:
+            review_status = str(compliance.get("reviewStatus") or "")
+            usage = str(compliance.get("usage") or "")
+            if review_status not in ALLOWED_COMPLIANCE_STATUSES:
+                error(
+                    f"registry source {source_id or index!r} has invalid compliance.reviewStatus "
+                    f"{review_status!r}"
+                )
+            if usage not in ALLOWED_COMPLIANCE_USAGE:
+                error(
+                    f"registry source {source_id or index!r} has invalid compliance.usage {usage!r}"
+                )
+            if compliance.get("binaryRehost") is not False:
+                error(
+                    f"registry source {source_id or index!r} must explicitly keep binaryRehost=false"
+                )
+            if review_status == "unreviewed":
+                unreviewed_compliance.append(source_id or str(index))
+            if review_status == "restricted":
+                if source.get("builder") is not False:
+                    error(f"restricted registry source {source_id or index!r} must set builder=false")
+                if source.get("autoPackage") is not False:
+                    error(f"restricted registry source {source_id or index!r} must set autoPackage=false")
+                if source.get("mergeable") is True:
+                    error(f"restricted registry source {source_id or index!r} must not be mergeable")
 
         parsed = urlparse(url)
         if parsed.scheme != "https" or not parsed.netloc:
@@ -445,6 +536,11 @@ def validate_registry() -> None:
         warn(
             f"{len(partially_localized)} registry source descriptions still fall back to English "
             "for one or more of DE/ES/FR"
+        )
+    if unreviewed_compliance:
+        warn(
+            f"{len(unreviewed_compliance)} registry Sources still have compliance.reviewStatus=unreviewed; "
+            "do not describe them as legally verified until reviewed individually"
         )
 
 
@@ -1965,6 +2061,7 @@ def main() -> int:
     validate_interactive_guide()
     validate_page_quality()
     validate_translations()
+    validate_privacy_compliance()
     validate_project_identity()
 
     for message in warnings:
