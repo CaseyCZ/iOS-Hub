@@ -145,7 +145,7 @@
                     <button id="expClear" class="btn small ghost" type="button">Clear selection</button>
                   </div>
                   <div id="mixPassHelp" class="muted builder-pass-help">Sources are not merged, copied or re-hosted. Each original Source URL is added separately so future updates continue normally.</div>
-                  <div id="mixDedupeHelp" class="muted builder-pass-help">The Builder sends all selected original Sources to the iOS Hub Source Import Shortcut in one batch.</div>
+                  <div id="mixDedupeHelp" class="muted builder-pass-help">Bulk import sends all selected original Sources to the iOS Hub Source Import Shortcut in one batch. The manual list remains available below.</div>
                 </div>
               </div>
             </div>
@@ -156,10 +156,12 @@
               <span id="mixTargetBadge" class="pill mode"><img class="installer-icon" src="assets/icons/altstore.svg" alt=""> AltStore Classic</span>
             </div>
             <div class="builder-actions">
-              <button id="expBuild" class="btn primary" type="button" disabled>Add selected Sources</button>
+              <button id="expBuild" class="btn primary" type="button" disabled>Bulk import</button>
               <a id="expInstallShortcut" class="btn secondary" href="https://www.icloud.com/shortcuts/b8a48606455246389f066fc4f35af057" target="_blank" rel="noopener">Install Shortcut</a>
+              <button id="expDownload" class="btn small secondary" type="button" disabled>Download selection JSON</button>
+              <button id="expPreview" class="btn small ghost" type="button" disabled>Preview selection JSON</button>
             </div>
-            <span id="shortcutHelp" class="muted">Bulk import uses the iOS Hub Source Import Shortcut. Install it once; you can reinstall it here later if you delete it.</span>
+            <span id="shortcutHelp" class="muted">Bulk import uses the iOS Hub Source Import Shortcut. Install it once; manual one-by-one opening remains available below. JSON export only saves the selected original Source URLs.</span>
             <span id="expMessage" class="muted"></span>
           </div>
         </article>
@@ -167,15 +169,13 @@
         <div id="experimentalBuilderList" class="builder-list" aria-live="polite"></div>
 
         <div id="expResult" class="builder-result">
-          <strong id="expResultTitle">Source queue</strong>
+          <strong id="expResultTitle">Manual fallback</strong>
           <div id="expResultInfo" class="muted" style="margin-top:6px"></div>
           <p id="expResultNote" class="notice" style="margin-top:10px"></p>
           <div id="expQueueList" class="builder-list builder-queue-list" aria-live="polite"></div>
           <div class="builder-actions">
             <a id="expAddTarget" class="btn small primary" href="#" hidden>Open next</a>
             <button id="expCopyUrl" class="btn small secondary" type="button" hidden>Copy Source URLs</button>
-            <button id="expDownload" class="btn small secondary" type="button">Download JSON</button>
-            <button id="expPreview" class="btn small ghost" type="button">Preview JSON</button>
             <button id="expRestartQueue" class="btn small ghost" type="button" hidden>Restart queue</button>
           </div>
         </div>
@@ -208,7 +208,7 @@
   </div>
 
   <script type="module" src="src/js/builder-page.js?v=1.1.5-20260929-guide-methods1"></script>
-  <script type="module" src="src/js/builder.js?v=1.1.5-20260930-shortcut-share2"></script>
+  <script type="module" src="src/js/builder.js?v=1.1.5-20260930-source-import4"></script>
   <script type="module" src="src/js/collapsible.js?v=1.1.5-20260918-audit1"></script>
   <script src="src/js/horizontal-scroll.js?v=1.1.5-20260930-scroll-hardfix1"></script>
   <script src="src/js/support-dialog.js?v=1.1.5-20260918-a11y1"></script>
