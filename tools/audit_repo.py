@@ -1816,13 +1816,32 @@ def validate_layout() -> None:
             "scroll-padding-inline:8px",
             ".filter-tabs,.trouble-quick,.assistant-tried-options",
             ".assistant-trouble-chips,.guide-jumpbar",
-            ".filter-tabs{\n  width:100%;\n  min-width:0;\n  max-width:100%;\n  justify-self:stretch;\n  justify-content:flex-start;",
+            ".filter-tabs{\n  display:grid;\n  grid-auto-flow:column;\n  grid-auto-columns:max-content;",
+            "overflow-x:auto!important;",
+            "touch-action:pan-y;",
         ):
             if required_mobile_scroll not in shared_css_text:
                 error(
                     "hub-extra.css is missing the shared mobile horizontal scroller guard; "
                     f"missing {required_mobile_scroll!r}"
                 )
+
+        horizontal_scroll_script = JS_DIR / "horizontal-scroll.js"
+        if not horizontal_scroll_script.exists():
+            error("Missing shared horizontal-scroll.js runtime")
+        else:
+            horizontal_scroll_text = horizontal_scroll_script.read_text(encoding="utf-8")
+            for required_scroll_js in (
+                "document.addEventListener('wheel'",
+                "document.addEventListener('touchstart'",
+                "document.addEventListener('touchmove'",
+                "event.preventDefault()",
+            ):
+                if required_scroll_js not in horizontal_scroll_text:
+                    error(
+                        "Shared horizontal scroll runtime is incomplete; "
+                        f"missing {required_scroll_js!r}"
+                    )
 
     for search_script in ("app.js", "builder.js"):
         path = JS_DIR / search_script
@@ -1855,6 +1874,7 @@ def validate_layout() -> None:
         JS_DIR / "support-dialog.js",
         JS_DIR / "mobile-menu.js",
         JS_DIR / "settings-menu.js",
+        JS_DIR / "horizontal-scroll.js",
         JS_DIR / "i18n.js",
         CSS_DIR / "styles.css",
         CSS_DIR / "hub-extra.css",
