@@ -43,7 +43,7 @@ CaseyCZ iOS Hub cizí IPA soubory ani cizí Source JSONy nerehostuje. Builder po
 
 Google Analytics se načítá až po výslovném souhlasu uživatele. Volbu lze kdykoli změnit přes **Cookie settings** a podrobnosti jsou na stránce `privacy.html`.
 
-iOS Hub je nezávislý projekt a není přidružený k AltStore, SideStore, LiveContainer, Feather, FlareStore ani k autorům katalogizovaných Sources, pokud to výslovně neuvádí původní projekt. Registry u každého Source sleduje stav compliance kontroly, důkazní URL, datum kontroly a samostatný příznak `aggregationApproved`. Všechny aktuální Sources jsou klasifikované v [COMPLIANCE.md](COMPLIANCE.md). Sources jsou v Builderu používány jako link-only: iOS Hub může zkontrolovat jejich dostupnost a formát, ale jejich plný feed ani app metadata se pro Builder nekopírují, neslučují ani nerehostují.
+iOS Hub je nezávislý projekt a není přidružený k AltStore, SideStore, LiveContainer, Feather, FlareStore ani k autorům katalogizovaných Sources, pokud to výslovně neuvádí původní projekt. Registry u každého Source sleduje stav compliance kontroly, důkazní URL a datum kontroly. Všechny aktuální Sources jsou klasifikované v [COMPLIANCE.md](COMPLIANCE.md). Builder používá pouze původní veřejné Source URL: iOS Hub může zkontrolovat jejich dostupnost a formát, ale jejich plný feed ani app metadata nekopíruje, neslučuje, necachuje ani nerehostuje.
 
 ## DEB → IPA Beta
 
