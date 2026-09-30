@@ -318,15 +318,7 @@
     }
   ],
   "userInfo": {
-    "sourceIDs": [
-      "ignited",
-      "xn1ckuz-sidebox",
-      "youmod-repo"
-    ],
-    "sourceURLs": [
-      "https://altstore.ignitedemulator.com/",
-      "https://raw.githubusercontent.com/xN1ckuz/xN1ckuz-Sidestore-Repo/main/repo.json",
-      "https://raw.githubusercontent.com/MountainofPenguin/Altstore-Repository/main/apps.json"
-    ]
+    "sourceIDs": "ignited,xn1ckuz-sidebox,youmod-repo",
+    "sourceURLs": "https://altstore.ignitedemulator.com/\nhttps://raw.githubusercontent.com/xN1ckuz/xN1ckuz-Sidestore-Repo/main/repo.json\nhttps://raw.githubusercontent.com/MountainofPenguin/Altstore-Repository/main/apps.json"
   }
 }

@@ -238,15 +238,7 @@
     }
   ],
   "userInfo": {
-    "sourceIDs": [
-      "flycast",
-      "neofreebird",
-      "youtuberebornplus"
-    ],
-    "sourceURLs": [
-      "https://flyinghead.github.io/flycast-builds/altstore.json",
-      "https://raw.githubusercontent.com/orionblur/NeoFreeBird/v6/AltSource.json",
-      "https://raw.githubusercontent.com/arichornlover/arichornlover.github.io/main/apps2.json"
-    ]
+    "sourceIDs": "flycast,neofreebird,youtuberebornplus",
+    "sourceURLs": "https://flyinghead.github.io/flycast-builds/altstore.json\nhttps://raw.githubusercontent.com/orionblur/NeoFreeBird/v6/AltSource.json\nhttps://raw.githubusercontent.com/arichornlover/arichornlover.github.io/main/apps2.json"
   }
 }

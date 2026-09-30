@@ -463,15 +463,7 @@
     }
   ],
   "userInfo": {
-    "sourceIDs": [
-      "armsx2",
-      "discord-appstore-builds",
-      "oatmealdome"
-    ],
-    "sourceURLs": [
-      "https://raw.githubusercontent.com/ARMSX2/Armsx2-Repo/main/apps.json",
-      "https://raw.githubusercontent.com/AlfaActa/discord-altstore-source/main/source.json",
-      "https://altstore.oatmealdome.me"
-    ]
+    "sourceIDs": "armsx2,discord-appstore-builds,oatmealdome",
+    "sourceURLs": "https://raw.githubusercontent.com/ARMSX2/Armsx2-Repo/main/apps.json\nhttps://raw.githubusercontent.com/AlfaActa/discord-altstore-source/main/source.json\nhttps://altstore.oatmealdome.me"
   }
 }

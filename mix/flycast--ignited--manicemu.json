@@ -179,15 +179,7 @@
     }
   ],
   "userInfo": {
-    "sourceIDs": [
-      "flycast",
-      "ignited",
-      "manicemu"
-    ],
-    "sourceURLs": [
-      "https://flyinghead.github.io/flycast-builds/altstore.json",
-      "https://altstore.ignitedemulator.com/",
-      "https://apps.manicemu.site/altstore"
-    ]
+    "sourceIDs": "flycast,ignited,manicemu",
+    "sourceURLs": "https://flyinghead.github.io/flycast-builds/altstore.json\nhttps://altstore.ignitedemulator.com/\nhttps://apps.manicemu.site/altstore"
   }
 }

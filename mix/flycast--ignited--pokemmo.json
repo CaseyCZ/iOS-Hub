@@ -103,15 +103,7 @@
     }
   ],
   "userInfo": {
-    "sourceIDs": [
-      "flycast",
-      "ignited",
-      "pokemmo"
-    ],
-    "sourceURLs": [
-      "https://flyinghead.github.io/flycast-builds/altstore.json",
-      "https://altstore.ignitedemulator.com/",
-      "https://pokemmo.eu/altstore/"
-    ]
+    "sourceIDs": "flycast,ignited,pokemmo",
+    "sourceURLs": "https://flyinghead.github.io/flycast-builds/altstore.json\nhttps://altstore.ignitedemulator.com/\nhttps://pokemmo.eu/altstore/"
   }
 }

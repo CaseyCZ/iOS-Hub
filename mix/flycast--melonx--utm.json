@@ -118,15 +118,7 @@
     }
   ],
   "userInfo": {
-    "sourceIDs": [
-      "flycast",
-      "melonx",
-      "utm"
-    ],
-    "sourceURLs": [
-      "https://flyinghead.github.io/flycast-builds/altstore.json",
-      "https://raw.githubusercontent.com/AzureDominus/melonx/refs/heads/XC-ios-ht/source.json",
-      "https://alt.getutm.app/"
-    ]
+    "sourceIDs": "flycast,melonx,utm",
+    "sourceURLs": "https://flyinghead.github.io/flycast-builds/altstore.json\nhttps://raw.githubusercontent.com/AzureDominus/melonx/refs/heads/XC-ios-ht/source.json\nhttps://alt.getutm.app/"
   }
 }

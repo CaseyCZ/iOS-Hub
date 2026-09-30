@@ -1125,15 +1125,7 @@
     }
   ],
   "userInfo": {
-    "sourceIDs": [
-      "fouad-source",
-      "pokemmo",
-      "youmod-repo"
-    ],
-    "sourceURLs": [
-      "https://raw.githubusercontent.com/FouadRaheb/Watusi-for-WhatsApp/master/altstore/source.json",
-      "https://pokemmo.eu/altstore/",
-      "https://raw.githubusercontent.com/MountainofPenguin/Altstore-Repository/main/apps.json"
-    ]
+    "sourceIDs": "fouad-source,pokemmo,youmod-repo",
+    "sourceURLs": "https://raw.githubusercontent.com/FouadRaheb/Watusi-for-WhatsApp/master/altstore/source.json\nhttps://pokemmo.eu/altstore/\nhttps://raw.githubusercontent.com/MountainofPenguin/Altstore-Repository/main/apps.json"
   }
 }

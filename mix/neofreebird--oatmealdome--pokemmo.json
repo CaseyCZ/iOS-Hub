@@ -303,15 +303,7 @@
     }
   ],
   "userInfo": {
-    "sourceIDs": [
-      "neofreebird",
-      "oatmealdome",
-      "pokemmo"
-    ],
-    "sourceURLs": [
-      "https://raw.githubusercontent.com/orionblur/NeoFreeBird/v6/AltSource.json",
-      "https://altstore.oatmealdome.me",
-      "https://pokemmo.eu/altstore/"
-    ]
+    "sourceIDs": "neofreebird,oatmealdome,pokemmo",
+    "sourceURLs": "https://raw.githubusercontent.com/orionblur/NeoFreeBird/v6/AltSource.json\nhttps://altstore.oatmealdome.me\nhttps://pokemmo.eu/altstore/"
   }
 }

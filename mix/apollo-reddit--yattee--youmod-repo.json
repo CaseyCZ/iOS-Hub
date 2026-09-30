@@ -173,15 +173,7 @@
     }
   ],
   "userInfo": {
-    "sourceIDs": [
-      "apollo-reddit",
-      "yattee",
-      "youmod-repo"
-    ],
-    "sourceURLs": [
-      "https://raw.githubusercontent.com/Balackburn/Apollo/main/apps.json",
-      "https://raw.githubusercontent.com/yattee/yattee/main/altstore-source.json",
-      "https://raw.githubusercontent.com/MountainofPenguin/Altstore-Repository/main/apps.json"
-    ]
+    "sourceIDs": "apollo-reddit,yattee,youmod-repo",
+    "sourceURLs": "https://raw.githubusercontent.com/Balackburn/Apollo/main/apps.json\nhttps://raw.githubusercontent.com/yattee/yattee/main/altstore-source.json\nhttps://raw.githubusercontent.com/MountainofPenguin/Altstore-Repository/main/apps.json"
   }
 }

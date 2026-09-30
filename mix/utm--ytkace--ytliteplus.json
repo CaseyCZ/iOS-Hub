@@ -80,15 +80,7 @@
     }
   ],
   "userInfo": {
-    "sourceIDs": [
-      "utm",
-      "ytkace",
-      "ytliteplus"
-    ],
-    "sourceURLs": [
-      "https://alt.getutm.app/",
-      "https://raw.githubusercontent.com/xKatsumi/YTKACE-SideStore-Repo/main/ytkace.json",
-      "https://raw.githubusercontent.com/YTLitePlus/YTLitePlus-Altstore/main/apps.json"
-    ]
+    "sourceIDs": "utm,ytkace,ytliteplus",
+    "sourceURLs": "https://alt.getutm.app/\nhttps://raw.githubusercontent.com/xKatsumi/YTKACE-SideStore-Repo/main/ytkace.json\nhttps://raw.githubusercontent.com/YTLitePlus/YTLitePlus-Altstore/main/apps.json"
   }
 }

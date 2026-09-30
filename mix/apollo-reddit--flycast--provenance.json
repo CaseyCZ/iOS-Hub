@@ -291,15 +291,7 @@
     }
   ],
   "userInfo": {
-    "sourceIDs": [
-      "apollo-reddit",
-      "flycast",
-      "provenance"
-    ],
-    "sourceURLs": [
-      "https://raw.githubusercontent.com/Balackburn/Apollo/main/apps.json",
-      "https://flyinghead.github.io/flycast-builds/altstore.json",
-      "https://provenance-emu.com/apps.json"
-    ]
+    "sourceIDs": "apollo-reddit,flycast,provenance",
+    "sourceURLs": "https://raw.githubusercontent.com/Balackburn/Apollo/main/apps.json\nhttps://flyinghead.github.io/flycast-builds/altstore.json\nhttps://provenance-emu.com/apps.json"
   }
 }

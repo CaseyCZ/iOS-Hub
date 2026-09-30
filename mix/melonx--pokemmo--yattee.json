@@ -136,15 +136,7 @@
     }
   ],
   "userInfo": {
-    "sourceIDs": [
-      "melonx",
-      "pokemmo",
-      "yattee"
-    ],
-    "sourceURLs": [
-      "https://raw.githubusercontent.com/AzureDominus/melonx/refs/heads/XC-ios-ht/source.json",
-      "https://pokemmo.eu/altstore/",
-      "https://raw.githubusercontent.com/yattee/yattee/main/altstore-source.json"
-    ]
+    "sourceIDs": "melonx,pokemmo,yattee",
+    "sourceURLs": "https://raw.githubusercontent.com/AzureDominus/melonx/refs/heads/XC-ios-ht/source.json\nhttps://pokemmo.eu/altstore/\nhttps://raw.githubusercontent.com/yattee/yattee/main/altstore-source.json"
   }
 }

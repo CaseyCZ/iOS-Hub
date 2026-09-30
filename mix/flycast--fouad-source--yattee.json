@@ -1169,15 +1169,7 @@
     }
   ],
   "userInfo": {
-    "sourceIDs": [
-      "flycast",
-      "fouad-source",
-      "yattee"
-    ],
-    "sourceURLs": [
-      "https://flyinghead.github.io/flycast-builds/altstore.json",
-      "https://raw.githubusercontent.com/FouadRaheb/Watusi-for-WhatsApp/master/altstore/source.json",
-      "https://raw.githubusercontent.com/yattee/yattee/main/altstore-source.json"
-    ]
+    "sourceIDs": "flycast,fouad-source,yattee",
+    "sourceURLs": "https://flyinghead.github.io/flycast-builds/altstore.json\nhttps://raw.githubusercontent.com/FouadRaheb/Watusi-for-WhatsApp/master/altstore/source.json\nhttps://raw.githubusercontent.com/yattee/yattee/main/altstore-source.json"
   }
 }

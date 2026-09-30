@@ -221,15 +221,7 @@
     }
   ],
   "userInfo": {
-    "sourceIDs": [
-      "discord-appstore-builds",
-      "ish",
-      "ytkace"
-    ],
-    "sourceURLs": [
-      "https://raw.githubusercontent.com/AlfaActa/discord-altstore-source/main/source.json",
-      "https://ish.app/altstore.json",
-      "https://raw.githubusercontent.com/xKatsumi/YTKACE-SideStore-Repo/main/ytkace.json"
-    ]
+    "sourceIDs": "discord-appstore-builds,ish,ytkace",
+    "sourceURLs": "https://raw.githubusercontent.com/AlfaActa/discord-altstore-source/main/source.json\nhttps://ish.app/altstore.json\nhttps://raw.githubusercontent.com/xKatsumi/YTKACE-SideStore-Repo/main/ytkace.json"
   }
 }

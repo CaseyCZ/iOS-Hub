@@ -535,15 +535,7 @@
     }
   ],
   "userInfo": {
-    "sourceIDs": [
-      "dvntm0-workshop",
-      "flycast",
-      "utm"
-    ],
-    "sourceURLs": [
-      "https://raw.githubusercontent.com/dvntm0/AltStore/main/repo.json",
-      "https://flyinghead.github.io/flycast-builds/altstore.json",
-      "https://alt.getutm.app/"
-    ]
+    "sourceIDs": "dvntm0-workshop,flycast,utm",
+    "sourceURLs": "https://raw.githubusercontent.com/dvntm0/AltStore/main/repo.json\nhttps://flyinghead.github.io/flycast-builds/altstore.json\nhttps://alt.getutm.app/"
   }
 }

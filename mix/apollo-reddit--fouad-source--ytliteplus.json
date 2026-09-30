@@ -1491,15 +1491,7 @@
     }
   ],
   "userInfo": {
-    "sourceIDs": [
-      "apollo-reddit",
-      "fouad-source",
-      "ytliteplus"
-    ],
-    "sourceURLs": [
-      "https://raw.githubusercontent.com/Balackburn/Apollo/main/apps.json",
-      "https://raw.githubusercontent.com/FouadRaheb/Watusi-for-WhatsApp/master/altstore/source.json",
-      "https://raw.githubusercontent.com/YTLitePlus/YTLitePlus-Altstore/main/apps.json"
-    ]
+    "sourceIDs": "apollo-reddit,fouad-source,ytliteplus",
+    "sourceURLs": "https://raw.githubusercontent.com/Balackburn/Apollo/main/apps.json\nhttps://raw.githubusercontent.com/FouadRaheb/Watusi-for-WhatsApp/master/altstore/source.json\nhttps://raw.githubusercontent.com/YTLitePlus/YTLitePlus-Altstore/main/apps.json"
   }
 }

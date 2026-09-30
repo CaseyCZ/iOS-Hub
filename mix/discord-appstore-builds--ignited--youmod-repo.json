@@ -276,15 +276,7 @@
     }
   ],
   "userInfo": {
-    "sourceIDs": [
-      "discord-appstore-builds",
-      "ignited",
-      "youmod-repo"
-    ],
-    "sourceURLs": [
-      "https://raw.githubusercontent.com/AlfaActa/discord-altstore-source/main/source.json",
-      "https://altstore.ignitedemulator.com/",
-      "https://raw.githubusercontent.com/MountainofPenguin/Altstore-Repository/main/apps.json"
-    ]
+    "sourceIDs": "discord-appstore-builds,ignited,youmod-repo",
+    "sourceURLs": "https://raw.githubusercontent.com/AlfaActa/discord-altstore-source/main/source.json\nhttps://altstore.ignitedemulator.com/\nhttps://raw.githubusercontent.com/MountainofPenguin/Altstore-Repository/main/apps.json"
   }
 }

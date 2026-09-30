@@ -383,15 +383,7 @@
     }
   ],
   "userInfo": {
-    "sourceIDs": [
-      "manicemu",
-      "provenance",
-      "yattee"
-    ],
-    "sourceURLs": [
-      "https://apps.manicemu.site/altstore",
-      "https://provenance-emu.com/apps.json",
-      "https://raw.githubusercontent.com/yattee/yattee/main/altstore-source.json"
-    ]
+    "sourceIDs": "manicemu,provenance,yattee",
+    "sourceURLs": "https://apps.manicemu.site/altstore\nhttps://provenance-emu.com/apps.json\nhttps://raw.githubusercontent.com/yattee/yattee/main/altstore-source.json"
   }
 }

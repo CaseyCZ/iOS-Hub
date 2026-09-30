@@ -344,15 +344,7 @@
     }
   ],
   "userInfo": {
-    "sourceIDs": [
-      "provenance",
-      "utm",
-      "yattee"
-    ],
-    "sourceURLs": [
-      "https://provenance-emu.com/apps.json",
-      "https://alt.getutm.app/",
-      "https://raw.githubusercontent.com/yattee/yattee/main/altstore-source.json"
-    ]
+    "sourceIDs": "provenance,utm,yattee",
+    "sourceURLs": "https://provenance-emu.com/apps.json\nhttps://alt.getutm.app/\nhttps://raw.githubusercontent.com/yattee/yattee/main/altstore-source.json"
   }
 }

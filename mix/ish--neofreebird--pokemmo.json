@@ -193,15 +193,7 @@
     }
   ],
   "userInfo": {
-    "sourceIDs": [
-      "ish",
-      "neofreebird",
-      "pokemmo"
-    ],
-    "sourceURLs": [
-      "https://ish.app/altstore.json",
-      "https://raw.githubusercontent.com/orionblur/NeoFreeBird/v6/AltSource.json",
-      "https://pokemmo.eu/altstore/"
-    ]
+    "sourceIDs": "ish,neofreebird,pokemmo",
+    "sourceURLs": "https://ish.app/altstore.json\nhttps://raw.githubusercontent.com/orionblur/NeoFreeBird/v6/AltSource.json\nhttps://pokemmo.eu/altstore/"
   }
 }

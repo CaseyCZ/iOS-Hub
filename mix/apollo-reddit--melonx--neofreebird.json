@@ -249,15 +249,7 @@
     }
   ],
   "userInfo": {
-    "sourceIDs": [
-      "apollo-reddit",
-      "melonx",
-      "neofreebird"
-    ],
-    "sourceURLs": [
-      "https://raw.githubusercontent.com/Balackburn/Apollo/main/apps.json",
-      "https://raw.githubusercontent.com/AzureDominus/melonx/refs/heads/XC-ios-ht/source.json",
-      "https://raw.githubusercontent.com/orionblur/NeoFreeBird/v6/AltSource.json"
-    ]
+    "sourceIDs": "apollo-reddit,melonx,neofreebird",
+    "sourceURLs": "https://raw.githubusercontent.com/Balackburn/Apollo/main/apps.json\nhttps://raw.githubusercontent.com/AzureDominus/melonx/refs/heads/XC-ios-ht/source.json\nhttps://raw.githubusercontent.com/orionblur/NeoFreeBird/v6/AltSource.json"
   }
 }

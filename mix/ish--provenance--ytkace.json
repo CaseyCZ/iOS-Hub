@@ -246,15 +246,7 @@
     }
   ],
   "userInfo": {
-    "sourceIDs": [
-      "ish",
-      "provenance",
-      "ytkace"
-    ],
-    "sourceURLs": [
-      "https://ish.app/altstore.json",
-      "https://provenance-emu.com/apps.json",
-      "https://raw.githubusercontent.com/xKatsumi/YTKACE-SideStore-Repo/main/ytkace.json"
-    ]
+    "sourceIDs": "ish,provenance,ytkace",
+    "sourceURLs": "https://ish.app/altstore.json\nhttps://provenance-emu.com/apps.json\nhttps://raw.githubusercontent.com/xKatsumi/YTKACE-SideStore-Repo/main/ytkace.json"
   }
 }

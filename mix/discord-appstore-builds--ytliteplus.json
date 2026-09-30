@@ -547,13 +547,7 @@
     }
   ],
   "userInfo": {
-    "sourceIDs": [
-      "discord-appstore-builds",
-      "ytliteplus"
-    ],
-    "sourceURLs": [
-      "https://raw.githubusercontent.com/AlfaActa/discord-altstore-source/main/source.json",
-      "https://raw.githubusercontent.com/YTLitePlus/YTLitePlus-Altstore/main/apps.json"
-    ]
+    "sourceIDs": "discord-appstore-builds,ytliteplus",
+    "sourceURLs": "https://raw.githubusercontent.com/AlfaActa/discord-altstore-source/main/source.json\nhttps://raw.githubusercontent.com/YTLitePlus/YTLitePlus-Altstore/main/apps.json"
   }
 }

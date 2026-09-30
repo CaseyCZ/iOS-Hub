@@ -1279,15 +1279,7 @@
     }
   ],
   "userInfo": {
-    "sourceIDs": [
-      "fouad-source",
-      "ignited",
-      "neofreebird"
-    ],
-    "sourceURLs": [
-      "https://raw.githubusercontent.com/FouadRaheb/Watusi-for-WhatsApp/master/altstore/source.json",
-      "https://altstore.ignitedemulator.com/",
-      "https://raw.githubusercontent.com/orionblur/NeoFreeBird/v6/AltSource.json"
-    ]
+    "sourceIDs": "fouad-source,ignited,neofreebird",
+    "sourceURLs": "https://raw.githubusercontent.com/FouadRaheb/Watusi-for-WhatsApp/master/altstore/source.json\nhttps://altstore.ignitedemulator.com/\nhttps://raw.githubusercontent.com/orionblur/NeoFreeBird/v6/AltSource.json"
   }
 }

@@ -1131,15 +1131,7 @@
     }
   ],
   "userInfo": {
-    "sourceIDs": [
-      "ish",
-      "oatmealdome",
-      "wuxu-library-plus"
-    ],
-    "sourceURLs": [
-      "https://ish.app/altstore.json",
-      "https://altstore.oatmealdome.me",
-      "https://raw.githubusercontent.com/WuXu1/WuXu1.github.io/main/wuxu-complete-plus.json"
-    ]
+    "sourceIDs": "ish,oatmealdome,wuxu-library-plus",
+    "sourceURLs": "https://ish.app/altstore.json\nhttps://altstore.oatmealdome.me\nhttps://raw.githubusercontent.com/WuXu1/WuXu1.github.io/main/wuxu-complete-plus.json"
   }
 }

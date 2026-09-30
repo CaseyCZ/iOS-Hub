@@ -209,15 +209,7 @@
     }
   ],
   "userInfo": {
-    "sourceIDs": [
-      "flycast",
-      "neofreebird",
-      "youmod-repo"
-    ],
-    "sourceURLs": [
-      "https://flyinghead.github.io/flycast-builds/altstore.json",
-      "https://raw.githubusercontent.com/orionblur/NeoFreeBird/v6/AltSource.json",
-      "https://raw.githubusercontent.com/MountainofPenguin/Altstore-Repository/main/apps.json"
-    ]
+    "sourceIDs": "flycast,neofreebird,youmod-repo",
+    "sourceURLs": "https://flyinghead.github.io/flycast-builds/altstore.json\nhttps://raw.githubusercontent.com/orionblur/NeoFreeBird/v6/AltSource.json\nhttps://raw.githubusercontent.com/MountainofPenguin/Altstore-Repository/main/apps.json"
   }
 }

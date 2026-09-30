@@ -181,15 +181,7 @@
     }
   ],
   "userInfo": {
-    "sourceIDs": [
-      "apollo-reddit",
-      "flycast",
-      "manicemu"
-    ],
-    "sourceURLs": [
-      "https://raw.githubusercontent.com/Balackburn/Apollo/main/apps.json",
-      "https://flyinghead.github.io/flycast-builds/altstore.json",
-      "https://apps.manicemu.site/altstore"
-    ]
+    "sourceIDs": "apollo-reddit,flycast,manicemu",
+    "sourceURLs": "https://raw.githubusercontent.com/Balackburn/Apollo/main/apps.json\nhttps://flyinghead.github.io/flycast-builds/altstore.json\nhttps://apps.manicemu.site/altstore"
   }
 }

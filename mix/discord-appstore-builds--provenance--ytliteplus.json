@@ -752,15 +752,7 @@
     }
   ],
   "userInfo": {
-    "sourceIDs": [
-      "discord-appstore-builds",
-      "provenance",
-      "ytliteplus"
-    ],
-    "sourceURLs": [
-      "https://raw.githubusercontent.com/AlfaActa/discord-altstore-source/main/source.json",
-      "https://provenance-emu.com/apps.json",
-      "https://raw.githubusercontent.com/YTLitePlus/YTLitePlus-Altstore/main/apps.json"
-    ]
+    "sourceIDs": "discord-appstore-builds,provenance,ytliteplus",
+    "sourceURLs": "https://raw.githubusercontent.com/AlfaActa/discord-altstore-source/main/source.json\nhttps://provenance-emu.com/apps.json\nhttps://raw.githubusercontent.com/YTLitePlus/YTLitePlus-Altstore/main/apps.json"
   }
 }

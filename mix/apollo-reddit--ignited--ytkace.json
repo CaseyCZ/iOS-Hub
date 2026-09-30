@@ -138,15 +138,7 @@
     }
   ],
   "userInfo": {
-    "sourceIDs": [
-      "apollo-reddit",
-      "ignited",
-      "ytkace"
-    ],
-    "sourceURLs": [
-      "https://raw.githubusercontent.com/Balackburn/Apollo/main/apps.json",
-      "https://altstore.ignitedemulator.com/",
-      "https://raw.githubusercontent.com/xKatsumi/YTKACE-SideStore-Repo/main/ytkace.json"
-    ]
+    "sourceIDs": "apollo-reddit,ignited,ytkace",
+    "sourceURLs": "https://raw.githubusercontent.com/Balackburn/Apollo/main/apps.json\nhttps://altstore.ignitedemulator.com/\nhttps://raw.githubusercontent.com/xKatsumi/YTKACE-SideStore-Repo/main/ytkace.json"
   }
 }

@@ -294,15 +294,7 @@
     }
   ],
   "userInfo": {
-    "sourceIDs": [
-      "flycast",
-      "provenance",
-      "youtuberebornplus"
-    ],
-    "sourceURLs": [
-      "https://flyinghead.github.io/flycast-builds/altstore.json",
-      "https://provenance-emu.com/apps.json",
-      "https://raw.githubusercontent.com/arichornlover/arichornlover.github.io/main/apps2.json"
-    ]
+    "sourceIDs": "flycast,provenance,youtuberebornplus",
+    "sourceURLs": "https://flyinghead.github.io/flycast-builds/altstore.json\nhttps://provenance-emu.com/apps.json\nhttps://raw.githubusercontent.com/arichornlover/arichornlover.github.io/main/apps2.json"
   }
 }

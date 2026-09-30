@@ -269,15 +269,7 @@
     }
   ],
   "userInfo": {
-    "sourceIDs": [
-      "ish",
-      "manicemu",
-      "neofreebird"
-    ],
-    "sourceURLs": [
-      "https://ish.app/altstore.json",
-      "https://apps.manicemu.site/altstore",
-      "https://raw.githubusercontent.com/orionblur/NeoFreeBird/v6/AltSource.json"
-    ]
+    "sourceIDs": "ish,manicemu,neofreebird",
+    "sourceURLs": "https://ish.app/altstore.json\nhttps://apps.manicemu.site/altstore\nhttps://raw.githubusercontent.com/orionblur/NeoFreeBird/v6/AltSource.json"
   }
 }

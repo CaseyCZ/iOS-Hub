@@ -340,15 +340,7 @@
     }
   ],
   "userInfo": {
-    "sourceIDs": [
-      "ignited",
-      "neofreebird",
-      "oatmealdome"
-    ],
-    "sourceURLs": [
-      "https://altstore.ignitedemulator.com/",
-      "https://raw.githubusercontent.com/orionblur/NeoFreeBird/v6/AltSource.json",
-      "https://altstore.oatmealdome.me"
-    ]
+    "sourceIDs": "ignited,neofreebird,oatmealdome",
+    "sourceURLs": "https://altstore.ignitedemulator.com/\nhttps://raw.githubusercontent.com/orionblur/NeoFreeBird/v6/AltSource.json\nhttps://altstore.oatmealdome.me"
   }
 }

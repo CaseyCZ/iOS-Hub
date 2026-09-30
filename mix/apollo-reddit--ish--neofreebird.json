@@ -232,15 +232,7 @@
     }
   ],
   "userInfo": {
-    "sourceIDs": [
-      "apollo-reddit",
-      "ish",
-      "neofreebird"
-    ],
-    "sourceURLs": [
-      "https://raw.githubusercontent.com/Balackburn/Apollo/main/apps.json",
-      "https://ish.app/altstore.json",
-      "https://raw.githubusercontent.com/orionblur/NeoFreeBird/v6/AltSource.json"
-    ]
+    "sourceIDs": "apollo-reddit,ish,neofreebird",
+    "sourceURLs": "https://raw.githubusercontent.com/Balackburn/Apollo/main/apps.json\nhttps://ish.app/altstore.json\nhttps://raw.githubusercontent.com/orionblur/NeoFreeBird/v6/AltSource.json"
   }
 }

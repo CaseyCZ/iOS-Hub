@@ -45,13 +45,7 @@
     }
   ],
   "userInfo": {
-    "sourceIDs": [
-      "flycast",
-      "ish"
-    ],
-    "sourceURLs": [
-      "https://flyinghead.github.io/flycast-builds/altstore.json",
-      "https://ish.app/altstore.json"
-    ]
+    "sourceIDs": "flycast,ish",
+    "sourceURLs": "https://flyinghead.github.io/flycast-builds/altstore.json\nhttps://ish.app/altstore.json"
   }
 }

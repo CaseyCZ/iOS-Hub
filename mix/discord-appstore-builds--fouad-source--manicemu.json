@@ -1349,15 +1349,7 @@
     }
   ],
   "userInfo": {
-    "sourceIDs": [
-      "discord-appstore-builds",
-      "fouad-source",
-      "manicemu"
-    ],
-    "sourceURLs": [
-      "https://raw.githubusercontent.com/AlfaActa/discord-altstore-source/main/source.json",
-      "https://raw.githubusercontent.com/FouadRaheb/Watusi-for-WhatsApp/master/altstore/source.json",
-      "https://apps.manicemu.site/altstore"
-    ]
+    "sourceIDs": "discord-appstore-builds,fouad-source,manicemu",
+    "sourceURLs": "https://raw.githubusercontent.com/AlfaActa/discord-altstore-source/main/source.json\nhttps://raw.githubusercontent.com/FouadRaheb/Watusi-for-WhatsApp/master/altstore/source.json\nhttps://apps.manicemu.site/altstore"
   }
 }

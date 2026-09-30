@@ -319,15 +319,7 @@
     }
   ],
   "userInfo": {
-    "sourceIDs": [
-      "discord-appstore-builds",
-      "utm",
-      "yattee"
-    ],
-    "sourceURLs": [
-      "https://raw.githubusercontent.com/AlfaActa/discord-altstore-source/main/source.json",
-      "https://alt.getutm.app/",
-      "https://raw.githubusercontent.com/yattee/yattee/main/altstore-source.json"
-    ]
+    "sourceIDs": "discord-appstore-builds,utm,yattee",
+    "sourceURLs": "https://raw.githubusercontent.com/AlfaActa/discord-altstore-source/main/source.json\nhttps://alt.getutm.app/\nhttps://raw.githubusercontent.com/yattee/yattee/main/altstore-source.json"
   }
 }

@@ -340,15 +340,7 @@
     }
   ],
   "userInfo": {
-    "sourceIDs": [
-      "neofreebird",
-      "oatmealdome",
-      "utm"
-    ],
-    "sourceURLs": [
-      "https://raw.githubusercontent.com/orionblur/NeoFreeBird/v6/AltSource.json",
-      "https://altstore.oatmealdome.me",
-      "https://alt.getutm.app/"
-    ]
+    "sourceIDs": "neofreebird,oatmealdome,utm",
+    "sourceURLs": "https://raw.githubusercontent.com/orionblur/NeoFreeBird/v6/AltSource.json\nhttps://altstore.oatmealdome.me\nhttps://alt.getutm.app/"
   }
 }

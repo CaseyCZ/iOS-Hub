@@ -300,15 +300,7 @@
     }
   ],
   "userInfo": {
-    "sourceIDs": [
-      "neofreebird",
-      "oatmealdome",
-      "ytkace"
-    ],
-    "sourceURLs": [
-      "https://raw.githubusercontent.com/orionblur/NeoFreeBird/v6/AltSource.json",
-      "https://altstore.oatmealdome.me",
-      "https://raw.githubusercontent.com/xKatsumi/YTKACE-SideStore-Repo/main/ytkace.json"
-    ]
+    "sourceIDs": "neofreebird,oatmealdome,ytkace",
+    "sourceURLs": "https://raw.githubusercontent.com/orionblur/NeoFreeBird/v6/AltSource.json\nhttps://altstore.oatmealdome.me\nhttps://raw.githubusercontent.com/xKatsumi/YTKACE-SideStore-Repo/main/ytkace.json"
   }
 }

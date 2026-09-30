@@ -304,15 +304,7 @@
     }
   ],
   "userInfo": {
-    "sourceIDs": [
-      "flycast",
-      "neofreebird",
-      "oatmealdome"
-    ],
-    "sourceURLs": [
-      "https://flyinghead.github.io/flycast-builds/altstore.json",
-      "https://raw.githubusercontent.com/orionblur/NeoFreeBird/v6/AltSource.json",
-      "https://altstore.oatmealdome.me"
-    ]
+    "sourceIDs": "flycast,neofreebird,oatmealdome",
+    "sourceURLs": "https://flyinghead.github.io/flycast-builds/altstore.json\nhttps://raw.githubusercontent.com/orionblur/NeoFreeBird/v6/AltSource.json\nhttps://altstore.oatmealdome.me"
   }
 }

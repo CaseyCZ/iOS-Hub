@@ -141,15 +141,7 @@
     }
   ],
   "userInfo": {
-    "sourceIDs": [
-      "apollo-reddit",
-      "ignited",
-      "pokemmo"
-    ],
-    "sourceURLs": [
-      "https://raw.githubusercontent.com/Balackburn/Apollo/main/apps.json",
-      "https://altstore.ignitedemulator.com/",
-      "https://pokemmo.eu/altstore/"
-    ]
+    "sourceIDs": "apollo-reddit,ignited,pokemmo",
+    "sourceURLs": "https://raw.githubusercontent.com/Balackburn/Apollo/main/apps.json\nhttps://altstore.ignitedemulator.com/\nhttps://pokemmo.eu/altstore/"
   }
 }

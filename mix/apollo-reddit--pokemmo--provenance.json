@@ -290,15 +290,7 @@
     }
   ],
   "userInfo": {
-    "sourceIDs": [
-      "apollo-reddit",
-      "pokemmo",
-      "provenance"
-    ],
-    "sourceURLs": [
-      "https://raw.githubusercontent.com/Balackburn/Apollo/main/apps.json",
-      "https://pokemmo.eu/altstore/",
-      "https://provenance-emu.com/apps.json"
-    ]
+    "sourceIDs": "apollo-reddit,pokemmo,provenance",
+    "sourceURLs": "https://raw.githubusercontent.com/Balackburn/Apollo/main/apps.json\nhttps://pokemmo.eu/altstore/\nhttps://provenance-emu.com/apps.json"
   }
 }

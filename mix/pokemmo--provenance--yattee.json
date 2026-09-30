@@ -307,15 +307,7 @@
     }
   ],
   "userInfo": {
-    "sourceIDs": [
-      "pokemmo",
-      "provenance",
-      "yattee"
-    ],
-    "sourceURLs": [
-      "https://pokemmo.eu/altstore/",
-      "https://provenance-emu.com/apps.json",
-      "https://raw.githubusercontent.com/yattee/yattee/main/altstore-source.json"
-    ]
+    "sourceIDs": "pokemmo,provenance,yattee",
+    "sourceURLs": "https://pokemmo.eu/altstore/\nhttps://provenance-emu.com/apps.json\nhttps://raw.githubusercontent.com/yattee/yattee/main/altstore-source.json"
   }
 }

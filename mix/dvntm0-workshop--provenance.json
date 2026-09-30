@@ -664,13 +664,7 @@
     }
   ],
   "userInfo": {
-    "sourceIDs": [
-      "dvntm0-workshop",
-      "provenance"
-    ],
-    "sourceURLs": [
-      "https://raw.githubusercontent.com/dvntm0/AltStore/main/repo.json",
-      "https://provenance-emu.com/apps.json"
-    ]
+    "sourceIDs": "dvntm0-workshop,provenance",
+    "sourceURLs": "https://raw.githubusercontent.com/dvntm0/AltStore/main/repo.json\nhttps://provenance-emu.com/apps.json"
   }
 }

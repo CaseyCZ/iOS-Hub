@@ -156,15 +156,7 @@
     }
   ],
   "userInfo": {
-    "sourceIDs": [
-      "ignited",
-      "ish",
-      "yattee"
-    ],
-    "sourceURLs": [
-      "https://altstore.ignitedemulator.com/",
-      "https://ish.app/altstore.json",
-      "https://raw.githubusercontent.com/yattee/yattee/main/altstore-source.json"
-    ]
+    "sourceIDs": "ignited,ish,yattee",
+    "sourceURLs": "https://altstore.ignitedemulator.com/\nhttps://ish.app/altstore.json\nhttps://raw.githubusercontent.com/yattee/yattee/main/altstore-source.json"
   }
 }

@@ -573,15 +573,7 @@
     }
   ],
   "userInfo": {
-    "sourceIDs": [
-      "dvntm0-workshop",
-      "manicemu",
-      "pokemmo"
-    ],
-    "sourceURLs": [
-      "https://raw.githubusercontent.com/dvntm0/AltStore/main/repo.json",
-      "https://apps.manicemu.site/altstore",
-      "https://pokemmo.eu/altstore/"
-    ]
+    "sourceIDs": "dvntm0-workshop,manicemu,pokemmo",
+    "sourceURLs": "https://raw.githubusercontent.com/dvntm0/AltStore/main/repo.json\nhttps://apps.manicemu.site/altstore\nhttps://pokemmo.eu/altstore/"
   }
 }

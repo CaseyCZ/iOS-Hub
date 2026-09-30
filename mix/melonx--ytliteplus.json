@@ -401,13 +401,7 @@
     }
   ],
   "userInfo": {
-    "sourceIDs": [
-      "melonx",
-      "ytliteplus"
-    ],
-    "sourceURLs": [
-      "https://raw.githubusercontent.com/AzureDominus/melonx/refs/heads/XC-ios-ht/source.json",
-      "https://raw.githubusercontent.com/YTLitePlus/YTLitePlus-Altstore/main/apps.json"
-    ]
+    "sourceIDs": "melonx,ytliteplus",
+    "sourceURLs": "https://raw.githubusercontent.com/AzureDominus/melonx/refs/heads/XC-ios-ht/source.json\nhttps://raw.githubusercontent.com/YTLitePlus/YTLitePlus-Altstore/main/apps.json"
   }
 }

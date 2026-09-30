@@ -361,15 +361,7 @@
     }
   ],
   "userInfo": {
-    "sourceIDs": [
-      "armsx2",
-      "ignited",
-      "neofreebird"
-    ],
-    "sourceURLs": [
-      "https://raw.githubusercontent.com/ARMSX2/Armsx2-Repo/main/apps.json",
-      "https://altstore.ignitedemulator.com/",
-      "https://raw.githubusercontent.com/orionblur/NeoFreeBird/v6/AltSource.json"
-    ]
+    "sourceIDs": "armsx2,ignited,neofreebird",
+    "sourceURLs": "https://raw.githubusercontent.com/ARMSX2/Armsx2-Repo/main/apps.json\nhttps://altstore.ignitedemulator.com/\nhttps://raw.githubusercontent.com/orionblur/NeoFreeBird/v6/AltSource.json"
   }
 }

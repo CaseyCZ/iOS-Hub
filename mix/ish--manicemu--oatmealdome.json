@@ -247,15 +247,7 @@
     }
   ],
   "userInfo": {
-    "sourceIDs": [
-      "ish",
-      "manicemu",
-      "oatmealdome"
-    ],
-    "sourceURLs": [
-      "https://ish.app/altstore.json",
-      "https://apps.manicemu.site/altstore",
-      "https://altstore.oatmealdome.me"
-    ]
+    "sourceIDs": "ish,manicemu,oatmealdome",
+    "sourceURLs": "https://ish.app/altstore.json\nhttps://apps.manicemu.site/altstore\nhttps://altstore.oatmealdome.me"
   }
 }

@@ -1140,15 +1140,7 @@
     }
   ],
   "userInfo": {
-    "sourceIDs": [
-      "apollo-reddit",
-      "manicemu",
-      "wuxu-library-plus"
-    ],
-    "sourceURLs": [
-      "https://raw.githubusercontent.com/Balackburn/Apollo/main/apps.json",
-      "https://apps.manicemu.site/altstore",
-      "https://raw.githubusercontent.com/WuXu1/WuXu1.github.io/main/wuxu-complete-plus.json"
-    ]
+    "sourceIDs": "apollo-reddit,manicemu,wuxu-library-plus",
+    "sourceURLs": "https://raw.githubusercontent.com/Balackburn/Apollo/main/apps.json\nhttps://apps.manicemu.site/altstore\nhttps://raw.githubusercontent.com/WuXu1/WuXu1.github.io/main/wuxu-complete-plus.json"
   }
 }

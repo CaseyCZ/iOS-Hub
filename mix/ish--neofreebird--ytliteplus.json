@@ -533,15 +533,7 @@
     }
   ],
   "userInfo": {
-    "sourceIDs": [
-      "ish",
-      "neofreebird",
-      "ytliteplus"
-    ],
-    "sourceURLs": [
-      "https://ish.app/altstore.json",
-      "https://raw.githubusercontent.com/orionblur/NeoFreeBird/v6/AltSource.json",
-      "https://raw.githubusercontent.com/YTLitePlus/YTLitePlus-Altstore/main/apps.json"
-    ]
+    "sourceIDs": "ish,neofreebird,ytliteplus",
+    "sourceURLs": "https://ish.app/altstore.json\nhttps://raw.githubusercontent.com/orionblur/NeoFreeBird/v6/AltSource.json\nhttps://raw.githubusercontent.com/YTLitePlus/YTLitePlus-Altstore/main/apps.json"
   }
 }

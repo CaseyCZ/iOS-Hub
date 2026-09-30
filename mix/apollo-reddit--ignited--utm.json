@@ -178,15 +178,7 @@
     }
   ],
   "userInfo": {
-    "sourceIDs": [
-      "apollo-reddit",
-      "ignited",
-      "utm"
-    ],
-    "sourceURLs": [
-      "https://raw.githubusercontent.com/Balackburn/Apollo/main/apps.json",
-      "https://altstore.ignitedemulator.com/",
-      "https://alt.getutm.app/"
-    ]
+    "sourceIDs": "apollo-reddit,ignited,utm",
+    "sourceURLs": "https://raw.githubusercontent.com/Balackburn/Apollo/main/apps.json\nhttps://altstore.ignitedemulator.com/\nhttps://alt.getutm.app/"
   }
 }

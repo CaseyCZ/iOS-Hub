@@ -316,15 +316,7 @@
     }
   ],
   "userInfo": {
-    "sourceIDs": [
-      "neofreebird",
-      "oatmealdome",
-      "youmod-repo"
-    ],
-    "sourceURLs": [
-      "https://raw.githubusercontent.com/orionblur/NeoFreeBird/v6/AltSource.json",
-      "https://altstore.oatmealdome.me",
-      "https://raw.githubusercontent.com/MountainofPenguin/Altstore-Repository/main/apps.json"
-    ]
+    "sourceIDs": "neofreebird,oatmealdome,youmod-repo",
+    "sourceURLs": "https://raw.githubusercontent.com/orionblur/NeoFreeBird/v6/AltSource.json\nhttps://altstore.oatmealdome.me\nhttps://raw.githubusercontent.com/MountainofPenguin/Altstore-Repository/main/apps.json"
   }
 }

@@ -396,15 +396,7 @@
     }
   ],
   "userInfo": {
-    "sourceIDs": [
-      "ignited",
-      "oatmealdome",
-      "provenance"
-    ],
-    "sourceURLs": [
-      "https://altstore.ignitedemulator.com/",
-      "https://altstore.oatmealdome.me",
-      "https://provenance-emu.com/apps.json"
-    ]
+    "sourceIDs": "ignited,oatmealdome,provenance",
+    "sourceURLs": "https://altstore.ignitedemulator.com/\nhttps://altstore.oatmealdome.me\nhttps://provenance-emu.com/apps.json"
   }
 }

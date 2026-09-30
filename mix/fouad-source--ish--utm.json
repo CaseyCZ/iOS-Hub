@@ -1147,15 +1147,7 @@
     }
   ],
   "userInfo": {
-    "sourceIDs": [
-      "fouad-source",
-      "ish",
-      "utm"
-    ],
-    "sourceURLs": [
-      "https://raw.githubusercontent.com/FouadRaheb/Watusi-for-WhatsApp/master/altstore/source.json",
-      "https://ish.app/altstore.json",
-      "https://alt.getutm.app/"
-    ]
+    "sourceIDs": "fouad-source,ish,utm",
+    "sourceURLs": "https://raw.githubusercontent.com/FouadRaheb/Watusi-for-WhatsApp/master/altstore/source.json\nhttps://ish.app/altstore.json\nhttps://alt.getutm.app/"
   }
 }

@@ -1318,15 +1318,7 @@
     }
   ],
   "userInfo": {
-    "sourceIDs": [
-      "fouad-source",
-      "manicemu",
-      "neofreebird"
-    ],
-    "sourceURLs": [
-      "https://raw.githubusercontent.com/FouadRaheb/Watusi-for-WhatsApp/master/altstore/source.json",
-      "https://apps.manicemu.site/altstore",
-      "https://raw.githubusercontent.com/orionblur/NeoFreeBird/v6/AltSource.json"
-    ]
+    "sourceIDs": "fouad-source,manicemu,neofreebird",
+    "sourceURLs": "https://raw.githubusercontent.com/FouadRaheb/Watusi-for-WhatsApp/master/altstore/source.json\nhttps://apps.manicemu.site/altstore\nhttps://raw.githubusercontent.com/orionblur/NeoFreeBird/v6/AltSource.json"
   }
 }

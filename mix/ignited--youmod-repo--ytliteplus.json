@@ -96,15 +96,7 @@
     }
   ],
   "userInfo": {
-    "sourceIDs": [
-      "ignited",
-      "youmod-repo",
-      "ytliteplus"
-    ],
-    "sourceURLs": [
-      "https://altstore.ignitedemulator.com/",
-      "https://raw.githubusercontent.com/MountainofPenguin/Altstore-Repository/main/apps.json",
-      "https://raw.githubusercontent.com/YTLitePlus/YTLitePlus-Altstore/main/apps.json"
-    ]
+    "sourceIDs": "ignited,youmod-repo,ytliteplus",
+    "sourceURLs": "https://altstore.ignitedemulator.com/\nhttps://raw.githubusercontent.com/MountainofPenguin/Altstore-Repository/main/apps.json\nhttps://raw.githubusercontent.com/YTLitePlus/YTLitePlus-Altstore/main/apps.json"
   }
 }

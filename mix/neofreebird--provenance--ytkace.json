@@ -378,15 +378,7 @@
     }
   ],
   "userInfo": {
-    "sourceIDs": [
-      "neofreebird",
-      "provenance",
-      "ytkace"
-    ],
-    "sourceURLs": [
-      "https://raw.githubusercontent.com/orionblur/NeoFreeBird/v6/AltSource.json",
-      "https://provenance-emu.com/apps.json",
-      "https://raw.githubusercontent.com/xKatsumi/YTKACE-SideStore-Repo/main/ytkace.json"
-    ]
+    "sourceIDs": "neofreebird,provenance,ytkace",
+    "sourceURLs": "https://raw.githubusercontent.com/orionblur/NeoFreeBird/v6/AltSource.json\nhttps://provenance-emu.com/apps.json\nhttps://raw.githubusercontent.com/xKatsumi/YTKACE-SideStore-Repo/main/ytkace.json"
   }
 }

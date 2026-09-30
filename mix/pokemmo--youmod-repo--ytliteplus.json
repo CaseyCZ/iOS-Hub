@@ -59,15 +59,7 @@
     }
   ],
   "userInfo": {
-    "sourceIDs": [
-      "pokemmo",
-      "youmod-repo",
-      "ytliteplus"
-    ],
-    "sourceURLs": [
-      "https://pokemmo.eu/altstore/",
-      "https://raw.githubusercontent.com/MountainofPenguin/Altstore-Repository/main/apps.json",
-      "https://raw.githubusercontent.com/YTLitePlus/YTLitePlus-Altstore/main/apps.json"
-    ]
+    "sourceIDs": "pokemmo,youmod-repo,ytliteplus",
+    "sourceURLs": "https://pokemmo.eu/altstore/\nhttps://raw.githubusercontent.com/MountainofPenguin/Altstore-Repository/main/apps.json\nhttps://raw.githubusercontent.com/YTLitePlus/YTLitePlus-Altstore/main/apps.json"
   }
 }

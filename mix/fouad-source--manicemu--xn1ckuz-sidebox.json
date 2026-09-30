@@ -1260,15 +1260,7 @@
     }
   ],
   "userInfo": {
-    "sourceIDs": [
-      "fouad-source",
-      "manicemu",
-      "xn1ckuz-sidebox"
-    ],
-    "sourceURLs": [
-      "https://raw.githubusercontent.com/FouadRaheb/Watusi-for-WhatsApp/master/altstore/source.json",
-      "https://apps.manicemu.site/altstore",
-      "https://raw.githubusercontent.com/xN1ckuz/xN1ckuz-Sidestore-Repo/main/repo.json"
-    ]
+    "sourceIDs": "fouad-source,manicemu,xn1ckuz-sidebox",
+    "sourceURLs": "https://raw.githubusercontent.com/FouadRaheb/Watusi-for-WhatsApp/master/altstore/source.json\nhttps://apps.manicemu.site/altstore\nhttps://raw.githubusercontent.com/xN1ckuz/xN1ckuz-Sidestore-Repo/main/repo.json"
   }
 }

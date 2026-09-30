@@ -327,15 +327,7 @@
     }
   ],
   "userInfo": {
-    "sourceIDs": [
-      "apollo-reddit",
-      "ignited",
-      "provenance"
-    ],
-    "sourceURLs": [
-      "https://raw.githubusercontent.com/Balackburn/Apollo/main/apps.json",
-      "https://altstore.ignitedemulator.com/",
-      "https://provenance-emu.com/apps.json"
-    ]
+    "sourceIDs": "apollo-reddit,ignited,provenance",
+    "sourceURLs": "https://raw.githubusercontent.com/Balackburn/Apollo/main/apps.json\nhttps://altstore.ignitedemulator.com/\nhttps://provenance-emu.com/apps.json"
   }
 }

@@ -269,13 +269,7 @@
     }
   ],
   "userInfo": {
-    "sourceIDs": [
-      "ignited",
-      "provenance"
-    ],
-    "sourceURLs": [
-      "https://altstore.ignitedemulator.com/",
-      "https://provenance-emu.com/apps.json"
-    ]
+    "sourceIDs": "ignited,provenance",
+    "sourceURLs": "https://altstore.ignitedemulator.com/\nhttps://provenance-emu.com/apps.json"
   }
 }

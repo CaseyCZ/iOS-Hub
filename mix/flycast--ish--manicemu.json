@@ -140,15 +140,7 @@
     }
   ],
   "userInfo": {
-    "sourceIDs": [
-      "flycast",
-      "ish",
-      "manicemu"
-    ],
-    "sourceURLs": [
-      "https://flyinghead.github.io/flycast-builds/altstore.json",
-      "https://ish.app/altstore.json",
-      "https://apps.manicemu.site/altstore"
-    ]
+    "sourceIDs": "flycast,ish,manicemu",
+    "sourceURLs": "https://flyinghead.github.io/flycast-builds/altstore.json\nhttps://ish.app/altstore.json\nhttps://apps.manicemu.site/altstore"
   }
 }

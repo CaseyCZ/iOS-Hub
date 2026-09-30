@@ -172,15 +172,7 @@
     }
   ],
   "userInfo": {
-    "sourceIDs": [
-      "flycast",
-      "ish",
-      "oatmealdome"
-    ],
-    "sourceURLs": [
-      "https://flyinghead.github.io/flycast-builds/altstore.json",
-      "https://ish.app/altstore.json",
-      "https://altstore.oatmealdome.me"
-    ]
+    "sourceIDs": "flycast,ish,oatmealdome",
+    "sourceURLs": "https://flyinghead.github.io/flycast-builds/altstore.json\nhttps://ish.app/altstore.json\nhttps://altstore.oatmealdome.me"
   }
 }

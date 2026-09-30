@@ -79,15 +79,7 @@
     }
   ],
   "userInfo": {
-    "sourceIDs": [
-      "flycast",
-      "pokemmo",
-      "youmod-repo"
-    ],
-    "sourceURLs": [
-      "https://flyinghead.github.io/flycast-builds/altstore.json",
-      "https://pokemmo.eu/altstore/",
-      "https://raw.githubusercontent.com/MountainofPenguin/Altstore-Repository/main/apps.json"
-    ]
+    "sourceIDs": "flycast,pokemmo,youmod-repo",
+    "sourceURLs": "https://flyinghead.github.io/flycast-builds/altstore.json\nhttps://pokemmo.eu/altstore/\nhttps://raw.githubusercontent.com/MountainofPenguin/Altstore-Repository/main/apps.json"
   }
 }

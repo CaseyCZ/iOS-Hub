@@ -378,15 +378,7 @@
     }
   ],
   "userInfo": {
-    "sourceIDs": [
-      "armsx2",
-      "ish",
-      "provenance"
-    ],
-    "sourceURLs": [
-      "https://raw.githubusercontent.com/ARMSX2/Armsx2-Repo/main/apps.json",
-      "https://ish.app/altstore.json",
-      "https://provenance-emu.com/apps.json"
-    ]
+    "sourceIDs": "armsx2,ish,provenance",
+    "sourceURLs": "https://raw.githubusercontent.com/ARMSX2/Armsx2-Repo/main/apps.json\nhttps://ish.app/altstore.json\nhttps://provenance-emu.com/apps.json"
   }
 }

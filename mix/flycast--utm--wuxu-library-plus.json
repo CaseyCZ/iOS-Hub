@@ -1063,15 +1063,7 @@
     }
   ],
   "userInfo": {
-    "sourceIDs": [
-      "flycast",
-      "utm",
-      "wuxu-library-plus"
-    ],
-    "sourceURLs": [
-      "https://flyinghead.github.io/flycast-builds/altstore.json",
-      "https://alt.getutm.app/",
-      "https://raw.githubusercontent.com/WuXu1/WuXu1.github.io/main/wuxu-complete-plus.json"
-    ]
+    "sourceIDs": "flycast,utm,wuxu-library-plus",
+    "sourceURLs": "https://flyinghead.github.io/flycast-builds/altstore.json\nhttps://alt.getutm.app/\nhttps://raw.githubusercontent.com/WuXu1/WuXu1.github.io/main/wuxu-complete-plus.json"
   }
 }

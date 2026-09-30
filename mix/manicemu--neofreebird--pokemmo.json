@@ -271,15 +271,7 @@
     }
   ],
   "userInfo": {
-    "sourceIDs": [
-      "manicemu",
-      "neofreebird",
-      "pokemmo"
-    ],
-    "sourceURLs": [
-      "https://apps.manicemu.site/altstore",
-      "https://raw.githubusercontent.com/orionblur/NeoFreeBird/v6/AltSource.json",
-      "https://pokemmo.eu/altstore/"
-    ]
+    "sourceIDs": "manicemu,neofreebird,pokemmo",
+    "sourceURLs": "https://apps.manicemu.site/altstore\nhttps://raw.githubusercontent.com/orionblur/NeoFreeBird/v6/AltSource.json\nhttps://pokemmo.eu/altstore/"
   }
 }

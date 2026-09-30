@@ -208,15 +208,7 @@
     }
   ],
   "userInfo": {
-    "sourceIDs": [
-      "ignited",
-      "ish",
-      "oatmealdome"
-    ],
-    "sourceURLs": [
-      "https://altstore.ignitedemulator.com/",
-      "https://ish.app/altstore.json",
-      "https://altstore.oatmealdome.me"
-    ]
+    "sourceIDs": "ignited,ish,oatmealdome",
+    "sourceURLs": "https://altstore.ignitedemulator.com/\nhttps://ish.app/altstore.json\nhttps://altstore.oatmealdome.me"
   }
 }

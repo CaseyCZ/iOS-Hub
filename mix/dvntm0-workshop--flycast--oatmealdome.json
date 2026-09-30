@@ -606,15 +606,7 @@
     }
   ],
   "userInfo": {
-    "sourceIDs": [
-      "dvntm0-workshop",
-      "flycast",
-      "oatmealdome"
-    ],
-    "sourceURLs": [
-      "https://raw.githubusercontent.com/dvntm0/AltStore/main/repo.json",
-      "https://flyinghead.github.io/flycast-builds/altstore.json",
-      "https://altstore.oatmealdome.me"
-    ]
+    "sourceIDs": "dvntm0-workshop,flycast,oatmealdome",
+    "sourceURLs": "https://raw.githubusercontent.com/dvntm0/AltStore/main/repo.json\nhttps://flyinghead.github.io/flycast-builds/altstore.json\nhttps://altstore.oatmealdome.me"
   }
 }

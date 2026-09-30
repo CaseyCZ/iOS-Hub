@@ -233,13 +233,7 @@
     }
   ],
   "userInfo": {
-    "sourceIDs": [
-      "flycast",
-      "provenance"
-    ],
-    "sourceURLs": [
-      "https://flyinghead.github.io/flycast-builds/altstore.json",
-      "https://provenance-emu.com/apps.json"
-    ]
+    "sourceIDs": "flycast,provenance",
+    "sourceURLs": "https://flyinghead.github.io/flycast-builds/altstore.json\nhttps://provenance-emu.com/apps.json"
   }
 }

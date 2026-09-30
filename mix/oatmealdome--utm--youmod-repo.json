@@ -223,15 +223,7 @@
     }
   ],
   "userInfo": {
-    "sourceIDs": [
-      "oatmealdome",
-      "utm",
-      "youmod-repo"
-    ],
-    "sourceURLs": [
-      "https://altstore.oatmealdome.me",
-      "https://alt.getutm.app/",
-      "https://raw.githubusercontent.com/MountainofPenguin/Altstore-Repository/main/apps.json"
-    ]
+    "sourceIDs": "oatmealdome,utm,youmod-repo",
+    "sourceURLs": "https://altstore.oatmealdome.me\nhttps://alt.getutm.app/\nhttps://raw.githubusercontent.com/MountainofPenguin/Altstore-Repository/main/apps.json"
   }
 }

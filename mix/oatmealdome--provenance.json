@@ -340,13 +340,7 @@
     }
   ],
   "userInfo": {
-    "sourceIDs": [
-      "oatmealdome",
-      "provenance"
-    ],
-    "sourceURLs": [
-      "https://altstore.oatmealdome.me",
-      "https://provenance-emu.com/apps.json"
-    ]
+    "sourceIDs": "oatmealdome,provenance",
+    "sourceURLs": "https://altstore.oatmealdome.me\nhttps://provenance-emu.com/apps.json"
   }
 }

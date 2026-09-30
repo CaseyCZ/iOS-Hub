@@ -515,15 +515,7 @@
     }
   ],
   "userInfo": {
-    "sourceIDs": [
-      "dvntm0-workshop",
-      "utm",
-      "youmod-repo"
-    ],
-    "sourceURLs": [
-      "https://raw.githubusercontent.com/dvntm0/AltStore/main/repo.json",
-      "https://alt.getutm.app/",
-      "https://raw.githubusercontent.com/MountainofPenguin/Altstore-Repository/main/apps.json"
-    ]
+    "sourceIDs": "dvntm0-workshop,utm,youmod-repo",
+    "sourceURLs": "https://raw.githubusercontent.com/dvntm0/AltStore/main/repo.json\nhttps://alt.getutm.app/\nhttps://raw.githubusercontent.com/MountainofPenguin/Altstore-Repository/main/apps.json"
   }
 }

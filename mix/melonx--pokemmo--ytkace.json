@@ -77,15 +77,7 @@
     }
   ],
   "userInfo": {
-    "sourceIDs": [
-      "melonx",
-      "pokemmo",
-      "ytkace"
-    ],
-    "sourceURLs": [
-      "https://raw.githubusercontent.com/AzureDominus/melonx/refs/heads/XC-ios-ht/source.json",
-      "https://pokemmo.eu/altstore/",
-      "https://raw.githubusercontent.com/xKatsumi/YTKACE-SideStore-Repo/main/ytkace.json"
-    ]
+    "sourceIDs": "melonx,pokemmo,ytkace",
+    "sourceURLs": "https://raw.githubusercontent.com/AzureDominus/melonx/refs/heads/XC-ios-ht/source.json\nhttps://pokemmo.eu/altstore/\nhttps://raw.githubusercontent.com/xKatsumi/YTKACE-SideStore-Repo/main/ytkace.json"
   }
 }

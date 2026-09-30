@@ -175,15 +175,7 @@
     }
   ],
   "userInfo": {
-    "sourceIDs": [
-      "ignited",
-      "manicemu",
-      "ytkace"
-    ],
-    "sourceURLs": [
-      "https://altstore.ignitedemulator.com/",
-      "https://apps.manicemu.site/altstore",
-      "https://raw.githubusercontent.com/xKatsumi/YTKACE-SideStore-Repo/main/ytkace.json"
-    ]
+    "sourceIDs": "ignited,manicemu,ytkace",
+    "sourceURLs": "https://altstore.ignitedemulator.com/\nhttps://apps.manicemu.site/altstore\nhttps://raw.githubusercontent.com/xKatsumi/YTKACE-SideStore-Repo/main/ytkace.json"
   }
 }

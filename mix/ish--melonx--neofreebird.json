@@ -208,15 +208,7 @@
     }
   ],
   "userInfo": {
-    "sourceIDs": [
-      "ish",
-      "melonx",
-      "neofreebird"
-    ],
-    "sourceURLs": [
-      "https://ish.app/altstore.json",
-      "https://raw.githubusercontent.com/AzureDominus/melonx/refs/heads/XC-ios-ht/source.json",
-      "https://raw.githubusercontent.com/orionblur/NeoFreeBird/v6/AltSource.json"
-    ]
+    "sourceIDs": "ish,melonx,neofreebird",
+    "sourceURLs": "https://ish.app/altstore.json\nhttps://raw.githubusercontent.com/AzureDominus/melonx/refs/heads/XC-ios-ht/source.json\nhttps://raw.githubusercontent.com/orionblur/NeoFreeBird/v6/AltSource.json"
   }
 }

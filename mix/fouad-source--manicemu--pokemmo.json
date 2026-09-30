@@ -1188,15 +1188,7 @@
     }
   ],
   "userInfo": {
-    "sourceIDs": [
-      "fouad-source",
-      "manicemu",
-      "pokemmo"
-    ],
-    "sourceURLs": [
-      "https://raw.githubusercontent.com/FouadRaheb/Watusi-for-WhatsApp/master/altstore/source.json",
-      "https://apps.manicemu.site/altstore",
-      "https://pokemmo.eu/altstore/"
-    ]
+    "sourceIDs": "fouad-source,manicemu,pokemmo",
+    "sourceURLs": "https://raw.githubusercontent.com/FouadRaheb/Watusi-for-WhatsApp/master/altstore/source.json\nhttps://apps.manicemu.site/altstore\nhttps://pokemmo.eu/altstore/"
   }
 }

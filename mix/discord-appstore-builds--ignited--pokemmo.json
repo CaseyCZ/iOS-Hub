@@ -263,15 +263,7 @@
     }
   ],
   "userInfo": {
-    "sourceIDs": [
-      "discord-appstore-builds",
-      "ignited",
-      "pokemmo"
-    ],
-    "sourceURLs": [
-      "https://raw.githubusercontent.com/AlfaActa/discord-altstore-source/main/source.json",
-      "https://altstore.ignitedemulator.com/",
-      "https://pokemmo.eu/altstore/"
-    ]
+    "sourceIDs": "discord-appstore-builds,ignited,pokemmo",
+    "sourceURLs": "https://raw.githubusercontent.com/AlfaActa/discord-altstore-source/main/source.json\nhttps://altstore.ignitedemulator.com/\nhttps://pokemmo.eu/altstore/"
   }
 }

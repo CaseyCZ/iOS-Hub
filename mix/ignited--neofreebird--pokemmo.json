@@ -232,15 +232,7 @@
     }
   ],
   "userInfo": {
-    "sourceIDs": [
-      "ignited",
-      "neofreebird",
-      "pokemmo"
-    ],
-    "sourceURLs": [
-      "https://altstore.ignitedemulator.com/",
-      "https://raw.githubusercontent.com/orionblur/NeoFreeBird/v6/AltSource.json",
-      "https://pokemmo.eu/altstore/"
-    ]
+    "sourceIDs": "ignited,neofreebird,pokemmo",
+    "sourceURLs": "https://altstore.ignitedemulator.com/\nhttps://raw.githubusercontent.com/orionblur/NeoFreeBird/v6/AltSource.json\nhttps://pokemmo.eu/altstore/"
   }
 }

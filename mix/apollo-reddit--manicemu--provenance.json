@@ -366,15 +366,7 @@
     }
   ],
   "userInfo": {
-    "sourceIDs": [
-      "apollo-reddit",
-      "manicemu",
-      "provenance"
-    ],
-    "sourceURLs": [
-      "https://raw.githubusercontent.com/Balackburn/Apollo/main/apps.json",
-      "https://apps.manicemu.site/altstore",
-      "https://provenance-emu.com/apps.json"
-    ]
+    "sourceIDs": "apollo-reddit,manicemu,provenance",
+    "sourceURLs": "https://raw.githubusercontent.com/Balackburn/Apollo/main/apps.json\nhttps://apps.manicemu.site/altstore\nhttps://provenance-emu.com/apps.json"
   }
 }

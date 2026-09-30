@@ -139,15 +139,7 @@
     }
   ],
   "userInfo": {
-    "sourceIDs": [
-      "apollo-reddit",
-      "ish",
-      "utm"
-    ],
-    "sourceURLs": [
-      "https://raw.githubusercontent.com/Balackburn/Apollo/main/apps.json",
-      "https://ish.app/altstore.json",
-      "https://alt.getutm.app/"
-    ]
+    "sourceIDs": "apollo-reddit,ish,utm",
+    "sourceURLs": "https://raw.githubusercontent.com/Balackburn/Apollo/main/apps.json\nhttps://ish.app/altstore.json\nhttps://alt.getutm.app/"
   }
 }

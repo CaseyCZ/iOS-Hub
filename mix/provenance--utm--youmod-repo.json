@@ -301,15 +301,7 @@
     }
   ],
   "userInfo": {
-    "sourceIDs": [
-      "provenance",
-      "utm",
-      "youmod-repo"
-    ],
-    "sourceURLs": [
-      "https://provenance-emu.com/apps.json",
-      "https://alt.getutm.app/",
-      "https://raw.githubusercontent.com/MountainofPenguin/Altstore-Repository/main/apps.json"
-    ]
+    "sourceIDs": "provenance,utm,youmod-repo",
+    "sourceURLs": "https://provenance-emu.com/apps.json\nhttps://alt.getutm.app/\nhttps://raw.githubusercontent.com/MountainofPenguin/Altstore-Repository/main/apps.json"
   }
 }

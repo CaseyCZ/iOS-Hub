@@ -81,13 +81,7 @@
     }
   ],
   "userInfo": {
-    "sourceIDs": [
-      "ish",
-      "utm"
-    ],
-    "sourceURLs": [
-      "https://ish.app/altstore.json",
-      "https://alt.getutm.app/"
-    ]
+    "sourceIDs": "ish,utm",
+    "sourceURLs": "https://ish.app/altstore.json\nhttps://alt.getutm.app/"
   }
 }

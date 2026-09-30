@@ -97,15 +97,7 @@
     }
   ],
   "userInfo": {
-    "sourceIDs": [
-      "ish",
-      "utm",
-      "ytkace"
-    ],
-    "sourceURLs": [
-      "https://ish.app/altstore.json",
-      "https://alt.getutm.app/",
-      "https://raw.githubusercontent.com/xKatsumi/YTKACE-SideStore-Repo/main/ytkace.json"
-    ]
+    "sourceIDs": "ish,utm,ytkace",
+    "sourceURLs": "https://ish.app/altstore.json\nhttps://alt.getutm.app/\nhttps://raw.githubusercontent.com/xKatsumi/YTKACE-SideStore-Repo/main/ytkace.json"
   }
 }

@@ -1026,15 +1026,7 @@
     }
   ],
   "userInfo": {
-    "sourceIDs": [
-      "flycast",
-      "pokemmo",
-      "wuxu-library-plus"
-    ],
-    "sourceURLs": [
-      "https://flyinghead.github.io/flycast-builds/altstore.json",
-      "https://pokemmo.eu/altstore/",
-      "https://raw.githubusercontent.com/WuXu1/WuXu1.github.io/main/wuxu-complete-plus.json"
-    ]
+    "sourceIDs": "flycast,pokemmo,wuxu-library-plus",
+    "sourceURLs": "https://flyinghead.github.io/flycast-builds/altstore.json\nhttps://pokemmo.eu/altstore/\nhttps://raw.githubusercontent.com/WuXu1/WuXu1.github.io/main/wuxu-complete-plus.json"
   }
 }

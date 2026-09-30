@@ -487,15 +487,7 @@
     }
   ],
   "userInfo": {
-    "sourceIDs": [
-      "flycast",
-      "provenance",
-      "xn1ckuz-sidebox"
-    ],
-    "sourceURLs": [
-      "https://flyinghead.github.io/flycast-builds/altstore.json",
-      "https://provenance-emu.com/apps.json",
-      "https://raw.githubusercontent.com/xN1ckuz/xN1ckuz-Sidestore-Repo/main/repo.json"
-    ]
+    "sourceIDs": "flycast,provenance,xn1ckuz-sidebox",
+    "sourceURLs": "https://flyinghead.github.io/flycast-builds/altstore.json\nhttps://provenance-emu.com/apps.json\nhttps://raw.githubusercontent.com/xN1ckuz/xN1ckuz-Sidestore-Repo/main/repo.json"
   }
 }

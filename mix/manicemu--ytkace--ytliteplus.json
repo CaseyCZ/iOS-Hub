@@ -119,15 +119,7 @@
     }
   ],
   "userInfo": {
-    "sourceIDs": [
-      "manicemu",
-      "ytkace",
-      "ytliteplus"
-    ],
-    "sourceURLs": [
-      "https://apps.manicemu.site/altstore",
-      "https://raw.githubusercontent.com/xKatsumi/YTKACE-SideStore-Repo/main/ytkace.json",
-      "https://raw.githubusercontent.com/YTLitePlus/YTLitePlus-Altstore/main/apps.json"
-    ]
+    "sourceIDs": "manicemu,ytkace,ytliteplus",
+    "sourceURLs": "https://apps.manicemu.site/altstore\nhttps://raw.githubusercontent.com/xKatsumi/YTKACE-SideStore-Repo/main/ytkace.json\nhttps://raw.githubusercontent.com/YTLitePlus/YTLitePlus-Altstore/main/apps.json"
   }
 }

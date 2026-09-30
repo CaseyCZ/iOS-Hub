@@ -247,13 +247,7 @@
     }
   ],
   "userInfo": {
-    "sourceIDs": [
-      "melonx",
-      "provenance"
-    ],
-    "sourceURLs": [
-      "https://raw.githubusercontent.com/AzureDominus/melonx/refs/heads/XC-ios-ht/source.json",
-      "https://provenance-emu.com/apps.json"
-    ]
+    "sourceIDs": "melonx,provenance",
+    "sourceURLs": "https://raw.githubusercontent.com/AzureDominus/melonx/refs/heads/XC-ios-ht/source.json\nhttps://provenance-emu.com/apps.json"
   }
 }

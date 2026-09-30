@@ -230,15 +230,7 @@
     }
   ],
   "userInfo": {
-    "sourceIDs": [
-      "flycast",
-      "oatmealdome",
-      "yattee"
-    ],
-    "sourceURLs": [
-      "https://flyinghead.github.io/flycast-builds/altstore.json",
-      "https://altstore.oatmealdome.me",
-      "https://raw.githubusercontent.com/yattee/yattee/main/altstore-source.json"
-    ]
+    "sourceIDs": "flycast,oatmealdome,yattee",
+    "sourceURLs": "https://flyinghead.github.io/flycast-builds/altstore.json\nhttps://altstore.oatmealdome.me\nhttps://raw.githubusercontent.com/yattee/yattee/main/altstore-source.json"
   }
 }

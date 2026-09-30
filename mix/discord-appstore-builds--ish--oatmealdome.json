@@ -332,15 +332,7 @@
     }
   ],
   "userInfo": {
-    "sourceIDs": [
-      "discord-appstore-builds",
-      "ish",
-      "oatmealdome"
-    ],
-    "sourceURLs": [
-      "https://raw.githubusercontent.com/AlfaActa/discord-altstore-source/main/source.json",
-      "https://ish.app/altstore.json",
-      "https://altstore.oatmealdome.me"
-    ]
+    "sourceIDs": "discord-appstore-builds,ish,oatmealdome",
+    "sourceURLs": "https://raw.githubusercontent.com/AlfaActa/discord-altstore-source/main/source.json\nhttps://ish.app/altstore.json\nhttps://altstore.oatmealdome.me"
   }
 }

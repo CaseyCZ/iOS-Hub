@@ -100,15 +100,7 @@
     }
   ],
   "userInfo": {
-    "sourceIDs": [
-      "ish",
-      "pokemmo",
-      "utm"
-    ],
-    "sourceURLs": [
-      "https://ish.app/altstore.json",
-      "https://pokemmo.eu/altstore/",
-      "https://alt.getutm.app/"
-    ]
+    "sourceIDs": "ish,pokemmo,utm",
+    "sourceURLs": "https://ish.app/altstore.json\nhttps://pokemmo.eu/altstore/\nhttps://alt.getutm.app/"
   }
 }

@@ -1192,15 +1192,7 @@
     }
   ],
   "userInfo": {
-    "sourceIDs": [
-      "provenance",
-      "wuxu-library-plus",
-      "ytliteplus"
-    ],
-    "sourceURLs": [
-      "https://provenance-emu.com/apps.json",
-      "https://raw.githubusercontent.com/WuXu1/WuXu1.github.io/main/wuxu-complete-plus.json",
-      "https://raw.githubusercontent.com/YTLitePlus/YTLitePlus-Altstore/main/apps.json"
-    ]
+    "sourceIDs": "provenance,wuxu-library-plus,ytliteplus",
+    "sourceURLs": "https://provenance-emu.com/apps.json\nhttps://raw.githubusercontent.com/WuXu1/WuXu1.github.io/main/wuxu-complete-plus.json\nhttps://raw.githubusercontent.com/YTLitePlus/YTLitePlus-Altstore/main/apps.json"
   }
 }

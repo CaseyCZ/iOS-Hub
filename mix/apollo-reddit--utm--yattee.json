@@ -197,15 +197,7 @@
     }
   ],
   "userInfo": {
-    "sourceIDs": [
-      "apollo-reddit",
-      "utm",
-      "yattee"
-    ],
-    "sourceURLs": [
-      "https://raw.githubusercontent.com/Balackburn/Apollo/main/apps.json",
-      "https://alt.getutm.app/",
-      "https://raw.githubusercontent.com/yattee/yattee/main/altstore-source.json"
-    ]
+    "sourceIDs": "apollo-reddit,utm,yattee",
+    "sourceURLs": "https://raw.githubusercontent.com/Balackburn/Apollo/main/apps.json\nhttps://alt.getutm.app/\nhttps://raw.githubusercontent.com/yattee/yattee/main/altstore-source.json"
   }
 }

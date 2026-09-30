@@ -174,15 +174,7 @@
     }
   ],
   "userInfo": {
-    "sourceIDs": [
-      "flycast",
-      "oatmealdome",
-      "pokemmo"
-    ],
-    "sourceURLs": [
-      "https://flyinghead.github.io/flycast-builds/altstore.json",
-      "https://altstore.oatmealdome.me",
-      "https://pokemmo.eu/altstore/"
-    ]
+    "sourceIDs": "flycast,oatmealdome,pokemmo",
+    "sourceURLs": "https://flyinghead.github.io/flycast-builds/altstore.json\nhttps://altstore.oatmealdome.me\nhttps://pokemmo.eu/altstore/"
   }
 }

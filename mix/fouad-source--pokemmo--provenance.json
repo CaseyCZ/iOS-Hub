@@ -1298,15 +1298,7 @@
     }
   ],
   "userInfo": {
-    "sourceIDs": [
-      "fouad-source",
-      "pokemmo",
-      "provenance"
-    ],
-    "sourceURLs": [
-      "https://raw.githubusercontent.com/FouadRaheb/Watusi-for-WhatsApp/master/altstore/source.json",
-      "https://pokemmo.eu/altstore/",
-      "https://provenance-emu.com/apps.json"
-    ]
+    "sourceIDs": "fouad-source,pokemmo,provenance",
+    "sourceURLs": "https://raw.githubusercontent.com/FouadRaheb/Watusi-for-WhatsApp/master/altstore/source.json\nhttps://pokemmo.eu/altstore/\nhttps://provenance-emu.com/apps.json"
   }
 }

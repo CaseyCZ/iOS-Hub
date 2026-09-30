@@ -115,15 +115,7 @@
     }
   ],
   "userInfo": {
-    "sourceIDs": [
-      "ignited",
-      "ish",
-      "melonx"
-    ],
-    "sourceURLs": [
-      "https://altstore.ignitedemulator.com/",
-      "https://ish.app/altstore.json",
-      "https://raw.githubusercontent.com/AzureDominus/melonx/refs/heads/XC-ios-ht/source.json"
-    ]
+    "sourceIDs": "ignited,ish,melonx",
+    "sourceURLs": "https://altstore.ignitedemulator.com/\nhttps://ish.app/altstore.json\nhttps://raw.githubusercontent.com/AzureDominus/melonx/refs/heads/XC-ios-ht/source.json"
   }
 }

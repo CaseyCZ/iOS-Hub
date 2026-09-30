@@ -268,15 +268,7 @@
     }
   ],
   "userInfo": {
-    "sourceIDs": [
-      "discord-appstore-builds",
-      "pokemmo",
-      "youtuberebornplus"
-    ],
-    "sourceURLs": [
-      "https://raw.githubusercontent.com/AlfaActa/discord-altstore-source/main/source.json",
-      "https://pokemmo.eu/altstore/",
-      "https://raw.githubusercontent.com/arichornlover/arichornlover.github.io/main/apps2.json"
-    ]
+    "sourceIDs": "discord-appstore-builds,pokemmo,youtuberebornplus",
+    "sourceURLs": "https://raw.githubusercontent.com/AlfaActa/discord-altstore-source/main/source.json\nhttps://pokemmo.eu/altstore/\nhttps://raw.githubusercontent.com/arichornlover/arichornlover.github.io/main/apps2.json"
   }
 }

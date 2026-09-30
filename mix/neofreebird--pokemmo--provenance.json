@@ -381,15 +381,7 @@
     }
   ],
   "userInfo": {
-    "sourceIDs": [
-      "neofreebird",
-      "pokemmo",
-      "provenance"
-    ],
-    "sourceURLs": [
-      "https://raw.githubusercontent.com/orionblur/NeoFreeBird/v6/AltSource.json",
-      "https://pokemmo.eu/altstore/",
-      "https://provenance-emu.com/apps.json"
-    ]
+    "sourceIDs": "neofreebird,pokemmo,provenance",
+    "sourceURLs": "https://raw.githubusercontent.com/orionblur/NeoFreeBird/v6/AltSource.json\nhttps://pokemmo.eu/altstore/\nhttps://provenance-emu.com/apps.json"
   }
 }

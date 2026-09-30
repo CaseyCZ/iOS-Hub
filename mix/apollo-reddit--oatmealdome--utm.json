@@ -249,15 +249,7 @@
     }
   ],
   "userInfo": {
-    "sourceIDs": [
-      "apollo-reddit",
-      "oatmealdome",
-      "utm"
-    ],
-    "sourceURLs": [
-      "https://raw.githubusercontent.com/Balackburn/Apollo/main/apps.json",
-      "https://altstore.oatmealdome.me",
-      "https://alt.getutm.app/"
-    ]
+    "sourceIDs": "apollo-reddit,oatmealdome,utm",
+    "sourceURLs": "https://raw.githubusercontent.com/Balackburn/Apollo/main/apps.json\nhttps://altstore.oatmealdome.me\nhttps://alt.getutm.app/"
   }
 }

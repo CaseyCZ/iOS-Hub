@@ -188,15 +188,7 @@
     }
   ],
   "userInfo": {
-    "sourceIDs": [
-      "melonx",
-      "oatmealdome",
-      "pokemmo"
-    ],
-    "sourceURLs": [
-      "https://raw.githubusercontent.com/AzureDominus/melonx/refs/heads/XC-ios-ht/source.json",
-      "https://altstore.oatmealdome.me",
-      "https://pokemmo.eu/altstore/"
-    ]
+    "sourceIDs": "melonx,oatmealdome,pokemmo",
+    "sourceURLs": "https://raw.githubusercontent.com/AzureDominus/melonx/refs/heads/XC-ios-ht/source.json\nhttps://altstore.oatmealdome.me\nhttps://pokemmo.eu/altstore/"
   }
 }

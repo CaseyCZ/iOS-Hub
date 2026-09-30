@@ -1276,15 +1276,7 @@
     }
   ],
   "userInfo": {
-    "sourceIDs": [
-      "fouad-source",
-      "oatmealdome",
-      "yattee"
-    ],
-    "sourceURLs": [
-      "https://raw.githubusercontent.com/FouadRaheb/Watusi-for-WhatsApp/master/altstore/source.json",
-      "https://altstore.oatmealdome.me",
-      "https://raw.githubusercontent.com/yattee/yattee/main/altstore-source.json"
-    ]
+    "sourceIDs": "fouad-source,oatmealdome,yattee",
+    "sourceURLs": "https://raw.githubusercontent.com/FouadRaheb/Watusi-for-WhatsApp/master/altstore/source.json\nhttps://altstore.oatmealdome.me\nhttps://raw.githubusercontent.com/yattee/yattee/main/altstore-source.json"
   }
 }

@@ -308,15 +308,7 @@
     }
   ],
   "userInfo": {
-    "sourceIDs": [
-      "ignited",
-      "manicemu",
-      "neofreebird"
-    ],
-    "sourceURLs": [
-      "https://altstore.ignitedemulator.com/",
-      "https://apps.manicemu.site/altstore",
-      "https://raw.githubusercontent.com/orionblur/NeoFreeBird/v6/AltSource.json"
-    ]
+    "sourceIDs": "ignited,manicemu,neofreebird",
+    "sourceURLs": "https://altstore.ignitedemulator.com/\nhttps://apps.manicemu.site/altstore\nhttps://raw.githubusercontent.com/orionblur/NeoFreeBird/v6/AltSource.json"
   }
 }

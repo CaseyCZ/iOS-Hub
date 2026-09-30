@@ -305,15 +305,7 @@
     }
   ],
   "userInfo": {
-    "sourceIDs": [
-      "discord-appstore-builds",
-      "utm",
-      "youtuberebornplus"
-    ],
-    "sourceURLs": [
-      "https://raw.githubusercontent.com/AlfaActa/discord-altstore-source/main/source.json",
-      "https://alt.getutm.app/",
-      "https://raw.githubusercontent.com/arichornlover/arichornlover.github.io/main/apps2.json"
-    ]
+    "sourceIDs": "discord-appstore-builds,utm,youtuberebornplus",
+    "sourceURLs": "https://raw.githubusercontent.com/AlfaActa/discord-altstore-source/main/source.json\nhttps://alt.getutm.app/\nhttps://raw.githubusercontent.com/arichornlover/arichornlover.github.io/main/apps2.json"
   }
 }

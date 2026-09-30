@@ -360,15 +360,7 @@
     }
   ],
   "userInfo": {
-    "sourceIDs": [
-      "flycast",
-      "oatmealdome",
-      "provenance"
-    ],
-    "sourceURLs": [
-      "https://flyinghead.github.io/flycast-builds/altstore.json",
-      "https://altstore.oatmealdome.me",
-      "https://provenance-emu.com/apps.json"
-    ]
+    "sourceIDs": "flycast,oatmealdome,provenance",
+    "sourceURLs": "https://flyinghead.github.io/flycast-builds/altstore.json\nhttps://altstore.oatmealdome.me\nhttps://provenance-emu.com/apps.json"
   }
 }

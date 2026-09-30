@@ -667,15 +667,7 @@
     }
   ],
   "userInfo": {
-    "sourceIDs": [
-      "manicemu",
-      "provenance",
-      "ytliteplus"
-    ],
-    "sourceURLs": [
-      "https://apps.manicemu.site/altstore",
-      "https://provenance-emu.com/apps.json",
-      "https://raw.githubusercontent.com/YTLitePlus/YTLitePlus-Altstore/main/apps.json"
-    ]
+    "sourceIDs": "manicemu,provenance,ytliteplus",
+    "sourceURLs": "https://apps.manicemu.site/altstore\nhttps://provenance-emu.com/apps.json\nhttps://raw.githubusercontent.com/YTLitePlus/YTLitePlus-Altstore/main/apps.json"
   }
 }

@@ -330,15 +330,7 @@
     }
   ],
   "userInfo": {
-    "sourceIDs": [
-      "provenance",
-      "utm",
-      "youtuberebornplus"
-    ],
-    "sourceURLs": [
-      "https://provenance-emu.com/apps.json",
-      "https://alt.getutm.app/",
-      "https://raw.githubusercontent.com/arichornlover/arichornlover.github.io/main/apps2.json"
-    ]
+    "sourceIDs": "provenance,utm,youtuberebornplus",
+    "sourceURLs": "https://provenance-emu.com/apps.json\nhttps://alt.getutm.app/\nhttps://raw.githubusercontent.com/arichornlover/arichornlover.github.io/main/apps2.json"
   }
 }

@@ -249,15 +249,7 @@
     }
   ],
   "userInfo": {
-    "sourceIDs": [
-      "flycast",
-      "provenance",
-      "ytkace"
-    ],
-    "sourceURLs": [
-      "https://flyinghead.github.io/flycast-builds/altstore.json",
-      "https://provenance-emu.com/apps.json",
-      "https://raw.githubusercontent.com/xKatsumi/YTKACE-SideStore-Repo/main/ytkace.json"
-    ]
+    "sourceIDs": "flycast,provenance,ytkace",
+    "sourceURLs": "https://flyinghead.github.io/flycast-builds/altstore.json\nhttps://provenance-emu.com/apps.json\nhttps://raw.githubusercontent.com/xKatsumi/YTKACE-SideStore-Repo/main/ytkace.json"
   }
 }

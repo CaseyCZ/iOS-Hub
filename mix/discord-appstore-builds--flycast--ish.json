@@ -225,15 +225,7 @@
     }
   ],
   "userInfo": {
-    "sourceIDs": [
-      "discord-appstore-builds",
-      "flycast",
-      "ish"
-    ],
-    "sourceURLs": [
-      "https://raw.githubusercontent.com/AlfaActa/discord-altstore-source/main/source.json",
-      "https://flyinghead.github.io/flycast-builds/altstore.json",
-      "https://ish.app/altstore.json"
-    ]
+    "sourceIDs": "discord-appstore-builds,flycast,ish",
+    "sourceURLs": "https://raw.githubusercontent.com/AlfaActa/discord-altstore-source/main/source.json\nhttps://flyinghead.github.io/flycast-builds/altstore.json\nhttps://ish.app/altstore.json"
   }
 }

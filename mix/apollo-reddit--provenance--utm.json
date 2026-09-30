@@ -327,15 +327,7 @@
     }
   ],
   "userInfo": {
-    "sourceIDs": [
-      "apollo-reddit",
-      "provenance",
-      "utm"
-    ],
-    "sourceURLs": [
-      "https://raw.githubusercontent.com/Balackburn/Apollo/main/apps.json",
-      "https://provenance-emu.com/apps.json",
-      "https://alt.getutm.app/"
-    ]
+    "sourceIDs": "apollo-reddit,provenance,utm",
+    "sourceURLs": "https://raw.githubusercontent.com/Balackburn/Apollo/main/apps.json\nhttps://provenance-emu.com/apps.json\nhttps://alt.getutm.app/"
   }
 }

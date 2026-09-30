@@ -479,15 +479,7 @@
     }
   ],
   "userInfo": {
-    "sourceIDs": [
-      "ignited",
-      "utm",
-      "ytliteplus"
-    ],
-    "sourceURLs": [
-      "https://altstore.ignitedemulator.com/",
-      "https://alt.getutm.app/",
-      "https://raw.githubusercontent.com/YTLitePlus/YTLitePlus-Altstore/main/apps.json"
-    ]
+    "sourceIDs": "ignited,utm,ytliteplus",
+    "sourceURLs": "https://altstore.ignitedemulator.com/\nhttps://alt.getutm.app/\nhttps://raw.githubusercontent.com/YTLitePlus/YTLitePlus-Altstore/main/apps.json"
   }
 }

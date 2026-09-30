@@ -337,15 +337,7 @@
     }
   ],
   "userInfo": {
-    "sourceIDs": [
-      "xn1ckuz-sidebox",
-      "yattee",
-      "youmod-repo"
-    ],
-    "sourceURLs": [
-      "https://raw.githubusercontent.com/xN1ckuz/xN1ckuz-Sidestore-Repo/main/repo.json",
-      "https://raw.githubusercontent.com/yattee/yattee/main/altstore-source.json",
-      "https://raw.githubusercontent.com/MountainofPenguin/Altstore-Repository/main/apps.json"
-    ]
+    "sourceIDs": "xn1ckuz-sidebox,yattee,youmod-repo",
+    "sourceURLs": "https://raw.githubusercontent.com/xN1ckuz/xN1ckuz-Sidestore-Repo/main/repo.json\nhttps://raw.githubusercontent.com/yattee/yattee/main/altstore-source.json\nhttps://raw.githubusercontent.com/MountainofPenguin/Altstore-Repository/main/apps.json"
   }
 }

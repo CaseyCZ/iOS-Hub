@@ -418,15 +418,7 @@
     }
   ],
   "userInfo": {
-    "sourceIDs": [
-      "neofreebird",
-      "provenance",
-      "utm"
-    ],
-    "sourceURLs": [
-      "https://raw.githubusercontent.com/orionblur/NeoFreeBird/v6/AltSource.json",
-      "https://provenance-emu.com/apps.json",
-      "https://alt.getutm.app/"
-    ]
+    "sourceIDs": "neofreebird,provenance,utm",
+    "sourceURLs": "https://raw.githubusercontent.com/orionblur/NeoFreeBird/v6/AltSource.json\nhttps://provenance-emu.com/apps.json\nhttps://alt.getutm.app/"
   }
 }

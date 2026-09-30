@@ -232,15 +232,7 @@
     }
   ],
   "userInfo": {
-    "sourceIDs": [
-      "neofreebird",
-      "pokemmo",
-      "utm"
-    ],
-    "sourceURLs": [
-      "https://raw.githubusercontent.com/orionblur/NeoFreeBird/v6/AltSource.json",
-      "https://pokemmo.eu/altstore/",
-      "https://alt.getutm.app/"
-    ]
+    "sourceIDs": "neofreebird,pokemmo,utm",
+    "sourceURLs": "https://raw.githubusercontent.com/orionblur/NeoFreeBird/v6/AltSource.json\nhttps://pokemmo.eu/altstore/\nhttps://alt.getutm.app/"
   }
 }

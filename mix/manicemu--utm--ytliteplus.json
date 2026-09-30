@@ -518,15 +518,7 @@
     }
   ],
   "userInfo": {
-    "sourceIDs": [
-      "manicemu",
-      "utm",
-      "ytliteplus"
-    ],
-    "sourceURLs": [
-      "https://apps.manicemu.site/altstore",
-      "https://alt.getutm.app/",
-      "https://raw.githubusercontent.com/YTLitePlus/YTLitePlus-Altstore/main/apps.json"
-    ]
+    "sourceIDs": "manicemu,utm,ytliteplus",
+    "sourceURLs": "https://apps.manicemu.site/altstore\nhttps://alt.getutm.app/\nhttps://raw.githubusercontent.com/YTLitePlus/YTLitePlus-Altstore/main/apps.json"
   }
 }

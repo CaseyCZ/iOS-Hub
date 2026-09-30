@@ -406,15 +406,7 @@
     }
   ],
   "userInfo": {
-    "sourceIDs": [
-      "flycast",
-      "pokemmo",
-      "ytliteplus"
-    ],
-    "sourceURLs": [
-      "https://flyinghead.github.io/flycast-builds/altstore.json",
-      "https://pokemmo.eu/altstore/",
-      "https://raw.githubusercontent.com/YTLitePlus/YTLitePlus-Altstore/main/apps.json"
-    ]
+    "sourceIDs": "flycast,pokemmo,ytliteplus",
+    "sourceURLs": "https://flyinghead.github.io/flycast-builds/altstore.json\nhttps://pokemmo.eu/altstore/\nhttps://raw.githubusercontent.com/YTLitePlus/YTLitePlus-Altstore/main/apps.json"
   }
 }

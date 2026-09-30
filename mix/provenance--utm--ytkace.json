@@ -285,15 +285,7 @@
     }
   ],
   "userInfo": {
-    "sourceIDs": [
-      "provenance",
-      "utm",
-      "ytkace"
-    ],
-    "sourceURLs": [
-      "https://provenance-emu.com/apps.json",
-      "https://alt.getutm.app/",
-      "https://raw.githubusercontent.com/xKatsumi/YTKACE-SideStore-Repo/main/ytkace.json"
-    ]
+    "sourceIDs": "provenance,utm,ytkace",
+    "sourceURLs": "https://provenance-emu.com/apps.json\nhttps://alt.getutm.app/\nhttps://raw.githubusercontent.com/xKatsumi/YTKACE-SideStore-Repo/main/ytkace.json"
   }
 }

@@ -359,15 +359,7 @@
     }
   ],
   "userInfo": {
-    "sourceIDs": [
-      "oatmealdome",
-      "pokemmo",
-      "provenance"
-    ],
-    "sourceURLs": [
-      "https://altstore.oatmealdome.me",
-      "https://pokemmo.eu/altstore/",
-      "https://provenance-emu.com/apps.json"
-    ]
+    "sourceIDs": "oatmealdome,pokemmo,provenance",
+    "sourceURLs": "https://altstore.oatmealdome.me\nhttps://pokemmo.eu/altstore/\nhttps://provenance-emu.com/apps.json"
   }
 }

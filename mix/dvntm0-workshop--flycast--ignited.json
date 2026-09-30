@@ -535,15 +535,7 @@
     }
   ],
   "userInfo": {
-    "sourceIDs": [
-      "dvntm0-workshop",
-      "flycast",
-      "ignited"
-    ],
-    "sourceURLs": [
-      "https://raw.githubusercontent.com/dvntm0/AltStore/main/repo.json",
-      "https://flyinghead.github.io/flycast-builds/altstore.json",
-      "https://altstore.ignitedemulator.com/"
-    ]
+    "sourceIDs": "dvntm0-workshop,flycast,ignited",
+    "sourceURLs": "https://raw.githubusercontent.com/dvntm0/AltStore/main/repo.json\nhttps://flyinghead.github.io/flycast-builds/altstore.json\nhttps://altstore.ignitedemulator.com/"
   }
 }

@@ -695,15 +695,7 @@
     }
   ],
   "userInfo": {
-    "sourceIDs": [
-      "discord-appstore-builds",
-      "dvntm0-workshop",
-      "utm"
-    ],
-    "sourceURLs": [
-      "https://raw.githubusercontent.com/AlfaActa/discord-altstore-source/main/source.json",
-      "https://raw.githubusercontent.com/dvntm0/AltStore/main/repo.json",
-      "https://alt.getutm.app/"
-    ]
+    "sourceIDs": "discord-appstore-builds,dvntm0-workshop,utm",
+    "sourceURLs": "https://raw.githubusercontent.com/AlfaActa/discord-altstore-source/main/source.json\nhttps://raw.githubusercontent.com/dvntm0/AltStore/main/repo.json\nhttps://alt.getutm.app/"
   }
 }

@@ -191,15 +191,7 @@
     }
   ],
   "userInfo": {
-    "sourceIDs": [
-      "manicemu",
-      "utm",
-      "youmod-repo"
-    ],
-    "sourceURLs": [
-      "https://apps.manicemu.site/altstore",
-      "https://alt.getutm.app/",
-      "https://raw.githubusercontent.com/MountainofPenguin/Altstore-Repository/main/apps.json"
-    ]
+    "sourceIDs": "manicemu,utm,youmod-repo",
+    "sourceURLs": "https://apps.manicemu.site/altstore\nhttps://alt.getutm.app/\nhttps://raw.githubusercontent.com/MountainofPenguin/Altstore-Repository/main/apps.json"
   }
 }

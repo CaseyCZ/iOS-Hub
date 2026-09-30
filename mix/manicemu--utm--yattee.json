@@ -234,15 +234,7 @@
     }
   ],
   "userInfo": {
-    "sourceIDs": [
-      "manicemu",
-      "utm",
-      "yattee"
-    ],
-    "sourceURLs": [
-      "https://apps.manicemu.site/altstore",
-      "https://alt.getutm.app/",
-      "https://raw.githubusercontent.com/yattee/yattee/main/altstore-source.json"
-    ]
+    "sourceIDs": "manicemu,utm,yattee",
+    "sourceURLs": "https://apps.manicemu.site/altstore\nhttps://alt.getutm.app/\nhttps://raw.githubusercontent.com/yattee/yattee/main/altstore-source.json"
   }
 }

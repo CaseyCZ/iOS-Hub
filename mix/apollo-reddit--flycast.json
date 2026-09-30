@@ -86,13 +86,7 @@
     }
   ],
   "userInfo": {
-    "sourceIDs": [
-      "apollo-reddit",
-      "flycast"
-    ],
-    "sourceURLs": [
-      "https://raw.githubusercontent.com/Balackburn/Apollo/main/apps.json",
-      "https://flyinghead.github.io/flycast-builds/altstore.json"
-    ]
+    "sourceIDs": "apollo-reddit,flycast",
+    "sourceURLs": "https://raw.githubusercontent.com/Balackburn/Apollo/main/apps.json\nhttps://flyinghead.github.io/flycast-builds/altstore.json"
   }
 }

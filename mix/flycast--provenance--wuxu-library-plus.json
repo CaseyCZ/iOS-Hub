@@ -1212,15 +1212,7 @@
     }
   ],
   "userInfo": {
-    "sourceIDs": [
-      "flycast",
-      "provenance",
-      "wuxu-library-plus"
-    ],
-    "sourceURLs": [
-      "https://flyinghead.github.io/flycast-builds/altstore.json",
-      "https://provenance-emu.com/apps.json",
-      "https://raw.githubusercontent.com/WuXu1/WuXu1.github.io/main/wuxu-complete-plus.json"
-    ]
+    "sourceIDs": "flycast,provenance,wuxu-library-plus",
+    "sourceURLs": "https://flyinghead.github.io/flycast-builds/altstore.json\nhttps://provenance-emu.com/apps.json\nhttps://raw.githubusercontent.com/WuXu1/WuXu1.github.io/main/wuxu-complete-plus.json"
   }
 }

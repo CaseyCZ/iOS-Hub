@@ -1079,15 +1079,7 @@
     }
   ],
   "userInfo": {
-    "sourceIDs": [
-      "ish",
-      "wuxu-library-plus",
-      "yattee"
-    ],
-    "sourceURLs": [
-      "https://ish.app/altstore.json",
-      "https://raw.githubusercontent.com/WuXu1/WuXu1.github.io/main/wuxu-complete-plus.json",
-      "https://raw.githubusercontent.com/yattee/yattee/main/altstore-source.json"
-    ]
+    "sourceIDs": "ish,wuxu-library-plus,yattee",
+    "sourceURLs": "https://ish.app/altstore.json\nhttps://raw.githubusercontent.com/WuXu1/WuXu1.github.io/main/wuxu-complete-plus.json\nhttps://raw.githubusercontent.com/yattee/yattee/main/altstore-source.json"
   }
 }

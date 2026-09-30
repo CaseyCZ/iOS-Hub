@@ -403,15 +403,7 @@
     }
   ],
   "userInfo": {
-    "sourceIDs": [
-      "ish",
-      "pokemmo",
-      "ytliteplus"
-    ],
-    "sourceURLs": [
-      "https://ish.app/altstore.json",
-      "https://pokemmo.eu/altstore/",
-      "https://raw.githubusercontent.com/YTLitePlus/YTLitePlus-Altstore/main/apps.json"
-    ]
+    "sourceIDs": "ish,pokemmo,ytliteplus",
+    "sourceURLs": "https://ish.app/altstore.json\nhttps://pokemmo.eu/altstore/\nhttps://raw.githubusercontent.com/YTLitePlus/YTLitePlus-Altstore/main/apps.json"
   }
 }

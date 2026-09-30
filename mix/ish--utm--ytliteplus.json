@@ -440,15 +440,7 @@
     }
   ],
   "userInfo": {
-    "sourceIDs": [
-      "ish",
-      "utm",
-      "ytliteplus"
-    ],
-    "sourceURLs": [
-      "https://ish.app/altstore.json",
-      "https://alt.getutm.app/",
-      "https://raw.githubusercontent.com/YTLitePlus/YTLitePlus-Altstore/main/apps.json"
-    ]
+    "sourceIDs": "ish,utm,ytliteplus",
+    "sourceURLs": "https://ish.app/altstore.json\nhttps://alt.getutm.app/\nhttps://raw.githubusercontent.com/YTLitePlus/YTLitePlus-Altstore/main/apps.json"
   }
 }

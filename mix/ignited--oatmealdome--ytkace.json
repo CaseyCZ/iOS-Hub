@@ -207,15 +207,7 @@
     }
   ],
   "userInfo": {
-    "sourceIDs": [
-      "ignited",
-      "oatmealdome",
-      "ytkace"
-    ],
-    "sourceURLs": [
-      "https://altstore.ignitedemulator.com/",
-      "https://altstore.oatmealdome.me",
-      "https://raw.githubusercontent.com/xKatsumi/YTKACE-SideStore-Repo/main/ytkace.json"
-    ]
+    "sourceIDs": "ignited,oatmealdome,ytkace",
+    "sourceURLs": "https://altstore.ignitedemulator.com/\nhttps://altstore.oatmealdome.me\nhttps://raw.githubusercontent.com/xKatsumi/YTKACE-SideStore-Repo/main/ytkace.json"
   }
 }

@@ -443,15 +443,7 @@
     }
   ],
   "userInfo": {
-    "sourceIDs": [
-      "flycast",
-      "utm",
-      "ytliteplus"
-    ],
-    "sourceURLs": [
-      "https://flyinghead.github.io/flycast-builds/altstore.json",
-      "https://alt.getutm.app/",
-      "https://raw.githubusercontent.com/YTLitePlus/YTLitePlus-Altstore/main/apps.json"
-    ]
+    "sourceIDs": "flycast,utm,ytliteplus",
+    "sourceURLs": "https://flyinghead.github.io/flycast-builds/altstore.json\nhttps://alt.getutm.app/\nhttps://raw.githubusercontent.com/YTLitePlus/YTLitePlus-Altstore/main/apps.json"
   }
 }

@@ -427,15 +427,7 @@
     }
   ],
   "userInfo": {
-    "sourceIDs": [
-      "armsx2",
-      "ish",
-      "xn1ckuz-sidebox"
-    ],
-    "sourceURLs": [
-      "https://raw.githubusercontent.com/ARMSX2/Armsx2-Repo/main/apps.json",
-      "https://ish.app/altstore.json",
-      "https://raw.githubusercontent.com/xN1ckuz/xN1ckuz-Sidestore-Repo/main/repo.json"
-    ]
+    "sourceIDs": "armsx2,ish,xn1ckuz-sidebox",
+    "sourceURLs": "https://raw.githubusercontent.com/ARMSX2/Armsx2-Repo/main/apps.json\nhttps://ish.app/altstore.json\nhttps://raw.githubusercontent.com/xN1ckuz/xN1ckuz-Sidestore-Repo/main/repo.json"
   }
 }

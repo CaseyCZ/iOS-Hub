@@ -96,15 +96,7 @@
     }
   ],
   "userInfo": {
-    "sourceIDs": [
-      "utm",
-      "youmod-repo",
-      "ytliteplus"
-    ],
-    "sourceURLs": [
-      "https://alt.getutm.app/",
-      "https://raw.githubusercontent.com/MountainofPenguin/Altstore-Repository/main/apps.json",
-      "https://raw.githubusercontent.com/YTLitePlus/YTLitePlus-Altstore/main/apps.json"
-    ]
+    "sourceIDs": "utm,youmod-repo,ytliteplus",
+    "sourceURLs": "https://alt.getutm.app/\nhttps://raw.githubusercontent.com/MountainofPenguin/Altstore-Repository/main/apps.json\nhttps://raw.githubusercontent.com/YTLitePlus/YTLitePlus-Altstore/main/apps.json"
   }
 }

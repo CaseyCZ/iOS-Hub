@@ -265,15 +265,7 @@
     }
   ],
   "userInfo": {
-    "sourceIDs": [
-      "apollo-reddit",
-      "discord-appstore-builds",
-      "pokemmo"
-    ],
-    "sourceURLs": [
-      "https://raw.githubusercontent.com/Balackburn/Apollo/main/apps.json",
-      "https://raw.githubusercontent.com/AlfaActa/discord-altstore-source/main/source.json",
-      "https://pokemmo.eu/altstore/"
-    ]
+    "sourceIDs": "apollo-reddit,discord-appstore-builds,pokemmo",
+    "sourceURLs": "https://raw.githubusercontent.com/Balackburn/Apollo/main/apps.json\nhttps://raw.githubusercontent.com/AlfaActa/discord-altstore-source/main/source.json\nhttps://pokemmo.eu/altstore/"
   }
 }

@@ -511,15 +511,7 @@
     }
   ],
   "userInfo": {
-    "sourceIDs": [
-      "ish",
-      "oatmealdome",
-      "ytliteplus"
-    ],
-    "sourceURLs": [
-      "https://ish.app/altstore.json",
-      "https://altstore.oatmealdome.me",
-      "https://raw.githubusercontent.com/YTLitePlus/YTLitePlus-Altstore/main/apps.json"
-    ]
+    "sourceIDs": "ish,oatmealdome,ytliteplus",
+    "sourceURLs": "https://ish.app/altstore.json\nhttps://altstore.oatmealdome.me\nhttps://raw.githubusercontent.com/YTLitePlus/YTLitePlus-Altstore/main/apps.json"
   }
 }

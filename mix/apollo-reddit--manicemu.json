@@ -161,13 +161,7 @@
     }
   ],
   "userInfo": {
-    "sourceIDs": [
-      "apollo-reddit",
-      "manicemu"
-    ],
-    "sourceURLs": [
-      "https://raw.githubusercontent.com/Balackburn/Apollo/main/apps.json",
-      "https://apps.manicemu.site/altstore"
-    ]
+    "sourceIDs": "apollo-reddit,manicemu",
+    "sourceURLs": "https://raw.githubusercontent.com/Balackburn/Apollo/main/apps.json\nhttps://apps.manicemu.site/altstore"
   }
 }

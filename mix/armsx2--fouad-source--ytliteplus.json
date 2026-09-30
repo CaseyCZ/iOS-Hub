@@ -1581,15 +1581,7 @@
     }
   ],
   "userInfo": {
-    "sourceIDs": [
-      "armsx2",
-      "fouad-source",
-      "ytliteplus"
-    ],
-    "sourceURLs": [
-      "https://raw.githubusercontent.com/ARMSX2/Armsx2-Repo/main/apps.json",
-      "https://raw.githubusercontent.com/FouadRaheb/Watusi-for-WhatsApp/master/altstore/source.json",
-      "https://raw.githubusercontent.com/YTLitePlus/YTLitePlus-Altstore/main/apps.json"
-    ]
+    "sourceIDs": "armsx2,fouad-source,ytliteplus",
+    "sourceURLs": "https://raw.githubusercontent.com/ARMSX2/Armsx2-Repo/main/apps.json\nhttps://raw.githubusercontent.com/FouadRaheb/Watusi-for-WhatsApp/master/altstore/source.json\nhttps://raw.githubusercontent.com/YTLitePlus/YTLitePlus-Altstore/main/apps.json"
   }
 }

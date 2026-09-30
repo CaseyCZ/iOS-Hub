@@ -171,15 +171,7 @@
     }
   ],
   "userInfo": {
-    "sourceIDs": [
-      "ish",
-      "oatmealdome",
-      "pokemmo"
-    ],
-    "sourceURLs": [
-      "https://ish.app/altstore.json",
-      "https://altstore.oatmealdome.me",
-      "https://pokemmo.eu/altstore/"
-    ]
+    "sourceIDs": "ish,oatmealdome,pokemmo",
+    "sourceURLs": "https://ish.app/altstore.json\nhttps://altstore.oatmealdome.me\nhttps://pokemmo.eu/altstore/"
   }
 }

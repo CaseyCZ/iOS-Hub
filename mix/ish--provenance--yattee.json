@@ -305,15 +305,7 @@
     }
   ],
   "userInfo": {
-    "sourceIDs": [
-      "ish",
-      "provenance",
-      "yattee"
-    ],
-    "sourceURLs": [
-      "https://ish.app/altstore.json",
-      "https://provenance-emu.com/apps.json",
-      "https://raw.githubusercontent.com/yattee/yattee/main/altstore-source.json"
-    ]
+    "sourceIDs": "ish,provenance,yattee",
+    "sourceURLs": "https://ish.app/altstore.json\nhttps://provenance-emu.com/apps.json\nhttps://raw.githubusercontent.com/yattee/yattee/main/altstore-source.json"
   }
 }

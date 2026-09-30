@@ -229,15 +229,7 @@
     }
   ],
   "userInfo": {
-    "sourceIDs": [
-      "oatmealdome",
-      "pokemmo",
-      "yattee"
-    ],
-    "sourceURLs": [
-      "https://altstore.oatmealdome.me",
-      "https://pokemmo.eu/altstore/",
-      "https://raw.githubusercontent.com/yattee/yattee/main/altstore-source.json"
-    ]
+    "sourceIDs": "oatmealdome,pokemmo,yattee",
+    "sourceURLs": "https://altstore.oatmealdome.me\nhttps://pokemmo.eu/altstore/\nhttps://raw.githubusercontent.com/yattee/yattee/main/altstore-source.json"
   }
 }

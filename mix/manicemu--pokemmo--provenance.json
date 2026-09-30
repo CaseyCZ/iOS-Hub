@@ -327,15 +327,7 @@
     }
   ],
   "userInfo": {
-    "sourceIDs": [
-      "manicemu",
-      "pokemmo",
-      "provenance"
-    ],
-    "sourceURLs": [
-      "https://apps.manicemu.site/altstore",
-      "https://pokemmo.eu/altstore/",
-      "https://provenance-emu.com/apps.json"
-    ]
+    "sourceIDs": "manicemu,pokemmo,provenance",
+    "sourceURLs": "https://apps.manicemu.site/altstore\nhttps://pokemmo.eu/altstore/\nhttps://provenance-emu.com/apps.json"
   }
 }

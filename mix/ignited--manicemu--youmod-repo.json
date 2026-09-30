@@ -191,15 +191,7 @@
     }
   ],
   "userInfo": {
-    "sourceIDs": [
-      "ignited",
-      "manicemu",
-      "youmod-repo"
-    ],
-    "sourceURLs": [
-      "https://altstore.ignitedemulator.com/",
-      "https://apps.manicemu.site/altstore",
-      "https://raw.githubusercontent.com/MountainofPenguin/Altstore-Repository/main/apps.json"
-    ]
+    "sourceIDs": "ignited,manicemu,youmod-repo",
+    "sourceURLs": "https://altstore.ignitedemulator.com/\nhttps://apps.manicemu.site/altstore\nhttps://raw.githubusercontent.com/MountainofPenguin/Altstore-Repository/main/apps.json"
   }
 }

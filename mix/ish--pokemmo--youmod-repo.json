@@ -76,15 +76,7 @@
     }
   ],
   "userInfo": {
-    "sourceIDs": [
-      "ish",
-      "pokemmo",
-      "youmod-repo"
-    ],
-    "sourceURLs": [
-      "https://ish.app/altstore.json",
-      "https://pokemmo.eu/altstore/",
-      "https://raw.githubusercontent.com/MountainofPenguin/Altstore-Repository/main/apps.json"
-    ]
+    "sourceIDs": "ish,pokemmo,youmod-repo",
+    "sourceURLs": "https://ish.app/altstore.json\nhttps://pokemmo.eu/altstore/\nhttps://raw.githubusercontent.com/MountainofPenguin/Altstore-Repository/main/apps.json"
   }
 }

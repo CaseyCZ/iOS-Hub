@@ -341,15 +341,7 @@
     }
   ],
   "userInfo": {
-    "sourceIDs": [
-      "apollo-reddit",
-      "discord-appstore-builds",
-      "manicemu"
-    ],
-    "sourceURLs": [
-      "https://raw.githubusercontent.com/Balackburn/Apollo/main/apps.json",
-      "https://raw.githubusercontent.com/AlfaActa/discord-altstore-source/main/source.json",
-      "https://apps.manicemu.site/altstore"
-    ]
+    "sourceIDs": "apollo-reddit,discord-appstore-builds,manicemu",
+    "sourceURLs": "https://raw.githubusercontent.com/Balackburn/Apollo/main/apps.json\nhttps://raw.githubusercontent.com/AlfaActa/discord-altstore-source/main/source.json\nhttps://apps.manicemu.site/altstore"
   }
 }

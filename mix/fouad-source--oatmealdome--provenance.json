@@ -1406,15 +1406,7 @@
     }
   ],
   "userInfo": {
-    "sourceIDs": [
-      "fouad-source",
-      "oatmealdome",
-      "provenance"
-    ],
-    "sourceURLs": [
-      "https://raw.githubusercontent.com/FouadRaheb/Watusi-for-WhatsApp/master/altstore/source.json",
-      "https://altstore.oatmealdome.me",
-      "https://provenance-emu.com/apps.json"
-    ]
+    "sourceIDs": "fouad-source,oatmealdome,provenance",
+    "sourceURLs": "https://raw.githubusercontent.com/FouadRaheb/Watusi-for-WhatsApp/master/altstore/source.json\nhttps://altstore.oatmealdome.me\nhttps://provenance-emu.com/apps.json"
   }
 }

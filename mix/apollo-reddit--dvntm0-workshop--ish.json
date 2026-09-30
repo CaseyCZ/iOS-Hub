@@ -534,15 +534,7 @@
     }
   ],
   "userInfo": {
-    "sourceIDs": [
-      "apollo-reddit",
-      "dvntm0-workshop",
-      "ish"
-    ],
-    "sourceURLs": [
-      "https://raw.githubusercontent.com/Balackburn/Apollo/main/apps.json",
-      "https://raw.githubusercontent.com/dvntm0/AltStore/main/repo.json",
-      "https://ish.app/altstore.json"
-    ]
+    "sourceIDs": "apollo-reddit,dvntm0-workshop,ish",
+    "sourceURLs": "https://raw.githubusercontent.com/Balackburn/Apollo/main/apps.json\nhttps://raw.githubusercontent.com/dvntm0/AltStore/main/repo.json\nhttps://ish.app/altstore.json"
   }
 }

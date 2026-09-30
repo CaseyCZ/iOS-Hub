@@ -520,15 +520,7 @@
     }
   ],
   "userInfo": {
-    "sourceIDs": [
-      "discord-appstore-builds",
-      "oatmealdome",
-      "provenance"
-    ],
-    "sourceURLs": [
-      "https://raw.githubusercontent.com/AlfaActa/discord-altstore-source/main/source.json",
-      "https://altstore.oatmealdome.me",
-      "https://provenance-emu.com/apps.json"
-    ]
+    "sourceIDs": "discord-appstore-builds,oatmealdome,provenance",
+    "sourceURLs": "https://raw.githubusercontent.com/AlfaActa/discord-altstore-source/main/source.json\nhttps://altstore.oatmealdome.me\nhttps://provenance-emu.com/apps.json"
   }
 }

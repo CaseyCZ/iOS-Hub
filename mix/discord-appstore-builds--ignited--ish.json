@@ -261,15 +261,7 @@
     }
   ],
   "userInfo": {
-    "sourceIDs": [
-      "discord-appstore-builds",
-      "ignited",
-      "ish"
-    ],
-    "sourceURLs": [
-      "https://raw.githubusercontent.com/AlfaActa/discord-altstore-source/main/source.json",
-      "https://altstore.ignitedemulator.com/",
-      "https://ish.app/altstore.json"
-    ]
+    "sourceIDs": "discord-appstore-builds,ignited,ish",
+    "sourceURLs": "https://raw.githubusercontent.com/AlfaActa/discord-altstore-source/main/source.json\nhttps://altstore.ignitedemulator.com/\nhttps://ish.app/altstore.json"
   }
 }

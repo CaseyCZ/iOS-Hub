@@ -699,15 +699,7 @@
     }
   ],
   "userInfo": {
-    "sourceIDs": [
-      "oatmealdome",
-      "provenance",
-      "ytliteplus"
-    ],
-    "sourceURLs": [
-      "https://altstore.oatmealdome.me",
-      "https://provenance-emu.com/apps.json",
-      "https://raw.githubusercontent.com/YTLitePlus/YTLitePlus-Altstore/main/apps.json"
-    ]
+    "sourceIDs": "oatmealdome,provenance,ytliteplus",
+    "sourceURLs": "https://altstore.oatmealdome.me\nhttps://provenance-emu.com/apps.json\nhttps://raw.githubusercontent.com/YTLitePlus/YTLitePlus-Altstore/main/apps.json"
   }
 }

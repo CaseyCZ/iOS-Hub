@@ -242,15 +242,7 @@
     }
   ],
   "userInfo": {
-    "sourceIDs": [
-      "oatmealdome",
-      "yattee",
-      "youmod-repo"
-    ],
-    "sourceURLs": [
-      "https://altstore.oatmealdome.me",
-      "https://raw.githubusercontent.com/yattee/yattee/main/altstore-source.json",
-      "https://raw.githubusercontent.com/MountainofPenguin/Altstore-Repository/main/apps.json"
-    ]
+    "sourceIDs": "oatmealdome,yattee,youmod-repo",
+    "sourceURLs": "https://altstore.oatmealdome.me\nhttps://raw.githubusercontent.com/yattee/yattee/main/altstore-source.json\nhttps://raw.githubusercontent.com/MountainofPenguin/Altstore-Repository/main/apps.json"
   }
 }

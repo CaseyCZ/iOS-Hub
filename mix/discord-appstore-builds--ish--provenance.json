@@ -410,15 +410,7 @@
     }
   ],
   "userInfo": {
-    "sourceIDs": [
-      "discord-appstore-builds",
-      "ish",
-      "provenance"
-    ],
-    "sourceURLs": [
-      "https://raw.githubusercontent.com/AlfaActa/discord-altstore-source/main/source.json",
-      "https://ish.app/altstore.json",
-      "https://provenance-emu.com/apps.json"
-    ]
+    "sourceIDs": "discord-appstore-builds,ish,provenance",
+    "sourceURLs": "https://raw.githubusercontent.com/AlfaActa/discord-altstore-source/main/source.json\nhttps://ish.app/altstore.json\nhttps://provenance-emu.com/apps.json"
   }
 }

@@ -85,13 +85,7 @@
     }
   ],
   "userInfo": {
-    "sourceIDs": [
-      "apollo-reddit",
-      "pokemmo"
-    ],
-    "sourceURLs": [
-      "https://raw.githubusercontent.com/Balackburn/Apollo/main/apps.json",
-      "https://pokemmo.eu/altstore/"
-    ]
+    "sourceIDs": "apollo-reddit,pokemmo",
+    "sourceURLs": "https://raw.githubusercontent.com/Balackburn/Apollo/main/apps.json\nhttps://pokemmo.eu/altstore/"
   }
 }

@@ -467,13 +467,7 @@
     }
   ],
   "userInfo": {
-    "sourceIDs": [
-      "provenance",
-      "xn1ckuz-sidebox"
-    ],
-    "sourceURLs": [
-      "https://provenance-emu.com/apps.json",
-      "https://raw.githubusercontent.com/xN1ckuz/xN1ckuz-Sidestore-Repo/main/repo.json"
-    ]
+    "sourceIDs": "provenance,xn1ckuz-sidebox",
+    "sourceURLs": "https://provenance-emu.com/apps.json\nhttps://raw.githubusercontent.com/xN1ckuz/xN1ckuz-Sidestore-Repo/main/repo.json"
   }
 }

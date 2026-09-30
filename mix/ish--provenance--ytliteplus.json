@@ -589,15 +589,7 @@
     }
   ],
   "userInfo": {
-    "sourceIDs": [
-      "ish",
-      "provenance",
-      "ytliteplus"
-    ],
-    "sourceURLs": [
-      "https://ish.app/altstore.json",
-      "https://provenance-emu.com/apps.json",
-      "https://raw.githubusercontent.com/YTLitePlus/YTLitePlus-Altstore/main/apps.json"
-    ]
+    "sourceIDs": "ish,provenance,ytliteplus",
+    "sourceURLs": "https://ish.app/altstore.json\nhttps://provenance-emu.com/apps.json\nhttps://raw.githubusercontent.com/YTLitePlus/YTLitePlus-Altstore/main/apps.json"
   }
 }

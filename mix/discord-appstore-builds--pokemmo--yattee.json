@@ -282,15 +282,7 @@
     }
   ],
   "userInfo": {
-    "sourceIDs": [
-      "discord-appstore-builds",
-      "pokemmo",
-      "yattee"
-    ],
-    "sourceURLs": [
-      "https://raw.githubusercontent.com/AlfaActa/discord-altstore-source/main/source.json",
-      "https://pokemmo.eu/altstore/",
-      "https://raw.githubusercontent.com/yattee/yattee/main/altstore-source.json"
-    ]
+    "sourceIDs": "discord-appstore-builds,pokemmo,yattee",
+    "sourceURLs": "https://raw.githubusercontent.com/AlfaActa/discord-altstore-source/main/source.json\nhttps://pokemmo.eu/altstore/\nhttps://raw.githubusercontent.com/yattee/yattee/main/altstore-source.json"
   }
 }

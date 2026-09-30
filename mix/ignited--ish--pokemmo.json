@@ -100,15 +100,7 @@
     }
   ],
   "userInfo": {
-    "sourceIDs": [
-      "ignited",
-      "ish",
-      "pokemmo"
-    ],
-    "sourceURLs": [
-      "https://altstore.ignitedemulator.com/",
-      "https://ish.app/altstore.json",
-      "https://pokemmo.eu/altstore/"
-    ]
+    "sourceIDs": "ignited,ish,pokemmo",
+    "sourceURLs": "https://altstore.ignitedemulator.com/\nhttps://ish.app/altstore.json\nhttps://pokemmo.eu/altstore/"
   }
 }

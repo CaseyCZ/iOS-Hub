@@ -59,15 +59,7 @@
     }
   ],
   "userInfo": {
-    "sourceIDs": [
-      "pokemmo",
-      "youmod-repo",
-      "youtuberebornplus"
-    ],
-    "sourceURLs": [
-      "https://pokemmo.eu/altstore/",
-      "https://raw.githubusercontent.com/MountainofPenguin/Altstore-Repository/main/apps.json",
-      "https://raw.githubusercontent.com/arichornlover/arichornlover.github.io/main/apps2.json"
-    ]
+    "sourceIDs": "pokemmo,youmod-repo,youtuberebornplus",
+    "sourceURLs": "https://pokemmo.eu/altstore/\nhttps://raw.githubusercontent.com/MountainofPenguin/Altstore-Repository/main/apps.json\nhttps://raw.githubusercontent.com/arichornlover/arichornlover.github.io/main/apps2.json"
   }
 }

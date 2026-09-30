@@ -291,15 +291,7 @@
     }
   ],
   "userInfo": {
-    "sourceIDs": [
-      "ish",
-      "provenance",
-      "youtuberebornplus"
-    ],
-    "sourceURLs": [
-      "https://ish.app/altstore.json",
-      "https://provenance-emu.com/apps.json",
-      "https://raw.githubusercontent.com/arichornlover/arichornlover.github.io/main/apps2.json"
-    ]
+    "sourceIDs": "ish,provenance,youtuberebornplus",
+    "sourceURLs": "https://ish.app/altstore.json\nhttps://provenance-emu.com/apps.json\nhttps://raw.githubusercontent.com/arichornlover/arichornlover.github.io/main/apps2.json"
   }
 }

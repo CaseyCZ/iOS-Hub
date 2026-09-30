@@ -168,15 +168,7 @@
     }
   ],
   "userInfo": {
-    "sourceIDs": [
-      "ish",
-      "oatmealdome",
-      "ytkace"
-    ],
-    "sourceURLs": [
-      "https://ish.app/altstore.json",
-      "https://altstore.oatmealdome.me",
-      "https://raw.githubusercontent.com/xKatsumi/YTKACE-SideStore-Repo/main/ytkace.json"
-    ]
+    "sourceIDs": "ish,oatmealdome,ytkace",
+    "sourceURLs": "https://ish.app/altstore.json\nhttps://altstore.oatmealdome.me\nhttps://raw.githubusercontent.com/xKatsumi/YTKACE-SideStore-Repo/main/ytkace.json"
   }
 }

@@ -1186,15 +1186,7 @@
     }
   ],
   "userInfo": {
-    "sourceIDs": [
-      "fouad-source",
-      "ignited",
-      "utm"
-    ],
-    "sourceURLs": [
-      "https://raw.githubusercontent.com/FouadRaheb/Watusi-for-WhatsApp/master/altstore/source.json",
-      "https://altstore.ignitedemulator.com/",
-      "https://alt.getutm.app/"
-    ]
+    "sourceIDs": "fouad-source,ignited,utm",
+    "sourceURLs": "https://raw.githubusercontent.com/FouadRaheb/Watusi-for-WhatsApp/master/altstore/source.json\nhttps://altstore.ignitedemulator.com/\nhttps://alt.getutm.app/"
   }
 }

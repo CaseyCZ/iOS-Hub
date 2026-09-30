@@ -193,15 +193,7 @@
     }
   ],
   "userInfo": {
-    "sourceIDs": [
-      "armsx2",
-      "flycast",
-      "ish"
-    ],
-    "sourceURLs": [
-      "https://raw.githubusercontent.com/ARMSX2/Armsx2-Repo/main/apps.json",
-      "https://flyinghead.github.io/flycast-builds/altstore.json",
-      "https://ish.app/altstore.json"
-    ]
+    "sourceIDs": "armsx2,flycast,ish",
+    "sourceURLs": "https://raw.githubusercontent.com/ARMSX2/Armsx2-Repo/main/apps.json\nhttps://flyinghead.github.io/flycast-builds/altstore.json\nhttps://ish.app/altstore.json"
   }
 }

@@ -120,13 +120,7 @@
     }
   ],
   "userInfo": {
-    "sourceIDs": [
-      "ish",
-      "manicemu"
-    ],
-    "sourceURLs": [
-      "https://ish.app/altstore.json",
-      "https://apps.manicemu.site/altstore"
-    ]
+    "sourceIDs": "ish,manicemu",
+    "sourceURLs": "https://ish.app/altstore.json\nhttps://apps.manicemu.site/altstore"
   }
 }

@@ -142,15 +142,7 @@
     }
   ],
   "userInfo": {
-    "sourceIDs": [
-      "flycast",
-      "manicemu",
-      "pokemmo"
-    ],
-    "sourceURLs": [
-      "https://flyinghead.github.io/flycast-builds/altstore.json",
-      "https://apps.manicemu.site/altstore",
-      "https://pokemmo.eu/altstore/"
-    ]
+    "sourceIDs": "flycast,manicemu,pokemmo",
+    "sourceURLs": "https://flyinghead.github.io/flycast-builds/altstore.json\nhttps://apps.manicemu.site/altstore\nhttps://pokemmo.eu/altstore/"
   }
 }

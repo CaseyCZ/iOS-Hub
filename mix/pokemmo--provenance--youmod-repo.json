@@ -264,15 +264,7 @@
     }
   ],
   "userInfo": {
-    "sourceIDs": [
-      "pokemmo",
-      "provenance",
-      "youmod-repo"
-    ],
-    "sourceURLs": [
-      "https://pokemmo.eu/altstore/",
-      "https://provenance-emu.com/apps.json",
-      "https://raw.githubusercontent.com/MountainofPenguin/Altstore-Repository/main/apps.json"
-    ]
+    "sourceIDs": "pokemmo,provenance,youmod-repo",
+    "sourceURLs": "https://pokemmo.eu/altstore/\nhttps://provenance-emu.com/apps.json\nhttps://raw.githubusercontent.com/MountainofPenguin/Altstore-Repository/main/apps.json"
   }
 }

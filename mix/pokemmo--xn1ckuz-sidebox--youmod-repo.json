@@ -281,15 +281,7 @@
     }
   ],
   "userInfo": {
-    "sourceIDs": [
-      "pokemmo",
-      "xn1ckuz-sidebox",
-      "youmod-repo"
-    ],
-    "sourceURLs": [
-      "https://pokemmo.eu/altstore/",
-      "https://raw.githubusercontent.com/xN1ckuz/xN1ckuz-Sidestore-Repo/main/repo.json",
-      "https://raw.githubusercontent.com/MountainofPenguin/Altstore-Repository/main/apps.json"
-    ]
+    "sourceIDs": "pokemmo,xn1ckuz-sidebox,youmod-repo",
+    "sourceURLs": "https://pokemmo.eu/altstore/\nhttps://raw.githubusercontent.com/xN1ckuz/xN1ckuz-Sidestore-Repo/main/repo.json\nhttps://raw.githubusercontent.com/MountainofPenguin/Altstore-Repository/main/apps.json"
   }
 }

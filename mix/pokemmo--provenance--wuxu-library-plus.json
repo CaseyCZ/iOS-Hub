@@ -1211,15 +1211,7 @@
     }
   ],
   "userInfo": {
-    "sourceIDs": [
-      "pokemmo",
-      "provenance",
-      "wuxu-library-plus"
-    ],
-    "sourceURLs": [
-      "https://pokemmo.eu/altstore/",
-      "https://provenance-emu.com/apps.json",
-      "https://raw.githubusercontent.com/WuXu1/WuXu1.github.io/main/wuxu-complete-plus.json"
-    ]
+    "sourceIDs": "pokemmo,provenance,wuxu-library-plus",
+    "sourceURLs": "https://pokemmo.eu/altstore/\nhttps://provenance-emu.com/apps.json\nhttps://raw.githubusercontent.com/WuXu1/WuXu1.github.io/main/wuxu-complete-plus.json"
   }
 }

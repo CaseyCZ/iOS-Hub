@@ -156,15 +156,7 @@
     }
   ],
   "userInfo": {
-    "sourceIDs": [
-      "ish",
-      "utm",
-      "yattee"
-    ],
-    "sourceURLs": [
-      "https://ish.app/altstore.json",
-      "https://alt.getutm.app/",
-      "https://raw.githubusercontent.com/yattee/yattee/main/altstore-source.json"
-    ]
+    "sourceIDs": "ish,utm,yattee",
+    "sourceURLs": "https://ish.app/altstore.json\nhttps://alt.getutm.app/\nhttps://raw.githubusercontent.com/yattee/yattee/main/altstore-source.json"
   }
 }

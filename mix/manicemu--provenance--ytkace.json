@@ -324,15 +324,7 @@
     }
   ],
   "userInfo": {
-    "sourceIDs": [
-      "manicemu",
-      "provenance",
-      "ytkace"
-    ],
-    "sourceURLs": [
-      "https://apps.manicemu.site/altstore",
-      "https://provenance-emu.com/apps.json",
-      "https://raw.githubusercontent.com/xKatsumi/YTKACE-SideStore-Repo/main/ytkace.json"
-    ]
+    "sourceIDs": "manicemu,provenance,ytkace",
+    "sourceURLs": "https://apps.manicemu.site/altstore\nhttps://provenance-emu.com/apps.json\nhttps://raw.githubusercontent.com/xKatsumi/YTKACE-SideStore-Repo/main/ytkace.json"
   }
 }

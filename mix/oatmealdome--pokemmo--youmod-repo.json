@@ -186,15 +186,7 @@
     }
   ],
   "userInfo": {
-    "sourceIDs": [
-      "oatmealdome",
-      "pokemmo",
-      "youmod-repo"
-    ],
-    "sourceURLs": [
-      "https://altstore.oatmealdome.me",
-      "https://pokemmo.eu/altstore/",
-      "https://raw.githubusercontent.com/MountainofPenguin/Altstore-Repository/main/apps.json"
-    ]
+    "sourceIDs": "oatmealdome,pokemmo,youmod-repo",
+    "sourceURLs": "https://altstore.oatmealdome.me\nhttps://pokemmo.eu/altstore/\nhttps://raw.githubusercontent.com/MountainofPenguin/Altstore-Repository/main/apps.json"
   }
 }

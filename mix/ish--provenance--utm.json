@@ -286,15 +286,7 @@
     }
   ],
   "userInfo": {
-    "sourceIDs": [
-      "ish",
-      "provenance",
-      "utm"
-    ],
-    "sourceURLs": [
-      "https://ish.app/altstore.json",
-      "https://provenance-emu.com/apps.json",
-      "https://alt.getutm.app/"
-    ]
+    "sourceIDs": "ish,provenance,utm",
+    "sourceURLs": "https://ish.app/altstore.json\nhttps://provenance-emu.com/apps.json\nhttps://alt.getutm.app/"
   }
 }

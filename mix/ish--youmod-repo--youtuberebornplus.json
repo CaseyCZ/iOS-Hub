@@ -57,15 +57,7 @@
     }
   ],
   "userInfo": {
-    "sourceIDs": [
-      "ish",
-      "youmod-repo",
-      "youtuberebornplus"
-    ],
-    "sourceURLs": [
-      "https://ish.app/altstore.json",
-      "https://raw.githubusercontent.com/MountainofPenguin/Altstore-Repository/main/apps.json",
-      "https://raw.githubusercontent.com/arichornlover/arichornlover.github.io/main/apps2.json"
-    ]
+    "sourceIDs": "ish,youmod-repo,youtuberebornplus",
+    "sourceURLs": "https://ish.app/altstore.json\nhttps://raw.githubusercontent.com/MountainofPenguin/Altstore-Repository/main/apps.json\nhttps://raw.githubusercontent.com/arichornlover/arichornlover.github.io/main/apps2.json"
   }
 }

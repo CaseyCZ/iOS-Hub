@@ -301,15 +301,7 @@
     }
   ],
   "userInfo": {
-    "sourceIDs": [
-      "ignited",
-      "provenance",
-      "youmod-repo"
-    ],
-    "sourceURLs": [
-      "https://altstore.ignitedemulator.com/",
-      "https://provenance-emu.com/apps.json",
-      "https://raw.githubusercontent.com/MountainofPenguin/Altstore-Repository/main/apps.json"
-    ]
+    "sourceIDs": "ignited,provenance,youmod-repo",
+    "sourceURLs": "https://altstore.ignitedemulator.com/\nhttps://provenance-emu.com/apps.json\nhttps://raw.githubusercontent.com/MountainofPenguin/Altstore-Repository/main/apps.json"
   }
 }

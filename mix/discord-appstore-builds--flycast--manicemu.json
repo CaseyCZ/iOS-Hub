@@ -303,15 +303,7 @@
     }
   ],
   "userInfo": {
-    "sourceIDs": [
-      "discord-appstore-builds",
-      "flycast",
-      "manicemu"
-    ],
-    "sourceURLs": [
-      "https://raw.githubusercontent.com/AlfaActa/discord-altstore-source/main/source.json",
-      "https://flyinghead.github.io/flycast-builds/altstore.json",
-      "https://apps.manicemu.site/altstore"
-    ]
+    "sourceIDs": "discord-appstore-builds,flycast,manicemu",
+    "sourceURLs": "https://raw.githubusercontent.com/AlfaActa/discord-altstore-source/main/source.json\nhttps://flyinghead.github.io/flycast-builds/altstore.json\nhttps://apps.manicemu.site/altstore"
   }
 }

@@ -223,15 +223,7 @@
     }
   ],
   "userInfo": {
-    "sourceIDs": [
-      "ignited",
-      "oatmealdome",
-      "youmod-repo"
-    ],
-    "sourceURLs": [
-      "https://altstore.ignitedemulator.com/",
-      "https://altstore.oatmealdome.me",
-      "https://raw.githubusercontent.com/MountainofPenguin/Altstore-Repository/main/apps.json"
-    ]
+    "sourceIDs": "ignited,oatmealdome,youmod-repo",
+    "sourceURLs": "https://altstore.ignitedemulator.com/\nhttps://altstore.oatmealdome.me\nhttps://raw.githubusercontent.com/MountainofPenguin/Altstore-Repository/main/apps.json"
   }
 }

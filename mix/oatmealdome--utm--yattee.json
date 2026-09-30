@@ -266,15 +266,7 @@
     }
   ],
   "userInfo": {
-    "sourceIDs": [
-      "oatmealdome",
-      "utm",
-      "yattee"
-    ],
-    "sourceURLs": [
-      "https://altstore.oatmealdome.me",
-      "https://alt.getutm.app/",
-      "https://raw.githubusercontent.com/yattee/yattee/main/altstore-source.json"
-    ]
+    "sourceIDs": "oatmealdome,utm,yattee",
+    "sourceURLs": "https://altstore.oatmealdome.me\nhttps://alt.getutm.app/\nhttps://raw.githubusercontent.com/yattee/yattee/main/altstore-source.json"
   }
 }

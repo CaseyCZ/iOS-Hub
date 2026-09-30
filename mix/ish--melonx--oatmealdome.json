@@ -186,15 +186,7 @@
     }
   ],
   "userInfo": {
-    "sourceIDs": [
-      "ish",
-      "melonx",
-      "oatmealdome"
-    ],
-    "sourceURLs": [
-      "https://ish.app/altstore.json",
-      "https://raw.githubusercontent.com/AzureDominus/melonx/refs/heads/XC-ios-ht/source.json",
-      "https://altstore.oatmealdome.me"
-    ]
+    "sourceIDs": "ish,melonx,oatmealdome",
+    "sourceURLs": "https://ish.app/altstore.json\nhttps://raw.githubusercontent.com/AzureDominus/melonx/refs/heads/XC-ios-ht/source.json\nhttps://altstore.oatmealdome.me"
   }
 }

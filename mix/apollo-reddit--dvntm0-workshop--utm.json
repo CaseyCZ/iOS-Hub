@@ -573,15 +573,7 @@
     }
   ],
   "userInfo": {
-    "sourceIDs": [
-      "apollo-reddit",
-      "dvntm0-workshop",
-      "utm"
-    ],
-    "sourceURLs": [
-      "https://raw.githubusercontent.com/Balackburn/Apollo/main/apps.json",
-      "https://raw.githubusercontent.com/dvntm0/AltStore/main/repo.json",
-      "https://alt.getutm.app/"
-    ]
+    "sourceIDs": "apollo-reddit,dvntm0-workshop,utm",
+    "sourceURLs": "https://raw.githubusercontent.com/Balackburn/Apollo/main/apps.json\nhttps://raw.githubusercontent.com/dvntm0/AltStore/main/repo.json\nhttps://alt.getutm.app/"
   }
 }

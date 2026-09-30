@@ -155,15 +155,7 @@
     }
   ],
   "userInfo": {
-    "sourceIDs": [
-      "flycast",
-      "manicemu",
-      "youmod-repo"
-    ],
-    "sourceURLs": [
-      "https://flyinghead.github.io/flycast-builds/altstore.json",
-      "https://apps.manicemu.site/altstore",
-      "https://raw.githubusercontent.com/MountainofPenguin/Altstore-Repository/main/apps.json"
-    ]
+    "sourceIDs": "flycast,manicemu,youmod-repo",
+    "sourceURLs": "https://flyinghead.github.io/flycast-builds/altstore.json\nhttps://apps.manicemu.site/altstore\nhttps://raw.githubusercontent.com/MountainofPenguin/Altstore-Repository/main/apps.json"
   }
 }

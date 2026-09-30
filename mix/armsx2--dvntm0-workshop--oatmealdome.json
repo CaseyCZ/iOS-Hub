@@ -734,15 +734,7 @@
     }
   ],
   "userInfo": {
-    "sourceIDs": [
-      "armsx2",
-      "dvntm0-workshop",
-      "oatmealdome"
-    ],
-    "sourceURLs": [
-      "https://raw.githubusercontent.com/ARMSX2/Armsx2-Repo/main/apps.json",
-      "https://raw.githubusercontent.com/dvntm0/AltStore/main/repo.json",
-      "https://altstore.oatmealdome.me"
-    ]
+    "sourceIDs": "armsx2,dvntm0-workshop,oatmealdome",
+    "sourceURLs": "https://raw.githubusercontent.com/ARMSX2/Armsx2-Repo/main/apps.json\nhttps://raw.githubusercontent.com/dvntm0/AltStore/main/repo.json\nhttps://altstore.oatmealdome.me"
   }
 }

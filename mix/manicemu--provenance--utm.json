@@ -364,15 +364,7 @@
     }
   ],
   "userInfo": {
-    "sourceIDs": [
-      "manicemu",
-      "provenance",
-      "utm"
-    ],
-    "sourceURLs": [
-      "https://apps.manicemu.site/altstore",
-      "https://provenance-emu.com/apps.json",
-      "https://alt.getutm.app/"
-    ]
+    "sourceIDs": "manicemu,provenance,utm",
+    "sourceURLs": "https://apps.manicemu.site/altstore\nhttps://provenance-emu.com/apps.json\nhttps://alt.getutm.app/"
   }
 }

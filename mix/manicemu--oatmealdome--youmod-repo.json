@@ -262,15 +262,7 @@
     }
   ],
   "userInfo": {
-    "sourceIDs": [
-      "manicemu",
-      "oatmealdome",
-      "youmod-repo"
-    ],
-    "sourceURLs": [
-      "https://apps.manicemu.site/altstore",
-      "https://altstore.oatmealdome.me",
-      "https://raw.githubusercontent.com/MountainofPenguin/Altstore-Repository/main/apps.json"
-    ]
+    "sourceIDs": "manicemu,oatmealdome,youmod-repo",
+    "sourceURLs": "https://apps.manicemu.site/altstore\nhttps://altstore.oatmealdome.me\nhttps://raw.githubusercontent.com/MountainofPenguin/Altstore-Repository/main/apps.json"
   }
 }

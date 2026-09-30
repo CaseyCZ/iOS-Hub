@@ -60,15 +60,7 @@
     }
   ],
   "userInfo": {
-    "sourceIDs": [
-      "ish",
-      "pokemmo",
-      "ytkace"
-    ],
-    "sourceURLs": [
-      "https://ish.app/altstore.json",
-      "https://pokemmo.eu/altstore/",
-      "https://raw.githubusercontent.com/xKatsumi/YTKACE-SideStore-Repo/main/ytkace.json"
-    ]
+    "sourceIDs": "ish,pokemmo,ytkace",
+    "sourceURLs": "https://ish.app/altstore.json\nhttps://pokemmo.eu/altstore/\nhttps://raw.githubusercontent.com/xKatsumi/YTKACE-SideStore-Repo/main/ytkace.json"
   }
 }

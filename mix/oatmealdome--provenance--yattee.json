@@ -415,15 +415,7 @@
     }
   ],
   "userInfo": {
-    "sourceIDs": [
-      "oatmealdome",
-      "provenance",
-      "yattee"
-    ],
-    "sourceURLs": [
-      "https://altstore.oatmealdome.me",
-      "https://provenance-emu.com/apps.json",
-      "https://raw.githubusercontent.com/yattee/yattee/main/altstore-source.json"
-    ]
+    "sourceIDs": "oatmealdome,provenance,yattee",
+    "sourceURLs": "https://altstore.oatmealdome.me\nhttps://provenance-emu.com/apps.json\nhttps://raw.githubusercontent.com/yattee/yattee/main/altstore-source.json"
   }
 }

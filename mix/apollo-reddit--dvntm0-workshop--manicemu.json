@@ -612,15 +612,7 @@
     }
   ],
   "userInfo": {
-    "sourceIDs": [
-      "apollo-reddit",
-      "dvntm0-workshop",
-      "manicemu"
-    ],
-    "sourceURLs": [
-      "https://raw.githubusercontent.com/Balackburn/Apollo/main/apps.json",
-      "https://raw.githubusercontent.com/dvntm0/AltStore/main/repo.json",
-      "https://apps.manicemu.site/altstore"
-    ]
+    "sourceIDs": "apollo-reddit,dvntm0-workshop,manicemu",
+    "sourceURLs": "https://raw.githubusercontent.com/Balackburn/Apollo/main/apps.json\nhttps://raw.githubusercontent.com/dvntm0/AltStore/main/repo.json\nhttps://apps.manicemu.site/altstore"
   }
 }

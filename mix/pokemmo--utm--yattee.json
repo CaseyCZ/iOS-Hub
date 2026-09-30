@@ -158,15 +158,7 @@
     }
   ],
   "userInfo": {
-    "sourceIDs": [
-      "pokemmo",
-      "utm",
-      "yattee"
-    ],
-    "sourceURLs": [
-      "https://pokemmo.eu/altstore/",
-      "https://alt.getutm.app/",
-      "https://raw.githubusercontent.com/yattee/yattee/main/altstore-source.json"
-    ]
+    "sourceIDs": "pokemmo,utm,yattee",
+    "sourceURLs": "https://pokemmo.eu/altstore/\nhttps://alt.getutm.app/\nhttps://raw.githubusercontent.com/yattee/yattee/main/altstore-source.json"
   }
 }

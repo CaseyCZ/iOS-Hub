@@ -152,13 +152,7 @@
     }
   ],
   "userInfo": {
-    "sourceIDs": [
-      "ish",
-      "oatmealdome"
-    ],
-    "sourceURLs": [
-      "https://ish.app/altstore.json",
-      "https://altstore.oatmealdome.me"
-    ]
+    "sourceIDs": "ish,oatmealdome",
+    "sourceURLs": "https://ish.app/altstore.json\nhttps://altstore.oatmealdome.me"
   }
 }

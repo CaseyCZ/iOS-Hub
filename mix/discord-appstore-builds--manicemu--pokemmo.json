@@ -302,15 +302,7 @@
     }
   ],
   "userInfo": {
-    "sourceIDs": [
-      "discord-appstore-builds",
-      "manicemu",
-      "pokemmo"
-    ],
-    "sourceURLs": [
-      "https://raw.githubusercontent.com/AlfaActa/discord-altstore-source/main/source.json",
-      "https://apps.manicemu.site/altstore",
-      "https://pokemmo.eu/altstore/"
-    ]
+    "sourceIDs": "discord-appstore-builds,manicemu,pokemmo",
+    "sourceURLs": "https://raw.githubusercontent.com/AlfaActa/discord-altstore-source/main/source.json\nhttps://apps.manicemu.site/altstore\nhttps://pokemmo.eu/altstore/"
   }
 }

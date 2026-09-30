@@ -113,15 +113,7 @@
     }
   ],
   "userInfo": {
-    "sourceIDs": [
-      "ish",
-      "utm",
-      "youmod-repo"
-    ],
-    "sourceURLs": [
-      "https://ish.app/altstore.json",
-      "https://alt.getutm.app/",
-      "https://raw.githubusercontent.com/MountainofPenguin/Altstore-Repository/main/apps.json"
-    ]
+    "sourceIDs": "ish,utm,youmod-repo",
+    "sourceURLs": "https://ish.app/altstore.json\nhttps://alt.getutm.app/\nhttps://raw.githubusercontent.com/MountainofPenguin/Altstore-Repository/main/apps.json"
   }
 }

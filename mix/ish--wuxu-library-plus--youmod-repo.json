@@ -962,15 +962,7 @@
     }
   ],
   "userInfo": {
-    "sourceIDs": [
-      "ish",
-      "wuxu-library-plus",
-      "youmod-repo"
-    ],
-    "sourceURLs": [
-      "https://ish.app/altstore.json",
-      "https://raw.githubusercontent.com/WuXu1/WuXu1.github.io/main/wuxu-complete-plus.json",
-      "https://raw.githubusercontent.com/MountainofPenguin/Altstore-Repository/main/apps.json"
-    ]
+    "sourceIDs": "ish,wuxu-library-plus,youmod-repo",
+    "sourceURLs": "https://ish.app/altstore.json\nhttps://raw.githubusercontent.com/WuXu1/WuXu1.github.io/main/wuxu-complete-plus.json\nhttps://raw.githubusercontent.com/MountainofPenguin/Altstore-Repository/main/apps.json"
   }
 }

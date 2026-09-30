@@ -103,15 +103,7 @@
     }
   ],
   "userInfo": {
-    "sourceIDs": [
-      "flycast",
-      "pokemmo",
-      "utm"
-    ],
-    "sourceURLs": [
-      "https://flyinghead.github.io/flycast-builds/altstore.json",
-      "https://pokemmo.eu/altstore/",
-      "https://alt.getutm.app/"
-    ]
+    "sourceIDs": "flycast,pokemmo,utm",
+    "sourceURLs": "https://flyinghead.github.io/flycast-builds/altstore.json\nhttps://pokemmo.eu/altstore/\nhttps://alt.getutm.app/"
   }
 }

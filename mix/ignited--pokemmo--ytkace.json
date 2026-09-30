@@ -99,15 +99,7 @@
     }
   ],
   "userInfo": {
-    "sourceIDs": [
-      "ignited",
-      "pokemmo",
-      "ytkace"
-    ],
-    "sourceURLs": [
-      "https://altstore.ignitedemulator.com/",
-      "https://pokemmo.eu/altstore/",
-      "https://raw.githubusercontent.com/xKatsumi/YTKACE-SideStore-Repo/main/ytkace.json"
-    ]
+    "sourceIDs": "ignited,pokemmo,ytkace",
+    "sourceURLs": "https://altstore.ignitedemulator.com/\nhttps://pokemmo.eu/altstore/\nhttps://raw.githubusercontent.com/xKatsumi/YTKACE-SideStore-Repo/main/ytkace.json"
   }
 }
