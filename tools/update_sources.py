@@ -225,6 +225,7 @@ def write_json(path: Path, payload: object) -> None:
     path.write_text(rendered, encoding="utf-8")
 
 
+# Monitoring only: original Source endpoints remain authoritative.
 def main() -> None:
     registry = json.loads(REGISTRY.read_text(encoding="utf-8"))
     sources = registry.get("sources", [])
