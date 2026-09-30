@@ -2094,8 +2094,8 @@ def validate_layout() -> None:
         text = index.read_text(encoding="utf-8")
         if "experimental-mix.js" in text:
             error("index.html still references obsolete experimental-mix.js")
-        if "builder.js" not in text:
-            error("index.html does not reference builder.js")
+        if "src/js/builder.js" in text:
+            error("index.html must not load the standalone Builder runtime")
 
     for html in SITE_PAGES:
         validate_html_scripts(html)
