@@ -274,7 +274,7 @@ def validate_privacy_compliance() -> None:
         for required_privacy in (
             "Google Analytics is optional",
             "not loaded until you explicitly choose",
-            "Hosted Mix files are intended to expire after approximately 24 hours",
+            "passes original public Source URLs directly to the selected installer",
             "does not rehost third-party IPA binaries",
             "data-cookie-settings",
         ):
@@ -287,14 +287,24 @@ def validate_privacy_compliance() -> None:
     else:
         builder_text = builder_path.read_text(encoding="utf-8")
         for required_builder_policy in (
-            "source.compliance?.aggregationApproved === true",
-            "['licensed','permission'].includes(source.compliance?.reviewStatus)",
-            "source.compliance?.usage === 'metadata-and-original-links'",
+            "source.compliance?.reviewStatus !== 'restricted'",
+            "sourceVariantURL(source, installer.variant)",
+            "installer.buildLink(sourceUrl)",
         ):
             if required_builder_policy not in builder_text:
                 error(
-                    "builder.js is missing rights-gated aggregation policy: "
+                    "builder.js is missing direct link-only Source policy: "
                     f"{required_builder_policy!r}"
+                )
+        for forbidden_builder_policy in (
+            "aggregationApproved === true",
+            "hostCustomMix",
+            "source-cache/",
+        ):
+            if forbidden_builder_policy in builder_text:
+                error(
+                    "builder.js must not require aggregation or hosted Mixes: "
+                    f"found {forbidden_builder_policy!r}"
                 )
 
     generator_path = ROOT / "tools" / "update_sources.py"
@@ -1338,7 +1348,7 @@ def validate_layout() -> None:
     # the catalog, Builder and Credits without maintaining duplicate hard-coded lists.
     dynamic_source_scripts = {
         "app.js": ("sources/registry.json", "data/status.json", "data/catalog.json", "sourceWebsiteIcon", "data-source-website-icon", "installers.js", "SOURCE_VARIANT_IDS", "sourceVariantLabel", "sourceModeLabel", "sourceInstallerCompatibility", "sourceInstallerDirectAvailable", "data-blocked-installers", "includeOffline:checkedOffline", "groupInstallerIds(sourceInstallerIds(source), 3)"),
-        "builder.js": ("sources/registry.json", "data/status.json", "data/catalog.json", "installers.js", "BUILDER_INSTALLER_IDS", "DEFAULT_BUILDER_INSTALLER_ID", "MIX_PACKAGE_IDS", "mixPackageData", "mixPackageTargetIds", "installerMixPackageData", "sourceInstallerDirectAvailable", "directSourceAvailable", "sourceFormatLabel", "targetVariant", "bundleKey = bundle.toLowerCase()", "dedupeHelp", "dedupeResult", "mixDedupeHelp"),
+        "builder.js": ("sources/registry.json", "data/status.json", "installers.js", "SOURCE_BUILDER_INSTALLER_IDS", "DEFAULT_SOURCE_BUILDER_INSTALLER_ID", "sourceInstallerDirectAvailable", "sourceFormatLabel", "targetVariant", "queueEntries()", "installer.buildLink(sourceUrl)", "window.location.href = entries[0].deepLink", "copyQueueUrls", "expQueueList"),
         "credits.js": ("sources/registry.json", "sourceCredits", "source.developer", "maintainerGroups", "sourceCreditGroup", "brand-link-icon", "iconImage", "CORE_SIDELOAD_RESOURCE_NAMES", "SIDELOAD_TOOLS"),
     }
     for script_name, required_parts in dynamic_source_scripts.items():
@@ -1369,6 +1379,8 @@ def validate_layout() -> None:
             "SOURCE_VARIANTS",
             "SOURCE_VARIANT_IDS",
             "SOURCE_MODES",
+            "SOURCE_BUILDER_INSTALLER_IDS",
+            "DEFAULT_SOURCE_BUILDER_INSTALLER_ID",
             "BUILDER_INSTALLER_IDS",
             "DEFAULT_BUILDER_INSTALLER_ID",
             "builderDefault",
@@ -1507,80 +1519,72 @@ def validate_layout() -> None:
                     f"missing {required_sideinstaller_profile!r}"
                 )
 
-        builder_installer_end = installers_text.find("export const BUILDER_INSTALLER_IDS")
-        builder_installer_text = installers_text[:builder_installer_end] if builder_installer_end >= 0 else installers_text
-        mix_target_count = builder_installer_text.count("mixTarget: true")
-        mix_package_count = builder_installer_text.count("mixPackage:")
-        if mix_package_count != mix_target_count:
-            error(
-                "Every Builder Mix target must declare its hosted mixPackage; "
-                f"found {mix_package_count} mixPackage entries for {mix_target_count} mixTarget entries"
-            )
-
     builder_page = ROOT / "builder.html"
     if builder_page.exists():
         builder_page_text = builder_page.read_text(encoding="utf-8")
-        if 'id="mixDedupeHelp"' not in builder_page_text:
-            error("builder.html must explain bundle-ID deduplication in the Mix UI")
-        if 'id="expAddTarget"' not in builder_page_text:
-            error("builder.html must keep the direct installer Add action in the result UI")
-        for forbidden_result_menu in ('id="expAddSources"', 'id="expAddSourcesSummary"', 'id="expAddSourcesMenu"'):
-            if forbidden_result_menu in builder_page_text:
+        for required_queue_ui in (
+            'id="builderTargets" class="builder-target-picker-host"',
+            'id="expAddTarget"',
+            'id="expCopyUrl"',
+            'id="expRestartQueue"',
+            'id="expQueueList"',
+            'id="mixCompatibilityHelp"',
+        ):
+            if required_queue_ui not in builder_page_text:
                 error(
-                    "Builder result must not show a per-source installer dropdown; "
-                    f"found {forbidden_result_menu!r}"
+                    "Builder direct Source queue UI is incomplete; "
+                    f"missing {required_queue_ui!r}"
                 )
-        if 'id="builderTargets" class="builder-target-picker-host"' not in builder_page_text:
-            error("Builder installer target must use the compact dropdown host")
-        if 'id="mixCompatibilityHelp"' not in builder_page_text:
-            error("Builder must explain PASS, TRY, incompatible Sources and direct Add behavior in the UI")
+        for obsolete_mix_ui in (
+            "Build Mix",
+            "Download JSON",
+            "Preview JSON",
+            'id="expDownload"',
+            'id="expPreview"',
+            'data-exp-compat-filter',
+        ):
+            if obsolete_mix_ui in builder_page_text:
+                error(
+                    "Builder must not restore combined Mix UI; "
+                    f"found {obsolete_mix_ui!r}"
+                )
         if 'class="builder-target-tabs"' in builder_page_text:
             error("Builder must not restore the large installer target card grid")
 
     installers_script = JS_DIR / "installers.js"
     if installers_script.exists():
         installers_text = installers_script.read_text(encoding="utf-8")
-        for required_mix_profile in (
-            "mixProfile: 'altstore-classic'",
-            "mixProfile: 'sidestore-classic'",
-            "mixProfile: 'livecontainer'",
-            "mixProfile: 'flarestore-classic'",
-            "mixProfile: 'feather-classic'",
+        for required_source_builder_arch in (
+            "export const SOURCE_BUILDER_INSTALLER_IDS",
+            "export const DEFAULT_SOURCE_BUILDER_INSTALLER_ID",
+            "capabilities?.includes('source')",
         ):
-            if required_mix_profile not in installers_text:
+            if required_source_builder_arch not in installers_text:
                 error(
-                    "installers.js must define an explicit Mix parser profile for every Builder target; "
-                    f"missing {required_mix_profile!r}"
+                    "installers.js must define direct Source Builder targets; "
+                    f"missing {required_source_builder_arch!r}"
                 )
 
     builder_script = JS_DIR / "builder.js"
     if builder_script.exists():
         builder_text = builder_script.read_text(encoding="utf-8")
-        if "sourceUrl && directSourceAvailable(ids[0], target)" not in builder_text:
-            error("Builder single-source fallback must respect per-installer direct Source compatibility")
-        for compatibility_ui_required in (
-            "targetCompatibility(source)",
-            "selectableForTarget(source)",
-            "builder-item-disabled",
-            "removedIncompatible",
-            "compatLogic",
+        for required_direct_queue in (
+            "SOURCE_BUILDER_INSTALLER_IDS",
+            "DEFAULT_SOURCE_BUILDER_INSTALLER_ID",
+            "function targetCompatibility(source)",
+            "function queueEntries()",
+            "function startQueue()",
+            "sourceVariantURL(source, installer.variant)",
+            "installer.buildLink(sourceUrl)",
+            "window.location.href = entries[0].deepLink",
+            "urls.join('\\n')",
+            "$('#expAddTarget')?.addEventListener('click'",
+            "$('#expQueueList')?.addEventListener('click'",
         ):
-            if compatibility_ui_required not in builder_text:
+            if required_direct_queue not in builder_text:
                 error(
-                    "Builder compatibility UX is incomplete; "
-                    f"missing {compatibility_ui_required!r}"
-                )
-        for hosted_api_required in (
-            "fetch('data/mix-api.json'",
-            "async function hostCustomMix(mix)",
-            "body:JSON.stringify(mix)",
-            "const hostedMix = await hostCustomMix(mix)",
-            "hostedMix?.url",
-        ):
-            if hosted_api_required not in builder_text:
-                error(
-                    "Builder hosted Mix API integration is incomplete; "
-                    f"missing {hosted_api_required!r}"
+                    "Builder direct Source queue is incomplete; "
+                    f"missing {required_direct_queue!r}"
                 )
         for picker_required in (
             'class="builder-target-picker"',
@@ -1593,65 +1597,27 @@ def validate_layout() -> None:
                     "Builder installer target dropdown is incomplete; "
                     f"missing {picker_required!r}"
                 )
+        for obsolete_mix_code in (
+            "hostCustomMix",
+            "data/mix-api.json",
+            "source-cache/",
+            "sanitizeClassicApp",
+            "dedupe(payloads)",
+            "hostedTarget(ids)",
+            "JSON.stringify(mix",
+            "blobUrl",
+        ):
+            if obsolete_mix_code in builder_text:
+                error(
+                    "Builder must use original Source URLs, not generated Mix JSON; "
+                    f"found {obsolete_mix_code!r}"
+                )
         if "$('[data-exp-target]').forEach(button => button.addEventListener" in builder_text:
             error("Builder target picker must use delegated events so re-rendered options keep working")
-        for required_action in (
-            "const addTarget = $('#expAddTarget')",
-            "installer.buildLink(hosted.url)",
-            "addTarget.innerHTML = `${installerIcon(target)}",
-        ):
-            if required_action not in builder_text:
-                error(
-                    "Builder result must expose one direct installer action; "
-                    f"missing {required_action!r}"
-                )
-        for forbidden_dropdown_code in (
-            "const addSources = $('#expAddSources')",
-            "addSourcesSummary.innerHTML",
-            "addSourcesMenu.innerHTML",
-            "sourceActions = ids.map",
-        ):
-            if forbidden_dropdown_code in builder_text:
-                error(
-                    "Builder result must not restore the per-source installer dropdown; "
-                    f"found {forbidden_dropdown_code!r}"
-                )
-        for forbidden in (
-            "let target = 'altstore'",
-            "savedTarget : 'altstore'",
-            "button.dataset.expTarget : 'altstore'",
-            "status?.altstore?.sourceURL",
-            "status?.altstore?.sourceIDs",
-            "status?.sidestore?.sourceURL",
-            "status?.sidestore?.sourceIDs",
-            "new Set(['sidestore','livecontainer'])",
-            'new Set(["sidestore","livecontainer"])',
-            "INSTALLERS[target]?.label || 'AltStore'",
-            "$('[data-exp-target]').forEach",
-        ):
-            if forbidden in builder_text:
-                error(
-                    "builder.js still hard-codes hosted Mix package behavior; "
-                    f"found {forbidden!r}; use MIX_PACKAGES from installers.js"
-                )
 
     mix_api_config = ROOT / "data" / "mix-api.json"
-    if not mix_api_config.exists():
-        error("Missing data/mix-api.json for hosted Custom Builder Mixes")
-    else:
-        try:
-            mix_api_payload = load_json(mix_api_config)
-            mix_api_url = str(mix_api_payload.get("apiURL") or "").strip()
-            if not mix_api_url.startswith("https://"):
-                error("data/mix-api.json apiURL must be a public HTTPS endpoint")
-            ttl_hours = mix_api_payload.get("ttlHours")
-            max_sources = mix_api_payload.get("maxSources")
-            if not isinstance(ttl_hours, (int, float)) or ttl_hours <= 0:
-                error("data/mix-api.json ttlHours must be a positive number")
-            if not isinstance(max_sources, int) or max_sources <= 0:
-                error("data/mix-api.json maxSources must be a positive integer")
-        except (json.JSONDecodeError, OSError, AttributeError) as exc:
-            error(f"Unable to validate data/mix-api.json: {exc}")
+    if mix_api_config.exists():
+        error("Obsolete data/mix-api.json must be removed; direct Source Builder does not use a Mix API")
 
     source_updater = ROOT / "tools" / "update_sources.py"
     if source_updater.exists():
@@ -2184,27 +2150,27 @@ def validate_layout() -> None:
     builder_script = JS_DIR / "builder.js"
     if builder_script.exists():
         builder_text = builder_script.read_text(encoding="utf-8")
-        for required_altstore_user_info in (
-            "sourceIDs:ids.join(',')",
-            ".join('\\n')",
-            "experimental:String(hasTry)",
-            "function targetMixProfile()",
-            "function normalizeVersionSize(version)",
-            "function sanitizeClassicApp(app)",
-            "function sanitizeAppForTarget(app)",
-            "delete cleaned.marketplaceID",
-            "delete cleaned.Build",
-            "delete cleaned.build",
-            "item.buildNumber = item.buildVersion",
-            ".map(item => sanitizeAppForTarget(item.app))",
-            "targetMixProfile() === 'altstore-classic'",
-            "const hostedMix = await hostCustomMix(mix)",
-            "hosted = hostedTarget(ids)",
+        for required_source_queue in (
+            "SOURCE_BUILDER_INSTALLER_IDS",
+            "function queueEntries()",
+            "installer.buildLink(sourceUrl)",
+            "window.location.href = entries[0].deepLink",
         ):
-            if required_altstore_user_info not in builder_text:
+            if required_source_queue not in builder_text:
                 error(
-                    "builder.js must keep generated userInfo string-only for AltStore compatibility; "
-                    f"missing {required_altstore_user_info!r}"
+                    "builder.js must keep the direct original-Source queue; "
+                    f"missing {required_source_queue!r}"
+                )
+        for forbidden_mix_runtime in (
+            "hostCustomMix",
+            "sanitizeClassicApp",
+            "data/mix-api.json",
+            "source-cache/",
+        ):
+            if forbidden_mix_runtime in builder_text:
+                error(
+                    "builder.js must not regenerate or host combined Source JSON; "
+                    f"found {forbidden_mix_runtime!r}"
                 )
 
     for search_script in ("app.js", "builder.js"):
