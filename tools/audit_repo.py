@@ -1141,7 +1141,7 @@ def validate_layout() -> None:
     # the catalog, Builder and Credits without maintaining duplicate hard-coded lists.
     dynamic_source_scripts = {
         "app.js": ("sources/registry.json", "data/status.json", "data/catalog.json", "sourceWebsiteIcon", "data-source-website-icon", "installers.js", "SOURCE_VARIANT_IDS", "sourceVariantLabel", "sourceModeLabel", "sourceInstallerCompatibility", "sourceInstallerDirectAvailable", "data-blocked-installers", "includeOffline:checkedOffline", "groupInstallerIds(sourceInstallerIds(source), 3)"),
-        "builder.js": ("sources/registry.json", "data/status.json", "installers.js", "SOURCE_BUILDER_INSTALLER_IDS", "DEFAULT_SOURCE_BUILDER_INSTALLER_ID", "sourceInstallerDirectAvailable", "sourceFormatLabel", "targetVariant", "queueEntries()", "installer.buildLink(sourceUrl)", "window.location.href = entries[0].deepLink", "copyQueueUrls", "expQueueList"),
+        "builder.js": ("sources/registry.json", "data/status.json", "installers.js", "SOURCE_BUILDER_INSTALLER_IDS", "DEFAULT_SOURCE_BUILDER_INSTALLER_ID", "sourceInstallerDirectAvailable", "sourceFormatLabel", "targetVariant", "queueEntries()", "installer.buildLink(sourceUrl)", "SHORTCUT_NAME", "startShortcutImport", "input=text&text=", "copyQueueUrls", "createSelectionJson", "ios-hub-source-selection-v1", "expQueueList"),
         "credits.js": ("sources/registry.json", "sourceCredits", "source.developer", "maintainerGroups", "sourceCreditGroup", "brand-link-icon", "iconImage", "CORE_SIDELOAD_RESOURCE_NAMES", "SIDELOAD_TOOLS"),
     }
     for script_name, required_parts in dynamic_source_scripts.items():
@@ -1167,7 +1167,7 @@ def validate_layout() -> None:
             "altstore-pal",
             "flarestore",
             "feather",
-            "flarestore://source?url=",
+            "flarestore://addRepo=",
             "feather://source/",
             "SOURCE_VARIANTS",
             "SOURCE_VARIANT_IDS",
@@ -1287,10 +1287,12 @@ def validate_layout() -> None:
 
         if "resourceBadges: Object.freeze(['freeVerified', 'resourceSideloading', 'Sources'])" not in installers_text:
             error("FlareStore Resources profile must keep FREE verified, Sideloading and Sources badges")
-        if "icon: 'assets/icons/flarestore.svg'" not in installers_text:
-            error("FlareStore must use the local stable icon asset")
+        if "icon: 'assets/icons/flarestore.webp'" not in installers_text:
+            error("FlareStore must use the local current icon asset")
         if "https://flarestore.app/favicon.ico" in installers_text:
             error("FlareStore must not depend on the external favicon")
+        if not (ROOT / "assets" / "icons" / "flarestore.webp").exists():
+            error("Missing local FlareStore icon asset: assets/icons/flarestore.webp")
 
         for required_sideinstaller_profile in (
             "ios27: 'on-device'",
@@ -1336,10 +1338,7 @@ def validate_layout() -> None:
                 )
         for obsolete_mix_ui in (
             "Build Mix",
-            "Download JSON",
-            "Preview JSON",
-            'id="expDownload"',
-            'id="expPreview"',
+            "Hosted Mix",
             'data-exp-compat-filter',
         ):
             if obsolete_mix_ui in builder_page_text:
@@ -1372,11 +1371,14 @@ def validate_layout() -> None:
             "DEFAULT_SOURCE_BUILDER_INSTALLER_ID",
             "function targetCompatibility(source)",
             "function queueEntries()",
-            "function startQueue()",
+            "async function startShortcutImport()",
+            "SHORTCUT_NAME",
+            "input=text&text=",
             "sourceVariantURL(source, installer.variant)",
             "installer.buildLink(sourceUrl)",
-            "window.location.href = entries[0].deepLink",
             "urls.join('\\n')",
+            "function createSelectionJson()",
+            "ios-hub-source-selection-v1",
             "$('#expAddTarget')?.addEventListener('click'",
             "$('#expQueueList')?.addEventListener('click'",
         ):
@@ -1976,7 +1978,10 @@ def validate_layout() -> None:
             "SOURCE_BUILDER_INSTALLER_IDS",
             "function queueEntries()",
             "installer.buildLink(sourceUrl)",
-            "window.location.href = entries[0].deepLink",
+            "async function startShortcutImport()",
+            "SHORTCUT_NAME",
+            "input=text&text=",
+            "function createSelectionJson()",
         ):
             if required_source_queue not in builder_text:
                 error(
