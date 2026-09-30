@@ -1,4 +1,5 @@
-import { SUPPORTED_LANGUAGES, applyTranslations, normalizeLanguage } from './i18n.js?v=1.1.5-20260918-fullaudit2';
+import { SUPPORTED_LANGUAGES, applyTranslations, normalizeLanguage } from './i18n.js?v=1.1.5-20260930-source-import8';
+import { SIDELOAD_TOOLS, CORE_SIDELOAD_RESOURCE_NAMES, creditSideloadTools, sideloadToolURL } from './installers.js?v=1.1.5-20260930-source-import4';
 
 const root = document.documentElement;
 const $ = selector => document.querySelector(selector);
@@ -18,6 +19,8 @@ const CREDITS_COPY = {
     sidestoreDesc: 'Open-source sideloading project maintained by the SideStore team and contributors.',
     sideinstallerDesc: 'On-device installer for SideStore and SideStore + LiveContainer by FrizzleM.',
     livecontainerDesc: 'Open-source project for running multiple iOS apps inside a container.',
+    flarestoreDesc: 'FlareStore app and repository tooling for iOS app signing, installation and compatible source browsing.',
+    featherDesc: 'Open-source on-device iOS application manager and signer by Samara and contributors.',
     trollstoreDesc: 'Permanent IPA installation project for supported iOS versions by opa334 and contributors.',
     atvloadlyDesc: 'Open-source Apple TV sideloading project by bitxeno and contributors.',
     iloaderDesc: 'Sideloading and pairing companion used with SideStore and LiveContainer workflows.',
@@ -62,6 +65,8 @@ const CREDITS_COPY = {
     sidestoreDesc: 'Open-source projekt pro sideloading spravovaný týmem SideStore a přispěvateli.',
     sideinstallerDesc: 'Instalátor SideStore a SideStore + LiveContainer přímo v zařízení od FrizzleM.',
     livecontainerDesc: 'Open-source projekt pro spouštění více iOS aplikací uvnitř jednoho kontejneru.',
+    flarestoreDesc: 'FlareStore aplikace a nástroje pro repozitáře, podepisování, instalaci a procházení kompatibilních iOS zdrojů.',
+    featherDesc: 'Open-source správce a podepisovač iOS aplikací přímo v zařízení od Samary a přispěvatelů.',
     trollstoreDesc: 'Projekt pro trvalou instalaci IPA na podporovaných verzích iOS od opa334 a přispěvatelů.',
     atvloadlyDesc: 'Open-source projekt pro sideloading na Apple TV od bitxeno a přispěvatelů.',
     iloaderDesc: 'Pomocník pro sideloading a párování používaný se SideStore a LiveContainer.',
@@ -106,6 +111,8 @@ const CREDITS_COPY = {
     sidestoreDesc: 'Open-Source-Sideloading-Projekt des SideStore-Teams und seiner Mitwirkenden.',
     sideinstallerDesc: 'On-Device-Installer für SideStore und SideStore + LiveContainer von FrizzleM.',
     livecontainerDesc: 'Open-Source-Projekt zum Ausführen mehrerer iOS-Apps in einem Container.',
+    flarestoreDesc: 'FlareStore-App und Repository-Werkzeuge zum Signieren, Installieren und Durchsuchen kompatibler iOS-Quellen.',
+    featherDesc: 'Open-Source-iOS-App-Manager und Signierer direkt auf dem Gerät von Samara und Mitwirkenden.',
     trollstoreDesc: 'Projekt zur permanenten IPA-Installation auf unterstützten iOS-Versionen von opa334 und Mitwirkenden.',
     atvloadlyDesc: 'Open-Source-Apple-TV-Sideloading-Projekt von bitxeno und Mitwirkenden.',
     iloaderDesc: 'Sideloading- und Pairing-Begleiter für SideStore- und LiveContainer-Abläufe.',
@@ -150,6 +157,8 @@ const CREDITS_COPY = {
     sidestoreDesc: 'Proyecto open source de sideloading mantenido por el equipo de SideStore y sus colaboradores.',
     sideinstallerDesc: 'Instalador en el dispositivo para SideStore y SideStore + LiveContainer de FrizzleM.',
     livecontainerDesc: 'Proyecto open source para ejecutar varias apps de iOS dentro de un contenedor.',
+    flarestoreDesc: 'App FlareStore y herramientas de repositorio para firmar, instalar y explorar fuentes iOS compatibles.',
+    featherDesc: 'Gestor y firmador open source de apps iOS en el propio dispositivo por Samara y colaboradores.',
     trollstoreDesc: 'Proyecto de instalación permanente de IPA para versiones compatibles de iOS de opa334 y colaboradores.',
     atvloadlyDesc: 'Proyecto open source de sideloading para Apple TV de bitxeno y colaboradores.',
     iloaderDesc: 'Herramienta complementaria de sideloading y emparejamiento para flujos con SideStore y LiveContainer.',
@@ -194,6 +203,8 @@ const CREDITS_COPY = {
     sidestoreDesc: 'Projet open source de sideloading maintenu par l’équipe SideStore et ses contributeurs.',
     sideinstallerDesc: 'Installateur sur appareil pour SideStore et SideStore + LiveContainer par FrizzleM.',
     livecontainerDesc: 'Projet open source permettant d’exécuter plusieurs apps iOS dans un seul conteneur.',
+    flarestoreDesc: 'Application FlareStore et outils de dépôt pour signer, installer et parcourir des sources iOS compatibles.',
+    featherDesc: 'Gestionnaire et outil de signature iOS open source sur l’appareil par Samara et les contributeurs.',
     trollstoreDesc: 'Projet d’installation permanente d’IPA pour les versions iOS compatibles par opa334 et ses contributeurs.',
     atvloadlyDesc: 'Projet open source de sideloading Apple TV par bitxeno et ses contributeurs.',
     iloaderDesc: 'Outil d’accompagnement pour le sideloading et l’appairage avec SideStore et LiveContainer.',
@@ -228,10 +239,7 @@ const CREDITS_COPY = {
   }
 };
 
-const CORE_RESOURCE_NAMES = new Set([
-  'AltStore Classic', 'AltStore', 'SideStore', 'SideInstaller', 'LiveContainer',
-  'Sideloadly', 'atvloadly', 'iloader', 'Impactor', 'TrollStore'
-]);
+const CORE_RESOURCE_NAMES = new Set(CORE_SIDELOAD_RESOURCE_NAMES);
 
 let currentLang = 'en';
 
@@ -246,6 +254,122 @@ function applyCreditCopy(lang) {
     if (value) node.textContent = value;
   });
   document.title = creditText('heroTitle') + ' — iOS Hub';
+}
+
+function buildSideloadCreditCard(tool) {
+  const card = document.createElement('article');
+  card.className = 'panel resource-card';
+  card.dataset.sideloadTool = tool.id;
+
+  const icon = document.createElement('div');
+  icon.className = 'resource-icon resource-icon-image';
+  const iconImage = document.createElement('img');
+  iconImage.className = 'official-app-icon';
+  iconImage.src = tool.icon || '';
+  iconImage.alt = tool.creditName || tool.label || '';
+  iconImage.loading = 'lazy';
+  iconImage.referrerPolicy = 'no-referrer';
+  icon.appendChild(iconImage);
+
+  const badges = document.createElement('div');
+  badges.className = 'resource-badges';
+  const badge = document.createElement('span');
+  badge.className = 'pill mode';
+  badge.textContent = tool.creditBadge || 'Project';
+  badges.appendChild(badge);
+
+  const title = document.createElement('h3');
+  title.textContent = tool.creditName || tool.label || tool.id;
+
+  const description = document.createElement('p');
+  if (tool.creditDescriptionKey) description.dataset.creditCopy = tool.creditDescriptionKey;
+  description.textContent = tool.creditDescriptionKey ? creditText(tool.creditDescriptionKey) : '';
+
+  const domain = document.createElement('div');
+  domain.className = 'resource-domain';
+  domain.textContent = tool.creditDomain || tool.domain || '';
+
+  const link = document.createElement('a');
+  link.className = 'btn primary brand-link';
+  link.href = sideloadToolURL(tool.id, 'credit');
+  link.target = '_blank';
+  link.rel = 'noopener noreferrer';
+
+  const linkIcon = document.createElement('img');
+  linkIcon.className = 'brand-link-icon';
+  linkIcon.src = tool.icon || '';
+  linkIcon.alt = '';
+  linkIcon.loading = 'lazy';
+  linkIcon.referrerPolicy = 'no-referrer';
+
+  const linkText = document.createElement('span');
+  if (tool.creditLinkKey) linkText.dataset.creditCopy = tool.creditLinkKey;
+  linkText.textContent = tool.creditLinkKey ? creditText(tool.creditLinkKey) : creditText('officialWebsite');
+
+  link.append(linkIcon, linkText);
+  card.append(icon, badges, title, description, domain, link);
+  return card;
+}
+
+function renderSideloadCreditCards() {
+  const host = document.querySelector('#sideloadCreditGrid');
+  if (!host) return;
+  host.replaceChildren(...creditSideloadTools().map(buildSideloadCreditCard));
+}
+
+function hydrateSideloadCreditCards() {
+  document.querySelectorAll('[data-sideload-tool]').forEach(card => {
+    const tool = SIDELOAD_TOOLS[card.dataset.sideloadTool];
+    if (!tool) return;
+
+    card.dataset.toolType = tool.toolType || '';
+    card.dataset.capabilities = (tool.capabilities || []).join(' ');
+    card.dataset.targets = (tool.targets || []).join(' ');
+    card.dataset.hostPlatforms = (tool.hostPlatforms || []).join(' ');
+    card.dataset.computerMode = tool.computerMode || 'unknown';
+    card.dataset.sourceSupport = tool.sourceSupport || 'none';
+    card.dataset.openSource = tool.openSource === true ? 'true' : (tool.openSource === false ? 'false' : 'unknown');
+    card.dataset.resourceBadges = (tool.resourceBadges || []).join(' ');
+
+    const title = card.querySelector('h3');
+    if (title && tool.creditName) title.textContent = tool.creditName;
+
+    const description = card.querySelector('p[data-credit-copy]');
+    if (description && tool.creditDescriptionKey) {
+      description.dataset.creditCopy = tool.creditDescriptionKey;
+    }
+
+    const badge = card.querySelector('.resource-badges .pill');
+    if (badge && tool.creditBadge) badge.textContent = tool.creditBadge;
+
+    const domain = card.querySelector('.resource-domain');
+    const creditDomain = tool.creditDomain || tool.domain;
+    if (domain && creditDomain) domain.textContent = creditDomain;
+
+    const href = sideloadToolURL(tool.id, 'credit');
+    const link = card.querySelector('a.btn.primary');
+    if (link && href) link.href = href;
+    const linkLabel = link?.querySelector('[data-credit-copy]');
+    if (linkLabel && tool.creditLinkKey) linkLabel.dataset.creditCopy = tool.creditLinkKey;
+
+    card.querySelectorAll('img.official-app-icon, img.brand-link-icon').forEach(img => {
+      if (tool.icon) img.src = tool.icon;
+      if (img.classList.contains('official-app-icon')) img.alt = tool.creditName || tool.label || '';
+    });
+  });
+
+  const cards = new Map(
+    [...document.querySelectorAll('[data-sideload-tool]')]
+      .map(card => [card.dataset.sideloadTool, card])
+  );
+  const first = creditSideloadTools().map(tool => cards.get(tool.id)).find(Boolean);
+  const host = first?.parentElement;
+  if (host) {
+    creditSideloadTools().forEach(tool => {
+      const card = cards.get(tool.id);
+      if (card && card.parentElement === host) host.appendChild(card);
+    });
+  }
 }
 
 function applyTheme(theme) {
@@ -461,6 +585,9 @@ $('#languageSelect')?.addEventListener('change', event => {
   loadFeaturedCredits();
   loadCredits();
 });
+
+renderSideloadCreditCards();
+hydrateSideloadCreditCards();
 
 const savedTheme = safeGet('caseycz-theme');
 const systemDark = window.matchMedia?.('(prefers-color-scheme: dark)').matches;

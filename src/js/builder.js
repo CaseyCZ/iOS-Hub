@@ -1,21 +1,35 @@
+import {
+  INSTALLERS,
+  SOURCE_BUILDER_INSTALLER_IDS,
+  DEFAULT_SOURCE_BUILDER_INSTALLER_ID,
+  sourceInstallerDirectAvailable,
+  sourceInstallerIds,
+  sourceVariantURL,
+  sourceFormatLabel
+} from './installers.js?v=1.1.5-20260930-source-import4';
+import { SOURCE_IMPORT_SHORTCUT } from './config.js?v=1.1.5-20260930-shortcut2';
+
 const $ = selector => document.querySelector(selector);
 const $$ = selector => [...document.querySelectorAll(selector)];
 const safeGet = key => { try { return localStorage.getItem(key); } catch (_) { return null; } };
 const safeSet = (key, value) => { try { localStorage.setItem(key, value); } catch (_) {} };
+const safeRemove = key => { try { localStorage.removeItem(key); } catch (_) {} };
 
 const STORAGE = {
-  selection: 'ioshub-mix-selection',
-  category: 'ioshub-mix-category',
-  genre: 'ioshub-mix-genre',
-  target: 'ioshub-mix-target',
-  compatibility: 'ioshub-mix-compatibility',
-  query: 'ioshub-mix-query'
+  selection: 'ioshub-source-builder-selection',
+  category: 'ioshub-source-builder-category',
+  genre: 'ioshub-source-builder-genre',
+  target: 'ioshub-source-builder-target',
+  query: 'ioshub-source-builder-query',
+  queue: 'ioshub-source-builder-queue',
+  queueIndex: 'ioshub-source-builder-queue-index',
+  queueTarget: 'ioshub-source-builder-queue-target'
 };
 
 const SOURCE_CATEGORIES = new Set(['all', 'official', 'trusted', 'community', 'modified']);
 const GENRES = new Set(['all', 'games', 'emulators', 'video', 'music', 'anime', 'social', 'downloads', 'sideload', 'utilities']);
-const TARGETS = new Set(['altstore', 'sidestore', 'livecontainer']);
-const COMPATIBILITY = new Set(['all', 'pass', 'try']);
+const TARGETS = new Set(SOURCE_BUILDER_INSTALLER_IDS);
+const SHORTCUT_INSTALLER_IDS = new Set(SOURCE_IMPORT_SHORTCUT.supportedInstallerIds || []);
 const GENRE_RULES = {
   games: ['games','pokemon','mmo','geometry-dash','game'],
   emulators: ['emulator','retro','dreamcast','dolphinios','virtualization'],
@@ -30,59 +44,282 @@ const GENRE_RULES = {
 
 const copy = {
   en: {
-    title:'Custom Source Builder', desc:'Filter checked online sources, select any combination and build your own Mix for AltStore, SideStore or LiveContainer.',
-    selectPass:'Select PASS for', selectAll:'Select all shown', clear:'Clear selection', build:'Build Mix', selected:'selected', shown:'shown', pass:'PASS', try:'TRY', passHelp:'The list is already limited to the selected destination. PASS additionally means the source passed the automated Mix merge test; it does not guarantee every app will run on every iOS device.',
-    mixStatus:'Merge test', targetLabel:'Where do you want to add the Mix?', targetHelpAlt:'The finished Mix will be a Classic AltSource for AltStore Classic. SideStore-only and PAL marketplace sources are hidden.', targetHelpSide:'SideStore is fully compatible with AltStore Sources (AltSources). We show Classic IPA-style sources here and remove PAL-only marketplace metadata from the generated Mix.', targetHelpLive:'LiveContainer can browse AltStore-style sources and install apps from their latest version download URL. We show mergeable Classic IPA-style sources here.', palNote:'AltStore PAL is not a Custom Mix target because PAL uses notarized marketplace packages and different source metadata than Classic IPA sources.', targetPrefix:'Target', statusAll:'All', statusPass:'PASS only', statusTry:'TRY only', platform:'Platform', platformAll:'All', classic:'AltStore Classic', pal:'AltStore PAL', sidestore:'SideStore', livecontainer:'LiveContainer', autoTested:'Auto tested',
-    altPackage:'AltStore Source', sidePackage:'SideStore Source', livePackage:'LiveContainer Source', customMix:'Custom Mix', filters:'⚙ Filters · 🔎 Search · ☑ Selection',
-    addAlt:'＋ Add to AltStore', addSide:'＋ Add to SideStore', addLive:'＋ Add to LiveContainer', copyUrl:'Copy URL', json:'JSON ↗', apps:'apps', sources:'sources',
-    hosted:'Hosted Mix ready', local:'Local Mix ready', experimental:'Experimental Mix ready', localNote:'This PASS combination is valid but is not pre-hosted. Download the JSON to inspect or host it; direct Add requires a public source URL.', tryNote:'This Mix contains one or more TRY sources. Download and test the JSON first; PAL or installer-specific metadata may not work after merging.',
-    conflicts:'duplicates resolved', download:'Download JSON', preview:'Preview JSON', building:'Testing and combining sources…', failed:'The selected Mix could not be built.', copied:'Source URL copied.', empty:'No sources match the current filters.'
+    title:'Custom Source Builder',
+    desc:'Choose an installer and original Sources. The Builder does not merge them into one universal Mix. Instead, iOS Hub Source Import sends the original Source URLs one after another in a single Shortcut run; when the selected installer supports this flow, multiple Sources can be added in that one run. If it does not, confirmation or the manual one-by-one fallback may still be needed. JSON export is optional.',
+    selectCompatible:'Select all compatible',
+    selectAll:'Select compatible shown',
+    clear:'Clear selection',
+    build:'Bulk import',
+    installShortcut:'Install Shortcut',
+    shortcutHelp:'Bulk import uses the iOS Hub Source Import Shortcut. Install it once; you can reinstall it here later if you delete it.',
+    shortcutUnsupported:'Bulk import through the Shortcut is not available for {tool} yet. You can still add the selected Sources manually one by one.',
+    prepareManual:'Prepare manual fallback',
+    manualOnlyQueueHelp:'This installer is not supported by the Shortcut yet. Open the selected Sources one by one below.',
+    downloadJson:'Download selection JSON',
+    previewJson:'Preview selection JSON',
+    jsonBuilding:'Preparing JSON…',
+    jsonReady:'JSON ready · {sources} original Sources.',
+    jsonFailed:'Could not create JSON:',
+    noSelection:'No compatible Sources are selected.',
+    noMergeableApps:'No compatible Sources were found.',
+    selected:'selected',
+    shown:'shown',
+    compatible:'COMPATIBLE',
+    incompatible:'INCOMPATIBLE',
+    incompatibleReason:'Not compatible with the selected installer.',
+    removedIncompatible:'{n} previously selected Source(s) were removed because they are not compatible with {tool}.',
+    targetLabel:'Where do you want to add the Sources?',
+    targetHelpAlt:'AltStore opens each Source as its own preview and may require confirmation. If bulk import is inconvenient, use the manual one-by-one fallback below.',
+    targetHelpSide:'SideStore handles one Source URL per deep link and may require confirmation. If needed, use the manual one-by-one fallback below.',
+    targetHelpLive:'Each selected AltStore-style Source is opened directly in LiveContainer using its original URL.',
+    targetHelpFlare:'Each selected compatible repository is opened directly in FlareStore using its original URL.',
+    targetHelpFeather:'Each selected repository is opened directly in Feather using its original URL.',
+    targetHelpPal:'Each PAL Source is opened separately in AltStore PAL and may require confirmation. No Classic/PAL conversion is performed.',
+    targetHelpGeneric:'The Builder sends original Source URLs directly to the selected installer.',
+    targetPrefix:'Target',
+    customBuilder:'Selected Sources',
+    filters:'⚙ Filters · 🔎 Search · ☑ Selection',
+    sourceHelp:'Sources are not merged, copied or re-hosted. Each original URL is added separately, so future updates still come from the original Source.',
+    queueHelp:'Bulk import sends the full selection to the Shortcut. The list below remains available as a manual one-by-one fallback.',
+    addTo:'Open next in',
+    copyUrls:'Copy Source URLs',
+    copied:'URLs copied',
+    restart:'Restart manual fallback',
+    queueReady:'Manual fallback ready',
+    queueFinished:'Manual fallback completed.',
+    queueProgress:'manually opened',
+    opening:'Opening',
+    retry:'Open',
+    pending:'Pending',
+    opened:'Opened',
+    empty:'No Sources match the current filters.',
+    apps:'apps',
+    sources:'Sources'
   },
   cs: {
-    title:'Custom Source Builder', desc:'Filtruj kontrolované online zdroje, vyber libovolnou kombinaci a vytvoř vlastní Mix pro AltStore, SideStore nebo LiveContainer.',
-    selectPass:'Vybrat PASS pro', selectAll:'Vybrat vše zobrazené', clear:'Zrušit výběr', build:'Vytvořit Mix', selected:'vybráno', shown:'zobrazeno', pass:'PASS', try:'ZKUSIT', passHelp:'Seznam je už omezený podle zvoleného cíle. PASS navíc znamená, že zdroj prošel automatickým testem sloučení do Mixu; neznamená to, že každá aplikace poběží na každém iOS zařízení.',
-    mixStatus:'Test sloučení', targetLabel:'Kam chceš výsledný Mix přidat?', targetHelpAlt:'Výsledný Mix bude Classic AltSource pro AltStore Classic. SideStore-only a PAL marketplace zdroje se skryjí.', targetHelpSide:'SideStore je plně kompatibilní s AltStore Sources (AltSources). Zobrazujeme zde Classic IPA zdroje a z výsledného Mixu odstraňujeme metadata určená jen pro PAL marketplace.', targetHelpLive:'LiveContainer umí procházet AltStore-style zdroje a instalovat aplikace z download URL jejich nejnovější verze. Zobrazujeme zde sloučitelné Classic IPA zdroje.', palNote:'AltStore PAL není cílem pro Vlastní Mix, protože PAL používá notarizované marketplace balíčky a jiná metadata než Classic IPA zdroje.', targetPrefix:'Cíl', statusAll:'Vše', statusPass:'Jen PASS', statusTry:'Jen ZKUSIT', platform:'Platforma', platformAll:'Vše', classic:'AltStore Classic', pal:'AltStore PAL', sidestore:'SideStore', livecontainer:'LiveContainer', autoTested:'Automaticky testováno',
-    altPackage:'AltStore Source', sidePackage:'SideStore Source', livePackage:'LiveContainer Source', customMix:'Vlastní Mix', filters:'⚙ Filtry · 🔎 Hledání · ☑ Výběr',
-    addAlt:'＋ Přidat do AltStore', addSide:'＋ Přidat do SideStore', addLive:'＋ Přidat do LiveContainer', copyUrl:'Kopírovat URL', json:'JSON ↗', apps:'aplikací', sources:'zdrojů',
-    hosted:'Veřejný Mix je připraven', local:'Lokální Mix je připraven', experimental:'Experimentální Mix je připraven', localNote:'Tato PASS kombinace je validní, ale není předem hostovaná. JSON můžeš stáhnout nebo hostovat; přímé přidání vyžaduje veřejnou URL.', tryNote:'Tento Mix obsahuje jeden nebo více zdrojů ZKUSIT. JSON nejdřív stáhni a otestuj; PAL nebo installer-specifická metadata se po sloučení nemusí chovat stejně.',
-    conflicts:'duplicit vyřešeno', download:'Stáhnout JSON', preview:'Náhled JSON', building:'Testuji a spojuji zdroje…', failed:'Vybraný Mix se nepodařilo vytvořit.', copied:'URL zdroje zkopírována.', empty:'Aktuálním filtrům neodpovídá žádný zdroj.'
+    title:'Custom Source Builder',
+    desc:'Vyber instalátor a původní Sources. Builder je neslučuje do jednoho univerzálního Mixu. Místo toho iOS Hub Source Import pošle původní URL Sources postupně v jednom spuštění zkratky; pokud to zvolený instalátor podporuje, může se tak v jednom běhu přidat více Sources. Pokud ne, může být potřeba potvrzení nebo ruční otevření po jedné. Export JSONu je volitelný.',
+    selectCompatible:'Vybrat všechny kompatibilní',
+    selectAll:'Vybrat kompatibilní zobrazené',
+    clear:'Zrušit výběr',
+    build:'Hromadný import',
+    installShortcut:'Nainstalovat zkratku',
+    shortcutHelp:'Hromadný import používá zkratku iOS Hub Source Import. Stačí ji nainstalovat jednou; pokud ji smažeš, odsud ji můžeš kdykoli znovu přidat.',
+    shortcutUnsupported:'Hromadný import přes zkratku zatím není pro {tool} podporovaný. Vybrané Sources můžeš stále přidat ručně po jedné.',
+    prepareManual:'Připravit ruční otevření',
+    manualOnlyQueueHelp:'Tento instalátor zatím zkratka nepodporuje. Otevři vybrané Sources ručně po jedné níže.',
+    downloadJson:'Stáhnout JSON výběru',
+    previewJson:'Náhled JSON výběru',
+    jsonBuilding:'Připravuji JSON…',
+    jsonReady:'JSON připraven · {sources} původních Sources.',
+    jsonFailed:'JSON se nepodařilo vytvořit:',
+    noSelection:'Není vybraná žádná kompatibilní Source.',
+    noMergeableApps:'Nebyly nalezeny žádné kompatibilní Sources.',
+    selected:'vybráno',
+    shown:'zobrazeno',
+    compatible:'KOMPATIBILNÍ',
+    incompatible:'NEKOMPATIBILNÍ',
+    incompatibleReason:'Není kompatibilní se zvoleným instalátorem.',
+    removedIncompatible:'Kvůli nekompatibilitě s {tool} bylo z výběru odebráno Sources: {n}.',
+    targetLabel:'Kam chceš Sources přidat?',
+    targetHelpAlt:'AltStore otevře každou Source jako samostatný náhled a může vyžadovat potvrzení. Když hromadný import není vhodný, použij dole ruční otevření po jedné.',
+    targetHelpSide:'SideStore zpracovává jednu Source URL na jeden deep-link a může vyžadovat potvrzení. Když je potřeba, použij dole ruční otevření po jedné.',
+    targetHelpLive:'Každá vybraná AltStore-style Source se otevře přímo v LiveContaineru přes původní URL.',
+    targetHelpFlare:'Každý vybraný kompatibilní repozitář se otevře přímo ve FlareStore přes původní URL.',
+    targetHelpFeather:'Každý vybraný repozitář se otevře přímo ve Feather přes původní URL.',
+    targetHelpPal:'Každá PAL Source se v AltStore PAL otevře samostatně a může vyžadovat potvrzení. Nic nepřevádíme mezi Classic a PAL.',
+    targetHelpGeneric:'Builder posílá původní Source URL přímo do zvoleného instalátoru.',
+    targetPrefix:'Cíl',
+    customBuilder:'Vybrané Sources',
+    filters:'⚙ Filtry · 🔎 Hledání · ☑ Výběr',
+    sourceHelp:'Sources se neslučují, nekopírují ani nerehostují. Každá původní URL se přidá samostatně, takže budoucí aktualizace dál chodí z originální Source.',
+    queueHelp:'Hromadný import pošle celý výběr do zkratky. Seznam dole zůstává jako ruční záloha pro otevření Sources po jedné.',
+    addTo:'Otevřít další v',
+    copyUrls:'Kopírovat URL Sources',
+    copied:'URL zkopírovány',
+    restart:'Začít ruční otevření znovu',
+    queueReady:'Ruční otevření po jedné',
+    queueFinished:'Ruční otevření je dokončené.',
+    queueProgress:'ručně otevřeno',
+    opening:'Otevírám',
+    retry:'Otevřít',
+    pending:'Čeká',
+    opened:'Otevřeno',
+    empty:'Aktuálním filtrům neodpovídá žádná Source.',
+    apps:'aplikací',
+    sources:'Sources'
   },
   de: {
-    title:'Custom Source Builder', desc:'Filtere geprüfte Online-Quellen, wähle eine beliebige Kombination und erstelle deinen eigenen Mix für AltStore, SideStore oder LiveContainer.',
-    selectPass:'PASS wählen für', selectAll:'Alle sichtbaren wählen', clear:'Auswahl löschen', build:'Mix erstellen', selected:'ausgewählt', shown:'sichtbar', pass:'PASS', try:'TEST', passHelp:'Die Liste ist bereits auf das gewählte Ziel beschränkt. PASS bedeutet zusätzlich, dass die Quelle den automatischen iOS-Hub-Mix-Zusammenführungstest bestanden hat; nicht, dass jede App auf jedem iOS-Gerät läuft.',
-    mixStatus:'Merge-Test', targetLabel:'Wo möchtest du den Mix hinzufügen?', targetHelpAlt:'Der fertige Mix wird eine Classic AltSource für AltStore Classic. SideStore-only- und PAL-Marketplace-Quellen werden ausgeblendet.', targetHelpSide:'SideStore ist vollständig mit AltStore Sources (AltSources) kompatibel. Hier zeigen wir Classic-IPA-Quellen und entfernen PAL-only Marketplace-Metadaten aus dem erzeugten Mix.', targetHelpLive:'LiveContainer kann AltStore-ähnliche Quellen durchsuchen und Apps über die Download-URL der neuesten Version installieren. Hier zeigen wir zusammenführbare Classic-IPA-Quellen.', palNote:'AltStore PAL ist kein Ziel für Custom Mix, da PAL notarized Marketplace-Pakete und andere Metadaten als Classic-IPA-Quellen verwendet.', targetPrefix:'Ziel', statusAll:'Alle', statusPass:'Nur PASS', statusTry:'Nur TEST', platform:'Plattform', platformAll:'Alle', classic:'AltStore Classic', pal:'AltStore PAL', sidestore:'SideStore', livecontainer:'LiveContainer', autoTested:'Automatisch geprüft',
-    altPackage:'AltStore Source', sidePackage:'SideStore Source', livePackage:'LiveContainer Source', customMix:'Eigener Mix', filters:'⚙ Filter · 🔎 Suche · ☑ Auswahl',
-    addAlt:'＋ Zu AltStore', addSide:'＋ Zu SideStore', addLive:'＋ Zu LiveContainer', copyUrl:'URL kopieren', json:'JSON ↗', apps:'Apps', sources:'Quellen',
-    hosted:'Gehosteter Mix bereit', local:'Lokaler Mix bereit', experimental:'Experimenteller Mix bereit', localNote:'Diese PASS-Kombination ist gültig, aber nicht vorab gehostet. Für direktes Hinzufügen ist eine öffentliche URL nötig.', tryNote:'Dieser Mix enthält TEST-Quellen. Lade die JSON-Datei herunter und teste sie zuerst.', conflicts:'Duplikate gelöst', download:'JSON laden', preview:'JSON ansehen', building:'Quellen werden getestet…', failed:'Der ausgewählte Mix konnte nicht erstellt werden.', copied:'URL kopiert.', empty:'Keine Quellen entsprechen den Filtern.'
+    title:'Custom Source Builder',
+    desc:'Installer und originale Sources auswählen. Der Builder führt sie nicht zu einem universellen Mix zusammen. Stattdessen sendet iOS Hub Source Import die Original-URLs nacheinander in einem einzigen Kurzbefehl-Lauf; wenn der gewählte Installer diesen Ablauf unterstützt, können mehrere Sources in diesem Lauf hinzugefügt werden. Andernfalls kann eine Bestätigung oder das manuelle Öffnen einzeln erforderlich sein. Der JSON-Export ist optional.',
+    selectCompatible:'Alle kompatiblen wählen',
+    selectAll:'Sichtbare kompatible wählen',
+    clear:'Auswahl löschen',
+    build:'Massenimport',
+    installShortcut:'Kurzbefehl installieren',
+    shortcutHelp:'Der Massenimport verwendet den Kurzbefehl iOS Hub Source Import. Einmal installieren; nach dem Löschen kann er hier erneut hinzugefügt werden.',
+    shortcutUnsupported:'Der Massenimport über den Kurzbefehl wird für {tool} noch nicht unterstützt. Die ausgewählten Sources können weiterhin manuell einzeln hinzugefügt werden.',
+    prepareManual:'Manuellen Fallback vorbereiten',
+    manualOnlyQueueHelp:'Dieser Installer wird vom Kurzbefehl noch nicht unterstützt. Öffne die ausgewählten Sources unten manuell einzeln.',
+    downloadJson:'Auswahl-JSON laden',
+    previewJson:'Auswahl-JSON Vorschau',
+    jsonBuilding:'JSON wird vorbereitet…',
+    jsonReady:'JSON bereit · {sources} originale Sources.',
+    jsonFailed:'JSON konnte nicht erstellt werden:',
+    noSelection:'Keine kompatiblen Sources ausgewählt.',
+    noMergeableApps:'Keine zusammenführbaren Apps gefunden.',
+    selected:'ausgewählt',
+    shown:'sichtbar',
+    compatible:'KOMPATIBEL',
+    incompatible:'NICHT KOMPATIBEL',
+    incompatibleReason:'Nicht mit dem gewählten Installer kompatibel.',
+    removedIncompatible:'{n} zuvor ausgewählte Source(s) wurden entfernt, da sie nicht mit {tool} kompatibel sind.',
+    targetLabel:'Wo sollen die Sources hinzugefügt werden?',
+    targetHelpAlt:'AltStore öffnet jede Source als eigene Vorschau und kann eine Bestätigung verlangen. Unten bleibt das manuelle Öffnen einzeln verfügbar.',
+    targetHelpSide:'SideStore verarbeitet eine Source-URL pro Deep-Link und kann eine Bestätigung verlangen. Unten bleibt das manuelle Öffnen einzeln verfügbar.',
+    targetHelpLive:'Jede ausgewählte Source wird mit ihrer Original-URL direkt in LiveContainer geöffnet.',
+    targetHelpFlare:'Jedes ausgewählte kompatible Repository wird mit seiner Original-URL direkt in FlareStore geöffnet.',
+    targetHelpFeather:'Jedes ausgewählte Repository wird mit seiner Original-URL direkt in Feather geöffnet.',
+    targetHelpPal:'Jede PAL Source wird direkt in AltStore PAL geöffnet. Es findet keine Classic/PAL-Konvertierung statt.',
+    targetHelpGeneric:'Der Builder sendet die Original-Source-URLs direkt an den gewählten Installer.',
+    targetPrefix:'Ziel',
+    customBuilder:'Ausgewählte Sources',
+    filters:'⚙ Filter · 🔎 Suche · ☑ Auswahl',
+    sourceHelp:'Sources werden nicht zusammengeführt, kopiert oder neu gehostet. Jede Original-URL bleibt erhalten, damit Updates weiterhin funktionieren.',
+    queueHelp:'Der Massenimport sendet die gesamte Auswahl an den Kurzbefehl. Die Liste unten bleibt als manueller Fallback erhalten.',
+    addTo:'Nächste öffnen in',
+    copyUrls:'Source-URLs kopieren',
+    copied:'URLs kopiert',
+    restart:'Warteschlange neu starten',
+    queueReady:'Source-Warteschlange bereit',
+    queueFinished:'Alle ausgewählten Sources wurden geöffnet.',
+    queueProgress:'geöffnet',
+    opening:'Öffne',
+    retry:'Öffnen',
+    pending:'Ausstehend',
+    opened:'Geöffnet',
+    empty:'Keine Sources entsprechen den Filtern.',
+    apps:'Apps',
+    sources:'Sources'
   },
   es: {
-    title:'Custom Source Builder', desc:'Filtra fuentes online comprobadas, elige cualquier combinación y crea tu propio Mix para AltStore, SideStore o LiveContainer.',
-    selectPass:'Seleccionar PASS para', selectAll:'Seleccionar visibles', clear:'Borrar selección', build:'Crear Mix', selected:'seleccionadas', shown:'visibles', pass:'PASS', try:'PROBAR', passHelp:'La lista ya está limitada al destino seleccionado. PASS además significa que la fuente superó la prueba automática de combinación de Mix; no garantiza que cada app funcione en todos los dispositivos iOS.',
-    mixStatus:'Prueba de combinación', targetLabel:'¿Dónde quieres añadir el Mix?', targetHelpAlt:'El Mix final será una Classic AltSource para AltStore Classic. Se ocultan las fuentes exclusivas de SideStore y las de marketplace PAL.', targetHelpSide:'SideStore es totalmente compatible con AltStore Sources (AltSources). Aquí mostramos fuentes IPA Classic y eliminamos del Mix generado los metadatos exclusivos de PAL.', targetHelpLive:'LiveContainer puede navegar fuentes estilo AltStore e instalar apps desde la URL de descarga de su versión más reciente. Aquí mostramos fuentes IPA Classic combinables.', palNote:'AltStore PAL no es un destino de Custom Mix porque usa paquetes notarizados de marketplace y metadatos diferentes a las fuentes IPA Classic.', targetPrefix:'Destino', statusAll:'Todo', statusPass:'Solo PASS', statusTry:'Solo PROBAR', platform:'Plataforma', platformAll:'Todo', classic:'AltStore Classic', pal:'AltStore PAL', sidestore:'SideStore', livecontainer:'LiveContainer', autoTested:'Prueba automática',
-    altPackage:'AltStore Source', sidePackage:'SideStore Source', livePackage:'LiveContainer Source', customMix:'Mix personalizado', filters:'⚙ Filtros · 🔎 Búsqueda · ☑ Selección',
-    addAlt:'＋ Añadir a AltStore', addSide:'＋ Añadir a SideStore', addLive:'＋ Añadir a LiveContainer', copyUrl:'Copiar URL', json:'JSON ↗', apps:'apps', sources:'fuentes',
-    hosted:'Mix alojado listo', local:'Mix local listo', experimental:'Mix experimental listo', localNote:'Esta combinación PASS es válida pero no está alojada. Añadir directamente requiere una URL pública.', tryNote:'Este Mix contiene fuentes PROBAR. Descarga y prueba primero el JSON.', conflicts:'duplicados resueltos', download:'Descargar JSON', preview:'Ver JSON', building:'Probando fuentes…', failed:'No se pudo crear el Mix.', copied:'URL copiada.', empty:'Ninguna fuente coincide con los filtros.'
+    title:'Custom Source Builder',
+    desc:'Elige un instalador y Sources originales. El Builder no las combina en un único Mix universal. iOS Hub Source Import envía las URL originales una tras otra en una sola ejecución del atajo; si el instalador seleccionado admite este flujo, se pueden añadir varias Sources en esa ejecución. Si no, puede hacer falta confirmación o usar la apertura manual una por una. El JSON es opcional.',
+    selectCompatible:'Seleccionar compatibles',
+    selectAll:'Seleccionar compatibles visibles',
+    clear:'Borrar selección',
+    build:'Importación masiva',
+    installShortcut:'Instalar atajo',
+    shortcutHelp:'La importación masiva usa el atajo iOS Hub Source Import. Instálalo una vez; si lo eliminas, puedes volver a añadirlo desde aquí.',
+    shortcutUnsupported:'La importación masiva mediante el atajo todavía no está disponible para {tool}. Puedes seguir añadiendo las Sources seleccionadas manualmente una por una.',
+    prepareManual:'Preparar alternativa manual',
+    manualOnlyQueueHelp:'Este instalador todavía no es compatible con el atajo. Abre las Sources seleccionadas manualmente una por una abajo.',
+    downloadJson:'Descargar JSON de selección',
+    previewJson:'Vista previa del JSON de selección',
+    jsonBuilding:'Preparando JSON…',
+    jsonReady:'JSON listo · {sources} Sources originales.',
+    jsonFailed:'No se pudo crear el JSON:',
+    noSelection:'No hay Sources compatibles seleccionadas.',
+    noMergeableApps:'No se encontraron apps combinables.',
+    selected:'seleccionadas',
+    shown:'visibles',
+    compatible:'COMPATIBLE',
+    incompatible:'INCOMPATIBLE',
+    incompatibleReason:'No es compatible con el instalador seleccionado.',
+    removedIncompatible:'Se eliminaron {n} Source(s) porque no son compatibles con {tool}.',
+    targetLabel:'¿Dónde quieres añadir las Sources?',
+    targetHelpAlt:'AltStore abre cada Source como una vista previa independiente y puede pedir confirmación. Abajo queda disponible la apertura manual una por una.',
+    targetHelpSide:'SideStore procesa una Source URL por deep-link y puede pedir confirmación. Abajo queda disponible la apertura manual una por una.',
+    targetHelpLive:'Cada Source seleccionada se abre directamente en LiveContainer con su URL original.',
+    targetHelpFlare:'Cada repositorio compatible se abre directamente en FlareStore con su URL original.',
+    targetHelpFeather:'Cada repositorio se abre directamente en Feather con su URL original.',
+    targetHelpPal:'Cada Source PAL se abre directamente en AltStore PAL. No se convierte entre Classic y PAL.',
+    targetHelpGeneric:'El Builder envía las URL originales directamente al instalador elegido.',
+    targetPrefix:'Destino',
+    customBuilder:'Sources seleccionadas',
+    filters:'⚙ Filtros · 🔎 Buscar · ☑ Selección',
+    sourceHelp:'Las Sources no se combinan, copian ni realojan. Se añade cada URL original por separado para conservar las actualizaciones.',
+    queueHelp:'La importación masiva envía toda la selección al atajo. La lista inferior queda como alternativa manual una por una.',
+    addTo:'Abrir siguiente en',
+    copyUrls:'Copiar URLs de Sources',
+    copied:'URLs copiadas',
+    restart:'Reiniciar cola',
+    queueReady:'Cola de Sources preparada',
+    queueFinished:'Se abrieron todas las Sources seleccionadas.',
+    queueProgress:'abiertas',
+    opening:'Abriendo',
+    retry:'Abrir',
+    pending:'Pendiente',
+    opened:'Abierta',
+    empty:'Ninguna Source coincide con los filtros.',
+    apps:'apps',
+    sources:'Sources'
   },
   fr: {
-    title:'Custom Source Builder', desc:'Filtrez les sources en ligne vérifiées, choisissez n’importe quelle combinaison et créez votre propre Mix pour AltStore, SideStore ou LiveContainer.',
-    selectPass:'Sélectionner les PASS pour', selectAll:'Tout sélectionner affiché', clear:'Effacer la sélection', build:'Créer Mix', selected:'sélectionnées', shown:'affichées', pass:'PASS', try:'TEST', passHelp:'La liste est déjà limitée à la cible choisie. PASS signifie en plus que la source a réussi le test automatique de fusion Mix; cela ne garantit pas que chaque app fonctionne sur chaque appareil iOS.',
-    mixStatus:'Test de fusion', targetLabel:'Où voulez-vous ajouter le Mix ?', targetHelpAlt:'Le Mix final sera une Classic AltSource pour AltStore Classic. Les sources réservées à SideStore et les marketplaces PAL sont masquées.', targetHelpSide:'SideStore est entièrement compatible avec les AltStore Sources (AltSources). Nous affichons ici les sources IPA Classic et retirons du Mix généré les métadonnées réservées à PAL.', targetHelpLive:'LiveContainer peut parcourir les sources de style AltStore et installer les apps depuis l’URL de téléchargement de leur dernière version. Nous affichons ici les sources IPA Classic fusionnables.', palNote:'AltStore PAL n’est pas une cible du Custom Mix car PAL utilise des paquets marketplace notariés et des métadonnées différentes des sources IPA Classic.', targetPrefix:'Cible', statusAll:'Tout', statusPass:'PASS seulement', statusTry:'TEST seulement', platform:'Plateforme', platformAll:'Tout', classic:'AltStore Classic', pal:'AltStore PAL', sidestore:'SideStore', livecontainer:'LiveContainer', autoTested:'Test automatique',
-    altPackage:'AltStore Source', sidePackage:'SideStore Source', livePackage:'LiveContainer Source', customMix:'Mix personnalisé', filters:'⚙ Filtres · 🔎 Recherche · ☑ Sélection',
-    addAlt:'＋ Ajouter à AltStore', addSide:'＋ Ajouter à SideStore', addLive:'＋ Ajouter à LiveContainer', copyUrl:'Copier URL', json:'JSON ↗', apps:'apps', sources:'sources',
-    hosted:'Mix hébergé prêt', local:'Mix local prêt', experimental:'Mix expérimental prêt', localNote:'Cette combinaison PASS est valide mais non hébergée. L’ajout direct nécessite une URL publique.', tryNote:'Ce Mix contient des sources TEST. Téléchargez et testez d’abord le JSON.', conflicts:'doublons résolus', download:'Télécharger JSON', preview:'Aperçu JSON', building:'Test des sources…', failed:'Impossible de créer le Mix.', copied:'URL copiée.', empty:'Aucune source ne correspond aux filtres.'
+    title:'Custom Source Builder',
+    desc:'Choisissez un installateur et les Sources originales. Le Builder ne les fusionne pas dans un Mix universel. iOS Hub Source Import envoie les URL originales l’une après l’autre dans une seule exécution du raccourci ; si l’installateur choisi prend en charge ce flux, plusieurs Sources peuvent être ajoutées pendant cette exécution. Sinon, une confirmation ou l’ouverture manuelle une par une peut être nécessaire. L’export JSON reste facultatif.',
+    selectCompatible:'Sélectionner les compatibles',
+    selectAll:'Sélectionner les compatibles affichées',
+    clear:'Effacer la sélection',
+    build:'Import groupé',
+    installShortcut:'Installer le raccourci',
+    shortcutHelp:'L’import groupé utilise le raccourci iOS Hub Source Import. Installez-le une fois ; s’il est supprimé, vous pouvez le réinstaller ici.',
+    shortcutUnsupported:'L’import groupé via le raccourci n’est pas encore disponible pour {tool}. Vous pouvez toujours ajouter les Sources sélectionnées manuellement une par une.',
+    prepareManual:'Préparer le mode manuel',
+    manualOnlyQueueHelp:'Cet installateur n’est pas encore pris en charge par le raccourci. Ouvrez les Sources sélectionnées manuellement une par une ci-dessous.',
+    downloadJson:'Télécharger le JSON de sélection',
+    previewJson:'Aperçu du JSON de sélection',
+    jsonBuilding:'Préparation du JSON…',
+    jsonReady:'JSON prêt · {sources} Sources originales.',
+    jsonFailed:'Impossible de créer le JSON :',
+    noSelection:'Aucune Source compatible sélectionnée.',
+    noMergeableApps:'Aucune app fusionnable trouvée.',
+    selected:'sélectionnées',
+    shown:'affichées',
+    compatible:'COMPATIBLE',
+    incompatible:'INCOMPATIBLE',
+    incompatibleReason:'Non compatible avec l’installateur sélectionné.',
+    removedIncompatible:'{n} Source(s) ont été retirées car elles ne sont pas compatibles avec {tool}.',
+    targetLabel:'Où voulez-vous ajouter les Sources ?',
+    targetHelpAlt:'Chaque Source Classic est ouverte séparément dans AltStore avec son URL originale, afin de conserver les mises à jour.',
+    targetHelpSide:'SideStore traite une URL de Source par deep-link et peut demander une confirmation. L’ouverture manuelle une par une reste disponible ci-dessous.',
+    targetHelpLive:'Chaque Source sélectionnée est ouverte directement dans LiveContainer avec son URL originale.',
+    targetHelpFlare:'Chaque dépôt compatible est ouvert directement dans FlareStore avec son URL originale.',
+    targetHelpFeather:'Chaque dépôt est ouvert directement dans Feather avec son URL originale.',
+    targetHelpPal:'Chaque Source PAL est ouverte directement dans AltStore PAL. Aucune conversion Classic/PAL n’est effectuée.',
+    targetHelpGeneric:'Le Builder envoie les URL originales directement à l’installateur choisi.',
+    targetPrefix:'Cible',
+    customBuilder:'Sources sélectionnées',
+    filters:'⚙ Filtres · 🔎 Recherche · ☑ Sélection',
+    sourceHelp:'Les Sources ne sont ni fusionnées, ni copiées, ni réhébergées. Chaque URL originale est ajoutée séparément afin de conserver les mises à jour.',
+    queueHelp:'L’import groupé envoie toute la sélection au raccourci. La liste ci-dessous reste disponible comme solution manuelle une par une.',
+    addTo:'Ouvrir suivante dans',
+    copyUrls:'Copier les URL des Sources',
+    copied:'URL copiées',
+    restart:'Recommencer la file',
+    queueReady:'File de Sources prête',
+    queueFinished:'Toutes les Sources sélectionnées ont été ouvertes.',
+    queueProgress:'ouvertes',
+    opening:'Ouverture',
+    retry:'Ouvrir',
+    pending:'En attente',
+    opened:'Ouverte',
+    empty:'Aucune Source ne correspond aux filtres.',
+    apps:'apps',
+    sources:'Sources'
   }
 };
 
 let registry = [];
 let status = {};
-let catalog = {};
 let selected = new Set();
-let blobUrl = null;
 let category = 'all';
 let genre = 'all';
-let target = 'altstore';
-let compatibility = 'all';
+let target = DEFAULT_SOURCE_BUILDER_INSTALLER_ID;
 let query = '';
+let queueIds = [];
+let queueIndex = 0;
+let queueTarget = '';
 
 function lang() {
   const value = safeGet('caseycz-language') || document.documentElement.lang || 'en';
@@ -90,20 +327,81 @@ function lang() {
 }
 function tr(key) { return copy[lang()][key] || copy.en[key] || key; }
 function escapeHtml(value) { return String(value ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c])); }
-const INSTALLER_ICONS = {
-  alt: 'assets/icons/altstore.svg',
-  side: 'assets/icons/sidestore.svg?v=1.1.5-20260918-audit13',
-  live: 'assets/icons/livecontainer.svg'
-};
-function installerIcon(type) {
-  const src = INSTALLER_ICONS[type];
+function installerIcon(installerId) {
+  const src = INSTALLERS[installerId]?.icon;
   return src ? `<img class="installer-icon" src="${escapeHtml(src)}" alt="" loading="lazy" referrerpolicy="no-referrer">` : '';
 }
+
+function targetName() {
+  return INSTALLERS[target]?.label || INSTALLERS[DEFAULT_SOURCE_BUILDER_INSTALLER_ID]?.label || 'Installer';
+}
+function targetVariant() {
+  return INSTALLERS[target]?.variant || null;
+}
+function shortcutSupportsTarget(installerId = target) {
+  return SHORTCUT_INSTALLER_IDS.has(installerId);
+}
+function targetHelpKey() {
+  if (target === 'altstore') return 'targetHelpAlt';
+  if (target === 'sidestore') return 'targetHelpSide';
+  if (target === 'livecontainer') return 'targetHelpLive';
+  if (target === 'flarestore') return 'targetHelpFlare';
+  if (target === 'feather') return 'targetHelpFeather';
+  if (target === 'altstore-pal') return 'targetHelpPal';
+  return 'targetHelpGeneric';
+}
+
+function renderTargetButtons() {
+  const host = $('#builderTargets');
+  if (!host) return;
+  const current = INSTALLERS[target] || INSTALLERS[DEFAULT_SOURCE_BUILDER_INSTALLER_ID];
+  const options = SOURCE_BUILDER_INSTALLER_IDS.map(installerId => {
+    const installer = INSTALLERS[installerId];
+    const active = target === installerId;
+    return `<button class="builder-target-option${active ? ' active' : ''}" type="button" role="option" aria-selected="${String(active)}" data-exp-target="${escapeHtml(installerId)}">
+      ${installerIcon(installerId)}
+      <span>${escapeHtml(installer.label)}</span>
+    </button>`;
+  }).join('');
+  host.innerHTML = `<details class="builder-target-picker">
+    <summary class="builder-target-select" aria-labelledby="builderTargetLabel">
+      ${installerIcon(target)}
+      <span>${escapeHtml(current?.label || targetName())}</span>
+      <span class="builder-target-chevron" aria-hidden="true">⌄</span>
+    </summary>
+    <div class="builder-target-menu" role="listbox" aria-labelledby="builderTargetLabel">
+      ${options}
+    </div>
+  </details>`;
+}
+
 function getStatus(id) { return status?.sources?.[id] || {}; }
-function catalogSource(id) { return catalog?.sources?.find(item => item.id === id) || null; }
-function allCandidates() { return registry.filter(source => source.builder !== false && getStatus(source.id).online === true && getStatus(source.id).mixTest !== 'fail'); }
-function autoCompatibleIds() { return new Set(status?.mixes?.autoCompatibleSourceIDs || []); }
-function hostedIds() { return new Set(status?.mixes?.mergeableSourceIDs || []); }
+function onlineBuilderSources() {
+  return registry.filter(source =>
+    source.builder !== false
+    && source.compliance?.reviewStatus !== 'restricted'
+    && getStatus(source.id).online === true
+  );
+}
+function targetCompatibility(source) {
+  const installer = INSTALLERS[target];
+  const variant = installer?.variant || null;
+  const sourceUrl = variant ? sourceVariantURL(source, variant) : null;
+  const supportsInstaller = sourceInstallerIds(source).includes(target);
+  const sourceStatus = getStatus(source.id);
+  const variantStatus = variant ? sourceStatus?.variants?.[variant] : null;
+  const directAllowed = sourceInstallerDirectAvailable(sourceStatus, target);
+  const supported = Boolean(
+    installer
+    && sourceUrl
+    && supportsInstaller
+    && sourceStatus?.online === true
+    && variantStatus?.online !== false
+    && directAllowed
+  );
+  return { supported, sourceUrl };
+}
+function selectableForTarget(source) { return targetCompatibility(source).supported; }
 
 function sourceTags(source) {
   return new Set((source.tags || []).map(tag => String(tag).toLowerCase()));
@@ -129,37 +427,8 @@ function matchesGenre(source) {
   const tags = [...sourceTags(source)];
   return (GENRE_RULES[genre] || []).some(rule => tags.includes(rule));
 }
-function targetName() {
-  if (target === 'sidestore') return 'SideStore';
-  if (target === 'livecontainer') return 'LiveContainer';
-  return 'AltStore Classic';
-}
-function targetIconType() {
-  if (target === 'sidestore') return 'side';
-  if (target === 'livecontainer') return 'live';
-  return 'alt';
-}
-function targetHelpKey() {
-  if (target === 'sidestore') return 'targetHelpSide';
-  if (target === 'livecontainer') return 'targetHelpLive';
-  return 'targetHelpAlt';
-}
-function matchesTarget(source) {
-  const mode = source.mode || 'classic';
-  if (mode === 'pal') return false;
-  if (target === 'sidestore') return mode === 'classic' || mode === 'sidestore';
-  return mode === 'classic';
-}
-function matchesCompatibility(source) {
-  if (compatibility === 'all') return true;
-  const test = getStatus(source.id).mixTest;
-  return compatibility === 'pass' ? test === 'pass' : test !== 'pass';
-}
 function sourceSearchText(source) {
-  const apps = (catalogSource(source.id)?.apps || []).flatMap(app => [
-    app.name, app.developerName, app.bundleIdentifier, app.subtitle, app.version
-  ]);
-  return [source.name, source.mode, ...(source.tags || []), ...Object.values(source.description || {}), ...apps]
+  return [source.name, source.developer, source.mode, ...(source.tags || []), ...Object.values(source.description || {})]
     .filter(Boolean).join(' ').toLowerCase();
 }
 function matchesQuery(source) {
@@ -167,7 +436,9 @@ function matchesQuery(source) {
   return !q || sourceSearchText(source).includes(q);
 }
 function candidates() {
-  return allCandidates().filter(source => matchesCategory(source) && matchesGenre(source) && matchesTarget(source) && matchesCompatibility(source) && matchesQuery(source));
+  return onlineBuilderSources().filter(source =>
+    matchesCategory(source) && matchesGenre(source) && matchesQuery(source)
+  );
 }
 
 function restoreSettings() {
@@ -178,381 +449,469 @@ function restoreSettings() {
   const savedCategory = safeGet(STORAGE.category);
   const savedGenre = safeGet(STORAGE.genre);
   const savedTarget = safeGet(STORAGE.target);
-  const savedCompatibility = safeGet(STORAGE.compatibility);
   category = SOURCE_CATEGORIES.has(savedCategory) ? savedCategory : 'all';
   genre = GENRES.has(savedGenre) ? savedGenre : 'all';
-  target = TARGETS.has(savedTarget) ? savedTarget : 'altstore';
-  compatibility = COMPATIBILITY.has(savedCompatibility) ? savedCompatibility : 'all';
+  target = TARGETS.has(savedTarget) ? savedTarget : DEFAULT_SOURCE_BUILDER_INSTALLER_ID;
   query = safeGet(STORAGE.query) || '';
+
+  try {
+    const savedQueue = JSON.parse(safeGet(STORAGE.queue) || '[]');
+    queueIds = Array.isArray(savedQueue) ? savedQueue.map(String) : [];
+  } catch (_) { queueIds = []; }
+  queueIndex = Math.max(0, Number(safeGet(STORAGE.queueIndex) || 0) || 0);
+  queueTarget = safeGet(STORAGE.queueTarget) || '';
 }
 function saveSelection() { safeSet(STORAGE.selection, JSON.stringify([...selected])); }
 function saveFilters() {
   safeSet(STORAGE.category, category);
   safeSet(STORAGE.genre, genre);
   safeSet(STORAGE.target, target);
-  safeSet(STORAGE.compatibility, compatibility);
   safeSet(STORAGE.query, query);
 }
-function hideResult() { $('#expResult')?.classList.remove('show'); }
+function saveQueue() {
+  safeSet(STORAGE.queue, JSON.stringify(queueIds));
+  safeSet(STORAGE.queueIndex, String(queueIndex));
+  safeSet(STORAGE.queueTarget, queueTarget);
+}
+function clearQueue({hide = true} = {}) {
+  queueIds = [];
+  queueIndex = 0;
+  queueTarget = '';
+  safeRemove(STORAGE.queue);
+  safeRemove(STORAGE.queueIndex);
+  safeRemove(STORAGE.queueTarget);
+  if (hide) $('#expResult')?.classList.remove('show');
+}
 
 function applyCopy() {
-  const map = {expSelectAll:'selectAll', expClear:'clear', expBuild:'build'};
-  Object.entries(map).forEach(([id,key]) => { const node = $('#' + id); if (node) node.textContent = tr(key); });
-  const selectPass = $('#expSelectCompatible');
-  if (selectPass) selectPass.textContent = `${tr('selectPass')} ${targetName()}`;
+  const map = {
+    expSelectCompatible:'selectCompatible',
+    expSelectAll:'selectAll',
+    expClear:'clear',
+    expBuild:'build',
+    expPrepareManual:'prepareManual',
+    expInstallShortcut:'installShortcut',
+    expDownload:'downloadJson',
+    expPreview:'previewJson',
+    expCopyUrl:'copyUrls',
+    expRestartQueue:'restart'
+  };
+  Object.entries(map).forEach(([id,key]) => {
+    const node = $('#' + id);
+    if (node) node.textContent = tr(key);
+  });
   if ($('#builderTitle')) $('#builderTitle').textContent = tr('title');
   if ($('#builderDesc')) $('#builderDesc').textContent = tr('desc');
-  if ($('#customMixCardTitle')) $('#customMixCardTitle').textContent = tr('customMix');
-  if ($('#customMixFiltersLabel')) $('#customMixFiltersLabel').textContent = tr('filters');
-  if ($('#mixTargetLabel')) $('#mixTargetLabel').textContent = tr('targetLabel');
-  if ($('#mixTargetHelp')) $('#mixTargetHelp').textContent = tr(targetHelpKey());
-  if ($('#mixPalNote')) $('#mixPalNote').textContent = tr('palNote');
-  if ($('#mixStatusLabel')) $('#mixStatusLabel').textContent = tr('mixStatus');
-  if ($('#mixTestBadge')) $('#mixTestBadge').textContent = tr('autoTested');
-  if ($('#mixPassHelp')) $('#mixPassHelp').textContent = tr('passHelp');
-  const targetBadge = $('#mixTargetBadge');
-  if (targetBadge) targetBadge.innerHTML = `${installerIcon(targetIconType())}${escapeHtml(tr('targetPrefix'))}: ${escapeHtml(targetName())}`;
-
-  const statusLabels = {all:'statusAll', pass:'statusPass', try:'statusTry'};
-  $$('[data-exp-compat-filter]').forEach(button => { button.textContent = tr(statusLabels[button.dataset.expCompatFilter] || 'statusAll'); });
+  if ($('#builderSelectionTitle')) $('#builderSelectionTitle').textContent = tr('customBuilder');
+  if ($('#builderFiltersLabel')) $('#builderFiltersLabel').textContent = tr('filters');
+  if ($('#builderTargetLabel')) $('#builderTargetLabel').textContent = tr('targetLabel');
+  if ($('#builderTargetHelp')) $('#builderTargetHelp').textContent = tr(targetHelpKey());
+  const shortcutNotice = $('#builderShortcutSupportNotice');
+  if (shortcutNotice) {
+    const supported = shortcutSupportsTarget();
+    shortcutNotice.hidden = supported;
+    shortcutNotice.textContent = supported ? '' : tr('shortcutUnsupported').replace('{tool}', targetName());
+  }
+  if ($('#builderSourceHelp')) $('#builderSourceHelp').textContent = tr('sourceHelp');
+  if ($('#builderQueueHelp')) $('#builderQueueHelp').textContent = tr('queueHelp');
+  if ($('#shortcutHelp')) $('#shortcutHelp').textContent = tr('shortcutHelp');
+  const targetBadge = $('#builderTargetBadge');
+  if (targetBadge) targetBadge.innerHTML = `${installerIcon(target)}${escapeHtml(tr('targetPrefix'))}: ${escapeHtml(targetName())}`;
+  renderTargetButtons();
 }
 
 function syncFilterUi() {
-  $$('[data-exp-category-filter]').forEach(button => button.classList.toggle('active', button.dataset.expCategoryFilter === category));
-  $$('[data-exp-genre-filter]').forEach(button => button.classList.toggle('active', button.dataset.expGenreFilter === genre));
-  $$('[data-exp-target]').forEach(button => button.classList.toggle('active', button.dataset.expTarget === target));
-  $$('[data-exp-compat-filter]').forEach(button => button.classList.toggle('active', button.dataset.expCompatFilter === compatibility));
+  $$('[data-exp-category-filter]').forEach(button => {
+    const active = button.dataset.expCategoryFilter === category;
+    button.classList.toggle('active', active);
+    button.setAttribute('aria-pressed', String(active));
+  });
+  $$('[data-exp-genre-filter]').forEach(button => {
+    const active = button.dataset.expGenreFilter === genre;
+    button.classList.toggle('active', active);
+    button.setAttribute('aria-pressed', String(active));
+  });
+  document.querySelectorAll('[data-exp-target]').forEach(button => {
+    const active = button.dataset.expTarget === target;
+    button.classList.toggle('active', active);
+    button.setAttribute('aria-selected', String(active));
+  });
   const search = $('#expSourceSearch');
   if (search && search.value !== query) search.value = query;
 }
 
-function packageCard(name, url, meta, type) {
-  if (!url) return '';
-  let install = `altstore://source?url=${encodeURIComponent(url)}`;
-  let addLabel = tr('addAlt');
-  let badge = 'AltStore';
-  if (type === 'side') {
-    install = `sidestore://source?url=${encodeURIComponent(url)}`;
-    addLabel = tr('addSide');
-    badge = 'SideStore';
-  } else if (type === 'live') {
-    install = `livecontainer://source?url=${encodeURIComponent(url)}`;
-    addLabel = tr('addLive');
-    badge = 'LiveContainer';
-  }
-  return `<article class="official-source-card">
-    <span class="pill mode service-pill">${installerIcon(type)}${badge}</span>
-    <h4>${escapeHtml(name)}</h4>
-    <div class="muted">${escapeHtml(meta)}</div>
-    <div class="official-source-actions">
-      <a class="btn small primary installer-action" href="${escapeHtml(install)}">${installerIcon(type)}${escapeHtml(addLabel)}</a>
-      <button class="btn small secondary" type="button" data-copy-source="${escapeHtml(url)}">${escapeHtml(tr('copyUrl'))}</button>
-      <a class="btn small ghost" target="_blank" rel="noopener" href="${escapeHtml(url)}">${escapeHtml(tr('json'))}</a>
-    </div>
-  </article>`;
-}
-
-function renderOfficialPackages() {
-  const node = $('#officialSourcePackages');
-  if (!node) return;
-  const altUrl = status?.altstore?.sourceURL || status?.mixes?.allCompatibleURL || '';
-  const altSources = status?.altstore?.sourceIDs?.length || status?.mixes?.autoCompatibleSourceIDs?.length || 0;
-  const altApps = status?.altstore?.appCount || 0;
-  const sideUrl = status?.sidestore?.sourceURL || '';
-  const sideSources = status?.sidestore?.sourceIDs?.length || 0;
-  const sideApps = status?.sidestore?.appCount || 0;
-  const altMeta = altApps ? `${altSources} ${tr('sources')} · ${altApps} ${tr('apps')}` : `${altSources} ${tr('sources')}`;
-  const sideMeta = `${sideSources} ${tr('sources')} · ${sideApps} ${tr('apps')}`;
-  node.innerHTML = [
-    packageCard(tr('altPackage'), altUrl, altMeta, 'alt'),
-    packageCard(tr('sidePackage'), sideUrl, sideMeta, 'side'),
-    packageCard(tr('livePackage'), altUrl, altMeta, 'live')
-  ].join('');
-}
-
-function modeName(source) {
-  return source.mode === 'sidestore' ? 'SideStore Source' : 'Classic AltSource';
-}
+function modeName(source) { return sourceFormatLabel(source); }
 
 function render() {
   applyCopy();
   syncFilterUi();
-  renderOfficialPackages();
   const list = $('#experimentalBuilderList');
   if (!list) return;
 
   const available = candidates();
-  const validIds = new Set(allCandidates().filter(source => matchesTarget(source)).map(source => source.id));
-  [...selected].forEach(id => { if (!validIds.has(id)) selected.delete(id); });
+  const validIds = new Set(onlineBuilderSources().filter(selectableForTarget).map(source => source.id));
+  [...selected].forEach(id => {
+    if (!validIds.has(id)) selected.delete(id);
+  });
   saveSelection();
 
   list.innerHTML = available.length ? available.map(source => {
     const item = getStatus(source.id);
     const checked = selected.has(source.id);
-    const passed = item.mixTest === 'pass';
-    const test = passed ? tr('pass') : tr('try');
-    const cls = passed ? 'online' : 'mode';
-    return `<label class="builder-item" title="${escapeHtml(item.mixReason || '')}">
-      <input type="checkbox" data-exp-source="${escapeHtml(source.id)}" ${checked ? 'checked' : ''}>
+    const targetInfo = targetCompatibility(source);
+    const selectable = targetInfo.supported;
+    const cls = selectable ? 'online' : 'offline';
+    const label = selectable ? tr('compatible') : tr('incompatible');
+    return `<label class="builder-item${selectable ? '' : ' builder-item-disabled'}" title="${escapeHtml(selectable ? '' : tr('incompatibleReason'))}">
+      <input type="checkbox" data-exp-source="${escapeHtml(source.id)}" ${checked ? 'checked' : ''} ${selectable ? '' : 'disabled'}>
       <div><strong>${escapeHtml(source.name)}</strong><span>${escapeHtml(modeName(source))} · → ${escapeHtml(targetName())}</span></div>
-      <div class="builder-count"><span class="pill online">● ONLINE</span> <span class="pill ${cls}">${escapeHtml(test)}</span> ${Number.isFinite(item.appCount) ? `${item.appCount} ${escapeHtml(tr('apps'))}` : ''}</div>
+      <div class="builder-count"><span class="pill online">● ONLINE</span> <span class="pill ${cls}">${escapeHtml(label)}</span> ${Number.isFinite(item.appCount) ? `${item.appCount} ${escapeHtml(tr('apps'))}` : ''}</div>
     </label>`;
   }).join('') : `<div class="notice">${escapeHtml(tr('empty'))}</div>`;
 
   const count = $('#expSelectedCount');
   if (count) count.textContent = `${selected.size} ${tr('selected')} · ${available.length} ${tr('shown')} · ${tr('targetPrefix')}: ${targetName()}`;
+  const shortcutSupported = shortcutSupportsTarget();
   const build = $('#expBuild');
-  if (build) build.disabled = selected.size === 0;
+  if (build) {
+    build.disabled = selected.size === 0 || !shortcutSupported;
+    build.title = shortcutSupported ? '' : tr('shortcutUnsupported').replace('{tool}', targetName());
+  }
+  const manual = $('#expPrepareManual');
+  if (manual) {
+    manual.hidden = shortcutSupported;
+    manual.disabled = selected.size === 0;
+  }
+  const download = $('#expDownload');
+  if (download) download.disabled = selected.size === 0;
+  const preview = $('#expPreview');
+  if (preview) preview.disabled = selected.size === 0;
+
+  if (queueIds.length && queueTarget === target) renderQueue();
 }
 
-function parseDate(value) {
-  if (!value) return 0;
-  const time = Date.parse(value);
-  return Number.isFinite(time) ? time : 0;
+function queueEntries() {
+  const installer = INSTALLERS[queueTarget || target];
+  if (!installer) return [];
+  return queueIds.map(id => {
+    const source = registry.find(item => item.id === id);
+    if (!source) return null;
+    const sourceUrl = sourceVariantURL(source, installer.variant);
+    if (!sourceUrl) return null;
+    return {
+      id,
+      name: source.name || id,
+      sourceUrl,
+      deepLink: installer.buildLink(sourceUrl)
+    };
+  }).filter(Boolean);
 }
-function appDate(app) {
-  let best = Math.max(parseDate(app.versionDate), parseDate(app.date));
-  if (Array.isArray(app.versions)) {
-    app.versions.forEach(v => { if (v && typeof v === 'object') best = Math.max(best, parseDate(v.date), parseDate(v.versionDate)); });
-  }
-  return best;
-}
-function dedupe(payloads) {
-  const merged = new Map();
-  let conflicts = 0;
-  for (const {source,payload} of payloads) {
-    for (const app of (Array.isArray(payload.apps) ? payload.apps : [])) {
-      if (!app || typeof app !== 'object') continue;
-      const bundle = app.bundleIdentifier || app.bundleID;
-      if (!bundle) continue;
-      if (!merged.has(bundle)) {
-        merged.set(bundle, {source,app});
-      } else {
-        conflicts += 1;
-        const old = merged.get(bundle);
-        if (appDate(app) > appDate(old.app)) merged.set(bundle, {source,app});
-      }
+
+function renderQueue() {
+  const result = $('#expResult');
+  const list = $('#expQueueList');
+  if (!result || !list || !queueIds.length || queueTarget !== target) return;
+
+  const entries = queueEntries();
+  queueIndex = Math.min(queueIndex, entries.length);
+  const installer = INSTALLERS[target];
+  const finished = queueIndex >= entries.length;
+
+  $('#expResultTitle').textContent = finished ? tr('queueFinished') : tr('queueReady');
+  $('#expResultInfo').textContent = `${queueIndex} / ${entries.length} ${tr('queueProgress')} · ${targetName()}`;
+  $('#expResultNote').textContent = shortcutSupportsTarget(queueTarget || target) ? tr('queueHelp') : tr('manualOnlyQueueHelp');
+
+  list.innerHTML = entries.map((entry,index) => {
+    const state = index < queueIndex ? tr('opened') : (index === queueIndex ? tr('opening') : tr('pending'));
+    const cls = index < queueIndex ? 'online' : (index === queueIndex ? 'mode' : '');
+    return `<article class="builder-item">
+      <div><strong>${escapeHtml(entry.name)}</strong><span>${escapeHtml(entry.sourceUrl)}</span></div>
+      <div class="builder-count">
+        <span class="pill ${cls}">${escapeHtml(state)}</span>
+        <a class="btn small ghost" href="${escapeHtml(entry.deepLink)}" data-queue-open="${index}">${escapeHtml(tr('retry'))}</a>
+      </div>
+    </article>`;
+  }).join('');
+
+  const next = $('#expAddTarget');
+  if (next) {
+    if (finished || !entries[queueIndex]) {
+      next.hidden = true;
+      next.removeAttribute('href');
+      delete next.dataset.queueIndex;
+    } else {
+      next.hidden = false;
+      next.href = entries[queueIndex].deepLink;
+      next.dataset.queueIndex = String(queueIndex);
+      next.innerHTML = `${installerIcon(target)}${escapeHtml(tr('addTo'))} ${escapeHtml(targetName())} · ${queueIndex + 1}/${entries.length}`;
     }
   }
-  return {
-    apps:[...merged.values()].map(item => item.app).sort((a,b) => String(a.name || '').localeCompare(String(b.name || ''))),
-    conflicts
-  };
+
+  const copy = $('#expCopyUrl');
+  if (copy) copy.hidden = entries.length === 0;
+  const restart = $('#expRestartQueue');
+  if (restart) restart.hidden = entries.length === 0;
+  result.classList.add('show');
 }
+
+function markQueueOpened(index) {
+  if (!Number.isInteger(index) || index < 0) return;
+  if (index >= queueIndex) queueIndex = Math.min(index + 1, queueIds.length);
+  saveQueue();
+  setTimeout(renderQueue, 0);
+}
+
+const SHORTCUT_NAME = SOURCE_IMPORT_SHORTCUT.name;
+let exportBlobUrl = null;
+
 function hashIds(ids) {
   let hash = 2166136261;
-  for (const ch of ids.join('|')) { hash ^= ch.charCodeAt(0); hash = Math.imul(hash,16777619); }
-  return (hash >>> 0).toString(16).padStart(8,'0');
-}
-function sameIds(ids, expected) {
-  const a = [...ids].sort();
-  const b = [...expected].sort();
-  return a.length === b.length && a.every((id,i) => id === b[i]);
+  for (const ch of ids.join('|')) {
+    hash ^= ch.charCodeAt(0);
+    hash = Math.imul(hash, 16777619);
+  }
+  return (hash >>> 0).toString(16).padStart(8, '0');
 }
 
-function hostedTarget(ids) {
-  const sorted = [...ids].sort();
-  const manual = hostedIds();
-  const max = Number(status?.mixes?.maxSourcesPerMix || 0);
-  if (sorted.length && sorted.length <= max && sorted.every(id => manual.has(id))) {
-    return {url:new URL(`mix/${sorted.join('--')}.json`, window.location.href).href.split('#')[0], alt:true, side:true, live:true};
-  }
+function createSelectionJson() {
+  const sources = registry
+    .filter(source => selected.has(source.id) && selectableForTarget(source))
+    .map(source => ({
+      id: source.id,
+      name: source.name || source.id,
+      url: targetCompatibility(source).sourceUrl
+    }))
+    .filter(source => Boolean(source.url));
 
-  const auto = [...autoCompatibleIds()];
-  if (auto.length && sameIds(sorted, auto)) {
-    return {url:status?.mixes?.allCompatibleURL || null, alt:true, side:true, live:true};
-  }
+  if (!sources.length) throw new Error(tr('noSelection'));
 
-  const altIds = status?.altstore?.sourceIDs || [];
-  if (altIds.length && sameIds(sorted, altIds)) {
-    return {url:status?.altstore?.sourceURL || null, alt:true, side:true, live:true};
-  }
+  const ids = sources.map(source => source.id).sort();
+  const payload = {
+    format: 'ios-hub-source-selection-v1',
+    name: 'iOS Hub Source Selection',
+    generatedAt: new Date().toISOString(),
+    installer: target,
+    installerName: targetName(),
+    shortcut: SHORTCUT_NAME,
+    sources
+  };
 
-  const sideIds = status?.sidestore?.sourceIDs || [];
-  if (sideIds.length && sameIds(sorted, sideIds)) {
-    return {url:status?.sidestore?.sourceURL || null, alt:false, side:true, live:true};
-  }
+  if (exportBlobUrl) URL.revokeObjectURL(exportBlobUrl);
+  exportBlobUrl = URL.createObjectURL(
+    new Blob([JSON.stringify(payload, null, 2) + '\n'], {type:'application/json'})
+  );
 
-  return {url:null, alt:false, side:false, live:false};
+  return {
+    url: exportBlobUrl,
+    filename: `iOS-Hub-Sources-${target}-${hashIds(ids)}.json`,
+    count: sources.length
+  };
 }
 
-async function buildMix() {
-  const button = $('#expBuild');
+function downloadSelectionJson(button) {
   const message = $('#expMessage');
-  const result = $('#expResult');
-  if (!selected.size) return;
-
-  if (button) button.disabled = true;
-  if (message) message.textContent = tr('building');
-  result?.classList.remove('show');
-
+  const original = button.textContent;
   try {
-    const ids = [...selected].sort();
-    const payloads = await Promise.all(ids.map(async id => {
-      const source = registry.find(item => item.id === id);
-      const response = await fetch(`data/source-cache/${encodeURIComponent(id)}.json`, {cache:'no-store'});
-      if (!response.ok) throw new Error(`${source?.name || id}: HTTP ${response.status}`);
-      const payload = await response.json();
-      if (!payload || !Array.isArray(payload.apps)) throw new Error(`${source?.name || id}: invalid apps array`);
-      return {source,payload};
-    }));
-
-    const {apps,conflicts} = dedupe(payloads);
-    if (!apps.length) throw new Error('No mergeable app entries were found.');
-
-    const hosted = hostedTarget(ids);
-    const names = ids.map(id => registry.find(source => source.id === id)?.name || id);
-    const hasTry = ids.some(id => getStatus(id).mixTest !== 'pass');
-    const mix = {
-      name:`Mix · ${names.join(' + ')}`,
-      identifier:`com.caseycz.ios.mix.${hashIds(ids)}`,
-      subtitle:hasTry ? 'Experimental combined source generated locally by iOS Hub' : 'Combined source generated by iOS Hub',
-      website:'https://caseycz.github.io/iOS-Hub/',
-      tintColor:'#38BDF8',
-      apps,
-      userInfo:{sourceIDs:ids, sourceURLs:ids.map(id => registry.find(source => source.id === id)?.url || ''), experimental:hasTry}
-    };
-
-    if (blobUrl) URL.revokeObjectURL(blobUrl);
-    blobUrl = URL.createObjectURL(new Blob([JSON.stringify(mix,null,2) + '\n'], {type:'application/json'}));
-
-    $('#expResultTitle').textContent = hosted.url ? tr('hosted') : (hasTry ? tr('experimental') : tr('local'));
-    $('#expResultInfo').textContent = `${apps.length} ${tr('apps')} · ${conflicts} ${tr('conflicts')}`;
-    $('#expResultNote').textContent = hosted.url ? '' : (hasTry ? tr('tryNote') : tr('localNote'));
-    $('#expDownload').href = blobUrl;
-    $('#expDownload').download = `iOS-Hub-Mix-${hashIds(ids)}.json`;
-    $('#expDownload').textContent = tr('download');
-    $('#expPreview').href = blobUrl;
-    $('#expPreview').textContent = tr('preview');
-
-    const alt = $('#expAdd');
-    const side = $('#expAddSideStore');
-    const live = $('#expAddLiveContainer');
-    const copyButton = $('#expCopyUrl');
-
-    if (hosted.url && hosted.alt && target === 'altstore') {
-      alt.hidden = false;
-      alt.href = `altstore://source?url=${encodeURIComponent(hosted.url)}`;
-      alt.innerHTML = `${installerIcon('alt')}${escapeHtml(tr('addAlt'))}`;
-    } else {
-      alt.hidden = true;
-    }
-
-    if (hosted.url && hosted.side && target === 'sidestore') {
-      side.hidden = false;
-      side.href = `sidestore://source?url=${encodeURIComponent(hosted.url)}`;
-      side.innerHTML = `${installerIcon('side')}${escapeHtml(tr('addSide'))}`;
-    } else {
-      side.hidden = true;
-    }
-
-    if (hosted.url && hosted.live && target === 'livecontainer') {
-      live.hidden = false;
-      live.href = `livecontainer://source?url=${encodeURIComponent(hosted.url)}`;
-      live.innerHTML = `${installerIcon('live')}${escapeHtml(tr('addLive'))}`;
-    } else {
-      live.hidden = true;
-    }
-
-    if (hosted.url) {
-      copyButton.hidden = false;
-      copyButton.dataset.url = hosted.url;
-      copyButton.textContent = tr('copyUrl');
-    } else {
-      copyButton.hidden = true;
-      delete copyButton.dataset.url;
-    }
-
-    if (message) message.textContent = '';
-    result?.classList.add('show');
+    button.disabled = true;
+    if (message) message.textContent = tr('jsonBuilding');
+    const exported = createSelectionJson();
+    const link = document.createElement('a');
+    link.href = exported.url;
+    link.download = exported.filename;
+    document.body.appendChild(link);
+    link.click();
+    link.remove();
+    if (message) message.textContent = tr('jsonReady').replace('{sources}', String(exported.count));
   } catch (error) {
     console.error(error);
-    if (message) message.textContent = `${tr('failed')} ${error.message || error}`;
+    if (message) message.textContent = `${tr('jsonFailed')} ${error.message || error}`;
   } finally {
-    if (button) button.disabled = selected.size === 0;
+    button.disabled = selected.size === 0;
+    button.textContent = original;
   }
+}
+
+function previewSelectionJson(button) {
+  const message = $('#expMessage');
+  const preview = window.open('', '_blank');
+  try {
+    button.disabled = true;
+    if (message) message.textContent = tr('jsonBuilding');
+    const exported = createSelectionJson();
+    if (preview) preview.location.href = exported.url;
+    else window.location.href = exported.url;
+    if (message) message.textContent = tr('jsonReady').replace('{sources}', String(exported.count));
+  } catch (error) {
+    if (preview) preview.close();
+    console.error(error);
+    if (message) message.textContent = `${tr('jsonFailed')} ${error.message || error}`;
+  } finally {
+    button.disabled = selected.size === 0;
+  }
+}
+
+function prepareSelectedQueue() {
+  const compatibleSelected = registry
+    .filter(source => selected.has(source.id) && selectableForTarget(source))
+    .map(source => source.id);
+
+  if (!compatibleSelected.length) return [];
+
+  queueIds = compatibleSelected;
+  queueIndex = 0;
+  queueTarget = target;
+  saveQueue();
+  return queueEntries();
+}
+
+function prepareManualFallback() {
+  const entries = prepareSelectedQueue();
+  if (!entries.length) return;
+  const message = $('#expMessage');
+  if (message) message.textContent = tr('manualOnlyQueueHelp');
+  renderQueue();
+}
+
+async function startShortcutImport() {
+  if (!shortcutSupportsTarget()) {
+    prepareManualFallback();
+    return;
+  }
+
+  const entries = prepareSelectedQueue();
+  if (!entries.length) return;
+
+  const payload = [target, ...entries.map(entry => entry.sourceUrl)].join('\n');
+  const shortcutBase = `shortcuts://run-shortcut?name=${encodeURIComponent(SHORTCUT_NAME)}`;
+  const message = $('#expMessage');
+  if (message) message.textContent = tr('queueHelp');
+
+  const encodedPayload = encodeURIComponent(payload);
+
+  // Prefer direct text input so the Shortcut receives the installer key on the
+  // very first run. Clipboard handoff on iOS can race with the app switch.
+  if (encodedPayload.length <= 6000) {
+    window.location.href = `${shortcutBase}&input=text&text=${encodedPayload}`;
+    return;
+  }
+
+  // Large batches fall back to the clipboard to avoid an oversized URL scheme.
+  try {
+    if (navigator.clipboard?.writeText) {
+      await navigator.clipboard.writeText(payload);
+      window.location.href = `${shortcutBase}&input=clipboard`;
+      return;
+    }
+  } catch (_) {
+    // If clipboard access is unavailable, use direct text as a last resort.
+  }
+
+  window.location.href = `${shortcutBase}&input=text&text=${encodedPayload}`;
+}
+
+async function copyQueueUrls(button) {
+  const urls = queueEntries().map(item => item.sourceUrl);
+  if (!urls.length) return;
+  try {
+    await navigator.clipboard.writeText(urls.join('\n'));
+    button.textContent = tr('copied');
+    setTimeout(() => { button.textContent = tr('copyUrls'); }, 1600);
+  } catch (_) {}
 }
 
 async function init() {
-  const host = $('#experimentalMixLab');
-  if (host) restoreSettings();
+  const host = $('#sourceBuilderWorkspace');
+  if (!host) return;
+
+  restoreSettings();
 
   try {
-    const [registryResponse,statusResponse,catalogResponse] = await Promise.all([
+    const [registryResponse,statusResponse] = await Promise.all([
       fetch('sources/registry.json',{cache:'no-store'}),
-      fetch('data/status.json',{cache:'no-store'}),
-      fetch('data/catalog.json',{cache:'no-store'})
+      fetch('data/status.json',{cache:'no-store'})
     ]);
     registry = (await registryResponse.json()).sources || [];
     status = await statusResponse.json();
-    catalog = await catalogResponse.json();
   } catch (error) {
     console.error(error);
-  }
-
-  // The homepage has the prepared source cards but not the standalone
-  // Custom Builder controls. Render those cards even when the Builder host
-  // is absent; previously the early return left "Ready sources" empty.
-  if (!host) {
-    renderOfficialPackages();
-    $('#languageSelect')?.addEventListener('change', () => setTimeout(renderOfficialPackages,0));
-    return;
   }
 
   render();
 
   $('#expSelectCompatible')?.addEventListener('click', () => {
-    selected = new Set(candidates().filter(source => getStatus(source.id).mixTest === 'pass').map(source => source.id));
+    selected = new Set(onlineBuilderSources().filter(selectableForTarget).map(source => source.id));
     saveSelection();
-    hideResult();
+    clearQueue();
     render();
   });
   $('#expSelectAll')?.addEventListener('click', () => {
-    selected = new Set(candidates().map(source => source.id));
+    selected = new Set(candidates().filter(selectableForTarget).map(source => source.id));
     saveSelection();
-    hideResult();
+    clearQueue();
     render();
   });
   $('#expClear')?.addEventListener('click', () => {
     selected.clear();
     saveSelection();
-    hideResult();
+    clearQueue();
     render();
   });
-  $('#expBuild')?.addEventListener('click', buildMix);
+  $('#expBuild')?.addEventListener('click', startShortcutImport);
+  $('#expPrepareManual')?.addEventListener('click', prepareManualFallback);
 
   $('#experimentalBuilderList')?.addEventListener('change', event => {
     const id = event.target?.dataset?.expSource;
     if (!id) return;
+    const source = registry.find(item => item.id === id);
+    if (!source || !selectableForTarget(source)) {
+      event.target.checked = false;
+      selected.delete(id);
+      saveSelection();
+      return;
+    }
     if (event.target.checked) selected.add(id); else selected.delete(id);
     saveSelection();
-    hideResult();
+    clearQueue();
     render();
   });
 
   $$('[data-exp-category-filter]').forEach(button => button.addEventListener('click', () => {
-    category = SOURCE_CATEGORIES.has(button.dataset.expCategoryFilter) ? button.dataset.expCategoryFilter : 'all';
-    saveFilters(); render();
-  }));
-  $$('[data-exp-genre-filter]').forEach(button => button.addEventListener('click', () => {
-    genre = GENRES.has(button.dataset.expGenreFilter) ? button.dataset.expGenreFilter : 'all';
-    saveFilters(); render();
-  }));
-  $$('[data-exp-target]').forEach(button => button.addEventListener('click', () => {
-    const nextTarget = TARGETS.has(button.dataset.expTarget) ? button.dataset.expTarget : 'altstore';
-    if (nextTarget !== target) {
-      target = nextTarget;
-      selected.clear();
-      saveSelection();
-      hideResult();
-    }
+    const requested = SOURCE_CATEGORIES.has(button.dataset.expCategoryFilter) ? button.dataset.expCategoryFilter : 'all';
+    category = requested !== 'all' && requested === category ? 'all' : requested;
     saveFilters();
     render();
   }));
-  $$('[data-exp-compat-filter]').forEach(button => button.addEventListener('click', () => {
-    compatibility = COMPATIBILITY.has(button.dataset.expCompatFilter) ? button.dataset.expCompatFilter : 'all';
-    saveFilters(); render();
+  $$('[data-exp-genre-filter]').forEach(button => button.addEventListener('click', () => {
+    const requested = GENRES.has(button.dataset.expGenreFilter) ? button.dataset.expGenreFilter : 'all';
+    genre = requested !== 'all' && requested === genre ? 'all' : requested;
+    saveFilters();
+    render();
   }));
+
+  $('#builderTargets')?.addEventListener('click', event => {
+    const button = event.target.closest('[data-exp-target]');
+    if (!button) return;
+    const nextTarget = TARGETS.has(button.dataset.expTarget) ? button.dataset.expTarget : DEFAULT_SOURCE_BUILDER_INSTALLER_ID;
+    let removed = 0;
+    if (nextTarget !== target) {
+      target = nextTarget;
+      [...selected].forEach(id => {
+        const source = registry.find(item => item.id === id);
+        if (!source || !selectableForTarget(source)) {
+          selected.delete(id);
+          removed += 1;
+        }
+      });
+      saveSelection();
+      clearQueue();
+    }
+    saveFilters();
+    render();
+    if (removed) {
+      const message = $('#expMessage');
+      if (message) message.textContent = tr('removedIncompatible').replace('{n}', String(removed)).replace('{tool}', targetName());
+    }
+  });
 
   $('#expSourceSearch')?.addEventListener('input', event => {
     query = event.target.value || '';
@@ -560,15 +919,31 @@ async function init() {
     render();
   });
 
-  $('#expCopyUrl')?.addEventListener('click', async event => {
-    const url = event.currentTarget.dataset.url;
-    if (!url) return;
-    try { await navigator.clipboard.writeText(url); } catch (_) {}
-    event.currentTarget.textContent = tr('copied');
-    setTimeout(() => { event.currentTarget.textContent = tr('copyUrl'); }, 1600);
+  $('#expAddTarget')?.addEventListener('click', event => {
+    const index = Number(event.currentTarget.dataset.queueIndex);
+    if (Number.isInteger(index)) markQueueOpened(index);
+  });
+
+  $('#expQueueList')?.addEventListener('click', event => {
+    const link = event.target.closest('[data-queue-open]');
+    if (!link) return;
+    const index = Number(link.dataset.queueOpen);
+    if (Number.isInteger(index)) markQueueOpened(index);
+  });
+
+  $('#expCopyUrl')?.addEventListener('click', event => copyQueueUrls(event.currentTarget));
+  $('#expDownload')?.addEventListener('click', event => downloadSelectionJson(event.currentTarget));
+  $('#expPreview')?.addEventListener('click', event => previewSelectionJson(event.currentTarget));
+  $('#expRestartQueue')?.addEventListener('click', () => {
+    queueIndex = 0;
+    saveQueue();
+    renderQueue();
   });
 
   $('#languageSelect')?.addEventListener('change', () => setTimeout(render,0));
+  document.addEventListener('visibilitychange', () => {
+    if (document.visibilityState === 'visible' && queueIds.length) renderQueue();
+  });
 }
 
 init();

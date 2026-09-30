@@ -1,5 +1,5 @@
 import { Archive } from '../../vendor/libarchive/libarchive.js?v=1.1.5-20260929-kodi1';
-import { SUPPORTED_LANGUAGES, applyTranslations, normalizeLanguage, t } from './i18n.js?v=1.1.5-20260918-fullaudit2';
+import { SUPPORTED_LANGUAGES, applyTranslations, normalizeLanguage, t } from './i18n.js?v=1.1.5-20260930-source-import8';
 
 const root = document.documentElement;
 const $ = (selector, scope = document) => scope.querySelector(selector);
@@ -356,16 +356,23 @@ const dropZone = $('#dropZone');
   event.preventDefault();
   dropZone.classList.remove('dragging');
 }));
-dropZone.addEventListener('drop', event => {
-  const file = event.dataTransfer?.files?.[0];
-  if (!file) return;
-  if (!file.name.toLowerCase().endsWith('.deb')) return void showToast(tr('chooseDebToast'));
+function chooseDebFile(file) {
+  if (!file) return false;
+  if (!file.name.toLowerCase().endsWith('.deb')) {
+    showToast(tr('chooseDebToast'));
+    setSelectedFile(null);
+    return false;
+  }
   setSelectedFile(file);
+  return true;
+}
+
+dropZone.addEventListener('drop', event => {
+  chooseDebFile(event.dataTransfer?.files?.[0]);
 });
 
 $('#debFile').addEventListener('change', event => {
-  const file = event.target.files?.[0];
-  if (file) setSelectedFile(file);
+  chooseDebFile(event.target.files?.[0]);
 });
 $('#removeFile').addEventListener('click', () => { cleanupResult(); setSelectedFile(null); });
 $('#convertButton').addEventListener('click', convertDebToIpa);

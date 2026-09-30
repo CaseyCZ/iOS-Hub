@@ -11,6 +11,7 @@ from urllib.parse import unquote, urlparse
 ROOT = Path(__file__).resolve().parents[1]
 REGISTRY = ROOT / "sources" / "registry.json"
 STATUS = ROOT / "data" / "status.json"
+STATUS_MOBILE_PAYLOAD_LIMIT_BYTES = 350 * 1024
 CATALOG = ROOT / "data" / "catalog.json"
 JS_DIR = ROOT / "src" / "js"
 CSS_DIR = ROOT / "src" / "css"
@@ -32,9 +33,12 @@ OWNED_REFERENCE_FILES = (
     ROOT / "guide.html",
     ROOT / "resources.html",
     ROOT / "credits.html",
+    ROOT / "privacy.html",
+    JS_DIR / "analytics.js",
     JS_DIR / "app.js",
     JS_DIR / "builder-page.js",
     JS_DIR / "builder.js",
+    JS_DIR / "config.js",
     JS_DIR / "guide.js",
     JS_DIR / "resources.js",
     JS_DIR / "i18n.js",
@@ -44,6 +48,8 @@ OWNED_REFERENCE_FILES = (
 
 LANGUAGES = ("en", "cs", "de", "es", "fr")
 ALLOWED_MODES = {"classic", "pal", "sidestore"}
+ALLOWED_INSTALLERS = {"altstore", "sidestore", "livecontainer", "altstore-pal", "flarestore", "feather"}
+ALLOWED_COMPLIANCE_STATUSES = {"unreviewed", "licensed", "permission", "public-metadata", "restricted"}
 ID_RE = re.compile(r"^[a-z0-9][a-z0-9-]*$")
 LEGACY_PATHS = [
     ROOT / "Packages",
@@ -100,6 +106,18 @@ def validate_alt_source(path: Path, *, required: bool = True) -> tuple[int, int]
     if not isinstance(apps, list):
         error(f"{path.relative_to(ROOT)} must contain an apps array")
         return 0, 0
+
+    user_info = payload.get("userInfo")
+    if user_info is not None:
+        if not isinstance(user_info, dict):
+            error(f"{path.relative_to(ROOT)} userInfo must be an object")
+        else:
+            for key, value in user_info.items():
+                if not isinstance(value, str):
+                    error(
+                        f"{path.relative_to(ROOT)} userInfo.{key} must be a string "
+                        f"for AltStore compatibility, got {type(value).__name__}"
+                    )
 
     seen: dict[str, str] = {}
     duplicate_count = 0
@@ -214,6 +232,7 @@ def validate_translations() -> None:
 
     for script in (
         JS_DIR / "app.js",
+        JS_DIR / "installers.js",
         JS_DIR / "builder-page.js",
         JS_DIR / "converter.js",
         JS_DIR / "guide.js",
@@ -234,6 +253,125 @@ def validate_translations() -> None:
                 f"Translation key {key!r} is used by the UI but appears in only "
                 f"{occurrences}/{len(LANGUAGES)} language dictionaries"
             )
+
+
+def validate_privacy_compliance() -> None:
+    license_path = ROOT / "LICENSE"
+    if not license_path.exists():
+        error("Missing LICENSE")
+    else:
+        license_text = license_path.read_text(encoding="utf-8")
+        if "[year]" in license_text or "[fullname]" in license_text:
+            error("LICENSE still contains template placeholders")
+        if "Copyright (c) 2026 CaseyCZ" not in license_text:
+            error("LICENSE must contain the current CaseyCZ copyright notice")
+
+    privacy_path = ROOT / "privacy.html"
+    if not privacy_path.exists():
+        error("Missing privacy.html")
+    else:
+        privacy_text = privacy_path.read_text(encoding="utf-8")
+        for required_privacy in (
+            "Google Analytics is optional",
+            "not loaded until you explicitly choose",
+            "passes original public Source URLs to the iOS Hub Source Import Shortcut",
+            "does not rehost third-party IPA binaries",
+            "data-cookie-settings",
+        ):
+            if required_privacy not in privacy_text:
+                error(f"privacy.html is missing required disclosure: {required_privacy!r}")
+
+    builder_path = JS_DIR / "builder.js"
+    if not builder_path.exists():
+        error("Missing builder.js")
+    else:
+        builder_text = builder_path.read_text(encoding="utf-8")
+        for required_builder_policy in (
+            "source.compliance?.reviewStatus !== 'restricted'",
+            "sourceVariantURL(source, installer.variant)",
+            "installer.buildLink(sourceUrl)",
+        ):
+            if required_builder_policy not in builder_text:
+                error(
+                    "builder.js is missing direct link-only Source policy: "
+                    f"{required_builder_policy!r}"
+                )
+        for forbidden_builder_policy in (
+            "aggregationApproved === true",
+            "hostCustomMix",
+            "source-cache/",
+        ):
+            if forbidden_builder_policy in builder_text:
+                error(
+                    "builder.js must not require aggregation or hosted Mixes: "
+                    f"found {forbidden_builder_policy!r}"
+                )
+
+    generator_path = ROOT / "tools" / "update_sources.py"
+    if not generator_path.exists():
+        error("Missing Source generator")
+    else:
+        generator_text = generator_path.read_text(encoding="utf-8")
+        for required_generator_policy in (
+            'status = {"generatedAt": generated_at, "sources": {}}',
+            'catalog = {"generatedAt": generated_at, "sources": []}',
+            "direct_installer_compatibility",
+            'DIRECT_SOURCE_INSTALLERS = ("altstore", "sidestore", "livecontainer", "altstore-pal", "flarestore", "feather")',
+            'STRICT_DUPLICATE_BUNDLE_INSTALLERS = {"altstore", "sidestore", "altstore-pal"}',
+            'installer_variant = "pal" if installer == "altstore-pal" else "classic"',
+            "installer_payload = variant_payloads.get(installer_variant)",
+            '"installerCompatibility"',
+        ):
+            if required_generator_policy not in generator_text:
+                error(
+                    "update_sources.py is missing direct Source monitoring policy: "
+                    f"{required_generator_policy!r}"
+                )
+        for forbidden_generator_persistence in (
+            "SOURCE_CACHE_DIR",
+            "source_compliance_allows_distribution",
+            "aggregationApproved",
+            "app_summary",
+            "uniqueAppCount",
+            "cachePayload",
+            "make_mix",
+            "make_store_source",
+        ):
+            if forbidden_generator_persistence in generator_text:
+                error(
+                    "update_sources.py must not persist or aggregate third-party app metadata: "
+                    f"found {forbidden_generator_persistence!r}"
+                )
+
+    analytics_path = JS_DIR / "analytics.js"
+    if not analytics_path.exists():
+        error("Missing analytics consent runtime")
+    else:
+        analytics_text = analytics_path.read_text(encoding="utf-8")
+        for required_analytics in (
+            "ioshub-analytics-consent-v1",
+            "function loadAnalytics()",
+            "document.createElement('script')",
+            "data-consent-accept",
+            "data-consent-reject",
+            "analytics_storage: 'denied'",
+        ):
+            if required_analytics not in analytics_text:
+                error(f"analytics.js is missing consent guard: {required_analytics!r}")
+
+    for page in SITE_PAGES:
+        if not page.exists():
+            continue
+        text = page.read_text(encoding="utf-8")
+        label = page.relative_to(ROOT)
+        if "https://www.googletagmanager.com/gtag/js?" in text:
+            error(f"{label} loads Google Analytics before consent")
+        if "src/js/analytics.js?v=" not in text:
+            error(f"{label} is missing the consent-gated analytics runtime")
+        if 'href="privacy.html"' not in text:
+            error(f"{label} footer must link to privacy.html")
+        if "data-cookie-settings" not in text:
+            error(f"{label} must provide a Cookie settings control")
 
 
 def validate_project_identity() -> None:
@@ -267,26 +405,6 @@ def validate_project_identity() -> None:
         workflow_text = update_workflow.read_text(encoding="utf-8")
         if workflow_text.count("python tools/audit_repo.py") < 2:
             error("update-sources workflow must audit generated data before each publish attempt")
-
-    generator = ROOT / "tools" / "update_sources.py"
-    if generator.exists():
-        text = generator.read_text(encoding="utf-8")
-        expected_base = f'BASE_URL = "{EXPECTED_SITE_URL}"'
-        if expected_base not in text:
-            error(f"tools/update_sources.py must define {expected_base}")
-
-    expected_sources = {
-        ROOT / "altstore" / "source.json": f"{EXPECTED_SITE_URL}altstore/source.json",
-        ROOT / "sidestore" / "source.json": f"{EXPECTED_SITE_URL}sidestore/source.json",
-    }
-    for path, expected_source_url in expected_sources.items():
-        payload = load_json(path)
-        if not isinstance(payload, dict):
-            continue
-        if payload.get("website") != EXPECTED_SITE_URL:
-            error(f"{path.relative_to(ROOT)} website must be {EXPECTED_SITE_URL}")
-        if payload.get("sourceURL") != expected_source_url:
-            error(f"{path.relative_to(ROOT)} sourceURL must be {expected_source_url}")
 
 
 def validate_registry() -> None:
@@ -322,6 +440,62 @@ def validate_registry() -> None:
         if not developer:
             error(f"registry source {source_id or index!r} is missing developer/maintainer credit")
 
+        compliance = source.get("compliance")
+        if not isinstance(compliance, dict):
+            error(f"registry source {source_id or index!r} is missing compliance metadata")
+        else:
+            review_status = str(compliance.get("reviewStatus") or "")
+            if review_status not in ALLOWED_COMPLIANCE_STATUSES:
+                error(
+                    f"registry source {source_id or index!r} has invalid compliance.reviewStatus "
+                    f"{review_status!r}"
+                )
+            if review_status == "unreviewed":
+                error(
+                    f"registry source {source_id or index!r} is still unreviewed; "
+                    "every Source must be classified before release"
+                )
+
+            evidence_url = str(compliance.get("evidenceURL") or "").strip()
+            parsed_evidence = urlparse(evidence_url)
+            if parsed_evidence.scheme != "https" or not parsed_evidence.netloc:
+                error(
+                    f"reviewed registry source {source_id or index!r} must include "
+                    "an absolute HTTPS compliance.evidenceURL"
+                )
+
+            reviewed_at = str(compliance.get("reviewedAt") or "").strip()
+            if not re.fullmatch(r"\d{4}-\d{2}-\d{2}", reviewed_at):
+                error(
+                    f"reviewed registry source {source_id or index!r} must include "
+                    "compliance.reviewedAt in YYYY-MM-DD format"
+                )
+
+            if not str(compliance.get("note") or "").strip():
+                error(
+                    f"reviewed registry source {source_id or index!r} must include compliance.note"
+                )
+
+            if compliance.get("binaryRehost") is not False:
+                error(
+                    f"registry source {source_id or index!r} must explicitly keep binaryRehost=false"
+                )
+
+            if review_status == "licensed" and not str(compliance.get("license") or "").strip():
+                error(
+                    f"licensed registry source {source_id or index!r} must record compliance.license"
+                )
+
+            for obsolete_compliance_key in ("usage", "aggregationApproved"):
+                if obsolete_compliance_key in compliance:
+                    error(
+                        f"registry source {source_id or index!r} still contains obsolete "
+                        f"compliance.{obsolete_compliance_key}"
+                    )
+
+            if review_status == "restricted" and source.get("builder") is not False:
+                error(f"restricted registry source {source_id or index!r} must set builder=false")
+
         parsed = urlparse(url)
         if parsed.scheme != "https" or not parsed.netloc:
             error(f"registry source {source_id or index!r} must use an absolute HTTPS URL")
@@ -332,6 +506,66 @@ def validate_registry() -> None:
 
         if mode not in ALLOWED_MODES:
             error(f"registry source {source_id or index!r} has unsupported mode {mode!r}")
+
+        source_urls = source.get("urls")
+        if source_urls is not None:
+            if not isinstance(source_urls, dict):
+                error(f"registry source {source_id or index!r} urls must be an object")
+            else:
+                unknown_variants = sorted(set(source_urls) - {"classic", "pal"})
+                if unknown_variants:
+                    error(
+                        f"registry source {source_id or index!r} has unsupported URL variants: "
+                        + ", ".join(unknown_variants)
+                    )
+                for variant, variant_url in source_urls.items():
+                    parsed_variant = urlparse(str(variant_url or ""))
+                    if parsed_variant.scheme != "https" or not parsed_variant.netloc:
+                        error(
+                            f"registry source {source_id or index!r} urls.{variant} "
+                            "must use an absolute HTTPS URL"
+                        )
+
+        classic_url = (
+            str(source_urls.get("classic") or "").strip()
+            if isinstance(source_urls, dict)
+            else (url if mode != "pal" else "")
+        )
+        pal_url = (
+            str(source_urls.get("pal") or "").strip()
+            if isinstance(source_urls, dict)
+            else (url if mode == "pal" else "")
+        )
+
+        installers = source.get("installers")
+        if classic_url and pal_url and installers is None:
+            error(
+                f"registry source {source_id or index!r} exposes both Classic and PAL URLs "
+                "and must declare installers explicitly"
+            )
+        if installers is not None:
+            if not isinstance(installers, list) or not installers:
+                error(f"registry source {source_id or index!r} installers must be a non-empty array")
+            else:
+                normalized_installers = [str(item) for item in installers]
+                unknown_installers = sorted(set(normalized_installers) - ALLOWED_INSTALLERS)
+                if unknown_installers:
+                    error(
+                        f"registry source {source_id or index!r} has unsupported installers: "
+                        + ", ".join(unknown_installers)
+                    )
+                if len(normalized_installers) != len(set(normalized_installers)):
+                    error(f"registry source {source_id or index!r} installers contains duplicates")
+
+                for installer in normalized_installers:
+                    if installer == "altstore-pal" and not pal_url:
+                        error(
+                            f"registry source {source_id or index!r} enables altstore-pal without a PAL URL"
+                        )
+                    if installer != "altstore-pal" and not classic_url:
+                        error(
+                            f"registry source {source_id or index!r} enables {installer} without a Classic URL"
+                        )
 
         website = str(source.get("website") or "").strip()
         if website:
@@ -358,12 +592,16 @@ def validate_registry() -> None:
                 f"registry source {source_id or index!r} disables cachePayload but remains available to Builder"
             )
 
-        if source.get("mergeable") is True and mode != "classic":
-            error(f"registry source {source_id!r} is mergeable but mode is {mode!r}; only Classic sources may be pre-hosted")
-
-        for key in ("official", "trusted", "recommended", "mergeable", "community", "modified"):
+        for key in ("official", "trusted", "recommended", "community", "modified"):
             if key in source and not isinstance(source[key], bool):
                 error(f"registry source {source_id!r} field {key!r} must be boolean")
+
+        for obsolete_source_key in ("mergeable", "autoPackage", "cachePayload", "catalogLimit"):
+            if obsolete_source_key in source:
+                error(
+                    f"registry source {source_id!r} still contains obsolete Mix field "
+                    f"{obsolete_source_key!r}"
+                )
 
 
     if partially_localized:
@@ -375,154 +613,192 @@ def validate_registry() -> None:
 
 def validate_generated_data() -> None:
     status = load_json(STATUS)
-    if isinstance(status, dict):
-        if not isinstance(status.get("sources"), dict):
-            error("data/status.json must contain a sources object")
-        mixes = status.get("mixes", {})
-        if not isinstance(mixes, dict):
-            error("data/status.json mixes must be an object")
-        else:
-            max_sources = mixes.get("maxSourcesPerMix")
-            if max_sources is not None and (not isinstance(max_sources, int) or max_sources < 0):
-                error("data/status.json maxSourcesPerMix must be a non-negative integer")
-
     catalog = load_json(CATALOG)
-    if isinstance(catalog, dict) and not isinstance(catalog.get("sources"), list):
-        error("data/catalog.json must contain a sources array")
-
     registry = load_json(REGISTRY)
-    if (
-        isinstance(registry, dict)
-        and isinstance(registry.get("sources"), list)
-        and isinstance(status, dict)
-        and isinstance(status.get("sources"), dict)
-        and isinstance(catalog, dict)
-        and isinstance(catalog.get("sources"), list)
-    ):
-        registry_ids = {
-            str(item.get("id"))
-            for item in registry["sources"]
-            if isinstance(item, dict) and item.get("id")
-        }
-        status_ids = set(status["sources"])
-        if registry_ids != status_ids:
-            missing = sorted(registry_ids - status_ids)
-            extra = sorted(status_ids - registry_ids)
-            if missing:
-                error("data/status.json is missing registry ids: " + ", ".join(missing))
-            if extra:
-                error("data/status.json contains unknown ids: " + ", ".join(extra))
 
-        online_ids = {
-            source_id
-            for source_id, item in status["sources"].items()
-            if isinstance(item, dict) and item.get("online") is True
-        }
-        catalog_ids = {
-            str(item.get("id"))
-            for item in catalog["sources"]
-            if isinstance(item, dict) and item.get("id")
-        }
-        if catalog_ids != online_ids:
-            missing = sorted(online_ids - catalog_ids)
-            extra = sorted(catalog_ids - online_ids)
-            if missing:
-                error("data/catalog.json is missing online source ids: " + ", ".join(missing))
-            if extra:
-                error("data/catalog.json contains non-online/unknown source ids: " + ", ".join(extra))
+    if not isinstance(status, dict):
+        return
+    if not isinstance(status.get("sources"), dict):
+        error("data/status.json must contain a sources object")
+        return
+    for obsolete_section in ("mixes", "altstore", "sidestore"):
+        if obsolete_section in status:
+            error(
+                f"data/status.json still publishes obsolete generated Source section "
+                f"{obsolete_section!r}"
+            )
 
-        for package_name in ("altstore", "sidestore"):
-            package = status.get(package_name, {})
-            if not isinstance(package, dict):
-                continue
-            unknown = sorted(set(package.get("sourceIDs") or []) - registry_ids)
+    if not isinstance(catalog, dict) or not isinstance(catalog.get("sources"), list):
+        error("data/catalog.json must contain a sources array")
+        return
+    if set(catalog) != {"generatedAt", "sources"}:
+        error(
+            "data/catalog.json may contain only generatedAt and Source-level sources metadata"
+        )
+
+    if not isinstance(registry, dict) or not isinstance(registry.get("sources"), list):
+        return
+
+    registry_by_id = {
+        str(item.get("id")): item
+        for item in registry["sources"]
+        if isinstance(item, dict) and item.get("id")
+    }
+    registry_ids = set(registry_by_id)
+    status_ids = set(status["sources"])
+    if registry_ids != status_ids:
+        missing = sorted(registry_ids - status_ids)
+        extra = sorted(status_ids - registry_ids)
+        if missing:
+            error("data/status.json is missing registry ids: " + ", ".join(missing))
+        if extra:
+            error("data/status.json contains unknown ids: " + ", ".join(extra))
+
+    online_ids: set[str] = set()
+    for source_id, source in registry_by_id.items():
+        item = status["sources"].get(source_id)
+        if not isinstance(item, dict):
+            continue
+
+        configured_urls = source.get("urls")
+        mode = str(source.get("mode") or "classic")
+        expected_variants: set[str] = set()
+        if isinstance(configured_urls, dict):
+            expected_variants.update(
+                variant
+                for variant in ("classic", "pal")
+                if str(configured_urls.get(variant) or "").strip()
+            )
+        primary_url = str(source.get("url") or "").strip()
+        if primary_url:
+            expected_variants.add("pal" if mode == "pal" else "classic")
+
+        variants = item.get("variants")
+        if not isinstance(variants, dict):
+            error(f"data/status.json source {source_id!r} must contain variants object")
+            variants = {}
+        else:
+            unknown = sorted(set(variants) - expected_variants)
+            missing = sorted(expected_variants - set(variants))
             if unknown:
-                error(f"data/status.json {package_name}.sourceIDs contains unknown ids: " + ", ".join(unknown))
-
-        # Keep generated installable packages in lockstep with status.json.
-        # This catches a new registry source being validated but accidentally omitted
-        # from the published AltStore/SideStore package output.
-        for package_name in ("altstore", "sidestore"):
-            package_status = status.get(package_name, {})
-            package_path = ROOT / package_name / "source.json"
-            package_payload = load_json(package_path)
-            if not isinstance(package_status, dict) or not isinstance(package_payload, dict):
-                continue
-            expected_ids = set(package_status.get("sourceIDs") or [])
-            user_info = package_payload.get("userInfo")
-            actual_ids = set(user_info.get("sourceIDs") or []) if isinstance(user_info, dict) else set()
-            if expected_ids != actual_ids:
                 error(
-                    f"{package_path.relative_to(ROOT)} sourceIDs differ from data/status.json; "
-                    f"missing={sorted(expected_ids - actual_ids)}, "
-                    f"extra={sorted(actual_ids - expected_ids)}"
+                    f"data/status.json source {source_id!r} has unknown variants: "
+                    + ", ".join(unknown)
+                )
+            if missing:
+                error(
+                    f"data/status.json source {source_id!r} is missing variants: "
+                    + ", ".join(missing)
+                )
+            for variant, variant_status in variants.items():
+                if not isinstance(variant_status, dict):
+                    error(
+                        f"data/status.json source {source_id!r} variant {variant!r} must be an object"
+                    )
+                    continue
+                if not isinstance(variant_status.get("online"), bool):
+                    error(
+                        f"data/status.json source {source_id!r} variant {variant!r} "
+                        "must contain boolean online"
+                    )
+                duplicate_report = variant_status.get("duplicateBundleIdentifiers")
+                if isinstance(duplicate_report, dict):
+                    forbidden_detail_keys = set(duplicate_report) - {
+                        "count", "duplicateAppEntries", "extraEntries"
+                    }
+                    if forbidden_detail_keys:
+                        error(
+                            f"data/status.json source {source_id!r} variant {variant!r} "
+                            "persists third-party duplicate details: "
+                            + ", ".join(sorted(forbidden_detail_keys))
+                        )
+
+        if "aggregationApproved" in item:
+            error(
+                f"data/status.json source {source_id!r} must not persist aggregationApproved"
+            )
+        if item.get("iconURL") not in ("", None):
+            error(f"data/status.json source {source_id!r} must not persist third-party iconURL")
+
+        duplicate_report = item.get("duplicateBundleIdentifiers")
+        if isinstance(duplicate_report, dict):
+            forbidden_detail_keys = set(duplicate_report) - {
+                "count", "duplicateAppEntries", "extraEntries"
+            }
+            if forbidden_detail_keys:
+                error(
+                    f"data/status.json source {source_id!r} persists third-party duplicate details: "
+                    + ", ".join(sorted(forbidden_detail_keys))
                 )
 
-        all_compatible_path = ROOT / "mix" / "all-compatible.json"
-        all_compatible = load_json(all_compatible_path)
-        mixes_status = status.get("mixes", {})
-        if isinstance(all_compatible, dict) and isinstance(mixes_status, dict):
-            expected_ids = set(mixes_status.get("autoCompatibleSourceIDs") or [])
-            user_info = all_compatible.get("userInfo")
-            actual_ids = set(user_info.get("sourceIDs") or []) if isinstance(user_info, dict) else set()
-            if expected_ids != actual_ids:
+        installer_compatibility = item.get("installerCompatibility")
+        if item.get("online") is True:
+            online_ids.add(source_id)
+            preferred = item.get("preferredVariant")
+            if preferred not in expected_variants:
                 error(
-                    "mix/all-compatible.json sourceIDs differ from data/status.json; "
-                    f"missing={sorted(expected_ids - actual_ids)}, "
-                    f"extra={sorted(actual_ids - expected_ids)}"
+                    f"data/status.json source {source_id!r} has invalid preferredVariant {preferred!r}"
+                )
+            elif isinstance(variants, dict) and variants.get(preferred, {}).get("online") is not True:
+                error(
+                    f"data/status.json source {source_id!r} preferredVariant {preferred!r} is not online"
+                )
+            if not isinstance(installer_compatibility, dict):
+                error(
+                    f"data/status.json source {source_id!r} must contain installerCompatibility"
                 )
 
-        registry_sources = [item for item in registry["sources"] if isinstance(item, dict)]
-        expected_cache_ids = {
-            str(item.get("id"))
-            for item in registry_sources
-            if item.get("id") in online_ids and item.get("cachePayload", True)
-        }
-        cache_dir = ROOT / "data" / "source-cache"
-        if cache_dir.is_dir():
-            actual_cache_ids = {path.stem for path in cache_dir.glob("*.json")}
-            if expected_cache_ids != actual_cache_ids:
-                error(
-                    "source cache IDs differ from expected online cache; "
-                    f"missing={sorted(expected_cache_ids - actual_cache_ids)}, "
-                    f"extra={sorted(actual_cache_ids - expected_cache_ids)}"
-                )
+    catalog_by_id = {
+        str(item.get("id")): item
+        for item in catalog["sources"]
+        if isinstance(item, dict) and item.get("id")
+    }
+    catalog_ids = set(catalog_by_id)
+    if catalog_ids != online_ids:
+        missing = sorted(online_ids - catalog_ids)
+        extra = sorted(catalog_ids - online_ids)
+        if missing:
+            error("data/catalog.json is missing online source ids: " + ", ".join(missing))
+        if extra:
+            error("data/catalog.json contains non-online/unknown source ids: " + ", ".join(extra))
 
-        mixes = status.get("mixes", {})
-        mix_dir = ROOT / "mix"
-        if isinstance(mixes, dict) and mix_dir.is_dir():
-            combo_files = [path for path in mix_dir.glob("*.json") if path.name != "all-compatible.json"]
-            expected_mix_count = mixes.get("count")
-            if isinstance(expected_mix_count, int) and expected_mix_count != len(combo_files):
-                error(
-                    f"data/status.json mix count {expected_mix_count} does not match "
-                    f"{len(combo_files)} generated combination files"
-                )
-            if not (mix_dir / "all-compatible.json").exists():
-                error("Missing mix/all-compatible.json")
+    for source_id, item in catalog_by_id.items():
+        source = registry_by_id.get(source_id, {})
+        status_item = status["sources"].get(source_id, {})
+        allowed_catalog_keys = {"id", "name", "appCount", "variants"}
+        extra_catalog_keys = set(item) - allowed_catalog_keys
+        if extra_catalog_keys:
+            error(
+                f"data/catalog.json source {source_id!r} persists unexpected metadata: "
+                + ", ".join(sorted(extra_catalog_keys))
+            )
+        if item.get("name") != source.get("name"):
+            error(f"data/catalog.json source {source_id!r} name must come from registry metadata")
+        if item.get("appCount") != status_item.get("appCount"):
+            error(f"data/catalog.json source {source_id!r} appCount differs from status.json")
+        if item.get("apps") not in ([], None):
+            error(f"data/catalog.json source {source_id!r} must not persist app metadata")
+        if item.get("iconURL") not in ("", None):
+            error(f"data/catalog.json source {source_id!r} must not persist third-party iconURL")
+        if item.get("catalogLimited") not in (False, None):
+            error(f"data/catalog.json source {source_id!r} must not claim a copied app catalog")
+        if "aggregationApproved" in item:
+            error(f"data/catalog.json source {source_id!r} must not persist aggregationApproved")
 
-    validate_alt_source(ROOT / "altstore" / "source.json")
-    validate_alt_source(ROOT / "sidestore" / "source.json")
-
-    mix_dir = ROOT / "mix"
-    if not mix_dir.is_dir():
-        error("Missing generated mix directory")
-    else:
-        mix_files = sorted(mix_dir.glob("*.json"))
-        if not mix_files:
-            error("No generated Mix JSON files found")
-        for path in mix_files:
-            validate_alt_source(path)
-
-    cache_dir = ROOT / "data" / "source-cache"
-    if not cache_dir.is_dir():
-        error("Missing data/source-cache directory")
-    else:
-        for path in sorted(cache_dir.glob("*.json")):
-            payload = load_json(path)
-            if not isinstance(payload, dict) or not isinstance(payload.get("apps"), list):
-                error(f"{path.relative_to(ROOT)} is not a valid source cache with an apps array")
-
+    obsolete_paths = (
+        ROOT / "data" / "source-cache",
+        ROOT / "data" / "conflicts.json",
+        ROOT / "data" / "mix-api.json",
+        ROOT / "mix",
+        ROOT / "altstore" / "source.json",
+        ROOT / "sidestore" / "source.json",
+        ROOT / "server" / "mix-api",
+    )
+    for obsolete in obsolete_paths:
+        if obsolete.exists():
+            error(
+                f"Obsolete Mix/cache artifact must not exist: {obsolete.relative_to(ROOT)}"
+            )
 
 
 def validate_interactive_guide() -> None:
@@ -533,6 +809,30 @@ def validate_interactive_guide() -> None:
         duplicates = sorted({value for value in ids if ids.count(value) > 1})
         for value in duplicates:
             error(f"guide.html contains duplicate id {value!r}")
+
+        for required_guide_structure in (
+            'id="methods"',
+            'data-i18n="guideQuickTitle"',
+            'id="source-installers"',
+            'data-i18n="guideSourceInstallersTitle"',
+            'href="#source-installers" data-help-copy="jumpSources"',
+            '<td>AltStore PAL</td>',
+            'data-i18n="guidePalBest"',
+            '<td>FlareStore</td>',
+            'data-i18n="guideFlareBest"',
+            '<td>Feather</td>',
+            'data-i18n="guideFeatherBest"',
+            '<div class="beginner-term-name">FlareStore</div>',
+            'data-i18n="beginnerFlareMeaning"',
+            '<div class="beginner-term-name">Feather</div>',
+            'data-i18n="beginnerFeatherMeaning"',
+            'data-i18n="beginnerGlossaryDesc">Seven short explanations before you choose anything.',
+        ):
+            if required_guide_structure not in text:
+                error(
+                    "guide.html must keep installation methods and Source-compatible installers as distinct sections; "
+                    f"missing {required_guide_structure!r}"
+                )
 
     first_party_scripts = (
         "app.js",
@@ -850,9 +1150,9 @@ def validate_layout() -> None:
     # Source-facing pages must stay registry-driven so adding one source updates
     # the catalog, Builder and Credits without maintaining duplicate hard-coded lists.
     dynamic_source_scripts = {
-        "app.js": ("sources/registry.json", "data/status.json", "data/catalog.json", "sourceWebsiteIcon", "data-source-website-icon"),
-        "builder.js": ("sources/registry.json", "data/status.json", "data/catalog.json"),
-        "credits.js": ("sources/registry.json", "sourceCredits", "source.developer", "maintainerGroups", "sourceCreditGroup", "brand-link-icon", "iconImage"),
+        "app.js": ("sources/registry.json", "data/status.json", "data/catalog.json", "sourceWebsiteIcon", "data-source-website-icon", "installers.js", "SOURCE_VARIANT_IDS", "sourceVariantLabel", "sourceModeLabel", "sourceInstallerCompatibility", "sourceInstallerDirectAvailable", "data-blocked-installers", "includeOffline:checkedOffline", "groupInstallerIds(sourceInstallerIds(source), 3)"),
+        "builder.js": ("sources/registry.json", "data/status.json", "installers.js", "SOURCE_BUILDER_INSTALLER_IDS", "DEFAULT_SOURCE_BUILDER_INSTALLER_ID", "sourceInstallerDirectAvailable", "sourceFormatLabel", "targetVariant", "queueEntries()", "installer.buildLink(sourceUrl)", "SHORTCUT_NAME", "SOURCE_IMPORT_SHORTCUT", "supportedInstallerIds", "shortcutSupportsTarget", "prepareManualFallback", "expPrepareManual", "startShortcutImport", "input=text&text=", "copyQueueUrls", "createSelectionJson", "ios-hub-source-selection-v1", "expQueueList"),
+        "credits.js": ("sources/registry.json", "sourceCredits", "source.developer", "maintainerGroups", "sourceCreditGroup", "brand-link-icon", "iconImage", "CORE_SIDELOAD_RESOURCE_NAMES", "SIDELOAD_TOOLS"),
     }
     for script_name, required_parts in dynamic_source_scripts.items():
         script = JS_DIR / script_name
@@ -865,6 +1165,395 @@ def validate_layout() -> None:
                     f"{script_name} must remain registry-driven; missing {required_part!r}"
                 )
 
+    installers_script = JS_DIR / "installers.js"
+    if not installers_script.exists():
+        error("Missing central installer configuration: src/js/installers.js")
+    else:
+        installers_text = installers_script.read_text(encoding="utf-8")
+        for required in (
+            "altstore",
+            "sidestore",
+            "livecontainer",
+            "altstore-pal",
+            "flarestore",
+            "feather",
+            "flarestore://addRepo=",
+            "feather://source/",
+            "SOURCE_VARIANTS",
+            "SOURCE_VARIANT_IDS",
+            "SOURCE_MODES",
+            "SOURCE_BUILDER_INSTALLER_IDS",
+            "DEFAULT_SOURCE_BUILDER_INSTALLER_ID",
+            "builderDefault",
+            "catalogPriority",
+            "overflowPriority",
+            "groupInstallerIds",
+            "sourceInstallerCompatibility",
+            "sourceInstallerDirectAvailable",
+            "sourceInstallerDeepLink",
+            "sourceVariantURL",
+            "sourceVariantIds",
+            "sourceVariantLabel",
+            "sourceModeLabel",
+            "sourceFormatLabel",
+            "SIDELOAD_TOOLS",
+            "AUXILIARY_SIDELOAD_TOOLS",
+            "CORE_SIDELOAD_TOOL_IDS",
+            "CORE_SIDELOAD_RESOURCE_NAMES",
+            "sideloadToolURL",
+            "sideloadToolSupports",
+            "RESOURCE_BADGES",
+            "resourceBadgeSpecs",
+            "orderedSideloadTools",
+            "resourceSideloadTools",
+            "creditSideloadTools",
+            "sideloadToolsWithCapability",
+            "sideloadToolsForTarget",
+            "sideloadToolsForRole",
+            "sideloadToolForRole",
+            "sideloadToolProfile",
+            "recommendationRoles: Object.freeze",
+            "targets: Object.freeze",
+            "hostPlatforms: Object.freeze",
+            "computerMode",
+            "openSource",
+            "sourceSupport",
+            "resourceBadges: Object.freeze",
+            "links: Object.freeze",
+            "classicGuide",
+            "prerequisites",
+            "pairing",
+            "lcSideStore",
+            "download",
+            "requirements",
+            "troubleshootingSideloadTools",
+            "sideinstaller",
+            "sideloadly",
+            "atvloadly",
+            "iloader",
+            "impactor",
+            "trollstore",
+        ):
+            if required not in installers_text:
+                error(f"installers.js is missing installer architecture part: {required!r}")
+
+        source_modes_match = re.search(
+            r"export const SOURCE_MODES = Object\.freeze\((\{[\s\S]*?\})\);\s*export const INSTALLERS",
+            installers_text,
+        )
+        if source_modes_match:
+            source_modes_text = source_modes_match.group(1)
+            for misplaced in ("toolType", "capabilities", "recommendationRoles", "website", "guideURL", "coreCredit", "resourceCard"):
+                if misplaced in source_modes_text:
+                    error(
+                        "SOURCE_MODES must contain source-format metadata only; "
+                        f"found misplaced tool metadata {misplaced!r}"
+                    )
+
+        profile_helper_start = installers_text.find("export function sideloadToolProfile")
+        tool_definitions_text = (
+            installers_text[:profile_helper_start]
+            if profile_helper_start >= 0
+            else installers_text
+        )
+        tool_count = tool_definitions_text.count("toolType:")
+        if tool_count < 12:
+            error(f"Central sideload registry unexpectedly contains only {tool_count} tool profiles")
+        for field in (
+            "targets: Object.freeze",
+            "hostPlatforms: Object.freeze",
+            "computerMode:",
+            "openSource:",
+            "sourceSupport:",
+            "resourceBadges: Object.freeze",
+            "recommendationRoles: Object.freeze",
+            "resourceOrder:",
+            "creditOrder:",
+            "resourceDescriptionKey:",
+            "creditDescriptionKey:",
+            "creditBadge:",
+            "creditLinkKey:",
+            "troubleshooting:",
+        ):
+            field_count = tool_definitions_text.count(field)
+            if field_count != tool_count:
+                error(
+                    "Every central sideload tool must have a complete profile; "
+                    f"{field!r} appears {field_count} times for {tool_count} tools"
+                )
+
+        for tool_id, troubleshooting_url in (
+            ("atvloadly", "https://github.com/bitxeno/atvloadly/wiki/FAQ"),
+            ("impactor", "https://github.com/claration/Impactor/issues"),
+            ("trollstore", "https://github.com/opa334/TrollStore/issues"),
+        ):
+            marker = f"id: '{tool_id}'"
+            start = tool_definitions_text.find(marker)
+            next_profile = tool_definitions_text.find("\n    id: '", start + len(marker)) if start >= 0 else -1
+            block = tool_definitions_text[start:next_profile if next_profile >= 0 else len(tool_definitions_text)] if start >= 0 else ""
+            links_match = re.search(r"links:\s*Object\.freeze\(\{([\s\S]*?)\}\)", block)
+            if not links_match or troubleshooting_url not in links_match.group(1):
+                error(f"{tool_id} troubleshooting URL must live inside links.troubleshooting")
+
+        if "resourceBadges: Object.freeze(['freeVerified', 'resourceSideloading', 'Sources'])" not in installers_text:
+            error("FlareStore Resources profile must keep FREE verified, Sideloading and Sources badges")
+        if "icon: 'assets/icons/flarestore.webp'" not in installers_text:
+            error("FlareStore must use the local current icon asset")
+        if "https://flarestore.app/favicon.ico" in installers_text:
+            error("FlareStore must not depend on the external favicon")
+        if not (ROOT / "assets" / "icons" / "flarestore.webp").exists():
+            error("Missing local FlareStore icon asset: assets/icons/flarestore.webp")
+
+        config_path = JS_DIR / "config.js"
+        if not config_path.exists():
+            error("Missing central Shortcut configuration: src/js/config.js")
+        else:
+            config_text = config_path.read_text(encoding="utf-8")
+            shortcut_ids_match = re.search(
+                r"supportedInstallerIds:\s*Object\.freeze\(\[([^\]]*)\]\)",
+                config_text,
+            )
+            if not shortcut_ids_match:
+                error("config.js must define SOURCE_IMPORT_SHORTCUT.supportedInstallerIds")
+            else:
+                shortcut_installer_ids = set(
+                    re.findall(r"['\"]([a-z0-9][a-z0-9-]*)['\"]", shortcut_ids_match.group(1))
+                )
+                installers_block_match = re.search(
+                    r"export const INSTALLERS = Object\.freeze\(\{([\s\S]*?)\n\}\);\s*\n\s*export const SOURCE_BUILDER_INSTALLER_IDS",
+                    installers_text,
+                )
+                source_installer_ids: set[str] = set()
+                if installers_block_match:
+                    for profile in re.finditer(
+                        r"\bid:\s*'([^']+)'[\s\S]*?\bcapabilities:\s*Object\.freeze\(\[([^\]]*)\]\)",
+                        installers_block_match.group(1),
+                    ):
+                        if re.search(r"['\"]source['\"]", profile.group(2)):
+                            source_installer_ids.add(profile.group(1))
+                else:
+                    error("Could not parse INSTALLERS block for Shortcut support audit")
+
+                shortcut_missing = sorted(source_installer_ids - shortcut_installer_ids)
+                if shortcut_missing:
+                    warn(
+                        "Source installer(s) are available in Builder but not yet supported by "
+                        "iOS Hub Source Import; Builder will expose manual-only fallback: "
+                        + ", ".join(shortcut_missing)
+                    )
+                shortcut_stale = sorted(shortcut_installer_ids - source_installer_ids)
+                if shortcut_stale:
+                    warn(
+                        "Shortcut supportedInstallerIds contains installer(s) no longer exposed "
+                        "as Source Builder targets: " + ", ".join(shortcut_stale)
+                    )
+
+        for required_sideinstaller_profile in (
+            "ios27: 'on-device'",
+            "ios17to26: 'pairing-file-required'",
+        ):
+            if required_sideinstaller_profile not in installers_text:
+                error(
+                    "SideInstaller compatibility profile is incomplete; "
+                    f"missing {required_sideinstaller_profile!r}"
+                )
+
+    index_page = ROOT / "index.html"
+    if index_page.exists():
+        index_page_text = index_page.read_text(encoding="utf-8")
+        if "combine compatible sources" in index_page_text.lower():
+            error("index.html still advertises obsolete combined Mix behavior")
+
+    builder_page = ROOT / "builder.html"
+    if builder_page.exists():
+        builder_page_text = builder_page.read_text(encoding="utf-8")
+        for obsolete_builder_copy in (
+            "filter and combine checked Classic iOS sources into a Mix",
+            "combined Mix",
+            "Hosted Mix",
+        ):
+            if obsolete_builder_copy.lower() in builder_page_text.lower():
+                error(
+                    "builder.html still advertises obsolete combined Mix behavior; "
+                    f"found {obsolete_builder_copy!r}"
+                )
+        for required_queue_ui in (
+            'id="builderTargets" class="builder-target-picker-host"',
+            'id="expAddTarget"',
+            'id="expCopyUrl"',
+            'id="expRestartQueue"',
+            'id="expQueueList"',
+            'id="builderCompatibilityHelp"',
+            'id="builderShortcutSupportNotice"',
+            'id="expPrepareManual"',
+        ):
+            if required_queue_ui not in builder_page_text:
+                error(
+                    "Builder direct Source queue UI is incomplete; "
+                    f"missing {required_queue_ui!r}"
+                )
+        for obsolete_mix_ui in (
+            "Build Mix",
+            "Hosted Mix",
+            'data-exp-compat-filter',
+        ):
+            if obsolete_mix_ui in builder_page_text:
+                error(
+                    "Builder must not restore combined Mix UI; "
+                    f"found {obsolete_mix_ui!r}"
+                )
+        if 'class="builder-target-tabs"' in builder_page_text:
+            error("Builder must not restore the large installer target card grid")
+
+    installers_script = JS_DIR / "installers.js"
+    if installers_script.exists():
+        installers_text = installers_script.read_text(encoding="utf-8")
+        for required_source_builder_arch in (
+            "export const SOURCE_BUILDER_INSTALLER_IDS",
+            "export const DEFAULT_SOURCE_BUILDER_INSTALLER_ID",
+            "capabilities?.includes('source')",
+        ):
+            if required_source_builder_arch not in installers_text:
+                error(
+                    "installers.js must define direct Source Builder targets; "
+                    f"missing {required_source_builder_arch!r}"
+                )
+
+    builder_script = JS_DIR / "builder.js"
+    if builder_script.exists():
+        builder_text = builder_script.read_text(encoding="utf-8")
+        for required_direct_queue in (
+            "SOURCE_BUILDER_INSTALLER_IDS",
+            "DEFAULT_SOURCE_BUILDER_INSTALLER_ID",
+            "function targetCompatibility(source)",
+            "function queueEntries()",
+            "async function startShortcutImport()",
+            "SHORTCUT_NAME",
+            "SOURCE_IMPORT_SHORTCUT.supportedInstallerIds",
+            "function shortcutSupportsTarget",
+            "function prepareManualFallback",
+            "$('#expPrepareManual')?.addEventListener('click', prepareManualFallback)",
+            "input=text&text=",
+            "sourceVariantURL(source, installer.variant)",
+            "installer.buildLink(sourceUrl)",
+            "urls.join('\\n')",
+            "function createSelectionJson()",
+            "ios-hub-source-selection-v1",
+            "$('#expAddTarget')?.addEventListener('click'",
+            "$('#expQueueList')?.addEventListener('click'",
+        ):
+            if required_direct_queue not in builder_text:
+                error(
+                    "Builder direct Source queue is incomplete; "
+                    f"missing {required_direct_queue!r}"
+                )
+        for picker_required in (
+            'class="builder-target-picker"',
+            'class="builder-target-menu"',
+            "role=\"option\"",
+            "$('#builderTargets')?.addEventListener('click'",
+        ):
+            if picker_required not in builder_text:
+                error(
+                    "Builder installer target dropdown is incomplete; "
+                    f"missing {picker_required!r}"
+                )
+        for obsolete_mix_code in (
+            "hostCustomMix",
+            "data/mix-api.json",
+            "source-cache/",
+            "sanitizeClassicApp",
+            "dedupe(payloads)",
+            "hostedTarget(ids)",
+            "JSON.stringify(mix",
+            "blobUrl",
+        ):
+            if obsolete_mix_code in builder_text:
+                error(
+                    "Builder must use original Source URLs, not generated Mix JSON; "
+                    f"found {obsolete_mix_code!r}"
+                )
+        if "$('[data-exp-target]').forEach(button => button.addEventListener" in builder_text:
+            error("Builder target picker must use delegated events so re-rendered options keep working")
+
+    mix_api_config = ROOT / "data" / "mix-api.json"
+    if mix_api_config.exists():
+        error("Obsolete data/mix-api.json must be removed; direct Source Builder does not use a Mix API")
+
+    source_updater = ROOT / "tools" / "update_sources.py"
+    if source_updater.exists():
+        updater_text = source_updater.read_text(encoding="utf-8")
+        for required in (
+            "duplicate_bundle_report",
+            "direct_installer_compatibility",
+            "DIRECT_SOURCE_INSTALLERS",
+            "STRICT_DUPLICATE_BUNDLE_INSTALLERS",
+            "TOLERANT_DUPLICATE_BUNDLE_INSTALLERS",
+            "DUPLICATE_BUNDLE_EXAMPLE_LIMIT",
+            "key = raw_bundle.lower()",
+            '"duplicateBundleIdentifiers"',
+            '"installerCompatibility"',
+            '"directSource": "fail"',
+            '"installVariants": "try"',
+            'status = {"generatedAt": generated_at, "sources": {}}',
+        ):
+            if required not in updater_text:
+                error(
+                    "update_sources.py must expose direct per-installer Source compatibility; "
+                    f"missing {required!r}"
+                )
+        for obsolete_generator_part in (
+            "MIX_DIR",
+            "ALTSTORE_DIR",
+            "SIDESTORE_DIR",
+            "make_mix",
+            "make_store_source",
+            "dedupe_apps",
+            "sanitize_classic_app",
+            "mixTest",
+            "mixReason",
+        ):
+            if obsolete_generator_part in updater_text:
+                error(
+                    "update_sources.py still contains obsolete combined-Mix generation code; "
+                    f"found {obsolete_generator_part!r}"
+                )
+
+    status_file = ROOT / "data" / "status.json"
+    if status_file.exists():
+        try:
+            status_text = status_file.read_text(encoding="utf-8")
+            if len(status_text.encode("utf-8")) > STATUS_MOBILE_PAYLOAD_LIMIT_BYTES:
+                error(
+                    "data/status.json is too large for the mobile runtime payload; "
+                    f"keep it below {STATUS_MOBILE_PAYLOAD_LIMIT_BYTES // 1024} KB"
+                )
+            status_payload = json.loads(status_text)
+            for obsolete_section in ("mixes", "altstore", "sidestore"):
+                if obsolete_section in status_payload:
+                    error(
+                        f"data/status.json still publishes obsolete generated Source section "
+                        f"{obsolete_section!r}"
+                    )
+            for source_id, source_status in (status_payload.get("sources") or {}).items():
+                duplicate_report = source_status.get("duplicateBundleIdentifiers") or {}
+                items = duplicate_report.get("items") or []
+                if len(items) > 20:
+                    error(
+                        f"data/status.json stores too many duplicate bundle examples for {source_id!r}; "
+                        "keep diagnostics capped to avoid bloating the mobile status payload"
+                    )
+        except (json.JSONDecodeError, OSError) as exc:
+            error(f"Unable to validate data/status.json duplicate bundle diagnostics: {exc}")
+
+    legacy_brand = "AltStore · SideStore · LiveContainer"
+    for page in SITE_PAGES:
+        if page.exists() and legacy_brand in page.read_text(encoding="utf-8"):
+            error(
+                f"{page.name} still hard-codes the legacy installer trio in site branding; "
+                "use installer-neutral branding"
+            )
+
     credits_page = ROOT / "credits.html"
     if credits_page.exists() and 'id="sourceCredits"' not in credits_page.read_text(encoding="utf-8"):
         error("credits.html must contain the dynamic Source catalogue credits host")
@@ -873,10 +1562,342 @@ def validate_layout() -> None:
 
     resources_page = ROOT / "resources.html"
     credits_script = JS_DIR / "credits.js"
+    resources_script = JS_DIR / "resources.js"
+    guide_script = JS_DIR / "guide.js"
+
+    registry_driven_tool_scripts = {
+        "resources.js": ("SIDELOAD_TOOLS", "resourceBadgeSpecs", "resourceSideloadTools", "resourceDescriptionKey", "sideloadToolURL", "buildResourceSideloadCard", "renderSideloadResourceCards", "sideloadResourceGrid", "hydrateSideloadToolCards", "renderSideloadToolBadges", "dataset.toolType", "dataset.capabilities", "dataset.targets", "dataset.hostPlatforms", "dataset.computerMode", "dataset.sourceSupport", "dataset.openSource", "dataset.resourceBadges"),
+        "credits.js": ("SIDELOAD_TOOLS", "CORE_SIDELOAD_RESOURCE_NAMES", "creditSideloadTools", "creditDescriptionKey", "creditBadge", "creditLinkKey", "sideloadToolURL", "buildSideloadCreditCard", "renderSideloadCreditCards", "sideloadCreditGrid", "hydrateSideloadCreditCards", "dataset.toolType", "dataset.capabilities", "dataset.targets", "dataset.hostPlatforms", "dataset.computerMode", "dataset.sourceSupport", "dataset.openSource", "dataset.resourceBadges"),
+        "guide.js": ("sideloadTool", "sideloadToolForRole", "sideloadToolURL", "troubleshootingSideloadTools", "hydrateGuideToolRegistryReferences", "handleToolScopeKeydown", "guideNodeSupportsTool", "filterGuideScopeGroup", "updateGuideScopeContent", "toolScopeActive", "data-guide-tool-link", "data-guide-tool-icon", "renderOfficialToolReferences", "officialHelpSources", "guideOfficialLinks", "selectedTroubleToolId", "guideTroubleshootingTools", "catalogPriority", "resourceOrder", "updateTroubleScopeControls", "data-assistant-tool", "data-trouble-tool", "renderToolScopePicker", "setToolScope", "data-guide-tool-scope", "url.searchParams.set('tool'", "troubleTermMatches", "troubleshootingToolAliases", "troubleshootingToolForQuery", "scopedTroubleQuery", "symptomScore > 0", "/install|installation|instal|nainstal/", "toolBoost", "document.querySelectorAll('.trouble-item')", "document.querySelectorAll('[data-guide-mode]')", "document.querySelectorAll('.assistant-tried-options [data-tried-key]')", "GUIDE_RECOMMENDATION_ROUTES", "recommendationToolURL", "SETUP_RESULT_ROUTES", "setupResultToolURL", "routeToolURL"),
+    }
+    for script_name, required_parts in registry_driven_tool_scripts.items():
+        script = JS_DIR / script_name
+        if not script.exists():
+            continue
+        script_text = script.read_text(encoding="utf-8")
+        for required_part in required_parts:
+            if required_part not in script_text:
+                error(
+                    f"{script_name} must use the central sideload tool registry; missing {required_part!r}"
+                )
+
+    installer_registry_consumers = ("app.js", "builder.js", "resources.js", "credits.js", "guide.js")
+    installer_registry_versions = {}
+    for script_name in installer_registry_consumers:
+        script = JS_DIR / script_name
+        if not script.exists():
+            continue
+        script_text = script.read_text(encoding="utf-8")
+        match = re.search(r"\./installers\.js\?v=([^'\"]+)", script_text)
+        if not match:
+            error(f"{script_name} must import installers.js with an explicit cache version")
+            continue
+        installer_registry_versions[script_name] = match.group(1)
+    if len(set(installer_registry_versions.values())) > 1:
+        error(
+            "Central installers.js consumers use different cache versions: "
+            + ", ".join(f"{name}={version}" for name, version in sorted(installer_registry_versions.items()))
+        )
+
+    guide_page = ROOT / "guide.html"
+    if guide_page.exists():
+        guide_page_text = guide_page.read_text(encoding="utf-8")
+        for required_host in ('id="officialHelpSources"', 'id="guideOfficialLinks"', 'id="guideToolScope"', 'id="guideToolScopeButton"', 'id="guideToolScopeMenu"'):
+            if required_host not in guide_page_text:
+                error(f"guide.html is missing registry-driven official reference host {required_host!r}")
+        if 'data-guide-tool-scope=' in guide_page_text:
+            error("guide.html must keep installer focus options registry-driven; do not hard-code installer choices in HTML")
+        for scoped_filter_marker in (
+            'data-assistant-tool="sidestore"',
+            'data-assistant-tool="livecontainer"',
+            'data-assistant-tool="altstore"',
+            'data-trouble-tool="sidestore"',
+            'data-trouble-tool="livecontainer"',
+            'data-trouble-tool="altstore"',
+        ):
+            if scoped_filter_marker not in guide_page_text:
+                error(
+                    "Guide tool-specific quick filters must follow the selected installer scope; "
+                    f"missing {scoped_filter_marker!r}"
+                )
+
+        required_registry_guide_links = (
+            ('sideinstaller', 'guide'),
+            ('sidestore', 'prerequisites'),
+            ('altstore', 'classicGuide'),
+            ('livecontainer', 'lcSideStore'),
+            ('livecontainer', 'repository'),
+            ('sideloadly', 'guide'),
+            ('trollstore', 'guide'),
+            ('atvloadly', 'guide'),
+            ('flarestore', 'guide'),
+            ('feather', 'guide'),
+        )
+        for tool_id, purpose in required_registry_guide_links:
+            marker = f'data-guide-tool-link="{tool_id}" data-guide-tool-purpose="{purpose}"'
+            if marker not in guide_page_text:
+                error(
+                    "Guide general installer links must be registry-driven; "
+                    f"missing {tool_id!r}/{purpose!r}"
+                )
+        source_section_start = guide_page_text.find('id="source-installers"')
+        compatibility_start = guide_page_text.find('id="compatibility"')
+        if source_section_start < 0 or compatibility_start <= source_section_start:
+            error("Guide must keep Source-capable installers in a separate section before Compatibility")
+        for scoped_tool in ("flarestore", "feather"):
+            marker = f'data-guide-tools="{scoped_tool}"'
+            source_card_start = guide_page_text.find(marker, source_section_start, compatibility_start)
+            if source_card_start < 0:
+                error(
+                    "Guide Source-compatible installers section is incomplete; "
+                    f"missing Source card for {scoped_tool!r}"
+                )
+            if guide_page_text.count(marker) < 2:
+                error(
+                    "Guide must include each Source-capable installer in both the Source installer section "
+                    f"and compatibility table; missing repeated scope marker for {scoped_tool!r}"
+                )
+
+        altstore_classic_marker = 'data-guide-tool-link="altstore" data-guide-tool-purpose="classicGuide"'
+        if guide_page_text.count(altstore_classic_marker) < 2:
+            error("Guide beginner cards must keep both AltStore Classic links registry-driven")
+
+        trouble_search_values = re.findall(r'<details\b[^>]*data-search="([^"]+)"', guide_page_text)
+        trouble_search_text = " ".join(trouble_search_values).lower()
+        expected_trouble_tokens = (
+            "altstore",
+            "altstore pal",
+            "sidestore",
+            "livecontainer",
+            "flarestore",
+            "feather",
+            "sideinstaller",
+            "sideloadly",
+            "atvloadly",
+            "iloader",
+            "impactor",
+            "trollstore",
+        )
+        for tool_token in expected_trouble_tokens:
+            if tool_token not in trouble_search_text:
+                error(
+                    "Guide troubleshooting must cover every central installer by name; "
+                    f"missing searchable diagnostics for {tool_token!r}"
+                )
+
+        trouble_tool_ids = set(re.findall(r'<details\b[^>]*data-tool="([^"]+)"', guide_page_text))
+        for tool_id in (
+            "altstore",
+            "altstore-pal",
+            "sidestore",
+            "livecontainer",
+            "flarestore",
+            "feather",
+            "sideinstaller",
+            "sideloadly",
+            "atvloadly",
+            "iloader",
+            "impactor",
+            "trollstore",
+        ):
+            if tool_id not in trouble_tool_ids:
+                error(
+                    "Guide troubleshooting must tag at least one diagnostic with each installer id; "
+                    f"missing data-tool for {tool_id!r}"
+                )
+
+        trouble_items = []
+        for match in re.finditer(
+            r'<details class="([^"]*\btrouble-item\b[^"]*)"([^>]*)>([\s\S]*?)</details>',
+            guide_page_text,
+        ):
+            classes, attrs, body = match.groups()
+            tool_match = re.search(r'data-tool="([^"]+)"', attrs)
+            search_match = re.search(r'data-search="([^"]*)"', attrs)
+            title_match = re.search(r"<summary[^>]*>([\s\S]*?)</summary>", body)
+            trouble_items.append(
+                {
+                    "classes": classes,
+                    "tool": tool_match.group(1) if tool_match else "",
+                    "search": (search_match.group(1) if search_match else "").lower(),
+                    "title": re.sub(r"<[^>]+>", " ", title_match.group(1) if title_match else "").strip(),
+                    "text": re.sub(r"<[^>]+>", " ", body).lower(),
+                }
+            )
+
+        trouble_aliases = {
+            "altstore": ("altstore", "altstore classic"),
+            "altstore-pal": ("altstore pal", "altstore-pal"),
+            "sidestore": ("sidestore",),
+            "livecontainer": ("livecontainer",),
+            "flarestore": ("flarestore",),
+            "feather": ("feather",),
+            "sideinstaller": ("sideinstaller",),
+            "sideloadly": ("sideloadly",),
+            "atvloadly": ("atvloadly",),
+            "iloader": ("iloader",),
+            "impactor": ("impactor",),
+            "trollstore": ("trollstore",),
+        }
+
+        def normalize_trouble_tool_text(value: str) -> str:
+            return re.sub(r"\s+", " ", re.sub(r"[^a-z0-9]+", " ", value.lower())).strip()
+
+        def audit_tool_for_query(query: str) -> str:
+            normalized_query = normalize_trouble_tool_text(query)
+            matches = []
+            for tool_id, aliases in trouble_aliases.items():
+                for alias in aliases:
+                    normalized_alias = normalize_trouble_tool_text(alias)
+                    if normalized_alias and normalized_alias in normalized_query:
+                        matches.append((len(normalized_alias), tool_id))
+            return max(matches)[1] if matches else ""
+
+        def audit_term_matches(haystack: str, term: str) -> bool:
+            if not term:
+                return False
+            if re.fullmatch(r"[a-z0-9_-]+", term, re.IGNORECASE):
+                return term in re.findall(r"[a-z0-9_-]+", haystack, re.IGNORECASE)
+            return term in haystack
+
+        def audit_trouble_top(query: str, selected_tool: str = "") -> tuple[str, str]:
+            terms = list(dict.fromkeys(term for term in query.lower().split() if term))
+            preferred_tool = selected_tool or audit_tool_for_query(query)
+            preferred_terms = {
+                token
+                for alias in trouble_aliases.get(preferred_tool, ())
+                for token in normalize_trouble_tool_text(alias).split()
+            }
+            symptom_terms = [term for term in terms if term not in preferred_terms]
+            ranked = []
+            for index, item in enumerate(trouble_items):
+                if selected_tool and item["tool"] and item["tool"] != selected_tool:
+                    continue
+
+                def score_terms(values):
+                    score = 0
+                    for term in values:
+                        if audit_term_matches(item["search"], term):
+                            score += 4 if any(ch.isdigit() for ch in term) else 2
+                        elif audit_term_matches(item["text"], term):
+                            score += 3 if any(ch.isdigit() for ch in term) else 1
+                    return score
+
+                base_score = score_terms(terms)
+                if base_score <= 0:
+                    continue
+                symptom_score = score_terms(symptom_terms)
+                tool_boost = 12 if preferred_tool and item["tool"] == preferred_tool and symptom_score > 0 else 0
+                competing_penalty = 0.75 if preferred_tool and item["tool"] and item["tool"] != preferred_tool else 0
+                community_penalty = 0.15 if "community-item" in item["classes"] else 0
+                ranked.append(
+                    (
+                        base_score + tool_boost - competing_penalty - community_penalty,
+                        base_score,
+                        -index,
+                        item["tool"],
+                        item["title"],
+                    )
+                )
+            if not ranked:
+                return "", ""
+            ranked.sort(reverse=True)
+            return ranked[0][3], ranked[0][4]
+
+        trouble_regressions = (
+            ("Feather install", "feather install ipa app", "", "feather", ""),
+            ("FlareStore install", "flarestore install ipa app", "", "flarestore", ""),
+            ("atvloadly Apple TV", "atvloadly apple tv", "", "atvloadly", ""),
+            ("SideInstaller HTTP 503", "sideinstaller apple login 503 2fa 1004 verification code", "", "sideinstaller", ""),
+            ("AltStore 7-day expiry", "altstore refresh", "", "", "expired after 7 days"),
+            ("AltStore app limit", "altstore 3 app limit app ids 1009 2009", "", "", "3-app or App ID limit"),
+            ("selected SideStore refresh", "sidestore refresh", "sidestore", "sidestore", ""),
+            ("selected AltStore PAL install", "altstore pal install ipa app", "altstore-pal", "altstore-pal", ""),
+            ("selected Feather integrity", "feather integrity", "feather", "feather", ""),
+            ("selected Sideloadly provisioning", "sideloadly certificate provision provisioning", "sideloadly", "sideloadly", "Sideloadly fails"),
+        )
+        for label, query, selected_tool, expected_tool, expected_title in trouble_regressions:
+            actual_tool, actual_title = audit_trouble_top(query, selected_tool)
+            if actual_tool != expected_tool or (expected_title and expected_title.lower() not in actual_title.lower()):
+                error(
+                    "Guide troubleshooting matcher regression failed for "
+                    f"{label!r}: got tool={actual_tool!r}, title={actual_title!r}"
+                )
+
+    guide_script = JS_DIR / "guide.js"
+    if guide_script.exists():
+        guide_text = guide_script.read_text(encoding="utf-8")
+        forbidden_single_collection_selectors = (
+            "const tabs = $('[data-guide-mode]')",
+            "return $('.assistant-tried-options [data-tried-key]').find",
+            "return $('.trouble-item')",
+            "const options = $('[data-guide-tool-scope]')",
+            "$('[data-assistant-tool], [data-trouble-tool]').forEach",
+            "const scopedNodes = $('[data-guide-tools]')",
+        )
+        for forbidden_selector in forbidden_single_collection_selectors:
+            if forbidden_selector in guide_text:
+                error(
+                    "guide.js uses a single-element selector where a collection is required; "
+                    f"found {forbidden_selector!r}"
+                )
+
+        for selector in (
+            "[data-guide-tool-scope]",
+            "[data-guide-tool-link]",
+            "[data-guide-tool-icon]",
+        ):
+            pattern = rf"(?<!\$)\$\('{re.escape(selector)}'\)\.forEach"
+            if re.search(pattern, guide_text):
+                error(
+                    "guide.js uses a single-element selector where a collection is required; "
+                    f"found single-element forEach selector {selector!r}"
+                )
+        setup_start = guide_text.find("const SETUP_RESULTS = {")
+        setup_end = guide_text.find("const SETUP_RESULT_ROUTES", setup_start)
+        recommendation_start = guide_text.find("const GUIDE_RECOMMENDATIONS = {")
+        recommendation_end = guide_text.find("const GUIDE_RECOMMENDATION_ROUTES", recommendation_start)
+
+        for block_name, start, end in (
+            ("SETUP_RESULTS", setup_start, setup_end),
+            ("GUIDE_RECOMMENDATIONS", recommendation_start, recommendation_end),
+        ):
+            if start < 0 or end <= start:
+                error(f"guide.js is missing {block_name} boundaries for registry audit")
+                continue
+
+            block = guide_text[start:end]
+            for line in block.splitlines():
+                if "url:'https://" not in line and "secondaryUrl:'https://" not in line:
+                    continue
+                if block_name == "SETUP_RESULTS" and "pairingNeeded:{" in line:
+                    continue
+                error(
+                    f"guide.js {block_name} still contains a direct external tool URL; "
+                    "use SETUP_RESULT_ROUTES / GUIDE_RECOMMENDATION_ROUTES and installers.js roles instead"
+                )
+                break
+
+    dynamic_sideload_hosts = {
+        "resources.html": 'id="sideloadResourceGrid"',
+        "credits.html": 'id="sideloadCreditGrid"',
+    }
+    for page_name, host_marker in dynamic_sideload_hosts.items():
+        page = ROOT / page_name
+        if not page.exists():
+            continue
+        page_text = page.read_text(encoding="utf-8")
+        if host_marker not in page_text:
+            error(f"{page_name} is missing its registry-driven sideload card host {host_marker!r}")
+        if 'data-sideload-tool=' in page_text:
+            error(
+                f"{page_name} still contains static sideload tool cards; "
+                "generate them from installers.js instead"
+            )
 
     if resources_page.exists():
         resources_text = resources_page.read_text(encoding="utf-8")
-        for match in re.finditer(r'<article class="panel resource-card">([\s\S]*?)</article>', resources_text):
+        for match in re.finditer(r'<article class="panel resource-card"[^>]*>([\s\S]*?)</article>', resources_text):
             card = match.group(1)
             name_match = re.search(r'<h3[^>]*>([\s\S]*?)</h3>', card)
             name = re.sub(r"<[^>]+>", "", name_match.group(1)).strip() if name_match else "unknown"
@@ -891,7 +1912,7 @@ def validate_layout() -> None:
         featured_start = credits_text.find('data-credit-copy="featuredTitle"')
         if core_start >= 0 and featured_start > core_start:
             core_block = credits_text[core_start:featured_start]
-            for match in re.finditer(r'<article class="panel resource-card">([\s\S]*?)</article>', core_block):
+            for match in re.finditer(r'<article class="panel resource-card"[^>]*>([\s\S]*?)</article>', core_block):
                 card = match.group(1)
                 name_match = re.search(r'<h3[^>]*>([\s\S]*?)</h3>', card)
                 name = re.sub(r"<[^>]+>", "", name_match.group(1)).strip() if name_match else "unknown"
@@ -905,7 +1926,7 @@ def validate_layout() -> None:
         credits_text = credits_script.read_text(encoding="utf-8")
 
         resource_names = re.findall(
-            r'<article class="panel resource-card">[\s\S]*?<h3[^>]*>(.*?)</h3>',
+            r'<article class="panel resource-card"[^>]*>[\s\S]*?<h3[^>]*>(.*?)</h3>',
             resources_text,
         )
         cleaned_resource_names = [
@@ -934,7 +1955,7 @@ def validate_layout() -> None:
 
     if credits_page.exists():
         credits_text = credits_page.read_text(encoding="utf-8")
-        for match in re.finditer(r'<article class="panel resource-card">([\s\S]*?)</article>', credits_text):
+        for match in re.finditer(r'<article class="panel resource-card"[^>]*>([\s\S]*?)</article>', credits_text):
             card = match.group(1)
             if 'btn primary' not in card:
                 continue
@@ -957,8 +1978,8 @@ def validate_layout() -> None:
         text = index.read_text(encoding="utf-8")
         if "experimental-mix.js" in text:
             error("index.html still references obsolete experimental-mix.js")
-        if "builder.js" not in text:
-            error("index.html does not reference builder.js")
+        if "src/js/builder.js" in text:
+            error("index.html must not load the standalone Builder runtime")
 
     for html in SITE_PAGES:
         validate_html_scripts(html)
@@ -970,6 +1991,74 @@ def validate_layout() -> None:
         for required_css in ("safe-area-inset-left", "safe-area-inset-right", "prefers-reduced-motion"):
             if required_css not in shared_css_text:
                 error(f"hub-extra.css is missing full-site mobile/accessibility guard: {required_css}")
+        for forbidden_mobile_scroll in (
+            ".filter-tabs>:first-child{margin-inline-start:auto}",
+            ".filter-tabs>:last-child{margin-inline-end:auto}",
+        ):
+            if forbidden_mobile_scroll in shared_css_text:
+                error(
+                    "Mobile horizontal filters must keep both edges reachable; "
+                    f"found {forbidden_mobile_scroll!r}"
+                )
+        for required_mobile_scroll in (
+            "scroll-padding-inline:8px",
+            ".filter-tabs,.trouble-quick,.assistant-tried-options",
+            ".assistant-trouble-chips,.guide-jumpbar",
+            ".filter-tabs{\n  display:grid;\n  grid-auto-flow:column;\n  grid-auto-columns:max-content;",
+            "overflow-x:auto!important;",
+            "touch-action:pan-y;",
+        ):
+            if required_mobile_scroll not in shared_css_text:
+                error(
+                    "hub-extra.css is missing the shared mobile horizontal scroller guard; "
+                    f"missing {required_mobile_scroll!r}"
+                )
+
+        horizontal_scroll_script = JS_DIR / "horizontal-scroll.js"
+        if not horizontal_scroll_script.exists():
+            error("Missing shared horizontal-scroll.js runtime")
+        else:
+            horizontal_scroll_text = horizontal_scroll_script.read_text(encoding="utf-8")
+            for required_scroll_js in (
+                "document.addEventListener('wheel'",
+                "document.addEventListener('touchstart'",
+                "document.addEventListener('touchmove'",
+                "event.preventDefault()",
+            ):
+                if required_scroll_js not in horizontal_scroll_text:
+                    error(
+                        "Shared horizontal scroll runtime is incomplete; "
+                        f"missing {required_scroll_js!r}"
+                    )
+
+    builder_script = JS_DIR / "builder.js"
+    if builder_script.exists():
+        builder_text = builder_script.read_text(encoding="utf-8")
+        for required_source_queue in (
+            "SOURCE_BUILDER_INSTALLER_IDS",
+            "function queueEntries()",
+            "installer.buildLink(sourceUrl)",
+            "async function startShortcutImport()",
+            "SHORTCUT_NAME",
+            "input=text&text=",
+            "function createSelectionJson()",
+        ):
+            if required_source_queue not in builder_text:
+                error(
+                    "builder.js must keep the direct original-Source queue; "
+                    f"missing {required_source_queue!r}"
+                )
+        for forbidden_mix_runtime in (
+            "hostCustomMix",
+            "sanitizeClassicApp",
+            "data/mix-api.json",
+            "source-cache/",
+        ):
+            if forbidden_mix_runtime in builder_text:
+                error(
+                    "builder.js must not regenerate or host combined Source JSON; "
+                    f"found {forbidden_mix_runtime!r}"
+                )
 
     for search_script in ("app.js", "builder.js"):
         path = JS_DIR / search_script
@@ -983,14 +2072,6 @@ def validate_layout() -> None:
             if "livecontainer://sources?url=" in script_text or "? 'sources' : 'source'" in script_text:
                 error(f"{script_name} uses obsolete LiveContainer deep link; use livecontainer://source?url=")
 
-    generator = ROOT / "tools" / "update_sources.py"
-    if generator.exists():
-        generator_text = generator.read_text(encoding="utf-8")
-        if 'cleaned.pop("marketplaceID", None)' not in generator_text:
-            error("tools/update_sources.py must strip marketplaceID from Classic generated sources")
-        if 'item.pop("Build", None)' not in generator_text:
-            error("tools/update_sources.py must strip custom Build fields from Classic generated sources")
-
     for required in (
         JS_DIR / "app.js",
         JS_DIR / "builder-page.js",
@@ -1002,6 +2083,7 @@ def validate_layout() -> None:
         JS_DIR / "support-dialog.js",
         JS_DIR / "mobile-menu.js",
         JS_DIR / "settings-menu.js",
+        JS_DIR / "horizontal-scroll.js",
         JS_DIR / "i18n.js",
         CSS_DIR / "styles.css",
         CSS_DIR / "hub-extra.css",
@@ -1016,6 +2098,47 @@ def validate_layout() -> None:
             error(f"Missing required runtime file: {required.relative_to(ROOT)}")
 
 
+def validate_compliance_register() -> None:
+    path = ROOT / "COMPLIANCE.md"
+    if not path.exists():
+        error("Missing COMPLIANCE.md")
+        return
+
+    text = path.read_text(encoding="utf-8")
+    registry = load_json(REGISTRY)
+    if not isinstance(registry, dict) or not isinstance(registry.get("sources"), list):
+        return
+
+    sources = [item for item in registry["sources"] if isinstance(item, dict)]
+    counts: dict[str, int] = {}
+    binary_rehost = 0
+    for source in sources:
+        compliance = source.get("compliance")
+        if not isinstance(compliance, dict):
+            continue
+        status = str(compliance.get("reviewStatus") or "missing")
+        counts[status] = counts.get(status, 0) + 1
+        if compliance.get("binaryRehost") is True:
+            binary_rehost += 1
+
+        source_id = str(source.get("id") or "")
+        if source_id and f"`{source_id}`" not in text:
+            error(f"COMPLIANCE.md is missing Source ID {source_id!r}")
+
+    expected_lines = (
+        f"- Total Sources: **{len(sources)}**",
+        f"- Licensed: **{counts.get('licensed', 0)}**",
+        f"- Permission: **{counts.get('permission', 0)}**",
+        f"- Public endpoint: **{counts.get('public-metadata', 0)}**",
+        f"- Restricted: **{counts.get('restricted', 0)}**",
+        f"- Unreviewed: **{counts.get('unreviewed', 0)}**",
+        f"- Binary rehosting enabled: **{binary_rehost}**",
+    )
+    for expected in expected_lines:
+        if expected not in text:
+            error(f"COMPLIANCE.md summary is stale; missing {expected!r}")
+
+
 def main() -> int:
     validate_registry()
     validate_generated_data()
@@ -1024,6 +2147,8 @@ def main() -> int:
     validate_interactive_guide()
     validate_page_quality()
     validate_translations()
+    validate_privacy_compliance()
+    validate_compliance_register()
     validate_project_identity()
 
     for message in warnings:

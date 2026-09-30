@@ -8,7 +8,7 @@
 </p>
 
 <p align="center">
-  A catalog for <strong>AltStore / SideStore / LiveContainer sources, Source Builder and practical iOS tools</strong>.
+  A catalog for <strong>compatible iOS sources, Source Builder and practical iOS tools</strong>.
 </p>
 
 <p align="center">
@@ -21,24 +21,27 @@
 
 ## Main features
 
-- AltStore Classic, AltStore PAL, SideStore and LiveContainer sources
-- filters by source type, genre, platform and Mix compatibility
-- search by source name, app name, developer, bundle identifier and source metadata
+- compatible Classic/PAL iOS sources with installer support driven by one central registry
+- filters by source type, genre and installer compatibility
+- search by Source name and Source metadata
 - a dedicated **Custom Source Builder** page for all online sources
 - an interactive **Help Center** with method selection, error diagnosis, setup wizard and links to official documentation
-- automated `PASS / TRY` status
-- ready-to-add **CaseyCZ AltStore Source**, **CaseyCZ SideStore Source** and **CaseyCZ LiveContainer Source**
-- app deduplication by `bundleIdentifier`
 - source checks every 6 hours
 - EN / CZ / DE / ES / FR interface with English as the default
 - saved language, appearance, filters and Builder selection
 - **DEB → IPA Converter (Beta)** for iPhone, iPad, Mac and PC
 
-## AltStore, SideStore and LiveContainer
+## Compatible source installers
 
-The ready-to-add CaseyCZ sources are generated automatically from currently available compatible sources. Stable builds are preferred in the default packages; Nightly feeds remain available for manual selection in the standalone Builder.
+The Source Builder does not create a combined feed or Mix JSON. Supported targets are **AltStore Classic, AltStore PAL, SideStore, LiveContainer, FlareStore and Feather**.
 
-CaseyCZ iOS Hub does not rehost third-party IPA files. Generated source JSON files preserve the original public download URLs from each project.
+For bulk import, the Builder passes the selected installer and original Source URLs to the **iOS Hub Source Import** Shortcut, which opens each original Source in the selected app. Some installers can accept Sources directly while others may show their own preview or confirmation flow. The Builder therefore also keeps a manual one-by-one fallback.
+
+Install or reinstall the Shortcut here: https://caseycz.github.io/iOS-Hub/shortcut.html
+
+Installer support, ordering, icons and deep-links are defined centrally in `src/js/installers.js`, so adding another installer does not require editing every source card by hand.
+
+CaseyCZ iOS Hub does not rehost third-party IPA files or third-party Source JSON files. The optional JSON export contains only the selected installer and the original Source URLs.
 
 ## DEB → IPA Beta
 
@@ -56,3 +59,8 @@ Not every Debian package can be safely converted by repackaging alone. Jailbreak
   <a href="https://www.buymeacoffee.com/caseycz"><img src="https://caseycz.github.io/support-qr.svg" width="150" alt="Buy Me a Coffee CaseyCZ QR code" /></a><br>
   <sub>Scan the QR code or click the button.</sub>
 </p>
+
+
+## Privacy and third-party content
+
+Every current Source is classified in [COMPLIANCE.md](COMPLIANCE.md). Builder Sources are used as link-only endpoints: iOS Hub may check availability and format, but it does not copy, merge or rehost their full feeds or app metadata for the Builder.

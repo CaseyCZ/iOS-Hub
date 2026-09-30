@@ -1,4 +1,16 @@
-import { SUPPORTED_LANGUAGES, applyTranslations, normalizeLanguage, t } from './i18n.js?v=1.1.5-20260918-fullaudit2';
+import { SUPPORTED_LANGUAGES, applyTranslations, normalizeLanguage, t } from './i18n.js?v=1.1.5-20260930-source-import8';
+import {
+  INSTALLERS,
+  SOURCE_VARIANT_IDS,
+  groupInstallerIds,
+  sourceInstallerIds,
+  sourceInstallerCompatibility,
+  sourceInstallerDirectAvailable,
+  sourceInstallerDeepLink,
+  sourceVariantURL,
+  sourceVariantLabel,
+  sourceModeLabel
+} from './installers.js?v=1.1.5-20260930-source-import4';
 
 const root = document.documentElement;
 const $ = (selector, scope = document) => scope.querySelector(selector);
@@ -43,14 +55,112 @@ const safeGet = key => { try { return localStorage.getItem(key); } catch (_) { r
 const safeSet = (key, value) => { try { localStorage.setItem(key, value); } catch (_) {} };
 const escapeHtml = value => String(value ?? '').replace(/[&<>'\"]/g, char => ({'&':'&amp;','<':'&lt;','>':'&gt;',"'":'&#39;','\"':'&quot;'}[char]));
 const tr = key => t(state.lang, key);
-const INSTALLER_ICONS = {
-  altstore: 'assets/icons/altstore.svg',
-  sidestore: 'assets/icons/sidestore.svg?v=1.1.5-20260918-audit13',
-  livecontainer: 'assets/icons/livecontainer.svg'
-};
-function installerIcon(installer) {
-  const src = INSTALLER_ICONS[installer];
+function installerIcon(installerId) {
+  const src = INSTALLERS[installerId]?.icon;
   return src ? `<img class="installer-icon" src="${escapeHtml(src)}" alt="" loading="lazy" referrerpolicy="no-referrer">` : '';
+}
+
+const MORE_INSTALLERS_LABELS = {
+  en: 'More',
+  cs: 'Další',
+  de: 'Mehr',
+  es: 'Más',
+  fr: 'Plus'
+};
+
+function moreInstallersLabel() {
+  return MORE_INSTALLERS_LABELS[state.lang] || MORE_INSTALLERS_LABELS.en;
+}
+
+function sourceInstallerButton(source, installerId, {primary = false, disabled = false} = {}) {
+  const installer = INSTALLERS[installerId];
+  if (!installer) return '';
+
+  const icon = installerIcon(installerId);
+  if (disabled) {
+    return `<span class="btn small secondary installer-link is-disabled" aria-disabled="true">${icon}${escapeHtml(installer.label)}</span>`;
+  }
+
+  const href = sourceInstallerDeepLink(source, installerId);
+  if (!href) return '';
+  return `<a class="btn small ${primary ? 'primary' : 'secondary'} installer-link" href="${escapeHtml(href)}">${icon}${escapeHtml(installer.label)}</a>`;
+}
+
+function sourceInstallerVariantAvailable(source, installerId) {
+  const variant = INSTALLERS[installerId]?.variant;
+  if (!variant) return false;
+  const variants = getStatus(source.id)?.variants;
+  if (!variants || typeof variants !== 'object' || !(variant in variants)) return true;
+  return variants[variant]?.online === true;
+}
+
+function sourceInstallerGroups(source) {
+  const sourceStatus = getStatus(source.id);
+  const available = sourceInstallerIds(source)
+    .filter(installerId => sourceInstallerVariantAvailable(source, installerId))
+    .filter(installerId => sourceInstallerDirectAvailable(sourceStatus, installerId));
+  return groupInstallerIds(available, 3);
+}
+
+function sourceMoreInstallers(source, installerIds) {
+  if (!installerIds.length) return '';
+  const links = installerIds
+    .map(installerId => sourceInstallerButton(source, installerId))
+    .filter(Boolean)
+    .join('');
+
+  return links ? `<details class="source-more">
+    <summary class="btn small secondary">${escapeHtml(moreInstallersLabel())} ▾</summary>
+    <div class="source-more-menu">${links}</div>
+  </details>` : '';
+}
+
+function sourceAvailableVariants(source, {includeOffline = false} = {}) {
+  const statusVariants = getStatus(source.id)?.variants;
+  return SOURCE_VARIANT_IDS.map(variant => {
+    const url = sourceVariantURL(source, variant);
+    if (!url) return null;
+    if (!includeOffline && statusVariants && typeof statusVariants === 'object' && variant in statusVariants) {
+      if (statusVariants[variant]?.online !== true) return null;
+    }
+    return {variant, label:sourceVariantLabel(variant), url};
+  }).filter(Boolean);
+}
+
+function sourceCopyControl(source, options = {}) {
+  const variants = sourceAvailableVariants(source, options);
+  if (!variants.length) return '';
+
+  if (variants.length === 1) {
+    return `<button class="btn small secondary" type="button" data-copy-source="${escapeHtml(variants[0].url)}">${escapeHtml(tr('copyUrl'))}</button>`;
+  }
+
+  const actions = variants.map(item =>
+    `<button class="btn small secondary" type="button" data-copy-source="${escapeHtml(item.url)}">${escapeHtml(item.label)}</button>`
+  ).join('');
+
+  return `<details class="source-more source-variant-menu">
+    <summary class="btn small secondary">${escapeHtml(tr('copyUrl'))} ▾</summary>
+    <div class="source-more-menu">${actions}</div>
+  </details>`;
+}
+
+function sourceJsonControl(source, options = {}) {
+  const variants = sourceAvailableVariants(source, options);
+  if (!variants.length) return '';
+
+  if (variants.length === 1) {
+    return `<a class="btn small ghost" href="${escapeHtml(variants[0].url)}" target="_blank" rel="noopener">JSON ↗</a>`;
+  }
+
+  const actions = variants.map(item =>
+    `<a class="btn small ghost" href="${escapeHtml(item.url)}" target="_blank" rel="noopener">${escapeHtml(item.label)} ↗</a>`
+  ).join('');
+
+  return `<details class="source-more source-variant-menu">
+    <summary class="btn small ghost">JSON ▾</summary>
+    <div class="source-more-menu">${actions}</div>
+  </details>`;
 }
 
 function loadPersistedSettings() {
@@ -79,17 +189,15 @@ function applyLanguage(value) {
   const select = $('#languageSelect');
   if (select) select.value = state.lang;
   document.title = state.lang === 'en'
-    ? 'iOS Hub — AltStore · SideStore · LiveContainer'
+    ? 'iOS Hub — iOS Sources · Sideloading'
     : `iOS Hub — ${tr('sources')} · ${tr('tools')}`;
   safeSet(STORAGE.language, state.lang);
   renderSources();
   updateStats();
 }
 
-function modeLabel(mode) {
-  if (mode === 'pal') return 'AltStore PAL';
-  if (mode === 'sidestore') return 'SideStore';
-  return 'AltStore Classic';
+function modeLabel(source) {
+  return sourceModeLabel(source);
 }
 
 function getStatus(id) {
@@ -146,14 +254,6 @@ document.addEventListener('error', event => {
   const host = img.closest('.source-icon');
   if (host) host.textContent = img.dataset.sourceFallback || '?';
 }, true);
-
-function sourceInstallerLink(installer, source) {
-  if (installer === 'altstore') {
-    const scheme = source.mode === 'pal' ? 'altstore-pal' : 'altstore';
-    return `${scheme}://source?url=${encodeURIComponent(source.url)}`;
-  }
-  return `${installer}://source?url=${encodeURIComponent(source.url)}`;
-}
 
 function sourceTags(source) {
   return new Set((source.tags || []).map(tag => String(tag).toLowerCase()));
@@ -242,25 +342,11 @@ function formatDate(value) {
 }
 
 function sourceAppsDisclosure(source) {
-  const catalog = catalogSource(source.id) || {};
-  const apps = [...(catalog.apps || [])]
-    .filter(app => app && typeof app === 'object')
-    .sort((left, right) => String(left.name || '').localeCompare(String(right.name || '')));
   const statusCount = getStatus(source.id).appCount;
-  const count = Number.isFinite(catalog.appCount) ? catalog.appCount : (Number.isFinite(statusCount) ? statusCount : apps.length);
-  const limited = catalog.catalogLimited === true && count > apps.length;
-  const rows = apps.length ? apps.map(app => {
-    const details = [app.developerName, app.version, app.bundleIdentifier].filter(Boolean).map(escapeHtml).join(' · ');
-    return `<div class="source-app-row"><strong>${escapeHtml(app.name || 'Unknown app')}</strong>${details ? `<span>${details}</span>` : ''}</div>`;
-  }).join('') : `<div class="source-app-empty">${escapeHtml(tr('noApps'))}</div>`;
-  const limitNote = limited ? `<div class="source-app-empty">${apps.length} / ${count}</div>` : '';
-  return `<details class="source-apps-disclosure">
-    <summary title="${escapeHtml(tr('showApps'))}" aria-label="${escapeHtml(tr('showApps'))}">
-      <span class="source-app-count">📱 <strong>${count}</strong> ${escapeHtml(tr('apps'))}</span>
-      <span class="source-app-chevron" aria-hidden="true">⌄</span>
-    </summary>
-    <div class="source-app-list">${limitNote}${rows}</div>
-  </details>`;
+  const count = Number.isFinite(statusCount) ? statusCount : '—';
+  return `<div class="source-apps-disclosure source-app-count-only">
+    <span class="source-app-count">📱 <strong>${count}</strong> ${escapeHtml(tr('apps'))}</span>
+  </div>`;
 }
 
 function renderSources() {
@@ -282,26 +368,28 @@ function renderSources() {
     const appCount = Number.isFinite(status.appCount) ? status.appCount : '—';
     const desc = source.description?.[state.lang] || source.description?.en || source.description?.cs || '';
     const checkedOffline = status.online === false && Boolean(status.checkedAt);
-    const palOnly = source.mode === 'pal';
-    const altStoreLabel = palOnly ? 'AltStore PAL' : 'AltStore';
-    const installerButtons = checkedOffline
-      ? `<span class="btn small secondary installer-link is-disabled" aria-disabled="true">${installerIcon('altstore')}${altStoreLabel}</span>
-        <span class="btn small secondary installer-link is-disabled" aria-disabled="true">${installerIcon('sidestore')}SideStore</span>
-        <span class="btn small secondary installer-link is-disabled" aria-disabled="true">${installerIcon('livecontainer')}LiveContainer</span>`
-      : palOnly
-        ? `<a class="btn small primary installer-link" href="${escapeHtml(sourceInstallerLink('altstore', source))}">${installerIcon('altstore')}${altStoreLabel}</a>
-          <span class="btn small secondary installer-link is-disabled" aria-disabled="true" title="${escapeHtml(tr('palOnlyInstaller'))}">${installerIcon('sidestore')}SideStore</span>
-          <span class="btn small secondary installer-link is-disabled" aria-disabled="true" title="${escapeHtml(tr('palOnlyInstaller'))}">${installerIcon('livecontainer')}LiveContainer</span>`
-        : `<a class="btn small primary installer-link" href="${escapeHtml(sourceInstallerLink('altstore', source))}">${installerIcon('altstore')}${altStoreLabel}</a>
-          <a class="btn small secondary installer-link" href="${escapeHtml(sourceInstallerLink('sidestore', source))}">${installerIcon('sidestore')}SideStore</a>
-          <a class="btn small secondary installer-link" href="${escapeHtml(sourceInstallerLink('livecontainer', source))}">${installerIcon('livecontainer')}LiveContainer</a>`;
-    return `<article class="source-card${checkedOffline ? ' is-offline' : ''}" data-source-id="${escapeHtml(source.id)}">
+    const installerGroups = checkedOffline
+      ? groupInstallerIds(sourceInstallerIds(source), 3)
+      : sourceInstallerGroups(source);
+    const installerButtons = installerGroups.main
+      .map((installerId, index) => sourceInstallerButton(source, installerId, {
+        primary: index === 0,
+        disabled: checkedOffline
+      }))
+      .filter(Boolean)
+      .join('');
+    const moreInstallerMenu = checkedOffline ? '' : sourceMoreInstallers(source, installerGroups.more);
+    const copyControl = sourceCopyControl(source, {includeOffline:checkedOffline});
+    const jsonControl = sourceJsonControl(source, {includeOffline:checkedOffline});
+    const blockedInstallers = sourceInstallerIds(source)
+      .filter(installerId => sourceInstallerCompatibility(status, installerId)?.directSource === 'fail');
+    return `<article class="source-card${checkedOffline ? ' is-offline' : ''}" data-source-id="${escapeHtml(source.id)}"${blockedInstallers.length ? ` data-blocked-installers="${escapeHtml(blockedInstallers.join(' '))}"` : ''}>
       <div class="source-top">
         <div class="source-icon">${sourceIcon(source)}</div>
         <div class="source-title">
           <h3>${escapeHtml(source.name)}</h3>
           <div class="source-meta">
-            <span class="pill mode">${escapeHtml(modeLabel(source.mode))}</span>
+            <span class="pill mode">${escapeHtml(modeLabel(source))}</span>
             ${status.online === true
               ? `<span class="pill online">● ${escapeHtml(tr('online'))}</span>`
               : status.checkedAt
@@ -314,47 +402,30 @@ function renderSources() {
       <p>${escapeHtml(desc)}</p>
       <div class="source-stats">${sourceAppsDisclosure(source)}${status.checkedAt ? `<span class="source-checked">${escapeHtml(tr('checked'))}: ${escapeHtml(formatDate(status.checkedAt))}</span>` : ''}</div>
       ${checkedOffline && status.error ? `<div class="source-offline-reason">${escapeHtml(status.error)}</div>` : ''}
-      <div class="source-installers" aria-label="Install source">${installerButtons}</div>
+      ${installerButtons ? `<div class="source-installers" aria-label="Install source">${installerButtons}</div>` : ''}
       <div class="source-actions source-utilities">
-        <button class="btn small secondary" type="button" data-copy-source="${escapeHtml(source.url)}">${escapeHtml(tr('copyUrl'))}</button>
-        <a class="btn small ghost" href="${escapeHtml(source.url)}" target="_blank" rel="noopener">JSON ↗</a>
+        ${moreInstallerMenu}
+        ${copyControl}
+        ${jsonControl}
         ${source.website ? `<a class="btn small ghost" href="${escapeHtml(source.website)}" target="_blank" rel="noopener">Web ↗</a>` : ''}
       </div>
     </article>`;
   }).join('');
 }
 
-function uniqueDiscoveredAppCount() {
-  const generatedCount = Number(state.catalog?.uniqueAppCount);
-  if (Number.isFinite(generatedCount) && generatedCount >= 0) return generatedCount;
-
-  const onlineIds = new Set(
-    state.registry
-      .filter(source => getStatus(source.id).online === true)
-      .map(source => source.id)
-  );
-  const keys = new Set();
-  for (const source of (state.catalog?.sources || [])) {
-    if (!onlineIds.has(source.id)) continue;
-    for (const app of (source.apps || [])) {
-      const bundle = String(app.bundleIdentifier || '').trim().toLowerCase();
-      const fallback = `${source.id}:${app.name || ''}:${app.developerName || ''}`.toLowerCase();
-      const key = bundle || fallback;
-      if (key) keys.add(key);
-    }
-  }
-  return keys.size;
-}
-
 function updateStats() {
   const statuses = state.status?.sources || {};
   const online = state.registry.filter(source => statuses[source.id]?.online === true).length;
   const offline = state.registry.filter(source => statuses[source.id]?.online === false && Boolean(statuses[source.id]?.checkedAt)).length;
-  const mixReady = state.status?.mixes?.autoCompatibleSourceIDs?.length || 0;
-  const apps = uniqueDiscoveredAppCount();
+  const installerCompatible = state.registry.filter(source => {
+    const item = statuses[source.id];
+    if (item?.online !== true) return false;
+    return Object.values(item.installerCompatibility || {}).some(value => value?.directSource !== 'fail');
+  }).length;
+  const checked = state.registry.filter(source => Boolean(statuses[source.id]?.checkedAt)).length;
   if ($('#statSources')) $('#statSources').textContent = online || '—';
-  if ($('#statMix')) $('#statMix').textContent = mixReady || '—';
-  if ($('#statApps')) $('#statApps').textContent = apps || '—';
+  if ($('#statMix')) $('#statMix').textContent = installerCompatible || '—';
+  if ($('#statApps')) $('#statApps').textContent = checked || '—';
 
   const sourceStatusSummary = $('#sourceStatusSummary');
   if (sourceStatusSummary) {
@@ -365,12 +436,31 @@ function updateStats() {
 }
 
 function syncFilterButtons() {
-  $$('[data-category-filter]').forEach(btn => btn.classList.toggle('active', btn.dataset.categoryFilter === state.sourceCategory));
-  document.querySelectorAll('[data-genre-filter]').forEach(btn => btn.classList.toggle('active', btn.dataset.genreFilter === state.genre));
-  document.querySelectorAll('[data-sort-filter]').forEach(btn => btn.classList.toggle('active', btn.dataset.sortFilter === state.sort));
+  document.querySelectorAll('[data-category-filter]').forEach(btn => {
+    const active = btn.dataset.categoryFilter === state.sourceCategory;
+    btn.classList.toggle('active', active);
+    btn.setAttribute('aria-pressed', String(active));
+  });
+  document.querySelectorAll('[data-genre-filter]').forEach(btn => {
+    const active = btn.dataset.genreFilter === state.genre;
+    btn.classList.toggle('active', active);
+    btn.setAttribute('aria-pressed', String(active));
+  });
+  document.querySelectorAll('[data-sort-filter]').forEach(btn => {
+    const active = btn.dataset.sortFilter === state.sort;
+    btn.classList.toggle('active', active);
+    btn.setAttribute('aria-pressed', String(active));
+  });
   const search = $('#sourceSearch');
   if (search && search.value !== state.query) search.value = state.query;
 }
+
+function toggleFilter(currentValue, requestedValue, allowedValues) {
+  const next = allowedValues.has(requestedValue) ? requestedValue : 'all';
+  return next !== 'all' && next === currentValue ? 'all' : next;
+}
+
+
 
 async function loadData() {
   try {
@@ -440,21 +530,27 @@ function closeSupport() {
 }
 
 document.addEventListener('click', event => {
+  document.querySelectorAll('.source-more[open]').forEach(details => {
+    if (!details.contains(event.target)) details.removeAttribute('open');
+  });
+
   const category = event.target.closest('[data-category-filter]');
   if (category) {
-    state.sourceCategory = SOURCE_CATEGORIES.has(category.dataset.categoryFilter) ? category.dataset.categoryFilter : 'all';
+    state.sourceCategory = toggleFilter(state.sourceCategory, category.dataset.categoryFilter, SOURCE_CATEGORIES);
     safeSet(STORAGE.category, state.sourceCategory);
     syncFilterButtons();
     renderSources();
+    category.closest('.filter-tabs')?.querySelector('.filter.active')?.scrollIntoView({block:'nearest', inline:'nearest'});
     return;
   }
 
   const genre = event.target.closest('[data-genre-filter]');
   if (genre) {
-    state.genre = GENRES.has(genre.dataset.genreFilter) ? genre.dataset.genreFilter : 'all';
+    state.genre = toggleFilter(state.genre, genre.dataset.genreFilter, GENRES);
     safeSet(STORAGE.genre, state.genre);
     syncFilterButtons();
     renderSources();
+    genre.closest('.filter-tabs')?.querySelector('.filter.active')?.scrollIntoView({block:'nearest', inline:'nearest'});
     return;
   }
 
@@ -468,7 +564,10 @@ document.addEventListener('click', event => {
   }
 
   const copy = event.target.closest('[data-copy-source]');
-  if (copy) return void copyText(copy.dataset.copySource, tr('sourceCopied'));
+  if (copy) {
+    copy.closest('.source-more[open]')?.removeAttribute('open');
+    return void copyText(copy.dataset.copySource, tr('sourceCopied'));
+  }
   if (event.target.closest('[data-support-open]')) return void openSupport();
   if (event.target.closest('[data-support-close]')) return void closeSupport();
   if (event.target.id === 'supportModal') closeSupport();

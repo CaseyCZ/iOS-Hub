@@ -8,7 +8,7 @@
 </p>
 
 <p align="center">
-  Katalog pro <strong>AltStore / SideStore / LiveContainer zdroje, Source Builder a praktické iOS nástroje</strong>.
+  Katalog pro <strong>kompatibilní iOS zdroje, Source Builder a praktické iOS nástroje</strong>.
 </p>
 
 <p align="center">
@@ -21,24 +21,33 @@
 
 ## Hlavní funkce
 
-- AltStore Classic, AltStore PAL, SideStore a LiveContainer zdroje
-- filtry podle typu zdroje, žánru, platformy a Mix kompatibility
-- vyhledávání podle zdroje i názvu aplikace
+- kompatibilní Classic/PAL iOS zdroje s installer podporou řízenou z jednoho centrálního registru
+- filtry podle typu zdroje, žánru a kompatibility s instalátorem
+- vyhledávání podle Source a jejích metadat
 - samostatná stránka **Custom Source Builder** pro všechny online zdroje
 - interaktivní **Help Center** s výběrem metody, diagnostikou chyb, průvodcem konfigurací a odkazy na oficiální dokumentaci
-- automatický stav `PASS / TRY`
-- hotový **CaseyCZ AltStore Source**, **CaseyCZ SideStore Source** a **CaseyCZ LiveContainer Source**
-- automatická deduplikace aplikací podle `bundleIdentifier`
 - kontrola zdrojů každých 6 hodin
 - EN / CZ / DE / ES / FR, výchozí jazyk EN
 - uložený jazyk, vzhled, filtry a výběr Builderu
 - **DEB → IPA Converter (Beta)** pro iPhone, iPad, Mac a PC
 
-## AltStore, SideStore a LiveContainer
+## Kompatibilní source instalátory
 
-Hotové CaseyCZ zdroje se generují automaticky z aktuálně dostupných kompatibilních zdrojů. Stabilní buildy mají ve výchozích balíčcích přednost; Nightly zdroje zůstávají dostupné pro ruční výběr v samostatném Builderu.
+Source Builder nevytváří žádný nový feed ani Mix JSON. Podporované cíle jsou **AltStore Classic, AltStore PAL, SideStore, LiveContainer, FlareStore a Feather**.
 
-CaseyCZ iOS Hub cizí IPA soubory nerehostuje. Výsledné source JSONy zachovávají původní veřejné download URL jednotlivých projektů.
+Pro hromadný import Builder předá zvolený instalátor a seznam původních Source URL zkratce **iOS Hub Source Import**, která jednotlivé původní Sources otevře ve vybrané aplikaci. Některé instalátory je umí převzít přímo, jiné mohou zobrazit vlastní náhled nebo vyžádat potvrzení. Dole v Builderu proto zůstává i ruční otevření po jedné.
+
+Zkratku lze nainstalovat nebo znovu přidat přes: https://caseycz.github.io/iOS-Hub/shortcut.html
+
+Podpora instalátorů, jejich pořadí, ikony a deep-linky jsou definované centrálně v `src/js/installers.js`, takže další installer není potřeba ručně doplňovat do každé source karty.
+
+CaseyCZ iOS Hub cizí IPA soubory ani cizí Source JSONy nerehostuje. Builder pracuje s původními veřejnými Source URL; volitelný JSON export ukládá pouze vybraný instalátor a seznam těchto původních URL.
+
+## Soukromí a obsah třetích stran
+
+Google Analytics se načítá až po výslovném souhlasu uživatele. Volbu lze kdykoli změnit přes **Cookie settings** a podrobnosti jsou na stránce `privacy.html`.
+
+iOS Hub je nezávislý projekt a není přidružený k AltStore, SideStore, LiveContainer, Feather, FlareStore ani k autorům katalogizovaných Sources, pokud to výslovně neuvádí původní projekt. Registry u každého Source sleduje stav compliance kontroly, důkazní URL a datum kontroly. Všechny aktuální Sources jsou klasifikované v [COMPLIANCE.md](COMPLIANCE.md). Builder používá pouze původní veřejné Source URL: iOS Hub může zkontrolovat jejich dostupnost a formát, ale jejich plný feed ani app metadata nekopíruje, neslučuje, necachuje ani nerehostuje.
 
 ## DEB → IPA Beta
 

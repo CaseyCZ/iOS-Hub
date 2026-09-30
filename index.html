@@ -6,20 +6,19 @@
   <meta name="theme-color" content="#070b14">
   <meta name="referrer" content="no-referrer">
   <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://www.googletagmanager.com; style-src 'self' 'unsafe-inline'; img-src 'self' https: data:; connect-src 'self' https://*.google-analytics.com https://*.analytics.google.com https://*.googletagmanager.com; object-src 'none'; base-uri 'self'; form-action 'none'">
-  <meta name="description" content="iOS Hub — AltStore, SideStore and LiveContainer sources, Source Builder and browser-based iOS tools.">
+  <meta name="description" content="iOS Hub — checked iOS sources, Source Builder, compatible installer links and browser-based iOS tools.">
   <link rel="canonical" href="https://caseycz.github.io/iOS-Hub/">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="iOS Hub">
-  <meta property="og:title" content="iOS Hub — AltStore · SideStore · LiveContainer">
-  <meta property="og:description" content="iOS Hub — AltStore, SideStore and LiveContainer sources, Source Builder and browser-based iOS tools.">
+  <meta property="og:title" content="iOS Hub — iOS Sources · Sideloading">
+  <meta property="og:description" content="iOS Hub — checked iOS Sources for supported installers, plus Source Builder and browser-based tools.">
   <meta property="og:url" content="https://caseycz.github.io/iOS-Hub/">
   <meta name="twitter:card" content="summary">
-  <title>iOS Hub — AltStore · SideStore · LiveContainer</title>
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-SZTERTRTCE"></script>
-  <script src="src/js/analytics.js?v=1.1.5-20260929-titlefix1"></script>
+  <title>iOS Hub — iOS Sources · Sideloading</title>
+  <!-- Analytics loads only after explicit opt-in consent. -->
+  <script src="src/js/analytics.js?v=1.1.5-20260930-consent1"></script>
   <link rel="stylesheet" href="src/css/styles.css?v=1.1.5-20260918-fullaudit3">
-  <link rel="stylesheet" href="src/css/hub-extra.css?v=1.1.5-20260924-scrollfix1">
+  <link rel="stylesheet" href="src/css/hub-extra.css?v=1.1.5-20260930-consent1">
   <link rel="stylesheet" href="src/css/collapsible.css?v=1.1.5-20260918-audit1">
 </head>
 <body>
@@ -28,7 +27,7 @@
     <div class="wrap topbar-inner">
       <a class="brand" href="#top" aria-label="iOS Hub">
         <span class="brand-mark">iOS</span>
-        <span>iOS Hub<small>AltStore · SideStore · LiveContainer</small></span>
+        <span>iOS Hub<small>iOS Sources · Sideloading</small></span>
       </a>
       <nav class="nav" aria-label="Primary">
         <a href="#tools" data-i18n="tools">Tools</a>
@@ -79,19 +78,19 @@
 
   <main id="top">
     <section class="hero wrap">
-      <div class="eyebrow">ALTSTORE · SIDESTORE · LIVECONTAINER</div>
+      <div class="eyebrow">IOS SOURCES · INSTALLERS · TOOLS</div>
       <h1 data-i18n="heroTitle">iOS sources. Catalog. Tools.</h1>
-      <p data-i18n="heroDesc">A live catalog of checked AltStore, SideStore and LiveContainer sources. Filter by source type and content, combine compatible sources and use practical iOS tools directly in the browser.</p>
+      <p data-i18n="heroDesc">A live catalog of checked iOS Sources for supported installers. Use bulk import through iOS Hub Source Import or open Sources one by one, and use practical iOS tools in the browser.</p>
       <div class="hero-actions">
         <a class="btn primary" href="guide.html" data-i18n="startHere">Start here</a>
         <a class="btn secondary" href="converter.html" data-i18n="openConverter">Open DEB → IPA Converter</a>
-        <a class="btn secondary" href="builder.html" data-i18n="buildSource">Build my Source</a>
+        <a class="btn secondary" href="builder.html" data-i18n="buildSource">Open Source Builder</a>
         <a class="btn secondary" href="#sources" data-i18n="browseSources">Browse sources</a>
       </div>
       <div class="stats" aria-label="Source statistics">
         <div class="stat"><strong id="statSources">—</strong><span data-i18n="availableSources">available sources</span></div>
-        <div class="stat"><strong id="statMix">—</strong><span data-i18n="mixReadySources">mix-ready sources</span></div>
-        <div class="stat"><strong id="statApps">—</strong><span data-i18n="discoveredApps">unique discovered apps</span></div>
+        <div class="stat"><strong id="statMix">—</strong><span data-i18n="mixReadySources">installer-compatible sources</span></div>
+        <div class="stat"><strong id="statApps">—</strong><span data-i18n="discoveredApps">checked source endpoints</span></div>
       </div>
     </section>
 
@@ -110,37 +109,21 @@
           <a class="btn primary" href="converter.html" data-i18n="openTool">Open tool</a>
         </article>
         <article class="panel tool-card">
-          <div class="tool-icon">MIX</div>
+          <div class="tool-icon">SRC</div>
           <div class="tool-copy">
             <span class="pill mode">CUSTOM</span>
             <h3 data-i18n="customBuilderCardTitle">Custom Builder</h3>
-            <p data-i18n="customBuilderCardDesc">Filter checked sources, choose any combination and create your own Mix on a dedicated page.</p>
+            <p data-i18n="customBuilderCardDesc">Choose an installer and original Sources. Bulk import uses iOS Hub Source Import; no combined Source feed is created.</p>
           </div>
           <a class="btn primary" href="builder.html" data-i18n="openBuilder">Open Builder</a>
         </article>
       </div>
     </section>
 
-    <section id="builder" class="section wrap">
-      <div class="section-head">
-        <div>
-          <h2 data-i18n="readySourcesTitle">Ready sources</h2>
-          <p data-i18n="readySourcesDesc">Use a prepared source or open the standalone Custom Builder for your own filtered Mix.</p>
-        </div>
-      </div>
-
-      <div class="panel builder-shell">
-        <div class="builder-card-grid">
-          <div id="officialSourcePackages" class="builder-ready-cards"></div>
-
-        </div>
-      </div>
-    </section>
-
     <section id="sources" class="section wrap">
       <div class="section-head">
         <div>
-          <h2 data-i18n="catalogTitle">AltStore · SideStore · LiveContainer sources</h2>
+          <h2 data-i18n="catalogTitle">iOS Sources · Sideloading sources</h2>
           <p data-i18n="catalogDesc">Every registered source stays visible with its latest automated status. Offline sources remain listed with install buttons disabled.</p>
           <div id="sourceStatusSummary" class="source-status-summary" aria-live="polite"></div>
         </div>
@@ -202,6 +185,8 @@
         <a href="https://caseycz.github.io/" target="_blank" rel="noopener">Website</a>
         <a href="https://github.com/CaseyCZ/iOS-Hub" target="_blank" rel="noopener">GitHub · iOS-Hub</a>
         <a href="credits.html">Credits</a>
+        <a href="privacy.html">Privacy &amp; Cookies</a>
+        <button class="footer-link-button" type="button" data-cookie-settings>Cookie settings</button>
       </div>
     </div>
   </footer>
@@ -218,9 +203,9 @@
   </div>
 
   <div id="toast" class="toast-message" role="status" aria-live="polite" hidden></div>
-  <script type="module" src="src/js/app.js?v=1.1.5-20260929-sourceicons2"></script>
-  <script type="module" src="src/js/builder.js?v=1.1.5-20260918-fullaudit1"></script>
+  <script type="module" src="src/js/app.js?v=1.1.5-20260930-source-import8"></script>
   <script type="module" src="src/js/collapsible.js?v=1.1.5-20260918-audit1"></script>
+  <script src="src/js/horizontal-scroll.js?v=1.1.5-20260930-scroll-hardfix1"></script>
   <script src="src/js/support-dialog.js?v=1.1.5-20260918-a11y1"></script>
   <script src="src/js/mobile-menu.js?v=1.1.5-20260918-a11y1"></script>
   <script src="src/js/settings-menu.js?v=1.1.5-20260918-a11y1"></script>

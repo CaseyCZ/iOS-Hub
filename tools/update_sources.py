@@ -1,8 +1,6 @@
 #!/usr/bin/env python3
 from __future__ import annotations
 
-import hashlib
-import itertools
 import json
 import urllib.error
 import urllib.request
@@ -10,15 +8,16 @@ from datetime import datetime, timezone
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
+# Direct Source monitoring only: generated data keeps endpoint/status metadata for the direct-link Builder, never third-party feed payloads.
 REGISTRY = ROOT / "sources" / "registry.json"
 DATA_DIR = ROOT / "data"
-SOURCE_CACHE_DIR = DATA_DIR / "source-cache"
-MIX_DIR = ROOT / "mix"
-ALTSTORE_DIR = ROOT / "altstore"
-SIDESTORE_DIR = ROOT / "sidestore"
-BASE_URL = "https://caseycz.github.io/iOS-Hub/"
-MAX_MIX_SOURCES = 3
 USER_AGENT = "CaseyCZ-iOS-Hub (+https://caseycz.github.io/iOS-Hub/)"
+
+# Keep this aligned with the Source Builder targets in src/js/installers.js.
+DIRECT_SOURCE_INSTALLERS = ("altstore", "sidestore", "livecontainer", "altstore-pal", "flarestore", "feather")
+STRICT_DUPLICATE_BUNDLE_INSTALLERS = {"altstore", "sidestore", "altstore-pal"}
+TOLERANT_DUPLICATE_BUNDLE_INSTALLERS = {"livecontainer", "feather"}
+DUPLICATE_BUNDLE_EXAMPLE_LIMIT = 20
 
 
 def now_iso() -> str:
@@ -43,173 +42,122 @@ def fetch_json(url: str) -> tuple[dict, int]:
     return payload, status
 
 
-def parse_date(value: object) -> float:
-    if not isinstance(value, str) or not value.strip():
-        return 0.0
-    text = value.strip().replace("Z", "+00:00")
-    try:
-        return datetime.fromisoformat(text).timestamp()
-    except ValueError:
-        try:
-            return datetime.fromisoformat(text[:10]).replace(tzinfo=timezone.utc).timestamp()
-        except ValueError:
-            return 0.0
+def source_variant_urls(source: dict) -> dict[str, str]:
+    """Return normalized Classic/PAL endpoints for a registry source."""
+    urls: dict[str, str] = {}
+    configured = source.get("urls")
+    if isinstance(configured, dict):
+        for variant in ("classic", "pal"):
+            value = configured.get(variant)
+            if isinstance(value, str) and value.strip():
+                urls[variant] = value.strip()
+
+    primary = str(source.get("url") or "").strip()
+    mode = str(source.get("mode") or "classic")
+    if primary:
+        if mode == "pal":
+            urls.setdefault("pal", primary)
+        else:
+            urls.setdefault("classic", primary)
+    return urls
 
 
-def app_date(app: dict) -> float:
-    candidates = [app.get("versionDate"), app.get("date")]
-    versions = app.get("versions")
-    if isinstance(versions, list):
-        for version in versions:
-            if isinstance(version, dict):
-                candidates.extend([version.get("date"), version.get("versionDate")])
-    return max((parse_date(value) for value in candidates), default=0.0)
+def source_variant_url(source: dict, variant: str) -> str:
+    return source_variant_urls(source).get(variant, "")
 
 
-def app_version(app: dict) -> str:
-    versions = app.get("versions")
-    if isinstance(versions, list) and versions:
-        dated = [item for item in versions if isinstance(item, dict)]
-        if dated:
-            latest = max(dated, key=lambda item: parse_date(item.get("date") or item.get("versionDate")))
-            if latest.get("version"):
-                return str(latest["version"])
-    for key in ("version", "absoluteVersion"):
-        if app.get(key):
-            return str(app[key])
-    return ""
+def source_supports_installer(source: dict, installer: str) -> bool:
+    configured = source.get("installers")
+    if isinstance(configured, list):
+        return installer in configured
+
+    mode = str(source.get("mode") or "classic")
+    if installer == "altstore-pal":
+        return mode == "pal"
+    if mode == "pal":
+        return False
+    if mode == "sidestore":
+        return installer == "sidestore"
+    return installer in {"altstore", "sidestore", "livecontainer", "flarestore", "feather"}
 
 
-def app_summary(app: dict) -> dict:
+def duplicate_bundle_report(payload: dict) -> dict:
+    counts: dict[str, int] = {}
+    for app in payload.get("apps", []):
+        if not isinstance(app, dict):
+            continue
+        raw_bundle = str(app.get("bundleIdentifier") or app.get("bundleID") or "").strip()
+        if not raw_bundle:
+            continue
+        key = raw_bundle.lower()
+        counts[key] = counts.get(key, 0) + 1
+
+    duplicate_counts = [count for count in counts.values() if count > 1]
     return {
-        "name": app.get("name") or "Unknown app",
-        "bundleIdentifier": app.get("bundleIdentifier") or app.get("bundleID") or "",
-        "developerName": app.get("developerName") or "",
-        "version": app_version(app),
-        "iconURL": app.get("iconURL") or "",
-        "subtitle": app.get("subtitle") or "",
+        "count": len(duplicate_counts),
+        "duplicateAppEntries": sum(duplicate_counts),
+        "extraEntries": sum(count - 1 for count in duplicate_counts),
     }
 
 
-def has_classic_download(app: dict) -> bool:
-    if app.get("downloadURL") and (app.get("version") or app.get("absoluteVersion")):
-        return True
-    versions = app.get("versions")
-    if isinstance(versions, list):
-        return any(
-            isinstance(version, dict) and version.get("version") and version.get("downloadURL")
-            for version in versions
-        )
-    return False
-
-
-def assess_mix_compatibility(source: dict, payload: dict) -> tuple[str, str]:
-    apps = [app for app in payload.get("apps", []) if isinstance(app, dict)]
-    if not apps:
-        return "fail", "Source contains no application entries."
-
-    missing_bundle = sum(1 for app in apps if not (app.get("bundleIdentifier") or app.get("bundleID")))
-    if missing_bundle:
-        return "fail", f"{missing_bundle} app entries are missing a bundle identifier."
-
-    bundles = [
-        str(app.get("bundleIdentifier") or app.get("bundleID") or "").strip().lower()
-        for app in apps
-        if (app.get("bundleIdentifier") or app.get("bundleID"))
-    ]
-    duplicate_bundles = len(bundles) - len(set(bundles))
-
-    classic_downloads = sum(1 for app in apps if has_classic_download(app))
-    mode = source.get("mode") or "classic"
-
-    if mode == "classic" and duplicate_bundles:
-        return "experimental", f"{duplicate_bundles} app entries share a bundle identifier; a Mix would collapse variants to one app."
-    if mode == "classic" and classic_downloads == len(apps):
-        return "pass", "Classic source structure and downloadable app metadata passed the automated Mix test."
-    if mode == "classic":
-        return "experimental", f"Classic JSON is readable, but {len(apps) - classic_downloads} app entries lack direct IPA version metadata."
-    if mode == "sidestore":
-        return "experimental", "SideStore source is structurally readable; installation behavior can differ from AltStore Classic."
-    if mode == "pal":
-        return "experimental", "AltStore PAL source is structurally readable, but notarized marketplace apps can require PAL-specific metadata."
-    return "experimental", "Source JSON is readable but uses an unclassified distribution mode."
-
-
-def is_sidestore_compatible(source: dict, payload: dict) -> bool:
-    """Conservative SideStore pool: AltSource-compatible direct IPA entries only."""
-    if (source.get("mode") or "classic") not in {"classic", "sidestore"}:
-        return False
-    apps = [app for app in payload.get("apps", []) if isinstance(app, dict)]
-    if not apps:
-        return False
-    return all(
-        (app.get("bundleIdentifier") or app.get("bundleID")) and has_classic_download(app)
-        for app in apps
+def direct_installer_compatibility(source: dict, variant_payloads: dict[str, dict]) -> tuple[dict, dict]:
+    # Keep the source-level duplicate summary based on Classic when available,
+    # but evaluate each installer against the payload variant it actually opens.
+    assessment_payload = (
+        variant_payloads.get("classic")
+        or variant_payloads.get("pal")
+        or {}
     )
+    report = duplicate_bundle_report(assessment_payload)
+    checks: dict[str, dict] = {}
 
+    for installer in DIRECT_SOURCE_INSTALLERS:
+        if not source_supports_installer(source, installer):
+            continue
 
-def is_default_package_source(source: dict) -> bool:
-    """Keep development/nightly feeds selectable, but out of stable iOS Hub packages."""
-    tags = {str(tag).lower() for tag in source.get("tags", [])}
-    return source.get("nightly") is not True and "nightly" not in tags and "development" not in tags
+        installer_variant = "pal" if installer == "altstore-pal" else "classic"
+        installer_payload = variant_payloads.get(installer_variant)
+        if installer_payload is None:
+            continue
 
+        installer_report = duplicate_bundle_report(installer_payload)
+        duplicate_count = installer_report["count"]
 
-def sanitize_classic_app(app: dict) -> dict:
-    """Remove marketplace-only/custom build fields from Classic IPA source output."""
-    cleaned = dict(app)
-    cleaned.pop("marketplaceID", None)
-    cleaned.pop("Build", None)
-    cleaned.pop("build", None)
+        if not duplicate_count:
+            checks[installer] = {
+                "directSource": "pass",
+                "reason": "No duplicate bundle identifiers were detected in the source variant used by this installer.",
+            }
+            continue
 
-    versions = cleaned.get("versions")
-    if isinstance(versions, list):
-        normalized_versions = []
-        for version in versions:
-            if isinstance(version, dict):
-                item = dict(version)
-                item.pop("Build", None)
-                item.pop("build", None)
-                normalized_versions.append(item)
-            else:
-                normalized_versions.append(version)
-        cleaned["versions"] = normalized_versions
+        if installer in STRICT_DUPLICATE_BUNDLE_INSTALLERS:
+            checks[installer] = {
+                "directSource": "fail",
+                "reason": (
+                    f"{duplicate_count} bundle identifiers occur more than once; "
+                    f"{installer} requires unique apps when adding the original source."
+                ),
+            }
+        elif installer in TOLERANT_DUPLICATE_BUNDLE_INSTALLERS:
+            checks[installer] = {
+                "directSource": "pass",
+                "installVariants": "try",
+                "reason": (
+                    f"{duplicate_count} duplicate bundle identifiers are present. "
+                    "The source parser can keep separate entries, but installing multiple variants "
+                    "with the same bundle identifier can still conflict."
+                ),
+            }
+        else:
+            checks[installer] = {
+                "directSource": "try",
+                "reason": (
+                    f"{duplicate_count} duplicate bundle identifiers are present; "
+                    "direct-source behavior is not verified for this installer."
+                ),
+            }
 
-    return cleaned
-
-
-def dedupe_apps(source_payloads: list[tuple[dict, dict]]) -> tuple[list[dict], list[dict]]:
-    merged: dict[str, tuple[dict, dict]] = {}
-    conflicts: list[dict] = []
-
-    for source_meta, payload in source_payloads:
-        for app in payload.get("apps", []):
-            if not isinstance(app, dict):
-                continue
-            bundle = app.get("bundleIdentifier") or app.get("bundleID")
-            if not bundle:
-                continue
-            if bundle not in merged:
-                merged[bundle] = (source_meta, app)
-                continue
-
-            old_meta, old_app = merged[bundle]
-            old_date = app_date(old_app)
-            new_date = app_date(app)
-            winner_meta, winner_app = old_meta, old_app
-            if new_date > old_date:
-                winner_meta, winner_app = source_meta, app
-                merged[bundle] = (source_meta, app)
-
-            conflicts.append({
-                "bundleIdentifier": bundle,
-                "keptSource": winner_meta["id"],
-                "otherSource": source_meta["id"] if winner_meta["id"] != source_meta["id"] else old_meta["id"],
-                "keptVersion": app_version(winner_app),
-            })
-
-    apps = [sanitize_classic_app(item[1]) for item in merged.values()]
-    apps.sort(key=lambda app: str(app.get("name") or "").lower())
-    return apps, conflicts
+    return report, checks
 
 
 def write_json(path: Path, payload: object) -> None:
@@ -220,64 +168,16 @@ def write_json(path: Path, payload: object) -> None:
     path.write_text(rendered, encoding="utf-8")
 
 
-def make_mix(selected: list[tuple[dict, dict]], filename: str, identifier_suffix: str) -> tuple[dict, list[dict]]:
-    apps, conflicts = dedupe_apps(selected)
-    names = [meta["name"] for meta, _ in selected]
-    return {
-        "name": "Mix · " + " + ".join(names),
-        "identifier": f"com.caseycz.ios.mix.{identifier_suffix}",
-        "subtitle": "Combined AltStore source generated by iOS Hub",
-        "website": BASE_URL,
-        "sourceURL": f"{BASE_URL}mix/{filename}",
-        "tintColor": "#38BDF8",
-        "apps": apps,
-        "userInfo": {
-            "sourceIDs": [meta["id"] for meta, _ in selected],
-            "sourceURLs": [meta["url"] for meta, _ in selected],
-        },
-    }, conflicts
-
-
-def make_store_source(selected: list[tuple[dict, dict]], store: str) -> tuple[dict, list[dict]]:
-    apps, conflicts = dedupe_apps(selected)
-    side = store == "sidestore"
-    name = "SideStore Source" if side else "AltStore Source"
-    identifier = "com.caseycz.ios.sidestore" if side else "com.caseycz.ios.altstore"
-    subtitle = (
-        "Checked SideStore-compatible apps from iOS Hub"
-        if side
-        else "Checked AltStore-compatible apps from iOS Hub"
-    )
-    return {
-        "name": name,
-        "identifier": identifier,
-        "subtitle": subtitle,
-        "website": BASE_URL,
-        "sourceURL": f"{BASE_URL}{store}/source.json",
-        "tintColor": "#38BDF8",
-        "apps": apps,
-        "userInfo": {
-            "generatedBy": "iOS Hub",
-            "sourceIDs": [meta["id"] for meta, _ in selected],
-            "sourceURLs": [meta["url"] for meta, _ in selected],
-        },
-    }, conflicts
-
-
+# Monitoring only: original Source endpoints remain authoritative; only Source-level diagnostics are persisted.
 def main() -> None:
     registry = json.loads(REGISTRY.read_text(encoding="utf-8"))
     sources = registry.get("sources", [])
     generated_at = now_iso()
 
     DATA_DIR.mkdir(parents=True, exist_ok=True)
-    SOURCE_CACHE_DIR.mkdir(parents=True, exist_ok=True)
-    MIX_DIR.mkdir(parents=True, exist_ok=True)
-    ALTSTORE_DIR.mkdir(parents=True, exist_ok=True)
-    SIDESTORE_DIR.mkdir(parents=True, exist_ok=True)
 
     status = {"generatedAt": generated_at, "sources": {}}
     catalog = {"generatedAt": generated_at, "sources": []}
-    loaded: dict[str, tuple[dict, dict]] = {}
 
     for source in sources:
         source_id = source["id"]
@@ -288,188 +188,102 @@ def main() -> None:
             "httpStatus": None,
             "iconURL": "",
             "error": None,
-            "mixTest": "fail",
-            "mixReason": "Source has not passed the latest check.",
+            "variants": {},
         }
-        try:
-            payload, http_status = fetch_json(source["url"])
+
+        variant_payloads: dict[str, dict] = {}
+        variant_urls = source_variant_urls(source)
+        for variant, variant_url in variant_urls.items():
+            variant_result = {
+                "online": False,
+                "httpStatus": None,
+                "appCount": None,
+                "error": None,
+            }
+            try:
+                payload, http_status = fetch_json(variant_url)
+                apps = [app for app in payload.get("apps", []) if isinstance(app, dict)]
+                variant_payloads[variant] = payload
+                duplicate_report = duplicate_bundle_report(payload)
+                variant_result.update({
+                    "online": True,
+                    "httpStatus": http_status,
+                    "appCount": len(apps),
+                    "error": None,
+                    "duplicateBundleIdentifiers": {
+                        "count": duplicate_report["count"],
+                        "duplicateAppEntries": duplicate_report["duplicateAppEntries"],
+                        "extraEntries": duplicate_report["extraEntries"],
+                    },
+                })
+            except (urllib.error.URLError, urllib.error.HTTPError, TimeoutError, ValueError, json.JSONDecodeError, UnicodeDecodeError) as exc:
+                variant_result["error"] = f"{type(exc).__name__}: {exc}"[:300]
+            except Exception as exc:
+                variant_result["error"] = f"{type(exc).__name__}: {exc}"[:300]
+            result["variants"][variant] = variant_result
+
+        preferred_variant = (
+            "classic" if "classic" in variant_payloads
+            else "pal" if "pal" in variant_payloads
+            else next(iter(variant_payloads), None)
+        )
+
+        if preferred_variant is not None:
+            payload = variant_payloads[preferred_variant]
             apps = [app for app in payload.get("apps", []) if isinstance(app, dict)]
-            mix_test, mix_reason = assess_mix_compatibility(source, payload)
+            variant_result = result["variants"][preferred_variant]
+            duplicate_report, installer_compatibility = direct_installer_compatibility(
+                source,
+                variant_payloads,
+            )
             result.update({
                 "online": True,
-                "httpStatus": http_status,
+                "httpStatus": variant_result.get("httpStatus"),
                 "appCount": len(apps),
-                "iconURL": payload.get("iconURL") or (apps[0].get("iconURL") if apps else "") or "",
+                "iconURL": "",
                 "error": None,
-                "mixTest": mix_test,
-                "mixReason": mix_reason,
+                "duplicateBundleIdentifiers": {
+                    "count": duplicate_report["count"],
+                    "duplicateAppEntries": duplicate_report["duplicateAppEntries"],
+                    "extraEntries": duplicate_report["extraEntries"],
+                },
+                "installerCompatibility": installer_compatibility,
+                "preferredVariant": preferred_variant,
             })
-            loaded[source_id] = (source, payload)
-            if source.get("cachePayload", True):
-                write_json(SOURCE_CACHE_DIR / f"{source_id}.json", payload)
-
-            catalog_limit = source.get("catalogLimit")
-            catalog_apps = apps
-            if isinstance(catalog_limit, int) and catalog_limit > 0:
-                catalog_apps = apps[:catalog_limit]
 
             catalog["sources"].append({
                 "id": source_id,
-                "name": payload.get("name") or source.get("name"),
+                "name": source.get("name"),
                 "appCount": len(apps),
-                "catalogLimited": len(catalog_apps) < len(apps),
-                "iconURL": result["iconURL"],
-                "apps": [app_summary(app) for app in catalog_apps],
+                "variants": sorted(variant_payloads),
             })
-        except (urllib.error.URLError, urllib.error.HTTPError, TimeoutError, ValueError, json.JSONDecodeError, UnicodeDecodeError) as exc:
-            result["error"] = f"{type(exc).__name__}: {exc}"[:300]
-        except Exception as exc:
-            result["error"] = f"{type(exc).__name__}: {exc}"[:300]
+        else:
+            errors = [
+                f"{variant}: {item.get('error')}"
+                for variant, item in result["variants"].items()
+                if item.get("error")
+            ]
+            result["error"] = "; ".join(errors)[:300] if errors else "No source variant URL is configured."
+
         status["sources"][source_id] = result
 
-    unique_app_keys: set[str] = set()
-    for source_id, (_source, payload) in loaded.items():
-        for app in payload.get("apps", []):
-            if not isinstance(app, dict):
-                continue
-            bundle = str(app.get("bundleIdentifier") or app.get("bundleID") or "").strip().lower()
-            if bundle:
-                unique_app_keys.add(bundle)
-                continue
-            name = str(app.get("name") or "").strip().lower()
-            developer = str(app.get("developerName") or "").strip().lower()
-            if name or developer:
-                unique_app_keys.add(f"{source_id}:{name}:{developer}")
-    catalog["uniqueAppCount"] = len(unique_app_keys)
-
-    live_cache_files = {
-        f"{source_id}.json"
-        for source_id, (source, _payload) in loaded.items()
-        if source.get("cachePayload", True)
-    }
-    for path in SOURCE_CACHE_DIR.glob("*.json"):
-        if path.name not in live_cache_files:
-            path.unlink()
-
-    mergeable_ids = sorted(
-        source["id"] for source in sources
-        if source.get("mergeable") and source.get("mode") == "classic" and source["id"] in loaded
-    )
-
-    auto_compatible_ids = sorted(
-        source_id for source_id, (source, _payload) in loaded.items()
-        if status["sources"][source_id]["mixTest"] == "pass"
-        and source.get("mode") == "classic"
-        and source.get("autoPackage", True)
-    )
-    experimental_ids = sorted(
-        source_id for source_id in loaded
-        if status["sources"][source_id]["mixTest"] == "experimental"
-    )
-
-    altstore_package_ids = sorted(
-        source_id for source_id in auto_compatible_ids
-        if is_default_package_source(loaded[source_id][0])
-    )
-    sidestore_compatible_ids = sorted(
-        source_id for source_id, (source, payload) in loaded.items()
-        if is_sidestore_compatible(source, payload)
-        and source_id != "sidestore-official"
-        and source.get("autoPackage", True)
-        and is_default_package_source(source)
-    )
-
-    effective_max = min(MAX_MIX_SOURCES, len(mergeable_ids))
-    expected_mix_files: set[str] = set()
-    all_conflicts: dict[str, list[dict]] = {}
-    mix_count = 0
-
-    for size in range(1, effective_max + 1):
-        for combo in itertools.combinations(mergeable_ids, size):
-            slug = "--".join(combo)
-            filename = f"{slug}.json"
-            expected_mix_files.add(filename)
-            selected = [loaded[source_id] for source_id in combo]
-            digest = hashlib.sha1(slug.encode("utf-8")).hexdigest()[:12]
-            mix, conflicts = make_mix(selected, filename, digest)
-            write_json(MIX_DIR / filename, mix)
-            if conflicts:
-                all_conflicts[slug] = conflicts
-            mix_count += 1
-
-    all_compatible_url = None
-    if auto_compatible_ids:
-        filename = "all-compatible.json"
-        expected_mix_files.add(filename)
-        selected = [loaded[source_id] for source_id in auto_compatible_ids]
-        mix, conflicts = make_mix(selected, filename, "all-compatible")
-        mix["name"] = "Mix · All compatible Classic sources"
-        write_json(MIX_DIR / filename, mix)
-        if conflicts:
-            all_conflicts["all-compatible"] = conflicts
-        all_compatible_url = f"{BASE_URL}mix/{filename}"
-
-    for path in MIX_DIR.glob("*.json"):
-        if path.name not in expected_mix_files:
-            path.unlink()
-
-    altstore_url = None
-    altstore_app_count = 0
-    altstore_conflict_count = 0
-    if altstore_package_ids:
-        altstore_selected = [loaded[source_id] for source_id in altstore_package_ids]
-        altstore_source, altstore_conflicts = make_store_source(altstore_selected, "altstore")
-        write_json(ALTSTORE_DIR / "source.json", altstore_source)
-        altstore_url = f"{BASE_URL}altstore/source.json"
-        altstore_app_count = len(altstore_source["apps"])
-        altstore_conflict_count = len(altstore_conflicts)
-        if altstore_conflicts:
-            all_conflicts["altstore-official"] = altstore_conflicts
-
-    sidestore_url = None
-    sidestore_app_count = 0
-    sidestore_conflict_count = 0
-    if sidestore_compatible_ids:
-        sidestore_selected = [loaded[source_id] for source_id in sidestore_compatible_ids]
-        sidestore_source, sidestore_conflicts = make_store_source(sidestore_selected, "sidestore")
-        write_json(SIDESTORE_DIR / "source.json", sidestore_source)
-        sidestore_url = f"{BASE_URL}sidestore/source.json"
-        sidestore_app_count = len(sidestore_source["apps"])
-        sidestore_conflict_count = len(sidestore_conflicts)
-        if sidestore_conflicts:
-            all_conflicts["sidestore-official"] = sidestore_conflicts
-
-    status["mixes"] = {
-        "count": mix_count,
-        "maxSourcesPerMix": effective_max,
-        "mergeableSourceIDs": mergeable_ids,
-        "autoCompatibleSourceIDs": auto_compatible_ids,
-        "experimentalSourceIDs": experimental_ids,
-        "allCompatibleURL": all_compatible_url,
-    }
-    status["altstore"] = {
-        "sourceURL": altstore_url,
-        "sourceIDs": altstore_package_ids,
-        "appCount": altstore_app_count,
-        "conflictCount": altstore_conflict_count,
-    }
-    status["sidestore"] = {
-        "sourceURL": sidestore_url,
-        "sourceIDs": sidestore_compatible_ids,
-        "appCount": sidestore_app_count,
-        "conflictCount": sidestore_conflict_count,
-    }
-
+    # Direct Source Builder architecture:
     write_json(DATA_DIR / "status.json", status)
     write_json(DATA_DIR / "catalog.json", catalog)
-    write_json(DATA_DIR / "conflicts.json", {"generatedAt": generated_at, "mixes": all_conflicts})
 
     online_count = sum(1 for item in status["sources"].values() if item["online"])
+    direct_compatible_count = sum(
+        1
+        for item in status["sources"].values()
+        if item.get("online") is True
+        and any(
+            isinstance(value, dict) and value.get("directSource") != "fail"
+            for value in (item.get("installerCompatibility") or {}).values()
+        )
+    )
     print(
         f"Checked {len(sources)} sources; {online_count} online; "
-        f"{len(auto_compatible_ids)} auto Mix-compatible; generated {mix_count} hosted combinations; "
-        f"AltStore package: {len(altstore_package_ids)} sources / {altstore_app_count} apps; "
-        f"SideStore package: {len(sidestore_compatible_ids)} sources / {sidestore_app_count} apps."
+        f"{direct_compatible_count} usable by at least one direct Source installer."
     )
 
 

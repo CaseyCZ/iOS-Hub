@@ -1,4 +1,5 @@
-import { SUPPORTED_LANGUAGES, applyTranslations, normalizeLanguage, t } from './i18n.js?v=1.1.5-20260918-fullaudit2';
+import { SUPPORTED_LANGUAGES, applyTranslations, normalizeLanguage, t } from './i18n.js?v=1.1.5-20260930-source-import8';
+import { SIDELOAD_TOOLS, resourceBadgeSpecs, resourceSideloadTools, sideloadToolURL } from './installers.js?v=1.1.5-20260930-source-import4';
 
 const root = document.documentElement;
 const RESOURCE_EXTRA_COPY = {
@@ -40,6 +41,134 @@ function applyResourceExtraCopy(lang) {
     const key = node.dataset.resourceCopy;
     if (copy[key]) node.textContent = copy[key];
   });
+}
+
+function buildResourceSideloadCard(tool) {
+  const card = document.createElement('article');
+  card.className = 'panel resource-card';
+  card.dataset.sideloadTool = tool.id;
+
+  const icon = document.createElement('div');
+  icon.className = 'resource-icon resource-icon-image';
+  const iconImage = document.createElement('img');
+  iconImage.className = 'official-app-icon';
+  iconImage.src = tool.icon || '';
+  iconImage.alt = tool.resourceName || tool.label || '';
+  iconImage.loading = 'lazy';
+  iconImage.referrerPolicy = 'no-referrer';
+  icon.appendChild(iconImage);
+
+  const badges = document.createElement('div');
+  badges.className = 'resource-badges';
+
+  const title = document.createElement('h3');
+  title.textContent = tool.resourceName || tool.label || tool.id;
+
+  const description = document.createElement('p');
+  if (tool.resourceDescriptionKey) description.dataset.i18n = tool.resourceDescriptionKey;
+  description.textContent = tool.resourceDescriptionKey
+    ? t(root.lang, tool.resourceDescriptionKey)
+    : '';
+
+  const domain = document.createElement('div');
+  domain.className = 'resource-domain';
+  domain.textContent = tool.domain || '';
+
+  const link = document.createElement('a');
+  link.className = 'btn primary brand-link';
+  link.href = sideloadToolURL(tool.id);
+  link.target = '_blank';
+  link.rel = 'noopener noreferrer';
+
+  const linkIcon = document.createElement('img');
+  linkIcon.className = 'brand-link-icon';
+  linkIcon.src = tool.icon || '';
+  linkIcon.alt = '';
+  linkIcon.loading = 'lazy';
+  linkIcon.referrerPolicy = 'no-referrer';
+
+  const linkText = document.createElement('span');
+  linkText.dataset.i18n = 'openWebsite';
+  linkText.textContent = t(root.lang, 'openWebsite');
+
+  link.append(linkIcon, linkText);
+  card.append(icon, badges, title, description, domain, link);
+  return card;
+}
+
+function renderSideloadResourceCards() {
+  const host = document.querySelector('#sideloadResourceGrid');
+  if (!host) return;
+  host.replaceChildren(...resourceSideloadTools().map(buildResourceSideloadCard));
+}
+
+function renderSideloadToolBadges(card, toolId) {
+  const host = card.querySelector('.resource-badges');
+  if (!host) return;
+
+  const badges = resourceBadgeSpecs(toolId);
+  host.replaceChildren(...badges.map(spec => {
+    const badge = document.createElement('span');
+    badge.className = `pill ${spec.className || 'mode'}`;
+    if (spec.key) {
+      badge.dataset.i18n = spec.key;
+      badge.textContent = t(root.lang, spec.key);
+    } else {
+      badge.textContent = spec.label || '';
+    }
+    return badge;
+  }));
+}
+
+function hydrateSideloadToolCards() {
+  document.querySelectorAll('[data-sideload-tool]').forEach(card => {
+    const tool = SIDELOAD_TOOLS[card.dataset.sideloadTool];
+    if (!tool) return;
+
+    card.dataset.toolType = tool.toolType || '';
+    card.dataset.capabilities = (tool.capabilities || []).join(' ');
+    card.dataset.targets = (tool.targets || []).join(' ');
+    card.dataset.hostPlatforms = (tool.hostPlatforms || []).join(' ');
+    card.dataset.computerMode = tool.computerMode || 'unknown';
+    card.dataset.sourceSupport = tool.sourceSupport || 'none';
+    card.dataset.openSource = tool.openSource === true ? 'true' : (tool.openSource === false ? 'false' : 'unknown');
+    card.dataset.resourceBadges = (tool.resourceBadges || []).join(' ');
+    renderSideloadToolBadges(card, tool.id);
+
+    const title = card.querySelector('h3');
+    if (title && tool.resourceName) title.textContent = tool.resourceName;
+
+    const description = card.querySelector('p[data-i18n]');
+    if (description && tool.resourceDescriptionKey) {
+      description.dataset.i18n = tool.resourceDescriptionKey;
+      description.textContent = t(root.lang, tool.resourceDescriptionKey);
+    }
+
+    const domain = card.querySelector('.resource-domain');
+    if (domain && tool.domain) domain.textContent = tool.domain;
+
+    const href = sideloadToolURL(tool.id);
+    const link = card.querySelector('a.btn.primary');
+    if (link && href) link.href = href;
+
+    card.querySelectorAll('img.official-app-icon, img.brand-link-icon').forEach(img => {
+      if (tool.icon) img.src = tool.icon;
+      if (img.classList.contains('official-app-icon')) img.alt = tool.resourceName || tool.label || '';
+    });
+  });
+
+  const cards = new Map(
+    [...document.querySelectorAll('[data-sideload-tool]')]
+      .map(card => [card.dataset.sideloadTool, card])
+  );
+  const first = resourceSideloadTools().map(tool => cards.get(tool.id)).find(Boolean);
+  const host = first?.parentElement;
+  if (host) {
+    resourceSideloadTools().forEach(tool => {
+      const card = cards.get(tool.id);
+      if (card && card.parentElement === host) host.appendChild(card);
+    });
+  }
 }
 
 const $ = selector => document.querySelector(selector);
@@ -99,6 +228,9 @@ document.addEventListener('click', event => {
 $('#themeToggle')?.addEventListener('click', () => applyTheme(root.dataset.theme === 'dark' ? 'light' : 'dark'));
 $('#languageSelect')?.addEventListener('change', event => applyLanguage(event.target.value));
 document.addEventListener('keydown', event => { if (event.key === 'Escape') closeSupport(); });
+
+renderSideloadResourceCards();
+hydrateSideloadToolCards();
 
 const savedTheme = safeGet('caseycz-theme');
 const systemDark = window.matchMedia?.('(prefers-color-scheme: dark)').matches;

@@ -6,20 +6,19 @@
   <meta name="theme-color" content="#070b14">
   <meta name="referrer" content="no-referrer">
   <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://www.googletagmanager.com; style-src 'self' 'unsafe-inline'; img-src 'self' https: data:; connect-src 'self' https://*.google-analytics.com https://*.analytics.google.com https://*.googletagmanager.com; object-src 'none'; base-uri 'self'; form-action 'none'">
-  <meta name="description" content="iOS Hub — free sideloading guide, compatibility overview and troubleshooting for AltStore, SideStore, LiveContainer, Sideloadly and TrollStore.">
+  <meta name="description" content="iOS Hub — free sideloading guide, source compatibility overview and troubleshooting for common iOS installation workflows.">
   <link rel="canonical" href="https://caseycz.github.io/iOS-Hub/guide.html">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="iOS Hub">
   <meta property="og:title" content="Sideloading Help Center — iOS Hub">
-  <meta property="og:description" content="iOS Hub — free sideloading guide, compatibility overview and troubleshooting for AltStore, SideStore, LiveContainer, Sideloadly and TrollStore.">
+  <meta property="og:description" content="iOS Hub — free sideloading guide, source compatibility overview and troubleshooting for common iOS installation workflows.">
   <meta property="og:url" content="https://caseycz.github.io/iOS-Hub/guide.html">
   <meta name="twitter:card" content="summary">
   <title>Sideloading Help Center — iOS Hub</title>
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-SZTERTRTCE"></script>
-  <script src="src/js/analytics.js?v=1.1.5-20260929-titlefix1"></script>
+  <!-- Analytics loads only after explicit opt-in consent. -->
+  <script src="src/js/analytics.js?v=1.1.5-20260930-consent1"></script>
   <link rel="stylesheet" href="src/css/styles.css?v=1.1.5-20260918-fullaudit3">
-  <link rel="stylesheet" href="src/css/hub-extra.css?v=1.1.5-20260924-scrollfix1">
+  <link rel="stylesheet" href="src/css/hub-extra.css?v=1.1.5-20260930-consent1">
 </head>
 <body>
   <a class="skip-link" href="#top" data-i18n="skipToContent">Skip to content</a>
@@ -27,7 +26,7 @@
     <div class="wrap topbar-inner">
       <a class="brand" href="index.html" aria-label="iOS Hub">
         <span class="brand-mark">iOS</span>
-        <span>iOS Hub<small>AltStore · SideStore · LiveContainer</small></span>
+        <span>iOS Hub<small>iOS Sources · Sideloading</small></span>
       </a>
       <nav class="nav" aria-label="Primary">
         <a href="index.html#tools" data-i18n="tools">Tools</a>
@@ -81,6 +80,25 @@
       <div class="eyebrow" data-help-copy="pageEyebrow">HELP CENTER · GUIDES · FIXES</div>
       <h1 data-help-copy="pageTitle">Sideloading Help Center</h1>
       <p data-help-copy="pageDesc">Choose the right sideloading method, diagnose a problem or describe your setup and get a focused path in a few taps.</p>
+    </section>
+
+    <section class="wrap guide-tool-scope-wrap" aria-labelledby="guideToolScopeTitle">
+      <div id="guideToolScope" class="guide-tool-scope panel">
+        <div class="guide-tool-scope-copy">
+          <div class="eyebrow" data-help-copy="toolScopeEyebrow">FOCUSED HELP</div>
+          <strong id="guideToolScopeTitle" data-help-copy="toolScopeTitle">Help with a selected installer</strong>
+          <span data-help-copy="toolScopeDesc">Already know which installer you use? Select it for focused help. If not, leave Help me choose selected and iOS Hub will guide you.</span>
+        </div>
+        <div class="guide-tool-picker">
+          <button id="guideToolScopeButton" class="guide-tool-scope-button" type="button" aria-haspopup="listbox" aria-expanded="false" aria-controls="guideToolScopeMenu">
+            <span id="guideToolScopeAllIcon" class="guide-tool-scope-all-icon" aria-hidden="true">✨</span>
+            <img id="guideToolScopeIcon" class="guide-tool-scope-icon" src="" alt="" hidden referrerpolicy="no-referrer">
+            <span id="guideToolScopeLabel" class="guide-tool-scope-label">Help me choose</span>
+            <span class="guide-tool-scope-chevron" aria-hidden="true">⌄</span>
+          </button>
+          <div id="guideToolScopeMenu" class="guide-tool-scope-menu" role="listbox" aria-labelledby="guideToolScopeTitle" hidden></div>
+        </div>
+      </div>
     </section>
 
     <section class="section wrap guide-page-section">
@@ -146,13 +164,13 @@
 
             <div class="assistant-trouble-chips" role="group" aria-label="Common sideloading problems">
               <button type="button" data-assistant-trouble-filter="refresh" data-help-copy="fixRefresh">Refresh</button>
-              <button type="button" data-assistant-trouble-filter="ios 27 shortcut resign long press background refresh all" data-guide-copy="communityChip">iOS 27 / Shortcut</button>
+              <button type="button" data-assistant-trouble-filter="ios 27 shortcut resign long press background refresh all" data-assistant-tool="sidestore" data-guide-copy="communityChip">iOS 27 / Shortcut</button>
               <button type="button" data-assistant-trouble-filter="apple login 503 2fa" data-help-copy="fixLogin">Apple ID / 503</button>
               <button type="button" data-assistant-trouble-filter="pairing" data-help-copy="fixPairing">Pairing</button>
               <button type="button" data-assistant-trouble-filter="certificate" data-help-copy="fixCertificate">Certificate</button>
               <button type="button" data-assistant-trouble-filter="3 app limit app ids" data-help-copy="fixLimits">App limits</button>
-              <button type="button" data-assistant-trouble-filter="livecontainer" data-help-copy="fixLiveContainer">LiveContainer</button>
-              <button type="button" data-assistant-trouble-filter="altserver" data-help-copy="fixAltServer">AltServer</button>
+              <button type="button" data-assistant-trouble-filter="livecontainer" data-assistant-tool="livecontainer" data-help-copy="fixLiveContainer">LiveContainer</button>
+              <button type="button" data-assistant-trouble-filter="altserver" data-assistant-tool="altstore" data-help-copy="fixAltServer">AltServer</button>
             </div>
 
             <div id="assistantTroubleSummary" class="assistant-trouble-summary">
@@ -196,14 +214,8 @@
                 <button id="assistantDiagnosisCopy" class="btn secondary" type="button" data-help-copy="diagnosisCopy">Copy help link</button>
               </div>
             </div>
-            <div class="official-help-sources">
+            <div id="officialHelpSources" class="official-help-sources">
               <span data-help-copy="officialSources">Official docs used</span>
-              <a href="https://docs.sidestore.io/docs/troubleshooting" target="_blank" rel="noopener noreferrer">SideStore</a>
-              <a href="https://livecontainer.github.io/docs/faq" target="_blank" rel="noopener noreferrer">LiveContainer</a>
-              <a href="https://faq.altstore.io/altstore-classic/troubleshooting-guide" target="_blank" rel="noopener noreferrer">AltStore</a>
-              <a href="https://sideloadly.io/" target="_blank" rel="noopener noreferrer">Sideloadly</a>
-              <a href="https://github.com/opa334/TrollStore" target="_blank" rel="noopener noreferrer">TrollStore</a>
-              <a href="https://github.com/FrizzleM/SideInstaller" target="_blank" rel="noopener noreferrer">SideInstaller</a>
             </div>
             <button id="assistantShowFixes" class="btn primary assistant-show-fixes" type="button" data-help-copy="fixShow">Show matching fixes ↓</button>
           </section>
@@ -276,7 +288,8 @@
         <div class="guide-jumpbar" aria-label="Guide sections">
           <span data-help-copy="jumpLabel">Jump to:</span>
           <a href="#basics" data-help-copy="jumpBasics">Basics</a>
-          <a href="#methods" data-help-copy="jumpMethods">Methods</a>
+          <a href="#methods" data-help-copy="jumpMethods">Installation methods</a>
+          <a href="#source-installers" data-help-copy="jumpSources">Source installers</a>
           <a href="#compatibility" data-help-copy="jumpCompatibility">Compatibility</a>
           <a href="#troubleshooting" data-help-copy="jumpTroubleshooting">Troubleshooting</a>
         </div>
@@ -289,57 +302,57 @@
 
         <div class="beginner-choice-grid">
           <article class="beginner-choice">
-            <div class="guide-icon guide-icon-image"><img class="official-app-icon" src="assets/icons/altstore.svg" alt="AltStore" loading="lazy" referrerpolicy="no-referrer"></div>
+            <div class="guide-icon guide-icon-image"><img class="official-app-icon" src="assets/icons/altstore.svg" data-guide-tool-icon="altstore" alt="AltStore" loading="lazy" referrerpolicy="no-referrer"></div>
             <span class="pill online">ALTSTORE</span>
             <h3 data-i18n="beginnerPalQuestion">I want AltStore — PAL or Classic?</h3>
             <p data-i18n="beginnerPalAnswer">AltStore PAL is the simple marketplace option in supported regions and does not install arbitrary IPA files. AltStore Classic installs IPA files worldwide, uses free Apple signing and can now refresh through Remote AltServer after setup.</p>
             <div class="beginner-actions">
               <a class="btn primary brand-link" href="https://faq.altstore.io/altstore-pal/what-is-altstore-pal" target="_blank" rel="noopener noreferrer"><img class="brand-link-icon" src="assets/icons/altstore.svg" alt="" loading="lazy" referrerpolicy="no-referrer"><span data-i18n="beginnerChoosePal">AltStore PAL ↗</span></a>
-              <a class="btn secondary brand-link" href="https://faq.altstore.io/altstore-classic" target="_blank" rel="noopener noreferrer"><img class="brand-link-icon" src="assets/icons/altstore.svg" alt="" loading="lazy" referrerpolicy="no-referrer"><span data-i18n="beginnerChooseClassic">AltStore Classic ↗</span></a>
+              <a class="btn secondary brand-link" href="https://faq.altstore.io/altstore-classic" data-guide-tool-link="altstore" data-guide-tool-purpose="classicGuide" target="_blank" rel="noopener noreferrer"><img class="brand-link-icon" src="assets/icons/altstore.svg" data-guide-tool-icon="altstore" alt="" loading="lazy" referrerpolicy="no-referrer"><span data-i18n="beginnerChooseClassic">AltStore Classic ↗</span></a>
             </div>
           </article>
 
           <article class="beginner-choice">
-            <div class="guide-icon guide-icon-image"><span class="official-icon-stack"><img class="official-app-icon" src="assets/icons/sidestore.svg?v=1.1.5-20260918-audit13" alt="SideStore" loading="lazy" referrerpolicy="no-referrer"><img class="official-app-icon" src="assets/icons/altstore.svg" alt="AltStore" loading="lazy" referrerpolicy="no-referrer"></span></div>
+            <div class="guide-icon guide-icon-image"><span class="official-icon-stack"><img class="official-app-icon" src="assets/icons/sidestore.svg?v=1.1.5-20260918-audit13" data-guide-tool-icon="sidestore" alt="SideStore" loading="lazy" referrerpolicy="no-referrer"><img class="official-app-icon" src="assets/icons/altstore.svg" data-guide-tool-icon="altstore" alt="AltStore" loading="lazy" referrerpolicy="no-referrer"></span></div>
             <span class="pill online">IPA + REFRESH</span>
             <h3 data-i18n="beginnerSideQuestion">I want to install .ipa files and refresh them later from my iPhone</h3>
             <p data-i18n="beginnerSideAnswer">You now have two good free routes. SideStore is built around on-device refresh after the first setup. AltStore Classic can also install and refresh without your own computer after you pair it with Remote AltServer.</p>
             <div class="beginner-actions">
-              <a class="btn primary brand-link" href="https://docs.sidestore.io/docs/installation/prerequisites" target="_blank" rel="noopener noreferrer"><img class="brand-link-icon" src="assets/icons/sidestore.svg?v=1.1.5-20260918-audit13" alt="" loading="lazy" referrerpolicy="no-referrer"><span data-i18n="beginnerChooseSide">SideStore ↗</span></a>
+              <a class="btn primary brand-link" href="https://docs.sidestore.io/docs/installation/prerequisites" data-guide-tool-link="sidestore" data-guide-tool-purpose="prerequisites" target="_blank" rel="noopener noreferrer"><img class="brand-link-icon" src="assets/icons/sidestore.svg?v=1.1.5-20260918-audit13" data-guide-tool-icon="sidestore" alt="" loading="lazy" referrerpolicy="no-referrer"><span data-i18n="beginnerChooseSide">SideStore ↗</span></a>
               <a class="btn secondary brand-link" href="https://faq.altstore.io/altstore-classic/remote-altservers" target="_blank" rel="noopener noreferrer"><img class="brand-link-icon" src="assets/icons/altstore.svg" alt="" loading="lazy" referrerpolicy="no-referrer"><span data-i18n="beginnerChooseRemote">AltStore + Remote AltServer ↗</span></a>
             </div>
           </article>
 
           <article class="beginner-choice">
-            <div class="guide-icon guide-icon-image"><span class="official-icon-stack"><img class="official-app-icon" src="https://sideloadly.io/favicon.ico" alt="Sideloadly" loading="lazy" referrerpolicy="no-referrer"><img class="official-app-icon" src="assets/icons/altstore.svg" alt="AltStore" loading="lazy" referrerpolicy="no-referrer"></span></div>
+            <div class="guide-icon guide-icon-image"><span class="official-icon-stack"><img class="official-app-icon" src="https://sideloadly.io/favicon.ico" data-guide-tool-icon="sideloadly" alt="Sideloadly" loading="lazy" referrerpolicy="no-referrer"><img class="official-app-icon" src="assets/icons/altstore.svg" data-guide-tool-icon="altstore" alt="AltStore" loading="lazy" referrerpolicy="no-referrer"></span></div>
             <span class="pill online">DESKTOP</span>
             <h3 data-i18n="beginnerClassicQuestion">I want to install IPA files mainly from my computer</h3>
             <p data-i18n="beginnerClassicAnswer">Sideloadly is the most direct desktop route and supports iPhone, iPad, Apple Silicon Mac and Apple TV, including Wi-Fi sideloading and automatic re-signing. AltStore Classic is useful if you also want Sources and the AltStore library workflow.</p>
             <div class="beginner-actions">
-              <a class="btn primary brand-link" href="https://sideloadly.io/" target="_blank" rel="noopener noreferrer"><img class="brand-link-icon" src="https://sideloadly.io/favicon.ico" alt="" loading="lazy" referrerpolicy="no-referrer"><span data-i18n="beginnerChooseSideloadly">Sideloadly ↗</span></a>
-              <a class="btn secondary brand-link" href="https://faq.altstore.io/altstore-classic" target="_blank" rel="noopener noreferrer"><img class="brand-link-icon" src="assets/icons/altstore.svg" alt="" loading="lazy" referrerpolicy="no-referrer"><span data-i18n="beginnerChooseClassic">AltStore Classic ↗</span></a>
+              <a class="btn primary brand-link" href="https://sideloadly.io/" data-guide-tool-link="sideloadly" data-guide-tool-purpose="guide" target="_blank" rel="noopener noreferrer"><img class="brand-link-icon" src="https://sideloadly.io/favicon.ico" data-guide-tool-icon="sideloadly" alt="" loading="lazy" referrerpolicy="no-referrer"><span data-i18n="beginnerChooseSideloadly">Sideloadly ↗</span></a>
+              <a class="btn secondary brand-link" href="https://faq.altstore.io/altstore-classic" data-guide-tool-link="altstore" data-guide-tool-purpose="classicGuide" target="_blank" rel="noopener noreferrer"><img class="brand-link-icon" src="assets/icons/altstore.svg" data-guide-tool-icon="altstore" alt="" loading="lazy" referrerpolicy="no-referrer"><span data-i18n="beginnerChooseClassic">AltStore Classic ↗</span></a>
             </div>
           </article>
 
           <article class="beginner-choice">
-            <div class="guide-icon guide-icon-image"><img class="official-app-icon" src="assets/icons/livecontainer.svg" alt="LiveContainer" loading="lazy" referrerpolicy="no-referrer"></div>
+            <div class="guide-icon guide-icon-image"><img class="official-app-icon" src="assets/icons/livecontainer.svg" data-guide-tool-icon="livecontainer" alt="LiveContainer" loading="lazy" referrerpolicy="no-referrer"></div>
             <span class="pill mode">MANY APPS</span>
             <h3 data-i18n="beginnerLcQuestion">I want to keep many IPA apps, not just a few</h3>
             <p data-i18n="beginnerLcAnswer">Use LiveContainer. It is not another store: it runs guest IPA apps inside one container, so the normal 3-app / 10-App-ID free-account limit does not apply to those guest apps. The LiveContainer + SideStore build is the easiest combined setup.</p>
             <div class="beginner-actions">
-              <a class="btn primary brand-link" href="https://livecontainer.github.io/docs/installation/lc_sidestore" target="_blank" rel="noopener noreferrer"><img class="brand-link-icon" src="assets/icons/livecontainer.svg" alt="" loading="lazy" referrerpolicy="no-referrer"><span data-i18n="beginnerChooseLc">LiveContainer + SideStore ↗</span></a>
-              <a class="btn secondary brand-link" href="https://github.com/LiveContainer/LiveContainer" target="_blank" rel="noopener noreferrer"><img class="brand-link-icon" src="assets/icons/livecontainer.svg" alt="" loading="lazy" referrerpolicy="no-referrer"><span data-i18n="beginnerChooseLcDocs">LiveContainer info ↗</span></a>
+              <a class="btn primary brand-link" href="https://livecontainer.github.io/docs/installation/lc_sidestore" data-guide-tool-link="livecontainer" data-guide-tool-purpose="lcSideStore" target="_blank" rel="noopener noreferrer"><img class="brand-link-icon" src="assets/icons/livecontainer.svg" data-guide-tool-icon="livecontainer" alt="" loading="lazy" referrerpolicy="no-referrer"><span data-i18n="beginnerChooseLc">LiveContainer + SideStore ↗</span></a>
+              <a class="btn secondary brand-link" href="https://github.com/LiveContainer/LiveContainer" data-guide-tool-link="livecontainer" data-guide-tool-purpose="repository" target="_blank" rel="noopener noreferrer"><img class="brand-link-icon" src="assets/icons/livecontainer.svg" data-guide-tool-icon="livecontainer" alt="" loading="lazy" referrerpolicy="no-referrer"><span data-i18n="beginnerChooseLcDocs">LiveContainer info ↗</span></a>
             </div>
           </article>
 
           <article class="beginner-choice">
-            <div class="guide-icon guide-icon-image"><span class="official-icon-stack"><img class="official-app-icon" src="https://sideloadly.io/favicon.ico" alt="Sideloadly" loading="lazy" referrerpolicy="no-referrer"><img class="official-app-icon" src="assets/icons/atvloadly.svg" alt="atvloadly" loading="lazy" referrerpolicy="no-referrer"></span></div>
+            <div class="guide-icon guide-icon-image"><span class="official-icon-stack"><img class="official-app-icon" src="https://sideloadly.io/favicon.ico" data-guide-tool-icon="sideloadly" alt="Sideloadly" loading="lazy" referrerpolicy="no-referrer"><img class="official-app-icon" src="assets/icons/atvloadly.svg" data-guide-tool-icon="atvloadly" alt="atvloadly" loading="lazy" referrerpolicy="no-referrer"></span></div>
             <span class="pill mode">tvOS</span>
             <h3 data-i18n="beginnerTvQuestion">I want to install apps on Apple TV</h3>
             <p data-i18n="beginnerTvAnswer">Sideloadly installs IPA files directly to Apple TV from Windows or macOS. If you want a self-hosted service on Linux or OpenWrt, use atvloadly instead.</p>
             <div class="beginner-actions">
-              <a class="btn primary brand-link" href="https://sideloadly.io/" target="_blank" rel="noopener noreferrer"><img class="brand-link-icon" src="https://sideloadly.io/favicon.ico" alt="" loading="lazy" referrerpolicy="no-referrer"><span data-i18n="beginnerChooseTv">Sideloadly for Apple TV ↗</span></a>
-              <a class="btn secondary brand-link" href="https://github.com/bitxeno/atvloadly" target="_blank" rel="noopener noreferrer"><img class="brand-link-icon" src="assets/icons/atvloadly.svg" alt="" loading="lazy" referrerpolicy="no-referrer"><span data-i18n="beginnerChooseAtv">atvloadly ↗</span></a>
+              <a class="btn primary brand-link" href="https://sideloadly.io/" data-guide-tool-link="sideloadly" data-guide-tool-purpose="guide" target="_blank" rel="noopener noreferrer"><img class="brand-link-icon" src="https://sideloadly.io/favicon.ico" data-guide-tool-icon="sideloadly" alt="" loading="lazy" referrerpolicy="no-referrer"><span data-i18n="beginnerChooseTv">Sideloadly for Apple TV ↗</span></a>
+              <a class="btn secondary brand-link" href="https://github.com/bitxeno/atvloadly" data-guide-tool-link="atvloadly" data-guide-tool-purpose="guide" target="_blank" rel="noopener noreferrer"><img class="brand-link-icon" src="assets/icons/atvloadly.svg" data-guide-tool-icon="atvloadly" alt="" loading="lazy" referrerpolicy="no-referrer"><span data-i18n="beginnerChooseAtv">atvloadly ↗</span></a>
             </div>
           </article>
         </div>
@@ -353,7 +366,7 @@
       <div class="section-head guide-section-head beginner-glossary-head">
         <div>
           <h2 data-i18n="beginnerGlossaryTitle">What do these names mean?</h2>
-          <p data-i18n="beginnerGlossaryDesc">Five short explanations before you choose anything.</p>
+          <p data-i18n="beginnerGlossaryDesc">Seven short explanations before you choose anything.</p>
         </div>
       </div>
 
@@ -374,6 +387,14 @@
           <div class="beginner-term-name">LiveContainer</div>
           <p data-i18n="beginnerLcMeaning">A launcher, not a store. It runs multiple guest IPA apps inside one installed container. You normally use it together with SideStore or AltStore.</p>
         </article>
+        <article class="panel beginner-term">
+          <div class="beginner-term-name">FlareStore</div>
+          <p data-i18n="beginnerFlareMeaning">An on-device app manager and signer that can browse compatible AltStore, SideStore and ESign-style repositories.</p>
+        </article>
+        <article class="panel beginner-term">
+          <div class="beginner-term-name">Feather</div>
+          <p data-i18n="beginnerFeatherMeaning">A free open-source on-device app manager and signer with support for AltStore-compatible Sources.</p>
+        </article>
         <article class="panel beginner-term beginner-source-term">
           <div class="beginner-term-name">Source</div>
           <p data-i18n="beginnerSourceMeaning">A Source is just a catalog link that tells AltStore or SideStore which apps and updates are available. Adding a Source does not install anything by itself — it only adds that catalog to your app browser.</p>
@@ -383,67 +404,102 @@
 
       <div id="methods" class="section-head guide-section-head">
         <div>
-          <h2 data-i18n="guideQuickTitle">Detailed methods</h2>
-          <p data-i18n="guideQuickDesc">Once you know what you need, compare the individual free methods below.</p>
+          <h2 data-i18n="guideQuickTitle">Installation methods</h2>
+          <p data-i18n="guideQuickDesc">Compare the main free installation methods below — Source-based installers, direct IPA sideloading, on-device setup, permanent installs and Apple TV paths.</p>
         </div>
       </div>
 
       <div class="guide-grid">
-        <article class="panel guide-card guide-card-highlight">
+        <article class="panel guide-card guide-card-highlight" data-guide-tools="sideinstaller sidestore livecontainer">
           <div class="guide-icon guide-icon-text">SI</div>
           <div class="resource-badges"><span class="pill online">NEW</span><span class="pill mode">iOS 27</span></div>
           <h3 data-guide-copy="sideInstallerTitle">Install SideStore without a PC on iOS 27</h3>
           <p data-guide-copy="sideInstallerDesc">SideInstaller installs SideStore or SideStore + LiveContainer fully on-device on iOS/iPadOS 27. SideInstaller v1 adds partial iOS 17–26 support when you already have a pairing file created with a computer.</p>
           <div class="guide-safety-note" data-guide-copy="sideInstallerSafety">Use only sideinstaller.net or the official FrizzleM/SideInstaller GitHub repository when entering Apple account credentials.</div>
-          <a class="btn primary" href="https://sideinstaller.net/" target="_blank" rel="noopener noreferrer"><span data-guide-copy="sideInstallerOpen">Open official SideInstaller ↗</span></a>
+          <a class="btn primary" href="https://sideinstaller.net/" data-guide-tool-link="sideinstaller" data-guide-tool-purpose="guide" target="_blank" rel="noopener noreferrer"><span data-guide-copy="sideInstallerOpen">Open official SideInstaller ↗</span></a>
         </article>
 
-        <article class="panel guide-card">
-          <div class="guide-icon guide-icon-image"><img class="official-app-icon" src="assets/icons/sidestore.svg?v=1.1.5-20260918-audit13" alt="SideStore" loading="lazy" referrerpolicy="no-referrer"></div>
+        <article class="panel guide-card" data-guide-tools="sidestore livecontainer">
+          <div class="guide-icon guide-icon-image"><img class="official-app-icon" src="assets/icons/sidestore.svg?v=1.1.5-20260918-audit13" data-guide-tool-icon="sidestore" alt="SideStore" loading="lazy" referrerpolicy="no-referrer"></div>
           <div class="resource-badges"><span class="pill online">FREE</span><span class="pill mode">SideStore + LiveContainer</span></div>
           <h3 data-i18n="guidePathSideTitle">Refresh from the iPhone after setup</h3>
           <p data-i18n="guidePathSideDesc">Use SideStore with LocalDevVPN. Add LiveContainer if you want to run several guest apps inside one container. iloader handles the initial install.</p>
-          <a class="btn primary brand-link" href="https://docs.sidestore.io/docs/installation/prerequisites" target="_blank" rel="noopener noreferrer"><img class="brand-link-icon" src="assets/icons/sidestore.svg?v=1.1.5-20260918-audit13" alt="" loading="lazy" referrerpolicy="no-referrer"><span data-i18n="guideOpenDocs">Open official guide ↗</span></a>
+          <a class="btn primary brand-link" href="https://docs.sidestore.io/docs/installation/prerequisites" data-guide-tool-link="sidestore" data-guide-tool-purpose="prerequisites" target="_blank" rel="noopener noreferrer"><img class="brand-link-icon" src="assets/icons/sidestore.svg?v=1.1.5-20260918-audit13" data-guide-tool-icon="sidestore" alt="" loading="lazy" referrerpolicy="no-referrer"><span data-i18n="guideOpenDocs">Open official guide ↗</span></a>
         </article>
 
-        <article class="panel guide-card">
-          <div class="guide-icon guide-icon-image"><img class="official-app-icon" src="assets/icons/altstore.svg" alt="AltStore" loading="lazy" referrerpolicy="no-referrer"></div>
+        <article class="panel guide-card" data-guide-tools="altstore">
+          <div class="guide-icon guide-icon-image"><img class="official-app-icon" src="assets/icons/altstore.svg" data-guide-tool-icon="altstore" alt="AltStore" loading="lazy" referrerpolicy="no-referrer"></div>
           <div class="resource-badges"><span class="pill online">FREE</span><span class="pill mode">AltStore Classic</span></div>
           <h3 data-i18n="guidePathAltTitle">Classic AltStore workflow</h3>
           <p data-i18n="guidePathAltDesc">Use AltStore Classic with AltServer on Windows or macOS. Keep AltServer available on the same Wi-Fi or connect by USB when apps need refreshing.</p>
           <a class="btn primary brand-link" href="https://faq.altstore.io/altstore-classic/altserver" target="_blank" rel="noopener noreferrer"><img class="brand-link-icon" src="assets/icons/altstore.svg" alt="" loading="lazy" referrerpolicy="no-referrer"><span data-i18n="guideOpenDocs">Open official guide ↗</span></a>
         </article>
 
-        <article class="panel guide-card">
-          <div class="guide-icon guide-icon-image"><img class="official-app-icon" src="assets/icons/altstore.svg" alt="AltStore" loading="lazy" referrerpolicy="no-referrer"></div>
+        <article class="panel guide-card" data-guide-tools="altstore">
+          <div class="guide-icon guide-icon-image"><img class="official-app-icon" src="assets/icons/altstore.svg" data-guide-tool-icon="altstore" alt="AltStore" loading="lazy" referrerpolicy="no-referrer"></div>
           <div class="resource-badges"><span class="pill online">NEW</span><span class="pill mode">Remote AltServer</span></div>
           <h3 data-i18n="guidePathRemoteTitle">AltStore refresh without your computer</h3>
           <p data-i18n="guidePathRemoteDesc">Pair AltStore Classic once, install LocalDevVPN and then use a Remote AltServer to install and refresh apps from anywhere while connected to Wi-Fi.</p>
           <a class="btn primary brand-link" href="https://faq.altstore.io/altstore-classic/remote-altservers" target="_blank" rel="noopener noreferrer"><img class="brand-link-icon" src="assets/icons/altstore.svg" alt="" loading="lazy" referrerpolicy="no-referrer"><span data-i18n="guideOpenDocs">Open official guide ↗</span></a>
         </article>
 
-        <article class="panel guide-card">
-          <div class="guide-icon guide-icon-image"><img class="official-app-icon" src="https://sideloadly.io/favicon.ico" alt="Sideloadly" loading="lazy" referrerpolicy="no-referrer"></div>
+        <article class="panel guide-card" data-guide-tools="sideloadly">
+          <div class="guide-icon guide-icon-image"><img class="official-app-icon" src="https://sideloadly.io/favicon.ico" data-guide-tool-icon="sideloadly" alt="Sideloadly" loading="lazy" referrerpolicy="no-referrer"></div>
           <div class="resource-badges"><span class="pill online">FREE</span><span class="pill mode">Sideloadly</span></div>
           <h3 data-i18n="guidePathDesktopTitle">Sign IPA files from Windows or Mac</h3>
           <p data-i18n="guidePathDesktopDesc">Use Sideloadly for direct IPA installation. Its daemon can automatically re-sign apps when your device is reachable over Wi-Fi or USB.</p>
-          <a class="btn primary brand-link" href="https://sideloadly.io/" target="_blank" rel="noopener noreferrer"><img class="brand-link-icon" src="https://sideloadly.io/favicon.ico" alt="" loading="lazy" referrerpolicy="no-referrer"><span data-i18n="guideOpenDocs">Open official guide ↗</span></a>
+          <a class="btn primary brand-link" href="https://sideloadly.io/" data-guide-tool-link="sideloadly" data-guide-tool-purpose="guide" target="_blank" rel="noopener noreferrer"><img class="brand-link-icon" src="https://sideloadly.io/favicon.ico" data-guide-tool-icon="sideloadly" alt="" loading="lazy" referrerpolicy="no-referrer"><span data-i18n="guideOpenDocs">Open official guide ↗</span></a>
         </article>
 
-        <article class="panel guide-card">
-          <div class="guide-icon guide-icon-image"><img class="official-app-icon" src="assets/icons/trollstore.svg" alt="TrollStore" loading="lazy" referrerpolicy="no-referrer"></div>
+        <article class="panel guide-card" data-guide-tools="trollstore">
+          <div class="guide-icon guide-icon-image"><img class="official-app-icon" src="assets/icons/trollstore.svg" data-guide-tool-icon="trollstore" alt="TrollStore" loading="lazy" referrerpolicy="no-referrer"></div>
           <div class="resource-badges"><span class="pill online">FREE</span><span class="pill mode">TrollStore</span></div>
           <h3 data-i18n="guidePathTrollTitle">No 7-day refresh on supported iOS</h3>
           <p data-i18n="guidePathTrollDesc">Use TrollStore only if your exact iOS/iPadOS version is supported. It permanently installs IPA files on those compatible versions.</p>
-          <a class="btn primary brand-link" href="https://github.com/opa334/TrollStore" target="_blank" rel="noopener noreferrer"><img class="brand-link-icon" src="assets/icons/trollstore.svg" alt="" loading="lazy" referrerpolicy="no-referrer"><span data-i18n="guideOpenDocs">Open official guide ↗</span></a>
+          <a class="btn primary brand-link" href="https://github.com/opa334/TrollStore" data-guide-tool-link="trollstore" data-guide-tool-purpose="guide" target="_blank" rel="noopener noreferrer"><img class="brand-link-icon" src="assets/icons/trollstore.svg" data-guide-tool-icon="trollstore" alt="" loading="lazy" referrerpolicy="no-referrer"><span data-i18n="guideOpenDocs">Open official guide ↗</span></a>
         </article>
 
-        <article class="panel guide-card">
-          <div class="guide-icon guide-icon-image"><span class="official-icon-stack"><img class="official-app-icon" src="https://sideloadly.io/favicon.ico" alt="Sideloadly" loading="lazy" referrerpolicy="no-referrer"><img class="official-app-icon" src="assets/icons/atvloadly.svg" alt="atvloadly" loading="lazy" referrerpolicy="no-referrer"></span></div>
+        <article class="panel guide-card" data-guide-tools="sideloadly atvloadly">
+          <div class="guide-icon guide-icon-image"><span class="official-icon-stack"><img class="official-app-icon" src="https://sideloadly.io/favicon.ico" data-guide-tool-icon="sideloadly" alt="Sideloadly" loading="lazy" referrerpolicy="no-referrer"><img class="official-app-icon" src="assets/icons/atvloadly.svg" data-guide-tool-icon="atvloadly" alt="atvloadly" loading="lazy" referrerpolicy="no-referrer"></span></div>
           <div class="resource-badges"><span class="pill online">FREE</span><span class="pill mode">Apple TV</span></div>
           <h3 data-i18n="guidePathTvTitle">Apple TV</h3>
           <p data-i18n="guidePathTvDesc">Use Sideloadly from Windows/macOS or self-host atvloadly on Linux/OpenWrt for an Apple TV focused setup.</p>
-          <a class="btn primary brand-link" href="https://github.com/bitxeno/atvloadly" target="_blank" rel="noopener noreferrer"><img class="brand-link-icon" src="assets/icons/atvloadly.svg" alt="" loading="lazy" referrerpolicy="no-referrer"><span data-i18n="guideOpenDocs">Open official guide ↗</span></a>
+          <a class="btn primary brand-link" href="https://github.com/bitxeno/atvloadly" data-guide-tool-link="atvloadly" data-guide-tool-purpose="guide" target="_blank" rel="noopener noreferrer"><img class="brand-link-icon" src="assets/icons/atvloadly.svg" data-guide-tool-icon="atvloadly" alt="" loading="lazy" referrerpolicy="no-referrer"><span data-i18n="guideOpenDocs">Open official guide ↗</span></a>
+        </article>
+      
+      </div>
+
+      <div id="source-installers" class="section-head guide-section-head">
+        <div>
+          <h2 data-i18n="guideSourceInstallersTitle">Source-compatible installers</h2>
+          <p data-i18n="guideSourceInstallersDesc">iOS Hub supports Source handoff to AltStore Classic, AltStore PAL, SideStore, LiveContainer, FlareStore and Feather. Availability is shown separately for each Source in the catalog.</p>
+        </div>
+      </div>
+
+      <div class="notice guide-limit-note">
+        <strong data-guide-copy="sourceImportShortcutTitle">Bulk Source import from iOS Hub</strong><br>
+        <span data-guide-copy="sourceImportShortcutDesc">The Source Builder can send the whole selected Source list to the iOS Hub Source Import Shortcut. The Shortcut opens the original Source URLs in the chosen installer. Some installers may still show their own preview or confirmation; the Builder keeps a manual one-by-one fallback.</span>
+        <div class="builder-actions">
+          <a class="btn secondary" href="shortcut.html" target="_blank" rel="noopener noreferrer" data-guide-copy="sourceImportShortcutOpen">Install iOS Hub Source Import ↗</a>
+          <a class="btn secondary" href="builder.html">Source Builder</a>
+        </div>
+      </div>
+
+      <div class="guide-grid">
+        <article class="panel guide-card" data-guide-tools="flarestore">
+          <div class="guide-icon guide-icon-image"><img class="official-app-icon" src="assets/icons/flarestore.webp" data-guide-tool-icon="flarestore" alt="FlareStore" loading="lazy" referrerpolicy="no-referrer"></div>
+          <div class="resource-badges"><span class="pill mode">FlareStore</span><span class="pill mode">Sources</span></div>
+          <h3 data-i18n="guideFlareStoreTitle">Browse multiple repository formats</h3>
+          <p data-i18n="guideFlareStoreDesc">FlareStore can add repository sources that follow AltStore, SideStore or ESign formats. iOS Hub uses the compatible Classic source URL when the source supports FlareStore.</p>
+          <a class="btn primary brand-link" href="https://flarestore.app/guide/ios/" data-guide-tool-link="flarestore" data-guide-tool-purpose="guide" target="_blank" rel="noopener noreferrer"><img class="brand-link-icon" src="assets/icons/flarestore.webp" data-guide-tool-icon="flarestore" alt="" loading="lazy" referrerpolicy="no-referrer"><span data-i18n="guideOpenDocs">Open official guide ↗</span></a>
+        </article>
+
+        <article class="panel guide-card" data-guide-tools="feather">
+          <div class="guide-icon guide-icon-image"><img class="official-app-icon" src="assets/icons/feather.png" data-guide-tool-icon="feather" alt="Feather" loading="lazy" referrerpolicy="no-referrer"></div>
+          <div class="resource-badges"><span class="pill online">FREE</span><span class="pill mode">Feather</span></div>
+          <h3 data-i18n="guideFeatherTitle">AltStore-compatible sources on-device</h3>
+          <p data-i18n="guideFeatherDesc">Feather is a free open-source on-device app manager and signer with support for AltStore repositories. Compatible iOS Hub sources open through the Feather source deep-link.</p>
+          <a class="btn primary brand-link" href="https://github.com/claration/Feather" data-guide-tool-link="feather" data-guide-tool-purpose="guide" target="_blank" rel="noopener noreferrer"><img class="brand-link-icon" src="assets/icons/feather.png" data-guide-tool-icon="feather" alt="" loading="lazy" referrerpolicy="no-referrer"><span data-i18n="guideOpenDocs">Open official guide ↗</span></a>
         </article>
       </div>
 
@@ -467,14 +523,17 @@
             </tr>
           </thead>
           <tbody>
-            <tr><td>AltStore Classic</td><td data-i18n="guideAltBest">Classic sideloading</td><td data-i18n="guideAltDevice">iPhone / iPad</td><td data-i18n="guideAltComputer">Windows or macOS with AltServer</td><td data-i18n="guideAltRefresh">7-day apps; refresh via AltServer over same Wi-Fi or USB</td><td data-i18n="guideYes">Yes</td></tr>
-            <tr><td>AltStore + Remote AltServer</td><td data-i18n="guideRemoteBest">Install and refresh without your own computer</td><td data-i18n="guideAltDevice">iPhone / iPad</td><td data-i18n="guideRemoteComputer">PC pairing is required for setup; afterwards the remote server is used</td><td data-i18n="guideRemoteRefresh">Wi-Fi + LocalDevVPN required; cellular is not supported</td><td data-i18n="guideYes">Yes</td></tr>
-            <tr><td>SideInstaller</td><td data-guide-copy="sideInstallerBest">On-device SideStore / LiveContainer setup</td><td data-guide-copy="sideInstallerDevice">iOS/iPadOS 27; partial 17–26 support with an existing pairing file</td><td data-guide-copy="sideInstallerComputer">No PC on iOS/iPadOS 27; iOS 17–26 requires an existing pairing file created with a computer</td><td data-guide-copy="sideInstallerRefresh">Installer only; refreshing is then handled by SideStore</td><td data-i18n="guideYes">Yes</td></tr>
-            <tr><td>SideStore</td><td data-i18n="guideSideBest">On-device refresh after setup</td><td data-i18n="guideSideDevice">iOS / iPadOS 15+</td><td data-i18n="guideSideComputer">Initial install only: Windows, macOS, Linux or Chromebook</td><td data-i18n="guideSideRefresh">LocalDevVPN must be enabled for install, update and refresh</td><td data-i18n="guideYes">Yes</td></tr>
-            <tr><td>LiveContainer + SideStore</td><td data-i18n="guideLcBest">Many guest apps in one container</td><td data-i18n="guideLcDevice">iOS / iPadOS 15+</td><td data-i18n="guideLcComputer">Initial install through Impactor, iloader or an existing standalone SideStore</td><td data-i18n="guideLcRefresh">Refresh the container / SideStore; guest apps run inside LiveContainer</td><td data-i18n="guideYes">Yes</td></tr>
-            <tr><td>Sideloadly</td><td data-i18n="guideSideloadlyBest">Direct IPA signing from desktop</td><td data-i18n="guideSideloadlyDevice">iPhone / iPad / Apple TV</td><td data-i18n="guideSideloadlyComputer">Windows or macOS</td><td data-i18n="guideSideloadlyRefresh">7-day free signing; optional auto-refresh daemon via Wi-Fi / USB</td><td data-i18n="guideYes">Yes</td></tr>
-            <tr><td>TrollStore</td><td data-i18n="guideTrollBest">Permanent installs on compatible iOS</td><td data-i18n="guideTrollDevice">iOS/iPadOS 14.0 beta 2–16.6.1, 16.7 RC, and 17.0</td><td data-i18n="guideTrollComputer">Depends on the installation path</td><td data-i18n="guideTrollRefresh">No 7-day refresh on supported versions</td><td data-i18n="guideNotNeeded">Not required for signing</td></tr>
-            <tr><td>atvloadly</td><td data-i18n="guideAtvBest">Self-hosted Apple TV sideloading</td><td data-i18n="guideAtvDevice">Apple TV</td><td data-i18n="guideAtvComputer">Linux or OpenWrt host</td><td data-i18n="guideAtvRefresh">Self-hosted pairing and automatic refresh workflow</td><td data-i18n="guideYes">Yes</td></tr>
+            <tr data-guide-tools="altstore"><td>AltStore Classic</td><td data-i18n="guideAltBest">Classic sideloading</td><td data-i18n="guideAltDevice">iPhone / iPad</td><td data-i18n="guideAltComputer">Windows or macOS with AltServer</td><td data-i18n="guideAltRefresh">7-day apps; refresh via AltServer over same Wi-Fi or USB</td><td data-i18n="guideYes">Yes</td></tr>
+            <tr data-guide-tools="altstore"><td>AltStore + Remote AltServer</td><td data-i18n="guideRemoteBest">Install and refresh without your own computer</td><td data-i18n="guideAltDevice">iPhone / iPad</td><td data-i18n="guideRemoteComputer">PC pairing is required for setup; afterwards the remote server is used</td><td data-i18n="guideRemoteRefresh">Wi-Fi + LocalDevVPN required; cellular is not supported</td><td data-i18n="guideYes">Yes</td></tr>
+            <tr data-guide-tools="altstore-pal"><td>AltStore PAL</td><td data-i18n="guidePalBest">Alternative marketplace in supported regions</td><td data-i18n="guidePalDevice">iPhone / iPad · iOS/iPadOS 18+ · supported region</td><td data-i18n="guidePalComputer">Not required</td><td data-i18n="guidePalRefresh">Marketplace apps do not use the normal 7-day sideload refresh cycle</td><td data-i18n="guidePalAccount">Matching App Store account required; free developer signing is not used</td></tr>
+            <tr data-guide-tools="sideinstaller sidestore livecontainer"><td>SideInstaller</td><td data-guide-copy="sideInstallerBest">On-device SideStore / LiveContainer setup</td><td data-guide-copy="sideInstallerDevice">iOS/iPadOS 27; partial 17–26 support with an existing pairing file</td><td data-guide-copy="sideInstallerComputer">No PC on iOS/iPadOS 27; iOS 17–26 requires an existing pairing file created with a computer</td><td data-guide-copy="sideInstallerRefresh">Installer only; refreshing is then handled by SideStore</td><td data-i18n="guideYes">Yes</td></tr>
+            <tr data-guide-tools="sidestore"><td>SideStore</td><td data-i18n="guideSideBest">On-device refresh after setup</td><td data-i18n="guideSideDevice">iOS / iPadOS 15+</td><td data-i18n="guideSideComputer">Initial install only: Windows, macOS, Linux or Chromebook</td><td data-i18n="guideSideRefresh">LocalDevVPN must be enabled for install, update and refresh</td><td data-i18n="guideYes">Yes</td></tr>
+            <tr data-guide-tools="livecontainer sidestore"><td>LiveContainer + SideStore</td><td data-i18n="guideLcBest">Many guest apps in one container</td><td data-i18n="guideLcDevice">iOS / iPadOS 15+</td><td data-i18n="guideLcComputer">Initial install through Impactor, iloader or an existing standalone SideStore</td><td data-i18n="guideLcRefresh">Refresh the container / SideStore; guest apps run inside LiveContainer</td><td data-i18n="guideYes">Yes</td></tr>
+            <tr data-guide-tools="flarestore"><td>FlareStore</td><td data-i18n="guideFlareBest">On-device signing and Source browsing</td><td data-i18n="guideFlareDevice">iPhone / iPad</td><td data-i18n="guideFlareComputer">Depends on certificate and setup</td><td data-i18n="guideFlareRefresh">Depends on the signing certificate / profile used</td><td data-i18n="guideFlareAccount">Depends on the signing method</td></tr>
+            <tr data-guide-tools="feather"><td>Feather</td><td data-i18n="guideFeatherBest">On-device IPA signing and AltStore-compatible Sources</td><td data-i18n="guideFeatherDevice">iPhone / iPad</td><td data-i18n="guideFeatherComputer">Not required for normal on-device use</td><td data-i18n="guideFeatherRefresh">Depends on the signing certificate / profile used</td><td data-i18n="guideFeatherAccount">Depends on the signing method</td></tr>
+            <tr data-guide-tools="sideloadly"><td>Sideloadly</td><td data-i18n="guideSideloadlyBest">Direct IPA signing from desktop</td><td data-i18n="guideSideloadlyDevice">iPhone / iPad / Apple TV</td><td data-i18n="guideSideloadlyComputer">Windows or macOS</td><td data-i18n="guideSideloadlyRefresh">7-day free signing; optional auto-refresh daemon via Wi-Fi / USB</td><td data-i18n="guideYes">Yes</td></tr>
+            <tr data-guide-tools="trollstore"><td>TrollStore</td><td data-i18n="guideTrollBest">Permanent installs on compatible iOS</td><td data-i18n="guideTrollDevice">iOS/iPadOS 14.0 beta 2–16.6.1, 16.7 RC, and 17.0</td><td data-i18n="guideTrollComputer">Depends on the installation path</td><td data-i18n="guideTrollRefresh">No 7-day refresh on supported versions</td><td data-i18n="guideNotNeeded">Not required for signing</td></tr>
+            <tr data-guide-tools="atvloadly"><td>atvloadly</td><td data-i18n="guideAtvBest">Self-hosted Apple TV sideloading</td><td data-i18n="guideAtvDevice">Apple TV</td><td data-i18n="guideAtvComputer">Linux or OpenWrt host</td><td data-i18n="guideAtvRefresh">Self-hosted pairing and automatic refresh workflow</td><td data-i18n="guideYes">Yes</td></tr>
           </tbody>
         </table>
       </div>
@@ -490,13 +549,13 @@
 
       <div class="trouble-quick" role="group" aria-label="Quick troubleshooting filters">
         <button type="button" data-trouble-filter="refresh" data-guide-copy="troubleChipRefresh">Refresh</button>
-        <button type="button" data-trouble-filter="ios 27 shortcut resign long press background refresh all" data-guide-copy="communityChip">iOS 27 / Shortcut</button>
+        <button type="button" data-trouble-filter="ios 27 shortcut resign long press background refresh all" data-trouble-tool="sidestore" data-guide-copy="communityChip">iOS 27 / Shortcut</button>
         <button type="button" data-trouble-filter="apple login 503 2fa" data-guide-copy="troubleChipLogin">Apple ID / login</button>
         <button type="button" data-trouble-filter="pairing" data-guide-copy="troubleChipPairing">Pairing</button>
         <button type="button" data-trouble-filter="certificate" data-guide-copy="troubleChipCertificate">Certificate</button>
         <button type="button" data-trouble-filter="3 app limit app ids" data-guide-copy="troubleChipLimits">App limits</button>
-        <button type="button" data-trouble-filter="livecontainer" data-guide-copy="troubleChipLiveContainer">LiveContainer</button>
-        <button type="button" data-trouble-filter="altserver" data-guide-copy="troubleChipAltServer">AltServer</button>
+        <button type="button" data-trouble-filter="livecontainer" data-trouble-tool="livecontainer" data-guide-copy="troubleChipLiveContainer">LiveContainer</button>
+        <button type="button" data-trouble-filter="altserver" data-trouble-tool="altstore" data-guide-copy="troubleChipAltServer">AltServer</button>
         <button type="button" data-trouble-filter="" data-guide-copy="troubleChipAll">All</button>
       </div>
 
@@ -539,24 +598,29 @@
             <a href="https://docs.sidestore.io/docs/troubleshooting/common-issues" target="_blank" rel="noopener noreferrer">Official SideStore checks ↗</a>
           </div>
         </details>
-        <details class="trouble-item" data-search="pairing file expired update reset iphone ios random sidestore replace pairing 1006 udid iloader">
+        <details class="trouble-item" data-tool="iloader" data-search="iloader pairing file anisette usb trust device">
+          <summary data-i18n="guideT4Q">iloader / pairing file setup fails</summary>
+          <div class="trouble-answer" data-i18n="guideT4A">Use the latest iloader, reconnect the device by USB and trust the computer again. Re-run the initial SideStore installation so the pairing data is generated again. For iloader-specific failures, use its official support links.</div>
+          <div class="trouble-docs"><a href="https://docs.sidestore.io/docs/advanced/pairing-file" target="_blank" rel="noopener noreferrer">SideStore Pairing Guide ↗</a></div>
+        </details>
+        <details class="trouble-item" data-tool="sidestore" data-search="pairing file expired update reset iphone ios random sidestore replace pairing 1006 udid iloader">
           <summary data-guide-copy="troublePairingExpireQ">SideStore pairing stopped working after an iOS update or reset</summary>
           <div class="trouble-answer" data-guide-copy="troublePairingExpireA">SideStore documents that pairing files can expire after an update or reset, and sometimes unexpectedly. Update iloader, delete the stored pairing, pair/trust the device again, place the new pairing file for SideStore, reconnect LocalDevVPN and refresh.</div>
           <div class="trouble-docs">
             <a href="https://docs.sidestore.io/docs/advanced/pairing-file" target="_blank" rel="noopener noreferrer">Pairing File Guide ↗</a>
           </div>
         </details>
-        <details class="trouble-item" data-search="sidestore 1005 1007 app not found invalid format ipa url download">
+        <details class="trouble-item" data-tool="sidestore" data-search="sidestore 1005 1007 app not found invalid format ipa url download">
           <summary data-guide-copy="troubleInvalidIpaQ">SideStore error 1005 / 1007 — app not found or invalid IPA</summary>
           <div class="trouble-answer" data-guide-copy="troubleInvalidIpaA">Error 1005 means SideStore could not find the app file at the provided URL. Error 1007 means the downloaded file is not a standard IPA. Re-download from the original source or try another verified source.</div>
           <div class="trouble-docs"><a href="https://docs.sidestore.io/docs/troubleshooting/error-codes" target="_blank" rel="noopener noreferrer">SideStore Error Codes ↗</a></div>
         </details>
-        <details class="trouble-item" data-search="sidestore nightly unstable beta latest nightly issue stable build">
+        <details class="trouble-item" data-tool="sidestore" data-search="sidestore nightly unstable beta latest nightly issue stable build">
           <summary data-guide-copy="troubleNightlyQ">SideStore nightly is unstable or suddenly broke</summary>
           <div class="trouble-answer" data-guide-copy="troubleNightlyA">SideStore's official troubleshooting guide says nightly builds may contain unstable bleeding-edge changes. If a problem appears only on nightly, switch back to the latest stable build before deeper troubleshooting.</div>
           <div class="trouble-docs"><a href="https://docs.sidestore.io/docs/troubleshooting/common-issues" target="_blank" rel="noopener noreferrer">SideStore Common Issues ↗</a></div>
         </details>
-        <details class="trouble-item" data-search="sidestore refresh update install vpn localdevvpn wifi 1414 minimuxer 27 afc connection dns blocker">
+        <details class="trouble-item" data-tool="sidestore" data-search="sidestore refresh update install vpn localdevvpn wifi 1414 minimuxer 27 afc connection dns blocker">
           <summary data-i18n="guideT1Q">SideStore will not install, update or refresh</summary>
           <div class="trouble-answer" data-i18n="guideT1A">Turn on LocalDevVPN first and make sure the device is on Wi-Fi. SideStore requires its on-device VPN whenever you install, update or refresh apps. If needed, reconnect the VPN and reopen SideStore.</div>
           <div class="trouble-docs"><a href="https://docs.sidestore.io/docs/troubleshooting/common-issues" target="_blank" rel="noopener noreferrer">SideStore Common Issues ↗</a></div>
@@ -566,22 +630,17 @@
           <div class="trouble-answer" data-i18n="guideT2A">This is normal with a free Apple development account. Refresh the app before expiry with SideStore, AltStore or Sideloadly. If you use AltStore, AltServer must be reachable. Sideloadly can use its auto-refresh daemon.</div>
           <div class="trouble-docs"><a href="https://faq.altstore.io/altstore-classic/your-altstore" target="_blank" rel="noopener noreferrer">AltStore Refresh Docs ↗</a></div>
         </details>
-        <details class="trouble-item" data-search="altstore altserver not found wifi usb firewall itunes icloud windows">
+        <details class="trouble-item" data-tool="altstore" data-search="altstore altserver not found wifi usb firewall itunes icloud windows">
           <summary data-i18n="guideT3Q">AltStore says it cannot find AltServer</summary>
           <div class="trouble-answer" data-i18n="guideT3A">Make sure AltServer is running and the computer is on the same Wi-Fi as the iPhone/iPad, or connect the device by USB. On Windows, firewall rules and the Apple versions of iTunes/iCloud can also matter.</div>
           <div class="trouble-docs"><a href="https://faq.altstore.io/altstore-classic/troubleshooting-guide" target="_blank" rel="noopener noreferrer">AltStore Troubleshooting ↗</a></div>
         </details>
-        <details class="trouble-item" data-search="remote altserver localdevvpn wifi invalid response unavailable choose server cellular">
+        <details class="trouble-item" data-tool="altstore" data-search="remote altserver localdevvpn wifi invalid response unavailable choose server cellular">
           <summary data-i18n="guideT10Q">Remote AltServer cannot be reached or is unavailable</summary>
           <div class="trouble-answer" data-i18n="guideT10A">Make sure Wi-Fi and LocalDevVPN are both enabled. Remote AltServer does not work over cellular. If the server returns an invalid response or is unavailable, wait a few minutes or choose another Remote AltServer in AltStore settings.</div>
           <div class="trouble-docs"><a href="https://faq.altstore.io/altstore-classic/remote-altservers" target="_blank" rel="noopener noreferrer">Remote AltServer Docs ↗</a></div>
         </details>
-        <details class="trouble-item" data-search="iloader pairing file anisette usb trust device">
-          <summary data-i18n="guideT4Q">iloader / pairing file setup fails</summary>
-          <div class="trouble-answer" data-i18n="guideT4A">Use the latest iloader, reconnect the device by USB and trust the computer again. Re-run the initial SideStore installation so the pairing data is generated again. For iloader-specific failures, use its official support links.</div>
-          <div class="trouble-docs"><a href="https://docs.sidestore.io/docs/advanced/pairing-file" target="_blank" rel="noopener noreferrer">SideStore Pairing Guide ↗</a></div>
-        </details>
-        <details class="trouble-item" data-search="livecontainer certificate mismatch missing sidestore import certificate">
+        <details class="trouble-item" data-tool="livecontainer" data-search="livecontainer certificate mismatch missing sidestore import certificate">
           <summary data-i18n="guideT5Q">LiveContainer says the certificate is missing or mismatched</summary>
           <div class="trouble-answer" data-i18n="guideT5A">Open SideStore, sign in, connect LocalDevVPN and run Refresh All. Then return to LiveContainer and import the signing certificate from SideStore. The built-in LiveContainer + SideStore workflow uses the same certificate.</div>
           <div class="trouble-docs"><a href="https://livecontainer.github.io/docs/installation/lc_sidestore" target="_blank" rel="noopener noreferrer">LiveContainer LC+SS Docs ↗</a></div>
@@ -591,12 +650,12 @@
           <div class="trouble-answer" data-i18n="guideT6A">A free Apple account has strict limits. Remove or deactivate apps you are not using, wait for old App IDs to expire, or use LiveContainer + SideStore so multiple guest apps can run inside one container slot.</div>
           <div class="trouble-docs"><a href="https://faq.altstore.io/altstore-classic/app-ids" target="_blank" rel="noopener noreferrer">AltStore App IDs ↗</a></div>
         </details>
-        <details class="trouble-item" data-search="livecontainer app not launch jit jitless compatibility crash invalid signature entitlements team id revoked certificate diagnose">
+        <details class="trouble-item" data-tool="livecontainer" data-search="livecontainer app not launch jit jitless compatibility crash invalid signature entitlements team id revoked certificate diagnose">
           <summary data-i18n="guideT7Q">An app installs in LiveContainer but will not launch</summary>
           <div class="trouble-answer" data-i18n="guideT7A">Not every app is compatible with LiveContainer. Run the JIT-Less Mode Diagnose tool, confirm the certificate import worked, and check the official compatibility information before assuming the IPA itself is broken.</div>
           <div class="trouble-docs"><a href="https://livecontainer.github.io/docs/faq/jit-less-mode-setup" target="_blank" rel="noopener noreferrer">JIT-Less Diagnose ↗</a></div>
         </details>
-        <details class="trouble-item" data-search="trollstore ios version 17 16 compatible support">
+        <details class="trouble-item" data-tool="trollstore" data-search="trollstore ios version 17 16 compatible support">
           <summary data-i18n="guideT8Q">Can I use TrollStore on a newer iOS version?</summary>
           <div class="trouble-answer" data-i18n="guideT8A">Only on the versions supported by the TrollStore project: 14.0 beta 2 through 16.6.1, 16.7 RC, and 17.0. The project states that 16.7.x other than that RC and 17.0.1+ are not supported by the known CoreTrust bugs.</div>
           <div class="trouble-docs"><a href="https://github.com/opa334/TrollStore" target="_blank" rel="noopener noreferrer">TrollStore ↗</a></div>
@@ -605,6 +664,58 @@
           <summary data-i18n="guideT9Q">What should I use for Apple TV?</summary>
           <div class="trouble-answer" data-i18n="guideT9A">Sideloadly supports Apple TV from Windows/macOS. If you want a self-hosted Linux/OpenWrt service, atvloadly is the more specialized route.</div>
           <div class="trouble-docs"><a href="https://sideloadly.io/" target="_blank" rel="noopener noreferrer">Sideloadly FAQ ↗</a></div>
+        </details>
+        <details class="trouble-item" data-tool="sideinstaller" data-search="sideinstaller install sidestore fails failed certificate revoked http 503 apple id 2fa pairing ios 27 ios 17 26">
+          <summary data-guide-copy="troubleSideInstallerInstallQ">SideInstaller cannot install SideStore</summary>
+          <div class="trouble-answer" data-guide-copy="troubleSideInstallerInstallA">Use the current official SideInstaller build and check the exact iOS version first. On iOS 27 the setup can run on-device; iOS 17–26 needs an existing pairing file. If Apple sign-in returns HTTP 503 or certificates are revoked, check the current SideInstaller release notes before retrying.</div>
+          <div class="trouble-docs"><a href="https://github.com/FrizzleM/SideInstaller/releases/tag/v1.0.0" target="_blank" rel="noopener noreferrer">SideInstaller v1.0.0 ↗</a></div>
+        </details>
+        <details class="trouble-item" data-tool="feather" data-search="feather install app unable integrity cannot be verified certificate revoked expired udid bad corrupted ipa idevice pairing heartbeat localdevvpn source">
+          <summary data-guide-copy="troubleFeatherQ">Feather cannot install an app or says integrity cannot be verified</summary>
+          <div class="trouble-answer" data-guide-copy="troubleFeatherA">Check the certificate pair first. Feather documents revoked or expired certificates, a certificate that does not include your device UDID, and a damaged IPA as common causes. If you use the idevice installation method, also verify the pairing file, LocalDevVPN and that Heartbeat is green.</div>
+          <div class="trouble-docs"><a href="https://github.com/claration/Feather/wiki/Troubleshooting" target="_blank" rel="noopener noreferrer">Feather Troubleshooting ↗</a></div>
+        </details>
+        <details class="trouble-item" data-tool="flarestore" data-search="flarestore install ipa prompt failed domain lookup localhost flarestore vip certificate p12 mobile provision signing source repository vpn dns ad blocker">
+          <summary data-guide-copy="troubleFlareQ">FlareStore signs the IPA but the install prompt fails</summary>
+          <div class="trouble-answer" data-guide-copy="troubleFlareA">Verify that a signing certificate is imported in FlareStore. If the install prompt does not appear or you get a domain lookup error, allow *.flarestore.vip and localhost.flarestore.vip through your VPN, DNS or ad blocker and retry the install.</div>
+          <div class="trouble-docs"><a href="https://flarestore.app/guide/ios/" target="_blank" rel="noopener noreferrer">FlareStore iOS Guide ↗</a></div>
+        </details>
+        <details class="trouble-item" data-tool="sideloadly" data-search="sideloadly anisette failed 500 internal server provisioning profile identity sign signing executable invalid argument ipa developer cannot be verified install">
+          <summary data-guide-copy="troubleSideloadlyQ">Sideloadly fails with Anisette, provisioning or signing errors</summary>
+          <div class="trouble-answer" data-guide-copy="troubleSideloadlyA">Start with the official Sideloadly FAQ for the exact message. Remote Anisette server errors can require retrying later or switching Anisette mode; invalid IPA paths, provisioning-profile errors and invalid signing identity each have separate documented checks.</div>
+          <div class="trouble-docs"><a href="https://sideloadly.io/faq" target="_blank" rel="noopener noreferrer">Sideloadly FAQ ↗</a></div>
+        </details>
+        <details class="trouble-item community-item" data-tool="sideloadly" data-search="sideloadly macos 27 anisette failed no otp guru meditation remote local workaround">
+          <summary data-guide-copy="communitySideloadlyMacQ">macOS 27: Sideloadly reports Anisette failed: No OTP</summary>
+          <div class="trouble-source-badge community" data-guide-copy="communityLabel">COMMUNITY WORKAROUND</div>
+          <div class="trouble-answer" data-guide-copy="communitySideloadlyMacA">A recent community workaround is to switch Sideloadly Advanced Options → Anisette Authentication from Local to Remote. This is a community workaround for the current macOS 27 behavior, not an official requirement, so check the official FAQ and newer releases first.</div>
+          <div class="trouble-docs">
+            <a href="https://www.reddit.com/r/sideloadly/comments/1wkjb2g/fix_sideloadly_on_macos_27_anisette_failed_no_otp/" target="_blank" rel="noopener noreferrer">Reddit workaround ↗</a>
+            <a href="https://sideloadly.io/faq" target="_blank" rel="noopener noreferrer">Official Sideloadly FAQ ↗</a>
+          </div>
+        </details>
+        <details class="trouble-item" data-tool="atvloadly" data-search="atvloadly apple tv tvos not found pairing remotepairing avahi mdns docker privileged login apple id ipa crash system upgrade install">
+          <summary data-guide-copy="troubleAtvloadlyQ">atvloadly cannot find or install to Apple TV</summary>
+          <div class="trouble-answer" data-guide-copy="troubleAtvloadlyA">Use the official atvloadly FAQ. Turn off VPN, restart Apple TV, enter pairing mode again and confirm mDNS/Avahi discovery works. Docker installs may need privileged mode. After a tvOS upgrade, pairing may need to be recreated.</div>
+          <div class="trouble-docs"><a href="https://github.com/bitxeno/atvloadly/wiki/FAQ" target="_blank" rel="noopener noreferrer">atvloadly FAQ ↗</a></div>
+        </details>
+        <details class="trouble-item" data-tool="impactor" data-search="impactor install ipa device not detected verification failed application verification 0xe8008018 identity sign no longer valid itunes usbmuxd pairing windows linux">
+          <summary data-guide-copy="troubleImpactorQ">Impactor cannot detect the device or installation verification fails</summary>
+          <div class="trouble-answer" data-guide-copy="troubleImpactorA">On Windows, make sure Apple device drivers from iTunes are available. On Linux, check usbmuxd and reconnect the device before restarting Impactor. Pairing-file installation requires USB. For verification errors such as 0xe8008018, also check that the computer and device time are correct and sign in again.</div>
+          <div class="trouble-docs">
+            <a href="https://github.com/claration/Impactor/releases" target="_blank" rel="noopener noreferrer">Impactor Releases ↗</a>
+            <a href="https://github.com/claration/Impactor/issues/233" target="_blank" rel="noopener noreferrer">Impactor issue 0xe8008018 ↗</a>
+          </div>
+        </details>
+        <details class="trouble-item" data-tool="trollstore" data-search="trollstore install ipa error 175 ldid failed sign app already exists force install unsupported macho coretrust">
+          <summary data-guide-copy="troubleTrollInstallQ">TrollStore cannot install an IPA or shows install error 175 / ldid</summary>
+          <div class="trouble-answer" data-guide-copy="troubleTrollInstallA">First confirm your exact iOS version is supported and update TrollStore. Install error 175 is an ldid signing failure and can also be caused by an IPA binary that TrollStore cannot process. Use the official issue tracker with the exact TrollStore version, iOS version and install log if the error remains.</div>
+          <div class="trouble-docs"><a href="https://github.com/opa334/TrollStore/issues" target="_blank" rel="noopener noreferrer">TrollStore Issues ↗</a></div>
+        </details>
+        <details class="trouble-item" data-tool="altstore-pal" data-search="altstore pal install download source nsurl error safari region marketplace not supported version vpn eu japan brazil">
+          <summary data-guide-copy="troublePalQ">AltStore PAL will not install, download or add a Source</summary>
+          <div class="trouble-answer" data-guide-copy="troublePalA">Use the official AltStore PAL troubleshooting page. Check the supported region and iOS version, use Safari for marketplace installation, disable a VPN if downloads return NSURLError, and update AltStore PAL if a Source reports that the installed version is unsupported.</div>
+          <div class="trouble-docs"><a href="https://faq.altstore.io/altstore-pal/troubleshooting" target="_blank" rel="noopener noreferrer">AltStore PAL Troubleshooting ↗</a></div>
         </details>
         <div id="troubleEmpty" class="trouble-empty" hidden data-i18n="guideNoTrouble">No troubleshooting item matches your search.</div>
       </div>
@@ -623,16 +734,7 @@
           <p data-i18n="guideCurrentNote">Compatibility can change after updates. This page intentionally links to the official documentation for the final installation steps.</p>
         </div>
       </div>
-      <div class="guide-official-links">
-        <a class="btn small secondary" href="https://sideinstaller.net/" target="_blank" rel="noopener noreferrer"><span>SideInstaller ↗</span></a>
-        <a class="btn small secondary brand-link" href="https://docs.sidestore.io/" target="_blank" rel="noopener noreferrer"><img class="brand-link-icon" src="assets/icons/sidestore.svg?v=1.1.5-20260918-audit13" alt="" loading="lazy" referrerpolicy="no-referrer"><span>SideStore Docs ↗</span></a>
-        <a class="btn small secondary brand-link" href="https://github.com/LiveContainer/LiveContainer" target="_blank" rel="noopener noreferrer"><img class="brand-link-icon" src="assets/icons/livecontainer.svg" alt="" loading="lazy" referrerpolicy="no-referrer"><span>LiveContainer ↗</span></a>
-        <a class="btn small secondary brand-link" href="https://iloader.app/" target="_blank" rel="noopener noreferrer"><img class="brand-link-icon" src="assets/icons/iloader.svg" alt="" loading="lazy" referrerpolicy="no-referrer"><span>iloader ↗</span></a>
-        <a class="btn small secondary brand-link" href="https://faq.altstore.io/" target="_blank" rel="noopener noreferrer"><img class="brand-link-icon" src="assets/icons/altstore.svg" alt="" loading="lazy" referrerpolicy="no-referrer"><span>AltStore Docs ↗</span></a>
-        <a class="btn small secondary brand-link" href="https://faq.altstore.io/altstore-classic/remote-altservers" target="_blank" rel="noopener noreferrer"><img class="brand-link-icon" src="assets/icons/altstore.svg" alt="" loading="lazy" referrerpolicy="no-referrer"><span>Remote AltServer ↗</span></a>
-        <a class="btn small secondary brand-link" href="https://sideloadly.io/" target="_blank" rel="noopener noreferrer"><img class="brand-link-icon" src="https://sideloadly.io/favicon.ico" alt="" loading="lazy" referrerpolicy="no-referrer"><span>Sideloadly ↗</span></a>
-        <a class="btn small secondary brand-link" href="https://github.com/opa334/TrollStore" target="_blank" rel="noopener noreferrer"><img class="brand-link-icon" src="assets/icons/trollstore.svg" alt="" loading="lazy" referrerpolicy="no-referrer"><span>TrollStore ↗</span></a>
-      </div>
+      <div id="guideOfficialLinks" class="guide-official-links"></div>
     </section>
   </main>
 
@@ -643,6 +745,8 @@
         <a href="https://caseycz.github.io/" target="_blank" rel="noopener">Website</a>
         <a href="https://github.com/CaseyCZ/iOS-Hub" target="_blank" rel="noopener">GitHub · iOS-Hub</a>
         <a href="credits.html">Credits</a>
+        <a href="privacy.html">Privacy &amp; Cookies</a>
+        <button class="footer-link-button" type="button" data-cookie-settings>Cookie settings</button>
       </div>
     </div>
   </footer>
@@ -658,7 +762,8 @@
     </div>
   </div>
 
-  <script type="module" src="src/js/guide.js?v=1.1.5-20260918-fullaudit3"></script>
+  <script type="module" src="src/js/guide.js?v=1.1.5-20260930-source-import8"></script>
+  <script src="src/js/horizontal-scroll.js?v=1.1.5-20260930-scroll-hardfix1"></script>
   <script src="src/js/support-dialog.js?v=1.1.5-20260918-a11y1"></script>
   <script src="src/js/mobile-menu.js?v=1.1.5-20260918-a11y1"></script>
   <script src="src/js/settings-menu.js?v=1.1.5-20260918-a11y1"></script>

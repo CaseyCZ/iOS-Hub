@@ -1,994 +1,3593 @@
 {
-  "generatedAt": "2026-09-30T12:37:50Z",
+  "generatedAt": "2026-09-30T17:14:13Z",
   "sources": {
     "utm": {
       "online": true,
-      "checkedAt": "2026-09-30T12:37:50Z",
+      "checkedAt": "2026-09-30T17:14:13Z",
       "appCount": 2,
       "httpStatus": 200,
-      "iconURL": "https://alt.getutm.app/icon.png",
+      "iconURL": "",
       "error": null,
-      "mixTest": "pass",
-      "mixReason": "Classic source structure and downloadable app metadata passed the automated Mix test."
+      "variants": {
+        "classic": {
+          "online": true,
+          "httpStatus": 200,
+          "appCount": 2,
+          "error": null,
+          "duplicateBundleIdentifiers": {
+            "count": 0,
+            "duplicateAppEntries": 0,
+            "extraEntries": 0
+          }
+        }
+      },
+      "duplicateBundleIdentifiers": {
+        "count": 0,
+        "duplicateAppEntries": 0,
+        "extraEntries": 0
+      },
+      "installerCompatibility": {
+        "altstore": {
+          "directSource": "pass",
+          "reason": "No duplicate bundle identifiers were detected in the source variant used by this installer."
+        },
+        "sidestore": {
+          "directSource": "pass",
+          "reason": "No duplicate bundle identifiers were detected in the source variant used by this installer."
+        },
+        "livecontainer": {
+          "directSource": "pass",
+          "reason": "No duplicate bundle identifiers were detected in the source variant used by this installer."
+        },
+        "flarestore": {
+          "directSource": "pass",
+          "reason": "No duplicate bundle identifiers were detected in the source variant used by this installer."
+        },
+        "feather": {
+          "directSource": "pass",
+          "reason": "No duplicate bundle identifiers were detected in the source variant used by this installer."
+        }
+      },
+      "preferredVariant": "classic"
     },
     "provenance": {
       "online": true,
-      "checkedAt": "2026-09-30T12:37:50Z",
+      "checkedAt": "2026-09-30T17:14:13Z",
       "appCount": 3,
       "httpStatus": 200,
-      "iconURL": "https://raw.githubusercontent.com/Provenance-Emu/Provenance/develop/Provenance/Resources/Assets.xcassets/AppIcon.appiconset/iTunesArtwork%402x.png",
+      "iconURL": "",
       "error": null,
-      "mixTest": "pass",
-      "mixReason": "Classic source structure and downloadable app metadata passed the automated Mix test."
+      "variants": {
+        "classic": {
+          "online": true,
+          "httpStatus": 200,
+          "appCount": 3,
+          "error": null,
+          "duplicateBundleIdentifiers": {
+            "count": 0,
+            "duplicateAppEntries": 0,
+            "extraEntries": 0
+          }
+        }
+      },
+      "duplicateBundleIdentifiers": {
+        "count": 0,
+        "duplicateAppEntries": 0,
+        "extraEntries": 0
+      },
+      "installerCompatibility": {
+        "altstore": {
+          "directSource": "pass",
+          "reason": "No duplicate bundle identifiers were detected in the source variant used by this installer."
+        },
+        "sidestore": {
+          "directSource": "pass",
+          "reason": "No duplicate bundle identifiers were detected in the source variant used by this installer."
+        },
+        "livecontainer": {
+          "directSource": "pass",
+          "reason": "No duplicate bundle identifiers were detected in the source variant used by this installer."
+        },
+        "flarestore": {
+          "directSource": "pass",
+          "reason": "No duplicate bundle identifiers were detected in the source variant used by this installer."
+        },
+        "feather": {
+          "directSource": "pass",
+          "reason": "No duplicate bundle identifiers were detected in the source variant used by this installer."
+        }
+      },
+      "preferredVariant": "classic"
     },
     "ish": {
       "online": true,
-      "checkedAt": "2026-09-30T12:37:50Z",
+      "checkedAt": "2026-09-30T17:14:13Z",
       "appCount": 1,
       "httpStatus": 200,
-      "iconURL": "https://ish.app/assets/icon-full.png",
+      "iconURL": "",
       "error": null,
-      "mixTest": "pass",
-      "mixReason": "Classic source structure and downloadable app metadata passed the automated Mix test."
+      "variants": {
+        "classic": {
+          "online": true,
+          "httpStatus": 200,
+          "appCount": 1,
+          "error": null,
+          "duplicateBundleIdentifiers": {
+            "count": 0,
+            "duplicateAppEntries": 0,
+            "extraEntries": 0
+          }
+        }
+      },
+      "duplicateBundleIdentifiers": {
+        "count": 0,
+        "duplicateAppEntries": 0,
+        "extraEntries": 0
+      },
+      "installerCompatibility": {
+        "altstore": {
+          "directSource": "pass",
+          "reason": "No duplicate bundle identifiers were detected in the source variant used by this installer."
+        },
+        "sidestore": {
+          "directSource": "pass",
+          "reason": "No duplicate bundle identifiers were detected in the source variant used by this installer."
+        },
+        "livecontainer": {
+          "directSource": "pass",
+          "reason": "No duplicate bundle identifiers were detected in the source variant used by this installer."
+        },
+        "flarestore": {
+          "directSource": "pass",
+          "reason": "No duplicate bundle identifiers were detected in the source variant used by this installer."
+        },
+        "feather": {
+          "directSource": "pass",
+          "reason": "No duplicate bundle identifiers were detected in the source variant used by this installer."
+        }
+      },
+      "preferredVariant": "classic"
     },
     "flycast": {
       "online": true,
-      "checkedAt": "2026-09-30T12:37:50Z",
+      "checkedAt": "2026-09-30T17:14:13Z",
       "appCount": 1,
       "httpStatus": 200,
-      "iconURL": "https://github.com/flyinghead/flycast/raw/master/shell/linux/flycast.png",
+      "iconURL": "",
       "error": null,
-      "mixTest": "pass",
-      "mixReason": "Classic source structure and downloadable app metadata passed the automated Mix test."
+      "variants": {
+        "classic": {
+          "online": true,
+          "httpStatus": 200,
+          "appCount": 1,
+          "error": null,
+          "duplicateBundleIdentifiers": {
+            "count": 0,
+            "duplicateAppEntries": 0,
+            "extraEntries": 0
+          }
+        }
+      },
+      "duplicateBundleIdentifiers": {
+        "count": 0,
+        "duplicateAppEntries": 0,
+        "extraEntries": 0
+      },
+      "installerCompatibility": {
+        "altstore": {
+          "directSource": "pass",
+          "reason": "No duplicate bundle identifiers were detected in the source variant used by this installer."
+        },
+        "sidestore": {
+          "directSource": "pass",
+          "reason": "No duplicate bundle identifiers were detected in the source variant used by this installer."
+        },
+        "livecontainer": {
+          "directSource": "pass",
+          "reason": "No duplicate bundle identifiers were detected in the source variant used by this installer."
+        },
+        "flarestore": {
+          "directSource": "pass",
+          "reason": "No duplicate bundle identifiers were detected in the source variant used by this installer."
+        },
+        "feather": {
+          "directSource": "pass",
+          "reason": "No duplicate bundle identifiers were detected in the source variant used by this installer."
+        }
+      },
+      "preferredVariant": "classic"
     },
     "sidestore-community": {
       "online": true,
-      "checkedAt": "2026-09-30T12:37:50Z",
+      "checkedAt": "2026-09-30T17:14:13Z",
       "appCount": 23,
       "httpStatus": 200,
-      "iconURL": "https://sidestore.io/assets/icon.png",
+      "iconURL": "",
       "error": null,
-      "mixTest": "experimental",
-      "mixReason": "SideStore source is structurally readable; installation behavior can differ from AltStore Classic."
+      "variants": {
+        "classic": {
+          "online": true,
+          "httpStatus": 200,
+          "appCount": 23,
+          "error": null,
+          "duplicateBundleIdentifiers": {
+            "count": 0,
+            "duplicateAppEntries": 0,
+            "extraEntries": 0
+          }
+        }
+      },
+      "duplicateBundleIdentifiers": {
+        "count": 0,
+        "duplicateAppEntries": 0,
+        "extraEntries": 0
+      },
+      "installerCompatibility": {
+        "altstore": {
+          "directSource": "pass",
+          "reason": "No duplicate bundle identifiers were detected in the source variant used by this installer."
+        },
+        "sidestore": {
+          "directSource": "pass",
+          "reason": "No duplicate bundle identifiers were detected in the source variant used by this installer."
+        },
+        "livecontainer": {
+          "directSource": "pass",
+          "reason": "No duplicate bundle identifiers were detected in the source variant used by this installer."
+        },
+        "flarestore": {
+          "directSource": "pass",
+          "reason": "No duplicate bundle identifiers were detected in the source variant used by this installer."
+        },
+        "feather": {
+          "directSource": "pass",
+          "reason": "No duplicate bundle identifiers were detected in the source variant used by this installer."
+        }
+      },
+      "preferredVariant": "classic"
     },
     "sidestore-official": {
       "online": true,
-      "checkedAt": "2026-09-30T12:37:50Z",
+      "checkedAt": "2026-09-30T17:14:13Z",
       "appCount": 1,
       "httpStatus": 200,
-      "iconURL": "https://apps.sidestore.io/apps/sidestore/v0.1.1/icon.png",
+      "iconURL": "",
       "error": null,
-      "mixTest": "experimental",
-      "mixReason": "SideStore source is structurally readable; installation behavior can differ from AltStore Classic."
+      "variants": {
+        "classic": {
+          "online": true,
+          "httpStatus": 200,
+          "appCount": 1,
+          "error": null,
+          "duplicateBundleIdentifiers": {
+            "count": 0,
+            "duplicateAppEntries": 0,
+            "extraEntries": 0
+          }
+        }
+      },
+      "duplicateBundleIdentifiers": {
+        "count": 0,
+        "duplicateAppEntries": 0,
+        "extraEntries": 0
+      },
+      "installerCompatibility": {
+        "altstore": {
+          "directSource": "pass",
+          "reason": "No duplicate bundle identifiers were detected in the source variant used by this installer."
+        },
+        "sidestore": {
+          "directSource": "pass",
+          "reason": "No duplicate bundle identifiers were detected in the source variant used by this installer."
+        },
+        "livecontainer": {
+          "directSource": "pass",
+          "reason": "No duplicate bundle identifiers were detected in the source variant used by this installer."
+        },
+        "flarestore": {
+          "directSource": "pass",
+          "reason": "No duplicate bundle identifiers were detected in the source variant used by this installer."
+        },
+        "feather": {
+          "directSource": "pass",
+          "reason": "No duplicate bundle identifiers were detected in the source variant used by this installer."
+        }
+      },
+      "preferredVariant": "classic"
     },
     "stikdebug": {
       "online": true,
-      "checkedAt": "2026-09-30T12:37:50Z",
+      "checkedAt": "2026-09-30T17:14:13Z",
       "appCount": 2,
       "httpStatus": 200,
-      "iconURL": "https://github.com/StikDebug/StikDebug/blob/main/assets/StikDebug.png?raw=true",
+      "iconURL": "",
       "error": null,
-      "mixTest": "pass",
-      "mixReason": "Classic source structure and downloadable app metadata passed the automated Mix test."
+      "variants": {
+        "classic": {
+          "online": true,
+          "httpStatus": 200,
+          "appCount": 2,
+          "error": null,
+          "duplicateBundleIdentifiers": {
+            "count": 0,
+            "duplicateAppEntries": 0,
+            "extraEntries": 0
+          }
+        }
+      },
+      "duplicateBundleIdentifiers": {
+        "count": 0,
+        "duplicateAppEntries": 0,
+        "extraEntries": 0
+      },
+      "installerCompatibility": {
+        "altstore": {
+          "directSource": "pass",
+          "reason": "No duplicate bundle identifiers were detected in the source variant used by this installer."
+        },
+        "sidestore": {
+          "directSource": "pass",
+          "reason": "No duplicate bundle identifiers were detected in the source variant used by this installer."
+        },
+        "livecontainer": {
+          "directSource": "pass",
+          "reason": "No duplicate bundle identifiers were detected in the source variant used by this installer."
+        },
+        "flarestore": {
+          "directSource": "pass",
+          "reason": "No duplicate bundle identifiers were detected in the source variant used by this installer."
+        },
+        "feather": {
+          "directSource": "pass",
+          "reason": "No duplicate bundle identifiers were detected in the source variant used by this installer."
+        }
+      },
+      "preferredVariant": "classic"
     },
     "livecontainer": {
       "online": true,
-      "checkedAt": "2026-09-30T12:37:50Z",
+      "checkedAt": "2026-09-30T17:14:13Z",
       "appCount": 1,
       "httpStatus": 200,
-      "iconURL": "https://raw.githubusercontent.com/LiveContainer/LiveContainer/main/screenshots/AppIcon1024.png",
+      "iconURL": "",
       "error": null,
-      "mixTest": "pass",
-      "mixReason": "Classic source structure and downloadable app metadata passed the automated Mix test."
+      "variants": {
+        "classic": {
+          "online": true,
+          "httpStatus": 200,
+          "appCount": 1,
+          "error": null,
+          "duplicateBundleIdentifiers": {
+            "count": 0,
+            "duplicateAppEntries": 0,
+            "extraEntries": 0
+          }
+        }
+      },
+      "duplicateBundleIdentifiers": {
+        "count": 0,
+        "duplicateAppEntries": 0,
+        "extraEntries": 0
+      },
+      "installerCompatibility": {
+        "altstore": {
+          "directSource": "pass",
+          "reason": "No duplicate bundle identifiers were detected in the source variant used by this installer."
+        },
+        "sidestore": {
+          "directSource": "pass",
+          "reason": "No duplicate bundle identifiers were detected in the source variant used by this installer."
+        },
+        "livecontainer": {
+          "directSource": "pass",
+          "reason": "No duplicate bundle identifiers were detected in the source variant used by this installer."
+        },
+        "flarestore": {
+          "directSource": "pass",
+          "reason": "No duplicate bundle identifiers were detected in the source variant used by this installer."
+        },
+        "feather": {
+          "directSource": "pass",
+          "reason": "No duplicate bundle identifiers were detected in the source variant used by this installer."
+        }
+      },
+      "preferredVariant": "classic"
     },
     "livecontainer-nightly": {
       "online": true,
-      "checkedAt": "2026-09-30T12:37:50Z",
+      "checkedAt": "2026-09-30T17:14:13Z",
       "appCount": 1,
       "httpStatus": 200,
-      "iconURL": "https://raw.githubusercontent.com/LiveContainer/LiveContainer/main/screenshots/AppIcon1024.png",
+      "iconURL": "",
       "error": null,
-      "mixTest": "pass",
-      "mixReason": "Classic source structure and downloadable app metadata passed the automated Mix test."
+      "variants": {
+        "classic": {
+          "online": true,
+          "httpStatus": 200,
+          "appCount": 1,
+          "error": null,
+          "duplicateBundleIdentifiers": {
+            "count": 0,
+            "duplicateAppEntries": 0,
+            "extraEntries": 0
+          }
+        }
+      },
+      "duplicateBundleIdentifiers": {
+        "count": 0,
+        "duplicateAppEntries": 0,
+        "extraEntries": 0
+      },
+      "installerCompatibility": {
+        "altstore": {
+          "directSource": "pass",
+          "reason": "No duplicate bundle identifiers were detected in the source variant used by this installer."
+        },
+        "sidestore": {
+          "directSource": "pass",
+          "reason": "No duplicate bundle identifiers were detected in the source variant used by this installer."
+        },
+        "livecontainer": {
+          "directSource": "pass",
+          "reason": "No duplicate bundle identifiers were detected in the source variant used by this installer."
+        },
+        "flarestore": {
+          "directSource": "pass",
+          "reason": "No duplicate bundle identifiers were detected in the source variant used by this installer."
+        },
+        "feather": {
+          "directSource": "pass",
+          "reason": "No duplicate bundle identifiers were detected in the source variant used by this installer."
+        }
+      },
+      "preferredVariant": "classic"
     },
     "manicemu": {
       "online": true,
-      "checkedAt": "2026-09-30T12:37:50Z",
+      "checkedAt": "2026-09-30T17:14:13Z",
       "appCount": 1,
       "httpStatus": 200,
-      "iconURL": "https://apps.manicemu.site/images/manicicon.jpg",
+      "iconURL": "",
       "error": null,
-      "mixTest": "pass",
-      "mixReason": "Classic source structure and downloadable app metadata passed the automated Mix test."
+      "variants": {
+        "classic": {
+          "online": true,
+          "httpStatus": 200,
+          "appCount": 1,
+          "error": null,
+          "duplicateBundleIdentifiers": {
+            "count": 0,
+            "duplicateAppEntries": 0,
+            "extraEntries": 0
+          }
+        }
+      },
+      "duplicateBundleIdentifiers": {
+        "count": 0,
+        "duplicateAppEntries": 0,
+        "extraEntries": 0
+      },
+      "installerCompatibility": {
+        "altstore": {
+          "directSource": "pass",
+          "reason": "No duplicate bundle identifiers were detected in the source variant used by this installer."
+        },
+        "sidestore": {
+          "directSource": "pass",
+          "reason": "No duplicate bundle identifiers were detected in the source variant used by this installer."
+        },
+        "livecontainer": {
+          "directSource": "pass",
+          "reason": "No duplicate bundle identifiers were detected in the source variant used by this installer."
+        },
+        "flarestore": {
+          "directSource": "pass",
+          "reason": "No duplicate bundle identifiers were detected in the source variant used by this installer."
+        },
+        "feather": {
+          "directSource": "pass",
+          "reason": "No duplicate bundle identifiers were detected in the source variant used by this installer."
+        }
+      },
+      "preferredVariant": "classic"
     },
     "flycast-ios": {
       "online": true,
-      "checkedAt": "2026-09-30T12:37:50Z",
+      "checkedAt": "2026-09-30T17:14:13Z",
       "appCount": 1,
       "httpStatus": 200,
-      "iconURL": "https://github.com/chachillie/Flycast-iOS/raw/main/shell/linux/flycast.png",
+      "iconURL": "",
       "error": null,
-      "mixTest": "pass",
-      "mixReason": "Classic source structure and downloadable app metadata passed the automated Mix test."
+      "variants": {
+        "classic": {
+          "online": true,
+          "httpStatus": 200,
+          "appCount": 1,
+          "error": null,
+          "duplicateBundleIdentifiers": {
+            "count": 0,
+            "duplicateAppEntries": 0,
+            "extraEntries": 0
+          }
+        }
+      },
+      "duplicateBundleIdentifiers": {
+        "count": 0,
+        "duplicateAppEntries": 0,
+        "extraEntries": 0
+      },
+      "installerCompatibility": {
+        "altstore": {
+          "directSource": "pass",
+          "reason": "No duplicate bundle identifiers were detected in the source variant used by this installer."
+        },
+        "sidestore": {
+          "directSource": "pass",
+          "reason": "No duplicate bundle identifiers were detected in the source variant used by this installer."
+        },
+        "livecontainer": {
+          "directSource": "pass",
+          "reason": "No duplicate bundle identifiers were detected in the source variant used by this installer."
+        },
+        "flarestore": {
+          "directSource": "pass",
+          "reason": "No duplicate bundle identifiers were detected in the source variant used by this installer."
+        },
+        "feather": {
+          "directSource": "pass",
+          "reason": "No duplicate bundle identifiers were detected in the source variant used by this installer."
+        }
+      },
+      "preferredVariant": "classic"
     },
     "geode-ios": {
       "online": true,
-      "checkedAt": "2026-09-30T12:37:50Z",
+      "checkedAt": "2026-09-30T17:14:13Z",
       "appCount": 1,
       "httpStatus": 200,
-      "iconURL": "https://ios-repo.geode-sdk.org/img/AltSourceIcon.png",
+      "iconURL": "",
       "error": null,
-      "mixTest": "pass",
-      "mixReason": "Classic source structure and downloadable app metadata passed the automated Mix test."
+      "variants": {
+        "classic": {
+          "online": true,
+          "httpStatus": 200,
+          "appCount": 1,
+          "error": null,
+          "duplicateBundleIdentifiers": {
+            "count": 0,
+            "duplicateAppEntries": 0,
+            "extraEntries": 0
+          }
+        }
+      },
+      "duplicateBundleIdentifiers": {
+        "count": 0,
+        "duplicateAppEntries": 0,
+        "extraEntries": 0
+      },
+      "installerCompatibility": {
+        "altstore": {
+          "directSource": "pass",
+          "reason": "No duplicate bundle identifiers were detected in the source variant used by this installer."
+        },
+        "sidestore": {
+          "directSource": "pass",
+          "reason": "No duplicate bundle identifiers were detected in the source variant used by this installer."
+        },
+        "livecontainer": {
+          "directSource": "pass",
+          "reason": "No duplicate bundle identifiers were detected in the source variant used by this installer."
+        },
+        "flarestore": {
+          "directSource": "pass",
+          "reason": "No duplicate bundle identifiers were detected in the source variant used by this installer."
+        },
+        "feather": {
+          "directSource": "pass",
+          "reason": "No duplicate bundle identifiers were detected in the source variant used by this installer."
+        }
+      },
+      "preferredVariant": "classic"
     },
     "retrosekai": {
       "online": true,
-      "checkedAt": "2026-09-30T12:37:50Z",
+      "checkedAt": "2026-09-30T17:14:13Z",
       "appCount": 1,
       "httpStatus": 200,
-      "iconURL": "https://repo.untitledcharts.com/assets/logo.png",
+      "iconURL": "",
       "error": null,
-      "mixTest": "pass",
-      "mixReason": "Classic source structure and downloadable app metadata passed the automated Mix test."
+      "variants": {
+        "classic": {
+          "online": true,
+          "httpStatus": 200,
+          "appCount": 1,
+          "error": null,
+          "duplicateBundleIdentifiers": {
+            "count": 0,
+            "duplicateAppEntries": 0,
+            "extraEntries": 0
+          }
+        }
+      },
+      "duplicateBundleIdentifiers": {
+        "count": 0,
+        "duplicateAppEntries": 0,
+        "extraEntries": 0
+      },
+      "installerCompatibility": {
+        "altstore": {
+          "directSource": "pass",
+          "reason": "No duplicate bundle identifiers were detected in the source variant used by this installer."
+        },
+        "sidestore": {
+          "directSource": "pass",
+          "reason": "No duplicate bundle identifiers were detected in the source variant used by this installer."
+        },
+        "livecontainer": {
+          "directSource": "pass",
+          "reason": "No duplicate bundle identifiers were detected in the source variant used by this installer."
+        },
+        "flarestore": {
+          "directSource": "pass",
+          "reason": "No duplicate bundle identifiers were detected in the source variant used by this installer."
+        },
+        "feather": {
+          "directSource": "pass",
+          "reason": "No duplicate bundle identifiers were detected in the source variant used by this installer."
+        }
+      },
+      "preferredVariant": "classic"
     },
     "oatmealdome": {
       "online": true,
-      "checkedAt": "2026-09-30T12:37:50Z",
+      "checkedAt": "2026-09-30T17:14:13Z",
       "appCount": 2,
       "httpStatus": 200,
-      "iconURL": "https://cdn.oatmealdome.me/dolphinios/AppIcon.appiconset/ios_marketing1024x1024.png",
+      "iconURL": "",
       "error": null,
-      "mixTest": "pass",
-      "mixReason": "Classic source structure and downloadable app metadata passed the automated Mix test."
+      "variants": {
+        "classic": {
+          "online": true,
+          "httpStatus": 200,
+          "appCount": 2,
+          "error": null,
+          "duplicateBundleIdentifiers": {
+            "count": 0,
+            "duplicateAppEntries": 0,
+            "extraEntries": 0
+          }
+        }
+      },
+      "duplicateBundleIdentifiers": {
+        "count": 0,
+        "duplicateAppEntries": 0,
+        "extraEntries": 0
+      },
+      "installerCompatibility": {
+        "altstore": {
+          "directSource": "pass",
+          "reason": "No duplicate bundle identifiers were detected in the source variant used by this installer."
+        },
+        "sidestore": {
+          "directSource": "pass",
+          "reason": "No duplicate bundle identifiers were detected in the source variant used by this installer."
+        },
+        "livecontainer": {
+          "directSource": "pass",
+          "reason": "No duplicate bundle identifiers were detected in the source variant used by this installer."
+        },
+        "flarestore": {
+          "directSource": "pass",
+          "reason": "No duplicate bundle identifiers were detected in the source variant used by this installer."
+        },
+        "feather": {
+          "directSource": "pass",
+          "reason": "No duplicate bundle identifiers were detected in the source variant used by this installer."
+        }
+      },
+      "preferredVariant": "classic"
     },
     "crystall1ne": {
       "online": true,
-      "checkedAt": "2026-09-30T12:37:50Z",
+      "checkedAt": "2026-09-30T17:14:13Z",
       "appCount": 2,
       "httpStatus": 200,
-      "iconURL": "https://alt.crystall1ne.dev/resources/media/the_icon.png",
+      "iconURL": "",
       "error": null,
-      "mixTest": "pass",
-      "mixReason": "Classic source structure and downloadable app metadata passed the automated Mix test."
+      "variants": {
+        "classic": {
+          "online": true,
+          "httpStatus": 200,
+          "appCount": 2,
+          "error": null,
+          "duplicateBundleIdentifiers": {
+            "count": 0,
+            "duplicateAppEntries": 0,
+            "extraEntries": 0
+          }
+        }
+      },
+      "duplicateBundleIdentifiers": {
+        "count": 0,
+        "duplicateAppEntries": 0,
+        "extraEntries": 0
+      },
+      "installerCompatibility": {
+        "altstore": {
+          "directSource": "pass",
+          "reason": "No duplicate bundle identifiers were detected in the source variant used by this installer."
+        },
+        "sidestore": {
+          "directSource": "pass",
+          "reason": "No duplicate bundle identifiers were detected in the source variant used by this installer."
+        },
+        "livecontainer": {
+          "directSource": "pass",
+          "reason": "No duplicate bundle identifiers were detected in the source variant used by this installer."
+        },
+        "flarestore": {
+          "directSource": "pass",
+          "reason": "No duplicate bundle identifiers were detected in the source variant used by this installer."
+        },
+        "feather": {
+          "directSource": "pass",
+          "reason": "No duplicate bundle identifiers were detected in the source variant used by this installer."
+        }
+      },
+      "preferredVariant": "classic"
     },
     "pokemmo": {
       "online": true,
-      "checkedAt": "2026-09-30T12:37:50Z",
+      "checkedAt": "2026-09-30T17:14:13Z",
       "appCount": 1,
       "httpStatus": 200,
-      "iconURL": "https://pokemmo.com/build/images/altstore.f5930b35.png",
+      "iconURL": "",
       "error": null,
-      "mixTest": "pass",
-      "mixReason": "Classic source structure and downloadable app metadata passed the automated Mix test."
+      "variants": {
+        "classic": {
+          "online": true,
+          "httpStatus": 200,
+          "appCount": 1,
+          "error": null,
+          "duplicateBundleIdentifiers": {
+            "count": 0,
+            "duplicateAppEntries": 0,
+            "extraEntries": 0
+          }
+        }
+      },
+      "duplicateBundleIdentifiers": {
+        "count": 0,
+        "duplicateAppEntries": 0,
+        "extraEntries": 0
+      },
+      "installerCompatibility": {
+        "altstore": {
+          "directSource": "pass",
+          "reason": "No duplicate bundle identifiers were detected in the source variant used by this installer."
+        },
+        "sidestore": {
+          "directSource": "pass",
+          "reason": "No duplicate bundle identifiers were detected in the source variant used by this installer."
+        },
+        "livecontainer": {
+          "directSource": "pass",
+          "reason": "No duplicate bundle identifiers were detected in the source variant used by this installer."
+        },
+        "flarestore": {
+          "directSource": "pass",
+          "reason": "No duplicate bundle identifiers were detected in the source variant used by this installer."
+        },
+        "feather": {
+          "directSource": "pass",
+          "reason": "No duplicate bundle identifiers were detected in the source variant used by this installer."
+        }
+      },
+      "preferredVariant": "classic"
     },
     "odyssey": {
       "online": true,
-      "checkedAt": "2026-09-30T12:37:50Z",
+      "checkedAt": "2026-09-30T17:14:13Z",
       "appCount": 2,
       "httpStatus": 200,
-      "iconURL": "https://theodyssey.dev/assets/images/icon.png",
+      "iconURL": "",
       "error": null,
-      "mixTest": "pass",
-      "mixReason": "Classic source structure and downloadable app metadata passed the automated Mix test."
+      "variants": {
+        "classic": {
+          "online": true,
+          "httpStatus": 200,
+          "appCount": 2,
+          "error": null,
+          "duplicateBundleIdentifiers": {
+            "count": 0,
+            "duplicateAppEntries": 0,
+            "extraEntries": 0
+          }
+        }
+      },
+      "duplicateBundleIdentifiers": {
+        "count": 0,
+        "duplicateAppEntries": 0,
+        "extraEntries": 0
+      },
+      "installerCompatibility": {
+        "altstore": {
+          "directSource": "pass",
+          "reason": "No duplicate bundle identifiers were detected in the source variant used by this installer."
+        },
+        "sidestore": {
+          "directSource": "pass",
+          "reason": "No duplicate bundle identifiers were detected in the source variant used by this installer."
+        },
+        "livecontainer": {
+          "directSource": "pass",
+          "reason": "No duplicate bundle identifiers were detected in the source variant used by this installer."
+        },
+        "flarestore": {
+          "directSource": "pass",
+          "reason": "No duplicate bundle identifiers were detected in the source variant used by this installer."
+        },
+        "feather": {
+          "directSource": "pass",
+          "reason": "No duplicate bundle identifiers were detected in the source variant used by this installer."
+        }
+      },
+      "preferredVariant": "classic"
     },
     "yattee": {
       "online": true,
-      "checkedAt": "2026-09-30T12:37:50Z",
+      "checkedAt": "2026-09-30T17:14:13Z",
       "appCount": 1,
       "httpStatus": 200,
-      "iconURL": "https://raw.githubusercontent.com/yattee/yattee/main/Assets/yattee-icon-512.png",
+      "iconURL": "",
       "error": null,
-      "mixTest": "pass",
-      "mixReason": "Classic source structure and downloadable app metadata passed the automated Mix test."
+      "variants": {
+        "classic": {
+          "online": true,
+          "httpStatus": 200,
+          "appCount": 1,
+          "error": null,
+          "duplicateBundleIdentifiers": {
+            "count": 0,
+            "duplicateAppEntries": 0,
+            "extraEntries": 0
+          }
+        }
+      },
+      "duplicateBundleIdentifiers": {
+        "count": 0,
+        "duplicateAppEntries": 0,
+        "extraEntries": 0
+      },
+      "installerCompatibility": {
+        "altstore": {
+          "directSource": "pass",
+          "reason": "No duplicate bundle identifiers were detected in the source variant used by this installer."
+        },
+        "sidestore": {
+          "directSource": "pass",
+          "reason": "No duplicate bundle identifiers were detected in the source variant used by this installer."
+        },
+        "livecontainer": {
+          "directSource": "pass",
+          "reason": "No duplicate bundle identifiers were detected in the source variant used by this installer."
+        },
+        "flarestore": {
+          "directSource": "pass",
+          "reason": "No duplicate bundle identifiers were detected in the source variant used by this installer."
+        },
+        "feather": {
+          "directSource": "pass",
+          "reason": "No duplicate bundle identifiers were detected in the source variant used by this installer."
+        }
+      },
+      "preferredVariant": "classic"
     },
     "ignited": {
-      "online": true,
-      "checkedAt": "2026-09-30T12:37:50Z",
-      "appCount": 1,
-      "httpStatus": 200,
-      "iconURL": "https://cdn.ignitedemulator.com/assets/altstore-icon.png",
-      "error": null,
-      "mixTest": "pass",
-      "mixReason": "Classic source structure and downloadable app metadata passed the automated Mix test."
+      "online": false,
+      "checkedAt": "2026-09-30T17:14:13Z",
+      "appCount": null,
+      "httpStatus": null,
+      "iconURL": "",
+      "error": "classic: RemoteDisconnected: Remote end closed connection without response",
+      "variants": {
+        "classic": {
+          "online": false,
+          "httpStatus": null,
+          "appCount": null,
+          "error": "RemoteDisconnected: Remote end closed connection without response"
+        }
+      }
     },
     "mona": {
       "online": true,
-      "checkedAt": "2026-09-30T12:37:50Z",
+      "checkedAt": "2026-09-30T17:14:13Z",
       "appCount": 1,
       "httpStatus": 200,
-      "iconURL": "https://i.imgur.com/PeIdqwy.png",
+      "iconURL": "",
       "error": null,
-      "mixTest": "pass",
-      "mixReason": "Classic source structure and downloadable app metadata passed the automated Mix test."
+      "variants": {
+        "classic": {
+          "online": true,
+          "httpStatus": 200,
+          "appCount": 1,
+          "error": null,
+          "duplicateBundleIdentifiers": {
+            "count": 0,
+            "duplicateAppEntries": 0,
+            "extraEntries": 0
+          }
+        }
+      },
+      "duplicateBundleIdentifiers": {
+        "count": 0,
+        "duplicateAppEntries": 0,
+        "extraEntries": 0
+      },
+      "installerCompatibility": {
+        "altstore": {
+          "directSource": "pass",
+          "reason": "No duplicate bundle identifiers were detected in the source variant used by this installer."
+        },
+        "sidestore": {
+          "directSource": "pass",
+          "reason": "No duplicate bundle identifiers were detected in the source variant used by this installer."
+        },
+        "livecontainer": {
+          "directSource": "pass",
+          "reason": "No duplicate bundle identifiers were detected in the source variant used by this installer."
+        },
+        "flarestore": {
+          "directSource": "pass",
+          "reason": "No duplicate bundle identifiers were detected in the source variant used by this installer."
+        },
+        "feather": {
+          "directSource": "pass",
+          "reason": "No duplicate bundle identifiers were detected in the source variant used by this installer."
+        }
+      },
+      "preferredVariant": "classic"
     },
     "vortx": {
       "online": true,
-      "checkedAt": "2026-09-30T12:37:50Z",
+      "checkedAt": "2026-09-30T17:14:13Z",
       "appCount": 2,
       "httpStatus": 200,
-      "iconURL": "https://raw.githubusercontent.com/VortXTV/VortX/main/docs/logo.png",
+      "iconURL": "",
       "error": null,
-      "mixTest": "pass",
-      "mixReason": "Classic source structure and downloadable app metadata passed the automated Mix test."
+      "variants": {
+        "classic": {
+          "online": true,
+          "httpStatus": 200,
+          "appCount": 2,
+          "error": null,
+          "duplicateBundleIdentifiers": {
+            "count": 0,
+            "duplicateAppEntries": 0,
+            "extraEntries": 0
+          }
+        }
+      },
+      "duplicateBundleIdentifiers": {
+        "count": 0,
+        "duplicateAppEntries": 0,
+        "extraEntries": 0
+      },
+      "installerCompatibility": {
+        "altstore": {
+          "directSource": "pass",
+          "reason": "No duplicate bundle identifiers were detected in the source variant used by this installer."
+        },
+        "sidestore": {
+          "directSource": "pass",
+          "reason": "No duplicate bundle identifiers were detected in the source variant used by this installer."
+        },
+        "livecontainer": {
+          "directSource": "pass",
+          "reason": "No duplicate bundle identifiers were detected in the source variant used by this installer."
+        },
+        "flarestore": {
+          "directSource": "pass",
+          "reason": "No duplicate bundle identifiers were detected in the source variant used by this installer."
+        },
+        "feather": {
+          "directSource": "pass",
+          "reason": "No duplicate bundle identifiers were detected in the source variant used by this installer."
+        }
+      },
+      "preferredVariant": "classic"
     },
     "stremio-official-pal": {
       "online": true,
-      "checkedAt": "2026-09-30T12:37:50Z",
+      "checkedAt": "2026-09-30T17:14:13Z",
       "appCount": 1,
       "httpStatus": 200,
-      "iconURL": "https://i.imgur.com/ykZuH0r.png",
+      "iconURL": "",
       "error": null,
-      "mixTest": "experimental",
-      "mixReason": "AltStore PAL source is structurally readable, but notarized marketplace apps can require PAL-specific metadata."
+      "variants": {
+        "pal": {
+          "online": true,
+          "httpStatus": 200,
+          "appCount": 1,
+          "error": null,
+          "duplicateBundleIdentifiers": {
+            "count": 0,
+            "duplicateAppEntries": 0,
+            "extraEntries": 0
+          }
+        }
+      },
+      "duplicateBundleIdentifiers": {
+        "count": 0,
+        "duplicateAppEntries": 0,
+        "extraEntries": 0
+      },
+      "installerCompatibility": {
+        "altstore-pal": {
+          "directSource": "pass",
+          "reason": "No duplicate bundle identifiers were detected in the source variant used by this installer."
+        }
+      },
+      "preferredVariant": "pal"
     },
     "stremio-ios": {
       "online": true,
-      "checkedAt": "2026-09-30T12:37:50Z",
+      "checkedAt": "2026-09-30T17:14:13Z",
       "appCount": 1,
       "httpStatus": 200,
-      "iconURL": "https://www.stremio.com/website/stremio-logo-small.png",
+      "iconURL": "",
       "error": null,
-      "mixTest": "pass",
-      "mixReason": "Classic source structure and downloadable app metadata passed the automated Mix test."
+      "variants": {
+        "classic": {
+          "online": true,
+          "httpStatus": 200,
+          "appCount": 1,
+          "error": null,
+          "duplicateBundleIdentifiers": {
+            "count": 0,
+            "duplicateAppEntries": 0,
+            "extraEntries": 0
+          }
+        }
+      },
+      "duplicateBundleIdentifiers": {
+        "count": 0,
+        "duplicateAppEntries": 0,
+        "extraEntries": 0
+      },
+      "installerCompatibility": {
+        "altstore": {
+          "directSource": "pass",
+          "reason": "No duplicate bundle identifiers were detected in the source variant used by this installer."
+        },
+        "sidestore": {
+          "directSource": "pass",
+          "reason": "No duplicate bundle identifiers were detected in the source variant used by this installer."
+        },
+        "livecontainer": {
+          "directSource": "pass",
+          "reason": "No duplicate bundle identifiers were detected in the source variant used by this installer."
+        },
+        "flarestore": {
+          "directSource": "pass",
+          "reason": "No duplicate bundle identifiers were detected in the source variant used by this installer."
+        },
+        "feather": {
+          "directSource": "pass",
+          "reason": "No duplicate bundle identifiers were detected in the source variant used by this installer."
+        }
+      },
+      "preferredVariant": "classic"
     },
     "kodi-ios": {
       "online": true,
-      "checkedAt": "2026-09-30T12:37:50Z",
+      "checkedAt": "2026-09-30T17:14:13Z",
       "appCount": 1,
       "httpStatus": 200,
-      "iconURL": "https://kodi.tv/images/kodi-logo.svg",
+      "iconURL": "",
       "error": null,
-      "mixTest": "pass",
-      "mixReason": "Classic source structure and downloadable app metadata passed the automated Mix test."
+      "variants": {
+        "classic": {
+          "online": true,
+          "httpStatus": 200,
+          "appCount": 1,
+          "error": null,
+          "duplicateBundleIdentifiers": {
+            "count": 0,
+            "duplicateAppEntries": 0,
+            "extraEntries": 0
+          }
+        }
+      },
+      "duplicateBundleIdentifiers": {
+        "count": 0,
+        "duplicateAppEntries": 0,
+        "extraEntries": 0
+      },
+      "installerCompatibility": {
+        "altstore": {
+          "directSource": "pass",
+          "reason": "No duplicate bundle identifiers were detected in the source variant used by this installer."
+        },
+        "sidestore": {
+          "directSource": "pass",
+          "reason": "No duplicate bundle identifiers were detected in the source variant used by this installer."
+        },
+        "livecontainer": {
+          "directSource": "pass",
+          "reason": "No duplicate bundle identifiers were detected in the source variant used by this installer."
+        },
+        "flarestore": {
+          "directSource": "pass",
+          "reason": "No duplicate bundle identifiers were detected in the source variant used by this installer."
+        },
+        "feather": {
+          "directSource": "pass",
+          "reason": "No duplicate bundle identifiers were detected in the source variant used by this installer."
+        }
+      },
+      "preferredVariant": "classic"
     },
     "nineanimator": {
       "online": false,
-      "checkedAt": "2026-09-30T12:37:50Z",
+      "checkedAt": "2026-09-30T17:14:13Z",
       "appCount": null,
       "httpStatus": null,
       "iconURL": "",
-      "error": "HTTPError: HTTP Error 522: <none>",
-      "mixTest": "fail",
-      "mixReason": "Source has not passed the latest check."
+      "error": "classic: HTTPError: HTTP Error 522: <none>",
+      "variants": {
+        "classic": {
+          "online": false,
+          "httpStatus": null,
+          "appCount": null,
+          "error": "HTTPError: HTTP Error 522: <none>"
+        }
+      }
     },
     "esound": {
       "online": true,
-      "checkedAt": "2026-09-30T12:37:50Z",
+      "checkedAt": "2026-09-30T17:14:13Z",
       "appCount": 1,
       "httpStatus": 200,
-      "iconURL": "https://esound.app/images/altstore/source-icon.png?v=4",
+      "iconURL": "",
       "error": null,
-      "mixTest": "experimental",
-      "mixReason": "AltStore PAL source is structurally readable, but notarized marketplace apps can require PAL-specific metadata."
+      "variants": {
+        "pal": {
+          "online": true,
+          "httpStatus": 200,
+          "appCount": 1,
+          "error": null,
+          "duplicateBundleIdentifiers": {
+            "count": 0,
+            "duplicateAppEntries": 0,
+            "extraEntries": 0
+          }
+        }
+      },
+      "duplicateBundleIdentifiers": {
+        "count": 0,
+        "duplicateAppEntries": 0,
+        "extraEntries": 0
+      },
+      "installerCompatibility": {
+        "altstore-pal": {
+          "directSource": "pass",
+          "reason": "No duplicate bundle identifiers were detected in the source variant used by this installer."
+        }
+      },
+      "preferredVariant": "pal"
     },
     "partyknights": {
       "online": true,
-      "checkedAt": "2026-09-30T12:37:50Z",
+      "checkedAt": "2026-09-30T17:14:13Z",
       "appCount": 1,
       "httpStatus": 200,
-      "iconURL": "https://partyknights.app/assets/img/icon_128.webp",
+      "iconURL": "",
       "error": null,
-      "mixTest": "pass",
-      "mixReason": "Classic source structure and downloadable app metadata passed the automated Mix test."
+      "variants": {
+        "classic": {
+          "online": true,
+          "httpStatus": 200,
+          "appCount": 1,
+          "error": null,
+          "duplicateBundleIdentifiers": {
+            "count": 0,
+            "duplicateAppEntries": 0,
+            "extraEntries": 0
+          }
+        }
+      },
+      "duplicateBundleIdentifiers": {
+        "count": 0,
+        "duplicateAppEntries": 0,
+        "extraEntries": 0
+      },
+      "installerCompatibility": {
+        "altstore": {
+          "directSource": "pass",
+          "reason": "No duplicate bundle identifiers were detected in the source variant used by this installer."
+        },
+        "sidestore": {
+          "directSource": "pass",
+          "reason": "No duplicate bundle identifiers were detected in the source variant used by this installer."
+        },
+        "livecontainer": {
+          "directSource": "pass",
+          "reason": "No duplicate bundle identifiers were detected in the source variant used by this installer."
+        },
+        "flarestore": {
+          "directSource": "pass",
+          "reason": "No duplicate bundle identifiers were detected in the source variant used by this installer."
+        },
+        "feather": {
+          "directSource": "pass",
+          "reason": "No duplicate bundle identifiers were detected in the source variant used by this installer."
+        }
+      },
+      "preferredVariant": "classic"
     },
     "bringyour": {
       "online": false,
-      "checkedAt": "2026-09-30T12:37:50Z",
+      "checkedAt": "2026-09-30T17:14:13Z",
       "appCount": null,
       "httpStatus": null,
       "iconURL": "",
-      "error": "HTTPError: HTTP Error 404: Not Found",
-      "mixTest": "fail",
-      "mixReason": "Source has not passed the latest check."
+      "error": "classic: HTTPError: HTTP Error 404: Not Found",
+      "variants": {
+        "classic": {
+          "online": false,
+          "httpStatus": null,
+          "appCount": null,
+          "error": "HTTPError: HTTP Error 404: Not Found"
+        }
+      }
     },
     "itorrent": {
       "online": true,
-      "checkedAt": "2026-09-30T12:37:50Z",
+      "checkedAt": "2026-09-30T17:14:13Z",
       "appCount": 1,
       "httpStatus": 200,
-      "iconURL": "https://raw.githubusercontent.com/XITRIX/xitrix.github.io/master/sourceIcon.png",
+      "iconURL": "",
       "error": null,
-      "mixTest": "pass",
-      "mixReason": "Classic source structure and downloadable app metadata passed the automated Mix test."
+      "variants": {
+        "classic": {
+          "online": true,
+          "httpStatus": 200,
+          "appCount": 1,
+          "error": null,
+          "duplicateBundleIdentifiers": {
+            "count": 0,
+            "duplicateAppEntries": 0,
+            "extraEntries": 0
+          }
+        }
+      },
+      "duplicateBundleIdentifiers": {
+        "count": 0,
+        "duplicateAppEntries": 0,
+        "extraEntries": 0
+      },
+      "installerCompatibility": {
+        "altstore": {
+          "directSource": "pass",
+          "reason": "No duplicate bundle identifiers were detected in the source variant used by this installer."
+        },
+        "sidestore": {
+          "directSource": "pass",
+          "reason": "No duplicate bundle identifiers were detected in the source variant used by this installer."
+        },
+        "livecontainer": {
+          "directSource": "pass",
+          "reason": "No duplicate bundle identifiers were detected in the source variant used by this installer."
+        },
+        "flarestore": {
+          "directSource": "pass",
+          "reason": "No duplicate bundle identifiers were detected in the source variant used by this installer."
+        },
+        "feather": {
+          "directSource": "pass",
+          "reason": "No duplicate bundle identifiers were detected in the source variant used by this installer."
+        }
+      },
+      "preferredVariant": "classic"
     },
     "qbitconnect": {
       "online": true,
-      "checkedAt": "2026-09-30T12:37:50Z",
+      "checkedAt": "2026-09-30T17:14:13Z",
       "appCount": 1,
       "httpStatus": 200,
-      "iconURL": "https://raw.githubusercontent.com/RajnishOne/altstore-releases/main/icons/general/bluematter.png",
+      "iconURL": "",
       "error": null,
-      "mixTest": "experimental",
-      "mixReason": "AltStore PAL source is structurally readable, but notarized marketplace apps can require PAL-specific metadata."
+      "variants": {
+        "classic": {
+          "online": true,
+          "httpStatus": 200,
+          "appCount": 1,
+          "error": null,
+          "duplicateBundleIdentifiers": {
+            "count": 0,
+            "duplicateAppEntries": 0,
+            "extraEntries": 0
+          }
+        },
+        "pal": {
+          "online": true,
+          "httpStatus": 200,
+          "appCount": 1,
+          "error": null,
+          "duplicateBundleIdentifiers": {
+            "count": 0,
+            "duplicateAppEntries": 0,
+            "extraEntries": 0
+          }
+        }
+      },
+      "duplicateBundleIdentifiers": {
+        "count": 0,
+        "duplicateAppEntries": 0,
+        "extraEntries": 0
+      },
+      "installerCompatibility": {
+        "altstore": {
+          "directSource": "pass",
+          "reason": "No duplicate bundle identifiers were detected in the source variant used by this installer."
+        },
+        "sidestore": {
+          "directSource": "pass",
+          "reason": "No duplicate bundle identifiers were detected in the source variant used by this installer."
+        },
+        "livecontainer": {
+          "directSource": "pass",
+          "reason": "No duplicate bundle identifiers were detected in the source variant used by this installer."
+        },
+        "altstore-pal": {
+          "directSource": "pass",
+          "reason": "No duplicate bundle identifiers were detected in the source variant used by this installer."
+        },
+        "flarestore": {
+          "directSource": "pass",
+          "reason": "No duplicate bundle identifiers were detected in the source variant used by this installer."
+        },
+        "feather": {
+          "directSource": "pass",
+          "reason": "No duplicate bundle identifiers were detected in the source variant used by this installer."
+        }
+      },
+      "preferredVariant": "classic"
     },
     "artemis": {
       "online": true,
-      "checkedAt": "2026-09-30T12:37:50Z",
+      "checkedAt": "2026-09-30T17:14:13Z",
       "appCount": 1,
       "httpStatus": 200,
-      "iconURL": "https://avatars.githubusercontent.com/u/28218457?v=4",
+      "iconURL": "",
       "error": null,
-      "mixTest": "experimental",
-      "mixReason": "AltStore PAL source is structurally readable, but notarized marketplace apps can require PAL-specific metadata."
+      "variants": {
+        "classic": {
+          "online": true,
+          "httpStatus": 200,
+          "appCount": 1,
+          "error": null,
+          "duplicateBundleIdentifiers": {
+            "count": 0,
+            "duplicateAppEntries": 0,
+            "extraEntries": 0
+          }
+        },
+        "pal": {
+          "online": true,
+          "httpStatus": 200,
+          "appCount": 1,
+          "error": null,
+          "duplicateBundleIdentifiers": {
+            "count": 0,
+            "duplicateAppEntries": 0,
+            "extraEntries": 0
+          }
+        }
+      },
+      "duplicateBundleIdentifiers": {
+        "count": 0,
+        "duplicateAppEntries": 0,
+        "extraEntries": 0
+      },
+      "installerCompatibility": {
+        "altstore": {
+          "directSource": "pass",
+          "reason": "No duplicate bundle identifiers were detected in the source variant used by this installer."
+        },
+        "sidestore": {
+          "directSource": "pass",
+          "reason": "No duplicate bundle identifiers were detected in the source variant used by this installer."
+        },
+        "livecontainer": {
+          "directSource": "pass",
+          "reason": "No duplicate bundle identifiers were detected in the source variant used by this installer."
+        },
+        "altstore-pal": {
+          "directSource": "pass",
+          "reason": "No duplicate bundle identifiers were detected in the source variant used by this installer."
+        },
+        "flarestore": {
+          "directSource": "pass",
+          "reason": "No duplicate bundle identifiers were detected in the source variant used by this installer."
+        },
+        "feather": {
+          "directSource": "pass",
+          "reason": "No duplicate bundle identifiers were detected in the source variant used by this installer."
+        }
+      },
+      "preferredVariant": "classic"
     },
     "hackerwebapp": {
       "online": true,
-      "checkedAt": "2026-09-30T12:37:50Z",
+      "checkedAt": "2026-09-30T17:14:13Z",
       "appCount": 1,
       "httpStatus": 200,
-      "iconURL": "https://raw.githubusercontent.com/cheeaun/hackerweb-native-2/main/assets/icon.png",
+      "iconURL": "",
       "error": null,
-      "mixTest": "experimental",
-      "mixReason": "AltStore PAL source is structurally readable, but notarized marketplace apps can require PAL-specific metadata."
+      "variants": {
+        "pal": {
+          "online": true,
+          "httpStatus": 200,
+          "appCount": 1,
+          "error": null,
+          "duplicateBundleIdentifiers": {
+            "count": 0,
+            "duplicateAppEntries": 0,
+            "extraEntries": 0
+          }
+        }
+      },
+      "duplicateBundleIdentifiers": {
+        "count": 0,
+        "duplicateAppEntries": 0,
+        "extraEntries": 0
+      },
+      "installerCompatibility": {
+        "altstore-pal": {
+          "directSource": "pass",
+          "reason": "No duplicate bundle identifiers were detected in the source variant used by this installer."
+        }
+      },
+      "preferredVariant": "pal"
     },
     "courtpredict": {
       "online": true,
-      "checkedAt": "2026-09-30T12:37:50Z",
+      "checkedAt": "2026-09-30T17:14:13Z",
       "appCount": 1,
       "httpStatus": 200,
-      "iconURL": "https://courtpredict-ios.web.app/icons/source.png",
+      "iconURL": "",
       "error": null,
-      "mixTest": "experimental",
-      "mixReason": "AltStore PAL source is structurally readable, but notarized marketplace apps can require PAL-specific metadata."
+      "variants": {
+        "pal": {
+          "online": true,
+          "httpStatus": 200,
+          "appCount": 1,
+          "error": null,
+          "duplicateBundleIdentifiers": {
+            "count": 0,
+            "duplicateAppEntries": 0,
+            "extraEntries": 0
+          }
+        }
+      },
+      "duplicateBundleIdentifiers": {
+        "count": 0,
+        "duplicateAppEntries": 0,
+        "extraEntries": 0
+      },
+      "installerCompatibility": {
+        "altstore-pal": {
+          "directSource": "pass",
+          "reason": "No duplicate bundle identifiers were detected in the source variant used by this installer."
+        }
+      },
+      "preferredVariant": "pal"
     },
     "wayfarer": {
       "online": true,
-      "checkedAt": "2026-09-30T12:37:50Z",
+      "checkedAt": "2026-09-30T17:14:13Z",
       "appCount": 1,
       "httpStatus": 200,
-      "iconURL": "https://stor-cdn.f8d.rocks/wf/icon.png",
+      "iconURL": "",
       "error": null,
-      "mixTest": "pass",
-      "mixReason": "Classic source structure and downloadable app metadata passed the automated Mix test."
+      "variants": {
+        "classic": {
+          "online": true,
+          "httpStatus": 200,
+          "appCount": 1,
+          "error": null,
+          "duplicateBundleIdentifiers": {
+            "count": 0,
+            "duplicateAppEntries": 0,
+            "extraEntries": 0
+          }
+        }
+      },
+      "duplicateBundleIdentifiers": {
+        "count": 0,
+        "duplicateAppEntries": 0,
+        "extraEntries": 0
+      },
+      "installerCompatibility": {
+        "altstore": {
+          "directSource": "pass",
+          "reason": "No duplicate bundle identifiers were detected in the source variant used by this installer."
+        },
+        "sidestore": {
+          "directSource": "pass",
+          "reason": "No duplicate bundle identifiers were detected in the source variant used by this installer."
+        },
+        "livecontainer": {
+          "directSource": "pass",
+          "reason": "No duplicate bundle identifiers were detected in the source variant used by this installer."
+        },
+        "flarestore": {
+          "directSource": "pass",
+          "reason": "No duplicate bundle identifiers were detected in the source variant used by this installer."
+        },
+        "feather": {
+          "directSource": "pass",
+          "reason": "No duplicate bundle identifiers were detected in the source variant used by this installer."
+        }
+      },
+      "preferredVariant": "classic"
     },
     "qbitcontrol": {
       "online": true,
-      "checkedAt": "2026-09-30T12:37:50Z",
+      "checkedAt": "2026-09-30T17:14:13Z",
       "appCount": 1,
       "httpStatus": 200,
-      "iconURL": "https://raw.githubusercontent.com/Michael-128/qBitControl/main/qBitControl/Assets.xcassets/AppIcon.appiconset/logo1.png",
+      "iconURL": "",
       "error": null,
-      "mixTest": "experimental",
-      "mixReason": "AltStore PAL source is structurally readable, but notarized marketplace apps can require PAL-specific metadata."
+      "variants": {
+        "classic": {
+          "online": true,
+          "httpStatus": 200,
+          "appCount": 1,
+          "error": null,
+          "duplicateBundleIdentifiers": {
+            "count": 0,
+            "duplicateAppEntries": 0,
+            "extraEntries": 0
+          }
+        },
+        "pal": {
+          "online": true,
+          "httpStatus": 200,
+          "appCount": 1,
+          "error": null,
+          "duplicateBundleIdentifiers": {
+            "count": 0,
+            "duplicateAppEntries": 0,
+            "extraEntries": 0
+          }
+        }
+      },
+      "duplicateBundleIdentifiers": {
+        "count": 0,
+        "duplicateAppEntries": 0,
+        "extraEntries": 0
+      },
+      "installerCompatibility": {
+        "altstore": {
+          "directSource": "pass",
+          "reason": "No duplicate bundle identifiers were detected in the source variant used by this installer."
+        },
+        "sidestore": {
+          "directSource": "pass",
+          "reason": "No duplicate bundle identifiers were detected in the source variant used by this installer."
+        },
+        "livecontainer": {
+          "directSource": "pass",
+          "reason": "No duplicate bundle identifiers were detected in the source variant used by this installer."
+        },
+        "altstore-pal": {
+          "directSource": "pass",
+          "reason": "No duplicate bundle identifiers were detected in the source variant used by this installer."
+        },
+        "flarestore": {
+          "directSource": "pass",
+          "reason": "No duplicate bundle identifiers were detected in the source variant used by this installer."
+        },
+        "feather": {
+          "directSource": "pass",
+          "reason": "No duplicate bundle identifiers were detected in the source variant used by this installer."
+        }
+      },
+      "preferredVariant": "classic"
     },
     "iphanpy": {
       "online": true,
-      "checkedAt": "2026-09-30T12:37:50Z",
+      "checkedAt": "2026-09-30T17:14:13Z",
       "appCount": 1,
       "httpStatus": 200,
-      "iconURL": "https://i.imgur.com/AAsffEA.png",
+      "iconURL": "",
       "error": null,
-      "mixTest": "experimental",
-      "mixReason": "AltStore PAL source is structurally readable, but notarized marketplace apps can require PAL-specific metadata."
+      "variants": {
+        "pal": {
+          "online": true,
+          "httpStatus": 200,
+          "appCount": 1,
+          "error": null,
+          "duplicateBundleIdentifiers": {
+            "count": 0,
+            "duplicateAppEntries": 0,
+            "extraEntries": 0
+          }
+        }
+      },
+      "duplicateBundleIdentifiers": {
+        "count": 0,
+        "duplicateAppEntries": 0,
+        "extraEntries": 0
+      },
+      "installerCompatibility": {
+        "altstore-pal": {
+          "directSource": "pass",
+          "reason": "No duplicate bundle identifiers were detected in the source variant used by this installer."
+        }
+      },
+      "preferredVariant": "pal"
     },
     "epic-games": {
       "online": true,
-      "checkedAt": "2026-09-30T12:37:50Z",
+      "checkedAt": "2026-09-30T17:14:13Z",
       "appCount": 3,
       "httpStatus": 200,
-      "iconURL": "https://content-download-egs.distro.on.epicgames.com/.well-known/EG-Shield-2023-Black-dual-tone-expanded.png",
+      "iconURL": "",
       "error": null,
-      "mixTest": "experimental",
-      "mixReason": "AltStore PAL source is structurally readable, but notarized marketplace apps can require PAL-specific metadata."
+      "variants": {
+        "pal": {
+          "online": true,
+          "httpStatus": 200,
+          "appCount": 3,
+          "error": null,
+          "duplicateBundleIdentifiers": {
+            "count": 0,
+            "duplicateAppEntries": 0,
+            "extraEntries": 0
+          }
+        }
+      },
+      "duplicateBundleIdentifiers": {
+        "count": 0,
+        "duplicateAppEntries": 0,
+        "extraEntries": 0
+      },
+      "installerCompatibility": {
+        "altstore-pal": {
+          "directSource": "pass",
+          "reason": "No duplicate bundle identifiers were detected in the source variant used by this installer."
+        }
+      },
+      "preferredVariant": "pal"
     },
     "xn1ckuz-sidebox": {
       "online": true,
-      "checkedAt": "2026-09-30T12:37:50Z",
+      "checkedAt": "2026-09-30T17:14:13Z",
       "appCount": 4,
       "httpStatus": 200,
-      "iconURL": "https://avatars.githubusercontent.com/u/74825012?v=4",
+      "iconURL": "",
       "error": null,
-      "mixTest": "pass",
-      "mixReason": "Classic source structure and downloadable app metadata passed the automated Mix test."
+      "variants": {
+        "classic": {
+          "online": true,
+          "httpStatus": 200,
+          "appCount": 4,
+          "error": null,
+          "duplicateBundleIdentifiers": {
+            "count": 0,
+            "duplicateAppEntries": 0,
+            "extraEntries": 0
+          }
+        }
+      },
+      "duplicateBundleIdentifiers": {
+        "count": 0,
+        "duplicateAppEntries": 0,
+        "extraEntries": 0
+      },
+      "installerCompatibility": {
+        "altstore": {
+          "directSource": "pass",
+          "reason": "No duplicate bundle identifiers were detected in the source variant used by this installer."
+        },
+        "sidestore": {
+          "directSource": "pass",
+          "reason": "No duplicate bundle identifiers were detected in the source variant used by this installer."
+        },
+        "livecontainer": {
+          "directSource": "pass",
+          "reason": "No duplicate bundle identifiers were detected in the source variant used by this installer."
+        },
+        "flarestore": {
+          "directSource": "pass",
+          "reason": "No duplicate bundle identifiers were detected in the source variant used by this installer."
+        },
+        "feather": {
+          "directSource": "pass",
+          "reason": "No duplicate bundle identifiers were detected in the source variant used by this installer."
+        }
+      },
+      "preferredVariant": "classic"
     },
     "dvntm0-workshop": {
       "online": true,
-      "checkedAt": "2026-09-30T12:37:50Z",
+      "checkedAt": "2026-09-30T17:14:13Z",
       "appCount": 7,
       "httpStatus": 200,
-      "iconURL": "https://raw.githubusercontent.com/dayanch96/YTLite/refs/heads/main/Resources/icon.png",
+      "iconURL": "",
       "error": null,
-      "mixTest": "pass",
-      "mixReason": "Classic source structure and downloadable app metadata passed the automated Mix test."
+      "variants": {
+        "classic": {
+          "online": true,
+          "httpStatus": 200,
+          "appCount": 7,
+          "error": null,
+          "duplicateBundleIdentifiers": {
+            "count": 0,
+            "duplicateAppEntries": 0,
+            "extraEntries": 0
+          }
+        }
+      },
+      "duplicateBundleIdentifiers": {
+        "count": 0,
+        "duplicateAppEntries": 0,
+        "extraEntries": 0
+      },
+      "installerCompatibility": {
+        "altstore": {
+          "directSource": "pass",
+          "reason": "No duplicate bundle identifiers were detected in the source variant used by this installer."
+        },
+        "sidestore": {
+          "directSource": "pass",
+          "reason": "No duplicate bundle identifiers were detected in the source variant used by this installer."
+        },
+        "livecontainer": {
+          "directSource": "pass",
+          "reason": "No duplicate bundle identifiers were detected in the source variant used by this installer."
+        },
+        "flarestore": {
+          "directSource": "pass",
+          "reason": "No duplicate bundle identifiers were detected in the source variant used by this installer."
+        },
+        "feather": {
+          "directSource": "pass",
+          "reason": "No duplicate bundle identifiers were detected in the source variant used by this installer."
+        }
+      },
+      "preferredVariant": "classic"
     },
     "wuxu-library-plus": {
       "online": true,
-      "checkedAt": "2026-09-30T12:37:50Z",
+      "checkedAt": "2026-09-30T17:14:13Z",
       "appCount": 13,
       "httpStatus": 200,
-      "iconURL": "https://external-content.duckduckgo.com/iu/?u=https://i.imgur.com/g17kMl9.jpeg",
+      "iconURL": "",
       "error": null,
-      "mixTest": "pass",
-      "mixReason": "Classic source structure and downloadable app metadata passed the automated Mix test."
+      "variants": {
+        "classic": {
+          "online": true,
+          "httpStatus": 200,
+          "appCount": 13,
+          "error": null,
+          "duplicateBundleIdentifiers": {
+            "count": 0,
+            "duplicateAppEntries": 0,
+            "extraEntries": 0
+          }
+        }
+      },
+      "duplicateBundleIdentifiers": {
+        "count": 0,
+        "duplicateAppEntries": 0,
+        "extraEntries": 0
+      },
+      "installerCompatibility": {
+        "altstore": {
+          "directSource": "pass",
+          "reason": "No duplicate bundle identifiers were detected in the source variant used by this installer."
+        },
+        "sidestore": {
+          "directSource": "pass",
+          "reason": "No duplicate bundle identifiers were detected in the source variant used by this installer."
+        },
+        "livecontainer": {
+          "directSource": "pass",
+          "reason": "No duplicate bundle identifiers were detected in the source variant used by this installer."
+        },
+        "flarestore": {
+          "directSource": "pass",
+          "reason": "No duplicate bundle identifiers were detected in the source variant used by this installer."
+        },
+        "feather": {
+          "directSource": "pass",
+          "reason": "No duplicate bundle identifiers were detected in the source variant used by this installer."
+        }
+      },
+      "preferredVariant": "classic"
     },
     "baretsky-tweaked": {
       "online": true,
-      "checkedAt": "2026-09-30T12:37:50Z",
+      "checkedAt": "2026-09-30T17:14:13Z",
       "appCount": 7,
       "httpStatus": 200,
-      "iconURL": "https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png",
+      "iconURL": "",
       "error": null,
-      "mixTest": "pass",
-      "mixReason": "Classic source structure and downloadable app metadata passed the automated Mix test."
+      "variants": {
+        "classic": {
+          "online": true,
+          "httpStatus": 200,
+          "appCount": 7,
+          "error": null,
+          "duplicateBundleIdentifiers": {
+            "count": 0,
+            "duplicateAppEntries": 0,
+            "extraEntries": 0
+          }
+        }
+      },
+      "duplicateBundleIdentifiers": {
+        "count": 0,
+        "duplicateAppEntries": 0,
+        "extraEntries": 0
+      },
+      "installerCompatibility": {
+        "altstore": {
+          "directSource": "pass",
+          "reason": "No duplicate bundle identifiers were detected in the source variant used by this installer."
+        },
+        "sidestore": {
+          "directSource": "pass",
+          "reason": "No duplicate bundle identifiers were detected in the source variant used by this installer."
+        },
+        "livecontainer": {
+          "directSource": "pass",
+          "reason": "No duplicate bundle identifiers were detected in the source variant used by this installer."
+        },
+        "flarestore": {
+          "directSource": "pass",
+          "reason": "No duplicate bundle identifiers were detected in the source variant used by this installer."
+        },
+        "feather": {
+          "directSource": "pass",
+          "reason": "No duplicate bundle identifiers were detected in the source variant used by this installer."
+        }
+      },
+      "preferredVariant": "classic"
     },
     "driftywinds": {
       "online": true,
-      "checkedAt": "2026-09-30T12:37:50Z",
+      "checkedAt": "2026-09-30T17:14:13Z",
       "appCount": 10,
       "httpStatus": 200,
-      "iconURL": "https://i.postimg.cc/Kcdr62dc/dp-rounded.png",
+      "iconURL": "",
       "error": null,
-      "mixTest": "pass",
-      "mixReason": "Classic source structure and downloadable app metadata passed the automated Mix test."
+      "variants": {
+        "classic": {
+          "online": true,
+          "httpStatus": 200,
+          "appCount": 10,
+          "error": null,
+          "duplicateBundleIdentifiers": {
+            "count": 0,
+            "duplicateAppEntries": 0,
+            "extraEntries": 0
+          }
+        }
+      },
+      "duplicateBundleIdentifiers": {
+        "count": 0,
+        "duplicateAppEntries": 0,
+        "extraEntries": 0
+      },
+      "installerCompatibility": {
+        "altstore": {
+          "directSource": "pass",
+          "reason": "No duplicate bundle identifiers were detected in the source variant used by this installer."
+        },
+        "sidestore": {
+          "directSource": "pass",
+          "reason": "No duplicate bundle identifiers were detected in the source variant used by this installer."
+        },
+        "livecontainer": {
+          "directSource": "pass",
+          "reason": "No duplicate bundle identifiers were detected in the source variant used by this installer."
+        },
+        "flarestore": {
+          "directSource": "pass",
+          "reason": "No duplicate bundle identifiers were detected in the source variant used by this installer."
+        },
+        "feather": {
+          "directSource": "pass",
+          "reason": "No duplicate bundle identifiers were detected in the source variant used by this installer."
+        }
+      },
+      "preferredVariant": "classic"
     },
     "ipa-vault": {
       "online": true,
-      "checkedAt": "2026-09-30T12:37:50Z",
+      "checkedAt": "2026-09-30T17:14:13Z",
       "appCount": 63,
       "httpStatus": 200,
-      "iconURL": "https://pub-dd800571175348b6a2745b3396360028.r2.dev/ipavault-altstore-repo-logo.png",
+      "iconURL": "",
       "error": null,
-      "mixTest": "pass",
-      "mixReason": "Classic source structure and downloadable app metadata passed the automated Mix test."
+      "variants": {
+        "classic": {
+          "online": true,
+          "httpStatus": 200,
+          "appCount": 63,
+          "error": null,
+          "duplicateBundleIdentifiers": {
+            "count": 0,
+            "duplicateAppEntries": 0,
+            "extraEntries": 0
+          }
+        }
+      },
+      "duplicateBundleIdentifiers": {
+        "count": 0,
+        "duplicateAppEntries": 0,
+        "extraEntries": 0
+      },
+      "installerCompatibility": {
+        "altstore": {
+          "directSource": "pass",
+          "reason": "No duplicate bundle identifiers were detected in the source variant used by this installer."
+        },
+        "sidestore": {
+          "directSource": "pass",
+          "reason": "No duplicate bundle identifiers were detected in the source variant used by this installer."
+        },
+        "livecontainer": {
+          "directSource": "pass",
+          "reason": "No duplicate bundle identifiers were detected in the source variant used by this installer."
+        },
+        "flarestore": {
+          "directSource": "pass",
+          "reason": "No duplicate bundle identifiers were detected in the source variant used by this installer."
+        },
+        "feather": {
+          "directSource": "pass",
+          "reason": "No duplicate bundle identifiers were detected in the source variant used by this installer."
+        }
+      },
+      "preferredVariant": "classic"
     },
     "sideloadlabs": {
       "online": true,
-      "checkedAt": "2026-09-30T12:37:50Z",
+      "checkedAt": "2026-09-30T17:14:13Z",
       "appCount": 4,
       "httpStatus": 200,
-      "iconURL": "https://avatars.githubusercontent.com/u/312393257?s=96&v=4",
+      "iconURL": "",
       "error": null,
-      "mixTest": "pass",
-      "mixReason": "Classic source structure and downloadable app metadata passed the automated Mix test."
+      "variants": {
+        "classic": {
+          "online": true,
+          "httpStatus": 200,
+          "appCount": 4,
+          "error": null,
+          "duplicateBundleIdentifiers": {
+            "count": 0,
+            "duplicateAppEntries": 0,
+            "extraEntries": 0
+          }
+        }
+      },
+      "duplicateBundleIdentifiers": {
+        "count": 0,
+        "duplicateAppEntries": 0,
+        "extraEntries": 0
+      },
+      "installerCompatibility": {
+        "altstore": {
+          "directSource": "pass",
+          "reason": "No duplicate bundle identifiers were detected in the source variant used by this installer."
+        },
+        "sidestore": {
+          "directSource": "pass",
+          "reason": "No duplicate bundle identifiers were detected in the source variant used by this installer."
+        },
+        "livecontainer": {
+          "directSource": "pass",
+          "reason": "No duplicate bundle identifiers were detected in the source variant used by this installer."
+        },
+        "flarestore": {
+          "directSource": "pass",
+          "reason": "No duplicate bundle identifiers were detected in the source variant used by this installer."
+        },
+        "feather": {
+          "directSource": "pass",
+          "reason": "No duplicate bundle identifiers were detected in the source variant used by this installer."
+        }
+      },
+      "preferredVariant": "classic"
     },
     "ytliteplus": {
       "online": true,
-      "checkedAt": "2026-09-30T12:37:50Z",
+      "checkedAt": "2026-09-30T17:14:13Z",
       "appCount": 1,
       "httpStatus": 200,
-      "iconURL": "https://raw.githubusercontent.com/YTLitePlus/YTLitePlus-Altstore/main/Youtube_logo-512.png",
+      "iconURL": "",
       "error": null,
-      "mixTest": "pass",
-      "mixReason": "Classic source structure and downloadable app metadata passed the automated Mix test."
+      "variants": {
+        "classic": {
+          "online": true,
+          "httpStatus": 200,
+          "appCount": 1,
+          "error": null,
+          "duplicateBundleIdentifiers": {
+            "count": 0,
+            "duplicateAppEntries": 0,
+            "extraEntries": 0
+          }
+        }
+      },
+      "duplicateBundleIdentifiers": {
+        "count": 0,
+        "duplicateAppEntries": 0,
+        "extraEntries": 0
+      },
+      "installerCompatibility": {
+        "altstore": {
+          "directSource": "pass",
+          "reason": "No duplicate bundle identifiers were detected in the source variant used by this installer."
+        },
+        "sidestore": {
+          "directSource": "pass",
+          "reason": "No duplicate bundle identifiers were detected in the source variant used by this installer."
+        },
+        "livecontainer": {
+          "directSource": "pass",
+          "reason": "No duplicate bundle identifiers were detected in the source variant used by this installer."
+        },
+        "flarestore": {
+          "directSource": "pass",
+          "reason": "No duplicate bundle identifiers were detected in the source variant used by this installer."
+        },
+        "feather": {
+          "directSource": "pass",
+          "reason": "No duplicate bundle identifiers were detected in the source variant used by this installer."
+        }
+      },
+      "preferredVariant": "classic"
     },
     "moe-altstore": {
       "online": true,
-      "checkedAt": "2026-09-30T12:37:50Z",
+      "checkedAt": "2026-09-30T17:14:13Z",
       "appCount": 34,
       "httpStatus": 200,
-      "iconURL": "https://raw.githubusercontent.com/MountainofPenguin/moe-altstore/main/icons/moe_icon.png",
+      "iconURL": "",
       "error": null,
-      "mixTest": "experimental",
-      "mixReason": "26 app entries share a bundle identifier; a Mix would collapse variants to one app."
+      "variants": {
+        "classic": {
+          "online": true,
+          "httpStatus": 200,
+          "appCount": 34,
+          "error": null,
+          "duplicateBundleIdentifiers": {
+            "count": 4,
+            "duplicateAppEntries": 30,
+            "extraEntries": 26
+          }
+        }
+      },
+      "duplicateBundleIdentifiers": {
+        "count": 4,
+        "duplicateAppEntries": 30,
+        "extraEntries": 26
+      },
+      "installerCompatibility": {
+        "altstore": {
+          "directSource": "fail",
+          "reason": "4 bundle identifiers occur more than once; altstore requires unique apps when adding the original source."
+        },
+        "sidestore": {
+          "directSource": "fail",
+          "reason": "4 bundle identifiers occur more than once; sidestore requires unique apps when adding the original source."
+        },
+        "livecontainer": {
+          "directSource": "pass",
+          "installVariants": "try",
+          "reason": "4 duplicate bundle identifiers are present. The source parser can keep separate entries, but installing multiple variants with the same bundle identifier can still conflict."
+        },
+        "flarestore": {
+          "directSource": "try",
+          "reason": "4 duplicate bundle identifiers are present; direct-source behavior is not verified for this installer."
+        },
+        "feather": {
+          "directSource": "pass",
+          "installVariants": "try",
+          "reason": "4 duplicate bundle identifiers are present. The source parser can keep separate entries, but installing multiple variants with the same bundle identifier can still conflict."
+        }
+      },
+      "preferredVariant": "classic"
     },
     "youmod-repo": {
       "online": true,
-      "checkedAt": "2026-09-30T12:37:50Z",
+      "checkedAt": "2026-09-30T17:14:13Z",
       "appCount": 1,
       "httpStatus": 200,
-      "iconURL": "https://raw.githubusercontent.com/MountainofPenguin/Altstore-Repository/main/assets/IMG_2642.png",
+      "iconURL": "",
       "error": null,
-      "mixTest": "pass",
-      "mixReason": "Classic source structure and downloadable app metadata passed the automated Mix test."
+      "variants": {
+        "classic": {
+          "online": true,
+          "httpStatus": 200,
+          "appCount": 1,
+          "error": null,
+          "duplicateBundleIdentifiers": {
+            "count": 0,
+            "duplicateAppEntries": 0,
+            "extraEntries": 0
+          }
+        }
+      },
+      "duplicateBundleIdentifiers": {
+        "count": 0,
+        "duplicateAppEntries": 0,
+        "extraEntries": 0
+      },
+      "installerCompatibility": {
+        "altstore": {
+          "directSource": "pass",
+          "reason": "No duplicate bundle identifiers were detected in the source variant used by this installer."
+        },
+        "sidestore": {
+          "directSource": "pass",
+          "reason": "No duplicate bundle identifiers were detected in the source variant used by this installer."
+        },
+        "livecontainer": {
+          "directSource": "pass",
+          "reason": "No duplicate bundle identifiers were detected in the source variant used by this installer."
+        },
+        "flarestore": {
+          "directSource": "pass",
+          "reason": "No duplicate bundle identifiers were detected in the source variant used by this installer."
+        },
+        "feather": {
+          "directSource": "pass",
+          "reason": "No duplicate bundle identifiers were detected in the source variant used by this installer."
+        }
+      },
+      "preferredVariant": "classic"
     },
     "youproextra": {
       "online": true,
-      "checkedAt": "2026-09-30T12:37:50Z",
+      "checkedAt": "2026-09-30T17:14:13Z",
       "appCount": 5,
       "httpStatus": 200,
-      "iconURL": "https://raw.githubusercontent.com/mrdrvt99/Altstore-Repository/main/assets/YouTube.png",
+      "iconURL": "",
       "error": null,
-      "mixTest": "experimental",
-      "mixReason": "4 app entries share a bundle identifier; a Mix would collapse variants to one app."
+      "variants": {
+        "classic": {
+          "online": true,
+          "httpStatus": 200,
+          "appCount": 5,
+          "error": null,
+          "duplicateBundleIdentifiers": {
+            "count": 1,
+            "duplicateAppEntries": 5,
+            "extraEntries": 4
+          }
+        }
+      },
+      "duplicateBundleIdentifiers": {
+        "count": 1,
+        "duplicateAppEntries": 5,
+        "extraEntries": 4
+      },
+      "installerCompatibility": {
+        "altstore": {
+          "directSource": "fail",
+          "reason": "1 bundle identifiers occur more than once; altstore requires unique apps when adding the original source."
+        },
+        "sidestore": {
+          "directSource": "fail",
+          "reason": "1 bundle identifiers occur more than once; sidestore requires unique apps when adding the original source."
+        },
+        "livecontainer": {
+          "directSource": "pass",
+          "installVariants": "try",
+          "reason": "1 duplicate bundle identifiers are present. The source parser can keep separate entries, but installing multiple variants with the same bundle identifier can still conflict."
+        },
+        "flarestore": {
+          "directSource": "try",
+          "reason": "1 duplicate bundle identifiers are present; direct-source behavior is not verified for this installer."
+        },
+        "feather": {
+          "directSource": "pass",
+          "installVariants": "try",
+          "reason": "1 duplicate bundle identifiers are present. The source parser can keep separate entries, but installing multiple variants with the same bundle identifier can still conflict."
+        }
+      },
+      "preferredVariant": "classic"
     },
     "owo-source": {
       "online": true,
-      "checkedAt": "2026-09-30T12:37:50Z",
+      "checkedAt": "2026-09-30T17:14:13Z",
       "appCount": 155,
       "httpStatus": 200,
-      "iconURL": "https://raw.githubusercontent.com/OwO-Network/Repo/main/icons/owo.repo.icon.png",
+      "iconURL": "",
       "error": null,
-      "mixTest": "experimental",
-      "mixReason": "128 app entries share a bundle identifier; a Mix would collapse variants to one app."
+      "variants": {
+        "classic": {
+          "online": true,
+          "httpStatus": 200,
+          "appCount": 155,
+          "error": null,
+          "duplicateBundleIdentifiers": {
+            "count": 13,
+            "duplicateAppEntries": 141,
+            "extraEntries": 128
+          }
+        }
+      },
+      "duplicateBundleIdentifiers": {
+        "count": 13,
+        "duplicateAppEntries": 141,
+        "extraEntries": 128
+      },
+      "installerCompatibility": {
+        "altstore": {
+          "directSource": "fail",
+          "reason": "13 bundle identifiers occur more than once; altstore requires unique apps when adding the original source."
+        },
+        "sidestore": {
+          "directSource": "fail",
+          "reason": "13 bundle identifiers occur more than once; sidestore requires unique apps when adding the original source."
+        },
+        "livecontainer": {
+          "directSource": "pass",
+          "installVariants": "try",
+          "reason": "13 duplicate bundle identifiers are present. The source parser can keep separate entries, but installing multiple variants with the same bundle identifier can still conflict."
+        },
+        "flarestore": {
+          "directSource": "try",
+          "reason": "13 duplicate bundle identifiers are present; direct-source behavior is not verified for this installer."
+        },
+        "feather": {
+          "directSource": "pass",
+          "installVariants": "try",
+          "reason": "13 duplicate bundle identifiers are present. The source parser can keep separate entries, but installing multiple variants with the same bundle identifier can still conflict."
+        }
+      },
+      "preferredVariant": "classic"
     },
     "cypwn-ipa": {
       "online": true,
-      "checkedAt": "2026-09-30T12:37:50Z",
-      "appCount": 209,
+      "checkedAt": "2026-09-30T17:14:13Z",
+      "appCount": 210,
       "httpStatus": 200,
-      "iconURL": "https://repo.cypwn.xyz/assets/images/cypwn_small.png",
+      "iconURL": "",
       "error": null,
-      "mixTest": "experimental",
-      "mixReason": "29 app entries share a bundle identifier; a Mix would collapse variants to one app."
+      "variants": {
+        "classic": {
+          "online": true,
+          "httpStatus": 200,
+          "appCount": 210,
+          "error": null,
+          "duplicateBundleIdentifiers": {
+            "count": 15,
+            "duplicateAppEntries": 45,
+            "extraEntries": 30
+          }
+        }
+      },
+      "duplicateBundleIdentifiers": {
+        "count": 15,
+        "duplicateAppEntries": 45,
+        "extraEntries": 30
+      },
+      "installerCompatibility": {
+        "altstore": {
+          "directSource": "fail",
+          "reason": "15 bundle identifiers occur more than once; altstore requires unique apps when adding the original source."
+        },
+        "sidestore": {
+          "directSource": "fail",
+          "reason": "15 bundle identifiers occur more than once; sidestore requires unique apps when adding the original source."
+        },
+        "livecontainer": {
+          "directSource": "pass",
+          "installVariants": "try",
+          "reason": "15 duplicate bundle identifiers are present. The source parser can keep separate entries, but installing multiple variants with the same bundle identifier can still conflict."
+        },
+        "flarestore": {
+          "directSource": "try",
+          "reason": "15 duplicate bundle identifiers are present; direct-source behavior is not verified for this installer."
+        },
+        "feather": {
+          "directSource": "pass",
+          "installVariants": "try",
+          "reason": "15 duplicate bundle identifiers are present. The source parser can keep separate entries, but installing multiple variants with the same bundle identifier can still conflict."
+        }
+      },
+      "preferredVariant": "classic"
     },
     "apptesters": {
       "online": true,
-      "checkedAt": "2026-09-30T12:37:50Z",
-      "appCount": 9412,
+      "checkedAt": "2026-09-30T17:14:13Z",
+      "appCount": 9418,
       "httpStatus": 200,
-      "iconURL": "https://apptesters.org/apptesters-512x512.png",
+      "iconURL": "",
       "error": null,
-      "mixTest": "experimental",
-      "mixReason": "8627 app entries share a bundle identifier; a Mix would collapse variants to one app."
+      "variants": {
+        "classic": {
+          "online": true,
+          "httpStatus": 200,
+          "appCount": 9418,
+          "error": null,
+          "duplicateBundleIdentifiers": {
+            "count": 551,
+            "duplicateAppEntries": 9184,
+            "extraEntries": 8633
+          }
+        }
+      },
+      "duplicateBundleIdentifiers": {
+        "count": 551,
+        "duplicateAppEntries": 9184,
+        "extraEntries": 8633
+      },
+      "installerCompatibility": {
+        "altstore": {
+          "directSource": "fail",
+          "reason": "551 bundle identifiers occur more than once; altstore requires unique apps when adding the original source."
+        },
+        "sidestore": {
+          "directSource": "fail",
+          "reason": "551 bundle identifiers occur more than once; sidestore requires unique apps when adding the original source."
+        },
+        "livecontainer": {
+          "directSource": "pass",
+          "installVariants": "try",
+          "reason": "551 duplicate bundle identifiers are present. The source parser can keep separate entries, but installing multiple variants with the same bundle identifier can still conflict."
+        },
+        "flarestore": {
+          "directSource": "try",
+          "reason": "551 duplicate bundle identifiers are present; direct-source behavior is not verified for this installer."
+        },
+        "feather": {
+          "directSource": "pass",
+          "installVariants": "try",
+          "reason": "551 duplicate bundle identifiers are present. The source parser can keep separate entries, but installing multiple variants with the same bundle identifier can still conflict."
+        }
+      },
+      "preferredVariant": "classic"
     },
     "youtuberebornplus": {
       "online": true,
-      "checkedAt": "2026-09-30T12:37:50Z",
+      "checkedAt": "2026-09-30T17:14:13Z",
       "appCount": 1,
       "httpStatus": 200,
-      "iconURL": "https://raw.githubusercontent.com/arichornlover/YouTube-Reborn-v5/main/layout/Library/Application%20Support/YouTubeReborn.bundle/ytrebornbuttonblack.png",
+      "iconURL": "",
       "error": null,
-      "mixTest": "pass",
-      "mixReason": "Classic source structure and downloadable app metadata passed the automated Mix test."
+      "variants": {
+        "classic": {
+          "online": true,
+          "httpStatus": 200,
+          "appCount": 1,
+          "error": null,
+          "duplicateBundleIdentifiers": {
+            "count": 0,
+            "duplicateAppEntries": 0,
+            "extraEntries": 0
+          }
+        }
+      },
+      "duplicateBundleIdentifiers": {
+        "count": 0,
+        "duplicateAppEntries": 0,
+        "extraEntries": 0
+      },
+      "installerCompatibility": {
+        "altstore": {
+          "directSource": "pass",
+          "reason": "No duplicate bundle identifiers were detected in the source variant used by this installer."
+        },
+        "sidestore": {
+          "directSource": "pass",
+          "reason": "No duplicate bundle identifiers were detected in the source variant used by this installer."
+        },
+        "livecontainer": {
+          "directSource": "pass",
+          "reason": "No duplicate bundle identifiers were detected in the source variant used by this installer."
+        },
+        "flarestore": {
+          "directSource": "pass",
+          "reason": "No duplicate bundle identifiers were detected in the source variant used by this installer."
+        },
+        "feather": {
+          "directSource": "pass",
+          "reason": "No duplicate bundle identifiers were detected in the source variant used by this installer."
+        }
+      },
+      "preferredVariant": "classic"
     },
     "apollo-reddit": {
       "online": true,
-      "checkedAt": "2026-09-30T12:37:50Z",
+      "checkedAt": "2026-09-30T17:14:13Z",
       "appCount": 1,
       "httpStatus": 200,
-      "iconURL": "https://raw.githubusercontent.com/Balackburn/Apollo/main/public/images/image_0.webp",
+      "iconURL": "",
       "error": null,
-      "mixTest": "pass",
-      "mixReason": "Classic source structure and downloadable app metadata passed the automated Mix test."
+      "variants": {
+        "classic": {
+          "online": true,
+          "httpStatus": 200,
+          "appCount": 1,
+          "error": null,
+          "duplicateBundleIdentifiers": {
+            "count": 0,
+            "duplicateAppEntries": 0,
+            "extraEntries": 0
+          }
+        }
+      },
+      "duplicateBundleIdentifiers": {
+        "count": 0,
+        "duplicateAppEntries": 0,
+        "extraEntries": 0
+      },
+      "installerCompatibility": {
+        "altstore": {
+          "directSource": "pass",
+          "reason": "No duplicate bundle identifiers were detected in the source variant used by this installer."
+        },
+        "sidestore": {
+          "directSource": "pass",
+          "reason": "No duplicate bundle identifiers were detected in the source variant used by this installer."
+        },
+        "livecontainer": {
+          "directSource": "pass",
+          "reason": "No duplicate bundle identifiers were detected in the source variant used by this installer."
+        },
+        "flarestore": {
+          "directSource": "pass",
+          "reason": "No duplicate bundle identifiers were detected in the source variant used by this installer."
+        },
+        "feather": {
+          "directSource": "pass",
+          "reason": "No duplicate bundle identifiers were detected in the source variant used by this installer."
+        }
+      },
+      "preferredVariant": "classic"
     },
     "discord-appstore-builds": {
       "online": true,
-      "checkedAt": "2026-09-30T12:37:50Z",
+      "checkedAt": "2026-09-30T17:14:13Z",
       "appCount": 1,
       "httpStatus": 200,
-      "iconURL": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/7c/c1/d5/7cc1d552-fca9-bc19-a585-28644c009f4b/AppIcon-0-0-1x_U007epad-0-1-0-sRGB-85-220.png/512x512bb.jpg",
+      "iconURL": "",
       "error": null,
-      "mixTest": "pass",
-      "mixReason": "Classic source structure and downloadable app metadata passed the automated Mix test."
+      "variants": {
+        "classic": {
+          "online": true,
+          "httpStatus": 200,
+          "appCount": 1,
+          "error": null,
+          "duplicateBundleIdentifiers": {
+            "count": 0,
+            "duplicateAppEntries": 0,
+            "extraEntries": 0
+          }
+        }
+      },
+      "duplicateBundleIdentifiers": {
+        "count": 0,
+        "duplicateAppEntries": 0,
+        "extraEntries": 0
+      },
+      "installerCompatibility": {
+        "altstore": {
+          "directSource": "pass",
+          "reason": "No duplicate bundle identifiers were detected in the source variant used by this installer."
+        },
+        "sidestore": {
+          "directSource": "pass",
+          "reason": "No duplicate bundle identifiers were detected in the source variant used by this installer."
+        },
+        "livecontainer": {
+          "directSource": "pass",
+          "reason": "No duplicate bundle identifiers were detected in the source variant used by this installer."
+        },
+        "flarestore": {
+          "directSource": "pass",
+          "reason": "No duplicate bundle identifiers were detected in the source variant used by this installer."
+        },
+        "feather": {
+          "directSource": "pass",
+          "reason": "No duplicate bundle identifiers were detected in the source variant used by this installer."
+        }
+      },
+      "preferredVariant": "classic"
     },
     "ytkace": {
       "online": true,
-      "checkedAt": "2026-09-30T12:37:50Z",
+      "checkedAt": "2026-09-30T17:14:13Z",
       "appCount": 1,
       "httpStatus": 200,
-      "iconURL": "https://img.lightshot.app/8gRG1MrsTPO7ZiwX_JfmbA.jpeg",
+      "iconURL": "",
       "error": null,
-      "mixTest": "pass",
-      "mixReason": "Classic source structure and downloadable app metadata passed the automated Mix test."
+      "variants": {
+        "classic": {
+          "online": true,
+          "httpStatus": 200,
+          "appCount": 1,
+          "error": null,
+          "duplicateBundleIdentifiers": {
+            "count": 0,
+            "duplicateAppEntries": 0,
+            "extraEntries": 0
+          }
+        }
+      },
+      "duplicateBundleIdentifiers": {
+        "count": 0,
+        "duplicateAppEntries": 0,
+        "extraEntries": 0
+      },
+      "installerCompatibility": {
+        "altstore": {
+          "directSource": "pass",
+          "reason": "No duplicate bundle identifiers were detected in the source variant used by this installer."
+        },
+        "sidestore": {
+          "directSource": "pass",
+          "reason": "No duplicate bundle identifiers were detected in the source variant used by this installer."
+        },
+        "livecontainer": {
+          "directSource": "pass",
+          "reason": "No duplicate bundle identifiers were detected in the source variant used by this installer."
+        },
+        "flarestore": {
+          "directSource": "pass",
+          "reason": "No duplicate bundle identifiers were detected in the source variant used by this installer."
+        },
+        "feather": {
+          "directSource": "pass",
+          "reason": "No duplicate bundle identifiers were detected in the source variant used by this installer."
+        }
+      },
+      "preferredVariant": "classic"
     },
     "heyfordy": {
       "online": true,
-      "checkedAt": "2026-09-30T12:37:50Z",
+      "checkedAt": "2026-09-30T17:14:13Z",
       "appCount": 8,
       "httpStatus": 200,
-      "iconURL": "https://repo.heyfordy.dev/assets/repo.png",
+      "iconURL": "",
       "error": null,
-      "mixTest": "pass",
-      "mixReason": "Classic source structure and downloadable app metadata passed the automated Mix test."
+      "variants": {
+        "classic": {
+          "online": true,
+          "httpStatus": 200,
+          "appCount": 8,
+          "error": null,
+          "duplicateBundleIdentifiers": {
+            "count": 0,
+            "duplicateAppEntries": 0,
+            "extraEntries": 0
+          }
+        }
+      },
+      "duplicateBundleIdentifiers": {
+        "count": 0,
+        "duplicateAppEntries": 0,
+        "extraEntries": 0
+      },
+      "installerCompatibility": {
+        "altstore": {
+          "directSource": "pass",
+          "reason": "No duplicate bundle identifiers were detected in the source variant used by this installer."
+        },
+        "sidestore": {
+          "directSource": "pass",
+          "reason": "No duplicate bundle identifiers were detected in the source variant used by this installer."
+        },
+        "livecontainer": {
+          "directSource": "pass",
+          "reason": "No duplicate bundle identifiers were detected in the source variant used by this installer."
+        },
+        "flarestore": {
+          "directSource": "pass",
+          "reason": "No duplicate bundle identifiers were detected in the source variant used by this installer."
+        },
+        "feather": {
+          "directSource": "pass",
+          "reason": "No duplicate bundle identifiers were detected in the source variant used by this installer."
+        }
+      },
+      "preferredVariant": "classic"
     },
     "ipalibrary": {
       "online": true,
-      "checkedAt": "2026-09-30T12:37:50Z",
+      "checkedAt": "2026-09-30T17:14:13Z",
       "appCount": 834,
       "httpStatus": 200,
-      "iconURL": "https://ipalibrary.me/favicon.ico",
+      "iconURL": "",
       "error": null,
-      "mixTest": "experimental",
-      "mixReason": "6 app entries share a bundle identifier; a Mix would collapse variants to one app."
+      "variants": {
+        "classic": {
+          "online": true,
+          "httpStatus": 200,
+          "appCount": 834,
+          "error": null,
+          "duplicateBundleIdentifiers": {
+            "count": 6,
+            "duplicateAppEntries": 12,
+            "extraEntries": 6
+          }
+        }
+      },
+      "duplicateBundleIdentifiers": {
+        "count": 6,
+        "duplicateAppEntries": 12,
+        "extraEntries": 6
+      },
+      "installerCompatibility": {
+        "altstore": {
+          "directSource": "fail",
+          "reason": "6 bundle identifiers occur more than once; altstore requires unique apps when adding the original source."
+        },
+        "sidestore": {
+          "directSource": "fail",
+          "reason": "6 bundle identifiers occur more than once; sidestore requires unique apps when adding the original source."
+        },
+        "livecontainer": {
+          "directSource": "pass",
+          "installVariants": "try",
+          "reason": "6 duplicate bundle identifiers are present. The source parser can keep separate entries, but installing multiple variants with the same bundle identifier can still conflict."
+        },
+        "flarestore": {
+          "directSource": "try",
+          "reason": "6 duplicate bundle identifiers are present; direct-source behavior is not verified for this installer."
+        },
+        "feather": {
+          "directSource": "pass",
+          "installVariants": "try",
+          "reason": "6 duplicate bundle identifiers are present. The source parser can keep separate entries, but installing multiple variants with the same bundle identifier can still conflict."
+        }
+      },
+      "preferredVariant": "classic"
     },
     "armsx2": {
       "online": true,
-      "checkedAt": "2026-09-30T12:37:50Z",
+      "checkedAt": "2026-09-30T17:14:13Z",
       "appCount": 2,
       "httpStatus": 200,
-      "iconURL": "https://ios.armsx2.net/assets/icon.png?v=d83ffc2a",
+      "iconURL": "",
       "error": null,
-      "mixTest": "pass",
-      "mixReason": "Classic source structure and downloadable app metadata passed the automated Mix test."
+      "variants": {
+        "classic": {
+          "online": true,
+          "httpStatus": 200,
+          "appCount": 2,
+          "error": null,
+          "duplicateBundleIdentifiers": {
+            "count": 0,
+            "duplicateAppEntries": 0,
+            "extraEntries": 0
+          }
+        }
+      },
+      "duplicateBundleIdentifiers": {
+        "count": 0,
+        "duplicateAppEntries": 0,
+        "extraEntries": 0
+      },
+      "installerCompatibility": {
+        "altstore": {
+          "directSource": "pass",
+          "reason": "No duplicate bundle identifiers were detected in the source variant used by this installer."
+        },
+        "sidestore": {
+          "directSource": "pass",
+          "reason": "No duplicate bundle identifiers were detected in the source variant used by this installer."
+        },
+        "livecontainer": {
+          "directSource": "pass",
+          "reason": "No duplicate bundle identifiers were detected in the source variant used by this installer."
+        },
+        "flarestore": {
+          "directSource": "pass",
+          "reason": "No duplicate bundle identifiers were detected in the source variant used by this installer."
+        },
+        "feather": {
+          "directSource": "pass",
+          "reason": "No duplicate bundle identifiers were detected in the source variant used by this installer."
+        }
+      },
+      "preferredVariant": "classic"
     },
     "fouad-source": {
       "online": true,
-      "checkedAt": "2026-09-30T12:37:50Z",
+      "checkedAt": "2026-09-30T17:14:13Z",
       "appCount": 6,
       "httpStatus": 200,
-      "iconURL": "https://raw.githubusercontent.com/FouadRaheb/Watusi-for-WhatsApp/master/altstore/icon.png",
+      "iconURL": "",
       "error": null,
-      "mixTest": "pass",
-      "mixReason": "Classic source structure and downloadable app metadata passed the automated Mix test."
+      "variants": {
+        "classic": {
+          "online": true,
+          "httpStatus": 200,
+          "appCount": 6,
+          "error": null,
+          "duplicateBundleIdentifiers": {
+            "count": 0,
+            "duplicateAppEntries": 0,
+            "extraEntries": 0
+          }
+        }
+      },
+      "duplicateBundleIdentifiers": {
+        "count": 0,
+        "duplicateAppEntries": 0,
+        "extraEntries": 0
+      },
+      "installerCompatibility": {
+        "altstore": {
+          "directSource": "pass",
+          "reason": "No duplicate bundle identifiers were detected in the source variant used by this installer."
+        },
+        "sidestore": {
+          "directSource": "pass",
+          "reason": "No duplicate bundle identifiers were detected in the source variant used by this installer."
+        },
+        "livecontainer": {
+          "directSource": "pass",
+          "reason": "No duplicate bundle identifiers were detected in the source variant used by this installer."
+        },
+        "flarestore": {
+          "directSource": "pass",
+          "reason": "No duplicate bundle identifiers were detected in the source variant used by this installer."
+        },
+        "feather": {
+          "directSource": "pass",
+          "reason": "No duplicate bundle identifiers were detected in the source variant used by this installer."
+        }
+      },
+      "preferredVariant": "classic"
     },
     "neofreebird": {
       "online": true,
-      "checkedAt": "2026-09-30T12:37:50Z",
+      "checkedAt": "2026-09-30T17:14:13Z",
       "appCount": 1,
       "httpStatus": 200,
-      "iconURL": "https://raw.githubusercontent.com/orionblur/NeoFreeBird/v6/icon_rounded.png",
+      "iconURL": "",
       "error": null,
-      "mixTest": "pass",
-      "mixReason": "Classic source structure and downloadable app metadata passed the automated Mix test."
+      "variants": {
+        "classic": {
+          "online": true,
+          "httpStatus": 200,
+          "appCount": 1,
+          "error": null,
+          "duplicateBundleIdentifiers": {
+            "count": 0,
+            "duplicateAppEntries": 0,
+            "extraEntries": 0
+          }
+        }
+      },
+      "duplicateBundleIdentifiers": {
+        "count": 0,
+        "duplicateAppEntries": 0,
+        "extraEntries": 0
+      },
+      "installerCompatibility": {
+        "altstore": {
+          "directSource": "pass",
+          "reason": "No duplicate bundle identifiers were detected in the source variant used by this installer."
+        },
+        "sidestore": {
+          "directSource": "pass",
+          "reason": "No duplicate bundle identifiers were detected in the source variant used by this installer."
+        },
+        "livecontainer": {
+          "directSource": "pass",
+          "reason": "No duplicate bundle identifiers were detected in the source variant used by this installer."
+        },
+        "flarestore": {
+          "directSource": "pass",
+          "reason": "No duplicate bundle identifiers were detected in the source variant used by this installer."
+        },
+        "feather": {
+          "directSource": "pass",
+          "reason": "No duplicate bundle identifiers were detected in the source variant used by this installer."
+        }
+      },
+      "preferredVariant": "classic"
     },
     "melonx": {
       "online": true,
-      "checkedAt": "2026-09-30T12:37:50Z",
+      "checkedAt": "2026-09-30T17:14:13Z",
       "appCount": 1,
       "httpStatus": 200,
-      "iconURL": "https://git.743378673.xyz/CycloKid/assets/media/branch/main/Melo/AppIcons/MeloNX.png",
+      "iconURL": "",
       "error": null,
-      "mixTest": "pass",
-      "mixReason": "Classic source structure and downloadable app metadata passed the automated Mix test."
+      "variants": {
+        "classic": {
+          "online": true,
+          "httpStatus": 200,
+          "appCount": 1,
+          "error": null,
+          "duplicateBundleIdentifiers": {
+            "count": 0,
+            "duplicateAppEntries": 0,
+            "extraEntries": 0
+          }
+        }
+      },
+      "duplicateBundleIdentifiers": {
+        "count": 0,
+        "duplicateAppEntries": 0,
+        "extraEntries": 0
+      },
+      "installerCompatibility": {
+        "altstore": {
+          "directSource": "pass",
+          "reason": "No duplicate bundle identifiers were detected in the source variant used by this installer."
+        },
+        "sidestore": {
+          "directSource": "pass",
+          "reason": "No duplicate bundle identifiers were detected in the source variant used by this installer."
+        },
+        "livecontainer": {
+          "directSource": "pass",
+          "reason": "No duplicate bundle identifiers were detected in the source variant used by this installer."
+        },
+        "flarestore": {
+          "directSource": "pass",
+          "reason": "No duplicate bundle identifiers were detected in the source variant used by this installer."
+        },
+        "feather": {
+          "directSource": "pass",
+          "reason": "No duplicate bundle identifiers were detected in the source variant used by this installer."
+        }
+      },
+      "preferredVariant": "classic"
     },
     "altgallery": {
       "online": true,
-      "checkedAt": "2026-09-30T12:37:50Z",
+      "checkedAt": "2026-09-30T17:14:13Z",
       "appCount": 39,
       "httpStatus": 200,
-      "iconURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/assets/icon.png",
+      "iconURL": "",
       "error": null,
-      "mixTest": "pass",
-      "mixReason": "Classic source structure and downloadable app metadata passed the automated Mix test."
+      "variants": {
+        "classic": {
+          "online": true,
+          "httpStatus": 200,
+          "appCount": 39,
+          "error": null,
+          "duplicateBundleIdentifiers": {
+            "count": 0,
+            "duplicateAppEntries": 0,
+            "extraEntries": 0
+          }
+        }
+      },
+      "duplicateBundleIdentifiers": {
+        "count": 0,
+        "duplicateAppEntries": 0,
+        "extraEntries": 0
+      },
+      "installerCompatibility": {
+        "altstore": {
+          "directSource": "pass",
+          "reason": "No duplicate bundle identifiers were detected in the source variant used by this installer."
+        },
+        "sidestore": {
+          "directSource": "pass",
+          "reason": "No duplicate bundle identifiers were detected in the source variant used by this installer."
+        },
+        "livecontainer": {
+          "directSource": "pass",
+          "reason": "No duplicate bundle identifiers were detected in the source variant used by this installer."
+        },
+        "flarestore": {
+          "directSource": "pass",
+          "reason": "No duplicate bundle identifiers were detected in the source variant used by this installer."
+        },
+        "feather": {
+          "directSource": "pass",
+          "reason": "No duplicate bundle identifiers were detected in the source variant used by this installer."
+        }
+      },
+      "preferredVariant": "classic"
     },
     "ripestore": {
       "online": true,
-      "checkedAt": "2026-09-30T12:37:50Z",
+      "checkedAt": "2026-09-30T17:14:13Z",
       "appCount": 11,
       "httpStatus": 200,
-      "iconURL": "https://i.imgur.com/pqIZoZo.jpeg",
+      "iconURL": "",
       "error": null,
-      "mixTest": "pass",
-      "mixReason": "Classic source structure and downloadable app metadata passed the automated Mix test."
+      "variants": {
+        "classic": {
+          "online": true,
+          "httpStatus": 200,
+          "appCount": 11,
+          "error": null,
+          "duplicateBundleIdentifiers": {
+            "count": 0,
+            "duplicateAppEntries": 0,
+            "extraEntries": 0
+          }
+        }
+      },
+      "duplicateBundleIdentifiers": {
+        "count": 0,
+        "duplicateAppEntries": 0,
+        "extraEntries": 0
+      },
+      "installerCompatibility": {
+        "altstore": {
+          "directSource": "pass",
+          "reason": "No duplicate bundle identifiers were detected in the source variant used by this installer."
+        },
+        "sidestore": {
+          "directSource": "pass",
+          "reason": "No duplicate bundle identifiers were detected in the source variant used by this installer."
+        },
+        "livecontainer": {
+          "directSource": "pass",
+          "reason": "No duplicate bundle identifiers were detected in the source variant used by this installer."
+        },
+        "flarestore": {
+          "directSource": "pass",
+          "reason": "No duplicate bundle identifiers were detected in the source variant used by this installer."
+        },
+        "feather": {
+          "directSource": "pass",
+          "reason": "No duplicate bundle identifiers were detected in the source variant used by this installer."
+        }
+      },
+      "preferredVariant": "classic"
     },
     "feather": {
       "online": true,
-      "checkedAt": "2026-09-30T12:37:50Z",
+      "checkedAt": "2026-09-30T17:14:13Z",
       "appCount": 1,
       "httpStatus": 200,
-      "iconURL": "https://github.com/khcrysalis/Feather/blob/v1.x/iOS/Resources/Icons/Main/Mac@3x.png?raw=true",
+      "iconURL": "",
       "error": null,
-      "mixTest": "pass",
-      "mixReason": "Classic source structure and downloadable app metadata passed the automated Mix test."
+      "variants": {
+        "classic": {
+          "online": true,
+          "httpStatus": 200,
+          "appCount": 1,
+          "error": null,
+          "duplicateBundleIdentifiers": {
+            "count": 0,
+            "duplicateAppEntries": 0,
+            "extraEntries": 0
+          }
+        }
+      },
+      "duplicateBundleIdentifiers": {
+        "count": 0,
+        "duplicateAppEntries": 0,
+        "extraEntries": 0
+      },
+      "installerCompatibility": {
+        "altstore": {
+          "directSource": "pass",
+          "reason": "No duplicate bundle identifiers were detected in the source variant used by this installer."
+        },
+        "sidestore": {
+          "directSource": "pass",
+          "reason": "No duplicate bundle identifiers were detected in the source variant used by this installer."
+        },
+        "livecontainer": {
+          "directSource": "pass",
+          "reason": "No duplicate bundle identifiers were detected in the source variant used by this installer."
+        },
+        "flarestore": {
+          "directSource": "pass",
+          "reason": "No duplicate bundle identifiers were detected in the source variant used by this installer."
+        },
+        "feather": {
+          "directSource": "pass",
+          "reason": "No duplicate bundle identifiers were detected in the source variant used by this installer."
+        }
+      },
+      "preferredVariant": "classic"
     },
     "quantum-source": {
       "online": true,
-      "checkedAt": "2026-09-30T12:37:50Z",
+      "checkedAt": "2026-09-30T17:14:13Z",
       "appCount": 38,
       "httpStatus": 200,
-      "iconURL": "https://quarksources.github.io/assets/ElementQ-Circled.png",
+      "iconURL": "",
       "error": null,
-      "mixTest": "pass",
-      "mixReason": "Classic source structure and downloadable app metadata passed the automated Mix test."
+      "variants": {
+        "classic": {
+          "online": true,
+          "httpStatus": 200,
+          "appCount": 38,
+          "error": null,
+          "duplicateBundleIdentifiers": {
+            "count": 0,
+            "duplicateAppEntries": 0,
+            "extraEntries": 0
+          }
+        }
+      },
+      "duplicateBundleIdentifiers": {
+        "count": 0,
+        "duplicateAppEntries": 0,
+        "extraEntries": 0
+      },
+      "installerCompatibility": {
+        "altstore": {
+          "directSource": "pass",
+          "reason": "No duplicate bundle identifiers were detected in the source variant used by this installer."
+        },
+        "sidestore": {
+          "directSource": "pass",
+          "reason": "No duplicate bundle identifiers were detected in the source variant used by this installer."
+        },
+        "livecontainer": {
+          "directSource": "pass",
+          "reason": "No duplicate bundle identifiers were detected in the source variant used by this installer."
+        },
+        "flarestore": {
+          "directSource": "pass",
+          "reason": "No duplicate bundle identifiers were detected in the source variant used by this installer."
+        },
+        "feather": {
+          "directSource": "pass",
+          "reason": "No duplicate bundle identifiers were detected in the source variant used by this installer."
+        }
+      },
+      "preferredVariant": "classic"
     },
     "spotc": {
       "online": true,
-      "checkedAt": "2026-09-30T12:37:50Z",
+      "checkedAt": "2026-09-30T17:14:13Z",
       "appCount": 3,
       "httpStatus": 200,
-      "iconURL": "https://raw.githubusercontent.com/SpotCompiled/.github/main/SpotC%20Icon.png",
+      "iconURL": "",
       "error": null,
-      "mixTest": "pass",
-      "mixReason": "Classic source structure and downloadable app metadata passed the automated Mix test."
+      "variants": {
+        "classic": {
+          "online": true,
+          "httpStatus": 200,
+          "appCount": 3,
+          "error": null,
+          "duplicateBundleIdentifiers": {
+            "count": 0,
+            "duplicateAppEntries": 0,
+            "extraEntries": 0
+          }
+        }
+      },
+      "duplicateBundleIdentifiers": {
+        "count": 0,
+        "duplicateAppEntries": 0,
+        "extraEntries": 0
+      },
+      "installerCompatibility": {
+        "altstore": {
+          "directSource": "pass",
+          "reason": "No duplicate bundle identifiers were detected in the source variant used by this installer."
+        },
+        "sidestore": {
+          "directSource": "pass",
+          "reason": "No duplicate bundle identifiers were detected in the source variant used by this installer."
+        },
+        "livecontainer": {
+          "directSource": "pass",
+          "reason": "No duplicate bundle identifiers were detected in the source variant used by this installer."
+        },
+        "flarestore": {
+          "directSource": "pass",
+          "reason": "No duplicate bundle identifiers were detected in the source variant used by this installer."
+        },
+        "feather": {
+          "directSource": "pass",
+          "reason": "No duplicate bundle identifiers were detected in the source variant used by this installer."
+        }
+      },
+      "preferredVariant": "classic"
     },
     "foxster-altsource": {
       "online": true,
-      "checkedAt": "2026-09-30T12:37:50Z",
+      "checkedAt": "2026-09-30T17:14:13Z",
       "appCount": 2,
       "httpStatus": 200,
-      "iconURL": "https://avatars.githubusercontent.com/u/77606385",
+      "iconURL": "",
       "error": null,
-      "mixTest": "pass",
-      "mixReason": "Classic source structure and downloadable app metadata passed the automated Mix test."
+      "variants": {
+        "classic": {
+          "online": true,
+          "httpStatus": 200,
+          "appCount": 2,
+          "error": null,
+          "duplicateBundleIdentifiers": {
+            "count": 0,
+            "duplicateAppEntries": 0,
+            "extraEntries": 0
+          }
+        }
+      },
+      "duplicateBundleIdentifiers": {
+        "count": 0,
+        "duplicateAppEntries": 0,
+        "extraEntries": 0
+      },
+      "installerCompatibility": {
+        "altstore": {
+          "directSource": "pass",
+          "reason": "No duplicate bundle identifiers were detected in the source variant used by this installer."
+        },
+        "sidestore": {
+          "directSource": "pass",
+          "reason": "No duplicate bundle identifiers were detected in the source variant used by this installer."
+        },
+        "livecontainer": {
+          "directSource": "pass",
+          "reason": "No duplicate bundle identifiers were detected in the source variant used by this installer."
+        },
+        "flarestore": {
+          "directSource": "pass",
+          "reason": "No duplicate bundle identifiers were detected in the source variant used by this installer."
+        },
+        "feather": {
+          "directSource": "pass",
+          "reason": "No duplicate bundle identifiers were detected in the source variant used by this installer."
+        }
+      },
+      "preferredVariant": "classic"
     },
     "fastsign": {
       "online": true,
-      "checkedAt": "2026-09-30T12:37:50Z",
+      "checkedAt": "2026-09-30T17:14:13Z",
       "appCount": 16272,
       "httpStatus": 200,
-      "iconURL": "https://fastsign.dev/icon.png",
+      "iconURL": "",
       "error": null,
-      "mixTest": "experimental",
-      "mixReason": "12684 app entries share a bundle identifier; a Mix would collapse variants to one app."
+      "variants": {
+        "classic": {
+          "online": true,
+          "httpStatus": 200,
+          "appCount": 16272,
+          "error": null,
+          "duplicateBundleIdentifiers": {
+            "count": 1031,
+            "duplicateAppEntries": 13715,
+            "extraEntries": 12684
+          }
+        }
+      },
+      "duplicateBundleIdentifiers": {
+        "count": 1031,
+        "duplicateAppEntries": 13715,
+        "extraEntries": 12684
+      },
+      "installerCompatibility": {
+        "altstore": {
+          "directSource": "fail",
+          "reason": "1031 bundle identifiers occur more than once; altstore requires unique apps when adding the original source."
+        },
+        "sidestore": {
+          "directSource": "fail",
+          "reason": "1031 bundle identifiers occur more than once; sidestore requires unique apps when adding the original source."
+        },
+        "livecontainer": {
+          "directSource": "pass",
+          "installVariants": "try",
+          "reason": "1031 duplicate bundle identifiers are present. The source parser can keep separate entries, but installing multiple variants with the same bundle identifier can still conflict."
+        },
+        "flarestore": {
+          "directSource": "try",
+          "reason": "1031 duplicate bundle identifiers are present; direct-source behavior is not verified for this installer."
+        },
+        "feather": {
+          "directSource": "pass",
+          "installVariants": "try",
+          "reason": "1031 duplicate bundle identifiers are present. The source parser can keep separate entries, but installing multiple variants with the same bundle identifier can still conflict."
+        }
+      },
+      "preferredVariant": "classic"
     },
     "quantum-plus": {
       "online": true,
-      "checkedAt": "2026-09-30T12:37:50Z",
+      "checkedAt": "2026-09-30T17:14:13Z",
       "appCount": 35,
       "httpStatus": 200,
-      "iconURL": "https://quarksources.github.io/assets/ElementQ-Circled.png",
+      "iconURL": "",
       "error": null,
-      "mixTest": "pass",
-      "mixReason": "Classic source structure and downloadable app metadata passed the automated Mix test."
+      "variants": {
+        "classic": {
+          "online": true,
+          "httpStatus": 200,
+          "appCount": 35,
+          "error": null,
+          "duplicateBundleIdentifiers": {
+            "count": 0,
+            "duplicateAppEntries": 0,
+            "extraEntries": 0
+          }
+        }
+      },
+      "duplicateBundleIdentifiers": {
+        "count": 0,
+        "duplicateAppEntries": 0,
+        "extraEntries": 0
+      },
+      "installerCompatibility": {
+        "altstore": {
+          "directSource": "pass",
+          "reason": "No duplicate bundle identifiers were detected in the source variant used by this installer."
+        },
+        "sidestore": {
+          "directSource": "pass",
+          "reason": "No duplicate bundle identifiers were detected in the source variant used by this installer."
+        },
+        "livecontainer": {
+          "directSource": "pass",
+          "reason": "No duplicate bundle identifiers were detected in the source variant used by this installer."
+        },
+        "flarestore": {
+          "directSource": "pass",
+          "reason": "No duplicate bundle identifiers were detected in the source variant used by this installer."
+        },
+        "feather": {
+          "directSource": "pass",
+          "reason": "No duplicate bundle identifiers were detected in the source variant used by this installer."
+        }
+      },
+      "preferredVariant": "classic"
     },
     "wuxu-standard": {
       "online": true,
-      "checkedAt": "2026-09-30T12:37:50Z",
+      "checkedAt": "2026-09-30T17:14:13Z",
       "appCount": 20,
       "httpStatus": 200,
-      "iconURL": "https://external-content.duckduckgo.com/iu/?u=https://external-content.duckduckgo.com/iu/?u=https://i.imgur.com/g17kMl9.png",
+      "iconURL": "",
       "error": null,
-      "mixTest": "pass",
-      "mixReason": "Classic source structure and downloadable app metadata passed the automated Mix test."
+      "variants": {
+        "classic": {
+          "online": true,
+          "httpStatus": 200,
+          "appCount": 20,
+          "error": null,
+          "duplicateBundleIdentifiers": {
+            "count": 0,
+            "duplicateAppEntries": 0,
+            "extraEntries": 0
+          }
+        }
+      },
+      "duplicateBundleIdentifiers": {
+        "count": 0,
+        "duplicateAppEntries": 0,
+        "extraEntries": 0
+      },
+      "installerCompatibility": {
+        "altstore": {
+          "directSource": "pass",
+          "reason": "No duplicate bundle identifiers were detected in the source variant used by this installer."
+        },
+        "sidestore": {
+          "directSource": "pass",
+          "reason": "No duplicate bundle identifiers were detected in the source variant used by this installer."
+        },
+        "livecontainer": {
+          "directSource": "pass",
+          "reason": "No duplicate bundle identifiers were detected in the source variant used by this installer."
+        },
+        "flarestore": {
+          "directSource": "pass",
+          "reason": "No duplicate bundle identifiers were detected in the source variant used by this installer."
+        },
+        "feather": {
+          "directSource": "pass",
+          "reason": "No duplicate bundle identifiers were detected in the source variant used by this installer."
+        }
+      },
+      "preferredVariant": "classic"
     },
     "taurine": {
       "online": true,
-      "checkedAt": "2026-09-30T12:37:50Z",
+      "checkedAt": "2026-09-30T17:14:13Z",
       "appCount": 1,
       "httpStatus": 200,
-      "iconURL": "https://taurine.app/assets/images/icon.png",
+      "iconURL": "",
       "error": null,
-      "mixTest": "pass",
-      "mixReason": "Classic source structure and downloadable app metadata passed the automated Mix test."
+      "variants": {
+        "classic": {
+          "online": true,
+          "httpStatus": 200,
+          "appCount": 1,
+          "error": null,
+          "duplicateBundleIdentifiers": {
+            "count": 0,
+            "duplicateAppEntries": 0,
+            "extraEntries": 0
+          }
+        }
+      },
+      "duplicateBundleIdentifiers": {
+        "count": 0,
+        "duplicateAppEntries": 0,
+        "extraEntries": 0
+      },
+      "installerCompatibility": {
+        "altstore": {
+          "directSource": "pass",
+          "reason": "No duplicate bundle identifiers were detected in the source variant used by this installer."
+        },
+        "sidestore": {
+          "directSource": "pass",
+          "reason": "No duplicate bundle identifiers were detected in the source variant used by this installer."
+        },
+        "livecontainer": {
+          "directSource": "pass",
+          "reason": "No duplicate bundle identifiers were detected in the source variant used by this installer."
+        },
+        "flarestore": {
+          "directSource": "pass",
+          "reason": "No duplicate bundle identifiers were detected in the source variant used by this installer."
+        },
+        "feather": {
+          "directSource": "pass",
+          "reason": "No duplicate bundle identifiers were detected in the source variant used by this installer."
+        }
+      },
+      "preferredVariant": "classic"
     },
     "burrito-source": {
       "online": true,
-      "checkedAt": "2026-09-30T12:37:50Z",
+      "checkedAt": "2026-09-30T17:14:13Z",
       "appCount": 7,
       "httpStatus": 200,
-      "iconURL": "https://inds.nerd.net/Resources/required/AppIcon256.png",
+      "iconURL": "",
       "error": null,
-      "mixTest": "pass",
-      "mixReason": "Classic source structure and downloadable app metadata passed the automated Mix test."
+      "variants": {
+        "classic": {
+          "online": true,
+          "httpStatus": 200,
+          "appCount": 7,
+          "error": null,
+          "duplicateBundleIdentifiers": {
+            "count": 0,
+            "duplicateAppEntries": 0,
+            "extraEntries": 0
+          }
+        }
+      },
+      "duplicateBundleIdentifiers": {
+        "count": 0,
+        "duplicateAppEntries": 0,
+        "extraEntries": 0
+      },
+      "installerCompatibility": {
+        "altstore": {
+          "directSource": "pass",
+          "reason": "No duplicate bundle identifiers were detected in the source variant used by this installer."
+        },
+        "sidestore": {
+          "directSource": "pass",
+          "reason": "No duplicate bundle identifiers were detected in the source variant used by this installer."
+        },
+        "livecontainer": {
+          "directSource": "pass",
+          "reason": "No duplicate bundle identifiers were detected in the source variant used by this installer."
+        },
+        "flarestore": {
+          "directSource": "pass",
+          "reason": "No duplicate bundle identifiers were detected in the source variant used by this installer."
+        },
+        "feather": {
+          "directSource": "pass",
+          "reason": "No duplicate bundle identifiers were detected in the source variant used by this installer."
+        }
+      },
+      "preferredVariant": "classic"
     },
     "salupov-altrepo": {
       "online": true,
-      "checkedAt": "2026-09-30T12:37:50Z",
+      "checkedAt": "2026-09-30T17:14:13Z",
       "appCount": 2,
       "httpStatus": 200,
-      "iconURL": "https://adp.salupovteam.com/pal/icon.png",
+      "iconURL": "",
       "error": null,
-      "mixTest": "pass",
-      "mixReason": "Classic source structure and downloadable app metadata passed the automated Mix test."
+      "variants": {
+        "classic": {
+          "online": true,
+          "httpStatus": 200,
+          "appCount": 2,
+          "error": null,
+          "duplicateBundleIdentifiers": {
+            "count": 0,
+            "duplicateAppEntries": 0,
+            "extraEntries": 0
+          }
+        }
+      },
+      "duplicateBundleIdentifiers": {
+        "count": 0,
+        "duplicateAppEntries": 0,
+        "extraEntries": 0
+      },
+      "installerCompatibility": {
+        "altstore": {
+          "directSource": "pass",
+          "reason": "No duplicate bundle identifiers were detected in the source variant used by this installer."
+        },
+        "sidestore": {
+          "directSource": "pass",
+          "reason": "No duplicate bundle identifiers were detected in the source variant used by this installer."
+        },
+        "livecontainer": {
+          "directSource": "pass",
+          "reason": "No duplicate bundle identifiers were detected in the source variant used by this installer."
+        },
+        "flarestore": {
+          "directSource": "pass",
+          "reason": "No duplicate bundle identifiers were detected in the source variant used by this installer."
+        },
+        "feather": {
+          "directSource": "pass",
+          "reason": "No duplicate bundle identifiers were detected in the source variant used by this installer."
+        }
+      },
+      "preferredVariant": "classic"
     },
     "cercube": {
       "online": true,
-      "checkedAt": "2026-09-30T12:37:50Z",
+      "checkedAt": "2026-09-30T17:14:13Z",
       "appCount": 2,
       "httpStatus": 200,
-      "iconURL": "https://cdn.cercube.com/assets/icon.png",
+      "iconURL": "",
       "error": null,
-      "mixTest": "pass",
-      "mixReason": "Classic source structure and downloadable app metadata passed the automated Mix test."
+      "variants": {
+        "classic": {
+          "online": true,
+          "httpStatus": 200,
+          "appCount": 2,
+          "error": null,
+          "duplicateBundleIdentifiers": {
+            "count": 0,
+            "duplicateAppEntries": 0,
+            "extraEntries": 0
+          }
+        }
+      },
+      "duplicateBundleIdentifiers": {
+        "count": 0,
+        "duplicateAppEntries": 0,
+        "extraEntries": 0
+      },
+      "installerCompatibility": {
+        "altstore": {
+          "directSource": "pass",
+          "reason": "No duplicate bundle identifiers were detected in the source variant used by this installer."
+        },
+        "sidestore": {
+          "directSource": "pass",
+          "reason": "No duplicate bundle identifiers were detected in the source variant used by this installer."
+        },
+        "livecontainer": {
+          "directSource": "pass",
+          "reason": "No duplicate bundle identifiers were detected in the source variant used by this installer."
+        },
+        "flarestore": {
+          "directSource": "pass",
+          "reason": "No duplicate bundle identifiers were detected in the source variant used by this installer."
+        },
+        "feather": {
+          "directSource": "pass",
+          "reason": "No duplicate bundle identifiers were detected in the source variant used by this installer."
+        }
+      },
+      "preferredVariant": "classic"
     },
     "rocket": {
       "online": true,
-      "checkedAt": "2026-09-30T12:37:50Z",
+      "checkedAt": "2026-09-30T17:14:13Z",
       "appCount": 1,
       "httpStatus": 200,
-      "iconURL": "https://cdn.getrocketapp.io/assets/icon.png",
+      "iconURL": "",
       "error": null,
-      "mixTest": "pass",
-      "mixReason": "Classic source structure and downloadable app metadata passed the automated Mix test."
+      "variants": {
+        "classic": {
+          "online": true,
+          "httpStatus": 200,
+          "appCount": 1,
+          "error": null,
+          "duplicateBundleIdentifiers": {
+            "count": 0,
+            "duplicateAppEntries": 0,
+            "extraEntries": 0
+          }
+        }
+      },
+      "duplicateBundleIdentifiers": {
+        "count": 0,
+        "duplicateAppEntries": 0,
+        "extraEntries": 0
+      },
+      "installerCompatibility": {
+        "altstore": {
+          "directSource": "pass",
+          "reason": "No duplicate bundle identifiers were detected in the source variant used by this installer."
+        },
+        "sidestore": {
+          "directSource": "pass",
+          "reason": "No duplicate bundle identifiers were detected in the source variant used by this installer."
+        },
+        "livecontainer": {
+          "directSource": "pass",
+          "reason": "No duplicate bundle identifiers were detected in the source variant used by this installer."
+        },
+        "flarestore": {
+          "directSource": "pass",
+          "reason": "No duplicate bundle identifiers were detected in the source variant used by this installer."
+        },
+        "feather": {
+          "directSource": "pass",
+          "reason": "No duplicate bundle identifiers were detected in the source variant used by this installer."
+        }
+      },
+      "preferredVariant": "classic"
     },
     "reynard-browser": {
       "online": true,
-      "checkedAt": "2026-09-30T12:37:50Z",
+      "checkedAt": "2026-09-30T17:14:13Z",
       "appCount": 1,
       "httpStatus": 200,
-      "iconURL": "https://github.com/user-attachments/assets/1c42dda2-b778-4342-9f94-8f852c3ad652",
+      "iconURL": "",
       "error": null,
-      "mixTest": "pass",
-      "mixReason": "Classic source structure and downloadable app metadata passed the automated Mix test."
+      "variants": {
+        "classic": {
+          "online": true,
+          "httpStatus": 200,
+          "appCount": 1,
+          "error": null,
+          "duplicateBundleIdentifiers": {
+            "count": 0,
+            "duplicateAppEntries": 0,
+            "extraEntries": 0
+          }
+        }
+      },
+      "duplicateBundleIdentifiers": {
+        "count": 0,
+        "duplicateAppEntries": 0,
+        "extraEntries": 0
+      },
+      "installerCompatibility": {
+        "altstore": {
+          "directSource": "pass",
+          "reason": "No duplicate bundle identifiers were detected in the source variant used by this installer."
+        },
+        "sidestore": {
+          "directSource": "pass",
+          "reason": "No duplicate bundle identifiers were detected in the source variant used by this installer."
+        },
+        "livecontainer": {
+          "directSource": "pass",
+          "reason": "No duplicate bundle identifiers were detected in the source variant used by this installer."
+        },
+        "flarestore": {
+          "directSource": "pass",
+          "reason": "No duplicate bundle identifiers were detected in the source variant used by this installer."
+        },
+        "feather": {
+          "directSource": "pass",
+          "reason": "No duplicate bundle identifiers were detected in the source variant used by this installer."
+        }
+      },
+      "preferredVariant": "classic"
     }
-  },
-  "mixes": {
-    "count": 1793,
-    "maxSourcesPerMix": 3,
-    "mergeableSourceIDs": [
-      "apollo-reddit",
-      "armsx2",
-      "discord-appstore-builds",
-      "dvntm0-workshop",
-      "flycast",
-      "fouad-source",
-      "ignited",
-      "ish",
-      "manicemu",
-      "melonx",
-      "neofreebird",
-      "oatmealdome",
-      "pokemmo",
-      "provenance",
-      "utm",
-      "wuxu-library-plus",
-      "xn1ckuz-sidebox",
-      "yattee",
-      "youmod-repo",
-      "youtuberebornplus",
-      "ytkace",
-      "ytliteplus"
-    ],
-    "autoCompatibleSourceIDs": [
-      "altgallery",
-      "apollo-reddit",
-      "armsx2",
-      "baretsky-tweaked",
-      "burrito-source",
-      "cercube",
-      "crystall1ne",
-      "discord-appstore-builds",
-      "driftywinds",
-      "dvntm0-workshop",
-      "feather",
-      "flycast",
-      "flycast-ios",
-      "fouad-source",
-      "foxster-altsource",
-      "geode-ios",
-      "ignited",
-      "ipa-vault",
-      "ish",
-      "itorrent",
-      "kodi-ios",
-      "livecontainer",
-      "livecontainer-nightly",
-      "manicemu",
-      "melonx",
-      "mona",
-      "neofreebird",
-      "oatmealdome",
-      "odyssey",
-      "partyknights",
-      "pokemmo",
-      "provenance",
-      "quantum-plus",
-      "quantum-source",
-      "retrosekai",
-      "reynard-browser",
-      "ripestore",
-      "rocket",
-      "salupov-altrepo",
-      "sideloadlabs",
-      "spotc",
-      "stikdebug",
-      "stremio-ios",
-      "taurine",
-      "utm",
-      "vortx",
-      "wayfarer",
-      "wuxu-library-plus",
-      "wuxu-standard",
-      "xn1ckuz-sidebox",
-      "yattee",
-      "youmod-repo",
-      "youtuberebornplus",
-      "ytkace",
-      "ytliteplus"
-    ],
-    "experimentalSourceIDs": [
-      "apptesters",
-      "artemis",
-      "courtpredict",
-      "cypwn-ipa",
-      "epic-games",
-      "esound",
-      "fastsign",
-      "hackerwebapp",
-      "ipalibrary",
-      "iphanpy",
-      "moe-altstore",
-      "owo-source",
-      "qbitconnect",
-      "qbitcontrol",
-      "sidestore-community",
-      "sidestore-official",
-      "stremio-official-pal",
-      "youproextra"
-    ],
-    "allCompatibleURL": "https://caseycz.github.io/iOS-Hub/mix/all-compatible.json"
-  },
-  "altstore": {
-    "sourceURL": "https://caseycz.github.io/iOS-Hub/altstore/source.json",
-    "sourceIDs": [
-      "altgallery",
-      "apollo-reddit",
-      "armsx2",
-      "baretsky-tweaked",
-      "burrito-source",
-      "cercube",
-      "crystall1ne",
-      "discord-appstore-builds",
-      "driftywinds",
-      "dvntm0-workshop",
-      "feather",
-      "flycast",
-      "flycast-ios",
-      "fouad-source",
-      "foxster-altsource",
-      "geode-ios",
-      "ignited",
-      "ipa-vault",
-      "ish",
-      "itorrent",
-      "kodi-ios",
-      "livecontainer",
-      "manicemu",
-      "melonx",
-      "mona",
-      "neofreebird",
-      "oatmealdome",
-      "odyssey",
-      "partyknights",
-      "pokemmo",
-      "provenance",
-      "quantum-plus",
-      "quantum-source",
-      "retrosekai",
-      "reynard-browser",
-      "ripestore",
-      "rocket",
-      "salupov-altrepo",
-      "sideloadlabs",
-      "spotc",
-      "stikdebug",
-      "stremio-ios",
-      "taurine",
-      "utm",
-      "vortx",
-      "wayfarer",
-      "wuxu-library-plus",
-      "wuxu-standard",
-      "xn1ckuz-sidebox",
-      "yattee",
-      "youmod-repo",
-      "youtuberebornplus",
-      "ytkace",
-      "ytliteplus"
-    ],
-    "appCount": 229,
-    "conflictCount": 89
-  },
-  "sidestore": {
-    "sourceURL": "https://caseycz.github.io/iOS-Hub/sidestore/source.json",
-    "sourceIDs": [
-      "altgallery",
-      "apollo-reddit",
-      "armsx2",
-      "baretsky-tweaked",
-      "burrito-source",
-      "cercube",
-      "crystall1ne",
-      "discord-appstore-builds",
-      "driftywinds",
-      "dvntm0-workshop",
-      "feather",
-      "flycast",
-      "flycast-ios",
-      "fouad-source",
-      "foxster-altsource",
-      "geode-ios",
-      "ignited",
-      "ipa-vault",
-      "ish",
-      "itorrent",
-      "kodi-ios",
-      "livecontainer",
-      "manicemu",
-      "melonx",
-      "mona",
-      "neofreebird",
-      "oatmealdome",
-      "odyssey",
-      "partyknights",
-      "pokemmo",
-      "provenance",
-      "quantum-plus",
-      "quantum-source",
-      "retrosekai",
-      "reynard-browser",
-      "ripestore",
-      "rocket",
-      "salupov-altrepo",
-      "sideloadlabs",
-      "sidestore-community",
-      "spotc",
-      "stikdebug",
-      "stremio-ios",
-      "taurine",
-      "utm",
-      "vortx",
-      "wayfarer",
-      "wuxu-library-plus",
-      "wuxu-standard",
-      "xn1ckuz-sidebox",
-      "yattee",
-      "youmod-repo",
-      "youtuberebornplus",
-      "ytkace",
-      "ytliteplus"
-    ],
-    "appCount": 234,
-    "conflictCount": 107
   }
 }
