@@ -10,7 +10,6 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 REGISTRY = ROOT / "sources" / "registry.json"
 DATA_DIR = ROOT / "data"
-SOURCE_CACHE_DIR = DATA_DIR / "source-cache"
 USER_AGENT = "CaseyCZ-iOS-Hub (+https://caseycz.github.io/iOS-Hub/)"
 
 DIRECT_SOURCE_INSTALLERS = ("altstore", "sidestore", "livecontainer", "flarestore", "feather")
@@ -80,46 +79,8 @@ def source_supports_installer(source: dict, installer: str) -> bool:
     return installer in {"altstore", "sidestore", "livecontainer", "flarestore", "feather"}
 
 
-def parse_date(value: object) -> float:
-    if not isinstance(value, str) or not value.strip():
-        return 0.0
-    text = value.strip().replace("Z", "+00:00")
-    try:
-        return datetime.fromisoformat(text).timestamp()
-    except ValueError:
-        try:
-            return datetime.fromisoformat(text[:10]).replace(tzinfo=timezone.utc).timestamp()
-        except ValueError:
-            return 0.0
-
-
-def app_version(app: dict) -> str:
-    versions = app.get("versions")
-    if isinstance(versions, list) and versions:
-        dated = [item for item in versions if isinstance(item, dict)]
-        if dated:
-            latest = max(dated, key=lambda item: parse_date(item.get("date") or item.get("versionDate")))
-            if latest.get("version"):
-                return str(latest["version"])
-    for key in ("version", "absoluteVersion"):
-        if app.get(key):
-            return str(app[key])
-    return ""
-
-
-def app_summary(app: dict) -> dict:
-    return {
-        "name": app.get("name") or "Unknown app",
-        "bundleIdentifier": app.get("bundleIdentifier") or app.get("bundleID") or "",
-        "developerName": app.get("developerName") or "",
-        "version": app_version(app),
-        "iconURL": app.get("iconURL") or "",
-        "subtitle": app.get("subtitle") or "",
-    }
-
-
 def duplicate_bundle_report(payload: dict) -> dict:
-    grouped: dict[str, dict] = {}
+    counts: dict[str, int] = {}
     for app in payload.get("apps", []):
         if not isinstance(app, dict):
             continue
@@ -127,35 +88,13 @@ def duplicate_bundle_report(payload: dict) -> dict:
         if not raw_bundle:
             continue
         key = raw_bundle.lower()
-        item = grouped.setdefault(
-            key,
-            {
-                "bundleIdentifier": raw_bundle,
-                "count": 0,
-                "names": [],
-            },
-        )
-        item["count"] += 1
-        name = str(app.get("name") or "Unknown app").strip()
-        if name and name not in item["names"]:
-            item["names"].append(name)
+        counts[key] = counts.get(key, 0) + 1
 
-    items = [
-        {
-            "bundleIdentifier": item["bundleIdentifier"],
-            "count": item["count"],
-            "names": item["names"][:8],
-        }
-        for item in grouped.values()
-        if item["count"] > 1
-    ]
-    items.sort(key=lambda item: (-item["count"], item["bundleIdentifier"].lower()))
+    duplicate_counts = [count for count in counts.values() if count > 1]
     return {
-        "count": len(items),
-        "duplicateAppEntries": sum(item["count"] for item in items),
-        "extraEntries": sum(item["count"] - 1 for item in items),
-        "items": items[:DUPLICATE_BUNDLE_EXAMPLE_LIMIT],
-        "itemsTruncated": len(items) > DUPLICATE_BUNDLE_EXAMPLE_LIMIT,
+        "count": len(duplicate_counts),
+        "duplicateAppEntries": sum(duplicate_counts),
+        "extraEntries": sum(count - 1 for count in duplicate_counts),
     }
 
 
@@ -205,18 +144,6 @@ def direct_installer_compatibility(source: dict, payload: dict) -> tuple[dict, d
     return report, checks
 
 
-def source_compliance_allows_distribution(source: dict) -> bool:
-    compliance = source.get("compliance")
-    if not isinstance(compliance, dict):
-        return False
-    return (
-        compliance.get("aggregationApproved") is True
-        and compliance.get("reviewStatus") in {"licensed", "permission"}
-        and compliance.get("usage") == "metadata-and-original-links"
-        and compliance.get("binaryRehost") is False
-    )
-
-
 def write_json(path: Path, payload: object) -> None:
     path.parent.mkdir(parents=True, exist_ok=True)
     rendered = json.dumps(payload, ensure_ascii=False, indent=2) + "\n"
@@ -232,11 +159,9 @@ def main() -> None:
     generated_at = now_iso()
 
     DATA_DIR.mkdir(parents=True, exist_ok=True)
-    SOURCE_CACHE_DIR.mkdir(parents=True, exist_ok=True)
 
     status = {"generatedAt": generated_at, "sources": {}}
     catalog = {"generatedAt": generated_at, "sources": []}
-    loaded: dict[str, tuple[dict, dict]] = {}
 
     for source in sources:
         source_id = source["id"]
@@ -269,7 +194,11 @@ def main() -> None:
                     "httpStatus": http_status,
                     "appCount": len(apps),
                     "error": None,
-                    "duplicateBundleIdentifiers": duplicate_report,
+                    "duplicateBundleIdentifiers": {
+                        "count": duplicate_report["count"],
+                        "duplicateAppEntries": duplicate_report["duplicateAppEntries"],
+                        "extraEntries": duplicate_report["extraEntries"],
+                    },
                 })
             except (urllib.error.URLError, urllib.error.HTTPError, TimeoutError, ValueError, json.JSONDecodeError, UnicodeDecodeError) as exc:
                 variant_result["error"] = f"{type(exc).__name__}: {exc}"[:300]
@@ -292,43 +221,29 @@ def main() -> None:
                 source,
                 assessment_payload,
             )
-            aggregation_allowed = source_compliance_allows_distribution(source)
             result.update({
                 "online": True,
                 "httpStatus": variant_result.get("httpStatus"),
                 "appCount": len(apps),
-                "iconURL": (
-                    payload.get("iconURL") or (apps[0].get("iconURL") if apps else "") or ""
-                ) if aggregation_allowed else "",
+                "iconURL": "",
                 "error": None,
-                "duplicateBundleIdentifiers": duplicate_report if aggregation_allowed else {
-                    "count": duplicate_report.get("count", 0) if isinstance(duplicate_report, dict) else 0,
-                    "examples": [],
+                "duplicateBundleIdentifiers": {
+                    "count": duplicate_report["count"],
+                    "duplicateAppEntries": duplicate_report["duplicateAppEntries"],
+                    "extraEntries": duplicate_report["extraEntries"],
                 },
                 "installerCompatibility": installer_compatibility,
                 "preferredVariant": preferred_variant,
-                "aggregationApproved": aggregation_allowed,
             })
-            loaded[source_id] = (source, payload)
-
-            if aggregation_allowed and source.get("cachePayload", True):
-                cache_payload = variant_payloads.get("classic", payload)
-                write_json(SOURCE_CACHE_DIR / f"{source_id}.json", cache_payload)
-
-            catalog_limit = source.get("catalogLimit")
-            catalog_apps = apps if aggregation_allowed else []
-            if isinstance(catalog_limit, int) and catalog_limit > 0:
-                catalog_apps = catalog_apps[:catalog_limit]
 
             catalog["sources"].append({
                 "id": source_id,
                 "name": source.get("name"),
                 "appCount": len(apps),
-                "catalogLimited": aggregation_allowed and len(catalog_apps) < len(apps),
-                "iconURL": result["iconURL"],
+                "catalogLimited": False,
+                "iconURL": "",
                 "variants": sorted(variant_payloads),
-                "apps": [app_summary(app) for app in catalog_apps],
-                "aggregationApproved": aggregation_allowed,
+                "apps": [],
             })
         else:
             errors = [
@@ -339,33 +254,6 @@ def main() -> None:
             result["error"] = "; ".join(errors)[:300] if errors else "No source variant URL is configured."
 
         status["sources"][source_id] = result
-
-    unique_app_keys: set[str] = set()
-    for source_id, (source, payload) in loaded.items():
-        if not source_compliance_allows_distribution(source):
-            continue
-        for app in payload.get("apps", []):
-            if not isinstance(app, dict):
-                continue
-            bundle = str(app.get("bundleIdentifier") or app.get("bundleID") or "").strip().lower()
-            if bundle:
-                unique_app_keys.add(bundle)
-                continue
-            name = str(app.get("name") or "").strip().lower()
-            developer = str(app.get("developerName") or "").strip().lower()
-            if name or developer:
-                unique_app_keys.add(f"{source_id}:{name}:{developer}")
-    catalog["uniqueAppCount"] = len(unique_app_keys)
-
-    live_cache_files = {
-        f"{source_id}.json"
-        for source_id, (source, _payload) in loaded.items()
-        if source_compliance_allows_distribution(source)
-        and source.get("cachePayload", True)
-    }
-    for path in SOURCE_CACHE_DIR.glob("*.json"):
-        if path.name not in live_cache_files:
-            path.unlink()
 
     # Direct Source Builder architecture:
     write_json(DATA_DIR / "status.json", status)
