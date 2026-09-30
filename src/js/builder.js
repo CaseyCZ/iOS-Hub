@@ -279,7 +279,7 @@ function packageCard(name, url, meta, type) {
     addLabel = tr('addSide');
     badge = 'SideStore';
   } else if (type === 'live') {
-    install = `livecontainer://source?url=${encodeURIComponent(url)}`;
+    install = `livecontainer://sources?url=${encodeURIComponent(url)}`;
     addLabel = tr('addLive');
     badge = 'LiveContainer';
   }
