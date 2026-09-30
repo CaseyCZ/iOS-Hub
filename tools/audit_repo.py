@@ -273,7 +273,7 @@ def validate_privacy_compliance() -> None:
         for required_privacy in (
             "Google Analytics is optional",
             "not loaded until you explicitly choose",
-            "passes original public Source URLs directly to the selected installer",
+            "passes original public Source URLs to the iOS Hub Source Import Shortcut",
             "does not rehost third-party IPA binaries",
             "data-cookie-settings",
         ):
@@ -315,6 +315,8 @@ def validate_privacy_compliance() -> None:
             'status = {"generatedAt": generated_at, "sources": {}}',
             'catalog = {"generatedAt": generated_at, "sources": []}',
             "direct_installer_compatibility",
+            'DIRECT_SOURCE_INSTALLERS = ("altstore", "sidestore", "livecontainer", "altstore-pal", "flarestore", "feather")',
+            'STRICT_DUPLICATE_BUNDLE_INSTALLERS = {"altstore", "sidestore", "altstore-pal"}',
             '"installerCompatibility"',
         ):
             if required_generator_policy not in generator_text:
