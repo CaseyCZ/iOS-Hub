@@ -42,6 +42,12 @@ Podpora instalátorů, jejich pořadí a deep-linky jsou definované centrálně
 
 CaseyCZ iOS Hub cizí IPA soubory nerehostuje. Výsledné source JSONy zachovávají původní veřejné download URL jednotlivých projektů.
 
+## Soukromí a obsah třetích stran
+
+Google Analytics se načítá až po výslovném souhlasu uživatele. Volbu lze kdykoli změnit přes **Cookie settings** a podrobnosti jsou na stránce `privacy.html`.
+
+iOS Hub je nezávislý projekt a není přidružený k AltStore, SideStore, LiveContainer, Feather, FlareStore ani k autorům katalogizovaných Sources, pokud to výslovně neuvádí původní projekt. Registry u každého Source sleduje stav compliance kontroly; neprověřený Source není označován jako právně ověřený. Pokud je Source označen jako `restricted`, Builder ani automatický generátor ho nesmí zahrnout do Mixů nebo balíčků.
+
 ## DEB → IPA Beta
 
 Převod probíhá lokálně v prohlížeči bez uploadu `.deb` na server. Funguje pro kompatibilní balíčky obsahující skutečnou `.app` aplikaci.
