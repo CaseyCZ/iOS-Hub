@@ -41,6 +41,7 @@ OWNED_REFERENCE_FILES = (
     JS_DIR / "config.js",
     JS_DIR / "guide.js",
     JS_DIR / "resources.js",
+    JS_DIR / "privacy.js",
     JS_DIR / "i18n.js",
     ROOT / "tools" / "update_sources.py",
     ROOT / ".github" / "workflows" / "update-sources.yml",
@@ -926,6 +927,7 @@ SITE_PAGES = (
     ROOT / "guide.html",
     ROOT / "resources.html",
     ROOT / "credits.html",
+    ROOT / "privacy.html",
 )
 
 
@@ -1008,6 +1010,7 @@ def validate_page_quality() -> None:
         ROOT / "guide.html": EXPECTED_SITE_URL + "guide.html",
         ROOT / "resources.html": EXPECTED_SITE_URL + "resources.html",
         ROOT / "credits.html": EXPECTED_SITE_URL + "credits.html",
+        ROOT / "privacy.html": EXPECTED_SITE_URL + "privacy.html",
     }
     for page in SITE_PAGES:
         if not page.exists():
@@ -1063,6 +1066,7 @@ def validate_page_quality() -> None:
             "guide.html": ["index.html#tools", "builder.html", "guide.html", "resources.html", "index.html#sources", "credits.html"],
             "resources.html": ["index.html#tools", "builder.html", "guide.html", "resources.html", "index.html#sources", "credits.html"],
             "credits.html": ["index.html#tools", "builder.html", "guide.html", "resources.html", "index.html#sources", "credits.html"],
+            "privacy.html": ["index.html#tools", "builder.html", "guide.html", "resources.html", "index.html#sources", "credits.html"],
         }
         nav_match = re.search(r'<nav\s+class="nav"[^>]*>(.*?)</nav>', text, flags=re.IGNORECASE | re.DOTALL)
         if not nav_match:
@@ -1093,7 +1097,7 @@ def validate_page_quality() -> None:
             if "?v=" not in asset:
                 error(f"{label} local runtime asset is not cache-versioned: {asset}")
 
-    support_scripts = ("app.js", "builder-page.js", "converter.js", "guide.js", "resources.js")
+    support_scripts = ("app.js", "builder-page.js", "converter.js", "guide.js", "resources.js", "privacy.js")
     for script_name in support_scripts:
         script = JS_DIR / script_name
         if not script.exists():
@@ -1129,7 +1133,7 @@ def validate_page_quality() -> None:
         if "setOpen(false, true)" not in mobile_text or "button.focus()" not in mobile_text:
             error("mobile-menu.js must restore focus to the menu button when Escape closes it")
 
-    importers = ("app.js", "builder-page.js", "converter.js", "guide.js", "resources.js", "credits.js")
+    importers = ("app.js", "builder-page.js", "converter.js", "guide.js", "resources.js", "credits.js", "privacy.js")
     versions: set[str] = set()
     for script_name in importers:
         script = JS_DIR / script_name

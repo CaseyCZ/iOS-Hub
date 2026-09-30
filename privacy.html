@@ -21,7 +21,7 @@
   <link rel="stylesheet" href="src/css/hub-extra.css?v=1.1.5-20260930-consent1">
 </head>
 <body>
-  <a class="skip-link" href="#top">Skip to content</a>
+  <a class="skip-link" href="#top" data-i18n="skipToContent">Skip to content</a>
 
   <header class="topbar">
     <div class="wrap topbar-inner">
@@ -30,73 +30,124 @@
         <span>iOS Hub<small>iOS Sources · Sideloading</small></span>
       </a>
       <nav class="nav" aria-label="Primary">
-        <a href="index.html#tools">Tools</a>
+        <a href="index.html#tools" data-i18n="tools">Tools</a>
         <a href="builder.html">Source Builder</a>
-        <a href="guide.html">Guide</a>
-        <a href="resources.html">Useful</a>
-        <a href="index.html#sources">Sources</a>
-        <a href="credits.html">Credits</a>
+        <a href="guide.html" data-i18n="guideNav">Guide</a>
+        <a href="resources.html" data-i18n="resourcesNav">Useful</a>
+        <a href="index.html#sources" data-i18n="sources">Sources</a>
+        <a href="credits.html" data-privacy-copy="creditsNav">Credits</a>
       </nav>
+      <div class="nav-actions">
+        <select id="languageSelect" class="language-select-native" aria-hidden="true" tabindex="-1">
+          <option value="en">EN</option>
+          <option value="cs">CZ</option>
+          <option value="de">DE</option>
+          <option value="es">ES</option>
+          <option value="fr">FR</option>
+        </select>
+        <div class="settings-menu" data-settings-menu>
+          <button id="settingsButton" class="icon-btn settings-button" type="button" aria-haspopup="dialog" aria-expanded="false" aria-controls="settingsPanel" aria-label="Settings" title="Settings">⚙</button>
+          <div id="settingsPanel" class="settings-panel" role="dialog" aria-labelledby="settingsTitle" aria-hidden="true">
+            <div id="settingsTitle" class="settings-title" data-settings-copy="title">Settings</div>
+
+            <div class="settings-label" data-settings-copy="appearance">APPEARANCE</div>
+            <div class="settings-theme-seg">
+              <button type="button" data-settings-theme="dark" aria-pressed="false">☾ <span data-settings-copy="dark">Dark</span></button>
+              <button type="button" data-settings-theme="light" aria-pressed="false">☀ <span data-settings-copy="light">Light</span></button>
+            </div>
+
+            <div class="settings-label" data-settings-copy="language">LANGUAGE</div>
+            <div class="settings-language-list">
+              <button type="button" data-settings-language="cs" role="radio" aria-checked="false"><img src="assets/flags/cz.svg" alt=""><span>Čeština</span></button>
+              <button type="button" data-settings-language="en" role="radio" aria-checked="false"><img src="assets/flags/gb.svg" alt=""><span>English</span></button>
+              <button type="button" data-settings-language="de" role="radio" aria-checked="false"><img src="assets/flags/de.svg" alt=""><span>Deutsch</span></button>
+              <button type="button" data-settings-language="es" role="radio" aria-checked="false"><img src="assets/flags/es.svg" alt=""><span>Español</span></button>
+              <button type="button" data-settings-language="fr" role="radio" aria-checked="false"><img src="assets/flags/fr.svg" alt=""><span>Français</span></button>
+            </div>
+
+            <div class="settings-label" data-settings-copy="report">REPORT ISSUE</div>
+            <a class="settings-report-link report-bug-btn" href="https://github.com/CaseyCZ/iOS-Hub/issues/new" target="_blank" rel="noopener" aria-label="Report a bug" title="Report a bug" data-i18n-title="reportBug" data-i18n-aria-label="reportBug"><span aria-hidden="true">🐞</span><span data-i18n="reportBug">Report a bug</span></a>
+          </div>
+        </div>
+        <button id="themeToggle" class="settings-theme-proxy" type="button" aria-hidden="true" tabindex="-1">☀</button>
+        <button class="compact-btn nav-support-primary" type="button" data-support-open><img class="compact-brand-icon" src="https://cdn.buymeacoffee.com/buttons/bmc-new-btn-logo.svg" alt="" referrerpolicy="no-referrer"><span class="support-label" data-i18n="support">Support</span></button>
+      </div>
     </div>
   </header>
 
   <main id="top" class="privacy-page">
     <section class="hero wrap">
-      <div class="eyebrow">PRIVACY · COOKIES · THIRD-PARTY CONTENT</div>
-      <h1>Privacy & Cookies</h1>
-      <p>iOS Hub is an independent project. It is not affiliated with, sponsored by or endorsed by AltStore, SideStore, LiveContainer, Feather, FlareStore, Apple or the maintainers of third-party Sources unless explicitly stated by the original project.</p>
+      <div class="eyebrow" data-privacy-copy="eyebrow">PRIVACY · COOKIES · THIRD-PARTY CONTENT</div>
+      <h1 data-privacy-copy="title">Privacy & Cookies</h1>
+      <p data-privacy-copy="intro">iOS Hub is an independent project. It is not affiliated with, sponsored by or endorsed by AltStore, SideStore, LiveContainer, Feather, FlareStore, Apple or the maintainers of third-party Sources unless explicitly stated by the original project.</p>
       <div class="privacy-actions">
-        <button class="btn primary" type="button" data-cookie-settings>Cookie settings</button>
-        <a class="btn secondary" href="credits.html">Credits & acknowledgements</a>
+        <button class="btn primary" type="button" data-cookie-settings data-privacy-copy="cookieSettings">Cookie settings</button>
+        <a class="btn secondary" href="credits.html" data-privacy-copy="creditsAcknowledgements">Credits & acknowledgements</a>
       </div>
     </section>
 
     <section class="section wrap">
       <div class="panel">
-        <h2>Analytics</h2>
-        <p>Google Analytics is optional. The Google Analytics tag is not loaded until you explicitly choose <strong>Accept analytics</strong>. If you reject analytics, iOS Hub does not load the Google Analytics script.</p>
-        <p>Your analytics choice is stored locally in your browser so the site can remember it. You can change that choice at any time with the Cookie settings button on this page or in the site footer.</p>
+        <h2 data-privacy-copy="analyticsTitle">Analytics</h2>
+        <p data-privacy-copy="analyticsP1">Google Analytics is optional. The Google Analytics tag is not loaded until you explicitly choose Accept analytics. If you reject analytics, iOS Hub does not load the Google Analytics script.</p>
+        <p data-privacy-copy="analyticsP2">Your analytics choice is stored locally in your browser so the site can remember it. You can change that choice at any time with the Cookie settings button on this page or in the site footer.</p>
       </div>
 
       <div class="panel">
-        <h2>Third-party Sources and downloads</h2>
-        <p>iOS Hub does not rehost third-party IPA binaries. Third-party Sources used by the Builder are treated as link-only: iOS Hub may check whether a public endpoint is available and structurally valid, but the Builder does not copy, merge or rehost that Source's full payload, app descriptions, artwork, version lists or other app metadata.</p>
-        <p>For bulk import, the Source Builder passes original public Source URLs to the iOS Hub Source Import Shortcut on the user's device; the Shortcut then opens those original URLs in the selected installer. The manual fallback can open them one by one. iOS Hub does not create a combined Source feed. App names, artwork, descriptions, trademarks and other third-party content remain the responsibility and property of their respective owners.</p>
-        <p>External Sources can change at any time. When you open a third-party website, installer or download URL, that service's own privacy policy and terms apply.</p>
+        <h2 data-privacy-copy="thirdPartyTitle">Third-party Sources and downloads</h2>
+        <p data-privacy-copy="thirdPartyP1">iOS Hub does not rehost third-party IPA binaries. Third-party Sources used by the Builder are treated as link-only: iOS Hub may check whether a public endpoint is available and structurally valid, but the Builder does not copy, merge or rehost that Source's full payload, app descriptions, artwork, version lists or other app metadata.</p>
+        <p data-privacy-copy="thirdPartyP2">For bulk import, the Source Builder passes original public Source URLs to the iOS Hub Source Import Shortcut on the user's device; the Shortcut then opens those original URLs in the selected installer. The manual fallback can open them one by one. iOS Hub does not create a combined Source feed. App names, artwork, descriptions, trademarks and other third-party content remain the responsibility and property of their respective owners.</p>
+        <p data-privacy-copy="thirdPartyP3">External Sources can change at any time. When you open a third-party website, installer or download URL, that service's own privacy policy and terms apply.</p>
       </div>
 
       <div class="panel">
-        <h2>Local browser tools</h2>
-        <p>The DEB → IPA Converter is designed to process selected files locally in your browser. The selected package is not uploaded to the iOS Hub server by the converter.</p>
+        <h2 data-privacy-copy="localToolsTitle">Local browser tools</h2>
+        <p data-privacy-copy="localToolsP">The DEB → IPA Converter is designed to process selected files locally in your browser. The selected package is not uploaded to the iOS Hub server by the converter.</p>
       </div>
 
       <div class="panel">
-        <h2>Local preferences</h2>
-        <p>iOS Hub may use browser storage for settings such as language, appearance, Builder selections and your analytics choice. These preferences are used to keep the site working the way you selected.</p>
+        <h2 data-privacy-copy="localPreferencesTitle">Local preferences</h2>
+        <p data-privacy-copy="localPreferencesP">iOS Hub may use browser storage for settings such as language, appearance, Builder selections and your analytics choice. These preferences are used to keep the site working the way you selected.</p>
       </div>
 
       <div class="panel">
-        <h2>Contact and corrections</h2>
-        <p>If you maintain a Source or project shown on iOS Hub and want attribution corrected, content removed or a link changed, open an issue in the project repository.</p>
+        <h2 data-privacy-copy="contactTitle">Contact and corrections</h2>
+        <p data-privacy-copy="contactP">If you maintain a Source or project shown on iOS Hub and want attribution corrected, content removed or a link changed, open an issue in the project repository.</p>
         <div class="privacy-actions">
-          <a class="btn primary" href="https://github.com/CaseyCZ/iOS-Hub/issues/new" target="_blank" rel="noopener noreferrer">Contact via GitHub ↗</a>
+          <a class="btn primary" href="https://github.com/CaseyCZ/iOS-Hub/issues/new" target="_blank" rel="noopener noreferrer" data-privacy-copy="contactGithub">Contact via GitHub ↗</a>
         </div>
-        <p class="muted">Last updated: 30 September 2026.</p>
+        <p class="muted" data-privacy-copy="lastUpdated">Last updated: 30 September 2026.</p>
       </div>
     </section>
   </main>
 
   <footer class="footer">
     <div class="wrap footer-inner">
-      <span>© 2026 iOS Hub · v1.1.5</span>
+      <span>© <span id="year"></span> iOS Hub · v1.1.5</span>
       <div class="footer-links">
-        <a href="https://caseycz.github.io/" target="_blank" rel="noopener">Website</a>
+        <a href="https://caseycz.github.io/" target="_blank" rel="noopener" data-privacy-copy="website">Website</a>
         <a href="https://github.com/CaseyCZ/iOS-Hub" target="_blank" rel="noopener">GitHub · iOS-Hub</a>
-        <a href="credits.html">Credits</a>
-        <a href="privacy.html" aria-current="page">Privacy &amp; Cookies</a>
-        <button class="footer-link-button" type="button" data-cookie-settings>Cookie settings</button>
+        <a href="credits.html" data-privacy-copy="creditsNav">Credits</a>
+        <a href="privacy.html" aria-current="page" data-privacy-copy="privacyLink">Privacy &amp; Cookies</a>
+        <button class="footer-link-button" type="button" data-cookie-settings data-privacy-copy="cookieSettings">Cookie settings</button>
       </div>
     </div>
   </footer>
+
+  <div id="supportModal" class="support-backdrop" role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="supportTitle">
+    <div class="support-dialog">
+      <button class="support-close" type="button" data-support-close aria-label="Close" data-i18n-aria-label="close">×</button>
+      <div class="eyebrow" data-i18n="supportEyebrow">SUPPORT THE PROJECT</div>
+      <h2 id="supportTitle" data-i18n="supportTitle">Support further development.</h2>
+      <p data-i18n="supportDesc">If iOS Hub saves you time, you can support further development through Buy Me a Coffee.</p>
+      <a href="https://www.buymeacoffee.com/caseycz" target="_blank" rel="noopener"><img class="support-qr" src="https://caseycz.github.io/support-qr.svg" alt="Buy Me a Coffee QR code"></a>
+      <a class="btn primary brand-link" style="width:100%" href="https://www.buymeacoffee.com/caseycz" target="_blank" rel="noopener"><img class="brand-link-icon brand-link-icon-contain" src="https://cdn.buymeacoffee.com/buttons/bmc-new-btn-logo.svg" alt="" referrerpolicy="no-referrer"><span data-i18n="openCoffee">Open Buy Me a Coffee ↗</span></a>
+    </div>
+  </div>
+
+  <script type="module" src="src/js/privacy.js?v=1.1.5-20260930-privacy1"></script>
+  <script src="src/js/support-dialog.js?v=1.1.5-20260918-a11y1"></script>
+  <script src="src/js/mobile-menu.js?v=1.1.5-20260918-a11y1"></script>
+  <script src="src/js/settings-menu.js?v=1.1.5-20260918-a11y1"></script>
 </body>
 </html>
