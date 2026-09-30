@@ -100,19 +100,33 @@ def duplicate_bundle_report(payload: dict) -> dict:
     }
 
 
-def direct_installer_compatibility(source: dict, payload: dict) -> tuple[dict, dict]:
-    report = duplicate_bundle_report(payload)
-    duplicate_count = report["count"]
+def direct_installer_compatibility(source: dict, variant_payloads: dict[str, dict]) -> tuple[dict, dict]:
+    # Keep the source-level duplicate summary based on Classic when available,
+    # but evaluate each installer against the payload variant it actually opens.
+    assessment_payload = (
+        variant_payloads.get("classic")
+        or variant_payloads.get("pal")
+        or {}
+    )
+    report = duplicate_bundle_report(assessment_payload)
     checks: dict[str, dict] = {}
 
     for installer in DIRECT_SOURCE_INSTALLERS:
         if not source_supports_installer(source, installer):
             continue
 
+        installer_variant = "pal" if installer == "altstore-pal" else "classic"
+        installer_payload = variant_payloads.get(installer_variant)
+        if installer_payload is None:
+            continue
+
+        installer_report = duplicate_bundle_report(installer_payload)
+        duplicate_count = installer_report["count"]
+
         if not duplicate_count:
             checks[installer] = {
                 "directSource": "pass",
-                "reason": "No duplicate bundle identifiers were detected in the source.",
+                "reason": "No duplicate bundle identifiers were detected in the source variant used by this installer.",
             }
             continue
 
@@ -218,10 +232,9 @@ def main() -> None:
             payload = variant_payloads[preferred_variant]
             apps = [app for app in payload.get("apps", []) if isinstance(app, dict)]
             variant_result = result["variants"][preferred_variant]
-            assessment_payload = variant_payloads.get("classic", payload)
             duplicate_report, installer_compatibility = direct_installer_compatibility(
                 source,
-                assessment_payload,
+                variant_payloads,
             )
             result.update({
                 "online": True,
