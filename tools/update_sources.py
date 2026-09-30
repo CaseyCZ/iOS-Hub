@@ -13,8 +13,8 @@ REGISTRY = ROOT / "sources" / "registry.json"
 DATA_DIR = ROOT / "data"
 USER_AGENT = "CaseyCZ-iOS-Hub (+https://caseycz.github.io/iOS-Hub/)"
 
-DIRECT_SOURCE_INSTALLERS = ("altstore", "sidestore", "livecontainer", "flarestore", "feather")
-STRICT_DUPLICATE_BUNDLE_INSTALLERS = {"altstore", "sidestore"}
+DIRECT_SOURCE_INSTALLERS = ("altstore", "sidestore", "livecontainer", "altstore-pal", "flarestore", "feather")
+STRICT_DUPLICATE_BUNDLE_INSTALLERS = {"altstore", "sidestore", "altstore-pal"}
 TOLERANT_DUPLICATE_BUNDLE_INSTALLERS = {"livecontainer", "feather"}
 DUPLICATE_BUNDLE_EXAMPLE_LIMIT = 20
 
