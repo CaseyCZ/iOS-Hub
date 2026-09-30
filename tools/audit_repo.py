@@ -1758,6 +1758,7 @@ def validate_layout() -> None:
             "scroll-padding-inline:8px",
             ".filter-tabs,.trouble-quick,.assistant-tried-options",
             ".assistant-trouble-chips,.guide-jumpbar",
+            ".filter-tabs{\n  width:100%;\n  min-width:0;\n  max-width:100%;\n  justify-self:stretch;\n  justify-content:flex-start;",
         ):
             if required_mobile_scroll not in shared_css_text:
                 error(
