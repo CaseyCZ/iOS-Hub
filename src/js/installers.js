@@ -693,13 +693,14 @@ export function sourceInstallerIds(source) {
   }
 
   const mode = SOURCE_MODES[source?.mode] || SOURCE_MODES.classic;
-  if (Array.isArray(mode.installerIds)) {
+  if (Array.isArray(mode.installerIds) && sourceVariantIds(source).length <= 1) {
     return mode.installerIds.filter(id => INSTALLERS[id]);
   }
 
-  return sourceVariantURL(source, mode.variant)
-    ? Object.values(INSTALLERS).filter(installer => installer.variant === mode.variant).map(installer => installer.id)
-    : [];
+  const availableVariants = new Set(sourceVariantIds(source));
+  return Object.values(INSTALLERS)
+    .filter(installer => availableVariants.has(installer.variant))
+    .map(installer => installer.id);
 }
 
 export function sourceInstallerCompatibility(sourceStatus, installerId) {
