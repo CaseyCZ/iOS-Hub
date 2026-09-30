@@ -495,37 +495,45 @@ def main() -> None:
                 source,
                 assessment_payload,
             )
+            aggregation_allowed = source_compliance_allows_distribution(source)
             result.update({
                 "online": True,
                 "httpStatus": variant_result.get("httpStatus"),
                 "appCount": len(apps),
-                "iconURL": payload.get("iconURL") or (apps[0].get("iconURL") if apps else "") or "",
+                "iconURL": (
+                    payload.get("iconURL") or (apps[0].get("iconURL") if apps else "") or ""
+                ) if aggregation_allowed else "",
                 "error": None,
                 "mixTest": mix_test,
                 "mixReason": mix_reason,
-                "duplicateBundleIdentifiers": duplicate_report,
+                "duplicateBundleIdentifiers": duplicate_report if aggregation_allowed else {
+                    "count": duplicate_report.get("count", 0) if isinstance(duplicate_report, dict) else 0,
+                    "examples": [],
+                },
                 "installerCompatibility": installer_compatibility,
                 "preferredVariant": preferred_variant,
+                "aggregationApproved": aggregation_allowed,
             })
             loaded[source_id] = (source, payload)
 
-            if source.get("cachePayload", True):
+            if aggregation_allowed and source.get("cachePayload", True):
                 cache_payload = variant_payloads.get("classic", payload)
                 write_json(SOURCE_CACHE_DIR / f"{source_id}.json", cache_payload)
 
             catalog_limit = source.get("catalogLimit")
-            catalog_apps = apps
+            catalog_apps = apps if aggregation_allowed else []
             if isinstance(catalog_limit, int) and catalog_limit > 0:
-                catalog_apps = apps[:catalog_limit]
+                catalog_apps = catalog_apps[:catalog_limit]
 
             catalog["sources"].append({
                 "id": source_id,
-                "name": payload.get("name") or source.get("name"),
+                "name": source.get("name"),
                 "appCount": len(apps),
-                "catalogLimited": len(catalog_apps) < len(apps),
+                "catalogLimited": aggregation_allowed and len(catalog_apps) < len(apps),
                 "iconURL": result["iconURL"],
                 "variants": sorted(variant_payloads),
                 "apps": [app_summary(app) for app in catalog_apps],
+                "aggregationApproved": aggregation_allowed,
             })
         else:
             errors = [
@@ -538,7 +546,9 @@ def main() -> None:
         status["sources"][source_id] = result
 
     unique_app_keys: set[str] = set()
-    for source_id, (_source, payload) in loaded.items():
+    for source_id, (source, payload) in loaded.items():
+        if not source_compliance_allows_distribution(source):
+            continue
         for app in payload.get("apps", []):
             if not isinstance(app, dict):
                 continue
@@ -555,7 +565,8 @@ def main() -> None:
     live_cache_files = {
         f"{source_id}.json"
         for source_id, (source, _payload) in loaded.items()
-        if source.get("cachePayload", True)
+        if source_compliance_allows_distribution(source)
+        and source.get("cachePayload", True)
     }
     for path in SOURCE_CACHE_DIR.glob("*.json"):
         if path.name not in live_cache_files:
