@@ -317,6 +317,8 @@ def validate_privacy_compliance() -> None:
             "direct_installer_compatibility",
             'DIRECT_SOURCE_INSTALLERS = ("altstore", "sidestore", "livecontainer", "altstore-pal", "flarestore", "feather")',
             'STRICT_DUPLICATE_BUNDLE_INSTALLERS = {"altstore", "sidestore", "altstore-pal"}',
+            'installer_variant = "pal" if installer == "altstore-pal" else "classic"',
+            "installer_payload = variant_payloads.get(installer_variant)",
             '"installerCompatibility"',
         ):
             if required_generator_policy not in generator_text:
