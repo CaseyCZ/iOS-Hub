@@ -49,7 +49,6 @@ LANGUAGES = ("en", "cs", "de", "es", "fr")
 ALLOWED_MODES = {"classic", "pal", "sidestore"}
 ALLOWED_INSTALLERS = {"altstore", "sidestore", "livecontainer", "altstore-pal", "flarestore", "feather"}
 ALLOWED_COMPLIANCE_STATUSES = {"unreviewed", "licensed", "permission", "public-metadata", "restricted"}
-ALLOWED_COMPLIANCE_USAGE = {"metadata-and-original-links", "link-only"}
 ID_RE = re.compile(r"^[a-z0-9][a-z0-9-]*$")
 LEGACY_PATHS = [
     ROOT / "Packages",
@@ -441,7 +440,6 @@ def validate_registry() -> None:
             error(f"registry source {source_id or index!r} is missing compliance metadata")
         else:
             review_status = str(compliance.get("reviewStatus") or "")
-            usage = str(compliance.get("usage") or "")
             if review_status not in ALLOWED_COMPLIANCE_STATUSES:
                 error(
                     f"registry source {source_id or index!r} has invalid compliance.reviewStatus "
@@ -452,79 +450,46 @@ def validate_registry() -> None:
                     f"registry source {source_id or index!r} is still unreviewed; "
                     "every Source must be classified before release"
                 )
-            else:
-                evidence_url = str(compliance.get("evidenceURL") or "").strip()
-                parsed_evidence = urlparse(evidence_url)
-                if parsed_evidence.scheme != "https" or not parsed_evidence.netloc:
-                    error(
-                        f"reviewed registry source {source_id or index!r} must include "
-                        "an absolute HTTPS compliance.evidenceURL"
-                    )
-                reviewed_at = str(compliance.get("reviewedAt") or "").strip()
-                if not re.fullmatch(r"\d{4}-\d{2}-\d{2}", reviewed_at):
-                    error(
-                        f"reviewed registry source {source_id or index!r} must include "
-                        "compliance.reviewedAt in YYYY-MM-DD format"
-                    )
-                if not str(compliance.get("note") or "").strip():
-                    error(
-                        f"reviewed registry source {source_id or index!r} must include compliance.note"
-                    )
-            if usage not in ALLOWED_COMPLIANCE_USAGE:
+
+            evidence_url = str(compliance.get("evidenceURL") or "").strip()
+            parsed_evidence = urlparse(evidence_url)
+            if parsed_evidence.scheme != "https" or not parsed_evidence.netloc:
                 error(
-                    f"registry source {source_id or index!r} has invalid compliance.usage {usage!r}"
+                    f"reviewed registry source {source_id or index!r} must include "
+                    "an absolute HTTPS compliance.evidenceURL"
                 )
+
+            reviewed_at = str(compliance.get("reviewedAt") or "").strip()
+            if not re.fullmatch(r"\d{4}-\d{2}-\d{2}", reviewed_at):
+                error(
+                    f"reviewed registry source {source_id or index!r} must include "
+                    "compliance.reviewedAt in YYYY-MM-DD format"
+                )
+
+            if not str(compliance.get("note") or "").strip():
+                error(
+                    f"reviewed registry source {source_id or index!r} must include compliance.note"
+                )
+
             if compliance.get("binaryRehost") is not False:
                 error(
                     f"registry source {source_id or index!r} must explicitly keep binaryRehost=false"
                 )
 
-            aggregation_approved = compliance.get("aggregationApproved")
-            if not isinstance(aggregation_approved, bool):
+            if review_status == "licensed" and not str(compliance.get("license") or "").strip():
                 error(
-                    f"registry source {source_id or index!r} must define boolean "
-                    "compliance.aggregationApproved"
-                )
-                aggregation_approved = False
-
-            rights_reviewed = review_status in {"licensed", "permission"}
-            if rights_reviewed:
-                evidence_url = str(compliance.get("evidenceURL") or "").strip()
-                parsed_evidence = urlparse(evidence_url)
-                if parsed_evidence.scheme != "https" or not parsed_evidence.netloc:
-                    error(
-                        f"rights-reviewed registry source {source_id or index!r} must include "
-                        "an absolute HTTPS compliance.evidenceURL"
-                    )
-                if review_status == "licensed" and not str(compliance.get("license") or "").strip():
-                    error(
-                        f"licensed registry source {source_id or index!r} must record compliance.license"
-                    )
-
-            if aggregation_approved:
-                if not rights_reviewed:
-                    error(
-                        f"aggregation-approved registry source {source_id or index!r} must be "
-                        "licensed or permission-reviewed"
-                    )
-                if usage != "metadata-and-original-links":
-                    error(
-                        f"aggregation-approved registry source {source_id or index!r} must use "
-                        "metadata-and-original-links"
-                    )
-            elif usage != "link-only":
-                error(
-                    f"registry source {source_id or index!r} is not aggregation-approved "
-                    "and must be link-only"
+                    f"licensed registry source {source_id or index!r} must record compliance.license"
                 )
 
-            if review_status == "restricted":
-                if source.get("builder") is not False:
-                    error(f"restricted registry source {source_id or index!r} must set builder=false")
-                if source.get("autoPackage") is not False:
-                    error(f"restricted registry source {source_id or index!r} must set autoPackage=false")
-                if source.get("mergeable") is True:
-                    error(f"restricted registry source {source_id or index!r} must not be mergeable")
+            for obsolete_compliance_key in ("usage", "aggregationApproved"):
+                if obsolete_compliance_key in compliance:
+                    error(
+                        f"registry source {source_id or index!r} still contains obsolete "
+                        f"compliance.{obsolete_compliance_key}"
+                    )
+
+            if review_status == "restricted" and source.get("builder") is not False:
+                error(f"restricted registry source {source_id or index!r} must set builder=false")
 
         parsed = urlparse(url)
         if parsed.scheme != "https" or not parsed.netloc:
@@ -622,12 +587,16 @@ def validate_registry() -> None:
                 f"registry source {source_id or index!r} disables cachePayload but remains available to Builder"
             )
 
-        if source.get("mergeable") is True and not classic_url:
-            error(f"registry source {source_id!r} is mergeable but has no Classic source URL")
-
-        for key in ("official", "trusted", "recommended", "mergeable", "community", "modified"):
+        for key in ("official", "trusted", "recommended", "community", "modified"):
             if key in source and not isinstance(source[key], bool):
                 error(f"registry source {source_id!r} field {key!r} must be boolean")
+
+        for obsolete_source_key in ("mergeable", "autoPackage", "cachePayload", "catalogLimit"):
+            if obsolete_source_key in source:
+                error(
+                    f"registry source {source_id!r} still contains obsolete Mix field "
+                    f"{obsolete_source_key!r}"
+                )
 
 
     if partially_localized:
