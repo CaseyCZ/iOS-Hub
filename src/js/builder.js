@@ -6,7 +6,7 @@ import {
   sourceInstallerIds,
   sourceVariantURL,
   sourceFormatLabel
-} from './installers.js?v=1.1.5-20260930-source-queue2';
+} from './installers.js?v=1.1.5-20260930-source-import4';
 
 const $ = selector => document.querySelector(selector);
 const $$ = selector => [...document.querySelectorAll(selector)];
@@ -43,20 +43,20 @@ const GENRE_RULES = {
 const copy = {
   en: {
     title:'Custom Source Builder',
-    desc:'Choose an installer and original Sources. iOS Hub sends the whole selection to the iOS Hub Source Import Shortcut, which opens each original Source in the selected app. JSON export remains optional.',
+    desc:'Choose an installer and original Sources. Bulk import sends the whole selection to the iOS Hub Source Import Shortcut. Manual one-by-one opening stays available below, and JSON export is optional.',
     selectCompatible:'Select all compatible',
     selectAll:'Select compatible shown',
     clear:'Clear selection',
     build:'Bulk import',
     installShortcut:'Install Shortcut',
     shortcutHelp:'Bulk import uses the iOS Hub Source Import Shortcut. Install it once; you can reinstall it here later if you delete it.',
-    downloadJson:'Download JSON',
-    previewJson:'Preview JSON',
+    downloadJson:'Download selection JSON',
+    previewJson:'Preview selection JSON',
     jsonBuilding:'Preparing JSON…',
-    jsonReady:'JSON ready · {apps} apps · {conflicts} duplicates resolved.',
+    jsonReady:'JSON ready · {sources} original Sources.',
     jsonFailed:'Could not create JSON:',
     noSelection:'No compatible Sources are selected.',
-    noMergeableApps:'No mergeable app entries were found.',
+    noMergeableApps:'No compatible Sources were found.',
     selected:'selected',
     shown:'shown',
     compatible:'COMPATIBLE',
@@ -64,25 +64,25 @@ const copy = {
     incompatibleReason:'Not compatible with the selected installer.',
     removedIncompatible:'{n} previously selected Source(s) were removed because they are not compatible with {tool}.',
     targetLabel:'Where do you want to add the Sources?',
-    targetHelpAlt:'Each selected Classic Source is opened in AltStore separately. AltStore keeps the original Source URL, so normal Source updates continue.',
-    targetHelpSide:'SideStore currently accepts one Source URL per deep link. The Builder therefore opens the selected original Sources one by one, preserving normal updates.',
+    targetHelpAlt:'AltStore opens each Source as its own preview and may require confirmation. If bulk import is inconvenient, use the manual one-by-one fallback below.',
+    targetHelpSide:'SideStore handles one Source URL per deep link and may require confirmation. If needed, use the manual one-by-one fallback below.',
     targetHelpLive:'Each selected AltStore-style Source is opened directly in LiveContainer using its original URL.',
     targetHelpFlare:'Each selected compatible repository is opened directly in FlareStore using its original URL.',
     targetHelpFeather:'Each selected repository is opened directly in Feather using its original URL.',
-    targetHelpPal:'Each selected PAL Source is opened directly in AltStore PAL. No Classic/PAL conversion is performed.',
+    targetHelpPal:'Each PAL Source is opened separately in AltStore PAL and may require confirmation. No Classic/PAL conversion is performed.',
     targetHelpGeneric:'The Builder sends original Source URLs directly to the selected installer.',
     targetPrefix:'Target',
     customBuilder:'Selected Sources',
     filters:'⚙ Filters · 🔎 Search · ☑ Selection',
     sourceHelp:'Sources are not merged, copied or re-hosted. Each original URL is added separately, so future updates still come from the original Source.',
-    queueHelp:'All selected original Sources are sent to the iOS Hub Source Import Shortcut in one batch.',
+    queueHelp:'Bulk import sends the full selection to the Shortcut. The list below remains available as a manual one-by-one fallback.',
     addTo:'Open next in',
     copyUrls:'Copy Source URLs',
     copied:'URLs copied',
-    restart:'Restart queue',
-    queueReady:'Source queue ready',
-    queueFinished:'All selected Sources have been opened.',
-    queueProgress:'opened',
+    restart:'Restart manual fallback',
+    queueReady:'Manual fallback ready',
+    queueFinished:'Manual fallback completed.',
+    queueProgress:'manually opened',
     opening:'Opening',
     retry:'Open',
     pending:'Pending',
@@ -93,20 +93,20 @@ const copy = {
   },
   cs: {
     title:'Custom Source Builder',
-    desc:'Vyber instalátor a původní Sources. iOS Hub předá celý výběr zkratce iOS Hub Source Import, která otevře každou původní Source ve zvolené aplikaci. Export JSONu zůstává volitelný.',
+    desc:'Vyber instalátor a původní Sources. Hromadný import předá celý výběr zkratce iOS Hub Source Import. Dole zůstává ruční otevření po jedné a export JSONu je volitelný.',
     selectCompatible:'Vybrat všechny kompatibilní',
     selectAll:'Vybrat kompatibilní zobrazené',
     clear:'Zrušit výběr',
     build:'Hromadný import',
     installShortcut:'Nainstalovat zkratku',
     shortcutHelp:'Hromadný import používá zkratku iOS Hub Source Import. Stačí ji nainstalovat jednou; pokud ji smažeš, odsud ji můžeš kdykoli znovu přidat.',
-    downloadJson:'Stáhnout JSON',
-    previewJson:'Náhled JSON',
+    downloadJson:'Stáhnout JSON výběru',
+    previewJson:'Náhled JSON výběru',
     jsonBuilding:'Připravuji JSON…',
-    jsonReady:'JSON připraven · {apps} aplikací · vyřešeno {conflicts} duplicit.',
+    jsonReady:'JSON připraven · {sources} původních Sources.',
     jsonFailed:'JSON se nepodařilo vytvořit:',
     noSelection:'Není vybraná žádná kompatibilní Source.',
-    noMergeableApps:'Nebyly nalezeny žádné aplikace, které lze sloučit.',
+    noMergeableApps:'Nebyly nalezeny žádné kompatibilní Sources.',
     selected:'vybráno',
     shown:'zobrazeno',
     compatible:'KOMPATIBILNÍ',
@@ -114,25 +114,25 @@ const copy = {
     incompatibleReason:'Není kompatibilní se zvoleným instalátorem.',
     removedIncompatible:'Kvůli nekompatibilitě s {tool} bylo z výběru odebráno Sources: {n}.',
     targetLabel:'Kam chceš Sources přidat?',
-    targetHelpAlt:'Každá vybraná Classic Source se otevře v AltStore samostatně. AltStore si uloží původní URL, takže aktualizace Source fungují dál normálně.',
-    targetHelpSide:'SideStore nyní přijímá jednu Source URL na jeden deep-link. Builder proto otevře vybrané původní Sources postupně a aktualizace zůstanou zachované.',
+    targetHelpAlt:'AltStore otevře každou Source jako samostatný náhled a může vyžadovat potvrzení. Když hromadný import není vhodný, použij dole ruční otevření po jedné.',
+    targetHelpSide:'SideStore zpracovává jednu Source URL na jeden deep-link a může vyžadovat potvrzení. Když je potřeba, použij dole ruční otevření po jedné.',
     targetHelpLive:'Každá vybraná AltStore-style Source se otevře přímo v LiveContaineru přes původní URL.',
     targetHelpFlare:'Každý vybraný kompatibilní repozitář se otevře přímo ve FlareStore přes původní URL.',
     targetHelpFeather:'Každý vybraný repozitář se otevře přímo ve Feather přes původní URL.',
-    targetHelpPal:'Každá vybraná PAL Source se otevře přímo v AltStore PAL. Nic nepřevádíme mezi Classic a PAL.',
+    targetHelpPal:'Každá PAL Source se v AltStore PAL otevře samostatně a může vyžadovat potvrzení. Nic nepřevádíme mezi Classic a PAL.',
     targetHelpGeneric:'Builder posílá původní Source URL přímo do zvoleného instalátoru.',
     targetPrefix:'Cíl',
     customBuilder:'Vybrané Sources',
     filters:'⚙ Filtry · 🔎 Hledání · ☑ Výběr',
     sourceHelp:'Sources se neslučují, nekopírují ani nerehostují. Každá původní URL se přidá samostatně, takže budoucí aktualizace dál chodí z originální Source.',
-    queueHelp:'Všechny vybrané původní Sources se pošlou najednou do zkratky iOS Hub Source Import.',
+    queueHelp:'Hromadný import pošle celý výběr do zkratky. Seznam dole zůstává jako ruční záloha pro otevření Sources po jedné.',
     addTo:'Otevřít další v',
     copyUrls:'Kopírovat URL Sources',
     copied:'URL zkopírovány',
-    restart:'Začít znovu',
-    queueReady:'Fronta Sources je připravená',
-    queueFinished:'Všechny vybrané Sources byly otevřeny.',
-    queueProgress:'otevřeno',
+    restart:'Začít ruční otevření znovu',
+    queueReady:'Ruční otevření po jedné',
+    queueFinished:'Ruční otevření je dokončené.',
+    queueProgress:'ručně otevřeno',
     opening:'Otevírám',
     retry:'Otevřít',
     pending:'Čeká',
@@ -143,17 +143,17 @@ const copy = {
   },
   de: {
     title:'Custom Source Builder',
-    desc:'Installer wählen, originale Sources auswählen und direkt an die App senden — ohne kombiniertes JSON.',
+    desc:'Installer und originale Sources auswählen. Der Massenimport sendet die gesamte Auswahl an den Kurzbefehl; manuelles Öffnen einzeln und JSON-Export bleiben verfügbar.',
     selectCompatible:'Alle kompatiblen wählen',
     selectAll:'Sichtbare kompatible wählen',
     clear:'Auswahl löschen',
     build:'Massenimport',
     installShortcut:'Kurzbefehl installieren',
     shortcutHelp:'Der Massenimport verwendet den Kurzbefehl iOS Hub Source Import. Einmal installieren; nach dem Löschen kann er hier erneut hinzugefügt werden.',
-    downloadJson:'JSON laden',
-    previewJson:'JSON-Vorschau',
+    downloadJson:'Auswahl-JSON laden',
+    previewJson:'Auswahl-JSON Vorschau',
     jsonBuilding:'JSON wird vorbereitet…',
-    jsonReady:'JSON bereit · {apps} Apps · {conflicts} Duplikate aufgelöst.',
+    jsonReady:'JSON bereit · {sources} originale Sources.',
     jsonFailed:'JSON konnte nicht erstellt werden:',
     noSelection:'Keine kompatiblen Sources ausgewählt.',
     noMergeableApps:'Keine zusammenführbaren Apps gefunden.',
@@ -164,8 +164,8 @@ const copy = {
     incompatibleReason:'Nicht mit dem gewählten Installer kompatibel.',
     removedIncompatible:'{n} zuvor ausgewählte Source(s) wurden entfernt, da sie nicht mit {tool} kompatibel sind.',
     targetLabel:'Wo sollen die Sources hinzugefügt werden?',
-    targetHelpAlt:'Jede Classic Source wird einzeln mit ihrer Original-URL in AltStore geöffnet. Updates bleiben dadurch erhalten.',
-    targetHelpSide:'SideStore akzeptiert derzeit eine Source-URL pro Deep-Link. Der Builder öffnet die Original-Sources daher nacheinander.',
+    targetHelpAlt:'AltStore öffnet jede Source als eigene Vorschau und kann eine Bestätigung verlangen. Unten bleibt das manuelle Öffnen einzeln verfügbar.',
+    targetHelpSide:'SideStore verarbeitet eine Source-URL pro Deep-Link und kann eine Bestätigung verlangen. Unten bleibt das manuelle Öffnen einzeln verfügbar.',
     targetHelpLive:'Jede ausgewählte Source wird mit ihrer Original-URL direkt in LiveContainer geöffnet.',
     targetHelpFlare:'Jedes ausgewählte kompatible Repository wird mit seiner Original-URL direkt in FlareStore geöffnet.',
     targetHelpFeather:'Jedes ausgewählte Repository wird mit seiner Original-URL direkt in Feather geöffnet.',
@@ -175,7 +175,7 @@ const copy = {
     customBuilder:'Ausgewählte Sources',
     filters:'⚙ Filter · 🔎 Suche · ☑ Auswahl',
     sourceHelp:'Sources werden nicht zusammengeführt, kopiert oder neu gehostet. Jede Original-URL bleibt erhalten, damit Updates weiterhin funktionieren.',
-    queueHelp:'Alle ausgewählten Original-Sources werden gesammelt an den Shortcut iOS Hub Source Import gesendet.',
+    queueHelp:'Der Massenimport sendet die gesamte Auswahl an den Kurzbefehl. Die Liste unten bleibt als manueller Fallback erhalten.',
     addTo:'Nächste öffnen in',
     copyUrls:'Source-URLs kopieren',
     copied:'URLs kopiert',
@@ -193,17 +193,17 @@ const copy = {
   },
   es: {
     title:'Custom Source Builder',
-    desc:'Elige un instalador, selecciona Sources originales y envíalas a la app sin crear un JSON combinado.',
+    desc:'Elige un instalador y Sources originales. La importación masiva envía toda la selección al atajo; abajo sigue disponible la apertura manual una por una y el JSON es opcional.',
     selectCompatible:'Seleccionar compatibles',
     selectAll:'Seleccionar compatibles visibles',
     clear:'Borrar selección',
     build:'Importación masiva',
     installShortcut:'Instalar atajo',
     shortcutHelp:'La importación masiva usa el atajo iOS Hub Source Import. Instálalo una vez; si lo eliminas, puedes volver a añadirlo desde aquí.',
-    downloadJson:'Descargar JSON',
-    previewJson:'Vista previa JSON',
+    downloadJson:'Descargar JSON de selección',
+    previewJson:'Vista previa del JSON de selección',
     jsonBuilding:'Preparando JSON…',
-    jsonReady:'JSON listo · {apps} apps · {conflicts} duplicados resueltos.',
+    jsonReady:'JSON listo · {sources} Sources originales.',
     jsonFailed:'No se pudo crear el JSON:',
     noSelection:'No hay Sources compatibles seleccionadas.',
     noMergeableApps:'No se encontraron apps combinables.',
@@ -214,8 +214,8 @@ const copy = {
     incompatibleReason:'No es compatible con el instalador seleccionado.',
     removedIncompatible:'Se eliminaron {n} Source(s) porque no son compatibles con {tool}.',
     targetLabel:'¿Dónde quieres añadir las Sources?',
-    targetHelpAlt:'Cada Source Classic se abre por separado en AltStore con su URL original, por lo que las actualizaciones siguen funcionando.',
-    targetHelpSide:'SideStore acepta actualmente una Source URL por deep-link. El Builder abre las Sources originales una a una.',
+    targetHelpAlt:'AltStore abre cada Source como una vista previa independiente y puede pedir confirmación. Abajo queda disponible la apertura manual una por una.',
+    targetHelpSide:'SideStore procesa una Source URL por deep-link y puede pedir confirmación. Abajo queda disponible la apertura manual una por una.',
     targetHelpLive:'Cada Source seleccionada se abre directamente en LiveContainer con su URL original.',
     targetHelpFlare:'Cada repositorio compatible se abre directamente en FlareStore con su URL original.',
     targetHelpFeather:'Cada repositorio se abre directamente en Feather con su URL original.',
@@ -225,7 +225,7 @@ const copy = {
     customBuilder:'Sources seleccionadas',
     filters:'⚙ Filtros · 🔎 Buscar · ☑ Selección',
     sourceHelp:'Las Sources no se combinan, copian ni realojan. Se añade cada URL original por separado para conservar las actualizaciones.',
-    queueHelp:'Todas las Sources originales seleccionadas se envían juntas al atajo iOS Hub Source Import.',
+    queueHelp:'La importación masiva envía toda la selección al atajo. La lista inferior queda como alternativa manual una por una.',
     addTo:'Abrir siguiente en',
     copyUrls:'Copiar URLs de Sources',
     copied:'URLs copiadas',
@@ -250,10 +250,10 @@ const copy = {
     build:'Import groupé',
     installShortcut:'Installer le raccourci',
     shortcutHelp:'L’import groupé utilise le raccourci iOS Hub Source Import. Installez-le une fois ; s’il est supprimé, vous pouvez le réinstaller ici.',
-    downloadJson:'Télécharger JSON',
-    previewJson:'Aperçu JSON',
+    downloadJson:'Télécharger le JSON de sélection',
+    previewJson:'Aperçu du JSON de sélection',
     jsonBuilding:'Préparation du JSON…',
-    jsonReady:'JSON prêt · {apps} apps · {conflicts} doublons résolus.',
+    jsonReady:'JSON prêt · {sources} Sources originales.',
     jsonFailed:'Impossible de créer le JSON :',
     noSelection:'Aucune Source compatible sélectionnée.',
     noMergeableApps:'Aucune app fusionnable trouvée.',
@@ -265,7 +265,7 @@ const copy = {
     removedIncompatible:'{n} Source(s) ont été retirées car elles ne sont pas compatibles avec {tool}.',
     targetLabel:'Où voulez-vous ajouter les Sources ?',
     targetHelpAlt:'Chaque Source Classic est ouverte séparément dans AltStore avec son URL originale, afin de conserver les mises à jour.',
-    targetHelpSide:'SideStore accepte actuellement une URL de Source par deep-link. Le Builder ouvre donc les Sources originales une par une.',
+    targetHelpSide:'SideStore traite une URL de Source par deep-link et peut demander une confirmation. L’ouverture manuelle une par une reste disponible ci-dessous.',
     targetHelpLive:'Chaque Source sélectionnée est ouverte directement dans LiveContainer avec son URL originale.',
     targetHelpFlare:'Chaque dépôt compatible est ouvert directement dans FlareStore avec son URL originale.',
     targetHelpFeather:'Chaque dépôt est ouvert directement dans Feather avec son URL originale.',
@@ -275,7 +275,7 @@ const copy = {
     customBuilder:'Sources sélectionnées',
     filters:'⚙ Filtres · 🔎 Recherche · ☑ Sélection',
     sourceHelp:'Les Sources ne sont ni fusionnées, ni copiées, ni réhébergées. Chaque URL originale est ajoutée séparément afin de conserver les mises à jour.',
-    queueHelp:'Toutes les Sources originales sélectionnées sont envoyées ensemble au raccourci iOS Hub Source Import.',
+    queueHelp:'L’import groupé envoie toute la sélection au raccourci. La liste ci-dessous reste disponible comme solution manuelle une par une.',
     addTo:'Ouvrir suivante dans',
     copyUrls:'Copier les URL des Sources',
     copied:'URL copiées',
@@ -547,6 +547,10 @@ function render() {
   if (count) count.textContent = `${selected.size} ${tr('selected')} · ${available.length} ${tr('shown')} · ${tr('targetPrefix')}: ${targetName()}`;
   const build = $('#expBuild');
   if (build) build.disabled = selected.size === 0;
+  const download = $('#expDownload');
+  if (download) download.disabled = selected.size === 0;
+  const preview = $('#expPreview');
+  if (preview) preview.disabled = selected.size === 0;
 
   if (queueIds.length && queueTarget === target) renderQueue();
 }
@@ -624,48 +628,7 @@ function markQueueOpened(index) {
 
 const SHORTCUT_NAME = 'iOS Hub Source Import';
 const SHORTCUT_SHARE_URL = 'https://www.icloud.com/shortcuts/b8a48606455246389f066fc4f35af057';
-let mixBlobUrl = null;
-
-function parseDate(value) {
-  if (!value) return 0;
-  const time = Date.parse(value);
-  return Number.isFinite(time) ? time : 0;
-}
-
-function appDate(app) {
-  let best = Math.max(parseDate(app?.versionDate), parseDate(app?.date));
-  if (Array.isArray(app?.versions)) {
-    app.versions.forEach(version => {
-      if (version && typeof version === 'object') {
-        best = Math.max(best, parseDate(version.date), parseDate(version.versionDate));
-      }
-    });
-  }
-  return best;
-}
-
-function dedupeApps(payloads) {
-  const merged = new Map();
-  let conflicts = 0;
-  for (const {source,payload} of payloads) {
-    for (const app of (Array.isArray(payload?.apps) ? payload.apps : [])) {
-      if (!app || typeof app !== 'object') continue;
-      const bundle = app.bundleIdentifier || app.bundleID;
-      if (!bundle) continue;
-      if (!merged.has(bundle)) {
-        merged.set(bundle, {source, app});
-      } else {
-        conflicts += 1;
-        const old = merged.get(bundle);
-        if (appDate(app) > appDate(old.app)) merged.set(bundle, {source, app});
-      }
-    }
-  }
-  return {
-    apps: [...merged.values()].map(item => item.app).sort((a,b) => String(a.name || '').localeCompare(String(b.name || ''))),
-    conflicts
-  };
-}
+let exportBlobUrl = null;
 
 function hashIds(ids) {
   let hash = 2166136261;
@@ -676,92 +639,80 @@ function hashIds(ids) {
   return (hash >>> 0).toString(16).padStart(8, '0');
 }
 
-async function createLocalMixJson() {
-  const sources = registry.filter(source => selected.has(source.id) && selectableForTarget(source));
+function createSelectionJson() {
+  const sources = registry
+    .filter(source => selected.has(source.id) && selectableForTarget(source))
+    .map(source => ({
+      id: source.id,
+      name: source.name || source.id,
+      url: targetCompatibility(source).sourceUrl
+    }))
+    .filter(source => Boolean(source.url));
+
   if (!sources.length) throw new Error(tr('noSelection'));
 
-  const payloads = await Promise.all(sources.map(async source => {
-    const response = await fetch(`data/source-cache/${encodeURIComponent(source.id)}.json`, {cache:'no-store'});
-    if (!response.ok) throw new Error(`${source.name || source.id}: HTTP ${response.status}`);
-    const payload = await response.json();
-    if (!payload || !Array.isArray(payload.apps)) throw new Error(`${source.name || source.id}: invalid apps array`);
-    return {source, payload};
-  }));
-
-  const {apps, conflicts} = dedupeApps(payloads);
-  if (!apps.length) throw new Error(tr('noMergeableApps'));
-
   const ids = sources.map(source => source.id).sort();
-  const names = sources.map(source => source.name || source.id);
-  const sourceURLs = sources.map(source => targetCompatibility(source).sourceUrl).filter(Boolean);
-  const mix = {
-    name: `Mix · ${names.join(' + ')}`,
-    identifier: `com.caseycz.ios.mix.${hashIds(ids)}`,
-    subtitle: 'Optional local JSON export generated by iOS Hub',
-    website: 'https://caseycz.github.io/iOS-Hub/',
-    tintColor: '#38BDF8',
-    apps,
-    userInfo: {
-      sourceIDs: ids,
-      sourceURLs,
-      targetInstaller: target,
-      note: 'Bulk Source Import uses the original Source URLs; this JSON export is optional.'
-    }
+  const payload = {
+    format: 'ios-hub-source-selection-v1',
+    name: 'iOS Hub Source Selection',
+    generatedAt: new Date().toISOString(),
+    installer: target,
+    installerName: targetName(),
+    shortcut: SHORTCUT_NAME,
+    sources
   };
 
-  if (mixBlobUrl) URL.revokeObjectURL(mixBlobUrl);
-  mixBlobUrl = URL.createObjectURL(new Blob([JSON.stringify(mix, null, 2) + '\n'], {type:'application/json'}));
+  if (exportBlobUrl) URL.revokeObjectURL(exportBlobUrl);
+  exportBlobUrl = URL.createObjectURL(
+    new Blob([JSON.stringify(payload, null, 2) + '\n'], {type:'application/json'})
+  );
+
   return {
-    url: mixBlobUrl,
-    filename: `iOS-Hub-Mix-${hashIds(ids)}.json`,
-    apps: apps.length,
-    conflicts
+    url: exportBlobUrl,
+    filename: `iOS-Hub-Sources-${target}-${hashIds(ids)}.json`,
+    count: sources.length
   };
 }
 
-async function downloadMixJson(button) {
+function downloadSelectionJson(button) {
   const message = $('#expMessage');
   const original = button.textContent;
   try {
     button.disabled = true;
     if (message) message.textContent = tr('jsonBuilding');
-    const mix = await createLocalMixJson();
+    const exported = createSelectionJson();
     const link = document.createElement('a');
-    link.href = mix.url;
-    link.download = mix.filename;
+    link.href = exported.url;
+    link.download = exported.filename;
     document.body.appendChild(link);
     link.click();
     link.remove();
-    if (message) message.textContent = tr('jsonReady')
-      .replace('{apps}', String(mix.apps))
-      .replace('{conflicts}', String(mix.conflicts));
+    if (message) message.textContent = tr('jsonReady').replace('{sources}', String(exported.count));
   } catch (error) {
     console.error(error);
     if (message) message.textContent = `${tr('jsonFailed')} ${error.message || error}`;
   } finally {
-    button.disabled = false;
+    button.disabled = selected.size === 0;
     button.textContent = original;
   }
 }
 
-async function previewMixJson(button) {
+function previewSelectionJson(button) {
   const message = $('#expMessage');
   const preview = window.open('', '_blank');
   try {
     button.disabled = true;
     if (message) message.textContent = tr('jsonBuilding');
-    const mix = await createLocalMixJson();
-    if (preview) preview.location.href = mix.url;
-    else window.location.href = mix.url;
-    if (message) message.textContent = tr('jsonReady')
-      .replace('{apps}', String(mix.apps))
-      .replace('{conflicts}', String(mix.conflicts));
+    const exported = createSelectionJson();
+    if (preview) preview.location.href = exported.url;
+    else window.location.href = exported.url;
+    if (message) message.textContent = tr('jsonReady').replace('{sources}', String(exported.count));
   } catch (error) {
     if (preview) preview.close();
     console.error(error);
     if (message) message.textContent = `${tr('jsonFailed')} ${error.message || error}`;
   } finally {
-    button.disabled = false;
+    button.disabled = selected.size === 0;
   }
 }
 
@@ -930,8 +881,8 @@ async function init() {
   });
 
   $('#expCopyUrl')?.addEventListener('click', event => copyQueueUrls(event.currentTarget));
-  $('#expDownload')?.addEventListener('click', event => downloadMixJson(event.currentTarget));
-  $('#expPreview')?.addEventListener('click', event => previewMixJson(event.currentTarget));
+  $('#expDownload')?.addEventListener('click', event => downloadSelectionJson(event.currentTarget));
+  $('#expPreview')?.addEventListener('click', event => previewSelectionJson(event.currentTarget));
   $('#expRestartQueue')?.addEventListener('click', () => {
     queueIndex = 0;
     saveQueue();
