@@ -86,11 +86,7 @@ export const INSTALLERS = Object.freeze({
     creditBadge: 'Project',
     creditLinkKey: 'officialWebsite',
     variant: 'classic',
-    mixTarget: true,
-    mixProfile: 'altstore-classic',
     builderDefault: true,
-    mixHelpKey: 'targetHelpAlt',
-    mixPackage: 'altstore',
     catalogPriority: 10,
     overflowPriority: 10,
     icon: 'assets/icons/altstore.svg',
@@ -133,10 +129,6 @@ export const INSTALLERS = Object.freeze({
     creditBadge: 'Project',
     creditLinkKey: 'officialWebsite',
     variant: 'classic',
-    mixTarget: true,
-    mixProfile: 'sidestore-classic',
-    mixHelpKey: 'targetHelpSide',
-    mixPackage: 'sidestore',
     catalogPriority: 20,
     overflowPriority: 20,
     icon: 'assets/icons/sidestore.svg?v=1.1.5-20260918-audit13',
@@ -177,10 +169,6 @@ export const INSTALLERS = Object.freeze({
     creditBadge: 'Open source',
     creditLinkKey: 'officialRepository',
     variant: 'classic',
-    mixTarget: true,
-    mixProfile: 'livecontainer',
-    mixHelpKey: 'targetHelpLive',
-    mixPackage: 'altstore',
     catalogPriority: 30,
     overflowPriority: 30,
     icon: 'assets/icons/livecontainer.svg',
@@ -221,7 +209,6 @@ export const INSTALLERS = Object.freeze({
     creditBadge: null,
     creditLinkKey: null,
     variant: 'pal',
-    mixTarget: false,
     catalogPriority: 40,
     overflowPriority: 60,
     icon: 'assets/icons/altstore.svg',
@@ -258,10 +245,6 @@ export const INSTALLERS = Object.freeze({
     creditBadge: 'Project',
     creditLinkKey: 'officialWebsite',
     variant: 'classic',
-    mixTarget: true,
-    mixProfile: 'flarestore-classic',
-    mixHelpKey: 'targetHelpFlare',
-    mixPackage: 'altstore',
     catalogPriority: 50,
     overflowPriority: 40,
     icon: 'assets/icons/flarestore.svg',
@@ -299,10 +282,6 @@ export const INSTALLERS = Object.freeze({
     creditBadge: 'Open source',
     creditLinkKey: 'officialRepository',
     variant: 'classic',
-    mixTarget: true,
-    mixProfile: 'feather-classic',
-    mixHelpKey: 'targetHelpFeather',
-    mixPackage: 'altstore',
     catalogPriority: 60,
     overflowPriority: 50,
     icon: 'https://raw.githubusercontent.com/claration/Feather/v1.x/iOS/Resources/Icons/Main/Mac@3x.png',
@@ -320,85 +299,6 @@ export const DEFAULT_SOURCE_BUILDER_INSTALLER_ID =
   SOURCE_BUILDER_INSTALLER_IDS.find(id => INSTALLERS[id]?.builderDefault)
   || SOURCE_BUILDER_INSTALLER_IDS[0]
   || '';
-
-// Legacy Mix exports remain for generated-data compatibility while the direct Source Builder
-// no longer uses or creates combined Mix JSON files.
-export const BUILDER_INSTALLER_IDS = Object.freeze(
-  Object.values(INSTALLERS).filter(installer => installer.mixTarget).map(installer => installer.id)
-);
-
-export const DEFAULT_BUILDER_INSTALLER_ID =
-  Object.values(INSTALLERS).find(installer => installer.mixTarget && installer.builderDefault)?.id
-  || BUILDER_INSTALLER_IDS[0]
-  || '';
-
-export const DEFAULT_MIX_PACKAGE_ID = 'altstore';
-
-export const MIX_PACKAGES = Object.freeze({
-  altstore: Object.freeze({
-    id: 'altstore',
-    statusKey: 'altstore',
-    sourceURLKey: 'sourceURL',
-    sourceIDsKey: 'sourceIDs',
-    appCountKey: 'appCount',
-    fallbackSourceURL: Object.freeze(['mixes', 'allCompatibleURL']),
-    fallbackSourceIDs: Object.freeze(['mixes', 'autoCompatibleSourceIDs']),
-    targetInstallerIds: Object.freeze([...BUILDER_INSTALLER_IDS])
-  }),
-  sidestore: Object.freeze({
-    id: 'sidestore',
-    statusKey: 'sidestore',
-    sourceURLKey: 'sourceURL',
-    sourceIDsKey: 'sourceIDs',
-    appCountKey: 'appCount',
-    targetInstallerIds: Object.freeze(['sidestore', 'livecontainer'])
-  })
-});
-
-export const MIX_PACKAGE_IDS = Object.freeze(Object.keys(MIX_PACKAGES));
-
-function nestedValue(object, path) {
-  return (path || []).reduce((value, key) => value?.[key], object);
-}
-
-export function mixPackageData(status, packageId, {fallbacks = true} = {}) {
-  const config = MIX_PACKAGES[packageId];
-  if (!config) return {id:packageId, sourceURL:'', sourceIDs:[], appCount:0};
-
-  const section = status?.[config.statusKey] || {};
-  const directURL = section?.[config.sourceURLKey] || '';
-  const directIDs = Array.isArray(section?.[config.sourceIDsKey]) ? section[config.sourceIDsKey] : [];
-  const appCount = Number(section?.[config.appCountKey] || 0);
-
-  const fallbackURL = fallbacks ? (nestedValue(status, config.fallbackSourceURL) || '') : '';
-  const fallbackIDsValue = fallbacks ? nestedValue(status, config.fallbackSourceIDs) : null;
-  const fallbackIDs = Array.isArray(fallbackIDsValue) ? fallbackIDsValue : [];
-
-  return {
-    id: config.id,
-    sourceURL: directURL || fallbackURL,
-    sourceIDs: directIDs.length ? directIDs : fallbackIDs,
-    appCount
-  };
-}
-
-export function mixPackageTargetIds(packageId) {
-  const ids = MIX_PACKAGES[packageId]?.targetInstallerIds || [];
-  return ids.filter(id => BUILDER_INSTALLER_IDS.includes(id));
-}
-
-export function installerMixPackageData(status, installerId) {
-  const installer = INSTALLERS[installerId];
-  if (!installer?.mixTarget) return null;
-
-  const preferredId = installer.mixPackage || DEFAULT_MIX_PACKAGE_ID;
-  const preferred = mixPackageData(status, preferredId);
-  if (preferred.sourceURL) return preferred;
-
-  return preferredId === DEFAULT_MIX_PACKAGE_ID
-    ? preferred
-    : mixPackageData(status, DEFAULT_MIX_PACKAGE_ID);
-}
 
 const AUXILIARY_SIDELOAD_TOOLS = Object.freeze({
   sideinstaller: Object.freeze({
