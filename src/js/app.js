@@ -453,11 +453,15 @@ function updateStats() {
   const statuses = state.status?.sources || {};
   const online = state.registry.filter(source => statuses[source.id]?.online === true).length;
   const offline = state.registry.filter(source => statuses[source.id]?.online === false && Boolean(statuses[source.id]?.checkedAt)).length;
-  const mixReady = state.status?.mixes?.autoCompatibleSourceIDs?.length || 0;
-  const apps = uniqueDiscoveredAppCount();
+  const installerCompatible = state.registry.filter(source => {
+    const item = statuses[source.id];
+    if (item?.online !== true) return false;
+    return Object.values(item.installerCompatibility || {}).some(value => value?.directSource !== 'fail');
+  }).length;
+  const checked = state.registry.filter(source => Boolean(statuses[source.id]?.checkedAt)).length;
   if ($('#statSources')) $('#statSources').textContent = online || '—';
-  if ($('#statMix')) $('#statMix').textContent = mixReady || '—';
-  if ($('#statApps')) $('#statApps').textContent = apps || '—';
+  if ($('#statMix')) $('#statMix').textContent = installerCompatible || '—';
+  if ($('#statApps')) $('#statApps').textContent = checked || '—';
 
   const sourceStatusSummary = $('#sourceStatusSummary');
   if (sourceStatusSummary) {
