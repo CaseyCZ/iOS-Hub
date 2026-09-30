@@ -1,5 +1,5 @@
 import { Archive } from '../../vendor/libarchive/libarchive.js?v=1.1.5-20260929-kodi1';
-import { SUPPORTED_LANGUAGES, applyTranslations, normalizeLanguage, t } from './i18n.js?v=1.1.5-20260929-guide-methods1';
+import { SUPPORTED_LANGUAGES, applyTranslations, normalizeLanguage, t } from './i18n.js?v=1.1.5-20260930-source-import7';
 
 const root = document.documentElement;
 const $ = (selector, scope = document) => scope.querySelector(selector);
