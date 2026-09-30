@@ -247,7 +247,7 @@ export const INSTALLERS = Object.freeze({
     variant: 'classic',
     catalogPriority: 50,
     overflowPriority: 40,
-    icon: 'assets/icons/flarestore.svg',
+    icon: 'assets/icons/flarestore.webp',
     buildLink: url => `flarestore://addRepo=${encodeURIComponent(url)}`
   },
   feather: {
