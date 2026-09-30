@@ -1,15 +1,13 @@
 {
-  "generatedAt": "2026-09-30T07:41:47Z",
+  "generatedAt": "2026-09-30T07:48:11Z",
   "sources": {
     "utm": {
       "online": true,
-      "checkedAt": "2026-09-30T07:41:47Z",
+      "checkedAt": "2026-09-30T07:48:11Z",
       "appCount": 2,
       "httpStatus": 200,
       "iconURL": "",
       "error": null,
-      "mixTest": "pass",
-      "mixReason": "Classic source structure and downloadable app metadata passed the automated Mix test.",
       "variants": {
         "classic": {
           "online": true,
@@ -56,13 +54,11 @@
     },
     "provenance": {
       "online": true,
-      "checkedAt": "2026-09-30T07:41:47Z",
+      "checkedAt": "2026-09-30T07:48:11Z",
       "appCount": 3,
       "httpStatus": 200,
       "iconURL": "",
       "error": null,
-      "mixTest": "pass",
-      "mixReason": "Classic source structure and downloadable app metadata passed the automated Mix test.",
       "variants": {
         "classic": {
           "online": true,
@@ -109,13 +105,11 @@
     },
     "ish": {
       "online": true,
-      "checkedAt": "2026-09-30T07:41:47Z",
+      "checkedAt": "2026-09-30T07:48:11Z",
       "appCount": 1,
       "httpStatus": 200,
       "iconURL": "",
       "error": null,
-      "mixTest": "pass",
-      "mixReason": "Classic source structure and downloadable app metadata passed the automated Mix test.",
       "variants": {
         "classic": {
           "online": true,
@@ -162,13 +156,11 @@
     },
     "flycast": {
       "online": true,
-      "checkedAt": "2026-09-30T07:41:47Z",
+      "checkedAt": "2026-09-30T07:48:11Z",
       "appCount": 1,
       "httpStatus": 200,
       "iconURL": "",
       "error": null,
-      "mixTest": "pass",
-      "mixReason": "Classic source structure and downloadable app metadata passed the automated Mix test.",
       "variants": {
         "classic": {
           "online": true,
@@ -215,13 +207,11 @@
     },
     "sidestore-community": {
       "online": true,
-      "checkedAt": "2026-09-30T07:41:47Z",
+      "checkedAt": "2026-09-30T07:48:11Z",
       "appCount": 23,
       "httpStatus": 200,
       "iconURL": "",
       "error": null,
-      "mixTest": "pass",
-      "mixReason": "Classic source structure and downloadable app metadata passed the automated Mix test.",
       "variants": {
         "classic": {
           "online": true,
@@ -268,13 +258,11 @@
     },
     "sidestore-official": {
       "online": true,
-      "checkedAt": "2026-09-30T07:41:47Z",
+      "checkedAt": "2026-09-30T07:48:11Z",
       "appCount": 1,
       "httpStatus": 200,
       "iconURL": "",
       "error": null,
-      "mixTest": "pass",
-      "mixReason": "Classic source structure and downloadable app metadata passed the automated Mix test.",
       "variants": {
         "classic": {
           "online": true,
@@ -321,13 +309,11 @@
     },
     "stikdebug": {
       "online": true,
-      "checkedAt": "2026-09-30T07:41:47Z",
+      "checkedAt": "2026-09-30T07:48:11Z",
       "appCount": 2,
       "httpStatus": 200,
       "iconURL": "",
       "error": null,
-      "mixTest": "pass",
-      "mixReason": "Classic source structure and downloadable app metadata passed the automated Mix test.",
       "variants": {
         "classic": {
           "online": true,
@@ -374,13 +360,11 @@
     },
     "livecontainer": {
       "online": true,
-      "checkedAt": "2026-09-30T07:41:47Z",
+      "checkedAt": "2026-09-30T07:48:11Z",
       "appCount": 1,
       "httpStatus": 200,
       "iconURL": "",
       "error": null,
-      "mixTest": "pass",
-      "mixReason": "Classic source structure and downloadable app metadata passed the automated Mix test.",
       "variants": {
         "classic": {
           "online": true,
@@ -427,13 +411,11 @@
     },
     "livecontainer-nightly": {
       "online": true,
-      "checkedAt": "2026-09-30T07:41:47Z",
+      "checkedAt": "2026-09-30T07:48:11Z",
       "appCount": 1,
       "httpStatus": 200,
       "iconURL": "",
       "error": null,
-      "mixTest": "pass",
-      "mixReason": "Classic source structure and downloadable app metadata passed the automated Mix test.",
       "variants": {
         "classic": {
           "online": true,
@@ -480,13 +462,11 @@
     },
     "manicemu": {
       "online": true,
-      "checkedAt": "2026-09-30T07:41:47Z",
+      "checkedAt": "2026-09-30T07:48:11Z",
       "appCount": 1,
       "httpStatus": 200,
       "iconURL": "",
       "error": null,
-      "mixTest": "pass",
-      "mixReason": "Classic source structure and downloadable app metadata passed the automated Mix test.",
       "variants": {
         "classic": {
           "online": true,
@@ -533,13 +513,11 @@
     },
     "flycast-ios": {
       "online": true,
-      "checkedAt": "2026-09-30T07:41:47Z",
+      "checkedAt": "2026-09-30T07:48:11Z",
       "appCount": 1,
       "httpStatus": 200,
       "iconURL": "",
       "error": null,
-      "mixTest": "pass",
-      "mixReason": "Classic source structure and downloadable app metadata passed the automated Mix test.",
       "variants": {
         "classic": {
           "online": true,
@@ -586,13 +564,11 @@
     },
     "geode-ios": {
       "online": true,
-      "checkedAt": "2026-09-30T07:41:47Z",
+      "checkedAt": "2026-09-30T07:48:11Z",
       "appCount": 1,
       "httpStatus": 200,
       "iconURL": "",
       "error": null,
-      "mixTest": "pass",
-      "mixReason": "Classic source structure and downloadable app metadata passed the automated Mix test.",
       "variants": {
         "classic": {
           "online": true,
@@ -639,13 +615,11 @@
     },
     "retrosekai": {
       "online": true,
-      "checkedAt": "2026-09-30T07:41:47Z",
+      "checkedAt": "2026-09-30T07:48:11Z",
       "appCount": 1,
       "httpStatus": 200,
       "iconURL": "",
       "error": null,
-      "mixTest": "pass",
-      "mixReason": "Classic source structure and downloadable app metadata passed the automated Mix test.",
       "variants": {
         "classic": {
           "online": true,
@@ -692,13 +666,11 @@
     },
     "oatmealdome": {
       "online": true,
-      "checkedAt": "2026-09-30T07:41:47Z",
+      "checkedAt": "2026-09-30T07:48:11Z",
       "appCount": 2,
       "httpStatus": 200,
       "iconURL": "",
       "error": null,
-      "mixTest": "pass",
-      "mixReason": "Classic source structure and downloadable app metadata passed the automated Mix test.",
       "variants": {
         "classic": {
           "online": true,
@@ -745,13 +717,11 @@
     },
     "crystall1ne": {
       "online": true,
-      "checkedAt": "2026-09-30T07:41:47Z",
+      "checkedAt": "2026-09-30T07:48:11Z",
       "appCount": 2,
       "httpStatus": 200,
       "iconURL": "",
       "error": null,
-      "mixTest": "pass",
-      "mixReason": "Classic source structure and downloadable app metadata passed the automated Mix test.",
       "variants": {
         "classic": {
           "online": true,
@@ -798,13 +768,11 @@
     },
     "pokemmo": {
       "online": true,
-      "checkedAt": "2026-09-30T07:41:47Z",
+      "checkedAt": "2026-09-30T07:48:11Z",
       "appCount": 1,
       "httpStatus": 200,
       "iconURL": "",
       "error": null,
-      "mixTest": "pass",
-      "mixReason": "Classic source structure and downloadable app metadata passed the automated Mix test.",
       "variants": {
         "classic": {
           "online": true,
@@ -851,13 +819,11 @@
     },
     "odyssey": {
       "online": true,
-      "checkedAt": "2026-09-30T07:41:47Z",
+      "checkedAt": "2026-09-30T07:48:11Z",
       "appCount": 2,
       "httpStatus": 200,
       "iconURL": "",
       "error": null,
-      "mixTest": "pass",
-      "mixReason": "Classic source structure and downloadable app metadata passed the automated Mix test.",
       "variants": {
         "classic": {
           "online": true,
@@ -904,13 +870,11 @@
     },
     "yattee": {
       "online": true,
-      "checkedAt": "2026-09-30T07:41:47Z",
+      "checkedAt": "2026-09-30T07:48:11Z",
       "appCount": 1,
       "httpStatus": 200,
       "iconURL": "",
       "error": null,
-      "mixTest": "pass",
-      "mixReason": "Classic source structure and downloadable app metadata passed the automated Mix test.",
       "variants": {
         "classic": {
           "online": true,
@@ -957,13 +921,11 @@
     },
     "ignited": {
       "online": true,
-      "checkedAt": "2026-09-30T07:41:47Z",
+      "checkedAt": "2026-09-30T07:48:11Z",
       "appCount": 1,
       "httpStatus": 200,
       "iconURL": "",
       "error": null,
-      "mixTest": "pass",
-      "mixReason": "Classic source structure and downloadable app metadata passed the automated Mix test.",
       "variants": {
         "classic": {
           "online": true,
@@ -1010,13 +972,11 @@
     },
     "mona": {
       "online": true,
-      "checkedAt": "2026-09-30T07:41:47Z",
+      "checkedAt": "2026-09-30T07:48:11Z",
       "appCount": 1,
       "httpStatus": 200,
       "iconURL": "",
       "error": null,
-      "mixTest": "pass",
-      "mixReason": "Classic source structure and downloadable app metadata passed the automated Mix test.",
       "variants": {
         "classic": {
           "online": true,
@@ -1063,13 +1023,11 @@
     },
     "vortx": {
       "online": true,
-      "checkedAt": "2026-09-30T07:41:47Z",
+      "checkedAt": "2026-09-30T07:48:11Z",
       "appCount": 2,
       "httpStatus": 200,
       "iconURL": "",
       "error": null,
-      "mixTest": "pass",
-      "mixReason": "Classic source structure and downloadable app metadata passed the automated Mix test.",
       "variants": {
         "classic": {
           "online": true,
@@ -1116,13 +1074,11 @@
     },
     "stremio-official-pal": {
       "online": true,
-      "checkedAt": "2026-09-30T07:41:47Z",
+      "checkedAt": "2026-09-30T07:48:11Z",
       "appCount": 1,
       "httpStatus": 200,
       "iconURL": "",
       "error": null,
-      "mixTest": "experimental",
-      "mixReason": "AltStore PAL source is structurally readable, but notarized marketplace apps can require PAL-specific metadata.",
       "variants": {
         "pal": {
           "online": true,
@@ -1148,13 +1104,11 @@
     },
     "stremio-ios": {
       "online": true,
-      "checkedAt": "2026-09-30T07:41:47Z",
+      "checkedAt": "2026-09-30T07:48:11Z",
       "appCount": 1,
       "httpStatus": 200,
       "iconURL": "",
       "error": null,
-      "mixTest": "pass",
-      "mixReason": "Classic source structure and downloadable app metadata passed the automated Mix test.",
       "variants": {
         "classic": {
           "online": true,
@@ -1201,13 +1155,11 @@
     },
     "kodi-ios": {
       "online": true,
-      "checkedAt": "2026-09-30T07:41:47Z",
+      "checkedAt": "2026-09-30T07:48:11Z",
       "appCount": 1,
       "httpStatus": 200,
       "iconURL": "",
       "error": null,
-      "mixTest": "pass",
-      "mixReason": "Classic source structure and downloadable app metadata passed the automated Mix test.",
       "variants": {
         "classic": {
           "online": true,
@@ -1254,13 +1206,11 @@
     },
     "nineanimator": {
       "online": false,
-      "checkedAt": "2026-09-30T07:41:47Z",
+      "checkedAt": "2026-09-30T07:48:11Z",
       "appCount": null,
       "httpStatus": null,
       "iconURL": "",
       "error": "classic: HTTPError: HTTP Error 522: <none>",
-      "mixTest": "fail",
-      "mixReason": "Source has not passed the latest check.",
       "variants": {
         "classic": {
           "online": false,
@@ -1272,13 +1222,11 @@
     },
     "esound": {
       "online": true,
-      "checkedAt": "2026-09-30T07:41:47Z",
+      "checkedAt": "2026-09-30T07:48:11Z",
       "appCount": 1,
       "httpStatus": 200,
       "iconURL": "",
       "error": null,
-      "mixTest": "experimental",
-      "mixReason": "AltStore PAL source is structurally readable, but notarized marketplace apps can require PAL-specific metadata.",
       "variants": {
         "pal": {
           "online": true,
@@ -1304,13 +1252,11 @@
     },
     "partyknights": {
       "online": true,
-      "checkedAt": "2026-09-30T07:41:47Z",
+      "checkedAt": "2026-09-30T07:48:11Z",
       "appCount": 1,
       "httpStatus": 200,
       "iconURL": "",
       "error": null,
-      "mixTest": "pass",
-      "mixReason": "Classic source structure and downloadable app metadata passed the automated Mix test.",
       "variants": {
         "classic": {
           "online": true,
@@ -1357,13 +1303,11 @@
     },
     "bringyour": {
       "online": false,
-      "checkedAt": "2026-09-30T07:41:47Z",
+      "checkedAt": "2026-09-30T07:48:11Z",
       "appCount": null,
       "httpStatus": null,
       "iconURL": "",
       "error": "classic: HTTPError: HTTP Error 404: Not Found",
-      "mixTest": "fail",
-      "mixReason": "Source has not passed the latest check.",
       "variants": {
         "classic": {
           "online": false,
@@ -1375,13 +1319,11 @@
     },
     "itorrent": {
       "online": true,
-      "checkedAt": "2026-09-30T07:41:47Z",
+      "checkedAt": "2026-09-30T07:48:11Z",
       "appCount": 1,
       "httpStatus": 200,
       "iconURL": "",
       "error": null,
-      "mixTest": "pass",
-      "mixReason": "Classic source structure and downloadable app metadata passed the automated Mix test.",
       "variants": {
         "classic": {
           "online": true,
@@ -1428,13 +1370,11 @@
     },
     "qbitconnect": {
       "online": true,
-      "checkedAt": "2026-09-30T07:41:47Z",
+      "checkedAt": "2026-09-30T07:48:11Z",
       "appCount": 1,
       "httpStatus": 200,
       "iconURL": "",
       "error": null,
-      "mixTest": "pass",
-      "mixReason": "Classic source structure and downloadable app metadata passed the automated Mix test.",
       "variants": {
         "classic": {
           "online": true,
@@ -1494,13 +1434,11 @@
     },
     "artemis": {
       "online": true,
-      "checkedAt": "2026-09-30T07:41:47Z",
+      "checkedAt": "2026-09-30T07:48:11Z",
       "appCount": 1,
       "httpStatus": 200,
       "iconURL": "",
       "error": null,
-      "mixTest": "pass",
-      "mixReason": "Classic source structure and downloadable app metadata passed the automated Mix test.",
       "variants": {
         "classic": {
           "online": true,
@@ -1560,13 +1498,11 @@
     },
     "hackerwebapp": {
       "online": true,
-      "checkedAt": "2026-09-30T07:41:47Z",
+      "checkedAt": "2026-09-30T07:48:11Z",
       "appCount": 1,
       "httpStatus": 200,
       "iconURL": "",
       "error": null,
-      "mixTest": "experimental",
-      "mixReason": "AltStore PAL source is structurally readable, but notarized marketplace apps can require PAL-specific metadata.",
       "variants": {
         "pal": {
           "online": true,
@@ -1592,13 +1528,11 @@
     },
     "courtpredict": {
       "online": true,
-      "checkedAt": "2026-09-30T07:41:47Z",
+      "checkedAt": "2026-09-30T07:48:11Z",
       "appCount": 1,
       "httpStatus": 200,
       "iconURL": "",
       "error": null,
-      "mixTest": "experimental",
-      "mixReason": "AltStore PAL source is structurally readable, but notarized marketplace apps can require PAL-specific metadata.",
       "variants": {
         "pal": {
           "online": true,
@@ -1624,13 +1558,11 @@
     },
     "wayfarer": {
       "online": true,
-      "checkedAt": "2026-09-30T07:41:47Z",
+      "checkedAt": "2026-09-30T07:48:11Z",
       "appCount": 1,
       "httpStatus": 200,
       "iconURL": "",
       "error": null,
-      "mixTest": "pass",
-      "mixReason": "Classic source structure and downloadable app metadata passed the automated Mix test.",
       "variants": {
         "classic": {
           "online": true,
@@ -1677,13 +1609,11 @@
     },
     "qbitcontrol": {
       "online": true,
-      "checkedAt": "2026-09-30T07:41:47Z",
+      "checkedAt": "2026-09-30T07:48:11Z",
       "appCount": 1,
       "httpStatus": 200,
       "iconURL": "",
       "error": null,
-      "mixTest": "pass",
-      "mixReason": "Classic source structure and downloadable app metadata passed the automated Mix test.",
       "variants": {
         "classic": {
           "online": true,
@@ -1743,13 +1673,11 @@
     },
     "iphanpy": {
       "online": true,
-      "checkedAt": "2026-09-30T07:41:47Z",
+      "checkedAt": "2026-09-30T07:48:11Z",
       "appCount": 1,
       "httpStatus": 200,
       "iconURL": "",
       "error": null,
-      "mixTest": "experimental",
-      "mixReason": "AltStore PAL source is structurally readable, but notarized marketplace apps can require PAL-specific metadata.",
       "variants": {
         "pal": {
           "online": true,
@@ -1775,13 +1703,11 @@
     },
     "epic-games": {
       "online": true,
-      "checkedAt": "2026-09-30T07:41:47Z",
+      "checkedAt": "2026-09-30T07:48:11Z",
       "appCount": 3,
       "httpStatus": 200,
       "iconURL": "",
       "error": null,
-      "mixTest": "experimental",
-      "mixReason": "AltStore PAL source is structurally readable, but notarized marketplace apps can require PAL-specific metadata.",
       "variants": {
         "pal": {
           "online": true,
@@ -1807,13 +1733,11 @@
     },
     "xn1ckuz-sidebox": {
       "online": true,
-      "checkedAt": "2026-09-30T07:41:47Z",
+      "checkedAt": "2026-09-30T07:48:11Z",
       "appCount": 4,
       "httpStatus": 200,
       "iconURL": "",
       "error": null,
-      "mixTest": "pass",
-      "mixReason": "Classic source structure and downloadable app metadata passed the automated Mix test.",
       "variants": {
         "classic": {
           "online": true,
@@ -1860,13 +1784,11 @@
     },
     "dvntm0-workshop": {
       "online": true,
-      "checkedAt": "2026-09-30T07:41:47Z",
+      "checkedAt": "2026-09-30T07:48:11Z",
       "appCount": 7,
       "httpStatus": 200,
       "iconURL": "",
       "error": null,
-      "mixTest": "pass",
-      "mixReason": "Classic source structure and downloadable app metadata passed the automated Mix test.",
       "variants": {
         "classic": {
           "online": true,
@@ -1913,13 +1835,11 @@
     },
     "wuxu-library-plus": {
       "online": true,
-      "checkedAt": "2026-09-30T07:41:47Z",
+      "checkedAt": "2026-09-30T07:48:11Z",
       "appCount": 13,
       "httpStatus": 200,
       "iconURL": "",
       "error": null,
-      "mixTest": "pass",
-      "mixReason": "Classic source structure and downloadable app metadata passed the automated Mix test.",
       "variants": {
         "classic": {
           "online": true,
@@ -1966,13 +1886,11 @@
     },
     "baretsky-tweaked": {
       "online": true,
-      "checkedAt": "2026-09-30T07:41:47Z",
+      "checkedAt": "2026-09-30T07:48:11Z",
       "appCount": 7,
       "httpStatus": 200,
       "iconURL": "",
       "error": null,
-      "mixTest": "pass",
-      "mixReason": "Classic source structure and downloadable app metadata passed the automated Mix test.",
       "variants": {
         "classic": {
           "online": true,
@@ -2019,13 +1937,11 @@
     },
     "driftywinds": {
       "online": true,
-      "checkedAt": "2026-09-30T07:41:47Z",
+      "checkedAt": "2026-09-30T07:48:11Z",
       "appCount": 10,
       "httpStatus": 200,
       "iconURL": "",
       "error": null,
-      "mixTest": "pass",
-      "mixReason": "Classic source structure and downloadable app metadata passed the automated Mix test.",
       "variants": {
         "classic": {
           "online": true,
@@ -2072,13 +1988,11 @@
     },
     "ipa-vault": {
       "online": true,
-      "checkedAt": "2026-09-30T07:41:47Z",
+      "checkedAt": "2026-09-30T07:48:11Z",
       "appCount": 63,
       "httpStatus": 200,
       "iconURL": "",
       "error": null,
-      "mixTest": "pass",
-      "mixReason": "Classic source structure and downloadable app metadata passed the automated Mix test.",
       "variants": {
         "classic": {
           "online": true,
@@ -2125,13 +2039,11 @@
     },
     "sideloadlabs": {
       "online": true,
-      "checkedAt": "2026-09-30T07:41:47Z",
+      "checkedAt": "2026-09-30T07:48:11Z",
       "appCount": 4,
       "httpStatus": 200,
       "iconURL": "",
       "error": null,
-      "mixTest": "pass",
-      "mixReason": "Classic source structure and downloadable app metadata passed the automated Mix test.",
       "variants": {
         "classic": {
           "online": true,
@@ -2178,13 +2090,11 @@
     },
     "ytliteplus": {
       "online": true,
-      "checkedAt": "2026-09-30T07:41:47Z",
+      "checkedAt": "2026-09-30T07:48:11Z",
       "appCount": 1,
       "httpStatus": 200,
       "iconURL": "",
       "error": null,
-      "mixTest": "pass",
-      "mixReason": "Classic source structure and downloadable app metadata passed the automated Mix test.",
       "variants": {
         "classic": {
           "online": true,
@@ -2231,13 +2141,11 @@
     },
     "moe-altstore": {
       "online": true,
-      "checkedAt": "2026-09-30T07:41:47Z",
+      "checkedAt": "2026-09-30T07:48:11Z",
       "appCount": 34,
       "httpStatus": 200,
       "iconURL": "",
       "error": null,
-      "mixTest": "experimental",
-      "mixReason": "26 app entries share a bundle identifier; a Mix would collapse variants to one app.",
       "variants": {
         "classic": {
           "online": true,
@@ -2334,13 +2242,11 @@
     },
     "youmod-repo": {
       "online": true,
-      "checkedAt": "2026-09-30T07:41:47Z",
+      "checkedAt": "2026-09-30T07:48:11Z",
       "appCount": 1,
       "httpStatus": 200,
       "iconURL": "",
       "error": null,
-      "mixTest": "pass",
-      "mixReason": "Classic source structure and downloadable app metadata passed the automated Mix test.",
       "variants": {
         "classic": {
           "online": true,
@@ -2387,13 +2293,11 @@
     },
     "youproextra": {
       "online": true,
-      "checkedAt": "2026-09-30T07:41:47Z",
+      "checkedAt": "2026-09-30T07:48:11Z",
       "appCount": 5,
       "httpStatus": 200,
       "iconURL": "",
       "error": null,
-      "mixTest": "experimental",
-      "mixReason": "4 app entries share a bundle identifier; a Mix would collapse variants to one app.",
       "variants": {
         "classic": {
           "online": true,
@@ -2454,13 +2358,11 @@
     },
     "owo-source": {
       "online": true,
-      "checkedAt": "2026-09-30T07:41:47Z",
+      "checkedAt": "2026-09-30T07:48:11Z",
       "appCount": 155,
       "httpStatus": 200,
       "iconURL": "",
       "error": null,
-      "mixTest": "experimental",
-      "mixReason": "128 app entries share a bundle identifier; a Mix would collapse variants to one app.",
       "variants": {
         "classic": {
           "online": true,
@@ -2604,13 +2506,11 @@
     },
     "cypwn-ipa": {
       "online": true,
-      "checkedAt": "2026-09-30T07:41:47Z",
+      "checkedAt": "2026-09-30T07:48:11Z",
       "appCount": 210,
       "httpStatus": 200,
       "iconURL": "",
       "error": null,
-      "mixTest": "experimental",
-      "mixReason": "30 app entries share a bundle identifier; a Mix would collapse variants to one app.",
       "variants": {
         "classic": {
           "online": true,
@@ -2795,13 +2695,11 @@
     },
     "apptesters": {
       "online": true,
-      "checkedAt": "2026-09-30T07:41:47Z",
+      "checkedAt": "2026-09-30T07:48:11Z",
       "appCount": 9402,
       "httpStatus": 200,
       "iconURL": "",
       "error": null,
-      "mixTest": "experimental",
-      "mixReason": "8617 app entries share a bundle identifier; a Mix would collapse variants to one app.",
       "variants": {
         "classic": {
           "online": true,
@@ -2997,13 +2895,11 @@
     },
     "youtuberebornplus": {
       "online": true,
-      "checkedAt": "2026-09-30T07:41:47Z",
+      "checkedAt": "2026-09-30T07:48:11Z",
       "appCount": 1,
       "httpStatus": 200,
       "iconURL": "",
       "error": null,
-      "mixTest": "pass",
-      "mixReason": "Classic source structure and downloadable app metadata passed the automated Mix test.",
       "variants": {
         "classic": {
           "online": true,
@@ -3050,13 +2946,11 @@
     },
     "apollo-reddit": {
       "online": true,
-      "checkedAt": "2026-09-30T07:41:47Z",
+      "checkedAt": "2026-09-30T07:48:11Z",
       "appCount": 1,
       "httpStatus": 200,
       "iconURL": "",
       "error": null,
-      "mixTest": "pass",
-      "mixReason": "Classic source structure and downloadable app metadata passed the automated Mix test.",
       "variants": {
         "classic": {
           "online": true,
@@ -3103,13 +2997,11 @@
     },
     "discord-appstore-builds": {
       "online": true,
-      "checkedAt": "2026-09-30T07:41:47Z",
+      "checkedAt": "2026-09-30T07:48:11Z",
       "appCount": 1,
       "httpStatus": 200,
       "iconURL": "",
       "error": null,
-      "mixTest": "pass",
-      "mixReason": "Classic source structure and downloadable app metadata passed the automated Mix test.",
       "variants": {
         "classic": {
           "online": true,
@@ -3156,13 +3048,11 @@
     },
     "ytkace": {
       "online": true,
-      "checkedAt": "2026-09-30T07:41:47Z",
+      "checkedAt": "2026-09-30T07:48:11Z",
       "appCount": 1,
       "httpStatus": 200,
       "iconURL": "",
       "error": null,
-      "mixTest": "pass",
-      "mixReason": "Classic source structure and downloadable app metadata passed the automated Mix test.",
       "variants": {
         "classic": {
           "online": true,
@@ -3209,13 +3099,11 @@
     },
     "heyfordy": {
       "online": true,
-      "checkedAt": "2026-09-30T07:41:47Z",
+      "checkedAt": "2026-09-30T07:48:11Z",
       "appCount": 8,
       "httpStatus": 200,
       "iconURL": "",
       "error": null,
-      "mixTest": "pass",
-      "mixReason": "Classic source structure and downloadable app metadata passed the automated Mix test.",
       "variants": {
         "classic": {
           "online": true,
@@ -3262,13 +3150,11 @@
     },
     "ipalibrary": {
       "online": true,
-      "checkedAt": "2026-09-30T07:41:47Z",
+      "checkedAt": "2026-09-30T07:48:11Z",
       "appCount": 834,
       "httpStatus": 200,
       "iconURL": "",
       "error": null,
-      "mixTest": "experimental",
-      "mixReason": "6 app entries share a bundle identifier; a Mix would collapse variants to one app.",
       "variants": {
         "classic": {
           "online": true,
@@ -3365,13 +3251,11 @@
     },
     "armsx2": {
       "online": true,
-      "checkedAt": "2026-09-30T07:41:47Z",
+      "checkedAt": "2026-09-30T07:48:11Z",
       "appCount": 2,
       "httpStatus": 200,
       "iconURL": "",
       "error": null,
-      "mixTest": "pass",
-      "mixReason": "Classic source structure and downloadable app metadata passed the automated Mix test.",
       "variants": {
         "classic": {
           "online": true,
@@ -3418,13 +3302,11 @@
     },
     "fouad-source": {
       "online": true,
-      "checkedAt": "2026-09-30T07:41:47Z",
+      "checkedAt": "2026-09-30T07:48:11Z",
       "appCount": 6,
       "httpStatus": 200,
       "iconURL": "",
       "error": null,
-      "mixTest": "pass",
-      "mixReason": "Classic source structure and downloadable app metadata passed the automated Mix test.",
       "variants": {
         "classic": {
           "online": true,
@@ -3471,13 +3353,11 @@
     },
     "neofreebird": {
       "online": true,
-      "checkedAt": "2026-09-30T07:41:47Z",
+      "checkedAt": "2026-09-30T07:48:11Z",
       "appCount": 1,
       "httpStatus": 200,
       "iconURL": "",
       "error": null,
-      "mixTest": "pass",
-      "mixReason": "Classic source structure and downloadable app metadata passed the automated Mix test.",
       "variants": {
         "classic": {
           "online": true,
@@ -3524,13 +3404,11 @@
     },
     "melonx": {
       "online": true,
-      "checkedAt": "2026-09-30T07:41:47Z",
+      "checkedAt": "2026-09-30T07:48:11Z",
       "appCount": 1,
       "httpStatus": 200,
       "iconURL": "",
       "error": null,
-      "mixTest": "pass",
-      "mixReason": "Classic source structure and downloadable app metadata passed the automated Mix test.",
       "variants": {
         "classic": {
           "online": true,
@@ -3577,13 +3455,11 @@
     },
     "altgallery": {
       "online": true,
-      "checkedAt": "2026-09-30T07:41:47Z",
+      "checkedAt": "2026-09-30T07:48:11Z",
       "appCount": 39,
       "httpStatus": 200,
       "iconURL": "",
       "error": null,
-      "mixTest": "pass",
-      "mixReason": "Classic source structure and downloadable app metadata passed the automated Mix test.",
       "variants": {
         "classic": {
           "online": true,
@@ -3630,13 +3506,11 @@
     },
     "ripestore": {
       "online": true,
-      "checkedAt": "2026-09-30T07:41:47Z",
+      "checkedAt": "2026-09-30T07:48:11Z",
       "appCount": 11,
       "httpStatus": 200,
       "iconURL": "",
       "error": null,
-      "mixTest": "pass",
-      "mixReason": "Classic source structure and downloadable app metadata passed the automated Mix test.",
       "variants": {
         "classic": {
           "online": true,
@@ -3683,13 +3557,11 @@
     },
     "feather": {
       "online": true,
-      "checkedAt": "2026-09-30T07:41:47Z",
+      "checkedAt": "2026-09-30T07:48:11Z",
       "appCount": 1,
       "httpStatus": 200,
       "iconURL": "",
       "error": null,
-      "mixTest": "pass",
-      "mixReason": "Classic source structure and downloadable app metadata passed the automated Mix test.",
       "variants": {
         "classic": {
           "online": true,
@@ -3736,13 +3608,11 @@
     },
     "quantum-source": {
       "online": true,
-      "checkedAt": "2026-09-30T07:41:47Z",
+      "checkedAt": "2026-09-30T07:48:11Z",
       "appCount": 38,
       "httpStatus": 200,
       "iconURL": "",
       "error": null,
-      "mixTest": "pass",
-      "mixReason": "Classic source structure and downloadable app metadata passed the automated Mix test.",
       "variants": {
         "classic": {
           "online": true,
@@ -3789,13 +3659,11 @@
     },
     "spotc": {
       "online": true,
-      "checkedAt": "2026-09-30T07:41:47Z",
+      "checkedAt": "2026-09-30T07:48:11Z",
       "appCount": 3,
       "httpStatus": 200,
       "iconURL": "",
       "error": null,
-      "mixTest": "pass",
-      "mixReason": "Classic source structure and downloadable app metadata passed the automated Mix test.",
       "variants": {
         "classic": {
           "online": true,
@@ -3842,13 +3710,11 @@
     },
     "foxster-altsource": {
       "online": true,
-      "checkedAt": "2026-09-30T07:41:47Z",
+      "checkedAt": "2026-09-30T07:48:11Z",
       "appCount": 2,
       "httpStatus": 200,
       "iconURL": "",
       "error": null,
-      "mixTest": "pass",
-      "mixReason": "Classic source structure and downloadable app metadata passed the automated Mix test.",
       "variants": {
         "classic": {
           "online": true,
@@ -3895,13 +3761,11 @@
     },
     "fastsign": {
       "online": true,
-      "checkedAt": "2026-09-30T07:41:47Z",
+      "checkedAt": "2026-09-30T07:48:11Z",
       "appCount": 16272,
       "httpStatus": 200,
       "iconURL": "",
       "error": null,
-      "mixTest": "experimental",
-      "mixReason": "12684 app entries share a bundle identifier; a Mix would collapse variants to one app.",
       "variants": {
         "classic": {
           "online": true,
@@ -4169,13 +4033,11 @@
     },
     "quantum-plus": {
       "online": true,
-      "checkedAt": "2026-09-30T07:41:47Z",
+      "checkedAt": "2026-09-30T07:48:11Z",
       "appCount": 35,
       "httpStatus": 200,
       "iconURL": "",
       "error": null,
-      "mixTest": "pass",
-      "mixReason": "Classic source structure and downloadable app metadata passed the automated Mix test.",
       "variants": {
         "classic": {
           "online": true,
@@ -4222,13 +4084,11 @@
     },
     "wuxu-standard": {
       "online": true,
-      "checkedAt": "2026-09-30T07:41:47Z",
+      "checkedAt": "2026-09-30T07:48:11Z",
       "appCount": 20,
       "httpStatus": 200,
       "iconURL": "",
       "error": null,
-      "mixTest": "pass",
-      "mixReason": "Classic source structure and downloadable app metadata passed the automated Mix test.",
       "variants": {
         "classic": {
           "online": true,
@@ -4275,13 +4135,11 @@
     },
     "taurine": {
       "online": true,
-      "checkedAt": "2026-09-30T07:41:47Z",
+      "checkedAt": "2026-09-30T07:48:11Z",
       "appCount": 1,
       "httpStatus": 200,
       "iconURL": "",
       "error": null,
-      "mixTest": "pass",
-      "mixReason": "Classic source structure and downloadable app metadata passed the automated Mix test.",
       "variants": {
         "classic": {
           "online": true,
@@ -4328,13 +4186,11 @@
     },
     "burrito-source": {
       "online": true,
-      "checkedAt": "2026-09-30T07:41:47Z",
+      "checkedAt": "2026-09-30T07:48:11Z",
       "appCount": 7,
       "httpStatus": 200,
       "iconURL": "",
       "error": null,
-      "mixTest": "pass",
-      "mixReason": "Classic source structure and downloadable app metadata passed the automated Mix test.",
       "variants": {
         "classic": {
           "online": true,
@@ -4381,13 +4237,11 @@
     },
     "salupov-altrepo": {
       "online": true,
-      "checkedAt": "2026-09-30T07:41:47Z",
+      "checkedAt": "2026-09-30T07:48:11Z",
       "appCount": 2,
       "httpStatus": 200,
       "iconURL": "",
       "error": null,
-      "mixTest": "pass",
-      "mixReason": "Classic source structure and downloadable app metadata passed the automated Mix test.",
       "variants": {
         "classic": {
           "online": true,
@@ -4434,13 +4288,11 @@
     },
     "cercube": {
       "online": true,
-      "checkedAt": "2026-09-30T07:41:47Z",
+      "checkedAt": "2026-09-30T07:48:11Z",
       "appCount": 2,
       "httpStatus": 200,
       "iconURL": "",
       "error": null,
-      "mixTest": "pass",
-      "mixReason": "Classic source structure and downloadable app metadata passed the automated Mix test.",
       "variants": {
         "classic": {
           "online": true,
@@ -4487,13 +4339,11 @@
     },
     "rocket": {
       "online": true,
-      "checkedAt": "2026-09-30T07:41:47Z",
+      "checkedAt": "2026-09-30T07:48:11Z",
       "appCount": 1,
       "httpStatus": 200,
       "iconURL": "",
       "error": null,
-      "mixTest": "pass",
-      "mixReason": "Classic source structure and downloadable app metadata passed the automated Mix test.",
       "variants": {
         "classic": {
           "online": true,
@@ -4540,13 +4390,11 @@
     },
     "reynard-browser": {
       "online": true,
-      "checkedAt": "2026-09-30T07:41:47Z",
+      "checkedAt": "2026-09-30T07:48:11Z",
       "appCount": 1,
       "httpStatus": 200,
       "iconURL": "",
       "error": null,
-      "mixTest": "pass",
-      "mixReason": "Classic source structure and downloadable app metadata passed the automated Mix test.",
       "variants": {
         "classic": {
           "online": true,
