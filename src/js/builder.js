@@ -34,7 +34,7 @@ const copy = {
     selectPass:'Select PASS for', selectAll:'Select all shown', clear:'Clear selection', build:'Build Mix', selected:'selected', shown:'shown', pass:'PASS', try:'TRY', passHelp:'The list is already limited to the selected destination. PASS additionally means the source passed the automated Mix merge test; it does not guarantee every app will run on every iOS device.',
     mixStatus:'Merge test', targetLabel:'Where do you want to add the Mix?', targetHelpAlt:'The finished Mix will be a Classic AltSource for AltStore Classic. SideStore-only and PAL marketplace sources are hidden.', targetHelpSide:'SideStore is fully compatible with AltStore Sources (AltSources). We show Classic IPA-style sources here and remove PAL-only marketplace metadata from the generated Mix.', targetHelpLive:'LiveContainer can browse AltStore-style sources and install apps from their latest version download URL. We show mergeable Classic IPA-style sources here.', palNote:'AltStore PAL is not a Custom Mix target because PAL uses notarized marketplace packages and different source metadata than Classic IPA sources.', targetPrefix:'Target', statusAll:'All', statusPass:'PASS only', statusTry:'TRY only', platform:'Platform', platformAll:'All', classic:'AltStore Classic', pal:'AltStore PAL', sidestore:'SideStore', livecontainer:'LiveContainer', autoTested:'Auto tested',
     altPackage:'AltStore Source', sidePackage:'SideStore Source', livePackage:'LiveContainer Source', customMix:'Custom Mix', filters:'⚙ Filters · 🔎 Search · ☑ Selection',
-    addAlt:'＋ Add to AltStore', addSide:'＋ Add to SideStore', addLive:'＋ Add to LiveContainer', bulkImport:'↗ Bulk import', sendingShortcut:'Opening iOS Hub Source Import…', shortcutFailed:'Could not open the Shortcut.', copyUrl:'Copy URL', json:'JSON ↗', apps:'apps', sources:'sources',
+    addAlt:'＋ Add to AltStore', addSide:'＋ Add to SideStore', addLive:'＋ Add to LiveContainer', copyUrl:'Copy URL', json:'JSON ↗', apps:'apps', sources:'sources',
     hosted:'Hosted Mix ready', local:'Local Mix ready', experimental:'Experimental Mix ready', localNote:'This PASS combination is valid but is not pre-hosted. Download the JSON to inspect or host it; direct Add requires a public source URL.', tryNote:'This Mix contains one or more TRY sources. Download and test the JSON first; PAL or installer-specific metadata may not work after merging.',
     conflicts:'duplicates resolved', download:'Download JSON', preview:'Preview JSON', building:'Testing and combining sources…', failed:'The selected Mix could not be built.', copied:'Source URL copied.', empty:'No sources match the current filters.'
   },
@@ -43,7 +43,7 @@ const copy = {
     selectPass:'Vybrat PASS pro', selectAll:'Vybrat vše zobrazené', clear:'Zrušit výběr', build:'Vytvořit Mix', selected:'vybráno', shown:'zobrazeno', pass:'PASS', try:'ZKUSIT', passHelp:'Seznam je už omezený podle zvoleného cíle. PASS navíc znamená, že zdroj prošel automatickým testem sloučení do Mixu; neznamená to, že každá aplikace poběží na každém iOS zařízení.',
     mixStatus:'Test sloučení', targetLabel:'Kam chceš výsledný Mix přidat?', targetHelpAlt:'Výsledný Mix bude Classic AltSource pro AltStore Classic. SideStore-only a PAL marketplace zdroje se skryjí.', targetHelpSide:'SideStore je plně kompatibilní s AltStore Sources (AltSources). Zobrazujeme zde Classic IPA zdroje a z výsledného Mixu odstraňujeme metadata určená jen pro PAL marketplace.', targetHelpLive:'LiveContainer umí procházet AltStore-style zdroje a instalovat aplikace z download URL jejich nejnovější verze. Zobrazujeme zde sloučitelné Classic IPA zdroje.', palNote:'AltStore PAL není cílem pro Vlastní Mix, protože PAL používá notarizované marketplace balíčky a jiná metadata než Classic IPA zdroje.', targetPrefix:'Cíl', statusAll:'Vše', statusPass:'Jen PASS', statusTry:'Jen ZKUSIT', platform:'Platforma', platformAll:'Vše', classic:'AltStore Classic', pal:'AltStore PAL', sidestore:'SideStore', livecontainer:'LiveContainer', autoTested:'Automaticky testováno',
     altPackage:'AltStore Source', sidePackage:'SideStore Source', livePackage:'LiveContainer Source', customMix:'Vlastní Mix', filters:'⚙ Filtry · 🔎 Hledání · ☑ Výběr',
-    addAlt:'＋ Přidat do AltStore', addSide:'＋ Přidat do SideStore', addLive:'＋ Přidat do LiveContainer', bulkImport:'↗ Hromadný import', sendingShortcut:'Otevírám iOS Hub Source Import…', shortcutFailed:'Zkratku se nepodařilo otevřít.', copyUrl:'Kopírovat URL', json:'JSON ↗', apps:'aplikací', sources:'zdrojů',
+    addAlt:'＋ Přidat do AltStore', addSide:'＋ Přidat do SideStore', addLive:'＋ Přidat do LiveContainer', copyUrl:'Kopírovat URL', json:'JSON ↗', apps:'aplikací', sources:'zdrojů',
     hosted:'Veřejný Mix je připraven', local:'Lokální Mix je připraven', experimental:'Experimentální Mix je připraven', localNote:'Tato PASS kombinace je validní, ale není předem hostovaná. JSON můžeš stáhnout nebo hostovat; přímé přidání vyžaduje veřejnou URL.', tryNote:'Tento Mix obsahuje jeden nebo více zdrojů ZKUSIT. JSON nejdřív stáhni a otestuj; PAL nebo installer-specifická metadata se po sloučení nemusí chovat stejně.',
     conflicts:'duplicit vyřešeno', download:'Stáhnout JSON', preview:'Náhled JSON', building:'Testuji a spojuji zdroje…', failed:'Vybraný Mix se nepodařilo vytvořit.', copied:'URL zdroje zkopírována.', empty:'Aktuálním filtrům neodpovídá žádný zdroj.'
   },
@@ -224,49 +224,6 @@ function syncFilterUi() {
   $$('[data-exp-compat-filter]').forEach(button => button.classList.toggle('active', button.dataset.expCompatFilter === compatibility));
   const search = $('#expSourceSearch');
   if (search && search.value !== query) search.value = query;
-}
-
-const SHORTCUT_NAME = 'iOS Hub Source Import';
-
-function sourceDeepLink(sourceUrl) {
-  const encoded = encodeURIComponent(sourceUrl);
-  if (target === 'sidestore') return `sidestore://source?url=${encoded}`;
-  if (target === 'livecontainer') return `livecontainer://source?url=${encoded}`;
-  return `altstore://source?url=${encoded}`;
-}
-
-function selectedSourceUrls() {
-  return [...selected]
-    .map(id => registry.find(source => source.id === id)?.url)
-    .filter(url => typeof url === 'string' && /^https:\/\//i.test(url));
-}
-
-async function bulkImportSelected() {
-  const message = $('#expMessage');
-  const urls = selectedSourceUrls();
-  if (!urls.length) return;
-
-  const payload = urls.map(sourceDeepLink).join('\n');
-  const base = `shortcuts://run-shortcut?name=${encodeURIComponent(SHORTCUT_NAME)}`;
-
-  if (message) message.textContent = tr('sendingShortcut');
-
-  try {
-    if (navigator.clipboard?.writeText) {
-      await navigator.clipboard.writeText(payload);
-      window.location.href = `${base}&input=clipboard`;
-      return;
-    }
-  } catch (_) {
-    // Clipboard can be unavailable in some embedded browsers. Fall back to text input.
-  }
-
-  try {
-    window.location.href = `${base}&input=text&text=${encodeURIComponent(payload)}`;
-  } catch (error) {
-    console.error(error);
-    if (message) message.textContent = tr('shortcutFailed');
-  }
 }
 
 function packageCard(name, url, meta, type) {
@@ -468,12 +425,33 @@ async function buildMix() {
     $('#expPreview').href = blobUrl;
     $('#expPreview').textContent = tr('preview');
 
-    const bulkImport = $('#expBulkImport');
+    const alt = $('#expAdd');
+    const side = $('#expAddSideStore');
+    const live = $('#expAddLiveContainer');
     const copyButton = $('#expCopyUrl');
 
-    if (bulkImport) {
-      bulkImport.hidden = false;
-      bulkImport.innerHTML = `${installerIcon(targetIconType())}${escapeHtml(tr('bulkImport'))} · ${escapeHtml(targetName())}`;
+    if (hosted.url && hosted.alt && target === 'altstore') {
+      alt.hidden = false;
+      alt.href = `altstore://source?url=${encodeURIComponent(hosted.url)}`;
+      alt.innerHTML = `${installerIcon('alt')}${escapeHtml(tr('addAlt'))}`;
+    } else {
+      alt.hidden = true;
+    }
+
+    if (hosted.url && hosted.side && target === 'sidestore') {
+      side.hidden = false;
+      side.href = `sidestore://source?url=${encodeURIComponent(hosted.url)}`;
+      side.innerHTML = `${installerIcon('side')}${escapeHtml(tr('addSide'))}`;
+    } else {
+      side.hidden = true;
+    }
+
+    if (hosted.url && hosted.live && target === 'livecontainer') {
+      live.hidden = false;
+      live.href = `livecontainer://source?url=${encodeURIComponent(hosted.url)}`;
+      live.innerHTML = `${installerIcon('live')}${escapeHtml(tr('addLive'))}`;
+    } else {
+      live.hidden = true;
     }
 
     if (hosted.url) {
@@ -542,7 +520,6 @@ async function init() {
     render();
   });
   $('#expBuild')?.addEventListener('click', buildMix);
-  $('#expBulkImport')?.addEventListener('click', bulkImportSelected);
 
   $('#experimentalBuilderList')?.addEventListener('change', event => {
     const id = event.target?.dataset?.expSource;
