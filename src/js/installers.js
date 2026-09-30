@@ -284,7 +284,7 @@ export const INSTALLERS = Object.freeze({
     variant: 'classic',
     catalogPriority: 60,
     overflowPriority: 50,
-    icon: 'https://raw.githubusercontent.com/claration/Feather/v1.x/iOS/Resources/Icons/Main/Mac@3x.png',
+    icon: 'assets/icons/feather.png',
     buildLink: url => `feather://source/${url}`
   }
 });
