@@ -146,7 +146,9 @@ function catalogSource(id) { return catalog?.sources?.find(item => item.id === i
 function onlineBuilderSources() {
   return registry.filter(source =>
     source.builder !== false
-    && source.compliance?.reviewStatus !== 'restricted'
+    && ['licensed','permission'].includes(source.compliance?.reviewStatus)
+    && source.compliance?.usage === 'metadata-and-original-links'
+    && source.compliance?.binaryRehost === false
     && getStatus(source.id).online === true
   );
 }
