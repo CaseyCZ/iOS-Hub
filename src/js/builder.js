@@ -43,7 +43,7 @@ const GENRE_RULES = {
 const copy = {
   en: {
     title:'Custom Source Builder',
-    desc:'Choose an installer and original Sources. Bulk import sends the whole selection to the iOS Hub Source Import Shortcut. Manual one-by-one opening stays available below, and JSON export is optional.',
+    desc:'Choose an installer and original Sources. The original plan to merge several Sources into one universal Mix is currently not reliably supported across installers, so the Builder keeps every Source separate and passes the original URLs through iOS Hub Source Import. Manual one-by-one opening stays available below, and JSON export is optional.',
     selectCompatible:'Select all compatible',
     selectAll:'Select compatible shown',
     clear:'Clear selection',
@@ -93,7 +93,7 @@ const copy = {
   },
   cs: {
     title:'Custom Source Builder',
-    desc:'Vyber instalátor a původní Sources. Hromadný import předá celý výběr zkratce iOS Hub Source Import. Dole zůstává ruční otevření po jedné a export JSONu je volitelný.',
+    desc:'Vyber instalátor a původní Sources. Původní plán sloučit více Sources do jednoho univerzálního Mixu aktuálně není spolehlivě možný napříč podporovanými instalátory, takže Builder ponechá každou Source samostatně a předá původní URL přes iOS Hub Source Import. Dole zůstává ruční otevření po jedné a export JSONu je volitelný.',
     selectCompatible:'Vybrat všechny kompatibilní',
     selectAll:'Vybrat kompatibilní zobrazené',
     clear:'Zrušit výběr',
@@ -143,7 +143,7 @@ const copy = {
   },
   de: {
     title:'Custom Source Builder',
-    desc:'Installer und originale Sources auswählen. Der Massenimport sendet die gesamte Auswahl an den Kurzbefehl; manuelles Öffnen einzeln und JSON-Export bleiben verfügbar.',
+    desc:'Installer und originale Sources auswählen. Der ursprüngliche Plan, mehrere Sources zu einem universellen Mix zusammenzuführen, wird derzeit nicht zuverlässig von allen unterstützten Installern unterstützt. Deshalb bleiben die Sources getrennt und ihre Original-URLs werden über iOS Hub Source Import übergeben. Manuelles Öffnen einzeln und JSON-Export bleiben verfügbar.',
     selectCompatible:'Alle kompatiblen wählen',
     selectAll:'Sichtbare kompatible wählen',
     clear:'Auswahl löschen',
@@ -193,7 +193,7 @@ const copy = {
   },
   es: {
     title:'Custom Source Builder',
-    desc:'Elige un instalador y Sources originales. La importación masiva envía toda la selección al atajo; abajo sigue disponible la apertura manual una por una y el JSON es opcional.',
+    desc:'Elige un instalador y Sources originales. El plan original de combinar varias Sources en un único Mix universal no es actualmente fiable en todos los instaladores compatibles, así que el Builder mantiene cada Source separada y envía las URL originales mediante iOS Hub Source Import. La apertura manual una por una y el JSON opcional siguen disponibles.',
     selectCompatible:'Seleccionar compatibles',
     selectAll:'Seleccionar compatibles visibles',
     clear:'Borrar selección',
@@ -243,7 +243,7 @@ const copy = {
   },
   fr: {
     title:'Custom Source Builder',
-    desc:'Choisissez un installateur, sélectionnez les Sources originales et envoyez-les à l’app sans créer de JSON combiné.',
+    desc:'Choisissez un installateur et les Sources originales. Le projet initial de fusionner plusieurs Sources dans un Mix universel n’est actuellement pas fiable avec tous les installateurs pris en charge ; le Builder conserve donc chaque Source séparément et transmet les URL originales via iOS Hub Source Import. L’ouverture manuelle une par une et l’export JSON facultatif restent disponibles.',
     selectCompatible:'Sélectionner les compatibles',
     selectAll:'Sélectionner les compatibles affichées',
     clear:'Effacer la sélection',
