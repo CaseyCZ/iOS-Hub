@@ -36,7 +36,6 @@
       "url": "https://alt.getutm.app/",
       "website": "https://getutm.app/",
       "mode": "classic",
-      "mergeable": true,
       "official": true,
       "trusted": true,
       "recommended": true,
@@ -53,12 +52,10 @@
       "developer": "UTM Team",
       "compliance": {
         "reviewStatus": "public-metadata",
-        "usage": "link-only",
         "binaryRehost": false,
-        "aggregationApproved": false,
         "evidenceURL": "https://alt.getutm.app/",
         "reviewedAt": "2026-09-30",
-        "note": "Public Source endpoint is listed for discovery/direct install only. No explicit aggregation or metadata-redistribution permission is recorded; iOS Hub must not cache, merge, or republish its app metadata."
+        "note": "Original public Source URL is listed for discovery and direct install only. iOS Hub does not copy, merge, cache, or rehost the Source feed or IPA binaries."
       }
     },
     {
@@ -67,7 +64,6 @@
       "url": "https://provenance-emu.com/apps.json",
       "website": "https://provenance-emu.com/",
       "mode": "classic",
-      "mergeable": true,
       "official": true,
       "trusted": true,
       "recommended": true,
@@ -84,12 +80,10 @@
       "developer": "Provenance Team",
       "compliance": {
         "reviewStatus": "public-metadata",
-        "usage": "link-only",
         "binaryRehost": false,
-        "aggregationApproved": false,
         "evidenceURL": "https://provenance-emu.com/apps.json",
         "reviewedAt": "2026-09-30",
-        "note": "Public Source endpoint is listed for discovery/direct install only. No explicit aggregation or metadata-redistribution permission is recorded; iOS Hub must not cache, merge, or republish its app metadata."
+        "note": "Original public Source URL is listed for discovery and direct install only. iOS Hub does not copy, merge, cache, or rehost the Source feed or IPA binaries."
       }
     },
     {
@@ -98,7 +92,6 @@
       "url": "https://ish.app/altstore.json",
       "website": "https://ish.app/",
       "mode": "classic",
-      "mergeable": true,
       "official": true,
       "trusted": false,
       "recommended": true,
@@ -115,12 +108,10 @@
       "developer": "iSH Team",
       "compliance": {
         "reviewStatus": "public-metadata",
-        "usage": "link-only",
         "binaryRehost": false,
-        "aggregationApproved": false,
         "evidenceURL": "https://ish.app/altstore.json",
         "reviewedAt": "2026-09-30",
-        "note": "Public Source endpoint is listed for discovery/direct install only. No explicit aggregation or metadata-redistribution permission is recorded; iOS Hub must not cache, merge, or republish its app metadata."
+        "note": "Original public Source URL is listed for discovery and direct install only. iOS Hub does not copy, merge, cache, or rehost the Source feed or IPA binaries."
       }
     },
     {
@@ -129,7 +120,6 @@
       "url": "https://flyinghead.github.io/flycast-builds/altstore.json",
       "website": "https://github.com/flyinghead/flycast",
       "mode": "classic",
-      "mergeable": true,
       "official": true,
       "trusted": true,
       "recommended": true,
@@ -147,12 +137,10 @@
       "developer": "Flycast Team",
       "compliance": {
         "reviewStatus": "public-metadata",
-        "usage": "link-only",
         "binaryRehost": false,
-        "aggregationApproved": false,
         "evidenceURL": "https://flyinghead.github.io/flycast-builds/altstore.json",
         "reviewedAt": "2026-09-30",
-        "note": "Public Source endpoint is listed for discovery/direct install only. No explicit aggregation or metadata-redistribution permission is recorded; iOS Hub must not cache, merge, or republish its app metadata."
+        "note": "Original public Source URL is listed for discovery and direct install only. iOS Hub does not copy, merge, cache, or rehost the Source feed or IPA binaries."
       }
     },
     {
@@ -161,7 +149,6 @@
       "url": "https://community-apps.sidestore.io/sidecommunity.json",
       "website": "https://sidestore.io/",
       "mode": "sidestore",
-      "mergeable": false,
       "official": true,
       "trusted": true,
       "recommended": true,
@@ -189,12 +176,10 @@
       ],
       "compliance": {
         "reviewStatus": "public-metadata",
-        "usage": "link-only",
         "binaryRehost": false,
-        "aggregationApproved": false,
         "evidenceURL": "https://community-apps.sidestore.io/sidecommunity.json",
         "reviewedAt": "2026-09-30",
-        "note": "Public Source endpoint is listed for discovery/direct install only. No explicit aggregation or metadata-redistribution permission is recorded; iOS Hub must not cache, merge, or republish its app metadata."
+        "note": "Original public Source URL is listed for discovery and direct install only. iOS Hub does not copy, merge, cache, or rehost the Source feed or IPA binaries."
       }
     },
     {
@@ -203,7 +188,6 @@
       "url": "https://apps.sidestore.io/",
       "website": "https://sidestore.io/",
       "mode": "sidestore",
-      "mergeable": false,
       "official": true,
       "trusted": true,
       "recommended": true,
@@ -230,12 +214,10 @@
       ],
       "compliance": {
         "reviewStatus": "public-metadata",
-        "usage": "link-only",
         "binaryRehost": false,
-        "aggregationApproved": false,
         "evidenceURL": "https://apps.sidestore.io/",
         "reviewedAt": "2026-09-30",
-        "note": "Public Source endpoint is listed for discovery/direct install only. No explicit aggregation or metadata-redistribution permission is recorded; iOS Hub must not cache, merge, or republish its app metadata."
+        "note": "Original public Source URL is listed for discovery and direct install only. iOS Hub does not copy, merge, cache, or rehost the Source feed or IPA binaries."
       }
     },
     {
@@ -244,7 +226,6 @@
       "url": "https://stikdebug.xyz/index.json",
       "website": "https://stikdebug.xyz/",
       "mode": "classic",
-      "mergeable": false,
       "official": true,
       "trusted": true,
       "recommended": false,
@@ -261,12 +242,10 @@
       "developer": "StikDebug",
       "compliance": {
         "reviewStatus": "public-metadata",
-        "usage": "link-only",
         "binaryRehost": false,
-        "aggregationApproved": false,
         "evidenceURL": "https://stikdebug.xyz/index.json",
         "reviewedAt": "2026-09-30",
-        "note": "Public Source endpoint is listed for discovery/direct install only. No explicit aggregation or metadata-redistribution permission is recorded; iOS Hub must not cache, merge, or republish its app metadata."
+        "note": "Original public Source URL is listed for discovery and direct install only. iOS Hub does not copy, merge, cache, or rehost the Source feed or IPA binaries."
       }
     },
     {
@@ -275,7 +254,6 @@
       "url": "https://github.com/LiveContainer/LiveContainer/releases/download/1.0/apps.json",
       "website": "https://github.com/LiveContainer/LiveContainer",
       "mode": "classic",
-      "mergeable": false,
       "official": true,
       "trusted": true,
       "recommended": true,
@@ -293,12 +271,10 @@
       "developer": "LiveContainer Team",
       "compliance": {
         "reviewStatus": "public-metadata",
-        "usage": "link-only",
         "binaryRehost": false,
-        "aggregationApproved": false,
         "evidenceURL": "https://github.com/LiveContainer/LiveContainer/releases/download/1.0/apps.json",
         "reviewedAt": "2026-09-30",
-        "note": "Public Source endpoint is listed for discovery/direct install only. No explicit aggregation or metadata-redistribution permission is recorded; iOS Hub must not cache, merge, or republish its app metadata."
+        "note": "Original public Source URL is listed for discovery and direct install only. iOS Hub does not copy, merge, cache, or rehost the Source feed or IPA binaries."
       }
     },
     {
@@ -307,7 +283,6 @@
       "url": "https://github.com/LiveContainer/LiveContainer/releases/download/nightly/apps_nightly.json",
       "website": "https://github.com/LiveContainer/LiveContainer",
       "mode": "classic",
-      "mergeable": false,
       "official": true,
       "trusted": true,
       "recommended": false,
@@ -325,12 +300,10 @@
       "developer": "LiveContainer Team",
       "compliance": {
         "reviewStatus": "public-metadata",
-        "usage": "link-only",
         "binaryRehost": false,
-        "aggregationApproved": false,
         "evidenceURL": "https://github.com/LiveContainer/LiveContainer/releases/download/nightly/apps_nightly.json",
         "reviewedAt": "2026-09-30",
-        "note": "Public Source endpoint is listed for discovery/direct install only. No explicit aggregation or metadata-redistribution permission is recorded; iOS Hub must not cache, merge, or republish its app metadata."
+        "note": "Original public Source URL is listed for discovery and direct install only. iOS Hub does not copy, merge, cache, or rehost the Source feed or IPA binaries."
       }
     },
     {
@@ -339,7 +312,6 @@
       "url": "https://apps.manicemu.site/altstore",
       "website": "https://manicemu.site/",
       "mode": "classic",
-      "mergeable": true,
       "official": true,
       "trusted": true,
       "recommended": true,
@@ -356,12 +328,10 @@
       "developer": "Manic EMU",
       "compliance": {
         "reviewStatus": "public-metadata",
-        "usage": "link-only",
         "binaryRehost": false,
-        "aggregationApproved": false,
         "evidenceURL": "https://apps.manicemu.site/altstore",
         "reviewedAt": "2026-09-30",
-        "note": "Public Source endpoint is listed for discovery/direct install only. No explicit aggregation or metadata-redistribution permission is recorded; iOS Hub must not cache, merge, or republish its app metadata."
+        "note": "Original public Source URL is listed for discovery and direct install only. iOS Hub does not copy, merge, cache, or rehost the Source feed or IPA binaries."
       }
     },
     {
@@ -370,7 +340,6 @@
       "url": "https://github.com/chachillie/Flycast-iOS/raw/refs/heads/main/flycast-ios.json",
       "website": "https://github.com/chachillie/Flycast-iOS",
       "mode": "classic",
-      "mergeable": false,
       "official": true,
       "trusted": true,
       "recommended": false,
@@ -387,13 +356,11 @@
       "developer": "chachillie",
       "compliance": {
         "reviewStatus": "licensed",
-        "usage": "link-only",
         "binaryRehost": false,
-        "aggregationApproved": false,
         "license": "GPL-2.0-only",
         "evidenceURL": "https://github.com/chachillie/Flycast-iOS/blob/main/LICENSE",
         "reviewedAt": "2026-09-30",
-        "note": "flycast-ios.json is in the same GPL-licensed repository; aggregation remains disabled pending copyleft notice/obligation review."
+        "note": "Original public Source URL is listed for discovery and direct install only. iOS Hub does not copy, merge, cache, or rehost the Source feed or IPA binaries. License evidence: GPL-2.0-only."
       }
     },
     {
@@ -402,7 +369,6 @@
       "url": "https://ios-repo.geode-sdk.org/altsource/main.json",
       "website": "https://geode-sdk.org/",
       "mode": "classic",
-      "mergeable": false,
       "official": true,
       "trusted": true,
       "recommended": false,
@@ -419,12 +385,10 @@
       "developer": "Geode Team",
       "compliance": {
         "reviewStatus": "public-metadata",
-        "usage": "link-only",
         "binaryRehost": false,
-        "aggregationApproved": false,
         "evidenceURL": "https://ios-repo.geode-sdk.org/altsource/main.json",
         "reviewedAt": "2026-09-30",
-        "note": "Public Source endpoint is listed for discovery/direct install only. No explicit aggregation or metadata-redistribution permission is recorded; iOS Hub must not cache, merge, or republish its app metadata."
+        "note": "Original public Source URL is listed for discovery and direct install only. iOS Hub does not copy, merge, cache, or rehost the Source feed or IPA binaries."
       }
     },
     {
@@ -433,7 +397,6 @@
       "url": "https://repo.untitledcharts.com",
       "website": "https://repo.untitledcharts.com",
       "mode": "classic",
-      "mergeable": false,
       "official": false,
       "trusted": true,
       "recommended": false,
@@ -450,12 +413,10 @@
       "developer": "RetroSekaï",
       "compliance": {
         "reviewStatus": "public-metadata",
-        "usage": "link-only",
         "binaryRehost": false,
-        "aggregationApproved": false,
         "evidenceURL": "https://repo.untitledcharts.com",
         "reviewedAt": "2026-09-30",
-        "note": "Public Source endpoint is listed for discovery/direct install only. No explicit aggregation or metadata-redistribution permission is recorded; iOS Hub must not cache, merge, or republish its app metadata."
+        "note": "Original public Source URL is listed for discovery and direct install only. iOS Hub does not copy, merge, cache, or rehost the Source feed or IPA binaries."
       }
     },
     {
@@ -464,7 +425,6 @@
       "url": "https://altstore.oatmealdome.me",
       "website": "https://oatmealdome.me/",
       "mode": "classic",
-      "mergeable": true,
       "official": true,
       "trusted": true,
       "recommended": true,
@@ -481,12 +441,10 @@
       "developer": "OatmealDome",
       "compliance": {
         "reviewStatus": "public-metadata",
-        "usage": "link-only",
         "binaryRehost": false,
-        "aggregationApproved": false,
         "evidenceURL": "https://altstore.oatmealdome.me",
         "reviewedAt": "2026-09-30",
-        "note": "Public Source endpoint is listed for discovery/direct install only. No explicit aggregation or metadata-redistribution permission is recorded; iOS Hub must not cache, merge, or republish its app metadata."
+        "note": "Original public Source URL is listed for discovery and direct install only. iOS Hub does not copy, merge, cache, or rehost the Source feed or IPA binaries."
       }
     },
     {
@@ -495,7 +453,6 @@
       "url": "https://alt.crystall1ne.dev",
       "website": "https://crystall1ne.dev/",
       "mode": "classic",
-      "mergeable": false,
       "official": true,
       "trusted": true,
       "recommended": false,
@@ -511,12 +468,10 @@
       "developer": "crystall1ne",
       "compliance": {
         "reviewStatus": "public-metadata",
-        "usage": "link-only",
         "binaryRehost": false,
-        "aggregationApproved": false,
         "evidenceURL": "https://alt.crystall1ne.dev",
         "reviewedAt": "2026-09-30",
-        "note": "Public Source endpoint is listed for discovery/direct install only. No explicit aggregation or metadata-redistribution permission is recorded; iOS Hub must not cache, merge, or republish its app metadata."
+        "note": "Original public Source URL is listed for discovery and direct install only. iOS Hub does not copy, merge, cache, or rehost the Source feed or IPA binaries."
       }
     },
     {
@@ -525,7 +480,6 @@
       "url": "https://pokemmo.eu/altstore/",
       "website": "https://pokemmo.com/",
       "mode": "classic",
-      "mergeable": true,
       "official": true,
       "trusted": true,
       "recommended": true,
@@ -542,12 +496,10 @@
       "developer": "PokeMMO Team",
       "compliance": {
         "reviewStatus": "public-metadata",
-        "usage": "link-only",
         "binaryRehost": false,
-        "aggregationApproved": false,
         "evidenceURL": "https://pokemmo.eu/altstore/",
         "reviewedAt": "2026-09-30",
-        "note": "Public Source endpoint is listed for discovery/direct install only. No explicit aggregation or metadata-redistribution permission is recorded; iOS Hub must not cache, merge, or republish its app metadata."
+        "note": "Original public Source URL is listed for discovery and direct install only. iOS Hub does not copy, merge, cache, or rehost the Source feed or IPA binaries."
       }
     },
     {
@@ -556,7 +508,6 @@
       "url": "https://theodyssey.dev/altstore/odysseysource.json",
       "website": "https://theodyssey.dev/",
       "mode": "classic",
-      "mergeable": false,
       "official": true,
       "trusted": true,
       "recommended": false,
@@ -572,12 +523,10 @@
       "developer": "Odyssey Team",
       "compliance": {
         "reviewStatus": "public-metadata",
-        "usage": "link-only",
         "binaryRehost": false,
-        "aggregationApproved": false,
         "evidenceURL": "https://theodyssey.dev/altstore/odysseysource.json",
         "reviewedAt": "2026-09-30",
-        "note": "Public Source endpoint is listed for discovery/direct install only. No explicit aggregation or metadata-redistribution permission is recorded; iOS Hub must not cache, merge, or republish its app metadata."
+        "note": "Original public Source URL is listed for discovery and direct install only. iOS Hub does not copy, merge, cache, or rehost the Source feed or IPA binaries."
       }
     },
     {
@@ -586,7 +535,6 @@
       "url": "https://raw.githubusercontent.com/yattee/yattee/main/altstore-source.json",
       "website": "https://github.com/yattee/yattee",
       "mode": "classic",
-      "mergeable": true,
       "official": true,
       "trusted": false,
       "recommended": true,
@@ -604,13 +552,11 @@
       "developer": "Yattee Team",
       "compliance": {
         "reviewStatus": "licensed",
-        "usage": "link-only",
         "binaryRehost": false,
-        "aggregationApproved": false,
         "license": "AGPL-3.0-only",
         "evidenceURL": "https://github.com/yattee/yattee/blob/main/LICENSE",
         "reviewedAt": "2026-09-30",
-        "note": "altstore-source.json is in the same licensed repository; aggregation remains disabled pending copyleft notice/obligation review."
+        "note": "Original public Source URL is listed for discovery and direct install only. iOS Hub does not copy, merge, cache, or rehost the Source feed or IPA binaries. License evidence: AGPL-3.0-only."
       }
     },
     {
@@ -619,7 +565,6 @@
       "url": "https://altstore.ignitedemulator.com/",
       "website": "https://github.com/litritt/Ignited",
       "mode": "classic",
-      "mergeable": true,
       "official": true,
       "trusted": true,
       "recommended": true,
@@ -636,12 +581,10 @@
       "developer": "litritt",
       "compliance": {
         "reviewStatus": "public-metadata",
-        "usage": "link-only",
         "binaryRehost": false,
-        "aggregationApproved": false,
         "evidenceURL": "https://altstore.ignitedemulator.com/",
         "reviewedAt": "2026-09-30",
-        "note": "Public Source endpoint is listed for discovery/direct install only. No explicit aggregation or metadata-redistribution permission is recorded; iOS Hub must not cache, merge, or republish its app metadata."
+        "note": "Original public Source URL is listed for discovery and direct install only. iOS Hub does not copy, merge, cache, or rehost the Source feed or IPA binaries."
       }
     },
     {
@@ -650,7 +593,6 @@
       "url": "https://raw.githubusercontent.com/delia-cheminot/mona-hrt/refs/heads/main/ios_source.json",
       "website": "https://github.com/delia-cheminot/mona-hrt",
       "mode": "classic",
-      "mergeable": false,
       "official": true,
       "trusted": true,
       "recommended": false,
@@ -665,12 +607,10 @@
       "developer": "delia-cheminot",
       "compliance": {
         "reviewStatus": "public-metadata",
-        "usage": "link-only",
         "binaryRehost": false,
-        "aggregationApproved": false,
         "evidenceURL": "https://raw.githubusercontent.com/delia-cheminot/mona-hrt/refs/heads/main/ios_source.json",
         "reviewedAt": "2026-09-30",
-        "note": "Public Source endpoint is listed for discovery/direct install only. No explicit aggregation or metadata-redistribution permission is recorded; iOS Hub must not cache, merge, or republish its app metadata."
+        "note": "Original public Source URL is listed for discovery and direct install only. iOS Hub does not copy, merge, cache, or rehost the Source feed or IPA binaries."
       }
     },
     {
@@ -679,7 +619,6 @@
       "url": "https://raw.githubusercontent.com/VortXTV/VortX/main/altstore/source.json",
       "website": "https://vortx.tv/",
       "mode": "classic",
-      "mergeable": false,
       "official": true,
       "trusted": false,
       "recommended": false,
@@ -697,13 +636,11 @@
       "developer": "VortXTV",
       "compliance": {
         "reviewStatus": "licensed",
-        "usage": "link-only",
         "binaryRehost": false,
-        "aggregationApproved": false,
         "license": "GPL-3.0-only",
         "evidenceURL": "https://github.com/VortXTV/VortX/blob/main/LICENSE",
         "reviewedAt": "2026-09-30",
-        "note": "altstore/source.json is in the same licensed repository; aggregation remains disabled pending copyleft notice/obligation review."
+        "note": "Original public Source URL is listed for discovery and direct install only. iOS Hub does not copy, merge, cache, or rehost the Source feed or IPA binaries. License evidence: GPL-3.0-only."
       }
     },
     {
@@ -712,7 +649,6 @@
       "url": "https://dl.strem.io/apple/altstore/source.json",
       "website": "https://www.stremio.com/",
       "mode": "pal",
-      "mergeable": false,
       "official": true,
       "trusted": false,
       "recommended": true,
@@ -731,12 +667,10 @@
       "developer": "Stremio Team",
       "compliance": {
         "reviewStatus": "public-metadata",
-        "usage": "link-only",
         "binaryRehost": false,
-        "aggregationApproved": false,
         "evidenceURL": "https://dl.strem.io/apple/altstore/source.json",
         "reviewedAt": "2026-09-30",
-        "note": "Public Source endpoint is listed for discovery/direct install only. No explicit aggregation or metadata-redistribution permission is recorded; iOS Hub must not cache, merge, or republish its app metadata."
+        "note": "Original public Source URL is listed for discovery and direct install only. iOS Hub does not copy, merge, cache, or rehost the Source feed or IPA binaries."
       }
     },
     {
@@ -745,7 +679,6 @@
       "url": "https://gorlev.github.io/stremio-altstore/stremio-ios.json",
       "website": "https://github.com/gorlev/stremio-altstore",
       "mode": "classic",
-      "mergeable": false,
       "official": false,
       "trusted": false,
       "recommended": false,
@@ -764,13 +697,11 @@
       "developer": "gorlev",
       "compliance": {
         "reviewStatus": "licensed",
-        "usage": "link-only",
         "binaryRehost": false,
-        "aggregationApproved": false,
         "license": "MIT",
         "evidenceURL": "https://github.com/gorlev/stremio-altstore/blob/main/LICENSE",
         "reviewedAt": "2026-09-30",
-        "note": "stremio-ios.json is MIT-licensed, but the feed references third-party Stremio artifacts/branding; aggregation remains disabled."
+        "note": "Original public Source URL is listed for discovery and direct install only. iOS Hub does not copy, merge, cache, or rehost the Source feed or IPA binaries. License evidence: MIT."
       }
     },
     {
@@ -779,7 +710,6 @@
       "url": "https://github.com/ohaiibuzzle/kodi-ios-ipa-builds/releases/latest/download/source.json",
       "website": "https://github.com/ohaiibuzzle/kodi-ios-ipa-builds",
       "mode": "classic",
-      "mergeable": false,
       "official": false,
       "trusted": false,
       "recommended": true,
@@ -797,12 +727,10 @@
       "developer": "ohaiibuzzle",
       "compliance": {
         "reviewStatus": "public-metadata",
-        "usage": "link-only",
         "binaryRehost": false,
-        "aggregationApproved": false,
         "evidenceURL": "https://github.com/ohaiibuzzle/kodi-ios-ipa-builds/releases/latest/download/source.json",
         "reviewedAt": "2026-09-30",
-        "note": "Public Source endpoint is listed for discovery/direct install only. No explicit aggregation or metadata-redistribution permission is recorded; iOS Hub must not cache, merge, or republish its app metadata."
+        "note": "Original public Source URL is listed for discovery and direct install only. iOS Hub does not copy, merge, cache, or rehost the Source feed or IPA binaries."
       }
     },
     {
@@ -811,7 +739,6 @@
       "url": "https://9ani.app/api/altstore",
       "website": "https://github.com/SuperMarcus/NineAnimator",
       "mode": "classic",
-      "mergeable": false,
       "official": true,
       "trusted": false,
       "recommended": true,
@@ -828,12 +755,10 @@
       "developer": "SuperMarcus",
       "compliance": {
         "reviewStatus": "public-metadata",
-        "usage": "link-only",
         "binaryRehost": false,
-        "aggregationApproved": false,
         "evidenceURL": "https://9ani.app/api/altstore",
         "reviewedAt": "2026-09-30",
-        "note": "Public Source endpoint is listed for discovery/direct install only. No explicit aggregation or metadata-redistribution permission is recorded; iOS Hub must not cache, merge, or republish its app metadata."
+        "note": "Original public Source URL is listed for discovery and direct install only. iOS Hub does not copy, merge, cache, or rehost the Source feed or IPA binaries."
       }
     },
     {
@@ -842,7 +767,6 @@
       "url": "https://esound.app/downloads/source.json",
       "website": "https://esound.app/",
       "mode": "pal",
-      "mergeable": false,
       "official": true,
       "trusted": false,
       "recommended": true,
@@ -860,12 +784,10 @@
       "developer": "eSound",
       "compliance": {
         "reviewStatus": "public-metadata",
-        "usage": "link-only",
         "binaryRehost": false,
-        "aggregationApproved": false,
         "evidenceURL": "https://esound.app/downloads/source.json",
         "reviewedAt": "2026-09-30",
-        "note": "Public Source endpoint is listed for discovery/direct install only. No explicit aggregation or metadata-redistribution permission is recorded; iOS Hub must not cache, merge, or republish its app metadata."
+        "note": "Original public Source URL is listed for discovery and direct install only. iOS Hub does not copy, merge, cache, or rehost the Source feed or IPA binaries."
       }
     },
     {
@@ -874,7 +796,6 @@
       "url": "https://partyknights.app/source",
       "website": "https://partyknights.app/",
       "mode": "classic",
-      "mergeable": false,
       "official": true,
       "trusted": false,
       "recommended": false,
@@ -889,12 +810,10 @@
       "developer": "Party Knights",
       "compliance": {
         "reviewStatus": "public-metadata",
-        "usage": "link-only",
         "binaryRehost": false,
-        "aggregationApproved": false,
         "evidenceURL": "https://partyknights.app/source",
         "reviewedAt": "2026-09-30",
-        "note": "Public Source endpoint is listed for discovery/direct install only. No explicit aggregation or metadata-redistribution permission is recorded; iOS Hub must not cache, merge, or republish its app metadata."
+        "note": "Original public Source URL is listed for discovery and direct install only. iOS Hub does not copy, merge, cache, or rehost the Source feed or IPA binaries."
       }
     },
     {
@@ -903,7 +822,6 @@
       "url": "https://bringyour.com/altstore/source.json",
       "website": "https://bringyour.com/",
       "mode": "classic",
-      "mergeable": false,
       "official": true,
       "trusted": false,
       "recommended": false,
@@ -919,12 +837,10 @@
       "developer": "BringYour",
       "compliance": {
         "reviewStatus": "public-metadata",
-        "usage": "link-only",
         "binaryRehost": false,
-        "aggregationApproved": false,
         "evidenceURL": "https://bringyour.com/altstore/source.json",
         "reviewedAt": "2026-09-30",
-        "note": "Public Source endpoint is listed for discovery/direct install only. No explicit aggregation or metadata-redistribution permission is recorded; iOS Hub must not cache, merge, or republish its app metadata."
+        "note": "Original public Source URL is listed for discovery and direct install only. iOS Hub does not copy, merge, cache, or rehost the Source feed or IPA binaries."
       }
     },
     {
@@ -933,7 +849,6 @@
       "url": "https://xitrix.github.io/iTorrent/AltStore.json",
       "website": "https://github.com/XITRIX/iTorrent",
       "mode": "classic",
-      "mergeable": false,
       "official": true,
       "trusted": false,
       "recommended": true,
@@ -950,12 +865,10 @@
       "developer": "XITRIX",
       "compliance": {
         "reviewStatus": "public-metadata",
-        "usage": "link-only",
         "binaryRehost": false,
-        "aggregationApproved": false,
         "evidenceURL": "https://xitrix.github.io/iTorrent/AltStore.json",
         "reviewedAt": "2026-09-30",
-        "note": "Public Source endpoint is listed for discovery/direct install only. No explicit aggregation or metadata-redistribution permission is recorded; iOS Hub must not cache, merge, or republish its app metadata."
+        "note": "Original public Source URL is listed for discovery and direct install only. iOS Hub does not copy, merge, cache, or rehost the Source feed or IPA binaries."
       }
     },
     {
@@ -964,7 +877,6 @@
       "url": "https://raw.githubusercontent.com/RajnishOne/altstore-releases/main/altstore-pal.json",
       "website": "https://github.com/RajnishOne/qbitconnect",
       "mode": "pal",
-      "mergeable": false,
       "official": true,
       "trusted": false,
       "recommended": false,
@@ -993,12 +905,10 @@
       ],
       "compliance": {
         "reviewStatus": "public-metadata",
-        "usage": "link-only",
         "binaryRehost": false,
-        "aggregationApproved": false,
         "evidenceURL": "https://raw.githubusercontent.com/RajnishOne/altstore-releases/main/altstore-pal.json",
         "reviewedAt": "2026-09-30",
-        "note": "Public Source endpoint is listed for discovery/direct install only. No explicit aggregation or metadata-redistribution permission is recorded; iOS Hub must not cache, merge, or republish its app metadata."
+        "note": "Original public Source URL is listed for discovery and direct install only. iOS Hub does not copy, merge, cache, or rehost the Source feed or IPA binaries."
       }
     },
     {
@@ -1007,7 +917,6 @@
       "url": "https://raw.githubusercontent.com/auties00/artemis/refs/heads/main/source_pal.json",
       "website": "https://github.com/Auties00/Artemis",
       "mode": "pal",
-      "mergeable": false,
       "official": true,
       "trusted": false,
       "recommended": false,
@@ -1037,12 +946,10 @@
       ],
       "compliance": {
         "reviewStatus": "public-metadata",
-        "usage": "link-only",
         "binaryRehost": false,
-        "aggregationApproved": false,
         "evidenceURL": "https://raw.githubusercontent.com/auties00/artemis/refs/heads/main/source_pal.json",
         "reviewedAt": "2026-09-30",
-        "note": "Public Source endpoint is listed for discovery/direct install only. No explicit aggregation or metadata-redistribution permission is recorded; iOS Hub must not cache, merge, or republish its app metadata."
+        "note": "Original public Source URL is listed for discovery and direct install only. iOS Hub does not copy, merge, cache, or rehost the Source feed or IPA binaries."
       }
     },
     {
@@ -1051,7 +958,6 @@
       "url": "https://alt.hackerwebapp.com/PALSource.json",
       "website": "https://hackerwebapp.com/",
       "mode": "pal",
-      "mergeable": false,
       "official": true,
       "trusted": false,
       "recommended": false,
@@ -1067,12 +973,10 @@
       "developer": "Hacker Web App",
       "compliance": {
         "reviewStatus": "public-metadata",
-        "usage": "link-only",
         "binaryRehost": false,
-        "aggregationApproved": false,
         "evidenceURL": "https://alt.hackerwebapp.com/PALSource.json",
         "reviewedAt": "2026-09-30",
-        "note": "Public Source endpoint is listed for discovery/direct install only. No explicit aggregation or metadata-redistribution permission is recorded; iOS Hub must not cache, merge, or republish its app metadata."
+        "note": "Original public Source URL is listed for discovery and direct install only. iOS Hub does not copy, merge, cache, or rehost the Source feed or IPA binaries."
       }
     },
     {
@@ -1081,7 +985,6 @@
       "url": "https://courtpredict-ios.web.app/PALSource.json",
       "website": "https://courtpredict-ios.web.app/",
       "mode": "pal",
-      "mergeable": false,
       "official": true,
       "trusted": false,
       "recommended": false,
@@ -1097,12 +1000,10 @@
       "developer": "CourtPredict",
       "compliance": {
         "reviewStatus": "public-metadata",
-        "usage": "link-only",
         "binaryRehost": false,
-        "aggregationApproved": false,
         "evidenceURL": "https://courtpredict-ios.web.app/PALSource.json",
         "reviewedAt": "2026-09-30",
-        "note": "Public Source endpoint is listed for discovery/direct install only. No explicit aggregation or metadata-redistribution permission is recorded; iOS Hub must not cache, merge, or republish its app metadata."
+        "note": "Original public Source URL is listed for discovery and direct install only. iOS Hub does not copy, merge, cache, or rehost the Source feed or IPA binaries."
       }
     },
     {
@@ -1111,7 +1012,6 @@
       "url": "https://alts.lao.sb",
       "website": "https://alts.lao.sb",
       "mode": "classic",
-      "mergeable": false,
       "official": false,
       "trusted": false,
       "recommended": false,
@@ -1127,12 +1027,10 @@
       "developer": "lao.sb",
       "compliance": {
         "reviewStatus": "public-metadata",
-        "usage": "link-only",
         "binaryRehost": false,
-        "aggregationApproved": false,
         "evidenceURL": "https://alts.lao.sb",
         "reviewedAt": "2026-09-30",
-        "note": "Public Source endpoint is listed for discovery/direct install only. No explicit aggregation or metadata-redistribution permission is recorded; iOS Hub must not cache, merge, or republish its app metadata."
+        "note": "Original public Source URL is listed for discovery and direct install only. iOS Hub does not copy, merge, cache, or rehost the Source feed or IPA binaries."
       }
     },
     {
@@ -1141,7 +1039,6 @@
       "url": "https://raw.githubusercontent.com/Michael-128/qBitControl-releases/main/source.json",
       "website": "https://github.com/Michael-128/qBitControl",
       "mode": "pal",
-      "mergeable": false,
       "official": true,
       "trusted": false,
       "recommended": false,
@@ -1169,12 +1066,10 @@
       ],
       "compliance": {
         "reviewStatus": "public-metadata",
-        "usage": "link-only",
         "binaryRehost": false,
-        "aggregationApproved": false,
         "evidenceURL": "https://raw.githubusercontent.com/Michael-128/qBitControl-releases/main/source.json",
         "reviewedAt": "2026-09-30",
-        "note": "Public Source endpoint is listed for discovery/direct install only. No explicit aggregation or metadata-redistribution permission is recorded; iOS Hub must not cache, merge, or republish its app metadata."
+        "note": "Original public Source URL is listed for discovery and direct install only. iOS Hub does not copy, merge, cache, or rehost the Source feed or IPA binaries."
       }
     },
     {
@@ -1183,7 +1078,6 @@
       "url": "https://raw.githubusercontent.com/matfantinel/iphanpy/refs/heads/main/altstore/source.json",
       "website": "https://fantinel.dev/blog/iphanpy-mastodon-client/",
       "mode": "pal",
-      "mergeable": false,
       "official": true,
       "trusted": false,
       "recommended": false,
@@ -1199,13 +1093,11 @@
       "developer": "matfantinel",
       "compliance": {
         "reviewStatus": "licensed",
-        "usage": "link-only",
         "binaryRehost": false,
-        "aggregationApproved": false,
         "license": "MIT",
         "evidenceURL": "https://github.com/matfantinel/iphanpy/blob/main/LICENSE",
         "reviewedAt": "2026-09-30",
-        "note": "altstore/source.json is in the same MIT-licensed repository; aggregation remains disabled pending notice and third-party asset review."
+        "note": "Original public Source URL is listed for discovery and direct install only. iOS Hub does not copy, merge, cache, or rehost the Source feed or IPA binaries. License evidence: MIT."
       }
     },
     {
@@ -1214,7 +1106,6 @@
       "url": "https://content-download-egs.distro.on.epicgames.com/iOS/altstore/source.json",
       "website": "https://www.epicgames.com/",
       "mode": "pal",
-      "mergeable": false,
       "official": true,
       "trusted": false,
       "recommended": true,
@@ -1232,12 +1123,10 @@
       "developer": "Epic Games",
       "compliance": {
         "reviewStatus": "public-metadata",
-        "usage": "link-only",
         "binaryRehost": false,
-        "aggregationApproved": false,
         "evidenceURL": "https://content-download-egs.distro.on.epicgames.com/iOS/altstore/source.json",
         "reviewedAt": "2026-09-30",
-        "note": "Public Source endpoint is listed for discovery/direct install only. No explicit aggregation or metadata-redistribution permission is recorded; iOS Hub must not cache, merge, or republish its app metadata."
+        "note": "Original public Source URL is listed for discovery and direct install only. iOS Hub does not copy, merge, cache, or rehost the Source feed or IPA binaries."
       }
     },
     {
@@ -1246,7 +1135,6 @@
       "url": "https://raw.githubusercontent.com/xN1ckuz/xN1ckuz-Sidestore-Repo/main/repo.json",
       "website": "https://github.com/xN1ckuz/xN1ckuz-Sidestore-Repo",
       "mode": "classic",
-      "mergeable": true,
       "official": false,
       "trusted": false,
       "recommended": true,
@@ -1270,12 +1158,10 @@
       "developer": "xN1ckuz",
       "compliance": {
         "reviewStatus": "public-metadata",
-        "usage": "link-only",
         "binaryRehost": false,
-        "aggregationApproved": false,
         "evidenceURL": "https://raw.githubusercontent.com/xN1ckuz/xN1ckuz-Sidestore-Repo/main/repo.json",
         "reviewedAt": "2026-09-30",
-        "note": "Public Source endpoint is listed for discovery/direct install only. No explicit aggregation or metadata-redistribution permission is recorded; iOS Hub must not cache, merge, or republish its app metadata."
+        "note": "Original public Source URL is listed for discovery and direct install only. iOS Hub does not copy, merge, cache, or rehost the Source feed or IPA binaries."
       }
     },
     {
@@ -1284,7 +1170,6 @@
       "url": "https://raw.githubusercontent.com/dvntm0/AltStore/main/repo.json",
       "website": "https://github.com/dvntm0/AltStore",
       "mode": "classic",
-      "mergeable": true,
       "official": false,
       "trusted": false,
       "recommended": true,
@@ -1307,12 +1192,10 @@
       "developer": "dvntm0",
       "compliance": {
         "reviewStatus": "public-metadata",
-        "usage": "link-only",
         "binaryRehost": false,
-        "aggregationApproved": false,
         "evidenceURL": "https://raw.githubusercontent.com/dvntm0/AltStore/main/repo.json",
         "reviewedAt": "2026-09-30",
-        "note": "Public Source endpoint is listed for discovery/direct install only. No explicit aggregation or metadata-redistribution permission is recorded; iOS Hub must not cache, merge, or republish its app metadata."
+        "note": "Original public Source URL is listed for discovery and direct install only. iOS Hub does not copy, merge, cache, or rehost the Source feed or IPA binaries."
       }
     },
     {
@@ -1321,7 +1204,6 @@
       "url": "https://raw.githubusercontent.com/WuXu1/WuXu1.github.io/main/wuxu-complete-plus.json",
       "website": "https://wuxu1.github.io/",
       "mode": "classic",
-      "mergeable": true,
       "official": false,
       "trusted": false,
       "recommended": true,
@@ -1346,12 +1228,10 @@
       "developer": "WuXu1",
       "compliance": {
         "reviewStatus": "public-metadata",
-        "usage": "link-only",
         "binaryRehost": false,
-        "aggregationApproved": false,
         "evidenceURL": "https://raw.githubusercontent.com/WuXu1/WuXu1.github.io/main/wuxu-complete-plus.json",
         "reviewedAt": "2026-09-30",
-        "note": "Public Source endpoint is listed for discovery/direct install only. No explicit aggregation or metadata-redistribution permission is recorded; iOS Hub must not cache, merge, or republish its app metadata."
+        "note": "Original public Source URL is listed for discovery and direct install only. iOS Hub does not copy, merge, cache, or rehost the Source feed or IPA binaries."
       }
     },
     {
@@ -1360,7 +1240,6 @@
       "url": "https://raw.githubusercontent.com/baretsky/baretsky-tweaked-ipas-library/main/apps.json",
       "website": "https://github.com/baretsky/baretsky-tweaked-ipas-library",
       "mode": "classic",
-      "mergeable": false,
       "official": false,
       "trusted": false,
       "recommended": true,
@@ -1385,12 +1264,10 @@
       "developer": "baretsky",
       "compliance": {
         "reviewStatus": "public-metadata",
-        "usage": "link-only",
         "binaryRehost": false,
-        "aggregationApproved": false,
         "evidenceURL": "https://raw.githubusercontent.com/baretsky/baretsky-tweaked-ipas-library/main/apps.json",
         "reviewedAt": "2026-09-30",
-        "note": "Public Source endpoint is listed for discovery/direct install only. No explicit aggregation or metadata-redistribution permission is recorded; iOS Hub must not cache, merge, or republish its app metadata."
+        "note": "Original public Source URL is listed for discovery and direct install only. iOS Hub does not copy, merge, cache, or rehost the Source feed or IPA binaries."
       }
     },
     {
@@ -1399,7 +1276,6 @@
       "url": "https://raw.githubusercontent.com/driftywinds/driftywinds.github.io/master/AltStore/apps.json",
       "website": "https://github.com/driftywinds/driftywinds.github.io",
       "mode": "classic",
-      "mergeable": false,
       "official": false,
       "trusted": false,
       "recommended": true,
@@ -1424,12 +1300,10 @@
       "developer": "driftywinds",
       "compliance": {
         "reviewStatus": "public-metadata",
-        "usage": "link-only",
         "binaryRehost": false,
-        "aggregationApproved": false,
         "evidenceURL": "https://raw.githubusercontent.com/driftywinds/driftywinds.github.io/master/AltStore/apps.json",
         "reviewedAt": "2026-09-30",
-        "note": "Public Source endpoint is listed for discovery/direct install only. No explicit aggregation or metadata-redistribution permission is recorded; iOS Hub must not cache, merge, or republish its app metadata."
+        "note": "Original public Source URL is listed for discovery and direct install only. iOS Hub does not copy, merge, cache, or rehost the Source feed or IPA binaries."
       }
     },
     {
@@ -1438,7 +1312,6 @@
       "url": "https://raw.githubusercontent.com/927tx/IPA-Vault/main/ipavaultsource.json",
       "website": "https://github.com/927tx/IPA-Vault",
       "mode": "classic",
-      "mergeable": false,
       "official": false,
       "trusted": false,
       "recommended": false,
@@ -1461,12 +1334,10 @@
       "developer": "927tx",
       "compliance": {
         "reviewStatus": "public-metadata",
-        "usage": "link-only",
         "binaryRehost": false,
-        "aggregationApproved": false,
         "evidenceURL": "https://raw.githubusercontent.com/927tx/IPA-Vault/main/ipavaultsource.json",
         "reviewedAt": "2026-09-30",
-        "note": "Public Source endpoint is listed for discovery/direct install only. No explicit aggregation or metadata-redistribution permission is recorded; iOS Hub must not cache, merge, or republish its app metadata."
+        "note": "Original public Source URL is listed for discovery and direct install only. iOS Hub does not copy, merge, cache, or rehost the Source feed or IPA binaries."
       }
     },
     {
@@ -1475,7 +1346,6 @@
       "url": "https://raw.githubusercontent.com/SideloadLabs/SideloasLabs-AltSource/main/apps.json",
       "website": "https://github.com/SideloadLabs/SideloasLabs-AltSource",
       "mode": "classic",
-      "mergeable": false,
       "official": false,
       "trusted": false,
       "recommended": false,
@@ -1495,12 +1365,10 @@
       "developer": "SideloadLabs",
       "compliance": {
         "reviewStatus": "public-metadata",
-        "usage": "link-only",
         "binaryRehost": false,
-        "aggregationApproved": false,
         "evidenceURL": "https://raw.githubusercontent.com/SideloadLabs/SideloasLabs-AltSource/main/apps.json",
         "reviewedAt": "2026-09-30",
-        "note": "Public Source endpoint is listed for discovery/direct install only. No explicit aggregation or metadata-redistribution permission is recorded; iOS Hub must not cache, merge, or republish its app metadata."
+        "note": "Original public Source URL is listed for discovery and direct install only. iOS Hub does not copy, merge, cache, or rehost the Source feed or IPA binaries."
       }
     },
     {
@@ -1509,7 +1377,6 @@
       "url": "https://raw.githubusercontent.com/YTLitePlus/YTLitePlus-Altstore/main/apps.json",
       "website": "https://github.com/YTLitePlus/YTLitePlus",
       "mode": "classic",
-      "mergeable": true,
       "official": true,
       "trusted": false,
       "recommended": true,
@@ -1529,12 +1396,10 @@
       "developer": "YTLitePlus",
       "compliance": {
         "reviewStatus": "public-metadata",
-        "usage": "link-only",
         "binaryRehost": false,
-        "aggregationApproved": false,
         "evidenceURL": "https://raw.githubusercontent.com/YTLitePlus/YTLitePlus-Altstore/main/apps.json",
         "reviewedAt": "2026-09-30",
-        "note": "Public Source endpoint is listed for discovery/direct install only. No explicit aggregation or metadata-redistribution permission is recorded; iOS Hub must not cache, merge, or republish its app metadata."
+        "note": "Original public Source URL is listed for discovery and direct install only. iOS Hub does not copy, merge, cache, or rehost the Source feed or IPA binaries."
       }
     },
     {
@@ -1543,13 +1408,11 @@
       "url": "https://raw.githubusercontent.com/MountainofPenguin/moe-altstore/main/apps.json",
       "website": "https://github.com/MountainofPenguin/moe-altstore",
       "mode": "classic",
-      "mergeable": false,
       "official": false,
       "trusted": false,
       "recommended": true,
       "community": true,
       "modified": true,
-      "autoPackage": false,
       "description": {
         "cs": "Aktivně aktualizovaný komunitní mirror upravených IPA z Moe Apps, včetně YouTube, Redditu, Infuse a dalších aplikací.",
         "en": "Actively updated community mirror of modified Moe Apps IPAs, including YouTube, Reddit, Infuse and more."
@@ -1567,12 +1430,10 @@
       "developer": "MountainofPenguin",
       "compliance": {
         "reviewStatus": "public-metadata",
-        "usage": "link-only",
         "binaryRehost": false,
-        "aggregationApproved": false,
         "evidenceURL": "https://raw.githubusercontent.com/MountainofPenguin/moe-altstore/main/apps.json",
         "reviewedAt": "2026-09-30",
-        "note": "Public Source endpoint is listed for discovery/direct install only. No explicit aggregation or metadata-redistribution permission is recorded; iOS Hub must not cache, merge, or republish its app metadata."
+        "note": "Original public Source URL is listed for discovery and direct install only. iOS Hub does not copy, merge, cache, or rehost the Source feed or IPA binaries."
       }
     },
     {
@@ -1581,7 +1442,6 @@
       "url": "https://raw.githubusercontent.com/MountainofPenguin/Altstore-Repository/main/apps.json",
       "website": "https://github.com/MountainofPenguin/Altstore-Repository",
       "mode": "classic",
-      "mergeable": true,
       "official": false,
       "trusted": false,
       "recommended": true,
@@ -1601,12 +1461,10 @@
       "developer": "MountainofPenguin",
       "compliance": {
         "reviewStatus": "public-metadata",
-        "usage": "link-only",
         "binaryRehost": false,
-        "aggregationApproved": false,
         "evidenceURL": "https://raw.githubusercontent.com/MountainofPenguin/Altstore-Repository/main/apps.json",
         "reviewedAt": "2026-09-30",
-        "note": "Public Source endpoint is listed for discovery/direct install only. No explicit aggregation or metadata-redistribution permission is recorded; iOS Hub must not cache, merge, or republish its app metadata."
+        "note": "Original public Source URL is listed for discovery and direct install only. iOS Hub does not copy, merge, cache, or rehost the Source feed or IPA binaries."
       }
     },
     {
@@ -1615,13 +1473,11 @@
       "url": "https://raw.githubusercontent.com/mrdrvt99/Altstore-Repository/main/apps.json",
       "website": "https://github.com/mrdrvt99/Altstore-Repository",
       "mode": "classic",
-      "mergeable": false,
       "official": false,
       "trusted": false,
       "recommended": true,
       "community": true,
       "modified": true,
-      "autoPackage": false,
       "description": {
         "cs": "Komunitní source s několika variantami upraveného YouTube: YTLite, YTKillerPlus, YTKACE, YouPro a YouMod.",
         "en": "Community source with several modified YouTube variants: YTLite, YTKillerPlus, YTKACE, YouPro and YouMod."
@@ -1636,12 +1492,10 @@
       "developer": "mrdrvt99",
       "compliance": {
         "reviewStatus": "public-metadata",
-        "usage": "link-only",
         "binaryRehost": false,
-        "aggregationApproved": false,
         "evidenceURL": "https://raw.githubusercontent.com/mrdrvt99/Altstore-Repository/main/apps.json",
         "reviewedAt": "2026-09-30",
-        "note": "Public Source endpoint is listed for discovery/direct install only. No explicit aggregation or metadata-redistribution permission is recorded; iOS Hub must not cache, merge, or republish its app metadata."
+        "note": "Original public Source URL is listed for discovery and direct install only. iOS Hub does not copy, merge, cache, or rehost the Source feed or IPA binaries."
       }
     },
     {
@@ -1650,14 +1504,11 @@
       "url": "https://repo.owo.network/",
       "website": "https://owo.network/",
       "mode": "classic",
-      "mergeable": false,
       "official": false,
       "trusted": false,
       "recommended": true,
       "community": true,
       "modified": true,
-      "autoPackage": false,
-      "catalogLimit": 160,
       "description": {
         "cs": "Velká a aktivní komunitní knihovna upravených IPA pro sideloading; obsahuje sociální aplikace, utility i další modified buildy.",
         "en": "Large active community library of modified IPAs for sideloading, including social apps, utilities and other tweaked builds."
@@ -1675,12 +1526,10 @@
       "developer": "OwO Network",
       "compliance": {
         "reviewStatus": "public-metadata",
-        "usage": "link-only",
         "binaryRehost": false,
-        "aggregationApproved": false,
         "evidenceURL": "https://repo.owo.network/",
         "reviewedAt": "2026-09-30",
-        "note": "Public Source endpoint is listed for discovery/direct install only. No explicit aggregation or metadata-redistribution permission is recorded; iOS Hub must not cache, merge, or republish its app metadata."
+        "note": "Original public Source URL is listed for discovery and direct install only. iOS Hub does not copy, merge, cache, or rehost the Source feed or IPA binaries."
       }
     },
     {
@@ -1689,16 +1538,12 @@
       "url": "https://ipa.cypwn.xyz/cypwn.json",
       "website": "https://www.cypwn.com/sources",
       "mode": "classic",
-      "mergeable": false,
       "official": false,
       "trusted": false,
       "recommended": true,
       "community": true,
       "modified": true,
-      "autoPackage": false,
-      "cachePayload": false,
       "builder": false,
-      "catalogLimit": 180,
       "description": {
         "cs": "Velká komunitní IPA knihovna s přibližně 180 aplikacemi, včetně tweaked, modified a TrollStore/sideload buildů.",
         "en": "Large community IPA library with roughly 180 apps, including tweaked, modified and TrollStore/sideload builds."
@@ -1717,12 +1562,10 @@
       "developer": "CyPwn",
       "compliance": {
         "reviewStatus": "public-metadata",
-        "usage": "link-only",
         "binaryRehost": false,
-        "aggregationApproved": false,
         "evidenceURL": "https://ipa.cypwn.xyz/cypwn.json",
         "reviewedAt": "2026-09-30",
-        "note": "Public Source endpoint is listed for discovery/direct install only. No explicit aggregation or metadata-redistribution permission is recorded; iOS Hub must not cache, merge, or republish its app metadata."
+        "note": "Original public Source URL is listed for discovery and direct install only. iOS Hub does not copy, merge, cache, or rehost the Source feed or IPA binaries."
       }
     },
     {
@@ -1731,16 +1574,12 @@
       "url": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/apps.json",
       "website": "https://apptesters.org/",
       "mode": "classic",
-      "mergeable": false,
       "official": false,
       "trusted": false,
       "recommended": false,
       "community": true,
       "modified": true,
-      "autoPackage": false,
-      "cachePayload": false,
       "builder": false,
-      "catalogLimit": 200,
       "description": {
         "cs": "Rozsáhlá a velmi aktivní komunitní IPA databáze s čistými i upravenými aplikacemi. Kvůli velikosti se v Hubu načítá jen omezený náhled katalogu.",
         "en": "Large and very active community IPA database with clean and modified apps. Due to its size, iOS Hub only indexes a limited catalog preview."
@@ -1760,12 +1599,10 @@
       "developer": "AppTesters",
       "compliance": {
         "reviewStatus": "public-metadata",
-        "usage": "link-only",
         "binaryRehost": false,
-        "aggregationApproved": false,
         "evidenceURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/apps.json",
         "reviewedAt": "2026-09-30",
-        "note": "Public Source endpoint is listed for discovery/direct install only. No explicit aggregation or metadata-redistribution permission is recorded; iOS Hub must not cache, merge, or republish its app metadata."
+        "note": "Original public Source URL is listed for discovery and direct install only. iOS Hub does not copy, merge, cache, or rehost the Source feed or IPA binaries."
       }
     },
     {
@@ -1774,7 +1611,6 @@
       "url": "https://raw.githubusercontent.com/arichornlover/arichornlover.github.io/main/apps2.json",
       "website": "https://github.com/arichornlover/YouTubeRebornPlus",
       "mode": "classic",
-      "mergeable": true,
       "official": true,
       "trusted": false,
       "recommended": true,
@@ -1794,12 +1630,10 @@
       "developer": "arichornlover",
       "compliance": {
         "reviewStatus": "public-metadata",
-        "usage": "link-only",
         "binaryRehost": false,
-        "aggregationApproved": false,
         "evidenceURL": "https://raw.githubusercontent.com/arichornlover/arichornlover.github.io/main/apps2.json",
         "reviewedAt": "2026-09-30",
-        "note": "Public Source endpoint is listed for discovery/direct install only. No explicit aggregation or metadata-redistribution permission is recorded; iOS Hub must not cache, merge, or republish its app metadata."
+        "note": "Original public Source URL is listed for discovery and direct install only. iOS Hub does not copy, merge, cache, or rehost the Source feed or IPA binaries."
       }
     },
     {
@@ -1808,7 +1642,6 @@
       "url": "https://raw.githubusercontent.com/Balackburn/Apollo/main/apps.json",
       "website": "https://balackburn.github.io/Apollo/",
       "mode": "classic",
-      "mergeable": true,
       "official": false,
       "trusted": false,
       "recommended": true,
@@ -1828,12 +1661,10 @@
       "developer": "Balackburn",
       "compliance": {
         "reviewStatus": "public-metadata",
-        "usage": "link-only",
         "binaryRehost": false,
-        "aggregationApproved": false,
         "evidenceURL": "https://raw.githubusercontent.com/Balackburn/Apollo/main/apps.json",
         "reviewedAt": "2026-09-30",
-        "note": "Public Source endpoint is listed for discovery/direct install only. No explicit aggregation or metadata-redistribution permission is recorded; iOS Hub must not cache, merge, or republish its app metadata."
+        "note": "Original public Source URL is listed for discovery and direct install only. iOS Hub does not copy, merge, cache, or rehost the Source feed or IPA binaries."
       }
     },
     {
@@ -1842,7 +1673,6 @@
       "url": "https://raw.githubusercontent.com/AlfaActa/discord-altstore-source/main/source.json",
       "website": "https://github.com/AlfaActa/discord-altstore-source",
       "mode": "classic",
-      "mergeable": true,
       "official": false,
       "trusted": false,
       "recommended": false,
@@ -1861,13 +1691,11 @@
       "developer": "AlfaActa",
       "compliance": {
         "reviewStatus": "licensed",
-        "usage": "link-only",
         "binaryRehost": false,
-        "aggregationApproved": false,
         "license": "MIT",
         "evidenceURL": "https://github.com/AlfaActa/discord-altstore-source/blob/main/LICENSE",
         "reviewedAt": "2026-09-30",
-        "note": "source.json is MIT-licensed, but it references third-party Discord artifacts/branding; aggregation remains disabled."
+        "note": "Original public Source URL is listed for discovery and direct install only. iOS Hub does not copy, merge, cache, or rehost the Source feed or IPA binaries. License evidence: MIT."
       }
     },
     {
@@ -1876,7 +1704,6 @@
       "url": "https://raw.githubusercontent.com/xKatsumi/YTKACE-SideStore-Repo/main/ytkace.json",
       "website": "https://github.com/xKatsumi/YTKACE-SideStore-Repo",
       "mode": "classic",
-      "mergeable": true,
       "official": false,
       "trusted": false,
       "recommended": true,
@@ -1898,12 +1725,10 @@
       "developer": "xKatsumi",
       "compliance": {
         "reviewStatus": "public-metadata",
-        "usage": "link-only",
         "binaryRehost": false,
-        "aggregationApproved": false,
         "evidenceURL": "https://raw.githubusercontent.com/xKatsumi/YTKACE-SideStore-Repo/main/ytkace.json",
         "reviewedAt": "2026-09-30",
-        "note": "Public Source endpoint is listed for discovery/direct install only. No explicit aggregation or metadata-redistribution permission is recorded; iOS Hub must not cache, merge, or republish its app metadata."
+        "note": "Original public Source URL is listed for discovery and direct install only. iOS Hub does not copy, merge, cache, or rehost the Source feed or IPA binaries."
       }
     },
     {
@@ -1912,13 +1737,11 @@
       "url": "https://raw.githubusercontent.com/Bitte-ein-Git/sidestore-repo/main/apps.json",
       "website": "https://repo.heyfordy.dev/",
       "mode": "classic",
-      "mergeable": false,
       "official": false,
       "trusted": false,
       "recommended": false,
       "community": true,
       "modified": true,
-      "autoPackage": false,
       "description": {
         "cs": "Komunitní modified source s YouTube+, Spotify+, YT Music+, Twitch+, Infuse+ a dalšími aplikacemi.",
         "en": "Community modified source with YouTube+, Spotify+, YT Music+, Twitch+, Infuse+ and other apps."
@@ -1937,12 +1760,10 @@
       "developer": "heyFordy",
       "compliance": {
         "reviewStatus": "public-metadata",
-        "usage": "link-only",
         "binaryRehost": false,
-        "aggregationApproved": false,
         "evidenceURL": "https://raw.githubusercontent.com/Bitte-ein-Git/sidestore-repo/main/apps.json",
         "reviewedAt": "2026-09-30",
-        "note": "Public Source endpoint is listed for discovery/direct install only. No explicit aggregation or metadata-redistribution permission is recorded; iOS Hub must not cache, merge, or republish its app metadata."
+        "note": "Original public Source URL is listed for discovery and direct install only. iOS Hub does not copy, merge, cache, or rehost the Source feed or IPA binaries."
       }
     },
     {
@@ -1951,16 +1772,12 @@
       "url": "https://raw.githubusercontent.com/2nkn0w/ipalibrary.me-source/main/ipalibrary_source.json",
       "website": "https://github.com/2nkn0w/ipalibrary.me-source",
       "mode": "classic",
-      "mergeable": false,
       "official": false,
       "trusted": false,
       "recommended": false,
       "community": true,
       "modified": true,
-      "autoPackage": false,
-      "cachePayload": false,
       "builder": false,
-      "catalogLimit": 200,
       "description": {
         "cs": "Velká automaticky generovaná komunitní IPA knihovna. V Hubu se indexuje omezený náhled, aby katalog zůstal rychlý.",
         "en": "Large automatically generated community IPA library. iOS Hub indexes a limited preview to keep the catalog fast."
@@ -1980,12 +1797,10 @@
       "developer": "2nkn0w",
       "compliance": {
         "reviewStatus": "public-metadata",
-        "usage": "link-only",
         "binaryRehost": false,
-        "aggregationApproved": false,
         "evidenceURL": "https://raw.githubusercontent.com/2nkn0w/ipalibrary.me-source/main/ipalibrary_source.json",
         "reviewedAt": "2026-09-30",
-        "note": "Public Source endpoint is listed for discovery/direct install only. No explicit aggregation or metadata-redistribution permission is recorded; iOS Hub must not cache, merge, or republish its app metadata."
+        "note": "Original public Source URL is listed for discovery and direct install only. iOS Hub does not copy, merge, cache, or rehost the Source feed or IPA binaries."
       }
     },
     {
@@ -1994,7 +1809,6 @@
       "url": "https://raw.githubusercontent.com/ARMSX2/Armsx2-Repo/main/apps.json",
       "website": "https://ios.armsx2.net/",
       "mode": "classic",
-      "mergeable": true,
       "official": true,
       "trusted": false,
       "recommended": true,
@@ -2014,12 +1828,10 @@
       "developer": "ARMSX2",
       "compliance": {
         "reviewStatus": "public-metadata",
-        "usage": "link-only",
         "binaryRehost": false,
-        "aggregationApproved": false,
         "evidenceURL": "https://raw.githubusercontent.com/ARMSX2/Armsx2-Repo/main/apps.json",
         "reviewedAt": "2026-09-30",
-        "note": "Public Source endpoint is listed for discovery/direct install only. No explicit aggregation or metadata-redistribution permission is recorded; iOS Hub must not cache, merge, or republish its app metadata."
+        "note": "Original public Source URL is listed for discovery and direct install only. iOS Hub does not copy, merge, cache, or rehost the Source feed or IPA binaries."
       }
     },
     {
@@ -2028,7 +1840,6 @@
       "url": "https://raw.githubusercontent.com/FouadRaheb/Watusi-for-WhatsApp/master/altstore/source.json",
       "website": "https://github.com/FouadRaheb/Watusi-for-WhatsApp",
       "mode": "classic",
-      "mergeable": true,
       "official": true,
       "trusted": false,
       "recommended": true,
@@ -2051,12 +1862,10 @@
       "developer": "FouadRaheb",
       "compliance": {
         "reviewStatus": "public-metadata",
-        "usage": "link-only",
         "binaryRehost": false,
-        "aggregationApproved": false,
         "evidenceURL": "https://raw.githubusercontent.com/FouadRaheb/Watusi-for-WhatsApp/master/altstore/source.json",
         "reviewedAt": "2026-09-30",
-        "note": "Public Source endpoint is listed for discovery/direct install only. No explicit aggregation or metadata-redistribution permission is recorded; iOS Hub must not cache, merge, or republish its app metadata."
+        "note": "Original public Source URL is listed for discovery and direct install only. iOS Hub does not copy, merge, cache, or rehost the Source feed or IPA binaries."
       }
     },
     {
@@ -2065,7 +1874,6 @@
       "url": "https://raw.githubusercontent.com/orionblur/NeoFreeBird/v6/AltSource.json",
       "website": "https://github.com/orionblur/NeoFreeBird",
       "mode": "classic",
-      "mergeable": true,
       "official": true,
       "trusted": false,
       "recommended": true,
@@ -2087,12 +1895,10 @@
       "developer": "orionblur",
       "compliance": {
         "reviewStatus": "public-metadata",
-        "usage": "link-only",
         "binaryRehost": false,
-        "aggregationApproved": false,
         "evidenceURL": "https://raw.githubusercontent.com/orionblur/NeoFreeBird/v6/AltSource.json",
         "reviewedAt": "2026-09-30",
-        "note": "Public Source endpoint is listed for discovery/direct install only. No explicit aggregation or metadata-redistribution permission is recorded; iOS Hub must not cache, merge, or republish its app metadata."
+        "note": "Original public Source URL is listed for discovery and direct install only. iOS Hub does not copy, merge, cache, or rehost the Source feed or IPA binaries."
       }
     },
     {
@@ -2101,7 +1907,6 @@
       "url": "https://raw.githubusercontent.com/AzureDominus/melonx/refs/heads/XC-ios-ht/source.json",
       "website": "https://MeloNX.org",
       "mode": "classic",
-      "mergeable": true,
       "official": true,
       "trusted": true,
       "recommended": true,
@@ -2120,12 +1925,10 @@
       "developer": "AzureDominus",
       "compliance": {
         "reviewStatus": "public-metadata",
-        "usage": "link-only",
         "binaryRehost": false,
-        "aggregationApproved": false,
         "evidenceURL": "https://raw.githubusercontent.com/AzureDominus/melonx/refs/heads/XC-ios-ht/source.json",
         "reviewedAt": "2026-09-30",
-        "note": "Public Source endpoint is listed for discovery/direct install only. No explicit aggregation or metadata-redistribution permission is recorded; iOS Hub must not cache, merge, or republish its app metadata."
+        "note": "Original public Source URL is listed for discovery and direct install only. iOS Hub does not copy, merge, cache, or rehost the Source feed or IPA binaries."
       }
     },
     {
@@ -2134,12 +1937,10 @@
       "url": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/all-apps.json",
       "website": "https://github.com/bebound/AltGallery",
       "mode": "classic",
-      "mergeable": false,
       "official": true,
       "trusted": false,
       "recommended": true,
       "community": true,
-      "catalogLimit": 200,
       "description": {
         "cs": "Kurátorovaná galerie open-source iOS aplikací z GitHub Releases. Source je generovaný projektem AltGallery a funguje s AltStore, SideStore i LiveContainer.",
         "en": "Curated gallery of open-source iOS apps from GitHub Releases. The source is generated by AltGallery and works with AltStore, SideStore and LiveContainer."
@@ -2157,13 +1958,11 @@
       "developer": "bebound",
       "compliance": {
         "reviewStatus": "licensed",
-        "usage": "link-only",
         "binaryRehost": false,
-        "aggregationApproved": false,
         "license": "MIT",
         "evidenceURL": "https://github.com/bebound/AltGallery/blob/master/LICENSE",
         "reviewedAt": "2026-09-30",
-        "note": "all-apps.json is in the MIT-licensed repository, but it aggregates third-party project metadata; aggregation remains disabled."
+        "note": "Original public Source URL is listed for discovery and direct install only. iOS Hub does not copy, merge, cache, or rehost the Source feed or IPA binaries. License evidence: MIT."
       }
     },
     {
@@ -2172,7 +1971,6 @@
       "url": "https://raw.githubusercontent.com/RipeStore/repos/main/RipeStore.json",
       "website": "https://ripestore.github.io/",
       "mode": "classic",
-      "mergeable": false,
       "official": true,
       "trusted": false,
       "recommended": false,
@@ -2191,12 +1989,10 @@
       "developer": "RipeStore",
       "compliance": {
         "reviewStatus": "public-metadata",
-        "usage": "link-only",
         "binaryRehost": false,
-        "aggregationApproved": false,
         "evidenceURL": "https://raw.githubusercontent.com/RipeStore/repos/main/RipeStore.json",
         "reviewedAt": "2026-09-30",
-        "note": "Public Source endpoint is listed for discovery/direct install only. No explicit aggregation or metadata-redistribution permission is recorded; iOS Hub must not cache, merge, or republish its app metadata."
+        "note": "Original public Source URL is listed for discovery and direct install only. iOS Hub does not copy, merge, cache, or rehost the Source feed or IPA binaries."
       }
     },
     {
@@ -2205,7 +2001,6 @@
       "url": "https://raw.githubusercontent.com/claration/Feather/main/app-repo.json",
       "website": "https://github.com/claration/Feather",
       "mode": "classic",
-      "mergeable": false,
       "official": true,
       "trusted": false,
       "recommended": false,
@@ -2223,13 +2018,11 @@
       "developer": "claration",
       "compliance": {
         "reviewStatus": "licensed",
-        "usage": "link-only",
         "binaryRehost": false,
-        "aggregationApproved": false,
         "license": "GPL-3.0-only",
         "evidenceURL": "https://github.com/claration/Feather/blob/main/LICENSE",
         "reviewedAt": "2026-09-30",
-        "note": "app-repo.json is in the same licensed repository; aggregation remains disabled pending copyleft notice/obligation review."
+        "note": "Original public Source URL is listed for discovery and direct install only. iOS Hub does not copy, merge, cache, or rehost the Source feed or IPA binaries. License evidence: GPL-3.0-only."
       }
     },
     {
@@ -2238,7 +2031,6 @@
       "url": "https://quarksources.github.io/quantumsource.json",
       "website": "https://quarksources.github.io/",
       "mode": "classic",
-      "mergeable": false,
       "official": true,
       "trusted": false,
       "recommended": false,
@@ -2258,12 +2050,10 @@
       "developer": "QuarkSources",
       "compliance": {
         "reviewStatus": "public-metadata",
-        "usage": "link-only",
         "binaryRehost": false,
-        "aggregationApproved": false,
         "evidenceURL": "https://quarksources.github.io/quantumsource.json",
         "reviewedAt": "2026-09-30",
-        "note": "Public Source endpoint is listed for discovery/direct install only. No explicit aggregation or metadata-redistribution permission is recorded; iOS Hub must not cache, merge, or republish its app metadata."
+        "note": "Original public Source URL is listed for discovery and direct install only. iOS Hub does not copy, merge, cache, or rehost the Source feed or IPA binaries."
       }
     },
     {
@@ -2272,7 +2062,6 @@
       "url": "https://raw.githubusercontent.com/SpotCompiled/SpotC-AltStore-Repo/main/AltStore%20Repo.json",
       "website": "https://spotc.yodaluca.dev/",
       "mode": "classic",
-      "mergeable": false,
       "official": true,
       "trusted": false,
       "recommended": false,
@@ -2291,12 +2080,10 @@
       "developer": "SpotCompiled",
       "compliance": {
         "reviewStatus": "public-metadata",
-        "usage": "link-only",
         "binaryRehost": false,
-        "aggregationApproved": false,
         "evidenceURL": "https://raw.githubusercontent.com/SpotCompiled/SpotC-AltStore-Repo/main/AltStore%20Repo.json",
         "reviewedAt": "2026-09-30",
-        "note": "Public Source endpoint is listed for discovery/direct install only. No explicit aggregation or metadata-redistribution permission is recorded; iOS Hub must not cache, merge, or republish its app metadata."
+        "note": "Original public Source URL is listed for discovery and direct install only. iOS Hub does not copy, merge, cache, or rehost the Source feed or IPA binaries."
       }
     },
     {
@@ -2305,7 +2092,6 @@
       "url": "https://therealfoxster.github.io/altsource/apps.json",
       "website": "https://github.com/therealFoxster/altsource",
       "mode": "classic",
-      "mergeable": false,
       "official": true,
       "trusted": false,
       "recommended": false,
@@ -2324,12 +2110,10 @@
       "developer": "therealFoxster",
       "compliance": {
         "reviewStatus": "public-metadata",
-        "usage": "link-only",
         "binaryRehost": false,
-        "aggregationApproved": false,
         "evidenceURL": "https://therealfoxster.github.io/altsource/apps.json",
         "reviewedAt": "2026-09-30",
-        "note": "Public Source endpoint is listed for discovery/direct install only. No explicit aggregation or metadata-redistribution permission is recorded; iOS Hub must not cache, merge, or republish its app metadata."
+        "note": "Original public Source URL is listed for discovery and direct install only. iOS Hub does not copy, merge, cache, or rehost the Source feed or IPA binaries."
       }
     },
     {
@@ -2338,7 +2122,6 @@
       "url": "https://fastsign.dev/repo.json",
       "website": "https://fastsign.dev/",
       "mode": "classic",
-      "mergeable": false,
       "official": true,
       "trusted": false,
       "recommended": false,
@@ -2354,19 +2137,14 @@
         "signing",
         "altstore"
       ],
-      "catalogLimit": 50,
-      "cachePayload": false,
-      "autoPackage": false,
       "builder": false,
       "developer": "FastSign",
       "compliance": {
         "reviewStatus": "public-metadata",
-        "usage": "link-only",
         "binaryRehost": false,
-        "aggregationApproved": false,
         "evidenceURL": "https://fastsign.dev/repo.json",
         "reviewedAt": "2026-09-30",
-        "note": "Public Source endpoint is listed for discovery/direct install only. No explicit aggregation or metadata-redistribution permission is recorded; iOS Hub must not cache, merge, or republish its app metadata."
+        "note": "Original public Source URL is listed for discovery and direct install only. iOS Hub does not copy, merge, cache, or rehost the Source feed or IPA binaries."
       }
     },
     {
@@ -2375,7 +2153,6 @@
       "url": "https://quarksources.github.io/quantumsource++.json",
       "website": "https://quarksources.github.io/",
       "mode": "classic",
-      "mergeable": false,
       "official": true,
       "trusted": false,
       "recommended": false,
@@ -2396,12 +2173,10 @@
       "developer": "QuarkSources",
       "compliance": {
         "reviewStatus": "public-metadata",
-        "usage": "link-only",
         "binaryRehost": false,
-        "aggregationApproved": false,
         "evidenceURL": "https://quarksources.github.io/quantumsource++.json",
         "reviewedAt": "2026-09-30",
-        "note": "Public Source endpoint is listed for discovery/direct install only. No explicit aggregation or metadata-redistribution permission is recorded; iOS Hub must not cache, merge, or republish its app metadata."
+        "note": "Original public Source URL is listed for discovery and direct install only. iOS Hub does not copy, merge, cache, or rehost the Source feed or IPA binaries."
       }
     },
     {
@@ -2410,7 +2185,6 @@
       "url": "https://wuxu1.github.io/wuxu-complete.json",
       "website": "https://wuxu1.github.io/",
       "mode": "classic",
-      "mergeable": false,
       "official": false,
       "trusted": false,
       "recommended": false,
@@ -2428,12 +2202,10 @@
       "developer": "WuXu1",
       "compliance": {
         "reviewStatus": "public-metadata",
-        "usage": "link-only",
         "binaryRehost": false,
-        "aggregationApproved": false,
         "evidenceURL": "https://wuxu1.github.io/wuxu-complete.json",
         "reviewedAt": "2026-09-30",
-        "note": "Public Source endpoint is listed for discovery/direct install only. No explicit aggregation or metadata-redistribution permission is recorded; iOS Hub must not cache, merge, or republish its app metadata."
+        "note": "Original public Source URL is listed for discovery and direct install only. iOS Hub does not copy, merge, cache, or rehost the Source feed or IPA binaries."
       }
     },
     {
@@ -2442,7 +2214,6 @@
       "url": "https://taurine.app/altstore/taurinestore.json",
       "website": "https://taurine.app/",
       "mode": "classic",
-      "mergeable": false,
       "official": true,
       "trusted": false,
       "recommended": false,
@@ -2458,12 +2229,10 @@
       "developer": "Taurine Team",
       "compliance": {
         "reviewStatus": "public-metadata",
-        "usage": "link-only",
         "binaryRehost": false,
-        "aggregationApproved": false,
         "evidenceURL": "https://taurine.app/altstore/taurinestore.json",
         "reviewedAt": "2026-09-30",
-        "note": "Public Source endpoint is listed for discovery/direct install only. No explicit aggregation or metadata-redistribution permission is recorded; iOS Hub must not cache, merge, or republish its app metadata."
+        "note": "Original public Source URL is listed for discovery and direct install only. iOS Hub does not copy, merge, cache, or rehost the Source feed or IPA binaries."
       }
     },
     {
@@ -2472,7 +2241,6 @@
       "url": "https://burritosoftware.github.io/altstore/channels/burritosource.json",
       "website": "https://burritosoftware.github.io/",
       "mode": "classic",
-      "mergeable": false,
       "official": true,
       "trusted": false,
       "recommended": false,
@@ -2489,12 +2257,10 @@
       "developer": "Burrito Software",
       "compliance": {
         "reviewStatus": "public-metadata",
-        "usage": "link-only",
         "binaryRehost": false,
-        "aggregationApproved": false,
         "evidenceURL": "https://burritosoftware.github.io/altstore/channels/burritosource.json",
         "reviewedAt": "2026-09-30",
-        "note": "Public Source endpoint is listed for discovery/direct install only. No explicit aggregation or metadata-redistribution permission is recorded; iOS Hub must not cache, merge, or republish its app metadata."
+        "note": "Original public Source URL is listed for discovery and direct install only. iOS Hub does not copy, merge, cache, or rehost the Source feed or IPA binaries."
       }
     },
     {
@@ -2503,7 +2269,6 @@
       "url": "https://adp.salupovteam.com/altrepo.json",
       "website": "https://salupovteam.com/",
       "mode": "classic",
-      "mergeable": false,
       "official": true,
       "trusted": false,
       "recommended": false,
@@ -2520,12 +2285,10 @@
       "developer": "Salupov Team",
       "compliance": {
         "reviewStatus": "public-metadata",
-        "usage": "link-only",
         "binaryRehost": false,
-        "aggregationApproved": false,
         "evidenceURL": "https://adp.salupovteam.com/altrepo.json",
         "reviewedAt": "2026-09-30",
-        "note": "Public Source endpoint is listed for discovery/direct install only. No explicit aggregation or metadata-redistribution permission is recorded; iOS Hub must not cache, merge, or republish its app metadata."
+        "note": "Original public Source URL is listed for discovery and direct install only. iOS Hub does not copy, merge, cache, or rehost the Source feed or IPA binaries."
       }
     },
     {
@@ -2534,7 +2297,6 @@
       "url": "https://altstore.cercube.com",
       "website": "https://cercube.com/",
       "mode": "classic",
-      "mergeable": false,
       "official": true,
       "trusted": false,
       "recommended": false,
@@ -2554,12 +2316,10 @@
       "developer": "Majd Alfhaily",
       "compliance": {
         "reviewStatus": "public-metadata",
-        "usage": "link-only",
         "binaryRehost": false,
-        "aggregationApproved": false,
         "evidenceURL": "https://altstore.cercube.com",
         "reviewedAt": "2026-09-30",
-        "note": "Public Source endpoint is listed for discovery/direct install only. No explicit aggregation or metadata-redistribution permission is recorded; iOS Hub must not cache, merge, or republish its app metadata."
+        "note": "Original public Source URL is listed for discovery and direct install only. iOS Hub does not copy, merge, cache, or rehost the Source feed or IPA binaries."
       }
     },
     {
@@ -2568,7 +2328,6 @@
       "url": "https://altstore.getrocketapp.io",
       "website": "https://getrocketapp.io/",
       "mode": "classic",
-      "mergeable": false,
       "official": true,
       "trusted": false,
       "recommended": false,
@@ -2588,12 +2347,10 @@
       "developer": "Majd Alfhaily",
       "compliance": {
         "reviewStatus": "public-metadata",
-        "usage": "link-only",
         "binaryRehost": false,
-        "aggregationApproved": false,
         "evidenceURL": "https://altstore.getrocketapp.io",
         "reviewedAt": "2026-09-30",
-        "note": "Public Source endpoint is listed for discovery/direct install only. No explicit aggregation or metadata-redistribution permission is recorded; iOS Hub must not cache, merge, or republish its app metadata."
+        "note": "Original public Source URL is listed for discovery and direct install only. iOS Hub does not copy, merge, cache, or rehost the Source feed or IPA binaries."
       }
     },
     {
@@ -2602,7 +2359,6 @@
       "url": "https://github.com/minh-ton/reynard-browser/releases/download/0.0.1-a1/source.json",
       "website": "https://github.com/minh-ton/reynard-browser",
       "mode": "classic",
-      "mergeable": false,
       "official": true,
       "trusted": false,
       "recommended": false,
@@ -2621,12 +2377,10 @@
       ],
       "compliance": {
         "reviewStatus": "public-metadata",
-        "usage": "link-only",
         "binaryRehost": false,
-        "aggregationApproved": false,
         "evidenceURL": "https://github.com/minh-ton/reynard-browser/releases/download/0.0.1-a1/source.json",
         "reviewedAt": "2026-09-30",
-        "note": "Public Source endpoint is listed for discovery/direct install only. No explicit aggregation or metadata-redistribution permission is recorded; iOS Hub must not cache, merge, or republish its app metadata."
+        "note": "Original public Source URL is listed for discovery and direct install only. iOS Hub does not copy, merge, cache, or rehost the Source feed or IPA binaries."
       }
     }
   ]
