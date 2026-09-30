@@ -356,10 +356,14 @@
       ],
       "developer": "chachillie",
       "compliance": {
-        "reviewStatus": "unreviewed",
+        "reviewStatus": "licensed",
         "usage": "link-only",
         "binaryRehost": false,
-        "aggregationApproved": false
+        "aggregationApproved": false,
+        "license": "GPL-2.0-only",
+        "evidenceURL": "https://github.com/chachillie/Flycast-iOS/blob/main/LICENSE",
+        "reviewedAt": "2026-09-30",
+        "note": "flycast-ios.json is in the same GPL-licensed repository; aggregation remains disabled pending copyleft notice/obligation review."
       }
     },
     {
@@ -551,10 +555,14 @@
       ],
       "developer": "Yattee Team",
       "compliance": {
-        "reviewStatus": "unreviewed",
+        "reviewStatus": "licensed",
         "usage": "link-only",
         "binaryRehost": false,
-        "aggregationApproved": false
+        "aggregationApproved": false,
+        "license": "AGPL-3.0-only",
+        "evidenceURL": "https://github.com/yattee/yattee/blob/main/LICENSE",
+        "reviewedAt": "2026-09-30",
+        "note": "altstore-source.json is in the same licensed repository; aggregation remains disabled pending copyleft notice/obligation review."
       }
     },
     {
@@ -634,10 +642,14 @@
       ],
       "developer": "VortXTV",
       "compliance": {
-        "reviewStatus": "unreviewed",
+        "reviewStatus": "licensed",
         "usage": "link-only",
         "binaryRehost": false,
-        "aggregationApproved": false
+        "aggregationApproved": false,
+        "license": "GPL-3.0-only",
+        "evidenceURL": "https://github.com/VortXTV/VortX/blob/main/LICENSE",
+        "reviewedAt": "2026-09-30",
+        "note": "altstore/source.json is in the same licensed repository; aggregation remains disabled pending copyleft notice/obligation review."
       }
     },
     {
@@ -694,10 +706,14 @@
       ],
       "developer": "gorlev",
       "compliance": {
-        "reviewStatus": "unreviewed",
+        "reviewStatus": "licensed",
         "usage": "link-only",
         "binaryRehost": false,
-        "aggregationApproved": false
+        "aggregationApproved": false,
+        "license": "MIT",
+        "evidenceURL": "https://github.com/gorlev/stremio-altstore/blob/main/LICENSE",
+        "reviewedAt": "2026-09-30",
+        "note": "stremio-ios.json is MIT-licensed, but the feed references third-party Stremio artifacts/branding; aggregation remains disabled."
       }
     },
     {
@@ -1089,10 +1105,14 @@
       ],
       "developer": "matfantinel",
       "compliance": {
-        "reviewStatus": "unreviewed",
+        "reviewStatus": "licensed",
         "usage": "link-only",
         "binaryRehost": false,
-        "aggregationApproved": false
+        "aggregationApproved": false,
+        "license": "MIT",
+        "evidenceURL": "https://github.com/matfantinel/iphanpy/blob/main/LICENSE",
+        "reviewedAt": "2026-09-30",
+        "note": "altstore/source.json is in the same MIT-licensed repository; aggregation remains disabled pending notice and third-party asset review."
       }
     },
     {
@@ -1696,10 +1716,14 @@
       ],
       "developer": "AlfaActa",
       "compliance": {
-        "reviewStatus": "unreviewed",
+        "reviewStatus": "licensed",
         "usage": "link-only",
         "binaryRehost": false,
-        "aggregationApproved": false
+        "aggregationApproved": false,
+        "license": "MIT",
+        "evidenceURL": "https://github.com/AlfaActa/discord-altstore-source/blob/main/LICENSE",
+        "reviewedAt": "2026-09-30",
+        "note": "source.json is MIT-licensed, but it references third-party Discord artifacts/branding; aggregation remains disabled."
       }
     },
     {
@@ -1967,10 +1991,14 @@
       ],
       "developer": "bebound",
       "compliance": {
-        "reviewStatus": "unreviewed",
+        "reviewStatus": "licensed",
         "usage": "link-only",
         "binaryRehost": false,
-        "aggregationApproved": false
+        "aggregationApproved": false,
+        "license": "MIT",
+        "evidenceURL": "https://github.com/bebound/AltGallery/blob/master/LICENSE",
+        "reviewedAt": "2026-09-30",
+        "note": "all-apps.json is in the MIT-licensed repository, but it aggregates third-party project metadata; aggregation remains disabled."
       }
     },
     {
@@ -2026,10 +2054,14 @@
       ],
       "developer": "claration",
       "compliance": {
-        "reviewStatus": "unreviewed",
+        "reviewStatus": "licensed",
         "usage": "link-only",
         "binaryRehost": false,
-        "aggregationApproved": false
+        "aggregationApproved": false,
+        "license": "GPL-3.0-only",
+        "evidenceURL": "https://github.com/claration/Feather/blob/main/LICENSE",
+        "reviewedAt": "2026-09-30",
+        "note": "app-repo.json is in the same licensed repository; aggregation remains disabled pending copyleft notice/obligation review."
       }
     },
     {
