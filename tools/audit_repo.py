@@ -626,8 +626,10 @@ def validate_generated_data() -> None:
     if not isinstance(catalog, dict) or not isinstance(catalog.get("sources"), list):
         error("data/catalog.json must contain a sources array")
         return
-    if "uniqueAppCount" in catalog:
-        error("data/catalog.json must not persist derived app metadata such as uniqueAppCount")
+    if set(catalog) != {"generatedAt", "sources"}:
+        error(
+            "data/catalog.json may contain only generatedAt and Source-level sources metadata"
+        )
 
     if not isinstance(registry, dict) or not isinstance(registry.get("sources"), list):
         return
@@ -758,6 +760,13 @@ def validate_generated_data() -> None:
     for source_id, item in catalog_by_id.items():
         source = registry_by_id.get(source_id, {})
         status_item = status["sources"].get(source_id, {})
+        allowed_catalog_keys = {"id", "name", "appCount", "variants"}
+        extra_catalog_keys = set(item) - allowed_catalog_keys
+        if extra_catalog_keys:
+            error(
+                f"data/catalog.json source {source_id!r} persists unexpected metadata: "
+                + ", ".join(sorted(extra_catalog_keys))
+            )
         if item.get("name") != source.get("name"):
             error(f"data/catalog.json source {source_id!r} name must come from registry metadata")
         if item.get("appCount") != status_item.get("appCount"):
