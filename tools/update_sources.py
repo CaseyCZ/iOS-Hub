@@ -593,6 +593,8 @@ def main() -> None:
                 all_conflicts[slug] = conflicts
             mix_count += 1
 
+    # Arbitrary Custom Builder combinations are hosted on demand by the Mix API;
+    # keep generated static Mixes limited to the bounded mergeable combinations below.
     hosted_pair_ids = []
 
     all_compatible_url = None
