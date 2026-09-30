@@ -281,8 +281,16 @@ function applyCopy() {
 }
 
 function syncFilterUi() {
-  $$('[data-exp-category-filter]').forEach(button => button.classList.toggle('active', button.dataset.expCategoryFilter === category));
-  $$('[data-exp-genre-filter]').forEach(button => button.classList.toggle('active', button.dataset.expGenreFilter === genre));
+  $('[data-exp-category-filter]').forEach(button => {
+    const active = button.dataset.expCategoryFilter === category;
+    button.classList.toggle('active', active);
+    button.setAttribute('aria-pressed', String(active));
+  });
+  $('[data-exp-genre-filter]').forEach(button => {
+    const active = button.dataset.expGenreFilter === genre;
+    button.classList.toggle('active', active);
+    button.setAttribute('aria-pressed', String(active));
+  });
   document.querySelectorAll('[data-exp-target]').forEach(button => {
     const active = button.dataset.expTarget === target;
     button.classList.toggle('active', active);
@@ -666,12 +674,14 @@ async function init() {
     render();
   });
 
-  $$('[data-exp-category-filter]').forEach(button => button.addEventListener('click', () => {
-    category = SOURCE_CATEGORIES.has(button.dataset.expCategoryFilter) ? button.dataset.expCategoryFilter : 'all';
+  $('[data-exp-category-filter]').forEach(button => button.addEventListener('click', () => {
+    const requested = SOURCE_CATEGORIES.has(button.dataset.expCategoryFilter) ? button.dataset.expCategoryFilter : 'all';
+    category = requested !== 'all' && requested === category ? 'all' : requested;
     saveFilters(); render();
   }));
-  $$('[data-exp-genre-filter]').forEach(button => button.addEventListener('click', () => {
-    genre = GENRES.has(button.dataset.expGenreFilter) ? button.dataset.expGenreFilter : 'all';
+  $('[data-exp-genre-filter]').forEach(button => button.addEventListener('click', () => {
+    const requested = GENRES.has(button.dataset.expGenreFilter) ? button.dataset.expGenreFilter : 'all';
+    genre = requested !== 'all' && requested === genre ? 'all' : requested;
     saveFilters(); render();
   }));
   $('#builderTargets')?.addEventListener('click', event => {
