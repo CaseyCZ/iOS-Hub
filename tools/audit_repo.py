@@ -386,12 +386,6 @@ def validate_project_identity() -> None:
         if workflow_text.count("python tools/audit_repo.py") < 2:
             error("update-sources workflow must audit generated data before each publish attempt")
 
-    generator = ROOT / "tools" / "update_sources.py"
-    if generator.exists():
-        text = generator.read_text(encoding="utf-8")
-        expected_base = f'BASE_URL = "{EXPECTED_SITE_URL}"'
-        if expected_base not in text:
-            error(f"tools/update_sources.py must define {expected_base}")
 
 def validate_registry() -> None:
     payload = load_json(REGISTRY)
@@ -1594,20 +1588,33 @@ def validate_layout() -> None:
             "STRICT_DUPLICATE_BUNDLE_INSTALLERS",
             "TOLERANT_DUPLICATE_BUNDLE_INSTALLERS",
             "DUPLICATE_BUNDLE_EXAMPLE_LIMIT",
-            "bundle_key = bundle.lower()",
+            "key = raw_bundle.lower()",
             '"duplicateBundleIdentifiers"',
             '"installerCompatibility"',
             '"directSource": "fail"',
             '"installVariants": "try"',
-            "Direct Source Builder architecture:",
-            'for path in MIX_DIR.glob("*.json")',
-            'ALTSTORE_DIR / "source.json"',
-            'SIDESTORE_DIR / "source.json"',
+            'status = {"generatedAt": generated_at, "sources": {}}',
         ):
             if required not in updater_text:
                 error(
-                    "update_sources.py must expose per-installer duplicate bundle compatibility; "
+                    "update_sources.py must expose direct per-installer Source compatibility; "
                     f"missing {required!r}"
+                )
+        for obsolete_generator_part in (
+            "MIX_DIR",
+            "ALTSTORE_DIR",
+            "SIDESTORE_DIR",
+            "make_mix",
+            "make_store_source",
+            "dedupe_apps",
+            "sanitize_classic_app",
+            "mixTest",
+            "mixReason",
+        ):
+            if obsolete_generator_part in updater_text:
+                error(
+                    "update_sources.py still contains obsolete combined-Mix generation code; "
+                    f"found {obsolete_generator_part!r}"
                 )
 
     status_file = ROOT / "data" / "status.json"
@@ -2159,14 +2166,6 @@ def validate_layout() -> None:
             script_text = script.read_text(encoding="utf-8")
             if "livecontainer://sources?url=" in script_text or "? 'sources' : 'source'" in script_text:
                 error(f"{script_name} uses obsolete LiveContainer deep link; use livecontainer://source?url=")
-
-    generator = ROOT / "tools" / "update_sources.py"
-    if generator.exists():
-        generator_text = generator.read_text(encoding="utf-8")
-        if 'cleaned.pop("marketplaceID", None)' not in generator_text:
-            error("tools/update_sources.py must strip marketplaceID from Classic generated sources")
-        if 'item.pop("Build", None)' not in generator_text:
-            error("tools/update_sources.py must strip custom Build fields from Classic generated sources")
 
     for required in (
         JS_DIR / "app.js",
