@@ -593,23 +593,7 @@ def main() -> None:
                 all_conflicts[slug] = conflicts
             mix_count += 1
 
-    # Every automatically verified PASS pair gets a hosted Mix URL so the
-    # selected installer can receive one direct deep-link instead of a menu
-    # of individual source links. Keep larger combinations conservative.
-    hosted_pair_ids = auto_compatible_ids
-    for combo in itertools.combinations(hosted_pair_ids, 2):
-        slug = "--".join(combo)
-        filename = f"{slug}.json"
-        if filename in expected_mix_files:
-            continue
-        expected_mix_files.add(filename)
-        selected = [loaded_classic[source_id] for source_id in combo]
-        digest = hashlib.sha1(slug.encode("utf-8")).hexdigest()[:12]
-        mix, conflicts = make_mix(selected, filename, digest)
-        write_json(MIX_DIR / filename, mix)
-        if conflicts:
-            all_conflicts[slug] = conflicts
-        mix_count += 1
+    hosted_pair_ids = []
 
     all_compatible_url = None
     if auto_compatible_ids:
