@@ -144,7 +144,11 @@ function directSourceAvailable(sourceId, installerId = target) {
 }
 function catalogSource(id) { return catalog?.sources?.find(item => item.id === id) || null; }
 function onlineBuilderSources() {
-  return registry.filter(source => source.builder !== false && getStatus(source.id).online === true);
+  return registry.filter(source =>
+    source.builder !== false
+    && source.compliance?.reviewStatus !== 'restricted'
+    && getStatus(source.id).online === true
+  );
 }
 function targetCompatibility(source) {
   const installer = INSTALLERS[target];
