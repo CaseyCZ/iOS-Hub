@@ -1876,6 +1876,11 @@ def validate_layout() -> None:
             "sourceIDs:ids.join(',')",
             ".join('\\n')",
             "experimental:String(hasTry)",
+            "function sanitizeClassicApp(app)",
+            "delete cleaned.marketplaceID",
+            "delete cleaned.Build",
+            "delete cleaned.build",
+            ".map(item => sanitizeClassicApp(item.app))",
         ):
             if required_altstore_user_info not in builder_text:
                 error(
