@@ -80,14 +80,14 @@
     <section class="hero builder-page-hero wrap">
       <div class="eyebrow">CUSTOM · SOURCE BUILDER</div>
       <h1 id="builderTitle">Custom Source Builder</h1>
-      <p id="builderDesc">Filter checked online sources, select any combination and build your own Mix.</p>
+      <p id="builderDesc">Choose an installer, select original Sources and add them directly to the app without creating a combined JSON.</p>
     </section>
 
     <section class="section wrap builder-page-section">
       <div id="experimentalMixLab" class="panel builder-shell builder-page-shell">
         <article class="builder-control-card builder-page-control">
           <span class="pill mode">CUSTOM</span>
-          <h4 id="customMixCardTitle">Custom Mix</h4>
+          <h4 id="customMixCardTitle">Selected Sources</h4>
           <div id="expSelectedCount" class="muted">0 selected</div>
 
           <details class="content-disclosure builder-filter-disclosure" open>
@@ -124,21 +124,12 @@
                 </div>
 
                 <div class="filter-group builder-target-group">
-                  <div class="filter-label"><span id="mixTargetLabel">Where do you want to add the Mix?</span></div>
+                  <div class="filter-label"><span id="mixTargetLabel">Where do you want to add the Sources?</span></div>
                   <div id="builderTargets" class="builder-target-picker-host" aria-labelledby="mixTargetLabel"></div>
-                  <div id="mixTargetHelp" class="muted builder-target-help">Choose the app where you want to add the finished source. Compatible, testable and incompatible Sources are explained below.</div>
-                  <div id="mixCompatibilityHelp" class="notice builder-compatibility-help">PASS = compatible and tested. TRY = compatible but not fully verified. INCOMPATIBLE = visible but disabled. Changing installer removes incompatible selected Sources. Build Mix combines selected Sources into one Source; direct Add to the selected app requires a public HTTPS Mix URL.</div>
-                  <div id="mixPalNote" class="muted builder-target-pal-note">AltStore PAL is not a Custom Mix target because PAL uses notarized marketplace packages and different source metadata than Classic IPA sources.</div>
-                  <div class="muted builder-target-pal-note">Compatible installers use the same normalized Classic AltSource output. Installer definitions and deep-links come from one shared configuration.</div>
-                </div>
-
-                <div class="filter-group">
-                  <div class="filter-label">🧪 <span id="mixStatusLabel">Mix status</span></div>
-                  <div class="filter-tabs">
-                    <button class="filter active" type="button" data-exp-compat-filter="all">All</button>
-                    <button class="filter" type="button" data-exp-compat-filter="pass">PASS only</button>
-                    <button class="filter" type="button" data-exp-compat-filter="try">TRY only</button>
-                  </div>
+                  <div id="mixTargetHelp" class="muted builder-target-help">Choose the app where you want to add the selected original Sources.</div>
+                  <div id="mixCompatibilityHelp" class="notice builder-compatibility-help">The Builder does not merge or re-host Sources. It opens each selected original Source URL directly in the chosen installer, so future updates continue from the original Source.</div>
+                  <div id="mixPalNote" class="muted builder-target-pal-note">Classic and PAL Sources are kept separate and are never converted.</div>
+                  <div class="muted builder-target-pal-note">Installer definitions and deep-links come from one shared configuration.</div>
                 </div>
 
                 <div class="filter-group">
@@ -149,12 +140,12 @@
                 <div class="filter-group">
                   <div class="filter-label">☑ <span data-i18n="selection">Selection</span></div>
                   <div class="builder-choice-actions">
-                    <button id="expSelectCompatible" class="btn small primary" type="button">Select PASS for AltStore Classic</button>
+                    <button id="expSelectCompatible" class="btn small primary" type="button">Select all compatible</button>
                     <button id="expSelectAll" class="btn small secondary" type="button">Select all shown</button>
                     <button id="expClear" class="btn small ghost" type="button">Clear selection</button>
                   </div>
-                  <div id="mixPassHelp" class="muted builder-pass-help">PASS means the source passed the automated Mix merge test. It does not mean every app is compatible with every iOS device.</div>
-                  <div id="mixDedupeHelp" class="muted builder-pass-help">If multiple app entries use the same bundle ID, the generated Mix keeps only one entry, normally the newest by date. Different variants of the same app can therefore be merged.</div>
+                  <div id="mixPassHelp" class="muted builder-pass-help">Sources are not merged, copied or re-hosted. Each original Source URL is added separately so future updates continue normally.</div>
+                  <div id="mixDedupeHelp" class="muted builder-pass-help">iOS does not reliably allow a webpage to open several external app links automatically. The first Source opens from your tap; after returning, use Open next for the remaining Sources.</div>
                 </div>
               </div>
             </div>
@@ -163,9 +154,9 @@
           <div class="builder-control-footer">
             <div class="builder-result-badges">
               <span id="mixTargetBadge" class="pill mode"><img class="installer-icon" src="assets/icons/altstore.svg" alt=""> AltStore Classic</span>
-              <span id="mixTestBadge" class="pill mode">Auto tested</span>
+              
             </div>
-            <button id="expBuild" class="btn primary" type="button" disabled>Build Mix</button>
+            <button id="expBuild" class="btn primary" type="button" disabled>Add selected Sources</button>
             <span id="expMessage" class="muted"></span>
           </div>
         </article>
@@ -173,14 +164,14 @@
         <div id="experimentalBuilderList" class="builder-list" aria-live="polite"></div>
 
         <div id="expResult" class="builder-result">
-          <strong id="expResultTitle">Mix</strong>
+          <strong id="expResultTitle">Source queue</strong>
           <div id="expResultInfo" class="muted" style="margin-top:6px"></div>
           <p id="expResultNote" class="notice" style="margin-top:10px"></p>
+          <div id="expQueueList" class="builder-list builder-queue-list" aria-live="polite"></div>
           <div class="builder-actions">
-            <a id="expAddTarget" class="btn small primary" href="#" hidden>＋ Add</a>
-            <button id="expCopyUrl" class="btn small secondary" type="button" hidden>Copy URL</button>
-            <a id="expDownload" class="btn small secondary" href="#">Download JSON</a>
-            <a id="expPreview" class="btn small ghost" href="#" target="_blank" rel="noopener">Preview JSON</a>
+            <a id="expAddTarget" class="btn small primary" href="#" hidden>Open next</a>
+            <button id="expCopyUrl" class="btn small secondary" type="button" hidden>Copy Source URLs</button>
+            <button id="expRestartQueue" class="btn small ghost" type="button" hidden>Restart queue</button>
           </div>
         </div>
       </div>
@@ -212,7 +203,7 @@
   </div>
 
   <script type="module" src="src/js/builder-page.js?v=1.1.5-20260929-guide-methods1"></script>
-  <script type="module" src="src/js/builder.js?v=1.1.5-20260930-rights-review3"></script>
+  <script type="module" src="src/js/builder.js?v=1.1.5-20260930-source-queue1"></script>
   <script type="module" src="src/js/collapsible.js?v=1.1.5-20260918-audit1"></script>
   <script src="src/js/horizontal-scroll.js?v=1.1.5-20260930-scroll-hardfix1"></script>
   <script src="src/js/support-dialog.js?v=1.1.5-20260918-a11y1"></script>
