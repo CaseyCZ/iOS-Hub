@@ -248,7 +248,7 @@ export const INSTALLERS = Object.freeze({
     catalogPriority: 50,
     overflowPriority: 40,
     icon: 'assets/icons/flarestore.svg',
-    buildLink: url => `flarestore://source?url=${encodeURIComponent(url)}`
+    buildLink: url => `flarestore://addRepo=${encodeURIComponent(url)}`
   },
   feather: {
     id: 'feather',
