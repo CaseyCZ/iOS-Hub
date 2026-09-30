@@ -366,8 +366,8 @@ def make_mix(selected: list[tuple[dict, dict]], filename: str, identifier_suffix
         "tintColor": "#38BDF8",
         "apps": apps,
         "userInfo": {
-            "sourceIDs": [meta["id"] for meta, _ in selected],
-            "sourceURLs": [source_variant_url(meta, "classic") or meta["url"] for meta, _ in selected],
+            "sourceIDs": ",".join(meta["id"] for meta, _ in selected),
+            "sourceURLs": "\n".join(source_variant_url(meta, "classic") or meta["url"] for meta, _ in selected),
         },
     }, conflicts
 
@@ -392,8 +392,8 @@ def make_store_source(selected: list[tuple[dict, dict]], store: str) -> tuple[di
         "apps": apps,
         "userInfo": {
             "generatedBy": "iOS Hub",
-            "sourceIDs": [meta["id"] for meta, _ in selected],
-            "sourceURLs": [source_variant_url(meta, "classic") or meta["url"] for meta, _ in selected],
+            "sourceIDs": ",".join(meta["id"] for meta, _ in selected),
+            "sourceURLs": "\n".join(source_variant_url(meta, "classic") or meta["url"] for meta, _ in selected),
         },
     }, conflicts
 
