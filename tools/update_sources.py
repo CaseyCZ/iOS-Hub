@@ -292,7 +292,8 @@ def source_compliance_allows_distribution(source: dict) -> bool:
     if not isinstance(compliance, dict):
         return False
     return (
-        compliance.get("reviewStatus") in {"licensed", "permission"}
+        compliance.get("aggregationApproved") is True
+        and compliance.get("reviewStatus") in {"licensed", "permission"}
         and compliance.get("usage") == "metadata-and-original-links"
         and compliance.get("binaryRehost") is False
     )
