@@ -926,13 +926,23 @@ def validate_generated_data() -> None:
             and item["compliance"].get("aggregationApproved") is True
         }
         cache_dir = ROOT / "data" / "source-cache"
-        if cache_dir.is_dir():
-            actual_cache_ids = {path.stem for path in cache_dir.glob("*.json")}
-            if expected_cache_ids != actual_cache_ids:
+        if expected_cache_ids:
+            if not cache_dir.is_dir():
+                error("Missing data/source-cache directory for aggregation-approved Sources")
+            else:
+                actual_cache_ids = {path.stem for path in cache_dir.glob("*.json")}
+                if expected_cache_ids != actual_cache_ids:
+                    error(
+                        "source cache IDs differ from expected approved cache; "
+                        f"missing={sorted(expected_cache_ids - actual_cache_ids)}, "
+                        f"extra={sorted(actual_cache_ids - expected_cache_ids)}"
+                    )
+        elif cache_dir.is_dir():
+            stale_cache_ids = {path.stem for path in cache_dir.glob("*.json")}
+            if stale_cache_ids:
                 error(
-                    "source cache IDs differ from expected online cache; "
-                    f"missing={sorted(expected_cache_ids - actual_cache_ids)}, "
-                    f"extra={sorted(actual_cache_ids - expected_cache_ids)}"
+                    "data/source-cache contains stale link-only Source payloads: "
+                    + ", ".join(sorted(stale_cache_ids))
                 )
 
         mixes = status.get("mixes", {})
@@ -975,9 +985,7 @@ def validate_generated_data() -> None:
                 error("Missing generated mix directory")
 
     cache_dir = ROOT / "data" / "source-cache"
-    if not cache_dir.is_dir():
-        error("Missing data/source-cache directory")
-    else:
+    if cache_dir.is_dir():
         for path in sorted(cache_dir.glob("*.json")):
             payload = load_json(path)
             if not isinstance(payload, dict) or not isinstance(payload.get("apps"), list):
