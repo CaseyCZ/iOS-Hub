@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
   <meta name="theme-color" content="#070b14">
   <meta name="referrer" content="no-referrer">
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'wasm-unsafe-eval'; style-src 'self' 'unsafe-inline'; img-src 'self' https: data:; connect-src 'self' https://*.google-analytics.com https://*.analytics.google.com https://*.googletagmanager.com; worker-src 'self' blob:; object-src 'none'; base-uri 'self'; form-action 'none'">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'wasm-unsafe-eval' https://www.googletagmanager.com; style-src 'self' 'unsafe-inline'; img-src 'self' https: data:; connect-src 'self' https://*.google-analytics.com https://*.analytics.google.com https://*.googletagmanager.com; worker-src 'self' blob:; object-src 'none'; base-uri 'self'; form-action 'none'">
   <meta name="description" content="DEB → IPA Converter — convert compatible iOS application .deb packages locally in your browser on iPhone, Mac and PC.">
   <link rel="canonical" href="https://caseycz.github.io/iOS-Hub/converter.html">
   <meta property="og:type" content="website">
@@ -15,11 +15,10 @@
   <meta property="og:url" content="https://caseycz.github.io/iOS-Hub/converter.html">
   <meta name="twitter:card" content="summary">
   <title>DEB → IPA Converter — iOS Hub</title>
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-SZTERTRTCE"></script>
-  <script src="src/js/analytics.js?v=1.1.5-20260929-titlefix1"></script>
+  <!-- Analytics loads only after explicit opt-in consent. -->
+  <script src="src/js/analytics.js?v=1.1.5-20260930-consent1"></script>
   <link rel="stylesheet" href="src/css/styles.css?v=1.1.5-20260918-fullaudit3">
-  <link rel="stylesheet" href="src/css/hub-extra.css?v=1.1.5-20260930-scroll-hardfix1">
+  <link rel="stylesheet" href="src/css/hub-extra.css?v=1.1.5-20260930-consent1">
   <link rel="stylesheet" href="src/css/converter.css?v=1.1.5-20260918-audit2">
 </head>
 <body>
@@ -37,6 +36,8 @@
         <a href="resources.html" data-i18n="resourcesNav">Useful</a>
         <a href="index.html#sources" data-i18n="sources">Sources</a>
         <a href="credits.html">Credits</a>
+        <a href="privacy.html">Privacy &amp; Cookies</a>
+        <button class="footer-link-button" type="button" data-cookie-settings>Cookie settings</button>
       </nav>
       <div class="nav-actions">
         <select id="languageSelect" class="language-select-native" aria-hidden="true" tabindex="-1">
