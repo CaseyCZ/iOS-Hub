@@ -241,10 +241,7 @@ def main() -> None:
                 "id": source_id,
                 "name": source.get("name"),
                 "appCount": len(apps),
-                "catalogLimited": False,
-                "iconURL": "",
                 "variants": sorted(variant_payloads),
-                "apps": [],
             })
         else:
             errors = [
