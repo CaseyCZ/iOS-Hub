@@ -313,14 +313,30 @@ def validate_privacy_compliance() -> None:
     else:
         generator_text = generator_path.read_text(encoding="utf-8")
         for required_generator_policy in (
-            'compliance.get("aggregationApproved") is True',
-            'compliance.get("reviewStatus") in {"licensed", "permission"}',
-            'compliance.get("usage") == "metadata-and-original-links"',
+            'status = {"generatedAt": generated_at, "sources": {}}',
+            'catalog = {"generatedAt": generated_at, "sources": []}',
+            "direct_installer_compatibility",
+            '"installerCompatibility"',
         ):
             if required_generator_policy not in generator_text:
                 error(
-                    "update_sources.py is missing rights-gated aggregation policy: "
+                    "update_sources.py is missing direct Source monitoring policy: "
                     f"{required_generator_policy!r}"
+                )
+        for forbidden_generator_persistence in (
+            "SOURCE_CACHE_DIR",
+            "source_compliance_allows_distribution",
+            "aggregationApproved",
+            "app_summary",
+            "uniqueAppCount",
+            "cachePayload",
+            "make_mix",
+            "make_store_source",
+        ):
+            if forbidden_generator_persistence in generator_text:
+                error(
+                    "update_sources.py must not persist or aggregate third-party app metadata: "
+                    f"found {forbidden_generator_persistence!r}"
                 )
 
     analytics_path = JS_DIR / "analytics.js"
@@ -623,353 +639,183 @@ def validate_registry() -> None:
 
 def validate_generated_data() -> None:
     status = load_json(STATUS)
-    if isinstance(status, dict):
-        if not isinstance(status.get("sources"), dict):
-            error("data/status.json must contain a sources object")
-        mixes = status.get("mixes", {})
-        if not isinstance(mixes, dict):
-            error("data/status.json mixes must be an object")
-        else:
-            max_sources = mixes.get("maxSourcesPerMix")
-            if max_sources is not None and (not isinstance(max_sources, int) or max_sources < 0):
-                error("data/status.json maxSourcesPerMix must be a non-negative integer")
-
     catalog = load_json(CATALOG)
-    if isinstance(catalog, dict) and not isinstance(catalog.get("sources"), list):
-        error("data/catalog.json must contain a sources array")
-
     registry = load_json(REGISTRY)
-    if (
-        isinstance(registry, dict)
-        and isinstance(registry.get("sources"), list)
-        and isinstance(status, dict)
-        and isinstance(status.get("sources"), dict)
-        and isinstance(catalog, dict)
-        and isinstance(catalog.get("sources"), list)
-    ):
-        registry_ids = {
-            str(item.get("id"))
-            for item in registry["sources"]
-            if isinstance(item, dict) and item.get("id")
-        }
-        registry_by_id = {
-            str(item.get("id")): item
-            for item in registry["sources"]
-            if isinstance(item, dict) and item.get("id")
-        }
 
-        status_ids = set(status["sources"])
-        if registry_ids != status_ids:
-            missing = sorted(registry_ids - status_ids)
-            extra = sorted(status_ids - registry_ids)
-            if missing:
-                error("data/status.json is missing registry ids: " + ", ".join(missing))
-            if extra:
-                error("data/status.json contains unknown ids: " + ", ".join(extra))
-
-        for source_id, source in registry_by_id.items():
-            item = status["sources"].get(source_id)
-            if not isinstance(item, dict):
-                continue
-
-            configured_urls = source.get("urls")
-            mode = str(source.get("mode") or "classic")
-            expected_variants: set[str] = set()
-            if isinstance(configured_urls, dict):
-                expected_variants.update(
-                    variant
-                    for variant in ("classic", "pal")
-                    if str(configured_urls.get(variant) or "").strip()
-                )
-            if str(source.get("url") or "").strip():
-                expected_variants.add("pal" if mode == "pal" else "classic")
-
-            variants = item.get("variants")
-            if expected_variants:
-                if not isinstance(variants, dict):
-                    error(f"data/status.json source {source_id!r} is missing variants status")
-                else:
-                    actual_variants = set(variants)
-                    if expected_variants != actual_variants:
-                        error(
-                            f"data/status.json source {source_id!r} variants differ from registry; "
-                            f"missing={sorted(expected_variants - actual_variants)}, "
-                            f"extra={sorted(actual_variants - expected_variants)}"
-                        )
-                    for variant, variant_status in variants.items():
-                        if not isinstance(variant_status, dict):
-                            error(
-                                f"data/status.json source {source_id!r} variant {variant!r} must be an object"
-                            )
-                            continue
-                        if not isinstance(variant_status.get("online"), bool):
-                            error(
-                                f"data/status.json source {source_id!r} variant {variant!r} "
-                                "must contain boolean online"
-                            )
-
-            preferred = item.get("preferredVariant")
-            if item.get("online") is True:
-                if preferred not in expected_variants:
-                    error(
-                        f"data/status.json source {source_id!r} has invalid preferredVariant {preferred!r}"
-                    )
-                elif isinstance(variants, dict) and variants.get(preferred, {}).get("online") is not True:
-                    error(
-                        f"data/status.json source {source_id!r} preferredVariant {preferred!r} is not online"
-                    )
-
-                compliance = source.get("compliance")
-                aggregation_approved = bool(
-                    isinstance(compliance, dict)
-                    and compliance.get("aggregationApproved") is True
-                )
-                if item.get("aggregationApproved") is not aggregation_approved:
-                    error(
-                        f"data/status.json source {source_id!r} aggregationApproved differs from registry"
-                    )
-                if not aggregation_approved:
-                    if item.get("iconURL") not in ("", None):
-                        error(
-                            f"link-only source {source_id!r} must not persist third-party iconURL"
-                        )
-                    duplicate_report = item.get("duplicateBundleIdentifiers")
-                    if isinstance(duplicate_report, dict) and duplicate_report.get("examples"):
-                        error(
-                            f"link-only source {source_id!r} must not persist duplicate bundle examples"
-                        )
-
-        online_ids = {
-            source_id
-            for source_id, item in status["sources"].items()
-            if isinstance(item, dict) and item.get("online") is True
-        }
-        catalog_ids = {
-            str(item.get("id"))
-            for item in catalog["sources"]
-            if isinstance(item, dict) and item.get("id")
-        }
-        if catalog_ids != online_ids:
-            missing = sorted(online_ids - catalog_ids)
-            extra = sorted(catalog_ids - online_ids)
-            if missing:
-                error("data/catalog.json is missing online source ids: " + ", ".join(missing))
-            if extra:
-                error("data/catalog.json contains non-online/unknown source ids: " + ", ".join(extra))
-
-        catalog_by_id = {
-            str(item.get("id")): item
-            for item in catalog["sources"]
-            if isinstance(item, dict) and item.get("id")
-        }
-        for source_id, source in registry_by_id.items():
-            catalog_item = catalog_by_id.get(source_id)
-            if not isinstance(catalog_item, dict):
-                continue
-            compliance = source.get("compliance")
-            aggregation_approved = bool(
-                isinstance(compliance, dict)
-                and compliance.get("aggregationApproved") is True
+    if not isinstance(status, dict):
+        return
+    if not isinstance(status.get("sources"), dict):
+        error("data/status.json must contain a sources object")
+        return
+    for obsolete_section in ("mixes", "altstore", "sidestore"):
+        if obsolete_section in status:
+            error(
+                f"data/status.json still publishes obsolete generated Source section "
+                f"{obsolete_section!r}"
             )
-            if catalog_item.get("aggregationApproved") is not aggregation_approved:
-                error(
-                    f"data/catalog.json source {source_id!r} aggregationApproved differs from registry"
-                )
-            if not aggregation_approved:
-                if catalog_item.get("apps") not in ([], None):
-                    error(
-                        f"link-only source {source_id!r} must not publish app metadata in catalog.json"
-                    )
-                if catalog_item.get("iconURL") not in ("", None):
-                    error(
-                        f"link-only source {source_id!r} must not publish third-party iconURL in catalog.json"
-                    )
-                if catalog_item.get("name") != source.get("name"):
-                    error(
-                        f"link-only source {source_id!r} catalog name must come from registry metadata"
-                    )
 
-        for package_name in ("altstore", "sidestore"):
-            package = status.get(package_name, {})
-            if not isinstance(package, dict):
-                continue
-            unknown = sorted(set(package.get("sourceIDs") or []) - registry_ids)
+    if not isinstance(catalog, dict) or not isinstance(catalog.get("sources"), list):
+        error("data/catalog.json must contain a sources array")
+        return
+    if "uniqueAppCount" in catalog:
+        error("data/catalog.json must not persist derived app metadata such as uniqueAppCount")
+
+    if not isinstance(registry, dict) or not isinstance(registry.get("sources"), list):
+        return
+
+    registry_by_id = {
+        str(item.get("id")): item
+        for item in registry["sources"]
+        if isinstance(item, dict) and item.get("id")
+    }
+    registry_ids = set(registry_by_id)
+    status_ids = set(status["sources"])
+    if registry_ids != status_ids:
+        missing = sorted(registry_ids - status_ids)
+        extra = sorted(status_ids - registry_ids)
+        if missing:
+            error("data/status.json is missing registry ids: " + ", ".join(missing))
+        if extra:
+            error("data/status.json contains unknown ids: " + ", ".join(extra))
+
+    online_ids: set[str] = set()
+    for source_id, source in registry_by_id.items():
+        item = status["sources"].get(source_id)
+        if not isinstance(item, dict):
+            continue
+
+        configured_urls = source.get("urls")
+        mode = str(source.get("mode") or "classic")
+        expected_variants: set[str] = set()
+        if isinstance(configured_urls, dict):
+            expected_variants.update(
+                variant
+                for variant in ("classic", "pal")
+                if str(configured_urls.get(variant) or "").strip()
+            )
+        primary_url = str(source.get("url") or "").strip()
+        if primary_url:
+            expected_variants.add("pal" if mode == "pal" else "classic")
+
+        variants = item.get("variants")
+        if not isinstance(variants, dict):
+            error(f"data/status.json source {source_id!r} must contain variants object")
+            variants = {}
+        else:
+            unknown = sorted(set(variants) - expected_variants)
+            missing = sorted(expected_variants - set(variants))
             if unknown:
-                error(f"data/status.json {package_name}.sourceIDs contains unknown ids: " + ", ".join(unknown))
-
-        # Keep generated installable packages in lockstep with status.json.
-        # An empty rights-approved set must remove stale package files completely.
-        for package_name in ("altstore", "sidestore"):
-            package_status = status.get(package_name, {})
-            package_path = ROOT / package_name / "source.json"
-            if not isinstance(package_status, dict):
-                continue
-
-            expected_ids = set(package_status.get("sourceIDs") or [])
-            expected_url = package_status.get("sourceURL")
-
-            if not expected_ids:
-                if expected_url not in (None, ""):
+                error(
+                    f"data/status.json source {source_id!r} has unknown variants: "
+                    + ", ".join(unknown)
+                )
+            if missing:
+                error(
+                    f"data/status.json source {source_id!r} is missing variants: "
+                    + ", ".join(missing)
+                )
+            for variant, variant_status in variants.items():
+                if not isinstance(variant_status, dict):
                     error(
-                        f"data/status.json {package_name}.sourceURL must be null when sourceIDs is empty"
+                        f"data/status.json source {source_id!r} variant {variant!r} must be an object"
                     )
-                if package_path.exists():
+                    continue
+                if not isinstance(variant_status.get("online"), bool):
                     error(
-                        f"{package_path.relative_to(ROOT)} is stale and must be removed when no "
-                        "rights-approved Sources are published"
+                        f"data/status.json source {source_id!r} variant {variant!r} "
+                        "must contain boolean online"
                     )
-                continue
-
-            if not package_path.exists():
-                error(
-                    f"Missing {package_path.relative_to(ROOT)} for "
-                    f"{len(expected_ids)} rights-approved Source(s)"
-                )
-                continue
-
-            package_payload = load_json(package_path)
-            if not isinstance(package_payload, dict):
-                continue
-
-            user_info = package_payload.get("userInfo")
-            source_ids_raw = user_info.get("sourceIDs") if isinstance(user_info, dict) else None
-            source_urls_raw = user_info.get("sourceURLs") if isinstance(user_info, dict) else None
-            source_ids = (
-                [item.strip() for item in source_ids_raw.split(",") if item.strip()]
-                if isinstance(source_ids_raw, str)
-                else []
-            )
-            source_urls = (
-                [item.strip() for item in source_urls_raw.splitlines() if item.strip()]
-                if isinstance(source_urls_raw, str)
-                else []
-            )
-            actual_ids = set(source_ids)
-            if expected_ids != actual_ids:
-                error(
-                    f"{package_path.relative_to(ROOT)} sourceIDs differ from data/status.json; "
-                    f"missing={sorted(expected_ids - actual_ids)}, "
-                    f"extra={sorted(actual_ids - expected_ids)}"
-                )
-
-            if len(source_ids) != len(source_urls):
-                error(
-                    f"{package_path.relative_to(ROOT)} userInfo sourceIDs/sourceURLs length mismatch"
-                )
-            else:
-                for source_id, source_url in zip(source_ids, source_urls):
-                    source = registry_by_id.get(str(source_id))
-                    if not isinstance(source, dict):
-                        continue
-                    configured_urls = source.get("urls")
-                    mode = str(source.get("mode") or "classic")
-                    configured_url = (
-                        str(configured_urls.get("classic") or "").strip()
-                        if isinstance(configured_urls, dict)
-                        else (str(source.get("url") or "").strip() if mode != "pal" else "")
-                    )
-                    if configured_url and source_url != configured_url:
+                duplicate_report = variant_status.get("duplicateBundleIdentifiers")
+                if isinstance(duplicate_report, dict):
+                    forbidden_detail_keys = set(duplicate_report) - {
+                        "count", "duplicateAppEntries", "extraEntries"
+                    }
+                    if forbidden_detail_keys:
                         error(
-                            f"{package_path.relative_to(ROOT)} uses non-Classic source URL "
-                            f"for {source_id!r}: {source_url!r}"
+                            f"data/status.json source {source_id!r} variant {variant!r} "
+                            "persists third-party duplicate details: "
+                            + ", ".join(sorted(forbidden_detail_keys))
                         )
 
-        all_compatible_path = ROOT / "mix" / "all-compatible.json"
-        mixes_status = status.get("mixes", {})
-        if isinstance(mixes_status, dict):
-            expected_ids = set(mixes_status.get("autoCompatibleSourceIDs") or [])
-            expected_url = mixes_status.get("allCompatibleURL")
-            if not expected_ids:
-                if expected_url not in (None, ""):
-                    error("data/status.json mixes.allCompatibleURL must be null when no Sources are approved")
-                if all_compatible_path.exists():
-                    error("mix/all-compatible.json is stale when no rights-approved Sources exist")
-            else:
-                if not all_compatible_path.exists():
-                    error("Missing mix/all-compatible.json")
-                else:
-                    all_compatible = load_json(all_compatible_path)
-                    if isinstance(all_compatible, dict):
-                        user_info = all_compatible.get("userInfo")
-                        source_ids_raw = user_info.get("sourceIDs") if isinstance(user_info, dict) else None
-                        actual_ids = (
-                            {item.strip() for item in source_ids_raw.split(",") if item.strip()}
-                            if isinstance(source_ids_raw, str)
-                            else set()
-                        )
-                        if expected_ids != actual_ids:
-                            error(
-                                "mix/all-compatible.json sourceIDs differ from data/status.json; "
-                                f"missing={sorted(expected_ids - actual_ids)}, "
-                                f"extra={sorted(actual_ids - expected_ids)}"
-                            )
+        if "aggregationApproved" in item:
+            error(
+                f"data/status.json source {source_id!r} must not persist aggregationApproved"
+            )
+        if item.get("iconURL") not in ("", None):
+            error(f"data/status.json source {source_id!r} must not persist third-party iconURL")
 
-        registry_sources = [item for item in registry["sources"] if isinstance(item, dict)]
-        expected_cache_ids = {
-            str(item.get("id"))
-            for item in registry_sources
-            if item.get("id") in online_ids
-            and item.get("cachePayload", True)
-            and isinstance(item.get("compliance"), dict)
-            and item["compliance"].get("aggregationApproved") is True
-        }
-        cache_dir = ROOT / "data" / "source-cache"
-        if expected_cache_ids:
-            if not cache_dir.is_dir():
-                error("Missing data/source-cache directory for aggregation-approved Sources")
-            else:
-                actual_cache_ids = {path.stem for path in cache_dir.glob("*.json")}
-                if expected_cache_ids != actual_cache_ids:
-                    error(
-                        "source cache IDs differ from expected approved cache; "
-                        f"missing={sorted(expected_cache_ids - actual_cache_ids)}, "
-                        f"extra={sorted(actual_cache_ids - expected_cache_ids)}"
-                    )
-        elif cache_dir.is_dir():
-            stale_cache_ids = {path.stem for path in cache_dir.glob("*.json")}
-            if stale_cache_ids:
+        duplicate_report = item.get("duplicateBundleIdentifiers")
+        if isinstance(duplicate_report, dict):
+            forbidden_detail_keys = set(duplicate_report) - {
+                "count", "duplicateAppEntries", "extraEntries"
+            }
+            if forbidden_detail_keys:
                 error(
-                    "data/source-cache contains stale link-only Source payloads: "
-                    + ", ".join(sorted(stale_cache_ids))
+                    f"data/status.json source {source_id!r} persists third-party duplicate details: "
+                    + ", ".join(sorted(forbidden_detail_keys))
                 )
 
-        mixes = status.get("mixes", {})
-        mix_dir = ROOT / "mix"
-        if isinstance(mixes, dict):
-            combo_files = list(mix_dir.glob("*.json")) if mix_dir.is_dir() else []
-            combination_files = [path for path in combo_files if path.name != "all-compatible.json"]
-            expected_mix_count = mixes.get("count")
-            if isinstance(expected_mix_count, int) and expected_mix_count != len(combination_files):
+        installer_compatibility = item.get("installerCompatibility")
+        if item.get("online") is True:
+            online_ids.add(source_id)
+            preferred = item.get("preferredVariant")
+            if preferred not in expected_variants:
                 error(
-                    f"data/status.json mix count {expected_mix_count} does not match "
-                    f"{len(combination_files)} generated combination files"
+                    f"data/status.json source {source_id!r} has invalid preferredVariant {preferred!r}"
+                )
+            elif isinstance(variants, dict) and variants.get(preferred, {}).get("online") is not True:
+                error(
+                    f"data/status.json source {source_id!r} preferredVariant {preferred!r} is not online"
+                )
+            if not isinstance(installer_compatibility, dict):
+                error(
+                    f"data/status.json source {source_id!r} must contain installerCompatibility"
                 )
 
-    for obsolete_generated in (
+    catalog_by_id = {
+        str(item.get("id")): item
+        for item in catalog["sources"]
+        if isinstance(item, dict) and item.get("id")
+    }
+    catalog_ids = set(catalog_by_id)
+    if catalog_ids != online_ids:
+        missing = sorted(online_ids - catalog_ids)
+        extra = sorted(catalog_ids - online_ids)
+        if missing:
+            error("data/catalog.json is missing online source ids: " + ", ".join(missing))
+        if extra:
+            error("data/catalog.json contains non-online/unknown source ids: " + ", ".join(extra))
+
+    for source_id, item in catalog_by_id.items():
+        source = registry_by_id.get(source_id, {})
+        status_item = status["sources"].get(source_id, {})
+        if item.get("name") != source.get("name"):
+            error(f"data/catalog.json source {source_id!r} name must come from registry metadata")
+        if item.get("appCount") != status_item.get("appCount"):
+            error(f"data/catalog.json source {source_id!r} appCount differs from status.json")
+        if item.get("apps") not in ([], None):
+            error(f"data/catalog.json source {source_id!r} must not persist app metadata")
+        if item.get("iconURL") not in ("", None):
+            error(f"data/catalog.json source {source_id!r} must not persist third-party iconURL")
+        if item.get("catalogLimited") not in (False, None):
+            error(f"data/catalog.json source {source_id!r} must not claim a copied app catalog")
+        if "aggregationApproved" in item:
+            error(f"data/catalog.json source {source_id!r} must not persist aggregationApproved")
+
+    obsolete_paths = (
+        ROOT / "data" / "source-cache",
+        ROOT / "data" / "conflicts.json",
+        ROOT / "data" / "mix-api.json",
+        ROOT / "mix",
         ROOT / "altstore" / "source.json",
         ROOT / "sidestore" / "source.json",
-    ):
-        if obsolete_generated.exists():
+        ROOT / "server" / "mix-api",
+    )
+    for obsolete in obsolete_paths:
+        if obsolete.exists():
             error(
-                f"Obsolete generated Source must not exist: {obsolete_generated.relative_to(ROOT)}"
+                f"Obsolete Mix/cache artifact must not exist: {obsolete.relative_to(ROOT)}"
             )
-
-    mix_dir = ROOT / "mix"
-    if mix_dir.is_dir():
-        stale_mix_files = sorted(mix_dir.glob("*.json"))
-        if stale_mix_files:
-            error(
-                "Obsolete combined Mix JSON files must not exist: "
-                + ", ".join(path.name for path in stale_mix_files)
-            )
-
-    cache_dir = ROOT / "data" / "source-cache"
-    if cache_dir.is_dir():
-        for path in sorted(cache_dir.glob("*.json")):
-            payload = load_json(path)
-            if not isinstance(payload, dict) or not isinstance(payload.get("apps"), list):
-                error(f"{path.relative_to(ROOT)} is not a valid source cache with an apps array")
-
 
 
 def validate_interactive_guide() -> None:
