@@ -366,6 +366,7 @@ def make_mix(selected: list[tuple[dict, dict]], filename: str, identifier_suffix
         "tintColor": "#38BDF8",
         "apps": apps,
         "userInfo": {
+            # AltStore decodes userInfo as string values; keep IDs serialized.
             "sourceIDs": ",".join(meta["id"] for meta, _ in selected),
             "sourceURLs": "\n".join(source_variant_url(meta, "classic") or meta["url"] for meta, _ in selected),
         },
