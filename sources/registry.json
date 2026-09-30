@@ -5,27 +5,32 @@
       {
         "name": "AltStore Trusted Sources",
         "url": "https://github.com/altstoreio/FAQ/blob/main/altstore-world/trusted-sources.md",
-        "note": "Official AltStore list of trusted sources reviewed against AltStore's safety standards."
+        "note": "Official AltStore list of trusted sources reviewed against AltStore's safety standards.",
+        "icon": "assets/icons/altstore.svg"
       },
       {
         "name": "SideStore trustedapps.json",
         "url": "https://github.com/SideStore/SideStore/blob/develop/trustedapps.json",
-        "note": "Official SideStore trusted-source list; iOS Hub still checks current availability and source validity independently."
+        "note": "Official SideStore trusted-source list; iOS Hub still checks current availability and source validity independently.",
+        "icon": "assets/icons/sidestore.svg"
       },
       {
         "name": "awesome-altstore",
         "url": "https://github.com/victordedomenico/awesome-altstore",
-        "note": "Discovery reference; sources are independently checked before being listed."
+        "note": "Discovery reference; sources are independently checked before being listed.",
+        "icon": "assets/icons/reference.svg"
       },
       {
         "name": "SideStore default sources",
         "url": "https://github.com/SideStore/default-sources/blob/main/sources.json",
-        "note": "Official SideStore default-source list used for discovery and cross-checking; live validity is checked independently."
+        "note": "Official SideStore default-source list used for discovery and cross-checking; live validity is checked independently.",
+        "icon": "assets/icons/sidestore.svg"
       },
       {
         "name": "AltStore PAL Directory",
         "url": "https://explore.alt.store/directory",
-        "note": "Official AltStore PAL directory for verified marketplace apps and sources."
+        "note": "Official AltStore PAL directory for verified marketplace apps and sources.",
+        "icon": "assets/icons/altstore.svg"
       }
     ]
   },
