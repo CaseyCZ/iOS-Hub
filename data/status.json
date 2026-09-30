@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-09-30T06:52:30Z",
+  "generatedAt": "2026-09-30T07:01:03Z",
   "sources": {
     "utm": {
       "online": true,
-      "checkedAt": "2026-09-30T06:52:30Z",
+      "checkedAt": "2026-09-30T07:01:03Z",
       "appCount": 2,
       "httpStatus": 200,
-      "iconURL": "https://alt.getutm.app/icon.png",
+      "iconURL": "",
       "error": null,
       "mixTest": "pass",
       "mixReason": "Classic source structure and downloadable app metadata passed the automated Mix test.",
@@ -27,10 +27,7 @@
       },
       "duplicateBundleIdentifiers": {
         "count": 0,
-        "duplicateAppEntries": 0,
-        "extraEntries": 0,
-        "items": [],
-        "itemsTruncated": false
+        "examples": []
       },
       "installerCompatibility": {
         "altstore": {
@@ -54,14 +51,15 @@
           "reason": "No duplicate bundle identifiers were detected in the source."
         }
       },
-      "preferredVariant": "classic"
+      "preferredVariant": "classic",
+      "aggregationApproved": false
     },
     "provenance": {
       "online": true,
-      "checkedAt": "2026-09-30T06:52:30Z",
+      "checkedAt": "2026-09-30T07:01:03Z",
       "appCount": 3,
       "httpStatus": 200,
-      "iconURL": "https://raw.githubusercontent.com/Provenance-Emu/Provenance/develop/Provenance/Resources/Assets.xcassets/AppIcon.appiconset/iTunesArtwork%402x.png",
+      "iconURL": "",
       "error": null,
       "mixTest": "pass",
       "mixReason": "Classic source structure and downloadable app metadata passed the automated Mix test.",
@@ -82,10 +80,7 @@
       },
       "duplicateBundleIdentifiers": {
         "count": 0,
-        "duplicateAppEntries": 0,
-        "extraEntries": 0,
-        "items": [],
-        "itemsTruncated": false
+        "examples": []
       },
       "installerCompatibility": {
         "altstore": {
@@ -109,14 +104,15 @@
           "reason": "No duplicate bundle identifiers were detected in the source."
         }
       },
-      "preferredVariant": "classic"
+      "preferredVariant": "classic",
+      "aggregationApproved": false
     },
     "ish": {
       "online": true,
-      "checkedAt": "2026-09-30T06:52:30Z",
+      "checkedAt": "2026-09-30T07:01:03Z",
       "appCount": 1,
       "httpStatus": 200,
-      "iconURL": "https://ish.app/assets/icon-full.png",
+      "iconURL": "",
       "error": null,
       "mixTest": "pass",
       "mixReason": "Classic source structure and downloadable app metadata passed the automated Mix test.",
@@ -137,10 +133,7 @@
       },
       "duplicateBundleIdentifiers": {
         "count": 0,
-        "duplicateAppEntries": 0,
-        "extraEntries": 0,
-        "items": [],
-        "itemsTruncated": false
+        "examples": []
       },
       "installerCompatibility": {
         "altstore": {
@@ -164,14 +157,15 @@
           "reason": "No duplicate bundle identifiers were detected in the source."
         }
       },
-      "preferredVariant": "classic"
+      "preferredVariant": "classic",
+      "aggregationApproved": false
     },
     "flycast": {
       "online": true,
-      "checkedAt": "2026-09-30T06:52:30Z",
+      "checkedAt": "2026-09-30T07:01:03Z",
       "appCount": 1,
       "httpStatus": 200,
-      "iconURL": "https://github.com/flyinghead/flycast/raw/master/shell/linux/flycast.png",
+      "iconURL": "",
       "error": null,
       "mixTest": "pass",
       "mixReason": "Classic source structure and downloadable app metadata passed the automated Mix test.",
@@ -192,10 +186,7 @@
       },
       "duplicateBundleIdentifiers": {
         "count": 0,
-        "duplicateAppEntries": 0,
-        "extraEntries": 0,
-        "items": [],
-        "itemsTruncated": false
+        "examples": []
       },
       "installerCompatibility": {
         "altstore": {
@@ -219,14 +210,15 @@
           "reason": "No duplicate bundle identifiers were detected in the source."
         }
       },
-      "preferredVariant": "classic"
+      "preferredVariant": "classic",
+      "aggregationApproved": false
     },
     "sidestore-community": {
       "online": true,
-      "checkedAt": "2026-09-30T06:52:30Z",
+      "checkedAt": "2026-09-30T07:01:03Z",
       "appCount": 23,
       "httpStatus": 200,
-      "iconURL": "https://sidestore.io/assets/icon.png",
+      "iconURL": "",
       "error": null,
       "mixTest": "pass",
       "mixReason": "Classic source structure and downloadable app metadata passed the automated Mix test.",
@@ -247,10 +239,7 @@
       },
       "duplicateBundleIdentifiers": {
         "count": 0,
-        "duplicateAppEntries": 0,
-        "extraEntries": 0,
-        "items": [],
-        "itemsTruncated": false
+        "examples": []
       },
       "installerCompatibility": {
         "altstore": {
@@ -274,14 +263,15 @@
           "reason": "No duplicate bundle identifiers were detected in the source."
         }
       },
-      "preferredVariant": "classic"
+      "preferredVariant": "classic",
+      "aggregationApproved": false
     },
     "sidestore-official": {
       "online": true,
-      "checkedAt": "2026-09-30T06:52:30Z",
+      "checkedAt": "2026-09-30T07:01:03Z",
       "appCount": 1,
       "httpStatus": 200,
-      "iconURL": "https://apps.sidestore.io/apps/sidestore/v0.1.1/icon.png",
+      "iconURL": "",
       "error": null,
       "mixTest": "pass",
       "mixReason": "Classic source structure and downloadable app metadata passed the automated Mix test.",
@@ -302,10 +292,7 @@
       },
       "duplicateBundleIdentifiers": {
         "count": 0,
-        "duplicateAppEntries": 0,
-        "extraEntries": 0,
-        "items": [],
-        "itemsTruncated": false
+        "examples": []
       },
       "installerCompatibility": {
         "altstore": {
@@ -329,14 +316,15 @@
           "reason": "No duplicate bundle identifiers were detected in the source."
         }
       },
-      "preferredVariant": "classic"
+      "preferredVariant": "classic",
+      "aggregationApproved": false
     },
     "stikdebug": {
       "online": true,
-      "checkedAt": "2026-09-30T06:52:30Z",
+      "checkedAt": "2026-09-30T07:01:03Z",
       "appCount": 2,
       "httpStatus": 200,
-      "iconURL": "https://github.com/StikDebug/StikDebug/blob/main/assets/StikDebug.png?raw=true",
+      "iconURL": "",
       "error": null,
       "mixTest": "pass",
       "mixReason": "Classic source structure and downloadable app metadata passed the automated Mix test.",
@@ -357,10 +345,7 @@
       },
       "duplicateBundleIdentifiers": {
         "count": 0,
-        "duplicateAppEntries": 0,
-        "extraEntries": 0,
-        "items": [],
-        "itemsTruncated": false
+        "examples": []
       },
       "installerCompatibility": {
         "altstore": {
@@ -384,14 +369,15 @@
           "reason": "No duplicate bundle identifiers were detected in the source."
         }
       },
-      "preferredVariant": "classic"
+      "preferredVariant": "classic",
+      "aggregationApproved": false
     },
     "livecontainer": {
       "online": true,
-      "checkedAt": "2026-09-30T06:52:30Z",
+      "checkedAt": "2026-09-30T07:01:03Z",
       "appCount": 1,
       "httpStatus": 200,
-      "iconURL": "https://raw.githubusercontent.com/LiveContainer/LiveContainer/main/screenshots/AppIcon1024.png",
+      "iconURL": "",
       "error": null,
       "mixTest": "pass",
       "mixReason": "Classic source structure and downloadable app metadata passed the automated Mix test.",
@@ -412,10 +398,7 @@
       },
       "duplicateBundleIdentifiers": {
         "count": 0,
-        "duplicateAppEntries": 0,
-        "extraEntries": 0,
-        "items": [],
-        "itemsTruncated": false
+        "examples": []
       },
       "installerCompatibility": {
         "altstore": {
@@ -439,14 +422,15 @@
           "reason": "No duplicate bundle identifiers were detected in the source."
         }
       },
-      "preferredVariant": "classic"
+      "preferredVariant": "classic",
+      "aggregationApproved": false
     },
     "livecontainer-nightly": {
       "online": true,
-      "checkedAt": "2026-09-30T06:52:30Z",
+      "checkedAt": "2026-09-30T07:01:03Z",
       "appCount": 1,
       "httpStatus": 200,
-      "iconURL": "https://raw.githubusercontent.com/LiveContainer/LiveContainer/main/screenshots/AppIcon1024.png",
+      "iconURL": "",
       "error": null,
       "mixTest": "pass",
       "mixReason": "Classic source structure and downloadable app metadata passed the automated Mix test.",
@@ -467,10 +451,7 @@
       },
       "duplicateBundleIdentifiers": {
         "count": 0,
-        "duplicateAppEntries": 0,
-        "extraEntries": 0,
-        "items": [],
-        "itemsTruncated": false
+        "examples": []
       },
       "installerCompatibility": {
         "altstore": {
@@ -494,14 +475,15 @@
           "reason": "No duplicate bundle identifiers were detected in the source."
         }
       },
-      "preferredVariant": "classic"
+      "preferredVariant": "classic",
+      "aggregationApproved": false
     },
     "manicemu": {
       "online": true,
-      "checkedAt": "2026-09-30T06:52:30Z",
+      "checkedAt": "2026-09-30T07:01:03Z",
       "appCount": 1,
       "httpStatus": 200,
-      "iconURL": "https://apps.manicemu.site/images/manicicon.jpg",
+      "iconURL": "",
       "error": null,
       "mixTest": "pass",
       "mixReason": "Classic source structure and downloadable app metadata passed the automated Mix test.",
@@ -522,10 +504,7 @@
       },
       "duplicateBundleIdentifiers": {
         "count": 0,
-        "duplicateAppEntries": 0,
-        "extraEntries": 0,
-        "items": [],
-        "itemsTruncated": false
+        "examples": []
       },
       "installerCompatibility": {
         "altstore": {
@@ -549,14 +528,15 @@
           "reason": "No duplicate bundle identifiers were detected in the source."
         }
       },
-      "preferredVariant": "classic"
+      "preferredVariant": "classic",
+      "aggregationApproved": false
     },
     "flycast-ios": {
       "online": true,
-      "checkedAt": "2026-09-30T06:52:30Z",
+      "checkedAt": "2026-09-30T07:01:03Z",
       "appCount": 1,
       "httpStatus": 200,
-      "iconURL": "https://github.com/chachillie/Flycast-iOS/raw/main/shell/linux/flycast.png",
+      "iconURL": "",
       "error": null,
       "mixTest": "pass",
       "mixReason": "Classic source structure and downloadable app metadata passed the automated Mix test.",
@@ -577,10 +557,7 @@
       },
       "duplicateBundleIdentifiers": {
         "count": 0,
-        "duplicateAppEntries": 0,
-        "extraEntries": 0,
-        "items": [],
-        "itemsTruncated": false
+        "examples": []
       },
       "installerCompatibility": {
         "altstore": {
@@ -604,14 +581,15 @@
           "reason": "No duplicate bundle identifiers were detected in the source."
         }
       },
-      "preferredVariant": "classic"
+      "preferredVariant": "classic",
+      "aggregationApproved": false
     },
     "geode-ios": {
       "online": true,
-      "checkedAt": "2026-09-30T06:52:30Z",
+      "checkedAt": "2026-09-30T07:01:03Z",
       "appCount": 1,
       "httpStatus": 200,
-      "iconURL": "https://ios-repo.geode-sdk.org/img/AltSourceIcon.png",
+      "iconURL": "",
       "error": null,
       "mixTest": "pass",
       "mixReason": "Classic source structure and downloadable app metadata passed the automated Mix test.",
@@ -632,10 +610,7 @@
       },
       "duplicateBundleIdentifiers": {
         "count": 0,
-        "duplicateAppEntries": 0,
-        "extraEntries": 0,
-        "items": [],
-        "itemsTruncated": false
+        "examples": []
       },
       "installerCompatibility": {
         "altstore": {
@@ -659,14 +634,15 @@
           "reason": "No duplicate bundle identifiers were detected in the source."
         }
       },
-      "preferredVariant": "classic"
+      "preferredVariant": "classic",
+      "aggregationApproved": false
     },
     "retrosekai": {
       "online": true,
-      "checkedAt": "2026-09-30T06:52:30Z",
+      "checkedAt": "2026-09-30T07:01:03Z",
       "appCount": 1,
       "httpStatus": 200,
-      "iconURL": "https://repo.untitledcharts.com/assets/logo.png",
+      "iconURL": "",
       "error": null,
       "mixTest": "pass",
       "mixReason": "Classic source structure and downloadable app metadata passed the automated Mix test.",
@@ -687,10 +663,7 @@
       },
       "duplicateBundleIdentifiers": {
         "count": 0,
-        "duplicateAppEntries": 0,
-        "extraEntries": 0,
-        "items": [],
-        "itemsTruncated": false
+        "examples": []
       },
       "installerCompatibility": {
         "altstore": {
@@ -714,14 +687,15 @@
           "reason": "No duplicate bundle identifiers were detected in the source."
         }
       },
-      "preferredVariant": "classic"
+      "preferredVariant": "classic",
+      "aggregationApproved": false
     },
     "oatmealdome": {
       "online": true,
-      "checkedAt": "2026-09-30T06:52:30Z",
+      "checkedAt": "2026-09-30T07:01:03Z",
       "appCount": 2,
       "httpStatus": 200,
-      "iconURL": "https://cdn.oatmealdome.me/dolphinios/AppIcon.appiconset/ios_marketing1024x1024.png",
+      "iconURL": "",
       "error": null,
       "mixTest": "pass",
       "mixReason": "Classic source structure and downloadable app metadata passed the automated Mix test.",
@@ -742,10 +716,7 @@
       },
       "duplicateBundleIdentifiers": {
         "count": 0,
-        "duplicateAppEntries": 0,
-        "extraEntries": 0,
-        "items": [],
-        "itemsTruncated": false
+        "examples": []
       },
       "installerCompatibility": {
         "altstore": {
@@ -769,14 +740,15 @@
           "reason": "No duplicate bundle identifiers were detected in the source."
         }
       },
-      "preferredVariant": "classic"
+      "preferredVariant": "classic",
+      "aggregationApproved": false
     },
     "crystall1ne": {
       "online": true,
-      "checkedAt": "2026-09-30T06:52:30Z",
+      "checkedAt": "2026-09-30T07:01:03Z",
       "appCount": 2,
       "httpStatus": 200,
-      "iconURL": "https://alt.crystall1ne.dev/resources/media/the_icon.png",
+      "iconURL": "",
       "error": null,
       "mixTest": "pass",
       "mixReason": "Classic source structure and downloadable app metadata passed the automated Mix test.",
@@ -797,10 +769,7 @@
       },
       "duplicateBundleIdentifiers": {
         "count": 0,
-        "duplicateAppEntries": 0,
-        "extraEntries": 0,
-        "items": [],
-        "itemsTruncated": false
+        "examples": []
       },
       "installerCompatibility": {
         "altstore": {
@@ -824,14 +793,15 @@
           "reason": "No duplicate bundle identifiers were detected in the source."
         }
       },
-      "preferredVariant": "classic"
+      "preferredVariant": "classic",
+      "aggregationApproved": false
     },
     "pokemmo": {
       "online": true,
-      "checkedAt": "2026-09-30T06:52:30Z",
+      "checkedAt": "2026-09-30T07:01:03Z",
       "appCount": 1,
       "httpStatus": 200,
-      "iconURL": "https://pokemmo.com/build/images/altstore.f5930b35.png",
+      "iconURL": "",
       "error": null,
       "mixTest": "pass",
       "mixReason": "Classic source structure and downloadable app metadata passed the automated Mix test.",
@@ -852,10 +822,7 @@
       },
       "duplicateBundleIdentifiers": {
         "count": 0,
-        "duplicateAppEntries": 0,
-        "extraEntries": 0,
-        "items": [],
-        "itemsTruncated": false
+        "examples": []
       },
       "installerCompatibility": {
         "altstore": {
@@ -879,14 +846,15 @@
           "reason": "No duplicate bundle identifiers were detected in the source."
         }
       },
-      "preferredVariant": "classic"
+      "preferredVariant": "classic",
+      "aggregationApproved": false
     },
     "odyssey": {
       "online": true,
-      "checkedAt": "2026-09-30T06:52:30Z",
+      "checkedAt": "2026-09-30T07:01:03Z",
       "appCount": 2,
       "httpStatus": 200,
-      "iconURL": "https://theodyssey.dev/assets/images/icon.png",
+      "iconURL": "",
       "error": null,
       "mixTest": "pass",
       "mixReason": "Classic source structure and downloadable app metadata passed the automated Mix test.",
@@ -907,10 +875,7 @@
       },
       "duplicateBundleIdentifiers": {
         "count": 0,
-        "duplicateAppEntries": 0,
-        "extraEntries": 0,
-        "items": [],
-        "itemsTruncated": false
+        "examples": []
       },
       "installerCompatibility": {
         "altstore": {
@@ -934,14 +899,15 @@
           "reason": "No duplicate bundle identifiers were detected in the source."
         }
       },
-      "preferredVariant": "classic"
+      "preferredVariant": "classic",
+      "aggregationApproved": false
     },
     "yattee": {
       "online": true,
-      "checkedAt": "2026-09-30T06:52:30Z",
+      "checkedAt": "2026-09-30T07:01:03Z",
       "appCount": 1,
       "httpStatus": 200,
-      "iconURL": "https://raw.githubusercontent.com/yattee/yattee/main/Assets/yattee-icon-512.png",
+      "iconURL": "",
       "error": null,
       "mixTest": "pass",
       "mixReason": "Classic source structure and downloadable app metadata passed the automated Mix test.",
@@ -962,10 +928,7 @@
       },
       "duplicateBundleIdentifiers": {
         "count": 0,
-        "duplicateAppEntries": 0,
-        "extraEntries": 0,
-        "items": [],
-        "itemsTruncated": false
+        "examples": []
       },
       "installerCompatibility": {
         "altstore": {
@@ -989,14 +952,15 @@
           "reason": "No duplicate bundle identifiers were detected in the source."
         }
       },
-      "preferredVariant": "classic"
+      "preferredVariant": "classic",
+      "aggregationApproved": false
     },
     "ignited": {
       "online": true,
-      "checkedAt": "2026-09-30T06:52:30Z",
+      "checkedAt": "2026-09-30T07:01:03Z",
       "appCount": 1,
       "httpStatus": 200,
-      "iconURL": "https://cdn.ignitedemulator.com/assets/altstore-icon.png",
+      "iconURL": "",
       "error": null,
       "mixTest": "pass",
       "mixReason": "Classic source structure and downloadable app metadata passed the automated Mix test.",
@@ -1017,10 +981,7 @@
       },
       "duplicateBundleIdentifiers": {
         "count": 0,
-        "duplicateAppEntries": 0,
-        "extraEntries": 0,
-        "items": [],
-        "itemsTruncated": false
+        "examples": []
       },
       "installerCompatibility": {
         "altstore": {
@@ -1044,14 +1005,15 @@
           "reason": "No duplicate bundle identifiers were detected in the source."
         }
       },
-      "preferredVariant": "classic"
+      "preferredVariant": "classic",
+      "aggregationApproved": false
     },
     "mona": {
       "online": true,
-      "checkedAt": "2026-09-30T06:52:30Z",
+      "checkedAt": "2026-09-30T07:01:03Z",
       "appCount": 1,
       "httpStatus": 200,
-      "iconURL": "https://i.imgur.com/PeIdqwy.png",
+      "iconURL": "",
       "error": null,
       "mixTest": "pass",
       "mixReason": "Classic source structure and downloadable app metadata passed the automated Mix test.",
@@ -1072,10 +1034,7 @@
       },
       "duplicateBundleIdentifiers": {
         "count": 0,
-        "duplicateAppEntries": 0,
-        "extraEntries": 0,
-        "items": [],
-        "itemsTruncated": false
+        "examples": []
       },
       "installerCompatibility": {
         "altstore": {
@@ -1099,14 +1058,15 @@
           "reason": "No duplicate bundle identifiers were detected in the source."
         }
       },
-      "preferredVariant": "classic"
+      "preferredVariant": "classic",
+      "aggregationApproved": false
     },
     "vortx": {
       "online": true,
-      "checkedAt": "2026-09-30T06:52:30Z",
+      "checkedAt": "2026-09-30T07:01:03Z",
       "appCount": 2,
       "httpStatus": 200,
-      "iconURL": "https://raw.githubusercontent.com/VortXTV/VortX/main/docs/logo.png",
+      "iconURL": "",
       "error": null,
       "mixTest": "pass",
       "mixReason": "Classic source structure and downloadable app metadata passed the automated Mix test.",
@@ -1127,10 +1087,7 @@
       },
       "duplicateBundleIdentifiers": {
         "count": 0,
-        "duplicateAppEntries": 0,
-        "extraEntries": 0,
-        "items": [],
-        "itemsTruncated": false
+        "examples": []
       },
       "installerCompatibility": {
         "altstore": {
@@ -1154,14 +1111,15 @@
           "reason": "No duplicate bundle identifiers were detected in the source."
         }
       },
-      "preferredVariant": "classic"
+      "preferredVariant": "classic",
+      "aggregationApproved": false
     },
     "stremio-official-pal": {
       "online": true,
-      "checkedAt": "2026-09-30T06:52:30Z",
+      "checkedAt": "2026-09-30T07:01:03Z",
       "appCount": 1,
       "httpStatus": 200,
-      "iconURL": "https://i.imgur.com/ykZuH0r.png",
+      "iconURL": "",
       "error": null,
       "mixTest": "experimental",
       "mixReason": "AltStore PAL source is structurally readable, but notarized marketplace apps can require PAL-specific metadata.",
@@ -1182,20 +1140,18 @@
       },
       "duplicateBundleIdentifiers": {
         "count": 0,
-        "duplicateAppEntries": 0,
-        "extraEntries": 0,
-        "items": [],
-        "itemsTruncated": false
+        "examples": []
       },
       "installerCompatibility": {},
-      "preferredVariant": "pal"
+      "preferredVariant": "pal",
+      "aggregationApproved": false
     },
     "stremio-ios": {
       "online": true,
-      "checkedAt": "2026-09-30T06:52:30Z",
+      "checkedAt": "2026-09-30T07:01:03Z",
       "appCount": 1,
       "httpStatus": 200,
-      "iconURL": "https://www.stremio.com/website/stremio-logo-small.png",
+      "iconURL": "",
       "error": null,
       "mixTest": "pass",
       "mixReason": "Classic source structure and downloadable app metadata passed the automated Mix test.",
@@ -1216,10 +1172,7 @@
       },
       "duplicateBundleIdentifiers": {
         "count": 0,
-        "duplicateAppEntries": 0,
-        "extraEntries": 0,
-        "items": [],
-        "itemsTruncated": false
+        "examples": []
       },
       "installerCompatibility": {
         "altstore": {
@@ -1243,14 +1196,15 @@
           "reason": "No duplicate bundle identifiers were detected in the source."
         }
       },
-      "preferredVariant": "classic"
+      "preferredVariant": "classic",
+      "aggregationApproved": false
     },
     "kodi-ios": {
       "online": true,
-      "checkedAt": "2026-09-30T06:52:30Z",
+      "checkedAt": "2026-09-30T07:01:03Z",
       "appCount": 1,
       "httpStatus": 200,
-      "iconURL": "https://kodi.tv/images/kodi-logo.svg",
+      "iconURL": "",
       "error": null,
       "mixTest": "pass",
       "mixReason": "Classic source structure and downloadable app metadata passed the automated Mix test.",
@@ -1271,10 +1225,7 @@
       },
       "duplicateBundleIdentifiers": {
         "count": 0,
-        "duplicateAppEntries": 0,
-        "extraEntries": 0,
-        "items": [],
-        "itemsTruncated": false
+        "examples": []
       },
       "installerCompatibility": {
         "altstore": {
@@ -1298,11 +1249,12 @@
           "reason": "No duplicate bundle identifiers were detected in the source."
         }
       },
-      "preferredVariant": "classic"
+      "preferredVariant": "classic",
+      "aggregationApproved": false
     },
     "nineanimator": {
       "online": false,
-      "checkedAt": "2026-09-30T06:52:30Z",
+      "checkedAt": "2026-09-30T07:01:03Z",
       "appCount": null,
       "httpStatus": null,
       "iconURL": "",
@@ -1320,10 +1272,10 @@
     },
     "esound": {
       "online": true,
-      "checkedAt": "2026-09-30T06:52:30Z",
+      "checkedAt": "2026-09-30T07:01:03Z",
       "appCount": 1,
       "httpStatus": 200,
-      "iconURL": "https://esound.app/images/altstore/source-icon.png?v=4",
+      "iconURL": "",
       "error": null,
       "mixTest": "experimental",
       "mixReason": "AltStore PAL source is structurally readable, but notarized marketplace apps can require PAL-specific metadata.",
@@ -1344,20 +1296,18 @@
       },
       "duplicateBundleIdentifiers": {
         "count": 0,
-        "duplicateAppEntries": 0,
-        "extraEntries": 0,
-        "items": [],
-        "itemsTruncated": false
+        "examples": []
       },
       "installerCompatibility": {},
-      "preferredVariant": "pal"
+      "preferredVariant": "pal",
+      "aggregationApproved": false
     },
     "partyknights": {
       "online": true,
-      "checkedAt": "2026-09-30T06:52:30Z",
+      "checkedAt": "2026-09-30T07:01:03Z",
       "appCount": 1,
       "httpStatus": 200,
-      "iconURL": "https://partyknights.app/assets/img/icon_128.webp",
+      "iconURL": "",
       "error": null,
       "mixTest": "pass",
       "mixReason": "Classic source structure and downloadable app metadata passed the automated Mix test.",
@@ -1378,10 +1328,7 @@
       },
       "duplicateBundleIdentifiers": {
         "count": 0,
-        "duplicateAppEntries": 0,
-        "extraEntries": 0,
-        "items": [],
-        "itemsTruncated": false
+        "examples": []
       },
       "installerCompatibility": {
         "altstore": {
@@ -1405,11 +1352,12 @@
           "reason": "No duplicate bundle identifiers were detected in the source."
         }
       },
-      "preferredVariant": "classic"
+      "preferredVariant": "classic",
+      "aggregationApproved": false
     },
     "bringyour": {
       "online": false,
-      "checkedAt": "2026-09-30T06:52:30Z",
+      "checkedAt": "2026-09-30T07:01:03Z",
       "appCount": null,
       "httpStatus": null,
       "iconURL": "",
@@ -1427,10 +1375,10 @@
     },
     "itorrent": {
       "online": true,
-      "checkedAt": "2026-09-30T06:52:30Z",
+      "checkedAt": "2026-09-30T07:01:03Z",
       "appCount": 1,
       "httpStatus": 200,
-      "iconURL": "https://raw.githubusercontent.com/XITRIX/xitrix.github.io/master/sourceIcon.png",
+      "iconURL": "",
       "error": null,
       "mixTest": "pass",
       "mixReason": "Classic source structure and downloadable app metadata passed the automated Mix test.",
@@ -1451,10 +1399,7 @@
       },
       "duplicateBundleIdentifiers": {
         "count": 0,
-        "duplicateAppEntries": 0,
-        "extraEntries": 0,
-        "items": [],
-        "itemsTruncated": false
+        "examples": []
       },
       "installerCompatibility": {
         "altstore": {
@@ -1478,14 +1423,15 @@
           "reason": "No duplicate bundle identifiers were detected in the source."
         }
       },
-      "preferredVariant": "classic"
+      "preferredVariant": "classic",
+      "aggregationApproved": false
     },
     "qbitconnect": {
       "online": true,
-      "checkedAt": "2026-09-30T06:52:30Z",
+      "checkedAt": "2026-09-30T07:01:03Z",
       "appCount": 1,
       "httpStatus": 200,
-      "iconURL": "https://raw.githubusercontent.com/RajnishOne/altstore-releases/main//icons/general/bluematter.png",
+      "iconURL": "",
       "error": null,
       "mixTest": "pass",
       "mixReason": "Classic source structure and downloadable app metadata passed the automated Mix test.",
@@ -1519,10 +1465,7 @@
       },
       "duplicateBundleIdentifiers": {
         "count": 0,
-        "duplicateAppEntries": 0,
-        "extraEntries": 0,
-        "items": [],
-        "itemsTruncated": false
+        "examples": []
       },
       "installerCompatibility": {
         "altstore": {
@@ -1546,14 +1489,15 @@
           "reason": "No duplicate bundle identifiers were detected in the source."
         }
       },
-      "preferredVariant": "classic"
+      "preferredVariant": "classic",
+      "aggregationApproved": false
     },
     "artemis": {
       "online": true,
-      "checkedAt": "2026-09-30T06:52:30Z",
+      "checkedAt": "2026-09-30T07:01:03Z",
       "appCount": 1,
       "httpStatus": 200,
-      "iconURL": "https://avatars.githubusercontent.com/u/28218457?v=4",
+      "iconURL": "",
       "error": null,
       "mixTest": "pass",
       "mixReason": "Classic source structure and downloadable app metadata passed the automated Mix test.",
@@ -1587,10 +1531,7 @@
       },
       "duplicateBundleIdentifiers": {
         "count": 0,
-        "duplicateAppEntries": 0,
-        "extraEntries": 0,
-        "items": [],
-        "itemsTruncated": false
+        "examples": []
       },
       "installerCompatibility": {
         "altstore": {
@@ -1614,14 +1555,15 @@
           "reason": "No duplicate bundle identifiers were detected in the source."
         }
       },
-      "preferredVariant": "classic"
+      "preferredVariant": "classic",
+      "aggregationApproved": false
     },
     "hackerwebapp": {
       "online": true,
-      "checkedAt": "2026-09-30T06:52:30Z",
+      "checkedAt": "2026-09-30T07:01:03Z",
       "appCount": 1,
       "httpStatus": 200,
-      "iconURL": "https://raw.githubusercontent.com/cheeaun/hackerweb-native-2/main/assets/icon.png",
+      "iconURL": "",
       "error": null,
       "mixTest": "experimental",
       "mixReason": "AltStore PAL source is structurally readable, but notarized marketplace apps can require PAL-specific metadata.",
@@ -1642,20 +1584,18 @@
       },
       "duplicateBundleIdentifiers": {
         "count": 0,
-        "duplicateAppEntries": 0,
-        "extraEntries": 0,
-        "items": [],
-        "itemsTruncated": false
+        "examples": []
       },
       "installerCompatibility": {},
-      "preferredVariant": "pal"
+      "preferredVariant": "pal",
+      "aggregationApproved": false
     },
     "courtpredict": {
       "online": true,
-      "checkedAt": "2026-09-30T06:52:30Z",
+      "checkedAt": "2026-09-30T07:01:03Z",
       "appCount": 1,
       "httpStatus": 200,
-      "iconURL": "https://courtpredict-ios.web.app/icons/source.png",
+      "iconURL": "",
       "error": null,
       "mixTest": "experimental",
       "mixReason": "AltStore PAL source is structurally readable, but notarized marketplace apps can require PAL-specific metadata.",
@@ -1676,20 +1616,18 @@
       },
       "duplicateBundleIdentifiers": {
         "count": 0,
-        "duplicateAppEntries": 0,
-        "extraEntries": 0,
-        "items": [],
-        "itemsTruncated": false
+        "examples": []
       },
       "installerCompatibility": {},
-      "preferredVariant": "pal"
+      "preferredVariant": "pal",
+      "aggregationApproved": false
     },
     "wayfarer": {
       "online": true,
-      "checkedAt": "2026-09-30T06:52:30Z",
+      "checkedAt": "2026-09-30T07:01:03Z",
       "appCount": 1,
       "httpStatus": 200,
-      "iconURL": "https://stor-cdn.f8d.rocks/wf/icon.png",
+      "iconURL": "",
       "error": null,
       "mixTest": "pass",
       "mixReason": "Classic source structure and downloadable app metadata passed the automated Mix test.",
@@ -1710,10 +1648,7 @@
       },
       "duplicateBundleIdentifiers": {
         "count": 0,
-        "duplicateAppEntries": 0,
-        "extraEntries": 0,
-        "items": [],
-        "itemsTruncated": false
+        "examples": []
       },
       "installerCompatibility": {
         "altstore": {
@@ -1737,14 +1672,15 @@
           "reason": "No duplicate bundle identifiers were detected in the source."
         }
       },
-      "preferredVariant": "classic"
+      "preferredVariant": "classic",
+      "aggregationApproved": false
     },
     "qbitcontrol": {
       "online": true,
-      "checkedAt": "2026-09-30T06:52:30Z",
+      "checkedAt": "2026-09-30T07:01:03Z",
       "appCount": 1,
       "httpStatus": 200,
-      "iconURL": "https://raw.githubusercontent.com/Michael-128/qBitControl/main/qBitControl/Assets.xcassets/AppIcon.appiconset/logo1.png",
+      "iconURL": "",
       "error": null,
       "mixTest": "pass",
       "mixReason": "Classic source structure and downloadable app metadata passed the automated Mix test.",
@@ -1778,10 +1714,7 @@
       },
       "duplicateBundleIdentifiers": {
         "count": 0,
-        "duplicateAppEntries": 0,
-        "extraEntries": 0,
-        "items": [],
-        "itemsTruncated": false
+        "examples": []
       },
       "installerCompatibility": {
         "altstore": {
@@ -1805,14 +1738,15 @@
           "reason": "No duplicate bundle identifiers were detected in the source."
         }
       },
-      "preferredVariant": "classic"
+      "preferredVariant": "classic",
+      "aggregationApproved": false
     },
     "iphanpy": {
       "online": true,
-      "checkedAt": "2026-09-30T06:52:30Z",
+      "checkedAt": "2026-09-30T07:01:03Z",
       "appCount": 1,
       "httpStatus": 200,
-      "iconURL": "https://i.imgur.com/AAsffEA.png",
+      "iconURL": "",
       "error": null,
       "mixTest": "experimental",
       "mixReason": "AltStore PAL source is structurally readable, but notarized marketplace apps can require PAL-specific metadata.",
@@ -1833,20 +1767,18 @@
       },
       "duplicateBundleIdentifiers": {
         "count": 0,
-        "duplicateAppEntries": 0,
-        "extraEntries": 0,
-        "items": [],
-        "itemsTruncated": false
+        "examples": []
       },
       "installerCompatibility": {},
-      "preferredVariant": "pal"
+      "preferredVariant": "pal",
+      "aggregationApproved": false
     },
     "epic-games": {
       "online": true,
-      "checkedAt": "2026-09-30T06:52:30Z",
+      "checkedAt": "2026-09-30T07:01:03Z",
       "appCount": 3,
       "httpStatus": 200,
-      "iconURL": "https://content-download-egs.distro.on.epicgames.com/.well-known/EG-Shield-2023-Black-dual-tone-expanded.png",
+      "iconURL": "",
       "error": null,
       "mixTest": "experimental",
       "mixReason": "AltStore PAL source is structurally readable, but notarized marketplace apps can require PAL-specific metadata.",
@@ -1867,20 +1799,18 @@
       },
       "duplicateBundleIdentifiers": {
         "count": 0,
-        "duplicateAppEntries": 0,
-        "extraEntries": 0,
-        "items": [],
-        "itemsTruncated": false
+        "examples": []
       },
       "installerCompatibility": {},
-      "preferredVariant": "pal"
+      "preferredVariant": "pal",
+      "aggregationApproved": false
     },
     "xn1ckuz-sidebox": {
       "online": true,
-      "checkedAt": "2026-09-30T06:52:30Z",
+      "checkedAt": "2026-09-30T07:01:03Z",
       "appCount": 4,
       "httpStatus": 200,
-      "iconURL": "https://avatars.githubusercontent.com/u/74825012?v=4",
+      "iconURL": "",
       "error": null,
       "mixTest": "pass",
       "mixReason": "Classic source structure and downloadable app metadata passed the automated Mix test.",
@@ -1901,10 +1831,7 @@
       },
       "duplicateBundleIdentifiers": {
         "count": 0,
-        "duplicateAppEntries": 0,
-        "extraEntries": 0,
-        "items": [],
-        "itemsTruncated": false
+        "examples": []
       },
       "installerCompatibility": {
         "altstore": {
@@ -1928,14 +1855,15 @@
           "reason": "No duplicate bundle identifiers were detected in the source."
         }
       },
-      "preferredVariant": "classic"
+      "preferredVariant": "classic",
+      "aggregationApproved": false
     },
     "dvntm0-workshop": {
       "online": true,
-      "checkedAt": "2026-09-30T06:52:30Z",
+      "checkedAt": "2026-09-30T07:01:03Z",
       "appCount": 7,
       "httpStatus": 200,
-      "iconURL": "https://raw.githubusercontent.com/dayanch96/YTLite/refs/heads/main/Resources/icon.png",
+      "iconURL": "",
       "error": null,
       "mixTest": "pass",
       "mixReason": "Classic source structure and downloadable app metadata passed the automated Mix test.",
@@ -1956,10 +1884,7 @@
       },
       "duplicateBundleIdentifiers": {
         "count": 0,
-        "duplicateAppEntries": 0,
-        "extraEntries": 0,
-        "items": [],
-        "itemsTruncated": false
+        "examples": []
       },
       "installerCompatibility": {
         "altstore": {
@@ -1983,14 +1908,15 @@
           "reason": "No duplicate bundle identifiers were detected in the source."
         }
       },
-      "preferredVariant": "classic"
+      "preferredVariant": "classic",
+      "aggregationApproved": false
     },
     "wuxu-library-plus": {
       "online": true,
-      "checkedAt": "2026-09-30T06:52:30Z",
+      "checkedAt": "2026-09-30T07:01:03Z",
       "appCount": 13,
       "httpStatus": 200,
-      "iconURL": "https://external-content.duckduckgo.com/iu/?u=https://i.imgur.com/g17kMl9.jpeg",
+      "iconURL": "",
       "error": null,
       "mixTest": "pass",
       "mixReason": "Classic source structure and downloadable app metadata passed the automated Mix test.",
@@ -2011,10 +1937,7 @@
       },
       "duplicateBundleIdentifiers": {
         "count": 0,
-        "duplicateAppEntries": 0,
-        "extraEntries": 0,
-        "items": [],
-        "itemsTruncated": false
+        "examples": []
       },
       "installerCompatibility": {
         "altstore": {
@@ -2038,14 +1961,15 @@
           "reason": "No duplicate bundle identifiers were detected in the source."
         }
       },
-      "preferredVariant": "classic"
+      "preferredVariant": "classic",
+      "aggregationApproved": false
     },
     "baretsky-tweaked": {
       "online": true,
-      "checkedAt": "2026-09-30T06:52:30Z",
+      "checkedAt": "2026-09-30T07:01:03Z",
       "appCount": 7,
       "httpStatus": 200,
-      "iconURL": "https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png",
+      "iconURL": "",
       "error": null,
       "mixTest": "pass",
       "mixReason": "Classic source structure and downloadable app metadata passed the automated Mix test.",
@@ -2066,10 +1990,7 @@
       },
       "duplicateBundleIdentifiers": {
         "count": 0,
-        "duplicateAppEntries": 0,
-        "extraEntries": 0,
-        "items": [],
-        "itemsTruncated": false
+        "examples": []
       },
       "installerCompatibility": {
         "altstore": {
@@ -2093,14 +2014,15 @@
           "reason": "No duplicate bundle identifiers were detected in the source."
         }
       },
-      "preferredVariant": "classic"
+      "preferredVariant": "classic",
+      "aggregationApproved": false
     },
     "driftywinds": {
       "online": true,
-      "checkedAt": "2026-09-30T06:52:30Z",
+      "checkedAt": "2026-09-30T07:01:03Z",
       "appCount": 10,
       "httpStatus": 200,
-      "iconURL": "https://i.postimg.cc/Kcdr62dc/dp-rounded.png",
+      "iconURL": "",
       "error": null,
       "mixTest": "pass",
       "mixReason": "Classic source structure and downloadable app metadata passed the automated Mix test.",
@@ -2121,10 +2043,7 @@
       },
       "duplicateBundleIdentifiers": {
         "count": 0,
-        "duplicateAppEntries": 0,
-        "extraEntries": 0,
-        "items": [],
-        "itemsTruncated": false
+        "examples": []
       },
       "installerCompatibility": {
         "altstore": {
@@ -2148,14 +2067,15 @@
           "reason": "No duplicate bundle identifiers were detected in the source."
         }
       },
-      "preferredVariant": "classic"
+      "preferredVariant": "classic",
+      "aggregationApproved": false
     },
     "ipa-vault": {
       "online": true,
-      "checkedAt": "2026-09-30T06:52:30Z",
+      "checkedAt": "2026-09-30T07:01:03Z",
       "appCount": 63,
       "httpStatus": 200,
-      "iconURL": "https://pub-dd800571175348b6a2745b3396360028.r2.dev/ipavault-altstore-repo-logo.png",
+      "iconURL": "",
       "error": null,
       "mixTest": "pass",
       "mixReason": "Classic source structure and downloadable app metadata passed the automated Mix test.",
@@ -2176,10 +2096,7 @@
       },
       "duplicateBundleIdentifiers": {
         "count": 0,
-        "duplicateAppEntries": 0,
-        "extraEntries": 0,
-        "items": [],
-        "itemsTruncated": false
+        "examples": []
       },
       "installerCompatibility": {
         "altstore": {
@@ -2203,14 +2120,15 @@
           "reason": "No duplicate bundle identifiers were detected in the source."
         }
       },
-      "preferredVariant": "classic"
+      "preferredVariant": "classic",
+      "aggregationApproved": false
     },
     "sideloadlabs": {
       "online": true,
-      "checkedAt": "2026-09-30T06:52:30Z",
+      "checkedAt": "2026-09-30T07:01:03Z",
       "appCount": 4,
       "httpStatus": 200,
-      "iconURL": "https://avatars.githubusercontent.com/u/312393257?s=96&v=4",
+      "iconURL": "",
       "error": null,
       "mixTest": "pass",
       "mixReason": "Classic source structure and downloadable app metadata passed the automated Mix test.",
@@ -2231,10 +2149,7 @@
       },
       "duplicateBundleIdentifiers": {
         "count": 0,
-        "duplicateAppEntries": 0,
-        "extraEntries": 0,
-        "items": [],
-        "itemsTruncated": false
+        "examples": []
       },
       "installerCompatibility": {
         "altstore": {
@@ -2258,14 +2173,15 @@
           "reason": "No duplicate bundle identifiers were detected in the source."
         }
       },
-      "preferredVariant": "classic"
+      "preferredVariant": "classic",
+      "aggregationApproved": false
     },
     "ytliteplus": {
       "online": true,
-      "checkedAt": "2026-09-30T06:52:30Z",
+      "checkedAt": "2026-09-30T07:01:03Z",
       "appCount": 1,
       "httpStatus": 200,
-      "iconURL": "https://raw.githubusercontent.com/YTLitePlus/YTLitePlus-Altstore/main/Youtube_logo-512.png",
+      "iconURL": "",
       "error": null,
       "mixTest": "pass",
       "mixReason": "Classic source structure and downloadable app metadata passed the automated Mix test.",
@@ -2286,10 +2202,7 @@
       },
       "duplicateBundleIdentifiers": {
         "count": 0,
-        "duplicateAppEntries": 0,
-        "extraEntries": 0,
-        "items": [],
-        "itemsTruncated": false
+        "examples": []
       },
       "installerCompatibility": {
         "altstore": {
@@ -2313,14 +2226,15 @@
           "reason": "No duplicate bundle identifiers were detected in the source."
         }
       },
-      "preferredVariant": "classic"
+      "preferredVariant": "classic",
+      "aggregationApproved": false
     },
     "moe-altstore": {
       "online": true,
-      "checkedAt": "2026-09-30T06:52:30Z",
+      "checkedAt": "2026-09-30T07:01:03Z",
       "appCount": 34,
       "httpStatus": 200,
-      "iconURL": "https://raw.githubusercontent.com/MountainofPenguin/moe-altstore/main/icons/moe_icon.png",
+      "iconURL": "",
       "error": null,
       "mixTest": "experimental",
       "mixReason": "26 app entries share a bundle identifier; a Mix would collapse variants to one app.",
@@ -2389,58 +2303,7 @@
       },
       "duplicateBundleIdentifiers": {
         "count": 4,
-        "duplicateAppEntries": 30,
-        "extraEntries": 26,
-        "items": [
-          {
-            "bundleIdentifier": "com.burbn.instagram",
-            "count": 14,
-            "names": [
-              "Instagram (Moe Multi)",
-              "Instagram (AC)",
-              "Instagram (BH)",
-              "Instagram (DL, Cracked)",
-              "Instagram (IGFormat)",
-              "Instagram (INK Plus)",
-              "Instagram (LRD, Cracked)",
-              "Instagram (Moe RyukGram)"
-            ]
-          },
-          {
-            "bundleIdentifier": "com.google.ios.youtube",
-            "count": 9,
-            "names": [
-              "YouTube (Moe Multi)",
-              "YouTube (Moe YTK)",
-              "YouTube (YTPlus Cyan Edition)",
-              "YouTube (LRD)",
-              "YouTube (DLTube, Moe Patched)",
-              "YouTube (Moe DLTube, Cracked)",
-              "YouTube (Moe LRD, Cracked)",
-              "YouTube (Moe SY)"
-            ]
-          },
-          {
-            "bundleIdentifier": "tv.twitch",
-            "count": 5,
-            "names": [
-              "Twitch",
-              "Twitch (Adfree, Moe Control)",
-              "Twitch (Tweach)",
-              "Twitch (Moe TwitchControl)",
-              "Twitch (Twitchv, Moe Tweach)"
-            ]
-          },
-          {
-            "bundleIdentifier": "com.firecore.infuse",
-            "count": 2,
-            "names": [
-              "Infuse (Moe Plus)",
-              "Infuse (Plus 2.5)"
-            ]
-          }
-        ],
-        "itemsTruncated": false
+        "examples": []
       },
       "installerCompatibility": {
         "altstore": {
@@ -2466,14 +2329,15 @@
           "reason": "4 duplicate bundle identifiers are present. The source parser can keep separate entries, but installing multiple variants with the same bundle identifier can still conflict."
         }
       },
-      "preferredVariant": "classic"
+      "preferredVariant": "classic",
+      "aggregationApproved": false
     },
     "youmod-repo": {
       "online": true,
-      "checkedAt": "2026-09-30T06:52:30Z",
+      "checkedAt": "2026-09-30T07:01:03Z",
       "appCount": 1,
       "httpStatus": 200,
-      "iconURL": "https://raw.githubusercontent.com/MountainofPenguin/Altstore-Repository/main/assets/IMG_2642.png",
+      "iconURL": "",
       "error": null,
       "mixTest": "pass",
       "mixReason": "Classic source structure and downloadable app metadata passed the automated Mix test.",
@@ -2494,10 +2358,7 @@
       },
       "duplicateBundleIdentifiers": {
         "count": 0,
-        "duplicateAppEntries": 0,
-        "extraEntries": 0,
-        "items": [],
-        "itemsTruncated": false
+        "examples": []
       },
       "installerCompatibility": {
         "altstore": {
@@ -2521,14 +2382,15 @@
           "reason": "No duplicate bundle identifiers were detected in the source."
         }
       },
-      "preferredVariant": "classic"
+      "preferredVariant": "classic",
+      "aggregationApproved": false
     },
     "youproextra": {
       "online": true,
-      "checkedAt": "2026-09-30T06:52:30Z",
+      "checkedAt": "2026-09-30T07:01:03Z",
       "appCount": 5,
       "httpStatus": 200,
-      "iconURL": "https://raw.githubusercontent.com/mrdrvt99/Altstore-Repository/main/assets/YouTube.png",
+      "iconURL": "",
       "error": null,
       "mixTest": "experimental",
       "mixReason": "4 app entries share a bundle identifier; a Mix would collapse variants to one app.",
@@ -2561,22 +2423,7 @@
       },
       "duplicateBundleIdentifiers": {
         "count": 1,
-        "duplicateAppEntries": 5,
-        "extraEntries": 4,
-        "items": [
-          {
-            "bundleIdentifier": "com.google.ios.youtube",
-            "count": 5,
-            "names": [
-              "YoutubePlus (YTLite)",
-              "YTKillerPlus",
-              "YTKACE",
-              "YouPro",
-              "YouMod"
-            ]
-          }
-        ],
-        "itemsTruncated": false
+        "examples": []
       },
       "installerCompatibility": {
         "altstore": {
@@ -2602,14 +2449,15 @@
           "reason": "1 duplicate bundle identifiers are present. The source parser can keep separate entries, but installing multiple variants with the same bundle identifier can still conflict."
         }
       },
-      "preferredVariant": "classic"
+      "preferredVariant": "classic",
+      "aggregationApproved": false
     },
     "owo-source": {
       "online": true,
-      "checkedAt": "2026-09-30T06:52:30Z",
+      "checkedAt": "2026-09-30T07:01:03Z",
       "appCount": 155,
       "httpStatus": 200,
-      "iconURL": "https://raw.githubusercontent.com/OwO-Network/Repo/main/icons/owo.repo.icon.png",
+      "iconURL": "",
       "error": null,
       "mixTest": "experimental",
       "mixReason": "128 app entries share a bundle identifier; a Mix would collapse variants to one app.",
@@ -2725,105 +2573,7 @@
       },
       "duplicateBundleIdentifiers": {
         "count": 13,
-        "duplicateAppEntries": 141,
-        "extraEntries": 128,
-        "items": [
-          {
-            "bundleIdentifier": "com.tencent.xin",
-            "count": 67,
-            "names": [
-              "WeChat"
-            ]
-          },
-          {
-            "bundleIdentifier": "com.burbn.instagram",
-            "count": 16,
-            "names": [
-              "Instagram"
-            ]
-          },
-          {
-            "bundleIdentifier": "com.example.piliplus",
-            "count": 16,
-            "names": [
-              "PiliPlus"
-            ]
-          },
-          {
-            "bundleIdentifier": "com.atebits.Tweetie2",
-            "count": 12,
-            "names": [
-              "Twitter",
-              "X"
-            ]
-          },
-          {
-            "bundleIdentifier": "com.ss.iphone.ugc.Aweme",
-            "count": 8,
-            "names": [
-              "Douyin",
-              "Aweme",
-              "DouYin"
-            ]
-          },
-          {
-            "bundleIdentifier": "wiki.qaq.Asspp",
-            "count": 5,
-            "names": [
-              "Asspp"
-            ]
-          },
-          {
-            "bundleIdentifier": "app.aidoku.Aidoku",
-            "count": 3,
-            "names": [
-              "Aidoku"
-            ]
-          },
-          {
-            "bundleIdentifier": "kh.crysalis.feather",
-            "count": 3,
-            "names": [
-              "Feather"
-            ]
-          },
-          {
-            "bundleIdentifier": "uclort.com.AppInfo",
-            "count": 3,
-            "names": [
-              "AppInfo"
-            ]
-          },
-          {
-            "bundleIdentifier": "app.swiftgram.ios",
-            "count": 2,
-            "names": [
-              "Swiftgram"
-            ]
-          },
-          {
-            "bundleIdentifier": "com.blink.academy.nomoraw",
-            "count": 2,
-            "names": [
-              "NOMORAW"
-            ]
-          },
-          {
-            "bundleIdentifier": "com.javdb.com",
-            "count": 2,
-            "names": [
-              "JavDB"
-            ]
-          },
-          {
-            "bundleIdentifier": "com.taobao.fleamarket",
-            "count": 2,
-            "names": [
-              "XianYu"
-            ]
-          }
-        ],
-        "itemsTruncated": false
+        "examples": []
       },
       "installerCompatibility": {
         "altstore": {
@@ -2849,14 +2599,15 @@
           "reason": "13 duplicate bundle identifiers are present. The source parser can keep separate entries, but installing multiple variants with the same bundle identifier can still conflict."
         }
       },
-      "preferredVariant": "classic"
+      "preferredVariant": "classic",
+      "aggregationApproved": false
     },
     "cypwn-ipa": {
       "online": true,
-      "checkedAt": "2026-09-30T06:52:30Z",
+      "checkedAt": "2026-09-30T07:01:03Z",
       "appCount": 209,
       "httpStatus": 200,
-      "iconURL": "https://repo.cypwn.xyz/assets/images/cypwn_small.png",
+      "iconURL": "",
       "error": null,
       "mixTest": "experimental",
       "mixReason": "29 app entries share a bundle identifier; a Mix would collapse variants to one app.",
@@ -3012,145 +2763,7 @@
       },
       "duplicateBundleIdentifiers": {
         "count": 15,
-        "duplicateAppEntries": 44,
-        "extraEntries": 29,
-        "items": [
-          {
-            "bundleIdentifier": "com.burbn.instagram",
-            "count": 8,
-            "names": [
-              "Theta_1.5",
-              "Theta_1_4",
-              "Regram_1.0-b10_351.0.1",
-              "Regram_1.0-b10_347.2.5",
-              "Regram_1.0-b8_343.0.0",
-              "IGRocketRegram_1.0-b7_338.0.0",
-              "Regram_1.0-b7_335.1.8",
-              "Regram_1.0-b7_335.0.8"
-            ]
-          },
-          {
-            "bundleIdentifier": "com.spotify.client",
-            "count": 6,
-            "names": [
-              "EeveeSpotify-5.9.5-9.0.36",
-              "EeveeSpotify-5.8.8-9.0.26",
-              "EeveeSpotify-5.8.6-9.0.14",
-              "EeveeSpotify-5.8-8.9.90",
-              "EeveeSpotify-4.9-8.9.68",
-              "Spotify++8.6.94_CyPwn"
-            ]
-          },
-          {
-            "bundleIdentifier": "com.gopeed.gopeed",
-            "count": 3,
-            "names": [
-              "Gopeed-v1.8.3-ios",
-              "Gopeed_1.7.0",
-              "Gopeed_1.6.10"
-            ]
-          },
-          {
-            "bundleIdentifier": "com.picsart.studio",
-            "count": 3,
-            "names": [
-              "Picsart_25.5.1_Cracked",
-              "Picsart_25.4.2_Premium",
-              "PicsArt_25.1.2"
-            ]
-          },
-          {
-            "bundleIdentifier": "com.readdle.smartemail",
-            "count": 3,
-            "names": [
-              "Spark_3.9.12",
-              "Spark_3.9.11",
-              "Spark_3.9.2"
-            ]
-          },
-          {
-            "bundleIdentifier": "com.stratospherix.filebrowserbiz",
-            "count": 3,
-            "names": [
-              "FileBrowser_Pro_25.7",
-              "FileBrowser_Pro_25.6",
-              "FileBrowser_Pro_25.5"
-            ]
-          },
-          {
-            "bundleIdentifier": "com.getmimo.mimo",
-            "count": 2,
-            "names": [
-              "Mimo_6.48.0_Premium",
-              "MimoPro_6.43"
-            ]
-          },
-          {
-            "bundleIdentifier": "com.gogolith.gocoed",
-            "count": 2,
-            "names": [
-              "GoCoEdit_23.0",
-              "GoCoEdit_22.3"
-            ]
-          },
-          {
-            "bundleIdentifier": "com.hammerandchisel.discord",
-            "count": 2,
-            "names": [
-              "Discord_228.1_Pyoncord",
-              "Bunny_Pyoncord_224.0"
-            ]
-          },
-          {
-            "bundleIdentifier": "com.kdt.livecontainer",
-            "count": 2,
-            "names": [
-              "LiveContainer_2.0",
-              "LiveContainer_1.0"
-            ]
-          },
-          {
-            "bundleIdentifier": "com.microblink.PhotoMath",
-            "count": 2,
-            "names": [
-              "Photomath_8.42.0",
-              "PhotoMathPlus_8.35.0"
-            ]
-          },
-          {
-            "bundleIdentifier": "com.stremio.pal",
-            "count": 2,
-            "names": [
-              "Stremio-2.0.6",
-              "Stremio-2.0.0"
-            ]
-          },
-          {
-            "bundleIdentifier": "com.trueaxis.skate",
-            "count": 2,
-            "names": [
-              "True_Skate_1.5.102",
-              "True_Skate_1.5.95"
-            ]
-          },
-          {
-            "bundleIdentifier": "Ed0ardo.CyPwnStore",
-            "count": 2,
-            "names": [
-              "CyPwnStore_7.1",
-              "CyPwn_Store"
-            ]
-          },
-          {
-            "bundleIdentifier": "Lilliana.Violyn",
-            "count": 2,
-            "names": [
-              "Violyn_1_4_4-2",
-              "Violyn_1.4.2"
-            ]
-          }
-        ],
-        "itemsTruncated": false
+        "examples": []
       },
       "installerCompatibility": {
         "altstore": {
@@ -3176,14 +2789,15 @@
           "reason": "15 duplicate bundle identifiers are present. The source parser can keep separate entries, but installing multiple variants with the same bundle identifier can still conflict."
         }
       },
-      "preferredVariant": "classic"
+      "preferredVariant": "classic",
+      "aggregationApproved": false
     },
     "apptesters": {
       "online": true,
-      "checkedAt": "2026-09-30T06:52:30Z",
+      "checkedAt": "2026-09-30T07:01:03Z",
       "appCount": 9402,
       "httpStatus": 200,
-      "iconURL": "https://apptesters.org/apptesters-512x512.png",
+      "iconURL": "",
       "error": null,
       "mixTest": "experimental",
       "mixReason": "8617 app entries share a bundle identifier; a Mix would collapse variants to one app.",
@@ -3351,157 +2965,7 @@
       },
       "duplicateBundleIdentifiers": {
         "count": 550,
-        "duplicateAppEntries": 9167,
-        "extraEntries": 8617,
-        "items": [
-          {
-            "bundleIdentifier": "tech.miidii.MDBlank",
-            "count": 161,
-            "names": [
-              "Unknown app"
-            ]
-          },
-          {
-            "bundleIdentifier": "com.ulisesolave.Fitia",
-            "count": 112,
-            "names": [
-              "Fitia"
-            ]
-          },
-          {
-            "bundleIdentifier": "com.sfun.snapedit",
-            "count": 110,
-            "names": [
-              "SnapEdit"
-            ]
-          },
-          {
-            "bundleIdentifier": "com.risesci.nyx",
-            "count": 102,
-            "names": [
-              "RiseSleep"
-            ]
-          },
-          {
-            "bundleIdentifier": "boomer.Smart-Video",
-            "count": 85,
-            "names": [
-              "Captions",
-              "Widgy"
-            ]
-          },
-          {
-            "bundleIdentifier": "com.wellocution.iosapp",
-            "count": 76,
-            "names": [
-              "BoldVoice"
-            ]
-          },
-          {
-            "bundleIdentifier": "com.gingerlabs.Notability",
-            "count": 75,
-            "names": [
-              "Notability"
-            ]
-          },
-          {
-            "bundleIdentifier": "com.locket.Locket",
-            "count": 74,
-            "names": [
-              "Locket"
-            ]
-          },
-          {
-            "bundleIdentifier": "com.yazio.ios.YAZIO",
-            "count": 74,
-            "names": [
-              "Yazio",
-              "YAZIO"
-            ]
-          },
-          {
-            "bundleIdentifier": "com.dopedevelopment.Panels",
-            "count": 72,
-            "names": [
-              "SCRL"
-            ]
-          },
-          {
-            "bundleIdentifier": "com.lightricks.Facetune2",
-            "count": 69,
-            "names": [
-              "Facetune"
-            ]
-          },
-          {
-            "bundleIdentifier": "com.picsart.studio",
-            "count": 67,
-            "names": [
-              "Picsart",
-              "PicsArt"
-            ]
-          },
-          {
-            "bundleIdentifier": "com.duolingo.DuolingoMobile",
-            "count": 63,
-            "names": [
-              "Duolingo",
-              "DuolingoMaxPublic"
-            ]
-          },
-          {
-            "bundleIdentifier": "com.myfitnesspal.mfp",
-            "count": 63,
-            "names": [
-              "MyFitnessPal"
-            ]
-          },
-          {
-            "bundleIdentifier": "com.dr1ven.eraser",
-            "count": 60,
-            "names": [
-              "Photoroom"
-            ]
-          },
-          {
-            "bundleIdentifier": "com.zerone.hidesktop",
-            "count": 60,
-            "names": [
-              "iScreen",
-              "HiWidget"
-            ]
-          },
-          {
-            "bundleIdentifier": "com.atebits.Tweetie2",
-            "count": 59,
-            "names": [
-              "X",
-              "Twitter"
-            ]
-          },
-          {
-            "bundleIdentifier": "com.mwm.procolor",
-            "count": 59,
-            "names": [
-              "ColorPop"
-            ]
-          },
-          {
-            "bundleIdentifier": "com.burbn.instagram",
-            "count": 58,
-            "names": [
-              "Instagram"
-            ]
-          },
-          {
-            "bundleIdentifier": "com.elevateapp.elevate",
-            "count": 58,
-            "names": [
-              "Elevate"
-            ]
-          }
-        ],
-        "itemsTruncated": true
+        "examples": []
       },
       "installerCompatibility": {
         "altstore": {
@@ -3527,14 +2991,15 @@
           "reason": "550 duplicate bundle identifiers are present. The source parser can keep separate entries, but installing multiple variants with the same bundle identifier can still conflict."
         }
       },
-      "preferredVariant": "classic"
+      "preferredVariant": "classic",
+      "aggregationApproved": false
     },
     "youtuberebornplus": {
       "online": true,
-      "checkedAt": "2026-09-30T06:52:30Z",
+      "checkedAt": "2026-09-30T07:01:03Z",
       "appCount": 1,
       "httpStatus": 200,
-      "iconURL": "https://raw.githubusercontent.com/arichornlover/YouTube-Reborn-v5/main/layout/Library/Application%20Support/YouTubeReborn.bundle/ytrebornbuttonblack.png",
+      "iconURL": "",
       "error": null,
       "mixTest": "pass",
       "mixReason": "Classic source structure and downloadable app metadata passed the automated Mix test.",
@@ -3555,10 +3020,7 @@
       },
       "duplicateBundleIdentifiers": {
         "count": 0,
-        "duplicateAppEntries": 0,
-        "extraEntries": 0,
-        "items": [],
-        "itemsTruncated": false
+        "examples": []
       },
       "installerCompatibility": {
         "altstore": {
@@ -3582,14 +3044,15 @@
           "reason": "No duplicate bundle identifiers were detected in the source."
         }
       },
-      "preferredVariant": "classic"
+      "preferredVariant": "classic",
+      "aggregationApproved": false
     },
     "apollo-reddit": {
       "online": true,
-      "checkedAt": "2026-09-30T06:52:30Z",
+      "checkedAt": "2026-09-30T07:01:03Z",
       "appCount": 1,
       "httpStatus": 200,
-      "iconURL": "https://raw.githubusercontent.com/Balackburn/Apollo/main/public/images/image_0.webp",
+      "iconURL": "",
       "error": null,
       "mixTest": "pass",
       "mixReason": "Classic source structure and downloadable app metadata passed the automated Mix test.",
@@ -3610,10 +3073,7 @@
       },
       "duplicateBundleIdentifiers": {
         "count": 0,
-        "duplicateAppEntries": 0,
-        "extraEntries": 0,
-        "items": [],
-        "itemsTruncated": false
+        "examples": []
       },
       "installerCompatibility": {
         "altstore": {
@@ -3637,14 +3097,15 @@
           "reason": "No duplicate bundle identifiers were detected in the source."
         }
       },
-      "preferredVariant": "classic"
+      "preferredVariant": "classic",
+      "aggregationApproved": false
     },
     "discord-appstore-builds": {
       "online": true,
-      "checkedAt": "2026-09-30T06:52:30Z",
+      "checkedAt": "2026-09-30T07:01:03Z",
       "appCount": 1,
       "httpStatus": 200,
-      "iconURL": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/7c/c1/d5/7cc1d552-fca9-bc19-a585-28644c009f4b/AppIcon-0-0-1x_U007epad-0-1-0-sRGB-85-220.png/512x512bb.jpg",
+      "iconURL": "",
       "error": null,
       "mixTest": "pass",
       "mixReason": "Classic source structure and downloadable app metadata passed the automated Mix test.",
@@ -3665,10 +3126,7 @@
       },
       "duplicateBundleIdentifiers": {
         "count": 0,
-        "duplicateAppEntries": 0,
-        "extraEntries": 0,
-        "items": [],
-        "itemsTruncated": false
+        "examples": []
       },
       "installerCompatibility": {
         "altstore": {
@@ -3692,14 +3150,15 @@
           "reason": "No duplicate bundle identifiers were detected in the source."
         }
       },
-      "preferredVariant": "classic"
+      "preferredVariant": "classic",
+      "aggregationApproved": false
     },
     "ytkace": {
       "online": true,
-      "checkedAt": "2026-09-30T06:52:30Z",
+      "checkedAt": "2026-09-30T07:01:03Z",
       "appCount": 1,
       "httpStatus": 200,
-      "iconURL": "https://img.lightshot.app/8gRG1MrsTPO7ZiwX_JfmbA.jpeg",
+      "iconURL": "",
       "error": null,
       "mixTest": "pass",
       "mixReason": "Classic source structure and downloadable app metadata passed the automated Mix test.",
@@ -3720,10 +3179,7 @@
       },
       "duplicateBundleIdentifiers": {
         "count": 0,
-        "duplicateAppEntries": 0,
-        "extraEntries": 0,
-        "items": [],
-        "itemsTruncated": false
+        "examples": []
       },
       "installerCompatibility": {
         "altstore": {
@@ -3747,14 +3203,15 @@
           "reason": "No duplicate bundle identifiers were detected in the source."
         }
       },
-      "preferredVariant": "classic"
+      "preferredVariant": "classic",
+      "aggregationApproved": false
     },
     "heyfordy": {
       "online": true,
-      "checkedAt": "2026-09-30T06:52:30Z",
+      "checkedAt": "2026-09-30T07:01:03Z",
       "appCount": 8,
       "httpStatus": 200,
-      "iconURL": "https://repo.heyfordy.dev/assets/repo.png",
+      "iconURL": "",
       "error": null,
       "mixTest": "pass",
       "mixReason": "Classic source structure and downloadable app metadata passed the automated Mix test.",
@@ -3775,10 +3232,7 @@
       },
       "duplicateBundleIdentifiers": {
         "count": 0,
-        "duplicateAppEntries": 0,
-        "extraEntries": 0,
-        "items": [],
-        "itemsTruncated": false
+        "examples": []
       },
       "installerCompatibility": {
         "altstore": {
@@ -3802,14 +3256,15 @@
           "reason": "No duplicate bundle identifiers were detected in the source."
         }
       },
-      "preferredVariant": "classic"
+      "preferredVariant": "classic",
+      "aggregationApproved": false
     },
     "ipalibrary": {
       "online": true,
-      "checkedAt": "2026-09-30T06:52:30Z",
+      "checkedAt": "2026-09-30T07:01:03Z",
       "appCount": 834,
       "httpStatus": 200,
-      "iconURL": "https://ipalibrary.me/favicon.ico",
+      "iconURL": "",
       "error": null,
       "mixTest": "experimental",
       "mixReason": "6 app entries share a bundle identifier; a Mix would collapse variants to one app.",
@@ -3878,58 +3333,7 @@
       },
       "duplicateBundleIdentifiers": {
         "count": 6,
-        "duplicateAppEntries": 12,
-        "extraEntries": 6,
-        "items": [
-          {
-            "bundleIdentifier": "me.ipalibrary.colorpoppremiumcolorpop",
-            "count": 2,
-            "names": [
-              "Color Pop Premium – Color Pop++"
-            ]
-          },
-          {
-            "bundleIdentifier": "me.ipalibrary.deadcells",
-            "count": 2,
-            "names": [
-              "Dead Cells+",
-              "Dead Cells"
-            ]
-          },
-          {
-            "bundleIdentifier": "me.ipalibrary.gettingoverit",
-            "count": 2,
-            "names": [
-              "Getting Over It",
-              "Getting Over It+"
-            ]
-          },
-          {
-            "bundleIdentifier": "me.ipalibrary.humananatomyatlas",
-            "count": 2,
-            "names": [
-              "Human Anatomy Atlas",
-              "Human Anatomy Atlas++"
-            ]
-          },
-          {
-            "bundleIdentifier": "me.ipalibrary.prune",
-            "count": 2,
-            "names": [
-              "Prune+",
-              "Prune"
-            ]
-          },
-          {
-            "bundleIdentifier": "me.ipalibrary.stardewvalley",
-            "count": 2,
-            "names": [
-              "Stardew Valley+",
-              "Stardew Valley"
-            ]
-          }
-        ],
-        "itemsTruncated": false
+        "examples": []
       },
       "installerCompatibility": {
         "altstore": {
@@ -3955,14 +3359,15 @@
           "reason": "6 duplicate bundle identifiers are present. The source parser can keep separate entries, but installing multiple variants with the same bundle identifier can still conflict."
         }
       },
-      "preferredVariant": "classic"
+      "preferredVariant": "classic",
+      "aggregationApproved": false
     },
     "armsx2": {
       "online": true,
-      "checkedAt": "2026-09-30T06:52:30Z",
+      "checkedAt": "2026-09-30T07:01:03Z",
       "appCount": 2,
       "httpStatus": 200,
-      "iconURL": "https://ios.armsx2.net/assets/icon.png?v=d83ffc2a",
+      "iconURL": "",
       "error": null,
       "mixTest": "pass",
       "mixReason": "Classic source structure and downloadable app metadata passed the automated Mix test.",
@@ -3983,10 +3388,7 @@
       },
       "duplicateBundleIdentifiers": {
         "count": 0,
-        "duplicateAppEntries": 0,
-        "extraEntries": 0,
-        "items": [],
-        "itemsTruncated": false
+        "examples": []
       },
       "installerCompatibility": {
         "altstore": {
@@ -4010,14 +3412,15 @@
           "reason": "No duplicate bundle identifiers were detected in the source."
         }
       },
-      "preferredVariant": "classic"
+      "preferredVariant": "classic",
+      "aggregationApproved": false
     },
     "fouad-source": {
       "online": true,
-      "checkedAt": "2026-09-30T06:52:30Z",
+      "checkedAt": "2026-09-30T07:01:03Z",
       "appCount": 6,
       "httpStatus": 200,
-      "iconURL": "https://raw.githubusercontent.com/FouadRaheb/Watusi-for-WhatsApp/master/altstore/icon.png",
+      "iconURL": "",
       "error": null,
       "mixTest": "pass",
       "mixReason": "Classic source structure and downloadable app metadata passed the automated Mix test.",
@@ -4038,10 +3441,7 @@
       },
       "duplicateBundleIdentifiers": {
         "count": 0,
-        "duplicateAppEntries": 0,
-        "extraEntries": 0,
-        "items": [],
-        "itemsTruncated": false
+        "examples": []
       },
       "installerCompatibility": {
         "altstore": {
@@ -4065,14 +3465,15 @@
           "reason": "No duplicate bundle identifiers were detected in the source."
         }
       },
-      "preferredVariant": "classic"
+      "preferredVariant": "classic",
+      "aggregationApproved": false
     },
     "neofreebird": {
       "online": true,
-      "checkedAt": "2026-09-30T06:52:30Z",
+      "checkedAt": "2026-09-30T07:01:03Z",
       "appCount": 1,
       "httpStatus": 200,
-      "iconURL": "https://raw.githubusercontent.com/orionblur/NeoFreeBird/v6/icon_rounded.png",
+      "iconURL": "",
       "error": null,
       "mixTest": "pass",
       "mixReason": "Classic source structure and downloadable app metadata passed the automated Mix test.",
@@ -4093,10 +3494,7 @@
       },
       "duplicateBundleIdentifiers": {
         "count": 0,
-        "duplicateAppEntries": 0,
-        "extraEntries": 0,
-        "items": [],
-        "itemsTruncated": false
+        "examples": []
       },
       "installerCompatibility": {
         "altstore": {
@@ -4120,14 +3518,15 @@
           "reason": "No duplicate bundle identifiers were detected in the source."
         }
       },
-      "preferredVariant": "classic"
+      "preferredVariant": "classic",
+      "aggregationApproved": false
     },
     "melonx": {
       "online": true,
-      "checkedAt": "2026-09-30T06:52:30Z",
+      "checkedAt": "2026-09-30T07:01:03Z",
       "appCount": 1,
       "httpStatus": 200,
-      "iconURL": "https://git.743378673.xyz/CycloKid/assets/media/branch/main/Melo/AppIcons/MeloNX.png",
+      "iconURL": "",
       "error": null,
       "mixTest": "pass",
       "mixReason": "Classic source structure and downloadable app metadata passed the automated Mix test.",
@@ -4148,10 +3547,7 @@
       },
       "duplicateBundleIdentifiers": {
         "count": 0,
-        "duplicateAppEntries": 0,
-        "extraEntries": 0,
-        "items": [],
-        "itemsTruncated": false
+        "examples": []
       },
       "installerCompatibility": {
         "altstore": {
@@ -4175,14 +3571,15 @@
           "reason": "No duplicate bundle identifiers were detected in the source."
         }
       },
-      "preferredVariant": "classic"
+      "preferredVariant": "classic",
+      "aggregationApproved": false
     },
     "altgallery": {
       "online": true,
-      "checkedAt": "2026-09-30T06:52:30Z",
+      "checkedAt": "2026-09-30T07:01:03Z",
       "appCount": 39,
       "httpStatus": 200,
-      "iconURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/assets/icon.png",
+      "iconURL": "",
       "error": null,
       "mixTest": "pass",
       "mixReason": "Classic source structure and downloadable app metadata passed the automated Mix test.",
@@ -4203,10 +3600,7 @@
       },
       "duplicateBundleIdentifiers": {
         "count": 0,
-        "duplicateAppEntries": 0,
-        "extraEntries": 0,
-        "items": [],
-        "itemsTruncated": false
+        "examples": []
       },
       "installerCompatibility": {
         "altstore": {
@@ -4230,14 +3624,15 @@
           "reason": "No duplicate bundle identifiers were detected in the source."
         }
       },
-      "preferredVariant": "classic"
+      "preferredVariant": "classic",
+      "aggregationApproved": false
     },
     "ripestore": {
       "online": true,
-      "checkedAt": "2026-09-30T06:52:30Z",
+      "checkedAt": "2026-09-30T07:01:03Z",
       "appCount": 11,
       "httpStatus": 200,
-      "iconURL": "https://i.imgur.com/pqIZoZo.jpeg",
+      "iconURL": "",
       "error": null,
       "mixTest": "pass",
       "mixReason": "Classic source structure and downloadable app metadata passed the automated Mix test.",
@@ -4258,10 +3653,7 @@
       },
       "duplicateBundleIdentifiers": {
         "count": 0,
-        "duplicateAppEntries": 0,
-        "extraEntries": 0,
-        "items": [],
-        "itemsTruncated": false
+        "examples": []
       },
       "installerCompatibility": {
         "altstore": {
@@ -4285,14 +3677,15 @@
           "reason": "No duplicate bundle identifiers were detected in the source."
         }
       },
-      "preferredVariant": "classic"
+      "preferredVariant": "classic",
+      "aggregationApproved": false
     },
     "feather": {
       "online": true,
-      "checkedAt": "2026-09-30T06:52:30Z",
+      "checkedAt": "2026-09-30T07:01:03Z",
       "appCount": 1,
       "httpStatus": 200,
-      "iconURL": "https://github.com/khcrysalis/Feather/blob/v1.x/iOS/Resources/Icons/Main/Mac@3x.png?raw=true",
+      "iconURL": "",
       "error": null,
       "mixTest": "pass",
       "mixReason": "Classic source structure and downloadable app metadata passed the automated Mix test.",
@@ -4313,10 +3706,7 @@
       },
       "duplicateBundleIdentifiers": {
         "count": 0,
-        "duplicateAppEntries": 0,
-        "extraEntries": 0,
-        "items": [],
-        "itemsTruncated": false
+        "examples": []
       },
       "installerCompatibility": {
         "altstore": {
@@ -4340,14 +3730,15 @@
           "reason": "No duplicate bundle identifiers were detected in the source."
         }
       },
-      "preferredVariant": "classic"
+      "preferredVariant": "classic",
+      "aggregationApproved": false
     },
     "quantum-source": {
       "online": true,
-      "checkedAt": "2026-09-30T06:52:30Z",
+      "checkedAt": "2026-09-30T07:01:03Z",
       "appCount": 38,
       "httpStatus": 200,
-      "iconURL": "https://quarksources.github.io/assets/ElementQ-Circled.png",
+      "iconURL": "",
       "error": null,
       "mixTest": "pass",
       "mixReason": "Classic source structure and downloadable app metadata passed the automated Mix test.",
@@ -4368,10 +3759,7 @@
       },
       "duplicateBundleIdentifiers": {
         "count": 0,
-        "duplicateAppEntries": 0,
-        "extraEntries": 0,
-        "items": [],
-        "itemsTruncated": false
+        "examples": []
       },
       "installerCompatibility": {
         "altstore": {
@@ -4395,14 +3783,15 @@
           "reason": "No duplicate bundle identifiers were detected in the source."
         }
       },
-      "preferredVariant": "classic"
+      "preferredVariant": "classic",
+      "aggregationApproved": false
     },
     "spotc": {
       "online": true,
-      "checkedAt": "2026-09-30T06:52:30Z",
+      "checkedAt": "2026-09-30T07:01:03Z",
       "appCount": 3,
       "httpStatus": 200,
-      "iconURL": "https://raw.githubusercontent.com/SpotCompiled/.github/main/SpotC%20Icon.png",
+      "iconURL": "",
       "error": null,
       "mixTest": "pass",
       "mixReason": "Classic source structure and downloadable app metadata passed the automated Mix test.",
@@ -4423,10 +3812,7 @@
       },
       "duplicateBundleIdentifiers": {
         "count": 0,
-        "duplicateAppEntries": 0,
-        "extraEntries": 0,
-        "items": [],
-        "itemsTruncated": false
+        "examples": []
       },
       "installerCompatibility": {
         "altstore": {
@@ -4450,14 +3836,15 @@
           "reason": "No duplicate bundle identifiers were detected in the source."
         }
       },
-      "preferredVariant": "classic"
+      "preferredVariant": "classic",
+      "aggregationApproved": false
     },
     "foxster-altsource": {
       "online": true,
-      "checkedAt": "2026-09-30T06:52:30Z",
+      "checkedAt": "2026-09-30T07:01:03Z",
       "appCount": 2,
       "httpStatus": 200,
-      "iconURL": "https://avatars.githubusercontent.com/u/77606385",
+      "iconURL": "",
       "error": null,
       "mixTest": "pass",
       "mixReason": "Classic source structure and downloadable app metadata passed the automated Mix test.",
@@ -4478,10 +3865,7 @@
       },
       "duplicateBundleIdentifiers": {
         "count": 0,
-        "duplicateAppEntries": 0,
-        "extraEntries": 0,
-        "items": [],
-        "itemsTruncated": false
+        "examples": []
       },
       "installerCompatibility": {
         "altstore": {
@@ -4505,14 +3889,15 @@
           "reason": "No duplicate bundle identifiers were detected in the source."
         }
       },
-      "preferredVariant": "classic"
+      "preferredVariant": "classic",
+      "aggregationApproved": false
     },
     "fastsign": {
       "online": true,
-      "checkedAt": "2026-09-30T06:52:30Z",
+      "checkedAt": "2026-09-30T07:01:03Z",
       "appCount": 16272,
       "httpStatus": 200,
-      "iconURL": "https://fastsign.dev/icon.png",
+      "iconURL": "",
       "error": null,
       "mixTest": "experimental",
       "mixReason": "12684 app entries share a bundle identifier; a Mix would collapse variants to one app.",
@@ -4752,229 +4137,7 @@
       },
       "duplicateBundleIdentifiers": {
         "count": 1031,
-        "duplicateAppEntries": 13715,
-        "extraEntries": 12684,
-        "items": [
-          {
-            "bundleIdentifier": "com.burbn.instagram",
-            "count": 365,
-            "names": [
-              "Instagram",
-              "Instagram (RL)",
-              "Instagram (RC)",
-              "Instagram (SK)",
-              "Instagram (RY)",
-              "Instagram (BE)",
-              "Instagram (IF)",
-              "Instagram (RyukGram)"
-            ]
-          },
-          {
-            "bundleIdentifier": "com.karbinstoree",
-            "count": 291,
-            "names": [
-              "Omega Royale",
-              "Luma Fusion",
-              "Cooking Trendy",
-              "APTV",
-              "ProCamera",
-              "Pencil Sketcher",
-              "Mobile Legends: Bang Bang ESP",
-              "Earn to Die Rogue"
-            ]
-          },
-          {
-            "bundleIdentifier": "com.atebits.Tweetie2",
-            "count": 228,
-            "names": [
-              "X",
-              "Twitter",
-              "Twitter BHX",
-              "NeoFreeBird",
-              "X++",
-              "BHX",
-              "DLTwitter",
-              "BHTwitter"
-            ]
-          },
-          {
-            "bundleIdentifier": "com.zhiliaoapp.musically",
-            "count": 216,
-            "names": [
-              "TikTok",
-              "TikTok (RS)",
-              "TikTok (RX)",
-              "TikTok (IN)",
-              "TikTok (GT)",
-              "TikTok (AS)",
-              "BHTikTokPlus",
-              "TikTok++"
-            ]
-          },
-          {
-            "bundleIdentifier": "com.facebook.Facebook",
-            "count": 137,
-            "names": [
-              "Facebook",
-              "Facebook++",
-              "Glow for Facebook",
-              "FacebookWolf",
-              "FacebookE0",
-              "FacebookMiX",
-              "Facebook Wolf",
-              "FacebookTxC"
-            ]
-          },
-          {
-            "bundleIdentifier": "com.google.ios.youtube",
-            "count": 137,
-            "names": [
-              "YouTube",
-              "ASJTube",
-              "YouMod + Tweaks (driftywinds)",
-              "YouTube (YP)",
-              "YouTube (KC)",
-              "YouTube (YM)",
-              "YouTube Plus (iOS14+)",
-              "YouTube Plus (iOS15+)"
-            ]
-          },
-          {
-            "bundleIdentifier": "com.picsart.studio",
-            "count": 134,
-            "names": [
-              "Picsart",
-              "PicsArt",
-              "PicsArtPlus",
-              "PicsArtPlusPlus",
-              "Picsart_25.5.1_Cracked",
-              "Picsart_25.4.2_Premium",
-              "PicsArt_25.1.2"
-            ]
-          },
-          {
-            "bundleIdentifier": "com.ulisesolave.Fitia",
-            "count": 115,
-            "names": [
-              "Fitia"
-            ]
-          },
-          {
-            "bundleIdentifier": "com.sfun.snapedit",
-            "count": 114,
-            "names": [
-              "SnapEdit",
-              "SnapEditPro"
-            ]
-          },
-          {
-            "bundleIdentifier": "com.spotify.client",
-            "count": 114,
-            "names": [
-              "Spotify",
-              "EeveeSpotify",
-              "Spotify (EeveeSpotifyReincarnated)",
-              "Spotify++",
-              "EeveeSpotify-5.9.5-9.0.36",
-              "EeveeSpotify-5.8.8-9.0.26",
-              "EeveeSpotify-5.8.6-9.0.14",
-              "SpotveeC"
-            ]
-          },
-          {
-            "bundleIdentifier": "tv.twitch",
-            "count": 106,
-            "names": [
-              "Twitch",
-              "Tweach",
-              "TwitchDvnloaderPlus",
-              "TwitchPlus",
-              "TwitchAdBlock",
-              "TwitchToolbox",
-              "Twitch++"
-            ]
-          },
-          {
-            "bundleIdentifier": "com.risesci.nyx",
-            "count": 104,
-            "names": [
-              "Rise Sleep",
-              "RiseSleep"
-            ]
-          },
-          {
-            "bundleIdentifier": "boomer.Smart-Video",
-            "count": 89,
-            "names": [
-              "Captions",
-              "Widgy"
-            ]
-          },
-          {
-            "bundleIdentifier": "com.locket.Locket",
-            "count": 86,
-            "names": [
-              "Locket",
-              "LocketWidgetGold"
-            ]
-          },
-          {
-            "bundleIdentifier": "com.lightricks.Facetune2",
-            "count": 83,
-            "names": [
-              "Facetune",
-              "FacetunePro"
-            ]
-          },
-          {
-            "bundleIdentifier": "net.whatsapp.WhatsApp",
-            "count": 83,
-            "names": [
-              "WhatsApp (WC)",
-              "WhatsApp (WG)",
-              "WhatsApp",
-              "WhatsApp (WL)",
-              "Watusi3",
-              "WhatsappWatusiCracked",
-              "WhatsappWatusi",
-              "Watusi for WhatsApp"
-            ]
-          },
-          {
-            "bundleIdentifier": "com.gingerlabs.Notability",
-            "count": 82,
-            "names": [
-              "Notability"
-            ]
-          },
-          {
-            "bundleIdentifier": "com.wellocution.iosapp",
-            "count": 80,
-            "names": [
-              "BoldVoice"
-            ]
-          },
-          {
-            "bundleIdentifier": "com.dopedevelopment.Panels",
-            "count": 78,
-            "names": [
-              "SCRL"
-            ]
-          },
-          {
-            "bundleIdentifier": "com.duolingo.DuolingoMobile",
-            "count": 75,
-            "names": [
-              "Duolingo",
-              "Duolingo++",
-              "DuolingoMaxPublic",
-              "DuolingoMax",
-              "Duolingo Cracked",
-              "DuolingoMax_7.37.1"
-            ]
-          }
-        ],
-        "itemsTruncated": true
+        "examples": []
       },
       "installerCompatibility": {
         "altstore": {
@@ -5000,14 +4163,15 @@
           "reason": "1031 duplicate bundle identifiers are present. The source parser can keep separate entries, but installing multiple variants with the same bundle identifier can still conflict."
         }
       },
-      "preferredVariant": "classic"
+      "preferredVariant": "classic",
+      "aggregationApproved": false
     },
     "quantum-plus": {
       "online": true,
-      "checkedAt": "2026-09-30T06:52:30Z",
+      "checkedAt": "2026-09-30T07:01:03Z",
       "appCount": 35,
       "httpStatus": 200,
-      "iconURL": "https://quarksources.github.io/assets/ElementQ-Circled.png",
+      "iconURL": "",
       "error": null,
       "mixTest": "pass",
       "mixReason": "Classic source structure and downloadable app metadata passed the automated Mix test.",
@@ -5028,10 +4192,7 @@
       },
       "duplicateBundleIdentifiers": {
         "count": 0,
-        "duplicateAppEntries": 0,
-        "extraEntries": 0,
-        "items": [],
-        "itemsTruncated": false
+        "examples": []
       },
       "installerCompatibility": {
         "altstore": {
@@ -5055,14 +4216,15 @@
           "reason": "No duplicate bundle identifiers were detected in the source."
         }
       },
-      "preferredVariant": "classic"
+      "preferredVariant": "classic",
+      "aggregationApproved": false
     },
     "wuxu-standard": {
       "online": true,
-      "checkedAt": "2026-09-30T06:52:30Z",
+      "checkedAt": "2026-09-30T07:01:03Z",
       "appCount": 20,
       "httpStatus": 200,
-      "iconURL": "https://external-content.duckduckgo.com/iu/?u=https://external-content.duckduckgo.com/iu/?u=https://i.imgur.com/g17kMl9.png",
+      "iconURL": "",
       "error": null,
       "mixTest": "pass",
       "mixReason": "Classic source structure and downloadable app metadata passed the automated Mix test.",
@@ -5083,10 +4245,7 @@
       },
       "duplicateBundleIdentifiers": {
         "count": 0,
-        "duplicateAppEntries": 0,
-        "extraEntries": 0,
-        "items": [],
-        "itemsTruncated": false
+        "examples": []
       },
       "installerCompatibility": {
         "altstore": {
@@ -5110,14 +4269,15 @@
           "reason": "No duplicate bundle identifiers were detected in the source."
         }
       },
-      "preferredVariant": "classic"
+      "preferredVariant": "classic",
+      "aggregationApproved": false
     },
     "taurine": {
       "online": true,
-      "checkedAt": "2026-09-30T06:52:30Z",
+      "checkedAt": "2026-09-30T07:01:03Z",
       "appCount": 1,
       "httpStatus": 200,
-      "iconURL": "https://taurine.app/assets/images/icon.png",
+      "iconURL": "",
       "error": null,
       "mixTest": "pass",
       "mixReason": "Classic source structure and downloadable app metadata passed the automated Mix test.",
@@ -5138,10 +4298,7 @@
       },
       "duplicateBundleIdentifiers": {
         "count": 0,
-        "duplicateAppEntries": 0,
-        "extraEntries": 0,
-        "items": [],
-        "itemsTruncated": false
+        "examples": []
       },
       "installerCompatibility": {
         "altstore": {
@@ -5165,14 +4322,15 @@
           "reason": "No duplicate bundle identifiers were detected in the source."
         }
       },
-      "preferredVariant": "classic"
+      "preferredVariant": "classic",
+      "aggregationApproved": false
     },
     "burrito-source": {
       "online": true,
-      "checkedAt": "2026-09-30T06:52:30Z",
+      "checkedAt": "2026-09-30T07:01:03Z",
       "appCount": 7,
       "httpStatus": 200,
-      "iconURL": "https://inds.nerd.net/Resources/required/AppIcon256.png",
+      "iconURL": "",
       "error": null,
       "mixTest": "pass",
       "mixReason": "Classic source structure and downloadable app metadata passed the automated Mix test.",
@@ -5193,10 +4351,7 @@
       },
       "duplicateBundleIdentifiers": {
         "count": 0,
-        "duplicateAppEntries": 0,
-        "extraEntries": 0,
-        "items": [],
-        "itemsTruncated": false
+        "examples": []
       },
       "installerCompatibility": {
         "altstore": {
@@ -5220,14 +4375,15 @@
           "reason": "No duplicate bundle identifiers were detected in the source."
         }
       },
-      "preferredVariant": "classic"
+      "preferredVariant": "classic",
+      "aggregationApproved": false
     },
     "salupov-altrepo": {
       "online": true,
-      "checkedAt": "2026-09-30T06:52:30Z",
+      "checkedAt": "2026-09-30T07:01:03Z",
       "appCount": 2,
       "httpStatus": 200,
-      "iconURL": "https://adp.salupovteam.com/pal/icon.png",
+      "iconURL": "",
       "error": null,
       "mixTest": "pass",
       "mixReason": "Classic source structure and downloadable app metadata passed the automated Mix test.",
@@ -5248,10 +4404,7 @@
       },
       "duplicateBundleIdentifiers": {
         "count": 0,
-        "duplicateAppEntries": 0,
-        "extraEntries": 0,
-        "items": [],
-        "itemsTruncated": false
+        "examples": []
       },
       "installerCompatibility": {
         "altstore": {
@@ -5275,14 +4428,15 @@
           "reason": "No duplicate bundle identifiers were detected in the source."
         }
       },
-      "preferredVariant": "classic"
+      "preferredVariant": "classic",
+      "aggregationApproved": false
     },
     "cercube": {
       "online": true,
-      "checkedAt": "2026-09-30T06:52:30Z",
+      "checkedAt": "2026-09-30T07:01:03Z",
       "appCount": 2,
       "httpStatus": 200,
-      "iconURL": "https://cdn.cercube.com/assets/icon.png",
+      "iconURL": "",
       "error": null,
       "mixTest": "pass",
       "mixReason": "Classic source structure and downloadable app metadata passed the automated Mix test.",
@@ -5303,10 +4457,7 @@
       },
       "duplicateBundleIdentifiers": {
         "count": 0,
-        "duplicateAppEntries": 0,
-        "extraEntries": 0,
-        "items": [],
-        "itemsTruncated": false
+        "examples": []
       },
       "installerCompatibility": {
         "altstore": {
@@ -5330,14 +4481,15 @@
           "reason": "No duplicate bundle identifiers were detected in the source."
         }
       },
-      "preferredVariant": "classic"
+      "preferredVariant": "classic",
+      "aggregationApproved": false
     },
     "rocket": {
       "online": true,
-      "checkedAt": "2026-09-30T06:52:30Z",
+      "checkedAt": "2026-09-30T07:01:03Z",
       "appCount": 1,
       "httpStatus": 200,
-      "iconURL": "https://cdn.getrocketapp.io/assets/icon.png",
+      "iconURL": "",
       "error": null,
       "mixTest": "pass",
       "mixReason": "Classic source structure and downloadable app metadata passed the automated Mix test.",
@@ -5358,10 +4510,7 @@
       },
       "duplicateBundleIdentifiers": {
         "count": 0,
-        "duplicateAppEntries": 0,
-        "extraEntries": 0,
-        "items": [],
-        "itemsTruncated": false
+        "examples": []
       },
       "installerCompatibility": {
         "altstore": {
@@ -5385,14 +4534,15 @@
           "reason": "No duplicate bundle identifiers were detected in the source."
         }
       },
-      "preferredVariant": "classic"
+      "preferredVariant": "classic",
+      "aggregationApproved": false
     },
     "reynard-browser": {
       "online": true,
-      "checkedAt": "2026-09-30T06:52:30Z",
+      "checkedAt": "2026-09-30T07:01:03Z",
       "appCount": 1,
       "httpStatus": 200,
-      "iconURL": "https://github.com/user-attachments/assets/1c42dda2-b778-4342-9f94-8f852c3ad652",
+      "iconURL": "",
       "error": null,
       "mixTest": "pass",
       "mixReason": "Classic source structure and downloadable app metadata passed the automated Mix test.",
@@ -5413,10 +4563,7 @@
       },
       "duplicateBundleIdentifiers": {
         "count": 0,
-        "duplicateAppEntries": 0,
-        "extraEntries": 0,
-        "items": [],
-        "itemsTruncated": false
+        "examples": []
       },
       "installerCompatibility": {
         "altstore": {
@@ -5440,7 +4587,8 @@
           "reason": "No duplicate bundle identifiers were detected in the source."
         }
       },
-      "preferredVariant": "classic"
+      "preferredVariant": "classic",
+      "aggregationApproved": false
     }
   },
   "mixes": {
