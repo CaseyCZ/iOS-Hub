@@ -45,8 +45,8 @@ const GENRE_RULES = {
 const copy = {
   en: {
     title:'Custom Source Builder', desc:'Filter checked online sources, select any combination and build your own Mix for any supported Classic source installer.',
-    selectPass:'Select PASS for', selectAll:'Select all shown', clear:'Clear selection', build:'Build Mix', selected:'selected', shown:'shown', pass:'PASS', try:'TRY', passHelp:'The list is already limited to the selected destination. PASS additionally means the source passed the automated Mix merge test; it does not guarantee every app will run on every iOS device.',
-    mixStatus:'Merge test', targetLabel:'Where do you want to add the Mix?', targetHelpGeneric:'Classic AltStore-compatible Mix. This installer can use the same merged source format.', targetHelpAlt:'The finished Mix will be a Classic AltSource for AltStore Classic. SideStore-only and PAL marketplace sources are hidden.', targetHelpSide:'SideStore is fully compatible with AltStore Sources (AltSources). We show Classic IPA-style sources here and remove PAL-only marketplace metadata from the generated Mix.', targetHelpLive:'LiveContainer can browse AltStore-style sources and install apps from their latest version download URL. We show mergeable Classic IPA-style sources here.', targetHelpFlare:'FlareStore accepts AltStore-compatible repositories. The Mix stays a Classic AltSource and opens directly in FlareStore.', targetHelpFeather:'Feather accepts AltStore-compatible repositories. The Mix stays a Classic AltSource and opens directly in Feather.', palNote:'AltStore PAL is not a Custom Mix target because PAL uses notarized marketplace packages and different source metadata than Classic IPA sources.', targetPrefix:'Target', statusAll:'All', statusPass:'PASS only', statusTry:'TRY only', platform:'Platform', platformAll:'All', classic:'AltStore Classic', pal:'AltStore PAL', sidestore:'SideStore', livecontainer:'LiveContainer', autoTested:'Auto tested',
+    selectPass:'Select PASS for', selectAll:'Select all shown', clear:'Clear selection', build:'Build Mix', selected:'selected', shown:'shown', pass:'PASS', try:'TRY', passHelp:'PASS means the source is compatible with the selected installer and passed the automated Mix merge test. It does not guarantee every app will run on every iOS device.', compatLogic:'PASS = compatible with the selected installer and passed the automated Mix merge test. TRY = compatible format but not fully verified; you can still select it for testing. INCOMPATIBLE = cannot be used with the installer selected above and is disabled. Changing installer removes incompatible selected Sources. Build Mix combines the selected Sources into one Source. Direct “Add to …” opens the selected app only when the combined Mix has a public HTTPS URL; otherwise Download / Preview remain available.', incompatible:'INCOMPATIBLE', incompatibleReason:'Not compatible with the selected installer.', removedIncompatible:'{n} previously selected source(s) were removed because they are not compatible with {tool}.',
+    mixStatus:'Merge test', targetLabel:'Where do you want to add the Mix?', targetHelpGeneric:'Classic AltStore-compatible Mix. This installer can use the same merged source format.', targetHelpAlt:'The finished Mix will be a Classic AltSource for AltStore Classic. Sources that cannot be used with AltStore remain visible but disabled.', targetHelpSide:'SideStore is fully compatible with AltStore Sources (AltSources). We show Classic IPA-style sources here and remove PAL-only marketplace metadata from the generated Mix.', targetHelpLive:'LiveContainer can browse AltStore-style sources and install apps from their latest version download URL. We show mergeable Classic IPA-style sources here.', targetHelpFlare:'FlareStore accepts AltStore-compatible repositories. The Mix stays a Classic AltSource and opens directly in FlareStore.', targetHelpFeather:'Feather accepts AltStore-compatible repositories. The Mix stays a Classic AltSource and opens directly in Feather.', palNote:'AltStore PAL is not a Custom Mix target because PAL uses notarized marketplace packages and different source metadata than Classic IPA sources.', targetPrefix:'Target', statusAll:'All', statusPass:'PASS only', statusTry:'TRY only', platform:'Platform', platformAll:'All', classic:'AltStore Classic', pal:'AltStore PAL', sidestore:'SideStore', livecontainer:'LiveContainer', autoTested:'Auto tested',
     altPackage:'AltStore Source', sidePackage:'SideStore Source', livePackage:'LiveContainer Source', customMix:'Custom Mix', filters:'⚙ Filters · 🔎 Search · ☑ Selection',
     dedupeHelp:'When multiple app entries use the same bundle ID, the generated Mix keeps only one entry — normally the newest by date. Different variants of the same app can therefore be merged into one.', dedupeResult:'Some app variants shared the same bundle ID and were merged; only one entry per bundle ID remains in the Mix.',
     addTo:'＋ Add to', copyUrl:'Copy URL', json:'JSON ↗', apps:'apps', sources:'sources',
@@ -55,8 +55,8 @@ const copy = {
   },
   cs: {
     title:'Custom Source Builder', desc:'Filtruj kontrolované online zdroje, vyber libovolnou kombinaci a vytvoř vlastní Mix pro podporované instalátory Classic zdrojů.',
-    selectPass:'Vybrat PASS pro', selectAll:'Vybrat vše zobrazené', clear:'Zrušit výběr', build:'Vytvořit Mix', selected:'vybráno', shown:'zobrazeno', pass:'PASS', try:'ZKUSIT', passHelp:'Seznam je už omezený podle zvoleného cíle. PASS navíc znamená, že zdroj prošel automatickým testem sloučení do Mixu; neznamená to, že každá aplikace poběží na každém iOS zařízení.',
-    mixStatus:'Test sloučení', targetLabel:'Kam chceš výsledný Mix přidat?', targetHelpGeneric:'Classic Mix kompatibilní s AltStore. Tento instalátor může použít stejný formát sloučeného zdroje.', targetHelpAlt:'Výsledný Mix bude Classic AltSource pro AltStore Classic. SideStore-only a PAL marketplace zdroje se skryjí.', targetHelpSide:'SideStore je plně kompatibilní s AltStore Sources (AltSources). Zobrazujeme zde Classic IPA zdroje a z výsledného Mixu odstraňujeme metadata určená jen pro PAL marketplace.', targetHelpLive:'LiveContainer umí procházet AltStore-style zdroje a instalovat aplikace z download URL jejich nejnovější verze. Zobrazujeme zde sloučitelné Classic IPA zdroje.', targetHelpFlare:'FlareStore přijímá AltStore-kompatibilní repozitáře. Mix zůstává Classic AltSource a otevře se přímo ve FlareStore.', targetHelpFeather:'Feather přijímá AltStore-kompatibilní repozitáře. Mix zůstává Classic AltSource a otevře se přímo ve Feather.', palNote:'AltStore PAL není cílem pro Vlastní Mix, protože PAL používá notarizované marketplace balíčky a jiná metadata než Classic IPA zdroje.', targetPrefix:'Cíl', statusAll:'Vše', statusPass:'Jen PASS', statusTry:'Jen ZKUSIT', platform:'Platforma', platformAll:'Vše', classic:'AltStore Classic', pal:'AltStore PAL', sidestore:'SideStore', livecontainer:'LiveContainer', autoTested:'Automaticky testováno',
+    selectPass:'Vybrat PASS pro', selectAll:'Vybrat vše zobrazené', clear:'Zrušit výběr', build:'Vytvořit Mix', selected:'vybráno', shown:'zobrazeno', pass:'PASS', try:'ZKUSIT', passHelp:'PASS znamená, že Source je kompatibilní se zvoleným instalátorem a prošel automatickým testem sloučení do Mixu; neznamená to, že každá aplikace poběží na každém iOS zařízení.', compatLogic:'PASS = kompatibilní se zvoleným instalátorem a prošel automatickým testem sloučení. ZKUSIT = formát je kompatibilní, ale není plně ověřený; pro testování ho lze vybrat. NEKOMPATIBILNÍ = se zvoleným instalátorem nejde použít a nelze ho zaškrtnout. Při změně instalátoru se nekompatibilní vybrané Sources automaticky odeberou. Vytvořit Mix spojí vybrané Sources do jednoho Source. Přímé „Přidat do …“ otevře zvolenou aplikaci jen tehdy, když má sloučený Mix veřejnou HTTPS URL; jinak zůstane Stáhnout / Náhled.', incompatible:'NEKOMPATIBILNÍ', incompatibleReason:'Není kompatibilní se zvoleným instalátorem.', removedIncompatible:'Kvůli nekompatibilitě s {tool} bylo z výběru odebráno Sources: {n}.',
+    mixStatus:'Test sloučení', targetLabel:'Kam chceš výsledný Mix přidat?', targetHelpGeneric:'Classic Mix kompatibilní s AltStore. Tento instalátor může použít stejný formát sloučeného zdroje.', targetHelpAlt:'Výsledný Mix bude Classic AltSource pro AltStore Classic. Sources, které s AltStore nejdou použít, zůstanou viditelné, ale nepůjdou vybrat.', targetHelpSide:'SideStore je plně kompatibilní s AltStore Sources (AltSources). Zobrazujeme zde Classic IPA zdroje a z výsledného Mixu odstraňujeme metadata určená jen pro PAL marketplace.', targetHelpLive:'LiveContainer umí procházet AltStore-style zdroje a instalovat aplikace z download URL jejich nejnovější verze. Zobrazujeme zde sloučitelné Classic IPA zdroje.', targetHelpFlare:'FlareStore přijímá AltStore-kompatibilní repozitáře. Mix zůstává Classic AltSource a otevře se přímo ve FlareStore.', targetHelpFeather:'Feather přijímá AltStore-kompatibilní repozitáře. Mix zůstává Classic AltSource a otevře se přímo ve Feather.', palNote:'AltStore PAL není cílem pro Vlastní Mix, protože PAL používá notarizované marketplace balíčky a jiná metadata než Classic IPA zdroje.', targetPrefix:'Cíl', statusAll:'Vše', statusPass:'Jen PASS', statusTry:'Jen ZKUSIT', platform:'Platforma', platformAll:'Vše', classic:'AltStore Classic', pal:'AltStore PAL', sidestore:'SideStore', livecontainer:'LiveContainer', autoTested:'Automaticky testováno',
     altPackage:'AltStore Source', sidePackage:'SideStore Source', livePackage:'LiveContainer Source', customMix:'Vlastní Mix', filters:'⚙ Filtry · 🔎 Hledání · ☑ Výběr',
     dedupeHelp:'Pokud má více položek aplikace stejné bundle ID, vygenerovaný Mix ponechá jen jednu — zpravidla nejnovější podle data. Různé varianty stejné aplikace se tím mohou sloučit do jedné.', dedupeResult:'Některé varianty aplikací měly stejné bundle ID a byly sloučeny; v Mixu zůstává jen jedna položka pro každé bundle ID.',
     addTo:'＋ Přidat do', copyUrl:'Kopírovat URL', json:'JSON ↗', apps:'aplikací', sources:'zdrojů',
@@ -65,8 +65,8 @@ const copy = {
   },
   de: {
     title:'Custom Source Builder', desc:'Filtere geprüfte Online-Quellen, wähle eine beliebige Kombination und erstelle deinen eigenen Mix für unterstützte Classic-Source-Installer.',
-    selectPass:'PASS wählen für', selectAll:'Alle sichtbaren wählen', clear:'Auswahl löschen', build:'Mix erstellen', selected:'ausgewählt', shown:'sichtbar', pass:'PASS', try:'TEST', passHelp:'Die Liste ist bereits auf das gewählte Ziel beschränkt. PASS bedeutet zusätzlich, dass die Quelle den automatischen iOS-Hub-Mix-Zusammenführungstest bestanden hat; nicht, dass jede App auf jedem iOS-Gerät läuft.',
-    mixStatus:'Merge-Test', targetLabel:'Wo möchtest du den Mix hinzufügen?', targetHelpGeneric:'Classic-Mix im AltStore-kompatiblen Format. Dieser Installer kann dasselbe zusammengeführte Quellenformat verwenden.', targetHelpAlt:'Der fertige Mix wird eine Classic AltSource für AltStore Classic. SideStore-only- und PAL-Marketplace-Quellen werden ausgeblendet.', targetHelpSide:'SideStore ist vollständig mit AltStore Sources (AltSources) kompatibel. Hier zeigen wir Classic-IPA-Quellen und entfernen PAL-only Marketplace-Metadaten aus dem erzeugten Mix.', targetHelpLive:'LiveContainer kann AltStore-ähnliche Quellen durchsuchen und Apps über die Download-URL der neuesten Version installieren. Hier zeigen wir zusammenführbare Classic-IPA-Quellen.', targetHelpFlare:'FlareStore akzeptiert AltStore-kompatible Repositories. Der Mix bleibt eine Classic AltSource und wird direkt in FlareStore geöffnet.', targetHelpFeather:'Feather akzeptiert AltStore-kompatible Repositories. Der Mix bleibt eine Classic AltSource und wird direkt in Feather geöffnet.', palNote:'AltStore PAL ist kein Ziel für Custom Mix, da PAL notarized Marketplace-Pakete und andere Metadaten als Classic-IPA-Quellen verwendet.', targetPrefix:'Ziel', statusAll:'Alle', statusPass:'Nur PASS', statusTry:'Nur TEST', platform:'Plattform', platformAll:'Alle', classic:'AltStore Classic', pal:'AltStore PAL', sidestore:'SideStore', livecontainer:'LiveContainer', autoTested:'Automatisch geprüft',
+    selectPass:'PASS wählen für', selectAll:'Alle sichtbaren wählen', clear:'Auswahl löschen', build:'Mix erstellen', selected:'ausgewählt', shown:'sichtbar', pass:'PASS', try:'TEST', passHelp:'PASS bedeutet, dass die Quelle mit dem gewählten Installer kompatibel ist und den automatischen Mix-Test bestanden hat; nicht, dass jede App auf jedem iOS-Gerät läuft.', compatLogic:'PASS = kompatibel und automatisch für den Mix geprüft. TEST = kompatibles Format, aber nicht vollständig verifiziert; die Quelle kann zum Testen ausgewählt werden. NICHT KOMPATIBEL = kann mit dem oben gewählten Installer nicht verwendet werden und ist deaktiviert. Beim Wechsel des Installers werden inkompatible ausgewählte Quellen entfernt. Mix erstellen kombiniert die ausgewählten Quellen zu einer Source. Direktes „Zu … hinzufügen“ öffnet die gewählte App nur, wenn der kombinierte Mix eine öffentliche HTTPS-URL hat; sonst bleiben Download / Vorschau verfügbar.', incompatible:'NICHT KOMPATIBEL', incompatibleReason:'Nicht mit dem ausgewählten Installer kompatibel.', removedIncompatible:'{n} zuvor ausgewählte Quelle(n) wurden entfernt, weil sie nicht mit {tool} kompatibel sind.',
+    mixStatus:'Merge-Test', targetLabel:'Wo möchtest du den Mix hinzufügen?', targetHelpGeneric:'Classic-Mix im AltStore-kompatiblen Format. Dieser Installer kann dasselbe zusammengeführte Quellenformat verwenden.', targetHelpAlt:'Der fertige Mix wird eine Classic AltSource für AltStore Classic. Nicht kompatible Quellen bleiben sichtbar, sind aber deaktiviert.', targetHelpSide:'SideStore ist vollständig mit AltStore Sources (AltSources) kompatibel. Hier zeigen wir Classic-IPA-Quellen und entfernen PAL-only Marketplace-Metadaten aus dem erzeugten Mix.', targetHelpLive:'LiveContainer kann AltStore-ähnliche Quellen durchsuchen und Apps über die Download-URL der neuesten Version installieren. Hier zeigen wir zusammenführbare Classic-IPA-Quellen.', targetHelpFlare:'FlareStore akzeptiert AltStore-kompatible Repositories. Der Mix bleibt eine Classic AltSource und wird direkt in FlareStore geöffnet.', targetHelpFeather:'Feather akzeptiert AltStore-kompatible Repositories. Der Mix bleibt eine Classic AltSource und wird direkt in Feather geöffnet.', palNote:'AltStore PAL ist kein Ziel für Custom Mix, da PAL notarized Marketplace-Pakete und andere Metadaten als Classic-IPA-Quellen verwendet.', targetPrefix:'Ziel', statusAll:'Alle', statusPass:'Nur PASS', statusTry:'Nur TEST', platform:'Plattform', platformAll:'Alle', classic:'AltStore Classic', pal:'AltStore PAL', sidestore:'SideStore', livecontainer:'LiveContainer', autoTested:'Automatisch geprüft',
     altPackage:'AltStore Source', sidePackage:'SideStore Source', livePackage:'LiveContainer Source', customMix:'Eigener Mix', filters:'⚙ Filter · 🔎 Suche · ☑ Auswahl',
     dedupeHelp:'Wenn mehrere App-Einträge dieselbe Bundle-ID verwenden, behält der erzeugte Mix nur einen Eintrag – normalerweise den neuesten nach Datum. Unterschiedliche Varianten derselben App können dadurch zusammengeführt werden.', dedupeResult:'Einige App-Varianten verwendeten dieselbe Bundle-ID und wurden zusammengeführt; im Mix bleibt nur ein Eintrag pro Bundle-ID.',
     addTo:'＋ Zu', copyUrl:'URL kopieren', json:'JSON ↗', apps:'Apps', sources:'Quellen',
@@ -74,8 +74,8 @@ const copy = {
   },
   es: {
     title:'Custom Source Builder', desc:'Filtra fuentes online comprobadas, elige cualquier combinación y crea tu propio Mix para instaladores compatibles con fuentes Classic.',
-    selectPass:'Seleccionar PASS para', selectAll:'Seleccionar visibles', clear:'Borrar selección', build:'Crear Mix', selected:'seleccionadas', shown:'visibles', pass:'PASS', try:'PROBAR', passHelp:'La lista ya está limitada al destino seleccionado. PASS además significa que la fuente superó la prueba automática de combinación de Mix; no garantiza que cada app funcione en todos los dispositivos iOS.',
-    mixStatus:'Prueba de combinación', targetLabel:'¿Dónde quieres añadir el Mix?', targetHelpGeneric:'Mix Classic compatible con AltStore. Este instalador puede usar el mismo formato de fuente combinada.', targetHelpAlt:'El Mix final será una Classic AltSource para AltStore Classic. Se ocultan las fuentes exclusivas de SideStore y las de marketplace PAL.', targetHelpSide:'SideStore es totalmente compatible con AltStore Sources (AltSources). Aquí mostramos fuentes IPA Classic y eliminamos del Mix generado los metadatos exclusivos de PAL.', targetHelpLive:'LiveContainer puede navegar fuentes estilo AltStore e instalar apps desde la URL de descarga de su versión más reciente. Aquí mostramos fuentes IPA Classic combinables.', targetHelpFlare:'FlareStore acepta repositorios compatibles con AltStore. El Mix sigue siendo una Classic AltSource y se abre directamente en FlareStore.', targetHelpFeather:'Feather acepta repositorios compatibles con AltStore. El Mix sigue siendo una Classic AltSource y se abre directamente en Feather.', palNote:'AltStore PAL no es un destino de Custom Mix porque usa paquetes notarizados de marketplace y metadatos diferentes a las fuentes IPA Classic.', targetPrefix:'Destino', statusAll:'Todo', statusPass:'Solo PASS', statusTry:'Solo PROBAR', platform:'Plataforma', platformAll:'Todo', classic:'AltStore Classic', pal:'AltStore PAL', sidestore:'SideStore', livecontainer:'LiveContainer', autoTested:'Prueba automática',
+    selectPass:'Seleccionar PASS para', selectAll:'Seleccionar visibles', clear:'Borrar selección', build:'Crear Mix', selected:'seleccionadas', shown:'visibles', pass:'PASS', try:'PROBAR', passHelp:'PASS significa que la fuente es compatible con el instalador seleccionado y superó la prueba automática de Mix; no garantiza que cada app funcione en todos los dispositivos iOS.', compatLogic:'PASS = compatible y verificada automáticamente para el Mix. PROBAR = formato compatible pero no verificado por completo; puede seleccionarse para pruebas. INCOMPATIBLE = no puede usarse con el instalador elegido y queda desactivada. Al cambiar de instalador se eliminan las Sources seleccionadas incompatibles. Crear Mix combina las Sources elegidas en una sola Source. “Añadir a …” abre directamente la app elegida solo cuando el Mix combinado tiene una URL HTTPS pública; de lo contrario quedan disponibles Descargar / Vista previa.', incompatible:'INCOMPATIBLE', incompatibleReason:'No es compatible con el instalador seleccionado.', removedIncompatible:'Se eliminaron {n} fuente(s) seleccionadas porque no son compatibles con {tool}.',
+    mixStatus:'Prueba de combinación', targetLabel:'¿Dónde quieres añadir el Mix?', targetHelpGeneric:'Mix Classic compatible con AltStore. Este instalador puede usar el mismo formato de fuente combinada.', targetHelpAlt:'El Mix final será una Classic AltSource para AltStore Classic. Las Sources incompatibles permanecen visibles, pero desactivadas.', targetHelpSide:'SideStore es totalmente compatible con AltStore Sources (AltSources). Aquí mostramos fuentes IPA Classic y eliminamos del Mix generado los metadatos exclusivos de PAL.', targetHelpLive:'LiveContainer puede navegar fuentes estilo AltStore e instalar apps desde la URL de descarga de su versión más reciente. Aquí mostramos fuentes IPA Classic combinables.', targetHelpFlare:'FlareStore acepta repositorios compatibles con AltStore. El Mix sigue siendo una Classic AltSource y se abre directamente en FlareStore.', targetHelpFeather:'Feather acepta repositorios compatibles con AltStore. El Mix sigue siendo una Classic AltSource y se abre directamente en Feather.', palNote:'AltStore PAL no es un destino de Custom Mix porque usa paquetes notarizados de marketplace y metadatos diferentes a las fuentes IPA Classic.', targetPrefix:'Destino', statusAll:'Todo', statusPass:'Solo PASS', statusTry:'Solo PROBAR', platform:'Plataforma', platformAll:'Todo', classic:'AltStore Classic', pal:'AltStore PAL', sidestore:'SideStore', livecontainer:'LiveContainer', autoTested:'Prueba automática',
     altPackage:'AltStore Source', sidePackage:'SideStore Source', livePackage:'LiveContainer Source', customMix:'Mix personalizado', filters:'⚙ Filtros · 🔎 Búsqueda · ☑ Selección',
     dedupeHelp:'Si varias entradas de una app usan el mismo bundle ID, el Mix generado conserva solo una — normalmente la más reciente por fecha. Por eso, distintas variantes de la misma app pueden fusionarse en una sola.', dedupeResult:'Algunas variantes compartían el mismo bundle ID y se fusionaron; en el Mix queda solo una entrada por bundle ID.',
     addTo:'＋ Añadir a', copyUrl:'Copiar URL', json:'JSON ↗', apps:'apps', sources:'fuentes',
@@ -83,8 +83,8 @@ const copy = {
   },
   fr: {
     title:'Custom Source Builder', desc:'Filtrez les sources en ligne vérifiées, choisissez n’importe quelle combinaison et créez votre propre Mix pour les installateurs compatibles avec les sources Classic.',
-    selectPass:'Sélectionner les PASS pour', selectAll:'Tout sélectionner affiché', clear:'Effacer la sélection', build:'Créer Mix', selected:'sélectionnées', shown:'affichées', pass:'PASS', try:'TEST', passHelp:'La liste est déjà limitée à la cible choisie. PASS signifie en plus que la source a réussi le test automatique de fusion Mix; cela ne garantit pas que chaque app fonctionne sur chaque appareil iOS.',
-    mixStatus:'Test de fusion', targetLabel:'Où voulez-vous ajouter le Mix ?', targetHelpGeneric:'Mix Classic compatible avec AltStore. Cet installateur peut utiliser le même format de source fusionnée.', targetHelpAlt:'Le Mix final sera une Classic AltSource pour AltStore Classic. Les sources réservées à SideStore et les marketplaces PAL sont masquées.', targetHelpSide:'SideStore est entièrement compatible avec les AltStore Sources (AltSources). Nous affichons ici les sources IPA Classic et retirons du Mix généré les métadonnées réservées à PAL.', targetHelpLive:'LiveContainer peut parcourir les sources de style AltStore et installer les apps depuis l’URL de téléchargement de leur dernière version. Nous affichons ici les sources IPA Classic fusionnables.', targetHelpFlare:'FlareStore accepte les dépôts compatibles AltStore. Le Mix reste une Classic AltSource et s’ouvre directement dans FlareStore.', targetHelpFeather:'Feather accepte les dépôts compatibles AltStore. Le Mix reste une Classic AltSource et s’ouvre directement dans Feather.', palNote:'AltStore PAL n’est pas une cible du Custom Mix car PAL utilise des paquets marketplace notariés et des métadonnées différentes des sources IPA Classic.', targetPrefix:'Cible', statusAll:'Tout', statusPass:'PASS seulement', statusTry:'TEST seulement', platform:'Plateforme', platformAll:'Tout', classic:'AltStore Classic', pal:'AltStore PAL', sidestore:'SideStore', livecontainer:'LiveContainer', autoTested:'Test automatique',
+    selectPass:'Sélectionner les PASS pour', selectAll:'Tout sélectionner affiché', clear:'Effacer la sélection', build:'Créer Mix', selected:'sélectionnées', shown:'affichées', pass:'PASS', try:'TEST', passHelp:'PASS signifie que la source est compatible avec l’installateur sélectionné et a réussi le test automatique de Mix ; cela ne garantit pas que chaque app fonctionne sur chaque appareil iOS.', compatLogic:'PASS = compatible et vérifié automatiquement pour le Mix. TEST = format compatible mais pas entièrement vérifié ; la source peut être sélectionnée pour tester. INCOMPATIBLE = ne peut pas être utilisée avec l’installateur choisi et reste désactivée. Changer d’installateur retire les Sources sélectionnées incompatibles. Créer Mix combine les Sources choisies en une seule Source. « Ajouter à … » ouvre directement l’app choisie seulement si le Mix combiné possède une URL HTTPS publique ; sinon Télécharger / Aperçu restent disponibles.', incompatible:'INCOMPATIBLE', incompatibleReason:'Non compatible avec l’installateur sélectionné.', removedIncompatible:'{n} source(s) sélectionnée(s) ont été retirées car elles ne sont pas compatibles avec {tool}.',
+    mixStatus:'Test de fusion', targetLabel:'Où voulez-vous ajouter le Mix ?', targetHelpGeneric:'Mix Classic compatible avec AltStore. Cet installateur peut utiliser le même format de source fusionnée.', targetHelpAlt:'Le Mix final sera une Classic AltSource pour AltStore Classic. Les Sources incompatibles restent visibles mais désactivées.', targetHelpSide:'SideStore est entièrement compatible avec les AltStore Sources (AltSources). Nous affichons ici les sources IPA Classic et retirons du Mix généré les métadonnées réservées à PAL.', targetHelpLive:'LiveContainer peut parcourir les sources de style AltStore et installer les apps depuis l’URL de téléchargement de leur dernière version. Nous affichons ici les sources IPA Classic fusionnables.', targetHelpFlare:'FlareStore accepte les dépôts compatibles AltStore. Le Mix reste une Classic AltSource et s’ouvre directement dans FlareStore.', targetHelpFeather:'Feather accepte les dépôts compatibles AltStore. Le Mix reste une Classic AltSource et s’ouvre directement dans Feather.', palNote:'AltStore PAL n’est pas une cible du Custom Mix car PAL utilise des paquets marketplace notariés et des métadonnées différentes des sources IPA Classic.', targetPrefix:'Cible', statusAll:'Tout', statusPass:'PASS seulement', statusTry:'TEST seulement', platform:'Plateforme', platformAll:'Tout', classic:'AltStore Classic', pal:'AltStore PAL', sidestore:'SideStore', livecontainer:'LiveContainer', autoTested:'Test automatique',
     altPackage:'AltStore Source', sidePackage:'SideStore Source', livePackage:'LiveContainer Source', customMix:'Mix personnalisé', filters:'⚙ Filtres · 🔎 Recherche · ☑ Sélection',
     dedupeHelp:'Si plusieurs entrées d’une app utilisent le même bundle ID, le Mix généré n’en conserve qu’une — généralement la plus récente selon la date. Différentes variantes d’une même app peuvent donc être fusionnées.', dedupeResult:'Certaines variantes partageaient le même bundle ID et ont été fusionnées ; le Mix ne conserve qu’une entrée par bundle ID.',
     addTo:'＋ Ajouter à', copyUrl:'Copier URL', json:'JSON ↗', apps:'apps', sources:'sources',
@@ -142,7 +142,26 @@ function directSourceAvailable(sourceId, installerId = target) {
   return sourceInstallerDirectAvailable(getStatus(sourceId), installerId);
 }
 function catalogSource(id) { return catalog?.sources?.find(item => item.id === id) || null; }
-function allCandidates() { return registry.filter(source => source.builder !== false && getStatus(source.id).online === true && getStatus(source.id).mixTest !== 'fail'); }
+function onlineBuilderSources() {
+  return registry.filter(source => source.builder !== false && getStatus(source.id).online === true);
+}
+function targetCompatibility(source) {
+  const installer = INSTALLERS[target];
+  const variant = installer?.variant || null;
+  const hasVariant = Boolean(variant && sourceVariantURL(source, variant));
+  const supportsInstaller = sourceInstallerIds(source).includes(target);
+  const statusInfo = getStatus(source.id)?.installerCompatibility?.[target];
+  const directSupported = statusInfo?.directSource !== 'fail';
+  const supported = Boolean(installer && hasVariant && supportsInstaller && directSupported);
+  return {
+    supported,
+    reason: supported ? (statusInfo?.reason || '') : (statusInfo?.reason || tr('incompatibleReason'))
+  };
+}
+function selectableForTarget(source) {
+  return targetCompatibility(source).supported && getStatus(source.id).mixTest !== 'fail';
+}
+function allCandidates() { return onlineBuilderSources().filter(source => selectableForTarget(source)); }
 function autoCompatibleIds() { return new Set(status?.mixes?.autoCompatibleSourceIDs || []); }
 function hostedIds() { return new Set(status?.mixes?.mergeableSourceIDs || []); }
 
@@ -182,13 +201,12 @@ function targetVariant() {
   return INSTALLERS[target]?.variant || null;
 }
 function matchesTarget(source) {
-  const variant = targetVariant();
-  return Boolean(variant && sourceVariantURL(source, variant)) && sourceInstallerIds(source).includes(target);
+  return targetCompatibility(source).supported;
 }
 function matchesCompatibility(source) {
   if (compatibility === 'all') return true;
   const test = getStatus(source.id).mixTest;
-  return compatibility === 'pass' ? test === 'pass' : test !== 'pass';
+  return compatibility === 'pass' ? test === 'pass' : (test !== 'pass' && test !== 'fail');
 }
 function sourceSearchText(source) {
   const apps = (catalogSource(source.id)?.apps || []).flatMap(app => [
@@ -202,7 +220,13 @@ function matchesQuery(source) {
   return !q || sourceSearchText(source).includes(q);
 }
 function candidates() {
-  return allCandidates().filter(source => matchesCategory(source) && matchesGenre(source) && matchesTarget(source) && matchesCompatibility(source) && matchesQuery(source));
+  return onlineBuilderSources().filter(source => {
+    if (!matchesCategory(source) || !matchesGenre(source) || !matchesQuery(source)) return false;
+    const targetInfo = targetCompatibility(source);
+    if (compatibility === 'all') return true;
+    if (!targetInfo.supported || getStatus(source.id).mixTest === 'fail') return false;
+    return matchesCompatibility(source);
+  });
 }
 
 function restoreSettings() {
@@ -241,6 +265,7 @@ function applyCopy() {
   if ($('#customMixFiltersLabel')) $('#customMixFiltersLabel').textContent = tr('filters');
   if ($('#mixTargetLabel')) $('#mixTargetLabel').textContent = tr('targetLabel');
   if ($('#mixTargetHelp')) $('#mixTargetHelp').textContent = tr(targetHelpKey());
+  if ($('#mixCompatibilityHelp')) $('#mixCompatibilityHelp').textContent = tr('compatLogic');
   if ($('#mixPalNote')) $('#mixPalNote').textContent = tr('palNote');
   if ($('#mixStatusLabel')) $('#mixStatusLabel').textContent = tr('mixStatus');
   if ($('#mixTestBadge')) $('#mixTestBadge').textContent = tr('autoTested');
@@ -310,19 +335,22 @@ function render() {
   if (!list) return;
 
   const available = candidates();
-  const validIds = new Set(allCandidates().filter(source => matchesTarget(source)).map(source => source.id));
+  const validIds = new Set(onlineBuilderSources().filter(source => selectableForTarget(source)).map(source => source.id));
   [...selected].forEach(id => { if (!validIds.has(id)) selected.delete(id); });
   saveSelection();
 
   list.innerHTML = available.length ? available.map(source => {
     const item = getStatus(source.id);
     const checked = selected.has(source.id);
+    const targetInfo = targetCompatibility(source);
+    const selectable = targetInfo.supported && item.mixTest !== 'fail';
     const passed = item.mixTest === 'pass';
-    const test = passed ? tr('pass') : tr('try');
-    const cls = passed ? 'online' : 'mode';
-    return `<label class="builder-item" title="${escapeHtml(item.mixReason || '')}">
-      <input type="checkbox" data-exp-source="${escapeHtml(source.id)}" ${checked ? 'checked' : ''}>
-      <div><strong>${escapeHtml(source.name)}</strong><span>${escapeHtml(modeName(source))} · → ${escapeHtml(targetName())}</span></div>
+    const test = selectable ? (passed ? tr('pass') : tr('try')) : tr('incompatible');
+    const cls = selectable ? (passed ? 'online' : 'mode') : 'offline';
+    const reason = selectable ? (item.mixReason || '') : (item.mixReason || targetInfo.reason || tr('incompatibleReason'));
+    return `<label class="builder-item${selectable ? '' : ' builder-item-disabled'}" title="${escapeHtml(reason)}">
+      <input type="checkbox" data-exp-source="${escapeHtml(source.id)}" ${checked ? 'checked' : ''} ${selectable ? '' : 'disabled'}>
+      <div><strong>${escapeHtml(source.name)}</strong><span>${escapeHtml(modeName(source))} · → ${escapeHtml(targetName())}${selectable ? '' : ` · ${escapeHtml(tr('incompatibleReason'))}`}</span></div>
       <div class="builder-count"><span class="pill online">● ONLINE</span> <span class="pill ${cls}">${escapeHtml(test)}</span> ${Number.isFinite(item.appCount) ? `${item.appCount} ${escapeHtml(tr('apps'))}` : ''}</div>
     </label>`;
   }).join('') : `<div class="notice">${escapeHtml(tr('empty'))}</div>`;
@@ -567,13 +595,13 @@ async function init() {
   render();
 
   $('#expSelectCompatible')?.addEventListener('click', () => {
-    selected = new Set(candidates().filter(source => getStatus(source.id).mixTest === 'pass').map(source => source.id));
+    selected = new Set(candidates().filter(source => selectableForTarget(source) && getStatus(source.id).mixTest === 'pass').map(source => source.id));
     saveSelection();
     hideResult();
     render();
   });
   $('#expSelectAll')?.addEventListener('click', () => {
-    selected = new Set(candidates().map(source => source.id));
+    selected = new Set(candidates().filter(source => selectableForTarget(source)).map(source => source.id));
     saveSelection();
     hideResult();
     render();
@@ -589,6 +617,13 @@ async function init() {
   $('#experimentalBuilderList')?.addEventListener('change', event => {
     const id = event.target?.dataset?.expSource;
     if (!id) return;
+    const source = registry.find(item => item.id === id);
+    if (!source || !selectableForTarget(source)) {
+      event.target.checked = false;
+      selected.delete(id);
+      saveSelection();
+      return;
+    }
     if (event.target.checked) selected.add(id); else selected.delete(id);
     saveSelection();
     hideResult();
@@ -607,14 +642,25 @@ async function init() {
     const button = event.target.closest('[data-exp-target]');
     if (!button) return;
     const nextTarget = TARGETS.has(button.dataset.expTarget) ? button.dataset.expTarget : DEFAULT_BUILDER_INSTALLER_ID;
+    let removed = 0;
     if (nextTarget !== target) {
       target = nextTarget;
-      selected.clear();
+      [...selected].forEach(id => {
+        const source = registry.find(item => item.id === id);
+        if (!source || !selectableForTarget(source)) {
+          selected.delete(id);
+          removed += 1;
+        }
+      });
       saveSelection();
       hideResult();
     }
     saveFilters();
     render();
+    if (removed) {
+      const message = $('#expMessage');
+      if (message) message.textContent = tr('removedIncompatible').replace('{n}', String(removed)).replace('{tool}', targetName());
+    }
   });
   $$('[data-exp-compat-filter]').forEach(button => button.addEventListener('click', () => {
     compatibility = COMPATIBILITY.has(button.dataset.expCompatFilter) ? button.dataset.expCompatFilter : 'all';
