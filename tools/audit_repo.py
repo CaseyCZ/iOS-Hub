@@ -1200,11 +1200,13 @@ def validate_layout() -> None:
         builder_page_text = builder_page.read_text(encoding="utf-8")
         if 'id="mixDedupeHelp"' not in builder_page_text:
             error("builder.html must explain bundle-ID deduplication in the Mix UI")
-        for required_action_host in ('id="expAddTarget"', 'id="expAddSources"', 'id="expAddSourcesSummary"', 'id="expAddSourcesMenu"'):
-            if required_action_host not in builder_page_text:
+        if 'id="expAddTarget"' not in builder_page_text:
+            error("builder.html must keep the direct installer Add action in the result UI")
+        for forbidden_result_menu in ('id="expAddSources"', 'id="expAddSourcesSummary"', 'id="expAddSourcesMenu"'):
+            if forbidden_result_menu in builder_page_text:
                 error(
-                    "builder.html must keep installer-aware Add actions in the result UI; "
-                    f"missing {required_action_host!r}"
+                    "Builder result must not show a per-source installer dropdown; "
+                    f"found {forbidden_result_menu!r}"
                 )
         if 'id="builderTargets" class="builder-target-picker-host"' not in builder_page_text:
             error("Builder installer target must use the compact dropdown host")
@@ -1216,8 +1218,6 @@ def validate_layout() -> None:
         builder_text = builder_script.read_text(encoding="utf-8")
         if "sourceUrl && directSourceAvailable(ids[0], target)" not in builder_text:
             error("Builder single-source fallback must respect per-installer direct Source compatibility")
-        if "!directSourceAvailable(id, target)" not in builder_text:
-            error("Builder multi-source fallback must filter incompatible direct Source actions")
         for hosted_pair_required in (
             "hostedPairSourceIDs",
             "sorted.length === 2",
@@ -1243,16 +1243,24 @@ def validate_layout() -> None:
             error("Builder target picker must use delegated events so re-rendered options keep working")
         for required_action in (
             "const addTarget = $('#expAddTarget')",
-            "const addSources = $('#expAddSources')",
             "installer.buildLink(hosted.url)",
             "addTarget.innerHTML = `${installerIcon(target)}",
-            "addSourcesSummary.innerHTML = `${installerIcon(target)}",
-            "addSourcesMenu.innerHTML = sourceActions.join('')",
         ):
             if required_action not in builder_text:
                 error(
-                    "Builder result must expose installer-aware Add actions before JSON-only fallbacks; "
+                    "Builder result must expose one direct installer action; "
                     f"missing {required_action!r}"
+                )
+        for forbidden_dropdown_code in (
+            "const addSources = $('#expAddSources')",
+            "addSourcesSummary.innerHTML",
+            "addSourcesMenu.innerHTML",
+            "sourceActions = ids.map",
+        ):
+            if forbidden_dropdown_code in builder_text:
+                error(
+                    "Builder result must not restore the per-source installer dropdown; "
+                    f"found {forbidden_dropdown_code!r}"
                 )
         for forbidden in (
             "let target = 'altstore'",
