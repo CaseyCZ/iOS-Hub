@@ -716,6 +716,26 @@ def validate_generated_data() -> None:
                         f"data/status.json source {source_id!r} preferredVariant {preferred!r} is not online"
                     )
 
+                compliance = source.get("compliance")
+                aggregation_approved = bool(
+                    isinstance(compliance, dict)
+                    and compliance.get("aggregationApproved") is True
+                )
+                if item.get("aggregationApproved") is not aggregation_approved:
+                    error(
+                        f"data/status.json source {source_id!r} aggregationApproved differs from registry"
+                    )
+                if not aggregation_approved:
+                    if item.get("iconURL") not in ("", None):
+                        error(
+                            f"link-only source {source_id!r} must not persist third-party iconURL"
+                        )
+                    duplicate_report = item.get("duplicateBundleIdentifiers")
+                    if isinstance(duplicate_report, dict) and duplicate_report.get("examples"):
+                        error(
+                            f"link-only source {source_id!r} must not persist duplicate bundle examples"
+                        )
+
         online_ids = {
             source_id
             for source_id, item in status["sources"].items()
@@ -733,6 +753,38 @@ def validate_generated_data() -> None:
                 error("data/catalog.json is missing online source ids: " + ", ".join(missing))
             if extra:
                 error("data/catalog.json contains non-online/unknown source ids: " + ", ".join(extra))
+
+        catalog_by_id = {
+            str(item.get("id")): item
+            for item in catalog["sources"]
+            if isinstance(item, dict) and item.get("id")
+        }
+        for source_id, source in registry_by_id.items():
+            catalog_item = catalog_by_id.get(source_id)
+            if not isinstance(catalog_item, dict):
+                continue
+            compliance = source.get("compliance")
+            aggregation_approved = bool(
+                isinstance(compliance, dict)
+                and compliance.get("aggregationApproved") is True
+            )
+            if catalog_item.get("aggregationApproved") is not aggregation_approved:
+                error(
+                    f"data/catalog.json source {source_id!r} aggregationApproved differs from registry"
+                )
+            if not aggregation_approved:
+                if catalog_item.get("apps") not in ([], None):
+                    error(
+                        f"link-only source {source_id!r} must not publish app metadata in catalog.json"
+                    )
+                if catalog_item.get("iconURL") not in ("", None):
+                    error(
+                        f"link-only source {source_id!r} must not publish third-party iconURL in catalog.json"
+                    )
+                if catalog_item.get("name") != source.get("name"):
+                    error(
+                        f"link-only source {source_id!r} catalog name must come from registry metadata"
+                    )
 
         for package_name in ("altstore", "sidestore"):
             package = status.get(package_name, {})
@@ -853,7 +905,10 @@ def validate_generated_data() -> None:
         expected_cache_ids = {
             str(item.get("id"))
             for item in registry_sources
-            if item.get("id") in online_ids and item.get("cachePayload", True)
+            if item.get("id") in online_ids
+            and item.get("cachePayload", True)
+            and isinstance(item.get("compliance"), dict)
+            and item["compliance"].get("aggregationApproved") is True
         }
         cache_dir = ROOT / "data" / "source-cache"
         if cache_dir.is_dir():
