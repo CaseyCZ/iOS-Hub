@@ -231,7 +231,7 @@ const SHORTCUT_NAME = 'iOS Hub Source Import';
 function sourceDeepLink(sourceUrl) {
   const encoded = encodeURIComponent(sourceUrl);
   if (target === 'sidestore') return `sidestore://source?url=${encoded}`;
-  if (target === 'livecontainer') return `livecontainer://sources?url=${encoded}`;
+  if (target === 'livecontainer') return `livecontainer://source?url=${encoded}`;
   return `altstore://source?url=${encoded}`;
 }
 
@@ -279,7 +279,7 @@ function packageCard(name, url, meta, type) {
     addLabel = tr('addSide');
     badge = 'SideStore';
   } else if (type === 'live') {
-    install = `livecontainer://sources?url=${encodeURIComponent(url)}`;
+    install = `livecontainer://source?url=${encodeURIComponent(url)}`;
     addLabel = tr('addLive');
     badge = 'LiveContainer';
   }
