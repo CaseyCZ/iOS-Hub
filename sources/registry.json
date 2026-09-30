@@ -52,10 +52,13 @@
       ],
       "developer": "UTM Team",
       "compliance": {
-        "reviewStatus": "unreviewed",
+        "reviewStatus": "public-metadata",
         "usage": "link-only",
         "binaryRehost": false,
-        "aggregationApproved": false
+        "aggregationApproved": false,
+        "evidenceURL": "https://alt.getutm.app/",
+        "reviewedAt": "2026-09-30",
+        "note": "Public Source endpoint is listed for discovery/direct install only. No explicit aggregation or metadata-redistribution permission is recorded; iOS Hub must not cache, merge, or republish its app metadata."
       }
     },
     {
@@ -80,10 +83,13 @@
       ],
       "developer": "Provenance Team",
       "compliance": {
-        "reviewStatus": "unreviewed",
+        "reviewStatus": "public-metadata",
         "usage": "link-only",
         "binaryRehost": false,
-        "aggregationApproved": false
+        "aggregationApproved": false,
+        "evidenceURL": "https://provenance-emu.com/apps.json",
+        "reviewedAt": "2026-09-30",
+        "note": "Public Source endpoint is listed for discovery/direct install only. No explicit aggregation or metadata-redistribution permission is recorded; iOS Hub must not cache, merge, or republish its app metadata."
       }
     },
     {
@@ -108,10 +114,13 @@
       ],
       "developer": "iSH Team",
       "compliance": {
-        "reviewStatus": "unreviewed",
+        "reviewStatus": "public-metadata",
         "usage": "link-only",
         "binaryRehost": false,
-        "aggregationApproved": false
+        "aggregationApproved": false,
+        "evidenceURL": "https://ish.app/altstore.json",
+        "reviewedAt": "2026-09-30",
+        "note": "Public Source endpoint is listed for discovery/direct install only. No explicit aggregation or metadata-redistribution permission is recorded; iOS Hub must not cache, merge, or republish its app metadata."
       }
     },
     {
@@ -137,10 +146,13 @@
       ],
       "developer": "Flycast Team",
       "compliance": {
-        "reviewStatus": "unreviewed",
+        "reviewStatus": "public-metadata",
         "usage": "link-only",
         "binaryRehost": false,
-        "aggregationApproved": false
+        "aggregationApproved": false,
+        "evidenceURL": "https://flyinghead.github.io/flycast-builds/altstore.json",
+        "reviewedAt": "2026-09-30",
+        "note": "Public Source endpoint is listed for discovery/direct install only. No explicit aggregation or metadata-redistribution permission is recorded; iOS Hub must not cache, merge, or republish its app metadata."
       }
     },
     {
@@ -176,10 +188,13 @@
         "feather"
       ],
       "compliance": {
-        "reviewStatus": "unreviewed",
+        "reviewStatus": "public-metadata",
         "usage": "link-only",
         "binaryRehost": false,
-        "aggregationApproved": false
+        "aggregationApproved": false,
+        "evidenceURL": "https://community-apps.sidestore.io/sidecommunity.json",
+        "reviewedAt": "2026-09-30",
+        "note": "Public Source endpoint is listed for discovery/direct install only. No explicit aggregation or metadata-redistribution permission is recorded; iOS Hub must not cache, merge, or republish its app metadata."
       }
     },
     {
@@ -214,10 +229,13 @@
         "feather"
       ],
       "compliance": {
-        "reviewStatus": "unreviewed",
+        "reviewStatus": "public-metadata",
         "usage": "link-only",
         "binaryRehost": false,
-        "aggregationApproved": false
+        "aggregationApproved": false,
+        "evidenceURL": "https://apps.sidestore.io/",
+        "reviewedAt": "2026-09-30",
+        "note": "Public Source endpoint is listed for discovery/direct install only. No explicit aggregation or metadata-redistribution permission is recorded; iOS Hub must not cache, merge, or republish its app metadata."
       }
     },
     {
@@ -242,10 +260,13 @@
       ],
       "developer": "StikDebug",
       "compliance": {
-        "reviewStatus": "unreviewed",
+        "reviewStatus": "public-metadata",
         "usage": "link-only",
         "binaryRehost": false,
-        "aggregationApproved": false
+        "aggregationApproved": false,
+        "evidenceURL": "https://stikdebug.xyz/index.json",
+        "reviewedAt": "2026-09-30",
+        "note": "Public Source endpoint is listed for discovery/direct install only. No explicit aggregation or metadata-redistribution permission is recorded; iOS Hub must not cache, merge, or republish its app metadata."
       }
     },
     {
@@ -271,10 +292,13 @@
       ],
       "developer": "LiveContainer Team",
       "compliance": {
-        "reviewStatus": "unreviewed",
+        "reviewStatus": "public-metadata",
         "usage": "link-only",
         "binaryRehost": false,
-        "aggregationApproved": false
+        "aggregationApproved": false,
+        "evidenceURL": "https://github.com/LiveContainer/LiveContainer/releases/download/1.0/apps.json",
+        "reviewedAt": "2026-09-30",
+        "note": "Public Source endpoint is listed for discovery/direct install only. No explicit aggregation or metadata-redistribution permission is recorded; iOS Hub must not cache, merge, or republish its app metadata."
       }
     },
     {
@@ -300,10 +324,13 @@
       ],
       "developer": "LiveContainer Team",
       "compliance": {
-        "reviewStatus": "unreviewed",
+        "reviewStatus": "public-metadata",
         "usage": "link-only",
         "binaryRehost": false,
-        "aggregationApproved": false
+        "aggregationApproved": false,
+        "evidenceURL": "https://github.com/LiveContainer/LiveContainer/releases/download/nightly/apps_nightly.json",
+        "reviewedAt": "2026-09-30",
+        "note": "Public Source endpoint is listed for discovery/direct install only. No explicit aggregation or metadata-redistribution permission is recorded; iOS Hub must not cache, merge, or republish its app metadata."
       }
     },
     {
@@ -328,10 +355,13 @@
       ],
       "developer": "Manic EMU",
       "compliance": {
-        "reviewStatus": "unreviewed",
+        "reviewStatus": "public-metadata",
         "usage": "link-only",
         "binaryRehost": false,
-        "aggregationApproved": false
+        "aggregationApproved": false,
+        "evidenceURL": "https://apps.manicemu.site/altstore",
+        "reviewedAt": "2026-09-30",
+        "note": "Public Source endpoint is listed for discovery/direct install only. No explicit aggregation or metadata-redistribution permission is recorded; iOS Hub must not cache, merge, or republish its app metadata."
       }
     },
     {
@@ -388,10 +418,13 @@
       ],
       "developer": "Geode Team",
       "compliance": {
-        "reviewStatus": "unreviewed",
+        "reviewStatus": "public-metadata",
         "usage": "link-only",
         "binaryRehost": false,
-        "aggregationApproved": false
+        "aggregationApproved": false,
+        "evidenceURL": "https://ios-repo.geode-sdk.org/altsource/main.json",
+        "reviewedAt": "2026-09-30",
+        "note": "Public Source endpoint is listed for discovery/direct install only. No explicit aggregation or metadata-redistribution permission is recorded; iOS Hub must not cache, merge, or republish its app metadata."
       }
     },
     {
@@ -416,10 +449,13 @@
       ],
       "developer": "RetroSekaï",
       "compliance": {
-        "reviewStatus": "unreviewed",
+        "reviewStatus": "public-metadata",
         "usage": "link-only",
         "binaryRehost": false,
-        "aggregationApproved": false
+        "aggregationApproved": false,
+        "evidenceURL": "https://repo.untitledcharts.com",
+        "reviewedAt": "2026-09-30",
+        "note": "Public Source endpoint is listed for discovery/direct install only. No explicit aggregation or metadata-redistribution permission is recorded; iOS Hub must not cache, merge, or republish its app metadata."
       }
     },
     {
@@ -444,10 +480,13 @@
       ],
       "developer": "OatmealDome",
       "compliance": {
-        "reviewStatus": "unreviewed",
+        "reviewStatus": "public-metadata",
         "usage": "link-only",
         "binaryRehost": false,
-        "aggregationApproved": false
+        "aggregationApproved": false,
+        "evidenceURL": "https://altstore.oatmealdome.me",
+        "reviewedAt": "2026-09-30",
+        "note": "Public Source endpoint is listed for discovery/direct install only. No explicit aggregation or metadata-redistribution permission is recorded; iOS Hub must not cache, merge, or republish its app metadata."
       }
     },
     {
@@ -471,10 +510,13 @@
       ],
       "developer": "crystall1ne",
       "compliance": {
-        "reviewStatus": "unreviewed",
+        "reviewStatus": "public-metadata",
         "usage": "link-only",
         "binaryRehost": false,
-        "aggregationApproved": false
+        "aggregationApproved": false,
+        "evidenceURL": "https://alt.crystall1ne.dev",
+        "reviewedAt": "2026-09-30",
+        "note": "Public Source endpoint is listed for discovery/direct install only. No explicit aggregation or metadata-redistribution permission is recorded; iOS Hub must not cache, merge, or republish its app metadata."
       }
     },
     {
@@ -499,10 +541,13 @@
       ],
       "developer": "PokeMMO Team",
       "compliance": {
-        "reviewStatus": "unreviewed",
+        "reviewStatus": "public-metadata",
         "usage": "link-only",
         "binaryRehost": false,
-        "aggregationApproved": false
+        "aggregationApproved": false,
+        "evidenceURL": "https://pokemmo.eu/altstore/",
+        "reviewedAt": "2026-09-30",
+        "note": "Public Source endpoint is listed for discovery/direct install only. No explicit aggregation or metadata-redistribution permission is recorded; iOS Hub must not cache, merge, or republish its app metadata."
       }
     },
     {
@@ -526,10 +571,13 @@
       ],
       "developer": "Odyssey Team",
       "compliance": {
-        "reviewStatus": "unreviewed",
+        "reviewStatus": "public-metadata",
         "usage": "link-only",
         "binaryRehost": false,
-        "aggregationApproved": false
+        "aggregationApproved": false,
+        "evidenceURL": "https://theodyssey.dev/altstore/odysseysource.json",
+        "reviewedAt": "2026-09-30",
+        "note": "Public Source endpoint is listed for discovery/direct install only. No explicit aggregation or metadata-redistribution permission is recorded; iOS Hub must not cache, merge, or republish its app metadata."
       }
     },
     {
@@ -587,10 +635,13 @@
       ],
       "developer": "litritt",
       "compliance": {
-        "reviewStatus": "unreviewed",
+        "reviewStatus": "public-metadata",
         "usage": "link-only",
         "binaryRehost": false,
-        "aggregationApproved": false
+        "aggregationApproved": false,
+        "evidenceURL": "https://altstore.ignitedemulator.com/",
+        "reviewedAt": "2026-09-30",
+        "note": "Public Source endpoint is listed for discovery/direct install only. No explicit aggregation or metadata-redistribution permission is recorded; iOS Hub must not cache, merge, or republish its app metadata."
       }
     },
     {
@@ -613,10 +664,13 @@
       ],
       "developer": "delia-cheminot",
       "compliance": {
-        "reviewStatus": "unreviewed",
+        "reviewStatus": "public-metadata",
         "usage": "link-only",
         "binaryRehost": false,
-        "aggregationApproved": false
+        "aggregationApproved": false,
+        "evidenceURL": "https://raw.githubusercontent.com/delia-cheminot/mona-hrt/refs/heads/main/ios_source.json",
+        "reviewedAt": "2026-09-30",
+        "note": "Public Source endpoint is listed for discovery/direct install only. No explicit aggregation or metadata-redistribution permission is recorded; iOS Hub must not cache, merge, or republish its app metadata."
       }
     },
     {
@@ -676,10 +730,13 @@
       ],
       "developer": "Stremio Team",
       "compliance": {
-        "reviewStatus": "unreviewed",
+        "reviewStatus": "public-metadata",
         "usage": "link-only",
         "binaryRehost": false,
-        "aggregationApproved": false
+        "aggregationApproved": false,
+        "evidenceURL": "https://dl.strem.io/apple/altstore/source.json",
+        "reviewedAt": "2026-09-30",
+        "note": "Public Source endpoint is listed for discovery/direct install only. No explicit aggregation or metadata-redistribution permission is recorded; iOS Hub must not cache, merge, or republish its app metadata."
       }
     },
     {
@@ -739,10 +796,13 @@
       ],
       "developer": "ohaiibuzzle",
       "compliance": {
-        "reviewStatus": "unreviewed",
+        "reviewStatus": "public-metadata",
         "usage": "link-only",
         "binaryRehost": false,
-        "aggregationApproved": false
+        "aggregationApproved": false,
+        "evidenceURL": "https://github.com/ohaiibuzzle/kodi-ios-ipa-builds/releases/latest/download/source.json",
+        "reviewedAt": "2026-09-30",
+        "note": "Public Source endpoint is listed for discovery/direct install only. No explicit aggregation or metadata-redistribution permission is recorded; iOS Hub must not cache, merge, or republish its app metadata."
       }
     },
     {
@@ -767,10 +827,13 @@
       ],
       "developer": "SuperMarcus",
       "compliance": {
-        "reviewStatus": "unreviewed",
+        "reviewStatus": "public-metadata",
         "usage": "link-only",
         "binaryRehost": false,
-        "aggregationApproved": false
+        "aggregationApproved": false,
+        "evidenceURL": "https://9ani.app/api/altstore",
+        "reviewedAt": "2026-09-30",
+        "note": "Public Source endpoint is listed for discovery/direct install only. No explicit aggregation or metadata-redistribution permission is recorded; iOS Hub must not cache, merge, or republish its app metadata."
       }
     },
     {
@@ -796,10 +859,13 @@
       ],
       "developer": "eSound",
       "compliance": {
-        "reviewStatus": "unreviewed",
+        "reviewStatus": "public-metadata",
         "usage": "link-only",
         "binaryRehost": false,
-        "aggregationApproved": false
+        "aggregationApproved": false,
+        "evidenceURL": "https://esound.app/downloads/source.json",
+        "reviewedAt": "2026-09-30",
+        "note": "Public Source endpoint is listed for discovery/direct install only. No explicit aggregation or metadata-redistribution permission is recorded; iOS Hub must not cache, merge, or republish its app metadata."
       }
     },
     {
@@ -822,10 +888,13 @@
       ],
       "developer": "Party Knights",
       "compliance": {
-        "reviewStatus": "unreviewed",
+        "reviewStatus": "public-metadata",
         "usage": "link-only",
         "binaryRehost": false,
-        "aggregationApproved": false
+        "aggregationApproved": false,
+        "evidenceURL": "https://partyknights.app/source",
+        "reviewedAt": "2026-09-30",
+        "note": "Public Source endpoint is listed for discovery/direct install only. No explicit aggregation or metadata-redistribution permission is recorded; iOS Hub must not cache, merge, or republish its app metadata."
       }
     },
     {
@@ -849,10 +918,13 @@
       ],
       "developer": "BringYour",
       "compliance": {
-        "reviewStatus": "unreviewed",
+        "reviewStatus": "public-metadata",
         "usage": "link-only",
         "binaryRehost": false,
-        "aggregationApproved": false
+        "aggregationApproved": false,
+        "evidenceURL": "https://bringyour.com/altstore/source.json",
+        "reviewedAt": "2026-09-30",
+        "note": "Public Source endpoint is listed for discovery/direct install only. No explicit aggregation or metadata-redistribution permission is recorded; iOS Hub must not cache, merge, or republish its app metadata."
       }
     },
     {
@@ -877,10 +949,13 @@
       ],
       "developer": "XITRIX",
       "compliance": {
-        "reviewStatus": "unreviewed",
+        "reviewStatus": "public-metadata",
         "usage": "link-only",
         "binaryRehost": false,
-        "aggregationApproved": false
+        "aggregationApproved": false,
+        "evidenceURL": "https://xitrix.github.io/iTorrent/AltStore.json",
+        "reviewedAt": "2026-09-30",
+        "note": "Public Source endpoint is listed for discovery/direct install only. No explicit aggregation or metadata-redistribution permission is recorded; iOS Hub must not cache, merge, or republish its app metadata."
       }
     },
     {
@@ -917,10 +992,13 @@
         "feather"
       ],
       "compliance": {
-        "reviewStatus": "unreviewed",
+        "reviewStatus": "public-metadata",
         "usage": "link-only",
         "binaryRehost": false,
-        "aggregationApproved": false
+        "aggregationApproved": false,
+        "evidenceURL": "https://raw.githubusercontent.com/RajnishOne/altstore-releases/main/altstore-pal.json",
+        "reviewedAt": "2026-09-30",
+        "note": "Public Source endpoint is listed for discovery/direct install only. No explicit aggregation or metadata-redistribution permission is recorded; iOS Hub must not cache, merge, or republish its app metadata."
       }
     },
     {
@@ -958,10 +1036,13 @@
         "feather"
       ],
       "compliance": {
-        "reviewStatus": "unreviewed",
+        "reviewStatus": "public-metadata",
         "usage": "link-only",
         "binaryRehost": false,
-        "aggregationApproved": false
+        "aggregationApproved": false,
+        "evidenceURL": "https://raw.githubusercontent.com/auties00/artemis/refs/heads/main/source_pal.json",
+        "reviewedAt": "2026-09-30",
+        "note": "Public Source endpoint is listed for discovery/direct install only. No explicit aggregation or metadata-redistribution permission is recorded; iOS Hub must not cache, merge, or republish its app metadata."
       }
     },
     {
@@ -985,10 +1066,13 @@
       ],
       "developer": "Hacker Web App",
       "compliance": {
-        "reviewStatus": "unreviewed",
+        "reviewStatus": "public-metadata",
         "usage": "link-only",
         "binaryRehost": false,
-        "aggregationApproved": false
+        "aggregationApproved": false,
+        "evidenceURL": "https://alt.hackerwebapp.com/PALSource.json",
+        "reviewedAt": "2026-09-30",
+        "note": "Public Source endpoint is listed for discovery/direct install only. No explicit aggregation or metadata-redistribution permission is recorded; iOS Hub must not cache, merge, or republish its app metadata."
       }
     },
     {
@@ -1012,10 +1096,13 @@
       ],
       "developer": "CourtPredict",
       "compliance": {
-        "reviewStatus": "unreviewed",
+        "reviewStatus": "public-metadata",
         "usage": "link-only",
         "binaryRehost": false,
-        "aggregationApproved": false
+        "aggregationApproved": false,
+        "evidenceURL": "https://courtpredict-ios.web.app/PALSource.json",
+        "reviewedAt": "2026-09-30",
+        "note": "Public Source endpoint is listed for discovery/direct install only. No explicit aggregation or metadata-redistribution permission is recorded; iOS Hub must not cache, merge, or republish its app metadata."
       }
     },
     {
@@ -1039,10 +1126,13 @@
       ],
       "developer": "lao.sb",
       "compliance": {
-        "reviewStatus": "unreviewed",
+        "reviewStatus": "public-metadata",
         "usage": "link-only",
         "binaryRehost": false,
-        "aggregationApproved": false
+        "aggregationApproved": false,
+        "evidenceURL": "https://alts.lao.sb",
+        "reviewedAt": "2026-09-30",
+        "note": "Public Source endpoint is listed for discovery/direct install only. No explicit aggregation or metadata-redistribution permission is recorded; iOS Hub must not cache, merge, or republish its app metadata."
       }
     },
     {
@@ -1078,10 +1168,13 @@
         "feather"
       ],
       "compliance": {
-        "reviewStatus": "unreviewed",
+        "reviewStatus": "public-metadata",
         "usage": "link-only",
         "binaryRehost": false,
-        "aggregationApproved": false
+        "aggregationApproved": false,
+        "evidenceURL": "https://raw.githubusercontent.com/Michael-128/qBitControl-releases/main/source.json",
+        "reviewedAt": "2026-09-30",
+        "note": "Public Source endpoint is listed for discovery/direct install only. No explicit aggregation or metadata-redistribution permission is recorded; iOS Hub must not cache, merge, or republish its app metadata."
       }
     },
     {
@@ -1138,10 +1231,13 @@
       ],
       "developer": "Epic Games",
       "compliance": {
-        "reviewStatus": "unreviewed",
+        "reviewStatus": "public-metadata",
         "usage": "link-only",
         "binaryRehost": false,
-        "aggregationApproved": false
+        "aggregationApproved": false,
+        "evidenceURL": "https://content-download-egs.distro.on.epicgames.com/iOS/altstore/source.json",
+        "reviewedAt": "2026-09-30",
+        "note": "Public Source endpoint is listed for discovery/direct install only. No explicit aggregation or metadata-redistribution permission is recorded; iOS Hub must not cache, merge, or republish its app metadata."
       }
     },
     {
@@ -1173,10 +1269,13 @@
       ],
       "developer": "xN1ckuz",
       "compliance": {
-        "reviewStatus": "unreviewed",
+        "reviewStatus": "public-metadata",
         "usage": "link-only",
         "binaryRehost": false,
-        "aggregationApproved": false
+        "aggregationApproved": false,
+        "evidenceURL": "https://raw.githubusercontent.com/xN1ckuz/xN1ckuz-Sidestore-Repo/main/repo.json",
+        "reviewedAt": "2026-09-30",
+        "note": "Public Source endpoint is listed for discovery/direct install only. No explicit aggregation or metadata-redistribution permission is recorded; iOS Hub must not cache, merge, or republish its app metadata."
       }
     },
     {
@@ -1207,10 +1306,13 @@
       ],
       "developer": "dvntm0",
       "compliance": {
-        "reviewStatus": "unreviewed",
+        "reviewStatus": "public-metadata",
         "usage": "link-only",
         "binaryRehost": false,
-        "aggregationApproved": false
+        "aggregationApproved": false,
+        "evidenceURL": "https://raw.githubusercontent.com/dvntm0/AltStore/main/repo.json",
+        "reviewedAt": "2026-09-30",
+        "note": "Public Source endpoint is listed for discovery/direct install only. No explicit aggregation or metadata-redistribution permission is recorded; iOS Hub must not cache, merge, or republish its app metadata."
       }
     },
     {
@@ -1243,10 +1345,13 @@
       ],
       "developer": "WuXu1",
       "compliance": {
-        "reviewStatus": "unreviewed",
+        "reviewStatus": "public-metadata",
         "usage": "link-only",
         "binaryRehost": false,
-        "aggregationApproved": false
+        "aggregationApproved": false,
+        "evidenceURL": "https://raw.githubusercontent.com/WuXu1/WuXu1.github.io/main/wuxu-complete-plus.json",
+        "reviewedAt": "2026-09-30",
+        "note": "Public Source endpoint is listed for discovery/direct install only. No explicit aggregation or metadata-redistribution permission is recorded; iOS Hub must not cache, merge, or republish its app metadata."
       }
     },
     {
@@ -1279,10 +1384,13 @@
       ],
       "developer": "baretsky",
       "compliance": {
-        "reviewStatus": "unreviewed",
+        "reviewStatus": "public-metadata",
         "usage": "link-only",
         "binaryRehost": false,
-        "aggregationApproved": false
+        "aggregationApproved": false,
+        "evidenceURL": "https://raw.githubusercontent.com/baretsky/baretsky-tweaked-ipas-library/main/apps.json",
+        "reviewedAt": "2026-09-30",
+        "note": "Public Source endpoint is listed for discovery/direct install only. No explicit aggregation or metadata-redistribution permission is recorded; iOS Hub must not cache, merge, or republish its app metadata."
       }
     },
     {
@@ -1315,10 +1423,13 @@
       ],
       "developer": "driftywinds",
       "compliance": {
-        "reviewStatus": "unreviewed",
+        "reviewStatus": "public-metadata",
         "usage": "link-only",
         "binaryRehost": false,
-        "aggregationApproved": false
+        "aggregationApproved": false,
+        "evidenceURL": "https://raw.githubusercontent.com/driftywinds/driftywinds.github.io/master/AltStore/apps.json",
+        "reviewedAt": "2026-09-30",
+        "note": "Public Source endpoint is listed for discovery/direct install only. No explicit aggregation or metadata-redistribution permission is recorded; iOS Hub must not cache, merge, or republish its app metadata."
       }
     },
     {
@@ -1349,10 +1460,13 @@
       ],
       "developer": "927tx",
       "compliance": {
-        "reviewStatus": "unreviewed",
+        "reviewStatus": "public-metadata",
         "usage": "link-only",
         "binaryRehost": false,
-        "aggregationApproved": false
+        "aggregationApproved": false,
+        "evidenceURL": "https://raw.githubusercontent.com/927tx/IPA-Vault/main/ipavaultsource.json",
+        "reviewedAt": "2026-09-30",
+        "note": "Public Source endpoint is listed for discovery/direct install only. No explicit aggregation or metadata-redistribution permission is recorded; iOS Hub must not cache, merge, or republish its app metadata."
       }
     },
     {
@@ -1380,10 +1494,13 @@
       ],
       "developer": "SideloadLabs",
       "compliance": {
-        "reviewStatus": "unreviewed",
+        "reviewStatus": "public-metadata",
         "usage": "link-only",
         "binaryRehost": false,
-        "aggregationApproved": false
+        "aggregationApproved": false,
+        "evidenceURL": "https://raw.githubusercontent.com/SideloadLabs/SideloasLabs-AltSource/main/apps.json",
+        "reviewedAt": "2026-09-30",
+        "note": "Public Source endpoint is listed for discovery/direct install only. No explicit aggregation or metadata-redistribution permission is recorded; iOS Hub must not cache, merge, or republish its app metadata."
       }
     },
     {
@@ -1411,10 +1528,13 @@
       ],
       "developer": "YTLitePlus",
       "compliance": {
-        "reviewStatus": "unreviewed",
+        "reviewStatus": "public-metadata",
         "usage": "link-only",
         "binaryRehost": false,
-        "aggregationApproved": false
+        "aggregationApproved": false,
+        "evidenceURL": "https://raw.githubusercontent.com/YTLitePlus/YTLitePlus-Altstore/main/apps.json",
+        "reviewedAt": "2026-09-30",
+        "note": "Public Source endpoint is listed for discovery/direct install only. No explicit aggregation or metadata-redistribution permission is recorded; iOS Hub must not cache, merge, or republish its app metadata."
       }
     },
     {
@@ -1446,10 +1566,13 @@
       ],
       "developer": "MountainofPenguin",
       "compliance": {
-        "reviewStatus": "unreviewed",
+        "reviewStatus": "public-metadata",
         "usage": "link-only",
         "binaryRehost": false,
-        "aggregationApproved": false
+        "aggregationApproved": false,
+        "evidenceURL": "https://raw.githubusercontent.com/MountainofPenguin/moe-altstore/main/apps.json",
+        "reviewedAt": "2026-09-30",
+        "note": "Public Source endpoint is listed for discovery/direct install only. No explicit aggregation or metadata-redistribution permission is recorded; iOS Hub must not cache, merge, or republish its app metadata."
       }
     },
     {
@@ -1477,10 +1600,13 @@
       ],
       "developer": "MountainofPenguin",
       "compliance": {
-        "reviewStatus": "unreviewed",
+        "reviewStatus": "public-metadata",
         "usage": "link-only",
         "binaryRehost": false,
-        "aggregationApproved": false
+        "aggregationApproved": false,
+        "evidenceURL": "https://raw.githubusercontent.com/MountainofPenguin/Altstore-Repository/main/apps.json",
+        "reviewedAt": "2026-09-30",
+        "note": "Public Source endpoint is listed for discovery/direct install only. No explicit aggregation or metadata-redistribution permission is recorded; iOS Hub must not cache, merge, or republish its app metadata."
       }
     },
     {
@@ -1509,10 +1635,13 @@
       ],
       "developer": "mrdrvt99",
       "compliance": {
-        "reviewStatus": "unreviewed",
+        "reviewStatus": "public-metadata",
         "usage": "link-only",
         "binaryRehost": false,
-        "aggregationApproved": false
+        "aggregationApproved": false,
+        "evidenceURL": "https://raw.githubusercontent.com/mrdrvt99/Altstore-Repository/main/apps.json",
+        "reviewedAt": "2026-09-30",
+        "note": "Public Source endpoint is listed for discovery/direct install only. No explicit aggregation or metadata-redistribution permission is recorded; iOS Hub must not cache, merge, or republish its app metadata."
       }
     },
     {
@@ -1545,10 +1674,13 @@
       ],
       "developer": "OwO Network",
       "compliance": {
-        "reviewStatus": "unreviewed",
+        "reviewStatus": "public-metadata",
         "usage": "link-only",
         "binaryRehost": false,
-        "aggregationApproved": false
+        "aggregationApproved": false,
+        "evidenceURL": "https://repo.owo.network/",
+        "reviewedAt": "2026-09-30",
+        "note": "Public Source endpoint is listed for discovery/direct install only. No explicit aggregation or metadata-redistribution permission is recorded; iOS Hub must not cache, merge, or republish its app metadata."
       }
     },
     {
@@ -1584,10 +1716,13 @@
       ],
       "developer": "CyPwn",
       "compliance": {
-        "reviewStatus": "unreviewed",
+        "reviewStatus": "public-metadata",
         "usage": "link-only",
         "binaryRehost": false,
-        "aggregationApproved": false
+        "aggregationApproved": false,
+        "evidenceURL": "https://ipa.cypwn.xyz/cypwn.json",
+        "reviewedAt": "2026-09-30",
+        "note": "Public Source endpoint is listed for discovery/direct install only. No explicit aggregation or metadata-redistribution permission is recorded; iOS Hub must not cache, merge, or republish its app metadata."
       }
     },
     {
@@ -1624,10 +1759,13 @@
       ],
       "developer": "AppTesters",
       "compliance": {
-        "reviewStatus": "unreviewed",
+        "reviewStatus": "public-metadata",
         "usage": "link-only",
         "binaryRehost": false,
-        "aggregationApproved": false
+        "aggregationApproved": false,
+        "evidenceURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/apps.json",
+        "reviewedAt": "2026-09-30",
+        "note": "Public Source endpoint is listed for discovery/direct install only. No explicit aggregation or metadata-redistribution permission is recorded; iOS Hub must not cache, merge, or republish its app metadata."
       }
     },
     {
@@ -1655,10 +1793,13 @@
       ],
       "developer": "arichornlover",
       "compliance": {
-        "reviewStatus": "unreviewed",
+        "reviewStatus": "public-metadata",
         "usage": "link-only",
         "binaryRehost": false,
-        "aggregationApproved": false
+        "aggregationApproved": false,
+        "evidenceURL": "https://raw.githubusercontent.com/arichornlover/arichornlover.github.io/main/apps2.json",
+        "reviewedAt": "2026-09-30",
+        "note": "Public Source endpoint is listed for discovery/direct install only. No explicit aggregation or metadata-redistribution permission is recorded; iOS Hub must not cache, merge, or republish its app metadata."
       }
     },
     {
@@ -1686,10 +1827,13 @@
       ],
       "developer": "Balackburn",
       "compliance": {
-        "reviewStatus": "unreviewed",
+        "reviewStatus": "public-metadata",
         "usage": "link-only",
         "binaryRehost": false,
-        "aggregationApproved": false
+        "aggregationApproved": false,
+        "evidenceURL": "https://raw.githubusercontent.com/Balackburn/Apollo/main/apps.json",
+        "reviewedAt": "2026-09-30",
+        "note": "Public Source endpoint is listed for discovery/direct install only. No explicit aggregation or metadata-redistribution permission is recorded; iOS Hub must not cache, merge, or republish its app metadata."
       }
     },
     {
@@ -1753,10 +1897,13 @@
       ],
       "developer": "xKatsumi",
       "compliance": {
-        "reviewStatus": "unreviewed",
+        "reviewStatus": "public-metadata",
         "usage": "link-only",
         "binaryRehost": false,
-        "aggregationApproved": false
+        "aggregationApproved": false,
+        "evidenceURL": "https://raw.githubusercontent.com/xKatsumi/YTKACE-SideStore-Repo/main/ytkace.json",
+        "reviewedAt": "2026-09-30",
+        "note": "Public Source endpoint is listed for discovery/direct install only. No explicit aggregation or metadata-redistribution permission is recorded; iOS Hub must not cache, merge, or republish its app metadata."
       }
     },
     {
@@ -1789,10 +1936,13 @@
       ],
       "developer": "heyFordy",
       "compliance": {
-        "reviewStatus": "unreviewed",
+        "reviewStatus": "public-metadata",
         "usage": "link-only",
         "binaryRehost": false,
-        "aggregationApproved": false
+        "aggregationApproved": false,
+        "evidenceURL": "https://raw.githubusercontent.com/Bitte-ein-Git/sidestore-repo/main/apps.json",
+        "reviewedAt": "2026-09-30",
+        "note": "Public Source endpoint is listed for discovery/direct install only. No explicit aggregation or metadata-redistribution permission is recorded; iOS Hub must not cache, merge, or republish its app metadata."
       }
     },
     {
@@ -1829,10 +1979,13 @@
       ],
       "developer": "2nkn0w",
       "compliance": {
-        "reviewStatus": "unreviewed",
+        "reviewStatus": "public-metadata",
         "usage": "link-only",
         "binaryRehost": false,
-        "aggregationApproved": false
+        "aggregationApproved": false,
+        "evidenceURL": "https://raw.githubusercontent.com/2nkn0w/ipalibrary.me-source/main/ipalibrary_source.json",
+        "reviewedAt": "2026-09-30",
+        "note": "Public Source endpoint is listed for discovery/direct install only. No explicit aggregation or metadata-redistribution permission is recorded; iOS Hub must not cache, merge, or republish its app metadata."
       }
     },
     {
@@ -1860,10 +2013,13 @@
       ],
       "developer": "ARMSX2",
       "compliance": {
-        "reviewStatus": "unreviewed",
+        "reviewStatus": "public-metadata",
         "usage": "link-only",
         "binaryRehost": false,
-        "aggregationApproved": false
+        "aggregationApproved": false,
+        "evidenceURL": "https://raw.githubusercontent.com/ARMSX2/Armsx2-Repo/main/apps.json",
+        "reviewedAt": "2026-09-30",
+        "note": "Public Source endpoint is listed for discovery/direct install only. No explicit aggregation or metadata-redistribution permission is recorded; iOS Hub must not cache, merge, or republish its app metadata."
       }
     },
     {
@@ -1894,10 +2050,13 @@
       ],
       "developer": "FouadRaheb",
       "compliance": {
-        "reviewStatus": "unreviewed",
+        "reviewStatus": "public-metadata",
         "usage": "link-only",
         "binaryRehost": false,
-        "aggregationApproved": false
+        "aggregationApproved": false,
+        "evidenceURL": "https://raw.githubusercontent.com/FouadRaheb/Watusi-for-WhatsApp/master/altstore/source.json",
+        "reviewedAt": "2026-09-30",
+        "note": "Public Source endpoint is listed for discovery/direct install only. No explicit aggregation or metadata-redistribution permission is recorded; iOS Hub must not cache, merge, or republish its app metadata."
       }
     },
     {
@@ -1927,10 +2086,13 @@
       ],
       "developer": "orionblur",
       "compliance": {
-        "reviewStatus": "unreviewed",
+        "reviewStatus": "public-metadata",
         "usage": "link-only",
         "binaryRehost": false,
-        "aggregationApproved": false
+        "aggregationApproved": false,
+        "evidenceURL": "https://raw.githubusercontent.com/orionblur/NeoFreeBird/v6/AltSource.json",
+        "reviewedAt": "2026-09-30",
+        "note": "Public Source endpoint is listed for discovery/direct install only. No explicit aggregation or metadata-redistribution permission is recorded; iOS Hub must not cache, merge, or republish its app metadata."
       }
     },
     {
@@ -1957,10 +2119,13 @@
       ],
       "developer": "AzureDominus",
       "compliance": {
-        "reviewStatus": "unreviewed",
+        "reviewStatus": "public-metadata",
         "usage": "link-only",
         "binaryRehost": false,
-        "aggregationApproved": false
+        "aggregationApproved": false,
+        "evidenceURL": "https://raw.githubusercontent.com/AzureDominus/melonx/refs/heads/XC-ios-ht/source.json",
+        "reviewedAt": "2026-09-30",
+        "note": "Public Source endpoint is listed for discovery/direct install only. No explicit aggregation or metadata-redistribution permission is recorded; iOS Hub must not cache, merge, or republish its app metadata."
       }
     },
     {
@@ -2025,10 +2190,13 @@
       ],
       "developer": "RipeStore",
       "compliance": {
-        "reviewStatus": "unreviewed",
+        "reviewStatus": "public-metadata",
         "usage": "link-only",
         "binaryRehost": false,
-        "aggregationApproved": false
+        "aggregationApproved": false,
+        "evidenceURL": "https://raw.githubusercontent.com/RipeStore/repos/main/RipeStore.json",
+        "reviewedAt": "2026-09-30",
+        "note": "Public Source endpoint is listed for discovery/direct install only. No explicit aggregation or metadata-redistribution permission is recorded; iOS Hub must not cache, merge, or republish its app metadata."
       }
     },
     {
@@ -2089,10 +2257,13 @@
       ],
       "developer": "QuarkSources",
       "compliance": {
-        "reviewStatus": "unreviewed",
+        "reviewStatus": "public-metadata",
         "usage": "link-only",
         "binaryRehost": false,
-        "aggregationApproved": false
+        "aggregationApproved": false,
+        "evidenceURL": "https://quarksources.github.io/quantumsource.json",
+        "reviewedAt": "2026-09-30",
+        "note": "Public Source endpoint is listed for discovery/direct install only. No explicit aggregation or metadata-redistribution permission is recorded; iOS Hub must not cache, merge, or republish its app metadata."
       }
     },
     {
@@ -2119,10 +2290,13 @@
       ],
       "developer": "SpotCompiled",
       "compliance": {
-        "reviewStatus": "unreviewed",
+        "reviewStatus": "public-metadata",
         "usage": "link-only",
         "binaryRehost": false,
-        "aggregationApproved": false
+        "aggregationApproved": false,
+        "evidenceURL": "https://raw.githubusercontent.com/SpotCompiled/SpotC-AltStore-Repo/main/AltStore%20Repo.json",
+        "reviewedAt": "2026-09-30",
+        "note": "Public Source endpoint is listed for discovery/direct install only. No explicit aggregation or metadata-redistribution permission is recorded; iOS Hub must not cache, merge, or republish its app metadata."
       }
     },
     {
@@ -2149,10 +2323,13 @@
       ],
       "developer": "therealFoxster",
       "compliance": {
-        "reviewStatus": "unreviewed",
+        "reviewStatus": "public-metadata",
         "usage": "link-only",
         "binaryRehost": false,
-        "aggregationApproved": false
+        "aggregationApproved": false,
+        "evidenceURL": "https://therealfoxster.github.io/altsource/apps.json",
+        "reviewedAt": "2026-09-30",
+        "note": "Public Source endpoint is listed for discovery/direct install only. No explicit aggregation or metadata-redistribution permission is recorded; iOS Hub must not cache, merge, or republish its app metadata."
       }
     },
     {
@@ -2183,10 +2360,13 @@
       "builder": false,
       "developer": "FastSign",
       "compliance": {
-        "reviewStatus": "unreviewed",
+        "reviewStatus": "public-metadata",
         "usage": "link-only",
         "binaryRehost": false,
-        "aggregationApproved": false
+        "aggregationApproved": false,
+        "evidenceURL": "https://fastsign.dev/repo.json",
+        "reviewedAt": "2026-09-30",
+        "note": "Public Source endpoint is listed for discovery/direct install only. No explicit aggregation or metadata-redistribution permission is recorded; iOS Hub must not cache, merge, or republish its app metadata."
       }
     },
     {
@@ -2215,10 +2395,13 @@
       ],
       "developer": "QuarkSources",
       "compliance": {
-        "reviewStatus": "unreviewed",
+        "reviewStatus": "public-metadata",
         "usage": "link-only",
         "binaryRehost": false,
-        "aggregationApproved": false
+        "aggregationApproved": false,
+        "evidenceURL": "https://quarksources.github.io/quantumsource++.json",
+        "reviewedAt": "2026-09-30",
+        "note": "Public Source endpoint is listed for discovery/direct install only. No explicit aggregation or metadata-redistribution permission is recorded; iOS Hub must not cache, merge, or republish its app metadata."
       }
     },
     {
@@ -2244,10 +2427,13 @@
       ],
       "developer": "WuXu1",
       "compliance": {
-        "reviewStatus": "unreviewed",
+        "reviewStatus": "public-metadata",
         "usage": "link-only",
         "binaryRehost": false,
-        "aggregationApproved": false
+        "aggregationApproved": false,
+        "evidenceURL": "https://wuxu1.github.io/wuxu-complete.json",
+        "reviewedAt": "2026-09-30",
+        "note": "Public Source endpoint is listed for discovery/direct install only. No explicit aggregation or metadata-redistribution permission is recorded; iOS Hub must not cache, merge, or republish its app metadata."
       }
     },
     {
@@ -2271,10 +2457,13 @@
       ],
       "developer": "Taurine Team",
       "compliance": {
-        "reviewStatus": "unreviewed",
+        "reviewStatus": "public-metadata",
         "usage": "link-only",
         "binaryRehost": false,
-        "aggregationApproved": false
+        "aggregationApproved": false,
+        "evidenceURL": "https://taurine.app/altstore/taurinestore.json",
+        "reviewedAt": "2026-09-30",
+        "note": "Public Source endpoint is listed for discovery/direct install only. No explicit aggregation or metadata-redistribution permission is recorded; iOS Hub must not cache, merge, or republish its app metadata."
       }
     },
     {
@@ -2299,10 +2488,13 @@
       ],
       "developer": "Burrito Software",
       "compliance": {
-        "reviewStatus": "unreviewed",
+        "reviewStatus": "public-metadata",
         "usage": "link-only",
         "binaryRehost": false,
-        "aggregationApproved": false
+        "aggregationApproved": false,
+        "evidenceURL": "https://burritosoftware.github.io/altstore/channels/burritosource.json",
+        "reviewedAt": "2026-09-30",
+        "note": "Public Source endpoint is listed for discovery/direct install only. No explicit aggregation or metadata-redistribution permission is recorded; iOS Hub must not cache, merge, or republish its app metadata."
       }
     },
     {
@@ -2327,10 +2519,13 @@
       ],
       "developer": "Salupov Team",
       "compliance": {
-        "reviewStatus": "unreviewed",
+        "reviewStatus": "public-metadata",
         "usage": "link-only",
         "binaryRehost": false,
-        "aggregationApproved": false
+        "aggregationApproved": false,
+        "evidenceURL": "https://adp.salupovteam.com/altrepo.json",
+        "reviewedAt": "2026-09-30",
+        "note": "Public Source endpoint is listed for discovery/direct install only. No explicit aggregation or metadata-redistribution permission is recorded; iOS Hub must not cache, merge, or republish its app metadata."
       }
     },
     {
@@ -2358,10 +2553,13 @@
       ],
       "developer": "Majd Alfhaily",
       "compliance": {
-        "reviewStatus": "unreviewed",
+        "reviewStatus": "public-metadata",
         "usage": "link-only",
         "binaryRehost": false,
-        "aggregationApproved": false
+        "aggregationApproved": false,
+        "evidenceURL": "https://altstore.cercube.com",
+        "reviewedAt": "2026-09-30",
+        "note": "Public Source endpoint is listed for discovery/direct install only. No explicit aggregation or metadata-redistribution permission is recorded; iOS Hub must not cache, merge, or republish its app metadata."
       }
     },
     {
@@ -2389,10 +2587,13 @@
       ],
       "developer": "Majd Alfhaily",
       "compliance": {
-        "reviewStatus": "unreviewed",
+        "reviewStatus": "public-metadata",
         "usage": "link-only",
         "binaryRehost": false,
-        "aggregationApproved": false
+        "aggregationApproved": false,
+        "evidenceURL": "https://altstore.getrocketapp.io",
+        "reviewedAt": "2026-09-30",
+        "note": "Public Source endpoint is listed for discovery/direct install only. No explicit aggregation or metadata-redistribution permission is recorded; iOS Hub must not cache, merge, or republish its app metadata."
       }
     },
     {
@@ -2419,10 +2620,13 @@
         "open-source"
       ],
       "compliance": {
-        "reviewStatus": "unreviewed",
+        "reviewStatus": "public-metadata",
         "usage": "link-only",
         "binaryRehost": false,
-        "aggregationApproved": false
+        "aggregationApproved": false,
+        "evidenceURL": "https://github.com/minh-ton/reynard-browser/releases/download/0.0.1-a1/source.json",
+        "reviewedAt": "2026-09-30",
+        "note": "Public Source endpoint is listed for discovery/direct install only. No explicit aggregation or metadata-redistribution permission is recorded; iOS Hub must not cache, merge, or republish its app metadata."
       }
     }
   ]
