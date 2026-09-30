@@ -1218,6 +1218,16 @@ def validate_layout() -> None:
             error("Builder single-source fallback must respect per-installer direct Source compatibility")
         if "!directSourceAvailable(id, target)" not in builder_text:
             error("Builder multi-source fallback must filter incompatible direct Source actions")
+        for hosted_pair_required in (
+            "hostedPairSourceIDs",
+            "sorted.length === 2",
+            "sorted.every(id => hostedPairs.has(id))",
+        ):
+            if hosted_pair_required not in builder_text:
+                error(
+                    "Builder PASS pair deep-link support is incomplete; "
+                    f"missing {hosted_pair_required!r}"
+                )
         for picker_required in (
             'class="builder-target-picker"',
             'class="builder-target-menu"',
