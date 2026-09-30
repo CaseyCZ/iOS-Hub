@@ -6,7 +6,7 @@ import {
   sourceInstallerIds,
   sourceVariantURL,
   sourceFormatLabel
-} from './installers.js?v=1.1.5-20260930-source-queue1';
+} from './installers.js?v=1.1.5-20260930-source-queue2';
 
 const $ = selector => document.querySelector(selector);
 const $$ = selector => [...document.querySelectorAll(selector)];
