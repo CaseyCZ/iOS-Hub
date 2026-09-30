@@ -1324,9 +1324,25 @@ def validate_layout() -> None:
                     f"missing {required_sideinstaller_profile!r}"
                 )
 
+    index_page = ROOT / "index.html"
+    if index_page.exists():
+        index_page_text = index_page.read_text(encoding="utf-8")
+        if "combine compatible sources" in index_page_text.lower():
+            error("index.html still advertises obsolete combined Mix behavior")
+
     builder_page = ROOT / "builder.html"
     if builder_page.exists():
         builder_page_text = builder_page.read_text(encoding="utf-8")
+        for obsolete_builder_copy in (
+            "filter and combine checked Classic iOS sources into a Mix",
+            "combined Mix",
+            "Hosted Mix",
+        ):
+            if obsolete_builder_copy.lower() in builder_page_text.lower():
+                error(
+                    "builder.html still advertises obsolete combined Mix behavior; "
+                    f"found {obsolete_builder_copy!r}"
+                )
         for required_queue_ui in (
             'id="builderTargets" class="builder-target-picker-host"',
             'id="expAddTarget"',
