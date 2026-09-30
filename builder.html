@@ -18,7 +18,7 @@
   <!-- Analytics loads only after explicit opt-in consent. -->
   <script src="src/js/analytics.js?v=1.1.5-20260930-consent1"></script>
   <link rel="stylesheet" href="src/css/styles.css?v=1.1.5-20260918-fullaudit3">
-  <link rel="stylesheet" href="src/css/hub-extra.css?v=1.1.5-20260930-consent1">
+  <link rel="stylesheet" href="src/css/hub-extra.css?v=1.1.5-20260930-builder-refactor1">
   <link rel="stylesheet" href="src/css/collapsible.css?v=1.1.5-20260918-audit1">
 </head>
 <body>
@@ -84,15 +84,15 @@
     </section>
 
     <section class="section wrap builder-page-section">
-      <div id="experimentalMixLab" class="panel builder-shell builder-page-shell">
+      <div id="sourceBuilderWorkspace" class="panel builder-shell builder-page-shell">
         <article class="builder-control-card builder-page-control">
           <span class="pill mode">CUSTOM</span>
-          <h4 id="customMixCardTitle">Selected Sources</h4>
+          <h4 id="builderSelectionTitle">Selected Sources</h4>
           <div id="expSelectedCount" class="muted">0 selected</div>
 
           <details class="content-disclosure builder-filter-disclosure" open>
             <summary>
-              <span id="customMixFiltersLabel" class="disclosure-title">⚙ Filters · 🔎 Search · ☑ Selection</span>
+              <span id="builderFiltersLabel" class="disclosure-title">⚙ Filters · 🔎 Search · ☑ Selection</span>
             </summary>
             <div class="disclosure-body">
               <div class="catalog-filters filter-disclosure-grid">
@@ -124,11 +124,11 @@
                 </div>
 
                 <div class="filter-group builder-target-group">
-                  <div class="filter-label"><span id="mixTargetLabel">Where do you want to add the Sources?</span></div>
-                  <div id="builderTargets" class="builder-target-picker-host" aria-labelledby="mixTargetLabel"></div>
-                  <div id="mixTargetHelp" class="muted builder-target-help">Choose the app where you want to add the selected original Sources.</div>
-                  <div id="mixCompatibilityHelp" class="notice builder-compatibility-help">The Builder does not merge or re-host Sources. It opens each selected original Source URL directly in the chosen installer, so future updates continue from the original Source.</div>
-                  <div id="mixPalNote" class="muted builder-target-pal-note">Classic and PAL Sources are kept separate and are never converted.</div>
+                  <div class="filter-label"><span id="builderTargetLabel">Where do you want to add the Sources?</span></div>
+                  <div id="builderTargets" class="builder-target-picker-host" aria-labelledby="builderTargetLabel"></div>
+                  <div id="builderTargetHelp" class="muted builder-target-help">Choose the app where you want to add the selected original Sources.</div>
+                  <div id="builderCompatibilityHelp" class="notice builder-compatibility-help">The Builder does not merge or re-host Sources. It opens each selected original Source URL directly in the chosen installer, so future updates continue from the original Source.</div>
+                  <div id="builderPalNote" class="muted builder-target-pal-note">Classic and PAL Sources are kept separate and are never converted.</div>
                   <div class="muted builder-target-pal-note">Installer definitions and deep-links come from one shared configuration.</div>
                 </div>
 
@@ -144,8 +144,8 @@
                     <button id="expSelectAll" class="btn small secondary" type="button">Select all shown</button>
                     <button id="expClear" class="btn small ghost" type="button">Clear selection</button>
                   </div>
-                  <div id="mixPassHelp" class="muted builder-pass-help">Sources are not merged, copied or re-hosted. Each original Source URL is added separately so future updates continue normally.</div>
-                  <div id="mixDedupeHelp" class="muted builder-pass-help">Bulk import sends all selected original Sources to the iOS Hub Source Import Shortcut in one batch. The manual list remains available below.</div>
+                  <div id="builderSourceHelp" class="muted builder-pass-help">Sources are not merged, copied or re-hosted. Each original Source URL is added separately so future updates continue normally.</div>
+                  <div id="builderQueueHelp" class="muted builder-pass-help">Bulk import sends all selected original Sources to the iOS Hub Source Import Shortcut in one batch. The manual list remains available below.</div>
                 </div>
               </div>
             </div>
@@ -153,7 +153,7 @@
 
           <div class="builder-control-footer">
             <div class="builder-result-badges">
-              <span id="mixTargetBadge" class="pill mode"><img class="installer-icon" src="assets/icons/altstore.svg" alt=""> AltStore Classic</span>
+              <span id="builderTargetBadge" class="pill mode"><img class="installer-icon" src="assets/icons/altstore.svg" alt=""> AltStore Classic</span>
             </div>
             <div class="builder-actions">
               <button id="expBuild" class="btn primary" type="button" disabled>Bulk import</button>
@@ -208,7 +208,7 @@
   </div>
 
   <script type="module" src="src/js/builder-page.js?v=1.1.5-20260930-source-import8"></script>
-  <script type="module" src="src/js/builder.js?v=1.1.5-20260930-source-import6"></script>
+  <script type="module" src="src/js/builder.js?v=1.1.5-20260930-source-import7"></script>
   <script type="module" src="src/js/collapsible.js?v=1.1.5-20260918-audit1"></script>
   <script src="src/js/horizontal-scroll.js?v=1.1.5-20260930-scroll-hardfix1"></script>
   <script src="src/js/support-dialog.js?v=1.1.5-20260918-a11y1"></script>

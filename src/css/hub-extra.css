@@ -338,8 +338,8 @@
 .builder-target-help{max-width:700px;margin:3px auto 0;text-align:center}
 .builder-target-pal-note{max-width:700px;margin:2px auto 0;text-align:center;font-size:9px;opacity:.82}
 .builder-result-badges{display:flex;gap:7px;flex-wrap:wrap;justify-content:center}
-#mixTargetBadge{display:inline-flex;align-items:center;gap:6px}
-#mixTargetBadge .installer-icon{width:14px;height:14px}
+#builderTargetBadge{display:inline-flex;align-items:center;gap:6px}
+#builderTargetBadge .installer-icon{width:14px;height:14px}
 @media(max-width:640px){
   .builder-target-picker-host{width:100%}
   .builder-target-select{min-height:48px}

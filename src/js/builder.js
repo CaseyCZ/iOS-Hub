@@ -344,12 +344,12 @@ function renderTargetButtons() {
     </button>`;
   }).join('');
   host.innerHTML = `<details class="builder-target-picker">
-    <summary class="builder-target-select" aria-labelledby="mixTargetLabel">
+    <summary class="builder-target-select" aria-labelledby="builderTargetLabel">
       ${installerIcon(target)}
       <span>${escapeHtml(current?.label || targetName())}</span>
       <span class="builder-target-chevron" aria-hidden="true">⌄</span>
     </summary>
-    <div class="builder-target-menu" role="listbox" aria-labelledby="mixTargetLabel">
+    <div class="builder-target-menu" role="listbox" aria-labelledby="builderTargetLabel">
       ${options}
     </div>
   </details>`;
@@ -481,15 +481,15 @@ function applyCopy() {
   });
   if ($('#builderTitle')) $('#builderTitle').textContent = tr('title');
   if ($('#builderDesc')) $('#builderDesc').textContent = tr('desc');
-  if ($('#customMixCardTitle')) $('#customMixCardTitle').textContent = tr('customBuilder');
-  if ($('#customMixFiltersLabel')) $('#customMixFiltersLabel').textContent = tr('filters');
-  if ($('#mixTargetLabel')) $('#mixTargetLabel').textContent = tr('targetLabel');
-  if ($('#mixTargetHelp')) $('#mixTargetHelp').textContent = tr(targetHelpKey());
-  if ($('#mixPassHelp')) $('#mixPassHelp').textContent = tr('sourceHelp');
-  if ($('#mixDedupeHelp')) $('#mixDedupeHelp').textContent = tr('queueHelp');
+  if ($('#builderSelectionTitle')) $('#builderSelectionTitle').textContent = tr('customBuilder');
+  if ($('#builderFiltersLabel')) $('#builderFiltersLabel').textContent = tr('filters');
+  if ($('#builderTargetLabel')) $('#builderTargetLabel').textContent = tr('targetLabel');
+  if ($('#builderTargetHelp')) $('#builderTargetHelp').textContent = tr(targetHelpKey());
+  if ($('#builderSourceHelp')) $('#builderSourceHelp').textContent = tr('sourceHelp');
+  if ($('#builderQueueHelp')) $('#builderQueueHelp').textContent = tr('queueHelp');
   if ($('#shortcutHelp')) $('#shortcutHelp').textContent = tr('shortcutHelp');
   if ($('#expInstallShortcut')) $('#expInstallShortcut').href = SHORTCUT_SHARE_URL;
-  const targetBadge = $('#mixTargetBadge');
+  const targetBadge = $('#builderTargetBadge');
   if (targetBadge) targetBadge.innerHTML = `${installerIcon(target)}${escapeHtml(tr('targetPrefix'))}: ${escapeHtml(targetName())}`;
   renderTargetButtons();
 }
@@ -770,7 +770,7 @@ async function copyQueueUrls(button) {
 }
 
 async function init() {
-  const host = $('#experimentalMixLab');
+  const host = $('#sourceBuilderWorkspace');
   if (!host) return;
 
   restoreSettings();
