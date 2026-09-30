@@ -347,7 +347,9 @@ function render() {
     const passed = item.mixTest === 'pass';
     const test = selectable ? (passed ? tr('pass') : tr('try')) : tr('incompatible');
     const cls = selectable ? (passed ? 'online' : 'mode') : 'offline';
-    const reason = selectable ? (item.mixReason || '') : (item.mixReason || targetInfo.reason || tr('incompatibleReason'));
+    const reason = selectable
+      ? (item.mixReason || '')
+      : (item.mixTest === 'fail' ? (item.mixReason || targetInfo.reason) : (targetInfo.reason || tr('incompatibleReason')));
     return `<label class="builder-item${selectable ? '' : ' builder-item-disabled'}" title="${escapeHtml(reason)}">
       <input type="checkbox" data-exp-source="${escapeHtml(source.id)}" ${checked ? 'checked' : ''} ${selectable ? '' : 'disabled'}>
       <div><strong>${escapeHtml(source.name)}</strong><span>${escapeHtml(modeName(source))} · → ${escapeHtml(targetName())}${selectable ? '' : ` · ${escapeHtml(tr('incompatibleReason'))}`}</span></div>
