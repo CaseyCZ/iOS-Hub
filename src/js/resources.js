@@ -1,4 +1,4 @@
-import { SUPPORTED_LANGUAGES, applyTranslations, normalizeLanguage, t } from './i18n.js?v=1.1.5-20260929-guide-methods1';
+import { SUPPORTED_LANGUAGES, applyTranslations, normalizeLanguage, t } from './i18n.js?v=1.1.5-20260930-source-import7';
 import { SIDELOAD_TOOLS, resourceBadgeSpecs, resourceSideloadTools, sideloadToolURL } from './installers.js?v=1.1.5-20260930-source-import4';
 
 const root = document.documentElement;
