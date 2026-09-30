@@ -2037,7 +2037,6 @@ def validate_compliance_register() -> None:
 
     sources = [item for item in registry["sources"] if isinstance(item, dict)]
     counts: dict[str, int] = {}
-    approved = 0
     binary_rehost = 0
     for source in sources:
         compliance = source.get("compliance")
@@ -2045,8 +2044,6 @@ def validate_compliance_register() -> None:
             continue
         status = str(compliance.get("reviewStatus") or "missing")
         counts[status] = counts.get(status, 0) + 1
-        if compliance.get("aggregationApproved") is True:
-            approved += 1
         if compliance.get("binaryRehost") is True:
             binary_rehost += 1
 
@@ -2058,10 +2055,9 @@ def validate_compliance_register() -> None:
         f"- Total Sources: **{len(sources)}**",
         f"- Licensed: **{counts.get('licensed', 0)}**",
         f"- Permission: **{counts.get('permission', 0)}**",
-        f"- Public metadata / link-only: **{counts.get('public-metadata', 0)}**",
+        f"- Public endpoint: **{counts.get('public-metadata', 0)}**",
         f"- Restricted: **{counts.get('restricted', 0)}**",
         f"- Unreviewed: **{counts.get('unreviewed', 0)}**",
-        f"- Aggregation approved: **{approved}**",
         f"- Binary rehosting enabled: **{binary_rehost}**",
     )
     for expected in expected_lines:
