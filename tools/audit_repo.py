@@ -393,22 +393,6 @@ def validate_project_identity() -> None:
         if expected_base not in text:
             error(f"tools/update_sources.py must define {expected_base}")
 
-    expected_sources = {
-        ROOT / "altstore" / "source.json": f"{EXPECTED_SITE_URL}altstore/source.json",
-        ROOT / "sidestore" / "source.json": f"{EXPECTED_SITE_URL}sidestore/source.json",
-    }
-    for path, expected_source_url in expected_sources.items():
-        if not path.exists():
-            continue
-        payload = load_json(path)
-        if not isinstance(payload, dict):
-            continue
-        if payload.get("website") != EXPECTED_SITE_URL:
-            error(f"{path.relative_to(ROOT)} website must be {EXPECTED_SITE_URL}")
-        if payload.get("sourceURL") != expected_source_url:
-            error(f"{path.relative_to(ROOT)} sourceURL must be {expected_source_url}")
-
-
 def validate_registry() -> None:
     payload = load_json(REGISTRY)
     if not isinstance(payload, dict) or not isinstance(payload.get("sources"), list):
@@ -967,32 +951,23 @@ def validate_generated_data() -> None:
                     f"{len(combination_files)} generated combination files"
                 )
 
-    altstore_required = bool(
-        isinstance(status, dict)
-        and isinstance(status.get("altstore"), dict)
-        and status["altstore"].get("sourceIDs")
-    )
-    sidestore_required = bool(
-        isinstance(status, dict)
-        and isinstance(status.get("sidestore"), dict)
-        and status["sidestore"].get("sourceIDs")
-    )
-    validate_alt_source(ROOT / "altstore" / "source.json", required=altstore_required)
-    validate_alt_source(ROOT / "sidestore" / "source.json", required=sidestore_required)
+    for obsolete_generated in (
+        ROOT / "altstore" / "source.json",
+        ROOT / "sidestore" / "source.json",
+    ):
+        if obsolete_generated.exists():
+            error(
+                f"Obsolete generated Source must not exist: {obsolete_generated.relative_to(ROOT)}"
+            )
 
     mix_dir = ROOT / "mix"
     if mix_dir.is_dir():
-        for path in sorted(mix_dir.glob("*.json")):
-            validate_alt_source(path)
-    elif isinstance(status, dict):
-        mixes_status = status.get("mixes", {})
-        if isinstance(mixes_status, dict):
-            expected_any_mix = bool(
-                (mixes_status.get("count") or 0)
-                or (mixes_status.get("autoCompatibleSourceIDs") or [])
+        stale_mix_files = sorted(mix_dir.glob("*.json"))
+        if stale_mix_files:
+            error(
+                "Obsolete combined Mix JSON files must not exist: "
+                + ", ".join(path.name for path in stale_mix_files)
             )
-            if expected_any_mix:
-                error("Missing generated mix directory")
 
     cache_dir = ROOT / "data" / "source-cache"
     if cache_dir.is_dir():
@@ -1381,17 +1356,7 @@ def validate_layout() -> None:
             "SOURCE_MODES",
             "SOURCE_BUILDER_INSTALLER_IDS",
             "DEFAULT_SOURCE_BUILDER_INSTALLER_ID",
-            "BUILDER_INSTALLER_IDS",
-            "DEFAULT_BUILDER_INSTALLER_ID",
             "builderDefault",
-            "DEFAULT_MIX_PACKAGE_ID",
-            "MIX_PACKAGES",
-            "MIX_PACKAGE_IDS",
-            "mixPackageData",
-            "mixPackageTargetIds",
-            "installerMixPackageData",
-            "mixTarget",
-            "mixPackage",
             "catalogPriority",
             "overflowPriority",
             "groupInstallerIds",
@@ -1634,6 +1599,10 @@ def validate_layout() -> None:
             '"installerCompatibility"',
             '"directSource": "fail"',
             '"installVariants": "try"',
+            "Direct Source Builder architecture:",
+            'for path in MIX_DIR.glob("*.json")',
+            'ALTSTORE_DIR / "source.json"',
+            'SIDESTORE_DIR / "source.json"',
         ):
             if required not in updater_text:
                 error(
@@ -1651,6 +1620,12 @@ def validate_layout() -> None:
                     f"keep it below {STATUS_MOBILE_PAYLOAD_LIMIT_BYTES // 1024} KB"
                 )
             status_payload = json.loads(status_text)
+            for obsolete_section in ("mixes", "altstore", "sidestore"):
+                if obsolete_section in status_payload:
+                    error(
+                        f"data/status.json still publishes obsolete generated Source section "
+                        f"{obsolete_section!r}"
+                    )
             for source_id, source_status in (status_payload.get("sources") or {}).items():
                 duplicate_report = source_status.get("duplicateBundleIdentifiers") or {}
                 items = duplicate_report.get("items") or []
