@@ -1224,3 +1224,49 @@ body{
   .assistant-tried-options>*,
   .guide-jumpbar>*{flex:0 0 auto}
 }
+
+
+/* Privacy / analytics consent */
+.privacy-consent{
+  position:fixed;
+  z-index:1200;
+  left:50%;
+  bottom:max(16px,env(safe-area-inset-bottom));
+  transform:translateX(-50%);
+  width:min(760px,calc(100% - 24px));
+  display:grid;
+  grid-template-columns:minmax(0,1fr) auto;
+  gap:16px;
+  align-items:center;
+  padding:16px;
+  border:1px solid var(--border);
+  border-radius:18px;
+  background:color-mix(in srgb,var(--panel) 96%,transparent);
+  box-shadow:0 20px 60px rgba(0,0,0,.35);
+  backdrop-filter:blur(18px);
+  -webkit-backdrop-filter:blur(18px);
+}
+.privacy-consent-copy{display:grid;gap:4px;min-width:0}
+.privacy-consent-copy strong{font-size:14px}
+.privacy-consent-copy span{color:var(--muted);font-size:11px;line-height:1.5}
+.privacy-consent-actions{display:flex;gap:8px;align-items:center;flex-wrap:wrap;justify-content:flex-end}
+.privacy-consent-actions .btn{min-height:38px}
+.footer-link-button{
+  appearance:none;
+  border:0;
+  background:none;
+  color:inherit;
+  font:inherit;
+  padding:0;
+  cursor:pointer;
+}
+.footer-link-button:hover{text-decoration:underline}
+.privacy-page .panel{padding:20px}
+.privacy-page h2{margin-top:0}
+.privacy-page ul{color:var(--muted);line-height:1.65}
+.privacy-page .privacy-actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:16px}
+@media(max-width:720px){
+  .privacy-consent{grid-template-columns:1fr}
+  .privacy-consent-actions{justify-content:stretch}
+  .privacy-consent-actions .btn{flex:1 1 140px}
+}
