@@ -1,5 +1,17 @@
 # Changelog
 
+## Unreleased — 2026-09-30
+- Replaced the hosted/generated Custom Mix architecture with direct original-Source handoff. The Builder no longer depends on generated Mix feeds or `data/source-cache`.
+- Added bulk Source import through the **iOS Hub Source Import** Shortcut, with direct text handoff for normal batches and clipboard fallback only for unusually long payloads.
+- Added an install/reinstall link for the Shortcut and kept a manual one-by-one Source opening fallback in the Builder.
+- Centralized six Source Builder targets: AltStore Classic, AltStore PAL, SideStore, LiveContainer, FlareStore and Feather.
+- Added installer-specific deep-links, including `livecontainer://source?url=`, `feather://source/` and `flarestore://addRepo=`.
+- Kept optional JSON download/preview as a lightweight export of the selected original Source URLs rather than a merged third-party app feed.
+- Replaced the old FlareStore placeholder artwork with the current app icon and updated cache keys so the change propagates across the site.
+- Updated compliance/privacy wording and repository audit rules for the direct Source + Shortcut architecture.
+- Confirmed LiveContainer bulk import on-device; other installers can still require their own preview or confirmation flow.
+
+
 ## 1.1.5 — 2026-09-18
 - Added another source batch for broader coverage: Apollo for Reddit, Discord App Store Builds, YTKACE, heyFordy SideStore Repo, IPALibrary Source and the official ARMSX2 iOS source.
 - Limited pre-generated hosted Custom Mix combinations to 3 sources per file to keep the repository scalable as the source catalog grows; larger selections still work through the in-browser Builder.
