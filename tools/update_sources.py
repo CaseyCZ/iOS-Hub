@@ -291,7 +291,11 @@ def source_compliance_allows_distribution(source: dict) -> bool:
     compliance = source.get("compliance")
     if not isinstance(compliance, dict):
         return False
-    return compliance.get("reviewStatus") != "restricted" and compliance.get("binaryRehost") is False
+    return (
+        compliance.get("reviewStatus") in {"licensed", "permission"}
+        and compliance.get("usage") == "metadata-and-original-links"
+        and compliance.get("binaryRehost") is False
+    )
 
 
 def sanitize_classic_app(app: dict) -> dict:
