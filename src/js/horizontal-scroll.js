@@ -57,4 +57,45 @@
       behavior:'smooth'
     }));
   });
+
+  let touchDrag = null;
+
+  document.addEventListener('touchstart', event => {
+    if (event.touches.length !== 1) return;
+    const scroller = getScroller(event.target);
+    if (!canScroll(scroller)) return;
+
+    const touch = event.touches[0];
+    touchDrag = {
+      scroller,
+      startX: touch.clientX,
+      startY: touch.clientY,
+      startScrollLeft: scroller.scrollLeft,
+      horizontal: false
+    };
+  }, {passive:true});
+
+  document.addEventListener('touchmove', event => {
+    if (!touchDrag || event.touches.length !== 1) return;
+
+    const touch = event.touches[0];
+    const dx = touch.clientX - touchDrag.startX;
+    const dy = touch.clientY - touchDrag.startY;
+
+    if (!touchDrag.horizontal) {
+      if (Math.abs(dx) < 6 && Math.abs(dy) < 6) return;
+      if (Math.abs(dy) > Math.abs(dx)) {
+        touchDrag = null;
+        return;
+      }
+      touchDrag.horizontal = true;
+    }
+
+    touchDrag.scroller.scrollLeft = touchDrag.startScrollLeft - dx;
+    event.preventDefault();
+  }, {passive:false});
+
+  const clearTouchDrag = () => { touchDrag = null; };
+  document.addEventListener('touchend', clearTouchDrag, {passive:true});
+  document.addEventListener('touchcancel', clearTouchDrag, {passive:true});
 })();
