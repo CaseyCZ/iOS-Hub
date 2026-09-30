@@ -10,7 +10,7 @@ import {
   sourceVariantURL,
   sourceVariantLabel,
   sourceModeLabel
-} from './installers.js?v=1.1.5-20260929-installers21';
+} from './installers.js?v=1.1.5-20260930-mix-profiles1';
 
 const root = document.documentElement;
 const $ = (selector, scope = document) => scope.querySelector(selector);
