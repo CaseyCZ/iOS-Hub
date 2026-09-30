@@ -33,11 +33,15 @@
 
 ## Kompatibilní source instalátory
 
-Source Builder nevytváří žádný nový feed ani Mix JSON. Uživatel vybere instalátor a původní Sources; iOS Hub pak otevře jejich originální URL přímo ve zvolené aplikaci. Tím zůstávají zachované běžné aktualizace z původních Sources.
+Source Builder nevytváří žádný nový feed ani Mix JSON. Podporované cíle jsou **AltStore Classic, AltStore PAL, SideStore, LiveContainer, FlareStore a Feather**.
 
-Podpora instalátorů, jejich pořadí a deep-linky jsou definované centrálně v `src/js/installers.js`, takže další installer není potřeba ručně doplňovat do každé source karty.
+Pro hromadný import Builder předá zvolený instalátor a seznam původních Source URL zkratce **iOS Hub Source Import**, která jednotlivé původní Sources otevře ve vybrané aplikaci. Některé instalátory je umí převzít přímo, jiné mohou zobrazit vlastní náhled nebo vyžádat potvrzení. Dole v Builderu proto zůstává i ruční otevření po jedné.
 
-CaseyCZ iOS Hub cizí IPA soubory ani cizí Source JSONy nerehostuje. Builder pouze předává původní veřejné Source URL podporovaným instalátorům.
+Zkratku lze nainstalovat nebo znovu přidat přes: https://www.icloud.com/shortcuts/b8a48606455246389f066fc4f35af057
+
+Podpora instalátorů, jejich pořadí, ikony a deep-linky jsou definované centrálně v `src/js/installers.js`, takže další installer není potřeba ručně doplňovat do každé source karty.
+
+CaseyCZ iOS Hub cizí IPA soubory ani cizí Source JSONy nerehostuje. Builder pracuje s původními veřejnými Source URL; volitelný JSON export ukládá pouze vybraný instalátor a seznam těchto původních URL.
 
 ## Soukromí a obsah třetích stran
 
