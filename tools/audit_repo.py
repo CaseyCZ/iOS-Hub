@@ -418,6 +418,30 @@ def validate_registry() -> None:
                 error(
                     f"registry source {source_id or index!r} must explicitly keep binaryRehost=false"
                 )
+
+            distributable = review_status in {"licensed", "permission"}
+            if distributable:
+                if usage != "metadata-and-original-links":
+                    error(
+                        f"rights-reviewed registry source {source_id or index!r} must use "
+                        "metadata-and-original-links"
+                    )
+                evidence_url = str(compliance.get("evidenceURL") or "").strip()
+                parsed_evidence = urlparse(evidence_url)
+                if parsed_evidence.scheme != "https" or not parsed_evidence.netloc:
+                    error(
+                        f"rights-reviewed registry source {source_id or index!r} must include "
+                        "an absolute HTTPS compliance.evidenceURL"
+                    )
+                if review_status == "licensed" and not str(compliance.get("license") or "").strip():
+                    error(
+                        f"licensed registry source {source_id or index!r} must record compliance.license"
+                    )
+            elif usage != "link-only":
+                error(
+                    f"registry source {source_id or index!r} is not rights-reviewed and must be link-only"
+                )
+
             if review_status == "unreviewed":
                 unreviewed_compliance.append(source_id or str(index))
             if review_status == "restricted":
