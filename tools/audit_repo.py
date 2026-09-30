@@ -2245,6 +2245,51 @@ def validate_layout() -> None:
             error(f"Missing required runtime file: {required.relative_to(ROOT)}")
 
 
+def validate_compliance_register() -> None:
+    path = ROOT / "COMPLIANCE.md"
+    if not path.exists():
+        error("Missing COMPLIANCE.md")
+        return
+
+    text = path.read_text(encoding="utf-8")
+    registry = load_json(REGISTRY)
+    if not isinstance(registry, dict) or not isinstance(registry.get("sources"), list):
+        return
+
+    sources = [item for item in registry["sources"] if isinstance(item, dict)]
+    counts: dict[str, int] = {}
+    approved = 0
+    binary_rehost = 0
+    for source in sources:
+        compliance = source.get("compliance")
+        if not isinstance(compliance, dict):
+            continue
+        status = str(compliance.get("reviewStatus") or "missing")
+        counts[status] = counts.get(status, 0) + 1
+        if compliance.get("aggregationApproved") is True:
+            approved += 1
+        if compliance.get("binaryRehost") is True:
+            binary_rehost += 1
+
+        source_id = str(source.get("id") or "")
+        if source_id and f"`{source_id}`" not in text:
+            error(f"COMPLIANCE.md is missing Source ID {source_id!r}")
+
+    expected_lines = (
+        f"- Total Sources: **{len(sources)}**",
+        f"- Licensed: **{counts.get('licensed', 0)}**",
+        f"- Permission: **{counts.get('permission', 0)}**",
+        f"- Public metadata / link-only: **{counts.get('public-metadata', 0)}**",
+        f"- Restricted: **{counts.get('restricted', 0)}**",
+        f"- Unreviewed: **{counts.get('unreviewed', 0)}**",
+        f"- Aggregation approved: **{approved}**",
+        f"- Binary rehosting enabled: **{binary_rehost}**",
+    )
+    for expected in expected_lines:
+        if expected not in text:
+            error(f"COMPLIANCE.md summary is stale; missing {expected!r}")
+
+
 def main() -> int:
     validate_registry()
     validate_generated_data()
@@ -2254,6 +2299,7 @@ def main() -> int:
     validate_page_quality()
     validate_translations()
     validate_privacy_compliance()
+    validate_compliance_register()
     validate_project_identity()
 
     for message in warnings:
