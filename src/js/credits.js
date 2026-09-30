@@ -514,11 +514,7 @@ async function loadCredits() {
         iconImage.alt = '';
         iconImage.loading = 'lazy';
         iconImage.referrerPolicy = 'no-referrer';
-        try {
-          iconImage.src = `https://www.google.com/s2/favicons?domain=${encodeURIComponent(new URL(ref.url).hostname)}&sz=128`;
-        } catch (_) {
-          iconImage.src = 'https://www.google.com/s2/favicons?domain=github.com&sz=128';
-        }
+        iconImage.src = ref.icon || 'assets/icons/reference.svg';
         icon.appendChild(iconImage);
 
         const badges = document.createElement('div');
