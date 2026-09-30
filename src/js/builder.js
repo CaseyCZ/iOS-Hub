@@ -47,7 +47,7 @@ const copy = {
     selectCompatible:'Select all compatible',
     selectAll:'Select compatible shown',
     clear:'Clear selection',
-    build:'Add selected Sources',
+    build:'Bulk import',
     selected:'selected',
     shown:'shown',
     compatible:'COMPATIBLE',
@@ -66,7 +66,7 @@ const copy = {
     customBuilder:'Selected Sources',
     filters:'⚙ Filters · 🔎 Search · ☑ Selection',
     sourceHelp:'Sources are not merged, copied or re-hosted. Each original URL is added separately, so future updates still come from the original Source.',
-    queueHelp:'iOS does not reliably allow a webpage to open several external app links automatically. The first Source opens from your tap; after returning, use Open next for the remaining Sources.',
+    queueHelp:'All selected original Sources are sent to the iOS Hub Source Import Shortcut in one batch.',
     addTo:'Open next in',
     copyUrls:'Copy Source URLs',
     copied:'URLs copied',
@@ -88,7 +88,7 @@ const copy = {
     selectCompatible:'Vybrat všechny kompatibilní',
     selectAll:'Vybrat kompatibilní zobrazené',
     clear:'Zrušit výběr',
-    build:'Přidat vybrané Sources',
+    build:'Hromadný import',
     selected:'vybráno',
     shown:'zobrazeno',
     compatible:'KOMPATIBILNÍ',
@@ -107,7 +107,7 @@ const copy = {
     customBuilder:'Vybrané Sources',
     filters:'⚙ Filtry · 🔎 Hledání · ☑ Výběr',
     sourceHelp:'Sources se neslučují, nekopírují ani nerehostují. Každá původní URL se přidá samostatně, takže budoucí aktualizace dál chodí z originální Source.',
-    queueHelp:'iOS nedovoluje spolehlivě otevřít několik externích odkazů do aplikace automaticky. První Source se otevře po klepnutí; po návratu použij Otevřít další.',
+    queueHelp:'Všechny vybrané původní Sources se pošlou najednou do zkratky iOS Hub Source Import.',
     addTo:'Otevřít další v',
     copyUrls:'Kopírovat URL Sources',
     copied:'URL zkopírovány',
@@ -129,7 +129,7 @@ const copy = {
     selectCompatible:'Alle kompatiblen wählen',
     selectAll:'Sichtbare kompatible wählen',
     clear:'Auswahl löschen',
-    build:'Ausgewählte Sources hinzufügen',
+    build:'Massenimport',
     selected:'ausgewählt',
     shown:'sichtbar',
     compatible:'KOMPATIBEL',
@@ -148,7 +148,7 @@ const copy = {
     customBuilder:'Ausgewählte Sources',
     filters:'⚙ Filter · 🔎 Suche · ☑ Auswahl',
     sourceHelp:'Sources werden nicht zusammengeführt, kopiert oder neu gehostet. Jede Original-URL bleibt erhalten, damit Updates weiterhin funktionieren.',
-    queueHelp:'iOS lässt mehrere externe App-Links nicht zuverlässig automatisch öffnen. Die erste Source öffnet sich per Tap; danach jeweils Weiter öffnen.',
+    queueHelp:'Alle ausgewählten Original-Sources werden gesammelt an den Shortcut iOS Hub Source Import gesendet.',
     addTo:'Nächste öffnen in',
     copyUrls:'Source-URLs kopieren',
     copied:'URLs kopiert',
@@ -170,7 +170,7 @@ const copy = {
     selectCompatible:'Seleccionar compatibles',
     selectAll:'Seleccionar compatibles visibles',
     clear:'Borrar selección',
-    build:'Añadir Sources seleccionadas',
+    build:'Importación masiva',
     selected:'seleccionadas',
     shown:'visibles',
     compatible:'COMPATIBLE',
@@ -189,7 +189,7 @@ const copy = {
     customBuilder:'Sources seleccionadas',
     filters:'⚙ Filtros · 🔎 Buscar · ☑ Selección',
     sourceHelp:'Las Sources no se combinan, copian ni realojan. Se añade cada URL original por separado para conservar las actualizaciones.',
-    queueHelp:'iOS no permite abrir de forma fiable varios enlaces externos automáticamente. La primera Source se abre con tu toque; después usa Abrir siguiente.',
+    queueHelp:'Todas las Sources originales seleccionadas se envían juntas al atajo iOS Hub Source Import.',
     addTo:'Abrir siguiente en',
     copyUrls:'Copiar URLs de Sources',
     copied:'URLs copiadas',
@@ -211,7 +211,7 @@ const copy = {
     selectCompatible:'Sélectionner les compatibles',
     selectAll:'Sélectionner les compatibles affichées',
     clear:'Effacer la sélection',
-    build:'Ajouter les Sources sélectionnées',
+    build:'Import groupé',
     selected:'sélectionnées',
     shown:'affichées',
     compatible:'COMPATIBLE',
@@ -230,7 +230,7 @@ const copy = {
     customBuilder:'Sources sélectionnées',
     filters:'⚙ Filtres · 🔎 Recherche · ☑ Sélection',
     sourceHelp:'Les Sources ne sont ni fusionnées, ni copiées, ni réhébergées. Chaque URL originale est ajoutée séparément afin de conserver les mises à jour.',
-    queueHelp:'iOS ne permet pas d’ouvrir automatiquement plusieurs liens externes de façon fiable. La première Source s’ouvre après votre toucher ; utilisez ensuite Ouvrir suivante.',
+    queueHelp:'Toutes les Sources originales sélectionnées sont envoyées ensemble au raccourci iOS Hub Source Import.',
     addTo:'Ouvrir suivante dans',
     copyUrls:'Copier les URL des Sources',
     copied:'URL copiées',
@@ -572,7 +572,9 @@ function markQueueOpened(index) {
   setTimeout(renderQueue, 0);
 }
 
-function startQueue() {
+const SHORTCUT_NAME = 'iOS Hub Source Import';
+
+async function startShortcutImport() {
   const compatibleSelected = registry
     .filter(source => selected.has(source.id) && selectableForTarget(source))
     .map(source => source.id);
@@ -583,15 +585,26 @@ function startQueue() {
   queueIndex = 0;
   queueTarget = target;
   saveQueue();
-  renderQueue();
 
   const entries = queueEntries();
   if (!entries.length) return;
 
-  // The user's tap is a valid gesture for the first external app launch.
-  // Remaining Sources require a fresh tap after returning to the browser.
-  markQueueOpened(0);
-  window.location.href = entries[0].deepLink;
+  const payload = entries.map(entry => entry.deepLink).join('\n');
+  const shortcutBase = `shortcuts://run-shortcut?name=${encodeURIComponent(SHORTCUT_NAME)}`;
+  const message = $('#expMessage');
+  if (message) message.textContent = tr('queueHelp');
+
+  try {
+    if (navigator.clipboard?.writeText) {
+      await navigator.clipboard.writeText(payload);
+      window.location.href = `${shortcutBase}&input=clipboard`;
+      return;
+    }
+  } catch (_) {
+    // Fall back to direct text input when clipboard access is unavailable.
+  }
+
+  window.location.href = `${shortcutBase}&input=text&text=${encodeURIComponent(payload)}`;
 }
 
 async function copyQueueUrls(button) {
@@ -641,7 +654,7 @@ async function init() {
     clearQueue();
     render();
   });
-  $('#expBuild')?.addEventListener('click', startQueue);
+  $('#expBuild')?.addEventListener('click', startShortcutImport);
 
   $('#experimentalBuilderList')?.addEventListener('change', event => {
     const id = event.target?.dataset?.expSource;
