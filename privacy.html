@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#070b14">
+  <meta name="referrer" content="no-referrer">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://www.googletagmanager.com; style-src 'self' 'unsafe-inline'; img-src 'self' https: data:; connect-src 'self' https://*.google-analytics.com https://*.analytics.google.com https://*.googletagmanager.com; object-src 'none'; base-uri 'self'; form-action 'none'">
+  <meta name="description" content="Privacy and cookie information for iOS Hub.">
+  <link rel="canonical" href="https://caseycz.github.io/iOS-Hub/privacy.html">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="iOS Hub">
+  <meta property="og:title" content="Privacy & Cookies — iOS Hub">
+  <meta property="og:description" content="How iOS Hub handles analytics, Hosted Mix data, local tools and third-party links.">
+  <meta property="og:url" content="https://caseycz.github.io/iOS-Hub/privacy.html">
+  <meta name="twitter:card" content="summary">
+  <title>Privacy & Cookies — iOS Hub</title>
+  <!-- Analytics loads only after explicit opt-in consent. -->
+  <script src="src/js/analytics.js?v=1.1.5-20260930-consent1"></script>
+  <link rel="stylesheet" href="src/css/styles.css?v=1.1.5-20260918-fullaudit3">
+  <link rel="stylesheet" href="src/css/hub-extra.css?v=1.1.5-20260930-consent1">
+</head>
+<body>
+  <a class="skip-link" href="#top">Skip to content</a>
+
+  <header class="topbar">
+    <div class="wrap topbar-inner">
+      <a class="brand" href="index.html" aria-label="iOS Hub">
+        <span class="brand-mark">iOS</span>
+        <span>iOS Hub<small>iOS Sources · Sideloading</small></span>
+      </a>
+      <nav class="nav" aria-label="Primary">
+        <a href="index.html#tools">Tools</a>
+        <a href="builder.html">Source Builder</a>
+        <a href="guide.html">Guide</a>
+        <a href="resources.html">Useful</a>
+        <a href="index.html#sources">Sources</a>
+        <a href="credits.html">Credits</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="top" class="privacy-page">
+    <section class="hero wrap">
+      <div class="eyebrow">PRIVACY · COOKIES · THIRD-PARTY CONTENT</div>
+      <h1>Privacy & Cookies</h1>
+      <p>iOS Hub is an independent project. It is not affiliated with, sponsored by or endorsed by AltStore, SideStore, LiveContainer, Feather, FlareStore, Apple or the maintainers of third-party Sources unless explicitly stated by the original project.</p>
+      <div class="privacy-actions">
+        <button class="btn primary" type="button" data-cookie-settings>Cookie settings</button>
+        <a class="btn secondary" href="credits.html">Credits & acknowledgements</a>
+      </div>
+    </section>
+
+    <section class="section wrap">
+      <div class="panel">
+        <h2>Analytics</h2>
+        <p>Google Analytics is optional. The Google Analytics tag is not loaded until you explicitly choose <strong>Accept analytics</strong>. If you reject analytics, iOS Hub does not load the Google Analytics script.</p>
+        <p>Your analytics choice is stored locally in your browser so the site can remember it. You can change that choice at any time with the Cookie settings button on this page or in the site footer.</p>
+      </div>
+
+      <div class="panel">
+        <h2>Hosted Mixes</h2>
+        <p>When you create a Hosted Mix in Source Builder, the generated Source JSON is sent to the iOS Hub Mix API so it can receive a temporary public HTTPS URL. Hosted Mix files are intended to expire after approximately 24 hours.</p>
+        <p>The generated Mix does not intentionally include your name, email address or account information. As with ordinary web requests, the server necessarily receives technical connection information such as an IP address and request metadata in order to respond.</p>
+      </div>
+
+      <div class="panel">
+        <h2>Third-party Sources and downloads</h2>
+        <p>iOS Hub does not rehost third-party IPA binaries. Generated Sources and Mixes retain original public download URLs from their source maintainers. App names, artwork, descriptions, trademarks and other third-party content remain the responsibility and property of their respective owners.</p>
+        <p>External Sources can change at any time. When you open a third-party website, installer or download URL, that service's own privacy policy and terms apply.</p>
+      </div>
+
+      <div class="panel">
+        <h2>Local browser tools</h2>
+        <p>The DEB → IPA Converter is designed to process selected files locally in your browser. The selected package is not uploaded to the iOS Hub server by the converter.</p>
+      </div>
+
+      <div class="panel">
+        <h2>Local preferences</h2>
+        <p>iOS Hub may use browser storage for settings such as language, appearance, Builder selections and your analytics choice. These preferences are used to keep the site working the way you selected.</p>
+      </div>
+
+      <div class="panel">
+        <h2>Contact and corrections</h2>
+        <p>If you maintain a Source or project shown on iOS Hub and want attribution corrected, content removed or a link changed, open an issue in the project repository.</p>
+        <div class="privacy-actions">
+          <a class="btn primary" href="https://github.com/CaseyCZ/iOS-Hub/issues/new" target="_blank" rel="noopener noreferrer">Contact via GitHub ↗</a>
+        </div>
+        <p class="muted">Last updated: 30 September 2026.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap footer-inner">
+      <span>© 2026 iOS Hub · v1.1.5</span>
+      <div class="footer-links">
+        <a href="https://caseycz.github.io/" target="_blank" rel="noopener">Website</a>
+        <a href="https://github.com/CaseyCZ/iOS-Hub" target="_blank" rel="noopener">GitHub · iOS-Hub</a>
+        <a href="credits.html">Credits</a>
+        <a href="privacy.html" aria-current="page">Privacy &amp; Cookies</a>
+        <button class="footer-link-button" type="button" data-cookie-settings>Cookie settings</button>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
