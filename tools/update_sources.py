@@ -641,6 +641,10 @@ def main() -> None:
         altstore_conflict_count = len(altstore_conflicts)
         if altstore_conflicts:
             all_conflicts["altstore-official"] = altstore_conflicts
+    else:
+        stale_altstore = ALTSTORE_DIR / "source.json"
+        if stale_altstore.exists():
+            stale_altstore.unlink()
 
     sidestore_url = None
     sidestore_app_count = 0
@@ -654,6 +658,10 @@ def main() -> None:
         sidestore_conflict_count = len(sidestore_conflicts)
         if sidestore_conflicts:
             all_conflicts["sidestore-official"] = sidestore_conflicts
+    else:
+        stale_sidestore = SIDESTORE_DIR / "source.json"
+        if stale_sidestore.exists():
+            stale_sidestore.unlink()
 
     status["mixes"] = {
         "count": mix_count,
