@@ -500,16 +500,10 @@ async function buildMix() {
     $('#expPreview').textContent = tr('preview');
 
     const addTarget = $('#expAddTarget');
-    const addSources = $('#expAddSources');
-    const addSourcesSummary = $('#expAddSourcesSummary');
-    const addSourcesMenu = $('#expAddSourcesMenu');
     const copyButton = $('#expCopyUrl');
     const installer = INSTALLERS[target];
 
     addTarget.hidden = true;
-    addSources.hidden = true;
-    addSources.removeAttribute('open');
-    addSourcesMenu.innerHTML = '';
 
     if (hosted.url && hosted.targets.has(target) && installer) {
       addTarget.hidden = false;
@@ -522,19 +516,6 @@ async function buildMix() {
         addTarget.hidden = false;
         addTarget.href = installer.buildLink(sourceUrl);
         addTarget.innerHTML = `${installerIcon(target)}${escapeHtml(tr('addTo'))} ${escapeHtml(targetName())}`;
-      }
-    } else if (installer && ids.length > 1) {
-      const sourceActions = ids.map(id => {
-        const source = registry.find(item => item.id === id);
-        const sourceUrl = sourceVariantURL(source, targetVariant());
-        if (!source || !sourceUrl || !directSourceAvailable(id, target)) return '';
-        return `<a class="btn small secondary installer-action" href="${escapeHtml(installer.buildLink(sourceUrl))}">${installerIcon(target)}${escapeHtml(source.name || id)}</a>`;
-      }).filter(Boolean);
-
-      if (sourceActions.length) {
-        addSources.hidden = false;
-        addSourcesSummary.innerHTML = `${installerIcon(target)}${escapeHtml(tr('addTo'))} ${escapeHtml(targetName())} ▾`;
-        addSourcesMenu.innerHTML = sourceActions.join('');
       }
     }
 
