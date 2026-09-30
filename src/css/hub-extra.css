@@ -1160,3 +1160,8 @@ body{
   .guide-tool-scope-button{min-height:50px}
   .guide-tool-scope-menu{left:0;right:0;width:100%}
 }
+
+.builder-compatibility-help{max-width:760px;margin:7px auto 2px;text-align:left;font-size:10px;line-height:1.55}
+.builder-item-disabled{opacity:.56;cursor:not-allowed}
+.builder-item-disabled input{cursor:not-allowed}
+.builder-item-disabled strong{color:var(--muted)}
