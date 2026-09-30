@@ -468,12 +468,45 @@ function updateStats() {
 }
 
 function syncFilterButtons() {
-  $$('[data-category-filter]').forEach(btn => btn.classList.toggle('active', btn.dataset.categoryFilter === state.sourceCategory));
-  document.querySelectorAll('[data-genre-filter]').forEach(btn => btn.classList.toggle('active', btn.dataset.genreFilter === state.genre));
-  document.querySelectorAll('[data-sort-filter]').forEach(btn => btn.classList.toggle('active', btn.dataset.sortFilter === state.sort));
+  $('[data-category-filter]').forEach(btn => {
+    const active = btn.dataset.categoryFilter === state.sourceCategory;
+    btn.classList.toggle('active', active);
+    btn.setAttribute('aria-pressed', String(active));
+  });
+  document.querySelectorAll('[data-genre-filter]').forEach(btn => {
+    const active = btn.dataset.genreFilter === state.genre;
+    btn.classList.toggle('active', active);
+    btn.setAttribute('aria-pressed', String(active));
+  });
+  document.querySelectorAll('[data-sort-filter]').forEach(btn => {
+    const active = btn.dataset.sortFilter === state.sort;
+    btn.classList.toggle('active', active);
+    btn.setAttribute('aria-pressed', String(active));
+  });
   const search = $('#sourceSearch');
   if (search && search.value !== state.query) search.value = state.query;
 }
+
+function toggleFilter(currentValue, requestedValue, allowedValues) {
+  const next = allowedValues.has(requestedValue) ? requestedValue : 'all';
+  return next !== 'all' && next === currentValue ? 'all' : next;
+}
+
+document.addEventListener('wheel', event => {
+  const tabs = event.target.closest?.('.filter-tabs');
+  if (!tabs || tabs.scrollWidth <= tabs.clientWidth) return;
+
+  const delta = Math.abs(event.deltaX) > Math.abs(event.deltaY) ? event.deltaX : event.deltaY;
+  if (!delta) return;
+
+  const maxScroll = Math.max(0, tabs.scrollWidth - tabs.clientWidth);
+  const atStart = tabs.scrollLeft <= 0;
+  const atEnd = tabs.scrollLeft >= maxScroll - 1;
+  if ((delta < 0 && atStart) || (delta > 0 && atEnd)) return;
+
+  tabs.scrollLeft += delta;
+  event.preventDefault();
+}, {passive:false});
 
 async function loadData() {
   try {
@@ -549,19 +582,21 @@ document.addEventListener('click', event => {
 
   const category = event.target.closest('[data-category-filter]');
   if (category) {
-    state.sourceCategory = SOURCE_CATEGORIES.has(category.dataset.categoryFilter) ? category.dataset.categoryFilter : 'all';
+    state.sourceCategory = toggleFilter(state.sourceCategory, category.dataset.categoryFilter, SOURCE_CATEGORIES);
     safeSet(STORAGE.category, state.sourceCategory);
     syncFilterButtons();
     renderSources();
+    category.closest('.filter-tabs')?.querySelector('.filter.active')?.scrollIntoView({block:'nearest', inline:'nearest'});
     return;
   }
 
   const genre = event.target.closest('[data-genre-filter]');
   if (genre) {
-    state.genre = GENRES.has(genre.dataset.genreFilter) ? genre.dataset.genreFilter : 'all';
+    state.genre = toggleFilter(state.genre, genre.dataset.genreFilter, GENRES);
     safeSet(STORAGE.genre, state.genre);
     syncFilterButtons();
     renderSources();
+    genre.closest('.filter-tabs')?.querySelector('.filter.active')?.scrollIntoView({block:'nearest', inline:'nearest'});
     return;
   }
 
