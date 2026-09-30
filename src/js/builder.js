@@ -43,11 +43,20 @@ const GENRE_RULES = {
 const copy = {
   en: {
     title:'Custom Source Builder',
-    desc:'Choose an installer, select original Sources and send them to the app without creating a combined JSON.',
+    desc:'Choose an installer and original Sources. iOS Hub sends the whole selection to the iOS Hub Source Import Shortcut, which opens each original Source in the selected app. JSON export remains optional.',
     selectCompatible:'Select all compatible',
     selectAll:'Select compatible shown',
     clear:'Clear selection',
     build:'Bulk import',
+    installShortcut:'Install Shortcut',
+    shortcutHelp:'Bulk import uses the iOS Hub Source Import Shortcut. Install it once; you can reinstall it here later if you delete it.',
+    downloadJson:'Download JSON',
+    previewJson:'Preview JSON',
+    jsonBuilding:'Preparing JSON…',
+    jsonReady:'JSON ready · {apps} apps · {conflicts} duplicates resolved.',
+    jsonFailed:'Could not create JSON:',
+    noSelection:'No compatible Sources are selected.',
+    noMergeableApps:'No mergeable app entries were found.',
     selected:'selected',
     shown:'shown',
     compatible:'COMPATIBLE',
@@ -84,11 +93,20 @@ const copy = {
   },
   cs: {
     title:'Custom Source Builder',
-    desc:'Vyber instalátor, označ původní Sources a pošli je do aplikace bez vytváření společného JSONu.',
+    desc:'Vyber instalátor a původní Sources. iOS Hub předá celý výběr zkratce iOS Hub Source Import, která otevře každou původní Source ve zvolené aplikaci. Export JSONu zůstává volitelný.',
     selectCompatible:'Vybrat všechny kompatibilní',
     selectAll:'Vybrat kompatibilní zobrazené',
     clear:'Zrušit výběr',
     build:'Hromadný import',
+    installShortcut:'Nainstalovat zkratku',
+    shortcutHelp:'Hromadný import používá zkratku iOS Hub Source Import. Stačí ji nainstalovat jednou; pokud ji smažeš, odsud ji můžeš kdykoli znovu přidat.',
+    downloadJson:'Stáhnout JSON',
+    previewJson:'Náhled JSON',
+    jsonBuilding:'Připravuji JSON…',
+    jsonReady:'JSON připraven · {apps} aplikací · vyřešeno {conflicts} duplicit.',
+    jsonFailed:'JSON se nepodařilo vytvořit:',
+    noSelection:'Není vybraná žádná kompatibilní Source.',
+    noMergeableApps:'Nebyly nalezeny žádné aplikace, které lze sloučit.',
     selected:'vybráno',
     shown:'zobrazeno',
     compatible:'KOMPATIBILNÍ',
@@ -130,6 +148,15 @@ const copy = {
     selectAll:'Sichtbare kompatible wählen',
     clear:'Auswahl löschen',
     build:'Massenimport',
+    installShortcut:'Kurzbefehl installieren',
+    shortcutHelp:'Der Massenimport verwendet den Kurzbefehl iOS Hub Source Import. Einmal installieren; nach dem Löschen kann er hier erneut hinzugefügt werden.',
+    downloadJson:'JSON laden',
+    previewJson:'JSON-Vorschau',
+    jsonBuilding:'JSON wird vorbereitet…',
+    jsonReady:'JSON bereit · {apps} Apps · {conflicts} Duplikate aufgelöst.',
+    jsonFailed:'JSON konnte nicht erstellt werden:',
+    noSelection:'Keine kompatiblen Sources ausgewählt.',
+    noMergeableApps:'Keine zusammenführbaren Apps gefunden.',
     selected:'ausgewählt',
     shown:'sichtbar',
     compatible:'KOMPATIBEL',
@@ -171,6 +198,15 @@ const copy = {
     selectAll:'Seleccionar compatibles visibles',
     clear:'Borrar selección',
     build:'Importación masiva',
+    installShortcut:'Instalar atajo',
+    shortcutHelp:'La importación masiva usa el atajo iOS Hub Source Import. Instálalo una vez; si lo eliminas, puedes volver a añadirlo desde aquí.',
+    downloadJson:'Descargar JSON',
+    previewJson:'Vista previa JSON',
+    jsonBuilding:'Preparando JSON…',
+    jsonReady:'JSON listo · {apps} apps · {conflicts} duplicados resueltos.',
+    jsonFailed:'No se pudo crear el JSON:',
+    noSelection:'No hay Sources compatibles seleccionadas.',
+    noMergeableApps:'No se encontraron apps combinables.',
     selected:'seleccionadas',
     shown:'visibles',
     compatible:'COMPATIBLE',
@@ -212,6 +248,15 @@ const copy = {
     selectAll:'Sélectionner les compatibles affichées',
     clear:'Effacer la sélection',
     build:'Import groupé',
+    installShortcut:'Installer le raccourci',
+    shortcutHelp:'L’import groupé utilise le raccourci iOS Hub Source Import. Installez-le une fois ; s’il est supprimé, vous pouvez le réinstaller ici.',
+    downloadJson:'Télécharger JSON',
+    previewJson:'Aperçu JSON',
+    jsonBuilding:'Préparation du JSON…',
+    jsonReady:'JSON prêt · {apps} apps · {conflicts} doublons résolus.',
+    jsonFailed:'Impossible de créer le JSON :',
+    noSelection:'Aucune Source compatible sélectionnée.',
+    noMergeableApps:'Aucune app fusionnable trouvée.',
     selected:'sélectionnées',
     shown:'affichées',
     compatible:'COMPATIBLE',
@@ -424,6 +469,9 @@ function applyCopy() {
     expSelectAll:'selectAll',
     expClear:'clear',
     expBuild:'build',
+    expInstallShortcut:'installShortcut',
+    expDownload:'downloadJson',
+    expPreview:'previewJson',
     expCopyUrl:'copyUrls',
     expRestartQueue:'restart'
   };
@@ -439,6 +487,8 @@ function applyCopy() {
   if ($('#mixTargetHelp')) $('#mixTargetHelp').textContent = tr(targetHelpKey());
   if ($('#mixPassHelp')) $('#mixPassHelp').textContent = tr('sourceHelp');
   if ($('#mixDedupeHelp')) $('#mixDedupeHelp').textContent = tr('queueHelp');
+  if ($('#shortcutHelp')) $('#shortcutHelp').textContent = tr('shortcutHelp');
+  if ($('#expInstallShortcut')) $('#expInstallShortcut').href = SHORTCUT_SHARE_URL;
   const targetBadge = $('#mixTargetBadge');
   if (targetBadge) targetBadge.innerHTML = `${installerIcon(target)}${escapeHtml(tr('targetPrefix'))}: ${escapeHtml(targetName())}`;
   renderTargetButtons();
@@ -573,6 +623,147 @@ function markQueueOpened(index) {
 }
 
 const SHORTCUT_NAME = 'iOS Hub Source Import';
+const SHORTCUT_SHARE_URL = 'https://www.icloud.com/shortcuts/b8a48606455246389f066fc4f35af057';
+let mixBlobUrl = null;
+
+function parseDate(value) {
+  if (!value) return 0;
+  const time = Date.parse(value);
+  return Number.isFinite(time) ? time : 0;
+}
+
+function appDate(app) {
+  let best = Math.max(parseDate(app?.versionDate), parseDate(app?.date));
+  if (Array.isArray(app?.versions)) {
+    app.versions.forEach(version => {
+      if (version && typeof version === 'object') {
+        best = Math.max(best, parseDate(version.date), parseDate(version.versionDate));
+      }
+    });
+  }
+  return best;
+}
+
+function dedupeApps(payloads) {
+  const merged = new Map();
+  let conflicts = 0;
+  for (const {source,payload} of payloads) {
+    for (const app of (Array.isArray(payload?.apps) ? payload.apps : [])) {
+      if (!app || typeof app !== 'object') continue;
+      const bundle = app.bundleIdentifier || app.bundleID;
+      if (!bundle) continue;
+      if (!merged.has(bundle)) {
+        merged.set(bundle, {source, app});
+      } else {
+        conflicts += 1;
+        const old = merged.get(bundle);
+        if (appDate(app) > appDate(old.app)) merged.set(bundle, {source, app});
+      }
+    }
+  }
+  return {
+    apps: [...merged.values()].map(item => item.app).sort((a,b) => String(a.name || '').localeCompare(String(b.name || ''))),
+    conflicts
+  };
+}
+
+function hashIds(ids) {
+  let hash = 2166136261;
+  for (const ch of ids.join('|')) {
+    hash ^= ch.charCodeAt(0);
+    hash = Math.imul(hash, 16777619);
+  }
+  return (hash >>> 0).toString(16).padStart(8, '0');
+}
+
+async function createLocalMixJson() {
+  const sources = registry.filter(source => selected.has(source.id) && selectableForTarget(source));
+  if (!sources.length) throw new Error(tr('noSelection'));
+
+  const payloads = await Promise.all(sources.map(async source => {
+    const response = await fetch(`data/source-cache/${encodeURIComponent(source.id)}.json`, {cache:'no-store'});
+    if (!response.ok) throw new Error(`${source.name || source.id}: HTTP ${response.status}`);
+    const payload = await response.json();
+    if (!payload || !Array.isArray(payload.apps)) throw new Error(`${source.name || source.id}: invalid apps array`);
+    return {source, payload};
+  }));
+
+  const {apps, conflicts} = dedupeApps(payloads);
+  if (!apps.length) throw new Error(tr('noMergeableApps'));
+
+  const ids = sources.map(source => source.id).sort();
+  const names = sources.map(source => source.name || source.id);
+  const sourceURLs = sources.map(source => targetCompatibility(source).sourceUrl).filter(Boolean);
+  const mix = {
+    name: `Mix · ${names.join(' + ')}`,
+    identifier: `com.caseycz.ios.mix.${hashIds(ids)}`,
+    subtitle: 'Optional local JSON export generated by iOS Hub',
+    website: 'https://caseycz.github.io/iOS-Hub/',
+    tintColor: '#38BDF8',
+    apps,
+    userInfo: {
+      sourceIDs: ids,
+      sourceURLs,
+      targetInstaller: target,
+      note: 'Bulk Source Import uses the original Source URLs; this JSON export is optional.'
+    }
+  };
+
+  if (mixBlobUrl) URL.revokeObjectURL(mixBlobUrl);
+  mixBlobUrl = URL.createObjectURL(new Blob([JSON.stringify(mix, null, 2) + '\n'], {type:'application/json'}));
+  return {
+    url: mixBlobUrl,
+    filename: `iOS-Hub-Mix-${hashIds(ids)}.json`,
+    apps: apps.length,
+    conflicts
+  };
+}
+
+async function downloadMixJson(button) {
+  const message = $('#expMessage');
+  const original = button.textContent;
+  try {
+    button.disabled = true;
+    if (message) message.textContent = tr('jsonBuilding');
+    const mix = await createLocalMixJson();
+    const link = document.createElement('a');
+    link.href = mix.url;
+    link.download = mix.filename;
+    document.body.appendChild(link);
+    link.click();
+    link.remove();
+    if (message) message.textContent = tr('jsonReady')
+      .replace('{apps}', String(mix.apps))
+      .replace('{conflicts}', String(mix.conflicts));
+  } catch (error) {
+    console.error(error);
+    if (message) message.textContent = `${tr('jsonFailed')} ${error.message || error}`;
+  } finally {
+    button.disabled = false;
+    button.textContent = original;
+  }
+}
+
+async function previewMixJson(button) {
+  const message = $('#expMessage');
+  const preview = window.open('', '_blank');
+  try {
+    button.disabled = true;
+    if (message) message.textContent = tr('jsonBuilding');
+    const mix = await createLocalMixJson();
+    if (preview) preview.location.href = mix.url;
+    else window.location.href = mix.url;
+    if (message) message.textContent = tr('jsonReady')
+      .replace('{apps}', String(mix.apps))
+      .replace('{conflicts}', String(mix.conflicts));
+  } catch (error) {
+    if (preview) preview.close();
+    console.error(error);
+    if (message) message.textContent = `${tr('jsonFailed')} ${error.message || error}`;
+  } finally {
+    button.disabled = false;
+  }
+}
 
 async function startShortcutImport() {
   const compatibleSelected = registry
@@ -739,6 +930,8 @@ async function init() {
   });
 
   $('#expCopyUrl')?.addEventListener('click', event => copyQueueUrls(event.currentTarget));
+  $('#expDownload')?.addEventListener('click', event => downloadMixJson(event.currentTarget));
+  $('#expPreview')?.addEventListener('click', event => previewMixJson(event.currentTarget));
   $('#expRestartQueue')?.addEventListener('click', () => {
     queueIndex = 0;
     saveQueue();
