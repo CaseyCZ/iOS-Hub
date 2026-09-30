@@ -37,7 +37,7 @@ The Source Builder does not create a combined feed or Mix JSON. Supported target
 
 For bulk import, the Builder passes the selected installer and original Source URLs to the **iOS Hub Source Import** Shortcut, which opens each original Source in the selected app. Some installers can accept Sources directly while others may show their own preview or confirmation flow. The Builder therefore also keeps a manual one-by-one fallback.
 
-Install or reinstall the Shortcut here: https://www.icloud.com/shortcuts/b8a48606455246389f066fc4f35af057
+Install or reinstall the Shortcut here: https://caseycz.github.io/iOS-Hub/shortcut.html
 
 Installer support, ordering, icons and deep-links are defined centrally in `src/js/installers.js`, so adding another installer does not require editing every source card by hand.
 

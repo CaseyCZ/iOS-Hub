@@ -37,7 +37,7 @@ Source Builder nevytváří žádný nový feed ani Mix JSON. Podporované cíle
 
 Pro hromadný import Builder předá zvolený instalátor a seznam původních Source URL zkratce **iOS Hub Source Import**, která jednotlivé původní Sources otevře ve vybrané aplikaci. Některé instalátory je umí převzít přímo, jiné mohou zobrazit vlastní náhled nebo vyžádat potvrzení. Dole v Builderu proto zůstává i ruční otevření po jedné.
 
-Zkratku lze nainstalovat nebo znovu přidat přes: https://www.icloud.com/shortcuts/b8a48606455246389f066fc4f35af057
+Zkratku lze nainstalovat nebo znovu přidat přes: https://caseycz.github.io/iOS-Hub/shortcut.html
 
 Podpora instalátorů, jejich pořadí, ikony a deep-linky jsou definované centrálně v `src/js/installers.js`, takže další installer není potřeba ručně doplňovat do každé source karty.
 

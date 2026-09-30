@@ -7,6 +7,7 @@ import {
   sourceVariantURL,
   sourceFormatLabel
 } from './installers.js?v=1.1.5-20260930-source-import4';
+import { SOURCE_IMPORT_SHORTCUT } from './config.js?v=1.1.5-20260930-shortcut1';
 
 const $ = selector => document.querySelector(selector);
 const $$ = selector => [...document.querySelectorAll(selector)];
@@ -488,7 +489,6 @@ function applyCopy() {
   if ($('#builderSourceHelp')) $('#builderSourceHelp').textContent = tr('sourceHelp');
   if ($('#builderQueueHelp')) $('#builderQueueHelp').textContent = tr('queueHelp');
   if ($('#shortcutHelp')) $('#shortcutHelp').textContent = tr('shortcutHelp');
-  if ($('#expInstallShortcut')) $('#expInstallShortcut').href = SHORTCUT_SHARE_URL;
   const targetBadge = $('#builderTargetBadge');
   if (targetBadge) targetBadge.innerHTML = `${installerIcon(target)}${escapeHtml(tr('targetPrefix'))}: ${escapeHtml(targetName())}`;
   renderTargetButtons();
@@ -626,8 +626,7 @@ function markQueueOpened(index) {
   setTimeout(renderQueue, 0);
 }
 
-const SHORTCUT_NAME = 'iOS Hub Source Import';
-const SHORTCUT_SHARE_URL = 'https://www.icloud.com/shortcuts/b8a48606455246389f066fc4f35af057';
+const SHORTCUT_NAME = SOURCE_IMPORT_SHORTCUT.name;
 let exportBlobUrl = null;
 
 function hashIds(ids) {

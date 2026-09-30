@@ -3,7 +3,7 @@
 Shared Shortcut used by the Custom Source Builder.
 
 Install / reinstall:
-https://www.icloud.com/shortcuts/b8a48606455246389f066fc4f35af057
+https://caseycz.github.io/iOS-Hub/shortcut.html
 
 ## Input format
 
