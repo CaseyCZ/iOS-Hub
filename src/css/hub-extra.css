@@ -1169,3 +1169,48 @@ body{
 .builder-item-disabled{opacity:.56;cursor:not-allowed}
 .builder-item-disabled input{cursor:not-allowed}
 .builder-item-disabled strong{color:var(--muted)}
+
+
+/* v1.1.5 — sitewide horizontal scrolling */
+.filter-tabs,
+.trouble-quick,
+.assistant-trouble-chips,
+.assistant-tried-options,
+.guide-jumpbar,
+.compat-table-wrap{
+  overscroll-behavior-x:contain;
+  -webkit-overflow-scrolling:touch;
+  touch-action:pan-x pan-y;
+  scroll-behavior:smooth;
+}
+.filter-tabs,
+.trouble-quick,
+.assistant-trouble-chips,
+.assistant-tried-options,
+.guide-jumpbar{
+  scroll-padding-inline:8px;
+}
+@media(max-width:760px){
+  .filter-tabs,
+  .trouble-quick,
+  .assistant-trouble-chips,
+  .assistant-tried-options,
+  .guide-jumpbar{
+    justify-content:flex-start;
+    flex-wrap:nowrap;
+    overflow-x:auto;
+    overflow-y:hidden;
+    max-width:100%;
+    scrollbar-width:none;
+  }
+  .filter-tabs::-webkit-scrollbar,
+  .trouble-quick::-webkit-scrollbar,
+  .assistant-trouble-chips::-webkit-scrollbar,
+  .assistant-tried-options::-webkit-scrollbar,
+  .guide-jumpbar::-webkit-scrollbar{display:none}
+  .filter-tabs>*,
+  .trouble-quick>*,
+  .assistant-trouble-chips>*,
+  .assistant-tried-options>*,
+  .guide-jumpbar>*{flex:0 0 auto}
+}
