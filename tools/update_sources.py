@@ -572,7 +572,7 @@ def main() -> None:
         if path.name not in live_cache_files:
             path.unlink()
 
-    # Direct Source Builder architecture:
+    # Direct Source Builder architecture (original URLs only; no combined Source publishing):
     # do not generate, merge, cache or publish combined third-party Source JSON files.
     # Users add each original Source URL directly to their selected installer.
     for path in MIX_DIR.glob("*.json"):
