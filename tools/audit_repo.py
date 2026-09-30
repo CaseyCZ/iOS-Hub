@@ -1210,6 +1210,8 @@ def validate_layout() -> None:
                 )
         if 'id="builderTargets" class="builder-target-picker-host"' not in builder_page_text:
             error("Builder installer target must use the compact dropdown host")
+        if 'id="mixCompatibilityHelp"' not in builder_page_text:
+            error("Builder must explain PASS, TRY, incompatible Sources and direct Add behavior in the UI")
         if 'class="builder-target-tabs"' in builder_page_text:
             error("Builder must not restore the large installer target card grid")
 
@@ -1218,6 +1220,18 @@ def validate_layout() -> None:
         builder_text = builder_script.read_text(encoding="utf-8")
         if "sourceUrl && directSourceAvailable(ids[0], target)" not in builder_text:
             error("Builder single-source fallback must respect per-installer direct Source compatibility")
+        for compatibility_ui_required in (
+            "targetCompatibility(source)",
+            "selectableForTarget(source)",
+            "builder-item-disabled",
+            "removedIncompatible",
+            "compatLogic",
+        ):
+            if compatibility_ui_required not in builder_text:
+                error(
+                    "Builder compatibility UX is incomplete; "
+                    f"missing {compatibility_ui_required!r}"
+                )
         for hosted_pair_required in (
             "hostedPairSourceIDs",
             "sorted.length === 2",
