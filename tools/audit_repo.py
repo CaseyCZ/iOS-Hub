@@ -821,6 +821,11 @@ def validate_interactive_guide() -> None:
             'data-i18n="guideFlareBest"',
             '<td>Feather</td>',
             'data-i18n="guideFeatherBest"',
+            '<div class="beginner-term-name">FlareStore</div>',
+            'data-i18n="beginnerFlareMeaning"',
+            '<div class="beginner-term-name">Feather</div>',
+            'data-i18n="beginnerFeatherMeaning"',
+            'data-i18n="beginnerGlossaryDesc">Seven short explanations before you choose anything.',
         ):
             if required_guide_structure not in text:
                 error(
