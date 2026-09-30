@@ -10,7 +10,7 @@ import {
   sourceInstallerIds,
   sourceVariantURL,
   sourceFormatLabel
-} from './installers.js?v=1.1.5-20260929-installers21';
+} from './installers.js?v=1.1.5-20260930-mix-profiles1';
 
 const $ = selector => document.querySelector(selector);
 const $$ = selector => [...document.querySelectorAll(selector)];
@@ -201,6 +201,9 @@ function targetHelpKey() {
 function targetVariant() {
   return INSTALLERS[target]?.variant || null;
 }
+function targetMixProfile() {
+  return INSTALLERS[target]?.mixProfile || 'altstore-classic';
+}
 function matchesTarget(source) {
   return targetCompatibility(source).supported;
 }
@@ -384,6 +387,18 @@ function appDate(app) {
   }
   return best;
 }
+function normalizeVersionSize(version) {
+  const item = {...version};
+  if (typeof item.size === 'string') {
+    const raw = item.size.trim();
+    if (/^\\d+$/.test(raw)) item.size = Number(raw);
+    else delete item.size;
+  } else if (item.size != null && !Number.isFinite(item.size)) {
+    delete item.size;
+  }
+  return item;
+}
+
 function sanitizeClassicApp(app) {
   const cleaned = {...app};
   delete cleaned.marketplaceID;
@@ -393,9 +408,27 @@ function sanitizeClassicApp(app) {
   if (Array.isArray(cleaned.versions)) {
     cleaned.versions = cleaned.versions.map(version => {
       if (!version || typeof version !== 'object' || Array.isArray(version)) return version;
-      const item = {...version};
+      const item = normalizeVersionSize(version);
       delete item.Build;
       delete item.build;
+      return item;
+    });
+  }
+
+  return cleaned;
+}
+
+function sanitizeAppForTarget(app) {
+  const profile = targetMixProfile();
+  const cleaned = sanitizeClassicApp(app);
+
+  if (profile === 'livecontainer' && Array.isArray(cleaned.versions)) {
+    cleaned.versions = cleaned.versions.map(version => {
+      if (!version || typeof version !== 'object' || Array.isArray(version)) return version;
+      const item = {...version};
+      if (!item.buildNumber && typeof item.buildVersion === 'string' && item.buildVersion.trim()) {
+        item.buildNumber = item.buildVersion;
+      }
       return item;
     });
   }
@@ -423,7 +456,7 @@ function dedupe(payloads) {
   }
   return {
     apps:[...merged.values()]
-      .map(item => sanitizeClassicApp(item.app))
+      .map(item => sanitizeAppForTarget(item.app))
       .sort((a,b) => String(a.name || '').localeCompare(String(b.name || ''))),
     conflicts
   };
@@ -559,11 +592,13 @@ async function buildMix() {
       website:'https://caseycz.github.io/iOS-Hub/',
       tintColor:'#38BDF8',
       apps,
-      userInfo:{
-        sourceIDs:ids.join(','),
-        sourceURLs:ids.map(id => sourceVariantURL(registry.find(source => source.id === id), targetVariant()) || '').join('\n'),
-        experimental:String(hasTry)
-      }
+      ...(targetMixProfile() === 'altstore-classic' ? {
+        userInfo:{
+          sourceIDs:ids.join(','),
+          sourceURLs:ids.map(id => sourceVariantURL(registry.find(source => source.id === id), targetVariant()) || '').join('\n'),
+          experimental:String(hasTry)
+        }
+      } : {})
     };
 
     if (blobUrl) URL.revokeObjectURL(blobUrl);
