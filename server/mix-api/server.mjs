@@ -214,7 +214,7 @@ async function buildHostedMix(sourceIds, target) {
     tintColor: '#38BDF8',
     apps,
     userInfo: {
-      sourceIDs: ids,
+      sourceIDs: ids.join(','),
       generatedAt: now.toISOString(),
       expiresAt: new Date(now.getTime() + TTL_MS).toISOString()
     }
