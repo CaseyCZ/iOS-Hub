@@ -1,822 +1,600 @@
 {
-  "generatedAt": "2026-09-30T07:57:52Z",
+  "generatedAt": "2026-09-30T08:02:44Z",
   "sources": [
     {
       "id": "utm",
       "name": "UTM Repository",
       "appCount": 2,
-      "catalogLimited": false,
-      "iconURL": "",
       "variants": [
         "classic"
-      ],
-      "apps": []
+      ]
     },
     {
       "id": "provenance",
       "name": "Provenance Emulator",
       "appCount": 3,
-      "catalogLimited": false,
-      "iconURL": "",
       "variants": [
         "classic"
-      ],
-      "apps": []
+      ]
     },
     {
       "id": "ish",
       "name": "iSH",
       "appCount": 1,
-      "catalogLimited": false,
-      "iconURL": "",
       "variants": [
         "classic"
-      ],
-      "apps": []
+      ]
     },
     {
       "id": "flycast",
       "name": "Flycast",
       "appCount": 1,
-      "catalogLimited": false,
-      "iconURL": "",
       "variants": [
         "classic"
-      ],
-      "apps": []
+      ]
     },
     {
       "id": "sidestore-community",
       "name": "SideStore Community",
       "appCount": 23,
-      "catalogLimited": false,
-      "iconURL": "",
       "variants": [
         "classic"
-      ],
-      "apps": []
+      ]
     },
     {
       "id": "sidestore-official",
       "name": "SideStore Official",
       "appCount": 1,
-      "catalogLimited": false,
-      "iconURL": "",
       "variants": [
         "classic"
-      ],
-      "apps": []
+      ]
     },
     {
       "id": "stikdebug",
       "name": "StikDebug",
       "appCount": 2,
-      "catalogLimited": false,
-      "iconURL": "",
       "variants": [
         "classic"
-      ],
-      "apps": []
+      ]
     },
     {
       "id": "livecontainer",
       "name": "LiveContainer Stable",
       "appCount": 1,
-      "catalogLimited": false,
-      "iconURL": "",
       "variants": [
         "classic"
-      ],
-      "apps": []
+      ]
     },
     {
       "id": "livecontainer-nightly",
       "name": "LiveContainer Nightly",
       "appCount": 1,
-      "catalogLimited": false,
-      "iconURL": "",
       "variants": [
         "classic"
-      ],
-      "apps": []
+      ]
     },
     {
       "id": "manicemu",
       "name": "Manic EMU",
       "appCount": 1,
-      "catalogLimited": false,
-      "iconURL": "",
       "variants": [
         "classic"
-      ],
-      "apps": []
+      ]
     },
     {
       "id": "flycast-ios",
       "name": "Flycast iOS",
       "appCount": 1,
-      "catalogLimited": false,
-      "iconURL": "",
       "variants": [
         "classic"
-      ],
-      "apps": []
+      ]
     },
     {
       "id": "geode-ios",
       "name": "Geode iOS",
       "appCount": 1,
-      "catalogLimited": false,
-      "iconURL": "",
       "variants": [
         "classic"
-      ],
-      "apps": []
+      ]
     },
     {
       "id": "retrosekai",
       "name": "RetroSekaï",
       "appCount": 1,
-      "catalogLimited": false,
-      "iconURL": "",
       "variants": [
         "classic"
-      ],
-      "apps": []
+      ]
     },
     {
       "id": "oatmealdome",
       "name": "OatmealDome",
       "appCount": 2,
-      "catalogLimited": false,
-      "iconURL": "",
       "variants": [
         "classic"
-      ],
-      "apps": []
+      ]
     },
     {
       "id": "crystall1ne",
       "name": "crystall1ne",
       "appCount": 2,
-      "catalogLimited": false,
-      "iconURL": "",
       "variants": [
         "classic"
-      ],
-      "apps": []
+      ]
     },
     {
       "id": "pokemmo",
       "name": "PokeMMO",
       "appCount": 1,
-      "catalogLimited": false,
-      "iconURL": "",
       "variants": [
         "classic"
-      ],
-      "apps": []
+      ]
     },
     {
       "id": "odyssey",
       "name": "Odyssey",
       "appCount": 2,
-      "catalogLimited": false,
-      "iconURL": "",
       "variants": [
         "classic"
-      ],
-      "apps": []
+      ]
     },
     {
       "id": "yattee",
       "name": "Yattee",
       "appCount": 1,
-      "catalogLimited": false,
-      "iconURL": "",
       "variants": [
         "classic"
-      ],
-      "apps": []
+      ]
     },
     {
       "id": "ignited",
       "name": "Ignited",
       "appCount": 1,
-      "catalogLimited": false,
-      "iconURL": "",
       "variants": [
         "classic"
-      ],
-      "apps": []
+      ]
     },
     {
       "id": "mona",
       "name": "Mona",
       "appCount": 1,
-      "catalogLimited": false,
-      "iconURL": "",
       "variants": [
         "classic"
-      ],
-      "apps": []
+      ]
     },
     {
       "id": "vortx",
       "name": "VortX",
       "appCount": 2,
-      "catalogLimited": false,
-      "iconURL": "",
       "variants": [
         "classic"
-      ],
-      "apps": []
+      ]
     },
     {
       "id": "stremio-official-pal",
       "name": "Stremio Official",
       "appCount": 1,
-      "catalogLimited": false,
-      "iconURL": "",
       "variants": [
         "pal"
-      ],
-      "apps": []
+      ]
     },
     {
       "id": "stremio-ios",
       "name": "Stremio iOS Source",
       "appCount": 1,
-      "catalogLimited": false,
-      "iconURL": "",
       "variants": [
         "classic"
-      ],
-      "apps": []
+      ]
     },
     {
       "id": "kodi-ios",
       "name": "Kodi iOS IPA",
       "appCount": 1,
-      "catalogLimited": false,
-      "iconURL": "",
       "variants": [
         "classic"
-      ],
-      "apps": []
+      ]
     },
     {
       "id": "esound",
       "name": "eSound",
       "appCount": 1,
-      "catalogLimited": false,
-      "iconURL": "",
       "variants": [
         "pal"
-      ],
-      "apps": []
+      ]
     },
     {
       "id": "partyknights",
       "name": "Party Knights",
       "appCount": 1,
-      "catalogLimited": false,
-      "iconURL": "",
       "variants": [
         "classic"
-      ],
-      "apps": []
+      ]
     },
     {
       "id": "itorrent",
       "name": "iTorrent",
       "appCount": 1,
-      "catalogLimited": false,
-      "iconURL": "",
       "variants": [
         "classic"
-      ],
-      "apps": []
+      ]
     },
     {
       "id": "qbitconnect",
       "name": "qBitConnect",
       "appCount": 1,
-      "catalogLimited": false,
-      "iconURL": "",
       "variants": [
         "classic",
         "pal"
-      ],
-      "apps": []
+      ]
     },
     {
       "id": "artemis",
       "name": "Artemis",
       "appCount": 1,
-      "catalogLimited": false,
-      "iconURL": "",
       "variants": [
         "classic",
         "pal"
-      ],
-      "apps": []
+      ]
     },
     {
       "id": "hackerwebapp",
       "name": "Hacker Web App",
       "appCount": 1,
-      "catalogLimited": false,
-      "iconURL": "",
       "variants": [
         "pal"
-      ],
-      "apps": []
+      ]
     },
     {
       "id": "courtpredict",
       "name": "CourtPredict",
       "appCount": 1,
-      "catalogLimited": false,
-      "iconURL": "",
       "variants": [
         "pal"
-      ],
-      "apps": []
+      ]
     },
     {
       "id": "wayfarer",
       "name": "Niantic Wayfarer",
       "appCount": 1,
-      "catalogLimited": false,
-      "iconURL": "",
       "variants": [
         "classic"
-      ],
-      "apps": []
+      ]
     },
     {
       "id": "qbitcontrol",
       "name": "qBitControl",
       "appCount": 1,
-      "catalogLimited": false,
-      "iconURL": "",
       "variants": [
         "classic",
         "pal"
-      ],
-      "apps": []
+      ]
     },
     {
       "id": "iphanpy",
       "name": "iPhanpy",
       "appCount": 1,
-      "catalogLimited": false,
-      "iconURL": "",
       "variants": [
         "pal"
-      ],
-      "apps": []
+      ]
     },
     {
       "id": "epic-games",
       "name": "Epic Games",
       "appCount": 3,
-      "catalogLimited": false,
-      "iconURL": "",
       "variants": [
         "pal"
-      ],
-      "apps": []
+      ]
     },
     {
       "id": "xn1ckuz-sidebox",
       "name": "xN1ckuz SideBox",
       "appCount": 4,
-      "catalogLimited": false,
-      "iconURL": "",
       "variants": [
         "classic"
-      ],
-      "apps": []
+      ]
     },
     {
       "id": "dvntm0-workshop",
       "name": "Dan's Workshop",
       "appCount": 7,
-      "catalogLimited": false,
-      "iconURL": "",
       "variants": [
         "classic"
-      ],
-      "apps": []
+      ]
     },
     {
       "id": "wuxu-library-plus",
       "name": "WuXu's Library++",
       "appCount": 13,
-      "catalogLimited": false,
-      "iconURL": "",
       "variants": [
         "classic"
-      ],
-      "apps": []
+      ]
     },
     {
       "id": "baretsky-tweaked",
       "name": "Baretsky Tweaked App Library",
       "appCount": 7,
-      "catalogLimited": false,
-      "iconURL": "",
       "variants": [
         "classic"
-      ],
-      "apps": []
+      ]
     },
     {
       "id": "driftywinds",
       "name": "driftywinds AltStore Repo",
       "appCount": 10,
-      "catalogLimited": false,
-      "iconURL": "",
       "variants": [
         "classic"
-      ],
-      "apps": []
+      ]
     },
     {
       "id": "ipa-vault",
       "name": "IPA Vault",
       "appCount": 63,
-      "catalogLimited": false,
-      "iconURL": "",
       "variants": [
         "classic"
-      ],
-      "apps": []
+      ]
     },
     {
       "id": "sideloadlabs",
       "name": "SideloadLabs Repo",
       "appCount": 4,
-      "catalogLimited": false,
-      "iconURL": "",
       "variants": [
         "classic"
-      ],
-      "apps": []
+      ]
     },
     {
       "id": "ytliteplus",
       "name": "YTLitePlus",
       "appCount": 1,
-      "catalogLimited": false,
-      "iconURL": "",
       "variants": [
         "classic"
-      ],
-      "apps": []
+      ]
     },
     {
       "id": "moe-altstore",
       "name": "Moe AltStore",
       "appCount": 34,
-      "catalogLimited": false,
-      "iconURL": "",
       "variants": [
         "classic"
-      ],
-      "apps": []
+      ]
     },
     {
       "id": "youmod-repo",
       "name": "YouMod Repo",
       "appCount": 1,
-      "catalogLimited": false,
-      "iconURL": "",
       "variants": [
         "classic"
-      ],
-      "apps": []
+      ]
     },
     {
       "id": "youproextra",
       "name": "YouProEXTRA",
       "appCount": 5,
-      "catalogLimited": false,
-      "iconURL": "",
       "variants": [
         "classic"
-      ],
-      "apps": []
+      ]
     },
     {
       "id": "owo-source",
       "name": "OwO Source",
       "appCount": 155,
-      "catalogLimited": false,
-      "iconURL": "",
       "variants": [
         "classic"
-      ],
-      "apps": []
+      ]
     },
     {
       "id": "cypwn-ipa",
       "name": "CyPwn IPA Library",
-      "appCount": 210,
-      "catalogLimited": false,
-      "iconURL": "",
+      "appCount": 209,
       "variants": [
         "classic"
-      ],
-      "apps": []
+      ]
     },
     {
       "id": "apptesters",
       "name": "AppTesters IPA Repo",
       "appCount": 9403,
-      "catalogLimited": false,
-      "iconURL": "",
       "variants": [
         "classic"
-      ],
-      "apps": []
+      ]
     },
     {
       "id": "youtuberebornplus",
       "name": "YouTubeRebornPlus",
       "appCount": 1,
-      "catalogLimited": false,
-      "iconURL": "",
       "variants": [
         "classic"
-      ],
-      "apps": []
+      ]
     },
     {
       "id": "apollo-reddit",
       "name": "Apollo for Reddit",
       "appCount": 1,
-      "catalogLimited": false,
-      "iconURL": "",
       "variants": [
         "classic"
-      ],
-      "apps": []
+      ]
     },
     {
       "id": "discord-appstore-builds",
       "name": "Discord App Store Builds",
       "appCount": 1,
-      "catalogLimited": false,
-      "iconURL": "",
       "variants": [
         "classic"
-      ],
-      "apps": []
+      ]
     },
     {
       "id": "ytkace",
       "name": "YTKACE",
       "appCount": 1,
-      "catalogLimited": false,
-      "iconURL": "",
       "variants": [
         "classic"
-      ],
-      "apps": []
+      ]
     },
     {
       "id": "heyfordy",
       "name": "heyFordy SideStore Repo",
       "appCount": 8,
-      "catalogLimited": false,
-      "iconURL": "",
       "variants": [
         "classic"
-      ],
-      "apps": []
+      ]
     },
     {
       "id": "ipalibrary",
       "name": "IPALibrary Source",
       "appCount": 834,
-      "catalogLimited": false,
-      "iconURL": "",
       "variants": [
         "classic"
-      ],
-      "apps": []
+      ]
     },
     {
       "id": "armsx2",
       "name": "ARMSX2 iOS",
       "appCount": 2,
-      "catalogLimited": false,
-      "iconURL": "",
       "variants": [
         "classic"
-      ],
-      "apps": []
+      ]
     },
     {
       "id": "fouad-source",
       "name": "Fouad's Source",
       "appCount": 6,
-      "catalogLimited": false,
-      "iconURL": "",
       "variants": [
         "classic"
-      ],
-      "apps": []
+      ]
     },
     {
       "id": "neofreebird",
       "name": "NeoFreeBird",
       "appCount": 1,
-      "catalogLimited": false,
-      "iconURL": "",
       "variants": [
         "classic"
-      ],
-      "apps": []
+      ]
     },
     {
       "id": "melonx",
       "name": "MeloNX",
       "appCount": 1,
-      "catalogLimited": false,
-      "iconURL": "",
       "variants": [
         "classic"
-      ],
-      "apps": []
+      ]
     },
     {
       "id": "altgallery",
       "name": "AltGallery",
       "appCount": 39,
-      "catalogLimited": false,
-      "iconURL": "",
       "variants": [
         "classic"
-      ],
-      "apps": []
+      ]
     },
     {
       "id": "ripestore",
       "name": "RipeStore",
       "appCount": 11,
-      "catalogLimited": false,
-      "iconURL": "",
       "variants": [
         "classic"
-      ],
-      "apps": []
+      ]
     },
     {
       "id": "feather",
       "name": "Feather Repository",
       "appCount": 1,
-      "catalogLimited": false,
-      "iconURL": "",
       "variants": [
         "classic"
-      ],
-      "apps": []
+      ]
     },
     {
       "id": "quantum-source",
       "name": "Quantum Source",
       "appCount": 38,
-      "catalogLimited": false,
-      "iconURL": "",
       "variants": [
         "classic"
-      ],
-      "apps": []
+      ]
     },
     {
       "id": "spotc",
       "name": "SpotCompiled",
       "appCount": 3,
-      "catalogLimited": false,
-      "iconURL": "",
       "variants": [
         "classic"
-      ],
-      "apps": []
+      ]
     },
     {
       "id": "foxster-altsource",
       "name": "Foxster's AltSource",
       "appCount": 2,
-      "catalogLimited": false,
-      "iconURL": "",
       "variants": [
         "classic"
-      ],
-      "apps": []
+      ]
     },
     {
       "id": "fastsign",
       "name": "FastSign",
       "appCount": 16272,
-      "catalogLimited": false,
-      "iconURL": "",
       "variants": [
         "classic"
-      ],
-      "apps": []
+      ]
     },
     {
       "id": "quantum-plus",
       "name": "Quantum Source++",
       "appCount": 35,
-      "catalogLimited": false,
-      "iconURL": "",
       "variants": [
         "classic"
-      ],
-      "apps": []
+      ]
     },
     {
       "id": "wuxu-standard",
       "name": "WuXu's Library",
       "appCount": 20,
-      "catalogLimited": false,
-      "iconURL": "",
       "variants": [
         "classic"
-      ],
-      "apps": []
+      ]
     },
     {
       "id": "taurine",
       "name": "Taurine",
       "appCount": 1,
-      "catalogLimited": false,
-      "iconURL": "",
       "variants": [
         "classic"
-      ],
-      "apps": []
+      ]
     },
     {
       "id": "burrito-source",
       "name": "Burrito's Source",
       "appCount": 7,
-      "catalogLimited": false,
-      "iconURL": "",
       "variants": [
         "classic"
-      ],
-      "apps": []
+      ]
     },
     {
       "id": "salupov-altrepo",
       "name": "Salupov Team AltRepo",
       "appCount": 2,
-      "catalogLimited": false,
-      "iconURL": "",
       "variants": [
         "classic"
-      ],
-      "apps": []
+      ]
     },
     {
       "id": "cercube",
       "name": "Cercube",
       "appCount": 2,
-      "catalogLimited": false,
-      "iconURL": "",
       "variants": [
         "classic"
-      ],
-      "apps": []
+      ]
     },
     {
       "id": "rocket",
       "name": "Rocket",
       "appCount": 1,
-      "catalogLimited": false,
-      "iconURL": "",
       "variants": [
         "classic"
-      ],
-      "apps": []
+      ]
     },
     {
       "id": "reynard-browser",
       "name": "Reynard Browser",
       "appCount": 1,
-      "catalogLimited": false,
-      "iconURL": "",
       "variants": [
         "classic"
-      ],
-      "apps": []
+      ]
     }
   ]
 }
