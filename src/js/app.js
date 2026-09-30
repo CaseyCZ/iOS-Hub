@@ -342,25 +342,11 @@ function formatDate(value) {
 }
 
 function sourceAppsDisclosure(source) {
-  const catalog = catalogSource(source.id) || {};
-  const apps = [...(catalog.apps || [])]
-    .filter(app => app && typeof app === 'object')
-    .sort((left, right) => String(left.name || '').localeCompare(String(right.name || '')));
   const statusCount = getStatus(source.id).appCount;
-  const count = Number.isFinite(catalog.appCount) ? catalog.appCount : (Number.isFinite(statusCount) ? statusCount : apps.length);
-  const limited = catalog.catalogLimited === true && count > apps.length;
-  const rows = apps.length ? apps.map(app => {
-    const details = [app.developerName, app.version, app.bundleIdentifier].filter(Boolean).map(escapeHtml).join(' · ');
-    return `<div class="source-app-row"><strong>${escapeHtml(app.name || 'Unknown app')}</strong>${details ? `<span>${details}</span>` : ''}</div>`;
-  }).join('') : `<div class="source-app-empty">${escapeHtml(tr('noApps'))}</div>`;
-  const limitNote = limited ? `<div class="source-app-empty">${apps.length} / ${count}</div>` : '';
-  return `<details class="source-apps-disclosure">
-    <summary title="${escapeHtml(tr('showApps'))}" aria-label="${escapeHtml(tr('showApps'))}">
-      <span class="source-app-count">📱 <strong>${count}</strong> ${escapeHtml(tr('apps'))}</span>
-      <span class="source-app-chevron" aria-hidden="true">⌄</span>
-    </summary>
-    <div class="source-app-list">${limitNote}${rows}</div>
-  </details>`;
+  const count = Number.isFinite(statusCount) ? statusCount : '—';
+  return `<div class="source-apps-disclosure source-app-count-only">
+    <span class="source-app-count">📱 <strong>${count}</strong> ${escapeHtml(tr('apps'))}</span>
+  </div>`;
 }
 
 function renderSources() {
@@ -425,28 +411,6 @@ function renderSources() {
       </div>
     </article>`;
   }).join('');
-}
-
-function uniqueDiscoveredAppCount() {
-  const generatedCount = Number(state.catalog?.uniqueAppCount);
-  if (Number.isFinite(generatedCount) && generatedCount >= 0) return generatedCount;
-
-  const onlineIds = new Set(
-    state.registry
-      .filter(source => getStatus(source.id).online === true)
-      .map(source => source.id)
-  );
-  const keys = new Set();
-  for (const source of (state.catalog?.sources || [])) {
-    if (!onlineIds.has(source.id)) continue;
-    for (const app of (source.apps || [])) {
-      const bundle = String(app.bundleIdentifier || '').trim().toLowerCase();
-      const fallback = `${source.id}:${app.name || ''}:${app.developerName || ''}`.toLowerCase();
-      const key = bundle || fallback;
-      if (key) keys.add(key);
-    }
-  }
-  return keys.size;
 }
 
 function updateStats() {
