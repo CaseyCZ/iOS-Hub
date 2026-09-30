@@ -406,15 +406,15 @@
 .nav-support-primary{background:linear-gradient(135deg,var(--action2),var(--action))!important;border-color:var(--action)!important;color:#fff!important;box-shadow:0 8px 22px color-mix(in srgb,var(--accent) 22%,transparent)}
 .nav-support-primary:hover{border-color:color-mix(in srgb,#fff 55%,var(--accent))!important}
 
-/* Landscape phone source cards */
+/* Landscape phone / tablet source cards */
 @media(min-width:641px) and (max-width:1100px){
-  .source-grid{grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}
+  .source-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
   .source-card{padding:12px}
-  .source-installers{grid-template-columns:repeat(auto-fit,minmax(78px,1fr));gap:4px;width:100%;align-items:stretch}
-  .source-installers .installer-link{width:100%;min-width:0;padding:0 4px;font-size:9px;gap:4px;white-space:nowrap}
+  .source-installers{grid-template-columns:repeat(3,minmax(0,1fr));gap:5px;width:100%;align-items:stretch}
+  .source-installers .installer-link{width:100%;min-width:0;padding:0 5px;font-size:9px;gap:4px;white-space:nowrap}
   .source-installers .installer-icon{width:13px;height:13px}
-  .source-utilities{grid-template-columns:repeat(auto-fit,minmax(58px,1fr));gap:4px;width:100%}
-  .source-utilities .btn,.source-utilities summary{width:100%;min-width:0;padding:0 4px;font-size:9px;white-space:nowrap}
+  .source-utilities{grid-template-columns:repeat(auto-fit,minmax(72px,1fr));gap:5px;width:100%}
+  .source-utilities .btn,.source-utilities summary{width:100%;min-width:0;padding:0 5px;font-size:9px;white-space:nowrap}
 }
 @media(max-width:640px){
   .source-installers .installer-link{min-width:0;white-space:nowrap}
@@ -1050,7 +1050,7 @@ body{
 .source-more-menu .installer-link,.source-more-menu .btn{width:100%;justify-content:flex-start;white-space:nowrap}
 .source-more[open]>summary{border-color:color-mix(in srgb,var(--accent) 55%,var(--border));color:var(--accent)}
 @media(max-width:640px){
-  .source-more-menu{left:50%;transform:translateX(-50%);min-width:160px}
+  .source-more-menu{left:0;right:auto;transform:none;min-width:160px;max-width:min(240px,calc(100vw - 32px))}
 }
 
 
