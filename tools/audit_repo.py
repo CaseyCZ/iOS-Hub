@@ -103,6 +103,18 @@ def validate_alt_source(path: Path, *, required: bool = True) -> tuple[int, int]
         error(f"{path.relative_to(ROOT)} must contain an apps array")
         return 0, 0
 
+    user_info = payload.get("userInfo")
+    if user_info is not None:
+        if not isinstance(user_info, dict):
+            error(f"{path.relative_to(ROOT)} userInfo must be an object")
+        else:
+            for key, value in user_info.items():
+                if not isinstance(value, str):
+                    error(
+                        f"{path.relative_to(ROOT)} userInfo.{key} must be a string "
+                        f"for AltStore compatibility, got {type(value).__name__}"
+                    )
+
     seen: dict[str, str] = {}
     duplicate_count = 0
     valid_apps = 0
@@ -571,7 +583,19 @@ def validate_generated_data() -> None:
                 continue
             expected_ids = set(package_status.get("sourceIDs") or [])
             user_info = package_payload.get("userInfo")
-            actual_ids = set(user_info.get("sourceIDs") or []) if isinstance(user_info, dict) else set()
+            source_ids_raw = user_info.get("sourceIDs") if isinstance(user_info, dict) else None
+            source_urls_raw = user_info.get("sourceURLs") if isinstance(user_info, dict) else None
+            source_ids = (
+                [item.strip() for item in source_ids_raw.split(",") if item.strip()]
+                if isinstance(source_ids_raw, str)
+                else []
+            )
+            source_urls = (
+                [item.strip() for item in source_urls_raw.splitlines() if item.strip()]
+                if isinstance(source_urls_raw, str)
+                else []
+            )
+            actual_ids = set(source_ids)
             if expected_ids != actual_ids:
                 error(
                     f"{package_path.relative_to(ROOT)} sourceIDs differ from data/status.json; "
@@ -579,30 +603,27 @@ def validate_generated_data() -> None:
                     f"extra={sorted(actual_ids - expected_ids)}"
                 )
 
-            source_ids = user_info.get("sourceIDs") if isinstance(user_info, dict) else None
-            source_urls = user_info.get("sourceURLs") if isinstance(user_info, dict) else None
-            if isinstance(source_ids, list) and isinstance(source_urls, list):
-                if len(source_ids) != len(source_urls):
-                    error(
-                        f"{package_path.relative_to(ROOT)} userInfo sourceIDs/sourceURLs length mismatch"
+            if len(source_ids) != len(source_urls):
+                error(
+                    f"{package_path.relative_to(ROOT)} userInfo sourceIDs/sourceURLs length mismatch"
+                )
+            else:
+                for source_id, source_url in zip(source_ids, source_urls):
+                    source = registry_by_id.get(str(source_id))
+                    if not isinstance(source, dict):
+                        continue
+                    configured_urls = source.get("urls")
+                    mode = str(source.get("mode") or "classic")
+                    expected_url = (
+                        str(configured_urls.get("classic") or "").strip()
+                        if isinstance(configured_urls, dict)
+                        else (str(source.get("url") or "").strip() if mode != "pal" else "")
                     )
-                else:
-                    for source_id, source_url in zip(source_ids, source_urls):
-                        source = registry_by_id.get(str(source_id))
-                        if not isinstance(source, dict):
-                            continue
-                        configured_urls = source.get("urls")
-                        mode = str(source.get("mode") or "classic")
-                        expected_url = (
-                            str(configured_urls.get("classic") or "").strip()
-                            if isinstance(configured_urls, dict)
-                            else (str(source.get("url") or "").strip() if mode != "pal" else "")
+                    if expected_url and source_url != expected_url:
+                        error(
+                            f"{package_path.relative_to(ROOT)} uses non-Classic source URL "
+                            f"for {source_id!r}: {source_url!r}"
                         )
-                        if expected_url and source_url != expected_url:
-                            error(
-                                f"{package_path.relative_to(ROOT)} uses non-Classic source URL "
-                                f"for {source_id!r}: {source_url!r}"
-                            )
 
         all_compatible_path = ROOT / "mix" / "all-compatible.json"
         all_compatible = load_json(all_compatible_path)
@@ -610,7 +631,12 @@ def validate_generated_data() -> None:
         if isinstance(all_compatible, dict) and isinstance(mixes_status, dict):
             expected_ids = set(mixes_status.get("autoCompatibleSourceIDs") or [])
             user_info = all_compatible.get("userInfo")
-            actual_ids = set(user_info.get("sourceIDs") or []) if isinstance(user_info, dict) else set()
+            source_ids_raw = user_info.get("sourceIDs") if isinstance(user_info, dict) else None
+            actual_ids = (
+                {item.strip() for item in source_ids_raw.split(",") if item.strip()}
+                if isinstance(source_ids_raw, str)
+                else set()
+            )
             if expected_ids != actual_ids:
                 error(
                     "mix/all-compatible.json sourceIDs differ from data/status.json; "
@@ -1842,6 +1868,20 @@ def validate_layout() -> None:
                         "Shared horizontal scroll runtime is incomplete; "
                         f"missing {required_scroll_js!r}"
                     )
+
+    builder_script = JS_DIR / "builder.js"
+    if builder_script.exists():
+        builder_text = builder_script.read_text(encoding="utf-8")
+        for required_altstore_user_info in (
+            "sourceIDs:ids.join(',')",
+            ".join('\\n')",
+            "experimental:String(hasTry)",
+        ):
+            if required_altstore_user_info not in builder_text:
+                error(
+                    "builder.js must keep generated userInfo string-only for AltStore compatibility; "
+                    f"missing {required_altstore_user_info!r}"
+                )
 
     for search_script in ("app.js", "builder.js"):
         path = JS_DIR / search_script
