@@ -310,6 +310,19 @@ export const INSTALLERS = Object.freeze({
   }
 });
 
+export const SOURCE_BUILDER_INSTALLER_IDS = Object.freeze(
+  Object.values(INSTALLERS)
+    .filter(installer => installer.capabilities?.includes('source'))
+    .map(installer => installer.id)
+);
+
+export const DEFAULT_SOURCE_BUILDER_INSTALLER_ID =
+  SOURCE_BUILDER_INSTALLER_IDS.find(id => INSTALLERS[id]?.builderDefault)
+  || SOURCE_BUILDER_INSTALLER_IDS[0]
+  || '';
+
+// Legacy Mix exports remain for generated-data compatibility while the direct Source Builder
+// no longer uses or creates combined Mix JSON files.
 export const BUILDER_INSTALLER_IDS = Object.freeze(
   Object.values(INSTALLERS).filter(installer => installer.mixTarget).map(installer => installer.id)
 );
