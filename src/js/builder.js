@@ -97,6 +97,7 @@ let status = {};
 let catalog = {};
 let selected = new Set();
 let blobUrl = null;
+let mixApiConfig = null;
 let category = 'all';
 let genre = 'all';
 let target = DEFAULT_BUILDER_INSTALLER_ID;
@@ -448,6 +449,45 @@ function hostedTarget(ids) {
   return {url:null, targets:new Set()};
 }
 
+async function loadMixApiConfig() {
+  if (mixApiConfig) return mixApiConfig;
+  try {
+    const response = await fetch('data/mix-api.json', {cache:'no-store'});
+    if (!response.ok) throw new Error(`Mix API config: HTTP ${response.status}`);
+    const payload = await response.json();
+    mixApiConfig = payload && typeof payload === 'object' ? payload : {};
+  } catch (error) {
+    console.warn('Mix API config unavailable; using local fallback.', error);
+    mixApiConfig = {};
+  }
+  return mixApiConfig;
+}
+
+async function hostCustomMix(mix) {
+  const config = await loadMixApiConfig();
+  const apiURL = String(config?.apiURL || '').trim();
+  if (!apiURL) return null;
+
+  const response = await fetch(apiURL, {
+    method:'POST',
+    headers:{'Content-Type':'application/json'},
+    body:JSON.stringify(mix)
+  });
+
+  let payload = {};
+  try {
+    payload = await response.json();
+  } catch (_) {}
+
+  if (!response.ok) {
+    throw new Error(payload?.error || `Mix API: HTTP ${response.status}`);
+  }
+
+  const url = String(payload?.url || '').trim();
+  if (!url.startsWith('https://')) throw new Error('Mix API did not return a public HTTPS URL.');
+  return {...payload, url};
+}
+
 function localMixDiagnostic(ids, hasTry) {
   const parts = [tr('directMixUnavailable')];
   const trySources = hasTry
@@ -488,7 +528,7 @@ async function buildMix() {
     const {apps,conflicts} = dedupe(payloads);
     if (!apps.length) throw new Error('No mergeable app entries were found.');
 
-    const hosted = hostedTarget(ids);
+    let hosted = hostedTarget(ids);
     const names = ids.map(id => registry.find(source => source.id === id)?.name || id);
     const hasTry = ids.some(id => getStatus(id).mixTest !== 'pass');
     const mix = {
@@ -503,6 +543,21 @@ async function buildMix() {
 
     if (blobUrl) URL.revokeObjectURL(blobUrl);
     blobUrl = URL.createObjectURL(new Blob([JSON.stringify(mix,null,2) + '\n'], {type:'application/json'}));
+
+    if (!hosted.url) {
+      try {
+        const hostedMix = await hostCustomMix(mix);
+        if (hostedMix?.url) {
+          hosted = {
+            url: hostedMix.url,
+            targets: new Set([target]),
+            expiresAt: hostedMix.expiresAt || null
+          };
+        }
+      } catch (hostError) {
+        console.warn('Custom Mix hosting failed; keeping Download / Preview fallback.', hostError);
+      }
+    }
 
     $('#expResultTitle').textContent = hosted.url ? tr('hosted') : (hasTry ? tr('experimental') : tr('local'));
     $('#expResultInfo').textContent = `${apps.length} ${tr('apps')} · ${conflicts} ${tr('conflicts')}`;
