@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-09-30T07:48:11Z",
+  "generatedAt": "2026-09-30T07:57:52Z",
   "sources": {
     "utm": {
       "online": true,
-      "checkedAt": "2026-09-30T07:48:11Z",
+      "checkedAt": "2026-09-30T07:57:52Z",
       "appCount": 2,
       "httpStatus": 200,
       "iconURL": "",
@@ -17,15 +17,14 @@
           "duplicateBundleIdentifiers": {
             "count": 0,
             "duplicateAppEntries": 0,
-            "extraEntries": 0,
-            "items": [],
-            "itemsTruncated": false
+            "extraEntries": 0
           }
         }
       },
       "duplicateBundleIdentifiers": {
         "count": 0,
-        "examples": []
+        "duplicateAppEntries": 0,
+        "extraEntries": 0
       },
       "installerCompatibility": {
         "altstore": {
@@ -49,12 +48,11 @@
           "reason": "No duplicate bundle identifiers were detected in the source."
         }
       },
-      "preferredVariant": "classic",
-      "aggregationApproved": false
+      "preferredVariant": "classic"
     },
     "provenance": {
       "online": true,
-      "checkedAt": "2026-09-30T07:48:11Z",
+      "checkedAt": "2026-09-30T07:57:52Z",
       "appCount": 3,
       "httpStatus": 200,
       "iconURL": "",
@@ -68,15 +66,14 @@
           "duplicateBundleIdentifiers": {
             "count": 0,
             "duplicateAppEntries": 0,
-            "extraEntries": 0,
-            "items": [],
-            "itemsTruncated": false
+            "extraEntries": 0
           }
         }
       },
       "duplicateBundleIdentifiers": {
         "count": 0,
-        "examples": []
+        "duplicateAppEntries": 0,
+        "extraEntries": 0
       },
       "installerCompatibility": {
         "altstore": {
@@ -100,12 +97,11 @@
           "reason": "No duplicate bundle identifiers were detected in the source."
         }
       },
-      "preferredVariant": "classic",
-      "aggregationApproved": false
+      "preferredVariant": "classic"
     },
     "ish": {
       "online": true,
-      "checkedAt": "2026-09-30T07:48:11Z",
+      "checkedAt": "2026-09-30T07:57:52Z",
       "appCount": 1,
       "httpStatus": 200,
       "iconURL": "",
@@ -119,15 +115,14 @@
           "duplicateBundleIdentifiers": {
             "count": 0,
             "duplicateAppEntries": 0,
-            "extraEntries": 0,
-            "items": [],
-            "itemsTruncated": false
+            "extraEntries": 0
           }
         }
       },
       "duplicateBundleIdentifiers": {
         "count": 0,
-        "examples": []
+        "duplicateAppEntries": 0,
+        "extraEntries": 0
       },
       "installerCompatibility": {
         "altstore": {
@@ -151,12 +146,11 @@
           "reason": "No duplicate bundle identifiers were detected in the source."
         }
       },
-      "preferredVariant": "classic",
-      "aggregationApproved": false
+      "preferredVariant": "classic"
     },
     "flycast": {
       "online": true,
-      "checkedAt": "2026-09-30T07:48:11Z",
+      "checkedAt": "2026-09-30T07:57:52Z",
       "appCount": 1,
       "httpStatus": 200,
       "iconURL": "",
@@ -170,15 +164,14 @@
           "duplicateBundleIdentifiers": {
             "count": 0,
             "duplicateAppEntries": 0,
-            "extraEntries": 0,
-            "items": [],
-            "itemsTruncated": false
+            "extraEntries": 0
           }
         }
       },
       "duplicateBundleIdentifiers": {
         "count": 0,
-        "examples": []
+        "duplicateAppEntries": 0,
+        "extraEntries": 0
       },
       "installerCompatibility": {
         "altstore": {
@@ -202,12 +195,11 @@
           "reason": "No duplicate bundle identifiers were detected in the source."
         }
       },
-      "preferredVariant": "classic",
-      "aggregationApproved": false
+      "preferredVariant": "classic"
     },
     "sidestore-community": {
       "online": true,
-      "checkedAt": "2026-09-30T07:48:11Z",
+      "checkedAt": "2026-09-30T07:57:52Z",
       "appCount": 23,
       "httpStatus": 200,
       "iconURL": "",
@@ -221,15 +213,14 @@
           "duplicateBundleIdentifiers": {
             "count": 0,
             "duplicateAppEntries": 0,
-            "extraEntries": 0,
-            "items": [],
-            "itemsTruncated": false
+            "extraEntries": 0
           }
         }
       },
       "duplicateBundleIdentifiers": {
         "count": 0,
-        "examples": []
+        "duplicateAppEntries": 0,
+        "extraEntries": 0
       },
       "installerCompatibility": {
         "altstore": {
@@ -253,12 +244,11 @@
           "reason": "No duplicate bundle identifiers were detected in the source."
         }
       },
-      "preferredVariant": "classic",
-      "aggregationApproved": false
+      "preferredVariant": "classic"
     },
     "sidestore-official": {
       "online": true,
-      "checkedAt": "2026-09-30T07:48:11Z",
+      "checkedAt": "2026-09-30T07:57:52Z",
       "appCount": 1,
       "httpStatus": 200,
       "iconURL": "",
@@ -272,15 +262,14 @@
           "duplicateBundleIdentifiers": {
             "count": 0,
             "duplicateAppEntries": 0,
-            "extraEntries": 0,
-            "items": [],
-            "itemsTruncated": false
+            "extraEntries": 0
           }
         }
       },
       "duplicateBundleIdentifiers": {
         "count": 0,
-        "examples": []
+        "duplicateAppEntries": 0,
+        "extraEntries": 0
       },
       "installerCompatibility": {
         "altstore": {
@@ -304,12 +293,11 @@
           "reason": "No duplicate bundle identifiers were detected in the source."
         }
       },
-      "preferredVariant": "classic",
-      "aggregationApproved": false
+      "preferredVariant": "classic"
     },
     "stikdebug": {
       "online": true,
-      "checkedAt": "2026-09-30T07:48:11Z",
+      "checkedAt": "2026-09-30T07:57:52Z",
       "appCount": 2,
       "httpStatus": 200,
       "iconURL": "",
@@ -323,15 +311,14 @@
           "duplicateBundleIdentifiers": {
             "count": 0,
             "duplicateAppEntries": 0,
-            "extraEntries": 0,
-            "items": [],
-            "itemsTruncated": false
+            "extraEntries": 0
           }
         }
       },
       "duplicateBundleIdentifiers": {
         "count": 0,
-        "examples": []
+        "duplicateAppEntries": 0,
+        "extraEntries": 0
       },
       "installerCompatibility": {
         "altstore": {
@@ -355,12 +342,11 @@
           "reason": "No duplicate bundle identifiers were detected in the source."
         }
       },
-      "preferredVariant": "classic",
-      "aggregationApproved": false
+      "preferredVariant": "classic"
     },
     "livecontainer": {
       "online": true,
-      "checkedAt": "2026-09-30T07:48:11Z",
+      "checkedAt": "2026-09-30T07:57:52Z",
       "appCount": 1,
       "httpStatus": 200,
       "iconURL": "",
@@ -374,15 +360,14 @@
           "duplicateBundleIdentifiers": {
             "count": 0,
             "duplicateAppEntries": 0,
-            "extraEntries": 0,
-            "items": [],
-            "itemsTruncated": false
+            "extraEntries": 0
           }
         }
       },
       "duplicateBundleIdentifiers": {
         "count": 0,
-        "examples": []
+        "duplicateAppEntries": 0,
+        "extraEntries": 0
       },
       "installerCompatibility": {
         "altstore": {
@@ -406,12 +391,11 @@
           "reason": "No duplicate bundle identifiers were detected in the source."
         }
       },
-      "preferredVariant": "classic",
-      "aggregationApproved": false
+      "preferredVariant": "classic"
     },
     "livecontainer-nightly": {
       "online": true,
-      "checkedAt": "2026-09-30T07:48:11Z",
+      "checkedAt": "2026-09-30T07:57:52Z",
       "appCount": 1,
       "httpStatus": 200,
       "iconURL": "",
@@ -425,15 +409,14 @@
           "duplicateBundleIdentifiers": {
             "count": 0,
             "duplicateAppEntries": 0,
-            "extraEntries": 0,
-            "items": [],
-            "itemsTruncated": false
+            "extraEntries": 0
           }
         }
       },
       "duplicateBundleIdentifiers": {
         "count": 0,
-        "examples": []
+        "duplicateAppEntries": 0,
+        "extraEntries": 0
       },
       "installerCompatibility": {
         "altstore": {
@@ -457,12 +440,11 @@
           "reason": "No duplicate bundle identifiers were detected in the source."
         }
       },
-      "preferredVariant": "classic",
-      "aggregationApproved": false
+      "preferredVariant": "classic"
     },
     "manicemu": {
       "online": true,
-      "checkedAt": "2026-09-30T07:48:11Z",
+      "checkedAt": "2026-09-30T07:57:52Z",
       "appCount": 1,
       "httpStatus": 200,
       "iconURL": "",
@@ -476,15 +458,14 @@
           "duplicateBundleIdentifiers": {
             "count": 0,
             "duplicateAppEntries": 0,
-            "extraEntries": 0,
-            "items": [],
-            "itemsTruncated": false
+            "extraEntries": 0
           }
         }
       },
       "duplicateBundleIdentifiers": {
         "count": 0,
-        "examples": []
+        "duplicateAppEntries": 0,
+        "extraEntries": 0
       },
       "installerCompatibility": {
         "altstore": {
@@ -508,12 +489,11 @@
           "reason": "No duplicate bundle identifiers were detected in the source."
         }
       },
-      "preferredVariant": "classic",
-      "aggregationApproved": false
+      "preferredVariant": "classic"
     },
     "flycast-ios": {
       "online": true,
-      "checkedAt": "2026-09-30T07:48:11Z",
+      "checkedAt": "2026-09-30T07:57:52Z",
       "appCount": 1,
       "httpStatus": 200,
       "iconURL": "",
@@ -527,15 +507,14 @@
           "duplicateBundleIdentifiers": {
             "count": 0,
             "duplicateAppEntries": 0,
-            "extraEntries": 0,
-            "items": [],
-            "itemsTruncated": false
+            "extraEntries": 0
           }
         }
       },
       "duplicateBundleIdentifiers": {
         "count": 0,
-        "examples": []
+        "duplicateAppEntries": 0,
+        "extraEntries": 0
       },
       "installerCompatibility": {
         "altstore": {
@@ -559,12 +538,11 @@
           "reason": "No duplicate bundle identifiers were detected in the source."
         }
       },
-      "preferredVariant": "classic",
-      "aggregationApproved": false
+      "preferredVariant": "classic"
     },
     "geode-ios": {
       "online": true,
-      "checkedAt": "2026-09-30T07:48:11Z",
+      "checkedAt": "2026-09-30T07:57:52Z",
       "appCount": 1,
       "httpStatus": 200,
       "iconURL": "",
@@ -578,15 +556,14 @@
           "duplicateBundleIdentifiers": {
             "count": 0,
             "duplicateAppEntries": 0,
-            "extraEntries": 0,
-            "items": [],
-            "itemsTruncated": false
+            "extraEntries": 0
           }
         }
       },
       "duplicateBundleIdentifiers": {
         "count": 0,
-        "examples": []
+        "duplicateAppEntries": 0,
+        "extraEntries": 0
       },
       "installerCompatibility": {
         "altstore": {
@@ -610,12 +587,11 @@
           "reason": "No duplicate bundle identifiers were detected in the source."
         }
       },
-      "preferredVariant": "classic",
-      "aggregationApproved": false
+      "preferredVariant": "classic"
     },
     "retrosekai": {
       "online": true,
-      "checkedAt": "2026-09-30T07:48:11Z",
+      "checkedAt": "2026-09-30T07:57:52Z",
       "appCount": 1,
       "httpStatus": 200,
       "iconURL": "",
@@ -629,15 +605,14 @@
           "duplicateBundleIdentifiers": {
             "count": 0,
             "duplicateAppEntries": 0,
-            "extraEntries": 0,
-            "items": [],
-            "itemsTruncated": false
+            "extraEntries": 0
           }
         }
       },
       "duplicateBundleIdentifiers": {
         "count": 0,
-        "examples": []
+        "duplicateAppEntries": 0,
+        "extraEntries": 0
       },
       "installerCompatibility": {
         "altstore": {
@@ -661,12 +636,11 @@
           "reason": "No duplicate bundle identifiers were detected in the source."
         }
       },
-      "preferredVariant": "classic",
-      "aggregationApproved": false
+      "preferredVariant": "classic"
     },
     "oatmealdome": {
       "online": true,
-      "checkedAt": "2026-09-30T07:48:11Z",
+      "checkedAt": "2026-09-30T07:57:52Z",
       "appCount": 2,
       "httpStatus": 200,
       "iconURL": "",
@@ -680,15 +654,14 @@
           "duplicateBundleIdentifiers": {
             "count": 0,
             "duplicateAppEntries": 0,
-            "extraEntries": 0,
-            "items": [],
-            "itemsTruncated": false
+            "extraEntries": 0
           }
         }
       },
       "duplicateBundleIdentifiers": {
         "count": 0,
-        "examples": []
+        "duplicateAppEntries": 0,
+        "extraEntries": 0
       },
       "installerCompatibility": {
         "altstore": {
@@ -712,12 +685,11 @@
           "reason": "No duplicate bundle identifiers were detected in the source."
         }
       },
-      "preferredVariant": "classic",
-      "aggregationApproved": false
+      "preferredVariant": "classic"
     },
     "crystall1ne": {
       "online": true,
-      "checkedAt": "2026-09-30T07:48:11Z",
+      "checkedAt": "2026-09-30T07:57:52Z",
       "appCount": 2,
       "httpStatus": 200,
       "iconURL": "",
@@ -731,15 +703,14 @@
           "duplicateBundleIdentifiers": {
             "count": 0,
             "duplicateAppEntries": 0,
-            "extraEntries": 0,
-            "items": [],
-            "itemsTruncated": false
+            "extraEntries": 0
           }
         }
       },
       "duplicateBundleIdentifiers": {
         "count": 0,
-        "examples": []
+        "duplicateAppEntries": 0,
+        "extraEntries": 0
       },
       "installerCompatibility": {
         "altstore": {
@@ -763,12 +734,11 @@
           "reason": "No duplicate bundle identifiers were detected in the source."
         }
       },
-      "preferredVariant": "classic",
-      "aggregationApproved": false
+      "preferredVariant": "classic"
     },
     "pokemmo": {
       "online": true,
-      "checkedAt": "2026-09-30T07:48:11Z",
+      "checkedAt": "2026-09-30T07:57:52Z",
       "appCount": 1,
       "httpStatus": 200,
       "iconURL": "",
@@ -782,15 +752,14 @@
           "duplicateBundleIdentifiers": {
             "count": 0,
             "duplicateAppEntries": 0,
-            "extraEntries": 0,
-            "items": [],
-            "itemsTruncated": false
+            "extraEntries": 0
           }
         }
       },
       "duplicateBundleIdentifiers": {
         "count": 0,
-        "examples": []
+        "duplicateAppEntries": 0,
+        "extraEntries": 0
       },
       "installerCompatibility": {
         "altstore": {
@@ -814,12 +783,11 @@
           "reason": "No duplicate bundle identifiers were detected in the source."
         }
       },
-      "preferredVariant": "classic",
-      "aggregationApproved": false
+      "preferredVariant": "classic"
     },
     "odyssey": {
       "online": true,
-      "checkedAt": "2026-09-30T07:48:11Z",
+      "checkedAt": "2026-09-30T07:57:52Z",
       "appCount": 2,
       "httpStatus": 200,
       "iconURL": "",
@@ -833,15 +801,14 @@
           "duplicateBundleIdentifiers": {
             "count": 0,
             "duplicateAppEntries": 0,
-            "extraEntries": 0,
-            "items": [],
-            "itemsTruncated": false
+            "extraEntries": 0
           }
         }
       },
       "duplicateBundleIdentifiers": {
         "count": 0,
-        "examples": []
+        "duplicateAppEntries": 0,
+        "extraEntries": 0
       },
       "installerCompatibility": {
         "altstore": {
@@ -865,12 +832,11 @@
           "reason": "No duplicate bundle identifiers were detected in the source."
         }
       },
-      "preferredVariant": "classic",
-      "aggregationApproved": false
+      "preferredVariant": "classic"
     },
     "yattee": {
       "online": true,
-      "checkedAt": "2026-09-30T07:48:11Z",
+      "checkedAt": "2026-09-30T07:57:52Z",
       "appCount": 1,
       "httpStatus": 200,
       "iconURL": "",
@@ -884,15 +850,14 @@
           "duplicateBundleIdentifiers": {
             "count": 0,
             "duplicateAppEntries": 0,
-            "extraEntries": 0,
-            "items": [],
-            "itemsTruncated": false
+            "extraEntries": 0
           }
         }
       },
       "duplicateBundleIdentifiers": {
         "count": 0,
-        "examples": []
+        "duplicateAppEntries": 0,
+        "extraEntries": 0
       },
       "installerCompatibility": {
         "altstore": {
@@ -916,12 +881,11 @@
           "reason": "No duplicate bundle identifiers were detected in the source."
         }
       },
-      "preferredVariant": "classic",
-      "aggregationApproved": false
+      "preferredVariant": "classic"
     },
     "ignited": {
       "online": true,
-      "checkedAt": "2026-09-30T07:48:11Z",
+      "checkedAt": "2026-09-30T07:57:52Z",
       "appCount": 1,
       "httpStatus": 200,
       "iconURL": "",
@@ -935,15 +899,14 @@
           "duplicateBundleIdentifiers": {
             "count": 0,
             "duplicateAppEntries": 0,
-            "extraEntries": 0,
-            "items": [],
-            "itemsTruncated": false
+            "extraEntries": 0
           }
         }
       },
       "duplicateBundleIdentifiers": {
         "count": 0,
-        "examples": []
+        "duplicateAppEntries": 0,
+        "extraEntries": 0
       },
       "installerCompatibility": {
         "altstore": {
@@ -967,12 +930,11 @@
           "reason": "No duplicate bundle identifiers were detected in the source."
         }
       },
-      "preferredVariant": "classic",
-      "aggregationApproved": false
+      "preferredVariant": "classic"
     },
     "mona": {
       "online": true,
-      "checkedAt": "2026-09-30T07:48:11Z",
+      "checkedAt": "2026-09-30T07:57:52Z",
       "appCount": 1,
       "httpStatus": 200,
       "iconURL": "",
@@ -986,15 +948,14 @@
           "duplicateBundleIdentifiers": {
             "count": 0,
             "duplicateAppEntries": 0,
-            "extraEntries": 0,
-            "items": [],
-            "itemsTruncated": false
+            "extraEntries": 0
           }
         }
       },
       "duplicateBundleIdentifiers": {
         "count": 0,
-        "examples": []
+        "duplicateAppEntries": 0,
+        "extraEntries": 0
       },
       "installerCompatibility": {
         "altstore": {
@@ -1018,12 +979,11 @@
           "reason": "No duplicate bundle identifiers were detected in the source."
         }
       },
-      "preferredVariant": "classic",
-      "aggregationApproved": false
+      "preferredVariant": "classic"
     },
     "vortx": {
       "online": true,
-      "checkedAt": "2026-09-30T07:48:11Z",
+      "checkedAt": "2026-09-30T07:57:52Z",
       "appCount": 2,
       "httpStatus": 200,
       "iconURL": "",
@@ -1037,15 +997,14 @@
           "duplicateBundleIdentifiers": {
             "count": 0,
             "duplicateAppEntries": 0,
-            "extraEntries": 0,
-            "items": [],
-            "itemsTruncated": false
+            "extraEntries": 0
           }
         }
       },
       "duplicateBundleIdentifiers": {
         "count": 0,
-        "examples": []
+        "duplicateAppEntries": 0,
+        "extraEntries": 0
       },
       "installerCompatibility": {
         "altstore": {
@@ -1069,12 +1028,11 @@
           "reason": "No duplicate bundle identifiers were detected in the source."
         }
       },
-      "preferredVariant": "classic",
-      "aggregationApproved": false
+      "preferredVariant": "classic"
     },
     "stremio-official-pal": {
       "online": true,
-      "checkedAt": "2026-09-30T07:48:11Z",
+      "checkedAt": "2026-09-30T07:57:52Z",
       "appCount": 1,
       "httpStatus": 200,
       "iconURL": "",
@@ -1088,23 +1046,21 @@
           "duplicateBundleIdentifiers": {
             "count": 0,
             "duplicateAppEntries": 0,
-            "extraEntries": 0,
-            "items": [],
-            "itemsTruncated": false
+            "extraEntries": 0
           }
         }
       },
       "duplicateBundleIdentifiers": {
         "count": 0,
-        "examples": []
+        "duplicateAppEntries": 0,
+        "extraEntries": 0
       },
       "installerCompatibility": {},
-      "preferredVariant": "pal",
-      "aggregationApproved": false
+      "preferredVariant": "pal"
     },
     "stremio-ios": {
       "online": true,
-      "checkedAt": "2026-09-30T07:48:11Z",
+      "checkedAt": "2026-09-30T07:57:52Z",
       "appCount": 1,
       "httpStatus": 200,
       "iconURL": "",
@@ -1118,15 +1074,14 @@
           "duplicateBundleIdentifiers": {
             "count": 0,
             "duplicateAppEntries": 0,
-            "extraEntries": 0,
-            "items": [],
-            "itemsTruncated": false
+            "extraEntries": 0
           }
         }
       },
       "duplicateBundleIdentifiers": {
         "count": 0,
-        "examples": []
+        "duplicateAppEntries": 0,
+        "extraEntries": 0
       },
       "installerCompatibility": {
         "altstore": {
@@ -1150,12 +1105,11 @@
           "reason": "No duplicate bundle identifiers were detected in the source."
         }
       },
-      "preferredVariant": "classic",
-      "aggregationApproved": false
+      "preferredVariant": "classic"
     },
     "kodi-ios": {
       "online": true,
-      "checkedAt": "2026-09-30T07:48:11Z",
+      "checkedAt": "2026-09-30T07:57:52Z",
       "appCount": 1,
       "httpStatus": 200,
       "iconURL": "",
@@ -1169,15 +1123,14 @@
           "duplicateBundleIdentifiers": {
             "count": 0,
             "duplicateAppEntries": 0,
-            "extraEntries": 0,
-            "items": [],
-            "itemsTruncated": false
+            "extraEntries": 0
           }
         }
       },
       "duplicateBundleIdentifiers": {
         "count": 0,
-        "examples": []
+        "duplicateAppEntries": 0,
+        "extraEntries": 0
       },
       "installerCompatibility": {
         "altstore": {
@@ -1201,12 +1154,11 @@
           "reason": "No duplicate bundle identifiers were detected in the source."
         }
       },
-      "preferredVariant": "classic",
-      "aggregationApproved": false
+      "preferredVariant": "classic"
     },
     "nineanimator": {
       "online": false,
-      "checkedAt": "2026-09-30T07:48:11Z",
+      "checkedAt": "2026-09-30T07:57:52Z",
       "appCount": null,
       "httpStatus": null,
       "iconURL": "",
@@ -1222,7 +1174,7 @@
     },
     "esound": {
       "online": true,
-      "checkedAt": "2026-09-30T07:48:11Z",
+      "checkedAt": "2026-09-30T07:57:52Z",
       "appCount": 1,
       "httpStatus": 200,
       "iconURL": "",
@@ -1236,23 +1188,21 @@
           "duplicateBundleIdentifiers": {
             "count": 0,
             "duplicateAppEntries": 0,
-            "extraEntries": 0,
-            "items": [],
-            "itemsTruncated": false
+            "extraEntries": 0
           }
         }
       },
       "duplicateBundleIdentifiers": {
         "count": 0,
-        "examples": []
+        "duplicateAppEntries": 0,
+        "extraEntries": 0
       },
       "installerCompatibility": {},
-      "preferredVariant": "pal",
-      "aggregationApproved": false
+      "preferredVariant": "pal"
     },
     "partyknights": {
       "online": true,
-      "checkedAt": "2026-09-30T07:48:11Z",
+      "checkedAt": "2026-09-30T07:57:52Z",
       "appCount": 1,
       "httpStatus": 200,
       "iconURL": "",
@@ -1266,15 +1216,14 @@
           "duplicateBundleIdentifiers": {
             "count": 0,
             "duplicateAppEntries": 0,
-            "extraEntries": 0,
-            "items": [],
-            "itemsTruncated": false
+            "extraEntries": 0
           }
         }
       },
       "duplicateBundleIdentifiers": {
         "count": 0,
-        "examples": []
+        "duplicateAppEntries": 0,
+        "extraEntries": 0
       },
       "installerCompatibility": {
         "altstore": {
@@ -1298,12 +1247,11 @@
           "reason": "No duplicate bundle identifiers were detected in the source."
         }
       },
-      "preferredVariant": "classic",
-      "aggregationApproved": false
+      "preferredVariant": "classic"
     },
     "bringyour": {
       "online": false,
-      "checkedAt": "2026-09-30T07:48:11Z",
+      "checkedAt": "2026-09-30T07:57:52Z",
       "appCount": null,
       "httpStatus": null,
       "iconURL": "",
@@ -1319,7 +1267,7 @@
     },
     "itorrent": {
       "online": true,
-      "checkedAt": "2026-09-30T07:48:11Z",
+      "checkedAt": "2026-09-30T07:57:52Z",
       "appCount": 1,
       "httpStatus": 200,
       "iconURL": "",
@@ -1333,15 +1281,14 @@
           "duplicateBundleIdentifiers": {
             "count": 0,
             "duplicateAppEntries": 0,
-            "extraEntries": 0,
-            "items": [],
-            "itemsTruncated": false
+            "extraEntries": 0
           }
         }
       },
       "duplicateBundleIdentifiers": {
         "count": 0,
-        "examples": []
+        "duplicateAppEntries": 0,
+        "extraEntries": 0
       },
       "installerCompatibility": {
         "altstore": {
@@ -1365,12 +1312,11 @@
           "reason": "No duplicate bundle identifiers were detected in the source."
         }
       },
-      "preferredVariant": "classic",
-      "aggregationApproved": false
+      "preferredVariant": "classic"
     },
     "qbitconnect": {
       "online": true,
-      "checkedAt": "2026-09-30T07:48:11Z",
+      "checkedAt": "2026-09-30T07:57:52Z",
       "appCount": 1,
       "httpStatus": 200,
       "iconURL": "",
@@ -1384,9 +1330,7 @@
           "duplicateBundleIdentifiers": {
             "count": 0,
             "duplicateAppEntries": 0,
-            "extraEntries": 0,
-            "items": [],
-            "itemsTruncated": false
+            "extraEntries": 0
           }
         },
         "pal": {
@@ -1397,15 +1341,14 @@
           "duplicateBundleIdentifiers": {
             "count": 0,
             "duplicateAppEntries": 0,
-            "extraEntries": 0,
-            "items": [],
-            "itemsTruncated": false
+            "extraEntries": 0
           }
         }
       },
       "duplicateBundleIdentifiers": {
         "count": 0,
-        "examples": []
+        "duplicateAppEntries": 0,
+        "extraEntries": 0
       },
       "installerCompatibility": {
         "altstore": {
@@ -1429,12 +1372,11 @@
           "reason": "No duplicate bundle identifiers were detected in the source."
         }
       },
-      "preferredVariant": "classic",
-      "aggregationApproved": false
+      "preferredVariant": "classic"
     },
     "artemis": {
       "online": true,
-      "checkedAt": "2026-09-30T07:48:11Z",
+      "checkedAt": "2026-09-30T07:57:52Z",
       "appCount": 1,
       "httpStatus": 200,
       "iconURL": "",
@@ -1448,9 +1390,7 @@
           "duplicateBundleIdentifiers": {
             "count": 0,
             "duplicateAppEntries": 0,
-            "extraEntries": 0,
-            "items": [],
-            "itemsTruncated": false
+            "extraEntries": 0
           }
         },
         "pal": {
@@ -1461,15 +1401,14 @@
           "duplicateBundleIdentifiers": {
             "count": 0,
             "duplicateAppEntries": 0,
-            "extraEntries": 0,
-            "items": [],
-            "itemsTruncated": false
+            "extraEntries": 0
           }
         }
       },
       "duplicateBundleIdentifiers": {
         "count": 0,
-        "examples": []
+        "duplicateAppEntries": 0,
+        "extraEntries": 0
       },
       "installerCompatibility": {
         "altstore": {
@@ -1493,12 +1432,11 @@
           "reason": "No duplicate bundle identifiers were detected in the source."
         }
       },
-      "preferredVariant": "classic",
-      "aggregationApproved": false
+      "preferredVariant": "classic"
     },
     "hackerwebapp": {
       "online": true,
-      "checkedAt": "2026-09-30T07:48:11Z",
+      "checkedAt": "2026-09-30T07:57:52Z",
       "appCount": 1,
       "httpStatus": 200,
       "iconURL": "",
@@ -1512,23 +1450,21 @@
           "duplicateBundleIdentifiers": {
             "count": 0,
             "duplicateAppEntries": 0,
-            "extraEntries": 0,
-            "items": [],
-            "itemsTruncated": false
+            "extraEntries": 0
           }
         }
       },
       "duplicateBundleIdentifiers": {
         "count": 0,
-        "examples": []
+        "duplicateAppEntries": 0,
+        "extraEntries": 0
       },
       "installerCompatibility": {},
-      "preferredVariant": "pal",
-      "aggregationApproved": false
+      "preferredVariant": "pal"
     },
     "courtpredict": {
       "online": true,
-      "checkedAt": "2026-09-30T07:48:11Z",
+      "checkedAt": "2026-09-30T07:57:52Z",
       "appCount": 1,
       "httpStatus": 200,
       "iconURL": "",
@@ -1542,23 +1478,21 @@
           "duplicateBundleIdentifiers": {
             "count": 0,
             "duplicateAppEntries": 0,
-            "extraEntries": 0,
-            "items": [],
-            "itemsTruncated": false
+            "extraEntries": 0
           }
         }
       },
       "duplicateBundleIdentifiers": {
         "count": 0,
-        "examples": []
+        "duplicateAppEntries": 0,
+        "extraEntries": 0
       },
       "installerCompatibility": {},
-      "preferredVariant": "pal",
-      "aggregationApproved": false
+      "preferredVariant": "pal"
     },
     "wayfarer": {
       "online": true,
-      "checkedAt": "2026-09-30T07:48:11Z",
+      "checkedAt": "2026-09-30T07:57:52Z",
       "appCount": 1,
       "httpStatus": 200,
       "iconURL": "",
@@ -1572,15 +1506,14 @@
           "duplicateBundleIdentifiers": {
             "count": 0,
             "duplicateAppEntries": 0,
-            "extraEntries": 0,
-            "items": [],
-            "itemsTruncated": false
+            "extraEntries": 0
           }
         }
       },
       "duplicateBundleIdentifiers": {
         "count": 0,
-        "examples": []
+        "duplicateAppEntries": 0,
+        "extraEntries": 0
       },
       "installerCompatibility": {
         "altstore": {
@@ -1604,12 +1537,11 @@
           "reason": "No duplicate bundle identifiers were detected in the source."
         }
       },
-      "preferredVariant": "classic",
-      "aggregationApproved": false
+      "preferredVariant": "classic"
     },
     "qbitcontrol": {
       "online": true,
-      "checkedAt": "2026-09-30T07:48:11Z",
+      "checkedAt": "2026-09-30T07:57:52Z",
       "appCount": 1,
       "httpStatus": 200,
       "iconURL": "",
@@ -1623,9 +1555,7 @@
           "duplicateBundleIdentifiers": {
             "count": 0,
             "duplicateAppEntries": 0,
-            "extraEntries": 0,
-            "items": [],
-            "itemsTruncated": false
+            "extraEntries": 0
           }
         },
         "pal": {
@@ -1636,15 +1566,14 @@
           "duplicateBundleIdentifiers": {
             "count": 0,
             "duplicateAppEntries": 0,
-            "extraEntries": 0,
-            "items": [],
-            "itemsTruncated": false
+            "extraEntries": 0
           }
         }
       },
       "duplicateBundleIdentifiers": {
         "count": 0,
-        "examples": []
+        "duplicateAppEntries": 0,
+        "extraEntries": 0
       },
       "installerCompatibility": {
         "altstore": {
@@ -1668,12 +1597,11 @@
           "reason": "No duplicate bundle identifiers were detected in the source."
         }
       },
-      "preferredVariant": "classic",
-      "aggregationApproved": false
+      "preferredVariant": "classic"
     },
     "iphanpy": {
       "online": true,
-      "checkedAt": "2026-09-30T07:48:11Z",
+      "checkedAt": "2026-09-30T07:57:52Z",
       "appCount": 1,
       "httpStatus": 200,
       "iconURL": "",
@@ -1687,23 +1615,21 @@
           "duplicateBundleIdentifiers": {
             "count": 0,
             "duplicateAppEntries": 0,
-            "extraEntries": 0,
-            "items": [],
-            "itemsTruncated": false
+            "extraEntries": 0
           }
         }
       },
       "duplicateBundleIdentifiers": {
         "count": 0,
-        "examples": []
+        "duplicateAppEntries": 0,
+        "extraEntries": 0
       },
       "installerCompatibility": {},
-      "preferredVariant": "pal",
-      "aggregationApproved": false
+      "preferredVariant": "pal"
     },
     "epic-games": {
       "online": true,
-      "checkedAt": "2026-09-30T07:48:11Z",
+      "checkedAt": "2026-09-30T07:57:52Z",
       "appCount": 3,
       "httpStatus": 200,
       "iconURL": "",
@@ -1717,23 +1643,21 @@
           "duplicateBundleIdentifiers": {
             "count": 0,
             "duplicateAppEntries": 0,
-            "extraEntries": 0,
-            "items": [],
-            "itemsTruncated": false
+            "extraEntries": 0
           }
         }
       },
       "duplicateBundleIdentifiers": {
         "count": 0,
-        "examples": []
+        "duplicateAppEntries": 0,
+        "extraEntries": 0
       },
       "installerCompatibility": {},
-      "preferredVariant": "pal",
-      "aggregationApproved": false
+      "preferredVariant": "pal"
     },
     "xn1ckuz-sidebox": {
       "online": true,
-      "checkedAt": "2026-09-30T07:48:11Z",
+      "checkedAt": "2026-09-30T07:57:52Z",
       "appCount": 4,
       "httpStatus": 200,
       "iconURL": "",
@@ -1747,15 +1671,14 @@
           "duplicateBundleIdentifiers": {
             "count": 0,
             "duplicateAppEntries": 0,
-            "extraEntries": 0,
-            "items": [],
-            "itemsTruncated": false
+            "extraEntries": 0
           }
         }
       },
       "duplicateBundleIdentifiers": {
         "count": 0,
-        "examples": []
+        "duplicateAppEntries": 0,
+        "extraEntries": 0
       },
       "installerCompatibility": {
         "altstore": {
@@ -1779,12 +1702,11 @@
           "reason": "No duplicate bundle identifiers were detected in the source."
         }
       },
-      "preferredVariant": "classic",
-      "aggregationApproved": false
+      "preferredVariant": "classic"
     },
     "dvntm0-workshop": {
       "online": true,
-      "checkedAt": "2026-09-30T07:48:11Z",
+      "checkedAt": "2026-09-30T07:57:52Z",
       "appCount": 7,
       "httpStatus": 200,
       "iconURL": "",
@@ -1798,15 +1720,14 @@
           "duplicateBundleIdentifiers": {
             "count": 0,
             "duplicateAppEntries": 0,
-            "extraEntries": 0,
-            "items": [],
-            "itemsTruncated": false
+            "extraEntries": 0
           }
         }
       },
       "duplicateBundleIdentifiers": {
         "count": 0,
-        "examples": []
+        "duplicateAppEntries": 0,
+        "extraEntries": 0
       },
       "installerCompatibility": {
         "altstore": {
@@ -1830,12 +1751,11 @@
           "reason": "No duplicate bundle identifiers were detected in the source."
         }
       },
-      "preferredVariant": "classic",
-      "aggregationApproved": false
+      "preferredVariant": "classic"
     },
     "wuxu-library-plus": {
       "online": true,
-      "checkedAt": "2026-09-30T07:48:11Z",
+      "checkedAt": "2026-09-30T07:57:52Z",
       "appCount": 13,
       "httpStatus": 200,
       "iconURL": "",
@@ -1849,15 +1769,14 @@
           "duplicateBundleIdentifiers": {
             "count": 0,
             "duplicateAppEntries": 0,
-            "extraEntries": 0,
-            "items": [],
-            "itemsTruncated": false
+            "extraEntries": 0
           }
         }
       },
       "duplicateBundleIdentifiers": {
         "count": 0,
-        "examples": []
+        "duplicateAppEntries": 0,
+        "extraEntries": 0
       },
       "installerCompatibility": {
         "altstore": {
@@ -1881,12 +1800,11 @@
           "reason": "No duplicate bundle identifiers were detected in the source."
         }
       },
-      "preferredVariant": "classic",
-      "aggregationApproved": false
+      "preferredVariant": "classic"
     },
     "baretsky-tweaked": {
       "online": true,
-      "checkedAt": "2026-09-30T07:48:11Z",
+      "checkedAt": "2026-09-30T07:57:52Z",
       "appCount": 7,
       "httpStatus": 200,
       "iconURL": "",
@@ -1900,15 +1818,14 @@
           "duplicateBundleIdentifiers": {
             "count": 0,
             "duplicateAppEntries": 0,
-            "extraEntries": 0,
-            "items": [],
-            "itemsTruncated": false
+            "extraEntries": 0
           }
         }
       },
       "duplicateBundleIdentifiers": {
         "count": 0,
-        "examples": []
+        "duplicateAppEntries": 0,
+        "extraEntries": 0
       },
       "installerCompatibility": {
         "altstore": {
@@ -1932,12 +1849,11 @@
           "reason": "No duplicate bundle identifiers were detected in the source."
         }
       },
-      "preferredVariant": "classic",
-      "aggregationApproved": false
+      "preferredVariant": "classic"
     },
     "driftywinds": {
       "online": true,
-      "checkedAt": "2026-09-30T07:48:11Z",
+      "checkedAt": "2026-09-30T07:57:52Z",
       "appCount": 10,
       "httpStatus": 200,
       "iconURL": "",
@@ -1951,15 +1867,14 @@
           "duplicateBundleIdentifiers": {
             "count": 0,
             "duplicateAppEntries": 0,
-            "extraEntries": 0,
-            "items": [],
-            "itemsTruncated": false
+            "extraEntries": 0
           }
         }
       },
       "duplicateBundleIdentifiers": {
         "count": 0,
-        "examples": []
+        "duplicateAppEntries": 0,
+        "extraEntries": 0
       },
       "installerCompatibility": {
         "altstore": {
@@ -1983,12 +1898,11 @@
           "reason": "No duplicate bundle identifiers were detected in the source."
         }
       },
-      "preferredVariant": "classic",
-      "aggregationApproved": false
+      "preferredVariant": "classic"
     },
     "ipa-vault": {
       "online": true,
-      "checkedAt": "2026-09-30T07:48:11Z",
+      "checkedAt": "2026-09-30T07:57:52Z",
       "appCount": 63,
       "httpStatus": 200,
       "iconURL": "",
@@ -2002,15 +1916,14 @@
           "duplicateBundleIdentifiers": {
             "count": 0,
             "duplicateAppEntries": 0,
-            "extraEntries": 0,
-            "items": [],
-            "itemsTruncated": false
+            "extraEntries": 0
           }
         }
       },
       "duplicateBundleIdentifiers": {
         "count": 0,
-        "examples": []
+        "duplicateAppEntries": 0,
+        "extraEntries": 0
       },
       "installerCompatibility": {
         "altstore": {
@@ -2034,12 +1947,11 @@
           "reason": "No duplicate bundle identifiers were detected in the source."
         }
       },
-      "preferredVariant": "classic",
-      "aggregationApproved": false
+      "preferredVariant": "classic"
     },
     "sideloadlabs": {
       "online": true,
-      "checkedAt": "2026-09-30T07:48:11Z",
+      "checkedAt": "2026-09-30T07:57:52Z",
       "appCount": 4,
       "httpStatus": 200,
       "iconURL": "",
@@ -2053,15 +1965,14 @@
           "duplicateBundleIdentifiers": {
             "count": 0,
             "duplicateAppEntries": 0,
-            "extraEntries": 0,
-            "items": [],
-            "itemsTruncated": false
+            "extraEntries": 0
           }
         }
       },
       "duplicateBundleIdentifiers": {
         "count": 0,
-        "examples": []
+        "duplicateAppEntries": 0,
+        "extraEntries": 0
       },
       "installerCompatibility": {
         "altstore": {
@@ -2085,12 +1996,11 @@
           "reason": "No duplicate bundle identifiers were detected in the source."
         }
       },
-      "preferredVariant": "classic",
-      "aggregationApproved": false
+      "preferredVariant": "classic"
     },
     "ytliteplus": {
       "online": true,
-      "checkedAt": "2026-09-30T07:48:11Z",
+      "checkedAt": "2026-09-30T07:57:52Z",
       "appCount": 1,
       "httpStatus": 200,
       "iconURL": "",
@@ -2104,15 +2014,14 @@
           "duplicateBundleIdentifiers": {
             "count": 0,
             "duplicateAppEntries": 0,
-            "extraEntries": 0,
-            "items": [],
-            "itemsTruncated": false
+            "extraEntries": 0
           }
         }
       },
       "duplicateBundleIdentifiers": {
         "count": 0,
-        "examples": []
+        "duplicateAppEntries": 0,
+        "extraEntries": 0
       },
       "installerCompatibility": {
         "altstore": {
@@ -2136,12 +2045,11 @@
           "reason": "No duplicate bundle identifiers were detected in the source."
         }
       },
-      "preferredVariant": "classic",
-      "aggregationApproved": false
+      "preferredVariant": "classic"
     },
     "moe-altstore": {
       "online": true,
-      "checkedAt": "2026-09-30T07:48:11Z",
+      "checkedAt": "2026-09-30T07:57:52Z",
       "appCount": 34,
       "httpStatus": 200,
       "iconURL": "",
@@ -2155,63 +2063,14 @@
           "duplicateBundleIdentifiers": {
             "count": 4,
             "duplicateAppEntries": 30,
-            "extraEntries": 26,
-            "items": [
-              {
-                "bundleIdentifier": "com.burbn.instagram",
-                "count": 14,
-                "names": [
-                  "Instagram (Moe Multi)",
-                  "Instagram (AC)",
-                  "Instagram (BH)",
-                  "Instagram (DL, Cracked)",
-                  "Instagram (IGFormat)",
-                  "Instagram (INK Plus)",
-                  "Instagram (LRD, Cracked)",
-                  "Instagram (Moe RyukGram)"
-                ]
-              },
-              {
-                "bundleIdentifier": "com.google.ios.youtube",
-                "count": 9,
-                "names": [
-                  "YouTube (Moe Multi)",
-                  "YouTube (Moe YTK)",
-                  "YouTube (YTPlus Cyan Edition)",
-                  "YouTube (LRD)",
-                  "YouTube (DLTube, Moe Patched)",
-                  "YouTube (Moe DLTube, Cracked)",
-                  "YouTube (Moe LRD, Cracked)",
-                  "YouTube (Moe SY)"
-                ]
-              },
-              {
-                "bundleIdentifier": "tv.twitch",
-                "count": 5,
-                "names": [
-                  "Twitch",
-                  "Twitch (Adfree, Moe Control)",
-                  "Twitch (Tweach)",
-                  "Twitch (Moe TwitchControl)",
-                  "Twitch (Twitchv, Moe Tweach)"
-                ]
-              },
-              {
-                "bundleIdentifier": "com.firecore.infuse",
-                "count": 2,
-                "names": [
-                  "Infuse (Moe Plus)",
-                  "Infuse (Plus 2.5)"
-                ]
-              }
-            ],
-            "itemsTruncated": false
+            "extraEntries": 26
           }
         }
       },
       "duplicateBundleIdentifiers": {
         "count": 4,
-        "examples": []
+        "duplicateAppEntries": 30,
+        "extraEntries": 26
       },
       "installerCompatibility": {
         "altstore": {
@@ -2237,12 +2096,11 @@
           "reason": "4 duplicate bundle identifiers are present. The source parser can keep separate entries, but installing multiple variants with the same bundle identifier can still conflict."
         }
       },
-      "preferredVariant": "classic",
-      "aggregationApproved": false
+      "preferredVariant": "classic"
     },
     "youmod-repo": {
       "online": true,
-      "checkedAt": "2026-09-30T07:48:11Z",
+      "checkedAt": "2026-09-30T07:57:52Z",
       "appCount": 1,
       "httpStatus": 200,
       "iconURL": "",
@@ -2256,15 +2114,14 @@
           "duplicateBundleIdentifiers": {
             "count": 0,
             "duplicateAppEntries": 0,
-            "extraEntries": 0,
-            "items": [],
-            "itemsTruncated": false
+            "extraEntries": 0
           }
         }
       },
       "duplicateBundleIdentifiers": {
         "count": 0,
-        "examples": []
+        "duplicateAppEntries": 0,
+        "extraEntries": 0
       },
       "installerCompatibility": {
         "altstore": {
@@ -2288,12 +2145,11 @@
           "reason": "No duplicate bundle identifiers were detected in the source."
         }
       },
-      "preferredVariant": "classic",
-      "aggregationApproved": false
+      "preferredVariant": "classic"
     },
     "youproextra": {
       "online": true,
-      "checkedAt": "2026-09-30T07:48:11Z",
+      "checkedAt": "2026-09-30T07:57:52Z",
       "appCount": 5,
       "httpStatus": 200,
       "iconURL": "",
@@ -2307,27 +2163,14 @@
           "duplicateBundleIdentifiers": {
             "count": 1,
             "duplicateAppEntries": 5,
-            "extraEntries": 4,
-            "items": [
-              {
-                "bundleIdentifier": "com.google.ios.youtube",
-                "count": 5,
-                "names": [
-                  "YoutubePlus (YTLite)",
-                  "YTKillerPlus",
-                  "YTKACE",
-                  "YouPro",
-                  "YouMod"
-                ]
-              }
-            ],
-            "itemsTruncated": false
+            "extraEntries": 4
           }
         }
       },
       "duplicateBundleIdentifiers": {
         "count": 1,
-        "examples": []
+        "duplicateAppEntries": 5,
+        "extraEntries": 4
       },
       "installerCompatibility": {
         "altstore": {
@@ -2353,12 +2196,11 @@
           "reason": "1 duplicate bundle identifiers are present. The source parser can keep separate entries, but installing multiple variants with the same bundle identifier can still conflict."
         }
       },
-      "preferredVariant": "classic",
-      "aggregationApproved": false
+      "preferredVariant": "classic"
     },
     "owo-source": {
       "online": true,
-      "checkedAt": "2026-09-30T07:48:11Z",
+      "checkedAt": "2026-09-30T07:57:52Z",
       "appCount": 155,
       "httpStatus": 200,
       "iconURL": "",
@@ -2372,110 +2214,14 @@
           "duplicateBundleIdentifiers": {
             "count": 13,
             "duplicateAppEntries": 141,
-            "extraEntries": 128,
-            "items": [
-              {
-                "bundleIdentifier": "com.tencent.xin",
-                "count": 67,
-                "names": [
-                  "WeChat"
-                ]
-              },
-              {
-                "bundleIdentifier": "com.burbn.instagram",
-                "count": 16,
-                "names": [
-                  "Instagram"
-                ]
-              },
-              {
-                "bundleIdentifier": "com.example.piliplus",
-                "count": 16,
-                "names": [
-                  "PiliPlus"
-                ]
-              },
-              {
-                "bundleIdentifier": "com.atebits.Tweetie2",
-                "count": 12,
-                "names": [
-                  "Twitter",
-                  "X"
-                ]
-              },
-              {
-                "bundleIdentifier": "com.ss.iphone.ugc.Aweme",
-                "count": 8,
-                "names": [
-                  "Douyin",
-                  "Aweme",
-                  "DouYin"
-                ]
-              },
-              {
-                "bundleIdentifier": "wiki.qaq.Asspp",
-                "count": 5,
-                "names": [
-                  "Asspp"
-                ]
-              },
-              {
-                "bundleIdentifier": "app.aidoku.Aidoku",
-                "count": 3,
-                "names": [
-                  "Aidoku"
-                ]
-              },
-              {
-                "bundleIdentifier": "kh.crysalis.feather",
-                "count": 3,
-                "names": [
-                  "Feather"
-                ]
-              },
-              {
-                "bundleIdentifier": "uclort.com.AppInfo",
-                "count": 3,
-                "names": [
-                  "AppInfo"
-                ]
-              },
-              {
-                "bundleIdentifier": "app.swiftgram.ios",
-                "count": 2,
-                "names": [
-                  "Swiftgram"
-                ]
-              },
-              {
-                "bundleIdentifier": "com.blink.academy.nomoraw",
-                "count": 2,
-                "names": [
-                  "NOMORAW"
-                ]
-              },
-              {
-                "bundleIdentifier": "com.javdb.com",
-                "count": 2,
-                "names": [
-                  "JavDB"
-                ]
-              },
-              {
-                "bundleIdentifier": "com.taobao.fleamarket",
-                "count": 2,
-                "names": [
-                  "XianYu"
-                ]
-              }
-            ],
-            "itemsTruncated": false
+            "extraEntries": 128
           }
         }
       },
       "duplicateBundleIdentifiers": {
         "count": 13,
-        "examples": []
+        "duplicateAppEntries": 141,
+        "extraEntries": 128
       },
       "installerCompatibility": {
         "altstore": {
@@ -2501,12 +2247,11 @@
           "reason": "13 duplicate bundle identifiers are present. The source parser can keep separate entries, but installing multiple variants with the same bundle identifier can still conflict."
         }
       },
-      "preferredVariant": "classic",
-      "aggregationApproved": false
+      "preferredVariant": "classic"
     },
     "cypwn-ipa": {
       "online": true,
-      "checkedAt": "2026-09-30T07:48:11Z",
+      "checkedAt": "2026-09-30T07:57:52Z",
       "appCount": 210,
       "httpStatus": 200,
       "iconURL": "",
@@ -2520,151 +2265,14 @@
           "duplicateBundleIdentifiers": {
             "count": 15,
             "duplicateAppEntries": 45,
-            "extraEntries": 30,
-            "items": [
-              {
-                "bundleIdentifier": "com.burbn.instagram",
-                "count": 8,
-                "names": [
-                  "Theta_1.5",
-                  "Theta_1_4",
-                  "Regram_1.0-b10_351.0.1",
-                  "Regram_1.0-b10_347.2.5",
-                  "Regram_1.0-b8_343.0.0",
-                  "IGRocketRegram_1.0-b7_338.0.0",
-                  "Regram_1.0-b7_335.1.8",
-                  "Regram_1.0-b7_335.0.8"
-                ]
-              },
-              {
-                "bundleIdentifier": "com.spotify.client",
-                "count": 6,
-                "names": [
-                  "EeveeSpotify-5.9.5-9.0.36",
-                  "EeveeSpotify-5.8.8-9.0.26",
-                  "EeveeSpotify-5.8.6-9.0.14",
-                  "EeveeSpotify-5.8-8.9.90",
-                  "EeveeSpotify-4.9-8.9.68",
-                  "Spotify++8.6.94_CyPwn"
-                ]
-              },
-              {
-                "bundleIdentifier": "com.gopeed.gopeed",
-                "count": 3,
-                "names": [
-                  "Gopeed-v1.8.3-ios",
-                  "Gopeed_1.7.0",
-                  "Gopeed_1.6.10"
-                ]
-              },
-              {
-                "bundleIdentifier": "com.picsart.studio",
-                "count": 3,
-                "names": [
-                  "Picsart_25.5.1_Cracked",
-                  "Picsart_25.4.2_Premium",
-                  "PicsArt_25.1.2"
-                ]
-              },
-              {
-                "bundleIdentifier": "com.readdle.smartemail",
-                "count": 3,
-                "names": [
-                  "Spark_3.9.12",
-                  "Spark_3.9.11",
-                  "Spark_3.9.2"
-                ]
-              },
-              {
-                "bundleIdentifier": "com.stratospherix.filebrowserbiz",
-                "count": 3,
-                "names": [
-                  "FileBrowser_Pro_25.7",
-                  "FileBrowser_Pro_25.6",
-                  "FileBrowser_Pro_25.5"
-                ]
-              },
-              {
-                "bundleIdentifier": "com.stremio.pal",
-                "count": 3,
-                "names": [
-                  "Stremio-2.0.7",
-                  "Stremio-2.0.6",
-                  "Stremio-2.0.0"
-                ]
-              },
-              {
-                "bundleIdentifier": "com.getmimo.mimo",
-                "count": 2,
-                "names": [
-                  "Mimo_6.48.0_Premium",
-                  "MimoPro_6.43"
-                ]
-              },
-              {
-                "bundleIdentifier": "com.gogolith.gocoed",
-                "count": 2,
-                "names": [
-                  "GoCoEdit_23.0",
-                  "GoCoEdit_22.3"
-                ]
-              },
-              {
-                "bundleIdentifier": "com.hammerandchisel.discord",
-                "count": 2,
-                "names": [
-                  "Discord_228.1_Pyoncord",
-                  "Bunny_Pyoncord_224.0"
-                ]
-              },
-              {
-                "bundleIdentifier": "com.kdt.livecontainer",
-                "count": 2,
-                "names": [
-                  "LiveContainer_2.0",
-                  "LiveContainer_1.0"
-                ]
-              },
-              {
-                "bundleIdentifier": "com.microblink.PhotoMath",
-                "count": 2,
-                "names": [
-                  "Photomath_8.42.0",
-                  "PhotoMathPlus_8.35.0"
-                ]
-              },
-              {
-                "bundleIdentifier": "com.trueaxis.skate",
-                "count": 2,
-                "names": [
-                  "True_Skate_1.5.102",
-                  "True_Skate_1.5.95"
-                ]
-              },
-              {
-                "bundleIdentifier": "Ed0ardo.CyPwnStore",
-                "count": 2,
-                "names": [
-                  "CyPwnStore_7.1",
-                  "CyPwn_Store"
-                ]
-              },
-              {
-                "bundleIdentifier": "Lilliana.Violyn",
-                "count": 2,
-                "names": [
-                  "Violyn_1_4_4-2",
-                  "Violyn_1.4.2"
-                ]
-              }
-            ],
-            "itemsTruncated": false
+            "extraEntries": 30
           }
         }
       },
       "duplicateBundleIdentifiers": {
         "count": 15,
-        "examples": []
+        "duplicateAppEntries": 45,
+        "extraEntries": 30
       },
       "installerCompatibility": {
         "altstore": {
@@ -2690,13 +2298,12 @@
           "reason": "15 duplicate bundle identifiers are present. The source parser can keep separate entries, but installing multiple variants with the same bundle identifier can still conflict."
         }
       },
-      "preferredVariant": "classic",
-      "aggregationApproved": false
+      "preferredVariant": "classic"
     },
     "apptesters": {
       "online": true,
-      "checkedAt": "2026-09-30T07:48:11Z",
-      "appCount": 9402,
+      "checkedAt": "2026-09-30T07:57:52Z",
+      "appCount": 9403,
       "httpStatus": 200,
       "iconURL": "",
       "error": null,
@@ -2704,167 +2311,19 @@
         "classic": {
           "online": true,
           "httpStatus": 200,
-          "appCount": 9402,
+          "appCount": 9403,
           "error": null,
           "duplicateBundleIdentifiers": {
             "count": 550,
-            "duplicateAppEntries": 9167,
-            "extraEntries": 8617,
-            "items": [
-              {
-                "bundleIdentifier": "tech.miidii.MDBlank",
-                "count": 161,
-                "names": [
-                  "Unknown app"
-                ]
-              },
-              {
-                "bundleIdentifier": "com.ulisesolave.Fitia",
-                "count": 112,
-                "names": [
-                  "Fitia"
-                ]
-              },
-              {
-                "bundleIdentifier": "com.sfun.snapedit",
-                "count": 110,
-                "names": [
-                  "SnapEdit"
-                ]
-              },
-              {
-                "bundleIdentifier": "com.risesci.nyx",
-                "count": 102,
-                "names": [
-                  "RiseSleep"
-                ]
-              },
-              {
-                "bundleIdentifier": "boomer.Smart-Video",
-                "count": 85,
-                "names": [
-                  "Captions",
-                  "Widgy"
-                ]
-              },
-              {
-                "bundleIdentifier": "com.wellocution.iosapp",
-                "count": 76,
-                "names": [
-                  "BoldVoice"
-                ]
-              },
-              {
-                "bundleIdentifier": "com.gingerlabs.Notability",
-                "count": 75,
-                "names": [
-                  "Notability"
-                ]
-              },
-              {
-                "bundleIdentifier": "com.locket.Locket",
-                "count": 74,
-                "names": [
-                  "Locket"
-                ]
-              },
-              {
-                "bundleIdentifier": "com.yazio.ios.YAZIO",
-                "count": 74,
-                "names": [
-                  "Yazio",
-                  "YAZIO"
-                ]
-              },
-              {
-                "bundleIdentifier": "com.dopedevelopment.Panels",
-                "count": 72,
-                "names": [
-                  "SCRL"
-                ]
-              },
-              {
-                "bundleIdentifier": "com.lightricks.Facetune2",
-                "count": 69,
-                "names": [
-                  "Facetune"
-                ]
-              },
-              {
-                "bundleIdentifier": "com.picsart.studio",
-                "count": 67,
-                "names": [
-                  "Picsart",
-                  "PicsArt"
-                ]
-              },
-              {
-                "bundleIdentifier": "com.duolingo.DuolingoMobile",
-                "count": 63,
-                "names": [
-                  "Duolingo",
-                  "DuolingoMaxPublic"
-                ]
-              },
-              {
-                "bundleIdentifier": "com.myfitnesspal.mfp",
-                "count": 63,
-                "names": [
-                  "MyFitnessPal"
-                ]
-              },
-              {
-                "bundleIdentifier": "com.dr1ven.eraser",
-                "count": 60,
-                "names": [
-                  "Photoroom"
-                ]
-              },
-              {
-                "bundleIdentifier": "com.zerone.hidesktop",
-                "count": 60,
-                "names": [
-                  "iScreen",
-                  "HiWidget"
-                ]
-              },
-              {
-                "bundleIdentifier": "com.atebits.Tweetie2",
-                "count": 59,
-                "names": [
-                  "X",
-                  "Twitter"
-                ]
-              },
-              {
-                "bundleIdentifier": "com.mwm.procolor",
-                "count": 59,
-                "names": [
-                  "ColorPop"
-                ]
-              },
-              {
-                "bundleIdentifier": "com.burbn.instagram",
-                "count": 58,
-                "names": [
-                  "Instagram"
-                ]
-              },
-              {
-                "bundleIdentifier": "com.elevateapp.elevate",
-                "count": 58,
-                "names": [
-                  "Elevate"
-                ]
-              }
-            ],
-            "itemsTruncated": true
+            "duplicateAppEntries": 9168,
+            "extraEntries": 8618
           }
         }
       },
       "duplicateBundleIdentifiers": {
         "count": 550,
-        "examples": []
+        "duplicateAppEntries": 9168,
+        "extraEntries": 8618
       },
       "installerCompatibility": {
         "altstore": {
@@ -2890,12 +2349,11 @@
           "reason": "550 duplicate bundle identifiers are present. The source parser can keep separate entries, but installing multiple variants with the same bundle identifier can still conflict."
         }
       },
-      "preferredVariant": "classic",
-      "aggregationApproved": false
+      "preferredVariant": "classic"
     },
     "youtuberebornplus": {
       "online": true,
-      "checkedAt": "2026-09-30T07:48:11Z",
+      "checkedAt": "2026-09-30T07:57:52Z",
       "appCount": 1,
       "httpStatus": 200,
       "iconURL": "",
@@ -2909,15 +2367,14 @@
           "duplicateBundleIdentifiers": {
             "count": 0,
             "duplicateAppEntries": 0,
-            "extraEntries": 0,
-            "items": [],
-            "itemsTruncated": false
+            "extraEntries": 0
           }
         }
       },
       "duplicateBundleIdentifiers": {
         "count": 0,
-        "examples": []
+        "duplicateAppEntries": 0,
+        "extraEntries": 0
       },
       "installerCompatibility": {
         "altstore": {
@@ -2941,12 +2398,11 @@
           "reason": "No duplicate bundle identifiers were detected in the source."
         }
       },
-      "preferredVariant": "classic",
-      "aggregationApproved": false
+      "preferredVariant": "classic"
     },
     "apollo-reddit": {
       "online": true,
-      "checkedAt": "2026-09-30T07:48:11Z",
+      "checkedAt": "2026-09-30T07:57:52Z",
       "appCount": 1,
       "httpStatus": 200,
       "iconURL": "",
@@ -2960,15 +2416,14 @@
           "duplicateBundleIdentifiers": {
             "count": 0,
             "duplicateAppEntries": 0,
-            "extraEntries": 0,
-            "items": [],
-            "itemsTruncated": false
+            "extraEntries": 0
           }
         }
       },
       "duplicateBundleIdentifiers": {
         "count": 0,
-        "examples": []
+        "duplicateAppEntries": 0,
+        "extraEntries": 0
       },
       "installerCompatibility": {
         "altstore": {
@@ -2992,12 +2447,11 @@
           "reason": "No duplicate bundle identifiers were detected in the source."
         }
       },
-      "preferredVariant": "classic",
-      "aggregationApproved": false
+      "preferredVariant": "classic"
     },
     "discord-appstore-builds": {
       "online": true,
-      "checkedAt": "2026-09-30T07:48:11Z",
+      "checkedAt": "2026-09-30T07:57:52Z",
       "appCount": 1,
       "httpStatus": 200,
       "iconURL": "",
@@ -3011,15 +2465,14 @@
           "duplicateBundleIdentifiers": {
             "count": 0,
             "duplicateAppEntries": 0,
-            "extraEntries": 0,
-            "items": [],
-            "itemsTruncated": false
+            "extraEntries": 0
           }
         }
       },
       "duplicateBundleIdentifiers": {
         "count": 0,
-        "examples": []
+        "duplicateAppEntries": 0,
+        "extraEntries": 0
       },
       "installerCompatibility": {
         "altstore": {
@@ -3043,12 +2496,11 @@
           "reason": "No duplicate bundle identifiers were detected in the source."
         }
       },
-      "preferredVariant": "classic",
-      "aggregationApproved": false
+      "preferredVariant": "classic"
     },
     "ytkace": {
       "online": true,
-      "checkedAt": "2026-09-30T07:48:11Z",
+      "checkedAt": "2026-09-30T07:57:52Z",
       "appCount": 1,
       "httpStatus": 200,
       "iconURL": "",
@@ -3062,15 +2514,14 @@
           "duplicateBundleIdentifiers": {
             "count": 0,
             "duplicateAppEntries": 0,
-            "extraEntries": 0,
-            "items": [],
-            "itemsTruncated": false
+            "extraEntries": 0
           }
         }
       },
       "duplicateBundleIdentifiers": {
         "count": 0,
-        "examples": []
+        "duplicateAppEntries": 0,
+        "extraEntries": 0
       },
       "installerCompatibility": {
         "altstore": {
@@ -3094,12 +2545,11 @@
           "reason": "No duplicate bundle identifiers were detected in the source."
         }
       },
-      "preferredVariant": "classic",
-      "aggregationApproved": false
+      "preferredVariant": "classic"
     },
     "heyfordy": {
       "online": true,
-      "checkedAt": "2026-09-30T07:48:11Z",
+      "checkedAt": "2026-09-30T07:57:52Z",
       "appCount": 8,
       "httpStatus": 200,
       "iconURL": "",
@@ -3113,15 +2563,14 @@
           "duplicateBundleIdentifiers": {
             "count": 0,
             "duplicateAppEntries": 0,
-            "extraEntries": 0,
-            "items": [],
-            "itemsTruncated": false
+            "extraEntries": 0
           }
         }
       },
       "duplicateBundleIdentifiers": {
         "count": 0,
-        "examples": []
+        "duplicateAppEntries": 0,
+        "extraEntries": 0
       },
       "installerCompatibility": {
         "altstore": {
@@ -3145,12 +2594,11 @@
           "reason": "No duplicate bundle identifiers were detected in the source."
         }
       },
-      "preferredVariant": "classic",
-      "aggregationApproved": false
+      "preferredVariant": "classic"
     },
     "ipalibrary": {
       "online": true,
-      "checkedAt": "2026-09-30T07:48:11Z",
+      "checkedAt": "2026-09-30T07:57:52Z",
       "appCount": 834,
       "httpStatus": 200,
       "iconURL": "",
@@ -3164,63 +2612,14 @@
           "duplicateBundleIdentifiers": {
             "count": 6,
             "duplicateAppEntries": 12,
-            "extraEntries": 6,
-            "items": [
-              {
-                "bundleIdentifier": "me.ipalibrary.colorpoppremiumcolorpop",
-                "count": 2,
-                "names": [
-                  "Color Pop Premium – Color Pop++"
-                ]
-              },
-              {
-                "bundleIdentifier": "me.ipalibrary.deadcells",
-                "count": 2,
-                "names": [
-                  "Dead Cells+",
-                  "Dead Cells"
-                ]
-              },
-              {
-                "bundleIdentifier": "me.ipalibrary.gettingoverit",
-                "count": 2,
-                "names": [
-                  "Getting Over It",
-                  "Getting Over It+"
-                ]
-              },
-              {
-                "bundleIdentifier": "me.ipalibrary.humananatomyatlas",
-                "count": 2,
-                "names": [
-                  "Human Anatomy Atlas",
-                  "Human Anatomy Atlas++"
-                ]
-              },
-              {
-                "bundleIdentifier": "me.ipalibrary.prune",
-                "count": 2,
-                "names": [
-                  "Prune+",
-                  "Prune"
-                ]
-              },
-              {
-                "bundleIdentifier": "me.ipalibrary.stardewvalley",
-                "count": 2,
-                "names": [
-                  "Stardew Valley+",
-                  "Stardew Valley"
-                ]
-              }
-            ],
-            "itemsTruncated": false
+            "extraEntries": 6
           }
         }
       },
       "duplicateBundleIdentifiers": {
         "count": 6,
-        "examples": []
+        "duplicateAppEntries": 12,
+        "extraEntries": 6
       },
       "installerCompatibility": {
         "altstore": {
@@ -3246,12 +2645,11 @@
           "reason": "6 duplicate bundle identifiers are present. The source parser can keep separate entries, but installing multiple variants with the same bundle identifier can still conflict."
         }
       },
-      "preferredVariant": "classic",
-      "aggregationApproved": false
+      "preferredVariant": "classic"
     },
     "armsx2": {
       "online": true,
-      "checkedAt": "2026-09-30T07:48:11Z",
+      "checkedAt": "2026-09-30T07:57:52Z",
       "appCount": 2,
       "httpStatus": 200,
       "iconURL": "",
@@ -3265,15 +2663,14 @@
           "duplicateBundleIdentifiers": {
             "count": 0,
             "duplicateAppEntries": 0,
-            "extraEntries": 0,
-            "items": [],
-            "itemsTruncated": false
+            "extraEntries": 0
           }
         }
       },
       "duplicateBundleIdentifiers": {
         "count": 0,
-        "examples": []
+        "duplicateAppEntries": 0,
+        "extraEntries": 0
       },
       "installerCompatibility": {
         "altstore": {
@@ -3297,12 +2694,11 @@
           "reason": "No duplicate bundle identifiers were detected in the source."
         }
       },
-      "preferredVariant": "classic",
-      "aggregationApproved": false
+      "preferredVariant": "classic"
     },
     "fouad-source": {
       "online": true,
-      "checkedAt": "2026-09-30T07:48:11Z",
+      "checkedAt": "2026-09-30T07:57:52Z",
       "appCount": 6,
       "httpStatus": 200,
       "iconURL": "",
@@ -3316,15 +2712,14 @@
           "duplicateBundleIdentifiers": {
             "count": 0,
             "duplicateAppEntries": 0,
-            "extraEntries": 0,
-            "items": [],
-            "itemsTruncated": false
+            "extraEntries": 0
           }
         }
       },
       "duplicateBundleIdentifiers": {
         "count": 0,
-        "examples": []
+        "duplicateAppEntries": 0,
+        "extraEntries": 0
       },
       "installerCompatibility": {
         "altstore": {
@@ -3348,12 +2743,11 @@
           "reason": "No duplicate bundle identifiers were detected in the source."
         }
       },
-      "preferredVariant": "classic",
-      "aggregationApproved": false
+      "preferredVariant": "classic"
     },
     "neofreebird": {
       "online": true,
-      "checkedAt": "2026-09-30T07:48:11Z",
+      "checkedAt": "2026-09-30T07:57:52Z",
       "appCount": 1,
       "httpStatus": 200,
       "iconURL": "",
@@ -3367,15 +2761,14 @@
           "duplicateBundleIdentifiers": {
             "count": 0,
             "duplicateAppEntries": 0,
-            "extraEntries": 0,
-            "items": [],
-            "itemsTruncated": false
+            "extraEntries": 0
           }
         }
       },
       "duplicateBundleIdentifiers": {
         "count": 0,
-        "examples": []
+        "duplicateAppEntries": 0,
+        "extraEntries": 0
       },
       "installerCompatibility": {
         "altstore": {
@@ -3399,12 +2792,11 @@
           "reason": "No duplicate bundle identifiers were detected in the source."
         }
       },
-      "preferredVariant": "classic",
-      "aggregationApproved": false
+      "preferredVariant": "classic"
     },
     "melonx": {
       "online": true,
-      "checkedAt": "2026-09-30T07:48:11Z",
+      "checkedAt": "2026-09-30T07:57:52Z",
       "appCount": 1,
       "httpStatus": 200,
       "iconURL": "",
@@ -3418,15 +2810,14 @@
           "duplicateBundleIdentifiers": {
             "count": 0,
             "duplicateAppEntries": 0,
-            "extraEntries": 0,
-            "items": [],
-            "itemsTruncated": false
+            "extraEntries": 0
           }
         }
       },
       "duplicateBundleIdentifiers": {
         "count": 0,
-        "examples": []
+        "duplicateAppEntries": 0,
+        "extraEntries": 0
       },
       "installerCompatibility": {
         "altstore": {
@@ -3450,12 +2841,11 @@
           "reason": "No duplicate bundle identifiers were detected in the source."
         }
       },
-      "preferredVariant": "classic",
-      "aggregationApproved": false
+      "preferredVariant": "classic"
     },
     "altgallery": {
       "online": true,
-      "checkedAt": "2026-09-30T07:48:11Z",
+      "checkedAt": "2026-09-30T07:57:52Z",
       "appCount": 39,
       "httpStatus": 200,
       "iconURL": "",
@@ -3469,15 +2859,14 @@
           "duplicateBundleIdentifiers": {
             "count": 0,
             "duplicateAppEntries": 0,
-            "extraEntries": 0,
-            "items": [],
-            "itemsTruncated": false
+            "extraEntries": 0
           }
         }
       },
       "duplicateBundleIdentifiers": {
         "count": 0,
-        "examples": []
+        "duplicateAppEntries": 0,
+        "extraEntries": 0
       },
       "installerCompatibility": {
         "altstore": {
@@ -3501,12 +2890,11 @@
           "reason": "No duplicate bundle identifiers were detected in the source."
         }
       },
-      "preferredVariant": "classic",
-      "aggregationApproved": false
+      "preferredVariant": "classic"
     },
     "ripestore": {
       "online": true,
-      "checkedAt": "2026-09-30T07:48:11Z",
+      "checkedAt": "2026-09-30T07:57:52Z",
       "appCount": 11,
       "httpStatus": 200,
       "iconURL": "",
@@ -3520,15 +2908,14 @@
           "duplicateBundleIdentifiers": {
             "count": 0,
             "duplicateAppEntries": 0,
-            "extraEntries": 0,
-            "items": [],
-            "itemsTruncated": false
+            "extraEntries": 0
           }
         }
       },
       "duplicateBundleIdentifiers": {
         "count": 0,
-        "examples": []
+        "duplicateAppEntries": 0,
+        "extraEntries": 0
       },
       "installerCompatibility": {
         "altstore": {
@@ -3552,12 +2939,11 @@
           "reason": "No duplicate bundle identifiers were detected in the source."
         }
       },
-      "preferredVariant": "classic",
-      "aggregationApproved": false
+      "preferredVariant": "classic"
     },
     "feather": {
       "online": true,
-      "checkedAt": "2026-09-30T07:48:11Z",
+      "checkedAt": "2026-09-30T07:57:52Z",
       "appCount": 1,
       "httpStatus": 200,
       "iconURL": "",
@@ -3571,15 +2957,14 @@
           "duplicateBundleIdentifiers": {
             "count": 0,
             "duplicateAppEntries": 0,
-            "extraEntries": 0,
-            "items": [],
-            "itemsTruncated": false
+            "extraEntries": 0
           }
         }
       },
       "duplicateBundleIdentifiers": {
         "count": 0,
-        "examples": []
+        "duplicateAppEntries": 0,
+        "extraEntries": 0
       },
       "installerCompatibility": {
         "altstore": {
@@ -3603,12 +2988,11 @@
           "reason": "No duplicate bundle identifiers were detected in the source."
         }
       },
-      "preferredVariant": "classic",
-      "aggregationApproved": false
+      "preferredVariant": "classic"
     },
     "quantum-source": {
       "online": true,
-      "checkedAt": "2026-09-30T07:48:11Z",
+      "checkedAt": "2026-09-30T07:57:52Z",
       "appCount": 38,
       "httpStatus": 200,
       "iconURL": "",
@@ -3622,15 +3006,14 @@
           "duplicateBundleIdentifiers": {
             "count": 0,
             "duplicateAppEntries": 0,
-            "extraEntries": 0,
-            "items": [],
-            "itemsTruncated": false
+            "extraEntries": 0
           }
         }
       },
       "duplicateBundleIdentifiers": {
         "count": 0,
-        "examples": []
+        "duplicateAppEntries": 0,
+        "extraEntries": 0
       },
       "installerCompatibility": {
         "altstore": {
@@ -3654,12 +3037,11 @@
           "reason": "No duplicate bundle identifiers were detected in the source."
         }
       },
-      "preferredVariant": "classic",
-      "aggregationApproved": false
+      "preferredVariant": "classic"
     },
     "spotc": {
       "online": true,
-      "checkedAt": "2026-09-30T07:48:11Z",
+      "checkedAt": "2026-09-30T07:57:52Z",
       "appCount": 3,
       "httpStatus": 200,
       "iconURL": "",
@@ -3673,15 +3055,14 @@
           "duplicateBundleIdentifiers": {
             "count": 0,
             "duplicateAppEntries": 0,
-            "extraEntries": 0,
-            "items": [],
-            "itemsTruncated": false
+            "extraEntries": 0
           }
         }
       },
       "duplicateBundleIdentifiers": {
         "count": 0,
-        "examples": []
+        "duplicateAppEntries": 0,
+        "extraEntries": 0
       },
       "installerCompatibility": {
         "altstore": {
@@ -3705,12 +3086,11 @@
           "reason": "No duplicate bundle identifiers were detected in the source."
         }
       },
-      "preferredVariant": "classic",
-      "aggregationApproved": false
+      "preferredVariant": "classic"
     },
     "foxster-altsource": {
       "online": true,
-      "checkedAt": "2026-09-30T07:48:11Z",
+      "checkedAt": "2026-09-30T07:57:52Z",
       "appCount": 2,
       "httpStatus": 200,
       "iconURL": "",
@@ -3724,15 +3104,14 @@
           "duplicateBundleIdentifiers": {
             "count": 0,
             "duplicateAppEntries": 0,
-            "extraEntries": 0,
-            "items": [],
-            "itemsTruncated": false
+            "extraEntries": 0
           }
         }
       },
       "duplicateBundleIdentifiers": {
         "count": 0,
-        "examples": []
+        "duplicateAppEntries": 0,
+        "extraEntries": 0
       },
       "installerCompatibility": {
         "altstore": {
@@ -3756,12 +3135,11 @@
           "reason": "No duplicate bundle identifiers were detected in the source."
         }
       },
-      "preferredVariant": "classic",
-      "aggregationApproved": false
+      "preferredVariant": "classic"
     },
     "fastsign": {
       "online": true,
-      "checkedAt": "2026-09-30T07:48:11Z",
+      "checkedAt": "2026-09-30T07:57:52Z",
       "appCount": 16272,
       "httpStatus": 200,
       "iconURL": "",
@@ -3775,234 +3153,14 @@
           "duplicateBundleIdentifiers": {
             "count": 1031,
             "duplicateAppEntries": 13715,
-            "extraEntries": 12684,
-            "items": [
-              {
-                "bundleIdentifier": "com.burbn.instagram",
-                "count": 365,
-                "names": [
-                  "Instagram",
-                  "Instagram (RL)",
-                  "Instagram (RC)",
-                  "Instagram (SK)",
-                  "Instagram (RY)",
-                  "Instagram (BE)",
-                  "Instagram (IF)",
-                  "Instagram (RyukGram)"
-                ]
-              },
-              {
-                "bundleIdentifier": "com.karbinstoree",
-                "count": 291,
-                "names": [
-                  "Omega Royale",
-                  "Luma Fusion",
-                  "Cooking Trendy",
-                  "APTV",
-                  "ProCamera",
-                  "Pencil Sketcher",
-                  "Mobile Legends: Bang Bang ESP",
-                  "Earn to Die Rogue"
-                ]
-              },
-              {
-                "bundleIdentifier": "com.atebits.Tweetie2",
-                "count": 228,
-                "names": [
-                  "X",
-                  "Twitter",
-                  "Twitter BHX",
-                  "NeoFreeBird",
-                  "X++",
-                  "BHX",
-                  "DLTwitter",
-                  "BHTwitter"
-                ]
-              },
-              {
-                "bundleIdentifier": "com.zhiliaoapp.musically",
-                "count": 216,
-                "names": [
-                  "TikTok",
-                  "TikTok (RS)",
-                  "TikTok (RX)",
-                  "TikTok (IN)",
-                  "TikTok (GT)",
-                  "TikTok (AS)",
-                  "BHTikTokPlus",
-                  "TikTok++"
-                ]
-              },
-              {
-                "bundleIdentifier": "com.facebook.Facebook",
-                "count": 137,
-                "names": [
-                  "Facebook",
-                  "Facebook++",
-                  "Glow for Facebook",
-                  "FacebookWolf",
-                  "FacebookE0",
-                  "FacebookMiX",
-                  "Facebook Wolf",
-                  "FacebookTxC"
-                ]
-              },
-              {
-                "bundleIdentifier": "com.google.ios.youtube",
-                "count": 137,
-                "names": [
-                  "YouTube",
-                  "ASJTube",
-                  "YouMod + Tweaks (driftywinds)",
-                  "YouTube (YP)",
-                  "YouTube (KC)",
-                  "YouTube (YM)",
-                  "YouTube Plus (iOS14+)",
-                  "YouTube Plus (iOS15+)"
-                ]
-              },
-              {
-                "bundleIdentifier": "com.picsart.studio",
-                "count": 134,
-                "names": [
-                  "Picsart",
-                  "PicsArt",
-                  "PicsArtPlus",
-                  "PicsArtPlusPlus",
-                  "Picsart_25.5.1_Cracked",
-                  "Picsart_25.4.2_Premium",
-                  "PicsArt_25.1.2"
-                ]
-              },
-              {
-                "bundleIdentifier": "com.ulisesolave.Fitia",
-                "count": 115,
-                "names": [
-                  "Fitia"
-                ]
-              },
-              {
-                "bundleIdentifier": "com.sfun.snapedit",
-                "count": 114,
-                "names": [
-                  "SnapEdit",
-                  "SnapEditPro"
-                ]
-              },
-              {
-                "bundleIdentifier": "com.spotify.client",
-                "count": 114,
-                "names": [
-                  "Spotify",
-                  "EeveeSpotify",
-                  "Spotify (EeveeSpotifyReincarnated)",
-                  "Spotify++",
-                  "EeveeSpotify-5.9.5-9.0.36",
-                  "EeveeSpotify-5.8.8-9.0.26",
-                  "EeveeSpotify-5.8.6-9.0.14",
-                  "SpotveeC"
-                ]
-              },
-              {
-                "bundleIdentifier": "tv.twitch",
-                "count": 106,
-                "names": [
-                  "Twitch",
-                  "Tweach",
-                  "TwitchDvnloaderPlus",
-                  "TwitchPlus",
-                  "TwitchAdBlock",
-                  "TwitchToolbox",
-                  "Twitch++"
-                ]
-              },
-              {
-                "bundleIdentifier": "com.risesci.nyx",
-                "count": 104,
-                "names": [
-                  "Rise Sleep",
-                  "RiseSleep"
-                ]
-              },
-              {
-                "bundleIdentifier": "boomer.Smart-Video",
-                "count": 89,
-                "names": [
-                  "Captions",
-                  "Widgy"
-                ]
-              },
-              {
-                "bundleIdentifier": "com.locket.Locket",
-                "count": 86,
-                "names": [
-                  "Locket",
-                  "LocketWidgetGold"
-                ]
-              },
-              {
-                "bundleIdentifier": "com.lightricks.Facetune2",
-                "count": 83,
-                "names": [
-                  "Facetune",
-                  "FacetunePro"
-                ]
-              },
-              {
-                "bundleIdentifier": "net.whatsapp.WhatsApp",
-                "count": 83,
-                "names": [
-                  "WhatsApp (WC)",
-                  "WhatsApp (WG)",
-                  "WhatsApp",
-                  "WhatsApp (WL)",
-                  "Watusi3",
-                  "WhatsappWatusiCracked",
-                  "WhatsappWatusi",
-                  "Watusi for WhatsApp"
-                ]
-              },
-              {
-                "bundleIdentifier": "com.gingerlabs.Notability",
-                "count": 82,
-                "names": [
-                  "Notability"
-                ]
-              },
-              {
-                "bundleIdentifier": "com.wellocution.iosapp",
-                "count": 80,
-                "names": [
-                  "BoldVoice"
-                ]
-              },
-              {
-                "bundleIdentifier": "com.dopedevelopment.Panels",
-                "count": 78,
-                "names": [
-                  "SCRL"
-                ]
-              },
-              {
-                "bundleIdentifier": "com.duolingo.DuolingoMobile",
-                "count": 75,
-                "names": [
-                  "Duolingo",
-                  "Duolingo++",
-                  "DuolingoMaxPublic",
-                  "DuolingoMax",
-                  "Duolingo Cracked",
-                  "DuolingoMax_7.37.1"
-                ]
-              }
-            ],
-            "itemsTruncated": true
+            "extraEntries": 12684
           }
         }
       },
       "duplicateBundleIdentifiers": {
         "count": 1031,
-        "examples": []
+        "duplicateAppEntries": 13715,
+        "extraEntries": 12684
       },
       "installerCompatibility": {
         "altstore": {
@@ -4028,12 +3186,11 @@
           "reason": "1031 duplicate bundle identifiers are present. The source parser can keep separate entries, but installing multiple variants with the same bundle identifier can still conflict."
         }
       },
-      "preferredVariant": "classic",
-      "aggregationApproved": false
+      "preferredVariant": "classic"
     },
     "quantum-plus": {
       "online": true,
-      "checkedAt": "2026-09-30T07:48:11Z",
+      "checkedAt": "2026-09-30T07:57:52Z",
       "appCount": 35,
       "httpStatus": 200,
       "iconURL": "",
@@ -4047,15 +3204,14 @@
           "duplicateBundleIdentifiers": {
             "count": 0,
             "duplicateAppEntries": 0,
-            "extraEntries": 0,
-            "items": [],
-            "itemsTruncated": false
+            "extraEntries": 0
           }
         }
       },
       "duplicateBundleIdentifiers": {
         "count": 0,
-        "examples": []
+        "duplicateAppEntries": 0,
+        "extraEntries": 0
       },
       "installerCompatibility": {
         "altstore": {
@@ -4079,12 +3235,11 @@
           "reason": "No duplicate bundle identifiers were detected in the source."
         }
       },
-      "preferredVariant": "classic",
-      "aggregationApproved": false
+      "preferredVariant": "classic"
     },
     "wuxu-standard": {
       "online": true,
-      "checkedAt": "2026-09-30T07:48:11Z",
+      "checkedAt": "2026-09-30T07:57:52Z",
       "appCount": 20,
       "httpStatus": 200,
       "iconURL": "",
@@ -4098,15 +3253,14 @@
           "duplicateBundleIdentifiers": {
             "count": 0,
             "duplicateAppEntries": 0,
-            "extraEntries": 0,
-            "items": [],
-            "itemsTruncated": false
+            "extraEntries": 0
           }
         }
       },
       "duplicateBundleIdentifiers": {
         "count": 0,
-        "examples": []
+        "duplicateAppEntries": 0,
+        "extraEntries": 0
       },
       "installerCompatibility": {
         "altstore": {
@@ -4130,12 +3284,11 @@
           "reason": "No duplicate bundle identifiers were detected in the source."
         }
       },
-      "preferredVariant": "classic",
-      "aggregationApproved": false
+      "preferredVariant": "classic"
     },
     "taurine": {
       "online": true,
-      "checkedAt": "2026-09-30T07:48:11Z",
+      "checkedAt": "2026-09-30T07:57:52Z",
       "appCount": 1,
       "httpStatus": 200,
       "iconURL": "",
@@ -4149,15 +3302,14 @@
           "duplicateBundleIdentifiers": {
             "count": 0,
             "duplicateAppEntries": 0,
-            "extraEntries": 0,
-            "items": [],
-            "itemsTruncated": false
+            "extraEntries": 0
           }
         }
       },
       "duplicateBundleIdentifiers": {
         "count": 0,
-        "examples": []
+        "duplicateAppEntries": 0,
+        "extraEntries": 0
       },
       "installerCompatibility": {
         "altstore": {
@@ -4181,12 +3333,11 @@
           "reason": "No duplicate bundle identifiers were detected in the source."
         }
       },
-      "preferredVariant": "classic",
-      "aggregationApproved": false
+      "preferredVariant": "classic"
     },
     "burrito-source": {
       "online": true,
-      "checkedAt": "2026-09-30T07:48:11Z",
+      "checkedAt": "2026-09-30T07:57:52Z",
       "appCount": 7,
       "httpStatus": 200,
       "iconURL": "",
@@ -4200,15 +3351,14 @@
           "duplicateBundleIdentifiers": {
             "count": 0,
             "duplicateAppEntries": 0,
-            "extraEntries": 0,
-            "items": [],
-            "itemsTruncated": false
+            "extraEntries": 0
           }
         }
       },
       "duplicateBundleIdentifiers": {
         "count": 0,
-        "examples": []
+        "duplicateAppEntries": 0,
+        "extraEntries": 0
       },
       "installerCompatibility": {
         "altstore": {
@@ -4232,12 +3382,11 @@
           "reason": "No duplicate bundle identifiers were detected in the source."
         }
       },
-      "preferredVariant": "classic",
-      "aggregationApproved": false
+      "preferredVariant": "classic"
     },
     "salupov-altrepo": {
       "online": true,
-      "checkedAt": "2026-09-30T07:48:11Z",
+      "checkedAt": "2026-09-30T07:57:52Z",
       "appCount": 2,
       "httpStatus": 200,
       "iconURL": "",
@@ -4251,15 +3400,14 @@
           "duplicateBundleIdentifiers": {
             "count": 0,
             "duplicateAppEntries": 0,
-            "extraEntries": 0,
-            "items": [],
-            "itemsTruncated": false
+            "extraEntries": 0
           }
         }
       },
       "duplicateBundleIdentifiers": {
         "count": 0,
-        "examples": []
+        "duplicateAppEntries": 0,
+        "extraEntries": 0
       },
       "installerCompatibility": {
         "altstore": {
@@ -4283,12 +3431,11 @@
           "reason": "No duplicate bundle identifiers were detected in the source."
         }
       },
-      "preferredVariant": "classic",
-      "aggregationApproved": false
+      "preferredVariant": "classic"
     },
     "cercube": {
       "online": true,
-      "checkedAt": "2026-09-30T07:48:11Z",
+      "checkedAt": "2026-09-30T07:57:52Z",
       "appCount": 2,
       "httpStatus": 200,
       "iconURL": "",
@@ -4302,15 +3449,14 @@
           "duplicateBundleIdentifiers": {
             "count": 0,
             "duplicateAppEntries": 0,
-            "extraEntries": 0,
-            "items": [],
-            "itemsTruncated": false
+            "extraEntries": 0
           }
         }
       },
       "duplicateBundleIdentifiers": {
         "count": 0,
-        "examples": []
+        "duplicateAppEntries": 0,
+        "extraEntries": 0
       },
       "installerCompatibility": {
         "altstore": {
@@ -4334,12 +3480,11 @@
           "reason": "No duplicate bundle identifiers were detected in the source."
         }
       },
-      "preferredVariant": "classic",
-      "aggregationApproved": false
+      "preferredVariant": "classic"
     },
     "rocket": {
       "online": true,
-      "checkedAt": "2026-09-30T07:48:11Z",
+      "checkedAt": "2026-09-30T07:57:52Z",
       "appCount": 1,
       "httpStatus": 200,
       "iconURL": "",
@@ -4353,15 +3498,14 @@
           "duplicateBundleIdentifiers": {
             "count": 0,
             "duplicateAppEntries": 0,
-            "extraEntries": 0,
-            "items": [],
-            "itemsTruncated": false
+            "extraEntries": 0
           }
         }
       },
       "duplicateBundleIdentifiers": {
         "count": 0,
-        "examples": []
+        "duplicateAppEntries": 0,
+        "extraEntries": 0
       },
       "installerCompatibility": {
         "altstore": {
@@ -4385,12 +3529,11 @@
           "reason": "No duplicate bundle identifiers were detected in the source."
         }
       },
-      "preferredVariant": "classic",
-      "aggregationApproved": false
+      "preferredVariant": "classic"
     },
     "reynard-browser": {
       "online": true,
-      "checkedAt": "2026-09-30T07:48:11Z",
+      "checkedAt": "2026-09-30T07:57:52Z",
       "appCount": 1,
       "httpStatus": 200,
       "iconURL": "",
@@ -4404,15 +3547,14 @@
           "duplicateBundleIdentifiers": {
             "count": 0,
             "duplicateAppEntries": 0,
-            "extraEntries": 0,
-            "items": [],
-            "itemsTruncated": false
+            "extraEntries": 0
           }
         }
       },
       "duplicateBundleIdentifiers": {
         "count": 0,
-        "examples": []
+        "duplicateAppEntries": 0,
+        "extraEntries": 0
       },
       "installerCompatibility": {
         "altstore": {
@@ -4436,8 +3578,7 @@
           "reason": "No duplicate bundle identifiers were detected in the source."
         }
       },
-      "preferredVariant": "classic",
-      "aggregationApproved": false
+      "preferredVariant": "classic"
     }
   }
 }
