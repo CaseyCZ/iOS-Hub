@@ -572,141 +572,36 @@ def main() -> None:
         if path.name not in live_cache_files:
             path.unlink()
 
-    mergeable_ids = sorted(
-        source["id"] for source in sources
-        if source.get("mergeable")
-        and source["id"] in loaded_classic
-        and source_compliance_allows_distribution(source)
-    )
-
-    auto_compatible_ids = sorted(
-        source_id for source_id, (source, _payload) in loaded_classic.items()
-        if status["sources"][source_id]["mixTest"] == "pass"
-        and source.get("autoPackage", True)
-        and source_compliance_allows_distribution(source)
-    )
-    experimental_ids = sorted(
-        source_id for source_id in loaded
-        if status["sources"][source_id]["mixTest"] == "experimental"
-    )
-
-    altstore_package_ids = sorted(
-        source_id for source_id in auto_compatible_ids
-        if is_default_package_source(loaded[source_id][0])
-    )
-    sidestore_compatible_ids = sorted(
-        source_id for source_id, (source, payload) in loaded_classic.items()
-        if is_sidestore_compatible(source, payload)
-        and source_id != "sidestore-official"
-        and source.get("autoPackage", True)
-        and source_compliance_allows_distribution(source)
-        and is_default_package_source(source)
-    )
-
-    effective_max = min(MAX_MIX_SOURCES, len(mergeable_ids))
-    expected_mix_files: set[str] = set()
-    all_conflicts: dict[str, list[dict]] = {}
-    mix_count = 0
-
-    for size in range(1, effective_max + 1):
-        for combo in itertools.combinations(mergeable_ids, size):
-            slug = "--".join(combo)
-            filename = f"{slug}.json"
-            expected_mix_files.add(filename)
-            selected = [loaded_classic[source_id] for source_id in combo]
-            digest = hashlib.sha1(slug.encode("utf-8")).hexdigest()[:12]
-            mix, conflicts = make_mix(selected, filename, digest)
-            write_json(MIX_DIR / filename, mix)
-            if conflicts:
-                all_conflicts[slug] = conflicts
-            mix_count += 1
-
-    # Arbitrary Custom Builder combinations are hosted on demand by the Mix API;
-    # keep generated static Mixes limited to the bounded mergeable combinations below.
-    hosted_pair_ids = []
-
-    all_compatible_url = None
-    if auto_compatible_ids:
-        filename = "all-compatible.json"
-        expected_mix_files.add(filename)
-        selected = [loaded_classic[source_id] for source_id in auto_compatible_ids]
-        mix, conflicts = make_mix(selected, filename, "all-compatible")
-        mix["name"] = "Mix · All compatible Classic sources"
-        write_json(MIX_DIR / filename, mix)
-        if conflicts:
-            all_conflicts["all-compatible"] = conflicts
-        all_compatible_url = f"{BASE_URL}mix/{filename}"
-
+    # Direct Source Builder architecture:
+    # do not generate, merge, cache or publish combined third-party Source JSON files.
+    # Users add each original Source URL directly to their selected installer.
     for path in MIX_DIR.glob("*.json"):
-        if path.name not in expected_mix_files:
-            path.unlink()
+        path.unlink()
 
-    altstore_url = None
-    altstore_app_count = 0
-    altstore_conflict_count = 0
-    if altstore_package_ids:
-        altstore_selected = [loaded_classic[source_id] for source_id in altstore_package_ids]
-        altstore_source, altstore_conflicts = make_store_source(altstore_selected, "altstore")
-        write_json(ALTSTORE_DIR / "source.json", altstore_source)
-        altstore_url = f"{BASE_URL}altstore/source.json"
-        altstore_app_count = len(altstore_source["apps"])
-        altstore_conflict_count = len(altstore_conflicts)
-        if altstore_conflicts:
-            all_conflicts["altstore-official"] = altstore_conflicts
-    else:
-        stale_altstore = ALTSTORE_DIR / "source.json"
-        if stale_altstore.exists():
-            stale_altstore.unlink()
-
-    sidestore_url = None
-    sidestore_app_count = 0
-    sidestore_conflict_count = 0
-    if sidestore_compatible_ids:
-        sidestore_selected = [loaded_classic[source_id] for source_id in sidestore_compatible_ids]
-        sidestore_source, sidestore_conflicts = make_store_source(sidestore_selected, "sidestore")
-        write_json(SIDESTORE_DIR / "source.json", sidestore_source)
-        sidestore_url = f"{BASE_URL}sidestore/source.json"
-        sidestore_app_count = len(sidestore_source["apps"])
-        sidestore_conflict_count = len(sidestore_conflicts)
-        if sidestore_conflicts:
-            all_conflicts["sidestore-official"] = sidestore_conflicts
-    else:
-        stale_sidestore = SIDESTORE_DIR / "source.json"
-        if stale_sidestore.exists():
-            stale_sidestore.unlink()
-
-    status["mixes"] = {
-        "count": mix_count,
-        "maxSourcesPerMix": effective_max,
-        "mergeableSourceIDs": mergeable_ids,
-        "autoCompatibleSourceIDs": auto_compatible_ids,
-        "hostedPairSourceIDs": hosted_pair_ids,
-        "experimentalSourceIDs": experimental_ids,
-        "allCompatibleURL": all_compatible_url,
-    }
-    status["altstore"] = {
-        "sourceURL": altstore_url,
-        "sourceIDs": altstore_package_ids,
-        "appCount": altstore_app_count,
-        "conflictCount": altstore_conflict_count,
-    }
-    status["sidestore"] = {
-        "sourceURL": sidestore_url,
-        "sourceIDs": sidestore_compatible_ids,
-        "appCount": sidestore_app_count,
-        "conflictCount": sidestore_conflict_count,
-    }
+    for stale_package in (
+        ALTSTORE_DIR / "source.json",
+        SIDESTORE_DIR / "source.json",
+    ):
+        if stale_package.exists():
+            stale_package.unlink()
 
     write_json(DATA_DIR / "status.json", status)
     write_json(DATA_DIR / "catalog.json", catalog)
-    write_json(DATA_DIR / "conflicts.json", {"generatedAt": generated_at, "mixes": all_conflicts})
+    write_json(DATA_DIR / "conflicts.json", {"generatedAt": generated_at, "mixes": {}})
 
     online_count = sum(1 for item in status["sources"].values() if item["online"])
+    direct_compatible_count = sum(
+        1
+        for item in status["sources"].values()
+        if item.get("online") is True
+        and any(
+            isinstance(value, dict) and value.get("directSource") != "fail"
+            for value in (item.get("installerCompatibility") or {}).values()
+        )
+    )
     print(
         f"Checked {len(sources)} sources; {online_count} online; "
-        f"{len(auto_compatible_ids)} auto Mix-compatible; generated {mix_count} hosted combinations; "
-        f"AltStore package: {len(altstore_package_ids)} sources / {altstore_app_count} apps; "
-        f"SideStore package: {len(sidestore_compatible_ids)} sources / {sidestore_app_count} apps."
+        f"{direct_compatible_count} usable by at least one direct Source installer."
     )
 
 
