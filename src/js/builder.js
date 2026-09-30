@@ -7,7 +7,7 @@ import {
   sourceVariantURL,
   sourceFormatLabel
 } from './installers.js?v=1.1.5-20260930-source-import4';
-import { SOURCE_IMPORT_SHORTCUT } from './config.js?v=1.1.5-20260930-shortcut1';
+import { SOURCE_IMPORT_SHORTCUT } from './config.js?v=1.1.5-20260930-shortcut2';
 
 const $ = selector => document.querySelector(selector);
 const $$ = selector => [...document.querySelectorAll(selector)];
@@ -29,6 +29,7 @@ const STORAGE = {
 const SOURCE_CATEGORIES = new Set(['all', 'official', 'trusted', 'community', 'modified']);
 const GENRES = new Set(['all', 'games', 'emulators', 'video', 'music', 'anime', 'social', 'downloads', 'sideload', 'utilities']);
 const TARGETS = new Set(SOURCE_BUILDER_INSTALLER_IDS);
+const SHORTCUT_INSTALLER_IDS = new Set(SOURCE_IMPORT_SHORTCUT.supportedInstallerIds || []);
 const GENRE_RULES = {
   games: ['games','pokemon','mmo','geometry-dash','game'],
   emulators: ['emulator','retro','dreamcast','dolphinios','virtualization'],
@@ -51,6 +52,9 @@ const copy = {
     build:'Bulk import',
     installShortcut:'Install Shortcut',
     shortcutHelp:'Bulk import uses the iOS Hub Source Import Shortcut. Install it once; you can reinstall it here later if you delete it.',
+    shortcutUnsupported:'Bulk import through the Shortcut is not available for {tool} yet. You can still add the selected Sources manually one by one.',
+    prepareManual:'Prepare manual fallback',
+    manualOnlyQueueHelp:'This installer is not supported by the Shortcut yet. Open the selected Sources one by one below.',
     downloadJson:'Download selection JSON',
     previewJson:'Preview selection JSON',
     jsonBuilding:'Preparing JSON…',
@@ -101,6 +105,9 @@ const copy = {
     build:'Hromadný import',
     installShortcut:'Nainstalovat zkratku',
     shortcutHelp:'Hromadný import používá zkratku iOS Hub Source Import. Stačí ji nainstalovat jednou; pokud ji smažeš, odsud ji můžeš kdykoli znovu přidat.',
+    shortcutUnsupported:'Hromadný import přes zkratku zatím není pro {tool} podporovaný. Vybrané Sources můžeš stále přidat ručně po jedné.',
+    prepareManual:'Připravit ruční otevření',
+    manualOnlyQueueHelp:'Tento instalátor zatím zkratka nepodporuje. Otevři vybrané Sources ručně po jedné níže.',
     downloadJson:'Stáhnout JSON výběru',
     previewJson:'Náhled JSON výběru',
     jsonBuilding:'Připravuji JSON…',
@@ -151,6 +158,9 @@ const copy = {
     build:'Massenimport',
     installShortcut:'Kurzbefehl installieren',
     shortcutHelp:'Der Massenimport verwendet den Kurzbefehl iOS Hub Source Import. Einmal installieren; nach dem Löschen kann er hier erneut hinzugefügt werden.',
+    shortcutUnsupported:'Der Massenimport über den Kurzbefehl wird für {tool} noch nicht unterstützt. Die ausgewählten Sources können weiterhin manuell einzeln hinzugefügt werden.',
+    prepareManual:'Manuellen Fallback vorbereiten',
+    manualOnlyQueueHelp:'Dieser Installer wird vom Kurzbefehl noch nicht unterstützt. Öffne die ausgewählten Sources unten manuell einzeln.',
     downloadJson:'Auswahl-JSON laden',
     previewJson:'Auswahl-JSON Vorschau',
     jsonBuilding:'JSON wird vorbereitet…',
@@ -201,6 +211,9 @@ const copy = {
     build:'Importación masiva',
     installShortcut:'Instalar atajo',
     shortcutHelp:'La importación masiva usa el atajo iOS Hub Source Import. Instálalo una vez; si lo eliminas, puedes volver a añadirlo desde aquí.',
+    shortcutUnsupported:'La importación masiva mediante el atajo todavía no está disponible para {tool}. Puedes seguir añadiendo las Sources seleccionadas manualmente una por una.',
+    prepareManual:'Preparar alternativa manual',
+    manualOnlyQueueHelp:'Este instalador todavía no es compatible con el atajo. Abre las Sources seleccionadas manualmente una por una abajo.',
     downloadJson:'Descargar JSON de selección',
     previewJson:'Vista previa del JSON de selección',
     jsonBuilding:'Preparando JSON…',
@@ -251,6 +264,9 @@ const copy = {
     build:'Import groupé',
     installShortcut:'Installer le raccourci',
     shortcutHelp:'L’import groupé utilise le raccourci iOS Hub Source Import. Installez-le une fois ; s’il est supprimé, vous pouvez le réinstaller ici.',
+    shortcutUnsupported:'L’import groupé via le raccourci n’est pas encore disponible pour {tool}. Vous pouvez toujours ajouter les Sources sélectionnées manuellement une par une.',
+    prepareManual:'Préparer le mode manuel',
+    manualOnlyQueueHelp:'Cet installateur n’est pas encore pris en charge par le raccourci. Ouvrez les Sources sélectionnées manuellement une par une ci-dessous.',
     downloadJson:'Télécharger le JSON de sélection',
     previewJson:'Aperçu du JSON de sélection',
     jsonBuilding:'Préparation du JSON…',
@@ -321,6 +337,9 @@ function targetName() {
 }
 function targetVariant() {
   return INSTALLERS[target]?.variant || null;
+}
+function shortcutSupportsTarget(installerId = target) {
+  return SHORTCUT_INSTALLER_IDS.has(installerId);
 }
 function targetHelpKey() {
   if (target === 'altstore') return 'targetHelpAlt';
@@ -470,6 +489,7 @@ function applyCopy() {
     expSelectAll:'selectAll',
     expClear:'clear',
     expBuild:'build',
+    expPrepareManual:'prepareManual',
     expInstallShortcut:'installShortcut',
     expDownload:'downloadJson',
     expPreview:'previewJson',
@@ -486,6 +506,12 @@ function applyCopy() {
   if ($('#builderFiltersLabel')) $('#builderFiltersLabel').textContent = tr('filters');
   if ($('#builderTargetLabel')) $('#builderTargetLabel').textContent = tr('targetLabel');
   if ($('#builderTargetHelp')) $('#builderTargetHelp').textContent = tr(targetHelpKey());
+  const shortcutNotice = $('#builderShortcutSupportNotice');
+  if (shortcutNotice) {
+    const supported = shortcutSupportsTarget();
+    shortcutNotice.hidden = supported;
+    shortcutNotice.textContent = supported ? '' : tr('shortcutUnsupported').replace('{tool}', targetName());
+  }
   if ($('#builderSourceHelp')) $('#builderSourceHelp').textContent = tr('sourceHelp');
   if ($('#builderQueueHelp')) $('#builderQueueHelp').textContent = tr('queueHelp');
   if ($('#shortcutHelp')) $('#shortcutHelp').textContent = tr('shortcutHelp');
@@ -545,8 +571,17 @@ function render() {
 
   const count = $('#expSelectedCount');
   if (count) count.textContent = `${selected.size} ${tr('selected')} · ${available.length} ${tr('shown')} · ${tr('targetPrefix')}: ${targetName()}`;
+  const shortcutSupported = shortcutSupportsTarget();
   const build = $('#expBuild');
-  if (build) build.disabled = selected.size === 0;
+  if (build) {
+    build.disabled = selected.size === 0 || !shortcutSupported;
+    build.title = shortcutSupported ? '' : tr('shortcutUnsupported').replace('{tool}', targetName());
+  }
+  const manual = $('#expPrepareManual');
+  if (manual) {
+    manual.hidden = shortcutSupported;
+    manual.disabled = selected.size === 0;
+  }
   const download = $('#expDownload');
   if (download) download.disabled = selected.size === 0;
   const preview = $('#expPreview');
@@ -584,7 +619,7 @@ function renderQueue() {
 
   $('#expResultTitle').textContent = finished ? tr('queueFinished') : tr('queueReady');
   $('#expResultInfo').textContent = `${queueIndex} / ${entries.length} ${tr('queueProgress')} · ${targetName()}`;
-  $('#expResultNote').textContent = tr('queueHelp');
+  $('#expResultNote').textContent = shortcutSupportsTarget(queueTarget || target) ? tr('queueHelp') : tr('manualOnlyQueueHelp');
 
   list.innerHTML = entries.map((entry,index) => {
     const state = index < queueIndex ? tr('opened') : (index === queueIndex ? tr('opening') : tr('pending'));
@@ -715,19 +750,35 @@ function previewSelectionJson(button) {
   }
 }
 
-async function startShortcutImport() {
+function prepareSelectedQueue() {
   const compatibleSelected = registry
     .filter(source => selected.has(source.id) && selectableForTarget(source))
     .map(source => source.id);
 
-  if (!compatibleSelected.length) return;
+  if (!compatibleSelected.length) return [];
 
   queueIds = compatibleSelected;
   queueIndex = 0;
   queueTarget = target;
   saveQueue();
+  return queueEntries();
+}
 
-  const entries = queueEntries();
+function prepareManualFallback() {
+  const entries = prepareSelectedQueue();
+  if (!entries.length) return;
+  const message = $('#expMessage');
+  if (message) message.textContent = tr('manualOnlyQueueHelp');
+  renderQueue();
+}
+
+async function startShortcutImport() {
+  if (!shortcutSupportsTarget()) {
+    prepareManualFallback();
+    return;
+  }
+
+  const entries = prepareSelectedQueue();
   if (!entries.length) return;
 
   const payload = [target, ...entries.map(entry => entry.sourceUrl)].join('\n');
@@ -806,6 +857,7 @@ async function init() {
     render();
   });
   $('#expBuild')?.addEventListener('click', startShortcutImport);
+  $('#expPrepareManual')?.addEventListener('click', prepareManualFallback);
 
   $('#experimentalBuilderList')?.addEventListener('change', event => {
     const id = event.target?.dataset?.expSource;

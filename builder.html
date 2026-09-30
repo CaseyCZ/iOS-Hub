@@ -127,6 +127,7 @@
                   <div class="filter-label"><span id="builderTargetLabel">Where do you want to add the Sources?</span></div>
                   <div id="builderTargets" class="builder-target-picker-host" aria-labelledby="builderTargetLabel"></div>
                   <div id="builderTargetHelp" class="muted builder-target-help">Choose the app where you want to add the selected original Sources.</div>
+                  <div id="builderShortcutSupportNotice" class="notice builder-shortcut-support-notice" hidden>Bulk import through the Shortcut is not available for this installer yet. You can still use the manual one-by-one fallback.</div>
                   <div id="builderCompatibilityHelp" class="notice builder-compatibility-help">The Builder does not merge or re-host Sources. It opens each selected original Source URL directly in the chosen installer, so future updates continue from the original Source.</div>
                   <div id="builderPalNote" class="muted builder-target-pal-note">Classic and PAL Sources are kept separate and are never converted.</div>
                   <div class="muted builder-target-pal-note">Installer definitions and deep-links come from one shared configuration.</div>
@@ -157,6 +158,7 @@
             </div>
             <div class="builder-actions">
               <button id="expBuild" class="btn primary" type="button" disabled>Bulk import</button>
+              <button id="expPrepareManual" class="btn secondary" type="button" hidden disabled>Prepare manual fallback</button>
               <a id="expInstallShortcut" class="btn secondary" href="shortcut.html" target="_blank" rel="noopener">Install Shortcut</a>
               <button id="expDownload" class="btn small secondary" type="button" disabled>Download selection JSON</button>
               <button id="expPreview" class="btn small ghost" type="button" disabled>Preview selection JSON</button>
@@ -208,7 +210,7 @@
   </div>
 
   <script type="module" src="src/js/builder-page.js?v=1.1.5-20260930-source-import8"></script>
-  <script type="module" src="src/js/builder.js?v=1.1.5-20260930-source-import8"></script>
+  <script type="module" src="src/js/builder.js?v=1.1.5-20260930-source-import9"></script>
   <script type="module" src="src/js/collapsible.js?v=1.1.5-20260918-audit1"></script>
   <script src="src/js/horizontal-scroll.js?v=1.1.5-20260930-scroll-hardfix1"></script>
   <script src="src/js/support-dialog.js?v=1.1.5-20260918-a11y1"></script>

@@ -38,6 +38,7 @@ OWNED_REFERENCE_FILES = (
     JS_DIR / "app.js",
     JS_DIR / "builder-page.js",
     JS_DIR / "builder.js",
+    JS_DIR / "config.js",
     JS_DIR / "guide.js",
     JS_DIR / "resources.js",
     JS_DIR / "i18n.js",
@@ -1150,7 +1151,7 @@ def validate_layout() -> None:
     # the catalog, Builder and Credits without maintaining duplicate hard-coded lists.
     dynamic_source_scripts = {
         "app.js": ("sources/registry.json", "data/status.json", "data/catalog.json", "sourceWebsiteIcon", "data-source-website-icon", "installers.js", "SOURCE_VARIANT_IDS", "sourceVariantLabel", "sourceModeLabel", "sourceInstallerCompatibility", "sourceInstallerDirectAvailable", "data-blocked-installers", "includeOffline:checkedOffline", "groupInstallerIds(sourceInstallerIds(source), 3)"),
-        "builder.js": ("sources/registry.json", "data/status.json", "installers.js", "SOURCE_BUILDER_INSTALLER_IDS", "DEFAULT_SOURCE_BUILDER_INSTALLER_ID", "sourceInstallerDirectAvailable", "sourceFormatLabel", "targetVariant", "queueEntries()", "installer.buildLink(sourceUrl)", "SHORTCUT_NAME", "startShortcutImport", "input=text&text=", "copyQueueUrls", "createSelectionJson", "ios-hub-source-selection-v1", "expQueueList"),
+        "builder.js": ("sources/registry.json", "data/status.json", "installers.js", "SOURCE_BUILDER_INSTALLER_IDS", "DEFAULT_SOURCE_BUILDER_INSTALLER_ID", "sourceInstallerDirectAvailable", "sourceFormatLabel", "targetVariant", "queueEntries()", "installer.buildLink(sourceUrl)", "SHORTCUT_NAME", "SOURCE_IMPORT_SHORTCUT", "supportedInstallerIds", "shortcutSupportsTarget", "prepareManualFallback", "expPrepareManual", "startShortcutImport", "input=text&text=", "copyQueueUrls", "createSelectionJson", "ios-hub-source-selection-v1", "expQueueList"),
         "credits.js": ("sources/registry.json", "sourceCredits", "source.developer", "maintainerGroups", "sourceCreditGroup", "brand-link-icon", "iconImage", "CORE_SIDELOAD_RESOURCE_NAMES", "SIDELOAD_TOOLS"),
     }
     for script_name, required_parts in dynamic_source_scripts.items():
@@ -1303,6 +1304,50 @@ def validate_layout() -> None:
         if not (ROOT / "assets" / "icons" / "flarestore.webp").exists():
             error("Missing local FlareStore icon asset: assets/icons/flarestore.webp")
 
+        config_path = JS_DIR / "config.js"
+        if not config_path.exists():
+            error("Missing central Shortcut configuration: src/js/config.js")
+        else:
+            config_text = config_path.read_text(encoding="utf-8")
+            shortcut_ids_match = re.search(
+                r"supportedInstallerIds:\s*Object\.freeze\(\[([^\]]*)\]\)",
+                config_text,
+            )
+            if not shortcut_ids_match:
+                error("config.js must define SOURCE_IMPORT_SHORTCUT.supportedInstallerIds")
+            else:
+                shortcut_installer_ids = set(
+                    re.findall(r"['\"]([a-z0-9][a-z0-9-]*)['\"]", shortcut_ids_match.group(1))
+                )
+                installers_block_match = re.search(
+                    r"export const INSTALLERS = Object\.freeze\(\{([\s\S]*?)\n\}\);\s*\n\s*export const SOURCE_BUILDER_INSTALLER_IDS",
+                    installers_text,
+                )
+                source_installer_ids: set[str] = set()
+                if installers_block_match:
+                    for profile in re.finditer(
+                        r"\bid:\s*'([^']+)'[\s\S]*?\bcapabilities:\s*Object\.freeze\(\[([^\]]*)\]\)",
+                        installers_block_match.group(1),
+                    ):
+                        if re.search(r"['\"]source['\"]", profile.group(2)):
+                            source_installer_ids.add(profile.group(1))
+                else:
+                    error("Could not parse INSTALLERS block for Shortcut support audit")
+
+                shortcut_missing = sorted(source_installer_ids - shortcut_installer_ids)
+                if shortcut_missing:
+                    warn(
+                        "Source installer(s) are available in Builder but not yet supported by "
+                        "iOS Hub Source Import; Builder will expose manual-only fallback: "
+                        + ", ".join(shortcut_missing)
+                    )
+                shortcut_stale = sorted(shortcut_installer_ids - source_installer_ids)
+                if shortcut_stale:
+                    warn(
+                        "Shortcut supportedInstallerIds contains installer(s) no longer exposed "
+                        "as Source Builder targets: " + ", ".join(shortcut_stale)
+                    )
+
         for required_sideinstaller_profile in (
             "ios27: 'on-device'",
             "ios17to26: 'pairing-file-required'",
@@ -1338,7 +1383,9 @@ def validate_layout() -> None:
             'id="expCopyUrl"',
             'id="expRestartQueue"',
             'id="expQueueList"',
-            'id="mixCompatibilityHelp"',
+            'id="builderCompatibilityHelp"',
+            'id="builderShortcutSupportNotice"',
+            'id="expPrepareManual"',
         ):
             if required_queue_ui not in builder_page_text:
                 error(
@@ -1382,6 +1429,10 @@ def validate_layout() -> None:
             "function queueEntries()",
             "async function startShortcutImport()",
             "SHORTCUT_NAME",
+            "SOURCE_IMPORT_SHORTCUT.supportedInstallerIds",
+            "function shortcutSupportsTarget",
+            "function prepareManualFallback",
+            "$('#expPrepareManual')?.addEventListener('click', prepareManualFallback)",
             "input=text&text=",
             "sourceVariantURL(source, installer.variant)",
             "installer.buildLink(sourceUrl)",
