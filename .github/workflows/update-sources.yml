@@ -32,7 +32,7 @@ jobs:
         with:
           python-version: "3.12"
 
-      - name: Validate sources and build packages
+      - name: Validate source endpoints
         run: |
           python tools/update_sources.py
           python tools/audit_repo.py
@@ -56,14 +56,14 @@ jobs:
             git reset --hard "origin/${TARGET_BRANCH}"
             python tools/update_sources.py
             python tools/audit_repo.py
-            git add data mix altstore sidestore
+            git add -A data
 
             if git diff --cached --quiet; then
               echo "No generated changes."
               exit 0
             fi
 
-            git commit -m "Update iOS source cache"
+            git commit -m "Update iOS source status"
             if git push origin HEAD:"${TARGET_BRANCH}"; then
               exit 0
             fi
@@ -72,5 +72,5 @@ jobs:
             sleep 2
           done
 
-          echo "Unable to push generated source cache after 5 attempts."
+          echo "Unable to push generated source status after 5 attempts."
           exit 1
