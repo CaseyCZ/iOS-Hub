@@ -36,7 +36,7 @@
 
 ## Kompatibilní source instalátory
 
-Hotové CaseyCZ zdroje se generují automaticky z aktuálně dostupných kompatibilních zdrojů. Stabilní buildy mají ve výchozích balíčcích přednost; Nightly zdroje zůstávají dostupné pro ruční výběr v samostatném Builderu.
+Hotové CaseyCZ zdroje a Hosted Mixy se generují pouze ze Sources s výslovně evidovaným `aggregationApproved: true`. Veřejné Sources bez doloženého práva k agregaci zůstávají v katalogu jen jako odkazy na originální endpoint a jejich app metadata se v iOS Hubu neukládají ani neslučují.
 
 Podpora instalátorů, jejich pořadí a deep-linky jsou definované centrálně v `src/js/installers.js`, takže další installer není potřeba ručně doplňovat do každé source karty.
 
@@ -46,7 +46,7 @@ CaseyCZ iOS Hub cizí IPA soubory nerehostuje. Výsledné source JSONy zachováv
 
 Google Analytics se načítá až po výslovném souhlasu uživatele. Volbu lze kdykoli změnit přes **Cookie settings** a podrobnosti jsou na stránce `privacy.html`.
 
-iOS Hub je nezávislý projekt a není přidružený k AltStore, SideStore, LiveContainer, Feather, FlareStore ani k autorům katalogizovaných Sources, pokud to výslovně neuvádí původní projekt. Registry u každého Source sleduje stav compliance kontroly; neprověřený Source není označován jako právně ověřený. Pokud je Source označen jako `restricted`, Builder ani automatický generátor ho nesmí zahrnout do Mixů nebo balíčků.
+iOS Hub je nezávislý projekt a není přidružený k AltStore, SideStore, LiveContainer, Feather, FlareStore ani k autorům katalogizovaných Sources, pokud to výslovně neuvádí původní projekt. Registry u každého Source sleduje stav compliance kontroly, důkazní URL, datum kontroly a samostatný příznak `aggregationApproved`. Všechny aktuální Sources jsou klasifikované v [COMPLIANCE.md](COMPLIANCE.md). Source bez výslovného schválení agregace je pouze link-only: iOS Hub ho může zkontrolovat na dostupnost/formát, ale neukládá jeho plný feed ani app metadata do cache, Mixů nebo generovaných balíčků.
 
 ## DEB → IPA Beta
 
