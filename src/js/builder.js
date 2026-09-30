@@ -538,7 +538,11 @@ async function buildMix() {
       website:'https://caseycz.github.io/iOS-Hub/',
       tintColor:'#38BDF8',
       apps,
-      userInfo:{sourceIDs:ids, sourceURLs:ids.map(id => sourceVariantURL(registry.find(source => source.id === id), targetVariant()) || ''), experimental:hasTry}
+      userInfo:{
+        sourceIDs:ids.join(','),
+        sourceURLs:ids.map(id => sourceVariantURL(registry.find(source => source.id === id), targetVariant()) || '').join('\n'),
+        experimental:String(hasTry)
+      }
     };
 
     if (blobUrl) URL.revokeObjectURL(blobUrl);
