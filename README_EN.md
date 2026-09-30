@@ -33,11 +33,15 @@
 
 ## Compatible source installers
 
-The Source Builder does not create a combined feed or Mix JSON. Users choose an installer and original Sources, and iOS Hub opens each original Source URL directly in the selected app. Normal updates therefore continue from the original Source.
+The Source Builder does not create a combined feed or Mix JSON. Supported targets are **AltStore Classic, AltStore PAL, SideStore, LiveContainer, FlareStore and Feather**.
 
-Installer support, ordering and deep-links are defined centrally in `src/js/installers.js`, so adding another installer does not require editing every source card by hand.
+For bulk import, the Builder passes the selected installer and original Source URLs to the **iOS Hub Source Import** Shortcut, which opens each original Source in the selected app. Some installers can accept Sources directly while others may show their own preview or confirmation flow. The Builder therefore also keeps a manual one-by-one fallback.
 
-CaseyCZ iOS Hub does not rehost third-party IPA files or third-party Source JSON files. The Builder only passes original public Source URLs to supported installers.
+Install or reinstall the Shortcut here: https://www.icloud.com/shortcuts/b8a48606455246389f066fc4f35af057
+
+Installer support, ordering, icons and deep-links are defined centrally in `src/js/installers.js`, so adding another installer does not require editing every source card by hand.
+
+CaseyCZ iOS Hub does not rehost third-party IPA files or third-party Source JSON files. The optional JSON export contains only the selected installer and the original Source URLs.
 
 ## DEB → IPA Beta
 
