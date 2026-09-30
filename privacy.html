@@ -11,7 +11,7 @@
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="iOS Hub">
   <meta property="og:title" content="Privacy & Cookies — iOS Hub">
-  <meta property="og:description" content="How iOS Hub handles analytics, Hosted Mix data, local tools and third-party links.">
+  <meta property="og:description" content="How iOS Hub handles analytics, local tools, original Source links and third-party content.">
   <meta property="og:url" content="https://caseycz.github.io/iOS-Hub/privacy.html">
   <meta name="twitter:card" content="summary">
   <title>Privacy & Cookies — iOS Hub</title>
@@ -59,15 +59,9 @@
       </div>
 
       <div class="panel">
-        <h2>Hosted Mixes</h2>
-        <p>When you create a Hosted Mix in Source Builder, the generated Source JSON is sent to the iOS Hub Mix API so it can receive a temporary public HTTPS URL. Hosted Mix files are intended to expire after approximately 24 hours.</p>
-        <p>The generated Mix does not intentionally include your name, email address or account information. As with ordinary web requests, the server necessarily receives technical connection information such as an IP address and request metadata in order to respond.</p>
-      </div>
-
-      <div class="panel">
         <h2>Third-party Sources and downloads</h2>
-        <p>iOS Hub does not rehost third-party IPA binaries. A third-party Source without explicit aggregation approval is treated as link-only: iOS Hub may check whether its public endpoint is available and structurally valid, but does not persist that Source's full payload, app descriptions, artwork, version lists or other app metadata in generated caches, Mixes or packages.</p>
-        <p>Only Sources with explicitly recorded aggregation approval may contribute metadata to generated Sources or Hosted Mixes, and their original public download URLs remain unchanged. App names, artwork, descriptions, trademarks and other third-party content remain the responsibility and property of their respective owners.</p>
+        <p>iOS Hub does not rehost third-party IPA binaries. Third-party Sources used by the Builder are treated as link-only: iOS Hub may check whether a public endpoint is available and structurally valid, but the Builder does not copy, merge or rehost that Source's full payload, app descriptions, artwork, version lists or other app metadata.</p>
+        <p>The Source Builder passes original public Source URLs directly to the selected installer; it does not create a combined Source feed. App names, artwork, descriptions, trademarks and other third-party content remain the responsibility and property of their respective owners.</p>
         <p>External Sources can change at any time. When you open a third-party website, installer or download URL, that service's own privacy policy and terms apply.</p>
       </div>
 
