@@ -1241,6 +1241,22 @@ def validate_layout() -> None:
         if 'class="builder-target-tabs"' in builder_page_text:
             error("Builder must not restore the large installer target card grid")
 
+    installers_script = JS_DIR / "installers.js"
+    if installers_script.exists():
+        installers_text = installers_script.read_text(encoding="utf-8")
+        for required_mix_profile in (
+            "mixProfile: 'altstore-classic'",
+            "mixProfile: 'sidestore-classic'",
+            "mixProfile: 'livecontainer'",
+            "mixProfile: 'flarestore-classic'",
+            "mixProfile: 'feather-classic'",
+        ):
+            if required_mix_profile not in installers_text:
+                error(
+                    "installers.js must define an explicit Mix parser profile for every Builder target; "
+                    f"missing {required_mix_profile!r}"
+                )
+
     builder_script = JS_DIR / "builder.js"
     if builder_script.exists():
         builder_text = builder_script.read_text(encoding="utf-8")
@@ -1876,11 +1892,18 @@ def validate_layout() -> None:
             "sourceIDs:ids.join(',')",
             ".join('\\n')",
             "experimental:String(hasTry)",
+            "function targetMixProfile()",
+            "function normalizeVersionSize(version)",
             "function sanitizeClassicApp(app)",
+            "function sanitizeAppForTarget(app)",
             "delete cleaned.marketplaceID",
             "delete cleaned.Build",
             "delete cleaned.build",
-            ".map(item => sanitizeClassicApp(item.app))",
+            "item.buildNumber = item.buildVersion",
+            ".map(item => sanitizeAppForTarget(item.app))",
+            "targetMixProfile() === 'altstore-classic'",
+            "const hostedMix = await hostCustomMix(mix)",
+            "hosted = hostedTarget(ids)",
         ):
             if required_altstore_user_info not in builder_text:
                 error(
