@@ -287,6 +287,13 @@ def is_default_package_source(source: dict) -> bool:
     return source.get("nightly") is not True and "nightly" not in tags and "development" not in tags
 
 
+def source_compliance_allows_distribution(source: dict) -> bool:
+    compliance = source.get("compliance")
+    if not isinstance(compliance, dict):
+        return False
+    return compliance.get("reviewStatus") != "restricted" and compliance.get("binaryRehost") is False
+
+
 def sanitize_classic_app(app: dict) -> dict:
     """Remove marketplace-only/custom build fields from Classic IPA source output."""
     cleaned = dict(app)
@@ -551,13 +558,16 @@ def main() -> None:
 
     mergeable_ids = sorted(
         source["id"] for source in sources
-        if source.get("mergeable") and source["id"] in loaded_classic
+        if source.get("mergeable")
+        and source["id"] in loaded_classic
+        and source_compliance_allows_distribution(source)
     )
 
     auto_compatible_ids = sorted(
         source_id for source_id, (source, _payload) in loaded_classic.items()
         if status["sources"][source_id]["mixTest"] == "pass"
         and source.get("autoPackage", True)
+        and source_compliance_allows_distribution(source)
     )
     experimental_ids = sorted(
         source_id for source_id in loaded
@@ -573,6 +583,7 @@ def main() -> None:
         if is_sidestore_compatible(source, payload)
         and source_id != "sidestore-official"
         and source.get("autoPackage", True)
+        and source_compliance_allows_distribution(source)
         and is_default_package_source(source)
     )
 
