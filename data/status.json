@@ -5545,7 +5545,11 @@
       "stremio-official-pal",
       "youproextra"
     ],
-    "allCompatibleURL": "https://caseycz.github.io/iOS-Hub/mix/all-compatible.json"
+    "allCompatibleURL": "https://caseycz.github.io/iOS-Hub/mix/all-compatible.json",
+    "hostedPairSourceIDs": [
+      "driftywinds",
+      "ipa-vault"
+    ]
   },
   "altstore": {
     "sourceURL": "https://caseycz.github.io/iOS-Hub/altstore/source.json",
