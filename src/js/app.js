@@ -492,21 +492,7 @@ function toggleFilter(currentValue, requestedValue, allowedValues) {
   return next !== 'all' && next === currentValue ? 'all' : next;
 }
 
-document.addEventListener('wheel', event => {
-  const tabs = event.target.closest?.('.filter-tabs');
-  if (!tabs || tabs.scrollWidth <= tabs.clientWidth) return;
 
-  const delta = Math.abs(event.deltaX) > Math.abs(event.deltaY) ? event.deltaX : event.deltaY;
-  if (!delta) return;
-
-  const maxScroll = Math.max(0, tabs.scrollWidth - tabs.clientWidth);
-  const atStart = tabs.scrollLeft <= 0;
-  const atEnd = tabs.scrollLeft >= maxScroll - 1;
-  if ((delta < 0 && atStart) || (delta > 0 && atEnd)) return;
-
-  tabs.scrollLeft += delta;
-  event.preventDefault();
-}, {passive:false});
 
 async function loadData() {
   try {
