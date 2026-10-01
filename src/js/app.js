@@ -341,7 +341,7 @@ function formatDate(value) {
   return new Intl.DateTimeFormat(localeMap[state.lang] || 'en-GB', {day:'2-digit', month:'2-digit', year:'numeric'}).format(date);
 }
 
-function sourceAppsDisclosure(source, checkedText = '') {
+function sourceAppsDisclosure(source) {
   const catalog = catalogSource(source.id) || {};
   const apps = [...(catalog.apps || [])]
     .filter(app => app && typeof app === 'object')
@@ -357,9 +357,6 @@ function sourceAppsDisclosure(source, checkedText = '') {
   const closeControl = apps.length > 20
     ? `<button type="button" class="btn small ghost source-app-close" data-source-app-close>${escapeHtml(tr('close'))}</button>`
     : '';
-  const expandedChecked = checkedText
-    ? `<div class="source-checked source-checked-expanded">${checkedText}</div>`
-    : '';
   return `<details class="source-apps-disclosure">
     <summary title="${escapeHtml(tr('showApps'))}" aria-label="${escapeHtml(tr('showApps'))}">
       <span class="source-app-count">📱 <strong>${count}</strong> ${escapeHtml(tr('apps'))}</span>
@@ -367,7 +364,6 @@ function sourceAppsDisclosure(source, checkedText = '') {
     </summary>
     <div class="source-app-list">${limitNote}${rows}</div>
     ${closeControl}
-    ${expandedChecked}
   </details>`;
 }
 
@@ -426,7 +422,7 @@ function renderSources() {
         const checkedText = status.checkedAt
           ? `${escapeHtml(tr('checked'))}: ${escapeHtml(formatDate(status.checkedAt))}`
           : '';
-        return `<div class="source-stats"><div class="source-stats-main">${sourceAppsDisclosure(source, checkedText)}${checkedText ? `<span class="source-checked source-checked-inline">${checkedText}</span>` : ''}</div></div>`;
+        return `<div class="source-stats"><div class="source-stats-main">${sourceAppsDisclosure(source)}${checkedText ? `<span class="source-checked">${checkedText}</span>` : ''}</div></div>`;
       })()}
       ${checkedOffline && status.error ? `<div class="source-offline-reason">${escapeHtml(status.error)}</div>` : ''}
       ${installerButtons ? `<div class="source-installers" aria-label="Install source">${installerButtons}</div>` : ''}
