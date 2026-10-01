@@ -356,6 +356,10 @@ def validate_privacy_compliance() -> None:
             "data-consent-accept",
             "data-consent-reject",
             "analytics_storage: 'denied'",
+            "ANALYTICS_PAGE_TITLE",
+            "ANALYTICS_PAGE_LOCATION",
+            "page_title: ANALYTICS_PAGE_TITLE",
+            "page_location: ANALYTICS_PAGE_LOCATION",
         ):
             if required_analytics not in analytics_text:
                 error(f"analytics.js is missing consent guard: {required_analytics!r}")
@@ -369,6 +373,13 @@ def validate_privacy_compliance() -> None:
             error(f"{label} loads Google Analytics before consent")
         if "src/js/analytics.js?v=" not in text:
             error(f"{label} is missing the consent-gated analytics runtime")
+        title_match = re.search(r"<title>([^<]+)</title>", text, flags=re.IGNORECASE)
+        analytics_pos = text.find("src/js/analytics.js?v=")
+        title_pos = title_match.start() if title_match else -1
+        if not title_match or not title_match.group(1).strip():
+            error(f"{label} must define a non-empty static <title> for Analytics")
+        elif analytics_pos >= 0 and title_pos > analytics_pos:
+            error(f"{label} must define <title> before analytics.js so page_title is stable")
         if 'href="privacy.html"' not in text:
             error(f"{label} footer must link to privacy.html")
         if "data-cookie-settings" not in text:
