@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-01T17:44:56Z",
+  "generatedAt": "2026-10-01T17:58:52Z",
   "sources": [
     {
       "id": "utm",
@@ -11,10 +11,16 @@
       "catalogLimited": false,
       "apps": [
         {
-          "name": "UTM"
+          "name": "UTM",
+          "developerName": "osy",
+          "version": "4.7.5",
+          "bundleIdentifier": "com.utmapp.UTM"
         },
         {
-          "name": "UTM SE"
+          "name": "UTM SE",
+          "developerName": "osy",
+          "version": "4.7.5",
+          "bundleIdentifier": "com.utmapp.UTM-SE"
         }
       ]
     },
@@ -28,13 +34,22 @@
       "catalogLimited": false,
       "apps": [
         {
-          "name": "Provenance"
+          "name": "Provenance",
+          "developerName": "Provenance-EMU",
+          "version": "3.3.0",
+          "bundleIdentifier": "com.provenance-emu.provenance"
         },
         {
-          "name": "Provenance Alpha"
+          "name": "Provenance Alpha",
+          "developerName": "Provenance-EMU",
+          "version": "3.4.0",
+          "bundleIdentifier": "com.provenance-emu.provenance.alpha"
         },
         {
-          "name": "iCube"
+          "name": "iCube",
+          "developerName": "Provenance Emu",
+          "version": "1.0.0",
+          "bundleIdentifier": "com.joemattiello.iCube"
         }
       ]
     },
@@ -48,7 +63,10 @@
       "catalogLimited": false,
       "apps": [
         {
-          "name": "iSH"
+          "name": "iSH",
+          "developerName": "Theodore Dubois and contributors",
+          "version": "Build 813",
+          "bundleIdentifier": "app.ish.iSH"
         }
       ]
     },
@@ -62,7 +80,10 @@
       "catalogLimited": false,
       "apps": [
         {
-          "name": "Flycast"
+          "name": "Flycast",
+          "developerName": "Flyinghead",
+          "version": "v2.5",
+          "bundleIdentifier": "com.flyinghead.Flycast"
         }
       ]
     },
@@ -76,73 +97,142 @@
       "catalogLimited": false,
       "apps": [
         {
-          "name": "PPSSPP"
+          "name": "PPSSPP",
+          "developerName": "Henrik Rydgård",
+          "version": "1.13.2",
+          "bundleIdentifier": "org.ppsspp.ppsspp"
         },
         {
-          "name": "Countdown"
+          "name": "Countdown",
+          "developerName": "neoarz",
+          "version": "1.6",
+          "bundleIdentifier": "com.neo.countdown"
         },
         {
-          "name": "StikNES"
+          "name": "StikNES",
+          "developerName": "StikNES Team",
+          "version": "5.2",
+          "bundleIdentifier": "com.stik.StikNES"
         },
         {
-          "name": "RetroArch"
+          "name": "RetroArch",
+          "developerName": "libretro",
+          "version": "1.12.0",
+          "bundleIdentifier": "com.libretro.RetroArchiOS11"
         },
         {
-          "name": "Flappy Bird"
+          "name": "Flappy Bird",
+          "developerName": "Brandon Plank",
+          "version": "4.3",
+          "bundleIdentifier": "org.brandonplank.flappybird"
         },
         {
-          "name": "iSH"
+          "name": "iSH",
+          "developerName": "Theodore Dubois and contributors",
+          "version": "Build 484",
+          "bundleIdentifier": "app.ish.iSH"
         },
         {
-          "name": "iNDS"
+          "name": "iNDS",
+          "developerName": "iNDS Team",
+          "version": "1.10.8",
+          "bundleIdentifier": "net.nerd.iNDS"
         },
         {
-          "name": "Play!"
+          "name": "Play!",
+          "developerName": "Jean-Philip Desjardins",
+          "version": "0.58-8-g70a126e3",
+          "bundleIdentifier": "com.virtualapplications.play"
         },
         {
-          "name": "iDOS"
+          "name": "iDOS",
+          "developerName": "litchie",
+          "version": "2.1",
+          "bundleIdentifier": "com.litchie.idosgames"
         },
         {
-          "name": "Firebird Emu"
+          "name": "Firebird Emu",
+          "developerName": "nspire-emus",
+          "version": "1.5",
+          "bundleIdentifier": "com.adriweb.firebird-emu"
         },
         {
-          "name": "ActiveGS iOS"
+          "name": "ActiveGS iOS",
+          "developerName": "yoshisuga & Olivier Goguel",
+          "version": "2021.9",
+          "bundleIdentifier": "com.yoshisuga.activeGS"
         },
         {
-          "name": "Ready"
+          "name": "Ready",
+          "developerName": "T-Pau",
+          "version": "1.6",
+          "bundleIdentifier": "at.spiderlab.c64"
         },
         {
-          "name": "MAME4iOS"
+          "name": "MAME4iOS",
+          "developerName": "yoshisuga",
+          "version": "2022.5",
+          "bundleIdentifier": "com.example.mame4ios"
         },
         {
-          "name": "OldOS"
+          "name": "OldOS",
+          "developerName": "zzanehip",
+          "version": "1.0",
+          "bundleIdentifier": "com.zurac.OldOS"
         },
         {
-          "name": "unc0ver"
+          "name": "unc0ver",
+          "developerName": "Pwn20wnd",
+          "version": "8.0.2",
+          "bundleIdentifier": "science.xnu.undecimus"
         },
         {
-          "name": "iTorrent"
+          "name": "iTorrent",
+          "developerName": "XITRIX",
+          "version": "2.0.14",
+          "bundleIdentifier": "com.xitrix.iTorrent2"
         },
         {
-          "name": "Rewound"
+          "name": "Rewound",
+          "developerName": "Louis Anslow",
+          "version": "2019.7",
+          "bundleIdentifier": "com.louisanslow.record"
         },
         {
-          "name": "ScummVM"
+          "name": "ScummVM",
+          "developerName": "ScummVM Team",
+          "version": "2.6.0",
+          "bundleIdentifier": "org.scummvm.scummvm"
         },
         {
-          "name": "Mini vMac"
+          "name": "Mini vMac",
+          "developerName": "Gryphel Project & zydeco",
+          "version": "2.5",
+          "bundleIdentifier": "net.namedfork.minivmac"
         },
         {
-          "name": "XPatcher"
+          "name": "XPatcher",
+          "developerName": "Wh0ba",
+          "version": "2.2",
+          "bundleIdentifier": "com.wh0ba.xpatcher"
         },
         {
-          "name": "blurt.blog"
+          "name": "blurt.blog",
+          "developerName": "sagarkothari88",
+          "version": "1.0.7",
+          "bundleIdentifier": "blog.blurt.blurt"
         },
         {
-          "name": "VCMI"
+          "name": "VCMI",
+          "developerName": "VCMI Team",
+          "version": "1.6.7",
+          "bundleIdentifier": "eu.vcmi.vcmiclient"
         },
         {
-          "name": "3Speak.tv - Acela"
+          "name": "3Speak.tv - Acela",
+          "developerName": "sagarkothari88",
+          "version": "1.0.3",
+          "bundleIdentifier": "com.example.acela"
         }
       ]
     },
@@ -156,7 +246,10 @@
       "catalogLimited": false,
       "apps": [
         {
-          "name": "SideStore"
+          "name": "SideStore",
+          "developerName": "SideStore Team",
+          "version": "0.6.2",
+          "bundleIdentifier": "com.SideStore.SideStore"
         }
       ]
     },
@@ -170,10 +263,16 @@
       "catalogLimited": false,
       "apps": [
         {
-          "name": "StikDebug"
+          "name": "StikDebug",
+          "developerName": "StikDebug",
+          "version": "3.1.13",
+          "bundleIdentifier": "com.stik.stikdebug"
         },
         {
-          "name": "StikPair"
+          "name": "StikPair",
+          "developerName": "StikDebug",
+          "version": "1.2.0",
+          "bundleIdentifier": "com.stik.StikPair"
         }
       ]
     },
@@ -187,7 +286,10 @@
       "catalogLimited": false,
       "apps": [
         {
-          "name": "LiveContainer"
+          "name": "LiveContainer",
+          "developerName": "LiveContainer Team",
+          "version": "3.8.0",
+          "bundleIdentifier": "com.kdt.livecontainer"
         }
       ]
     },
@@ -201,7 +303,10 @@
       "catalogLimited": false,
       "apps": [
         {
-          "name": "LiveContainer (nightly)"
+          "name": "LiveContainer (nightly)",
+          "developerName": "LiveContainer Team",
+          "version": "3.8.10",
+          "bundleIdentifier": "com.kdt.livecontainer"
         }
       ]
     },
@@ -215,7 +320,10 @@
       "catalogLimited": false,
       "apps": [
         {
-          "name": "Manic EMU v2.0.1"
+          "name": "Manic EMU v2.0.1",
+          "developerName": "Manic EMU Development Team",
+          "version": "2.0.1",
+          "bundleIdentifier": "com.aoshuang.manicemu"
         }
       ]
     },
@@ -229,7 +337,10 @@
       "catalogLimited": false,
       "apps": [
         {
-          "name": "Flycast"
+          "name": "Flycast",
+          "developerName": "Chachirie",
+          "version": "1.0",
+          "bundleIdentifier": "com.chachirie.FlycastiOS"
         }
       ]
     },
@@ -243,7 +354,10 @@
       "catalogLimited": false,
       "apps": [
         {
-          "name": "Geode"
+          "name": "Geode",
+          "developerName": "Geode SDK Team",
+          "version": "1.5.5",
+          "bundleIdentifier": "com.geode.launcher"
         }
       ]
     },
@@ -257,7 +371,10 @@
       "catalogLimited": false,
       "apps": [
         {
-          "name": "Retro Sekai!"
+          "name": "Retro Sekai!",
+          "developerName": "0x1b1b",
+          "version": "2026.0.1",
+          "bundleIdentifier": "com.lila.retrosekai.beta"
         }
       ]
     },
@@ -271,10 +388,16 @@
       "catalogLimited": false,
       "apps": [
         {
-          "name": "DolphiniOS"
+          "name": "DolphiniOS",
+          "developerName": "OatmealDome",
+          "version": "3.2.1",
+          "bundleIdentifier": "me.oatmealdome.dolphinios-njb"
         },
         {
-          "name": "DolphiniOS (Public Beta)"
+          "name": "DolphiniOS (Public Beta)",
+          "developerName": "OatmealDome",
+          "version": "5.0.0b6",
+          "bundleIdentifier": "me.oatmealdome.DolphiniOS-njb-patreon-beta"
         }
       ]
     },
@@ -288,10 +411,16 @@
       "catalogLimited": false,
       "apps": [
         {
-          "name": "Angel Aura Amethyst"
+          "name": "Angel Aura Amethyst",
+          "developerName": "AngelAuraMC",
+          "version": "1.0.9212a18",
+          "bundleIdentifier": "org.angelauramc.amethyst"
         },
         {
-          "name": "PojavLauncher iOS"
+          "name": "PojavLauncher iOS",
+          "developerName": "PojavLauncherTeam",
+          "version": "2.2",
+          "bundleIdentifier": "net.kdt.pojavlauncher"
         }
       ]
     },
@@ -305,7 +434,10 @@
       "catalogLimited": false,
       "apps": [
         {
-          "name": "PokeMMO"
+          "name": "PokeMMO",
+          "developerName": "PokeMMO",
+          "version": "32920",
+          "bundleIdentifier": "eu.pokemmo.client"
         }
       ]
     },
@@ -319,10 +451,16 @@
       "catalogLimited": false,
       "apps": [
         {
-          "name": "Odyssey"
+          "name": "Odyssey",
+          "developerName": "Odyssey Team",
+          "version": "1.4.3",
+          "bundleIdentifier": "org.coolstar.odyssey"
         },
         {
-          "name": "Taurine"
+          "name": "Taurine",
+          "developerName": "Odyssey Team",
+          "version": "1.1.6",
+          "bundleIdentifier": "com.odysseyteam.taurine"
         }
       ]
     },
@@ -336,7 +474,10 @@
       "catalogLimited": false,
       "apps": [
         {
-          "name": "Yattee"
+          "name": "Yattee",
+          "developerName": "Yattee",
+          "version": "2.0.0",
+          "bundleIdentifier": "stream.yattee.app"
         }
       ]
     },
@@ -350,7 +491,10 @@
       "catalogLimited": false,
       "apps": [
         {
-          "name": "Ignited"
+          "name": "Ignited",
+          "developerName": "LitRitt",
+          "version": "1.11",
+          "bundleIdentifier": "com.litritt.ignited"
         }
       ]
     },
@@ -364,7 +508,10 @@
       "catalogLimited": false,
       "apps": [
         {
-          "name": "Mona - HRT journal"
+          "name": "Mona - HRT journal",
+          "developerName": "Délia Cheminot",
+          "version": "1.23.0",
+          "bundleIdentifier": "com.deliacheminot.mona"
         }
       ]
     },
@@ -378,10 +525,16 @@
       "catalogLimited": false,
       "apps": [
         {
-          "name": "VortX"
+          "name": "VortX",
+          "developerName": "Mamaclapper",
+          "version": "0.4.0",
+          "bundleIdentifier": "com.stremiox.app.native"
         },
         {
-          "name": "VortX (Apple TV)"
+          "name": "VortX (Apple TV)",
+          "developerName": "Mamaclapper",
+          "version": "0.4.0",
+          "bundleIdentifier": "com.stremiox.tv"
         }
       ]
     },
@@ -395,7 +548,10 @@
       "catalogLimited": false,
       "apps": [
         {
-          "name": "Stremio"
+          "name": "Stremio",
+          "developerName": "Stremio",
+          "version": "2.0.8",
+          "bundleIdentifier": "com.stremio.pal"
         }
       ]
     },
@@ -409,7 +565,10 @@
       "catalogLimited": false,
       "apps": [
         {
-          "name": "Stremio"
+          "name": "Stremio",
+          "developerName": "Stremio",
+          "version": "2.0.8",
+          "bundleIdentifier": "com.stremio.pal"
         }
       ]
     },
@@ -423,7 +582,10 @@
       "catalogLimited": false,
       "apps": [
         {
-          "name": "Kodi iOS"
+          "name": "Kodi iOS",
+          "developerName": "Kodi Team",
+          "version": "21.3",
+          "bundleIdentifier": "org.xbmc.kodi-ios"
         }
       ]
     },
@@ -437,7 +599,10 @@
       "catalogLimited": false,
       "apps": [
         {
-          "name": "eSound"
+          "name": "eSound",
+          "developerName": "Spicy Sparks",
+          "version": "5.2.16",
+          "bundleIdentifier": "com.appstore.esound"
         }
       ]
     },
@@ -451,7 +616,10 @@
       "catalogLimited": false,
       "apps": [
         {
-          "name": "Party Knights - Drinking Game"
+          "name": "Party Knights - Drinking Game",
+          "developerName": "Saturday Apps",
+          "version": "2.29.1",
+          "bundleIdentifier": "com.saturdayapps.partyKnights"
         }
       ]
     },
@@ -465,7 +633,10 @@
       "catalogLimited": false,
       "apps": [
         {
-          "name": "iTorrent"
+          "name": "iTorrent",
+          "developerName": "XITRIX",
+          "version": "2.2.0",
+          "bundleIdentifier": "com.xitrix.iTorrent2"
         }
       ]
     },
@@ -480,7 +651,10 @@
       "catalogLimited": false,
       "apps": [
         {
-          "name": "qBitConnect"
+          "name": "qBitConnect",
+          "developerName": "RajnishOne",
+          "version": "1.6.9",
+          "bundleIdentifier": "com.bluematter.qbitconnect"
         }
       ]
     },
@@ -495,7 +669,10 @@
       "catalogLimited": false,
       "apps": [
         {
-          "name": "Artemis"
+          "name": "Artemis",
+          "developerName": "Auties00",
+          "version": "3.0",
+          "bundleIdentifier": "com.github.auties00.artemis"
         }
       ]
     },
@@ -509,7 +686,10 @@
       "catalogLimited": false,
       "apps": [
         {
-          "name": "HackerWeb"
+          "name": "HackerWeb",
+          "developerName": "Lim Chee Aun",
+          "version": "3.0.1",
+          "bundleIdentifier": "cheeaun.hackerweb"
         }
       ]
     },
@@ -523,7 +703,10 @@
       "catalogLimited": false,
       "apps": [
         {
-          "name": "CourtPredict"
+          "name": "CourtPredict",
+          "developerName": "Charon",
+          "version": "1.0.1",
+          "bundleIdentifier": "org.charon.basketballbetapp"
         }
       ]
     },
@@ -537,7 +720,10 @@
       "catalogLimited": false,
       "apps": [
         {
-          "name": "Wayfurther"
+          "name": "Wayfurther",
+          "developerName": "Shibo Lyu",
+          "version": "1.3",
+          "bundleIdentifier": "sb.lao.Wayfurther"
         }
       ]
     },
@@ -552,7 +738,10 @@
       "catalogLimited": false,
       "apps": [
         {
-          "name": "qBitControl"
+          "name": "qBitControl",
+          "developerName": "Michael-128",
+          "version": "1.4.2",
+          "bundleIdentifier": "MikeMichael225.qBitControl"
         }
       ]
     },
@@ -566,7 +755,10 @@
       "catalogLimited": false,
       "apps": [
         {
-          "name": "iPhanpy"
+          "name": "iPhanpy",
+          "developerName": "Matt Fantinel",
+          "version": "1.5.6",
+          "bundleIdentifier": "dev.fantinel.ios.phanpy"
         }
       ]
     },
@@ -580,13 +772,22 @@
       "catalogLimited": false,
       "apps": [
         {
-          "name": "Fortnite"
+          "name": "Fortnite",
+          "developerName": "Epic Games Sweden AB",
+          "version": "42.30",
+          "bundleIdentifier": "com.epicgames.FortniteGame"
         },
         {
-          "name": "Fall Guys"
+          "name": "Fall Guys",
+          "developerName": "Mediatonic, Ltd.",
+          "version": "21.3.1",
+          "bundleIdentifier": "uk.co.mediatonic.fallguys"
         },
         {
-          "name": "Rocket League Sideswipe"
+          "name": "Rocket League Sideswipe",
+          "developerName": "Psyonix, LLC",
+          "version": "1.10.2",
+          "bundleIdentifier": "com.psyonixllc.mesa"
         }
       ]
     },
@@ -600,16 +801,28 @@
       "catalogLimited": false,
       "apps": [
         {
-          "name": "Spotify Premium"
+          "name": "Spotify Premium",
+          "developerName": "Eevee",
+          "version": "9.1.80",
+          "bundleIdentifier": "com.spotify.client"
         },
         {
-          "name": "YouTube Plus"
+          "name": "YouTube Plus",
+          "developerName": "Dayanch96",
+          "version": "21.39.4",
+          "bundleIdentifier": "com.google.ios.youtube"
         },
         {
-          "name": "YouTube Music Ultimate"
+          "name": "YouTube Music Ultimate",
+          "developerName": "Dayanch96",
+          "version": "9.39.2",
+          "bundleIdentifier": "com.google.ios.youtubemusic"
         },
         {
-          "name": "Instagram Plus"
+          "name": "Instagram Plus",
+          "developerName": "SoCuul",
+          "version": "418.2.0",
+          "bundleIdentifier": "com.burbn.instagram"
         }
       ]
     },
@@ -623,25 +836,46 @@
       "catalogLimited": false,
       "apps": [
         {
-          "name": "Glow for Facebook"
+          "name": "Glow for Facebook",
+          "developerName": "dvntm",
+          "version": "519.0.0",
+          "bundleIdentifier": "com.facebook.Facebook"
         },
         {
-          "name": "Flow for Messenger"
+          "name": "Flow for Messenger",
+          "developerName": "dvntm",
+          "version": "511.0.0",
+          "bundleIdentifier": "com.facebook.Messenger"
         },
         {
-          "name": "Infuse Plus (iOS18+)"
+          "name": "Infuse Plus (iOS18+)",
+          "developerName": "dvntm",
+          "version": "8.4.8",
+          "bundleIdentifier": "com.firecore.infuse"
         },
         {
-          "name": "YouTube Plus (iOS16+)"
+          "name": "YouTube Plus (iOS16+)",
+          "developerName": "dvntm",
+          "version": "21.16.2",
+          "bundleIdentifier": "com.google.ios.youtube"
         },
         {
-          "name": "YouTube Music Ultimate (iOS16+)"
+          "name": "YouTube Music Ultimate (iOS16+)",
+          "developerName": "dvntm",
+          "version": "9.11.2",
+          "bundleIdentifier": "com.google.ios.youtubemusic"
         },
         {
-          "name": "OrwellVK"
+          "name": "OrwellVK",
+          "developerName": "dvntm",
+          "version": "8.144.1",
+          "bundleIdentifier": "com.vk.vkclient"
         },
         {
-          "name": "Tweach"
+          "name": "Tweach",
+          "developerName": "dvntm",
+          "version": "30.4.2",
+          "bundleIdentifier": "tv.twitch"
         }
       ]
     },
@@ -655,43 +889,82 @@
       "catalogLimited": false,
       "apps": [
         {
-          "name": "HD Flix (No Ads)"
+          "name": "HD Flix (No Ads)",
+          "developerName": "Dezokr",
+          "version": "2.0",
+          "bundleIdentifier": "com.box.hd.flix.drama.hub"
         },
         {
-          "name": "X++"
+          "name": "X++",
+          "developerName": "Densor",
+          "version": "10.83",
+          "bundleIdentifier": "com.atebits.Tweetie2"
         },
         {
-          "name": "Facebook++"
+          "name": "Facebook++",
+          "developerName": "Michael Lema",
+          "version": "1.3.1",
+          "bundleIdentifier": "com.facebook.Facebook"
         },
         {
-          "name": "TikTok++"
+          "name": "TikTok++",
+          "developerName": "aJBbo",
+          "version": "38.7.0",
+          "bundleIdentifier": "com.zhiliaoapp.musically"
         },
         {
-          "name": "Instagram++"
+          "name": "Instagram++",
+          "developerName": "Fouad Raheb",
+          "version": "356.1.0",
+          "bundleIdentifier": "com.burbn.instagram"
         },
         {
-          "name": "MyFitnessPal++"
+          "name": "MyFitnessPal++",
+          "developerName": "Strejda603",
+          "version": "26.30.0",
+          "bundleIdentifier": "com.myfitnesspal.mfp"
         },
         {
-          "name": "BeReal++"
+          "name": "BeReal++",
+          "developerName": "Yandevelop",
+          "version": "2.14.2",
+          "bundleIdentifier": "AlexisBarreyat.BeReal"
         },
         {
-          "name": "Deezer++"
+          "name": "Deezer++",
+          "developerName": "iJulioVerne",
+          "version": "7.15.0",
+          "bundleIdentifier": "com.deezer.Deezer"
         },
         {
-          "name": "SoundCloud++"
+          "name": "SoundCloud++",
+          "developerName": "VAXMG",
+          "version": "8.71.0",
+          "bundleIdentifier": "com.soundcloud.TouchApp"
         },
         {
-          "name": "Spotify++"
+          "name": "Spotify++",
+          "developerName": "Eevee",
+          "version": "9.0.84",
+          "bundleIdentifier": "com.spotify.client"
         },
         {
-          "name": "YouTube++"
+          "name": "YouTube++",
+          "developerName": "Dayanch96",
+          "version": "20.09.3",
+          "bundleIdentifier": "com.google.ios.youtube"
         },
         {
-          "name": "Duolingo++"
+          "name": "Duolingo++",
+          "developerName": "Laxus",
+          "version": "7.134.0",
+          "bundleIdentifier": "com.duolingo.DuolingoMobile"
         },
         {
-          "name": "Messenger++"
+          "name": "Messenger++",
+          "developerName": "Michael Lema",
+          "version": "390.0",
+          "bundleIdentifier": "com.facebook.Messenger"
         }
       ]
     },
@@ -705,25 +978,46 @@
       "catalogLimited": false,
       "apps": [
         {
-          "name": "TikTok"
+          "name": "TikTok",
+          "developerName": "",
+          "version": "43.1.0",
+          "bundleIdentifier": "com.zhiliaoapp.musically"
         },
         {
-          "name": "YouTube"
+          "name": "YouTube",
+          "developerName": "",
+          "version": "21.39.4",
+          "bundleIdentifier": "com.google.ios.youtube"
         },
         {
-          "name": "Twitter"
+          "name": "Twitter",
+          "developerName": "",
+          "version": "11.66",
+          "bundleIdentifier": "com.atebits.Tweetie2"
         },
         {
-          "name": "Instagram"
+          "name": "Instagram",
+          "developerName": "",
+          "version": "416.1.0",
+          "bundleIdentifier": "com.burbn.instagram"
         },
         {
-          "name": "Twitch"
+          "name": "Twitch",
+          "developerName": "",
+          "version": "31.4.2",
+          "bundleIdentifier": "tv.twitch"
         },
         {
-          "name": "YouTube Music"
+          "name": "YouTube Music",
+          "developerName": "",
+          "version": "9.02.5",
+          "bundleIdentifier": "com.google.ios.youtubemusic"
         },
         {
-          "name": "Ksign"
+          "name": "Ksign",
+          "developerName": "",
+          "version": "1.6",
+          "bundleIdentifier": "nya.asami.ksign"
         }
       ]
     },
@@ -737,34 +1031,64 @@
       "catalogLimited": false,
       "apps": [
         {
-          "name": "YouMod + Tweaks (driftywinds)"
+          "name": "YouMod + Tweaks (driftywinds)",
+          "developerName": "Tonwalter888",
+          "version": "21.39.4",
+          "bundleIdentifier": "com.google.ios.youtube"
         },
         {
-          "name": "Spotify (EeveeSpotifyReincarnated)"
+          "name": "Spotify (EeveeSpotifyReincarnated)",
+          "developerName": "jaydenjcpy & faroukbmiled",
+          "version": "9.1.50",
+          "bundleIdentifier": "com.spotify.client"
         },
         {
-          "name": "Minecraft"
+          "name": "Minecraft",
+          "developerName": "Kamo Hacks",
+          "version": "1.26.0",
+          "bundleIdentifier": "com.mojang.minecraftpe"
         },
         {
-          "name": "Instagram (RyukGram)"
+          "name": "Instagram (RyukGram)",
+          "developerName": "Ryuk",
+          "version": "448.0.0",
+          "bundleIdentifier": "com.burbn.instagram"
         },
         {
-          "name": "Twitter BHX"
+          "name": "Twitter BHX",
+          "developerName": "baterblx",
+          "version": "11.54",
+          "bundleIdentifier": "com.atebits.Tweetie2"
         },
         {
-          "name": "Balatro"
+          "name": "Balatro",
+          "developerName": "driftywinds",
+          "version": "1.0.1o",
+          "bundleIdentifier": "com.unofficial.balatro"
         },
         {
-          "name": "YT Music Ultimate"
+          "name": "YT Music Ultimate",
+          "developerName": "Ginsu / dayanch96",
+          "version": "9.22.2",
+          "bundleIdentifier": "com.google.ios.youtubemusic"
         },
         {
-          "name": "Feather"
+          "name": "Feather",
+          "developerName": "khcrysalis",
+          "version": "2.4.0",
+          "bundleIdentifier": "kh.crysalis.feather"
         },
         {
-          "name": "Elgato Stream Deck Mobile"
+          "name": "Elgato Stream Deck Mobile",
+          "developerName": "zxcvbn",
+          "version": "2.2.0",
+          "bundleIdentifier": "com.elgato.streamdeck-ios"
         },
         {
-          "name": "LiveContainer - BETA NOT MEANT FOR USE YET"
+          "name": "LiveContainer - BETA NOT MEANT FOR USE YET",
+          "developerName": "khanhduytran0",
+          "version": "2.1.2",
+          "bundleIdentifier": "com.kdt.livecontainer"
         }
       ]
     },
@@ -778,154 +1102,304 @@
       "catalogLimited": true,
       "apps": [
         {
-          "name": "Discord (RainTweak)"
+          "name": "Discord (RainTweak)",
+          "developerName": "Ra1ncord & IPA Vault",
+          "version": "347.0",
+          "bundleIdentifier": "com.hammerandchisel.discord"
         },
         {
-          "name": "Facebook (iQFace)"
+          "name": "Facebook (iQFace)",
+          "developerName": "7MD & IPA Vault & lucaspedrosa",
+          "version": "580.0.0",
+          "bundleIdentifier": "com.facebook.Facebook"
         },
         {
-          "name": "Facebook (Facebook Plus)"
+          "name": "Facebook (Facebook Plus)",
+          "developerName": "IPA Vault",
+          "version": "580.0.0",
+          "bundleIdentifier": "com.facebook.Facebook.facebookplus"
         },
         {
-          "name": "Google Photos (Gunshot) (iOS 16.1+)"
+          "name": "Google Photos (Gunshot) (iOS 16.1+)",
+          "developerName": "tqmane & IPA Vault",
+          "version": "7.20.2",
+          "bundleIdentifier": "com.google.Photos.v7-20-2"
         },
         {
-          "name": "Google Photos (Gunshot) (iOS 17+)"
+          "name": "Google Photos (Gunshot) (iOS 17+)",
+          "developerName": "tqmane & IPA Vault",
+          "version": "7.44.0",
+          "bundleIdentifier": "com.google.Photos.v7-44-0"
         },
         {
-          "name": "Google Photos (Gunshot)"
+          "name": "Google Photos (Gunshot)",
+          "developerName": "tqmane & IPA Vault",
+          "version": "7.94.0",
+          "bundleIdentifier": "com.google.Photos"
         },
         {
-          "name": "iMe (MxGram)"
+          "name": "iMe (MxGram)",
+          "developerName": "m1ronx1412 & IPA Vault",
+          "version": "12.8.1",
+          "bundleIdentifier": "com.olcorporation.olai"
         },
         {
-          "name": "iMe (iQTele)"
+          "name": "iMe (iQTele)",
+          "developerName": "7MD & IPA Vault",
+          "version": "12.8.1",
+          "bundleIdentifier": "com.olcorporation.olai.iqtele"
         },
         {
-          "name": "Infuse Plus (7.8.4)"
+          "name": "Infuse Plus (7.8.4)",
+          "developerName": "dvntms & IPA Vault",
+          "version": "7.8.4",
+          "bundleIdentifier": "com.firecore.infuse.v7-8-4"
         },
         {
-          "name": "Infuse Plus (8.2.4)"
+          "name": "Infuse Plus (8.2.4)",
+          "developerName": "dvntms & IPA Vault",
+          "version": "8.2.4",
+          "bundleIdentifier": "com.firecore.infuse.v8-2-4"
         },
         {
-          "name": "Infuse Plus (8.5.5)"
+          "name": "Infuse Plus (8.5.5)",
+          "developerName": "dvntms & IPA Vault",
+          "version": "8.5.5",
+          "bundleIdentifier": "com.firecore.infuse"
         },
         {
-          "name": "Instagram (Regram 6.1 Cracked)"
+          "name": "Instagram (Regram 6.1 Cracked)",
+          "developerName": "Spy_0G & IPAVault & PrintedWaste",
+          "version": "448.0.0",
+          "bundleIdentifier": "com.burbn.instagram.regram"
         },
         {
-          "name": "Instagram (Regram 6.1) (No Plugins)"
+          "name": "Instagram (Regram 6.1) (No Plugins)",
+          "developerName": "Spy_0G & IPAVault & PrintedWaste",
+          "version": "448.0.0",
+          "bundleIdentifier": "com.burbn.instagram.regram.noplugins"
         },
         {
-          "name": "Instagram (RyukGram No Plugins)"
+          "name": "Instagram (RyukGram No Plugins)",
+          "developerName": "faroukbmiled & IPA Vault",
+          "version": "448.0.0",
+          "bundleIdentifier": "com.burbn.instagram.ryukgram.noplugins"
         },
         {
-          "name": "Instagram (RyukGram)"
+          "name": "Instagram (RyukGram)",
+          "developerName": "faroukbmiled & IPA Vault",
+          "version": "448.0.0",
+          "bundleIdentifier": "com.burbn.instagram"
         },
         {
-          "name": "Instagram (Sparkle No Plugins)"
+          "name": "Instagram (Sparkle No Plugins)",
+          "developerName": "efibalogh & CieLogic & IPA Vault",
+          "version": "448.0.0",
+          "bundleIdentifier": "com.burbn.instagram.sparkle.noplugins"
         },
         {
-          "name": "Instagram (Sparkle)"
+          "name": "Instagram (Sparkle)",
+          "developerName": "efibalogh & CieLogic & IPA Vault",
+          "version": "448.0.0",
+          "bundleIdentifier": "com.burbn.instagram.sparkle"
         },
         {
-          "name": "Messenger (Flow)"
+          "name": "Messenger (Flow)",
+          "developerName": "dvntms & IPA Vault",
+          "version": "580.0.0",
+          "bundleIdentifier": "com.facebook.Messenger.flow"
         },
         {
-          "name": "Messenger (Login)"
+          "name": "Messenger (Login)",
+          "developerName": "IPA Vault",
+          "version": "523.0.0",
+          "bundleIdentifier": "com.facebook.Messenger.login"
         },
         {
-          "name": "Messenger (MSGPlusX)"
+          "name": "Messenger (MSGPlusX)",
+          "developerName": "Dens0r & IPA Vault & lucaspedrosa",
+          "version": "580.0.0",
+          "bundleIdentifier": "com.facebook.Messenger"
         },
         {
-          "name": "Nagram (Lead)"
+          "name": "Nagram (Lead)",
+          "developerName": "aquaonly & IPA Vault",
+          "version": "12.9.2.1",
+          "bundleIdentifier": "xyz.nextalone.nagram.lead"
         },
         {
-          "name": "Nagram (MxGram)"
+          "name": "Nagram (MxGram)",
+          "developerName": "m1ronx1412 & IPA Vault",
+          "version": "12.9.2.1",
+          "bundleIdentifier": "xyz.nextalone.nagram.mxgram"
         },
         {
-          "name": "Nagram (TGExtra)"
+          "name": "Nagram (TGExtra)",
+          "developerName": "swiftleopard & IPA Vault",
+          "version": "12.9.2.1",
+          "bundleIdentifier": "xyz.nextalone.nagram.tgextra"
         },
         {
-          "name": "Nagram (iQTele)"
+          "name": "Nagram (iQTele)",
+          "developerName": "7MD & IPA Vault",
+          "version": "12.9.2.1",
+          "bundleIdentifier": "xyz.nextalone.nagram"
         },
         {
-          "name": "Reddit (Login)"
+          "name": "Reddit (Login)",
+          "developerName": "IPA Vault",
+          "version": "2024.12.0",
+          "bundleIdentifier": "com.reddit.Reddit.login"
         },
         {
-          "name": "Reddit (RedditFilter)"
+          "name": "Reddit (RedditFilter)",
+          "developerName": "Moe & IPA Vault",
+          "version": "2026.39.0",
+          "bundleIdentifier": "com.reddit.Reddit"
         },
         {
-          "name": "SoundCloud (NexaSC) (iOS 16.0-16.3)"
+          "name": "SoundCloud (NexaSC) (iOS 16.0-16.3)",
+          "developerName": "cielogic & IPA Vault",
+          "version": "7.68.1",
+          "bundleIdentifier": "com.soundcloud.TouchApp.nexasc.v7-68-1"
         },
         {
-          "name": "SoundCloud (NexaSC)"
+          "name": "SoundCloud (NexaSC)",
+          "developerName": "cielogic & IPA Vault",
+          "version": "8.80.0",
+          "bundleIdentifier": "com.soundcloud.TouchApp"
         },
         {
-          "name": "Swiftgram (Lead)"
+          "name": "Swiftgram (Lead)",
+          "developerName": "aquaonly & IPA Vault",
+          "version": "12.9.3",
+          "bundleIdentifier": "app.swiftgram.ios.lead"
         },
         {
-          "name": "Swiftgram (MxGram)"
+          "name": "Swiftgram (MxGram)",
+          "developerName": "m1ronx1412 & IPA Vault",
+          "version": "12.9.3",
+          "bundleIdentifier": "app.swiftgram.ios.mxgram"
         },
         {
-          "name": "Swiftgram (iQTele)"
+          "name": "Swiftgram (iQTele)",
+          "developerName": "7MD & IPA Vault",
+          "version": "12.9.3",
+          "bundleIdentifier": "app.swiftgram.ios"
         },
         {
-          "name": "Swiftgram (TGExtra)"
+          "name": "Swiftgram (TGExtra)",
+          "developerName": "swiftleopard & IPA Vault",
+          "version": "12.9.3",
+          "bundleIdentifier": "app.swiftgram.ios.tgextra"
         },
         {
-          "name": "Telegram (Lead)"
+          "name": "Telegram (Lead)",
+          "developerName": "aquaonly & IPA Vault",
+          "version": "12.9.4",
+          "bundleIdentifier": "ph.telegra.Telegraph.lead"
         },
         {
-          "name": "Telegram (MxGram)"
+          "name": "Telegram (MxGram)",
+          "developerName": "m1ronx1412 & IPA Vault",
+          "version": "12.9.4",
+          "bundleIdentifier": "ph.telegra.Telegraph.mxgram"
         },
         {
-          "name": "Telegram (iQTele)"
+          "name": "Telegram (iQTele)",
+          "developerName": "7MD & IPA Vault",
+          "version": "12.9.4",
+          "bundleIdentifier": "ph.telegra.Telegraph"
         },
         {
-          "name": "Telegram (TGExtra)"
+          "name": "Telegram (TGExtra)",
+          "developerName": "swiftleopard & IPA Vault",
+          "version": "12.9.4",
+          "bundleIdentifier": "ph.telegra.Telegraph.tgextra"
         },
         {
-          "name": "Spotify (EeveeSpotify 6.6.8 + Spoti.pw 0.22.0)"
+          "name": "Spotify (EeveeSpotify 6.6.8 + Spoti.pw 0.22.0)",
+          "developerName": "skopevoj & IPA Vault",
+          "version": "9.1.86",
+          "bundleIdentifier": "com.spotify.client"
         },
         {
-          "name": "Spotify (EeveeSpotify 6.6.8 + Spoti.pw 0.22.0) (No Plugins)"
+          "name": "Spotify (EeveeSpotify 6.6.8 + Spoti.pw 0.22.0) (No Plugins)",
+          "developerName": "skopevoj & IPA Vault",
+          "version": "9.1.86",
+          "bundleIdentifier": "com.spotify.client.spotipw.noplugins"
         },
         {
-          "name": "Threads (ThreadSaver)"
+          "name": "Threads (ThreadSaver)",
+          "developerName": "swiftleopard & IPA Vault",
+          "version": "449.0",
+          "bundleIdentifier": "com.burbn.barcelona"
         },
         {
-          "name": "TikTok (Infinitok)"
+          "name": "TikTok (Infinitok)",
+          "developerName": "Mod4 & IPA Vault",
+          "version": "47.0.0",
+          "bundleIdentifier": "com.zhiliaoapp.musically"
         },
         {
-          "name": "Turrit (Lead)"
+          "name": "Turrit (Lead)",
+          "developerName": "aquaonly & IPA Vault",
+          "version": "1.5.4",
+          "bundleIdentifier": "com.seastar.turrit.lead"
         },
         {
-          "name": "Turrit (MxGram)"
+          "name": "Turrit (MxGram)",
+          "developerName": "m1ronx1412 & IPA Vault",
+          "version": "1.5.4",
+          "bundleIdentifier": "com.seastar.turrit.mxgram"
         },
         {
-          "name": "Turrit (iQTele)"
+          "name": "Turrit (iQTele)",
+          "developerName": "7MD & IPA Vault",
+          "version": "1.5.4",
+          "bundleIdentifier": "com.seastar.turrit"
         },
         {
-          "name": "Turrit (TGExtra)"
+          "name": "Turrit (TGExtra)",
+          "developerName": "swiftleopard & IPA Vault",
+          "version": "1.5.4",
+          "bundleIdentifier": "com.seastar.turrit.tgextra"
         },
         {
-          "name": "Twitch"
+          "name": "Twitch",
+          "developerName": "dvntms/zeroxdeadbeef/canpng/IPA Vault",
+          "version": "31.4",
+          "bundleIdentifier": "tv.twitch"
         },
         {
-          "name": "Twitch (Glass)"
+          "name": "Twitch (Glass)",
+          "developerName": "dvntms/zeroxdeadbeef/canpng/IPA Vault",
+          "version": "31.4",
+          "bundleIdentifier": "tv.twitch.glass"
         },
         {
-          "name": "Twitter NFB"
+          "name": "Twitter NFB",
+          "developerName": "orionblur & IPA Vault",
+          "version": "12.30",
+          "bundleIdentifier": "com.atebits.Tweetie2.twitter"
         },
         {
-          "name": "Twitter NFB (Glass)"
+          "name": "Twitter NFB (Glass)",
+          "developerName": "orionblur & IPA Vault",
+          "version": "12.20",
+          "bundleIdentifier": "com.atebits.Tweetie2.twitterglass"
         },
         {
-          "name": "Twitter NFB + TWI"
+          "name": "Twitter NFB + TWI",
+          "developerName": "orionblur & dens0r & IPA Vault",
+          "version": "12.30",
+          "bundleIdentifier": "com.atebits.Tweetie2.twittertwi"
         },
         {
-          "name": "Twitter NFB + TWI (Glass)"
+          "name": "Twitter NFB + TWI (Glass)",
+          "developerName": "orionblur & dens0r & IPA Vault",
+          "version": "12.20",
+          "bundleIdentifier": "com.atebits.Tweetie2.twittertwiglass"
         }
       ]
     },
@@ -939,16 +1413,28 @@
       "catalogLimited": false,
       "apps": [
         {
-          "name": "EeveeSpotifyReincarnated"
+          "name": "EeveeSpotifyReincarnated",
+          "developerName": "SideloadLabs",
+          "version": "9.1.76",
+          "bundleIdentifier": "com.spotify.client"
         },
         {
-          "name": "EeveeSpotifyReincarnated(PATCHED)"
+          "name": "EeveeSpotifyReincarnated(PATCHED)",
+          "developerName": "SideloadLabs",
+          "version": "9.1.76",
+          "bundleIdentifier": "com.spotify.client.patched"
         },
         {
-          "name": "ESR Liquid Glass"
+          "name": "ESR Liquid Glass",
+          "developerName": "SideloadLabs",
+          "version": "9.1.76",
+          "bundleIdentifier": "com.spotify.client.lg"
         },
         {
-          "name": "ESR Liquid Glass Patched"
+          "name": "ESR Liquid Glass Patched",
+          "developerName": "SideloadLabs",
+          "version": "9.1.76",
+          "bundleIdentifier": "com.spotify.client.lg.patch"
         }
       ]
     },
@@ -962,7 +1448,10 @@
       "catalogLimited": false,
       "apps": [
         {
-          "name": "YTLitePlus"
+          "name": "YTLitePlus",
+          "developerName": "Various Developers",
+          "version": "19.34.2",
+          "bundleIdentifier": "com.google.ios.youtube"
         }
       ]
     },
@@ -976,106 +1465,208 @@
       "catalogLimited": false,
       "apps": [
         {
-          "name": "Carrot"
+          "name": "Carrot",
+          "developerName": "Moe Apps",
+          "version": "6.5",
+          "bundleIdentifier": "com.grailr.CARROTweather"
         },
         {
-          "name": "Webssh"
+          "name": "Webssh",
+          "developerName": "Moe Apps",
+          "version": "33.0",
+          "bundleIdentifier": "com.itimeteo.webssh"
         },
         {
-          "name": "MoeReddit"
+          "name": "MoeReddit",
+          "developerName": "Moe Apps",
+          "version": "2026.39.0 (4.5.1)",
+          "bundleIdentifier": "com.reddit.Reddit"
         },
         {
-          "name": "Infuse (Moe Plus)"
+          "name": "Infuse (Moe Plus)",
+          "developerName": "Moe Apps",
+          "version": "8.5.6 (2.6)",
+          "bundleIdentifier": "com.firecore.infuse"
         },
         {
-          "name": "Infuse (Plus 2.5)"
+          "name": "Infuse (Plus 2.5)",
+          "developerName": "Moe Apps",
+          "version": "8.4.2 (2.5)",
+          "bundleIdentifier": "com.firecore.infuse"
         },
         {
-          "name": "YouTube (Moe Multi)"
+          "name": "YouTube (Moe Multi)",
+          "developerName": "Moe Apps",
+          "version": "21.32.4 (10.17)",
+          "bundleIdentifier": "com.google.ios.youtube"
         },
         {
-          "name": "YouTube (Moe YTK)"
+          "name": "YouTube (Moe YTK)",
+          "developerName": "Moe Apps",
+          "version": "21.39.4 (6.6)",
+          "bundleIdentifier": "com.google.ios.youtube"
         },
         {
-          "name": "YouTube (YTPlus Cyan Edition)"
+          "name": "YouTube (YTPlus Cyan Edition)",
+          "developerName": "Moe Apps",
+          "version": "20.10.4 (5.2)",
+          "bundleIdentifier": "com.google.ios.youtube"
         },
         {
-          "name": "YouTube (LRD)"
+          "name": "YouTube (LRD)",
+          "developerName": "Moe Apps",
+          "version": "21.08.3 (1.13)",
+          "bundleIdentifier": "com.google.ios.youtube"
         },
         {
-          "name": "YouTube (DLTube, Moe Patched)"
+          "name": "YouTube (DLTube, Moe Patched)",
+          "developerName": "Moe Apps",
+          "version": "21.26.4 (2.16.4)",
+          "bundleIdentifier": "com.google.ios.youtube"
         },
         {
-          "name": "YouTube (Moe DLTube, Cracked)"
+          "name": "YouTube (Moe DLTube, Cracked)",
+          "developerName": "Moe Apps",
+          "version": "21.24.3 (2.16.3)",
+          "bundleIdentifier": "com.google.ios.youtube"
         },
         {
-          "name": "YouTube (Moe LRD, Cracked)"
+          "name": "YouTube (Moe LRD, Cracked)",
+          "developerName": "Moe Apps",
+          "version": "21.39.4 (1.13)",
+          "bundleIdentifier": "com.google.ios.youtube"
         },
         {
-          "name": "YouTube (Moe SY)"
+          "name": "YouTube (Moe SY)",
+          "developerName": "Moe Apps",
+          "version": "21.39.4 (2.0)",
+          "bundleIdentifier": "com.google.ios.youtube"
         },
         {
-          "name": "YouTube (Moe YTPlus, Temp Free)"
+          "name": "YouTube (Moe YTPlus, Temp Free)",
+          "developerName": "Moe Apps",
+          "version": "21.39.4 (5.2.1)",
+          "bundleIdentifier": "com.google.ios.youtube"
         },
         {
-          "name": "YouTube Music"
+          "name": "YouTube Music",
+          "developerName": "Moe Apps",
+          "version": "9.39.2 (2.4.1)",
+          "bundleIdentifier": "com.google.ios.youtubemusic"
         },
         {
-          "name": "Instagram (Moe Multi)"
+          "name": "Instagram (Moe Multi)",
+          "developerName": "Moe Apps",
+          "version": "448.0.0 (8.5)",
+          "bundleIdentifier": "com.burbn.instagram"
         },
         {
-          "name": "Instagram (AC)"
+          "name": "Instagram (AC)",
+          "developerName": "Moe Apps",
+          "version": "448.0.0 (1.5)",
+          "bundleIdentifier": "com.burbn.instagram"
         },
         {
-          "name": "Instagram (BH)"
+          "name": "Instagram (BH)",
+          "developerName": "Moe Apps",
+          "version": "448.0.0 (1.2)",
+          "bundleIdentifier": "com.burbn.instagram"
         },
         {
-          "name": "Instagram (DL, Cracked)"
+          "name": "Instagram (DL, Cracked)",
+          "developerName": "Moe Apps",
+          "version": "448.0.0 (2.5)",
+          "bundleIdentifier": "com.burbn.instagram"
         },
         {
-          "name": "Instagram (IGFormat)"
+          "name": "Instagram (IGFormat)",
+          "developerName": "Moe Apps",
+          "version": "448.0.0 (2.6)",
+          "bundleIdentifier": "com.burbn.instagram"
         },
         {
-          "name": "Instagram (INK Plus)"
+          "name": "Instagram (INK Plus)",
+          "developerName": "Moe Apps",
+          "version": "448.0.0 (5.2.10)",
+          "bundleIdentifier": "com.burbn.instagram"
         },
         {
-          "name": "Instagram (LRD, Cracked)"
+          "name": "Instagram (LRD, Cracked)",
+          "developerName": "Moe Apps",
+          "version": "448.0.0 (2.19)",
+          "bundleIdentifier": "com.burbn.instagram"
         },
         {
-          "name": "Instagram (Moe RyukGram)"
+          "name": "Instagram (Moe RyukGram)",
+          "developerName": "Moe Apps",
+          "version": "448.0.0 (1.4.0)",
+          "bundleIdentifier": "com.burbn.instagram"
         },
         {
-          "name": "Instagram (NYX B2, Cracked)"
+          "name": "Instagram (NYX B2, Cracked)",
+          "developerName": "Moe Apps",
+          "version": "443.0.0 (1.6.4)",
+          "bundleIdentifier": "com.burbn.instagram"
         },
         {
-          "name": "Instagram (NYX B4)"
+          "name": "Instagram (NYX B4)",
+          "developerName": "Moe Apps",
+          "version": "448.0.0 (1.7.2)",
+          "bundleIdentifier": "com.burbn.instagram"
         },
         {
-          "name": "Instagram (Regram)"
+          "name": "Instagram (Regram)",
+          "developerName": "Moe Apps",
+          "version": "443.0.0 (1.5)",
+          "bundleIdentifier": "com.burbn.instagram"
         },
         {
-          "name": "Instagram (Rocket, Cracked)"
+          "name": "Instagram (Rocket, Cracked)",
+          "developerName": "Moe Apps",
+          "version": "448.0.0 (4.3.3)",
+          "bundleIdentifier": "com.burbn.instagram"
         },
         {
-          "name": "Instagram (SC)"
+          "name": "Instagram (SC)",
+          "developerName": "Moe Apps",
+          "version": "448.0.0 (1.1.1)",
+          "bundleIdentifier": "com.burbn.instagram"
         },
         {
-          "name": "Instagram (Theta)"
+          "name": "Instagram (Theta)",
+          "developerName": "Moe Apps",
+          "version": "448.0.0 (5.0)",
+          "bundleIdentifier": "com.burbn.instagram"
         },
         {
-          "name": "Twitch"
+          "name": "Twitch",
+          "developerName": "Moe Apps",
+          "version": "24.2.4",
+          "bundleIdentifier": "tv.twitch"
         },
         {
-          "name": "Twitch (Adfree, Moe Control)"
+          "name": "Twitch (Adfree, Moe Control)",
+          "developerName": "Moe Apps",
+          "version": "29.0 (0.0.2)",
+          "bundleIdentifier": "tv.twitch"
         },
         {
-          "name": "Twitch (Tweach)"
+          "name": "Twitch (Tweach)",
+          "developerName": "Moe Apps",
+          "version": "29.0 (2.3.1)",
+          "bundleIdentifier": "tv.twitch"
         },
         {
-          "name": "Twitch (Moe TwitchControl)"
+          "name": "Twitch (Moe TwitchControl)",
+          "developerName": "Moe Apps",
+          "version": "31.4.2 (0.0.6)",
+          "bundleIdentifier": "tv.twitch"
         },
         {
-          "name": "Twitch (Twitchv, Moe Tweach)"
+          "name": "Twitch (Twitchv, Moe Tweach)",
+          "developerName": "Moe Apps",
+          "version": "31.4.2 (2.4.1)",
+          "bundleIdentifier": "tv.twitch"
         }
       ]
     },
@@ -1089,7 +1680,10 @@
       "catalogLimited": false,
       "apps": [
         {
-          "name": "YouMod"
+          "name": "YouMod",
+          "developerName": "Tonwalter888",
+          "version": "21.18.4",
+          "bundleIdentifier": "com.google.ios.youtube"
         }
       ]
     },
@@ -1103,19 +1697,34 @@
       "catalogLimited": false,
       "apps": [
         {
-          "name": "YoutubePlus (YTLite)"
+          "name": "YoutubePlus (YTLite)",
+          "developerName": "dayanch96",
+          "version": "21.39.4",
+          "bundleIdentifier": "com.google.ios.youtube"
         },
         {
-          "name": "YTKillerPlus"
+          "name": "YTKillerPlus",
+          "developerName": "iKarwan",
+          "version": "21.38.3",
+          "bundleIdentifier": "com.google.ios.youtube"
         },
         {
-          "name": "YTKACE"
+          "name": "YTKACE",
+          "developerName": "itzzace0",
+          "version": "21.39.4",
+          "bundleIdentifier": "com.google.ios.youtube"
         },
         {
-          "name": "YouPro"
+          "name": "YouPro",
+          "developerName": "alibusut",
+          "version": "21.39.4",
+          "bundleIdentifier": "com.google.ios.youtube"
         },
         {
-          "name": "YouMod"
+          "name": "YouMod",
+          "developerName": "Tonwalter888",
+          "version": "21.39.4",
+          "bundleIdentifier": "com.google.ios.youtube"
         }
       ]
     },
@@ -1129,476 +1738,926 @@
       "catalogLimited": true,
       "apps": [
         {
-          "name": "PiliPlus"
+          "name": "PiliPlus",
+          "developerName": "",
+          "version": "2.1.5",
+          "bundleIdentifier": "com.example.piliplus"
         },
         {
-          "name": "PiliPlus"
+          "name": "PiliPlus",
+          "developerName": "",
+          "version": "2.1.4",
+          "bundleIdentifier": "com.example.piliplus"
         },
         {
-          "name": "AIFengYue"
+          "name": "AIFengYue",
+          "developerName": "",
+          "version": "1.2.8",
+          "bundleIdentifier": "com.aiporn.aichat"
         },
         {
-          "name": "PiliPlus"
+          "name": "PiliPlus",
+          "developerName": "",
+          "version": "2.1.3.1",
+          "bundleIdentifier": "com.example.piliplus"
         },
         {
-          "name": "Aidoku"
+          "name": "Aidoku",
+          "developerName": "",
+          "version": "0.9",
+          "bundleIdentifier": "app.aidoku.Aidoku"
         },
         {
-          "name": "PiliPlus"
+          "name": "PiliPlus",
+          "developerName": "",
+          "version": "2.1.2.3",
+          "bundleIdentifier": "com.example.piliplus"
         },
         {
-          "name": "PiliPlus"
+          "name": "PiliPlus",
+          "developerName": "",
+          "version": "2.1.2.2",
+          "bundleIdentifier": "com.example.piliplus"
         },
         {
-          "name": "PiliPlus"
+          "name": "PiliPlus",
+          "developerName": "",
+          "version": "2.1.2.1",
+          "bundleIdentifier": "com.example.piliplus"
         },
         {
-          "name": "PiliPlus"
+          "name": "PiliPlus",
+          "developerName": "",
+          "version": "2.1.2",
+          "bundleIdentifier": "com.example.piliplus"
         },
         {
-          "name": "PiliPlus"
+          "name": "PiliPlus",
+          "developerName": "",
+          "version": "2.1.1.2",
+          "bundleIdentifier": "com.example.piliplus"
         },
         {
-          "name": "PiliPlus"
+          "name": "PiliPlus",
+          "developerName": "",
+          "version": "2.1.1",
+          "bundleIdentifier": "com.example.piliplus"
         },
         {
-          "name": "PiliPlus"
+          "name": "PiliPlus",
+          "developerName": "",
+          "version": "2.1.0",
+          "bundleIdentifier": "com.example.piliplus"
         },
         {
-          "name": "Feather"
+          "name": "Feather",
+          "developerName": "",
+          "version": "2.9.0",
+          "bundleIdentifier": "kh.crysalis.feather"
         },
         {
-          "name": "Aidoku"
+          "name": "Aidoku",
+          "developerName": "",
+          "version": "0.8.4",
+          "bundleIdentifier": "app.aidoku.Aidoku"
         },
         {
-          "name": "JavDB"
+          "name": "JavDB",
+          "developerName": "",
+          "version": "1.9.29",
+          "bundleIdentifier": "com.javdb.com"
         },
         {
-          "name": "Feather"
+          "name": "Feather",
+          "developerName": "",
+          "version": "2.8.2",
+          "bundleIdentifier": "kh.crysalis.feather"
         },
         {
-          "name": "Aidoku"
+          "name": "Aidoku",
+          "developerName": "",
+          "version": "0.8.3",
+          "bundleIdentifier": "app.aidoku.Aidoku"
         },
         {
-          "name": "PiliPlus"
+          "name": "PiliPlus",
+          "developerName": "",
+          "version": "2.0.9.2",
+          "bundleIdentifier": "com.example.piliplus"
         },
         {
-          "name": "PiliPlus"
+          "name": "PiliPlus",
+          "developerName": "",
+          "version": "2.0.9.1",
+          "bundleIdentifier": "com.example.piliplus"
         },
         {
-          "name": "PiliPlus"
+          "name": "PiliPlus",
+          "developerName": "",
+          "version": "2.0.9",
+          "bundleIdentifier": "com.example.piliplus"
         },
         {
-          "name": "PiliPlus"
+          "name": "PiliPlus",
+          "developerName": "",
+          "version": "2.0.8.1",
+          "bundleIdentifier": "com.example.piliplus"
         },
         {
-          "name": "PiliPlus"
+          "name": "PiliPlus",
+          "developerName": "",
+          "version": "2.0.8",
+          "bundleIdentifier": "com.example.piliplus"
         },
         {
-          "name": "PiliPlus"
+          "name": "PiliPlus",
+          "developerName": "",
+          "version": "2.0.7.2",
+          "bundleIdentifier": "com.example.piliplus"
         },
         {
-          "name": "Swiftgram"
+          "name": "Swiftgram",
+          "developerName": "",
+          "version": "12.2",
+          "bundleIdentifier": "app.swiftgram.ios"
         },
         {
-          "name": "Swiftgram"
+          "name": "Swiftgram",
+          "developerName": "",
+          "version": "12.2",
+          "bundleIdentifier": "app.swiftgram.ios"
         },
         {
-          "name": "Twitter"
+          "name": "Twitter",
+          "developerName": "",
+          "version": "11.35",
+          "bundleIdentifier": "com.atebits.Tweetie2"
         },
         {
-          "name": "Twitter"
+          "name": "Twitter",
+          "developerName": "",
+          "version": "11.35",
+          "bundleIdentifier": "com.atebits.Tweetie2"
         },
         {
-          "name": "Twitter"
+          "name": "Twitter",
+          "developerName": "",
+          "version": "11.33",
+          "bundleIdentifier": "com.atebits.Tweetie2"
         },
         {
-          "name": "Instagram"
+          "name": "Instagram",
+          "developerName": "",
+          "version": "400.1.0",
+          "bundleIdentifier": "com.burbn.instagram"
         },
         {
-          "name": "Instagram"
+          "name": "Instagram",
+          "developerName": "",
+          "version": "398.0.0",
+          "bundleIdentifier": "com.burbn.instagram"
         },
         {
-          "name": "Asspp"
+          "name": "Asspp",
+          "developerName": "",
+          "version": "2.2",
+          "bundleIdentifier": "wiki.qaq.Asspp"
         },
         {
-          "name": "Twitter"
+          "name": "Twitter",
+          "developerName": "",
+          "version": "11.5.5",
+          "bundleIdentifier": "com.atebits.Tweetie2"
         },
         {
-          "name": "DYDL"
+          "name": "DYDL",
+          "developerName": "",
+          "version": "1.0.0",
+          "bundleIdentifier": "nz.owo.DYDL"
         },
         {
-          "name": "Twitter"
+          "name": "Twitter",
+          "developerName": "",
+          "version": "11.5.5",
+          "bundleIdentifier": "com.atebits.Tweetie2"
         },
         {
-          "name": "Twitter"
+          "name": "Twitter",
+          "developerName": "",
+          "version": "11.5.5",
+          "bundleIdentifier": "com.atebits.Tweetie2"
         },
         {
-          "name": "WeChat"
+          "name": "WeChat",
+          "developerName": "",
+          "version": "8.0.62",
+          "bundleIdentifier": "com.tencent.xin"
         },
         {
-          "name": "WeChat"
+          "name": "WeChat",
+          "developerName": "",
+          "version": "8.0.57",
+          "bundleIdentifier": "com.tencent.xin"
         },
         {
-          "name": "WeChat"
+          "name": "WeChat",
+          "developerName": "",
+          "version": "8.0.57",
+          "bundleIdentifier": "com.tencent.xin"
         },
         {
-          "name": "WeChat"
+          "name": "WeChat",
+          "developerName": "",
+          "version": "8.0.62",
+          "bundleIdentifier": "com.tencent.xin"
         },
         {
-          "name": "Instagram"
+          "name": "Instagram",
+          "developerName": "",
+          "version": "392.0.0",
+          "bundleIdentifier": "com.burbn.instagram"
         },
         {
-          "name": "WeChat"
+          "name": "WeChat",
+          "developerName": "",
+          "version": "8.0.57",
+          "bundleIdentifier": "com.tencent.xin"
         },
         {
-          "name": "BilibiliIntl"
+          "name": "BilibiliIntl",
+          "developerName": "",
+          "version": "3.20.1",
+          "bundleIdentifier": "com.bilibili.inter"
         },
         {
-          "name": "Instagram"
+          "name": "Instagram",
+          "developerName": "",
+          "version": "387.0.0",
+          "bundleIdentifier": "com.burbn.instagram"
         },
         {
-          "name": "WeChat"
+          "name": "WeChat",
+          "developerName": "",
+          "version": "8.0.57",
+          "bundleIdentifier": "com.tencent.xin"
         },
         {
-          "name": "WeChat"
+          "name": "WeChat",
+          "developerName": "",
+          "version": "8.0.57",
+          "bundleIdentifier": "com.tencent.xin"
         },
         {
-          "name": "WeChat"
+          "name": "WeChat",
+          "developerName": "",
+          "version": "8.0.57",
+          "bundleIdentifier": "com.tencent.xin"
         },
         {
-          "name": "Instagram"
+          "name": "Instagram",
+          "developerName": "",
+          "version": "384.0.0",
+          "bundleIdentifier": "com.burbn.instagram"
         },
         {
-          "name": "WeChat"
+          "name": "WeChat",
+          "developerName": "",
+          "version": "8.0.57",
+          "bundleIdentifier": "com.tencent.xin"
         },
         {
-          "name": "WeChat"
+          "name": "WeChat",
+          "developerName": "",
+          "version": "8.0.57",
+          "bundleIdentifier": "com.tencent.xin"
         },
         {
-          "name": "WeChat"
+          "name": "WeChat",
+          "developerName": "",
+          "version": "8.0.57",
+          "bundleIdentifier": "com.tencent.xin"
         }
       ]
     },
     {
       "id": "cypwn-ipa",
       "name": "CyPwn IPA Library",
-      "appCount": 209,
+      "appCount": 210,
       "variants": [
         "classic"
       ],
       "catalogLimited": true,
       "apps": [
         {
-          "name": "Stremio-2.0.6"
+          "name": "Stremio-2.0.7",
+          "developerName": "Stremio-2.0.7 x CyPwn",
+          "version": "2.0.7",
+          "bundleIdentifier": "com.stremio.pal"
         },
         {
-          "name": "PowerWarriors_18.0"
+          "name": "Stremio-2.0.6",
+          "developerName": "Stremio-2.0.6 x CyPwn",
+          "version": "2.0.6",
+          "bundleIdentifier": "com.stremio.pal"
         },
         {
-          "name": "Stremio-2.0.0"
+          "name": "PowerWarriors_18.0",
+          "developerName": "PowerWarriors_18.0 x CyPwn",
+          "version": "18",
+          "bundleIdentifier": "com.ZombiAriel.Power-Warriors"
         },
         {
-          "name": "CloverPit-1.4.8"
+          "name": "Stremio-2.0.0",
+          "developerName": "Stremio-2.0.0 x CyPwn",
+          "version": "2.0.0",
+          "bundleIdentifier": "com.stremio.pal"
         },
         {
-          "name": "Stremio-1.3.6"
+          "name": "CloverPit-1.4.8",
+          "developerName": "CloverPit-1.4.8 x CyPwn",
+          "version": "1.4.8",
+          "bundleIdentifier": "com.PanikArcade.CloverPit"
         },
         {
-          "name": "Vesc_Tool_6.06.2"
+          "name": "Stremio-1.3.6",
+          "developerName": "Stremio-1.3.6 x CyPwn",
+          "version": "1.3.6",
+          "bundleIdentifier": "com.stremio.ios"
         },
         {
-          "name": "Terraria_4.5.0"
+          "name": "Vesc_Tool_6.06.2",
+          "developerName": "Vesc_Tool_6.06.2 x CyPwn",
+          "version": "6.06.2",
+          "bundleIdentifier": "com.vesc-project.vesc-tool"
         },
         {
-          "name": "Violyn_1_4_4-2"
+          "name": "Terraria_4.5.0",
+          "developerName": "Terraria_4.5.0 x CyPwn",
+          "version": "4.5.0",
+          "bundleIdentifier": "com.505games.terraria"
         },
         {
-          "name": "iTorrent"
+          "name": "Violyn_1_4_4-2",
+          "developerName": "Violyn_1_4_4-2 x CyPwn",
+          "version": "1.4.4",
+          "bundleIdentifier": "Lilliana.Violyn"
         },
         {
-          "name": "True_Skate_1.5.102"
+          "name": "iTorrent",
+          "developerName": "iTorrent x CyPwn",
+          "version": "2.1.1",
+          "bundleIdentifier": "com.xitrix.iTorrent2"
         },
         {
-          "name": "Gopeed-v1.8.3-ios"
+          "name": "True_Skate_1.5.102",
+          "developerName": "True_Skate_1.5.102 x CyPwn",
+          "version": "1.5.102",
+          "bundleIdentifier": "com.trueaxis.skate"
         },
         {
-          "name": "OldOS"
+          "name": "Gopeed-v1.8.3-ios",
+          "developerName": "Gopeed-v1.8.3-ios x CyPwn",
+          "version": "1.8.3",
+          "bundleIdentifier": "com.gopeed.gopeed"
         },
         {
-          "name": "InjectionIPA_v5.0"
+          "name": "OldOS",
+          "developerName": "OldOS x CyPwn",
+          "version": "2.0.7",
+          "bundleIdentifier": "com.zrc.BudgetingBuddy"
         },
         {
-          "name": "DLiPA_v1.1"
+          "name": "InjectionIPA_v5.0",
+          "developerName": "InjectionIPA_v5.0 x CyPwn",
+          "version": "5.0",
+          "bundleIdentifier": "injectionDylibToIpa.Sniper"
         },
         {
-          "name": "Fortnite+Release-7.40-CL-5011364"
+          "name": "DLiPA_v1.1",
+          "developerName": "DLiPA_v1.1 x CyPwn",
+          "version": "1.1",
+          "bundleIdentifier": "com.ahmedbafkir.dlipa"
         },
         {
-          "name": "Spotube-iOS"
+          "name": "Fortnite+Release-7.40-CL-5011364",
+          "developerName": "Fortnite+Release-7.40-CL-5011364 x CyPwn",
+          "version": "7.40.2",
+          "bundleIdentifier": "3bda04b065c347de824ac05c8bb874bf"
         },
         {
-          "name": "PotatoIM"
+          "name": "Spotube-iOS",
+          "developerName": "Spotube-iOS x CyPwn",
+          "version": "5.1.0",
+          "bundleIdentifier": "oss.krtirtho.spotube.stable"
         },
         {
-          "name": "Asspp_2.3"
+          "name": "PotatoIM",
+          "developerName": "PotatoIM x CyPwn",
+          "version": "2.47.207251",
+          "bundleIdentifier": "org.potatochat.PotatoEnterprise"
         },
         {
-          "name": "GoCoEdit_23.0"
+          "name": "Asspp_2.3",
+          "developerName": "Asspp_2.3 x CyPwn",
+          "version": "2.3",
+          "bundleIdentifier": "wiki.qaq.Asspp"
         },
         {
-          "name": "Deltarune_v727"
+          "name": "GoCoEdit_23.0",
+          "developerName": "GoCoEdit_23.0 x CyPwn",
+          "version": "23.0",
+          "bundleIdentifier": "com.gogolith.gocoed"
         },
         {
-          "name": "BazaartPremium_10.8.0"
+          "name": "Deltarune_v727",
+          "developerName": "Deltarune_v727 x CyPwn",
+          "version": "0",
+          "bundleIdentifier": "com.ates.DELTARUNE"
         },
         {
-          "name": "VPN_FAST"
+          "name": "BazaartPremium_10.8.0",
+          "developerName": "BazaartPremium_10.8.0 x CyPwn",
+          "version": "10.8.0",
+          "bundleIdentifier": "co.bazaart.app"
         },
         {
-          "name": "Tasks_Create_Live_Activities"
+          "name": "VPN_FAST",
+          "developerName": "VPN_FAST x CyPwn",
+          "version": "1.8.6",
+          "bundleIdentifier": "com.hedef.vpnunlimitedproxy"
         },
         {
-          "name": "ChatGPTw15"
+          "name": "Tasks_Create_Live_Activities",
+          "developerName": "Tasks_Create_Live_Activities x CyPwn",
+          "version": "1.01",
+          "bundleIdentifier": "rihab.liveTasks"
         },
         {
-          "name": "VPN_Proxy_Master"
+          "name": "ChatGPTw15",
+          "developerName": "ChatGPTw15 x CyPwn",
+          "version": "1.0",
+          "bundleIdentifier": "com.akuma.chatgptv15"
         },
         {
-          "name": "VPN_Freedom"
+          "name": "VPN_Proxy_Master",
+          "developerName": "VPN_Proxy_Master x CyPwn",
+          "version": "2.2.8",
+          "bundleIdentifier": "net.dreamdownloader.vpn"
         },
         {
-          "name": "bitchat_1.2.1"
+          "name": "VPN_Freedom",
+          "developerName": "VPN_Freedom x CyPwn",
+          "version": "1.2.2",
+          "bundleIdentifier": "com.vfulup.vpn"
         },
         {
-          "name": "The_Free_VPN"
+          "name": "bitchat_1.2.1",
+          "developerName": "bitchat_1.2.1 x CyPwn",
+          "version": "1.2.1",
+          "bundleIdentifier": "nochat.bitchat.hehbveh"
         },
         {
-          "name": "Shark_Arsenal_4.0.14"
+          "name": "The_Free_VPN",
+          "developerName": "The_Free_VPN x CyPwn",
+          "version": "1.10.1",
+          "bundleIdentifier": "com.thefreevpn"
         },
         {
-          "name": "FileBrowser_Pro_25.7"
+          "name": "Shark_Arsenal_4.0.14",
+          "developerName": "Shark_Arsenal_4.0.14 x CyPwn",
+          "version": "4.0.14",
+          "bundleIdentifier": "com.blackshark.peripheral.community"
         },
         {
-          "name": "Amethyst_1.0"
+          "name": "FileBrowser_Pro_25.7",
+          "developerName": "FileBrowser_Pro_25.7 x CyPwn",
+          "version": "25.7",
+          "bundleIdentifier": "com.stratospherix.filebrowserbiz"
         },
         {
-          "name": "Bitchat"
+          "name": "Amethyst_1.0",
+          "developerName": "Amethyst_1.0 x CyPwn",
+          "version": "1.0",
+          "bundleIdentifier": "org.angelauramc.amethyst"
         },
         {
-          "name": "Little Nightmares"
+          "name": "Bitchat",
+          "developerName": "Bitchat x CyPwn",
+          "version": "1.0.0",
+          "bundleIdentifier": "chat.bitchat"
         },
         {
-          "name": "SQLiteFlow_5.8.6"
+          "name": "Little Nightmares",
+          "developerName": "Little Nightmares x CyPwn",
+          "version": "1.0.2",
+          "bundleIdentifier": "com.playdigious.littlenightmares"
         },
         {
-          "name": "FileBrowser_Pro_25.6"
+          "name": "SQLiteFlow_5.8.6",
+          "developerName": "SQLiteFlow_5.8.6 x CyPwn",
+          "version": "5.8.6",
+          "bundleIdentifier": "com.hyperobjc.SQLiteFlow-iOS"
         },
         {
-          "name": "FileBrowser_Pro_25.5"
+          "name": "FileBrowser_Pro_25.6",
+          "developerName": "FileBrowser_Pro_25.6 x CyPwn",
+          "version": "25.6",
+          "bundleIdentifier": "com.stratospherix.filebrowserbiz"
         },
         {
-          "name": "Scrcpy_Remote_2.4"
+          "name": "FileBrowser_Pro_25.5",
+          "developerName": "FileBrowser_Pro_25.5 x CyPwn",
+          "version": "25.5",
+          "bundleIdentifier": "com.stratospherix.filebrowserbiz"
         },
         {
-          "name": "True_Skate_1.5.95"
+          "name": "Scrcpy_Remote_2.4",
+          "developerName": "Scrcpy_Remote_2.4 x CyPwn",
+          "version": "2.4",
+          "bundleIdentifier": "com.mobile.scrcpy-ios"
         },
         {
-          "name": "FTPManager_8.5.4"
+          "name": "True_Skate_1.5.95",
+          "developerName": "True_Skate_1.5.95 x CyPwn",
+          "version": "1.5.95",
+          "bundleIdentifier": "com.trueaxis.skate"
         },
         {
-          "name": "Stremio_1.0.1-17"
+          "name": "FTPManager_8.5.4",
+          "developerName": "FTPManager_8.5.4 x CyPwn",
+          "version": "8.5.4",
+          "bundleIdentifier": "com.skyjos.ftpmanager"
         },
         {
-          "name": "Theta_1.5"
+          "name": "Stremio_1.0.1-17",
+          "developerName": "Stremio_1.0.1-17 x CyPwn",
+          "version": "1.0.1",
+          "bundleIdentifier": "com.stremio.one"
         },
         {
-          "name": "UniversalPaperclips"
+          "name": "Theta_1.5",
+          "developerName": "Theta_1.5 x CyPwn",
+          "version": "380.0.0",
+          "bundleIdentifier": "com.burbn.instagram"
         },
         {
-          "name": "Pokecut_4.4.2"
+          "name": "UniversalPaperclips",
+          "developerName": "UniversalPaperclips x CyPwn",
+          "version": "2.1.0",
+          "bundleIdentifier": "com.everybodyhouse.paperclipsuniquetest"
         },
         {
-          "name": "ProCam_14.7.3"
+          "name": "Pokecut_4.4.2",
+          "developerName": "Pokecut_4.4.2 x CyPwn",
+          "version": "4.4.2",
+          "bundleIdentifier": "com.seawardhyacinth.pokecut"
         },
         {
-          "name": "maid2_0_7"
+          "name": "ProCam_14.7.3",
+          "developerName": "ProCam_14.7.3 x CyPwn",
+          "version": "14.7.3",
+          "bundleIdentifier": "gemini.ProCam-2"
         },
         {
-          "name": "Ignited_1.8.5"
+          "name": "maid2_0_7",
+          "developerName": "maid2_0_7 x CyPwn",
+          "version": "2.0.7",
+          "bundleIdentifier": "com.danemadsen.maid"
         },
         {
-          "name": "EeveeSpotify-5.9.5-9.0.36"
+          "name": "Ignited_1.8.5",
+          "developerName": "Ignited_1.8.5 x CyPwn",
+          "version": "1.8.5",
+          "bundleIdentifier": "com.litritt.ignited"
         },
         {
-          "name": "Balatro_1.0.1o"
+          "name": "EeveeSpotify-5.9.5-9.0.36",
+          "developerName": "EeveeSpotify-5.9.5-9.0.36 x CyPwn",
+          "version": "9.0.36",
+          "bundleIdentifier": "com.spotify.client"
         },
         {
-          "name": "CrazyCattle3D_1.0.0"
+          "name": "Balatro_1.0.1o",
+          "developerName": "Balatro_1.0.1o x CyPwn",
+          "version": "1.0.1o",
+          "bundleIdentifier": "org.htf65jud.balatro"
         },
         {
-          "name": "Gopeed_1.7.0"
+          "name": "CrazyCattle3D_1.0.0",
+          "developerName": "CrazyCattle3D_1.0.0 x CyPwn",
+          "version": "1.0.0",
+          "bundleIdentifier": "com.nathan.cc3dios"
         }
       ]
     },
     {
       "id": "apptesters",
       "name": "AppTesters IPA Repo",
-      "appCount": 9438,
+      "appCount": 9439,
       "variants": [
         "classic"
       ],
       "catalogLimited": true,
       "apps": [
         {
-          "name": "SkyGuide"
+          "name": "Calendars",
+          "developerName": "",
+          "version": "5.39.4",
+          "bundleIdentifier": "com.readdle.CalendarsLite"
         },
         {
-          "name": "Lyfta"
+          "name": "SkyGuide",
+          "developerName": "",
+          "version": "13.0.3",
+          "bundleIdentifier": "com.fifthstarlabs.skyguide"
         },
         {
-          "name": "CodeSnackIDE"
+          "name": "Lyfta",
+          "developerName": "",
+          "version": "1.163",
+          "bundleIdentifier": "com.lyftaios"
         },
         {
-          "name": "SimplyPiano"
+          "name": "CodeSnackIDE",
+          "developerName": "",
+          "version": "6.2.0",
+          "bundleIdentifier": "com.cloud-compiler"
         },
         {
-          "name": "PSExpress"
+          "name": "SimplyPiano",
+          "developerName": "",
+          "version": "9.10.94",
+          "bundleIdentifier": "com.joytunes.asla"
         },
         {
-          "name": "TypeAI"
+          "name": "PSExpress",
+          "developerName": "",
+          "version": "26.37.1",
+          "bundleIdentifier": "com.adobe.PSMobile"
         },
         {
-          "name": "Endel"
+          "name": "TypeAI",
+          "developerName": "",
+          "version": "4.1.0",
+          "bundleIdentifier": "com.codeway.AIKeyboard"
         },
         {
-          "name": "KineMaster"
+          "name": "Endel",
+          "developerName": "",
+          "version": "4.49.283",
+          "bundleIdentifier": "com.endel.endel"
         },
         {
-          "name": "Calm"
+          "name": "KineMaster",
+          "developerName": "",
+          "version": "8.2.3",
+          "bundleIdentifier": "com.kinemaster.kios"
         },
         {
-          "name": "VlogNow"
+          "name": "Calm",
+          "developerName": "",
+          "version": "7.2",
+          "bundleIdentifier": "com.calm.calmapp"
         },
         {
-          "name": "UnifiedDictionary"
+          "name": "VlogNow",
+          "developerName": "",
+          "version": "2.22.0",
+          "bundleIdentifier": "com.frontrow.vlog"
         },
         {
-          "name": "StressWatch"
+          "name": "UnifiedDictionary",
+          "developerName": "",
+          "version": "36.1",
+          "bundleIdentifier": "com.bravolol.bravoLang.chineseDictionary"
         },
         {
-          "name": "1Blocker"
+          "name": "StressWatch",
+          "developerName": "",
+          "version": "3.4.1",
+          "bundleIdentifier": "com.ideation.Stress"
         },
         {
-          "name": "SNOW"
+          "name": "1Blocker",
+          "developerName": "",
+          "version": "6.6.5",
+          "bundleIdentifier": "com.khanov.BlockerX"
         },
         {
-          "name": "SleepCycle"
+          "name": "SNOW",
+          "developerName": "",
+          "version": "15.4.6",
+          "bundleIdentifier": "com.campmobile.snow"
         },
         {
-          "name": "HeavyBagPro"
+          "name": "SleepCycle",
+          "developerName": "",
+          "version": "6.26.390",
+          "bundleIdentifier": "com.lexwarelabs.goodmorning"
         },
         {
-          "name": "FitnessAI"
+          "name": "HeavyBagPro",
+          "developerName": "",
+          "version": "2.6.3",
+          "bundleIdentifier": "com.opentechiz.heavybagpro"
         },
         {
-          "name": "Mockup"
+          "name": "FitnessAI",
+          "developerName": "",
+          "version": "24.1",
+          "bundleIdentifier": "com.jakemor.firness-ai"
         },
         {
-          "name": "Infuse"
+          "name": "Mockup",
+          "developerName": "",
+          "version": "4.5.1",
+          "bundleIdentifier": "com.hasankassem.mockup"
         },
         {
-          "name": "Lifesum"
+          "name": "Infuse",
+          "developerName": "",
+          "version": "8.5.6",
+          "bundleIdentifier": "com.firecore.infuse"
         },
         {
-          "name": "LINECamera"
+          "name": "Lifesum",
+          "developerName": "",
+          "version": "23.14.2",
+          "bundleIdentifier": "com.sillens.iShape"
         },
         {
-          "name": "LUTStudio"
+          "name": "LINECamera",
+          "developerName": "",
+          "version": "18.5.6",
+          "bundleIdentifier": "jp.naver.linecamera"
         },
         {
-          "name": "BeatMakerPro"
+          "name": "LUTStudio",
+          "developerName": "",
+          "version": "4.0.8",
+          "bundleIdentifier": "com.solveit.lut-studio"
         },
         {
-          "name": "CodeSnackIDE"
+          "name": "BeatMakerPro",
+          "developerName": "",
+          "version": "4.19.00",
+          "bundleIdentifier": "com.mwm.sampler-app"
         },
         {
-          "name": "SODA"
+          "name": "CodeSnackIDE",
+          "developerName": "",
+          "version": "6.0.2",
+          "bundleIdentifier": "com.cloud-compiler"
         },
         {
-          "name": "Premiere"
+          "name": "SODA",
+          "developerName": "",
+          "version": "10.4.1",
+          "bundleIdentifier": "com.snowcorp.soda"
         },
         {
-          "name": "Lightroom"
+          "name": "Premiere",
+          "developerName": "",
+          "version": "26.21.0",
+          "bundleIdentifier": "com.adobe.premiere.ios"
         },
         {
-          "name": "Picsart"
+          "name": "Lightroom",
+          "developerName": "",
+          "version": "11.6.1",
+          "bundleIdentifier": "com.adobe.lrmobilephone"
         },
         {
-          "name": "ThePiano"
+          "name": "Picsart",
+          "developerName": "",
+          "version": "30.9.1",
+          "bundleIdentifier": "com.picsart.studio"
         },
         {
-          "name": "ColorPop"
+          "name": "ThePiano",
+          "developerName": "",
+          "version": "2.23.6",
+          "bundleIdentifier": "com.impalastudios.pianofree"
         },
         {
-          "name": "NutriCoach"
+          "name": "ColorPop",
+          "developerName": "",
+          "version": "2.65.02",
+          "bundleIdentifier": "com.mwm.procolor"
         },
         {
-          "name": "PixelColor"
+          "name": "NutriCoach",
+          "developerName": "",
+          "version": "2.5.0",
+          "bundleIdentifier": "nutrition.coach"
         },
         {
-          "name": "OraWeather"
+          "name": "PixelColor",
+          "developerName": "",
+          "version": "6.03.00",
+          "bundleIdentifier": "com.djitlabs.pixelcolor"
         },
         {
-          "name": "DesignLab"
+          "name": "OraWeather",
+          "developerName": "",
+          "version": "6.3.0",
+          "bundleIdentifier": "com.itwcalculator.worldradarfree"
         },
         {
-          "name": "SCRL"
+          "name": "DesignLab",
+          "developerName": "",
+          "version": "5.57.5",
+          "bundleIdentifier": "com.apperto.piclabhd"
         },
         {
-          "name": "Crsel"
+          "name": "SCRL",
+          "developerName": "",
+          "version": "9.57.1",
+          "bundleIdentifier": "com.dopedevelopment.Panels"
         },
         {
-          "name": "DiamondFinder"
+          "name": "Crsel",
+          "developerName": "",
+          "version": "1.5.5",
+          "bundleIdentifier": "com.frameoneapps.Crsel"
         },
         {
-          "name": "PureStatus"
+          "name": "DiamondFinder",
+          "developerName": "",
+          "version": "9.2.5",
+          "bundleIdentifier": "com.mcdiamondfinder.app"
         },
         {
-          "name": "Foodie"
+          "name": "PureStatus",
+          "developerName": "",
+          "version": "2026.06",
+          "bundleIdentifier": "com.damtechdesigns.wa.story"
         },
         {
-          "name": "MyFitnessPal"
+          "name": "Foodie",
+          "developerName": "",
+          "version": "8.3.2",
+          "bundleIdentifier": "com.linecorp.Foodie"
         },
         {
-          "name": "AdobeFresco"
+          "name": "MyFitnessPal",
+          "developerName": "",
+          "version": "26.39.0",
+          "bundleIdentifier": "com.myfitnesspal.mfp"
         },
         {
-          "name": "LUTStudio"
+          "name": "AdobeFresco",
+          "developerName": "",
+          "version": "7.8.0",
+          "bundleIdentifier": "com.adobe.fresco.ios"
         },
         {
-          "name": "GrowMe"
+          "name": "LUTStudio",
+          "developerName": "",
+          "version": "4.0.7",
+          "bundleIdentifier": "com.solveit.lut-studio"
         },
         {
-          "name": "RiseSleep"
+          "name": "GrowMe",
+          "developerName": "",
+          "version": "1.4.0",
+          "bundleIdentifier": "com.book.summaries.reading"
         },
         {
-          "name": "Dehancer"
+          "name": "RiseSleep",
+          "developerName": "",
+          "version": "0.1.633",
+          "bundleIdentifier": "com.risesci.nyx"
         },
         {
-          "name": "Athlytic"
+          "name": "Dehancer",
+          "developerName": "",
+          "version": "7.1",
+          "bundleIdentifier": "com.dehancer.film.ios-app"
         },
         {
-          "name": "Yazio"
+          "name": "Athlytic",
+          "developerName": "",
+          "version": "27.0.2",
+          "bundleIdentifier": "myndarc.newFitnessApp"
         },
         {
-          "name": "Captions"
+          "name": "Yazio",
+          "developerName": "",
+          "version": "26.39.2",
+          "bundleIdentifier": "com.yazio.ios.YAZIO"
         },
         {
-          "name": "Wallpapers"
+          "name": "Captions",
+          "developerName": "",
+          "version": "13.36.1",
+          "bundleIdentifier": "boomer.Smart-Video"
         },
         {
-          "name": "Uplens"
+          "name": "Wallpapers",
+          "developerName": "",
+          "version": "2.6",
+          "bundleIdentifier": "com.apalonapps.wallpaperspys"
         }
       ]
     },
@@ -1612,7 +2671,10 @@
       "catalogLimited": false,
       "apps": [
         {
-          "name": "YouTubeRebornPlus"
+          "name": "YouTubeRebornPlus",
+          "developerName": "LillieH1000, zachary7829 & arichornlover",
+          "version": "20.05.4",
+          "bundleIdentifier": "com.google.ios.youtube"
         }
       ]
     },
@@ -1626,7 +2688,10 @@
       "catalogLimited": false,
       "apps": [
         {
-          "name": "Apollo for Reddit"
+          "name": "Apollo for Reddit",
+          "developerName": "Christian Selig (& Apollo-Reborn contributors)",
+          "version": "3.8.5",
+          "bundleIdentifier": "com.christianselig.Apollo"
         }
       ]
     },
@@ -1640,7 +2705,10 @@
       "catalogLimited": false,
       "apps": [
         {
-          "name": "Discord - Talk, Play, Hang Out"
+          "name": "Discord - Talk, Play, Hang Out",
+          "developerName": "Discord Inc.",
+          "version": "346.0",
+          "bundleIdentifier": "com.hammerandchisel.discord"
         }
       ]
     },
@@ -1654,7 +2722,10 @@
       "catalogLimited": false,
       "apps": [
         {
-          "name": "YTKace"
+          "name": "YTKace",
+          "developerName": "itzzace",
+          "version": "1.1.1",
+          "bundleIdentifier": "com.google.ios.youtube"
         }
       ]
     },
@@ -1668,28 +2739,52 @@
       "catalogLimited": false,
       "apps": [
         {
-          "name": "YouTube+🗿"
+          "name": "YouTube+🗿",
+          "developerName": "heyFordy",
+          "version": "21.13.6",
+          "bundleIdentifier": "com.google.ios.youtube"
         },
         {
-          "name": "Spotify+🗿"
+          "name": "Spotify+🗿",
+          "developerName": "heyFordy",
+          "version": "6.2.2",
+          "bundleIdentifier": "com.spotify.client"
         },
         {
-          "name": "YT Music+🗿"
+          "name": "YT Music+🗿",
+          "developerName": "heyFordy",
+          "version": "9.06.4",
+          "bundleIdentifier": "com.google.ios.youtubemusic"
         },
         {
-          "name": "Acrobat+🗿"
+          "name": "Acrobat+🗿",
+          "developerName": "heyFordy / Adobe",
+          "version": "24.05.01",
+          "bundleIdentifier": "com.adobe.Adobe-Reader"
         },
         {
-          "name": "PicsArt+🗿"
+          "name": "PicsArt+🗿",
+          "developerName": "heyFordy",
+          "version": "28.4.3",
+          "bundleIdentifier": "com.picsart.studio"
         },
         {
-          "name": "Infuse+🗿"
+          "name": "Infuse+🗿",
+          "developerName": "Firecore, LLC • iOSGods",
+          "version": "8.5",
+          "bundleIdentifier": "com.firecore.infuse"
         },
         {
-          "name": "Gopeed"
+          "name": "Gopeed",
+          "developerName": "GopeedLab",
+          "version": "1.9.3",
+          "bundleIdentifier": "com.gopeed.gopeed.app"
         },
         {
-          "name": "Twitch+🗿"
+          "name": "Twitch+🗿",
+          "developerName": "heyFordy",
+          "version": "19.4",
+          "bundleIdentifier": "tv.twitch"
         }
       ]
     },
@@ -1703,154 +2798,304 @@
       "catalogLimited": true,
       "apps": [
         {
-          "name": "Flappy Bird"
+          "name": "Flappy Bird",
+          "developerName": "Crypticplank",
+          "version": "4.3",
+          "bundleIdentifier": "me.ipalibrary.flappybird"
         },
         {
-          "name": "UTM"
+          "name": "UTM",
+          "developerName": "UTM",
+          "version": "4.0.9",
+          "bundleIdentifier": "me.ipalibrary.utm"
         },
         {
-          "name": "PostBox Pocket"
+          "name": "PostBox Pocket",
+          "developerName": "Nathan Choi",
+          "version": "0.8.1",
+          "bundleIdentifier": "me.ipalibrary.postboxpocket"
         },
         {
-          "name": "Human Anatomy Atlas"
+          "name": "Human Anatomy Atlas",
+          "developerName": "Visible Body",
+          "version": "2023.0.03",
+          "bundleIdentifier": "me.ipalibrary.humananatomyatlas"
         },
         {
-          "name": "WallpapersCraft Pro"
+          "name": "WallpapersCraft Pro",
+          "developerName": "VOLKRAFT",
+          "version": "2.8",
+          "bundleIdentifier": "me.ipalibrary.wallpaperscraftpro"
         },
         {
-          "name": "VideoShow PRO"
+          "name": "VideoShow PRO",
+          "developerName": "VIDEOSHOW PTE. LTD.",
+          "version": "5.7.5 (5.9.0)",
+          "bundleIdentifier": "me.ipalibrary.videoshowpro"
         },
         {
-          "name": "Napster++"
+          "name": "Napster++",
+          "developerName": "Rhapsody International S.a.r.l",
+          "version": "7.4.6",
+          "bundleIdentifier": "me.ipalibrary.napster"
         },
         {
-          "name": "Instagram Plus"
+          "name": "Instagram Plus",
+          "developerName": "Instagram",
+          "version": "250.0 (T2.50)",
+          "bundleIdentifier": "me.ipalibrary.instagramplus"
         },
         {
-          "name": "Duet Display"
+          "name": "Duet Display",
+          "developerName": "Duet, Inc.",
+          "version": "2.4.17",
+          "bundleIdentifier": "me.ipalibrary.duetdisplay"
         },
         {
-          "name": "METAL SLUG X"
+          "name": "METAL SLUG X",
+          "developerName": "SNK CORPORATION",
+          "version": "1.4.2",
+          "bundleIdentifier": "me.ipalibrary.metalslugx"
         },
         {
-          "name": "METAL SLUG 3"
+          "name": "METAL SLUG 3",
+          "developerName": "SNK CORPORATION",
+          "version": "1.5.1",
+          "bundleIdentifier": "me.ipalibrary.metalslug3"
         },
         {
-          "name": "METAL SLUG 2"
+          "name": "METAL SLUG 2",
+          "developerName": "SNK CORPORATION",
+          "version": "1.4.1",
+          "bundleIdentifier": "me.ipalibrary.metalslug2"
         },
         {
-          "name": "METAL SLUG 1"
+          "name": "METAL SLUG 1",
+          "developerName": "SNK CORPORATION",
+          "version": "1.4.1",
+          "bundleIdentifier": "me.ipalibrary.metalslug1"
         },
         {
-          "name": "Infltr++"
+          "name": "Infltr++",
+          "developerName": "Yooshr Ltd",
+          "version": "6.8",
+          "bundleIdentifier": "me.ipalibrary.infltr"
         },
         {
-          "name": "Aftercut"
+          "name": "Aftercut",
+          "developerName": "LI XUAN NIU",
+          "version": "6.0",
+          "bundleIdentifier": "me.ipalibrary.aftercut"
         },
         {
-          "name": "Unruly Heroes"
+          "name": "Unruly Heroes",
+          "developerName": "Perfect Game Speed",
+          "version": "3.2",
+          "bundleIdentifier": "me.ipalibrary.unrulyheroes"
         },
         {
-          "name": "Lapse: A Forgotten Future"
+          "name": "Lapse: A Forgotten Future",
+          "developerName": "Stefano Cornago",
+          "version": "1.6",
+          "bundleIdentifier": "me.ipalibrary.lapseaforgottenfuture"
         },
         {
-          "name": "Max Payne Mobile"
+          "name": "Max Payne Mobile",
+          "developerName": "Rockstar Games",
+          "version": "2.0 (1.4.10)",
+          "bundleIdentifier": "me.ipalibrary.maxpaynemobile"
         },
         {
-          "name": "GTA: Liberty City Stories"
+          "name": "GTA: Liberty City Stories",
+          "developerName": "Rockstar Games",
+          "version": "1.2 (1.14)",
+          "bundleIdentifier": "me.ipalibrary.gtalibertycitystories"
         },
         {
-          "name": "GTA: Chinatown Wars"
+          "name": "GTA: Chinatown Wars",
+          "developerName": "Rockstar Games",
+          "version": "4.5 (4.4.7)",
+          "bundleIdentifier": "me.ipalibrary.gtachinatownwars"
         },
         {
-          "name": "Bully: Anniversary Edition"
+          "name": "Bully: Anniversary Edition",
+          "developerName": "Rockstar Games",
+          "version": "1.1 (1.03.6)",
+          "bundleIdentifier": "me.ipalibrary.bullyanniversaryedition"
         },
         {
-          "name": "Grand Theft Auto: Vice City"
+          "name": "Grand Theft Auto: Vice City",
+          "developerName": "Rockstar Games",
+          "version": "1.8 (1.5.6)",
+          "bundleIdentifier": "me.ipalibrary.grandtheftautovicecity"
         },
         {
-          "name": "Grand Theft Auto III"
+          "name": "Grand Theft Auto III",
+          "developerName": "Rockstar Games",
+          "version": "1.5 (1.3.13)",
+          "bundleIdentifier": "me.ipalibrary.grandtheftautoiii"
         },
         {
-          "name": "Pocket City"
+          "name": "Pocket City",
+          "developerName": "Codebrew Games Inc.",
+          "version": "1.0.40",
+          "bundleIdentifier": "me.ipalibrary.pocketcity"
         },
         {
-          "name": "Geekbench 5 Pro"
+          "name": "Geekbench 5 Pro",
+          "developerName": "Primate Labs Inc.",
+          "version": "5.4.4",
+          "bundleIdentifier": "me.ipalibrary.geekbench5pro"
         },
         {
-          "name": "Oceanhorn ™"
+          "name": "Oceanhorn ™",
+          "developerName": "FDG Mobile Games",
+          "version": "3.4",
+          "bundleIdentifier": "me.ipalibrary.oceanhorn"
         },
         {
-          "name": "GSE SMART IPTV"
+          "name": "GSE SMART IPTV",
+          "developerName": "droidvision",
+          "version": "4.1",
+          "bundleIdentifier": "me.ipalibrary.gsesmartiptv"
         },
         {
-          "name": "Picsew Pro – Picsew++"
+          "name": "Picsew Pro – Picsew++",
+          "developerName": "Yojio",
+          "version": "3.9.4",
+          "bundleIdentifier": "me.ipalibrary.picsewpropicsew"
         },
         {
-          "name": "Hydra Pro – Hydra++"
+          "name": "Hydra Pro – Hydra++",
+          "developerName": "Creaceed SRL",
+          "version": "2.2",
+          "bundleIdentifier": "me.ipalibrary.hydraprohydra"
         },
         {
-          "name": "Don’t Starve: Shipwrecked"
+          "name": "Don’t Starve: Shipwrecked",
+          "developerName": "Klei",
+          "version": "1.84",
+          "bundleIdentifier": "me.ipalibrary.dontstarveshipwrecked"
         },
         {
-          "name": "Cat Quest"
+          "name": "Cat Quest",
+          "developerName": "The Gentlebros.",
+          "version": "1.2.71",
+          "bundleIdentifier": "me.ipalibrary.catquest"
         },
         {
-          "name": "Juicy Realm"
+          "name": "Juicy Realm",
+          "developerName": "X.D. Network Inc.",
+          "version": "3.1.7",
+          "bundleIdentifier": "me.ipalibrary.juicyrealm"
         },
         {
-          "name": "Kingdom Two Crowns"
+          "name": "Kingdom Two Crowns",
+          "developerName": "Raw Fury",
+          "version": "2.3.0",
+          "bundleIdentifier": "me.ipalibrary.kingdomtwocrowns"
         },
         {
-          "name": "GSE SMART IPTV PRO"
+          "name": "GSE SMART IPTV PRO",
+          "developerName": "droidvision",
+          "version": "1.0",
+          "bundleIdentifier": "me.ipalibrary.gsesmartiptvpro"
         },
         {
-          "name": "Analog Portland"
+          "name": "Analog Portland",
+          "developerName": "ordinaryfactory Inc.",
+          "version": "1.0.992",
+          "bundleIdentifier": "me.ipalibrary.analogportland"
         },
         {
-          "name": "Analog Tokyo"
+          "name": "Analog Tokyo",
+          "developerName": "ordinaryfactory Inc.",
+          "version": "1.0.992",
+          "bundleIdentifier": "me.ipalibrary.analogtokyo"
         },
         {
-          "name": "Analog Beijing"
+          "name": "Analog Beijing",
+          "developerName": "ordinaryfactory Inc.",
+          "version": "1.0.992",
+          "bundleIdentifier": "me.ipalibrary.analogbeijing"
         },
         {
-          "name": "Analog Wedding"
+          "name": "Analog Wedding",
+          "developerName": "ordinaryfactory Inc.",
+          "version": "1.0.992",
+          "bundleIdentifier": "me.ipalibrary.analogwedding"
         },
         {
-          "name": "Analog Jeju"
+          "name": "Analog Jeju",
+          "developerName": "ordinaryfactory Inc.",
+          "version": "1.0.992",
+          "bundleIdentifier": "me.ipalibrary.analogjeju"
         },
         {
-          "name": "Analog London"
+          "name": "Analog London",
+          "developerName": "ordinaryfactory Inc.",
+          "version": "1.0.992",
+          "bundleIdentifier": "me.ipalibrary.analoglondon"
         },
         {
-          "name": "Analog Budapest"
+          "name": "Analog Budapest",
+          "developerName": "ordinaryfactory Inc.",
+          "version": "1.0.992",
+          "bundleIdentifier": "me.ipalibrary.analogbudapest"
         },
         {
-          "name": "Analog Paris"
+          "name": "Analog Paris",
+          "developerName": "ordinaryfactory Inc.",
+          "version": "1.0.992",
+          "bundleIdentifier": "me.ipalibrary.analogparis"
         },
         {
-          "name": "Analog Seoul"
+          "name": "Analog Seoul",
+          "developerName": "ordinaryfactory Inc.",
+          "version": "1.0.992",
+          "bundleIdentifier": "me.ipalibrary.analogseoul"
         },
         {
-          "name": "Analog Acoustic"
+          "name": "Analog Acoustic",
+          "developerName": "ordinaryfactory Inc.",
+          "version": "1.0.96",
+          "bundleIdentifier": "me.ipalibrary.analogacoustic"
         },
         {
-          "name": "Analog Brooklyn"
+          "name": "Analog Brooklyn",
+          "developerName": "ordinaryfactory Inc.",
+          "version": "1.0.97",
+          "bundleIdentifier": "me.ipalibrary.analogbrooklyn"
         },
         {
-          "name": "Color Accent"
+          "name": "Color Accent",
+          "developerName": "205L Studio",
+          "version": "3.9",
+          "bundleIdentifier": "me.ipalibrary.coloraccent"
         },
         {
-          "name": "Florence"
+          "name": "Florence",
+          "developerName": "Annapurna Interactive",
+          "version": "1.0.5",
+          "bundleIdentifier": "me.ipalibrary.florence"
         },
         {
-          "name": "HDR Max – Photo Editor"
+          "name": "HDR Max – Photo Editor",
+          "developerName": "Petri Gronlund",
+          "version": "3.0",
+          "bundleIdentifier": "me.ipalibrary.hdrmaxphotoeditor"
         },
         {
-          "name": "Streeme: IPTV Streaming"
+          "name": "Streeme: IPTV Streaming",
+          "developerName": "AreaEngineering Ltd",
+          "version": "1.0.50",
+          "bundleIdentifier": "me.ipalibrary.streemeiptvstreaming"
         },
         {
-          "name": "Tadaa SLR"
+          "name": "Tadaa SLR",
+          "developerName": "menschmaschine Publishing GmbH",
+          "version": "1.7",
+          "bundleIdentifier": "me.ipalibrary.tadaaslr"
         }
       ]
     },
@@ -1864,10 +3109,16 @@
       "catalogLimited": false,
       "apps": [
         {
-          "name": "ARMSX2 iOS"
+          "name": "ARMSX2 iOS",
+          "developerName": "ARMSX2",
+          "version": "2.5.2",
+          "bundleIdentifier": "com.armsx2.ios"
         },
         {
-          "name": "ARMSX2 Nightly"
+          "name": "ARMSX2 Nightly",
+          "developerName": "ARMSX2",
+          "version": "2.5.3-nightly.20260928.1716",
+          "bundleIdentifier": "com.armsx2.ios.nightly"
         }
       ]
     },
@@ -1881,22 +3132,40 @@
       "catalogLimited": false,
       "apps": [
         {
-          "name": "Regram"
+          "name": "Regram",
+          "developerName": "Fouad Raheb",
+          "version": "406.1.0",
+          "bundleIdentifier": "com.burbn.instagram"
         },
         {
-          "name": "Regram (Duplicate)"
+          "name": "Regram (Duplicate)",
+          "developerName": "Fouad Raheb",
+          "version": "406.1.0",
+          "bundleIdentifier": "com.fouadraheb.regram"
         },
         {
-          "name": "Watusi"
+          "name": "Watusi",
+          "developerName": "Fouad Raheb",
+          "version": "25.33.73",
+          "bundleIdentifier": "net.whatsapp.WhatsApp"
         },
         {
-          "name": "Watusi (Duplicate)"
+          "name": "Watusi (Duplicate)",
+          "developerName": "Fouad Raheb",
+          "version": "25.33.73",
+          "bundleIdentifier": "com.fouadraheb.watusi"
         },
         {
-          "name": "Watusi (Business)"
+          "name": "Watusi (Business)",
+          "developerName": "Fouad Raheb",
+          "version": "25.33.74",
+          "bundleIdentifier": "net.whatsapp.WhatsAppSMB"
         },
         {
-          "name": "Watusi (Business Duplicate)"
+          "name": "Watusi (Business Duplicate)",
+          "developerName": "Fouad Raheb",
+          "version": "25.33.74",
+          "bundleIdentifier": "com.fouadraheb.watusiSMB"
         }
       ]
     },
@@ -1910,7 +3179,10 @@
       "catalogLimited": false,
       "apps": [
         {
-          "name": "Twitter"
+          "name": "Twitter",
+          "developerName": "actuallyaridan, nyaathea, timi2506, theacrat, orionblur",
+          "version": "12.28.1",
+          "bundleIdentifier": "com.atebits.Tweetie2"
         }
       ]
     },
@@ -1924,7 +3196,10 @@
       "catalogLimited": false,
       "apps": [
         {
-          "name": "MeloNX"
+          "name": "MeloNX",
+          "developerName": "Stossy11",
+          "version": "1.7.0",
+          "bundleIdentifier": "com.stossy11.MeloNX"
         }
       ]
     },
@@ -1938,127 +3213,250 @@
       "catalogLimited": false,
       "apps": [
         {
-          "name": "Aidoku"
+          "name": "Aidoku",
+          "developerName": "Skitty",
+          "version": "0.9",
+          "bundleIdentifier": "app.aidoku.Aidoku"
         },
         {
-          "name": "AirCard-iOS"
+          "name": "AirCard-iOS",
+          "developerName": "Mak5er",
+          "version": "1.3",
+          "bundleIdentifier": "com.mak5er.aircard"
         },
         {
-          "name": "AniBaka"
+          "name": "AniBaka",
+          "developerName": "AniBakaBaka",
+          "version": "5.2.0",
+          "bundleIdentifier": "ani.baka"
         },
         {
-          "name": "AnimeFlow"
+          "name": "AnimeFlow",
+          "developerName": "openAnimeFlow",
+          "version": "2.6.1",
+          "bundleIdentifier": "com.ligg.anime_flow"
         },
         {
-          "name": "Animeko"
+          "name": "Animeko",
+          "developerName": "open-ani",
+          "version": "6.2.0",
+          "bundleIdentifier": "org.animeko.animeko"
         },
         {
-          "name": "Apollo for Reddit - GLASS"
+          "name": "Apollo for Reddit - GLASS",
+          "developerName": "Christian Selig (& Apollo-Reborn contributors)",
+          "version": "3.8.5",
+          "bundleIdentifier": "com.christianselig.Apollo"
         },
         {
-          "name": "ARMSX2"
+          "name": "ARMSX2",
+          "developerName": "ARMSX2",
+          "version": "nightly-20260930",
+          "bundleIdentifier": "com.armsx2.ios"
         },
         {
-          "name": "Doer"
+          "name": "Doer",
+          "developerName": "moliango",
+          "version": "1.8.5.3",
+          "bundleIdentifier": "com.naine.doer"
         },
         {
-          "name": "DolphiniOS"
+          "name": "DolphiniOS",
+          "developerName": "OatmealDome",
+          "version": "5.0.0b6",
+          "bundleIdentifier": "me.oatmealdome.DolphiniOS-njb-patreon-beta"
         },
         {
-          "name": "DukeX"
+          "name": "DukeX",
+          "developerName": "Manic EMU Development Team",
+          "version": "1.0.2",
+          "bundleIdentifier": "com.mafty.dukex"
         },
         {
-          "name": "EhPanda"
+          "name": "EhPanda",
+          "developerName": "EhPanda-Team",
+          "version": "2.8.1",
+          "bundleIdentifier": "app.ehpanda"
         },
         {
-          "name": "Husk"
+          "name": "Husk",
+          "developerName": "Leviidev",
+          "version": "0.4.1",
+          "bundleIdentifier": "com.husk.app"
         },
         {
-          "name": "Iridium"
+          "name": "Iridium",
+          "developerName": "intraducine",
+          "version": "0.1.1",
+          "bundleIdentifier": "software.iridium"
         },
         {
-          "name": "iTorrent"
+          "name": "iTorrent",
+          "developerName": "XITRIX",
+          "version": "2.2.0-1",
+          "bundleIdentifier": "com.xitrix.iTorrent2"
         },
         {
-          "name": "Kazumi"
+          "name": "Kazumi",
+          "developerName": "Predidit",
+          "version": "2.3.7",
+          "bundleIdentifier": "com.example.kazumi"
         },
         {
-          "name": "KMusic"
+          "name": "KMusic",
+          "developerName": "Mac-XK",
+          "version": "2.3.0",
+          "bundleIdentifier": "com.macxk.KMusic"
         },
         {
-          "name": "Kumone"
+          "name": "Kumone",
+          "developerName": "missuo",
+          "version": "0.3.19",
+          "bundleIdentifier": "sb.moe.kumone"
         },
         {
-          "name": "LiveContainer+SideStore"
+          "name": "LiveContainer+SideStore",
+          "developerName": "LiveContainer Team",
+          "version": "3.8.0",
+          "bundleIdentifier": "com.kdt.livecontainer"
         },
         {
-          "name": "Madeira"
+          "name": "Madeira",
+          "developerName": "Will Faust",
+          "version": "0.1.0",
+          "bundleIdentifier": "com.willfaust.madeora"
         },
         {
-          "name": "Mangayomi"
+          "name": "Mangayomi",
+          "developerName": "Moustapha Kodjo Amadou",
+          "version": "0.9.7",
+          "bundleIdentifier": "com.kodjodevf.mangayomi"
         },
         {
-          "name": "ManicEMU"
+          "name": "ManicEMU",
+          "developerName": "Manic EMU Development Team",
+          "version": "2.0.1",
+          "bundleIdentifier": "com.aoshuang.manicemu"
         },
         {
-          "name": "MiniWatts"
+          "name": "MiniWatts",
+          "developerName": "ResistanceTo",
+          "version": "1.4.1",
+          "bundleIdentifier": "org.zhaohe.MiniWatts"
         },
         {
-          "name": "MoviePilotLite"
+          "name": "MoviePilotLite",
+          "developerName": "singleton-altman",
+          "version": "1.2.5",
+          "bundleIdentifier": "com.altman.moviepilot"
         },
         {
-          "name": "Musly"
+          "name": "Musly",
+          "developerName": "dddevid",
+          "version": "2.0.2",
+          "bundleIdentifier": "com.dddevid.musly"
         },
         {
-          "name": "NeoStation iOS"
+          "name": "NeoStation iOS",
+          "developerName": "TarbleFR",
+          "version": "0.0.2",
+          "bundleIdentifier": "com.neogamelab.neostation"
         },
         {
-          "name": "Novella"
+          "name": "Novella",
+          "developerName": "CELIA",
+          "version": "2.5.0",
+          "bundleIdentifier": "sh.celia.novella"
         },
         {
-          "name": "Opaline"
+          "name": "Opaline",
+          "developerName": "verback2308",
+          "version": "1.12.0",
+          "bundleIdentifier": "com.verback.YTLite"
         },
         {
-          "name": "Orchard"
+          "name": "Orchard",
+          "developerName": "MakrSas",
+          "version": "0.2",
+          "bundleIdentifier": "com.makr.orchard"
         },
         {
-          "name": "PiliPlus"
+          "name": "PiliPlus",
+          "developerName": "bggRGjQaUbCoE",
+          "version": "2.1.5",
+          "bundleIdentifier": "com.example.piliplus"
         },
         {
-          "name": "Pixiv-SwiftUI"
+          "name": "Pixiv-SwiftUI",
+          "developerName": "Eslzzyl",
+          "version": "0.16.0",
+          "bundleIdentifier": "org.eu.eslzzyl.Pixiv-SwiftUI"
         },
         {
-          "name": "PSX3IOS"
+          "name": "PSX3IOS",
+          "developerName": "xmiguel911x",
+          "version": "0.2.7-beta",
+          "bundleIdentifier": "com.miguel.psx3ios"
         },
         {
-          "name": "PureLive"
+          "name": "PureLive",
+          "developerName": "liuchuancong",
+          "version": "3.1.17",
+          "bundleIdentifier": "com.mystyle.purelive.liu"
         },
         {
-          "name": "Roam Control"
+          "name": "Roam Control",
+          "developerName": "seanhowarthdev",
+          "version": "0.9.4",
+          "bundleIdentifier": "com.sean.roamcontrol"
         },
         {
-          "name": "SceneBox"
+          "name": "SceneBox",
+          "developerName": "donbytyqi",
+          "version": "1.0.4",
+          "bundleIdentifier": "app.scenebox.SceneBox"
         },
         {
-          "name": "SpotiFLAC"
+          "name": "SpotiFLAC",
+          "developerName": "zarzet",
+          "version": "5.0.6",
+          "bundleIdentifier": "com.zarz.spotiflac"
         },
         {
-          "name": "TiebaPure"
+          "name": "TiebaPure",
+          "developerName": "infinityf4p",
+          "version": "1.4.14",
+          "bundleIdentifier": "dev.infinityf4p.tiebapure"
         },
         {
-          "name": "Tsumiru"
+          "name": "Tsumiru",
+          "developerName": "Suwayomi",
+          "version": "1.3.3",
+          "bundleIdentifier": "com.suwayomi.tachideskSorayomi"
         },
         {
-          "name": "UTM"
+          "name": "UTM",
+          "developerName": "osy",
+          "version": "4.7.5",
+          "bundleIdentifier": "com.utmapp.UTM"
         },
         {
-          "name": "VeneraNext"
+          "name": "VeneraNext",
+          "developerName": "CyrilPeng",
+          "version": "1.17.0",
+          "bundleIdentifier": "com.github.cyrilpeng.veneranext"
         },
         {
-          "name": "YouProEXTRA"
+          "name": "YouProEXTRA",
+          "developerName": "alibusut",
+          "version": "21.39.4",
+          "bundleIdentifier": "com.google.ios.youtube"
         },
         {
-          "name": "ZhihuMinusMinus"
+          "name": "ZhihuMinusMinus",
+          "developerName": "huamurui",
+          "version": "0.7.0",
+          "bundleIdentifier": "com.huamu013.ZhihuMinusMinus"
         }
       ]
     },
@@ -2072,37 +3470,70 @@
       "catalogLimited": false,
       "apps": [
         {
-          "name": "SimpleFrontend"
+          "name": "SimpleFrontend",
+          "developerName": "Stossy11",
+          "version": "1.2",
+          "bundleIdentifier": "com.jimdude.SimpleFrontend"
         },
         {
-          "name": "ImageX"
+          "name": "ImageX",
+          "developerName": "Lyu Jiahao",
+          "version": "1.1.3",
+          "bundleIdentifier": "com.tinyperfectapps.imagex"
         },
         {
-          "name": "Batman - The Telltale Series"
+          "name": "Batman - The Telltale Series",
+          "developerName": "LCG Entertainment, Inc",
+          "version": "1.8",
+          "bundleIdentifier": "com.telltalegames.BAT100"
         },
         {
-          "name": "Delight Games Premium Library"
+          "name": "Delight Games Premium Library",
+          "developerName": "Delight Games LLC",
+          "version": "4.6",
+          "bundleIdentifier": "com.your-company.DelightGames"
         },
         {
-          "name": "Flappy Bird"
+          "name": "Flappy Bird",
+          "developerName": "BrandonPlank",
+          "version": "4.3",
+          "bundleIdentifier": "org.brandonplank.flappybird"
         },
         {
-          "name": "RamBench"
+          "name": "RamBench",
+          "developerName": "Propenchiefer",
+          "version": "1.3",
+          "bundleIdentifier": "com.Autumn.RamBench"
         },
         {
-          "name": "Gacha Club"
+          "name": "Gacha Club",
+          "developerName": "Lunime",
+          "version": "4.0.0",
+          "bundleIdentifier": "com.lunime.gachaclub"
         },
         {
-          "name": "Infinity Blade III"
+          "name": "Infinity Blade III",
+          "developerName": "ChAIR Entertainment",
+          "version": "1.4.4",
+          "bundleIdentifier": "com.chairentertainment.IB3"
         },
         {
-          "name": "Infinity Blade II"
+          "name": "Infinity Blade II",
+          "developerName": "ChAIR Entertainment",
+          "version": "1.3.5",
+          "bundleIdentifier": "com.chairentertainment.IB2"
         },
         {
-          "name": "Infinity Blade I"
+          "name": "Infinity Blade I",
+          "developerName": "ChAIR Entertainment",
+          "version": "1.4.3",
+          "bundleIdentifier": "com.chairentertainment.birthright"
         },
         {
-          "name": "Keka"
+          "name": "Keka",
+          "developerName": "aonez",
+          "version": "1.6.6",
+          "bundleIdentifier": "com.aone.Keka-iOS"
         }
       ]
     },
@@ -2116,7 +3547,10 @@
       "catalogLimited": false,
       "apps": [
         {
-          "name": "Feather"
+          "name": "Feather",
+          "developerName": "Samara",
+          "version": "2.9.0",
+          "bundleIdentifier": "thewonderofyou.Feather"
         }
       ]
     },
@@ -2130,118 +3564,232 @@
       "catalogLimited": false,
       "apps": [
         {
-          "name": "emuThreeDS"
+          "name": "emuThreeDS",
+          "developerName": "Antique",
+          "version": "1.0.7.1",
+          "bundleIdentifier": "com.antique.emuThreeDS"
         },
         {
-          "name": "citra"
+          "name": "citra",
+          "developerName": "rinsuki",
+          "version": "0.1.gha.4865233241.Release.5af330c0e6cac9c183a432d5839cf78780873951",
+          "bundleIdentifier": "net.rinsuki.slapps.citra.ci-artifact"
         },
         {
-          "name": "WDBRemoveThreeAppLimit"
+          "name": "WDBRemoveThreeAppLimit",
+          "developerName": "Zhuowei",
+          "version": "1.0",
+          "bundleIdentifier": "com.worthdoingbadly.WDBRemoveThreeAppLimit"
         },
         {
-          "name": "WDBFontOverwrite"
+          "name": "WDBFontOverwrite",
+          "developerName": "Zhuowei + Ginsudev",
+          "version": "1.10.8",
+          "bundleIdentifier": "com.ginsudev.WDBFontOverwrite"
         },
         {
-          "name": "Deltroid"
+          "name": "Deltroid",
+          "developerName": "SideStore Team",
+          "version": "1.5",
+          "bundleIdentifier": "com.rileytestut.Deltroid"
         },
         {
-          "name": "VCMI"
+          "name": "VCMI",
+          "developerName": "VCMI Team",
+          "version": "1.7.1",
+          "bundleIdentifier": "eu.vcmi.vcmiclient"
         },
         {
-          "name": "Delta iPac Edition"
+          "name": "Delta iPac Edition",
+          "developerName": "Riley Testut & Ian Clawson",
+          "version": "1",
+          "bundleIdentifier": "com.ianclawson.DeltaPacEdition"
         },
         {
-          "name": "PPSSPP"
+          "name": "PPSSPP",
+          "developerName": "Henrik Rydgård",
+          "version": "1.13.2",
+          "bundleIdentifier": "org.ppsspp.ppsspp"
         },
         {
-          "name": "Firebird Emu"
+          "name": "Firebird Emu",
+          "developerName": "nspire-emus",
+          "version": "1.6",
+          "bundleIdentifier": "com.adriweb.firebird-emu"
         },
         {
-          "name": "ActiveGS iOS"
+          "name": "ActiveGS iOS",
+          "developerName": "yoshisuga & Olivier Goguel",
+          "version": "2021.9",
+          "bundleIdentifier": "com.yoshisuga.activeGS"
         },
         {
-          "name": "Ready"
+          "name": "Ready",
+          "developerName": "T-Pau",
+          "version": "1.6.1",
+          "bundleIdentifier": "at.spiderlab.c64"
         },
         {
-          "name": "DolphiniOS"
+          "name": "DolphiniOS",
+          "developerName": "OatmealDome",
+          "version": "3.2.1",
+          "bundleIdentifier": "me.oatmealdome.dolphinios-njb"
         },
         {
-          "name": "DolphiniOS (Public Beta)"
+          "name": "DolphiniOS (Public Beta)",
+          "developerName": "OatmealDome",
+          "version": "5.0.0b4",
+          "bundleIdentifier": "me.oatmealdome.DolphiniOS-njb-patreon-beta"
         },
         {
-          "name": "iNDS"
+          "name": "iNDS",
+          "developerName": "iNDS Team",
+          "version": "1.10.8",
+          "bundleIdentifier": "net.nerd.iNDS"
         },
         {
-          "name": "MAME4iOS"
+          "name": "MAME4iOS",
+          "developerName": "yoshisuga",
+          "version": "2022.5",
+          "bundleIdentifier": "com.example.mame4ios"
         },
         {
-          "name": "OldOS"
+          "name": "OldOS",
+          "developerName": "zzanehip",
+          "version": "1.0",
+          "bundleIdentifier": "com.zrc.BudgetingBuddy"
         },
         {
-          "name": "unc0ver"
+          "name": "unc0ver",
+          "developerName": "Pwn20wnd",
+          "version": "8.0.2",
+          "bundleIdentifier": "science.xnu.undecimus"
         },
         {
-          "name": "iTorrent"
+          "name": "iTorrent",
+          "developerName": "XITRIX",
+          "version": "1.8.3",
+          "bundleIdentifier": "ru.nonamedude.iTorrent"
         },
         {
-          "name": "GBA4iOS"
+          "name": "GBA4iOS",
+          "developerName": "Riley Testut",
+          "version": "2.1",
+          "bundleIdentifier": "com.rileytestut.GBA4iOS"
         },
         {
-          "name": "RetroArch"
+          "name": "RetroArch",
+          "developerName": "libretro",
+          "version": "1.12.0",
+          "bundleIdentifier": "com.libretro.RetroArchiOS11"
         },
         {
-          "name": "Rewound"
+          "name": "Rewound",
+          "developerName": "Louis Anslow",
+          "version": "2019.7",
+          "bundleIdentifier": "com.louisanslow.record"
         },
         {
-          "name": "ScummVM"
+          "name": "ScummVM",
+          "developerName": "ScummVM Team",
+          "version": "2.6.0",
+          "bundleIdentifier": "org.scummvm.scummvm"
         },
         {
-          "name": "Mini vMac"
+          "name": "Mini vMac",
+          "developerName": "Gryphel Project & zydeco",
+          "version": "2.6",
+          "bundleIdentifier": "net.namedfork.minivmac"
         },
         {
-          "name": "Filza Escaped"
+          "name": "Filza Escaped",
+          "developerName": "Bas vT",
+          "version": "3.7",
+          "bundleIdentifier": "com.dry05.filzaescaped11-12"
         },
         {
-          "name": "XPatcher"
+          "name": "XPatcher",
+          "developerName": "Wh0ba",
+          "version": "2.2",
+          "bundleIdentifier": "com.wh0ba.xpatcher"
         },
         {
-          "name": "iSH"
+          "name": "iSH",
+          "developerName": "Theodore Dubois and contributors",
+          "version": "1.3.2",
+          "bundleIdentifier": "app.ish.iSH"
         },
         {
-          "name": "Play!"
+          "name": "Play!",
+          "developerName": "Jean-Philip Desjardins",
+          "version": "0.58",
+          "bundleIdentifier": "com.virtualapplications.play"
         },
         {
-          "name": "appdb"
+          "name": "appdb",
+          "developerName": "ned",
+          "version": "1.1.6",
+          "bundleIdentifier": "it.ned.appdb-ios"
         },
         {
-          "name": "Odyssey"
+          "name": "Odyssey",
+          "developerName": "Odyssey Team",
+          "version": "1.4.3",
+          "bundleIdentifier": "org.coolstar.odyssey"
         },
         {
-          "name": "UTM"
+          "name": "UTM",
+          "developerName": "osy",
+          "version": "4.3.5",
+          "bundleIdentifier": "com.utmapp.UTM"
         },
         {
-          "name": "iDOS"
+          "name": "iDOS",
+          "developerName": "litchie",
+          "version": "2.1",
+          "bundleIdentifier": "com.litchie.idosgames"
         },
         {
-          "name": "Taurine"
+          "name": "Taurine",
+          "developerName": "Odyssey Team",
+          "version": "1.1.7-3",
+          "bundleIdentifier": "org.coolstar.taurine"
         },
         {
-          "name": "UTM SE"
+          "name": "UTM SE",
+          "developerName": "osy",
+          "version": "4.3.5",
+          "bundleIdentifier": "com.utmapp.UTM-SE"
         },
         {
-          "name": "Provenance EMU"
+          "name": "Provenance EMU",
+          "developerName": "Joe Mattiello",
+          "version": "2.2.1",
+          "bundleIdentifier": "org.provenance-emu.provenance"
         },
         {
-          "name": "Flycast"
+          "name": "Flycast",
+          "developerName": "Flyinghead",
+          "version": "v2.5",
+          "bundleIdentifier": "com.flyinghead.Flycast"
         },
         {
-          "name": "PokeMMO"
+          "name": "PokeMMO",
+          "developerName": "PokeMMO",
+          "version": "31249",
+          "bundleIdentifier": "eu.pokemmo.client"
         },
         {
-          "name": "Ignited"
+          "name": "Ignited",
+          "developerName": "Lit Development",
+          "version": "1.8.6",
+          "bundleIdentifier": "com.litritt.ignited"
         },
         {
-          "name": "PokeMMO PTS"
+          "name": "PokeMMO PTS",
+          "developerName": "PokeMMO",
+          "version": "30557",
+          "bundleIdentifier": "eu.pokemmo.client.pts"
         }
       ]
     },
@@ -2255,13 +3803,22 @@
       "catalogLimited": false,
       "apps": [
         {
-          "name": "SpotC++"
+          "name": "SpotC++",
+          "developerName": "Whoeevee & Aesthyrica",
+          "version": "2.6.3",
+          "bundleIdentifier": "com.yodaluca23.SpotCPlusPlus"
         },
         {
-          "name": "SpotveeC"
+          "name": "SpotveeC",
+          "developerName": "Whoeevee & Asdfzxcvbn",
+          "version": "3.5.3",
+          "bundleIdentifier": "com.yodaluca23.SpotveeC"
         },
         {
-          "name": "SpotilifeC"
+          "name": "SpotilifeC",
+          "developerName": "Julioverne",
+          "version": "1.2.1",
+          "bundleIdentifier": "com.yodaluca23.SpotilifeC"
         }
       ]
     },
@@ -2275,10 +3832,16 @@
       "catalogLimited": false,
       "apps": [
         {
-          "name": "uYouPlus"
+          "name": "uYouPlus",
+          "developerName": "Various Developers",
+          "version": "21.09.2",
+          "bundleIdentifier": "com.google.ios.youtube"
         },
         {
-          "name": "Spotify Tweaked"
+          "name": "Spotify Tweaked",
+          "developerName": "Various Developers",
+          "version": "8.6.42",
+          "bundleIdentifier": "com.spotify.client"
         }
       ]
     },
@@ -2292,154 +3855,304 @@
       "catalogLimited": true,
       "apps": [
         {
-          "name": "Twitter"
+          "name": "Twitter",
+          "developerName": "@ipavault",
+          "version": "12.31",
+          "bundleIdentifier": "com.atebits.Tweetie2"
         },
         {
-          "name": "Twitter"
+          "name": "Twitter",
+          "developerName": "@ipavault",
+          "version": "12.31",
+          "bundleIdentifier": "com.atebits.Tweetie2"
         },
         {
-          "name": "X"
+          "name": "X",
+          "developerName": "@ipavault",
+          "version": "12.31",
+          "bundleIdentifier": "com.atebits.Tweetie2"
         },
         {
-          "name": "X"
+          "name": "X",
+          "developerName": "@ipavault",
+          "version": "12.31",
+          "bundleIdentifier": "com.atebits.Tweetie2"
         },
         {
-          "name": "Twitter"
+          "name": "Twitter",
+          "developerName": "@ipavault",
+          "version": "12.31",
+          "bundleIdentifier": "com.atebits.Tweetie2"
         },
         {
-          "name": "Twitter"
+          "name": "Twitter",
+          "developerName": "@ipavault",
+          "version": "12.31",
+          "bundleIdentifier": "com.atebits.Tweetie2"
         },
         {
-          "name": "X"
+          "name": "X",
+          "developerName": "@ipavault",
+          "version": "12.31",
+          "bundleIdentifier": "com.atebits.Tweetie2"
         },
         {
-          "name": "X"
+          "name": "X",
+          "developerName": "@ipavault",
+          "version": "12.31",
+          "bundleIdentifier": "com.atebits.Tweetie2"
         },
         {
-          "name": "iCube"
+          "name": "iCube",
+          "developerName": "Provenance Emu",
+          "version": "1.0.0",
+          "bundleIdentifier": "com.joemattiello.iCube"
         },
         {
-          "name": "Mockup"
+          "name": "Mockup",
+          "developerName": "AppTesters IPA Repo",
+          "version": "4.5.1",
+          "bundleIdentifier": "com.hasankassem.mockup"
         },
         {
-          "name": "FitnessAI"
+          "name": "FitnessAI",
+          "developerName": "AppTesters IPA Repo",
+          "version": "24.1",
+          "bundleIdentifier": "com.jakemor.firness-ai"
         },
         {
-          "name": "HeavyBagPro"
+          "name": "HeavyBagPro",
+          "developerName": "AppTesters IPA Repo",
+          "version": "2.6.3",
+          "bundleIdentifier": "com.opentechiz.heavybagpro"
         },
         {
-          "name": "SleepCycle"
+          "name": "SleepCycle",
+          "developerName": "AppTesters IPA Repo",
+          "version": "6.26.390",
+          "bundleIdentifier": "com.lexwarelabs.goodmorning"
         },
         {
-          "name": "SNOW"
+          "name": "SNOW",
+          "developerName": "AppTesters IPA Repo",
+          "version": "15.4.6",
+          "bundleIdentifier": "com.campmobile.snow"
         },
         {
-          "name": "1Blocker"
+          "name": "1Blocker",
+          "developerName": "AppTesters IPA Repo",
+          "version": "6.6.5",
+          "bundleIdentifier": "com.khanov.BlockerX"
         },
         {
-          "name": "StressWatch"
+          "name": "StressWatch",
+          "developerName": "AppTesters IPA Repo",
+          "version": "3.4.1",
+          "bundleIdentifier": "com.ideation.Stress"
         },
         {
-          "name": "Provenance Alpha"
+          "name": "Provenance Alpha",
+          "developerName": "Provenance-EMU",
+          "version": "3.4.0",
+          "bundleIdentifier": "com.provenance-emu.provenance.alpha"
         },
         {
-          "name": "Spotify"
+          "name": "Spotify",
+          "developerName": "@ipavault",
+          "version": "9.1.86",
+          "bundleIdentifier": "com.spotify.client"
         },
         {
-          "name": "Spotify"
+          "name": "Spotify",
+          "developerName": "@ipavault",
+          "version": "9.1.86",
+          "bundleIdentifier": "com.spotify.client"
         },
         {
-          "name": "SNOW"
+          "name": "SNOW",
+          "developerName": "@blatants",
+          "version": "15.4.6",
+          "bundleIdentifier": "com.campmobile.snow"
         },
         {
-          "name": "Sleep Cycle"
+          "name": "Sleep Cycle",
+          "developerName": "@blatants",
+          "version": "6.26.390",
+          "bundleIdentifier": "com.lexwarelabs.goodmorning"
         },
         {
-          "name": "Heavy Bag Pro"
+          "name": "Heavy Bag Pro",
+          "developerName": "@blatants",
+          "version": "2.6.3",
+          "bundleIdentifier": "com.opentechiz.heavybagpro"
         },
         {
-          "name": "FitnessAI"
+          "name": "FitnessAI",
+          "developerName": "@blatants",
+          "version": "24.1",
+          "bundleIdentifier": "com.jakemor.firness-ai"
         },
         {
-          "name": "Notewise"
+          "name": "Notewise",
+          "developerName": "@Sa1y0miii",
+          "version": "4.1.0",
+          "bundleIdentifier": "com.ziikr.ios.notewise"
         },
         {
-          "name": "Razr"
+          "name": "Razr",
+          "developerName": "@Sa1y0miii",
+          "version": "010",
+          "bundleIdentifier": "com.mys.razr"
         },
         {
-          "name": "[untitled]"
+          "name": "[untitled]",
+          "developerName": "@Sa1y0miii",
+          "version": "1.22.0",
+          "bundleIdentifier": "com.untitledinbrackets.untitled-ios"
         },
         {
-          "name": "Ninja Fit"
+          "name": "Ninja Fit",
+          "developerName": "@Sa1y0miii",
+          "version": "1.31.4",
+          "bundleIdentifier": "com.calories-ninja"
         },
         {
-          "name": "Flashtex"
+          "name": "Flashtex",
+          "developerName": "@Sa1y0miii",
+          "version": "2.3.6",
+          "bundleIdentifier": "de.kruschel.flashtex"
         },
         {
-          "name": "Xeela"
+          "name": "Xeela",
+          "developerName": "@Sa1y0miii",
+          "version": "3.5.2",
+          "bundleIdentifier": "com.xeelafitness.xeelafitness"
         },
         {
-          "name": "QuakeMate"
+          "name": "QuakeMate",
+          "developerName": "@Sa1y0miii",
+          "version": "4.2.6",
+          "bundleIdentifier": "technology.fil.QuakeMate"
         },
         {
-          "name": "Tracked"
+          "name": "Tracked",
+          "developerName": "@Sa1y0miii",
+          "version": "8.0.5",
+          "bundleIdentifier": "com.tracked.mobile"
         },
         {
-          "name": "pico cam"
+          "name": "pico cam",
+          "developerName": "@Sa1y0miii",
+          "version": "1.6.2",
+          "bundleIdentifier": "com.zuzu.peekapic"
         },
         {
-          "name": "ClassDojo"
+          "name": "ClassDojo",
+          "developerName": "@Sa1y0miii",
+          "version": "18.34.0",
+          "bundleIdentifier": "com.ClassDojo"
         },
         {
-          "name": "CSR Racing 2"
+          "name": "CSR Racing 2",
+          "developerName": "@kamohacks",
+          "version": "6.7.2",
+          "bundleIdentifier": "com.naturalmotion.customstreetracer2"
         },
         {
-          "name": "Castle Busters"
+          "name": "Castle Busters",
+          "developerName": "@kamohacks",
+          "version": "1.19.0",
+          "bundleIdentifier": "com.epicoro.castleclashers"
         },
         {
-          "name": "Dead Impact"
+          "name": "Dead Impact",
+          "developerName": "@kamohacks",
+          "version": "0.2.280912",
+          "bundleIdentifier": "games.synthez.zombie.survival.multiplayer"
         },
         {
-          "name": "Grim Soul"
+          "name": "Grim Soul",
+          "developerName": "@kamohacks",
+          "version": "8.5.0",
+          "bundleIdentifier": "fantasy.survival.game.rpg"
         },
         {
-          "name": "Subway Surf"
+          "name": "Subway Surf",
+          "developerName": "@kamohacks",
+          "version": "3.69.2",
+          "bundleIdentifier": "com.kiloo.subwaysurfers"
         },
         {
-          "name": "Golf Battle"
+          "name": "Golf Battle",
+          "developerName": "@kamohacks",
+          "version": "2.25.0",
+          "bundleIdentifier": "games.onebutton.golfbattle"
         },
         {
-          "name": "Bike Race"
+          "name": "Bike Race",
+          "developerName": "@kamohacks",
+          "version": "8.24.0",
+          "bundleIdentifier": "com.topfreegames.bikeracefree"
         },
         {
-          "name": "Ant Colony"
+          "name": "Ant Colony",
+          "developerName": "@kamohacks",
+          "version": "7.3.6",
+          "bundleIdentifier": "com.PIXELCELLS.AntColony2"
         },
         {
-          "name": "Coin Master"
+          "name": "Coin Master",
+          "developerName": "@kamohacks",
+          "version": "3.5.2720",
+          "bundleIdentifier": "com.mobile-softing.coinmaster"
         },
         {
-          "name": "Infuse"
+          "name": "Infuse",
+          "developerName": "@ipavault",
+          "version": "8.5.6",
+          "bundleIdentifier": "com.firecore.infuse"
         },
         {
-          "name": "Messenger"
+          "name": "Messenger",
+          "developerName": "@ipavault",
+          "version": "581.0.0",
+          "bundleIdentifier": "com.facebook.Messenger"
         },
         {
-          "name": "Messenger"
+          "name": "Messenger",
+          "developerName": "@ipavault",
+          "version": "581.0.0",
+          "bundleIdentifier": "com.facebook.Messenger"
         },
         {
-          "name": "Infuse"
+          "name": "Infuse",
+          "developerName": "@blatants",
+          "version": "8.5.6",
+          "bundleIdentifier": "com.firecore.infuse"
         },
         {
-          "name": "Lifesum"
+          "name": "Lifesum",
+          "developerName": "@blatants",
+          "version": "23.14.2",
+          "bundleIdentifier": "com.sillens.iShape"
         },
         {
-          "name": "Facebook"
+          "name": "Facebook",
+          "developerName": "@ipavault",
+          "version": "581.0.0",
+          "bundleIdentifier": "com.facebook.Facebook"
         },
         {
-          "name": "LINE Camera"
+          "name": "LINE Camera",
+          "developerName": "@blatants",
+          "version": "18.5.6",
+          "bundleIdentifier": "jp.naver.linecamera"
         },
         {
-          "name": "VinylStudio"
+          "name": "VinylStudio",
+          "developerName": "@Sa1y0miii",
+          "version": "1.12.1",
+          "bundleIdentifier": "app.vinylreleases.studio"
         }
       ]
     },
@@ -2453,109 +4166,214 @@
       "catalogLimited": false,
       "apps": [
         {
-          "name": "Emnity"
+          "name": "Emnity",
+          "developerName": "Emnity Team",
+          "version": "177.1",
+          "bundleIdentifier": "com.hammerandchisel.discord"
         },
         {
-          "name": "iVanced for YouTube"
+          "name": "iVanced for YouTube",
+          "developerName": "TherionRO",
+          "version": "19.08.2",
+          "bundleIdentifier": "com.google.ios.youtube"
         },
         {
-          "name": "Streamer"
+          "name": "Streamer",
+          "developerName": "StreamerApp",
+          "version": "1.3.0",
+          "bundleIdentifier": "com.streamerapp.ios"
         },
         {
-          "name": "SoundCloud++"
+          "name": "SoundCloud++",
+          "developerName": "Codey Moore",
+          "version": "6.20.0",
+          "bundleIdentifier": "com.soundcloud.TouchApp"
         },
         {
-          "name": "BeReal++"
+          "name": "BeReal++",
+          "developerName": "Avangelista",
+          "version": "0.36.0",
+          "bundleIdentifier": "AlexisBarreyat.BeReal"
         },
         {
-          "name": "TikTok++"
+          "name": "TikTok++",
+          "developerName": "CrazyMind90",
+          "version": "28.4.1",
+          "bundleIdentifier": "com.zhiliaoapp.musically"
         },
         {
-          "name": "Anime Now!"
+          "name": "Anime Now!",
+          "developerName": "AnimeNow Team",
+          "version": "1.0.0-b3",
+          "bundleIdentifier": "com.errorerrorerror.animenow"
         },
         {
-          "name": "ZiniTevi++"
+          "name": "ZiniTevi++",
+          "developerName": "",
+          "version": "1.5.0",
+          "bundleIdentifier": "jb.zini.tevi"
         },
         {
-          "name": "Photomath++"
+          "name": "Photomath++",
+          "developerName": "Strejda603",
+          "version": "8.21.0",
+          "bundleIdentifier": "com.microblink.PhotoMath"
         },
         {
-          "name": "Snapchat++"
+          "name": "Snapchat++",
+          "developerName": "Kanji",
+          "version": "11.80.0",
+          "bundleIdentifier": "com.toyopagroup.picaboo"
         },
         {
-          "name": "Crunchyroll++"
+          "name": "Crunchyroll++",
+          "developerName": "unlimapps",
+          "version": "3.5.1",
+          "bundleIdentifier": "com.crunchyroll.iphone"
         },
         {
-          "name": "Duolingo++"
+          "name": "Duolingo++",
+          "developerName": "unlimapps",
+          "version": "6.2.0",
+          "bundleIdentifier": "com.duolingo.DuolingoMobile"
         },
         {
-          "name": "Deezer++"
+          "name": "Deezer++",
+          "developerName": "julioverne",
+          "version": "7.1.1",
+          "bundleIdentifier": "com.deezer.Deezer"
         },
         {
-          "name": "Spotify++"
+          "name": "Spotify++",
+          "developerName": "iJulioVerne",
+          "version": "8.9.38",
+          "bundleIdentifier": "com.spotify.client"
         },
         {
-          "name": "BHTwitter (deprecated)"
+          "name": "BHTwitter (deprecated)",
+          "developerName": "BandarHL",
+          "version": "9.2",
+          "bundleIdentifier": "com.atebits.Tweetie2"
         },
         {
-          "name": "Reddit++"
+          "name": "Reddit++",
+          "developerName": "syto203",
+          "version": "2020.12.0",
+          "bundleIdentifier": "syto203.reddit.pp"
         },
         {
-          "name": "Paperback"
+          "name": "Paperback",
+          "developerName": "Faizan Durrani",
+          "version": "0.8.11",
+          "bundleIdentifier": "dev.faizandurrani.moe.paperback.app"
         },
         {
-          "name": "Channels"
+          "name": "Channels",
+          "developerName": "Furkan Simsir",
+          "version": "1.8.0",
+          "bundleIdentifier": "com.channelsapp.channels"
         },
         {
-          "name": "Rocket for Instagram"
+          "name": "Rocket for Instagram",
+          "developerName": "Alfhaily & Qn_",
+          "version": "312.0.0",
+          "bundleIdentifier": "com.burbn.instagram"
         },
         {
-          "name": "Instagram Rhino"
+          "name": "Instagram Rhino",
+          "developerName": "Michael Lema",
+          "version": "167.0",
+          "bundleIdentifier": "com.Lema.Michael.InstagramApp"
         },
         {
-          "name": "WhatsApp++"
+          "name": "WhatsApp++",
+          "developerName": "unlimapps",
+          "version": "2.19.71",
+          "bundleIdentifier": "net.whatsapp.WhatsApp"
         },
         {
-          "name": "CARROT Weather"
+          "name": "CARROT Weather",
+          "developerName": "Grailr LLC",
+          "version": "4.14",
+          "bundleIdentifier": "com.grailr.CARROTweather"
         },
         {
-          "name": "WolframAlpha"
+          "name": "WolframAlpha",
+          "developerName": "Wolfram Group, LLC",
+          "version": "2.0.5",
+          "bundleIdentifier": "com.wolframalpha.wolframalpha"
         },
         {
-          "name": "Infuse Pro 6"
+          "name": "Infuse Pro 6",
+          "developerName": "Firecore, LLC",
+          "version": "6.5.6",
+          "bundleIdentifier": "com.firecore.infuse"
         },
         {
-          "name": "Filmr Pro"
+          "name": "Filmr Pro",
+          "developerName": "Stei App",
+          "version": "7.5.4",
+          "bundleIdentifier": "com.stey"
         },
         {
-          "name": "LumaFusion"
+          "name": "LumaFusion",
+          "developerName": "Luma Touch, LLC",
+          "version": "2.1.1",
+          "bundleIdentifier": "com.luma-touch.LumaFusion"
         },
         {
-          "name": "NineAnimator"
+          "name": "NineAnimator",
+          "developerName": "Marcus Zhou",
+          "version": "1.3.0",
+          "bundleIdentifier": "com.marcuszhou.NineAnimator"
         },
         {
-          "name": "Twitch++"
+          "name": "Twitch++",
+          "developerName": "Michael Lema",
+          "version": "9.3.1",
+          "bundleIdentifier": "tv.twitch"
         },
         {
-          "name": "EhPanda"
+          "name": "EhPanda",
+          "developerName": "Araki Tatsuzou",
+          "version": "2.7.10",
+          "bundleIdentifier": "app.ehpanda"
         },
         {
-          "name": "Cercube+"
+          "name": "Cercube+",
+          "developerName": "Majd Alfhaily",
+          "version": "16.42.3",
+          "bundleIdentifier": "com.google.ios.youtube.cercube"
         },
         {
-          "name": "Yattee"
+          "name": "Yattee",
+          "developerName": "Yattee",
+          "version": "1.3.5",
+          "bundleIdentifier": "stream.yattee.app"
         },
         {
-          "name": "CercubePlus (Legacy)"
+          "name": "CercubePlus (Legacy)",
+          "developerName": "Alfhaily & Qn_",
+          "version": "17.36.4",
+          "bundleIdentifier": "com.google.ios.youtubecercubelegacy"
         },
         {
-          "name": "Facebook Wolf"
+          "name": "Facebook Wolf",
+          "developerName": "Michael Lema & Qn_",
+          "version": "402.0",
+          "bundleIdentifier": "com.facebook.Facebook"
         },
         {
-          "name": "CercubePlus (Cercube+)"
+          "name": "CercubePlus (Cercube+)",
+          "developerName": "Alfhaily & Qn_",
+          "version": "17.43.1",
+          "bundleIdentifier": "com.google.ios.youtubecercube"
         },
         {
-          "name": "RedditFilter"
+          "name": "RedditFilter",
+          "developerName": "level3tjg",
+          "version": "2023.50.1",
+          "bundleIdentifier": "com.reddit.Reddit"
         }
       ]
     },
@@ -2569,64 +4387,124 @@
       "catalogLimited": false,
       "apps": [
         {
-          "name": "LiveContainer"
+          "name": "LiveContainer",
+          "developerName": "Unknown",
+          "version": "3.8.0",
+          "bundleIdentifier": "com.kdt.livecontainer"
         },
         {
-          "name": "TrollInstallerX"
+          "name": "TrollInstallerX",
+          "developerName": "alfiecg24",
+          "version": "1.0.3",
+          "bundleIdentifier": "com.Alfie.TrollInstallerX"
         },
         {
-          "name": "Santander (MDC)"
+          "name": "Santander (MDC)",
+          "developerName": "haxi0",
+          "version": "0.4",
+          "bundleIdentifier": "org.haxi0.santander"
         },
         {
-          "name": "PostBox"
+          "name": "PostBox",
+          "developerName": "PostBox Team",
+          "version": "0.8.1",
+          "bundleIdentifier": "com.simplycode.PostBox"
         },
         {
-          "name": "emuThreeDS"
+          "name": "emuThreeDS",
+          "developerName": "Antique",
+          "version": "1.0.5.2",
+          "bundleIdentifier": "com.antique.emuThreeDS"
         },
         {
-          "name": "PPSSPP"
+          "name": "PPSSPP",
+          "developerName": "Henrik Rydgård",
+          "version": "1.20.4",
+          "bundleIdentifier": "org.ppsspp.ppsspp"
         },
         {
-          "name": "Filza (MDC)"
+          "name": "Filza (MDC)",
+          "developerName": "TIGI Software",
+          "version": "3.7",
+          "bundleIdentifier": "com.dry05.filzaescaped11-12"
         },
         {
-          "name": "Scarlet"
+          "name": "Scarlet",
+          "developerName": "DebianArch",
+          "version": "1.0",
+          "bundleIdentifier": "com.DebianArch.ScarletPersonalXYZZZ"
         },
         {
-          "name": "Odyssey"
+          "name": "Odyssey",
+          "developerName": "Odyssey Team",
+          "version": "1.4.3",
+          "bundleIdentifier": "org.coolstar.odyssey"
         },
         {
-          "name": "Taurine"
+          "name": "Taurine",
+          "developerName": "Odyssey Team",
+          "version": "1.1.7-3",
+          "bundleIdentifier": "org.coolstar.taurine"
         },
         {
-          "name": "unc0ver"
+          "name": "unc0ver",
+          "developerName": "Pwn20wnd",
+          "version": "8.0.2",
+          "bundleIdentifier": "science.xnu.undecimus"
         },
         {
-          "name": "Dopamine"
+          "name": "Dopamine",
+          "developerName": "opa334",
+          "version": "2.4.1",
+          "bundleIdentifier": "com.opa334.Dopamine"
         },
         {
-          "name": "iTorrent"
+          "name": "iTorrent",
+          "developerName": "XITRIX",
+          "version": "1.9",
+          "bundleIdentifier": "ru.nonamedude.iTorrent"
         },
         {
-          "name": "Cowabunga"
+          "name": "Cowabunga",
+          "developerName": "Leminlimez",
+          "version": "10.2.0",
+          "bundleIdentifier": "com.leemin.Cowabunga"
         },
         {
-          "name": "ESign"
+          "name": "ESign",
+          "developerName": "esign.yyyue.xyz",
+          "version": "4.8.1",
+          "bundleIdentifier": "p3.xyz.yyyue.esign"
         },
         {
-          "name": "Atrasis"
+          "name": "Atrasis",
+          "developerName": "Atrasis Team",
+          "version": "18.400.8",
+          "bundleIdentifier": "com.atrasis.original"
         },
         {
-          "name": "Null's Royale"
+          "name": "Null's Royale",
+          "developerName": "Null",
+          "version": "4.88.4",
+          "bundleIdentifier": "nt.nr.ios"
         },
         {
-          "name": "Angry Birds Space"
+          "name": "Angry Birds Space",
+          "developerName": "Rovio",
+          "version": "2.2.13",
+          "bundleIdentifier": "com.rovio.AngryBirdsSpace"
         },
         {
-          "name": "Angry Birds Star Wars"
+          "name": "Angry Birds Star Wars",
+          "developerName": "Rovio",
+          "version": "1.5.12",
+          "bundleIdentifier": "com.rovio.angrybirdsstarwars"
         },
         {
-          "name": "Pokemon Go (w/ SpooferPro)"
+          "name": "Pokemon Go (w/ SpooferPro)",
+          "developerName": "SpooferPro Team",
+          "version": "0.269.1",
+          "bundleIdentifier": "com.nianticlabs.pokemongo"
         }
       ]
     },
@@ -2640,7 +4518,10 @@
       "catalogLimited": false,
       "apps": [
         {
-          "name": "Taurine"
+          "name": "Taurine",
+          "developerName": "Odyssey Team",
+          "version": "1.1.7",
+          "bundleIdentifier": "com.odysseyteam.taurine"
         }
       ]
     },
@@ -2654,25 +4535,46 @@
       "catalogLimited": false,
       "apps": [
         {
-          "name": "iNDS"
+          "name": "iNDS",
+          "developerName": "iNDS Team",
+          "version": "1.10.7",
+          "bundleIdentifier": "net.nerd.iNDS"
         },
         {
-          "name": "Provenance"
+          "name": "Provenance",
+          "developerName": "Provenance Team",
+          "version": "1.4",
+          "bundleIdentifier": "com.provenance-emu.provenance"
         },
         {
-          "name": "UTM"
+          "name": "UTM",
+          "developerName": "osy86",
+          "version": "0.1",
+          "bundleIdentifier": "com.osy86.UTM"
         },
         {
-          "name": "Thermometer"
+          "name": "Thermometer",
+          "developerName": "Ryan McLeod",
+          "version": "1.0",
+          "bundleIdentifier": "com.growpixel.blackbox.store.Thermometer"
         },
         {
-          "name": "appdb"
+          "name": "appdb",
+          "developerName": "n3d1117",
+          "version": "1.0.4",
+          "bundleIdentifier": "it.ned.appdb-ios"
         },
         {
-          "name": "unc0ver"
+          "name": "unc0ver",
+          "developerName": "Pwn20wnd & Sam Bingner",
+          "version": "4.0.0",
+          "bundleIdentifier": "science.xnu.undecimus"
         },
         {
-          "name": "Sileo Demo"
+          "name": "Sileo Demo",
+          "developerName": "Sileo Team",
+          "version": "1.4.1",
+          "bundleIdentifier": "org.coolstar.SileoDemo"
         }
       ]
     },
@@ -2686,10 +4588,16 @@
       "catalogLimited": false,
       "apps": [
         {
-          "name": "Remind"
+          "name": "Remind",
+          "developerName": "S0meyosh1no",
+          "version": "1.1",
+          "bundleIdentifier": "dev.remindapp.remind"
         },
         {
-          "name": "Bacon"
+          "name": "Bacon",
+          "developerName": "S0meyosh1no",
+          "version": "1.1",
+          "bundleIdentifier": "com.s0meyosh1no.ibacon"
         }
       ]
     },
@@ -2703,10 +4611,16 @@
       "catalogLimited": false,
       "apps": [
         {
-          "name": "Cercube"
+          "name": "Cercube",
+          "developerName": "Cercube",
+          "version": "21.39.4",
+          "bundleIdentifier": "com.google.ios.youtube"
         },
         {
-          "name": "Cercube (Legacy)"
+          "name": "Cercube (Legacy)",
+          "developerName": "Cercube",
+          "version": "20.21.6",
+          "bundleIdentifier": "com.google.ios.youtube-"
         }
       ]
     },
@@ -2720,7 +4634,10 @@
       "catalogLimited": false,
       "apps": [
         {
-          "name": "Rocket for Instagram"
+          "name": "Rocket for Instagram",
+          "developerName": "Rocket",
+          "version": "448.0.0",
+          "bundleIdentifier": "com.burbn.instagram"
         }
       ]
     },
@@ -2734,7 +4651,10 @@
       "catalogLimited": false,
       "apps": [
         {
-          "name": "Reynard Browser"
+          "name": "Reynard Browser",
+          "developerName": "Minh Ton",
+          "version": "0.15.0",
+          "bundleIdentifier": "com.minh-ton.Reynard"
         }
       ]
     },
@@ -2748,22 +4668,40 @@
       "catalogLimited": false,
       "apps": [
         {
-          "name": "AltStore"
+          "name": "AltStore",
+          "developerName": "Riley Testut",
+          "version": "2.3",
+          "bundleIdentifier": "com.rileytestut.AltStore"
         },
         {
-          "name": "AltStore"
+          "name": "AltStore",
+          "developerName": "Riley Testut",
+          "version": "2.3rc",
+          "bundleIdentifier": "com.rileytestut.AltStore.Beta"
         },
         {
-          "name": "Delta"
+          "name": "Delta",
+          "developerName": "Riley Testut",
+          "version": "1.7.1",
+          "bundleIdentifier": "com.rileytestut.Delta"
         },
         {
-          "name": "Delta"
+          "name": "Delta",
+          "developerName": "Riley Testut",
+          "version": "2.0.4",
+          "bundleIdentifier": "com.rileytestut.Delta.Beta"
         },
         {
-          "name": "Clip"
+          "name": "Clip",
+          "developerName": "Riley Testut",
+          "version": "1.2",
+          "bundleIdentifier": "com.rileytestut.Clip"
         },
         {
-          "name": "Clip"
+          "name": "Clip",
+          "developerName": "Riley Testut",
+          "version": "1.2b2",
+          "bundleIdentifier": "com.rileytestut.Clip.Beta"
         }
       ]
     },
@@ -2777,28 +4715,52 @@
       "catalogLimited": false,
       "apps": [
         {
-          "name": "RNGTool"
+          "name": "RNGTool",
+          "developerName": "NCX Programming",
+          "version": "3.0.0",
+          "bundleIdentifier": "com.NCX-Programming.RNGToolMobile"
         },
         {
-          "name": "UTM Virtual Machines"
+          "name": "UTM Virtual Machines",
+          "developerName": "osy",
+          "version": "4.5.4",
+          "bundleIdentifier": "com.utmapp.UTM"
         },
         {
-          "name": "LiveContainer"
+          "name": "LiveContainer",
+          "developerName": "khanhduytran0",
+          "version": "2.1.1",
+          "bundleIdentifier": "com.kdt.livecontainer"
         },
         {
-          "name": "SideStore"
+          "name": "SideStore",
+          "developerName": "SideStore Team",
+          "version": "0.5.8",
+          "bundleIdentifier": "com.SideStore.SideStore"
         },
         {
-          "name": "Ferrite"
+          "name": "Ferrite",
+          "developerName": "RoyalLab",
+          "version": "0.7.1",
+          "bundleIdentifier": "me.kingbri.ferrite"
         },
         {
-          "name": "SideJIT"
+          "name": "SideJIT",
+          "developerName": "Stossy11 | nythepegasus",
+          "version": "0.0.4",
+          "bundleIdentifier": "com.stossy11.SideJIT"
         },
         {
-          "name": "Mindustry"
+          "name": "Mindustry",
+          "developerName": "Unofficial Mindustry repository",
+          "version": "20021",
+          "bundleIdentifier": "io.anuke.mindustry.be"
         },
         {
-          "name": "GearGlimpseRevolution"
+          "name": "GearGlimpseRevolution",
+          "developerName": "nab138",
+          "version": "0.0.4",
+          "bundleIdentifier": "me.nabdev.gearglimpserev"
         }
       ]
     },
@@ -2812,7 +4774,10 @@
       "catalogLimited": false,
       "apps": [
         {
-          "name": "Winston for Reddit"
+          "name": "Winston for Reddit",
+          "developerName": "Kinark",
+          "version": "1.1.5",
+          "bundleIdentifier": "lo.cafe.winston"
         }
       ]
     },
@@ -2826,22 +4791,40 @@
       "catalogLimited": false,
       "apps": [
         {
-          "name": "Customize Search Engine"
+          "name": "Customize Search Engine",
+          "developerName": "Cizzuk",
+          "version": "5.0",
+          "bundleIdentifier": "com.tsg0o0.cse"
         },
         {
-          "name": "Deflector"
+          "name": "Deflector",
+          "developerName": "Cizzuk",
+          "version": "0.1",
+          "bundleIdentifier": "net.cizzuk.deflector"
         },
         {
-          "name": "Side Search"
+          "name": "Side Search",
+          "developerName": "Cizzuk",
+          "version": "4.0",
+          "bundleIdentifier": "net.cizzuk.sidesearch"
         },
         {
-          "name": "CBNote"
+          "name": "CBNote",
+          "developerName": "Cizzuk",
+          "version": "2.7",
+          "bundleIdentifier": "net.cizzuk.cbnote"
         },
         {
-          "name": "Alare"
+          "name": "Alare",
+          "developerName": "Cizzuk",
+          "version": "2.0",
+          "bundleIdentifier": "net.cizzuk.alare"
         },
         {
-          "name": "WebA11Y"
+          "name": "WebA11Y",
+          "developerName": "Cizzuk",
+          "version": "3.6",
+          "bundleIdentifier": "com.tsg0o0.safariweba11y"
         }
       ]
     },
@@ -2855,7 +4838,10 @@
       "catalogLimited": false,
       "apps": [
         {
-          "name": "Aidoku"
+          "name": "Aidoku",
+          "developerName": "Skitty",
+          "version": "0.9",
+          "bundleIdentifier": "app.aidoku.Aidoku"
         }
       ]
     },
@@ -2869,7 +4855,10 @@
       "catalogLimited": false,
       "apps": [
         {
-          "name": "Mangayomi"
+          "name": "Mangayomi",
+          "developerName": "Moustapha Kodjo Amadou",
+          "version": "0.9.7",
+          "bundleIdentifier": "com.kodjodevf.mangayomi"
         }
       ]
     },
@@ -2883,7 +4872,10 @@
       "catalogLimited": false,
       "apps": [
         {
-          "name": "AnymeX"
+          "name": "AnymeX",
+          "developerName": "RyanYuuki",
+          "version": "3.1.8",
+          "bundleIdentifier": "com.ryan.anymex"
         }
       ]
     },
@@ -2897,10 +4889,16 @@
       "catalogLimited": false,
       "apps": [
         {
-          "name": "Animeko"
+          "name": "Animeko",
+          "developerName": "openani",
+          "version": "6.2.0",
+          "bundleIdentifier": "org.animeko.animeko"
         },
         {
-          "name": "Animeko (Pre-Release)"
+          "name": "Animeko (Pre-Release)",
+          "developerName": "openani",
+          "version": "6.2.0-beta01",
+          "bundleIdentifier": "org.animeko.animeko.beta"
         }
       ]
     },
@@ -2914,25 +4912,46 @@
       "catalogLimited": false,
       "apps": [
         {
-          "name": "NeoFreeBird"
+          "name": "NeoFreeBird",
+          "developerName": "actuallyaridan and timi2506",
+          "version": "10.76b1",
+          "bundleIdentifier": "timi2506.actuallyaridan.NeoFreeBird-New"
         },
         {
-          "name": "Portal Mini"
+          "name": "Portal Mini",
+          "developerName": "timi2506",
+          "version": "1.0.0",
+          "bundleIdentifier": "com.timi2506.Portal-Mini"
         },
         {
-          "name": "Haptics"
+          "name": "Haptics",
+          "developerName": "timi2506",
+          "version": "1.0.0",
+          "bundleIdentifier": "com.timi2506.Haptics"
         },
         {
-          "name": "macOS Icons"
+          "name": "macOS Icons",
+          "developerName": "timi2506",
+          "version": "1.0",
+          "bundleIdentifier": "com.timi2506.macosicons"
         },
         {
-          "name": "YT-TV"
+          "name": "YT-TV",
+          "developerName": "timi2506",
+          "version": "1.0",
+          "bundleIdentifier": "com.timi2506.YT-TV"
         },
         {
-          "name": "Browser"
+          "name": "Browser",
+          "developerName": "timi2506",
+          "version": "0.5b",
+          "bundleIdentifier": "com.timi2506.Browser"
         },
         {
-          "name": "Portal"
+          "name": "Portal",
+          "developerName": "timi2506",
+          "version": "1.0",
+          "bundleIdentifier": "com.timi2506.wsf-portal"
         }
       ]
     },
@@ -2946,7 +4965,10 @@
       "catalogLimited": false,
       "apps": [
         {
-          "name": "Nuvio"
+          "name": "Nuvio",
+          "developerName": "NuvioMedia",
+          "version": "0.5.5",
+          "bundleIdentifier": "com.nuvio.media"
         }
       ]
     },
@@ -2960,7 +4982,10 @@
       "catalogLimited": false,
       "apps": [
         {
-          "name": "RyukSign"
+          "name": "RyukSign",
+          "developerName": "faroukbmiled",
+          "version": "2.9.8",
+          "bundleIdentifier": "ryuk2.anoxclan.com"
         }
       ]
     }
