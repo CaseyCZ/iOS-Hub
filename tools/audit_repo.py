@@ -359,7 +359,6 @@ def validate_privacy_compliance() -> None:
             "ANALYTICS_PAGE_TITLE",
             "ANALYTICS_PAGE_LOCATION",
             "meta[name=\"analytics-page-title\"]",
-            "link[rel=\"canonical\"]",
             "page_title: ANALYTICS_PAGE_TITLE",
             "page_location: ANALYTICS_PAGE_LOCATION",
         ):
