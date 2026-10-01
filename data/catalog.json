@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-01T17:17:55Z",
+  "generatedAt": "2026-10-01T17:44:56Z",
   "sources": [
     {
       "id": "utm",
@@ -7,6 +7,15 @@
       "appCount": 2,
       "variants": [
         "classic"
+      ],
+      "catalogLimited": false,
+      "apps": [
+        {
+          "name": "UTM"
+        },
+        {
+          "name": "UTM SE"
+        }
       ]
     },
     {
@@ -15,6 +24,18 @@
       "appCount": 3,
       "variants": [
         "classic"
+      ],
+      "catalogLimited": false,
+      "apps": [
+        {
+          "name": "Provenance"
+        },
+        {
+          "name": "Provenance Alpha"
+        },
+        {
+          "name": "iCube"
+        }
       ]
     },
     {
@@ -23,6 +44,12 @@
       "appCount": 1,
       "variants": [
         "classic"
+      ],
+      "catalogLimited": false,
+      "apps": [
+        {
+          "name": "iSH"
+        }
       ]
     },
     {
@@ -31,6 +58,12 @@
       "appCount": 1,
       "variants": [
         "classic"
+      ],
+      "catalogLimited": false,
+      "apps": [
+        {
+          "name": "Flycast"
+        }
       ]
     },
     {
@@ -39,6 +72,78 @@
       "appCount": 23,
       "variants": [
         "classic"
+      ],
+      "catalogLimited": false,
+      "apps": [
+        {
+          "name": "PPSSPP"
+        },
+        {
+          "name": "Countdown"
+        },
+        {
+          "name": "StikNES"
+        },
+        {
+          "name": "RetroArch"
+        },
+        {
+          "name": "Flappy Bird"
+        },
+        {
+          "name": "iSH"
+        },
+        {
+          "name": "iNDS"
+        },
+        {
+          "name": "Play!"
+        },
+        {
+          "name": "iDOS"
+        },
+        {
+          "name": "Firebird Emu"
+        },
+        {
+          "name": "ActiveGS iOS"
+        },
+        {
+          "name": "Ready"
+        },
+        {
+          "name": "MAME4iOS"
+        },
+        {
+          "name": "OldOS"
+        },
+        {
+          "name": "unc0ver"
+        },
+        {
+          "name": "iTorrent"
+        },
+        {
+          "name": "Rewound"
+        },
+        {
+          "name": "ScummVM"
+        },
+        {
+          "name": "Mini vMac"
+        },
+        {
+          "name": "XPatcher"
+        },
+        {
+          "name": "blurt.blog"
+        },
+        {
+          "name": "VCMI"
+        },
+        {
+          "name": "3Speak.tv - Acela"
+        }
       ]
     },
     {
@@ -47,6 +152,12 @@
       "appCount": 1,
       "variants": [
         "classic"
+      ],
+      "catalogLimited": false,
+      "apps": [
+        {
+          "name": "SideStore"
+        }
       ]
     },
     {
@@ -55,6 +166,15 @@
       "appCount": 2,
       "variants": [
         "classic"
+      ],
+      "catalogLimited": false,
+      "apps": [
+        {
+          "name": "StikDebug"
+        },
+        {
+          "name": "StikPair"
+        }
       ]
     },
     {
@@ -63,6 +183,12 @@
       "appCount": 1,
       "variants": [
         "classic"
+      ],
+      "catalogLimited": false,
+      "apps": [
+        {
+          "name": "LiveContainer"
+        }
       ]
     },
     {
@@ -71,6 +197,12 @@
       "appCount": 1,
       "variants": [
         "classic"
+      ],
+      "catalogLimited": false,
+      "apps": [
+        {
+          "name": "LiveContainer (nightly)"
+        }
       ]
     },
     {
@@ -79,6 +211,12 @@
       "appCount": 1,
       "variants": [
         "classic"
+      ],
+      "catalogLimited": false,
+      "apps": [
+        {
+          "name": "Manic EMU v2.0.1"
+        }
       ]
     },
     {
@@ -87,6 +225,12 @@
       "appCount": 1,
       "variants": [
         "classic"
+      ],
+      "catalogLimited": false,
+      "apps": [
+        {
+          "name": "Flycast"
+        }
       ]
     },
     {
@@ -95,6 +239,12 @@
       "appCount": 1,
       "variants": [
         "classic"
+      ],
+      "catalogLimited": false,
+      "apps": [
+        {
+          "name": "Geode"
+        }
       ]
     },
     {
@@ -103,6 +253,12 @@
       "appCount": 1,
       "variants": [
         "classic"
+      ],
+      "catalogLimited": false,
+      "apps": [
+        {
+          "name": "Retro Sekai!"
+        }
       ]
     },
     {
@@ -111,6 +267,15 @@
       "appCount": 2,
       "variants": [
         "classic"
+      ],
+      "catalogLimited": false,
+      "apps": [
+        {
+          "name": "DolphiniOS"
+        },
+        {
+          "name": "DolphiniOS (Public Beta)"
+        }
       ]
     },
     {
@@ -119,6 +284,15 @@
       "appCount": 2,
       "variants": [
         "classic"
+      ],
+      "catalogLimited": false,
+      "apps": [
+        {
+          "name": "Angel Aura Amethyst"
+        },
+        {
+          "name": "PojavLauncher iOS"
+        }
       ]
     },
     {
@@ -127,6 +301,12 @@
       "appCount": 1,
       "variants": [
         "classic"
+      ],
+      "catalogLimited": false,
+      "apps": [
+        {
+          "name": "PokeMMO"
+        }
       ]
     },
     {
@@ -135,6 +315,15 @@
       "appCount": 2,
       "variants": [
         "classic"
+      ],
+      "catalogLimited": false,
+      "apps": [
+        {
+          "name": "Odyssey"
+        },
+        {
+          "name": "Taurine"
+        }
       ]
     },
     {
@@ -143,6 +332,12 @@
       "appCount": 1,
       "variants": [
         "classic"
+      ],
+      "catalogLimited": false,
+      "apps": [
+        {
+          "name": "Yattee"
+        }
       ]
     },
     {
@@ -151,6 +346,12 @@
       "appCount": 1,
       "variants": [
         "classic"
+      ],
+      "catalogLimited": false,
+      "apps": [
+        {
+          "name": "Ignited"
+        }
       ]
     },
     {
@@ -159,6 +360,12 @@
       "appCount": 1,
       "variants": [
         "classic"
+      ],
+      "catalogLimited": false,
+      "apps": [
+        {
+          "name": "Mona - HRT journal"
+        }
       ]
     },
     {
@@ -167,6 +374,15 @@
       "appCount": 2,
       "variants": [
         "classic"
+      ],
+      "catalogLimited": false,
+      "apps": [
+        {
+          "name": "VortX"
+        },
+        {
+          "name": "VortX (Apple TV)"
+        }
       ]
     },
     {
@@ -175,6 +391,12 @@
       "appCount": 1,
       "variants": [
         "pal"
+      ],
+      "catalogLimited": false,
+      "apps": [
+        {
+          "name": "Stremio"
+        }
       ]
     },
     {
@@ -183,6 +405,12 @@
       "appCount": 1,
       "variants": [
         "classic"
+      ],
+      "catalogLimited": false,
+      "apps": [
+        {
+          "name": "Stremio"
+        }
       ]
     },
     {
@@ -191,6 +419,12 @@
       "appCount": 1,
       "variants": [
         "classic"
+      ],
+      "catalogLimited": false,
+      "apps": [
+        {
+          "name": "Kodi iOS"
+        }
       ]
     },
     {
@@ -199,6 +433,12 @@
       "appCount": 1,
       "variants": [
         "pal"
+      ],
+      "catalogLimited": false,
+      "apps": [
+        {
+          "name": "eSound"
+        }
       ]
     },
     {
@@ -207,6 +447,12 @@
       "appCount": 1,
       "variants": [
         "classic"
+      ],
+      "catalogLimited": false,
+      "apps": [
+        {
+          "name": "Party Knights - Drinking Game"
+        }
       ]
     },
     {
@@ -215,6 +461,12 @@
       "appCount": 1,
       "variants": [
         "classic"
+      ],
+      "catalogLimited": false,
+      "apps": [
+        {
+          "name": "iTorrent"
+        }
       ]
     },
     {
@@ -224,6 +476,12 @@
       "variants": [
         "classic",
         "pal"
+      ],
+      "catalogLimited": false,
+      "apps": [
+        {
+          "name": "qBitConnect"
+        }
       ]
     },
     {
@@ -233,6 +491,12 @@
       "variants": [
         "classic",
         "pal"
+      ],
+      "catalogLimited": false,
+      "apps": [
+        {
+          "name": "Artemis"
+        }
       ]
     },
     {
@@ -241,6 +505,12 @@
       "appCount": 1,
       "variants": [
         "pal"
+      ],
+      "catalogLimited": false,
+      "apps": [
+        {
+          "name": "HackerWeb"
+        }
       ]
     },
     {
@@ -249,6 +519,12 @@
       "appCount": 1,
       "variants": [
         "pal"
+      ],
+      "catalogLimited": false,
+      "apps": [
+        {
+          "name": "CourtPredict"
+        }
       ]
     },
     {
@@ -257,6 +533,12 @@
       "appCount": 1,
       "variants": [
         "classic"
+      ],
+      "catalogLimited": false,
+      "apps": [
+        {
+          "name": "Wayfurther"
+        }
       ]
     },
     {
@@ -266,6 +548,12 @@
       "variants": [
         "classic",
         "pal"
+      ],
+      "catalogLimited": false,
+      "apps": [
+        {
+          "name": "qBitControl"
+        }
       ]
     },
     {
@@ -274,6 +562,12 @@
       "appCount": 1,
       "variants": [
         "pal"
+      ],
+      "catalogLimited": false,
+      "apps": [
+        {
+          "name": "iPhanpy"
+        }
       ]
     },
     {
@@ -282,6 +576,18 @@
       "appCount": 3,
       "variants": [
         "pal"
+      ],
+      "catalogLimited": false,
+      "apps": [
+        {
+          "name": "Fortnite"
+        },
+        {
+          "name": "Fall Guys"
+        },
+        {
+          "name": "Rocket League Sideswipe"
+        }
       ]
     },
     {
@@ -290,6 +596,21 @@
       "appCount": 4,
       "variants": [
         "classic"
+      ],
+      "catalogLimited": false,
+      "apps": [
+        {
+          "name": "Spotify Premium"
+        },
+        {
+          "name": "YouTube Plus"
+        },
+        {
+          "name": "YouTube Music Ultimate"
+        },
+        {
+          "name": "Instagram Plus"
+        }
       ]
     },
     {
@@ -298,6 +619,30 @@
       "appCount": 7,
       "variants": [
         "classic"
+      ],
+      "catalogLimited": false,
+      "apps": [
+        {
+          "name": "Glow for Facebook"
+        },
+        {
+          "name": "Flow for Messenger"
+        },
+        {
+          "name": "Infuse Plus (iOS18+)"
+        },
+        {
+          "name": "YouTube Plus (iOS16+)"
+        },
+        {
+          "name": "YouTube Music Ultimate (iOS16+)"
+        },
+        {
+          "name": "OrwellVK"
+        },
+        {
+          "name": "Tweach"
+        }
       ]
     },
     {
@@ -306,6 +651,48 @@
       "appCount": 13,
       "variants": [
         "classic"
+      ],
+      "catalogLimited": false,
+      "apps": [
+        {
+          "name": "HD Flix (No Ads)"
+        },
+        {
+          "name": "X++"
+        },
+        {
+          "name": "Facebook++"
+        },
+        {
+          "name": "TikTok++"
+        },
+        {
+          "name": "Instagram++"
+        },
+        {
+          "name": "MyFitnessPal++"
+        },
+        {
+          "name": "BeReal++"
+        },
+        {
+          "name": "Deezer++"
+        },
+        {
+          "name": "SoundCloud++"
+        },
+        {
+          "name": "Spotify++"
+        },
+        {
+          "name": "YouTube++"
+        },
+        {
+          "name": "Duolingo++"
+        },
+        {
+          "name": "Messenger++"
+        }
       ]
     },
     {
@@ -314,6 +701,30 @@
       "appCount": 7,
       "variants": [
         "classic"
+      ],
+      "catalogLimited": false,
+      "apps": [
+        {
+          "name": "TikTok"
+        },
+        {
+          "name": "YouTube"
+        },
+        {
+          "name": "Twitter"
+        },
+        {
+          "name": "Instagram"
+        },
+        {
+          "name": "Twitch"
+        },
+        {
+          "name": "YouTube Music"
+        },
+        {
+          "name": "Ksign"
+        }
       ]
     },
     {
@@ -322,6 +733,39 @@
       "appCount": 10,
       "variants": [
         "classic"
+      ],
+      "catalogLimited": false,
+      "apps": [
+        {
+          "name": "YouMod + Tweaks (driftywinds)"
+        },
+        {
+          "name": "Spotify (EeveeSpotifyReincarnated)"
+        },
+        {
+          "name": "Minecraft"
+        },
+        {
+          "name": "Instagram (RyukGram)"
+        },
+        {
+          "name": "Twitter BHX"
+        },
+        {
+          "name": "Balatro"
+        },
+        {
+          "name": "YT Music Ultimate"
+        },
+        {
+          "name": "Feather"
+        },
+        {
+          "name": "Elgato Stream Deck Mobile"
+        },
+        {
+          "name": "LiveContainer - BETA NOT MEANT FOR USE YET"
+        }
       ]
     },
     {
@@ -330,6 +774,159 @@
       "appCount": 63,
       "variants": [
         "classic"
+      ],
+      "catalogLimited": true,
+      "apps": [
+        {
+          "name": "Discord (RainTweak)"
+        },
+        {
+          "name": "Facebook (iQFace)"
+        },
+        {
+          "name": "Facebook (Facebook Plus)"
+        },
+        {
+          "name": "Google Photos (Gunshot) (iOS 16.1+)"
+        },
+        {
+          "name": "Google Photos (Gunshot) (iOS 17+)"
+        },
+        {
+          "name": "Google Photos (Gunshot)"
+        },
+        {
+          "name": "iMe (MxGram)"
+        },
+        {
+          "name": "iMe (iQTele)"
+        },
+        {
+          "name": "Infuse Plus (7.8.4)"
+        },
+        {
+          "name": "Infuse Plus (8.2.4)"
+        },
+        {
+          "name": "Infuse Plus (8.5.5)"
+        },
+        {
+          "name": "Instagram (Regram 6.1 Cracked)"
+        },
+        {
+          "name": "Instagram (Regram 6.1) (No Plugins)"
+        },
+        {
+          "name": "Instagram (RyukGram No Plugins)"
+        },
+        {
+          "name": "Instagram (RyukGram)"
+        },
+        {
+          "name": "Instagram (Sparkle No Plugins)"
+        },
+        {
+          "name": "Instagram (Sparkle)"
+        },
+        {
+          "name": "Messenger (Flow)"
+        },
+        {
+          "name": "Messenger (Login)"
+        },
+        {
+          "name": "Messenger (MSGPlusX)"
+        },
+        {
+          "name": "Nagram (Lead)"
+        },
+        {
+          "name": "Nagram (MxGram)"
+        },
+        {
+          "name": "Nagram (TGExtra)"
+        },
+        {
+          "name": "Nagram (iQTele)"
+        },
+        {
+          "name": "Reddit (Login)"
+        },
+        {
+          "name": "Reddit (RedditFilter)"
+        },
+        {
+          "name": "SoundCloud (NexaSC) (iOS 16.0-16.3)"
+        },
+        {
+          "name": "SoundCloud (NexaSC)"
+        },
+        {
+          "name": "Swiftgram (Lead)"
+        },
+        {
+          "name": "Swiftgram (MxGram)"
+        },
+        {
+          "name": "Swiftgram (iQTele)"
+        },
+        {
+          "name": "Swiftgram (TGExtra)"
+        },
+        {
+          "name": "Telegram (Lead)"
+        },
+        {
+          "name": "Telegram (MxGram)"
+        },
+        {
+          "name": "Telegram (iQTele)"
+        },
+        {
+          "name": "Telegram (TGExtra)"
+        },
+        {
+          "name": "Spotify (EeveeSpotify 6.6.8 + Spoti.pw 0.22.0)"
+        },
+        {
+          "name": "Spotify (EeveeSpotify 6.6.8 + Spoti.pw 0.22.0) (No Plugins)"
+        },
+        {
+          "name": "Threads (ThreadSaver)"
+        },
+        {
+          "name": "TikTok (Infinitok)"
+        },
+        {
+          "name": "Turrit (Lead)"
+        },
+        {
+          "name": "Turrit (MxGram)"
+        },
+        {
+          "name": "Turrit (iQTele)"
+        },
+        {
+          "name": "Turrit (TGExtra)"
+        },
+        {
+          "name": "Twitch"
+        },
+        {
+          "name": "Twitch (Glass)"
+        },
+        {
+          "name": "Twitter NFB"
+        },
+        {
+          "name": "Twitter NFB (Glass)"
+        },
+        {
+          "name": "Twitter NFB + TWI"
+        },
+        {
+          "name": "Twitter NFB + TWI (Glass)"
+        }
       ]
     },
     {
@@ -338,6 +935,21 @@
       "appCount": 4,
       "variants": [
         "classic"
+      ],
+      "catalogLimited": false,
+      "apps": [
+        {
+          "name": "EeveeSpotifyReincarnated"
+        },
+        {
+          "name": "EeveeSpotifyReincarnated(PATCHED)"
+        },
+        {
+          "name": "ESR Liquid Glass"
+        },
+        {
+          "name": "ESR Liquid Glass Patched"
+        }
       ]
     },
     {
@@ -346,6 +958,12 @@
       "appCount": 1,
       "variants": [
         "classic"
+      ],
+      "catalogLimited": false,
+      "apps": [
+        {
+          "name": "YTLitePlus"
+        }
       ]
     },
     {
@@ -354,6 +972,111 @@
       "appCount": 34,
       "variants": [
         "classic"
+      ],
+      "catalogLimited": false,
+      "apps": [
+        {
+          "name": "Carrot"
+        },
+        {
+          "name": "Webssh"
+        },
+        {
+          "name": "MoeReddit"
+        },
+        {
+          "name": "Infuse (Moe Plus)"
+        },
+        {
+          "name": "Infuse (Plus 2.5)"
+        },
+        {
+          "name": "YouTube (Moe Multi)"
+        },
+        {
+          "name": "YouTube (Moe YTK)"
+        },
+        {
+          "name": "YouTube (YTPlus Cyan Edition)"
+        },
+        {
+          "name": "YouTube (LRD)"
+        },
+        {
+          "name": "YouTube (DLTube, Moe Patched)"
+        },
+        {
+          "name": "YouTube (Moe DLTube, Cracked)"
+        },
+        {
+          "name": "YouTube (Moe LRD, Cracked)"
+        },
+        {
+          "name": "YouTube (Moe SY)"
+        },
+        {
+          "name": "YouTube (Moe YTPlus, Temp Free)"
+        },
+        {
+          "name": "YouTube Music"
+        },
+        {
+          "name": "Instagram (Moe Multi)"
+        },
+        {
+          "name": "Instagram (AC)"
+        },
+        {
+          "name": "Instagram (BH)"
+        },
+        {
+          "name": "Instagram (DL, Cracked)"
+        },
+        {
+          "name": "Instagram (IGFormat)"
+        },
+        {
+          "name": "Instagram (INK Plus)"
+        },
+        {
+          "name": "Instagram (LRD, Cracked)"
+        },
+        {
+          "name": "Instagram (Moe RyukGram)"
+        },
+        {
+          "name": "Instagram (NYX B2, Cracked)"
+        },
+        {
+          "name": "Instagram (NYX B4)"
+        },
+        {
+          "name": "Instagram (Regram)"
+        },
+        {
+          "name": "Instagram (Rocket, Cracked)"
+        },
+        {
+          "name": "Instagram (SC)"
+        },
+        {
+          "name": "Instagram (Theta)"
+        },
+        {
+          "name": "Twitch"
+        },
+        {
+          "name": "Twitch (Adfree, Moe Control)"
+        },
+        {
+          "name": "Twitch (Tweach)"
+        },
+        {
+          "name": "Twitch (Moe TwitchControl)"
+        },
+        {
+          "name": "Twitch (Twitchv, Moe Tweach)"
+        }
       ]
     },
     {
@@ -362,6 +1085,12 @@
       "appCount": 1,
       "variants": [
         "classic"
+      ],
+      "catalogLimited": false,
+      "apps": [
+        {
+          "name": "YouMod"
+        }
       ]
     },
     {
@@ -370,6 +1099,24 @@
       "appCount": 5,
       "variants": [
         "classic"
+      ],
+      "catalogLimited": false,
+      "apps": [
+        {
+          "name": "YoutubePlus (YTLite)"
+        },
+        {
+          "name": "YTKillerPlus"
+        },
+        {
+          "name": "YTKACE"
+        },
+        {
+          "name": "YouPro"
+        },
+        {
+          "name": "YouMod"
+        }
       ]
     },
     {
@@ -378,14 +1125,320 @@
       "appCount": 155,
       "variants": [
         "classic"
+      ],
+      "catalogLimited": true,
+      "apps": [
+        {
+          "name": "PiliPlus"
+        },
+        {
+          "name": "PiliPlus"
+        },
+        {
+          "name": "AIFengYue"
+        },
+        {
+          "name": "PiliPlus"
+        },
+        {
+          "name": "Aidoku"
+        },
+        {
+          "name": "PiliPlus"
+        },
+        {
+          "name": "PiliPlus"
+        },
+        {
+          "name": "PiliPlus"
+        },
+        {
+          "name": "PiliPlus"
+        },
+        {
+          "name": "PiliPlus"
+        },
+        {
+          "name": "PiliPlus"
+        },
+        {
+          "name": "PiliPlus"
+        },
+        {
+          "name": "Feather"
+        },
+        {
+          "name": "Aidoku"
+        },
+        {
+          "name": "JavDB"
+        },
+        {
+          "name": "Feather"
+        },
+        {
+          "name": "Aidoku"
+        },
+        {
+          "name": "PiliPlus"
+        },
+        {
+          "name": "PiliPlus"
+        },
+        {
+          "name": "PiliPlus"
+        },
+        {
+          "name": "PiliPlus"
+        },
+        {
+          "name": "PiliPlus"
+        },
+        {
+          "name": "PiliPlus"
+        },
+        {
+          "name": "Swiftgram"
+        },
+        {
+          "name": "Swiftgram"
+        },
+        {
+          "name": "Twitter"
+        },
+        {
+          "name": "Twitter"
+        },
+        {
+          "name": "Twitter"
+        },
+        {
+          "name": "Instagram"
+        },
+        {
+          "name": "Instagram"
+        },
+        {
+          "name": "Asspp"
+        },
+        {
+          "name": "Twitter"
+        },
+        {
+          "name": "DYDL"
+        },
+        {
+          "name": "Twitter"
+        },
+        {
+          "name": "Twitter"
+        },
+        {
+          "name": "WeChat"
+        },
+        {
+          "name": "WeChat"
+        },
+        {
+          "name": "WeChat"
+        },
+        {
+          "name": "WeChat"
+        },
+        {
+          "name": "Instagram"
+        },
+        {
+          "name": "WeChat"
+        },
+        {
+          "name": "BilibiliIntl"
+        },
+        {
+          "name": "Instagram"
+        },
+        {
+          "name": "WeChat"
+        },
+        {
+          "name": "WeChat"
+        },
+        {
+          "name": "WeChat"
+        },
+        {
+          "name": "Instagram"
+        },
+        {
+          "name": "WeChat"
+        },
+        {
+          "name": "WeChat"
+        },
+        {
+          "name": "WeChat"
+        }
       ]
     },
     {
       "id": "cypwn-ipa",
       "name": "CyPwn IPA Library",
-      "appCount": 207,
+      "appCount": 209,
       "variants": [
         "classic"
+      ],
+      "catalogLimited": true,
+      "apps": [
+        {
+          "name": "Stremio-2.0.6"
+        },
+        {
+          "name": "PowerWarriors_18.0"
+        },
+        {
+          "name": "Stremio-2.0.0"
+        },
+        {
+          "name": "CloverPit-1.4.8"
+        },
+        {
+          "name": "Stremio-1.3.6"
+        },
+        {
+          "name": "Vesc_Tool_6.06.2"
+        },
+        {
+          "name": "Terraria_4.5.0"
+        },
+        {
+          "name": "Violyn_1_4_4-2"
+        },
+        {
+          "name": "iTorrent"
+        },
+        {
+          "name": "True_Skate_1.5.102"
+        },
+        {
+          "name": "Gopeed-v1.8.3-ios"
+        },
+        {
+          "name": "OldOS"
+        },
+        {
+          "name": "InjectionIPA_v5.0"
+        },
+        {
+          "name": "DLiPA_v1.1"
+        },
+        {
+          "name": "Fortnite+Release-7.40-CL-5011364"
+        },
+        {
+          "name": "Spotube-iOS"
+        },
+        {
+          "name": "PotatoIM"
+        },
+        {
+          "name": "Asspp_2.3"
+        },
+        {
+          "name": "GoCoEdit_23.0"
+        },
+        {
+          "name": "Deltarune_v727"
+        },
+        {
+          "name": "BazaartPremium_10.8.0"
+        },
+        {
+          "name": "VPN_FAST"
+        },
+        {
+          "name": "Tasks_Create_Live_Activities"
+        },
+        {
+          "name": "ChatGPTw15"
+        },
+        {
+          "name": "VPN_Proxy_Master"
+        },
+        {
+          "name": "VPN_Freedom"
+        },
+        {
+          "name": "bitchat_1.2.1"
+        },
+        {
+          "name": "The_Free_VPN"
+        },
+        {
+          "name": "Shark_Arsenal_4.0.14"
+        },
+        {
+          "name": "FileBrowser_Pro_25.7"
+        },
+        {
+          "name": "Amethyst_1.0"
+        },
+        {
+          "name": "Bitchat"
+        },
+        {
+          "name": "Little Nightmares"
+        },
+        {
+          "name": "SQLiteFlow_5.8.6"
+        },
+        {
+          "name": "FileBrowser_Pro_25.6"
+        },
+        {
+          "name": "FileBrowser_Pro_25.5"
+        },
+        {
+          "name": "Scrcpy_Remote_2.4"
+        },
+        {
+          "name": "True_Skate_1.5.95"
+        },
+        {
+          "name": "FTPManager_8.5.4"
+        },
+        {
+          "name": "Stremio_1.0.1-17"
+        },
+        {
+          "name": "Theta_1.5"
+        },
+        {
+          "name": "UniversalPaperclips"
+        },
+        {
+          "name": "Pokecut_4.4.2"
+        },
+        {
+          "name": "ProCam_14.7.3"
+        },
+        {
+          "name": "maid2_0_7"
+        },
+        {
+          "name": "Ignited_1.8.5"
+        },
+        {
+          "name": "EeveeSpotify-5.9.5-9.0.36"
+        },
+        {
+          "name": "Balatro_1.0.1o"
+        },
+        {
+          "name": "CrazyCattle3D_1.0.0"
+        },
+        {
+          "name": "Gopeed_1.7.0"
+        }
       ]
     },
     {
@@ -394,6 +1447,159 @@
       "appCount": 9438,
       "variants": [
         "classic"
+      ],
+      "catalogLimited": true,
+      "apps": [
+        {
+          "name": "SkyGuide"
+        },
+        {
+          "name": "Lyfta"
+        },
+        {
+          "name": "CodeSnackIDE"
+        },
+        {
+          "name": "SimplyPiano"
+        },
+        {
+          "name": "PSExpress"
+        },
+        {
+          "name": "TypeAI"
+        },
+        {
+          "name": "Endel"
+        },
+        {
+          "name": "KineMaster"
+        },
+        {
+          "name": "Calm"
+        },
+        {
+          "name": "VlogNow"
+        },
+        {
+          "name": "UnifiedDictionary"
+        },
+        {
+          "name": "StressWatch"
+        },
+        {
+          "name": "1Blocker"
+        },
+        {
+          "name": "SNOW"
+        },
+        {
+          "name": "SleepCycle"
+        },
+        {
+          "name": "HeavyBagPro"
+        },
+        {
+          "name": "FitnessAI"
+        },
+        {
+          "name": "Mockup"
+        },
+        {
+          "name": "Infuse"
+        },
+        {
+          "name": "Lifesum"
+        },
+        {
+          "name": "LINECamera"
+        },
+        {
+          "name": "LUTStudio"
+        },
+        {
+          "name": "BeatMakerPro"
+        },
+        {
+          "name": "CodeSnackIDE"
+        },
+        {
+          "name": "SODA"
+        },
+        {
+          "name": "Premiere"
+        },
+        {
+          "name": "Lightroom"
+        },
+        {
+          "name": "Picsart"
+        },
+        {
+          "name": "ThePiano"
+        },
+        {
+          "name": "ColorPop"
+        },
+        {
+          "name": "NutriCoach"
+        },
+        {
+          "name": "PixelColor"
+        },
+        {
+          "name": "OraWeather"
+        },
+        {
+          "name": "DesignLab"
+        },
+        {
+          "name": "SCRL"
+        },
+        {
+          "name": "Crsel"
+        },
+        {
+          "name": "DiamondFinder"
+        },
+        {
+          "name": "PureStatus"
+        },
+        {
+          "name": "Foodie"
+        },
+        {
+          "name": "MyFitnessPal"
+        },
+        {
+          "name": "AdobeFresco"
+        },
+        {
+          "name": "LUTStudio"
+        },
+        {
+          "name": "GrowMe"
+        },
+        {
+          "name": "RiseSleep"
+        },
+        {
+          "name": "Dehancer"
+        },
+        {
+          "name": "Athlytic"
+        },
+        {
+          "name": "Yazio"
+        },
+        {
+          "name": "Captions"
+        },
+        {
+          "name": "Wallpapers"
+        },
+        {
+          "name": "Uplens"
+        }
       ]
     },
     {
@@ -402,6 +1608,12 @@
       "appCount": 1,
       "variants": [
         "classic"
+      ],
+      "catalogLimited": false,
+      "apps": [
+        {
+          "name": "YouTubeRebornPlus"
+        }
       ]
     },
     {
@@ -410,6 +1622,12 @@
       "appCount": 1,
       "variants": [
         "classic"
+      ],
+      "catalogLimited": false,
+      "apps": [
+        {
+          "name": "Apollo for Reddit"
+        }
       ]
     },
     {
@@ -418,6 +1636,12 @@
       "appCount": 1,
       "variants": [
         "classic"
+      ],
+      "catalogLimited": false,
+      "apps": [
+        {
+          "name": "Discord - Talk, Play, Hang Out"
+        }
       ]
     },
     {
@@ -426,6 +1650,12 @@
       "appCount": 1,
       "variants": [
         "classic"
+      ],
+      "catalogLimited": false,
+      "apps": [
+        {
+          "name": "YTKace"
+        }
       ]
     },
     {
@@ -434,6 +1664,33 @@
       "appCount": 8,
       "variants": [
         "classic"
+      ],
+      "catalogLimited": false,
+      "apps": [
+        {
+          "name": "YouTube+🗿"
+        },
+        {
+          "name": "Spotify+🗿"
+        },
+        {
+          "name": "YT Music+🗿"
+        },
+        {
+          "name": "Acrobat+🗿"
+        },
+        {
+          "name": "PicsArt+🗿"
+        },
+        {
+          "name": "Infuse+🗿"
+        },
+        {
+          "name": "Gopeed"
+        },
+        {
+          "name": "Twitch+🗿"
+        }
       ]
     },
     {
@@ -442,6 +1699,159 @@
       "appCount": 834,
       "variants": [
         "classic"
+      ],
+      "catalogLimited": true,
+      "apps": [
+        {
+          "name": "Flappy Bird"
+        },
+        {
+          "name": "UTM"
+        },
+        {
+          "name": "PostBox Pocket"
+        },
+        {
+          "name": "Human Anatomy Atlas"
+        },
+        {
+          "name": "WallpapersCraft Pro"
+        },
+        {
+          "name": "VideoShow PRO"
+        },
+        {
+          "name": "Napster++"
+        },
+        {
+          "name": "Instagram Plus"
+        },
+        {
+          "name": "Duet Display"
+        },
+        {
+          "name": "METAL SLUG X"
+        },
+        {
+          "name": "METAL SLUG 3"
+        },
+        {
+          "name": "METAL SLUG 2"
+        },
+        {
+          "name": "METAL SLUG 1"
+        },
+        {
+          "name": "Infltr++"
+        },
+        {
+          "name": "Aftercut"
+        },
+        {
+          "name": "Unruly Heroes"
+        },
+        {
+          "name": "Lapse: A Forgotten Future"
+        },
+        {
+          "name": "Max Payne Mobile"
+        },
+        {
+          "name": "GTA: Liberty City Stories"
+        },
+        {
+          "name": "GTA: Chinatown Wars"
+        },
+        {
+          "name": "Bully: Anniversary Edition"
+        },
+        {
+          "name": "Grand Theft Auto: Vice City"
+        },
+        {
+          "name": "Grand Theft Auto III"
+        },
+        {
+          "name": "Pocket City"
+        },
+        {
+          "name": "Geekbench 5 Pro"
+        },
+        {
+          "name": "Oceanhorn ™"
+        },
+        {
+          "name": "GSE SMART IPTV"
+        },
+        {
+          "name": "Picsew Pro – Picsew++"
+        },
+        {
+          "name": "Hydra Pro – Hydra++"
+        },
+        {
+          "name": "Don’t Starve: Shipwrecked"
+        },
+        {
+          "name": "Cat Quest"
+        },
+        {
+          "name": "Juicy Realm"
+        },
+        {
+          "name": "Kingdom Two Crowns"
+        },
+        {
+          "name": "GSE SMART IPTV PRO"
+        },
+        {
+          "name": "Analog Portland"
+        },
+        {
+          "name": "Analog Tokyo"
+        },
+        {
+          "name": "Analog Beijing"
+        },
+        {
+          "name": "Analog Wedding"
+        },
+        {
+          "name": "Analog Jeju"
+        },
+        {
+          "name": "Analog London"
+        },
+        {
+          "name": "Analog Budapest"
+        },
+        {
+          "name": "Analog Paris"
+        },
+        {
+          "name": "Analog Seoul"
+        },
+        {
+          "name": "Analog Acoustic"
+        },
+        {
+          "name": "Analog Brooklyn"
+        },
+        {
+          "name": "Color Accent"
+        },
+        {
+          "name": "Florence"
+        },
+        {
+          "name": "HDR Max – Photo Editor"
+        },
+        {
+          "name": "Streeme: IPTV Streaming"
+        },
+        {
+          "name": "Tadaa SLR"
+        }
       ]
     },
     {
@@ -450,6 +1860,15 @@
       "appCount": 2,
       "variants": [
         "classic"
+      ],
+      "catalogLimited": false,
+      "apps": [
+        {
+          "name": "ARMSX2 iOS"
+        },
+        {
+          "name": "ARMSX2 Nightly"
+        }
       ]
     },
     {
@@ -458,6 +1877,27 @@
       "appCount": 6,
       "variants": [
         "classic"
+      ],
+      "catalogLimited": false,
+      "apps": [
+        {
+          "name": "Regram"
+        },
+        {
+          "name": "Regram (Duplicate)"
+        },
+        {
+          "name": "Watusi"
+        },
+        {
+          "name": "Watusi (Duplicate)"
+        },
+        {
+          "name": "Watusi (Business)"
+        },
+        {
+          "name": "Watusi (Business Duplicate)"
+        }
       ]
     },
     {
@@ -466,6 +1906,12 @@
       "appCount": 1,
       "variants": [
         "classic"
+      ],
+      "catalogLimited": false,
+      "apps": [
+        {
+          "name": "Twitter"
+        }
       ]
     },
     {
@@ -474,6 +1920,12 @@
       "appCount": 1,
       "variants": [
         "classic"
+      ],
+      "catalogLimited": false,
+      "apps": [
+        {
+          "name": "MeloNX"
+        }
       ]
     },
     {
@@ -482,6 +1934,132 @@
       "appCount": 41,
       "variants": [
         "classic"
+      ],
+      "catalogLimited": false,
+      "apps": [
+        {
+          "name": "Aidoku"
+        },
+        {
+          "name": "AirCard-iOS"
+        },
+        {
+          "name": "AniBaka"
+        },
+        {
+          "name": "AnimeFlow"
+        },
+        {
+          "name": "Animeko"
+        },
+        {
+          "name": "Apollo for Reddit - GLASS"
+        },
+        {
+          "name": "ARMSX2"
+        },
+        {
+          "name": "Doer"
+        },
+        {
+          "name": "DolphiniOS"
+        },
+        {
+          "name": "DukeX"
+        },
+        {
+          "name": "EhPanda"
+        },
+        {
+          "name": "Husk"
+        },
+        {
+          "name": "Iridium"
+        },
+        {
+          "name": "iTorrent"
+        },
+        {
+          "name": "Kazumi"
+        },
+        {
+          "name": "KMusic"
+        },
+        {
+          "name": "Kumone"
+        },
+        {
+          "name": "LiveContainer+SideStore"
+        },
+        {
+          "name": "Madeira"
+        },
+        {
+          "name": "Mangayomi"
+        },
+        {
+          "name": "ManicEMU"
+        },
+        {
+          "name": "MiniWatts"
+        },
+        {
+          "name": "MoviePilotLite"
+        },
+        {
+          "name": "Musly"
+        },
+        {
+          "name": "NeoStation iOS"
+        },
+        {
+          "name": "Novella"
+        },
+        {
+          "name": "Opaline"
+        },
+        {
+          "name": "Orchard"
+        },
+        {
+          "name": "PiliPlus"
+        },
+        {
+          "name": "Pixiv-SwiftUI"
+        },
+        {
+          "name": "PSX3IOS"
+        },
+        {
+          "name": "PureLive"
+        },
+        {
+          "name": "Roam Control"
+        },
+        {
+          "name": "SceneBox"
+        },
+        {
+          "name": "SpotiFLAC"
+        },
+        {
+          "name": "TiebaPure"
+        },
+        {
+          "name": "Tsumiru"
+        },
+        {
+          "name": "UTM"
+        },
+        {
+          "name": "VeneraNext"
+        },
+        {
+          "name": "YouProEXTRA"
+        },
+        {
+          "name": "ZhihuMinusMinus"
+        }
       ]
     },
     {
@@ -490,6 +2068,42 @@
       "appCount": 11,
       "variants": [
         "classic"
+      ],
+      "catalogLimited": false,
+      "apps": [
+        {
+          "name": "SimpleFrontend"
+        },
+        {
+          "name": "ImageX"
+        },
+        {
+          "name": "Batman - The Telltale Series"
+        },
+        {
+          "name": "Delight Games Premium Library"
+        },
+        {
+          "name": "Flappy Bird"
+        },
+        {
+          "name": "RamBench"
+        },
+        {
+          "name": "Gacha Club"
+        },
+        {
+          "name": "Infinity Blade III"
+        },
+        {
+          "name": "Infinity Blade II"
+        },
+        {
+          "name": "Infinity Blade I"
+        },
+        {
+          "name": "Keka"
+        }
       ]
     },
     {
@@ -498,6 +2112,12 @@
       "appCount": 1,
       "variants": [
         "classic"
+      ],
+      "catalogLimited": false,
+      "apps": [
+        {
+          "name": "Feather"
+        }
       ]
     },
     {
@@ -506,6 +2126,123 @@
       "appCount": 38,
       "variants": [
         "classic"
+      ],
+      "catalogLimited": false,
+      "apps": [
+        {
+          "name": "emuThreeDS"
+        },
+        {
+          "name": "citra"
+        },
+        {
+          "name": "WDBRemoveThreeAppLimit"
+        },
+        {
+          "name": "WDBFontOverwrite"
+        },
+        {
+          "name": "Deltroid"
+        },
+        {
+          "name": "VCMI"
+        },
+        {
+          "name": "Delta iPac Edition"
+        },
+        {
+          "name": "PPSSPP"
+        },
+        {
+          "name": "Firebird Emu"
+        },
+        {
+          "name": "ActiveGS iOS"
+        },
+        {
+          "name": "Ready"
+        },
+        {
+          "name": "DolphiniOS"
+        },
+        {
+          "name": "DolphiniOS (Public Beta)"
+        },
+        {
+          "name": "iNDS"
+        },
+        {
+          "name": "MAME4iOS"
+        },
+        {
+          "name": "OldOS"
+        },
+        {
+          "name": "unc0ver"
+        },
+        {
+          "name": "iTorrent"
+        },
+        {
+          "name": "GBA4iOS"
+        },
+        {
+          "name": "RetroArch"
+        },
+        {
+          "name": "Rewound"
+        },
+        {
+          "name": "ScummVM"
+        },
+        {
+          "name": "Mini vMac"
+        },
+        {
+          "name": "Filza Escaped"
+        },
+        {
+          "name": "XPatcher"
+        },
+        {
+          "name": "iSH"
+        },
+        {
+          "name": "Play!"
+        },
+        {
+          "name": "appdb"
+        },
+        {
+          "name": "Odyssey"
+        },
+        {
+          "name": "UTM"
+        },
+        {
+          "name": "iDOS"
+        },
+        {
+          "name": "Taurine"
+        },
+        {
+          "name": "UTM SE"
+        },
+        {
+          "name": "Provenance EMU"
+        },
+        {
+          "name": "Flycast"
+        },
+        {
+          "name": "PokeMMO"
+        },
+        {
+          "name": "Ignited"
+        },
+        {
+          "name": "PokeMMO PTS"
+        }
       ]
     },
     {
@@ -514,6 +2251,18 @@
       "appCount": 3,
       "variants": [
         "classic"
+      ],
+      "catalogLimited": false,
+      "apps": [
+        {
+          "name": "SpotC++"
+        },
+        {
+          "name": "SpotveeC"
+        },
+        {
+          "name": "SpotilifeC"
+        }
       ]
     },
     {
@@ -522,6 +2271,15 @@
       "appCount": 2,
       "variants": [
         "classic"
+      ],
+      "catalogLimited": false,
+      "apps": [
+        {
+          "name": "uYouPlus"
+        },
+        {
+          "name": "Spotify Tweaked"
+        }
       ]
     },
     {
@@ -530,6 +2288,159 @@
       "appCount": 16344,
       "variants": [
         "classic"
+      ],
+      "catalogLimited": true,
+      "apps": [
+        {
+          "name": "Twitter"
+        },
+        {
+          "name": "Twitter"
+        },
+        {
+          "name": "X"
+        },
+        {
+          "name": "X"
+        },
+        {
+          "name": "Twitter"
+        },
+        {
+          "name": "Twitter"
+        },
+        {
+          "name": "X"
+        },
+        {
+          "name": "X"
+        },
+        {
+          "name": "iCube"
+        },
+        {
+          "name": "Mockup"
+        },
+        {
+          "name": "FitnessAI"
+        },
+        {
+          "name": "HeavyBagPro"
+        },
+        {
+          "name": "SleepCycle"
+        },
+        {
+          "name": "SNOW"
+        },
+        {
+          "name": "1Blocker"
+        },
+        {
+          "name": "StressWatch"
+        },
+        {
+          "name": "Provenance Alpha"
+        },
+        {
+          "name": "Spotify"
+        },
+        {
+          "name": "Spotify"
+        },
+        {
+          "name": "SNOW"
+        },
+        {
+          "name": "Sleep Cycle"
+        },
+        {
+          "name": "Heavy Bag Pro"
+        },
+        {
+          "name": "FitnessAI"
+        },
+        {
+          "name": "Notewise"
+        },
+        {
+          "name": "Razr"
+        },
+        {
+          "name": "[untitled]"
+        },
+        {
+          "name": "Ninja Fit"
+        },
+        {
+          "name": "Flashtex"
+        },
+        {
+          "name": "Xeela"
+        },
+        {
+          "name": "QuakeMate"
+        },
+        {
+          "name": "Tracked"
+        },
+        {
+          "name": "pico cam"
+        },
+        {
+          "name": "ClassDojo"
+        },
+        {
+          "name": "CSR Racing 2"
+        },
+        {
+          "name": "Castle Busters"
+        },
+        {
+          "name": "Dead Impact"
+        },
+        {
+          "name": "Grim Soul"
+        },
+        {
+          "name": "Subway Surf"
+        },
+        {
+          "name": "Golf Battle"
+        },
+        {
+          "name": "Bike Race"
+        },
+        {
+          "name": "Ant Colony"
+        },
+        {
+          "name": "Coin Master"
+        },
+        {
+          "name": "Infuse"
+        },
+        {
+          "name": "Messenger"
+        },
+        {
+          "name": "Messenger"
+        },
+        {
+          "name": "Infuse"
+        },
+        {
+          "name": "Lifesum"
+        },
+        {
+          "name": "Facebook"
+        },
+        {
+          "name": "LINE Camera"
+        },
+        {
+          "name": "VinylStudio"
+        }
       ]
     },
     {
@@ -538,6 +2449,114 @@
       "appCount": 35,
       "variants": [
         "classic"
+      ],
+      "catalogLimited": false,
+      "apps": [
+        {
+          "name": "Emnity"
+        },
+        {
+          "name": "iVanced for YouTube"
+        },
+        {
+          "name": "Streamer"
+        },
+        {
+          "name": "SoundCloud++"
+        },
+        {
+          "name": "BeReal++"
+        },
+        {
+          "name": "TikTok++"
+        },
+        {
+          "name": "Anime Now!"
+        },
+        {
+          "name": "ZiniTevi++"
+        },
+        {
+          "name": "Photomath++"
+        },
+        {
+          "name": "Snapchat++"
+        },
+        {
+          "name": "Crunchyroll++"
+        },
+        {
+          "name": "Duolingo++"
+        },
+        {
+          "name": "Deezer++"
+        },
+        {
+          "name": "Spotify++"
+        },
+        {
+          "name": "BHTwitter (deprecated)"
+        },
+        {
+          "name": "Reddit++"
+        },
+        {
+          "name": "Paperback"
+        },
+        {
+          "name": "Channels"
+        },
+        {
+          "name": "Rocket for Instagram"
+        },
+        {
+          "name": "Instagram Rhino"
+        },
+        {
+          "name": "WhatsApp++"
+        },
+        {
+          "name": "CARROT Weather"
+        },
+        {
+          "name": "WolframAlpha"
+        },
+        {
+          "name": "Infuse Pro 6"
+        },
+        {
+          "name": "Filmr Pro"
+        },
+        {
+          "name": "LumaFusion"
+        },
+        {
+          "name": "NineAnimator"
+        },
+        {
+          "name": "Twitch++"
+        },
+        {
+          "name": "EhPanda"
+        },
+        {
+          "name": "Cercube+"
+        },
+        {
+          "name": "Yattee"
+        },
+        {
+          "name": "CercubePlus (Legacy)"
+        },
+        {
+          "name": "Facebook Wolf"
+        },
+        {
+          "name": "CercubePlus (Cercube+)"
+        },
+        {
+          "name": "RedditFilter"
+        }
       ]
     },
     {
@@ -546,6 +2565,69 @@
       "appCount": 20,
       "variants": [
         "classic"
+      ],
+      "catalogLimited": false,
+      "apps": [
+        {
+          "name": "LiveContainer"
+        },
+        {
+          "name": "TrollInstallerX"
+        },
+        {
+          "name": "Santander (MDC)"
+        },
+        {
+          "name": "PostBox"
+        },
+        {
+          "name": "emuThreeDS"
+        },
+        {
+          "name": "PPSSPP"
+        },
+        {
+          "name": "Filza (MDC)"
+        },
+        {
+          "name": "Scarlet"
+        },
+        {
+          "name": "Odyssey"
+        },
+        {
+          "name": "Taurine"
+        },
+        {
+          "name": "unc0ver"
+        },
+        {
+          "name": "Dopamine"
+        },
+        {
+          "name": "iTorrent"
+        },
+        {
+          "name": "Cowabunga"
+        },
+        {
+          "name": "ESign"
+        },
+        {
+          "name": "Atrasis"
+        },
+        {
+          "name": "Null's Royale"
+        },
+        {
+          "name": "Angry Birds Space"
+        },
+        {
+          "name": "Angry Birds Star Wars"
+        },
+        {
+          "name": "Pokemon Go (w/ SpooferPro)"
+        }
       ]
     },
     {
@@ -554,6 +2636,12 @@
       "appCount": 1,
       "variants": [
         "classic"
+      ],
+      "catalogLimited": false,
+      "apps": [
+        {
+          "name": "Taurine"
+        }
       ]
     },
     {
@@ -562,6 +2650,30 @@
       "appCount": 7,
       "variants": [
         "classic"
+      ],
+      "catalogLimited": false,
+      "apps": [
+        {
+          "name": "iNDS"
+        },
+        {
+          "name": "Provenance"
+        },
+        {
+          "name": "UTM"
+        },
+        {
+          "name": "Thermometer"
+        },
+        {
+          "name": "appdb"
+        },
+        {
+          "name": "unc0ver"
+        },
+        {
+          "name": "Sileo Demo"
+        }
       ]
     },
     {
@@ -570,6 +2682,15 @@
       "appCount": 2,
       "variants": [
         "classic"
+      ],
+      "catalogLimited": false,
+      "apps": [
+        {
+          "name": "Remind"
+        },
+        {
+          "name": "Bacon"
+        }
       ]
     },
     {
@@ -578,6 +2699,15 @@
       "appCount": 2,
       "variants": [
         "classic"
+      ],
+      "catalogLimited": false,
+      "apps": [
+        {
+          "name": "Cercube"
+        },
+        {
+          "name": "Cercube (Legacy)"
+        }
       ]
     },
     {
@@ -586,6 +2716,12 @@
       "appCount": 1,
       "variants": [
         "classic"
+      ],
+      "catalogLimited": false,
+      "apps": [
+        {
+          "name": "Rocket for Instagram"
+        }
       ]
     },
     {
@@ -594,6 +2730,12 @@
       "appCount": 1,
       "variants": [
         "classic"
+      ],
+      "catalogLimited": false,
+      "apps": [
+        {
+          "name": "Reynard Browser"
+        }
       ]
     },
     {
@@ -602,6 +2744,27 @@
       "appCount": 6,
       "variants": [
         "classic"
+      ],
+      "catalogLimited": false,
+      "apps": [
+        {
+          "name": "AltStore"
+        },
+        {
+          "name": "AltStore"
+        },
+        {
+          "name": "Delta"
+        },
+        {
+          "name": "Delta"
+        },
+        {
+          "name": "Clip"
+        },
+        {
+          "name": "Clip"
+        }
       ]
     },
     {
@@ -610,6 +2773,33 @@
       "appCount": 8,
       "variants": [
         "classic"
+      ],
+      "catalogLimited": false,
+      "apps": [
+        {
+          "name": "RNGTool"
+        },
+        {
+          "name": "UTM Virtual Machines"
+        },
+        {
+          "name": "LiveContainer"
+        },
+        {
+          "name": "SideStore"
+        },
+        {
+          "name": "Ferrite"
+        },
+        {
+          "name": "SideJIT"
+        },
+        {
+          "name": "Mindustry"
+        },
+        {
+          "name": "GearGlimpseRevolution"
+        }
       ]
     },
     {
@@ -618,6 +2808,12 @@
       "appCount": 1,
       "variants": [
         "classic"
+      ],
+      "catalogLimited": false,
+      "apps": [
+        {
+          "name": "Winston for Reddit"
+        }
       ]
     },
     {
@@ -626,6 +2822,27 @@
       "appCount": 6,
       "variants": [
         "pal"
+      ],
+      "catalogLimited": false,
+      "apps": [
+        {
+          "name": "Customize Search Engine"
+        },
+        {
+          "name": "Deflector"
+        },
+        {
+          "name": "Side Search"
+        },
+        {
+          "name": "CBNote"
+        },
+        {
+          "name": "Alare"
+        },
+        {
+          "name": "WebA11Y"
+        }
       ]
     },
     {
@@ -634,6 +2851,12 @@
       "appCount": 1,
       "variants": [
         "classic"
+      ],
+      "catalogLimited": false,
+      "apps": [
+        {
+          "name": "Aidoku"
+        }
       ]
     },
     {
@@ -642,6 +2865,12 @@
       "appCount": 1,
       "variants": [
         "classic"
+      ],
+      "catalogLimited": false,
+      "apps": [
+        {
+          "name": "Mangayomi"
+        }
       ]
     },
     {
@@ -650,6 +2879,12 @@
       "appCount": 1,
       "variants": [
         "classic"
+      ],
+      "catalogLimited": false,
+      "apps": [
+        {
+          "name": "AnymeX"
+        }
       ]
     },
     {
@@ -658,6 +2893,15 @@
       "appCount": 2,
       "variants": [
         "classic"
+      ],
+      "catalogLimited": false,
+      "apps": [
+        {
+          "name": "Animeko"
+        },
+        {
+          "name": "Animeko (Pre-Release)"
+        }
       ]
     },
     {
@@ -666,6 +2910,30 @@
       "appCount": 7,
       "variants": [
         "classic"
+      ],
+      "catalogLimited": false,
+      "apps": [
+        {
+          "name": "NeoFreeBird"
+        },
+        {
+          "name": "Portal Mini"
+        },
+        {
+          "name": "Haptics"
+        },
+        {
+          "name": "macOS Icons"
+        },
+        {
+          "name": "YT-TV"
+        },
+        {
+          "name": "Browser"
+        },
+        {
+          "name": "Portal"
+        }
       ]
     },
     {
@@ -674,6 +2942,12 @@
       "appCount": 1,
       "variants": [
         "classic"
+      ],
+      "catalogLimited": false,
+      "apps": [
+        {
+          "name": "Nuvio"
+        }
       ]
     },
     {
@@ -682,6 +2956,12 @@
       "appCount": 1,
       "variants": [
         "classic"
+      ],
+      "catalogLimited": false,
+      "apps": [
+        {
+          "name": "RyukSign"
+        }
       ]
     }
   ]
