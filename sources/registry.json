@@ -2741,37 +2741,6 @@
       "iconURL": "https://raw.githubusercontent.com/WSF-Team/WSF/main/portal/resources/wsf.png"
     },
     {
-      "id": "thatstella",
-      "name": "ThatStella7922 Source",
-      "url": "https://alt.thatstel.la/",
-      "website": "https://thatstel.la/",
-      "mode": "classic",
-      "official": true,
-      "trusted": true,
-      "recommended": false,
-      "description": {
-        "cs": "Oficiální a SideStore-trusted source ThatStella7922, aktuálně zaměřený hlavně na utilitu Battery Webhook.",
-        "en": "Official and SideStore-trusted ThatStella7922 source, currently focused mainly on the Battery Webhook utility."
-      },
-      "tags": [
-        "utility",
-        "battery",
-        "shortcuts",
-        "webhook",
-        "trusted",
-        "official"
-      ],
-      "developer": "ThatStella7922",
-      "compliance": {
-        "reviewStatus": "public-metadata",
-        "binaryRehost": false,
-        "evidenceURL": "https://alt.thatstel.la/",
-        "reviewedAt": "2026-10-01",
-        "note": "Original public Source URL is listed for discovery and direct install only. iOS Hub does not copy, merge, cache, or rehost the Source feed or IPA binaries."
-      },
-      "iconURL": "https://files.thatstel.la/hidden/avatars-banners-socials/pfp.png"
-    },
-    {
       "id": "nuvio",
       "name": "Nuvio Official",
       "url": "https://raw.githubusercontent.com/NuvioMedia/NuvioMobile/cmp-rewrite/store.json",
