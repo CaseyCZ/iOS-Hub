@@ -1,6 +1,6 @@
 # iOS Hub — Source Compliance Register
 
-Last reviewed: 2026-09-30
+Last reviewed: 2026-10-01
 
 This file documents how iOS Hub treats third-party Source endpoints. It is an engineering/compliance record, not legal advice.
 
@@ -17,10 +17,10 @@ This file documents how iOS Hub treats third-party Source endpoints. It is an en
 
 ## Current status
 
-- Total Sources: **76**
+- Total Sources: **87**
 - Licensed: **8**
 - Permission: **0**
-- Public endpoint: **68**
+- Public endpoint: **79**
 - Restricted: **0**
 - Unreviewed: **0**
 - Binary rehosting enabled: **0**
@@ -105,6 +105,18 @@ This file documents how iOS Hub treats third-party Source endpoints. It is an en
 | Cercube | `cercube` | public-metadata | — | [evidence](https://altstore.cercube.com) |
 | Rocket | `rocket` | public-metadata | — | [evidence](https://altstore.getrocketapp.io) |
 | Reynard Browser | `reynard-browser` | public-metadata | — | [evidence](https://github.com/minh-ton/reynard-browser/releases/download/0.0.1-a1/source.json) |
+
+| AltStore Official | `altstore-official` | public-metadata | — | [evidence](https://apps.altstore.io) |
+| SideStore Connect | `sidestore-connect` | public-metadata | — | [evidence](https://connect.sidestore.io/apps.json) |
+| Winston for Reddit | `winston` | public-metadata | — | [evidence](https://raw.githubusercontent.com/lo-cafe/winston-altstore/main/apps.json) |
+| Cizzuk Source | `cizzuk-source` | public-metadata | — | [evidence](https://i.cizzuk.net/altstore/source.pal.json) |
+| Aidoku Source | `aidoku` | public-metadata | — | [evidence](https://raw.githubusercontent.com/Aidoku/Aidoku/altstore/apps.json) |
+| Mangayomi | `mangayomi` | public-metadata | — | [evidence](https://raw.githubusercontent.com/kodjodevf/mangayomi/refs/heads/main/repo/source.json) |
+| AnymeX | `anymex` | public-metadata | — | [evidence](https://raw.githubusercontent.com/RyanYuuki/AnymeX/refs/heads/main/repo/source.json) |
+| OpenAni / Animeko | `animeko-openani` | public-metadata | — | [evidence](https://raw.githubusercontent.com/maxchang3/ani-altstore-source/main/generated/apps.json) |
+| WSF Source | `wsf-source` | public-metadata | — | [evidence](https://raw.githubusercontent.com/WSF-Team/WSF/main/repo/app-repo.json) |
+| Nuvio Official | `nuvio` | public-metadata | — | [evidence](https://raw.githubusercontent.com/NuvioMedia/NuvioMobile/cmp-rewrite/store.json) |
+| RyukSign Repository | `ryuksign` | public-metadata | — | [evidence](https://raw.githubusercontent.com/faroukbmiled/RyukSign/refs/heads/main/app-repo.json) |
 
 ## Notes
 
