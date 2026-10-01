@@ -2803,36 +2803,35 @@
     },
     {
       "id": "ryuksign",
-      "name": "RyukSign / RyukGram",
-      "url": "https://source.ryuksign.com",
-      "website": "https://store.ryuksign.com/",
+      "name": "RyukSign Repository",
+      "url": "https://raw.githubusercontent.com/faroukbmiled/RyukSign/refs/heads/main/app-repo.json",
+      "website": "https://github.com/faroukbmiled/RyukSign",
       "mode": "classic",
       "official": true,
       "trusted": false,
       "recommended": true,
-      "community": true,
-      "modified": true,
+      "community": false,
+      "modified": false,
       "description": {
-        "cs": "Oficiální RyukSign source s aktuálními RyukGram buildy pro Instagram a souvisejícími variantami.",
-        "en": "Official RyukSign source with current RyukGram builds for Instagram and related variants."
+        "cs": "Oficiální source RyukSign, nástroje pro podepisování a instalaci iOS aplikací přímo na zařízení.",
+        "en": "Official source for RyukSign, an on-device iOS app signing and installation tool."
       },
       "tags": [
-        "instagram",
-        "modified",
-        "social",
-        "tweak",
-        "community",
+        "sideload",
+        "signing",
+        "installer",
+        "utility",
         "official"
       ],
-      "developer": "faroukbmiled / RyukGram",
+      "developer": "faroukbmiled",
       "compliance": {
         "reviewStatus": "public-metadata",
         "binaryRehost": false,
-        "evidenceURL": "https://github.com/faroukbmiled/RyukGram",
+        "evidenceURL": "https://raw.githubusercontent.com/faroukbmiled/RyukSign/refs/heads/main/app-repo.json",
         "reviewedAt": "2026-10-01",
         "note": "Original public Source URL is listed for discovery and direct install only. iOS Hub does not copy, merge, cache, or rehost the Source feed or IPA binaries."
       },
-      "iconURL": "https://avatars.githubusercontent.com/u/51106560?v=4"
+      "iconURL": "https://raw.githubusercontent.com/faroukbmiled/RyukSign/refs/heads/main/repo-icon.png"
     }
   ]
 }
