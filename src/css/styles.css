@@ -23,7 +23,7 @@ html[data-theme="light"]{color-scheme:light;--page:#eef3f8;--bg:#f8fafc;--panel:
 .source-stats-main>.source-checked{grid-column:3;justify-self:start;white-space:nowrap}
 .source-stats-main>.source-apps-disclosure[open]{grid-column:1/-1;width:100%}
 .source-stats-main>.source-apps-disclosure[open]>summary{margin-left:auto;margin-right:auto}
-.source-stats-main>.source-apps-disclosure[open]~.source-checked{grid-column:1/-1;justify-self:center;margin-top:12px}
+.source-stats-main>.source-apps-disclosure[open]~.source-checked{grid-column:1/-1;justify-self:stretch;justify-content:center;text-align:center;width:100%;margin-top:12px}
 .source-app-close{display:flex;margin:10px auto 0}
 @media(max-width:640px){.source-stats-main{column-gap:8px}.source-stats-main>.source-checked{font-size:9px}}
 @media(max-width:640px){.section-head{align-items:center}.footer-inner{align-items:center}}
