@@ -358,6 +358,8 @@ def validate_privacy_compliance() -> None:
             "analytics_storage: 'denied'",
             "ANALYTICS_PAGE_TITLE",
             "ANALYTICS_PAGE_LOCATION",
+            "meta[name=\"analytics-page-title\"]",
+            "link[rel=\"canonical\"]",
             "page_title: ANALYTICS_PAGE_TITLE",
             "page_location: ANALYTICS_PAGE_LOCATION",
         ):
@@ -380,6 +382,12 @@ def validate_privacy_compliance() -> None:
             error(f"{label} must define a non-empty static <title> for Analytics")
         elif analytics_pos >= 0 and title_pos > analytics_pos:
             error(f"{label} must define <title> before analytics.js so page_title is stable")
+        analytics_title_match = re.search(r'<meta\s+name="analytics-page-title"\s+content="([^"]+)"', text, flags=re.IGNORECASE)
+        if not analytics_title_match or not analytics_title_match.group(1).strip():
+            error(f"{label} must define a stable analytics-page-title")
+        canonical_match = re.search(r'<link\s+rel="canonical"\s+href="([^"]+)"', text, flags=re.IGNORECASE)
+        if not canonical_match or not canonical_match.group(1).strip():
+            error(f"{label} must define a canonical URL for Analytics")
         if 'href="privacy.html"' not in text:
             error(f"{label} footer must link to privacy.html")
         if "data-cookie-settings" not in text:
