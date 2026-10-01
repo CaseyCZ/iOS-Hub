@@ -9,6 +9,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 # Direct Source monitoring: generated data keeps endpoint/status metadata plus the same limited app preview used by the original iOS Hub catalog.
+# The preview fields and per-source catalogLimit behavior intentionally match the original implementation.
 REGISTRY = ROOT / "sources" / "registry.json"
 DATA_DIR = ROOT / "data"
 USER_AGENT = "CaseyCZ-iOS-Hub (+https://caseycz.github.io/iOS-Hub/)"
