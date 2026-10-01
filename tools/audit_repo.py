@@ -332,7 +332,6 @@ def validate_privacy_compliance() -> None:
             "SOURCE_CACHE_DIR",
             "source_compliance_allows_distribution",
             "aggregationApproved",
-            "app_summary",
             "uniqueAppCount",
             "cachePayload",
             "make_mix",
