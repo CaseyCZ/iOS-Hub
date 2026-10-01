@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-29",
+  "updated": "2026-10-01",
   "attribution": {
     "references": [
       {
@@ -2463,6 +2463,376 @@
         "note": "Original public Source URL is listed for discovery and direct install only. iOS Hub does not copy, merge, cache, or rehost the Source feed or IPA binaries."
       },
       "iconURL": "https://github.com/user-attachments/assets/1c42dda2-b778-4342-9f94-8f852c3ad652"
+    },
+    {
+      "id": "altstore-official",
+      "name": "AltStore Official",
+      "url": "https://apps.altstore.io",
+      "website": "https://altstore.io/",
+      "mode": "classic",
+      "official": true,
+      "trusted": true,
+      "recommended": true,
+      "description": {
+        "cs": "Oficiální výchozí source AltStore pro AltStore, Clip, Delta a jejich beta verze.",
+        "en": "Official default AltStore source for AltStore, Clip, Delta and their beta versions."
+      },
+      "tags": [
+        "altstore",
+        "official",
+        "utility",
+        "clipboard",
+        "emulator",
+        "trusted"
+      ],
+      "developer": "AltStore LLC",
+      "compliance": {
+        "reviewStatus": "public-metadata",
+        "binaryRehost": false,
+        "evidenceURL": "https://apps.altstore.io",
+        "reviewedAt": "2026-10-01",
+        "note": "Original public Source URL is listed for discovery and direct install only. iOS Hub does not copy, merge, cache, or rehost the Source feed or IPA binaries."
+      },
+      "iconURL": "https://raw.githubusercontent.com/altstoreio/AltStore/marketplace/AltStore/Resources/Icons.xcassets/Raw/Turquoise.imageset/AltStore-2.0.png"
+    },
+    {
+      "id": "sidestore-connect",
+      "name": "SideStore Connect",
+      "url": "https://connect.sidestore.io/apps.json",
+      "website": "https://connect.sidestore.io/",
+      "mode": "classic",
+      "official": true,
+      "trusted": false,
+      "recommended": true,
+      "community": true,
+      "description": {
+        "cs": "Komunitní source provozovaný přes SideStore Connect s aplikacemi jako Ferrite, SideJIT, LiveContainer, UTM a dalšími.",
+        "en": "Community source powered by SideStore Connect with apps such as Ferrite, SideJIT, LiveContainer, UTM and more."
+      },
+      "tags": [
+        "sidestore",
+        "community",
+        "utility",
+        "jit",
+        "apps"
+      ],
+      "developer": "SideStore Connect",
+      "compliance": {
+        "reviewStatus": "public-metadata",
+        "binaryRehost": false,
+        "evidenceURL": "https://connect.sidestore.io/apps.json",
+        "reviewedAt": "2026-10-01",
+        "note": "Original public Source URL is listed for discovery and direct install only. iOS Hub does not copy, merge, cache, or rehost the Source feed or IPA binaries."
+      },
+      "iconURL": "https://apps.sidestore.io/apps/sidestore/v0.1.1/icon.png"
+    },
+    {
+      "id": "winston",
+      "name": "Winston for Reddit",
+      "url": "https://raw.githubusercontent.com/lo-cafe/winston-altstore/main/apps.json",
+      "website": "https://github.com/lo-cafe/winston",
+      "mode": "classic",
+      "official": true,
+      "trusted": false,
+      "recommended": false,
+      "description": {
+        "cs": "Oficiální source open-source nativního Reddit klienta Winston pro iOS.",
+        "en": "Official source for Winston, an open-source native Reddit client for iOS."
+      },
+      "tags": [
+        "reddit",
+        "social",
+        "open-source",
+        "client",
+        "official"
+      ],
+      "developer": "lo.cafe / Kinark",
+      "compliance": {
+        "reviewStatus": "public-metadata",
+        "binaryRehost": false,
+        "evidenceURL": "https://raw.githubusercontent.com/lo-cafe/winston-altstore/main/apps.json",
+        "reviewedAt": "2026-10-01",
+        "note": "Original public Source URL is listed for discovery and direct install only. iOS Hub does not copy, merge, cache, or rehost the Source feed or IPA binaries."
+      },
+      "iconURL": "https://lo.cafe/favicon.png"
+    },
+    {
+      "id": "cizzuk-source",
+      "name": "Cizzuk Source",
+      "url": "https://i.cizzuk.net/altstore/source.pal.json",
+      "website": "https://cizzuk.net/",
+      "mode": "pal",
+      "official": true,
+      "trusted": false,
+      "recommended": true,
+      "description": {
+        "cs": "Oficiální AltStore PAL source vývojáře Cizzuk s menšími praktickými utilitami a nástroji.",
+        "en": "Official AltStore PAL source by Cizzuk with small practical utilities and tools."
+      },
+      "tags": [
+        "pal",
+        "utility",
+        "tools",
+        "official"
+      ],
+      "developer": "Cizzuk",
+      "compliance": {
+        "reviewStatus": "public-metadata",
+        "binaryRehost": false,
+        "evidenceURL": "https://i.cizzuk.net/altstore/source.pal.json",
+        "reviewedAt": "2026-10-01",
+        "note": "Original public Source URL is listed for discovery and direct install only. iOS Hub does not copy, merge, cache, or rehost the Source feed or IPA binaries."
+      },
+      "iconURL": "https://i.cizzuk.net/altstore/icon-75rcnwa-opt.png"
+    },
+    {
+      "id": "aidoku",
+      "name": "Aidoku Source",
+      "url": "https://raw.githubusercontent.com/Aidoku/Aidoku/altstore/apps.json",
+      "website": "https://aidoku.app/",
+      "mode": "classic",
+      "official": true,
+      "trusted": false,
+      "recommended": true,
+      "description": {
+        "cs": "Oficiální source open-source čtečky Aidoku pro manga, komiksy a externí zdroje.",
+        "en": "Official source for Aidoku, an open-source manga and comics reader with external sources."
+      },
+      "tags": [
+        "manga",
+        "reader",
+        "comics",
+        "open-source",
+        "official"
+      ],
+      "developer": "Aidoku / Skitty",
+      "compliance": {
+        "reviewStatus": "public-metadata",
+        "binaryRehost": false,
+        "evidenceURL": "https://raw.githubusercontent.com/Aidoku/Aidoku/altstore/apps.json",
+        "reviewedAt": "2026-10-01",
+        "note": "Original public Source URL is listed for discovery and direct install only. iOS Hub does not copy, merge, cache, or rehost the Source feed or IPA binaries."
+      },
+      "iconURL": "https://aidoku.app/images/apple-touch-icon.png"
+    },
+    {
+      "id": "mangayomi",
+      "name": "Mangayomi",
+      "url": "https://raw.githubusercontent.com/kodjodevf/mangayomi/refs/heads/main/repo/source.json",
+      "website": "https://github.com/kodjodevf/mangayomi",
+      "mode": "classic",
+      "official": true,
+      "trusted": false,
+      "recommended": true,
+      "description": {
+        "cs": "Oficiální source Mangayomi pro čtení manga a novel a sledování anime s rozšiřitelnými zdroji.",
+        "en": "Official Mangayomi source for reading manga and novels and watching anime with extensible sources."
+      },
+      "tags": [
+        "manga",
+        "anime",
+        "reader",
+        "media",
+        "open-source",
+        "official"
+      ],
+      "developer": "Moustapha Kodjo Amadou",
+      "compliance": {
+        "reviewStatus": "public-metadata",
+        "binaryRehost": false,
+        "evidenceURL": "https://raw.githubusercontent.com/kodjodevf/mangayomi/refs/heads/main/repo/source.json",
+        "reviewedAt": "2026-10-01",
+        "note": "Original public Source URL is listed for discovery and direct install only. iOS Hub does not copy, merge, cache, or rehost the Source feed or IPA binaries."
+      },
+      "iconURL": "https://raw.githubusercontent.com/kodjodevf/mangayomi/refs/heads/main/repo/images/icons/icon_default.webp"
+    },
+    {
+      "id": "anymex",
+      "name": "AnymeX",
+      "url": "https://raw.githubusercontent.com/RyanYuuki/AnymeX/refs/heads/main/repo/source.json",
+      "website": "https://github.com/RyanYuuki/AnymeX",
+      "mode": "classic",
+      "official": true,
+      "trusted": false,
+      "recommended": true,
+      "description": {
+        "cs": "Oficiální source AnymeX, multiplatformního klienta pro správu a sledování anime a manga seznamů.",
+        "en": "Official AnymeX source, a cross-platform client for managing and tracking anime and manga lists."
+      },
+      "tags": [
+        "anime",
+        "manga",
+        "tracking",
+        "anilist",
+        "myanimelist",
+        "official"
+      ],
+      "developer": "RyanYuuki",
+      "compliance": {
+        "reviewStatus": "public-metadata",
+        "binaryRehost": false,
+        "evidenceURL": "https://raw.githubusercontent.com/RyanYuuki/AnymeX/refs/heads/main/repo/source.json",
+        "reviewedAt": "2026-10-01",
+        "note": "Original public Source URL is listed for discovery and direct install only. iOS Hub does not copy, merge, cache, or rehost the Source feed or IPA binaries."
+      },
+      "iconURL": "https://raw.githubusercontent.com/RyanYuuki/AnymeX/refs/heads/main/repo/images/icons/anymex.webp"
+    },
+    {
+      "id": "animeko-openani",
+      "name": "OpenAni / Animeko",
+      "url": "https://raw.githubusercontent.com/maxchang3/ani-altstore-source/main/generated/apps.json",
+      "website": "https://myani.org/",
+      "mode": "classic",
+      "official": false,
+      "trusted": false,
+      "recommended": true,
+      "community": true,
+      "description": {
+        "cs": "Veřejný AltStore source pro Animeko (OpenAni), včetně stabilních a předběžných buildů.",
+        "en": "Public AltStore source for Animeko (OpenAni), including stable and pre-release builds."
+      },
+      "tags": [
+        "anime",
+        "media",
+        "community",
+        "open-source",
+        "altstore"
+      ],
+      "developer": "Animeko / OpenAni",
+      "compliance": {
+        "reviewStatus": "public-metadata",
+        "binaryRehost": false,
+        "evidenceURL": "https://raw.githubusercontent.com/maxchang3/ani-altstore-source/main/generated/apps.json",
+        "reviewedAt": "2026-10-01",
+        "note": "Original public Source URL is listed for discovery and direct install only. iOS Hub does not copy, merge, cache, or rehost the Source feed or IPA binaries."
+      },
+      "iconURL": "https://avatars.githubusercontent.com/u/166622089"
+    },
+    {
+      "id": "wsf-source",
+      "name": "WSF Source",
+      "url": "https://raw.githubusercontent.com/WSF-Team/WSF/main/repo/app-repo.json",
+      "website": "https://github.com/WSF-Team/WSF",
+      "mode": "classic",
+      "official": true,
+      "trusted": false,
+      "recommended": false,
+      "community": true,
+      "modified": true,
+      "description": {
+        "cs": "Source projektu WSF s utilitami a komunitními aplikacemi jako Portal, Browser, Haptics, YT-TV a dalšími.",
+        "en": "WSF project source with utilities and community apps such as Portal, Browser, Haptics, YT-TV and more."
+      },
+      "tags": [
+        "community",
+        "utility",
+        "apps",
+        "modified",
+        "altstore"
+      ],
+      "developer": "WSF Team",
+      "compliance": {
+        "reviewStatus": "public-metadata",
+        "binaryRehost": false,
+        "evidenceURL": "https://raw.githubusercontent.com/WSF-Team/WSF/main/repo/app-repo.json",
+        "reviewedAt": "2026-10-01",
+        "note": "Original public Source URL is listed for discovery and direct install only. iOS Hub does not copy, merge, cache, or rehost the Source feed or IPA binaries."
+      },
+      "iconURL": "https://raw.githubusercontent.com/WSF-Team/WSF/main/portal/resources/wsf.png"
+    },
+    {
+      "id": "thatstella",
+      "name": "ThatStella7922 Source",
+      "url": "https://alt.thatstel.la/",
+      "website": "https://thatstel.la/",
+      "mode": "classic",
+      "official": true,
+      "trusted": true,
+      "recommended": false,
+      "description": {
+        "cs": "Oficiální a SideStore-trusted source ThatStella7922, aktuálně zaměřený hlavně na utilitu Battery Webhook.",
+        "en": "Official and SideStore-trusted ThatStella7922 source, currently focused mainly on the Battery Webhook utility."
+      },
+      "tags": [
+        "utility",
+        "battery",
+        "shortcuts",
+        "webhook",
+        "trusted",
+        "official"
+      ],
+      "developer": "ThatStella7922",
+      "compliance": {
+        "reviewStatus": "public-metadata",
+        "binaryRehost": false,
+        "evidenceURL": "https://alt.thatstel.la/",
+        "reviewedAt": "2026-10-01",
+        "note": "Original public Source URL is listed for discovery and direct install only. iOS Hub does not copy, merge, cache, or rehost the Source feed or IPA binaries."
+      },
+      "iconURL": "https://files.thatstel.la/hidden/avatars-banners-socials/pfp.png"
+    },
+    {
+      "id": "nuvio",
+      "name": "Nuvio Official",
+      "url": "https://raw.githubusercontent.com/NuvioMedia/NuvioMobile/cmp-rewrite/store.json",
+      "website": "https://nuvio.tv/",
+      "mode": "classic",
+      "official": true,
+      "trusted": false,
+      "recommended": true,
+      "description": {
+        "cs": "Oficiální source open-source mediální aplikace Nuvio pro iOS se systémem vlastních zdrojů, knihovnou a synchronizací.",
+        "en": "Official source for Nuvio, an open-source iOS media app with bring-your-own sources, library and sync."
+      },
+      "tags": [
+        "media",
+        "video",
+        "streaming",
+        "open-source",
+        "official"
+      ],
+      "developer": "NuvioMedia",
+      "compliance": {
+        "reviewStatus": "public-metadata",
+        "binaryRehost": false,
+        "evidenceURL": "https://raw.githubusercontent.com/NuvioMedia/NuvioMobile/cmp-rewrite/store.json",
+        "reviewedAt": "2026-10-01",
+        "note": "Original public Source URL is listed for discovery and direct install only. iOS Hub does not copy, merge, cache, or rehost the Source feed or IPA binaries."
+      },
+      "iconURL": "https://raw.githubusercontent.com/NuvioMedia/NuvioMobile/0.4.11/iosApp/iosApp/Assets.xcassets/AppIcon.appiconset/app-icon-1024.png"
+    },
+    {
+      "id": "ryuksign",
+      "name": "RyukSign / RyukGram",
+      "url": "https://source.ryuksign.com",
+      "website": "https://store.ryuksign.com/",
+      "mode": "classic",
+      "official": true,
+      "trusted": false,
+      "recommended": true,
+      "community": true,
+      "modified": true,
+      "description": {
+        "cs": "Oficiální RyukSign source s aktuálními RyukGram buildy pro Instagram a souvisejícími variantami.",
+        "en": "Official RyukSign source with current RyukGram builds for Instagram and related variants."
+      },
+      "tags": [
+        "instagram",
+        "modified",
+        "social",
+        "tweak",
+        "community",
+        "official"
+      ],
+      "developer": "faroukbmiled / RyukGram",
+      "compliance": {
+        "reviewStatus": "public-metadata",
+        "binaryRehost": false,
+        "evidenceURL": "https://github.com/faroukbmiled/RyukGram",
+        "reviewedAt": "2026-10-01",
+        "note": "Original public Source URL is listed for discovery and direct install only. iOS Hub does not copy, merge, cache, or rehost the Source feed or IPA binaries."
+      },
+      "iconURL": "https://avatars.githubusercontent.com/u/51106560?v=4"
     }
   ]
 }
