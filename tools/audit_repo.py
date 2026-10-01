@@ -629,7 +629,7 @@ def validate_registry() -> None:
             if key in source and not isinstance(source[key], bool):
                 error(f"registry source {source_id!r} field {key!r} must be boolean")
 
-        for obsolete_source_key in ("mergeable", "autoPackage", "cachePayload", "catalogLimit"):
+        for obsolete_source_key in ("mergeable", "autoPackage", "cachePayload"):
             if obsolete_source_key in source:
                 error(
                     f"registry source {source_id!r} still contains obsolete Mix field "
@@ -798,55 +798,57 @@ def validate_generated_data() -> None:
     for source_id, item in catalog_by_id.items():
         source = registry_by_id.get(source_id, {})
         status_item = status["sources"].get(source_id, {})
-        allowed_catalog_keys = {"id", "name", "appCount", "variants", "catalogLimited", "apps"}
+        allowed_catalog_keys = {"id", "name", "appCount", "catalogLimited", "iconURL", "apps"}
         extra_catalog_keys = set(item) - allowed_catalog_keys
         if extra_catalog_keys:
             error(
                 f"data/catalog.json source {source_id!r} persists unexpected metadata: "
                 + ", ".join(sorted(extra_catalog_keys))
             )
-        if item.get("name") != source.get("name"):
-            error(f"data/catalog.json source {source_id!r} name must come from registry metadata")
+        if not str(item.get("name") or "").strip():
+            error(f"data/catalog.json source {source_id!r} name must not be empty")
         if item.get("appCount") != status_item.get("appCount"):
             error(f"data/catalog.json source {source_id!r} appCount differs from status.json")
+
         preview_apps = item.get("apps")
         if not isinstance(preview_apps, list):
             error(f"data/catalog.json source {source_id!r} apps preview must be a list")
             preview_apps = []
-        elif len(preview_apps) > 50:
-            error(f"data/catalog.json source {source_id!r} app preview exceeds 50 entries")
         for app_index, app_preview in enumerate(preview_apps):
-            allowed_app_preview_keys = {"name", "developerName", "version", "bundleIdentifier"}
+            allowed_app_preview_keys = {"name", "bundleIdentifier", "developerName", "version", "iconURL", "subtitle"}
             if not isinstance(app_preview, dict) or set(app_preview) != allowed_app_preview_keys:
                 error(
                     f"data/catalog.json source {source_id!r} app preview #{app_index} "
-                    "must contain only name, developerName, version and bundleIdentifier"
+                    "must match the original catalog app-summary fields"
                 )
                 continue
             if not str(app_preview.get("name") or "").strip():
                 error(f"data/catalog.json source {source_id!r} app preview #{app_index} has an empty name")
-            for preview_key in ("developerName", "version", "bundleIdentifier"):
-                if not isinstance(app_preview.get(preview_key), str):
-                    error(
-                        f"data/catalog.json source {source_id!r} app preview #{app_index} "
-                        f"{preview_key} must be a string"
-                    )
 
         catalog_limited = item.get("catalogLimited")
         if not isinstance(catalog_limited, bool):
             error(f"data/catalog.json source {source_id!r} catalogLimited must be boolean")
-        elif isinstance(item.get("appCount"), int):
-            expected_limited = item["appCount"] > len(preview_apps)
-            if catalog_limited != expected_limited:
+        configured_limit = source.get("catalogLimit")
+        if isinstance(configured_limit, int) and configured_limit > 0 and isinstance(item.get("appCount"), int):
+            expected_preview_count = min(item["appCount"], configured_limit)
+            if len(preview_apps) != expected_preview_count:
                 error(
-                    f"data/catalog.json source {source_id!r} catalogLimited does not match "
-                    "the app-name preview size"
+                    f"data/catalog.json source {source_id!r} preview count must match catalogLimit"
                 )
+            if catalog_limited != (item["appCount"] > configured_limit):
+                error(
+                    f"data/catalog.json source {source_id!r} catalogLimited must match catalogLimit"
+                )
+        elif isinstance(item.get("appCount"), int):
+            if len(preview_apps) != item["appCount"]:
+                error(
+                    f"data/catalog.json source {source_id!r} must keep the full original app preview"
+                )
+            if catalog_limited:
+                error(f"data/catalog.json source {source_id!r} must not be limited without catalogLimit")
 
-        if item.get("iconURL") not in ("", None):
-            error(f"data/catalog.json source {source_id!r} must not persist third-party iconURL")
-        if "aggregationApproved" in item:
-            error(f"data/catalog.json source {source_id!r} must not persist aggregationApproved")
+        if not isinstance(item.get("iconURL"), str):
+            error(f"data/catalog.json source {source_id!r} iconURL must be a string")
 
     obsolete_paths = (
         ROOT / "data" / "source-cache",

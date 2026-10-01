@@ -13,7 +13,7 @@ This file documents how iOS Hub treats third-party Source endpoints. It is an en
 - `permission`: explicit permission relevant to the Source was recorded.
 - `public-metadata`: a public Source endpoint is listed for discovery/direct installation; its feed content is not republished by iOS Hub.
 - `restricted`: the Source must not be offered by the Builder.
-- Availability checks may read a public Source response to validate its structure and count apps. To support the expandable app preview, iOS Hub persists a limited list containing app name, developer, version and bundle identifier; descriptions, artwork and download URLs are not persisted.
+- Availability checks may read a public Source response to validate its structure and count apps. The Sources page keeps the original limited catalog preview used by iOS Hub: app name, developer, version, bundle identifier, icon URL and subtitle. Download URLs are not persisted in the preview.
 
 ## Current status
 

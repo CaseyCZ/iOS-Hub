@@ -345,7 +345,7 @@ function sourceAppsDisclosure(source) {
   const catalog = catalogSource(source.id) || {};
   const apps = [...(catalog.apps || [])]
     .filter(app => app && typeof app === 'object')
-    .sort((left, right) => String(left.name || '').localeCompare(String(right.name || ''), state.lang, {sensitivity:'base'}));
+    .sort((left, right) => String(left.name || '').localeCompare(String(right.name || '')));
   const statusCount = getStatus(source.id).appCount;
   const count = Number.isFinite(catalog.appCount) ? catalog.appCount : (Number.isFinite(statusCount) ? statusCount : apps.length);
   const limited = catalog.catalogLimited === true && count > apps.length;

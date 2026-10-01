@@ -8,7 +8,7 @@ from datetime import datetime, timezone
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
-# Direct Source monitoring: generated data keeps endpoint/status metadata plus a small app preview; full third-party feed payloads are never persisted.
+# Direct Source monitoring: generated data keeps endpoint/status metadata plus the same limited app preview used by the original iOS Hub catalog.
 REGISTRY = ROOT / "sources" / "registry.json"
 DATA_DIR = ROOT / "data"
 USER_AGENT = "CaseyCZ-iOS-Hub (+https://caseycz.github.io/iOS-Hub/)"
@@ -18,7 +18,6 @@ DIRECT_SOURCE_INSTALLERS = ("altstore", "sidestore", "livecontainer", "altstore-
 STRICT_DUPLICATE_BUNDLE_INSTALLERS = {"altstore", "sidestore", "altstore-pal"}
 TOLERANT_DUPLICATE_BUNDLE_INSTALLERS = {"livecontainer", "feather"}
 DUPLICATE_BUNDLE_EXAMPLE_LIMIT = 20
-CATALOG_APP_PREVIEW_LIMIT = 50
 
 
 def now_iso() -> str:
@@ -69,6 +68,17 @@ def app_version(app: dict) -> str:
         if app.get(key):
             return str(app[key])
     return ""
+
+
+def app_summary(app: dict) -> dict:
+    return {
+        "name": app.get("name") or "Unknown app",
+        "bundleIdentifier": app.get("bundleIdentifier") or app.get("bundleID") or "",
+        "developerName": app.get("developerName") or "",
+        "version": app_version(app),
+        "iconURL": app.get("iconURL") or "",
+        "subtitle": app.get("subtitle") or "",
+    }
 
 def source_variant_urls(source: dict) -> dict[str, str]:
     """Return normalized Classic/PAL endpoints for a registry source."""
@@ -279,22 +289,18 @@ def main() -> None:
                 "preferredVariant": preferred_variant,
             })
 
-            catalog_apps = apps[:CATALOG_APP_PREVIEW_LIMIT]
+            catalog_limit = source.get("catalogLimit")
+            catalog_apps = apps
+            if isinstance(catalog_limit, int) and catalog_limit > 0:
+                catalog_apps = apps[:catalog_limit]
+
             catalog["sources"].append({
                 "id": source_id,
-                "name": source.get("name"),
+                "name": payload.get("name") or source.get("name"),
                 "appCount": len(apps),
-                "variants": sorted(variant_payloads),
                 "catalogLimited": len(catalog_apps) < len(apps),
-                "apps": [
-                    {
-                        "name": str(app.get("name") or "Unknown app").strip() or "Unknown app",
-                        "developerName": str(app.get("developerName") or "").strip(),
-                        "version": app_version(app),
-                        "bundleIdentifier": str(app.get("bundleIdentifier") or app.get("bundleID") or "").strip(),
-                    }
-                    for app in catalog_apps
-                ],
+                "iconURL": payload.get("iconURL") or (apps[0].get("iconURL") if apps else "") or "",
+                "apps": [app_summary(app) for app in catalog_apps],
             })
         else:
             errors = [
