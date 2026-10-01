@@ -1,0 +1,83 @@
+{
+  "name": "Stremio",
+  "subtitle": "Freedom to stream.",
+  "description": "Stremio is a video streaming organizer for movies, series, live TV, and web channels.",
+  "iconURL": "https://i.imgur.com/ykZuH0r.png",
+  "website": "https://www.stremio.com",
+  "fediUsername": "stremio",
+  "tintColor": "#7055D9",
+  "featuredApps": [
+    "com.stremio.pal"
+  ],
+  "apps": [
+    {
+      "name": "Stremio",
+      "bundleIdentifier": "com.stremio.pal",
+      "marketplaceID": "6774661170",
+      "developerName": "Stremio",
+      "subtitle": "Freedom to stream.",
+      "localizedDescription": "Stremio is a video streaming organizer for movies, series, live TV, and web channels.",
+      "iconURL": "https://i.imgur.com/ykZuH0r.png",
+      "tintColor": "#7055D9",
+      "category": "entertainment",
+      "screenshots": {
+        "iphone": [
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/6a/ee/19/6aee194d-7b33-aaab-b3bf-64b9773e6120/login.png/1242x2688ss.jpg",
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/8a/9d/46/8a9d46c5-68f5-4396-7e97-a0fdc2e4c99b/7A634238-A47C-4B30-9373-0EDCE5E01D8C.png/1242x2688ss.jpg",
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/e0/3b/96/e03b96c3-e1a5-ad13-b45a-a267cf9860a5/D1DC7867-6EE9-4837-919E-81902FC3344F.png/1242x2688ss.jpg",
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/9d/ec/de/9decdee5-5e8c-4ac8-f213-6cd259ce7eeb/5EA57C1E-F7EC-4C2D-AC9A-771814B51ED4.png/1242x2688ss.jpg"
+        ],
+        "ipad": [
+          {
+            "imageURL": "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/71/54/b9/7154b96c-b3e1-148b-0711-b5c26c6dc280/login-ipad.png/2048x2732ss.jpg",
+            "width": 2048,
+            "height": 2732
+          },
+          {
+            "imageURL": "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/7d/ae/9c/7dae9cc9-d812-92df-46a3-301fc6b6ce1a/9B597930-50BE-4D8E-AEEC-EEF762C1E768.png/2048x2732ss.jpg",
+            "width": 2048,
+            "height": 2732
+          },
+          {
+            "imageURL": "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/76/0d/24/760d2486-cdb1-5935-3d98-f21e695d7151/9A77F888-EADE-4EEB-9549-EDDA02E1BEE3.png/2048x2732ss.jpg",
+            "width": 2048,
+            "height": 2732
+          },
+          {
+            "imageURL": "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/40/2b/cd/402bcd56-0df9-17c3-508b-b19540d6205e/D452C7D4-67E6-4AFF-BA25-3DF914C326DA.png/2048x2732ss.jpg",
+            "width": 2048,
+            "height": 2732
+          }
+        ]
+      },
+      "versions": [
+        {
+          "version": "2.0.8",
+          "buildVersion": "23",
+          "date": "2026-09-11",
+          "downloadURL": "https://dl.strem.io/apple/altstore/stremio/2.0.8-23/manifest.json",
+          "size": 79934835,
+          "minOSVersion": "13.0",
+          "localizedDescription": "feat: Added P2P/torrent downloads with improved persistence and restoration.\nfeat: Added download exporting and sharing with external apps.\nfeat: Added quick access to Downloads from the profile picker.\nfeat: Added live torrent statistics for peers, download speed, and completion.\nfeat: Added vertical swipe controls for brightness and volume.\nfeat: Added visual feedback for double-tap seeking.\nfeat: Added support for Gravatar profile pictures.\nfeat: Added Cinemeta configuration for eligible profiles.\nfeat: Added streaming server cache size and torrent performance settings.\nfeat: Added warnings when system configuration may limit download functionality.\nfix: Fixed tap-to-open and pause actions in Download Live Activities on iOS 17.0 and 17.1.\nfix: Continue Watching now starts playback directly at the saved position instead of seeking twice.\nfix: Fixed automatic subtitle selection and ensured subtitles refresh correctly when switching episodes.\nfix: Fixed a KSPlayer crash when leaving playback on iOS 15 and macOS 12.\nfix: Fixed the bottom navigation bar remaining visible on iOS 17 and earlier.\nfix: Fixed playback when opening videos from Downloads or deep links.\nfix: Improved player startup and local streaming server reliability.\nfix: Improved Picture in Picture compatibility on macOS 27.\n\nWith the release of iOS 27 and Xcode 27, support for macOS 11 and iOS 14 or earlier is no longer possible. iOS 15 and macOS 12 will become the minimum supported versions when support for iPhone Duo begins."
+        },
+        {
+          "version": "2.0.7",
+          "buildVersion": "22",
+          "date": "2026-08-25",
+          "downloadURL": "https://dl.strem.io/apple/altstore/stremio/2.0.7-22/manifest.json",
+          "size": 79502924,
+          "minOSVersion": "13.0",
+          "localizedDescription": "feat: add download Live Activities on iOS 16.2 and later\nfeat: add in-app storage management for reviewing and clearing cached data\nfeat: add subtitle Live Sync for quickly correcting subtitle timing\nfeat: scroll to the top when the active tab is tapped again\nfeat: add gradient fade edges to the profile picker\nfix: correct toast positioning\nfix: refresh content correctly after selecting a profile\nfix: prevent Discover crashes and resolve the “See All” loading race condition\nfix: prevent downloads from becoming stuck in a frozen state\nfix: resume interrupted downloads when selecting “Retry”\nfix: open the offline copy when a downloaded video URL is selected\nfix: warn when hardware decoding is unavailable and software decoding is used\nfix: correct subtitle offset behavior\nfix: detect external displays when the app initially launches\nfix: hide video content from app-switcher snapshots\nfix: make play and pause respond immediately when the controls are hidden\nfix: improve KSPlayer playback of high-bitrate content\n\n### About Live Activities\n\nDownload Live Activities require iOS 16.2 or later. Due to iOS background-execution restrictions, live progress reporting may pause around 30 seconds after the app enters the background. The download will continue, and the Live Activity will update when it completes or fails.\n\nA future update is planned to support background torrent downloading on iOS 26 and later. On older iOS versions, opening a video in Picture in Picture can keep the app running while a download continues."
+        }
+      ],
+      "appPermissions": {
+        "entitlements": [
+          "com.apple.developer.applesignin",
+          "com.apple.developer.associated-domains"
+        ],
+        "privacy": {}
+      }
+    }
+  ],
+  "news": []
+}

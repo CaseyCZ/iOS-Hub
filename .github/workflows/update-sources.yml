@@ -1,0 +1,76 @@
+name: Update iOS sources
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "17 */6 * * *"
+  push:
+    branches: [main, installer-refactor]
+    paths:
+      - "sources/registry.json"
+      - "tools/update_sources.py"
+      - ".github/workflows/update-sources.yml"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: update-ios-sources-${{ github.ref_name }}
+  cancel-in-progress: true
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v7
+        with:
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v7
+        with:
+          python-version: "3.12"
+
+      - name: Validate sources and build packages
+        run: |
+          python tools/update_sources.py
+          python tools/audit_repo.py
+
+      - name: Commit generated catalog
+        run: |
+          git config user.name "CaseyCZ"
+          git config user.email "25530709+CaseyCZ@users.noreply.github.com"
+
+          # Generated files can race with normal website commits. For every
+          # attempt start from the newest target branch and regenerate instead
+          # of rebasing generated timestamps/caches and creating conflicts.
+          TARGET_BRANCH="${GITHUB_REF_NAME:-main}"
+          if [ "${GITHUB_EVENT_NAME}" = "schedule" ]; then
+            TARGET_BRANCH="main"
+          fi
+          echo "Updating generated data on branch: ${TARGET_BRANCH}"
+
+          for attempt in 1 2 3 4 5; do
+            git fetch origin "${TARGET_BRANCH}"
+            git reset --hard "origin/${TARGET_BRANCH}"
+            python tools/update_sources.py
+            python tools/audit_repo.py
+            git add data mix altstore sidestore
+
+            if git diff --cached --quiet; then
+              echo "No generated changes."
+              exit 0
+            fi
+
+            git commit -m "Update iOS source cache"
+            if git push origin HEAD:"${TARGET_BRANCH}"; then
+              exit 0
+            fi
+
+            echo "Push raced with another commit; regenerating on latest ${TARGET_BRANCH} ($attempt/5)..."
+            sleep 2
+          done
+
+          echo "Unable to push generated source cache after 5 attempts."
+          exit 1

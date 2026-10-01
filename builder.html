@@ -1,0 +1,223 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#070b14">
+  <meta name="referrer" content="no-referrer">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://www.googletagmanager.com; style-src 'self' 'unsafe-inline'; img-src 'self' https: data:; connect-src 'self' https://*.google-analytics.com https://*.analytics.google.com https://*.googletagmanager.com; object-src 'none'; base-uri 'self'; form-action 'none'">
+  <meta name="description" content="Custom Source Builder — filter and combine checked Classic iOS sources into a Mix for supported source installers.">
+  <link rel="canonical" href="https://caseycz.github.io/iOS-Hub/builder.html">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="iOS Hub">
+  <meta property="og:title" content="Custom Source Builder — iOS Hub">
+  <meta property="og:description" content="Custom Source Builder — filter and combine checked Classic iOS sources into a Mix for supported source installers.">
+  <meta property="og:url" content="https://caseycz.github.io/iOS-Hub/builder.html">
+  <meta name="twitter:card" content="summary">
+  <title>Custom Source Builder — iOS Hub</title>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-SZTERTRTCE"></script>
+  <script src="src/js/analytics.js?v=1.1.5-20260929-titlefix1"></script>
+  <link rel="stylesheet" href="src/css/styles.css?v=1.1.5-20260918-fullaudit3">
+  <link rel="stylesheet" href="src/css/hub-extra.css?v=1.1.5-20260924-scrollfix1">
+  <link rel="stylesheet" href="src/css/collapsible.css?v=1.1.5-20260918-audit1">
+</head>
+<body>
+  <a class="skip-link" href="#top" data-i18n="skipToContent">Skip to content</a>
+  <header class="topbar">
+    <div class="wrap topbar-inner">
+      <a class="brand" href="index.html" aria-label="iOS Hub">
+        <span class="brand-mark">iOS</span>
+        <span>iOS Hub<small>iOS Sources · Sideloading</small></span>
+      </a>
+      <nav class="nav" aria-label="Primary">
+        <a href="index.html#tools" data-i18n="tools">Tools</a>
+        <a href="builder.html" class="active" aria-current="page">Source Builder</a>
+        <a href="guide.html" data-i18n="guideNav">Guide</a>
+        <a href="resources.html" data-i18n="resourcesNav">Useful</a>
+        <a href="index.html#sources" data-i18n="sources">Sources</a>
+        <a href="credits.html">Credits</a>
+      </nav>
+      <div class="nav-actions">
+        <select id="languageSelect" class="language-select-native" aria-hidden="true" tabindex="-1">
+          <option value="en">EN</option>
+          <option value="cs">CZ</option>
+          <option value="de">DE</option>
+          <option value="es">ES</option>
+          <option value="fr">FR</option>
+        </select>
+        <div class="settings-menu" data-settings-menu>
+          <button id="settingsButton" class="icon-btn settings-button" type="button" aria-haspopup="dialog" aria-expanded="false" aria-controls="settingsPanel" aria-label="Settings" title="Settings">⚙</button>
+          <div id="settingsPanel" class="settings-panel" role="dialog" aria-labelledby="settingsTitle" aria-hidden="true">
+            <div id="settingsTitle" class="settings-title" data-settings-copy="title">Settings</div>
+
+            <div class="settings-label" data-settings-copy="appearance">APPEARANCE</div>
+            <div class="settings-theme-seg">
+              <button type="button" data-settings-theme="dark" aria-pressed="false">☾ <span data-settings-copy="dark">Dark</span></button>
+              <button type="button" data-settings-theme="light" aria-pressed="false">☀ <span data-settings-copy="light">Light</span></button>
+            </div>
+
+            <div class="settings-label" data-settings-copy="language">LANGUAGE</div>
+            <div class="settings-language-list">
+              <button type="button" data-settings-language="cs" role="radio" aria-checked="false"><img src="assets/flags/cz.svg" alt=""><span>Čeština</span></button>
+              <button type="button" data-settings-language="en" role="radio" aria-checked="false"><img src="assets/flags/gb.svg" alt=""><span>English</span></button>
+              <button type="button" data-settings-language="de" role="radio" aria-checked="false"><img src="assets/flags/de.svg" alt=""><span>Deutsch</span></button>
+              <button type="button" data-settings-language="es" role="radio" aria-checked="false"><img src="assets/flags/es.svg" alt=""><span>Español</span></button>
+              <button type="button" data-settings-language="fr" role="radio" aria-checked="false"><img src="assets/flags/fr.svg" alt=""><span>Français</span></button>
+            </div>
+
+            <div class="settings-label" data-settings-copy="report">REPORT ISSUE</div>
+            <a class="settings-report-link report-bug-btn" href="https://github.com/CaseyCZ/iOS-Hub/issues/new" target="_blank" rel="noopener" aria-label="Report a bug" title="Report a bug" data-i18n-title="reportBug" data-i18n-aria-label="reportBug"><span aria-hidden="true">🐞</span><span data-i18n="reportBug">Report a bug</span></a>
+          </div>
+        </div>
+        <button id="themeToggle" class="settings-theme-proxy" type="button" aria-hidden="true" tabindex="-1">☀</button>
+        <button class="compact-btn nav-support-primary" type="button" data-support-open><img class="compact-brand-icon" src="https://cdn.buymeacoffee.com/buttons/bmc-new-btn-logo.svg" alt="" referrerpolicy="no-referrer"><span class="support-label" data-i18n="support">Support</span></button>
+
+      </div>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero builder-page-hero wrap">
+      <div class="eyebrow">CUSTOM · SOURCE BUILDER</div>
+      <h1 id="builderTitle">Custom Source Builder</h1>
+      <p id="builderDesc">Filter checked online sources, select any combination and build your own Mix.</p>
+    </section>
+
+    <section class="section wrap builder-page-section">
+      <div id="experimentalMixLab" class="panel builder-shell builder-page-shell">
+        <article class="builder-control-card builder-page-control">
+          <span class="pill mode">CUSTOM</span>
+          <h4 id="customMixCardTitle">Custom Mix</h4>
+          <div id="expSelectedCount" class="muted">0 selected</div>
+
+          <details class="content-disclosure builder-filter-disclosure" open>
+            <summary>
+              <span id="customMixFiltersLabel" class="disclosure-title">⚙ Filters · 🔎 Search · ☑ Selection</span>
+            </summary>
+            <div class="disclosure-body">
+              <div class="catalog-filters filter-disclosure-grid">
+                <div class="filter-group">
+                  <div class="filter-label">⚙ <span data-i18n="sourceType">Source type</span></div>
+                  <div class="filter-tabs">
+                    <button class="filter active" type="button" data-exp-category-filter="all" data-i18n="all">All</button>
+                    <button class="filter" type="button" data-exp-category-filter="official" data-i18n="official">Official</button>
+                    <button class="filter" type="button" data-exp-category-filter="trusted" data-i18n="trusted">Trusted</button>
+                    <button class="filter" type="button" data-exp-category-filter="community" data-i18n="community">Community</button>
+                    <button class="filter" type="button" data-exp-category-filter="modified" data-i18n="modified">Modified</button>
+                  </div>
+                </div>
+
+                <div class="filter-group">
+                  <div class="filter-label">🏷 <span data-i18n="genre">Genre</span></div>
+                  <div class="filter-tabs">
+                    <button class="filter active" type="button" data-exp-genre-filter="all" data-i18n="all">All</button>
+                    <button class="filter" type="button" data-exp-genre-filter="games" data-i18n="games">Games</button>
+                    <button class="filter" type="button" data-exp-genre-filter="emulators" data-i18n="emulators">Emulators</button>
+                    <button class="filter" type="button" data-exp-genre-filter="video" data-i18n="video">Video</button>
+                    <button class="filter" type="button" data-exp-genre-filter="music" data-i18n="music">Music</button>
+                    <button class="filter" type="button" data-exp-genre-filter="anime" data-i18n="animeManga">Anime & Manga</button>
+                    <button class="filter" type="button" data-exp-genre-filter="social" data-i18n="social">Social</button>
+                    <button class="filter" type="button" data-exp-genre-filter="downloads" data-i18n="downloads">Downloads</button>
+                    <button class="filter" type="button" data-exp-genre-filter="sideload" data-i18n="sideloadTools">Sideload Tools</button>
+                    <button class="filter" type="button" data-exp-genre-filter="utilities" data-i18n="utilities">Utilities</button>
+                  </div>
+                </div>
+
+                <div class="filter-group builder-target-group">
+                  <div class="filter-label"><span id="mixTargetLabel">Where do you want to add the Mix?</span></div>
+                  <div id="builderTargets" class="builder-target-tabs" role="group" aria-labelledby="mixTargetLabel"></div>
+                  <div id="mixTargetHelp" class="muted builder-target-help">Choose the app where you want to add the finished source. The list below will only show sources suitable for that target.</div>
+                  <div id="mixPalNote" class="muted builder-target-pal-note">AltStore PAL is not a Custom Mix target because PAL uses notarized marketplace packages and different source metadata than Classic IPA sources.</div>
+                  <div class="muted builder-target-pal-note">Compatible installers use the same normalized Classic AltSource output. Installer definitions and deep-links come from one shared configuration.</div>
+                </div>
+
+                <div class="filter-group">
+                  <div class="filter-label">🧪 <span id="mixStatusLabel">Mix status</span></div>
+                  <div class="filter-tabs">
+                    <button class="filter active" type="button" data-exp-compat-filter="all">All</button>
+                    <button class="filter" type="button" data-exp-compat-filter="pass">PASS only</button>
+                    <button class="filter" type="button" data-exp-compat-filter="try">TRY only</button>
+                  </div>
+                </div>
+
+                <div class="filter-group">
+                  <div class="filter-label">🔎 <span data-i18n="search">Search</span></div>
+                  <input id="expSourceSearch" class="search" type="search" aria-label="Search" data-i18n-aria-label="search" autocomplete="off" data-i18n-placeholder="searchPlaceholder" placeholder="Search sources…">
+                </div>
+
+                <div class="filter-group">
+                  <div class="filter-label">☑ <span data-i18n="selection">Selection</span></div>
+                  <div class="builder-choice-actions">
+                    <button id="expSelectCompatible" class="btn small primary" type="button">Select PASS for AltStore Classic</button>
+                    <button id="expSelectAll" class="btn small secondary" type="button">Select all shown</button>
+                    <button id="expClear" class="btn small ghost" type="button">Clear selection</button>
+                  </div>
+                  <div id="mixPassHelp" class="muted builder-pass-help">PASS means the source passed the automated Mix merge test. It does not mean every app is compatible with every iOS device.</div>
+                  <div id="mixDedupeHelp" class="muted builder-pass-help">If multiple app entries use the same bundle ID, the generated Mix keeps only one entry, normally the newest by date. Different variants of the same app can therefore be merged.</div>
+                </div>
+              </div>
+            </div>
+          </details>
+
+          <div class="builder-control-footer">
+            <div class="builder-result-badges">
+              <span id="mixTargetBadge" class="pill mode"><img class="installer-icon" src="assets/icons/altstore.svg" alt=""> AltStore Classic</span>
+              <span id="mixTestBadge" class="pill mode">Auto tested</span>
+            </div>
+            <button id="expBuild" class="btn primary" type="button" disabled>Build Mix</button>
+            <span id="expMessage" class="muted"></span>
+          </div>
+        </article>
+
+        <div id="experimentalBuilderList" class="builder-list" aria-live="polite"></div>
+
+        <div id="expResult" class="builder-result">
+          <strong id="expResultTitle">Mix</strong>
+          <div id="expResultInfo" class="muted" style="margin-top:6px"></div>
+          <p id="expResultNote" class="notice" style="margin-top:10px"></p>
+          <div class="builder-actions">
+            <a id="expAddTarget" class="btn small primary" href="#" hidden>＋ Add</a>
+            <details id="expAddSources" class="builder-install-sources" hidden>
+              <summary id="expAddSourcesSummary" class="btn small primary">＋ Add sources</summary>
+              <div id="expAddSourcesMenu" class="builder-install-sources-menu"></div>
+            </details>
+            <button id="expCopyUrl" class="btn small secondary" type="button" hidden>Copy URL</button>
+            <a id="expDownload" class="btn small secondary" href="#">Download JSON</a>
+            <a id="expPreview" class="btn small ghost" href="#" target="_blank" rel="noopener">Preview JSON</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap footer-inner">
+      <span>© <span id="year"></span> iOS Hub · v1.1.5</span>
+      <div class="footer-links">
+        <a href="https://caseycz.github.io/" target="_blank" rel="noopener">Website</a>
+        <a href="https://github.com/CaseyCZ/iOS-Hub" target="_blank" rel="noopener">GitHub · iOS-Hub</a>
+        <a href="credits.html">Credits</a>
+      </div>
+    </div>
+  </footer>
+
+  <div id="supportModal" class="support-backdrop" role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="supportTitle">
+    <div class="support-dialog">
+      <button class="support-close" type="button" data-support-close aria-label="Close" data-i18n-aria-label="close">×</button>
+      <div class="eyebrow" data-i18n="supportEyebrow">SUPPORT THE PROJECT</div>
+      <h2 id="supportTitle" data-i18n="supportTitle">Support further development.</h2>
+      <p data-i18n="supportDesc">If iOS Hub saves you time, you can support further development through Buy Me a Coffee.</p>
+      <a href="https://www.buymeacoffee.com/caseycz" target="_blank" rel="noopener"><img class="support-qr" src="https://caseycz.github.io/support-qr.svg" alt="Buy Me a Coffee QR code"></a>
+      <a class="btn primary brand-link" style="width:100%" href="https://www.buymeacoffee.com/caseycz" target="_blank" rel="noopener"><img class="brand-link-icon brand-link-icon-contain" src="https://cdn.buymeacoffee.com/buttons/bmc-new-btn-logo.svg" alt="" referrerpolicy="no-referrer"><span data-i18n="openCoffee">Open Buy Me a Coffee ↗</span></a>
+    </div>
+  </div>
+
+  <script type="module" src="src/js/builder-page.js?v=1.1.5-20260929-guide-methods1"></script>
+  <script type="module" src="src/js/builder.js?v=1.1.5-20260929-builder-registry1"></script>
+  <script type="module" src="src/js/collapsible.js?v=1.1.5-20260918-audit1"></script>
+  <script src="src/js/support-dialog.js?v=1.1.5-20260918-a11y1"></script>
+  <script src="src/js/mobile-menu.js?v=1.1.5-20260918-a11y1"></script>
+  <script src="src/js/settings-menu.js?v=1.1.5-20260918-a11y1"></script>
+</body>
+</html>

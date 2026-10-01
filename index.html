@@ -1,0 +1,228 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#070b14">
+  <meta name="referrer" content="no-referrer">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://www.googletagmanager.com; style-src 'self' 'unsafe-inline'; img-src 'self' https: data:; connect-src 'self' https://*.google-analytics.com https://*.analytics.google.com https://*.googletagmanager.com; object-src 'none'; base-uri 'self'; form-action 'none'">
+  <meta name="description" content="iOS Hub — checked iOS sources, Source Builder, compatible installer links and browser-based iOS tools.">
+  <link rel="canonical" href="https://caseycz.github.io/iOS-Hub/">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="iOS Hub">
+  <meta property="og:title" content="iOS Hub — iOS Sources · Sideloading">
+  <meta property="og:description" content="iOS Hub — AltStore, SideStore and LiveContainer sources, Source Builder and browser-based iOS tools.">
+  <meta property="og:url" content="https://caseycz.github.io/iOS-Hub/">
+  <meta name="twitter:card" content="summary">
+  <title>iOS Hub — iOS Sources · Sideloading</title>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-SZTERTRTCE"></script>
+  <script src="src/js/analytics.js?v=1.1.5-20260929-titlefix1"></script>
+  <link rel="stylesheet" href="src/css/styles.css?v=1.1.5-20260918-fullaudit3">
+  <link rel="stylesheet" href="src/css/hub-extra.css?v=1.1.5-20260924-scrollfix1">
+  <link rel="stylesheet" href="src/css/collapsible.css?v=1.1.5-20260918-audit1">
+</head>
+<body>
+  <a class="skip-link" href="#top" data-i18n="skipToContent">Skip to content</a>
+  <header class="topbar">
+    <div class="wrap topbar-inner">
+      <a class="brand" href="#top" aria-label="iOS Hub">
+        <span class="brand-mark">iOS</span>
+        <span>iOS Hub<small>iOS Sources · Sideloading</small></span>
+      </a>
+      <nav class="nav" aria-label="Primary">
+        <a href="#tools" data-i18n="tools">Tools</a>
+        <a href="builder.html">Source Builder</a>
+        <a href="guide.html" data-i18n="guideNav">Guide</a>
+        <a href="resources.html" data-i18n="resourcesNav">Useful</a>
+        <a href="#sources" data-i18n="sources">Sources</a>
+        <a href="credits.html">Credits</a>
+      </nav>
+      <div class="nav-actions">
+        <select id="languageSelect" class="language-select-native" aria-hidden="true" tabindex="-1">
+          <option value="en">EN</option>
+          <option value="cs">CZ</option>
+          <option value="de">DE</option>
+          <option value="es">ES</option>
+          <option value="fr">FR</option>
+        </select>
+        <div class="settings-menu" data-settings-menu>
+          <button id="settingsButton" class="icon-btn settings-button" type="button" aria-haspopup="dialog" aria-expanded="false" aria-controls="settingsPanel" aria-label="Settings" title="Settings">⚙</button>
+          <div id="settingsPanel" class="settings-panel" role="dialog" aria-labelledby="settingsTitle" aria-hidden="true">
+            <div id="settingsTitle" class="settings-title" data-settings-copy="title">Settings</div>
+
+            <div class="settings-label" data-settings-copy="appearance">APPEARANCE</div>
+            <div class="settings-theme-seg">
+              <button type="button" data-settings-theme="dark" aria-pressed="false">☾ <span data-settings-copy="dark">Dark</span></button>
+              <button type="button" data-settings-theme="light" aria-pressed="false">☀ <span data-settings-copy="light">Light</span></button>
+            </div>
+
+            <div class="settings-label" data-settings-copy="language">LANGUAGE</div>
+            <div class="settings-language-list">
+              <button type="button" data-settings-language="cs" role="radio" aria-checked="false"><img src="assets/flags/cz.svg" alt=""><span>Čeština</span></button>
+              <button type="button" data-settings-language="en" role="radio" aria-checked="false"><img src="assets/flags/gb.svg" alt=""><span>English</span></button>
+              <button type="button" data-settings-language="de" role="radio" aria-checked="false"><img src="assets/flags/de.svg" alt=""><span>Deutsch</span></button>
+              <button type="button" data-settings-language="es" role="radio" aria-checked="false"><img src="assets/flags/es.svg" alt=""><span>Español</span></button>
+              <button type="button" data-settings-language="fr" role="radio" aria-checked="false"><img src="assets/flags/fr.svg" alt=""><span>Français</span></button>
+            </div>
+
+            <div class="settings-label" data-settings-copy="report">REPORT ISSUE</div>
+            <a class="settings-report-link report-bug-btn" href="https://github.com/CaseyCZ/iOS-Hub/issues/new" target="_blank" rel="noopener" aria-label="Report a bug" title="Report a bug" data-i18n-title="reportBug" data-i18n-aria-label="reportBug"><span aria-hidden="true">🐞</span><span data-i18n="reportBug">Report a bug</span></a>
+          </div>
+        </div>
+        <button id="themeToggle" class="settings-theme-proxy" type="button" aria-hidden="true" tabindex="-1">☀</button>
+        <button class="compact-btn nav-support-primary" type="button" data-support-open><img class="compact-brand-icon" src="https://cdn.buymeacoffee.com/buttons/bmc-new-btn-logo.svg" alt="" referrerpolicy="no-referrer"><span class="support-label" data-i18n="support">Support</span></button>
+
+      </div>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero wrap">
+      <div class="eyebrow">IOS SOURCES · INSTALLERS · TOOLS</div>
+      <h1 data-i18n="heroTitle">iOS sources. Catalog. Tools.</h1>
+      <p data-i18n="heroDesc">A live catalog of checked AltStore, SideStore and LiveContainer sources. Filter by source type and content, combine compatible sources and use practical iOS tools directly in the browser.</p>
+      <div class="hero-actions">
+        <a class="btn primary" href="guide.html" data-i18n="startHere">Start here</a>
+        <a class="btn secondary" href="converter.html" data-i18n="openConverter">Open DEB → IPA Converter</a>
+        <a class="btn secondary" href="builder.html" data-i18n="buildSource">Build my Source</a>
+        <a class="btn secondary" href="#sources" data-i18n="browseSources">Browse sources</a>
+      </div>
+      <div class="stats" aria-label="Source statistics">
+        <div class="stat"><strong id="statSources">—</strong><span data-i18n="availableSources">available sources</span></div>
+        <div class="stat"><strong id="statMix">—</strong><span data-i18n="mixReadySources">mix-ready sources</span></div>
+        <div class="stat"><strong id="statApps">—</strong><span data-i18n="discoveredApps">unique discovered apps</span></div>
+      </div>
+    </section>
+
+    <section id="tools" class="section wrap">
+      <div class="section-head">
+        <div><h2 data-i18n="toolsTitle">Tools</h2><p data-i18n="toolsDesc">Utilities that run directly in your browser and work on iPhone, iPad, Mac and PC.</p></div>
+      </div>
+      <div class="tools-grid">
+        <article class="panel tool-card">
+          <div class="tool-icon">DEB</div>
+          <div class="tool-copy">
+            <span class="pill mode">BETA</span>
+            <h3 data-i18n="converterCardTitle">DEB → IPA Converter</h3>
+            <p data-i18n="converterCardDesc">Convert a compatible iOS .deb package to .ipa locally in your browser. Packages with special filesystem metadata may still require a desktop conversion tool.</p>
+          </div>
+          <a class="btn primary" href="converter.html" data-i18n="openTool">Open tool</a>
+        </article>
+        <article class="panel tool-card">
+          <div class="tool-icon">MIX</div>
+          <div class="tool-copy">
+            <span class="pill mode">CUSTOM</span>
+            <h3 data-i18n="customBuilderCardTitle">Custom Builder</h3>
+            <p data-i18n="customBuilderCardDesc">Filter checked sources, choose any combination and create your own Mix on a dedicated page.</p>
+          </div>
+          <a class="btn primary" href="builder.html" data-i18n="openBuilder">Open Builder</a>
+        </article>
+      </div>
+    </section>
+
+    <section id="builder" class="section wrap">
+      <div class="section-head">
+        <div>
+          <h2 data-i18n="readySourcesTitle">Ready sources</h2>
+          <p data-i18n="readySourcesDesc">Use a prepared source or open the standalone Custom Builder for your own filtered Mix.</p>
+        </div>
+      </div>
+
+      <div class="panel builder-shell">
+        <div class="builder-card-grid">
+          <div id="officialSourcePackages" class="builder-ready-cards"></div>
+
+        </div>
+      </div>
+    </section>
+
+    <section id="sources" class="section wrap">
+      <div class="section-head">
+        <div>
+          <h2 data-i18n="catalogTitle">iOS Sources · Sideloading sources</h2>
+          <p data-i18n="catalogDesc">Every registered source stays visible with its latest automated status. Offline sources remain listed with install buttons disabled.</p>
+          <div id="sourceStatusSummary" class="source-status-summary" aria-live="polite"></div>
+        </div>
+      </div>
+
+      <details class="content-disclosure filter-disclosure">
+        <summary>
+          <span class="disclosure-title">⚙ <span data-i18n="sourceType">Source type</span> · 🏷 <span data-i18n="genre">Genre</span> · ↕ <span data-i18n="sort">Sort</span> · 🔎 <span data-i18n="search">Search</span></span>
+        </summary>
+        <div class="disclosure-body">
+          <div class="catalog-filters filter-disclosure-grid">
+            <div class="filter-group">
+              <div class="filter-label">⚙ <span data-i18n="sourceType">Source type</span></div>
+              <div class="filter-tabs">
+                <button class="filter active" type="button" data-category-filter="all" data-i18n="all">All</button>
+                <button class="filter" type="button" data-category-filter="official" data-i18n="official">Official</button>
+                <button class="filter" type="button" data-category-filter="trusted" data-i18n="trusted">Trusted</button>
+                <button class="filter" type="button" data-category-filter="community" data-i18n="community">Community</button>
+                <button class="filter" type="button" data-category-filter="modified" data-i18n="modified">Modified</button>
+              </div>
+            </div>
+            <div class="filter-group">
+              <div class="filter-label">🏷 <span data-i18n="genre">Genre</span></div>
+              <div class="filter-tabs">
+                <button class="filter active" type="button" data-genre-filter="all" data-i18n="all">All</button>
+                <button class="filter" type="button" data-genre-filter="games" data-i18n="games">Games</button>
+                <button class="filter" type="button" data-genre-filter="emulators" data-i18n="emulators">Emulators</button>
+                <button class="filter" type="button" data-genre-filter="video" data-i18n="video">Video</button>
+                <button class="filter" type="button" data-genre-filter="music" data-i18n="music">Music</button>
+                <button class="filter" type="button" data-genre-filter="anime" data-i18n="animeManga">Anime & Manga</button>
+                <button class="filter" type="button" data-genre-filter="social" data-i18n="social">Social</button>
+                <button class="filter" type="button" data-genre-filter="downloads" data-i18n="downloads">Downloads</button>
+                <button class="filter" type="button" data-genre-filter="sideload" data-i18n="sideloadTools">Sideload Tools</button>
+                <button class="filter" type="button" data-genre-filter="utilities" data-i18n="utilities">Utilities</button>
+              </div>
+            </div>
+            <div class="filter-group">
+              <div class="filter-label">↕ <span data-i18n="sort">Sort</span></div>
+              <div class="filter-tabs">
+                <button class="filter active" type="button" data-sort-filter="name" data-i18n="sortName">Name A–Z</button>
+                <button class="filter" type="button" data-sort-filter="apps-desc" data-i18n="sortAppsHigh">Apps: most first</button>
+                <button class="filter" type="button" data-sort-filter="apps-asc" data-i18n="sortAppsLow">Apps: fewest first</button>
+              </div>
+            </div>
+            <div class="filter-group"><div class="filter-label">🔎 <span data-i18n="search">Search</span></div><input id="sourceSearch" class="search" type="search" aria-label="Search" data-i18n-aria-label="search" autocomplete="off" data-i18n-placeholder="searchPlaceholder" placeholder="Search sources…"></div>
+          </div>
+        </div>
+      </details>
+
+      <div id="sourceGrid" class="source-grid" aria-live="polite"></div>
+      <div class="notice" style="margin-top:13px"><strong data-i18n="note">Note:</strong> <span data-i18n="catalogNote">iOS Hub does not rehost third-party IPA files. The catalog uses original public source URLs and preserves original download links. External sources can change at any time.</span></div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap footer-inner">
+      <span>© <span id="year"></span> iOS Hub · v1.1.5</span>
+      <div class="footer-links">
+        <a href="https://caseycz.github.io/" target="_blank" rel="noopener">Website</a>
+        <a href="https://github.com/CaseyCZ/iOS-Hub" target="_blank" rel="noopener">GitHub · iOS-Hub</a>
+        <a href="credits.html">Credits</a>
+      </div>
+    </div>
+  </footer>
+
+  <div id="supportModal" class="support-backdrop" role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="supportTitle">
+    <div class="support-dialog">
+      <button class="support-close" type="button" data-support-close aria-label="Close" data-i18n-aria-label="close">×</button>
+      <div class="eyebrow" data-i18n="supportEyebrow">SUPPORT THE PROJECT</div>
+      <h2 id="supportTitle" data-i18n="supportTitle">Support further development.</h2>
+      <p data-i18n="supportDesc">If iOS Hub saves you time, you can support further development through Buy Me a Coffee.</p>
+      <a href="https://www.buymeacoffee.com/caseycz" target="_blank" rel="noopener"><img class="support-qr" src="https://caseycz.github.io/support-qr.svg" alt="Buy Me a Coffee QR code"></a>
+      <a class="btn primary brand-link" style="width:100%" href="https://www.buymeacoffee.com/caseycz" target="_blank" rel="noopener"><img class="brand-link-icon brand-link-icon-contain" src="https://cdn.buymeacoffee.com/buttons/bmc-new-btn-logo.svg" alt="" referrerpolicy="no-referrer"><span data-i18n="openCoffee">Open Buy Me a Coffee ↗</span></a>
+    </div>
+  </div>
+
+  <div id="toast" class="toast-message" role="status" aria-live="polite" hidden></div>
+  <script type="module" src="src/js/app.js?v=1.1.5-20260929-installers20"></script>
+  <script type="module" src="src/js/builder.js?v=1.1.5-20260929-builder-registry1"></script>
+  <script type="module" src="src/js/collapsible.js?v=1.1.5-20260918-audit1"></script>
+  <script src="src/js/support-dialog.js?v=1.1.5-20260918-a11y1"></script>
+  <script src="src/js/mobile-menu.js?v=1.1.5-20260918-a11y1"></script>
+  <script src="src/js/settings-menu.js?v=1.1.5-20260918-a11y1"></script>
+</body>
+</html>
