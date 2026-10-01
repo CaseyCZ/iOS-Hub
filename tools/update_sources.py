@@ -8,7 +8,7 @@ from datetime import datetime, timezone
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
-# Direct Source monitoring: generated data keeps endpoint/status metadata plus a small app-name preview; full third-party feed payloads are never persisted.
+# Direct Source monitoring: generated data keeps endpoint/status metadata plus a small app preview; full third-party feed payloads are never persisted.
 REGISTRY = ROOT / "sources" / "registry.json"
 DATA_DIR = ROOT / "data"
 USER_AGENT = "CaseyCZ-iOS-Hub (+https://caseycz.github.io/iOS-Hub/)"
@@ -42,6 +42,33 @@ def fetch_json(url: str) -> tuple[dict, int]:
         raise ValueError("Source must contain an apps array")
     return payload, status
 
+
+
+def parse_date(value: object) -> float:
+    if not isinstance(value, str) or not value.strip():
+        return 0.0
+    text = value.strip().replace("Z", "+00:00")
+    try:
+        return datetime.fromisoformat(text).timestamp()
+    except ValueError:
+        try:
+            return datetime.fromisoformat(text[:10]).replace(tzinfo=timezone.utc).timestamp()
+        except ValueError:
+            return 0.0
+
+
+def app_version(app: dict) -> str:
+    versions = app.get("versions")
+    if isinstance(versions, list) and versions:
+        dated = [item for item in versions if isinstance(item, dict)]
+        if dated:
+            latest = max(dated, key=lambda item: parse_date(item.get("date") or item.get("versionDate")))
+            if latest.get("version"):
+                return str(latest["version"])
+    for key in ("version", "absoluteVersion"):
+        if app.get(key):
+            return str(app[key])
+    return ""
 
 def source_variant_urls(source: dict) -> dict[str, str]:
     """Return normalized Classic/PAL endpoints for a registry source."""
@@ -260,7 +287,12 @@ def main() -> None:
                 "variants": sorted(variant_payloads),
                 "catalogLimited": len(catalog_apps) < len(apps),
                 "apps": [
-                    {"name": str(app.get("name") or "Unknown app").strip() or "Unknown app"}
+                    {
+                        "name": str(app.get("name") or "Unknown app").strip() or "Unknown app",
+                        "developerName": str(app.get("developerName") or "").strip(),
+                        "version": app_version(app),
+                        "bundleIdentifier": str(app.get("bundleIdentifier") or app.get("bundleID") or "").strip(),
+                    }
                     for app in catalog_apps
                 ],
             })

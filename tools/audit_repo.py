@@ -814,16 +814,23 @@ def validate_generated_data() -> None:
             error(f"data/catalog.json source {source_id!r} apps preview must be a list")
             preview_apps = []
         elif len(preview_apps) > 50:
-            error(f"data/catalog.json source {source_id!r} app-name preview exceeds 50 entries")
+            error(f"data/catalog.json source {source_id!r} app preview exceeds 50 entries")
         for app_index, app_preview in enumerate(preview_apps):
-            if not isinstance(app_preview, dict) or set(app_preview) != {"name"}:
+            allowed_app_preview_keys = {"name", "developerName", "version", "bundleIdentifier"}
+            if not isinstance(app_preview, dict) or set(app_preview) != allowed_app_preview_keys:
                 error(
                     f"data/catalog.json source {source_id!r} app preview #{app_index} "
-                    "must contain only a name"
+                    "must contain only name, developerName, version and bundleIdentifier"
                 )
                 continue
             if not str(app_preview.get("name") or "").strip():
                 error(f"data/catalog.json source {source_id!r} app preview #{app_index} has an empty name")
+            for preview_key in ("developerName", "version", "bundleIdentifier"):
+                if not isinstance(app_preview.get(preview_key), str):
+                    error(
+                        f"data/catalog.json source {source_id!r} app preview #{app_index} "
+                        f"{preview_key} must be a string"
+                    )
 
         catalog_limited = item.get("catalogLimited")
         if not isinstance(catalog_limited, bool):

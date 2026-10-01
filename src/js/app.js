@@ -344,28 +344,16 @@ function formatDate(value) {
 function sourceAppsDisclosure(source) {
   const catalog = catalogSource(source.id) || {};
   const apps = [...(catalog.apps || [])]
-    .filter(app => app && typeof app === 'object' && String(app.name || '').trim())
+    .filter(app => app && typeof app === 'object')
     .sort((left, right) => String(left.name || '').localeCompare(String(right.name || ''), state.lang, {sensitivity:'base'}));
   const statusCount = getStatus(source.id).appCount;
-  const numericCount = Number.isFinite(catalog.appCount)
-    ? catalog.appCount
-    : (Number.isFinite(statusCount) ? statusCount : null);
-  const count = Number.isFinite(numericCount) ? numericCount : '—';
-
-  if (!apps.length) {
-    return `<div class="source-apps-disclosure source-app-count-only">
-      <span class="source-app-count">📱 <strong>${count}</strong> ${escapeHtml(tr('apps'))}</span>
-    </div>`;
-  }
-
-  const limited = catalog.catalogLimited === true && Number.isFinite(numericCount) && numericCount > apps.length;
-  const rows = apps.map(app =>
-    `<div class="source-app-row"><strong>${escapeHtml(app.name)}</strong></div>`
-  ).join('');
-  const limitNote = limited
-    ? `<div class="source-app-empty">${apps.length} / ${numericCount}</div>`
-    : '';
-
+  const count = Number.isFinite(catalog.appCount) ? catalog.appCount : (Number.isFinite(statusCount) ? statusCount : apps.length);
+  const limited = catalog.catalogLimited === true && count > apps.length;
+  const rows = apps.length ? apps.map(app => {
+    const details = [app.developerName, app.version, app.bundleIdentifier].filter(Boolean).map(escapeHtml).join(' · ');
+    return `<div class="source-app-row"><strong>${escapeHtml(app.name || 'Unknown app')}</strong>${details ? `<span>${details}</span>` : ''}</div>`;
+  }).join('') : `<div class="source-app-empty">${escapeHtml(tr('noApps'))}</div>`;
+  const limitNote = limited ? `<div class="source-app-empty">${apps.length} / ${count}</div>` : '';
   return `<details class="source-apps-disclosure">
     <summary title="${escapeHtml(tr('showApps'))}" aria-label="${escapeHtml(tr('showApps'))}">
       <span class="source-app-count">📱 <strong>${count}</strong> ${escapeHtml(tr('apps'))}</span>
