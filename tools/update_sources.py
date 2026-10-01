@@ -8,7 +8,7 @@ from datetime import datetime, timezone
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
-# Direct Source monitoring only: generated data keeps endpoint/status metadata for the direct-link Builder, never third-party feed payloads.
+# Direct Source monitoring: generated data keeps endpoint/status metadata plus a small app-name preview; full third-party feed payloads are never persisted.
 REGISTRY = ROOT / "sources" / "registry.json"
 DATA_DIR = ROOT / "data"
 USER_AGENT = "CaseyCZ-iOS-Hub (+https://caseycz.github.io/iOS-Hub/)"
@@ -18,6 +18,7 @@ DIRECT_SOURCE_INSTALLERS = ("altstore", "sidestore", "livecontainer", "altstore-
 STRICT_DUPLICATE_BUNDLE_INSTALLERS = {"altstore", "sidestore", "altstore-pal"}
 TOLERANT_DUPLICATE_BUNDLE_INSTALLERS = {"livecontainer", "feather"}
 DUPLICATE_BUNDLE_EXAMPLE_LIMIT = 20
+CATALOG_APP_PREVIEW_LIMIT = 50
 
 
 def now_iso() -> str:
@@ -251,11 +252,17 @@ def main() -> None:
                 "preferredVariant": preferred_variant,
             })
 
+            catalog_apps = apps[:CATALOG_APP_PREVIEW_LIMIT]
             catalog["sources"].append({
                 "id": source_id,
                 "name": source.get("name"),
                 "appCount": len(apps),
                 "variants": sorted(variant_payloads),
+                "catalogLimited": len(catalog_apps) < len(apps),
+                "apps": [
+                    {"name": str(app.get("name") or "Unknown app").strip() or "Unknown app"}
+                    for app in catalog_apps
+                ],
             })
         else:
             errors = [
