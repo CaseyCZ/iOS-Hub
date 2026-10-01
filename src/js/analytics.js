@@ -1,6 +1,8 @@
 (() => {
   const MEASUREMENT_ID = 'G-SZTERTRTCE';
   const CONSENT_KEY = 'ioshub-analytics-consent-v1';
+  const ANALYTICS_PAGE_TITLE = String(document.title || 'iOS Hub').trim() || 'iOS Hub';
+  const ANALYTICS_PAGE_LOCATION = `${window.location.origin}${window.location.pathname}${window.location.search}`;
   let banner = null;
   let loaded = false;
 
@@ -75,7 +77,9 @@
     gtag('js', new Date());
     gtag('config', MEASUREMENT_ID, {
       allow_google_signals: false,
-      allow_ad_personalization_signals: false
+      allow_ad_personalization_signals: false,
+      page_title: ANALYTICS_PAGE_TITLE,
+      page_location: ANALYTICS_PAGE_LOCATION
     });
 
     const script = document.createElement('script');
