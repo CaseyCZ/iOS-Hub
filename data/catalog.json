@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-01T18:04:21Z",
+  "generatedAt": "2026-10-01T22:43:20Z",
   "sources": [
     {
       "id": "utm",
@@ -1114,7 +1114,7 @@
           "name": "Twitch",
           "bundleIdentifier": "tv.twitch",
           "developerName": "",
-          "version": "31.4.2",
+          "version": "31.4.4",
           "iconURL": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Twitch_Glitch_Logo_Purple.svg/640px-Twitch_Glitch_Logo_Purple.svg.png",
           "subtitle": ""
         },
@@ -3395,10 +3395,18 @@
     {
       "id": "cypwn-ipa",
       "name": "CyPwn IPA Library",
-      "appCount": 209,
+      "appCount": 210,
       "catalogLimited": true,
       "iconURL": "https://repo.cypwn.xyz/assets/images/cypwn_small.png",
       "apps": [
+        {
+          "name": "Stremio-2.0.7",
+          "bundleIdentifier": "com.stremio.pal",
+          "developerName": "Stremio-2.0.7 x CyPwn",
+          "version": "2.0.7",
+          "iconURL": "https://ipa.cypwn.xyz/serve/icons/Stremio-2.0.7.png",
+          "subtitle": ""
+        },
         {
           "name": "Stremio-2.0.6",
           "bundleIdentifier": "com.stremio.pal",
@@ -4830,24 +4838,80 @@
           "version": "2.6",
           "iconURL": "https://ipa.cypwn.xyz/serve/icons/Star_Map_2.6_Satella.png",
           "subtitle": ""
-        },
-        {
-          "name": "RefacePro_3.12.0",
-          "bundleIdentifier": "cypwn.RefacePro_3.12.0.3.12.0",
-          "developerName": "RefacePro_3.12.0 x CyPwn",
-          "version": "3.12.0",
-          "iconURL": "https://ipa.cypwn.xyz/serve/icons/RefacePro_3.12.0.png",
-          "subtitle": ""
         }
       ]
     },
     {
       "id": "apptesters",
       "name": "AppTesters IPA Repo",
-      "appCount": 9439,
+      "appCount": 9447,
       "catalogLimited": true,
       "iconURL": "https://apptesters.org/apptesters-512x512.png",
       "apps": [
+        {
+          "name": "ism",
+          "bundleIdentifier": "com.ahaf.mshion",
+          "developerName": "",
+          "version": "7.49.0",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.ahaf.mshion.png",
+          "subtitle": ""
+        },
+        {
+          "name": "Paste",
+          "bundleIdentifier": "com.wiheads.paste",
+          "developerName": "",
+          "version": "7.0.1",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.wiheads.paste.png",
+          "subtitle": ""
+        },
+        {
+          "name": "SODA",
+          "bundleIdentifier": "com.snowcorp.soda",
+          "developerName": "",
+          "version": "10.4.2",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.snowcorp.soda.png",
+          "subtitle": ""
+        },
+        {
+          "name": "UpNote",
+          "bundleIdentifier": "com.getupnote.ios",
+          "developerName": "",
+          "version": "9.22.7",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.getupnote.ios.png",
+          "subtitle": ""
+        },
+        {
+          "name": "InShot",
+          "bundleIdentifier": "com.camerasideas.InstaShot",
+          "developerName": "",
+          "version": "2.0.2",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.camerasideas.InstaShot.png",
+          "subtitle": ""
+        },
+        {
+          "name": "PureStatus",
+          "bundleIdentifier": "com.damtechdesigns.wa.story",
+          "developerName": "",
+          "version": "2026.07",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.damtechdesigns.wa.story.png",
+          "subtitle": ""
+        },
+        {
+          "name": "GentlerStreak",
+          "bundleIdentifier": "app.gentler.activity",
+          "developerName": "",
+          "version": "5.13.3",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/app.gentler.activity.png",
+          "subtitle": ""
+        },
+        {
+          "name": "BoldVoice",
+          "bundleIdentifier": "com.wellocution.iosapp",
+          "developerName": "",
+          "version": "4.4.7",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.wellocution.iosapp.png",
+          "subtitle": ""
+        },
         {
           "name": "Calendars",
           "bundleIdentifier": "com.readdle.CalendarsLite",
@@ -6383,70 +6447,6 @@
           "version": "10.9",
           "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/tech.sketchar.ios.png",
           "subtitle": ""
-        },
-        {
-          "name": "Unknown app",
-          "bundleIdentifier": "tech.miidii.MDBlank",
-          "developerName": "",
-          "version": "7.26.6",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/tech.miidii.MDBlank.png",
-          "subtitle": ""
-        },
-        {
-          "name": "ThePiano",
-          "bundleIdentifier": "com.impalastudios.pianofree",
-          "developerName": "",
-          "version": "2.23.4",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.impalastudios.pianofree.png",
-          "subtitle": ""
-        },
-        {
-          "name": "Elevate",
-          "bundleIdentifier": "com.elevateapp.elevate",
-          "developerName": "",
-          "version": "5.258.0",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.elevateapp.elevate.png",
-          "subtitle": ""
-        },
-        {
-          "name": "Drafts",
-          "bundleIdentifier": "com.agiletortoise.Drafts5",
-          "developerName": "",
-          "version": "54.0.4",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.agiletortoise.Drafts5.png",
-          "subtitle": ""
-        },
-        {
-          "name": "ProCCD",
-          "bundleIdentifier": "com.yengshine.proccd",
-          "developerName": "",
-          "version": "6.8.2",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.yengshine.proccd.png",
-          "subtitle": ""
-        },
-        {
-          "name": "ColoringBook",
-          "bundleIdentifier": "com.apalonapps.clrbook",
-          "developerName": "",
-          "version": "1.5.8",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.apalonapps.clrbook.png",
-          "subtitle": ""
-        },
-        {
-          "name": "RiseSleep",
-          "bundleIdentifier": "com.risesci.nyx",
-          "developerName": "",
-          "version": "0.1.632",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.risesci.nyx.png",
-          "subtitle": ""
-        },
-        {
-          "name": "SODA",
-          "bundleIdentifier": "com.snowcorp.soda",
-          "developerName": "",
-          "version": "10.4.0",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.snowcorp.soda.png",
-          "subtitle": ""
         }
       ]
     },
@@ -6545,7 +6545,7 @@
           "name": "YT Music+🗿",
           "bundleIdentifier": "com.google.ios.youtubemusic",
           "developerName": "heyFordy",
-          "version": "9.06.4",
+          "version": "9.39.2",
           "iconURL": "http://repo.heyfordy.dev/assets/ytmusic.png",
           "subtitle": "iOS YouTube Music Vanced experience."
         },
@@ -8599,7 +8599,7 @@
           "name": "SpotiFLAC",
           "bundleIdentifier": "com.zarz.spotiflac",
           "developerName": "zarzet",
-          "version": "5.0.6",
+          "version": "5.0.7",
           "iconURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/SpotiFLAC/icon.png",
           "subtitle": "FLAC Downloader for iOS"
         },
