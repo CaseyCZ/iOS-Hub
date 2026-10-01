@@ -2,8 +2,7 @@
   const MEASUREMENT_ID = 'G-SZTERTRTCE';
   const CONSENT_KEY = 'ioshub-analytics-consent-v1';
   const ANALYTICS_PAGE_TITLE = String(document.querySelector('meta[name="analytics-page-title"]')?.content || document.title || 'iOS Hub').trim() || 'iOS Hub';
-  const canonicalHref = document.querySelector('link[rel="canonical"]')?.href;
-  const ANALYTICS_PAGE_LOCATION = canonicalHref || `${window.location.origin}${window.location.pathname}${window.location.search}`;
+  const ANALYTICS_PAGE_LOCATION = `${window.location.origin}${window.location.pathname}${window.location.search}`;
   let banner = null;
   let loaded = false;
 
