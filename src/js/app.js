@@ -341,7 +341,7 @@ function formatDate(value) {
   return new Intl.DateTimeFormat(localeMap[state.lang] || 'en-GB', {day:'2-digit', month:'2-digit', year:'numeric'}).format(date);
 }
 
-function sourceAppsDisclosure(source) {
+function sourceAppsDisclosure(source, checkedText = '') {
   const catalog = catalogSource(source.id) || {};
   const apps = [...(catalog.apps || [])]
     .filter(app => app && typeof app === 'object')
@@ -354,12 +354,20 @@ function sourceAppsDisclosure(source) {
     return `<div class="source-app-row"><strong>${escapeHtml(app.name || 'Unknown app')}</strong>${details ? `<span>${details}</span>` : ''}</div>`;
   }).join('') : `<div class="source-app-empty">${escapeHtml(tr('noApps'))}</div>`;
   const limitNote = limited ? `<div class="source-app-empty">${apps.length} / ${count}</div>` : '';
+  const closeControl = apps.length > 20
+    ? `<button type="button" class="btn small ghost source-app-close" data-source-app-close>${escapeHtml(tr('close'))}</button>`
+    : '';
+  const expandedChecked = checkedText
+    ? `<div class="source-checked source-checked-expanded">${checkedText}</div>`
+    : '';
   return `<details class="source-apps-disclosure">
     <summary title="${escapeHtml(tr('showApps'))}" aria-label="${escapeHtml(tr('showApps'))}">
       <span class="source-app-count">📱 <strong>${count}</strong> ${escapeHtml(tr('apps'))}</span>
       <span class="source-app-chevron" aria-hidden="true">⌄</span>
     </summary>
     <div class="source-app-list">${limitNote}${rows}</div>
+    ${closeControl}
+    ${expandedChecked}
   </details>`;
 }
 
@@ -414,7 +422,12 @@ function renderSources() {
         </div>
       </div>
       <p>${escapeHtml(desc)}</p>
-      <div class="source-stats">${sourceAppsDisclosure(source)}${status.checkedAt ? `<span class="source-checked">${escapeHtml(tr('checked'))}: ${escapeHtml(formatDate(status.checkedAt))}</span>` : ''}</div>
+      ${(() => {
+        const checkedText = status.checkedAt
+          ? `${escapeHtml(tr('checked'))}: ${escapeHtml(formatDate(status.checkedAt))}`
+          : '';
+        return `<div class="source-stats"><div class="source-stats-main">${sourceAppsDisclosure(source, checkedText)}${checkedText ? `<span class="source-checked source-checked-inline">${checkedText}</span>` : ''}</div></div>`;
+      })()}
       ${checkedOffline && status.error ? `<div class="source-offline-reason">${escapeHtml(status.error)}</div>` : ''}
       ${installerButtons ? `<div class="source-installers" aria-label="Install source">${installerButtons}</div>` : ''}
       <div class="source-actions source-utilities">
@@ -547,6 +560,14 @@ document.addEventListener('click', event => {
   document.querySelectorAll('.source-more[open]').forEach(details => {
     if (!details.contains(event.target)) details.removeAttribute('open');
   });
+
+  const closeSourceApps = event.target.closest('[data-source-app-close]');
+  if (closeSourceApps) {
+    const details = closeSourceApps.closest('.source-apps-disclosure');
+    details?.removeAttribute('open');
+    details?.querySelector('summary')?.focus();
+    return;
+  }
 
   const category = event.target.closest('[data-category-filter]');
   if (category) {
