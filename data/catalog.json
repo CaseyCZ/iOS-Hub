@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-02T19:15:41Z",
+  "generatedAt": "2026-10-02T19:22:00Z",
   "sources": [
     {
       "id": "utm",
@@ -24,7 +24,8 @@
           "iconURL": "https://alt.getutm.app/icon.png",
           "subtitle": "Virtual machines for iOS (without JIT support)"
         }
-      ]
+      ],
+      "sourceURL": "https://alt.getutm.app/"
     },
     {
       "id": "provenance",
@@ -57,7 +58,8 @@
           "iconURL": "https://icube-emu.com/icon-1024.png",
           "subtitle": "GameCube & Wii Emulator for iOS & tvOS"
         }
-      ]
+      ],
+      "sourceURL": "https://provenance-emu.com/apps.json"
     },
     {
       "id": "ish",
@@ -74,7 +76,8 @@
           "iconURL": "https://ish.app/assets/icon-full.png",
           "subtitle": "Linux shell for iOS"
         }
-      ]
+      ],
+      "sourceURL": "https://ish.app/altstore.json"
     },
     {
       "id": "flycast",
@@ -91,7 +94,8 @@
           "iconURL": "https://github.com/flyinghead/flycast/raw/master/shell/linux/flycast.png",
           "subtitle": "Dreamcast, Naomi and Atomiswave emulator."
         }
-      ]
+      ],
+      "sourceURL": "https://flyinghead.github.io/flycast-builds/altstore.json"
     },
     {
       "id": "sidestore-community",
@@ -284,7 +288,8 @@
           "iconURL": "https://github.com/spknetwork/Android-App/releases/download/v1.0.3_48/AppIcon-512.png",
           "subtitle": "Tokenized Video Communities"
         }
-      ]
+      ],
+      "sourceURL": "https://community-apps.sidestore.io/sidecommunity.json"
     },
     {
       "id": "sidestore-official",
@@ -301,7 +306,8 @@
           "iconURL": "https://apps.sidestore.io/apps/sidestore/v0.1.1/icon.png",
           "subtitle": ""
         }
-      ]
+      ],
+      "sourceURL": "https://apps.sidestore.io/"
     },
     {
       "id": "stikdebug",
@@ -326,7 +332,8 @@
           "iconURL": "https://github.com/StikDebug/StikPair/blob/main/App/Assets.xcassets/AppLogo.imageset/StikPair-iOS-Default-1024%401x.png?raw=true",
           "subtitle": "Requires iOS 27+"
         }
-      ]
+      ],
+      "sourceURL": "https://stikdebug.xyz/index.json"
     },
     {
       "id": "livecontainer",
@@ -343,7 +350,8 @@
           "iconURL": "https://raw.githubusercontent.com/LiveContainer/LiveContainer/main/screenshots/AppIcon1024.png",
           "subtitle": "Run iOS apps without actually installing them!"
         }
-      ]
+      ],
+      "sourceURL": "https://github.com/LiveContainer/LiveContainer/releases/download/1.0/apps.json"
     },
     {
       "id": "livecontainer-nightly",
@@ -360,7 +368,8 @@
           "iconURL": "https://raw.githubusercontent.com/LiveContainer/LiveContainer/main/screenshots/AppIcon1024.png",
           "subtitle": "Run iOS apps without actually installing them!"
         }
-      ]
+      ],
+      "sourceURL": "https://github.com/LiveContainer/LiveContainer/releases/download/nightly/apps_nightly.json"
     },
     {
       "id": "manicemu",
@@ -377,7 +386,8 @@
           "iconURL": "https://apps.manicemu.site/images/manicicon.jpg",
           "subtitle": "Love Retro Games"
         }
-      ]
+      ],
+      "sourceURL": "https://apps.manicemu.site/altstore"
     },
     {
       "id": "flycast-ios",
@@ -394,7 +404,8 @@
           "iconURL": "https://github.com/chachillie/Flycast-iOS/raw/main/shell/linux/flycast.png",
           "subtitle": "Dreamcast, Naomi and Atomiswave emulator."
         }
-      ]
+      ],
+      "sourceURL": "https://github.com/chachillie/Flycast-iOS/raw/refs/heads/main/flycast-ios.json"
     },
     {
       "id": "geode-ios",
@@ -411,7 +422,8 @@
           "iconURL": "https://raw.githubusercontent.com/geode-sdk/ios-launcher/main/Icons/Default.png",
           "subtitle": "Geode, now on iOS!"
         }
-      ]
+      ],
+      "sourceURL": "https://ios-repo.geode-sdk.org/altsource/main.json"
     },
     {
       "id": "retrosekai",
@@ -428,7 +440,8 @@
           "iconURL": "https://repo.untitledcharts.com/assets/retrosekai/icon.png",
           "subtitle": "Project Sekai but RETRO STYLE."
         }
-      ]
+      ],
+      "sourceURL": "https://repo.untitledcharts.com"
     },
     {
       "id": "oatmealdome",
@@ -453,7 +466,8 @@
           "iconURL": "https://cdn.oatmealdome.me/dolphinios/AppIcon.appiconset/BetaAppStore.png",
           "subtitle": "Test the latest DolphiniOS."
         }
-      ]
+      ],
+      "sourceURL": "https://altstore.oatmealdome.me"
     },
     {
       "id": "crystall1ne",
@@ -478,7 +492,8 @@
           "iconURL": "https://raw.githubusercontent.com/PojavLauncherTeam/PojavLauncher_iOS/main/Natives/Assets.xcassets/AppIcon-Dark.appiconset/AppIcon-Dark_1024x1024.png",
           "subtitle": "Brought Minecraft: Java Edition to mobile devices."
         }
-      ]
+      ],
+      "sourceURL": "https://alt.crystall1ne.dev"
     },
     {
       "id": "pokemmo",
@@ -495,7 +510,8 @@
           "iconURL": "https://pokemmo.com/build/images/altstore.f5930b35.png",
           "subtitle": ""
         }
-      ]
+      ],
+      "sourceURL": "https://pokemmo.eu/altstore/"
     },
     {
       "id": "odyssey",
@@ -520,7 +536,8 @@
           "iconURL": "https://taurine.app/assets/images/icon.png",
           "subtitle": "An iOS 14.0-14.3 jailbreak."
         }
-      ]
+      ],
+      "sourceURL": "https://theodyssey.dev/altstore/odysseysource.json"
     },
     {
       "id": "yattee",
@@ -537,7 +554,8 @@
           "iconURL": "https://raw.githubusercontent.com/yattee/yattee/main/Assets/yattee-icon-512.png",
           "subtitle": "Privacy-focused video player"
         }
-      ]
+      ],
+      "sourceURL": "https://raw.githubusercontent.com/yattee/yattee/main/altstore-source.json"
     },
     {
       "id": "ignited",
@@ -554,7 +572,8 @@
           "iconURL": "https://cdn.ignitedemulator.com/assets/icon-1024.png",
           "subtitle": "Retro games, modern design."
         }
-      ]
+      ],
+      "sourceURL": "https://altstore.ignitedemulator.com/"
     },
     {
       "id": "mona",
@@ -571,7 +590,8 @@
           "iconURL": "https://i.imgur.com/Xb9A1Lh.png",
           "subtitle": "Your hormonal journal"
         }
-      ]
+      ],
+      "sourceURL": "https://raw.githubusercontent.com/delia-cheminot/mona-hrt/refs/heads/main/ios_source.json"
     },
     {
       "id": "vortx",
@@ -596,7 +616,8 @@
           "iconURL": "https://raw.githubusercontent.com/VortXTV/VortX/main/docs/logo.png",
           "subtitle": "Stream movies and shows on Apple TV."
         }
-      ]
+      ],
+      "sourceURL": "https://raw.githubusercontent.com/VortXTV/VortX/main/altstore/source.json"
     },
     {
       "id": "stremio-official-pal",
@@ -613,7 +634,8 @@
           "iconURL": "https://i.imgur.com/ykZuH0r.png",
           "subtitle": "Freedom to stream."
         }
-      ]
+      ],
+      "sourceURL": "https://dl.strem.io/apple/altstore/source.json"
     },
     {
       "id": "stremio-ios",
@@ -630,7 +652,8 @@
           "iconURL": "https://www.stremio.com/website/stremio-logo-small.png",
           "subtitle": "Freedom to stream."
         }
-      ]
+      ],
+      "sourceURL": "https://gorlev.github.io/stremio-altstore/stremio-ios.json"
     },
     {
       "id": "kodi-ios",
@@ -647,7 +670,8 @@
           "iconURL": "https://kodi.tv/images/kodi-logo.svg",
           "subtitle": "Kodi media center for iOS"
         }
-      ]
+      ],
+      "sourceURL": "https://github.com/ohaiibuzzle/kodi-ios-ipa-builds/releases/latest/download/source.json"
     },
     {
       "id": "esound",
@@ -664,7 +688,8 @@
           "iconURL": "https://esound.app/images/altstore/esound/esound-icon.png?v=4",
           "subtitle": "Music player powered by YouTube"
         }
-      ]
+      ],
+      "sourceURL": "https://esound.app/downloads/source.json"
     },
     {
       "id": "partyknights",
@@ -681,7 +706,8 @@
           "iconURL": "https://partyknights.app/assets/img/icon_128.webp",
           "subtitle": "Drinking game app for unforgettable nights."
         }
-      ]
+      ],
+      "sourceURL": "https://partyknights.app/source"
     },
     {
       "id": "itorrent",
@@ -698,7 +724,8 @@
           "iconURL": "https://raw.githubusercontent.com/XITRIX/xitrix.github.io/master/icon.png",
           "subtitle": "Torrent client for iOS"
         }
-      ]
+      ],
+      "sourceURL": "https://xitrix.github.io/iTorrent/AltStore.json"
     },
     {
       "id": "qbitconnect",
@@ -715,7 +742,8 @@
           "iconURL": "https://raw.githubusercontent.com/RajnishOne/altstore-releases/main/icons/qBitConnect/AppIcon-40%403x.png",
           "subtitle": "Modern qBittorrent remote client."
         }
-      ]
+      ],
+      "sourceURL": "https://raw.githubusercontent.com/RajnishOne/altstore-releases/main/altstore-pal.json"
     },
     {
       "id": "artemis",
@@ -732,7 +760,8 @@
           "iconURL": "https://github.com/Auties00/Artemis/blob/main/Artemis/Assets.xcassets/AppIcon.appiconset/appstore.png?raw=true",
           "subtitle": "Alternative client for HIDIVE"
         }
-      ]
+      ],
+      "sourceURL": "https://raw.githubusercontent.com/auties00/artemis/refs/heads/main/source_pal.json"
     },
     {
       "id": "hackerwebapp",
@@ -749,7 +778,8 @@
           "iconURL": "https://raw.githubusercontent.com/cheeaun/hackerweb-native-2/main/assets/icon.png",
           "subtitle": "A read-only Hacker News client"
         }
-      ]
+      ],
+      "sourceURL": "https://alt.hackerwebapp.com/PALSource.json"
     },
     {
       "id": "courtpredict",
@@ -766,7 +796,8 @@
           "iconURL": "https://courtpredict-ios.web.app/icons/app-icon.png",
           "subtitle": "Predict basketball game winners and compete with friends! Track your accuracy and climb the leaderboard based on your winning percentage."
         }
-      ]
+      ],
+      "sourceURL": "https://courtpredict-ios.web.app/PALSource.json"
     },
     {
       "id": "wayfarer",
@@ -783,7 +814,8 @@
           "iconURL": "https://stor-cdn.f8d.rocks/wf/icon.png",
           "subtitle": "The unofficial Niantic Wayfarer iOS app."
         }
-      ]
+      ],
+      "sourceURL": "https://alts.lao.sb"
     },
     {
       "id": "qbitcontrol",
@@ -800,7 +832,8 @@
           "iconURL": "https://raw.githubusercontent.com/Michael-128/qBitControl/main/qBitControl/Assets.xcassets/AppIcon.appiconset/logo1.png",
           "subtitle": "Remote client for qBittorrent."
         }
-      ]
+      ],
+      "sourceURL": "https://raw.githubusercontent.com/Michael-128/qBitControl-releases/main/source.json"
     },
     {
       "id": "iphanpy",
@@ -817,7 +850,8 @@
           "iconURL": "https://i.imgur.com/AAsffEA.png",
           "subtitle": "The best Mastodon client out there - now as an iOS app!"
         }
-      ]
+      ],
+      "sourceURL": "https://raw.githubusercontent.com/matfantinel/iphanpy/refs/heads/main/altstore/source.json"
     },
     {
       "id": "epic-games",
@@ -850,7 +884,8 @@
           "iconURL": "https://content-download-egs.distro.on.epicgames.com/.well-known/1024x1024bb.png",
           "subtitle": ""
         }
-      ]
+      ],
+      "sourceURL": "https://content-download-egs.distro.on.epicgames.com/iOS/altstore/source.json"
     },
     {
       "id": "xn1ckuz-sidebox",
@@ -891,7 +926,8 @@
           "iconURL": "https://raw.githubusercontent.com/xN1ckuz/xN1ckuz-Sidestore-Repo/refs/heads/main/Resources/SCInstagram/icon.png",
           "subtitle": "Instagram Plus Tweak."
         }
-      ]
+      ],
+      "sourceURL": "https://raw.githubusercontent.com/xN1ckuz/xN1ckuz-Sidestore-Repo/main/repo.json"
     },
     {
       "id": "dvntm0-workshop",
@@ -956,7 +992,8 @@
           "iconURL": "https://raw.githubusercontent.com/dayanch96/Tweach/refs/heads/main/sileo/icon.png",
           "subtitle": "Download your favorite Clips, VODs and Live Streams with Tweach"
         }
-      ]
+      ],
+      "sourceURL": "https://raw.githubusercontent.com/dvntm0/AltStore/main/repo.json"
     },
     {
       "id": "wuxu-library-plus",
@@ -1069,7 +1106,8 @@
           "iconURL": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/05/90/0d/05900d52-cace-057b-aa3a-3c08aa064c4c/AppIcon-0-0-1x_U007epad-0-1-0-sRGB-85-220.png/512x512bb.jpg",
           "subtitle": "The ultimate Facebook Messenger tweak!"
         }
-      ]
+      ],
+      "sourceURL": "https://raw.githubusercontent.com/WuXu1/WuXu1.github.io/main/wuxu-complete-plus.json"
     },
     {
       "id": "baretsky-tweaked",
@@ -1134,7 +1172,8 @@
           "iconURL": "https://github.com/Nyasami/Ksign/blob/main/Ksign/Resources/Assets.xcassets/AppIcon.appiconset/Ksign-trans%201.png?raw=true",
           "subtitle": ""
         }
-      ]
+      ],
+      "sourceURL": "https://raw.githubusercontent.com/baretsky/baretsky-tweaked-ipas-library/main/apps.json"
     },
     {
       "id": "driftywinds",
@@ -1223,7 +1262,8 @@
           "iconURL": "https://cdn-icons-png.flaticon.com/512/9402/9402265.png",
           "subtitle": "Run iOS apps without actually installing them! More info:- https://github.com/khanhduytran0/LiveContainer | If you want to donate: - https://ko-fi.com/driftywinds"
         }
-      ]
+      ],
+      "sourceURL": "https://raw.githubusercontent.com/driftywinds/driftywinds.github.io/master/AltStore/apps.json"
     },
     {
       "id": "ipa-vault",
@@ -1736,7 +1776,8 @@
           "iconURL": "https://pub-dd800571175348b6a2745b3396360028.r2.dev/App%20Icons/YouTube-Music-Icons/YouTube-Music-AppStore-1024x1024.png",
           "subtitle": "YouTube Music 9.39.2 with YTMUltimate+ 2.4.1 No PiP"
         }
-      ]
+      ],
+      "sourceURL": "https://raw.githubusercontent.com/927tx/IPA-Vault/main/ipavaultsource.json"
     },
     {
       "id": "sideloadlabs",
@@ -1777,7 +1818,8 @@
           "iconURL": "https://files.catbox.moe/9fgova.JPG",
           "subtitle": "This tweak makes Spotify think you have a Premium subscription, granting free listening, just like Spotilife, and provides some additional features like custom lyrics."
         }
-      ]
+      ],
+      "sourceURL": "https://raw.githubusercontent.com/SideloadLabs/SideloasLabs-AltSource/main/apps.json"
     },
     {
       "id": "ytliteplus",
@@ -1794,7 +1836,8 @@
           "iconURL": "https://raw.githubusercontent.com/YTLitePlus/YTLitePlus-Altstore/main/Youtube_logo-512.png",
           "subtitle": "YTLite with more features!"
         }
-      ]
+      ],
+      "sourceURL": "https://raw.githubusercontent.com/YTLitePlus/YTLitePlus-Altstore/main/apps.json"
     },
     {
       "id": "moe-altstore",
@@ -2075,7 +2118,8 @@
           "iconURL": "https://raw.githubusercontent.com/MountainofPenguin/moe-altstore/main/icons/twitchv-tweach.png",
           "subtitle": "Tweach tweak build"
         }
-      ]
+      ],
+      "sourceURL": "https://raw.githubusercontent.com/MountainofPenguin/moe-altstore/main/apps.json"
     },
     {
       "id": "youmod-repo",
@@ -2092,7 +2136,8 @@
           "iconURL": "https://raw.githubusercontent.com/MountainofPenguin/Altstore-Repository/main/assets/YouTube Icon.png",
           "subtitle": "YouTube with YouMod tweaks"
         }
-      ]
+      ],
+      "sourceURL": "https://raw.githubusercontent.com/MountainofPenguin/Altstore-Repository/main/apps.json"
     },
     {
       "id": "youproextra",
@@ -2141,7 +2186,8 @@
           "iconURL": "https://raw.githubusercontent.com/mrdrvt99/Altstore-Repository/main/assets/YouTube.png",
           "subtitle": ""
         }
-      ]
+      ],
+      "sourceURL": "https://raw.githubusercontent.com/mrdrvt99/Altstore-Repository/main/apps.json"
     },
     {
       "id": "owo-source",
@@ -3390,7 +3436,8 @@
           "iconURL": "https://raw.githubusercontent.com/owo-network/Repo/main/icons/com.tencent.xin.png",
           "subtitle": ""
         }
-      ]
+      ],
+      "sourceURL": "https://repo.owo.network/"
     },
     {
       "id": "cypwn-ipa",
@@ -4839,7 +4886,8 @@
           "iconURL": "https://ipa.cypwn.xyz/serve/icons/Star_Map_2.6_Satella.png",
           "subtitle": ""
         }
-      ]
+      ],
+      "sourceURL": "https://ipa.cypwn.xyz/cypwn.json"
     },
     {
       "id": "apptesters",
@@ -6448,7 +6496,8 @@
           "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.tripleglazedstudios.Weather.png",
           "subtitle": ""
         }
-      ]
+      ],
+      "sourceURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/apps.json"
     },
     {
       "id": "youtuberebornplus",
@@ -6465,7 +6514,8 @@
           "iconURL": "https://raw.githubusercontent.com/arichornlover/YouTube-Reborn-v5/main/layout/Library/Application%20Support/YouTubeReborn.bundle/ytrebornbuttonblack.png",
           "subtitle": "Supercharged with a ton of tweaks for the YouTube app."
         }
-      ]
+      ],
+      "sourceURL": "https://raw.githubusercontent.com/arichornlover/arichornlover.github.io/main/apps2.json"
     },
     {
       "id": "apollo-reddit",
@@ -6482,7 +6532,8 @@
           "iconURL": "https://raw.githubusercontent.com/Balackburn/Apollo/main/public/images/image_0.webp",
           "subtitle": "The award-winning Reddit app"
         }
-      ]
+      ],
+      "sourceURL": "https://raw.githubusercontent.com/Balackburn/Apollo/main/apps.json"
     },
     {
       "id": "discord-appstore-builds",
@@ -6499,7 +6550,8 @@
           "iconURL": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/7c/c1/d5/7cc1d552-fca9-bc19-a585-28644c009f4b/AppIcon-0-0-1x_U007epad-0-1-0-sRGB-85-220.png/512x512bb.jpg",
           "subtitle": "The standard Discord app with no tweaks added."
         }
-      ]
+      ],
+      "sourceURL": "https://raw.githubusercontent.com/AlfaActa/discord-altstore-source/main/source.json"
     },
     {
       "id": "ytkace",
@@ -6516,7 +6568,8 @@
           "iconURL": "https://img.lightshot.app/8gRG1MrsTPO7ZiwX_JfmbA.jpeg",
           "subtitle": "Enhanced YouTube for iOS 17 and newer"
         }
-      ]
+      ],
+      "sourceURL": "https://raw.githubusercontent.com/xKatsumi/YTKACE-SideStore-Repo/main/ytkace.json"
     },
     {
       "id": "heyfordy",
@@ -6589,7 +6642,8 @@
           "iconURL": "https://repo.heyfordy.dev/assets/ttv.png",
           "subtitle": "Set your own proxy server !"
         }
-      ]
+      ],
+      "sourceURL": "https://raw.githubusercontent.com/Bitte-ein-Git/sidestore-repo/main/apps.json"
     },
     {
       "id": "ipalibrary",
@@ -8198,7 +8252,8 @@
           "iconURL": "https://ipalibrary.me/wp-content/uploads/2023/02/World-Clock-Pro-Mobile-150x150.png",
           "subtitle": ""
         }
-      ]
+      ],
+      "sourceURL": "https://raw.githubusercontent.com/2nkn0w/ipalibrary.me-source/main/ipalibrary_source.json"
     },
     {
       "id": "armsx2",
@@ -8223,7 +8278,8 @@
           "iconURL": "https://ios.armsx2.net/assets/icon-nightly.png?v=1ce15bef",
           "subtitle": "The newest features, built most days. Installs beside the stable app."
         }
-      ]
+      ],
+      "sourceURL": "https://raw.githubusercontent.com/ARMSX2/Armsx2-Repo/main/apps.json"
     },
     {
       "id": "fouad-source",
@@ -8280,7 +8336,8 @@
           "iconURL": "https://raw.githubusercontent.com/FouadRaheb/Watusi-for-WhatsApp/master/altstore/watusi/business.png",
           "subtitle": "Your all-in-one tweak for WhatsApp Messenger"
         }
-      ]
+      ],
+      "sourceURL": "https://raw.githubusercontent.com/FouadRaheb/Watusi-for-WhatsApp/master/altstore/source.json"
     },
     {
       "id": "neofreebird",
@@ -8297,7 +8354,8 @@
           "iconURL": "https://raw.githubusercontent.com/orionblur/NeoFreeBird/v6/icon_rounded.png",
           "subtitle": "NeoFreeBird version 6.7.1"
         }
-      ]
+      ],
+      "sourceURL": "https://raw.githubusercontent.com/orionblur/NeoFreeBird/v6/AltSource.json"
     },
     {
       "id": "melonx",
@@ -8314,7 +8372,8 @@
           "iconURL": "https://git.743378673.xyz/CycloKid/assets/media/branch/main/Melo/AppIcons/MeloNX.png",
           "subtitle": "An NX Emulator."
         }
-      ]
+      ],
+      "sourceURL": "https://raw.githubusercontent.com/AzureDominus/melonx/refs/heads/XC-ios-ht/source.json"
     },
     {
       "id": "altgallery",
@@ -8651,7 +8710,8 @@
           "iconURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/ZhihuMinusMinus/icon.png",
           "subtitle": "轻量、纯净的第三方知乎客户端"
         }
-      ]
+      ],
+      "sourceURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/all-apps.json"
     },
     {
       "id": "ripestore",
@@ -8748,7 +8808,8 @@
           "iconURL": "https://cdn.jsdelivr.net/gh/RipeStore/Keka@main/Keka-Squish-128x128.png",
           "subtitle": "The file archiver for iOS"
         }
-      ]
+      ],
+      "sourceURL": "https://raw.githubusercontent.com/RipeStore/repos/main/RipeStore.json"
     },
     {
       "id": "feather",
@@ -8765,7 +8826,8 @@
           "iconURL": "https://github.com/khcrysalis/Feather/blob/v1.x/iOS/Resources/Icons/Main/Mac@3x.png?raw=true",
           "subtitle": "On-device signing application"
         }
-      ]
+      ],
+      "sourceURL": "https://raw.githubusercontent.com/claration/Feather/main/app-repo.json"
     },
     {
       "id": "quantum-source",
@@ -9078,7 +9140,8 @@
           "iconURL": "https://pokemmo.com/build/images/altstore.ba9b8a4e.png",
           "subtitle": ""
         }
-      ]
+      ],
+      "sourceURL": "https://quarksources.github.io/quantumsource.json"
     },
     {
       "id": "spotc",
@@ -9111,7 +9174,8 @@
           "iconURL": "https://github.com/SpotCompiled/SpotC-AltStore-Repo/raw/main/SpotilifeC%20AppIcon.png",
           "subtitle": "Spotify Free Premium Tweak"
         }
-      ]
+      ],
+      "sourceURL": "https://raw.githubusercontent.com/SpotCompiled/SpotC-AltStore-Repo/main/AltStore%20Repo.json"
     },
     {
       "id": "foxster-altsource",
@@ -9136,7 +9200,8 @@
           "iconURL": "https://raw.githubusercontent.com/therealFoxster/AltSource/master/assets/icons/Spotify.png",
           "subtitle": "Ad-free, unlimited skips and more customizable than ever"
         }
-      ]
+      ],
+      "sourceURL": "https://therealfoxster.github.io/altsource/apps.json"
     },
     {
       "id": "fastsign",
@@ -9545,7 +9610,8 @@
           "iconURL": "https://fastsign.dev/tg-icon/sa1y0miii/13737.png",
           "subtitle": "@Sa1y0miii | Wakeout! Desk Stretch & Energy 🧸 Min.iOS: [17.2+] 🧀 App version: [110.0.6] !upd  🪼 App Store: https://apps.apple.com/app/id1242116567 📮 N"
         }
-      ]
+      ],
+      "sourceURL": "https://fastsign.dev/repo.json"
     },
     {
       "id": "quantum-plus",
@@ -9834,7 +9900,8 @@
           "iconURL": "https://raw.githubusercontent.com/qnblackcat/AltStore/main/ScreenShot/free-reddit-logo-icon-2436-thumb.png",
           "subtitle": "Filter out unwanted content from your Reddit feed. Configurable from in-app settings"
         }
-      ]
+      ],
+      "sourceURL": "https://quarksources.github.io/quantumsource++.json"
     },
     {
       "id": "wuxu-standard",
@@ -10003,7 +10070,8 @@
           "iconURL": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/1e/0d/a8/1e0da8c5-c56a-68ef-601f-33078883892c/AppIcon-0-0-1x_U007emarketing-0-8-0-85-220.png/512x512bb.jpg",
           "subtitle": "Pokemon Go injected with SpooferPro"
         }
-      ]
+      ],
+      "sourceURL": "https://wuxu1.github.io/wuxu-complete.json"
     },
     {
       "id": "taurine",
@@ -10020,7 +10088,8 @@
           "iconURL": "https://taurine.app/assets/images/icon.png",
           "subtitle": "Time to get amped."
         }
-      ]
+      ],
+      "sourceURL": "https://taurine.app/altstore/taurinestore.json"
     },
     {
       "id": "burrito-source",
@@ -10085,7 +10154,8 @@
           "iconURL": "https://pbs.twimg.com/profile_images/1019627376857280512/laMqxYhl_400x400.jpg",
           "subtitle": "Unpack the full potential of your iDevice."
         }
-      ]
+      ],
+      "sourceURL": "https://burritosoftware.github.io/altstore/channels/burritosource.json"
     },
     {
       "id": "salupov-altrepo",
@@ -10110,7 +10180,8 @@
           "iconURL": "https://adp.salupovteam.com/pal/bacon.png",
           "subtitle": "Bluetooth toolkit"
         }
-      ]
+      ],
+      "sourceURL": "https://adp.salupovteam.com/altrepo.json"
     },
     {
       "id": "cercube",
@@ -10135,7 +10206,8 @@
           "iconURL": "https://cdn.cercube.com/assets/icon.png",
           "subtitle": "The all-in-one jailbreak tweak"
         }
-      ]
+      ],
+      "sourceURL": "https://altstore.cercube.com"
     },
     {
       "id": "rocket",
@@ -10152,7 +10224,8 @@
           "iconURL": "https://cdn.getrocketapp.io/assets/icon.png",
           "subtitle": "All-in-one tweak for Instagram"
         }
-      ]
+      ],
+      "sourceURL": "https://altstore.getrocketapp.io"
     },
     {
       "id": "reynard-browser",
@@ -10169,7 +10242,8 @@
           "iconURL": "https://github.com/user-attachments/assets/1c42dda2-b778-4342-9f94-8f852c3ad652",
           "subtitle": "An experimental Gecko-based web browser for iOS 13+."
         }
-      ]
+      ],
+      "sourceURL": "https://github.com/minh-ton/reynard-browser/releases/download/0.0.1-a1/source.json"
     },
     {
       "id": "altstore-official",
@@ -10226,7 +10300,8 @@
           "iconURL": "https://user-images.githubusercontent.com/705880/63391981-5326f800-c37a-11e9-99d8-760fd06bb601.png",
           "subtitle": "Manage your clipboard history with ease."
         }
-      ]
+      ],
+      "sourceURL": "https://apps.altstore.io"
     },
     {
       "id": "sidestore-connect",
@@ -10299,7 +10374,8 @@
           "iconURL": "https://connect.sidestore.io/public/apps/me.nabdev.gearglimpserev/icon.png",
           "subtitle": "FRC AR Tools for iOS"
         }
-      ]
+      ],
+      "sourceURL": "https://connect.sidestore.io/apps.json"
     },
     {
       "id": "winston",
@@ -10316,7 +10392,8 @@
           "iconURL": "https://raw.githubusercontent.com/lo-cafe/winston-altstore/main/images/0.png",
           "subtitle": "Winston, a beautiful and native Reddit client for iOS"
         }
-      ]
+      ],
+      "sourceURL": "https://raw.githubusercontent.com/lo-cafe/winston-altstore/main/apps.json"
     },
     {
       "id": "cizzuk-source",
@@ -10373,7 +10450,8 @@
           "iconURL": "https://i.cizzuk.net/altstore/safariweba11y/v3.6/icon.png",
           "subtitle": "Improve Web Accessibility in Safari"
         }
-      ]
+      ],
+      "sourceURL": "https://i.cizzuk.net/altstore/source.pal.json"
     },
     {
       "id": "aidoku",
@@ -10390,7 +10468,8 @@
           "iconURL": "https://aidoku.app/images/apple-touch-icon.png",
           "subtitle": "Free and open source manga reader for iOS and iPadOS"
         }
-      ]
+      ],
+      "sourceURL": "https://raw.githubusercontent.com/Aidoku/Aidoku/altstore/apps.json"
     },
     {
       "id": "mangayomi",
@@ -10407,7 +10486,8 @@
           "iconURL": "https://raw.githubusercontent.com/kodjodevf/mangayomi/refs/heads/main/repo/images/icons/icon_default.webp",
           "subtitle": "Read manga, novels, and watch anime"
         }
-      ]
+      ],
+      "sourceURL": "https://raw.githubusercontent.com/kodjodevf/mangayomi/refs/heads/main/repo/source.json"
     },
     {
       "id": "anymex",
@@ -10424,7 +10504,8 @@
           "iconURL": "https://raw.githubusercontent.com/RyanYuuki/AnymeX/refs/heads/main/repo/images/icons/anymex.webp",
           "subtitle": "Multiservice tracking client"
         }
-      ]
+      ],
+      "sourceURL": "https://raw.githubusercontent.com/RyanYuuki/AnymeX/refs/heads/main/repo/source.json"
     },
     {
       "id": "animeko-openani",
@@ -10449,7 +10530,8 @@
           "iconURL": "https://avatars.githubusercontent.com/u/166622089",
           "subtitle": ""
         }
-      ]
+      ],
+      "sourceURL": "https://raw.githubusercontent.com/maxchang3/ani-altstore-source/main/generated/apps.json"
     },
     {
       "id": "wsf-source",
@@ -10514,7 +10596,8 @@
           "iconURL": "https://github.com/WhySooooFurious/Ultimate-Sideloading-Guide/blob/main/branding.png?raw=true",
           "subtitle": "The Portal to everything WSF"
         }
-      ]
+      ],
+      "sourceURL": "https://raw.githubusercontent.com/WSF-Team/WSF/main/repo/app-repo.json"
     },
     {
       "id": "nuvio",
@@ -10531,7 +10614,8 @@
           "iconURL": "https://raw.githubusercontent.com/NuvioMedia/NuvioMobile/0.4.11/iosApp/iosApp/Assets.xcassets/AppIcon.appiconset/app-icon-1024.png",
           "subtitle": "A free, open-source media app for your phone, your desktop, and the TV you already own."
         }
-      ]
+      ],
+      "sourceURL": "https://raw.githubusercontent.com/NuvioMedia/NuvioMobile/cmp-rewrite/store.json"
     },
     {
       "id": "ryuksign",
@@ -10548,7 +10632,8 @@
           "iconURL": "https://raw.githubusercontent.com/faroukbmiled/RyukSign/refs/heads/main/repo-icon.png",
           "subtitle": "On-device iOS app signer and installer."
         }
-      ]
+      ],
+      "sourceURL": "https://raw.githubusercontent.com/faroukbmiled/RyukSign/refs/heads/main/app-repo.json"
     }
   ]
 }
