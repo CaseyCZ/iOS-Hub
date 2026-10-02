@@ -316,6 +316,12 @@ def main() -> None:
     # Direct Source Builder architecture:
     write_json(DATA_DIR / "status.json", status)
     write_json(DATA_DIR / "catalog.json", catalog)
+    # Tiny marker used by Sideload Watch so home-screen widgets can cheaply
+    # detect catalog changes without querying the GitHub API or downloading
+    # the full catalog on every widget refresh.
+    write_json(DATA_DIR / "catalog-meta.json", {
+        "generatedAt": generated_at,
+    })
 
     online_count = sum(1 for item in status["sources"].values() if item["online"])
     direct_compatible_count = sum(
