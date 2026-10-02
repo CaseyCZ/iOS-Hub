@@ -289,6 +289,7 @@
         <div class="guide-jumpbar" aria-label="Guide sections">
           <span data-help-copy="jumpLabel">Jump to:</span>
           <a href="#basics" data-help-copy="jumpBasics">Basics</a>
+          <a href="#hub-usage">iOS Hub</a>
           <a href="#methods" data-help-copy="jumpMethods">Installation methods</a>
           <a href="#source-installers" data-help-copy="jumpSources">Source installers</a>
           <a href="#compatibility" data-help-copy="jumpCompatibility">Compatibility</a>
@@ -400,6 +401,49 @@
           <div class="beginner-term-name">Source</div>
           <p data-i18n="beginnerSourceMeaning">A Source is just a catalog link that tells AltStore or SideStore which apps and updates are available. Adding a Source does not install anything by itself — it only adds that catalog to your app browser.</p>
           <a class="btn small secondary" href="index.html#sources" data-i18n="beginnerBrowseSources">Browse our checked Sources</a>
+        </article>
+      </div>
+
+      <div id="hub-usage" class="section-head guide-section-head">
+        <div>
+          <h2 data-guide-copy="hubUseTitle">How to use iOS Hub</h2>
+          <p data-guide-copy="hubUseDesc">A quick explanation of the labels and controls you see on Source cards, plus the Source Builder workflow.</p>
+        </div>
+      </div>
+
+      <div class="guide-grid">
+        <article class="panel guide-card">
+          <div class="guide-icon guide-icon-text">iOS</div>
+          <div class="resource-badges">
+            <span class="pill online" data-i18n="online">Online</span>
+            <span class="pill" data-i18n="official">Official</span>
+            <span class="pill" data-i18n="community">Community</span>
+            <span class="pill" data-i18n="modified">Modified</span>
+          </div>
+          <h3 data-guide-copy="hubLabelsTitle">Understand Source labels</h3>
+          <p data-guide-copy="hubLabelsDesc">Online means the latest automated check could read the Source. Official identifies a Source published by the project or developer; Community identifies a third-party/community Source; Modified marks Sources that include modified or tweaked apps. AltStore Classic or PAL describes the Source format / install path, not a trust rating.</p>
+          <a class="btn secondary" href="index.html#sources" data-guide-copy="hubBrowseSources">Browse Sources</a>
+        </article>
+
+        <article class="panel guide-card">
+          <div class="guide-icon guide-icon-text">↗</div>
+          <div class="resource-badges">
+            <span class="pill mode">More</span>
+            <span class="pill mode">Copy URL</span>
+            <span class="pill mode">JSON</span>
+            <span class="pill mode">Web</span>
+          </div>
+          <h3 data-guide-copy="hubButtonsTitle">Buttons on a Source card</h3>
+          <p data-guide-copy="hubButtonsDesc">The installer buttons open the original Source in that app. More shows additional compatible installers. Copy URL copies the exact Source address, JSON opens the raw Source document, and Web opens the project or Source website when one is available.</p>
+          <a class="btn secondary" href="index.html#sources" data-guide-copy="hubOpenCatalog">Open Source catalog</a>
+        </article>
+
+        <article class="panel guide-card">
+          <div class="guide-icon guide-icon-text">☑</div>
+          <div class="resource-badges"><span class="pill mode">Source Builder</span><span class="pill online">Bulk import</span></div>
+          <h3 data-guide-copy="hubBuilderTitle">Use Source Builder</h3>
+          <p data-guide-copy="hubBuilderDesc">Choose the installer first, filter and select compatible Sources, then use Bulk import. Where supported, the iOS Hub Source Import Shortcut opens the selected original Source URLs one after another. Sources remain separate and continue updating from their original URLs; if the Shortcut cannot handle the target, use the manual one-by-one fallback.</p>
+          <a class="btn primary" href="builder.html" data-guide-copy="hubOpenBuilder">Open Source Builder ↗</a>
         </article>
       </div>
 
@@ -763,7 +807,7 @@
     </div>
   </div>
 
-  <script type="module" src="src/js/guide.js?v=1.1.5-20260930-source-import8"></script>
+  <script type="module" src="src/js/guide.js?v=1.1.5-20261002-hub-help1"></script>
   <script src="src/js/horizontal-scroll.js?v=1.1.5-20260930-scroll-hardfix1"></script>
   <script src="src/js/support-dialog.js?v=1.1.5-20260918-a11y1"></script>
   <script src="src/js/mobile-menu.js?v=1.1.5-20260918-a11y1"></script>
