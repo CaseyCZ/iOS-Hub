@@ -301,6 +301,7 @@ def main() -> None:
                 "appCount": len(apps),
                 "catalogLimited": len(catalog_apps) < len(apps),
                 "iconURL": payload.get("iconURL") or (apps[0].get("iconURL") if apps else "") or "",
+                "sourceURL": source_variant_url(source, preferred_variant),
                 "apps": [app_summary(app) for app in catalog_apps],
             })
         else:
