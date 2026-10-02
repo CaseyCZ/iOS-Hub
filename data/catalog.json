@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-02T05:40:28Z",
+  "generatedAt": "2026-10-02T12:38:48Z",
   "sources": [
     {
       "id": "utm",
@@ -4844,10 +4844,34 @@
     {
       "id": "apptesters",
       "name": "AppTesters IPA Repo",
-      "appCount": 9452,
+      "appCount": 9455,
       "catalogLimited": true,
       "iconURL": "https://apptesters.org/apptesters-512x512.png",
       "apps": [
+        {
+          "name": "TranslateNow",
+          "bundleIdentifier": "solutions.wzp.translator",
+          "developerName": "",
+          "version": "2026.9.48",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/solutions.wzp.translator.png",
+          "subtitle": ""
+        },
+        {
+          "name": "SCRL",
+          "bundleIdentifier": "com.dopedevelopment.Panels",
+          "developerName": "",
+          "version": "9.57.2",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.dopedevelopment.Panels.png",
+          "subtitle": ""
+        },
+        {
+          "name": "Pillow",
+          "bundleIdentifier": "com.neybox.Pillow",
+          "developerName": "",
+          "version": "6.6.1",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.neybox.Pillow.png",
+          "subtitle": ""
+        },
         {
           "name": "CLIME",
           "bundleIdentifier": "com.apalonapps.radarfree",
@@ -6422,30 +6446,6 @@
           "developerName": "",
           "version": "8.6.1",
           "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.crossforward.WidgetSmith.png",
-          "subtitle": ""
-        },
-        {
-          "name": "Bazaart",
-          "bundleIdentifier": "co.bazaart.app",
-          "developerName": "",
-          "version": "27.0.2",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/co.bazaart.app.png",
-          "subtitle": ""
-        },
-        {
-          "name": "Moovit",
-          "bundleIdentifier": "com.tranzmate.tranzmate1",
-          "developerName": "",
-          "version": "5.201.0",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.tranzmate.tranzmate1.png",
-          "subtitle": ""
-        },
-        {
-          "name": "Cleanup",
-          "bundleIdentifier": "com.codeway.cleanerplus",
-          "developerName": "",
-          "version": "6.22.0",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.codeway.cleanerplus.png",
           "subtitle": ""
         }
       ]
@@ -8471,7 +8471,7 @@
           "name": "Madeira",
           "bundleIdentifier": "com.willfaust.madeora",
           "developerName": "Will Faust",
-          "version": "0.1.0",
+          "version": "0.1.1",
           "iconURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/Madeira/icon.png",
           "subtitle": "Windows PC games on your iPhone"
         },
