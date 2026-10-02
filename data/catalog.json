@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-02T12:38:48Z",
+  "generatedAt": "2026-10-02T19:15:41Z",
   "sources": [
     {
       "id": "utm",
@@ -2063,7 +2063,7 @@
           "name": "Twitch (Moe TwitchControl)",
           "bundleIdentifier": "tv.twitch",
           "developerName": "Moe Apps",
-          "version": "31.4.2 (0.0.6)",
+          "version": "31.4.4 (0.0.6)",
           "iconURL": "https://raw.githubusercontent.com/MountainofPenguin/moe-altstore/main/icons/twitch-twitchcontrol.png",
           "subtitle": "TwitchControl tweak build"
         },
@@ -2071,7 +2071,7 @@
           "name": "Twitch (Twitchv, Moe Tweach)",
           "bundleIdentifier": "tv.twitch",
           "developerName": "Moe Apps",
-          "version": "31.4.2 (2.4.1)",
+          "version": "31.4.4 (2.4.1)",
           "iconURL": "https://raw.githubusercontent.com/MountainofPenguin/moe-altstore/main/icons/twitchv-tweach.png",
           "subtitle": "Tweach tweak build"
         }
@@ -4844,10 +4844,74 @@
     {
       "id": "apptesters",
       "name": "AppTesters IPA Repo",
-      "appCount": 9455,
+      "appCount": 9463,
       "catalogLimited": true,
       "iconURL": "https://apptesters.org/apptesters-512x512.png",
       "apps": [
+        {
+          "name": "AdobeFresco",
+          "bundleIdentifier": "com.adobe.fresco.ios",
+          "developerName": "",
+          "version": "7.8.1",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.adobe.fresco.ios.png",
+          "subtitle": ""
+        },
+        {
+          "name": "Locket",
+          "bundleIdentifier": "com.locket.Locket",
+          "developerName": "",
+          "version": "2.67.0",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.locket.Locket.png",
+          "subtitle": ""
+        },
+        {
+          "name": "AlightMotion",
+          "bundleIdentifier": "com.alightcreative.motion",
+          "developerName": "",
+          "version": "6.2.60",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.alightcreative.motion.png",
+          "subtitle": ""
+        },
+        {
+          "name": "FitnessOnline",
+          "bundleIdentifier": "com.aiti.FitnessOnline",
+          "developerName": "",
+          "version": "1.29.0",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.aiti.FitnessOnline.png",
+          "subtitle": ""
+        },
+        {
+          "name": "FreeYourMusic",
+          "bundleIdentifier": "io.stampapp.Stamp",
+          "developerName": "",
+          "version": "10.2.0",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/io.stampapp.Stamp.png",
+          "subtitle": ""
+        },
+        {
+          "name": "Hevy",
+          "bundleIdentifier": "com.hevyapp.hevy",
+          "developerName": "",
+          "version": "3.1.16",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.hevyapp.hevy.png",
+          "subtitle": ""
+        },
+        {
+          "name": "Lampa",
+          "bundleIdentifier": "com.lampa.photo",
+          "developerName": "",
+          "version": "2.1.5",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.lampa.photo.png",
+          "subtitle": ""
+        },
+        {
+          "name": "CodeSnackIDE",
+          "bundleIdentifier": "com.cloud-compiler",
+          "developerName": "",
+          "version": "6.2.1",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.cloud-compiler.png",
+          "subtitle": ""
+        },
         {
           "name": "TranslateNow",
           "bundleIdentifier": "solutions.wzp.translator",
@@ -6382,70 +6446,6 @@
           "developerName": "",
           "version": "3.7.2",
           "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.tripleglazedstudios.Weather.png",
-          "subtitle": ""
-        },
-        {
-          "name": "Dazz",
-          "bundleIdentifier": "dazz.camera.vintagecamera",
-          "developerName": "",
-          "version": "2.17.5",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/dazz.camera.vintagecamera.png",
-          "subtitle": ""
-        },
-        {
-          "name": "Vibes",
-          "bundleIdentifier": "com.andyworks.vibes",
-          "developerName": "",
-          "version": "1.28",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.andyworks.vibes.png",
-          "subtitle": ""
-        },
-        {
-          "name": "Duolingo",
-          "bundleIdentifier": "com.duolingo.DuolingoMobile",
-          "developerName": "",
-          "version": "7.141.0",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.duolingo.DuolingoMobile.png",
-          "subtitle": ""
-        },
-        {
-          "name": "swipewipe",
-          "bundleIdentifier": "com.aoklab.fewerphotos",
-          "developerName": "",
-          "version": "3.4.16",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.aoklab.fewerphotos.png",
-          "subtitle": ""
-        },
-        {
-          "name": "Picsew",
-          "bundleIdentifier": "com.sugarmo.ScrollClip",
-          "developerName": "",
-          "version": "3.19.1",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.sugarmo.ScrollClip.png",
-          "subtitle": ""
-        },
-        {
-          "name": "Labbet",
-          "bundleIdentifier": "app.labbet.labbet",
-          "developerName": "",
-          "version": "2.69",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/app.labbet.labbet.png",
-          "subtitle": ""
-        },
-        {
-          "name": "MapleReadCX",
-          "bundleIdentifier": "com.maplepop.bmcx",
-          "developerName": "",
-          "version": "7.1",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.maplepop.bmcx.png",
-          "subtitle": ""
-        },
-        {
-          "name": "Widgetsmith",
-          "bundleIdentifier": "com.crossforward.WidgetSmith",
-          "developerName": "",
-          "version": "8.6.1",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.crossforward.WidgetSmith.png",
           "subtitle": ""
         }
       ]
@@ -10445,7 +10445,7 @@
           "name": "Animeko (Pre-Release)",
           "bundleIdentifier": "org.animeko.animeko.beta",
           "developerName": "openani",
-          "version": "6.2.0-beta01",
+          "version": "6.3.0-alpha01",
           "iconURL": "https://avatars.githubusercontent.com/u/166622089",
           "subtitle": ""
         }
@@ -10527,7 +10527,7 @@
           "name": "Nuvio",
           "bundleIdentifier": "com.nuvio.media",
           "developerName": "NuvioMedia",
-          "version": "0.5.5",
+          "version": "0.5.6",
           "iconURL": "https://raw.githubusercontent.com/NuvioMedia/NuvioMobile/0.4.11/iosApp/iosApp/Assets.xcassets/AppIcon.appiconset/app-icon-1024.png",
           "subtitle": "A free, open-source media app for your phone, your desktop, and the TV you already own."
         }
