@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-05T05:44:02Z",
+  "generatedAt": "2026-10-05T14:43:47Z",
   "sources": [
     {
       "id": "utm",
@@ -1093,7 +1093,7 @@
           "name": "YouTube",
           "bundleIdentifier": "com.google.ios.youtube",
           "developerName": "",
-          "version": "21.39.4",
+          "version": "21.40.5",
           "iconURL": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ef/Youtube_logo.png/512px-Youtube_logo.png",
           "subtitle": ""
         },
@@ -1441,9 +1441,9 @@
           "name": "SoundCloud (NexaSC)",
           "bundleIdentifier": "com.soundcloud.TouchApp",
           "developerName": "cielogic & IPA Vault",
-          "version": "8.80.1",
+          "version": "8.81.0",
           "iconURL": "https://pub-dd800571175348b6a2745b3396360028.r2.dev/App%20Icons/SoundCloud-8.76.0-Icons/SoundCloud-AppStore-1024x1024.png",
-          "subtitle": "SoundCloud 8.80.1 with NexaSC beta 4"
+          "subtitle": "SoundCloud 8.81.0 with NexaSC beta 4"
         },
         {
           "name": "Swiftgram (MxGram)",
@@ -1587,7 +1587,7 @@
           "developerName": "orionblur & IPA Vault & lucaspedrosa",
           "version": "12.31.1",
           "iconURL": "https://pub-dd800571175348b6a2745b3396360028.r2.dev/App%20Icons/Twitter-12.14-Icons/Twitter-AppStore-1024x1024.png",
-          "subtitle": "Twitter 12.31.1 with NFB 7.0.0"
+          "subtitle": "Twitter 12.31.1 with NFB 7.1.0"
         },
         {
           "name": "Twitter NFB + TWI",
@@ -1603,7 +1603,7 @@
           "developerName": "orionblur & IPA Vault & lucaspedrosa",
           "version": "12.31.1",
           "iconURL": "https://pub-dd800571175348b6a2745b3396360028.r2.dev/App%20Icons/X-Icons/X-AppStore-1024x1024.png",
-          "subtitle": "X 12.31.1 with NFB 7.0.0"
+          "subtitle": "X 12.31.1 with NFB 7.1.0"
         },
         {
           "name": "X NFB + TWI",
@@ -1611,7 +1611,7 @@
           "developerName": "orionblur & dens0r & IPA Vault & lucaspedrosa",
           "version": "12.31.1",
           "iconURL": "https://pub-dd800571175348b6a2745b3396360028.r2.dev/App%20Icons/X-Icons/X-AppStore-1024x1024.png",
-          "subtitle": "X 12.31.1 with NFB 7.0.0 + TWIGalaxy 1.14"
+          "subtitle": "X 12.31.1 with NFB 7.1.0 + TWIGalaxy 1.14"
         },
         {
           "name": "YouTube (YouMod 2.0.0) (iOS 16+)",
@@ -1690,7 +1690,7 @@
     {
       "id": "sideloadlabs",
       "name": "SideloadLabs Repo",
-      "appCount": 4,
+      "appCount": 2,
       "catalogLimited": false,
       "iconURL": "https://avatars.githubusercontent.com/u/312393257?s=96&v=4",
       "sourceURL": "https://raw.githubusercontent.com/SideloadLabs/SideloasLabs-AltSource/main/apps.json",
@@ -1699,7 +1699,7 @@
           "name": "EeveeSpotifyReincarnated",
           "bundleIdentifier": "com.spotify.client",
           "developerName": "SideloadLabs",
-          "version": "9.1.76",
+          "version": "9.1.88",
           "iconURL": "https://files.catbox.moe/9fgova.JPG",
           "subtitle": "This tweak makes Spotify think you have a Premium subscription, granting free listening, just like Spotilife, and provides some additional features like custom lyrics."
         },
@@ -1707,23 +1707,7 @@
           "name": "EeveeSpotifyReincarnated(PATCHED)",
           "bundleIdentifier": "com.spotify.client.patched",
           "developerName": "SideloadLabs",
-          "version": "9.1.76",
-          "iconURL": "https://files.catbox.moe/9fgova.JPG",
-          "subtitle": "This tweak makes Spotify think you have a Premium subscription, granting free listening, just like Spotilife, and provides some additional features like custom lyrics."
-        },
-        {
-          "name": "ESR Liquid Glass",
-          "bundleIdentifier": "com.spotify.client.lg",
-          "developerName": "SideloadLabs",
-          "version": "9.1.76",
-          "iconURL": "https://files.catbox.moe/9fgova.JPG",
-          "subtitle": "This tweak makes Spotify think you have a Premium subscription, granting free listening, just like Spotilife, and provides some additional features like custom lyrics."
-        },
-        {
-          "name": "ESR Liquid Glass Patched",
-          "bundleIdentifier": "com.spotify.client.lg.patch",
-          "developerName": "SideloadLabs",
-          "version": "9.1.76",
+          "version": "9.1.88",
           "iconURL": "https://files.catbox.moe/9fgova.JPG",
           "subtitle": "This tweak makes Spotify think you have a Premium subscription, granting free listening, just like Spotilife, and provides some additional features like custom lyrics."
         }
@@ -2100,11 +2084,19 @@
     {
       "id": "owo-source",
       "name": "OwO Source",
-      "appCount": 155,
+      "appCount": 156,
       "catalogLimited": false,
       "iconURL": "https://raw.githubusercontent.com/OwO-Network/Repo/main/icons/owo.repo.icon.png",
       "sourceURL": "https://repo.owo.network/",
       "apps": [
+        {
+          "name": "PiliPlus",
+          "bundleIdentifier": "com.example.piliplus",
+          "developerName": "",
+          "version": "2.1.6",
+          "iconURL": "https://raw.githubusercontent.com/owo-network/Repo/main/icons/com.example.piliplus.png",
+          "subtitle": ""
+        },
         {
           "name": "PiliPlus",
           "bundleIdentifier": "com.example.piliplus",
@@ -4800,11 +4792,107 @@
     {
       "id": "apptesters",
       "name": "AppTesters IPA Repo",
-      "appCount": 9481,
+      "appCount": 9493,
       "catalogLimited": true,
       "iconURL": "https://apptesters.org/apptesters-512x512.png",
       "sourceURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/apps.json",
       "apps": [
+        {
+          "name": "Scanner",
+          "bundleIdentifier": "com.apalonapps.pdffree",
+          "developerName": "",
+          "version": "2.12.6",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.apalonapps.pdffree.png",
+          "subtitle": ""
+        },
+        {
+          "name": "SnoreLab",
+          "bundleIdentifier": "com.revivasoftworks.Snore-Lab",
+          "developerName": "",
+          "version": "6.4.13",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.revivasoftworks.Snore-Lab.png",
+          "subtitle": ""
+        },
+        {
+          "name": "ThePiano",
+          "bundleIdentifier": "com.impalastudios.pianofree",
+          "developerName": "",
+          "version": "2.23.7",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.impalastudios.pianofree.png",
+          "subtitle": ""
+        },
+        {
+          "name": "edjingMix",
+          "bundleIdentifier": "com.edjing.edjingdjturntable",
+          "developerName": "",
+          "version": "9.3.1",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.edjing.edjingdjturntable.png",
+          "subtitle": ""
+        },
+        {
+          "name": "TunerPro",
+          "bundleIdentifier": "com.mwm.guitartuner",
+          "developerName": "",
+          "version": "4.01.08",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.mwm.guitartuner.png",
+          "subtitle": ""
+        },
+        {
+          "name": "SCRL",
+          "bundleIdentifier": "com.dopedevelopment.Panels",
+          "developerName": "",
+          "version": "9.58",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.dopedevelopment.Panels.png",
+          "subtitle": ""
+        },
+        {
+          "name": "PUSH",
+          "bundleIdentifier": "com.ADPTVLTD.push",
+          "developerName": "",
+          "version": "4.0.5",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.ADPTVLTD.push.png",
+          "subtitle": ""
+        },
+        {
+          "name": "Moovit",
+          "bundleIdentifier": "com.tranzmate.tranzmate1",
+          "developerName": "",
+          "version": "5.202.0",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.tranzmate.tranzmate1.png",
+          "subtitle": ""
+        },
+        {
+          "name": "Cleanup",
+          "bundleIdentifier": "com.codeway.cleanerplus",
+          "developerName": "",
+          "version": "6.23.0",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.codeway.cleanerplus.png",
+          "subtitle": ""
+        },
+        {
+          "name": "HabitKit",
+          "bundleIdentifier": "com.roehl.habitkit",
+          "developerName": "",
+          "version": "1.18.1",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.roehl.habitkit.png",
+          "subtitle": ""
+        },
+        {
+          "name": "Yazio",
+          "bundleIdentifier": "com.yazio.ios.YAZIO",
+          "developerName": "",
+          "version": "26.40.0",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.yazio.ios.YAZIO.png",
+          "subtitle": ""
+        },
+        {
+          "name": "Mimo",
+          "bundleIdentifier": "com.getmimo.mimo",
+          "developerName": "",
+          "version": "12.30.0",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.getmimo.mimo.png",
+          "subtitle": ""
+        },
         {
           "name": "foriOS",
           "bundleIdentifier": "com.tapinfinity.HdjcXcode7",
@@ -6307,102 +6395,6 @@
           "developerName": "",
           "version": "1.6.0",
           "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.penguinbit.fastdownload.png",
-          "subtitle": ""
-        },
-        {
-          "name": "iScreen",
-          "bundleIdentifier": "com.zerone.hidesktop",
-          "developerName": "",
-          "version": "5.1.10",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.zerone.hidesktop.png",
-          "subtitle": ""
-        },
-        {
-          "name": "LookUp",
-          "bundleIdentifier": "in.muditbhargava.LookUp",
-          "developerName": "",
-          "version": "13.0.3",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/in.muditbhargava.LookUp.png",
-          "subtitle": ""
-        },
-        {
-          "name": "Balance",
-          "bundleIdentifier": "com.elevateapp.kamino.kamino",
-          "developerName": "",
-          "version": "1.212.0",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.elevateapp.kamino.kamino.png",
-          "subtitle": ""
-        },
-        {
-          "name": "B612",
-          "bundleIdentifier": "com.linecorp.b612",
-          "developerName": "",
-          "version": "15.4.1",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.linecorp.b612.png",
-          "subtitle": ""
-        },
-        {
-          "name": "BoldVoice",
-          "bundleIdentifier": "com.wellocution.iosapp",
-          "developerName": "",
-          "version": "4.4.5",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.wellocution.iosapp.png",
-          "subtitle": ""
-        },
-        {
-          "name": "CLIME",
-          "bundleIdentifier": "com.apalonapps.radarfree",
-          "developerName": "",
-          "version": "5.13.70",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.apalonapps.radarfree.png",
-          "subtitle": ""
-        },
-        {
-          "name": "Notability",
-          "bundleIdentifier": "com.gingerlabs.Notability",
-          "developerName": "",
-          "version": "16.12.3",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.gingerlabs.Notability.png",
-          "subtitle": ""
-        },
-        {
-          "name": "SkyGuide",
-          "bundleIdentifier": "com.fifthstarlabs.skyguide",
-          "developerName": "",
-          "version": "13.0.2",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.fifthstarlabs.skyguide.png",
-          "subtitle": ""
-        },
-        {
-          "name": "Lifesum",
-          "bundleIdentifier": "com.sillens.iShape",
-          "developerName": "",
-          "version": "23.14.1",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.sillens.iShape.png",
-          "subtitle": ""
-        },
-        {
-          "name": "Duolingo",
-          "bundleIdentifier": "com.duolingo.DuolingoMobile",
-          "developerName": "",
-          "version": "7.141.1",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.duolingo.DuolingoMobile.png",
-          "subtitle": ""
-        },
-        {
-          "name": "1Blocker",
-          "bundleIdentifier": "com.khanov.BlockerX",
-          "developerName": "",
-          "version": "6.6.4",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.khanov.BlockerX.png",
-          "subtitle": ""
-        },
-        {
-          "name": "PlanesLiveFree",
-          "bundleIdentifier": "com.apalonapps.planesfree",
-          "developerName": "",
-          "version": "3.10.59",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.apalonapps.planesfree.png",
           "subtitle": ""
         }
       ]
