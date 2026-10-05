@@ -9,6 +9,7 @@ on:
     paths:
       - "sources/registry.json"
       - "tools/update_sources.py"
+      - "tools/audit_repo.py"
       - ".github/workflows/update-sources.yml"
 
 permissions:
