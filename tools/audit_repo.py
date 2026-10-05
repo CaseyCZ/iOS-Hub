@@ -797,7 +797,7 @@ def validate_generated_data() -> None:
     for source_id, item in catalog_by_id.items():
         source = registry_by_id.get(source_id, {})
         status_item = status["sources"].get(source_id, {})
-        allowed_catalog_keys = {"id", "name", "appCount", "catalogLimited", "iconURL", "apps"}
+        allowed_catalog_keys = {"id", "name", "appCount", "catalogLimited", "iconURL", "sourceURL", "apps"}
         extra_catalog_keys = set(item) - allowed_catalog_keys
         if extra_catalog_keys:
             error(
