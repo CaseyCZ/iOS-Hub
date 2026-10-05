@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-05T05:02:27Z",
+  "generatedAt": "2026-10-05T05:44:02Z",
   "sources": [
     {
       "id": "utm",
@@ -634,6 +634,24 @@
           "version": "21.3",
           "iconURL": "https://kodi.tv/images/kodi-logo.svg",
           "subtitle": "Kodi media center for iOS"
+        }
+      ]
+    },
+    {
+      "id": "esound",
+      "name": "Spicy Sparks",
+      "appCount": 1,
+      "catalogLimited": false,
+      "iconURL": "https://esound.app/images/altstore/source-icon.png?v=4",
+      "sourceURL": "https://esound.app/downloads/source.json",
+      "apps": [
+        {
+          "name": "eSound",
+          "bundleIdentifier": "com.appstore.esound",
+          "developerName": "Spicy Sparks",
+          "version": "5.2.16",
+          "iconURL": "https://esound.app/images/altstore/esound/esound-icon.png?v=4",
+          "subtitle": "Music player powered by YouTube"
         }
       ]
     },
