@@ -1140,7 +1140,16 @@ function renderSetupResult() {
     setupState.version === 'unknown' ? '?' : (setupState.version === 'older' ? 'Legacy' : 'iOS ' + setupState.version),
     setupState.computer === 'none' ? 'NO PC' : (setupState.computer === 'setup' ? 'SETUP PC' : 'PC OK')
   ];
-  $('#setupResultBadges').innerHTML = badges.map(value => `<span class="pill mode">${value}</span>`).join('');
+  const badgesHost = $('#setupResultBadges');
+if (badgesHost) {
+  badgesHost.replaceChildren();
+  badges.forEach(value => {
+    const badge = document.createElement('span');
+    badge.className = 'pill mode';
+    badge.textContent = value;
+    badgesHost.appendChild(badge);
+  });
+}
   setRecommendationLink(
     $('#setupResultPrimary'),
     result.primary,
