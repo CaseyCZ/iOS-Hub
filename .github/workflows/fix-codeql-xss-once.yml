@@ -1,0 +1,56 @@
+name: Fix CodeQL XSS once
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - .github/workflows/fix-codeql-xss-once.yml
+
+permissions:
+  contents: write
+
+jobs:
+  fix:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Replace unsafe badge HTML rendering
+        shell: bash
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+
+          path = Path('src/js/guide.js')
+          text = path.read_text(encoding='utf-8')
+          old = '''  $('#setupResultBadges').innerHTML = badges.map(value => `<span class="pill mode">${value}</span>`).join('');'''
+          new = '''  const badgesHost = $('#setupResultBadges');
+          if (badgesHost) {
+            badgesHost.replaceChildren();
+            badges.forEach(value => {
+              const badge = document.createElement('span');
+              badge.className = 'pill mode';
+              badge.textContent = value;
+              badgesHost.appendChild(badge);
+            });
+          }'''
+
+          if text.count(old) != 1:
+              raise SystemExit(f'Expected exactly one target, found {text.count(old)}')
+
+          path.write_text(text.replace(old, new, 1), encoding='utf-8')
+          PY
+
+      - name: Commit fix and remove one-time workflow
+        shell: bash
+        run: |
+          git config user.name "Lukáš"
+          git config user.email "kyselalukas@seznam.cz"
+          git rm .github/workflows/fix-codeql-xss-once.yml
+          git add src/js/guide.js
+          git commit -m "Fix CodeQL client-side XSS alert"
+          git push
