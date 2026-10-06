@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-06T06:24:04Z",
+  "generatedAt": "2026-10-06T18:24:39Z",
   "sources": [
     {
       "id": "utm",
@@ -865,7 +865,7 @@
           "name": "Fortnite",
           "bundleIdentifier": "com.epicgames.FortniteGame",
           "developerName": "Epic Games Sweden AB",
-          "version": "42.30",
+          "version": "42.30.1",
           "iconURL": "https://cdn1.epicgames.com/item/fn/FN_Logo_512x512_1024x1024-0a19a924e7f61249ab0c76569abfdc31",
           "subtitle": ""
         },
@@ -1153,7 +1153,7 @@
           "name": "Twitch",
           "bundleIdentifier": "tv.twitch",
           "developerName": "",
-          "version": "31.4.4",
+          "version": "31.5",
           "iconURL": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Twitch_Glitch_Logo_Purple.svg/640px-Twitch_Glitch_Logo_Purple.svg.png",
           "subtitle": ""
         },
@@ -4820,11 +4820,59 @@
     {
       "id": "apptesters",
       "name": "AppTesters IPA Repo",
-      "appCount": 9508,
+      "appCount": 9514,
       "catalogLimited": true,
       "iconURL": "https://apptesters.org/apptesters-512x512.png",
       "sourceURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/apps.json",
       "apps": [
+        {
+          "name": "Athlytic",
+          "bundleIdentifier": "myndarc.newFitnessApp",
+          "developerName": "",
+          "version": "27.0.4",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/myndarc.newFitnessApp.png",
+          "subtitle": ""
+        },
+        {
+          "name": "swipewipe",
+          "bundleIdentifier": "com.aoklab.fewerphotos",
+          "developerName": "",
+          "version": "3.5.0",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.aoklab.fewerphotos.png",
+          "subtitle": ""
+        },
+        {
+          "name": "Yazio",
+          "bundleIdentifier": "com.yazio.ios.YAZIO",
+          "developerName": "",
+          "version": "26.40.1",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.yazio.ios.YAZIO.png",
+          "subtitle": ""
+        },
+        {
+          "name": "edjingMix",
+          "bundleIdentifier": "com.edjing.edjingdjturntable",
+          "developerName": "",
+          "version": "9.3.2",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.edjing.edjingdjturntable.png",
+          "subtitle": ""
+        },
+        {
+          "name": "SimplyDraw",
+          "bundleIdentifier": "com.joytunes.Draw",
+          "developerName": "",
+          "version": "1.15.0",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.joytunes.Draw.png",
+          "subtitle": ""
+        },
+        {
+          "name": "Facetune",
+          "bundleIdentifier": "com.lightricks.Facetune2",
+          "developerName": "",
+          "version": "26.31",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.lightricks.Facetune2.png",
+          "subtitle": ""
+        },
         {
           "name": "Dropshare",
           "bundleIdentifier": "net.mkswap.Dropshare-iOS",
@@ -6375,54 +6423,6 @@
           "developerName": "",
           "version": "2.10.0",
           "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.photoeditor.polish.png",
-          "subtitle": ""
-        },
-        {
-          "name": "Pillow",
-          "bundleIdentifier": "com.neybox.Pillow",
-          "developerName": "",
-          "version": "6.6",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.neybox.Pillow.png",
-          "subtitle": ""
-        },
-        {
-          "name": "Mockview",
-          "bundleIdentifier": "com.kavsoft.MockviewApp",
-          "developerName": "",
-          "version": "5.0.3",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.kavsoft.MockviewApp.png",
-          "subtitle": ""
-        },
-        {
-          "name": "Dictionary",
-          "bundleIdentifier": "com.mobisystems.OxfordDictionaryOfEnglishFree",
-          "developerName": "",
-          "version": "16.6.1",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.mobisystems.OxfordDictionaryOfEnglishFree.png",
-          "subtitle": ""
-        },
-        {
-          "name": "VSCO",
-          "bundleIdentifier": "co.visualsupply.cam",
-          "developerName": "",
-          "version": "461.9.0",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/co.visualsupply.cam.png",
-          "subtitle": ""
-        },
-        {
-          "name": "Thenx",
-          "bundleIdentifier": "com.calisthenics.thenx",
-          "developerName": "",
-          "version": "6.8.1",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.calisthenics.thenx.png",
-          "subtitle": ""
-        },
-        {
-          "name": "NutriCoach",
-          "bundleIdentifier": "nutrition.coach",
-          "developerName": "",
-          "version": "2.4.0",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/nutrition.coach.png",
           "subtitle": ""
         }
       ]
@@ -10351,32 +10351,32 @@
           "name": "Deflector",
           "bundleIdentifier": "net.cizzuk.deflector",
           "developerName": "Cizzuk",
-          "version": "0.1",
-          "iconURL": "https://i.cizzuk.net/altstore/deflector/v0.1/icon.png",
-          "subtitle": "Run any shortcut from the Dynamic Island"
+          "version": "1.0",
+          "iconURL": "https://i.cizzuk.net/altstore/deflector/v1.0/icon.png",
+          "subtitle": "Run shortcuts from Dynamic Island, Watch and more"
         },
         {
           "name": "Side Search",
           "bundleIdentifier": "net.cizzuk.sidesearch",
           "developerName": "Cizzuk",
-          "version": "4.0",
-          "iconURL": "https://i.cizzuk.net/altstore/sidesearch/v4.0/icon.png",
+          "version": "4.1",
+          "iconURL": "https://i.cizzuk.net/altstore/sidesearch/v4.1/icon.png",
           "subtitle": "Use your Favorite Voice Assistant"
         },
         {
           "name": "Alare",
           "bundleIdentifier": "net.cizzuk.alare",
           "developerName": "Cizzuk",
-          "version": "2.0",
-          "iconURL": "https://i.cizzuk.net/altstore/alare/v2.0/icon.png",
+          "version": "2.1",
+          "iconURL": "https://i.cizzuk.net/altstore/alare/v2.1/icon.png",
           "subtitle": "Alarm app to prevent oversleeping"
         },
         {
           "name": "CBNote",
           "bundleIdentifier": "net.cizzuk.cbnote",
           "developerName": "Cizzuk",
-          "version": "2.7",
-          "iconURL": "https://i.cizzuk.net/altstore/cbnote/v2.7/icon.png",
+          "version": "2.8",
+          "iconURL": "https://i.cizzuk.net/altstore/cbnote/v2.8/icon.png",
           "subtitle": "Replace Camera Control with Note app"
         },
         {
@@ -10419,7 +10419,7 @@
           "name": "Mangayomi",
           "bundleIdentifier": "com.kodjodevf.mangayomi",
           "developerName": "Moustapha Kodjo Amadou",
-          "version": "0.9.7",
+          "version": "0.9.8",
           "iconURL": "https://raw.githubusercontent.com/kodjodevf/mangayomi/refs/heads/main/repo/images/icons/icon_default.webp",
           "subtitle": "Read manga, novels, and watch anime"
         }
@@ -10547,7 +10547,7 @@
           "name": "Nuvio",
           "bundleIdentifier": "com.nuvio.media",
           "developerName": "NuvioMedia",
-          "version": "0.5.6",
+          "version": "0.5.7",
           "iconURL": "https://raw.githubusercontent.com/NuvioMedia/NuvioMobile/0.4.11/iosApp/iosApp/Assets.xcassets/AppIcon.appiconset/app-icon-1024.png",
           "subtitle": "A free, open-source media app for your phone, your desktop, and the TV you already own."
         }
