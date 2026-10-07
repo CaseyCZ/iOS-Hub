@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-06T18:24:39Z",
+  "generatedAt": "2026-10-07T06:03:20Z",
   "sources": [
     {
       "id": "utm",
@@ -4820,11 +4820,67 @@
     {
       "id": "apptesters",
       "name": "AppTesters IPA Repo",
-      "appCount": 9514,
+      "appCount": 9521,
       "catalogLimited": true,
       "iconURL": "https://apptesters.org/apptesters-512x512.png",
       "sourceURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/apps.json",
       "apps": [
+        {
+          "name": "KineMaster",
+          "bundleIdentifier": "com.kinemaster.kios",
+          "developerName": "",
+          "version": "8.2.4",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.kinemaster.kios.png",
+          "subtitle": ""
+        },
+        {
+          "name": "Splice",
+          "bundleIdentifier": "com.path36.SpliceFree",
+          "developerName": "",
+          "version": "4.28.71",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.path36.SpliceFree.png",
+          "subtitle": ""
+        },
+        {
+          "name": "Fonts",
+          "bundleIdentifier": "fontskeyboard.fonts",
+          "developerName": "",
+          "version": "8.4.55",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/fontskeyboard.fonts.png",
+          "subtitle": ""
+        },
+        {
+          "name": "MyFitnessPal",
+          "bundleIdentifier": "com.myfitnesspal.mfp",
+          "developerName": "",
+          "version": "26.40.0",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.myfitnesspal.mfp.png",
+          "subtitle": ""
+        },
+        {
+          "name": "RiseSleep",
+          "bundleIdentifier": "com.risesci.nyx",
+          "developerName": "",
+          "version": "0.1.634",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.risesci.nyx.png",
+          "subtitle": ""
+        },
+        {
+          "name": "CodeSnackIDE",
+          "bundleIdentifier": "com.cloud-compiler",
+          "developerName": "",
+          "version": "6.4.1",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.cloud-compiler.png",
+          "subtitle": ""
+        },
+        {
+          "name": "OfflineMusic",
+          "bundleIdentifier": "com.offlinemusic",
+          "developerName": "",
+          "version": "3.9.6",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.offlinemusic.png",
+          "subtitle": ""
+        },
         {
           "name": "Athlytic",
           "bundleIdentifier": "myndarc.newFitnessApp",
@@ -6368,62 +6424,6 @@
           "version": "7.26.1",
           "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.readdle.PDFExpert5.png",
           "subtitle": ""
-        },
-        {
-          "name": "Mockup",
-          "bundleIdentifier": "com.hasankassem.mockup",
-          "developerName": "",
-          "version": "4.5",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.hasankassem.mockup.png",
-          "subtitle": ""
-        },
-        {
-          "name": "WaterReminder",
-          "bundleIdentifier": "com.vgfit.waterreminder",
-          "developerName": "",
-          "version": "1.11.2",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.vgfit.waterreminder.png",
-          "subtitle": ""
-        },
-        {
-          "name": "BoxBox",
-          "bundleIdentifier": "club.boxbox.widgets-ios",
-          "developerName": "",
-          "version": "5.5.2",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/club.boxbox.widgets-ios.png",
-          "subtitle": ""
-        },
-        {
-          "name": "Evermusic",
-          "bundleIdentifier": "com.leshko.cloudplayer",
-          "developerName": "",
-          "version": "8.9",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.leshko.cloudplayer.png",
-          "subtitle": ""
-        },
-        {
-          "name": "PeakVisor",
-          "bundleIdentifier": "ru.routes.peakvisor",
-          "developerName": "",
-          "version": "5.115",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/ru.routes.peakvisor.png",
-          "subtitle": ""
-        },
-        {
-          "name": "Captions",
-          "bundleIdentifier": "boomer.Smart-Video",
-          "developerName": "",
-          "version": "13.36.0",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/boomer.Smart-Video.png",
-          "subtitle": ""
-        },
-        {
-          "name": "Polish",
-          "bundleIdentifier": "com.photoeditor.polish",
-          "developerName": "",
-          "version": "2.10.0",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.photoeditor.polish.png",
-          "subtitle": ""
         }
       ]
     },
@@ -6576,7 +6576,7 @@
     {
       "id": "ipalibrary",
       "name": "IPALibrary Source",
-      "appCount": 834,
+      "appCount": 833,
       "catalogLimited": true,
       "iconURL": "https://ipalibrary.me/favicon.ico",
       "sourceURL": "https://raw.githubusercontent.com/2nkn0w/ipalibrary.me-source/main/ipalibrary_source.json",
@@ -8363,7 +8363,7 @@
           "name": "ARMSX2",
           "bundleIdentifier": "com.armsx2.ios",
           "developerName": "ARMSX2",
-          "version": "nightly-20261005",
+          "version": "nightly-20261006",
           "iconURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/ARMSX2/icon.png",
           "subtitle": "PlayStation 2 emulator for ARM64"
         },
@@ -8403,7 +8403,7 @@
           "name": "Husk",
           "bundleIdentifier": "com.husk.app",
           "developerName": "Leviidev",
-          "version": "0.7.0",
+          "version": "0.8.0",
           "iconURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/Husk/icon.png",
           "subtitle": "Android app launcher for iOS"
         },
@@ -8427,7 +8427,7 @@
           "name": "Kazumi",
           "bundleIdentifier": "com.example.kazumi",
           "developerName": "Predidit",
-          "version": "2.3.7",
+          "version": "2.3.8",
           "iconURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/Kazumi/icon.png",
           "subtitle": "基于自定义规则的番剧采集APP，支持流媒体在线观看，支持弹幕，支持实时超分辨率。"
         },
@@ -8467,7 +8467,7 @@
           "name": "Mangayomi",
           "bundleIdentifier": "com.kodjodevf.mangayomi",
           "developerName": "Moustapha Kodjo Amadou",
-          "version": "0.9.7",
+          "version": "0.9.8",
           "iconURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/Mangayomi/icon.png",
           "subtitle": "Read manga, novels, and watch anime"
         },
@@ -8643,7 +8643,7 @@
           "name": "ZhihuMinusMinus",
           "bundleIdentifier": "com.huamu013.ZhihuMinusMinus",
           "developerName": "huamurui",
-          "version": "0.7.1",
+          "version": "0.8.0",
           "iconURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/ZhihuMinusMinus/icon.png",
           "subtitle": "轻量、纯净的第三方知乎客户端"
         }
@@ -9142,410 +9142,410 @@
     {
       "id": "fastsign",
       "name": "Alan's Gigantic Repo",
-      "appCount": 16385,
+      "appCount": 16363,
       "catalogLimited": true,
       "iconURL": "https://fastsign.dev/icon.png",
       "sourceURL": "https://fastsign.dev/repo.json",
       "apps": [
         {
-          "name": "NoteCircle",
-          "bundleIdentifier": "com.thegenau.NoteCircle",
-          "developerName": "@riftysIPAlibrary",
-          "version": "4.87",
-          "iconURL": "https://fastsign.dev/tg-icon/riftysipalibrary/8247.png",
-          "subtitle": "@riftysIPAlibrary | NoteCircle: To Do, Checklist  Tweak: Plus Unlocked  Version: 4.87  Patched ✓  @riftysIPAlibrary  Additional Information ℹ️  Min OS"
+          "name": "Messenger",
+          "bundleIdentifier": "com.facebook.Messenger",
+          "developerName": "@ipavault",
+          "version": "582.0.0",
+          "iconURL": "https://fastsign.dev/tg-icon/ipavault/783.png",
+          "subtitle": "@ipavault | Builds of Messenger 582.0.0  ▪Rich Previews for push notifications working on MSGPlusX ▪Updated to Messenger 582.0.0 Follow these instruct"
         },
         {
-          "name": "Elevate",
-          "bundleIdentifier": "com.elevateapp.elevate",
+          "name": "Messenger",
+          "bundleIdentifier": "com.facebook.Messenger",
+          "developerName": "@ipavault",
+          "version": "582.0.0",
+          "iconURL": "https://fastsign.dev/tg-icon/ipavault/784.png",
+          "subtitle": "@ipavault | Builds of Messenger 582.0.0  ▪Rich Previews for push notifications working on MSGPlusX ▪Updated to Messenger 582.0.0 Follow these instruct"
+        },
+        {
+          "name": "X",
+          "bundleIdentifier": "com.atebits.Tweetie2",
+          "developerName": "@ipavault",
+          "version": "12.32",
+          "iconURL": "https://fastsign.dev/tg-icon/ipavault/779.png",
+          "subtitle": "@ipavault | Builds of X/Twitter 12.32  ▪Updated to X 12.32 ▪Liquid Glass toggle built in! Builds: ▪X NFB 7.1.0 ▪X NFB+TWI ▪Twitter Branded NFB 7.1.0 ▪"
+        },
+        {
+          "name": "Twitter",
+          "bundleIdentifier": "com.atebits.Tweetie2",
+          "developerName": "@ipavault",
+          "version": "12.32",
+          "iconURL": "https://fastsign.dev/tg-icon/ipavault/782.png",
+          "subtitle": "@ipavault | Builds of X/Twitter 12.32  ▪Updated to X 12.32 ▪Liquid Glass toggle built in! Builds: ▪X NFB 7.1.0 ▪X NFB+TWI ▪Twitter Branded NFB 7.1.0 ▪"
+        },
+        {
+          "name": "Twitter",
+          "bundleIdentifier": "com.atebits.Tweetie2",
+          "developerName": "@ipavault",
+          "version": "12.32",
+          "iconURL": "https://fastsign.dev/tg-icon/ipavault/781.png",
+          "subtitle": "@ipavault | Builds of X/Twitter 12.32  ▪Updated to X 12.32 ▪Liquid Glass toggle built in! Builds: ▪X NFB 7.1.0 ▪X NFB+TWI ▪Twitter Branded NFB 7.1.0 ▪"
+        },
+        {
+          "name": "X",
+          "bundleIdentifier": "com.atebits.Tweetie2",
+          "developerName": "@ipavault",
+          "version": "12.32",
+          "iconURL": "https://fastsign.dev/tg-icon/ipavault/780.png",
+          "subtitle": "@ipavault | Builds of X/Twitter 12.32  ▪Updated to X 12.32 ▪Liquid Glass toggle built in! Builds: ▪X NFB 7.1.0 ▪X NFB+TWI ▪Twitter Branded NFB 7.1.0 ▪"
+        },
+        {
+          "name": "Instagram",
+          "bundleIdentifier": "com.burbn.instagram",
+          "developerName": "@ipavault",
+          "version": "450.1.0",
+          "iconURL": "https://fastsign.dev/tg-icon/ipavault/777.png",
+          "subtitle": "@ipavault | Builds of Instagram 450.1.0  ▪Added InstaOLED 1.5 ▪Updated to Instagram 450.1.0 Builds: ▪Sparkle 1.4.0 ▪Sparkle 1.4.0 (No Plugins) ⚠️ Use "
+        },
+        {
+          "name": "Instagram",
+          "bundleIdentifier": "com.burbn.instagram",
+          "developerName": "@ipavault",
+          "version": "450.1.0",
+          "iconURL": "https://fastsign.dev/tg-icon/ipavault/778.png",
+          "subtitle": "@ipavault | Builds of Instagram 450.1.0  ▪Added InstaOLED 1.5 ▪Updated to Instagram 450.1.0 Builds: ▪Sparkle 1.4.0 ▪Sparkle 1.4.0 (No Plugins) ⚠️ Use "
+        },
+        {
+          "name": "YouTube Music",
+          "bundleIdentifier": "com.google.ios.youtubemusic",
+          "developerName": "scholars lounge",
+          "version": "9.40.2",
+          "iconURL": "https://fastsign.dev/tg-icon/scholars-lounge/78622.png",
+          "subtitle": "scholars lounge | YT Music Ultimate+ No PIP 9.40  - YouTube Music 9.40 - YTMusicUltimate - Return YouTube Music Dislike - YTMABConfig -YTVolume - Info"
+        },
+        {
+          "name": "YouTube Music",
+          "bundleIdentifier": "com.google.ios.youtubemusic",
+          "developerName": "scholars lounge",
+          "version": "9.40.2",
+          "iconURL": "https://fastsign.dev/tg-icon/scholars-lounge/78621.png",
+          "subtitle": "scholars lounge | YT Music Ultimate+ 9.40  - YouTube Music 9.40 - YTMusicUltimate - Return YouTube Music Dislike - YTMABConfig - YouMusicPIP - YTVolum"
+        },
+        {
+          "name": "Reddit",
+          "bundleIdentifier": "com.reddit.Reddit",
+          "developerName": "scholars lounge",
+          "version": "2026.40.0",
+          "iconURL": "https://fastsign.dev/tg-icon/scholars-lounge/78620.png",
+          "subtitle": "scholars lounge | RedditDeluxe 2026.40.0  - Reddit 2026.40.0 - RedditFilter (MoeReddit) hold 3 fingers down to get the menu - redditColorComments - Ol"
+        },
+        {
+          "name": "Instagram",
+          "bundleIdentifier": "com.burbn.instagram",
+          "developerName": "@ipavault",
+          "version": "450.1.0",
+          "iconURL": "https://fastsign.dev/tg-icon/ipavault/773.png",
+          "subtitle": "@ipavault | Builds of Instagram 450.1.0  ▪  Updated to Instagram 450.1.0 Builds: ▪RyukGram 1.4.5 ▪RyukGram 1.4.5 (No Plugins) ⚠️ Use RyukGram 1.4.5 bu"
+        },
+        {
+          "name": "Instagram",
+          "bundleIdentifier": "com.burbn.instagram",
+          "developerName": "@ipavault",
+          "version": "450.1.0",
+          "iconURL": "https://fastsign.dev/tg-icon/ipavault/774.png",
+          "subtitle": "@ipavault | Builds of Instagram 450.1.0  ▪  Updated to Instagram 450.1.0 Builds: ▪RyukGram 1.4.5 ▪RyukGram 1.4.5 (No Plugins) ⚠️ Use RyukGram 1.4.5 bu"
+        },
+        {
+          "name": "OfflineMusic",
+          "bundleIdentifier": "com.offlinemusic",
           "developerName": "AppTesters IPA Repo",
-          "version": "5.260.0",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.elevateapp.elevate.png",
-          "subtitle": "@blatants | Elevate - Brain Training Games  • Bundle ID: com.elevateapp.elevate • Updated to: 5.260.0 • Minimum iOS: 17.0 • Patched • Modifier: Subscr"
-        },
-        {
-          "name": "Elevate",
-          "bundleIdentifier": "com.elevateapp.elevate",
-          "developerName": "@riftysIPAlibrary",
-          "version": "5.260.0",
-          "iconURL": "https://fastsign.dev/tg-icon/riftysipalibrary/8246.png",
-          "subtitle": "@riftysIPAlibrary | Elevate - Brain Training Games  Tweak: Subscription Unlocked  Version: 5.260.0  Patched ✓  @riftysIPAlibrary  Additional Informati"
-        },
-        {
-          "name": "Halide",
-          "bundleIdentifier": "com.chromanoir.Zeit",
-          "developerName": "AppTesters IPA Repo",
-          "version": "3.2.1",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.chromanoir.Zeit.png",
-          "subtitle": "Injected with Pro"
-        },
-        {
-          "name": "Fitia",
-          "bundleIdentifier": "com.ulisesolave.Fitia",
-          "developerName": "AppTesters IPA Repo",
-          "version": "25.1.1",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.ulisesolave.Fitia.png",
-          "subtitle": "Injected with Subscription Unlocked"
+          "version": "3.9.6",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.offlinemusic.png",
+          "subtitle": "@blatants | Offline Music Player  • Bundle ID: com.offlinemusic • Updated to: 3.9.6 • Minimum iOS: 18.0 • Patched • Modifier: Pro Unlocked • Tweaked b"
         },
         {
           "name": "CodeSnackIDE",
           "bundleIdentifier": "com.cloud-compiler",
           "developerName": "AppTesters IPA Repo",
-          "version": "6.4.0",
+          "version": "6.4.1",
           "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.cloud-compiler.png",
-          "subtitle": "@blatants | CodeSnack IDE  • Bundle ID: com.cloud-compiler • Updated to: 6.4.0 • Minimum iOS: 15.6 • Patched • Modifier: Subscription Unlocked • Tweak"
+          "subtitle": "@blatants | CodeSnack IDE  • Bundle ID: com.cloud-compiler • Updated to: 6.4.1 • Minimum iOS: 15.6 • Patched • Modifier: Subscription Unlocked • Tweak"
         },
         {
-          "name": "PeakVisor",
-          "bundleIdentifier": "ru.routes.peakvisor",
+          "name": "RiseSleep",
+          "bundleIdentifier": "com.risesci.nyx",
           "developerName": "AppTesters IPA Repo",
-          "version": "5.116",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/ru.routes.peakvisor.png",
+          "version": "0.1.634",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.risesci.nyx.png",
+          "subtitle": "@blatants | RISE: Sleep Tracker  • Bundle ID: com.risesci.nyx • Updated to: 1.634.0 • Minimum iOS: 15.1 • Patched • Modifier: Subscription Unlocked • "
+        },
+        {
+          "name": "MyFitnessPal",
+          "bundleIdentifier": "com.myfitnesspal.mfp",
+          "developerName": "AppTesters IPA Repo",
+          "version": "26.40.0",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.myfitnesspal.mfp.png",
+          "subtitle": "@blatants | MyFitnessPal: Calorie Counter  • Bundle ID: com.myfitnesspal.mfp • Updated to: 26.40.0 • Minimum iOS: 18.0 • Patched • Modifier: Subscript"
+        },
+        {
+          "name": "Fonts",
+          "bundleIdentifier": "fontskeyboard.fonts",
+          "developerName": "AppTesters IPA Repo",
+          "version": "8.4.55",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/fontskeyboard.fonts.png",
           "subtitle": "Injected with Subscription Unlocked"
         },
         {
-          "name": "Luminar",
-          "bundleIdentifier": "com.skylum.luminaripad",
+          "name": "Splice",
+          "bundleIdentifier": "com.path36.SpliceFree",
           "developerName": "AppTesters IPA Repo",
-          "version": "4.4.3",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.skylum.luminaripad.png",
-          "subtitle": "@blatants | Luminar: Photo Editor&Enhancer  • Bundle ID: com.skylum.luminaripad • Updated to: 4.4.3 • Minimum iOS: 17.0 • Patched • Modifier: Subscrip"
-        },
-        {
-          "name": "JournalCircle",
-          "bundleIdentifier": "com.genau.JournalCircle",
-          "developerName": "@riftysIPAlibrary",
-          "version": "3.5.8",
-          "iconURL": "https://fastsign.dev/tg-icon/riftysipalibrary/8245.png",
-          "subtitle": "@riftysIPAlibrary | JournalCircle: Diary & Tracker  Tweak: Premium Unlocked  Version: 3.5.8  Patched ✓  @riftysIPAlibrary  Additional Information ℹ️  "
-        },
-        {
-          "name": "Time Squared",
-          "bundleIdentifier": "co.timesquared.hourstimetracker.ios",
-          "developerName": "@riftysIPAlibrary",
-          "version": "3.4.1789",
-          "iconURL": "https://fastsign.dev/tg-icon/riftysipalibrary/8244.png",
-          "subtitle": "@riftysIPAlibrary | Time Squared - Hours Tracker  Tweak: Premium Unlocked  Version: 3.4.1789  Patched ✓  @riftysIPAlibrary  Additional Information ℹ️ "
-        },
-        {
-          "name": "Sniper",
-          "bundleIdentifier": "com.squareenixmontreal.hitmansniper",
-          "developerName": "scholars lounge",
-          "version": "1.25.15",
-          "iconURL": "https://fastsign.dev/tg-icon/scholars-lounge/78461.png",
-          "subtitle": "scholars lounge | Hitman Sniper Paid game $1.99 Version: 1.25.15 Bundle ID: com.squareenixmontreal.hitmansniper AppStore link: https://apps.apple.com/"
-        },
-        {
-          "name": "Twitter",
-          "bundleIdentifier": "com.atebits.Tweetie2",
-          "developerName": "@ipavault",
-          "version": "12.31.2",
-          "iconURL": "https://fastsign.dev/tg-icon/ipavault/771.png",
-          "subtitle": "No tweak information supplied by the source."
-        },
-        {
-          "name": "X",
-          "bundleIdentifier": "com.atebits.Tweetie2",
-          "developerName": "@ipavault",
-          "version": "12.31.2",
-          "iconURL": "https://fastsign.dev/tg-icon/ipavault/769.png",
-          "subtitle": "No tweak information supplied by the source."
-        },
-        {
-          "name": "Twitter",
-          "bundleIdentifier": "com.atebits.Tweetie2",
-          "developerName": "@ipavault",
-          "version": "12.31.2",
-          "iconURL": "https://fastsign.dev/tg-icon/ipavault/772.png",
-          "subtitle": "No tweak information supplied by the source."
-        },
-        {
-          "name": "X",
-          "bundleIdentifier": "com.atebits.Tweetie2",
-          "developerName": "@ipavault",
-          "version": "12.31.2",
-          "iconURL": "https://fastsign.dev/tg-icon/ipavault/770.png",
-          "subtitle": "No tweak information supplied by the source."
-        },
-        {
-          "name": "Twitter",
-          "bundleIdentifier": "com.atebits.Tweetie2",
-          "developerName": "@ipavault",
-          "version": "12.31.2",
-          "iconURL": "https://fastsign.dev/tg-icon/ipavault/768.png",
-          "subtitle": "No tweak information supplied by the source."
-        },
-        {
-          "name": "X",
-          "bundleIdentifier": "com.atebits.Tweetie2",
-          "developerName": "@ipavault",
-          "version": "12.31.2",
-          "iconURL": "https://fastsign.dev/tg-icon/ipavault/766.png",
-          "subtitle": "No tweak information supplied by the source."
-        },
-        {
-          "name": "Twitter",
-          "bundleIdentifier": "com.atebits.Tweetie2",
-          "developerName": "@ipavault",
-          "version": "12.31.2",
-          "iconURL": "https://fastsign.dev/tg-icon/ipavault/767.png",
-          "subtitle": "No tweak information supplied by the source."
-        },
-        {
-          "name": "X",
-          "bundleIdentifier": "com.atebits.Tweetie2",
-          "developerName": "@ipavault",
-          "version": "12.31.2",
-          "iconURL": "https://fastsign.dev/tg-icon/ipavault/765.png",
-          "subtitle": "No tweak information supplied by the source."
-        },
-        {
-          "name": "Tetris",
-          "bundleIdentifier": "com.n3twork.tetris",
-          "developerName": "@riftysIPAlibrary",
-          "version": "7.7.11",
-          "iconURL": "https://fastsign.dev/tg-icon/riftysipalibrary/8243.png",
-          "subtitle": "@riftysIPAlibrary | Tetris®  Tweak: no ads  Version: 7.7.11  Patched ✓  @riftysIPAlibrary  Additional Information ℹ️  Min OS Version: 15.0 Bundle ID: "
-        },
-        {
-          "name": "PeakVisor",
-          "bundleIdentifier": "ru.routes.peakvisor",
-          "developerName": "@blatants",
-          "version": "5.116",
-          "iconURL": "https://fastsign.dev/tg-icon/blatants/12656.png",
-          "subtitle": "@blatants | Hiking and Skiing - PeakVisor  • Bundle ID: ru.routes.peakvisor • Updated to: 5.116 • Minimum iOS: 16.0 • Patched • Modifier: Subscription"
-        },
-        {
-          "name": "Instagram",
-          "bundleIdentifier": "com.burbn.instagram",
-          "developerName": "@ipavault",
-          "version": "450.0.0",
-          "iconURL": "https://fastsign.dev/tg-icon/ipavault/763.png",
-          "subtitle": "Variant: Regram 6.3"
-        },
-        {
-          "name": "Instagram",
-          "bundleIdentifier": "com.burbn.instagram",
-          "developerName": "@ipavault",
-          "version": "450.0.0",
-          "iconURL": "https://fastsign.dev/tg-icon/ipavault/764.png",
-          "subtitle": "Variant: Regram 6.3 · No plugins"
-        },
-        {
-          "name": "StudyCards",
-          "bundleIdentifier": "com.cameronshemilt.StudyCards",
-          "developerName": "@riftysIPAlibrary",
-          "version": "3.3.0",
-          "iconURL": "https://fastsign.dev/tg-icon/riftysipalibrary/8242.png",
-          "subtitle": "@riftysIPAlibrary | StudyCards  Tweak: Premium Unlocked  Version: 3.3.0  Patched ✓  @riftysIPAlibrary  Additional Information ℹ️  Min OS Version: 16.1"
-        },
-        {
-          "name": "Instagram",
-          "bundleIdentifier": "com.burbn.instagram",
-          "developerName": "@ipavault",
-          "version": "450.0.0",
-          "iconURL": "https://fastsign.dev/tg-icon/ipavault/761.png",
-          "subtitle": "Variant: Sparkle 1.4.0"
-        },
-        {
-          "name": "Instagram",
-          "bundleIdentifier": "com.burbn.instagram",
-          "developerName": "@ipavault",
-          "version": "450.0.0",
-          "iconURL": "https://fastsign.dev/tg-icon/ipavault/762.png",
-          "subtitle": "Variant: Sparkle 1.4.0 · No plugins"
+          "version": "4.28.71",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.path36.SpliceFree.png",
+          "subtitle": "Injected with Subscription Unlocked"
         },
         {
           "name": "Spotify",
           "bundleIdentifier": "com.spotify.client",
           "developerName": "scholars lounge",
-          "version": "9.1.84",
-          "iconURL": "https://fastsign.dev/tg-icon/scholars-lounge/78438.png",
-          "subtitle": "scholars lounge | EeveeSpotifyReincarnated Spotify version: 9.1.84 EeveeSpotifyReincarnated version: 7.0.0 App by SideloadLabs Compiled by @z0_0_1  Th"
+          "version": "9.1.88",
+          "iconURL": "https://fastsign.dev/tg-icon/scholars-lounge/78601.png",
+          "subtitle": "scholars lounge | EeveeSpotifyReincarnated Spotify version: 9.1.88 EeveeSpotifyReincarnated version: 7.0.0 App by SideloadLabs Compiled by @z0_0_1  Th"
         },
         {
-          "name": "Sofascore",
-          "bundleIdentifier": "com.SofaScore.iOS",
+          "name": "Reveri",
+          "bundleIdentifier": "com.reveri.reverihealth",
           "developerName": "@riftysIPAlibrary",
-          "version": "26.09.28",
-          "iconURL": "https://fastsign.dev/tg-icon/riftysipalibrary/8241.png",
-          "subtitle": "@riftysIPAlibrary | Sofascore - Live sports scores  Tweak: Premium Unlocked  Version: 26.09.28  Patched ✓  @riftysIPAlibrary  Additional Information ℹ"
+          "version": "4.20.0",
+          "iconURL": "https://fastsign.dev/tg-icon/riftysipalibrary/8257.png",
+          "subtitle": "@riftysIPAlibrary | Reveri: Brain Over Pain  Tweak: Premium Unlocked  Version: 4.20.0  Patched ✓  @riftysIPAlibrary  Additional Information ℹ️  Min OS"
         },
         {
-          "name": "Reddit",
-          "bundleIdentifier": "com.reddit.Reddit",
-          "developerName": "@ipavault",
-          "version": "2026.40.0",
-          "iconURL": "https://fastsign.dev/tg-icon/ipavault/759.png",
-          "subtitle": "Variant: 2026.39.0 RedditFilter"
+          "name": "VidCap",
+          "bundleIdentifier": "io.fadel.VidCap",
+          "developerName": "@riftysIPAlibrary",
+          "version": "1.0.236",
+          "iconURL": "https://fastsign.dev/tg-icon/riftysipalibrary/8256.png",
+          "subtitle": "@riftysIPAlibrary | AI Captions for Videos: VidCap  Tweak: Subscription Unlocked  Version: 1.0.236  Patched ✓  @riftysIPAlibrary  Additional Informati"
         },
         {
-          "name": "Discord",
-          "bundleIdentifier": "com.hammerandchisel.discord",
-          "developerName": "@ipavault",
-          "version": "348.0",
-          "iconURL": "https://fastsign.dev/tg-icon/ipavault/758.png",
-          "subtitle": "Variant: RainTweak"
+          "name": "Strides",
+          "bundleIdentifier": "com.puresignal.strides",
+          "developerName": "@riftysIPAlibrary",
+          "version": "19.15",
+          "iconURL": "https://fastsign.dev/tg-icon/riftysipalibrary/8255.png",
+          "subtitle": "@riftysIPAlibrary | Strides: Habit Tracker + Goals  Tweak: Plus Unlocked  Version: 19.15  Patched ✓  @riftysIPAlibrary  Additional Information ℹ️  Min"
         },
         {
-          "name": "Fitia",
-          "bundleIdentifier": "com.ulisesolave.Fitia",
-          "developerName": "@blatants",
-          "version": "25.1.1",
-          "iconURL": "https://fastsign.dev/tg-icon/blatants/12654.png",
-          "subtitle": "@blatants | Fitia: Calorie Counter & Diet  • Bundle ID: com.ulisesolave.Fitia • Updated to: 25.1.1 • Minimum iOS: 16 • Patched • Modifier: Subscriptio"
+          "name": "Smart Receipts",
+          "bundleIdentifier": "co.smartreceipts.ios",
+          "developerName": "@riftysIPAlibrary",
+          "version": "5.21.2",
+          "iconURL": "https://fastsign.dev/tg-icon/riftysipalibrary/8254.png",
+          "subtitle": "@riftysIPAlibrary | Smart Receipts: Expenses & Tax  Tweak: Pro Unlocked  Version: 5.21.2  Patched ✓  @riftysIPAlibrary  Additional Information ℹ️  Min"
         },
         {
-          "name": "Halide",
-          "bundleIdentifier": "com.chromanoir.Zeit",
-          "developerName": "@blatants",
-          "version": "3.2.1",
-          "iconURL": "https://fastsign.dev/tg-icon/blatants/12652.png",
-          "subtitle": "@blatants | Halide Mark III - Pro Camera  • Bundle ID: com.chromanoir.Zeit • Reuploaded: 3.2.1 • Minimum iOS: 18.0 • Patched • Modifier: Subscription "
-        },
-        {
-          "name": "AI Retouch",
-          "bundleIdentifier": "com.picretouch.photoeditor",
-          "developerName": "@blatants",
-          "version": "1.2.1",
-          "iconURL": "https://fastsign.dev/tg-icon/blatants/12651.png",
-          "subtitle": "@blatants | Remove Objects: AI Retouch  • Bundle ID: com.picretouch.photoeditor • Reuploaded: 1.2.1 • Minimum iOS: 15.0 • Patched • Modifier: Subscrip"
-        },
-        {
-          "name": "Athlytic",
-          "bundleIdentifier": "myndarc.newFitnessApp",
-          "developerName": "@blatants",
-          "version": "27.0.3",
-          "iconURL": "https://fastsign.dev/tg-icon/blatants/12650.png",
-          "subtitle": "@blatants | Athlytic: Fitness & Recovery  • Bundle ID: myndarc.newFitnessApp • Reuploaded: 27.0.3 • Minimum iOS: 17.0 • Patched • Modifier: Subscripti"
-        },
-        {
-          "name": "Encode",
-          "bundleIdentifier": "com.upskew.encode.ios",
-          "developerName": "@blatants",
-          "version": "6.23.0",
-          "iconURL": "https://fastsign.dev/tg-icon/blatants/12649.png",
-          "subtitle": "@blatants | Encode: Learn to Code  • Bundle ID: com.upskew.encode.ios • Reuploaded: 6.23.0 • Minimum iOS: 15.0 • Patched • Modifier: Subscription Unlo"
-        },
-        {
-          "name": "Bazaart",
-          "bundleIdentifier": "co.bazaart.app",
-          "developerName": "@blatants",
-          "version": "27.0.3",
-          "iconURL": "https://fastsign.dev/tg-icon/blatants/12648.png",
-          "subtitle": "@blatants | Bazaart AI Photo Editor Design  • Bundle ID: co.bazaart.app • Reuploaded: 27.0.3 • Minimum iOS: 18.0 • Patched • Modifier: Bazaart Super •"
-        },
-        {
-          "name": "Mockview",
-          "bundleIdentifier": "com.kavsoft.MockviewApp",
-          "developerName": "@blatants",
-          "version": "5.0.4",
-          "iconURL": "https://fastsign.dev/tg-icon/blatants/12647.png",
-          "subtitle": "@blatants | Mockview - Mockup Generator  • Bundle ID: com.kavsoft.MockviewApp • Reuploaded: 5.0.4 • Minimum iOS: 17.0 • Patched • Modifier: Subscripti"
+          "name": "LingUp",
+          "bundleIdentifier": "com.lingup.app",
+          "developerName": "@Sa1y0miii",
+          "version": "2.0.15",
+          "iconURL": "https://fastsign.dev/tg-icon/sa1y0miii/13911.png",
+          "subtitle": "@Sa1y0miii | LingUp: AI Language Tutor 🧸 Min.iOS: [15.0+] 🧀 App version: [5.92] !upd  🪼 App Store: https://apps.apple.com/app/id6670719890 📮 Notes: Re"
         },
         {
           "name": "TapeKit",
           "bundleIdentifier": "com.widget-kid",
-          "developerName": "@riftysIPAlibrary",
+          "developerName": "@Sa1y0miii",
           "version": "3.7.0",
-          "iconURL": "https://fastsign.dev/tg-icon/riftysipalibrary/8240.png",
-          "subtitle": "@riftysIPAlibrary | TapeKit・Lab of Top Widgets・GIF  Tweak: Premium Unlocked  Version: 3.7.0  Patched ✓  @riftysIPAlibrary  Additional Information ℹ️  "
+          "iconURL": "https://fastsign.dev/tg-icon/sa1y0miii/13908.png",
+          "subtitle": "@Sa1y0miii | TapeKit・Lab of Top Widgets・GIF 🧸 Min.iOS: [17.0+] 🧀 App version: [3.7.0] !upd  🪼 App Store: https://apps.apple.com/app/id1532641230 📮 Not"
         },
         {
-          "name": "Instagram",
-          "bundleIdentifier": "com.burbn.instagram",
-          "developerName": "@ipavault",
-          "version": "450.0.0",
-          "iconURL": "https://fastsign.dev/tg-icon/ipavault/756.png",
-          "subtitle": "Variant: RyukGram 1.4.5"
+          "name": "Notewise",
+          "bundleIdentifier": "com.ziikr.ios.notewise",
+          "developerName": "@Sa1y0miii",
+          "version": "4.1.4",
+          "iconURL": "https://fastsign.dev/tg-icon/sa1y0miii/13905.png",
+          "subtitle": "@Sa1y0miii | Notewise - AI Notes, PDF, Docs 🧸 Min.iOS: [26.0+] 🧀 App version: [4.1.4] !upd  🪼 App Store: https://apps.apple.com/app/id6480045936 📮 Not"
         },
         {
-          "name": "Instagram",
-          "bundleIdentifier": "com.burbn.instagram",
-          "developerName": "@ipavault",
-          "version": "450.0.0",
-          "iconURL": "https://fastsign.dev/tg-icon/ipavault/757.png",
-          "subtitle": "Variant: RyukGram 1.4.5 · No plugins"
+          "name": "Gizmo",
+          "bundleIdentifier": "io.gonative.ios.xqdyad",
+          "developerName": "@Sa1y0miii",
+          "version": "3.2.101",
+          "iconURL": "https://fastsign.dev/tg-icon/sa1y0miii/13902.png",
+          "subtitle": "@Sa1y0miii | Gizmo: AI Flashcards 🧸 Min.iOS: [16.4+] 🧀 App version: [3.2.101] !upd  🪼 App Store: https://apps.apple.com/app/id1610516671 📮 Notes: Subs"
         },
         {
-          "name": "Notability",
-          "bundleIdentifier": "com.gingerlabs.Notability",
-          "developerName": "AppTesters IPA Repo",
-          "version": "16.12.5",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.gingerlabs.Notability.png",
-          "subtitle": "@blatants | Notability: AI Note Journal  • Bundle ID: com.gingerlabs.Notability • Updated to: 16.12.5 • Minimum iOS: 18.0 • Patched • Modifier: Pro Un"
+          "name": "Shae",
+          "bundleIdentifier": "com.flowind.shae",
+          "developerName": "@Sa1y0miii",
+          "version": "3.6",
+          "iconURL": "https://fastsign.dev/tg-icon/sa1y0miii/13899.png",
+          "subtitle": "@Sa1y0miii | Music, Player, Vinyl - Shae 🧸 Min.iOS: [18.0+] 🧀 App version: [3.6] !upd  🪼 App Store: https://apps.apple.com/app/id6753968019 📮 Notes: S"
         },
         {
-          "name": "Spotify",
-          "bundleIdentifier": "com.spotify.client",
-          "developerName": "@ipavault",
-          "version": "9.1.78",
-          "iconURL": "https://fastsign.dev/tg-icon/ipavault/755.png",
-          "subtitle": "Variant: Chroma.pw 0.50.0 · No plugins"
+          "name": "Soundscape",
+          "bundleIdentifier": "com.soundscape.music",
+          "developerName": "@Sa1y0miii",
+          "version": "11.1.0",
+          "iconURL": "https://fastsign.dev/tg-icon/sa1y0miii/13896.png",
+          "subtitle": "@Sa1y0miii | Soundscape: Sleep Calm & Focus 🧸 Min.iOS: [17.0+] 🧀 App version: [11.1.0] !upd  🪼 App Store: https://apps.apple.com/app/id6480119395 📮 No"
         },
         {
-          "name": "Spotify",
-          "bundleIdentifier": "com.spotify.client",
-          "developerName": "@ipavault",
-          "version": "9.1.78",
-          "iconURL": "https://fastsign.dev/tg-icon/ipavault/754.png",
-          "subtitle": "Variant: Chroma.pw 0.50.0"
-        },
-        {
-          "name": "Picsew",
-          "bundleIdentifier": "com.sugarmo.ScrollClip",
-          "developerName": "AppTesters IPA Repo",
-          "version": "3.19.2",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.sugarmo.ScrollClip.png",
-          "subtitle": "@blatants | Picsew - Screenshot Stitching  • Bundle ID: com.sugarmo.ScrollClip • Updated to: 3.19.2 • Minimum iOS: 16.0 • Patched • Modifier: Picsew P"
-        },
-        {
-          "name": "Spotify",
-          "bundleIdentifier": "com.spotify.client",
-          "developerName": "@ipavault",
-          "version": "9.1.78",
-          "iconURL": "https://fastsign.dev/tg-icon/ipavault/753.png",
-          "subtitle": "Variant: Eevee+Chroma.pw · No plugins"
-        },
-        {
-          "name": "Spotify",
-          "bundleIdentifier": "com.spotify.client",
-          "developerName": "@ipavault",
-          "version": "9.1.78",
-          "iconURL": "https://fastsign.dev/tg-icon/ipavault/752.png",
-          "subtitle": "Variant: Eevee+Chroma.pw"
-        },
-        {
-          "name": "I Am Sober",
-          "bundleIdentifier": "com.thehungrywasp.iamsober",
+          "name": "Soundscape",
+          "bundleIdentifier": "com.soundscape.music",
           "developerName": "@riftysIPAlibrary",
-          "version": "8.8.3",
-          "iconURL": "https://fastsign.dev/tg-icon/riftysipalibrary/8239.png",
-          "subtitle": "@riftysIPAlibrary | I Am Sober  Tweak: Premium Unlocked  Version: 8.8.3  Patched ✓  @riftysIPAlibrary  Additional Information ℹ️  Min OS Version: 15.1"
+          "version": "11.1.0",
+          "iconURL": "https://fastsign.dev/tg-icon/riftysipalibrary/8253.png",
+          "subtitle": "@riftysIPAlibrary | Soundscape: Sleep Focus Relax  Tweak: Subscription Unlocked  Version: 11.1.0  Patched ✓  @riftysIPAlibrary  Additional Information"
+        },
+        {
+          "name": "YouTube (YP)",
+          "bundleIdentifier": "com.google.ios.youtube",
+          "developerName": "iOSDecrypted",
+          "version": "21.40.5",
+          "iconURL": "https://fastsign.dev/tg-icon/iosdecrypted/227741.png",
+          "subtitle": "iOSDecrypted | Builds of YouTube 📀  🪧Build Version: 21.40.5 ⭐️YP: YTPlus Cracked ⭐️YM: YouMod ⭐️KC: YTKACE ➡️Repost Policy: t.me/iosdecrypted/15  📊Oth"
+        },
+        {
+          "name": "YouTube (KC)",
+          "bundleIdentifier": "com.google.ios.youtube",
+          "developerName": "iOSDecrypted",
+          "version": "21.40.5",
+          "iconURL": "https://fastsign.dev/tg-icon/iosdecrypted/227739.png",
+          "subtitle": "iOSDecrypted | Builds of YouTube 📀  🪧Build Version: 21.40.5 ⭐️YP: YTPlus Cracked ⭐️YM: YouMod ⭐️KC: YTKACE ➡️Repost Policy: t.me/iosdecrypted/15  📊Oth"
+        },
+        {
+          "name": "YouTube (YM)",
+          "bundleIdentifier": "com.google.ios.youtube",
+          "developerName": "iOSDecrypted",
+          "version": "21.40.5",
+          "iconURL": "https://fastsign.dev/tg-icon/iosdecrypted/227740.png",
+          "subtitle": "iOSDecrypted | Builds of YouTube 📀  🪧Build Version: 21.40.5 ⭐️YP: YTPlus Cracked ⭐️YM: YouMod ⭐️KC: YTKACE ➡️Repost Policy: t.me/iosdecrypted/15  📊Oth"
+        },
+        {
+          "name": "MusicBox",
+          "bundleIdentifier": "br.com.marcosatanaka.musicbox",
+          "developerName": "@riftysIPAlibrary",
+          "version": "1.8.5",
+          "iconURL": "https://fastsign.dev/tg-icon/riftysipalibrary/8252.png",
+          "subtitle": "@riftysIPAlibrary | MusicBox: Save Music for Later  Tweak: Subscription Unlocked  Version: 1.8.5  Patched ✓  @riftysIPAlibrary  Additional Information"
+        },
+        {
+          "name": "Spotify",
+          "bundleIdentifier": "com.spotify.client",
+          "developerName": "@compiledipas",
+          "version": "9.1.88",
+          "iconURL": "https://fastsign.dev/tg-icon/compiledipas/1658.png",
+          "subtitle": "@ipa_dark | 🔄 Spotify - мод Eevee   🇷🇺 Модифицированный Spotify   ℹ️ Особенности:  ▎Взломана Premium подписка  💌 Для установки приложения требуется се"
         },
         {
           "name": "Athlytic",
           "bundleIdentifier": "myndarc.newFitnessApp",
           "developerName": "AppTesters IPA Repo",
-          "version": "27.0.3",
+          "version": "27.0.4",
           "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/myndarc.newFitnessApp.png",
-          "subtitle": "@blatants | Athlytic: Fitness & Recovery  • Bundle ID: myndarc.newFitnessApp • Updated to: 27.0.3 • Minimum iOS: 17.0 • Patched • Modifier: Subscripti"
+          "subtitle": "@blatants | Athlytic: Fitness & Recovery  • Bundle ID: myndarc.newFitnessApp • Updated to: 27.0.4 • Minimum iOS: 17.0 • Patched • Modifier: Subscripti"
         },
         {
-          "name": "TwitchUnblock",
-          "bundleIdentifier": "com.mxfia19.TwitchUnblock",
-          "developerName": "@ipavault",
-          "version": "1.2.2",
-          "iconURL": "https://fastsign.dev/tg-icon/ipavault/751.png",
-          "subtitle": "No tweak information supplied by the source."
-        },
-        {
-          "name": "modr.",
-          "bundleIdentifier": "club.modr.ios",
+          "name": "Procreate",
+          "bundleIdentifier": "au.com.savageinteractive.procreate",
           "developerName": "@ipa_dark",
-          "version": "1.0.59500",
-          "iconURL": "https://fastsign.dev/tg-icon/ipa-dark/1795.png",
-          "subtitle": "@ipa_dark | 🔄 Modr  (клуб романтики)   🇷🇺 Мод для Клуба Романтики - Modr  💡 Вам нравятся новеллы? посмотрите наш проект по накрутке: @novellaplus_bot "
+          "version": "5.4.14",
+          "iconURL": "https://fastsign.dev/tg-icon/ipa-dark/1797.png",
+          "subtitle": "@ipa_dark | 🔄 Procreate - appstore  🇷🇺 Профессиональное приложение для цифрового рисования и иллюстраций, предлагающее широкий набор инструментов, вкл"
+        },
+        {
+          "name": "[untitled]",
+          "bundleIdentifier": "com.untitledinbrackets.untitled-ios",
+          "developerName": "@Sa1y0miii",
+          "version": "1.23.0",
+          "iconURL": "https://fastsign.dev/tg-icon/sa1y0miii/13893.png",
+          "subtitle": "@Sa1y0miii | [untitled] 🧸 Min.iOS: [17.6+] 🧀 App version: [1.23.0] !upd  🪼 App Store: https://apps.apple.com/ua/app/untitled/id6445854828 📮 Notes: Sub"
+        },
+        {
+          "name": "Picoboom",
+          "bundleIdentifier": "com.vanilla.picoboom",
+          "developerName": "@Sa1y0miii",
+          "version": "1.0.52",
+          "iconURL": "https://fastsign.dev/tg-icon/sa1y0miii/13890.png",
+          "subtitle": "@Sa1y0miii | Picoboom - Group Party Game 🧸 Min.iOS: [16.0+] 🧀 App version: [1.0.52] !upd  🪼 App Store: https://apps.apple.com/app/id6720754145 📮 Notes"
+        },
+        {
+          "name": "Wishlists",
+          "bundleIdentifier": "com.ckbusiness.Wishlists",
+          "developerName": "@Sa1y0miii",
+          "version": "3.8.14",
+          "iconURL": "https://fastsign.dev/tg-icon/sa1y0miii/13887.png",
+          "subtitle": "@Sa1y0miii | Wishlists - online wishlist 🧸 Min.iOS: [16.0+] 🧀 App version: [3.8.14] !upd  🪼 App Store: https://apps.apple.com/app/id1503912334 📮 Notes"
+        },
+        {
+          "name": "Live Transcribe",
+          "bundleIdentifier": "com.robnorback.LiveTranscribe",
+          "developerName": "@Sa1y0miii",
+          "version": "2.88",
+          "iconURL": "https://fastsign.dev/tg-icon/sa1y0miii/13884.png",
+          "subtitle": "@Sa1y0miii | Live Transcribe – Live Captioning  🧸 Min.iOS: [15.0+]    🧀 App version: [2.88] !upd  🪼 App Store: https://apps.apple.com/ua/app/live-tran"
+        },
+        {
+          "name": "ClassDojo",
+          "bundleIdentifier": "com.ClassDojo",
+          "developerName": "@Sa1y0miii",
+          "version": "18.36.0",
+          "iconURL": "https://fastsign.dev/tg-icon/sa1y0miii/13881.png",
+          "subtitle": "@Sa1y0miii | ClassDojo 🧸 Min.iOS: [18.0+] 🧀 App version: [18.36.0] !upd  🪼 App Store: https://apps.apple.com/app/id552602056 📮 Notes: Subscription unl"
+        },
+        {
+          "name": "RunCut",
+          "bundleIdentifier": "app.runcut",
+          "developerName": "@Sa1y0miii",
+          "version": "2.1.3",
+          "iconURL": "https://fastsign.dev/tg-icon/sa1y0miii/13878.png",
+          "subtitle": "@Sa1y0miii | RunCut: Run & Ride Video Maker 🧸 Min.iOS: [15.6+] 🧀 App version: [2.1.3] !upd  🪼 App Store: https://apps.apple.com/app/id6775352847 📮 Not"
+        },
+        {
+          "name": "Splash",
+          "bundleIdentifier": "app.cranberry.splash",
+          "developerName": "@Sa1y0miii",
+          "version": "3.0.0",
+          "iconURL": "https://fastsign.dev/tg-icon/sa1y0miii/13875.png",
+          "subtitle": "@Sa1y0miii | Splash - Party & Group Games 🧸 Min.iOS: [16.6+] 🧀 App version: [3.0.0] !upd  🪼 App Store: https://apps.apple.com/app/id6744290388 📮 Notes"
+        },
+        {
+          "name": "Lumra",
+          "bundleIdentifier": "com.retrocam.mvp",
+          "developerName": "@Sa1y0miii",
+          "version": "1.3.11",
+          "iconURL": "https://fastsign.dev/tg-icon/sa1y0miii/13872.png",
+          "subtitle": "@Sa1y0miii | lumra - vintage camera 🧸 Min.iOS: [17.0+] 🧀 App version: [1.2.6] !upd  🪼 App Store: https://apps.apple.com/app/id6760749306 📮 Notes: Subs"
+        },
+        {
+          "name": "Sleepwave",
+          "bundleIdentifier": "sleepwave.app",
+          "developerName": "@Sa1y0miii",
+          "version": "4.5.5",
+          "iconURL": "https://fastsign.dev/tg-icon/sa1y0miii/13869.png",
+          "subtitle": "@Sa1y0miii | Sleepwave: Alarm & Tracker 🧸 Min.iOS: [18+] 🧀 App version: [4.5.5] !upd  🪼 App Store: https://apps.apple.com/app/id1565509007 📮 Notes: Su"
+        },
+        {
+          "name": "Polarsteps",
+          "bundleIdentifier": "com.polarsteps.Polarsteps",
+          "developerName": "@Sa1y0miii",
+          "version": "10.15.0",
+          "iconURL": "https://fastsign.dev/tg-icon/sa1y0miii/13866.png",
+          "subtitle": "@Sa1y0miii | Polarsteps 🧸 Min.iOS: [17.0+] 🧀 App version: [10.15.0] !upd  🪼 App Store: https://apps.apple.com/app/id947925763 📮 Notes: Subscription un"
+        },
+        {
+          "name": "swipewipe",
+          "bundleIdentifier": "com.aoklab.fewerphotos",
+          "developerName": "AppTesters IPA Repo",
+          "version": "3.5.0",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.aoklab.fewerphotos.png",
+          "subtitle": "@blatants | Swipewipe: Photo Cleaner  • Bundle ID: com.aoklab.fewerphotos • Updated to: 3.5.0 • Minimum iOS: 18.0 • Patched • Modifier: Pro Unlocked •"
+        },
+        {
+          "name": "PUSH",
+          "bundleIdentifier": "com.ADPTVLTD.push",
+          "developerName": "@Sa1y0miii",
+          "version": "4.0.5",
+          "iconURL": "https://fastsign.dev/tg-icon/sa1y0miii/13863.png",
+          "subtitle": "@Sa1y0miii | PUSH Workout & Gym Tracker 🧸 Min.iOS: [16.4+] 🧀 App version: [4.0.5] !upd  🪼 App Store: https://apps.apple.com/app/id1621689462 📮 Notes: "
         }
       ]
     },
