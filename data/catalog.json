@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-08T06:08:18Z",
+  "generatedAt": "2026-10-08T13:33:26Z",
   "sources": [
     {
       "id": "utm",
@@ -1268,7 +1268,7 @@
     {
       "id": "ipa-vault",
       "name": "IPA Vault Source Repo",
-      "appCount": 55,
+      "appCount": 57,
       "catalogLimited": false,
       "iconURL": "https://pub-dd800571175348b6a2745b3396360028.r2.dev/ipavault-altstore-repo-logo.png",
       "sourceURL": "https://raw.githubusercontent.com/927tx/IPA-Vault/main/ipavaultsource.json",
@@ -1530,6 +1530,22 @@
           "subtitle": "Telegram 12.9.4 with TGExtra 1.7.8"
         },
         {
+          "name": "Spotify (Vitrine 1.0.0-b5)",
+          "bundleIdentifier": "com.spotify.client",
+          "developerName": "MyNameIsJeff & skopevoj & IPA Vault",
+          "version": "9.1.88",
+          "iconURL": "https://pub-dd800571175348b6a2745b3396360028.r2.dev/App%20Icons/Spotify-Icons/Spotify-AppStore-1024x1024.png",
+          "subtitle": "Spotify 9.1.88 with Vitrine 1.0.0-b5"
+        },
+        {
+          "name": "Spotify (Vitrine 1.0.0-b5) (No Plugins)",
+          "bundleIdentifier": "com.spotify.client.vitrine.noplugins",
+          "developerName": "MyNameIsJeff & skopevoj & IPA Vault",
+          "version": "9.1.88",
+          "iconURL": "https://pub-dd800571175348b6a2745b3396360028.r2.dev/App%20Icons/Spotify-Icons/Spotify-AppStore-1024x1024.png",
+          "subtitle": "Spotify 9.1.88 with Vitrine 1.0.0-b5 (No Plugins)"
+        },
+        {
           "name": "Spotify (EeveeSpotify + Chroma.pw) (9.1.78)",
           "bundleIdentifier": "com.spotify.client.v9-1-78",
           "developerName": "skopevoj & IPA Vault",
@@ -1557,9 +1573,9 @@
           "name": "TikTok (Infinitok)",
           "bundleIdentifier": "com.zhiliaoapp.musically",
           "developerName": "Mod4 & IPA Vault",
-          "version": "47.0.0",
+          "version": "47.1.0",
           "iconURL": "https://pub-dd800571175348b6a2745b3396360028.r2.dev/App%20Icons/TikTok-Icons/TikTok-AppStore-1024x1024.png",
-          "subtitle": "TikTok 47.0.0 with Infinitok 0.0.2"
+          "subtitle": "TikTok 47.1.0 with Infinitok 0.0.2"
         },
         {
           "name": "Turrit (MxGram)",
@@ -1586,7 +1602,7 @@
           "subtitle": "Turrit 1.5.5 with TGExtra 1.7.7"
         },
         {
-          "name": "TwitchUnblock 1.2.2",
+          "name": "TwitchUnblock",
           "bundleIdentifier": "com.ipavault.twitchunblock",
           "developerName": "MXFia19 & IPA Vault",
           "version": "1.2.2",
@@ -10547,7 +10563,7 @@
           "name": "Nuvio",
           "bundleIdentifier": "com.nuvio.media",
           "developerName": "NuvioMedia",
-          "version": "0.5.7",
+          "version": "0.5.8",
           "iconURL": "https://raw.githubusercontent.com/NuvioMedia/NuvioMobile/0.4.11/iosApp/iosApp/Assets.xcassets/AppIcon.appiconset/app-icon-1024.png",
           "subtitle": "A free, open-source media app for your phone, your desktop, and the TV you already own."
         }
