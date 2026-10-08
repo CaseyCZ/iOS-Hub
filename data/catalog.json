@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-08T13:33:26Z",
+  "generatedAt": "2026-10-08T23:22:57Z",
   "sources": [
     {
       "id": "utm",
@@ -30,7 +30,7 @@
     {
       "id": "provenance",
       "name": "Provenance Emulator",
-      "appCount": 3,
+      "appCount": 2,
       "catalogLimited": false,
       "iconURL": "https://raw.githubusercontent.com/Provenance-Emu/Provenance/develop/Provenance/Resources/Assets.xcassets/AppIcon.appiconset/iTunesArtwork%402x.png",
       "sourceURL": "https://provenance-emu.com/apps.json",
@@ -42,14 +42,6 @@
           "version": "3.3.0",
           "iconURL": "https://raw.githubusercontent.com/Provenance-Emu/Provenance/develop/Provenance/Resources/Assets.xcassets/AppIcon.appiconset/iTunesArtwork%402x.png",
           "subtitle": "Multi-system retro emulator for iOS & tvOS"
-        },
-        {
-          "name": "Provenance Alpha",
-          "bundleIdentifier": "com.provenance-emu.provenance.alpha",
-          "developerName": "Provenance-EMU",
-          "version": "3.4.0",
-          "iconURL": "https://raw.githubusercontent.com/Provenance-Emu/Provenance/develop/Provenance/Resources/Assets.xcassets/AppIcon.appiconset/iTunesArtwork%402x.png",
-          "subtitle": "Latest dev builds - test new features early"
         },
         {
           "name": "iCube",
@@ -1803,7 +1795,7 @@
           "name": "MoeReddit",
           "bundleIdentifier": "com.reddit.Reddit",
           "developerName": "Moe Apps",
-          "version": "2026.39.0 (4.5.1)",
+          "version": "2026.40.0 (4.5.1)",
           "iconURL": "https://raw.githubusercontent.com/MountainofPenguin/moe-altstore/main/icons/moereddit.png",
           "subtitle": "Reddit client, MoeReddit build"
         },
@@ -1835,7 +1827,7 @@
           "name": "YouTube (Moe YTK)",
           "bundleIdentifier": "com.google.ios.youtube",
           "developerName": "Moe Apps",
-          "version": "21.39.4 (6.6)",
+          "version": "21.40.5 (6.6.5)",
           "iconURL": "https://raw.githubusercontent.com/MountainofPenguin/moe-altstore/main/icons/youtube-moe-ytk.png",
           "subtitle": "YTKillerPlus tweak build"
         },
@@ -1875,7 +1867,7 @@
           "name": "YouTube (Moe LRD, Cracked)",
           "bundleIdentifier": "com.google.ios.youtube",
           "developerName": "Moe Apps",
-          "version": "21.39.4 (1.13)",
+          "version": "21.40.5 (1.13)",
           "iconURL": "https://raw.githubusercontent.com/MountainofPenguin/moe-altstore/main/icons/youtube-lrd-cracked.png",
           "subtitle": "TubeLRD tweak build, cracked"
         },
@@ -1883,7 +1875,7 @@
           "name": "YouTube (Moe SY)",
           "bundleIdentifier": "com.google.ios.youtube",
           "developerName": "Moe Apps",
-          "version": "21.39.4 (2.0)",
+          "version": "21.40.5 (2.0)",
           "iconURL": "https://raw.githubusercontent.com/MountainofPenguin/moe-altstore/main/icons/youtube-moe-sy.png",
           "subtitle": "SY tweak build"
         },
@@ -1891,7 +1883,7 @@
           "name": "YouTube (Moe YTPlus, Temp Free)",
           "bundleIdentifier": "com.google.ios.youtube",
           "developerName": "Moe Apps",
-          "version": "21.39.4 (5.2.1)",
+          "version": "21.40.5 (5.2.1)",
           "iconURL": "https://raw.githubusercontent.com/MountainofPenguin/moe-altstore/main/icons/youtube-ytplus-temp-free.png",
           "subtitle": "YTPlus tweak build"
         },
@@ -1899,7 +1891,7 @@
           "name": "YouTube Music",
           "bundleIdentifier": "com.google.ios.youtubemusic",
           "developerName": "Moe Apps",
-          "version": "9.39.2 (2.4.1)",
+          "version": "9.40.2 (2.4.1)",
           "iconURL": "https://raw.githubusercontent.com/MountainofPenguin/moe-altstore/main/icons/youtube-music.png",
           "subtitle": "Ultimate Enhanced tweak build"
         },
@@ -1907,7 +1899,7 @@
           "name": "Instagram (Moe Multi)",
           "bundleIdentifier": "com.burbn.instagram",
           "developerName": "Moe Apps",
-          "version": "449.0.0 (8.5)",
+          "version": "450.1.0 (8.5)",
           "iconURL": "https://raw.githubusercontent.com/MountainofPenguin/moe-altstore/main/icons/instagram-moe-multi.png",
           "subtitle": "Multi-tweak loader"
         },
@@ -1915,7 +1907,7 @@
           "name": "Instagram (AC)",
           "bundleIdentifier": "com.burbn.instagram",
           "developerName": "Moe Apps",
-          "version": "449.0.0 (1.5)",
+          "version": "450.1.0 (1.5)",
           "iconURL": "https://raw.githubusercontent.com/MountainofPenguin/moe-altstore/main/icons/instagram-ac.png",
           "subtitle": "AC tweak build"
         },
@@ -1923,7 +1915,7 @@
           "name": "Instagram (BH)",
           "bundleIdentifier": "com.burbn.instagram",
           "developerName": "Moe Apps",
-          "version": "449.0.0 (1.2)",
+          "version": "450.1.0 (1.2)",
           "iconURL": "https://raw.githubusercontent.com/MountainofPenguin/moe-altstore/main/icons/instagram-bh.png",
           "subtitle": "BH tweak build"
         },
@@ -1931,7 +1923,7 @@
           "name": "Instagram (DL, Cracked)",
           "bundleIdentifier": "com.burbn.instagram",
           "developerName": "Moe Apps",
-          "version": "449.0.0 (2.5)",
+          "version": "450.1.0 (2.5)",
           "iconURL": "https://raw.githubusercontent.com/MountainofPenguin/moe-altstore/main/icons/instagram-dl-cracked.png",
           "subtitle": "DL tweak build, cracked"
         },
@@ -1939,7 +1931,7 @@
           "name": "Instagram (IGFormat)",
           "bundleIdentifier": "com.burbn.instagram",
           "developerName": "Moe Apps",
-          "version": "449.0.0 (2.6)",
+          "version": "450.1.0 (2.6)",
           "iconURL": "https://raw.githubusercontent.com/MountainofPenguin/moe-altstore/main/icons/instagram-igformat.png",
           "subtitle": "IGFormat tweak build"
         },
@@ -1947,7 +1939,7 @@
           "name": "Instagram (INK Plus)",
           "bundleIdentifier": "com.burbn.instagram",
           "developerName": "Moe Apps",
-          "version": "449.0.0 (5.2.10)",
+          "version": "450.1.0 (5.2.10)",
           "iconURL": "https://raw.githubusercontent.com/MountainofPenguin/moe-altstore/main/icons/instagram-ink-plus.png",
           "subtitle": "INK Plus tweak build"
         },
@@ -1955,7 +1947,7 @@
           "name": "Instagram (LRD, Cracked)",
           "bundleIdentifier": "com.burbn.instagram",
           "developerName": "Moe Apps",
-          "version": "449.0.0 (2.19)",
+          "version": "450.1.0 (2.19)",
           "iconURL": "https://raw.githubusercontent.com/MountainofPenguin/moe-altstore/main/icons/instagram-lrd-cracked.png",
           "subtitle": "LRD tweak build, cracked"
         },
@@ -1963,7 +1955,7 @@
           "name": "Instagram (Moe RyukGram)",
           "bundleIdentifier": "com.burbn.instagram",
           "developerName": "Moe Apps",
-          "version": "449.0.0 (1.4.0)",
+          "version": "450.1.0 (1.4.5)",
           "iconURL": "https://raw.githubusercontent.com/MountainofPenguin/moe-altstore/main/icons/instagram-ryukgram.png",
           "subtitle": "RyukGram tweak build"
         },
@@ -1979,7 +1971,7 @@
           "name": "Instagram (NYX B4)",
           "bundleIdentifier": "com.burbn.instagram",
           "developerName": "Moe Apps",
-          "version": "449.0.0 (1.7.2)",
+          "version": "450.1.0 (1.7.2)",
           "iconURL": "https://raw.githubusercontent.com/MountainofPenguin/moe-altstore/main/icons/instagram-nyx-b4.png",
           "subtitle": "NYX tweak build"
         },
@@ -1995,7 +1987,7 @@
           "name": "Instagram (Rocket, Cracked)",
           "bundleIdentifier": "com.burbn.instagram",
           "developerName": "Moe Apps",
-          "version": "449.0.0 (4.3.3)",
+          "version": "450.1.0 (4.3.3)",
           "iconURL": "https://raw.githubusercontent.com/MountainofPenguin/moe-altstore/main/icons/instagram-rocket-cracked.png",
           "subtitle": "Rocket tweak build, cracked"
         },
@@ -2003,7 +1995,7 @@
           "name": "Instagram (SC)",
           "bundleIdentifier": "com.burbn.instagram",
           "developerName": "Moe Apps",
-          "version": "449.0.0 (1.1.1)",
+          "version": "450.1.0 (1.1.1)",
           "iconURL": "https://raw.githubusercontent.com/MountainofPenguin/moe-altstore/main/icons/instagram-sc.png",
           "subtitle": "SC tweak build"
         },
@@ -2011,7 +2003,7 @@
           "name": "Instagram (Theta)",
           "bundleIdentifier": "com.burbn.instagram",
           "developerName": "Moe Apps",
-          "version": "449.0.0 (5.0)",
+          "version": "450.1.0 (5.0)",
           "iconURL": "https://raw.githubusercontent.com/MountainofPenguin/moe-altstore/main/icons/instagram-theta.png",
           "subtitle": "Theta tweak build"
         },
@@ -2043,7 +2035,7 @@
           "name": "Twitch (Moe TwitchControl)",
           "bundleIdentifier": "tv.twitch",
           "developerName": "Moe Apps",
-          "version": "31.4.4 (0.0.6)",
+          "version": "31.5 (0.0.6)",
           "iconURL": "https://raw.githubusercontent.com/MountainofPenguin/moe-altstore/main/icons/twitch-twitchcontrol.png",
           "subtitle": "TwitchControl tweak build"
         },
@@ -2051,7 +2043,7 @@
           "name": "Twitch (Twitchv, Moe Tweach)",
           "bundleIdentifier": "tv.twitch",
           "developerName": "Moe Apps",
-          "version": "31.4.4 (2.4.1)",
+          "version": "31.5 (2.4.1)",
           "iconURL": "https://raw.githubusercontent.com/MountainofPenguin/moe-altstore/main/icons/twitchv-tweach.png",
           "subtitle": "Tweach tweak build"
         }
@@ -4836,11 +4828,19 @@
     {
       "id": "apptesters",
       "name": "AppTesters IPA Repo",
-      "appCount": 9539,
+      "appCount": 9540,
       "catalogLimited": true,
       "iconURL": "https://apptesters.org/apptesters-512x512.png",
       "sourceURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/apps.json",
       "apps": [
+        {
+          "name": "VDIT",
+          "bundleIdentifier": "me.imgbase.videoday",
+          "developerName": "",
+          "version": "4.3.1",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/me.imgbase.videoday.png",
+          "subtitle": ""
+        },
         {
           "name": "VDIT",
           "bundleIdentifier": "me.imgbase.videoday",
@@ -6431,14 +6431,6 @@
           "developerName": "",
           "version": "10.30",
           "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.joytunes.SimplyGuitar.png",
-          "subtitle": ""
-        },
-        {
-          "name": "Detail",
-          "bundleIdentifier": "co.detail.duo",
-          "developerName": "",
-          "version": "6.0.2",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/co.detail.duo.png",
           "subtitle": ""
         }
       ]
@@ -8379,7 +8371,7 @@
           "name": "ARMSX2",
           "bundleIdentifier": "com.armsx2.ios",
           "developerName": "ARMSX2",
-          "version": "nightly-20261007",
+          "version": "nightly-20261008",
           "iconURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/ARMSX2/icon.png",
           "subtitle": "PlayStation 2 emulator for ARM64"
         },
@@ -8419,7 +8411,7 @@
           "name": "Husk",
           "bundleIdentifier": "com.husk.app",
           "developerName": "Leviidev",
-          "version": "0.9.0",
+          "version": "1.0.0",
           "iconURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/Husk/icon.png",
           "subtitle": "Android app launcher for iOS"
         },
@@ -8571,7 +8563,7 @@
           "name": "Playport",
           "bundleIdentifier": "dev.playport.app",
           "developerName": "playportdev",
-          "version": "0.3.3",
+          "version": "0.4.0",
           "iconURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/Playport/icon.png",
           "subtitle": "PC games on your iPhone. Natively, no streaming."
         },
@@ -8595,7 +8587,7 @@
           "name": "Roam Control",
           "bundleIdentifier": "com.sean.roamcontrol",
           "developerName": "seanhowarthdev",
-          "version": "0.9.4",
+          "version": "0.9.7",
           "iconURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/Roam-Control/icon.png",
           "subtitle": "Choose, test and move your iPhone's reported location"
         },
@@ -8611,7 +8603,7 @@
           "name": "SpotiFLAC",
           "bundleIdentifier": "com.zarz.spotiflac",
           "developerName": "zarzet",
-          "version": "5.0.7",
+          "version": "5.1.0",
           "iconURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/SpotiFLAC/icon.png",
           "subtitle": "FLAC Downloader for iOS"
         },
