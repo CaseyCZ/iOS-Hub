@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-09T06:12:51Z",
+  "generatedAt": "2026-10-09T13:20:37Z",
   "sources": [
     {
       "id": "utm",
@@ -1268,7 +1268,7 @@
     {
       "id": "ipa-vault",
       "name": "IPA Vault Source Repo",
-      "appCount": 57,
+      "appCount": 60,
       "catalogLimited": false,
       "iconURL": "https://pub-dd800571175348b6a2745b3396360028.r2.dev/ipavault-altstore-repo-logo.png",
       "sourceURL": "https://raw.githubusercontent.com/927tx/IPA-Vault/main/ipavaultsource.json",
@@ -1317,9 +1317,9 @@
           "name": "Google Photos (Gunshot)",
           "bundleIdentifier": "com.google.Photos",
           "developerName": "tqmane & IPA Vault",
-          "version": "7.95.0",
+          "version": "7.96.0",
           "iconURL": "https://pub-dd800571175348b6a2745b3396360028.r2.dev/App%20Icons/Google-Photos-Icons/Google-Photos-AppStore-1024x1024.png",
-          "subtitle": "Google Photos 7.95.0 with Gunshot 0.2.6"
+          "subtitle": "Google Photos 7.96.0 with Gunshot 0.2.6"
         },
         {
           "name": "iMe (MxGram)",
@@ -1360,6 +1360,14 @@
           "version": "8.5.6",
           "iconURL": "https://pub-dd800571175348b6a2745b3396360028.r2.dev/App%20Icons/Infuse-icons/Infuse-AppStore-1024x1024.png",
           "subtitle": "Infuse 8.5.6 with Infuse Plus 2.6"
+        },
+        {
+          "name": "Husk",
+          "bundleIdentifier": "com.husk.app",
+          "developerName": "Leviidev & IPA Vault",
+          "version": "1.1.0",
+          "iconURL": "https://pub-dd800571175348b6a2745b3396360028.r2.dev/App%20Icons/Husk-Icons/Icon-Default_Normal.png",
+          "subtitle": "Husk 1.1.0"
         },
         {
           "name": "Instagram (Regram 6.3 Cracked)",
@@ -1509,41 +1517,57 @@
           "name": "Telegram (MxGram)",
           "bundleIdentifier": "ph.telegra.Telegraph.mxgram",
           "developerName": "m1ronx1412 & IPA Vault",
-          "version": "12.9.4",
+          "version": "13.0",
           "iconURL": "https://pub-dd800571175348b6a2745b3396360028.r2.dev/App%20Icons/Telegram-Icons/Telegram-AppStore-1024x1024.png",
-          "subtitle": "Telegram 12.9.4 with MxGram 1.0.0"
+          "subtitle": "Telegram 13.0 with MxGram 1.0.0"
         },
         {
           "name": "Telegram (iQTele)",
           "bundleIdentifier": "ph.telegra.Telegraph",
           "developerName": "7MD & IPA Vault",
-          "version": "12.9.4",
+          "version": "13.0",
           "iconURL": "https://pub-dd800571175348b6a2745b3396360028.r2.dev/App%20Icons/Telegram-Icons/Telegram-AppStore-1024x1024.png",
-          "subtitle": "Telegram 12.9.4 with iQTele 1.2"
+          "subtitle": "Telegram 13.0 with iQTele 1.4"
         },
         {
           "name": "Telegram (TGExtra)",
           "bundleIdentifier": "ph.telegra.Telegraph.tgextra",
           "developerName": "swiftleopard & IPA Vault",
-          "version": "12.9.4",
+          "version": "13.0",
           "iconURL": "https://pub-dd800571175348b6a2745b3396360028.r2.dev/App%20Icons/Telegram-Icons/Telegram-AppStore-1024x1024.png",
-          "subtitle": "Telegram 12.9.4 with TGExtra 1.7.8"
+          "subtitle": "Telegram 13.0 with TGExtra 1.7.8"
         },
         {
-          "name": "Spotify (Vitrine 1.0.0-b5)",
+          "name": "Spotify (EeveeSpotify 7.0.0)",
+          "bundleIdentifier": "com.spotify.client.eeveespotify",
+          "developerName": "skopevoj & IPA Vault",
+          "version": "9.1.90",
+          "iconURL": "https://pub-dd800571175348b6a2745b3396360028.r2.dev/App%20Icons/Spotify-Icons/Spotify-AppStore-1024x1024.png",
+          "subtitle": "Spotify 9.1.90 with EeveeSpotify 7.0.0"
+        },
+        {
+          "name": "Spotify (EeveeSpotify 7.0.0) (No Plugins)",
+          "bundleIdentifier": "com.spotify.client.eeveespotify.noplugins",
+          "developerName": "skopevoj & IPA Vault",
+          "version": "9.1.90",
+          "iconURL": "https://pub-dd800571175348b6a2745b3396360028.r2.dev/App%20Icons/Spotify-Icons/Spotify-AppStore-1024x1024.png",
+          "subtitle": "Spotify 9.1.90 with EeveeSpotify 7.0.0 (No Plugins)"
+        },
+        {
+          "name": "Spotify (Vitrine 1.0.0-b7)",
           "bundleIdentifier": "com.spotify.client",
           "developerName": "MyNameIsJeff & skopevoj & IPA Vault",
           "version": "9.1.88",
           "iconURL": "https://pub-dd800571175348b6a2745b3396360028.r2.dev/App%20Icons/Spotify-Icons/Spotify-AppStore-1024x1024.png",
-          "subtitle": "Spotify 9.1.88 with Vitrine 1.0.0-b5"
+          "subtitle": "Spotify 9.1.88 with Vitrine 1.0.0-b7"
         },
         {
-          "name": "Spotify (Vitrine 1.0.0-b5) (No Plugins)",
+          "name": "Spotify (Vitrine 1.0.0-b7) (No Plugins)",
           "bundleIdentifier": "com.spotify.client.vitrine.noplugins",
           "developerName": "MyNameIsJeff & skopevoj & IPA Vault",
           "version": "9.1.88",
           "iconURL": "https://pub-dd800571175348b6a2745b3396360028.r2.dev/App%20Icons/Spotify-Icons/Spotify-AppStore-1024x1024.png",
-          "subtitle": "Spotify 9.1.88 with Vitrine 1.0.0-b5 (No Plugins)"
+          "subtitle": "Spotify 9.1.88 with Vitrine 1.0.0-b7 (No Plugins)"
         },
         {
           "name": "Spotify (EeveeSpotify + Chroma.pw) (9.1.78)",
@@ -1602,12 +1626,12 @@
           "subtitle": "Turrit 1.5.5 with TGExtra 1.7.7"
         },
         {
-          "name": "TwitchUnblock",
+          "name": "TwitchUnblock 1.2.16",
           "bundleIdentifier": "com.ipavault.twitchunblock",
           "developerName": "MXFia19 & IPA Vault",
-          "version": "1.2.2",
+          "version": "1.2.16",
           "iconURL": "https://pub-dd800571175348b6a2745b3396360028.r2.dev/App%20Icons/Twitch-Tweach-TC-Icons/Twitch-AppStore-1024x1024.png",
-          "subtitle": "TwitchUnblock 1.2.2"
+          "subtitle": "TwitchUnblock 1.2.16"
         },
         {
           "name": "Twitch",
@@ -1629,33 +1653,33 @@
           "name": "Twitter NFB",
           "bundleIdentifier": "com.atebits.Tweetie2.twitter",
           "developerName": "orionblur & IPA Vault & lucaspedrosa",
-          "version": "12.32.1",
+          "version": "12.33",
           "iconURL": "https://pub-dd800571175348b6a2745b3396360028.r2.dev/App%20Icons/Twitter-12.14-Icons/Twitter-AppStore-1024x1024.png",
-          "subtitle": "Twitter 12.32.1 with NFB 7.1.0"
+          "subtitle": "Twitter 12.33 with NFB 7.1.0"
         },
         {
           "name": "Twitter NFB + TWI",
           "bundleIdentifier": "com.atebits.Tweetie2.twittertwi",
           "developerName": "orionblur & dens0r & IPA Vault & lucaspedrosa",
-          "version": "12.32.1",
+          "version": "12.33",
           "iconURL": "https://pub-dd800571175348b6a2745b3396360028.r2.dev/App%20Icons/Twitter-12.14-Icons/Twitter-AppStore-1024x1024.png",
-          "subtitle": "Twitter 12.32.1 with NFB 7.1.0 + TWIGalaxy 1.14"
+          "subtitle": "Twitter 12.33 with NFB 7.1.0 + TWIGalaxy 1.14"
         },
         {
           "name": "X NFB",
           "bundleIdentifier": "com.atebits.Tweetie2",
           "developerName": "orionblur & IPA Vault & lucaspedrosa",
-          "version": "12.32.1",
+          "version": "12.33",
           "iconURL": "https://pub-dd800571175348b6a2745b3396360028.r2.dev/App%20Icons/X-Icons/X-AppStore-1024x1024.png",
-          "subtitle": "X 12.32.1 with NFB 7.1.0"
+          "subtitle": "X 12.33 with NFB 7.1.0"
         },
         {
           "name": "X NFB + TWI",
           "bundleIdentifier": "com.atebits.Tweetie2.twi",
           "developerName": "orionblur & dens0r & IPA Vault & lucaspedrosa",
-          "version": "12.32.1",
+          "version": "12.33",
           "iconURL": "https://pub-dd800571175348b6a2745b3396360028.r2.dev/App%20Icons/X-Icons/X-AppStore-1024x1024.png",
-          "subtitle": "X 12.32.1 with NFB 7.1.0 + TWIGalaxy 1.14"
+          "subtitle": "X 12.33 with NFB 7.1.0 + TWIGalaxy 1.14"
         },
         {
           "name": "YouTube (YouMod 2.0.0) (iOS 16+)",
@@ -3386,11 +3410,19 @@
     {
       "id": "cypwn-ipa",
       "name": "CyPwn IPA Library",
-      "appCount": 209,
+      "appCount": 210,
       "catalogLimited": true,
       "iconURL": "https://repo.cypwn.xyz/assets/images/cypwn_small.png",
       "sourceURL": "https://ipa.cypwn.xyz/cypwn.json",
       "apps": [
+        {
+          "name": "Stremio-2.0.7",
+          "bundleIdentifier": "com.stremio.pal",
+          "developerName": "Stremio-2.0.7 x CyPwn",
+          "version": "2.0.7",
+          "iconURL": "https://ipa.cypwn.xyz/serve/icons/Stremio-2.0.7.png",
+          "subtitle": ""
+        },
         {
           "name": "Stremio-2.0.6",
           "bundleIdentifier": "com.stremio.pal",
@@ -4821,14 +4853,6 @@
           "developerName": "Star_Map_2.6_Satella x CyPwn",
           "version": "2.6",
           "iconURL": "https://ipa.cypwn.xyz/serve/icons/Star_Map_2.6_Satella.png",
-          "subtitle": ""
-        },
-        {
-          "name": "RefacePro_3.12.0",
-          "bundleIdentifier": "cypwn.RefacePro_3.12.0.3.12.0",
-          "developerName": "RefacePro_3.12.0 x CyPwn",
-          "version": "3.12.0",
-          "iconURL": "https://ipa.cypwn.xyz/serve/icons/RefacePro_3.12.0.png",
           "subtitle": ""
         }
       ]
@@ -8419,7 +8443,7 @@
           "name": "Husk",
           "bundleIdentifier": "com.husk.app",
           "developerName": "Leviidev",
-          "version": "1.0.1",
+          "version": "1.1.0",
           "iconURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/Husk/icon.png",
           "subtitle": "Android app launcher for iOS"
         },
@@ -8659,7 +8683,7 @@
           "name": "ZhihuMinusMinus",
           "bundleIdentifier": "com.huamu013.ZhihuMinusMinus",
           "developerName": "huamurui",
-          "version": "0.8.0",
+          "version": "0.8.1",
           "iconURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/ZhihuMinusMinus/icon.png",
           "subtitle": "轻量、纯净的第三方知乎客户端"
         }
