@@ -1,0 +1,45 @@
+name: Vendor DEB to IPA runtime
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  vendor:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v7
+
+      - name: Download pinned browser runtimes
+        run: |
+          set -euo pipefail
+
+          mkdir -p vendor/libarchive
+          LIBARCHIVE="https://cdn.jsdelivr.net/npm/libarchive.js@2.0.2"
+          curl -fL "$LIBARCHIVE/dist/libarchive.js" -o vendor/libarchive/libarchive.js
+          curl -fL "$LIBARCHIVE/dist/worker-bundle.js" -o vendor/libarchive/worker-bundle.js
+          curl -fL "$LIBARCHIVE/dist/libarchive.wasm" -o vendor/libarchive/libarchive.wasm
+          curl -fL "$LIBARCHIVE/LICENSE" -o vendor/libarchive/LICENSE
+
+          mkdir -p vendor/jszip
+          JSZIP="https://cdn.jsdelivr.net/npm/jszip@3.10.1"
+          curl -fL "$JSZIP/dist/jszip.min.js" -o vendor/jszip/jszip.min.js
+          curl -fL "$JSZIP/LICENSE.markdown" -o vendor/jszip/LICENSE.markdown
+
+      - name: Apply iOS Hub compatibility patch
+        run: python tools/patch_libarchive_runtime.py
+
+      - name: Commit runtimes
+        run: |
+          git config user.name "CaseyCZ"
+          git config user.email "25530709+CaseyCZ@users.noreply.github.com"
+          git add vendor/libarchive vendor/jszip
+          if git diff --cached --quiet; then
+            echo "Runtimes already up to date."
+          else
+            git commit -m "Vendor DEB converter runtimes [skip ci]"
+            git push
+          fi

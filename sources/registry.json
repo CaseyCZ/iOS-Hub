@@ -1,0 +1,2812 @@
+{
+  "updated": "2026-10-01",
+  "attribution": {
+    "references": [
+      {
+        "name": "AltStore Trusted Sources",
+        "url": "https://github.com/altstoreio/FAQ/blob/main/altstore-world/trusted-sources.md",
+        "note": "Official AltStore list of trusted sources reviewed against AltStore's safety standards.",
+        "icon": "assets/icons/altstore.svg"
+      },
+      {
+        "name": "SideStore trustedapps.json",
+        "url": "https://github.com/SideStore/SideStore/blob/develop/trustedapps.json",
+        "note": "Official SideStore trusted-source list; iOS Hub still checks current availability and source validity independently.",
+        "icon": "assets/icons/sidestore.svg"
+      },
+      {
+        "name": "awesome-altstore",
+        "url": "https://github.com/victordedomenico/awesome-altstore",
+        "note": "Discovery reference; sources are independently checked before being listed.",
+        "icon": "assets/icons/awesome-altstore.svg"
+      },
+      {
+        "name": "SideStore default sources",
+        "url": "https://github.com/SideStore/default-sources/blob/main/sources.json",
+        "note": "Official SideStore default-source list used for discovery and cross-checking; live validity is checked independently.",
+        "icon": "assets/icons/sidestore.svg"
+      },
+      {
+        "name": "AltStore PAL Directory",
+        "url": "https://explore.alt.store/directory",
+        "note": "Official AltStore PAL directory for verified marketplace apps and sources.",
+        "icon": "assets/icons/altstore.svg"
+      }
+    ]
+  },
+  "sources": [
+    {
+      "id": "utm",
+      "name": "UTM Repository",
+      "url": "https://alt.getutm.app/",
+      "website": "https://getutm.app/",
+      "mode": "classic",
+      "official": true,
+      "trusted": true,
+      "recommended": true,
+      "description": {
+        "cs": "Oficiální zdroj UTM a UTM SE pro virtualizaci a emulaci na iOS.",
+        "en": "Official UTM and UTM SE source for virtualization and emulation on iOS."
+      },
+      "tags": [
+        "virtualization",
+        "emulator",
+        "ipa",
+        "utility"
+      ],
+      "developer": "UTM Team",
+      "compliance": {
+        "reviewStatus": "public-metadata",
+        "binaryRehost": false,
+        "evidenceURL": "https://alt.getutm.app/",
+        "reviewedAt": "2026-09-30",
+        "note": "Original public Source URL is listed for discovery and direct install only. iOS Hub does not copy, merge, cache, or rehost the Source feed or IPA binaries."
+      },
+      "iconURL": "https://alt.getutm.app/icon.png"
+    },
+    {
+      "id": "provenance",
+      "name": "Provenance Emulator",
+      "url": "https://provenance-emu.com/apps.json",
+      "website": "https://provenance-emu.com/",
+      "mode": "classic",
+      "official": true,
+      "trusted": true,
+      "recommended": true,
+      "description": {
+        "cs": "Oficiální zdroj emulátoru Provenance pro více retro platforem.",
+        "en": "Official Provenance multi-system retro emulator source."
+      },
+      "tags": [
+        "emulator",
+        "games",
+        "retro",
+        "ipa"
+      ],
+      "developer": "Provenance Team",
+      "compliance": {
+        "reviewStatus": "public-metadata",
+        "binaryRehost": false,
+        "evidenceURL": "https://provenance-emu.com/apps.json",
+        "reviewedAt": "2026-09-30",
+        "note": "Original public Source URL is listed for discovery and direct install only. iOS Hub does not copy, merge, cache, or rehost the Source feed or IPA binaries."
+      },
+      "iconURL": "https://raw.githubusercontent.com/Provenance-Emu/Provenance/develop/Provenance/Resources/Assets.xcassets/AppIcon.appiconset/iTunesArtwork%402x.png"
+    },
+    {
+      "id": "ish",
+      "name": "iSH",
+      "url": "https://ish.app/altstore.json",
+      "website": "https://ish.app/",
+      "mode": "classic",
+      "official": true,
+      "trusted": false,
+      "recommended": true,
+      "description": {
+        "cs": "Oficiální zdroj iSH — linuxové shell prostředí běžící lokálně na iOS.",
+        "en": "Official iSH source — a Linux shell environment running locally on iOS."
+      },
+      "tags": [
+        "linux",
+        "terminal",
+        "developer",
+        "utility"
+      ],
+      "developer": "iSH Team",
+      "compliance": {
+        "reviewStatus": "public-metadata",
+        "binaryRehost": false,
+        "evidenceURL": "https://ish.app/altstore.json",
+        "reviewedAt": "2026-09-30",
+        "note": "Original public Source URL is listed for discovery and direct install only. iOS Hub does not copy, merge, cache, or rehost the Source feed or IPA binaries."
+      },
+      "iconURL": "https://ish.app/assets/icon-full.png"
+    },
+    {
+      "id": "flycast",
+      "name": "Flycast",
+      "url": "https://flyinghead.github.io/flycast-builds/altstore.json",
+      "website": "https://github.com/flyinghead/flycast",
+      "mode": "classic",
+      "official": true,
+      "trusted": true,
+      "recommended": true,
+      "description": {
+        "cs": "Zdroj Flycast pro emulaci Dreamcast, Naomi a Atomiswave.",
+        "en": "Flycast source for Dreamcast, Naomi and Atomiswave emulation."
+      },
+      "tags": [
+        "emulator",
+        "games",
+        "dreamcast",
+        "retro",
+        "ipa"
+      ],
+      "developer": "Flycast Team",
+      "compliance": {
+        "reviewStatus": "public-metadata",
+        "binaryRehost": false,
+        "evidenceURL": "https://flyinghead.github.io/flycast-builds/altstore.json",
+        "reviewedAt": "2026-09-30",
+        "note": "Original public Source URL is listed for discovery and direct install only. iOS Hub does not copy, merge, cache, or rehost the Source feed or IPA binaries."
+      },
+      "iconURL": "https://github.com/flyinghead/flycast/raw/master/shell/linux/flycast.png"
+    },
+    {
+      "id": "sidestore-community",
+      "name": "SideStore Community",
+      "url": "https://community-apps.sidestore.io/sidecommunity.json",
+      "website": "https://sidestore.io/",
+      "mode": "sidestore",
+      "official": true,
+      "trusted": true,
+      "recommended": true,
+      "description": {
+        "cs": "Velký komunitní katalog SideStore s aplikacemi a emulátory od různých vývojářů.",
+        "en": "Large SideStore community catalog with apps and emulators from multiple developers."
+      },
+      "tags": [
+        "sidestore",
+        "community",
+        "catalog",
+        "apps",
+        "games"
+      ],
+      "developer": "SideStore Team",
+      "urls": {
+        "classic": "https://community-apps.sidestore.io/sidecommunity.json"
+      },
+      "installers": [
+        "altstore",
+        "sidestore",
+        "livecontainer",
+        "flarestore",
+        "feather"
+      ],
+      "compliance": {
+        "reviewStatus": "public-metadata",
+        "binaryRehost": false,
+        "evidenceURL": "https://community-apps.sidestore.io/sidecommunity.json",
+        "reviewedAt": "2026-09-30",
+        "note": "Original public Source URL is listed for discovery and direct install only. iOS Hub does not copy, merge, cache, or rehost the Source feed or IPA binaries."
+      },
+      "iconURL": "https://sidestore.io/assets/icon.png"
+    },
+    {
+      "id": "sidestore-official",
+      "name": "SideStore Official",
+      "url": "https://apps.sidestore.io/",
+      "website": "https://sidestore.io/",
+      "mode": "sidestore",
+      "official": true,
+      "trusted": true,
+      "recommended": true,
+      "description": {
+        "cs": "Oficiální source SideStore a dalších aplikací týmu SideStore.",
+        "en": "Official source for SideStore and other SideStore team apps."
+      },
+      "tags": [
+        "sidestore",
+        "official",
+        "utility",
+        "signing"
+      ],
+      "developer": "SideStore Team",
+      "urls": {
+        "classic": "https://apps.sidestore.io/"
+      },
+      "installers": [
+        "altstore",
+        "sidestore",
+        "livecontainer",
+        "flarestore",
+        "feather"
+      ],
+      "compliance": {
+        "reviewStatus": "public-metadata",
+        "binaryRehost": false,
+        "evidenceURL": "https://apps.sidestore.io/",
+        "reviewedAt": "2026-09-30",
+        "note": "Original public Source URL is listed for discovery and direct install only. iOS Hub does not copy, merge, cache, or rehost the Source feed or IPA binaries."
+      },
+      "iconURL": "https://apps.sidestore.io/apps/sidestore/v0.1.1/icon.png"
+    },
+    {
+      "id": "stikdebug",
+      "name": "StikDebug",
+      "url": "https://stikdebug.xyz/index.json",
+      "website": "https://stikdebug.xyz/",
+      "mode": "classic",
+      "official": true,
+      "trusted": true,
+      "recommended": false,
+      "description": {
+        "cs": "Trusted source projektu StikDebug pro vývojářské a diagnostické nástroje.",
+        "en": "Trusted StikDebug project source for developer and diagnostic tools."
+      },
+      "tags": [
+        "developer",
+        "debug",
+        "utility",
+        "trusted"
+      ],
+      "developer": "StikDebug",
+      "compliance": {
+        "reviewStatus": "public-metadata",
+        "binaryRehost": false,
+        "evidenceURL": "https://stikdebug.xyz/index.json",
+        "reviewedAt": "2026-09-30",
+        "note": "Original public Source URL is listed for discovery and direct install only. iOS Hub does not copy, merge, cache, or rehost the Source feed or IPA binaries."
+      },
+      "iconURL": "https://github.com/StikDebug/StikDebug/blob/main/assets/StikDebug.png?raw=true"
+    },
+    {
+      "id": "livecontainer",
+      "name": "LiveContainer Stable",
+      "url": "https://github.com/LiveContainer/LiveContainer/releases/download/1.0/apps.json",
+      "website": "https://github.com/LiveContainer/LiveContainer",
+      "mode": "classic",
+      "official": true,
+      "trusted": true,
+      "recommended": true,
+      "description": {
+        "cs": "Oficiální stabilní source pro LiveContainer — launcher iOS aplikací bez samostatné instalace každé aplikace.",
+        "en": "Official stable source for LiveContainer — an iOS app launcher that runs apps without installing each one separately."
+      },
+      "tags": [
+        "livecontainer",
+        "utility",
+        "sideload",
+        "trusted",
+        "official"
+      ],
+      "developer": "LiveContainer Team",
+      "compliance": {
+        "reviewStatus": "public-metadata",
+        "binaryRehost": false,
+        "evidenceURL": "https://github.com/LiveContainer/LiveContainer/releases/download/1.0/apps.json",
+        "reviewedAt": "2026-09-30",
+        "note": "Original public Source URL is listed for discovery and direct install only. iOS Hub does not copy, merge, cache, or rehost the Source feed or IPA binaries."
+      },
+      "iconURL": "https://raw.githubusercontent.com/LiveContainer/LiveContainer/main/screenshots/AppIcon1024.png"
+    },
+    {
+      "id": "livecontainer-nightly",
+      "name": "LiveContainer Nightly",
+      "url": "https://github.com/LiveContainer/LiveContainer/releases/download/nightly/apps_nightly.json",
+      "website": "https://github.com/LiveContainer/LiveContainer",
+      "mode": "classic",
+      "official": true,
+      "trusted": true,
+      "recommended": false,
+      "description": {
+        "cs": "Oficiální nightly source LiveContainer s nejnovějšími testovacími buildy.",
+        "en": "Official LiveContainer nightly source with the latest development builds."
+      },
+      "tags": [
+        "livecontainer",
+        "utility",
+        "sideload",
+        "nightly",
+        "official"
+      ],
+      "developer": "LiveContainer Team",
+      "compliance": {
+        "reviewStatus": "public-metadata",
+        "binaryRehost": false,
+        "evidenceURL": "https://github.com/LiveContainer/LiveContainer/releases/download/nightly/apps_nightly.json",
+        "reviewedAt": "2026-09-30",
+        "note": "Original public Source URL is listed for discovery and direct install only. iOS Hub does not copy, merge, cache, or rehost the Source feed or IPA binaries."
+      },
+      "iconURL": "https://raw.githubusercontent.com/LiveContainer/LiveContainer/main/screenshots/AppIcon1024.png"
+    },
+    {
+      "id": "manicemu",
+      "name": "Manic EMU",
+      "url": "https://apps.manicemu.site/altstore",
+      "website": "https://manicemu.site/",
+      "mode": "classic",
+      "official": true,
+      "trusted": true,
+      "recommended": true,
+      "description": {
+        "cs": "Trusted source pro Manic EMU a herní emulaci na iOS.",
+        "en": "Trusted source for Manic EMU and game emulation on iOS."
+      },
+      "tags": [
+        "games",
+        "emulator",
+        "retro",
+        "trusted"
+      ],
+      "developer": "Manic EMU",
+      "compliance": {
+        "reviewStatus": "public-metadata",
+        "binaryRehost": false,
+        "evidenceURL": "https://apps.manicemu.site/altstore",
+        "reviewedAt": "2026-09-30",
+        "note": "Original public Source URL is listed for discovery and direct install only. iOS Hub does not copy, merge, cache, or rehost the Source feed or IPA binaries."
+      },
+      "iconURL": "https://apps.manicemu.site/images/manicicon.jpg"
+    },
+    {
+      "id": "flycast-ios",
+      "name": "Flycast iOS",
+      "url": "https://github.com/chachillie/Flycast-iOS/raw/refs/heads/main/flycast-ios.json",
+      "website": "https://github.com/chachillie/Flycast-iOS",
+      "mode": "classic",
+      "official": true,
+      "trusted": true,
+      "recommended": false,
+      "description": {
+        "cs": "Trusted iOS source pro alternativní Flycast buildy.",
+        "en": "Trusted iOS source for alternative Flycast builds."
+      },
+      "tags": [
+        "games",
+        "emulator",
+        "dreamcast",
+        "trusted"
+      ],
+      "developer": "chachillie",
+      "compliance": {
+        "reviewStatus": "licensed",
+        "binaryRehost": false,
+        "license": "GPL-2.0-only",
+        "evidenceURL": "https://github.com/chachillie/Flycast-iOS/blob/main/LICENSE",
+        "reviewedAt": "2026-09-30",
+        "note": "Original public Source URL is listed for discovery and direct install only. iOS Hub does not copy, merge, cache, or rehost the Source feed or IPA binaries. License evidence: GPL-2.0-only."
+      },
+      "iconURL": "https://github.com/chachillie/Flycast-iOS/raw/main/shell/linux/flycast.png"
+    },
+    {
+      "id": "geode-ios",
+      "name": "Geode iOS",
+      "url": "https://ios-repo.geode-sdk.org/altsource/main.json",
+      "website": "https://geode-sdk.org/",
+      "mode": "classic",
+      "official": true,
+      "trusted": true,
+      "recommended": false,
+      "description": {
+        "cs": "Trusted source projektu Geode pro iOS.",
+        "en": "Trusted source for the Geode iOS project."
+      },
+      "tags": [
+        "games",
+        "mods",
+        "geometry-dash",
+        "trusted"
+      ],
+      "developer": "Geode Team",
+      "compliance": {
+        "reviewStatus": "public-metadata",
+        "binaryRehost": false,
+        "evidenceURL": "https://ios-repo.geode-sdk.org/altsource/main.json",
+        "reviewedAt": "2026-09-30",
+        "note": "Original public Source URL is listed for discovery and direct install only. iOS Hub does not copy, merge, cache, or rehost the Source feed or IPA binaries."
+      },
+      "iconURL": "https://ios-repo.geode-sdk.org/img/AltSourceIcon.png"
+    },
+    {
+      "id": "retrosekai",
+      "name": "RetroSekaï",
+      "url": "https://repo.untitledcharts.com",
+      "website": "https://repo.untitledcharts.com",
+      "mode": "classic",
+      "official": false,
+      "trusted": true,
+      "recommended": false,
+      "description": {
+        "cs": "Trusted komunitní source zaměřený na retro a herní aplikace.",
+        "en": "Trusted community source focused on retro and gaming apps."
+      },
+      "tags": [
+        "games",
+        "retro",
+        "community",
+        "trusted"
+      ],
+      "developer": "RetroSekaï",
+      "compliance": {
+        "reviewStatus": "public-metadata",
+        "binaryRehost": false,
+        "evidenceURL": "https://repo.untitledcharts.com",
+        "reviewedAt": "2026-09-30",
+        "note": "Original public Source URL is listed for discovery and direct install only. iOS Hub does not copy, merge, cache, or rehost the Source feed or IPA binaries."
+      },
+      "iconURL": "https://repo.untitledcharts.com/assets/logo.png"
+    },
+    {
+      "id": "oatmealdome",
+      "name": "OatmealDome",
+      "url": "https://altstore.oatmealdome.me",
+      "website": "https://oatmealdome.me/",
+      "mode": "classic",
+      "official": true,
+      "trusted": true,
+      "recommended": true,
+      "description": {
+        "cs": "Trusted source OatmealDome, známý hlavně díky DolphiniOS.",
+        "en": "Trusted OatmealDome source, best known for DolphiniOS."
+      },
+      "tags": [
+        "games",
+        "emulator",
+        "dolphinios",
+        "trusted"
+      ],
+      "developer": "OatmealDome",
+      "compliance": {
+        "reviewStatus": "public-metadata",
+        "binaryRehost": false,
+        "evidenceURL": "https://altstore.oatmealdome.me",
+        "reviewedAt": "2026-09-30",
+        "note": "Original public Source URL is listed for discovery and direct install only. iOS Hub does not copy, merge, cache, or rehost the Source feed or IPA binaries."
+      },
+      "iconURL": "https://cdn.oatmealdome.me/dolphinios/AppIcon.appiconset/ios_marketing1024x1024.png"
+    },
+    {
+      "id": "crystall1ne",
+      "name": "crystall1ne",
+      "url": "https://alt.crystall1ne.dev",
+      "website": "https://crystall1ne.dev/",
+      "mode": "classic",
+      "official": true,
+      "trusted": true,
+      "recommended": false,
+      "description": {
+        "cs": "Trusted AltStore source vývojáře crystall1ne.",
+        "en": "Trusted AltStore source by crystall1ne."
+      },
+      "tags": [
+        "apps",
+        "utility",
+        "trusted"
+      ],
+      "developer": "crystall1ne",
+      "compliance": {
+        "reviewStatus": "public-metadata",
+        "binaryRehost": false,
+        "evidenceURL": "https://alt.crystall1ne.dev",
+        "reviewedAt": "2026-09-30",
+        "note": "Original public Source URL is listed for discovery and direct install only. iOS Hub does not copy, merge, cache, or rehost the Source feed or IPA binaries."
+      },
+      "iconURL": "https://alt.crystall1ne.dev/resources/media/the_icon.png"
+    },
+    {
+      "id": "pokemmo",
+      "name": "PokeMMO",
+      "url": "https://pokemmo.eu/altstore/",
+      "website": "https://pokemmo.com/",
+      "mode": "classic",
+      "official": true,
+      "trusted": true,
+      "recommended": true,
+      "description": {
+        "cs": "Oficiální trusted source pro PokeMMO na iOS.",
+        "en": "Official trusted source for PokeMMO on iOS."
+      },
+      "tags": [
+        "games",
+        "pokemon",
+        "mmo",
+        "trusted"
+      ],
+      "developer": "PokeMMO Team",
+      "compliance": {
+        "reviewStatus": "public-metadata",
+        "binaryRehost": false,
+        "evidenceURL": "https://pokemmo.eu/altstore/",
+        "reviewedAt": "2026-09-30",
+        "note": "Original public Source URL is listed for discovery and direct install only. iOS Hub does not copy, merge, cache, or rehost the Source feed or IPA binaries."
+      },
+      "iconURL": "https://pokemmo.com/build/images/altstore.f5930b35.png"
+    },
+    {
+      "id": "odyssey",
+      "name": "Odyssey",
+      "url": "https://theodyssey.dev/altstore/odysseysource.json",
+      "website": "https://theodyssey.dev/",
+      "mode": "classic",
+      "official": true,
+      "trusted": true,
+      "recommended": false,
+      "description": {
+        "cs": "Trusted source projektu Odyssey.",
+        "en": "Trusted source for the Odyssey project."
+      },
+      "tags": [
+        "utility",
+        "ios",
+        "trusted"
+      ],
+      "developer": "Odyssey Team",
+      "compliance": {
+        "reviewStatus": "public-metadata",
+        "binaryRehost": false,
+        "evidenceURL": "https://theodyssey.dev/altstore/odysseysource.json",
+        "reviewedAt": "2026-09-30",
+        "note": "Original public Source URL is listed for discovery and direct install only. iOS Hub does not copy, merge, cache, or rehost the Source feed or IPA binaries."
+      },
+      "iconURL": "https://theodyssey.dev/assets/images/icon.png"
+    },
+    {
+      "id": "yattee",
+      "name": "Yattee",
+      "url": "https://raw.githubusercontent.com/yattee/yattee/main/altstore-source.json",
+      "website": "https://github.com/yattee/yattee",
+      "mode": "classic",
+      "official": true,
+      "trusted": false,
+      "recommended": true,
+      "description": {
+        "cs": "Open-source video klient: YouTube přes Invidious/Piped, PiP, background audio, SponsorBlock a další funkce.",
+        "en": "Open-source video client with YouTube via Invidious/Piped, PiP, background audio, SponsorBlock and more."
+      },
+      "tags": [
+        "youtube",
+        "video",
+        "media",
+        "privacy",
+        "open-source"
+      ],
+      "developer": "Yattee Team",
+      "compliance": {
+        "reviewStatus": "licensed",
+        "binaryRehost": false,
+        "license": "AGPL-3.0-only",
+        "evidenceURL": "https://github.com/yattee/yattee/blob/main/LICENSE",
+        "reviewedAt": "2026-09-30",
+        "note": "Original public Source URL is listed for discovery and direct install only. iOS Hub does not copy, merge, cache, or rehost the Source feed or IPA binaries. License evidence: AGPL-3.0-only."
+      },
+      "iconURL": "https://raw.githubusercontent.com/yattee/yattee/main/Assets/yattee-icon-512.png"
+    },
+    {
+      "id": "ignited",
+      "name": "Ignited",
+      "url": "https://altstore.ignitedemulator.com/",
+      "website": "https://github.com/litritt/Ignited",
+      "mode": "classic",
+      "official": true,
+      "trusted": true,
+      "recommended": true,
+      "description": {
+        "cs": "Trusted source pro multi-system herní emulátor Ignited.",
+        "en": "Trusted source for the Ignited multi-system game emulator."
+      },
+      "tags": [
+        "games",
+        "emulator",
+        "retro",
+        "trusted"
+      ],
+      "developer": "litritt",
+      "compliance": {
+        "reviewStatus": "public-metadata",
+        "binaryRehost": false,
+        "evidenceURL": "https://altstore.ignitedemulator.com/",
+        "reviewedAt": "2026-09-30",
+        "note": "Original public Source URL is listed for discovery and direct install only. iOS Hub does not copy, merge, cache, or rehost the Source feed or IPA binaries."
+      },
+      "iconURL": "https://cdn.ignitedemulator.com/assets/altstore-icon.png"
+    },
+    {
+      "id": "mona",
+      "name": "Mona",
+      "url": "https://raw.githubusercontent.com/delia-cheminot/mona-hrt/refs/heads/main/ios_source.json",
+      "website": "https://github.com/delia-cheminot/mona-hrt",
+      "mode": "classic",
+      "official": true,
+      "trusted": true,
+      "recommended": false,
+      "description": {
+        "cs": "Trusted source projektu Mona.",
+        "en": "Trusted source for the Mona project."
+      },
+      "tags": [
+        "app",
+        "trusted"
+      ],
+      "developer": "delia-cheminot",
+      "compliance": {
+        "reviewStatus": "public-metadata",
+        "binaryRehost": false,
+        "evidenceURL": "https://raw.githubusercontent.com/delia-cheminot/mona-hrt/refs/heads/main/ios_source.json",
+        "reviewedAt": "2026-09-30",
+        "note": "Original public Source URL is listed for discovery and direct install only. iOS Hub does not copy, merge, cache, or rehost the Source feed or IPA binaries."
+      },
+      "iconURL": "https://i.imgur.com/PeIdqwy.png"
+    },
+    {
+      "id": "vortx",
+      "name": "VortX",
+      "url": "https://raw.githubusercontent.com/VortXTV/VortX/main/altstore/source.json",
+      "website": "https://vortx.tv/",
+      "mode": "classic",
+      "official": true,
+      "trusted": false,
+      "recommended": false,
+      "description": {
+        "cs": "Open-source nativní streaming klient pro Apple zařízení postavený na stremio-core a libmpv.",
+        "en": "Open-source native streaming client for Apple devices built on stremio-core and libmpv."
+      },
+      "tags": [
+        "video",
+        "streaming",
+        "stremio",
+        "media",
+        "open-source"
+      ],
+      "developer": "VortXTV",
+      "compliance": {
+        "reviewStatus": "licensed",
+        "binaryRehost": false,
+        "license": "GPL-3.0-only",
+        "evidenceURL": "https://github.com/VortXTV/VortX/blob/main/LICENSE",
+        "reviewedAt": "2026-09-30",
+        "note": "Original public Source URL is listed for discovery and direct install only. iOS Hub does not copy, merge, cache, or rehost the Source feed or IPA binaries. License evidence: GPL-3.0-only."
+      },
+      "iconURL": "https://raw.githubusercontent.com/VortXTV/VortX/main/docs/logo.png"
+    },
+    {
+      "id": "stremio-official-pal",
+      "name": "Stremio Official",
+      "url": "https://dl.strem.io/apple/altstore/source.json",
+      "website": "https://www.stremio.com/",
+      "mode": "pal",
+      "official": true,
+      "trusted": false,
+      "recommended": true,
+      "description": {
+        "cs": "Oficiální AltStore PAL source Stremio pro iOS.",
+        "en": "Official Stremio AltStore PAL source for iOS."
+      },
+      "tags": [
+        "pal",
+        "video",
+        "streaming",
+        "stremio",
+        "media",
+        "official"
+      ],
+      "developer": "Stremio Team",
+      "compliance": {
+        "reviewStatus": "public-metadata",
+        "binaryRehost": false,
+        "evidenceURL": "https://dl.strem.io/apple/altstore/source.json",
+        "reviewedAt": "2026-09-30",
+        "note": "Original public Source URL is listed for discovery and direct install only. iOS Hub does not copy, merge, cache, or rehost the Source feed or IPA binaries."
+      },
+      "iconURL": "https://i.imgur.com/ykZuH0r.png"
+    },
+    {
+      "id": "stremio-ios",
+      "name": "Stremio iOS Source",
+      "url": "https://gorlev.github.io/stremio-altstore/stremio-ios.json",
+      "website": "https://github.com/gorlev/stremio-altstore",
+      "mode": "classic",
+      "official": false,
+      "trusted": false,
+      "recommended": false,
+      "description": {
+        "cs": "Komunitní AltStore source pro Stremio iOS s automaticky aktualizovanými IPA buildy.",
+        "en": "Community AltStore source for Stremio iOS with automatically updated IPA builds."
+      },
+      "tags": [
+        "video",
+        "streaming",
+        "stremio",
+        "media",
+        "community",
+        "ipa"
+      ],
+      "developer": "gorlev",
+      "compliance": {
+        "reviewStatus": "licensed",
+        "binaryRehost": false,
+        "license": "MIT",
+        "evidenceURL": "https://github.com/gorlev/stremio-altstore/blob/main/LICENSE",
+        "reviewedAt": "2026-09-30",
+        "note": "Original public Source URL is listed for discovery and direct install only. iOS Hub does not copy, merge, cache, or rehost the Source feed or IPA binaries. License evidence: MIT."
+      },
+      "iconURL": "https://www.stremio.com/website/stremio-logo-small.png"
+    },
+    {
+      "id": "kodi-ios",
+      "name": "Kodi iOS IPA",
+      "url": "https://github.com/ohaiibuzzle/kodi-ios-ipa-builds/releases/latest/download/source.json",
+      "website": "https://github.com/ohaiibuzzle/kodi-ios-ipa-builds",
+      "mode": "classic",
+      "official": false,
+      "trusted": false,
+      "recommended": true,
+      "description": {
+        "cs": "AltStore/SideStore source, který automaticky převádí oficiální Kodi iOS .deb release na IPA. Build není oficiálně provozovaný Kodi Teamem.",
+        "en": "AltStore/SideStore source that automatically converts the official Kodi iOS .deb release to an IPA. The build source is not operated by Kodi Team."
+      },
+      "tags": [
+        "video",
+        "media",
+        "kodi",
+        "ipa",
+        "community"
+      ],
+      "developer": "ohaiibuzzle",
+      "compliance": {
+        "reviewStatus": "public-metadata",
+        "binaryRehost": false,
+        "evidenceURL": "https://github.com/ohaiibuzzle/kodi-ios-ipa-builds/releases/latest/download/source.json",
+        "reviewedAt": "2026-09-30",
+        "note": "Original public Source URL is listed for discovery and direct install only. iOS Hub does not copy, merge, cache, or rehost the Source feed or IPA binaries."
+      },
+      "iconURL": "https://kodi.tv/images/kodi-logo.svg"
+    },
+    {
+      "id": "nineanimator",
+      "name": "NineAnimator",
+      "url": "https://9ani.app/api/altstore",
+      "website": "https://github.com/SuperMarcus/NineAnimator",
+      "mode": "classic",
+      "official": true,
+      "trusted": false,
+      "recommended": true,
+      "description": {
+        "cs": "Oficiální source pro open-source anime přehrávač NineAnimator.",
+        "en": "Official source for the open-source NineAnimator anime player."
+      },
+      "tags": [
+        "video",
+        "anime",
+        "streaming",
+        "open-source"
+      ],
+      "developer": "SuperMarcus",
+      "compliance": {
+        "reviewStatus": "public-metadata",
+        "binaryRehost": false,
+        "evidenceURL": "https://9ani.app/api/altstore",
+        "reviewedAt": "2026-09-30",
+        "note": "Original public Source URL is listed for discovery and direct install only. iOS Hub does not copy, merge, cache, or rehost the Source feed or IPA binaries."
+      },
+      "iconURL": "assets/source-icons/nineanimator.svg"
+    },
+    {
+      "id": "esound",
+      "name": "eSound",
+      "url": "https://esound.app/downloads/source.json",
+      "website": "https://esound.app/",
+      "mode": "pal",
+      "official": true,
+      "trusted": false,
+      "recommended": true,
+      "description": {
+        "cs": "Oficiální AltStore PAL source hudební aplikace eSound.",
+        "en": "Official AltStore PAL source for the eSound music app."
+      },
+      "tags": [
+        "music",
+        "audio",
+        "youtube",
+        "pal",
+        "official"
+      ],
+      "developer": "eSound",
+      "compliance": {
+        "reviewStatus": "public-metadata",
+        "binaryRehost": false,
+        "evidenceURL": "https://esound.app/downloads/source.json",
+        "reviewedAt": "2026-09-30",
+        "note": "Original public Source URL is listed for discovery and direct install only. iOS Hub does not copy, merge, cache, or rehost the Source feed or IPA binaries."
+      },
+      "iconURL": "https://esound.app/images/altstore/source-icon.png?v=4"
+    },
+    {
+      "id": "partyknights",
+      "name": "Party Knights",
+      "url": "https://partyknights.app/source",
+      "website": "https://partyknights.app/",
+      "mode": "classic",
+      "official": true,
+      "trusted": false,
+      "recommended": false,
+      "description": {
+        "cs": "Oficiální source pro iOS hru Party Knights.",
+        "en": "Official source for the Party Knights iOS game."
+      },
+      "tags": [
+        "games",
+        "official"
+      ],
+      "developer": "Party Knights",
+      "compliance": {
+        "reviewStatus": "public-metadata",
+        "binaryRehost": false,
+        "evidenceURL": "https://partyknights.app/source",
+        "reviewedAt": "2026-09-30",
+        "note": "Original public Source URL is listed for discovery and direct install only. iOS Hub does not copy, merge, cache, or rehost the Source feed or IPA binaries."
+      },
+      "iconURL": "https://partyknights.app/assets/img/icon_128.webp"
+    },
+    {
+      "id": "bringyour",
+      "name": "BringYour",
+      "url": "https://bringyour.com/altstore/source.json",
+      "website": "https://bringyour.com/",
+      "mode": "classic",
+      "official": true,
+      "trusted": false,
+      "recommended": false,
+      "description": {
+        "cs": "Projektový source pro BringYour, aplikaci pro privátní síťové připojení a sdílení.",
+        "en": "Project source for BringYour, a private networking and connection-sharing app."
+      },
+      "tags": [
+        "network",
+        "privacy",
+        "utility"
+      ],
+      "developer": "BringYour",
+      "compliance": {
+        "reviewStatus": "public-metadata",
+        "binaryRehost": false,
+        "evidenceURL": "https://bringyour.com/altstore/source.json",
+        "reviewedAt": "2026-09-30",
+        "note": "Original public Source URL is listed for discovery and direct install only. iOS Hub does not copy, merge, cache, or rehost the Source feed or IPA binaries."
+      },
+      "iconURL": "assets/source-icons/bringyour.svg"
+    },
+    {
+      "id": "itorrent",
+      "name": "iTorrent",
+      "url": "https://xitrix.github.io/iTorrent/AltStore.json",
+      "website": "https://github.com/XITRIX/iTorrent",
+      "mode": "classic",
+      "official": true,
+      "trusted": false,
+      "recommended": true,
+      "description": {
+        "cs": "Oficiální AltStore source open-source torrent klienta iTorrent pro iOS.",
+        "en": "Official AltStore source for the open-source iTorrent client for iOS."
+      },
+      "tags": [
+        "torrent",
+        "utility",
+        "open-source",
+        "download"
+      ],
+      "developer": "XITRIX",
+      "compliance": {
+        "reviewStatus": "public-metadata",
+        "binaryRehost": false,
+        "evidenceURL": "https://xitrix.github.io/iTorrent/AltStore.json",
+        "reviewedAt": "2026-09-30",
+        "note": "Original public Source URL is listed for discovery and direct install only. iOS Hub does not copy, merge, cache, or rehost the Source feed or IPA binaries."
+      },
+      "iconURL": "https://raw.githubusercontent.com/XITRIX/xitrix.github.io/master/sourceIcon.png"
+    },
+    {
+      "id": "qbitconnect",
+      "name": "qBitConnect",
+      "url": "https://raw.githubusercontent.com/RajnishOne/altstore-releases/main/altstore-pal.json",
+      "website": "https://github.com/RajnishOne/qbitconnect",
+      "mode": "pal",
+      "official": true,
+      "trusted": false,
+      "recommended": false,
+      "description": {
+        "cs": "AltStore PAL source pro moderní vzdálenou správu qBittorrentu.",
+        "en": "AltStore PAL source for a modern qBittorrent remote client."
+      },
+      "tags": [
+        "pal",
+        "qbittorrent",
+        "torrent",
+        "utility"
+      ],
+      "developer": "RajnishOne",
+      "urls": {
+        "classic": "https://raw.githubusercontent.com/RajnishOne/altstore-releases/main/altstore.json",
+        "pal": "https://raw.githubusercontent.com/RajnishOne/altstore-releases/main/altstore-pal.json"
+      },
+      "installers": [
+        "altstore",
+        "sidestore",
+        "livecontainer",
+        "altstore-pal",
+        "flarestore",
+        "feather"
+      ],
+      "compliance": {
+        "reviewStatus": "public-metadata",
+        "binaryRehost": false,
+        "evidenceURL": "https://raw.githubusercontent.com/RajnishOne/altstore-releases/main/altstore-pal.json",
+        "reviewedAt": "2026-09-30",
+        "note": "Original public Source URL is listed for discovery and direct install only. iOS Hub does not copy, merge, cache, or rehost the Source feed or IPA binaries."
+      },
+      "iconURL": "https://raw.githubusercontent.com/RajnishOne/altstore-releases/main/icons/general/bluematter.png"
+    },
+    {
+      "id": "artemis",
+      "name": "Artemis",
+      "url": "https://raw.githubusercontent.com/auties00/artemis/refs/heads/main/source_pal.json",
+      "website": "https://github.com/Auties00/Artemis",
+      "mode": "pal",
+      "official": true,
+      "trusted": false,
+      "recommended": false,
+      "description": {
+        "cs": "Open-source alternativní klient pro streamovací službu HIDIVE.",
+        "en": "Open-source alternative client for the HIDIVE streaming service."
+      },
+      "tags": [
+        "pal",
+        "video",
+        "anime",
+        "streaming",
+        "open-source"
+      ],
+      "developer": "Auties00",
+      "urls": {
+        "classic": "https://raw.githubusercontent.com/auties00/artemis/refs/heads/main/source.json",
+        "pal": "https://raw.githubusercontent.com/auties00/artemis/refs/heads/main/source_pal.json"
+      },
+      "installers": [
+        "altstore",
+        "sidestore",
+        "livecontainer",
+        "altstore-pal",
+        "flarestore",
+        "feather"
+      ],
+      "compliance": {
+        "reviewStatus": "public-metadata",
+        "binaryRehost": false,
+        "evidenceURL": "https://raw.githubusercontent.com/auties00/artemis/refs/heads/main/source_pal.json",
+        "reviewedAt": "2026-09-30",
+        "note": "Original public Source URL is listed for discovery and direct install only. iOS Hub does not copy, merge, cache, or rehost the Source feed or IPA binaries."
+      },
+      "iconURL": "https://avatars.githubusercontent.com/u/28218457?v=4"
+    },
+    {
+      "id": "hackerwebapp",
+      "name": "Hacker Web App",
+      "url": "https://alt.hackerwebapp.com/PALSource.json",
+      "website": "https://hackerwebapp.com/",
+      "mode": "pal",
+      "official": true,
+      "trusted": false,
+      "recommended": false,
+      "description": {
+        "cs": "AltStore PAL source projektu Hacker Web App.",
+        "en": "AltStore PAL source for Hacker Web App."
+      },
+      "tags": [
+        "pal",
+        "news",
+        "developer"
+      ],
+      "developer": "Hacker Web App",
+      "compliance": {
+        "reviewStatus": "public-metadata",
+        "binaryRehost": false,
+        "evidenceURL": "https://alt.hackerwebapp.com/PALSource.json",
+        "reviewedAt": "2026-09-30",
+        "note": "Original public Source URL is listed for discovery and direct install only. iOS Hub does not copy, merge, cache, or rehost the Source feed or IPA binaries."
+      },
+      "iconURL": "https://raw.githubusercontent.com/cheeaun/hackerweb-native-2/main/assets/icon.png"
+    },
+    {
+      "id": "courtpredict",
+      "name": "CourtPredict",
+      "url": "https://courtpredict-ios.web.app/PALSource.json",
+      "website": "https://courtpredict-ios.web.app/",
+      "mode": "pal",
+      "official": true,
+      "trusted": false,
+      "recommended": false,
+      "description": {
+        "cs": "AltStore PAL source aplikace CourtPredict.",
+        "en": "AltStore PAL source for CourtPredict."
+      },
+      "tags": [
+        "pal",
+        "sports",
+        "utility"
+      ],
+      "developer": "CourtPredict",
+      "compliance": {
+        "reviewStatus": "public-metadata",
+        "binaryRehost": false,
+        "evidenceURL": "https://courtpredict-ios.web.app/PALSource.json",
+        "reviewedAt": "2026-09-30",
+        "note": "Original public Source URL is listed for discovery and direct install only. iOS Hub does not copy, merge, cache, or rehost the Source feed or IPA binaries."
+      },
+      "iconURL": "https://courtpredict-ios.web.app/icons/source.png"
+    },
+    {
+      "id": "wayfarer",
+      "name": "Niantic Wayfarer",
+      "url": "https://alts.lao.sb",
+      "website": "https://alts.lao.sb",
+      "mode": "classic",
+      "official": false,
+      "trusted": false,
+      "recommended": false,
+      "description": {
+        "cs": "Komunitní source pro Niantic Wayfarer klienta na iOS.",
+        "en": "Community source for a Niantic Wayfarer client on iOS."
+      },
+      "tags": [
+        "games",
+        "niantic",
+        "community"
+      ],
+      "developer": "lao.sb",
+      "compliance": {
+        "reviewStatus": "public-metadata",
+        "binaryRehost": false,
+        "evidenceURL": "https://alts.lao.sb",
+        "reviewedAt": "2026-09-30",
+        "note": "Original public Source URL is listed for discovery and direct install only. iOS Hub does not copy, merge, cache, or rehost the Source feed or IPA binaries."
+      },
+      "iconURL": "https://stor-cdn.f8d.rocks/wf/icon.png"
+    },
+    {
+      "id": "qbitcontrol",
+      "name": "qBitControl",
+      "url": "https://raw.githubusercontent.com/Michael-128/qBitControl-releases/main/source.json",
+      "website": "https://github.com/Michael-128/qBitControl",
+      "mode": "pal",
+      "official": true,
+      "trusted": false,
+      "recommended": false,
+      "description": {
+        "cs": "Projektový AltStore PAL zdroj pro qBitControl, vzdálenou správu qBittorrentu.",
+        "en": "Project AltStore PAL source for qBitControl, a qBittorrent remote client."
+      },
+      "tags": [
+        "pal",
+        "utility",
+        "qbittorrent"
+      ],
+      "developer": "Michael-128",
+      "urls": {
+        "classic": "https://raw.githubusercontent.com/Michael-128/qBitControl-releases/main/source-classic.json",
+        "pal": "https://raw.githubusercontent.com/Michael-128/qBitControl-releases/main/source.json"
+      },
+      "installers": [
+        "altstore",
+        "sidestore",
+        "livecontainer",
+        "altstore-pal",
+        "flarestore",
+        "feather"
+      ],
+      "compliance": {
+        "reviewStatus": "public-metadata",
+        "binaryRehost": false,
+        "evidenceURL": "https://raw.githubusercontent.com/Michael-128/qBitControl-releases/main/source.json",
+        "reviewedAt": "2026-09-30",
+        "note": "Original public Source URL is listed for discovery and direct install only. iOS Hub does not copy, merge, cache, or rehost the Source feed or IPA binaries."
+      },
+      "iconURL": "https://raw.githubusercontent.com/Michael-128/qBitControl/main/qBitControl/Assets.xcassets/AppIcon.appiconset/logo1.png"
+    },
+    {
+      "id": "iphanpy",
+      "name": "iPhanpy",
+      "url": "https://raw.githubusercontent.com/matfantinel/iphanpy/refs/heads/main/altstore/source.json",
+      "website": "https://fantinel.dev/blog/iphanpy-mastodon-client/",
+      "mode": "pal",
+      "official": true,
+      "trusted": false,
+      "recommended": false,
+      "description": {
+        "cs": "Projektový AltStore PAL zdroj pro iPhanpy, klienta Mastodon.",
+        "en": "Project AltStore PAL source for iPhanpy, a Mastodon client."
+      },
+      "tags": [
+        "pal",
+        "mastodon",
+        "social"
+      ],
+      "developer": "matfantinel",
+      "compliance": {
+        "reviewStatus": "licensed",
+        "binaryRehost": false,
+        "license": "MIT",
+        "evidenceURL": "https://github.com/matfantinel/iphanpy/blob/main/LICENSE",
+        "reviewedAt": "2026-09-30",
+        "note": "Original public Source URL is listed for discovery and direct install only. iOS Hub does not copy, merge, cache, or rehost the Source feed or IPA binaries. License evidence: MIT."
+      },
+      "iconURL": "https://i.imgur.com/AAsffEA.png"
+    },
+    {
+      "id": "epic-games",
+      "name": "Epic Games",
+      "url": "https://content-download-egs.distro.on.epicgames.com/iOS/altstore/source.json",
+      "website": "https://www.epicgames.com/",
+      "mode": "pal",
+      "official": true,
+      "trusted": false,
+      "recommended": true,
+      "description": {
+        "cs": "Oficiální iOS zdroj Epic Games pro Fortnite, Fall Guys a další podporované hry.",
+        "en": "Official Epic Games iOS source for Fortnite, Fall Guys and other supported games."
+      },
+      "tags": [
+        "pal",
+        "games",
+        "fortnite",
+        "fall-guys",
+        "official"
+      ],
+      "developer": "Epic Games",
+      "compliance": {
+        "reviewStatus": "public-metadata",
+        "binaryRehost": false,
+        "evidenceURL": "https://content-download-egs.distro.on.epicgames.com/iOS/altstore/source.json",
+        "reviewedAt": "2026-09-30",
+        "note": "Original public Source URL is listed for discovery and direct install only. iOS Hub does not copy, merge, cache, or rehost the Source feed or IPA binaries."
+      },
+      "iconURL": "https://content-download-egs.distro.on.epicgames.com/.well-known/EG-Shield-2023-Black-dual-tone-expanded.png"
+    },
+    {
+      "id": "xn1ckuz-sidebox",
+      "name": "xN1ckuz SideBox",
+      "url": "https://raw.githubusercontent.com/xN1ckuz/xN1ckuz-Sidestore-Repo/main/repo.json",
+      "website": "https://github.com/xN1ckuz/xN1ckuz-Sidestore-Repo",
+      "mode": "classic",
+      "official": false,
+      "trusted": false,
+      "recommended": true,
+      "community": true,
+      "modified": true,
+      "description": {
+        "cs": "Komunitní modified source s aktuálními buildy EeveeSpotify, YouTube Plus, YTMusicUltimate a SCInsta.",
+        "en": "Community modified source with current EeveeSpotify, YouTube Plus, YTMusicUltimate and SCInsta builds."
+      },
+      "tags": [
+        "community",
+        "modified",
+        "tweaks",
+        "spotify",
+        "youtube",
+        "music",
+        "instagram",
+        "social",
+        "video"
+      ],
+      "developer": "xN1ckuz",
+      "compliance": {
+        "reviewStatus": "public-metadata",
+        "binaryRehost": false,
+        "evidenceURL": "https://raw.githubusercontent.com/xN1ckuz/xN1ckuz-Sidestore-Repo/main/repo.json",
+        "reviewedAt": "2026-09-30",
+        "note": "Original public Source URL is listed for discovery and direct install only. iOS Hub does not copy, merge, cache, or rehost the Source feed or IPA binaries."
+      },
+      "iconURL": "https://avatars.githubusercontent.com/u/74825012?v=4"
+    },
+    {
+      "id": "dvntm0-workshop",
+      "name": "Dan's Workshop",
+      "url": "https://raw.githubusercontent.com/dvntm0/AltStore/main/repo.json",
+      "website": "https://github.com/dvntm0/AltStore",
+      "mode": "classic",
+      "official": false,
+      "trusted": false,
+      "recommended": true,
+      "community": true,
+      "modified": true,
+      "description": {
+        "cs": "Komunitní modified source od dvntm0 s YouTube Plus, YTMusicUltimate, Infuse Plus, Glow, Flow, Tweach a dalšími upravenými aplikacemi.",
+        "en": "Community modified source by dvntm0 with YouTube Plus, YTMusicUltimate, Infuse Plus, Glow, Flow, Tweach and other modified apps."
+      },
+      "tags": [
+        "community",
+        "modified",
+        "tweaks",
+        "youtube",
+        "music",
+        "video",
+        "social",
+        "apps"
+      ],
+      "developer": "dvntm0",
+      "compliance": {
+        "reviewStatus": "public-metadata",
+        "binaryRehost": false,
+        "evidenceURL": "https://raw.githubusercontent.com/dvntm0/AltStore/main/repo.json",
+        "reviewedAt": "2026-09-30",
+        "note": "Original public Source URL is listed for discovery and direct install only. iOS Hub does not copy, merge, cache, or rehost the Source feed or IPA binaries."
+      },
+      "iconURL": "https://raw.githubusercontent.com/dayanch96/YTLite/refs/heads/main/Resources/icon.png"
+    },
+    {
+      "id": "wuxu-library-plus",
+      "name": "WuXu's Library++",
+      "url": "https://raw.githubusercontent.com/WuXu1/WuXu1.github.io/main/wuxu-complete-plus.json",
+      "website": "https://wuxu1.github.io/",
+      "mode": "classic",
+      "official": false,
+      "trusted": false,
+      "recommended": true,
+      "community": true,
+      "modified": true,
+      "description": {
+        "cs": "Komunitní modified knihovna s upravenými buildy TikTok, Instagram, Spotify, YouTube, Deezer, SoundCloud, Duolingo a dalšími.",
+        "en": "Community modified library with tweaked TikTok, Instagram, Spotify, YouTube, Deezer, SoundCloud, Duolingo and more."
+      },
+      "tags": [
+        "community",
+        "modified",
+        "tweaks",
+        "spotify",
+        "youtube",
+        "music",
+        "video",
+        "social",
+        "tiktok",
+        "instagram"
+      ],
+      "developer": "WuXu1",
+      "compliance": {
+        "reviewStatus": "public-metadata",
+        "binaryRehost": false,
+        "evidenceURL": "https://raw.githubusercontent.com/WuXu1/WuXu1.github.io/main/wuxu-complete-plus.json",
+        "reviewedAt": "2026-09-30",
+        "note": "Original public Source URL is listed for discovery and direct install only. iOS Hub does not copy, merge, cache, or rehost the Source feed or IPA binaries."
+      },
+      "iconURL": "https://external-content.duckduckgo.com/iu/?u=https://i.imgur.com/g17kMl9.jpeg"
+    },
+    {
+      "id": "baretsky-tweaked",
+      "name": "Baretsky Tweaked App Library",
+      "url": "https://raw.githubusercontent.com/baretsky/baretsky-tweaked-ipas-library/main/apps.json",
+      "website": "https://github.com/baretsky/baretsky-tweaked-ipas-library",
+      "mode": "classic",
+      "official": false,
+      "trusted": false,
+      "recommended": true,
+      "community": true,
+      "modified": true,
+      "description": {
+        "cs": "Aktivně aktualizovaná komunitní knihovna tweaked IPA pro TikTok, YouTube, X/Twitter, Instagram, Twitch, YouTube Music a další.",
+        "en": "Actively updated community library of tweaked IPAs for TikTok, YouTube, X/Twitter, Instagram, Twitch, YouTube Music and more."
+      },
+      "tags": [
+        "community",
+        "modified",
+        "tweaks",
+        "youtube",
+        "music",
+        "video",
+        "social",
+        "tiktok",
+        "instagram",
+        "twitch"
+      ],
+      "developer": "baretsky",
+      "compliance": {
+        "reviewStatus": "public-metadata",
+        "binaryRehost": false,
+        "evidenceURL": "https://raw.githubusercontent.com/baretsky/baretsky-tweaked-ipas-library/main/apps.json",
+        "reviewedAt": "2026-09-30",
+        "note": "Original public Source URL is listed for discovery and direct install only. iOS Hub does not copy, merge, cache, or rehost the Source feed or IPA binaries."
+      },
+      "iconURL": "https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png"
+    },
+    {
+      "id": "driftywinds",
+      "name": "driftywinds AltStore Repo",
+      "url": "https://raw.githubusercontent.com/driftywinds/driftywinds.github.io/master/AltStore/apps.json",
+      "website": "https://github.com/driftywinds/driftywinds.github.io",
+      "mode": "classic",
+      "official": false,
+      "trusted": false,
+      "recommended": true,
+      "community": true,
+      "modified": true,
+      "description": {
+        "cs": "Komunitní source s tweaked buildy YouTube, EeveeSpotify, Instagram, X/Twitter, YouTube Music a dalšími sideload aplikacemi.",
+        "en": "Community source with tweaked YouTube, EeveeSpotify, Instagram, X/Twitter, YouTube Music and other sideload apps."
+      },
+      "tags": [
+        "community",
+        "modified",
+        "tweaks",
+        "spotify",
+        "youtube",
+        "music",
+        "video",
+        "social",
+        "instagram",
+        "twitter"
+      ],
+      "developer": "driftywinds",
+      "compliance": {
+        "reviewStatus": "public-metadata",
+        "binaryRehost": false,
+        "evidenceURL": "https://raw.githubusercontent.com/driftywinds/driftywinds.github.io/master/AltStore/apps.json",
+        "reviewedAt": "2026-09-30",
+        "note": "Original public Source URL is listed for discovery and direct install only. iOS Hub does not copy, merge, cache, or rehost the Source feed or IPA binaries."
+      },
+      "iconURL": "https://i.postimg.cc/Kcdr62dc/dp-rounded.png"
+    },
+    {
+      "id": "ipa-vault",
+      "name": "IPA Vault",
+      "url": "https://raw.githubusercontent.com/927tx/IPA-Vault/main/ipavaultsource.json",
+      "website": "https://github.com/927tx/IPA-Vault",
+      "mode": "classic",
+      "official": false,
+      "trusted": false,
+      "recommended": false,
+      "community": true,
+      "modified": true,
+      "description": {
+        "cs": "Větší komunitní modified IPA knihovna s desítkami upravených aplikací, včetně sociálních, médií a utilit.",
+        "en": "Larger community modified IPA library with dozens of tweaked social, media and utility apps."
+      },
+      "tags": [
+        "community",
+        "modified",
+        "tweaks",
+        "apps",
+        "social",
+        "video",
+        "music",
+        "utility"
+      ],
+      "developer": "927tx",
+      "compliance": {
+        "reviewStatus": "public-metadata",
+        "binaryRehost": false,
+        "evidenceURL": "https://raw.githubusercontent.com/927tx/IPA-Vault/main/ipavaultsource.json",
+        "reviewedAt": "2026-09-30",
+        "note": "Original public Source URL is listed for discovery and direct install only. iOS Hub does not copy, merge, cache, or rehost the Source feed or IPA binaries."
+      },
+      "iconURL": "https://pub-dd800571175348b6a2745b3396360028.r2.dev/ipavault-altstore-repo-logo.png"
+    },
+    {
+      "id": "sideloadlabs",
+      "name": "SideloadLabs Repo",
+      "url": "https://raw.githubusercontent.com/SideloadLabs/SideloasLabs-AltSource/main/apps.json",
+      "website": "https://github.com/SideloadLabs/SideloasLabs-AltSource",
+      "mode": "classic",
+      "official": false,
+      "trusted": false,
+      "recommended": false,
+      "community": true,
+      "modified": true,
+      "description": {
+        "cs": "Komunitní source zaměřený na EeveeSpotify Reincarnated, včetně patched a Liquid Glass variant.",
+        "en": "Community source focused on EeveeSpotify Reincarnated, including patched and Liquid Glass variants."
+      },
+      "tags": [
+        "community",
+        "modified",
+        "tweaks",
+        "spotify",
+        "music"
+      ],
+      "developer": "SideloadLabs",
+      "compliance": {
+        "reviewStatus": "public-metadata",
+        "binaryRehost": false,
+        "evidenceURL": "https://raw.githubusercontent.com/SideloadLabs/SideloasLabs-AltSource/main/apps.json",
+        "reviewedAt": "2026-09-30",
+        "note": "Original public Source URL is listed for discovery and direct install only. iOS Hub does not copy, merge, cache, or rehost the Source feed or IPA binaries."
+      },
+      "iconURL": "https://avatars.githubusercontent.com/u/312393257?s=96&v=4"
+    },
+    {
+      "id": "ytliteplus",
+      "name": "YTLitePlus",
+      "url": "https://raw.githubusercontent.com/YTLitePlus/YTLitePlus-Altstore/main/apps.json",
+      "website": "https://github.com/YTLitePlus/YTLitePlus",
+      "mode": "classic",
+      "official": true,
+      "trusted": false,
+      "recommended": true,
+      "community": false,
+      "modified": true,
+      "description": {
+        "cs": "Oficiální AltStore source projektu YTLitePlus pro upravený YouTube klient s blokováním reklam a dalšími funkcemi.",
+        "en": "Official YTLitePlus AltStore source for a modified YouTube client with ad blocking and additional features."
+      },
+      "tags": [
+        "official",
+        "modified",
+        "tweaks",
+        "youtube",
+        "video"
+      ],
+      "developer": "YTLitePlus",
+      "compliance": {
+        "reviewStatus": "public-metadata",
+        "binaryRehost": false,
+        "evidenceURL": "https://raw.githubusercontent.com/YTLitePlus/YTLitePlus-Altstore/main/apps.json",
+        "reviewedAt": "2026-09-30",
+        "note": "Original public Source URL is listed for discovery and direct install only. iOS Hub does not copy, merge, cache, or rehost the Source feed or IPA binaries."
+      },
+      "iconURL": "https://raw.githubusercontent.com/YTLitePlus/YTLitePlus-Altstore/main/Youtube_logo-512.png"
+    },
+    {
+      "id": "moe-altstore",
+      "name": "Moe AltStore",
+      "url": "https://raw.githubusercontent.com/MountainofPenguin/moe-altstore/main/apps.json",
+      "website": "https://github.com/MountainofPenguin/moe-altstore",
+      "mode": "classic",
+      "official": false,
+      "trusted": false,
+      "recommended": true,
+      "community": true,
+      "modified": true,
+      "description": {
+        "cs": "Aktivně aktualizovaný komunitní mirror upravených IPA z Moe Apps, včetně YouTube, Redditu, Infuse a dalších aplikací.",
+        "en": "Actively updated community mirror of modified Moe Apps IPAs, including YouTube, Reddit, Infuse and more."
+      },
+      "tags": [
+        "community",
+        "modified",
+        "tweaked",
+        "youtube",
+        "video",
+        "social",
+        "reddit",
+        "utility"
+      ],
+      "developer": "MountainofPenguin",
+      "compliance": {
+        "reviewStatus": "public-metadata",
+        "binaryRehost": false,
+        "evidenceURL": "https://raw.githubusercontent.com/MountainofPenguin/moe-altstore/main/apps.json",
+        "reviewedAt": "2026-09-30",
+        "note": "Original public Source URL is listed for discovery and direct install only. iOS Hub does not copy, merge, cache, or rehost the Source feed or IPA binaries."
+      },
+      "iconURL": "https://raw.githubusercontent.com/MountainofPenguin/moe-altstore/main/icons/moe_icon.png"
+    },
+    {
+      "id": "youmod-repo",
+      "name": "YouMod Repo",
+      "url": "https://raw.githubusercontent.com/MountainofPenguin/Altstore-Repository/main/apps.json",
+      "website": "https://github.com/MountainofPenguin/Altstore-Repository",
+      "mode": "classic",
+      "official": false,
+      "trusted": false,
+      "recommended": true,
+      "community": true,
+      "modified": true,
+      "description": {
+        "cs": "Komunitní automaticky sestavovaný source pro YouMod a upravený YouTube.",
+        "en": "Community auto-built source for YouMod and modified YouTube."
+      },
+      "tags": [
+        "community",
+        "modified",
+        "tweaks",
+        "youtube",
+        "video"
+      ],
+      "developer": "MountainofPenguin",
+      "compliance": {
+        "reviewStatus": "public-metadata",
+        "binaryRehost": false,
+        "evidenceURL": "https://raw.githubusercontent.com/MountainofPenguin/Altstore-Repository/main/apps.json",
+        "reviewedAt": "2026-09-30",
+        "note": "Original public Source URL is listed for discovery and direct install only. iOS Hub does not copy, merge, cache, or rehost the Source feed or IPA binaries."
+      },
+      "iconURL": "https://raw.githubusercontent.com/MountainofPenguin/Altstore-Repository/main/assets/IMG_2642.png"
+    },
+    {
+      "id": "youproextra",
+      "name": "YouProEXTRA",
+      "url": "https://raw.githubusercontent.com/mrdrvt99/Altstore-Repository/main/apps.json",
+      "website": "https://github.com/mrdrvt99/Altstore-Repository",
+      "mode": "classic",
+      "official": false,
+      "trusted": false,
+      "recommended": true,
+      "community": true,
+      "modified": true,
+      "description": {
+        "cs": "Komunitní source s několika variantami upraveného YouTube: YTLite, YTKillerPlus, YTKACE, YouPro a YouMod.",
+        "en": "Community source with several modified YouTube variants: YTLite, YTKillerPlus, YTKACE, YouPro and YouMod."
+      },
+      "tags": [
+        "community",
+        "modified",
+        "tweaks",
+        "youtube",
+        "video"
+      ],
+      "developer": "mrdrvt99",
+      "compliance": {
+        "reviewStatus": "public-metadata",
+        "binaryRehost": false,
+        "evidenceURL": "https://raw.githubusercontent.com/mrdrvt99/Altstore-Repository/main/apps.json",
+        "reviewedAt": "2026-09-30",
+        "note": "Original public Source URL is listed for discovery and direct install only. iOS Hub does not copy, merge, cache, or rehost the Source feed or IPA binaries."
+      },
+      "iconURL": "https://raw.githubusercontent.com/mrdrvt99/Altstore-Repository/main/assets/YouTube.png"
+    },
+    {
+      "id": "owo-source",
+      "name": "OwO Source",
+      "url": "https://repo.owo.network/",
+      "website": "https://owo.network/",
+      "mode": "classic",
+      "official": false,
+      "trusted": false,
+      "recommended": true,
+      "community": true,
+      "modified": true,
+      "description": {
+        "cs": "Velká a aktivní komunitní knihovna upravených IPA pro sideloading; obsahuje sociální aplikace, utility i další modified buildy.",
+        "en": "Large active community library of modified IPAs for sideloading, including social apps, utilities and other tweaked builds."
+      },
+      "tags": [
+        "community",
+        "modified",
+        "tweaked",
+        "apps",
+        "social",
+        "video",
+        "music",
+        "utility"
+      ],
+      "developer": "OwO Network",
+      "compliance": {
+        "reviewStatus": "public-metadata",
+        "binaryRehost": false,
+        "evidenceURL": "https://repo.owo.network/",
+        "reviewedAt": "2026-09-30",
+        "note": "Original public Source URL is listed for discovery and direct install only. iOS Hub does not copy, merge, cache, or rehost the Source feed or IPA binaries."
+      },
+      "iconURL": "https://raw.githubusercontent.com/OwO-Network/Repo/main/icons/owo.repo.icon.png",
+      "catalogLimit": 160
+    },
+    {
+      "id": "cypwn-ipa",
+      "name": "CyPwn IPA Library",
+      "url": "https://ipa.cypwn.xyz/cypwn.json",
+      "website": "https://www.cypwn.com/sources",
+      "mode": "classic",
+      "official": false,
+      "trusted": false,
+      "recommended": true,
+      "community": true,
+      "modified": true,
+      "builder": false,
+      "description": {
+        "cs": "Velká komunitní IPA knihovna s přibližně 180 aplikacemi, včetně tweaked, modified a TrollStore/sideload buildů.",
+        "en": "Large community IPA library with roughly 180 apps, including tweaked, modified and TrollStore/sideload builds."
+      },
+      "tags": [
+        "community",
+        "modified",
+        "tweaked",
+        "mega",
+        "apps",
+        "social",
+        "video",
+        "music",
+        "utility"
+      ],
+      "developer": "CyPwn",
+      "compliance": {
+        "reviewStatus": "public-metadata",
+        "binaryRehost": false,
+        "evidenceURL": "https://ipa.cypwn.xyz/cypwn.json",
+        "reviewedAt": "2026-09-30",
+        "note": "Original public Source URL is listed for discovery and direct install only. iOS Hub does not copy, merge, cache, or rehost the Source feed or IPA binaries."
+      },
+      "iconURL": "https://repo.cypwn.xyz/assets/images/cypwn_small.png",
+      "catalogLimit": 180
+    },
+    {
+      "id": "apptesters",
+      "name": "AppTesters IPA Repo",
+      "url": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/apps.json",
+      "website": "https://apptesters.org/",
+      "mode": "classic",
+      "official": false,
+      "trusted": false,
+      "recommended": false,
+      "community": true,
+      "modified": true,
+      "builder": false,
+      "description": {
+        "cs": "Rozsáhlá a velmi aktivní komunitní IPA databáze s čistými i upravenými aplikacemi. Kvůli velikosti se v Hubu načítá jen omezený náhled katalogu.",
+        "en": "Large and very active community IPA database with clean and modified apps. Due to its size, iOS Hub only indexes a limited catalog preview."
+      },
+      "tags": [
+        "community",
+        "modified",
+        "tweaked",
+        "mega",
+        "apps",
+        "games",
+        "social",
+        "video",
+        "music",
+        "utility"
+      ],
+      "developer": "AppTesters",
+      "compliance": {
+        "reviewStatus": "public-metadata",
+        "binaryRehost": false,
+        "evidenceURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/apps.json",
+        "reviewedAt": "2026-09-30",
+        "note": "Original public Source URL is listed for discovery and direct install only. iOS Hub does not copy, merge, cache, or rehost the Source feed or IPA binaries."
+      },
+      "iconURL": "https://apptesters.org/apptesters-512x512.png",
+      "catalogLimit": 200
+    },
+    {
+      "id": "youtuberebornplus",
+      "name": "YouTubeRebornPlus",
+      "url": "https://raw.githubusercontent.com/arichornlover/arichornlover.github.io/main/apps2.json",
+      "website": "https://github.com/arichornlover/YouTubeRebornPlus",
+      "mode": "classic",
+      "official": true,
+      "trusted": false,
+      "recommended": true,
+      "community": false,
+      "modified": true,
+      "description": {
+        "cs": "Oficiální AltStore source projektu YouTubeRebornPlus pro upravený YouTube klient.",
+        "en": "Official AltStore source for the modified YouTubeRebornPlus client."
+      },
+      "tags": [
+        "official",
+        "modified",
+        "tweaks",
+        "youtube",
+        "video"
+      ],
+      "developer": "arichornlover",
+      "compliance": {
+        "reviewStatus": "public-metadata",
+        "binaryRehost": false,
+        "evidenceURL": "https://raw.githubusercontent.com/arichornlover/arichornlover.github.io/main/apps2.json",
+        "reviewedAt": "2026-09-30",
+        "note": "Original public Source URL is listed for discovery and direct install only. iOS Hub does not copy, merge, cache, or rehost the Source feed or IPA binaries."
+      },
+      "iconURL": "https://raw.githubusercontent.com/arichornlover/YouTube-Reborn-v5/main/layout/Library/Application%20Support/YouTubeReborn.bundle/ytrebornbuttonblack.png"
+    },
+    {
+      "id": "apollo-reddit",
+      "name": "Apollo for Reddit",
+      "url": "https://raw.githubusercontent.com/Balackburn/Apollo/main/apps.json",
+      "website": "https://balackburn.github.io/Apollo/",
+      "mode": "classic",
+      "official": false,
+      "trusted": false,
+      "recommended": true,
+      "community": true,
+      "modified": true,
+      "description": {
+        "cs": "Aktivně udržovaný komunitní source pro Apollo for Reddit s Apollo-Reborn úpravami a vlastním API.",
+        "en": "Actively maintained community source for Apollo for Reddit with Apollo-Reborn modifications and custom API support."
+      },
+      "tags": [
+        "community",
+        "modified",
+        "tweaks",
+        "reddit",
+        "social"
+      ],
+      "developer": "Balackburn",
+      "compliance": {
+        "reviewStatus": "public-metadata",
+        "binaryRehost": false,
+        "evidenceURL": "https://raw.githubusercontent.com/Balackburn/Apollo/main/apps.json",
+        "reviewedAt": "2026-09-30",
+        "note": "Original public Source URL is listed for discovery and direct install only. iOS Hub does not copy, merge, cache, or rehost the Source feed or IPA binaries."
+      },
+      "iconURL": "https://raw.githubusercontent.com/Balackburn/Apollo/main/public/images/image_0.webp"
+    },
+    {
+      "id": "discord-appstore-builds",
+      "name": "Discord App Store Builds",
+      "url": "https://raw.githubusercontent.com/AlfaActa/discord-altstore-source/main/source.json",
+      "website": "https://github.com/AlfaActa/discord-altstore-source",
+      "mode": "classic",
+      "official": false,
+      "trusted": false,
+      "recommended": false,
+      "community": true,
+      "modified": false,
+      "description": {
+        "cs": "Komunitní automatizovaný AltSource s dešifrovanými App Store buildy Discordu připravenými pro sideloading.",
+        "en": "Community automated AltSource with decrypted Discord App Store builds prepared for sideloading."
+      },
+      "tags": [
+        "community",
+        "discord",
+        "social",
+        "sideload"
+      ],
+      "developer": "AlfaActa",
+      "compliance": {
+        "reviewStatus": "licensed",
+        "binaryRehost": false,
+        "license": "MIT",
+        "evidenceURL": "https://github.com/AlfaActa/discord-altstore-source/blob/main/LICENSE",
+        "reviewedAt": "2026-09-30",
+        "note": "Original public Source URL is listed for discovery and direct install only. iOS Hub does not copy, merge, cache, or rehost the Source feed or IPA binaries. License evidence: MIT."
+      },
+      "iconURL": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/7c/c1/d5/7cc1d552-fca9-bc19-a585-28644c009f4b/AppIcon-0-0-1x_U007epad-0-1-0-sRGB-85-220.png/512x512bb.jpg"
+    },
+    {
+      "id": "ytkace",
+      "name": "YTKACE",
+      "url": "https://raw.githubusercontent.com/xKatsumi/YTKACE-SideStore-Repo/main/ytkace.json",
+      "website": "https://github.com/xKatsumi/YTKACE-SideStore-Repo",
+      "mode": "classic",
+      "official": false,
+      "trusted": false,
+      "recommended": true,
+      "community": true,
+      "modified": true,
+      "description": {
+        "cs": "Komunitní SideStore/LiveContainer source pro upravený YouTube klient YTKACE.",
+        "en": "Community SideStore/LiveContainer source for the modified YTKACE YouTube client."
+      },
+      "tags": [
+        "community",
+        "modified",
+        "tweaks",
+        "youtube",
+        "video",
+        "sidestore",
+        "livecontainer"
+      ],
+      "developer": "xKatsumi",
+      "compliance": {
+        "reviewStatus": "public-metadata",
+        "binaryRehost": false,
+        "evidenceURL": "https://raw.githubusercontent.com/xKatsumi/YTKACE-SideStore-Repo/main/ytkace.json",
+        "reviewedAt": "2026-09-30",
+        "note": "Original public Source URL is listed for discovery and direct install only. iOS Hub does not copy, merge, cache, or rehost the Source feed or IPA binaries."
+      },
+      "iconURL": "https://img.lightshot.app/8gRG1MrsTPO7ZiwX_JfmbA.jpeg"
+    },
+    {
+      "id": "heyfordy",
+      "name": "heyFordy SideStore Repo",
+      "url": "https://raw.githubusercontent.com/Bitte-ein-Git/sidestore-repo/main/apps.json",
+      "website": "https://repo.heyfordy.dev/",
+      "mode": "classic",
+      "official": false,
+      "trusted": false,
+      "recommended": false,
+      "community": true,
+      "modified": true,
+      "description": {
+        "cs": "Komunitní modified source s YouTube+, Spotify+, YT Music+, Twitch+, Infuse+ a dalšími aplikacemi.",
+        "en": "Community modified source with YouTube+, Spotify+, YT Music+, Twitch+, Infuse+ and other apps."
+      },
+      "tags": [
+        "community",
+        "modified",
+        "tweaks",
+        "youtube",
+        "spotify",
+        "music",
+        "video",
+        "twitch",
+        "utility"
+      ],
+      "developer": "heyFordy",
+      "compliance": {
+        "reviewStatus": "public-metadata",
+        "binaryRehost": false,
+        "evidenceURL": "https://raw.githubusercontent.com/Bitte-ein-Git/sidestore-repo/main/apps.json",
+        "reviewedAt": "2026-09-30",
+        "note": "Original public Source URL is listed for discovery and direct install only. iOS Hub does not copy, merge, cache, or rehost the Source feed or IPA binaries."
+      },
+      "iconURL": "https://repo.heyfordy.dev/assets/repo.png"
+    },
+    {
+      "id": "ipalibrary",
+      "name": "IPALibrary Source",
+      "url": "https://raw.githubusercontent.com/2nkn0w/ipalibrary.me-source/main/ipalibrary_source.json",
+      "website": "https://github.com/2nkn0w/ipalibrary.me-source",
+      "mode": "classic",
+      "official": false,
+      "trusted": false,
+      "recommended": false,
+      "community": true,
+      "modified": true,
+      "builder": false,
+      "description": {
+        "cs": "Velká automaticky generovaná komunitní IPA knihovna. V Hubu se indexuje omezený náhled, aby katalog zůstal rychlý.",
+        "en": "Large automatically generated community IPA library. iOS Hub indexes a limited preview to keep the catalog fast."
+      },
+      "tags": [
+        "community",
+        "modified",
+        "tweaked",
+        "mega",
+        "apps",
+        "games",
+        "social",
+        "video",
+        "music",
+        "utility"
+      ],
+      "developer": "2nkn0w",
+      "compliance": {
+        "reviewStatus": "public-metadata",
+        "binaryRehost": false,
+        "evidenceURL": "https://raw.githubusercontent.com/2nkn0w/ipalibrary.me-source/main/ipalibrary_source.json",
+        "reviewedAt": "2026-09-30",
+        "note": "Original public Source URL is listed for discovery and direct install only. iOS Hub does not copy, merge, cache, or rehost the Source feed or IPA binaries."
+      },
+      "iconURL": "https://ipalibrary.me/favicon.ico",
+      "catalogLimit": 200
+    },
+    {
+      "id": "armsx2",
+      "name": "ARMSX2 iOS",
+      "url": "https://raw.githubusercontent.com/ARMSX2/Armsx2-Repo/main/apps.json",
+      "website": "https://ios.armsx2.net/",
+      "mode": "classic",
+      "official": true,
+      "trusted": false,
+      "recommended": true,
+      "community": false,
+      "modified": false,
+      "description": {
+        "cs": "Oficiální AltStore/SideStore source emulátoru PlayStation 2 ARMSX2 pro iPhone a iPad.",
+        "en": "Official AltStore/SideStore source for the ARMSX2 PlayStation 2 emulator on iPhone and iPad."
+      },
+      "tags": [
+        "official",
+        "games",
+        "emulator",
+        "playstation",
+        "ps2"
+      ],
+      "developer": "ARMSX2",
+      "compliance": {
+        "reviewStatus": "public-metadata",
+        "binaryRehost": false,
+        "evidenceURL": "https://raw.githubusercontent.com/ARMSX2/Armsx2-Repo/main/apps.json",
+        "reviewedAt": "2026-09-30",
+        "note": "Original public Source URL is listed for discovery and direct install only. iOS Hub does not copy, merge, cache, or rehost the Source feed or IPA binaries."
+      },
+      "iconURL": "https://ios.armsx2.net/assets/icon.png?v=d83ffc2a"
+    },
+    {
+      "id": "fouad-source",
+      "name": "Fouad's Source",
+      "url": "https://raw.githubusercontent.com/FouadRaheb/Watusi-for-WhatsApp/master/altstore/source.json",
+      "website": "https://github.com/FouadRaheb/Watusi-for-WhatsApp",
+      "mode": "classic",
+      "official": true,
+      "trusted": false,
+      "recommended": true,
+      "community": false,
+      "modified": true,
+      "description": {
+        "cs": "Oficiální modified source Fouada Raheba pro Watusi (WhatsApp) a Regram (Instagram), včetně duplicate a Business variant.",
+        "en": "Official Fouad Raheb modified source for Watusi (WhatsApp) and Regram (Instagram), including duplicate and Business variants."
+      },
+      "tags": [
+        "official",
+        "modified",
+        "tweaks",
+        "whatsapp",
+        "instagram",
+        "social",
+        "regram",
+        "watusi"
+      ],
+      "developer": "FouadRaheb",
+      "compliance": {
+        "reviewStatus": "public-metadata",
+        "binaryRehost": false,
+        "evidenceURL": "https://raw.githubusercontent.com/FouadRaheb/Watusi-for-WhatsApp/master/altstore/source.json",
+        "reviewedAt": "2026-09-30",
+        "note": "Original public Source URL is listed for discovery and direct install only. iOS Hub does not copy, merge, cache, or rehost the Source feed or IPA binaries."
+      },
+      "iconURL": "https://raw.githubusercontent.com/FouadRaheb/Watusi-for-WhatsApp/master/altstore/icon.png"
+    },
+    {
+      "id": "neofreebird",
+      "name": "NeoFreeBird",
+      "url": "https://raw.githubusercontent.com/orionblur/NeoFreeBird/v6/AltSource.json",
+      "website": "https://github.com/orionblur/NeoFreeBird",
+      "mode": "classic",
+      "official": true,
+      "trusted": false,
+      "recommended": true,
+      "community": false,
+      "modified": true,
+      "description": {
+        "cs": "Oficiální source NeoFreeBird pro upravený X/Twitter klient s BHTwitter a dalšími QoL úpravami.",
+        "en": "Official NeoFreeBird source for a modified X/Twitter client with BHTwitter and additional quality-of-life tweaks."
+      },
+      "tags": [
+        "official",
+        "modified",
+        "tweaks",
+        "twitter",
+        "x",
+        "social",
+        "bhtwitter"
+      ],
+      "developer": "orionblur",
+      "compliance": {
+        "reviewStatus": "public-metadata",
+        "binaryRehost": false,
+        "evidenceURL": "https://raw.githubusercontent.com/orionblur/NeoFreeBird/v6/AltSource.json",
+        "reviewedAt": "2026-09-30",
+        "note": "Original public Source URL is listed for discovery and direct install only. iOS Hub does not copy, merge, cache, or rehost the Source feed or IPA binaries."
+      },
+      "iconURL": "https://raw.githubusercontent.com/orionblur/NeoFreeBird/v6/icon_rounded.png"
+    },
+    {
+      "id": "melonx",
+      "name": "MeloNX",
+      "url": "https://raw.githubusercontent.com/AzureDominus/melonx/refs/heads/XC-ios-ht/source.json",
+      "website": "https://MeloNX.org",
+      "mode": "classic",
+      "official": true,
+      "trusted": true,
+      "recommended": true,
+      "description": {
+        "cs": "Oficiální source pro MeloNX, emulátor Nintendo Switch pro iOS. Pro spuštění her vyžaduje JIT a vlastní systémové soubory.",
+        "en": "Official source for MeloNX, a Nintendo Switch emulator for iOS. Running games requires JIT and your own system files."
+      },
+      "tags": [
+        "games",
+        "emulator",
+        "switch",
+        "jit",
+        "trusted",
+        "official"
+      ],
+      "developer": "AzureDominus",
+      "compliance": {
+        "reviewStatus": "public-metadata",
+        "binaryRehost": false,
+        "evidenceURL": "https://raw.githubusercontent.com/AzureDominus/melonx/refs/heads/XC-ios-ht/source.json",
+        "reviewedAt": "2026-09-30",
+        "note": "Original public Source URL is listed for discovery and direct install only. iOS Hub does not copy, merge, cache, or rehost the Source feed or IPA binaries."
+      },
+      "iconURL": "https://git.743378673.xyz/CycloKid/assets/media/branch/main/Melo/AppIcons/MeloNX.png"
+    },
+    {
+      "id": "altgallery",
+      "name": "AltGallery",
+      "url": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/all-apps.json",
+      "website": "https://github.com/bebound/AltGallery",
+      "mode": "classic",
+      "official": true,
+      "trusted": false,
+      "recommended": true,
+      "community": true,
+      "description": {
+        "cs": "Kurátorovaná galerie open-source iOS aplikací z GitHub Releases. Source je generovaný projektem AltGallery a funguje s AltStore, SideStore i LiveContainer.",
+        "en": "Curated gallery of open-source iOS apps from GitHub Releases. The source is generated by AltGallery and works with AltStore, SideStore and LiveContainer."
+      },
+      "tags": [
+        "community",
+        "catalog",
+        "apps",
+        "open-source",
+        "github",
+        "altstore",
+        "sidestore",
+        "livecontainer"
+      ],
+      "developer": "bebound",
+      "compliance": {
+        "reviewStatus": "licensed",
+        "binaryRehost": false,
+        "license": "MIT",
+        "evidenceURL": "https://github.com/bebound/AltGallery/blob/master/LICENSE",
+        "reviewedAt": "2026-09-30",
+        "note": "Original public Source URL is listed for discovery and direct install only. iOS Hub does not copy, merge, cache, or rehost the Source feed or IPA binaries. License evidence: MIT."
+      },
+      "iconURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/assets/icon.png",
+      "catalogLimit": 200
+    },
+    {
+      "id": "ripestore",
+      "name": "RipeStore",
+      "url": "https://raw.githubusercontent.com/RipeStore/repos/main/RipeStore.json",
+      "website": "https://ripestore.github.io/",
+      "mode": "classic",
+      "official": true,
+      "trusted": false,
+      "recommended": false,
+      "community": true,
+      "description": {
+        "cs": "Aktivně udržovaný komunitní AltStore source zaměřený hlavně na nepřepatchované IPA aplikace a projekty pro sideloading.",
+        "en": "Actively maintained community AltStore source focused mainly on unpatched IPA apps and sideloading projects."
+      },
+      "tags": [
+        "community",
+        "apps",
+        "ipa",
+        "altstore",
+        "sidestore"
+      ],
+      "developer": "RipeStore",
+      "compliance": {
+        "reviewStatus": "public-metadata",
+        "binaryRehost": false,
+        "evidenceURL": "https://raw.githubusercontent.com/RipeStore/repos/main/RipeStore.json",
+        "reviewedAt": "2026-09-30",
+        "note": "Original public Source URL is listed for discovery and direct install only. iOS Hub does not copy, merge, cache, or rehost the Source feed or IPA binaries."
+      },
+      "iconURL": "https://i.imgur.com/pqIZoZo.jpeg"
+    },
+    {
+      "id": "feather",
+      "name": "Feather Repository",
+      "url": "https://raw.githubusercontent.com/claration/Feather/main/app-repo.json",
+      "website": "https://github.com/claration/Feather",
+      "mode": "classic",
+      "official": true,
+      "trusted": false,
+      "recommended": false,
+      "description": {
+        "cs": "Oficiální source aplikace Feather, správce a on-device podepisovač iOS aplikací.",
+        "en": "Official source for Feather, an on-device iOS app manager and signing utility."
+      },
+      "tags": [
+        "utility",
+        "signing",
+        "installer",
+        "open-source",
+        "official"
+      ],
+      "developer": "claration",
+      "compliance": {
+        "reviewStatus": "licensed",
+        "binaryRehost": false,
+        "license": "GPL-3.0-only",
+        "evidenceURL": "https://github.com/claration/Feather/blob/main/LICENSE",
+        "reviewedAt": "2026-09-30",
+        "note": "Original public Source URL is listed for discovery and direct install only. iOS Hub does not copy, merge, cache, or rehost the Source feed or IPA binaries. License evidence: GPL-3.0-only."
+      },
+      "iconURL": "https://github.com/khcrysalis/Feather/blob/v1.x/iOS/Resources/Icons/Main/Mac@3x.png?raw=true"
+    },
+    {
+      "id": "quantum-source",
+      "name": "Quantum Source",
+      "url": "https://quarksources.github.io/quantumsource.json",
+      "website": "https://quarksources.github.io/",
+      "mode": "classic",
+      "official": true,
+      "trusted": false,
+      "recommended": false,
+      "community": true,
+      "description": {
+        "cs": "Automaticky aktualizovaný komunitní source s emulátory, utilitami, hrami a dalšími iOS projekty.",
+        "en": "Automatically updated community source with emulators, utilities, games and other iOS projects."
+      },
+      "tags": [
+        "community",
+        "emulator",
+        "games",
+        "utility",
+        "apps",
+        "altstore"
+      ],
+      "developer": "QuarkSources",
+      "compliance": {
+        "reviewStatus": "public-metadata",
+        "binaryRehost": false,
+        "evidenceURL": "https://quarksources.github.io/quantumsource.json",
+        "reviewedAt": "2026-09-30",
+        "note": "Original public Source URL is listed for discovery and direct install only. iOS Hub does not copy, merge, cache, or rehost the Source feed or IPA binaries."
+      },
+      "iconURL": "https://quarksources.github.io/assets/ElementQ-Circled.png"
+    },
+    {
+      "id": "spotc",
+      "name": "SpotCompiled",
+      "url": "https://raw.githubusercontent.com/SpotCompiled/SpotC-AltStore-Repo/main/AltStore%20Repo.json",
+      "website": "https://spotc.yodaluca.dev/",
+      "mode": "classic",
+      "official": true,
+      "trusted": false,
+      "recommended": false,
+      "modified": true,
+      "description": {
+        "cs": "Oficiální source projektu SpotCompiled pro upravené Spotify buildy na iOS.",
+        "en": "Official SpotCompiled source for modified Spotify builds on iOS."
+      },
+      "tags": [
+        "modified",
+        "music",
+        "spotify",
+        "community",
+        "altstore"
+      ],
+      "developer": "SpotCompiled",
+      "compliance": {
+        "reviewStatus": "public-metadata",
+        "binaryRehost": false,
+        "evidenceURL": "https://raw.githubusercontent.com/SpotCompiled/SpotC-AltStore-Repo/main/AltStore%20Repo.json",
+        "reviewedAt": "2026-09-30",
+        "note": "Original public Source URL is listed for discovery and direct install only. iOS Hub does not copy, merge, cache, or rehost the Source feed or IPA binaries."
+      },
+      "iconURL": "https://raw.githubusercontent.com/SpotCompiled/.github/main/SpotC%20Icon.png"
+    },
+    {
+      "id": "foxster-altsource",
+      "name": "Foxster's AltSource",
+      "url": "https://therealfoxster.github.io/altsource/apps.json",
+      "website": "https://github.com/therealFoxster/altsource",
+      "mode": "classic",
+      "official": true,
+      "trusted": false,
+      "recommended": false,
+      "modified": true,
+      "description": {
+        "cs": "Aktivní AltStore source od Foxster s upravenými aplikacemi a aktuálními buildy.",
+        "en": "Active AltStore source by Foxster with modified apps and current builds."
+      },
+      "tags": [
+        "modified",
+        "apps",
+        "community",
+        "youtube",
+        "altstore"
+      ],
+      "developer": "therealFoxster",
+      "compliance": {
+        "reviewStatus": "public-metadata",
+        "binaryRehost": false,
+        "evidenceURL": "https://therealfoxster.github.io/altsource/apps.json",
+        "reviewedAt": "2026-09-30",
+        "note": "Original public Source URL is listed for discovery and direct install only. iOS Hub does not copy, merge, cache, or rehost the Source feed or IPA binaries."
+      },
+      "iconURL": "https://avatars.githubusercontent.com/u/77606385"
+    },
+    {
+      "id": "fastsign",
+      "name": "FastSign",
+      "url": "https://fastsign.dev/repo.json",
+      "website": "https://fastsign.dev/",
+      "mode": "classic",
+      "official": true,
+      "trusted": false,
+      "recommended": false,
+      "community": true,
+      "description": {
+        "cs": "Velký komunitní source FastSign pro sideloading. iOS Hub zobrazuje jen 50 aplikací jako náhled z celého katalogu, aby stránka zůstala rychlá.",
+        "en": "Large community FastSign source for sideloading. iOS Hub shows only 50 apps as a preview of the full catalog to keep the page fast."
+      },
+      "tags": [
+        "community",
+        "apps",
+        "ipa",
+        "signing",
+        "altstore"
+      ],
+      "builder": false,
+      "developer": "FastSign",
+      "compliance": {
+        "reviewStatus": "public-metadata",
+        "binaryRehost": false,
+        "evidenceURL": "https://fastsign.dev/repo.json",
+        "reviewedAt": "2026-09-30",
+        "note": "Original public Source URL is listed for discovery and direct install only. iOS Hub does not copy, merge, cache, or rehost the Source feed or IPA binaries."
+      },
+      "iconURL": "https://fastsign.dev/icon.png",
+      "catalogLimit": 50
+    },
+    {
+      "id": "quantum-plus",
+      "name": "Quantum Source++",
+      "url": "https://quarksources.github.io/quantumsource++.json",
+      "website": "https://quarksources.github.io/",
+      "mode": "classic",
+      "official": true,
+      "trusted": false,
+      "recommended": false,
+      "community": true,
+      "modified": true,
+      "description": {
+        "cs": "Rozšířená komunitní varianta Quantum Source s upravenými aplikacemi, streamingem a dalšími tweaked buildy.",
+        "en": "Expanded community variant of Quantum Source with modified apps, streaming apps and other tweaked builds."
+      },
+      "tags": [
+        "community",
+        "modified",
+        "tweaked",
+        "apps",
+        "streaming",
+        "altstore"
+      ],
+      "developer": "QuarkSources",
+      "compliance": {
+        "reviewStatus": "public-metadata",
+        "binaryRehost": false,
+        "evidenceURL": "https://quarksources.github.io/quantumsource++.json",
+        "reviewedAt": "2026-09-30",
+        "note": "Original public Source URL is listed for discovery and direct install only. iOS Hub does not copy, merge, cache, or rehost the Source feed or IPA binaries."
+      },
+      "iconURL": "https://quarksources.github.io/assets/ElementQ-Circled.png"
+    },
+    {
+      "id": "wuxu-standard",
+      "name": "WuXu's Library",
+      "url": "https://wuxu1.github.io/wuxu-complete.json",
+      "website": "https://wuxu1.github.io/",
+      "mode": "classic",
+      "official": false,
+      "trusted": false,
+      "recommended": false,
+      "community": true,
+      "description": {
+        "cs": "Standardní komunitní WuXu knihovna iOS aplikací a nástrojů pro sideloading.",
+        "en": "Standard community WuXu library of iOS apps and sideloading utilities."
+      },
+      "tags": [
+        "community",
+        "apps",
+        "ipa",
+        "altstore"
+      ],
+      "developer": "WuXu1",
+      "compliance": {
+        "reviewStatus": "public-metadata",
+        "binaryRehost": false,
+        "evidenceURL": "https://wuxu1.github.io/wuxu-complete.json",
+        "reviewedAt": "2026-09-30",
+        "note": "Original public Source URL is listed for discovery and direct install only. iOS Hub does not copy, merge, cache, or rehost the Source feed or IPA binaries."
+      },
+      "iconURL": "https://external-content.duckduckgo.com/iu/?u=https://external-content.duckduckgo.com/iu/?u=https://i.imgur.com/g17kMl9.png"
+    },
+    {
+      "id": "taurine",
+      "name": "Taurine",
+      "url": "https://taurine.app/altstore/taurinestore.json",
+      "website": "https://taurine.app/",
+      "mode": "classic",
+      "official": true,
+      "trusted": false,
+      "recommended": false,
+      "description": {
+        "cs": "Oficiální historický source jailbreaku Taurine pro podporované verze iOS 14.",
+        "en": "Official historical source for the Taurine jailbreak on supported iOS 14 versions."
+      },
+      "tags": [
+        "jailbreak",
+        "legacy",
+        "official"
+      ],
+      "developer": "Taurine Team",
+      "compliance": {
+        "reviewStatus": "public-metadata",
+        "binaryRehost": false,
+        "evidenceURL": "https://taurine.app/altstore/taurinestore.json",
+        "reviewedAt": "2026-09-30",
+        "note": "Original public Source URL is listed for discovery and direct install only. iOS Hub does not copy, merge, cache, or rehost the Source feed or IPA binaries."
+      },
+      "iconURL": "https://taurine.app/assets/images/icon.png"
+    },
+    {
+      "id": "burrito-source",
+      "name": "Burrito's Source",
+      "url": "https://burritosoftware.github.io/altstore/channels/burritosource.json",
+      "website": "https://burritosoftware.github.io/",
+      "mode": "classic",
+      "official": true,
+      "trusted": false,
+      "recommended": false,
+      "community": true,
+      "description": {
+        "cs": "Komunitní AltStore source projektu Burrito Software.",
+        "en": "Community AltStore source from Burrito Software."
+      },
+      "tags": [
+        "community",
+        "apps",
+        "altstore"
+      ],
+      "developer": "Burrito Software",
+      "compliance": {
+        "reviewStatus": "public-metadata",
+        "binaryRehost": false,
+        "evidenceURL": "https://burritosoftware.github.io/altstore/channels/burritosource.json",
+        "reviewedAt": "2026-09-30",
+        "note": "Original public Source URL is listed for discovery and direct install only. iOS Hub does not copy, merge, cache, or rehost the Source feed or IPA binaries."
+      },
+      "iconURL": "https://inds.nerd.net/Resources/required/AppIcon256.png"
+    },
+    {
+      "id": "salupov-altrepo",
+      "name": "Salupov Team AltRepo",
+      "url": "https://adp.salupovteam.com/altrepo.json",
+      "website": "https://salupovteam.com/",
+      "mode": "classic",
+      "official": true,
+      "trusted": false,
+      "recommended": false,
+      "community": true,
+      "description": {
+        "cs": "AltStore source Salupov Team s aplikacemi a nástroji pro iOS.",
+        "en": "Salupov Team AltStore source with iOS apps and utilities."
+      },
+      "tags": [
+        "community",
+        "apps",
+        "altstore"
+      ],
+      "developer": "Salupov Team",
+      "compliance": {
+        "reviewStatus": "public-metadata",
+        "binaryRehost": false,
+        "evidenceURL": "https://adp.salupovteam.com/altrepo.json",
+        "reviewedAt": "2026-09-30",
+        "note": "Original public Source URL is listed for discovery and direct install only. iOS Hub does not copy, merge, cache, or rehost the Source feed or IPA binaries."
+      },
+      "iconURL": "https://adp.salupovteam.com/pal/icon.png"
+    },
+    {
+      "id": "cercube",
+      "name": "Cercube",
+      "url": "https://altstore.cercube.com",
+      "website": "https://cercube.com/",
+      "mode": "classic",
+      "official": true,
+      "trusted": false,
+      "recommended": false,
+      "modified": true,
+      "description": {
+        "cs": "Oficiální AltStore source pro Cercube, tweak rozšiřující YouTube na iOS o další funkce.",
+        "en": "Official AltStore source for Cercube, a tweak that adds extra features to YouTube on iOS."
+      },
+      "tags": [
+        "modified",
+        "youtube",
+        "tweak",
+        "altstore",
+        "sidestore",
+        "official"
+      ],
+      "developer": "Majd Alfhaily",
+      "compliance": {
+        "reviewStatus": "public-metadata",
+        "binaryRehost": false,
+        "evidenceURL": "https://altstore.cercube.com",
+        "reviewedAt": "2026-09-30",
+        "note": "Original public Source URL is listed for discovery and direct install only. iOS Hub does not copy, merge, cache, or rehost the Source feed or IPA binaries."
+      },
+      "iconURL": "https://cdn.cercube.com/assets/icon.png"
+    },
+    {
+      "id": "rocket",
+      "name": "Rocket",
+      "url": "https://altstore.getrocketapp.io",
+      "website": "https://getrocketapp.io/",
+      "mode": "classic",
+      "official": true,
+      "trusted": false,
+      "recommended": false,
+      "modified": true,
+      "description": {
+        "cs": "Oficiální AltStore source pro Rocket, tweak rozšiřující Instagram na iOS o další funkce.",
+        "en": "Official AltStore source for Rocket, a tweak that adds extra features to Instagram on iOS."
+      },
+      "tags": [
+        "modified",
+        "instagram",
+        "tweak",
+        "altstore",
+        "sidestore",
+        "official"
+      ],
+      "developer": "Majd Alfhaily",
+      "compliance": {
+        "reviewStatus": "public-metadata",
+        "binaryRehost": false,
+        "evidenceURL": "https://altstore.getrocketapp.io",
+        "reviewedAt": "2026-09-30",
+        "note": "Original public Source URL is listed for discovery and direct install only. iOS Hub does not copy, merge, cache, or rehost the Source feed or IPA binaries."
+      },
+      "iconURL": "https://cdn.getrocketapp.io/assets/icon.png"
+    },
+    {
+      "id": "reynard-browser",
+      "name": "Reynard Browser",
+      "url": "https://github.com/minh-ton/reynard-browser/releases/download/0.0.1-a1/source.json",
+      "website": "https://github.com/minh-ton/reynard-browser",
+      "mode": "classic",
+      "official": true,
+      "trusted": false,
+      "recommended": false,
+      "developer": "Minh Ton",
+      "description": {
+        "cs": "Oficiální AltStore/SideStore source pro Reynard Browser, experimentální Gecko prohlížeč pro iOS.",
+        "en": "Official AltStore/SideStore source for Reynard Browser, an experimental Gecko-based browser for iOS."
+      },
+      "tags": [
+        "browser",
+        "gecko",
+        "altstore",
+        "sidestore",
+        "official",
+        "open-source"
+      ],
+      "compliance": {
+        "reviewStatus": "public-metadata",
+        "binaryRehost": false,
+        "evidenceURL": "https://github.com/minh-ton/reynard-browser/releases/download/0.0.1-a1/source.json",
+        "reviewedAt": "2026-09-30",
+        "note": "Original public Source URL is listed for discovery and direct install only. iOS Hub does not copy, merge, cache, or rehost the Source feed or IPA binaries."
+      },
+      "iconURL": "https://github.com/user-attachments/assets/1c42dda2-b778-4342-9f94-8f852c3ad652"
+    },
+    {
+      "id": "altstore-official",
+      "name": "AltStore Official",
+      "url": "https://apps.altstore.io",
+      "website": "https://altstore.io/",
+      "mode": "classic",
+      "official": true,
+      "trusted": true,
+      "recommended": true,
+      "description": {
+        "cs": "Oficiální výchozí source AltStore pro AltStore, Clip, Delta a jejich beta verze.",
+        "en": "Official default AltStore source for AltStore, Clip, Delta and their beta versions."
+      },
+      "tags": [
+        "altstore",
+        "official",
+        "utility",
+        "clipboard",
+        "emulator",
+        "trusted"
+      ],
+      "developer": "AltStore LLC",
+      "compliance": {
+        "reviewStatus": "public-metadata",
+        "binaryRehost": false,
+        "evidenceURL": "https://apps.altstore.io",
+        "reviewedAt": "2026-10-01",
+        "note": "Original public Source URL is listed for discovery and direct install only. iOS Hub does not copy, merge, cache, or rehost the Source feed or IPA binaries."
+      },
+      "iconURL": "https://raw.githubusercontent.com/altstoreio/AltStore/marketplace/AltStore/Resources/Icons.xcassets/Raw/Turquoise.imageset/AltStore-2.0.png"
+    },
+    {
+      "id": "sidestore-connect",
+      "name": "SideStore Connect",
+      "url": "https://connect.sidestore.io/apps.json",
+      "website": "https://connect.sidestore.io/",
+      "mode": "classic",
+      "official": true,
+      "trusted": false,
+      "recommended": true,
+      "community": true,
+      "description": {
+        "cs": "Komunitní source provozovaný přes SideStore Connect s aplikacemi jako Ferrite, SideJIT, LiveContainer, UTM a dalšími.",
+        "en": "Community source powered by SideStore Connect with apps such as Ferrite, SideJIT, LiveContainer, UTM and more."
+      },
+      "tags": [
+        "sidestore",
+        "community",
+        "utility",
+        "jit",
+        "apps"
+      ],
+      "developer": "SideStore Connect",
+      "compliance": {
+        "reviewStatus": "public-metadata",
+        "binaryRehost": false,
+        "evidenceURL": "https://connect.sidestore.io/apps.json",
+        "reviewedAt": "2026-10-01",
+        "note": "Original public Source URL is listed for discovery and direct install only. iOS Hub does not copy, merge, cache, or rehost the Source feed or IPA binaries."
+      },
+      "iconURL": "https://apps.sidestore.io/apps/sidestore/v0.1.1/icon.png"
+    },
+    {
+      "id": "winston",
+      "name": "Winston for Reddit",
+      "url": "https://raw.githubusercontent.com/lo-cafe/winston-altstore/main/apps.json",
+      "website": "https://github.com/lo-cafe/winston",
+      "mode": "classic",
+      "official": true,
+      "trusted": false,
+      "recommended": false,
+      "description": {
+        "cs": "Oficiální source open-source nativního Reddit klienta Winston pro iOS.",
+        "en": "Official source for Winston, an open-source native Reddit client for iOS."
+      },
+      "tags": [
+        "reddit",
+        "social",
+        "open-source",
+        "client",
+        "official"
+      ],
+      "developer": "lo.cafe / Kinark",
+      "compliance": {
+        "reviewStatus": "public-metadata",
+        "binaryRehost": false,
+        "evidenceURL": "https://raw.githubusercontent.com/lo-cafe/winston-altstore/main/apps.json",
+        "reviewedAt": "2026-10-01",
+        "note": "Original public Source URL is listed for discovery and direct install only. iOS Hub does not copy, merge, cache, or rehost the Source feed or IPA binaries."
+      },
+      "iconURL": "https://lo.cafe/favicon.png"
+    },
+    {
+      "id": "cizzuk-source",
+      "name": "Cizzuk Source",
+      "url": "https://i.cizzuk.net/altstore/source.pal.json",
+      "website": "https://cizzuk.net/",
+      "mode": "pal",
+      "official": true,
+      "trusted": false,
+      "recommended": true,
+      "description": {
+        "cs": "Oficiální AltStore PAL source vývojáře Cizzuk s menšími praktickými utilitami a nástroji.",
+        "en": "Official AltStore PAL source by Cizzuk with small practical utilities and tools."
+      },
+      "tags": [
+        "pal",
+        "utility",
+        "tools",
+        "official"
+      ],
+      "developer": "Cizzuk",
+      "compliance": {
+        "reviewStatus": "public-metadata",
+        "binaryRehost": false,
+        "evidenceURL": "https://i.cizzuk.net/altstore/source.pal.json",
+        "reviewedAt": "2026-10-01",
+        "note": "Original public Source URL is listed for discovery and direct install only. iOS Hub does not copy, merge, cache, or rehost the Source feed or IPA binaries."
+      },
+      "iconURL": "https://i.cizzuk.net/altstore/icon-75rcnwa-opt.png"
+    },
+    {
+      "id": "aidoku",
+      "name": "Aidoku Source",
+      "url": "https://raw.githubusercontent.com/Aidoku/Aidoku/altstore/apps.json",
+      "website": "https://aidoku.app/",
+      "mode": "classic",
+      "official": true,
+      "trusted": false,
+      "recommended": true,
+      "description": {
+        "cs": "Oficiální source open-source čtečky Aidoku pro manga, komiksy a externí zdroje.",
+        "en": "Official source for Aidoku, an open-source manga and comics reader with external sources."
+      },
+      "tags": [
+        "manga",
+        "reader",
+        "comics",
+        "open-source",
+        "official"
+      ],
+      "developer": "Aidoku / Skitty",
+      "compliance": {
+        "reviewStatus": "public-metadata",
+        "binaryRehost": false,
+        "evidenceURL": "https://raw.githubusercontent.com/Aidoku/Aidoku/altstore/apps.json",
+        "reviewedAt": "2026-10-01",
+        "note": "Original public Source URL is listed for discovery and direct install only. iOS Hub does not copy, merge, cache, or rehost the Source feed or IPA binaries."
+      },
+      "iconURL": "https://aidoku.app/images/apple-touch-icon.png"
+    },
+    {
+      "id": "mangayomi",
+      "name": "Mangayomi",
+      "url": "https://raw.githubusercontent.com/kodjodevf/mangayomi/refs/heads/main/repo/source.json",
+      "website": "https://github.com/kodjodevf/mangayomi",
+      "mode": "classic",
+      "official": true,
+      "trusted": false,
+      "recommended": true,
+      "description": {
+        "cs": "Oficiální source Mangayomi pro čtení manga a novel a sledování anime s rozšiřitelnými zdroji.",
+        "en": "Official Mangayomi source for reading manga and novels and watching anime with extensible sources."
+      },
+      "tags": [
+        "manga",
+        "anime",
+        "reader",
+        "media",
+        "open-source",
+        "official"
+      ],
+      "developer": "Moustapha Kodjo Amadou",
+      "compliance": {
+        "reviewStatus": "public-metadata",
+        "binaryRehost": false,
+        "evidenceURL": "https://raw.githubusercontent.com/kodjodevf/mangayomi/refs/heads/main/repo/source.json",
+        "reviewedAt": "2026-10-01",
+        "note": "Original public Source URL is listed for discovery and direct install only. iOS Hub does not copy, merge, cache, or rehost the Source feed or IPA binaries."
+      },
+      "iconURL": "https://raw.githubusercontent.com/kodjodevf/mangayomi/refs/heads/main/repo/images/icons/icon_default.webp"
+    },
+    {
+      "id": "anymex",
+      "name": "AnymeX",
+      "url": "https://raw.githubusercontent.com/RyanYuuki/AnymeX/refs/heads/main/repo/source.json",
+      "website": "https://github.com/RyanYuuki/AnymeX",
+      "mode": "classic",
+      "official": true,
+      "trusted": false,
+      "recommended": true,
+      "description": {
+        "cs": "Oficiální source AnymeX, multiplatformního klienta pro správu a sledování anime a manga seznamů.",
+        "en": "Official AnymeX source, a cross-platform client for managing and tracking anime and manga lists."
+      },
+      "tags": [
+        "anime",
+        "manga",
+        "tracking",
+        "anilist",
+        "myanimelist",
+        "official"
+      ],
+      "developer": "RyanYuuki",
+      "compliance": {
+        "reviewStatus": "public-metadata",
+        "binaryRehost": false,
+        "evidenceURL": "https://raw.githubusercontent.com/RyanYuuki/AnymeX/refs/heads/main/repo/source.json",
+        "reviewedAt": "2026-10-01",
+        "note": "Original public Source URL is listed for discovery and direct install only. iOS Hub does not copy, merge, cache, or rehost the Source feed or IPA binaries."
+      },
+      "iconURL": "https://raw.githubusercontent.com/RyanYuuki/AnymeX/refs/heads/main/repo/images/icons/anymex.webp"
+    },
+    {
+      "id": "animeko-openani",
+      "name": "OpenAni / Animeko",
+      "url": "https://raw.githubusercontent.com/maxchang3/ani-altstore-source/main/generated/apps.json",
+      "website": "https://myani.org/",
+      "mode": "classic",
+      "official": false,
+      "trusted": false,
+      "recommended": true,
+      "community": true,
+      "description": {
+        "cs": "Veřejný AltStore source pro Animeko (OpenAni), včetně stabilních a předběžných buildů.",
+        "en": "Public AltStore source for Animeko (OpenAni), including stable and pre-release builds."
+      },
+      "tags": [
+        "anime",
+        "media",
+        "community",
+        "open-source",
+        "altstore"
+      ],
+      "developer": "Animeko / OpenAni",
+      "compliance": {
+        "reviewStatus": "public-metadata",
+        "binaryRehost": false,
+        "evidenceURL": "https://raw.githubusercontent.com/maxchang3/ani-altstore-source/main/generated/apps.json",
+        "reviewedAt": "2026-10-01",
+        "note": "Original public Source URL is listed for discovery and direct install only. iOS Hub does not copy, merge, cache, or rehost the Source feed or IPA binaries."
+      },
+      "iconURL": "https://avatars.githubusercontent.com/u/166622089"
+    },
+    {
+      "id": "wsf-source",
+      "name": "WSF Source",
+      "url": "https://raw.githubusercontent.com/WSF-Team/WSF/main/repo/app-repo.json",
+      "website": "https://github.com/WSF-Team/WSF",
+      "mode": "classic",
+      "official": true,
+      "trusted": false,
+      "recommended": false,
+      "community": true,
+      "modified": true,
+      "description": {
+        "cs": "Source projektu WSF s utilitami a komunitními aplikacemi jako Portal, Browser, Haptics, YT-TV a dalšími.",
+        "en": "WSF project source with utilities and community apps such as Portal, Browser, Haptics, YT-TV and more."
+      },
+      "tags": [
+        "community",
+        "utility",
+        "apps",
+        "modified",
+        "altstore"
+      ],
+      "developer": "WSF Team",
+      "compliance": {
+        "reviewStatus": "public-metadata",
+        "binaryRehost": false,
+        "evidenceURL": "https://raw.githubusercontent.com/WSF-Team/WSF/main/repo/app-repo.json",
+        "reviewedAt": "2026-10-01",
+        "note": "Original public Source URL is listed for discovery and direct install only. iOS Hub does not copy, merge, cache, or rehost the Source feed or IPA binaries."
+      },
+      "iconURL": "https://raw.githubusercontent.com/WSF-Team/WSF/main/portal/resources/wsf.png"
+    },
+    {
+      "id": "nuvio",
+      "name": "Nuvio Official",
+      "url": "https://raw.githubusercontent.com/NuvioMedia/NuvioMobile/cmp-rewrite/store.json",
+      "website": "https://nuvio.tv/",
+      "mode": "classic",
+      "official": true,
+      "trusted": false,
+      "recommended": true,
+      "description": {
+        "cs": "Oficiální source open-source mediální aplikace Nuvio pro iOS se systémem vlastních zdrojů, knihovnou a synchronizací.",
+        "en": "Official source for Nuvio, an open-source iOS media app with bring-your-own sources, library and sync."
+      },
+      "tags": [
+        "media",
+        "video",
+        "streaming",
+        "open-source",
+        "official"
+      ],
+      "developer": "NuvioMedia",
+      "compliance": {
+        "reviewStatus": "public-metadata",
+        "binaryRehost": false,
+        "evidenceURL": "https://raw.githubusercontent.com/NuvioMedia/NuvioMobile/cmp-rewrite/store.json",
+        "reviewedAt": "2026-10-01",
+        "note": "Original public Source URL is listed for discovery and direct install only. iOS Hub does not copy, merge, cache, or rehost the Source feed or IPA binaries."
+      },
+      "iconURL": "https://raw.githubusercontent.com/NuvioMedia/NuvioMobile/0.4.11/iosApp/iosApp/Assets.xcassets/AppIcon.appiconset/app-icon-1024.png"
+    },
+    {
+      "id": "ryuksign",
+      "name": "RyukSign Repository",
+      "url": "https://raw.githubusercontent.com/faroukbmiled/RyukSign/refs/heads/main/app-repo.json",
+      "website": "https://github.com/faroukbmiled/RyukSign",
+      "mode": "classic",
+      "official": true,
+      "trusted": false,
+      "recommended": true,
+      "community": false,
+      "modified": false,
+      "description": {
+        "cs": "Oficiální source RyukSign, nástroje pro podepisování a instalaci iOS aplikací přímo na zařízení.",
+        "en": "Official source for RyukSign, an on-device iOS app signing and installation tool."
+      },
+      "tags": [
+        "sideload",
+        "signing",
+        "installer",
+        "utility",
+        "official"
+      ],
+      "developer": "faroukbmiled",
+      "compliance": {
+        "reviewStatus": "public-metadata",
+        "binaryRehost": false,
+        "evidenceURL": "https://raw.githubusercontent.com/faroukbmiled/RyukSign/refs/heads/main/app-repo.json",
+        "reviewedAt": "2026-10-01",
+        "note": "Original public Source URL is listed for discovery and direct install only. iOS Hub does not copy, merge, cache, or rehost the Source feed or IPA binaries."
+      },
+      "iconURL": "https://raw.githubusercontent.com/faroukbmiled/RyukSign/refs/heads/main/repo-icon.png"
+    }
+  ]
+}

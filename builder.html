@@ -1,0 +1,221 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#070b14">
+  <meta name="referrer" content="no-referrer">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://www.googletagmanager.com; style-src 'self' 'unsafe-inline'; img-src 'self' https: data:; connect-src 'self' https://*.google-analytics.com https://*.analytics.google.com https://*.googletagmanager.com; object-src 'none'; base-uri 'self'; form-action 'none'">
+  <meta name="description" content="Custom Source Builder — bulk import multiple original iOS Sources through one Shortcut run where the selected installer supports it, without merging them into one Mix.">
+  <link rel="canonical" href="https://caseycz.github.io/iOS-Hub/builder.html">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="iOS Hub">
+  <meta property="og:title" content="Custom Source Builder — iOS Hub">
+  <meta property="og:description" content="Custom Source Builder — send multiple original Sources through one iOS Hub Source Import run when the selected installer supports it. Sources remain separate instead of being merged into one Mix.">
+  <meta property="og:url" content="https://caseycz.github.io/iOS-Hub/builder.html">
+  <meta name="twitter:card" content="summary">
+  <title>Custom Source Builder — iOS Hub</title>
+  <meta name="analytics-page-title" content="Custom Source Builder — iOS Hub">
+  <!-- Analytics loads only after explicit opt-in consent. -->
+  <script src="src/js/analytics.js?v=1.1.5-20261001-stabletitles2"></script>
+  <link rel="stylesheet" href="src/css/styles.css?v=1.1.5-20260918-fullaudit3">
+  <link rel="stylesheet" href="src/css/hub-extra.css?v=1.1.5-20260930-builder-cleanup1">
+  <link rel="stylesheet" href="src/css/collapsible.css?v=1.1.5-20260918-audit1">
+</head>
+<body>
+  <a class="skip-link" href="#top" data-i18n="skipToContent">Skip to content</a>
+  <header class="topbar">
+    <div class="wrap topbar-inner">
+      <a class="brand" href="index.html" aria-label="iOS Hub">
+        <span class="brand-mark">iOS</span>
+        <span>iOS Hub<small>iOS Sources · Sideloading</small></span>
+      </a>
+      <nav class="nav" aria-label="Primary">
+        <a href="index.html#tools" data-i18n="tools">Tools</a>
+        <a href="builder.html" class="active" aria-current="page">Source Builder</a>
+        <a href="guide.html" data-i18n="guideNav">Guide</a>
+        <a href="resources.html" data-i18n="resourcesNav">Useful</a>
+        <a href="index.html#sources" data-i18n="sources">Sources</a>
+        <a href="credits.html">Credits</a>
+      </nav>
+      <div class="nav-actions">
+        <select id="languageSelect" class="language-select-native" aria-hidden="true" tabindex="-1">
+          <option value="en">EN</option>
+          <option value="cs">CZ</option>
+          <option value="de">DE</option>
+          <option value="es">ES</option>
+          <option value="fr">FR</option>
+        </select>
+        <div class="settings-menu" data-settings-menu>
+          <button id="settingsButton" class="icon-btn settings-button" type="button" aria-haspopup="dialog" aria-expanded="false" aria-controls="settingsPanel" aria-label="Settings" title="Settings">⚙</button>
+          <div id="settingsPanel" class="settings-panel" role="dialog" aria-labelledby="settingsTitle" aria-hidden="true">
+            <div id="settingsTitle" class="settings-title" data-settings-copy="title">Settings</div>
+
+            <div class="settings-label" data-settings-copy="appearance">APPEARANCE</div>
+            <div class="settings-theme-seg">
+              <button type="button" data-settings-theme="dark" aria-pressed="false">☾ <span data-settings-copy="dark">Dark</span></button>
+              <button type="button" data-settings-theme="light" aria-pressed="false">☀ <span data-settings-copy="light">Light</span></button>
+            </div>
+
+            <div class="settings-label" data-settings-copy="language">LANGUAGE</div>
+            <div class="settings-language-list">
+              <button type="button" data-settings-language="cs" role="radio" aria-checked="false"><img src="assets/flags/cz.svg" alt=""><span>Čeština</span></button>
+              <button type="button" data-settings-language="en" role="radio" aria-checked="false"><img src="assets/flags/gb.svg" alt=""><span>English</span></button>
+              <button type="button" data-settings-language="de" role="radio" aria-checked="false"><img src="assets/flags/de.svg" alt=""><span>Deutsch</span></button>
+              <button type="button" data-settings-language="es" role="radio" aria-checked="false"><img src="assets/flags/es.svg" alt=""><span>Español</span></button>
+              <button type="button" data-settings-language="fr" role="radio" aria-checked="false"><img src="assets/flags/fr.svg" alt=""><span>Français</span></button>
+            </div>
+
+            <div class="settings-label" data-settings-copy="report">REPORT ISSUE</div>
+            <a class="settings-report-link report-bug-btn" href="https://github.com/CaseyCZ/iOS-Hub/issues/new" target="_blank" rel="noopener" aria-label="Report a bug" title="Report a bug" data-i18n-title="reportBug" data-i18n-aria-label="reportBug"><span aria-hidden="true">🐞</span><span data-i18n="reportBug">Report a bug</span></a>
+          </div>
+        </div>
+        <button id="themeToggle" class="settings-theme-proxy" type="button" aria-hidden="true" tabindex="-1">☀</button>
+        <button class="compact-btn nav-support-primary" type="button" data-support-open><img class="compact-brand-icon" src="https://cdn.buymeacoffee.com/buttons/bmc-new-btn-logo.svg" alt="" referrerpolicy="no-referrer"><span class="support-label" data-i18n="support">Support</span></button>
+
+      </div>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero builder-page-hero wrap">
+      <div class="eyebrow">CUSTOM · SOURCE BUILDER</div>
+      <h1 id="builderTitle">Custom Source Builder</h1>
+      <p id="builderDesc">Choose an installer and original Sources. The Builder does not merge them into one universal Mix. Instead, iOS Hub Source Import sends the original Source URLs one after another in a single Shortcut run; when the selected installer supports this flow, multiple Sources can be added in that one run. If it does not, confirmation or the manual one-by-one fallback may still be needed. Optional selection JSON remains available.</p>
+    </section>
+
+    <section class="section wrap builder-page-section">
+      <div id="sourceBuilderWorkspace" class="panel builder-shell builder-page-shell">
+        <article class="builder-control-card builder-page-control">
+          <span class="pill mode">CUSTOM</span>
+          <h4 id="builderSelectionTitle">Selected Sources</h4>
+          <div id="expSelectedCount" class="muted">0 selected</div>
+
+          <details class="content-disclosure builder-filter-disclosure" open>
+            <summary>
+              <span id="builderFiltersLabel" class="disclosure-title">⚙ Filters · 🔎 Search · ☑ Selection</span>
+            </summary>
+            <div class="disclosure-body">
+              <div class="catalog-filters filter-disclosure-grid">
+                <div class="filter-group">
+                  <div class="filter-label">⚙ <span data-i18n="sourceType">Source type</span></div>
+                  <div class="filter-tabs">
+                    <button class="filter active" type="button" data-exp-category-filter="all" data-i18n="all">All</button>
+                    <button class="filter" type="button" data-exp-category-filter="official" data-i18n="official">Official</button>
+                    <button class="filter" type="button" data-exp-category-filter="trusted" data-i18n="trusted">Trusted</button>
+                    <button class="filter" type="button" data-exp-category-filter="community" data-i18n="community">Community</button>
+                    <button class="filter" type="button" data-exp-category-filter="modified" data-i18n="modified">Modified</button>
+                  </div>
+                </div>
+
+                <div class="filter-group">
+                  <div class="filter-label">🏷 <span data-i18n="genre">Genre</span></div>
+                  <div class="filter-tabs">
+                    <button class="filter active" type="button" data-exp-genre-filter="all" data-i18n="all">All</button>
+                    <button class="filter" type="button" data-exp-genre-filter="games" data-i18n="games">Games</button>
+                    <button class="filter" type="button" data-exp-genre-filter="emulators" data-i18n="emulators">Emulators</button>
+                    <button class="filter" type="button" data-exp-genre-filter="video" data-i18n="video">Video</button>
+                    <button class="filter" type="button" data-exp-genre-filter="music" data-i18n="music">Music</button>
+                    <button class="filter" type="button" data-exp-genre-filter="anime" data-i18n="animeManga">Anime & Manga</button>
+                    <button class="filter" type="button" data-exp-genre-filter="social" data-i18n="social">Social</button>
+                    <button class="filter" type="button" data-exp-genre-filter="downloads" data-i18n="downloads">Downloads</button>
+                    <button class="filter" type="button" data-exp-genre-filter="sideload" data-i18n="sideloadTools">Sideload Tools</button>
+                    <button class="filter" type="button" data-exp-genre-filter="utilities" data-i18n="utilities">Utilities</button>
+                  </div>
+                </div>
+
+                <div class="filter-group builder-target-group">
+                  <div class="filter-label"><span id="builderTargetLabel">Where do you want to add the Sources?</span></div>
+                  <div id="builderTargets" class="builder-target-picker-host" aria-labelledby="builderTargetLabel"></div>
+                  <div id="builderTargetHelp" class="muted builder-target-help">Choose the app where you want to add the selected original Sources.</div>
+                  <div id="builderShortcutSupportNotice" class="notice builder-shortcut-support-notice" hidden>Bulk import through the Shortcut is not available for this installer yet. You can still use the manual one-by-one fallback.</div>
+                  <div id="builderCompatibilityHelp" class="notice builder-compatibility-help">The Builder does not merge or re-host Sources. It opens each selected original Source URL directly in the chosen installer, so future updates continue from the original Source.</div>
+                  <div id="builderPalNote" class="muted builder-target-pal-note">Classic and PAL Sources are kept separate and are never converted.</div>
+                  <div class="muted builder-target-pal-note">Installer definitions and deep-links come from one shared configuration.</div>
+                </div>
+
+                <div class="filter-group">
+                  <div class="filter-label">🔎 <span data-i18n="search">Search</span></div>
+                  <input id="expSourceSearch" class="search" type="search" aria-label="Search" data-i18n-aria-label="search" autocomplete="off" data-i18n-placeholder="searchPlaceholder" placeholder="Search sources…">
+                </div>
+
+                <div class="filter-group">
+                  <div class="filter-label">☑ <span data-i18n="selection">Selection</span></div>
+                  <div class="builder-choice-actions">
+                    <button id="expSelectCompatible" class="btn small primary" type="button">Select all compatible</button>
+                    <button id="expSelectAll" class="btn small secondary" type="button">Select all shown</button>
+                    <button id="expClear" class="btn small ghost" type="button">Clear selection</button>
+                  </div>
+                  <div id="builderSourceHelp" class="muted builder-pass-help">Sources are not merged, copied or re-hosted. Each original Source URL is added separately so future updates continue normally.</div>
+                  <div id="builderQueueHelp" class="muted builder-pass-help">Bulk import sends all selected original Sources to the iOS Hub Source Import Shortcut in one batch. The manual list remains available below.</div>
+                </div>
+              </div>
+            </div>
+          </details>
+
+          <div class="builder-control-footer">
+            <div class="builder-result-badges">
+              <span id="builderTargetBadge" class="pill mode"><img class="installer-icon" src="assets/icons/altstore.svg" alt=""> AltStore Classic</span>
+            </div>
+            <div class="builder-actions">
+              <button id="expBuild" class="btn primary" type="button" disabled>Bulk import</button>
+              <button id="expPrepareManual" class="btn secondary" type="button" hidden disabled>Prepare manual fallback</button>
+              <a id="expInstallShortcut" class="btn secondary" href="shortcut.html" target="_blank" rel="noopener">Install Shortcut</a>
+              <button id="expDownload" class="btn small secondary" type="button" disabled>Download selection JSON</button>
+              <button id="expPreview" class="btn small ghost" type="button" disabled>Preview selection JSON</button>
+            </div>
+            <span id="shortcutHelp" class="muted">Bulk import uses the iOS Hub Source Import Shortcut. Install it once; manual one-by-one opening remains available below. JSON export only saves the selected original Source URLs.</span>
+            <span id="expMessage" class="muted"></span>
+          </div>
+        </article>
+
+        <div id="experimentalBuilderList" class="builder-list" aria-live="polite"></div>
+
+        <div id="expResult" class="builder-result">
+          <strong id="expResultTitle">Manual fallback</strong>
+          <div id="expResultInfo" class="muted" style="margin-top:6px"></div>
+          <p id="expResultNote" class="notice" style="margin-top:10px"></p>
+          <div id="expQueueList" class="builder-list builder-queue-list" aria-live="polite"></div>
+          <div class="builder-actions">
+            <a id="expAddTarget" class="btn small primary" href="#" hidden>Open next</a>
+            <button id="expCopyUrl" class="btn small secondary" type="button" hidden>Copy Source URLs</button>
+            <button id="expRestartQueue" class="btn small ghost" type="button" hidden>Restart queue</button>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap footer-inner">
+      <span>© <span id="year"></span> iOS Hub · v1.1.5</span>
+      <div class="footer-links">
+        <a href="https://caseycz.github.io/" target="_blank" rel="noopener">Website</a>
+        <a href="https://github.com/CaseyCZ/iOS-Hub" target="_blank" rel="noopener">GitHub · iOS-Hub</a>
+        <a href="credits.html">Credits</a>
+        <a href="privacy.html">Privacy &amp; Cookies</a>
+        <button class="footer-link-button" type="button" data-cookie-settings>Cookie settings</button>
+      </div>
+    </div>
+  </footer>
+
+  <div id="supportModal" class="support-backdrop" role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="supportTitle">
+    <div class="support-dialog">
+      <button class="support-close" type="button" data-support-close aria-label="Close" data-i18n-aria-label="close">×</button>
+      <div class="eyebrow" data-i18n="supportEyebrow">SUPPORT THE PROJECT</div>
+      <h2 id="supportTitle" data-i18n="supportTitle">Support further development.</h2>
+      <p data-i18n="supportDesc">If iOS Hub saves you time, you can support further development through Buy Me a Coffee.</p>
+      <a href="https://www.buymeacoffee.com/caseycz" target="_blank" rel="noopener"><img class="support-qr" src="https://caseycz.github.io/support-qr.svg" alt="Buy Me a Coffee QR code"></a>
+      <a class="btn primary brand-link" style="width:100%" href="https://www.buymeacoffee.com/caseycz" target="_blank" rel="noopener"><img class="brand-link-icon brand-link-icon-contain" src="https://cdn.buymeacoffee.com/buttons/bmc-new-btn-logo.svg" alt="" referrerpolicy="no-referrer"><span data-i18n="openCoffee">Open Buy Me a Coffee ↗</span></a>
+    </div>
+  </div>
+
+  <script type="module" src="src/js/builder-page.js?v=1.1.5-20260930-source-import8"></script>
+  <script type="module" src="src/js/builder.js?v=1.1.5-20260930-source-import9"></script>
+  <script type="module" src="src/js/collapsible.js?v=1.1.5-20260918-audit1"></script>
+  <script src="src/js/horizontal-scroll.js?v=1.1.5-20260930-scroll-hardfix1"></script>
+  <script src="src/js/support-dialog.js?v=1.1.5-20260918-a11y1"></script>
+  <script src="src/js/mobile-menu.js?v=1.1.5-20260918-a11y1"></script>
+  <script src="src/js/settings-menu.js?v=1.1.5-20260918-a11y1"></script>
+</body>
+</html>
