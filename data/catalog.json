@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-11T05:50:02Z",
+  "generatedAt": "2026-10-11T12:53:41Z",
   "sources": [
     {
       "id": "utm",
@@ -3414,11 +3414,19 @@
     {
       "id": "cypwn-ipa",
       "name": "CyPwn IPA Library",
-      "appCount": 209,
+      "appCount": 210,
       "catalogLimited": true,
       "iconURL": "https://repo.cypwn.xyz/assets/images/cypwn_small.png",
       "sourceURL": "https://ipa.cypwn.xyz/cypwn.json",
       "apps": [
+        {
+          "name": "Stremio-2.0.7",
+          "bundleIdentifier": "com.stremio.pal",
+          "developerName": "Stremio-2.0.7 x CyPwn",
+          "version": "2.0.7",
+          "iconURL": "https://ipa.cypwn.xyz/serve/icons/Stremio-2.0.7.png",
+          "subtitle": ""
+        },
         {
           "name": "Stremio-2.0.6",
           "bundleIdentifier": "com.stremio.pal",
@@ -4849,14 +4857,6 @@
           "developerName": "Star_Map_2.6_Satella x CyPwn",
           "version": "2.6",
           "iconURL": "https://ipa.cypwn.xyz/serve/icons/Star_Map_2.6_Satella.png",
-          "subtitle": ""
-        },
-        {
-          "name": "RefacePro_3.12.0",
-          "bundleIdentifier": "cypwn.RefacePro_3.12.0.3.12.0",
-          "developerName": "RefacePro_3.12.0 x CyPwn",
-          "version": "3.12.0",
-          "iconURL": "https://ipa.cypwn.xyz/serve/icons/RefacePro_3.12.0.png",
           "subtitle": ""
         }
       ]
@@ -8399,7 +8399,7 @@
           "name": "Apollo for Reddit - GLASS",
           "bundleIdentifier": "com.christianselig.Apollo",
           "developerName": "Christian Selig (& Apollo-Reborn contributors)",
-          "version": "3.8.5",
+          "version": "3.9.0",
           "iconURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/Apollo-Reborn/icon.png",
           "subtitle": "Apollo-Reborn build with Liquid Glass patch"
         },
@@ -8415,7 +8415,7 @@
           "name": "Doer",
           "bundleIdentifier": "com.naine.doer",
           "developerName": "moliango",
-          "version": "1.8.5.3",
+          "version": "1.8.6",
           "iconURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/Doer/icon.png",
           "subtitle": "A native iOS client for Linux.do"
         },
@@ -8527,7 +8527,7 @@
           "name": "MiniWatts",
           "bundleIdentifier": "org.zhaohe.MiniWatts",
           "developerName": "ResistanceTo",
-          "version": "1.4.1",
+          "version": "1.5.0",
           "iconURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/MiniWatts/icon.png",
           "subtitle": "Battery, charging and thermal instrument"
         },
@@ -8551,7 +8551,7 @@
           "name": "NeoStation iOS",
           "bundleIdentifier": "com.neogamelab.neostation",
           "developerName": "TarbleFR",
-          "version": "0.0.2",
+          "version": "0.0.4",
           "iconURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/NeoStation/icon.png",
           "subtitle": "Emulation frontend for iPhone and iPad"
         },
@@ -8591,7 +8591,7 @@
           "name": "Pixiv-SwiftUI",
           "bundleIdentifier": "org.eu.eslzzyl.Pixiv-SwiftUI",
           "developerName": "Eslzzyl",
-          "version": "0.16.0",
+          "version": "0.16.2",
           "iconURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/Pixiv-SwiftUI/icon.png",
           "subtitle": "基于 SwiftUI 的 Pixiv 第三方客户端"
         },
@@ -8615,7 +8615,7 @@
           "name": "PureLive",
           "bundleIdentifier": "com.mystyle.purelive.liu",
           "developerName": "liuchuancong",
-          "version": "3.1.18",
+          "version": "3.1.19",
           "iconURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/PureLive/icon.png",
           "subtitle": "基于 Flutter 的开源多平台直播聚合播放器"
         },
@@ -8639,7 +8639,7 @@
           "name": "SpotiFLAC",
           "bundleIdentifier": "com.zarz.spotiflac",
           "developerName": "zarzet",
-          "version": "5.1.0",
+          "version": "5.1.1",
           "iconURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/SpotiFLAC/icon.png",
           "subtitle": "FLAC Downloader for iOS"
         },
@@ -8647,7 +8647,7 @@
           "name": "TiebaPure",
           "bundleIdentifier": "dev.infinityf4p.tiebapure",
           "developerName": "infinityf4p",
-          "version": "1.4.14",
+          "version": "1.4.15",
           "iconURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/TiebaPure/icon.png",
           "subtitle": "基于 SwiftUI 的第三方百度贴吧客户端"
         },
@@ -10219,7 +10219,7 @@
           "name": "Reynard Browser",
           "bundleIdentifier": "com.minh-ton.Reynard",
           "developerName": "Minh Ton",
-          "version": "0.16.0",
+          "version": "0.17.0",
           "iconURL": "https://github.com/user-attachments/assets/1c42dda2-b778-4342-9f94-8f852c3ad652",
           "subtitle": "An experimental Gecko-based web browser for iOS 13+."
         }
