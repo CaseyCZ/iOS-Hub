@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-12T15:29:44Z",
+  "generatedAt": "2026-10-13T00:43:05Z",
   "sources": [
     {
       "id": "utm",
@@ -4872,11 +4872,19 @@
     {
       "id": "apptesters",
       "name": "AppTesters IPA Repo",
-      "appCount": 9543,
+      "appCount": 9544,
       "catalogLimited": true,
       "iconURL": "https://apptesters.org/apptesters-512x512.png",
       "sourceURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/apps.json",
       "apps": [
+        {
+          "name": "VDIT",
+          "bundleIdentifier": "me.imgbase.videoday",
+          "developerName": "",
+          "version": "4.3.1",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/me.imgbase.videoday.png",
+          "subtitle": ""
+        },
         {
           "name": "VDIT",
           "bundleIdentifier": "me.imgbase.videoday",
@@ -6467,14 +6475,6 @@
           "developerName": "",
           "version": "54.0.5",
           "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.agiletortoise.Drafts5.png",
-          "subtitle": ""
-        },
-        {
-          "name": "Clipboard",
-          "bundleIdentifier": "com.zeus.EasyCopy",
-          "developerName": "",
-          "version": "4.1.1",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.zeus.EasyCopy.png",
           "subtitle": ""
         }
       ]
@@ -10471,7 +10471,7 @@
           "name": "Mangayomi",
           "bundleIdentifier": "com.kodjodevf.mangayomi",
           "developerName": "Moustapha Kodjo Amadou",
-          "version": "0.9.8",
+          "version": "0.9.9",
           "iconURL": "https://raw.githubusercontent.com/kodjodevf/mangayomi/refs/heads/main/repo/images/icons/icon_default.webp",
           "subtitle": "Read manga, novels, and watch anime"
         }
