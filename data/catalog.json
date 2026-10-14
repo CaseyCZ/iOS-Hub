@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-14T11:56:02Z",
+  "generatedAt": "2026-10-14T17:13:54Z",
   "sources": [
     {
       "id": "utm",
@@ -4908,7 +4908,7 @@
     {
       "id": "apptesters",
       "name": "AppTesters IPA Repo",
-      "appCount": 9545,
+      "appCount": 9546,
       "catalogLimited": true,
       "iconURL": "https://apptesters.org/apptesters-512x512.png",
       "sourceURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/apps.json",
@@ -4919,6 +4919,14 @@
           "developerName": "",
           "version": "4.3.1",
           "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/me.imgbase.videoday.png",
+          "subtitle": ""
+        },
+        {
+          "name": "CollaNote",
+          "bundleIdentifier": "net.quochuywdm.collanote496",
+          "developerName": "",
+          "version": "5.0.6",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/net.quochuywdm.collanote496.png",
           "subtitle": ""
         },
         {
@@ -6503,14 +6511,6 @@
           "developerName": "",
           "version": "1.14.1",
           "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.joytunes.Draw.png",
-          "subtitle": ""
-        },
-        {
-          "name": "Thenx",
-          "bundleIdentifier": "com.calisthenics.thenx",
-          "developerName": "",
-          "version": "6.8.3",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.calisthenics.thenx.png",
           "subtitle": ""
         }
       ]
@@ -8523,7 +8523,7 @@
           "name": "Kazumi",
           "bundleIdentifier": "com.example.kazumi",
           "developerName": "Predidit",
-          "version": "2.3.8",
+          "version": "2.3.9",
           "iconURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/Kazumi/icon.png",
           "subtitle": "基于自定义规则的番剧采集APP，支持流媒体在线观看，支持弹幕，支持实时超分辨率。"
         },
