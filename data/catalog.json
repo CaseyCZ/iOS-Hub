@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-15T17:03:39Z",
+  "generatedAt": "2026-10-15T21:25:20Z",
   "sources": [
     {
       "id": "utm",
@@ -1161,7 +1161,7 @@
           "name": "Twitch",
           "bundleIdentifier": "tv.twitch",
           "developerName": "",
-          "version": "31.6",
+          "version": "31.6.2",
           "iconURL": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Twitch_Glitch_Logo_Purple.svg/640px-Twitch_Glitch_Logo_Purple.svg.png",
           "subtitle": ""
         },
@@ -3458,19 +3458,11 @@
     {
       "id": "cypwn-ipa",
       "name": "CyPwn IPA Library",
-      "appCount": 210,
+      "appCount": 209,
       "catalogLimited": true,
       "iconURL": "https://repo.cypwn.xyz/assets/images/cypwn_small.png",
       "sourceURL": "https://ipa.cypwn.xyz/cypwn.json",
       "apps": [
-        {
-          "name": "Stremio-2.0.7",
-          "bundleIdentifier": "com.stremio.pal",
-          "developerName": "Stremio-2.0.7 x CyPwn",
-          "version": "2.0.7",
-          "iconURL": "https://ipa.cypwn.xyz/serve/icons/Stremio-2.0.7.png",
-          "subtitle": ""
-        },
         {
           "name": "Stremio-2.0.6",
           "bundleIdentifier": "com.stremio.pal",
@@ -4902,17 +4894,33 @@
           "version": "2.6",
           "iconURL": "https://ipa.cypwn.xyz/serve/icons/Star_Map_2.6_Satella.png",
           "subtitle": ""
+        },
+        {
+          "name": "RefacePro_3.12.0",
+          "bundleIdentifier": "cypwn.RefacePro_3.12.0.3.12.0",
+          "developerName": "RefacePro_3.12.0 x CyPwn",
+          "version": "3.12.0",
+          "iconURL": "https://ipa.cypwn.xyz/serve/icons/RefacePro_3.12.0.png",
+          "subtitle": ""
         }
       ]
     },
     {
       "id": "apptesters",
       "name": "AppTesters IPA Repo",
-      "appCount": 9547,
+      "appCount": 9548,
       "catalogLimited": true,
       "iconURL": "https://apptesters.org/apptesters-512x512.png",
       "sourceURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/apps.json",
       "apps": [
+        {
+          "name": "VDIT",
+          "bundleIdentifier": "me.imgbase.videoday",
+          "developerName": "",
+          "version": "4.3.1",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/me.imgbase.videoday.png",
+          "subtitle": ""
+        },
         {
           "name": "VDIT",
           "bundleIdentifier": "me.imgbase.videoday",
@@ -6503,14 +6511,6 @@
           "developerName": "",
           "version": "5.0.4",
           "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/net.quochuywdm.collanote496.png",
-          "subtitle": ""
-        },
-        {
-          "name": "Unfold",
-          "bundleIdentifier": "com.moonlab.unfoldstories",
-          "developerName": "",
-          "version": "8.166.0",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.moonlab.unfoldstories.png",
           "subtitle": ""
         }
       ]
