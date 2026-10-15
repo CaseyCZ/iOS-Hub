@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-15T04:42:40Z",
+  "generatedAt": "2026-10-15T11:33:22Z",
   "sources": [
     {
       "id": "utm",
@@ -873,7 +873,7 @@
           "name": "Fortnite",
           "bundleIdentifier": "com.epicgames.FortniteGame",
           "developerName": "Epic Games Sweden AB",
-          "version": "42.30.1",
+          "version": "42.40",
           "iconURL": "https://cdn1.epicgames.com/item/fn/FN_Logo_512x512_1024x1024-0a19a924e7f61249ab0c76569abfdc31",
           "subtitle": ""
         },
@@ -881,7 +881,7 @@
           "name": "Fall Guys",
           "bundleIdentifier": "uk.co.mediatonic.fallguys",
           "developerName": "Mediatonic, Ltd.",
-          "version": "21.3.1",
+          "version": "21.3.2",
           "iconURL": "https://cdn1.epicgames.com/item/50118b7f954e450f8823df1614b24e80/iOS-New-512x512_512x512-ff4ce9348fe2142316cb4434228d78eb",
           "subtitle": ""
         },
@@ -3458,11 +3458,19 @@
     {
       "id": "cypwn-ipa",
       "name": "CyPwn IPA Library",
-      "appCount": 209,
+      "appCount": 210,
       "catalogLimited": true,
       "iconURL": "https://repo.cypwn.xyz/assets/images/cypwn_small.png",
       "sourceURL": "https://ipa.cypwn.xyz/cypwn.json",
       "apps": [
+        {
+          "name": "Stremio-2.0.7",
+          "bundleIdentifier": "com.stremio.pal",
+          "developerName": "Stremio-2.0.7 x CyPwn",
+          "version": "2.0.7",
+          "iconURL": "https://ipa.cypwn.xyz/serve/icons/Stremio-2.0.7.png",
+          "subtitle": ""
+        },
         {
           "name": "Stremio-2.0.6",
           "bundleIdentifier": "com.stremio.pal",
@@ -4893,14 +4901,6 @@
           "developerName": "Star_Map_2.6_Satella x CyPwn",
           "version": "2.6",
           "iconURL": "https://ipa.cypwn.xyz/serve/icons/Star_Map_2.6_Satella.png",
-          "subtitle": ""
-        },
-        {
-          "name": "RefacePro_3.12.0",
-          "bundleIdentifier": "cypwn.RefacePro_3.12.0.3.12.0",
-          "developerName": "RefacePro_3.12.0 x CyPwn",
-          "version": "3.12.0",
-          "iconURL": "https://ipa.cypwn.xyz/serve/icons/RefacePro_3.12.0.png",
           "subtitle": ""
         }
       ]
