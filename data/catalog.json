@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-16T04:35:09Z",
+  "generatedAt": "2026-10-16T11:28:18Z",
   "sources": [
     {
       "id": "utm",
@@ -13,7 +13,7 @@
           "name": "UTM",
           "bundleIdentifier": "com.utmapp.UTM",
           "developerName": "osy",
-          "version": "4.7.5",
+          "version": "5.0.7",
           "iconURL": "https://alt.getutm.app/icon.png",
           "subtitle": "Virtual machines for iOS (with JIT support)"
         },
@@ -21,7 +21,7 @@
           "name": "UTM SE",
           "bundleIdentifier": "com.utmapp.UTM-SE",
           "developerName": "osy",
-          "version": "4.7.5",
+          "version": "5.0.7",
           "iconURL": "https://alt.getutm.app/icon.png",
           "subtitle": "Virtual machines for iOS (without JIT support)"
         }
@@ -1669,33 +1669,33 @@
           "name": "Twitter NFB",
           "bundleIdentifier": "com.atebits.Tweetie2.twitter",
           "developerName": "orionblur & IPA Vault & lucaspedrosa",
-          "version": "12.33",
+          "version": "12.35",
           "iconURL": "https://pub-dd800571175348b6a2745b3396360028.r2.dev/App%20Icons/Twitter-12.14-Icons/Twitter-AppStore-1024x1024.png",
-          "subtitle": "Twitter 12.33 with NFB 7.1.1"
+          "subtitle": "Twitter 12.35 with NFB 7.1.1"
         },
         {
           "name": "Twitter NFB + TWI",
           "bundleIdentifier": "com.atebits.Tweetie2.twittertwi",
           "developerName": "orionblur & dens0r & IPA Vault & lucaspedrosa",
-          "version": "12.33",
+          "version": "12.35",
           "iconURL": "https://pub-dd800571175348b6a2745b3396360028.r2.dev/App%20Icons/Twitter-12.14-Icons/Twitter-AppStore-1024x1024.png",
-          "subtitle": "Twitter 12.33 with NFB 7.1.1 + TWIGalaxy 1.14"
+          "subtitle": "Twitter 12.35 with NFB 7.1.1 + TWIGalaxy 1.14"
         },
         {
           "name": "X NFB",
           "bundleIdentifier": "com.atebits.Tweetie2",
           "developerName": "orionblur & IPA Vault & lucaspedrosa",
-          "version": "12.33",
+          "version": "12.35",
           "iconURL": "https://pub-dd800571175348b6a2745b3396360028.r2.dev/App%20Icons/X-Icons/X-AppStore-1024x1024.png",
-          "subtitle": "X 12.33 with NFB 7.1.1"
+          "subtitle": "X 12.35 with NFB 7.1.1"
         },
         {
           "name": "X NFB + TWI",
           "bundleIdentifier": "com.atebits.Tweetie2.twi",
           "developerName": "orionblur & dens0r & IPA Vault & lucaspedrosa",
-          "version": "12.33",
+          "version": "12.35",
           "iconURL": "https://pub-dd800571175348b6a2745b3396360028.r2.dev/App%20Icons/X-Icons/X-AppStore-1024x1024.png",
-          "subtitle": "X 12.33 with NFB 7.1.1 + TWIGalaxy 1.14"
+          "subtitle": "X 12.35 with NFB 7.1.1 + TWIGalaxy 1.14"
         },
         {
           "name": "YouTube (YouMod 2.0.0) (iOS 16+)",
@@ -8715,7 +8715,7 @@
           "name": "UTM",
           "bundleIdentifier": "com.utmapp.UTM",
           "developerName": "osy",
-          "version": "4.7.5",
+          "version": "5.0.7",
           "iconURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/UTM/icon.png",
           "subtitle": "Virtual machines for iOS"
         },
@@ -10635,7 +10635,7 @@
           "name": "Nuvio",
           "bundleIdentifier": "com.nuvio.media",
           "developerName": "NuvioMedia",
-          "version": "0.5.10",
+          "version": "0.6.0",
           "iconURL": "https://raw.githubusercontent.com/NuvioMedia/NuvioMobile/0.4.11/iosApp/iosApp/Assets.xcassets/AppIcon.appiconset/app-icon-1024.png",
           "subtitle": "A free, open-source media app for your phone, your desktop, and the TV you already own."
         }
