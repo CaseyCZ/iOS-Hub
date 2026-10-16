@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-16T16:41:46Z",
+  "generatedAt": "2026-10-16T21:12:02Z",
   "sources": [
     {
       "id": "utm",
@@ -4908,11 +4908,19 @@
     {
       "id": "apptesters",
       "name": "AppTesters IPA Repo",
-      "appCount": 9548,
+      "appCount": 9549,
       "catalogLimited": true,
       "iconURL": "https://apptesters.org/apptesters-512x512.png",
       "sourceURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/apps.json",
       "apps": [
+        {
+          "name": "VDIT",
+          "bundleIdentifier": "me.imgbase.videoday",
+          "developerName": "",
+          "version": "4.3.1",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/me.imgbase.videoday.png",
+          "subtitle": ""
+        },
         {
           "name": "VDIT",
           "bundleIdentifier": "me.imgbase.videoday",
@@ -6503,14 +6511,6 @@
           "developerName": "",
           "version": "12.29.0",
           "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.getmimo.mimo.png",
-          "subtitle": ""
-        },
-        {
-          "name": "CollaNote",
-          "bundleIdentifier": "net.quochuywdm.collanote496",
-          "developerName": "",
-          "version": "5.0.4",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/net.quochuywdm.collanote496.png",
           "subtitle": ""
         }
       ]
@@ -8451,7 +8451,7 @@
           "name": "ARMSX2",
           "bundleIdentifier": "com.armsx2.ios",
           "developerName": "ARMSX2",
-          "version": "nightly-20261011",
+          "version": "nightly-20261016",
           "iconURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/ARMSX2/icon.png",
           "subtitle": "PlayStation 2 emulator for ARM64"
         },
@@ -10313,7 +10313,7 @@
           "name": "Delta",
           "bundleIdentifier": "com.rileytestut.Delta.Beta",
           "developerName": "Riley Testut",
-          "version": "2.0.4",
+          "version": "2.0.7",
           "iconURL": "https://cdn.altstore.io/file/altstore/images/delta/Delta4.png",
           "subtitle": "Classic games in your pocket."
         },
