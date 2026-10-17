@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-17T15:37:39Z",
+  "generatedAt": "2026-10-17T20:38:43Z",
   "sources": [
     {
       "id": "utm",
@@ -595,7 +595,7 @@
           "name": "Mona - HRT journal",
           "bundleIdentifier": "com.deliacheminot.mona",
           "developerName": "Délia Cheminot",
-          "version": "1.24.1",
+          "version": "1.24.2",
           "iconURL": "https://i.imgur.com/Xb9A1Lh.png",
           "subtitle": "Your hormonal journal"
         }
@@ -1303,7 +1303,7 @@
           "developerName": "shajon404 & IPA Vault",
           "version": "583.0.0",
           "iconURL": "https://pub-dd800571175348b6a2745b3396360028.r2.dev/App%20Icons/Facebook-Icons/Facebook-AppStore-1024x1024.png",
-          "subtitle": "Facebook 583.0.0 with Facebook Plus 1.0.1"
+          "subtitle": "Facebook 583.0.0 with Facebook Plus 1.0.2"
         },
         {
           "name": "Google Photos (Gunshot) (iOS 16.1+)",
@@ -1429,9 +1429,9 @@
           "name": "Messenger (Flow)",
           "bundleIdentifier": "com.facebook.Messenger.flow",
           "developerName": "dvntms & IPA Vault",
-          "version": "583.0.0",
+          "version": "584.0.0",
           "iconURL": "https://pub-dd800571175348b6a2745b3396360028.r2.dev/App%20Icons/Messenger-Icons/Messenger-AppStore-1024x1024.png",
-          "subtitle": "Messenger 583.0.0 with Flow 1.0"
+          "subtitle": "Messenger 584.0.0 with Flow 1.0"
         },
         {
           "name": "Messenger (Login)",
@@ -1445,9 +1445,9 @@
           "name": "Messenger (MSGPlusX)",
           "bundleIdentifier": "com.facebook.Messenger",
           "developerName": "Dens0r & IPA Vault & lucaspedrosa",
-          "version": "583.0.0",
+          "version": "584.0.0",
           "iconURL": "https://pub-dd800571175348b6a2745b3396360028.r2.dev/App%20Icons/Messenger-Icons/Messenger-AppStore-1024x1024.png",
-          "subtitle": "Messenger 583.0.0 with MSGPlusX 1.1"
+          "subtitle": "Messenger 584.0.0 with MSGPlusX 1.1"
         },
         {
           "name": "Nagram (MxGram)",
@@ -1621,25 +1621,25 @@
           "name": "Turrit (MxGram)",
           "bundleIdentifier": "com.seastar.turrit.mxgram",
           "developerName": "m1ronx1412 & IPA Vault",
-          "version": "1.5.5",
+          "version": "1.5.6",
           "iconURL": "https://pub-dd800571175348b6a2745b3396360028.r2.dev/App%20Icons/Turrit-Icons/Turrit-AppStore-1024x1024.png",
-          "subtitle": "Turrit 1.5.5 with MxGram 1.0.0"
+          "subtitle": "Turrit 1.5.6 with MxGram 1.0.0"
         },
         {
           "name": "Turrit (iQTele)",
           "bundleIdentifier": "com.seastar.turrit",
           "developerName": "7MD & IPA Vault",
-          "version": "1.5.5",
+          "version": "1.5.6",
           "iconURL": "https://pub-dd800571175348b6a2745b3396360028.r2.dev/App%20Icons/Turrit-Icons/Turrit-AppStore-1024x1024.png",
-          "subtitle": "Turrit 1.5.5 with iQTele 1.4"
+          "subtitle": "Turrit 1.5.6 with iQTele 1.4"
         },
         {
           "name": "Turrit (TGExtra)",
           "bundleIdentifier": "com.seastar.turrit.tgextra",
           "developerName": "swiftleopard & IPA Vault",
-          "version": "1.5.5",
+          "version": "1.5.6",
           "iconURL": "https://pub-dd800571175348b6a2745b3396360028.r2.dev/App%20Icons/Turrit-Icons/Turrit-AppStore-1024x1024.png",
-          "subtitle": "Turrit 1.5.5 with TGExtra 1.7.7"
+          "subtitle": "Turrit 1.5.6 with TGExtra 1.7.7"
         },
         {
           "name": "TwitchUnblock",
@@ -1867,7 +1867,7 @@
           "name": "Infuse (Moe Plus)",
           "bundleIdentifier": "com.firecore.infuse",
           "developerName": "Moe Apps",
-          "version": "8.5.7 (2.6)",
+          "version": "8.5.8 (2.6)",
           "iconURL": "https://raw.githubusercontent.com/MountainofPenguin/moe-altstore/main/icons/infuse-moe-plus.png",
           "subtitle": "Media player, Moe Plus patch"
         },
@@ -2099,7 +2099,7 @@
           "name": "Twitch (Moe TwitchControl)",
           "bundleIdentifier": "tv.twitch",
           "developerName": "Moe Apps",
-          "version": "31.6 (0.0.6)",
+          "version": "31.6.2 (0.0.6)",
           "iconURL": "https://raw.githubusercontent.com/MountainofPenguin/moe-altstore/main/icons/twitch-twitchcontrol.png",
           "subtitle": "TwitchControl tweak build"
         },
@@ -2107,7 +2107,7 @@
           "name": "Twitch (Twitchv, Moe Tweach)",
           "bundleIdentifier": "tv.twitch",
           "developerName": "Moe Apps",
-          "version": "31.6 (2.4.1)",
+          "version": "31.6.2 (2.4.1)",
           "iconURL": "https://raw.githubusercontent.com/MountainofPenguin/moe-altstore/main/icons/twitchv-tweach.png",
           "subtitle": "Tweach tweak build"
         }
@@ -4916,11 +4916,19 @@
     {
       "id": "apptesters",
       "name": "AppTesters IPA Repo",
-      "appCount": 9549,
+      "appCount": 9550,
       "catalogLimited": true,
       "iconURL": "https://apptesters.org/apptesters-512x512.png",
       "sourceURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/apps.json",
       "apps": [
+        {
+          "name": "VDIT",
+          "bundleIdentifier": "me.imgbase.videoday",
+          "developerName": "",
+          "version": "4.3.1",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/me.imgbase.videoday.png",
+          "subtitle": ""
+        },
         {
           "name": "VDIT",
           "bundleIdentifier": "me.imgbase.videoday",
@@ -6511,14 +6519,6 @@
           "developerName": "",
           "version": "7.1.0",
           "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/instapreview.png",
-          "subtitle": ""
-        },
-        {
-          "name": "Mimo",
-          "bundleIdentifier": "com.getmimo.mimo",
-          "developerName": "",
-          "version": "12.29.0",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.getmimo.mimo.png",
           "subtitle": ""
         }
       ]
