@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-18T04:36:59Z",
+  "generatedAt": "2026-10-18T11:09:00Z",
   "sources": [
     {
       "id": "utm",
@@ -3466,11 +3466,19 @@
     {
       "id": "cypwn-ipa",
       "name": "CyPwn IPA Library",
-      "appCount": 209,
+      "appCount": 210,
       "catalogLimited": true,
       "iconURL": "https://repo.cypwn.xyz/assets/images/cypwn_small.png",
       "sourceURL": "https://ipa.cypwn.xyz/cypwn.json",
       "apps": [
+        {
+          "name": "Stremio-2.0.7",
+          "bundleIdentifier": "com.stremio.pal",
+          "developerName": "Stremio-2.0.7 x CyPwn",
+          "version": "2.0.7",
+          "iconURL": "https://ipa.cypwn.xyz/serve/icons/Stremio-2.0.7.png",
+          "subtitle": ""
+        },
         {
           "name": "Stremio-2.0.6",
           "bundleIdentifier": "com.stremio.pal",
@@ -4901,14 +4909,6 @@
           "developerName": "Star_Map_2.6_Satella x CyPwn",
           "version": "2.6",
           "iconURL": "https://ipa.cypwn.xyz/serve/icons/Star_Map_2.6_Satella.png",
-          "subtitle": ""
-        },
-        {
-          "name": "RefacePro_3.12.0",
-          "bundleIdentifier": "cypwn.RefacePro_3.12.0.3.12.0",
-          "developerName": "RefacePro_3.12.0 x CyPwn",
-          "version": "3.12.0",
-          "iconURL": "https://ipa.cypwn.xyz/serve/icons/RefacePro_3.12.0.png",
           "subtitle": ""
         }
       ]
@@ -10279,7 +10279,7 @@
           "name": "Reynard Browser",
           "bundleIdentifier": "com.minh-ton.Reynard",
           "developerName": "Minh Ton",
-          "version": "0.17.1",
+          "version": "0.18.0",
           "iconURL": "https://github.com/user-attachments/assets/1c42dda2-b778-4342-9f94-8f852c3ad652",
           "subtitle": "An experimental Gecko-based web browser for iOS 13+."
         }
