@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-19T04:43:29Z",
+  "generatedAt": "2026-10-19T13:20:22Z",
   "sources": [
     {
       "id": "utm",
@@ -1501,9 +1501,9 @@
           "name": "SoundCloud (NexaSC)",
           "bundleIdentifier": "com.soundcloud.TouchApp",
           "developerName": "cielogic & IPA Vault",
-          "version": "8.82.0",
+          "version": "8.83.0",
           "iconURL": "https://pub-dd800571175348b6a2745b3396360028.r2.dev/App%20Icons/SoundCloud-8.76.0-Icons/SoundCloud-AppStore-1024x1024.png",
-          "subtitle": "SoundCloud 8.82.0 with NexaSC beta 4"
+          "subtitle": "SoundCloud 8.83.0 with NexaSC beta 4"
         },
         {
           "name": "Swiftgram (MxGram)",
@@ -1613,9 +1613,9 @@
           "name": "TikTok (Infinitok)",
           "bundleIdentifier": "com.zhiliaoapp.musically",
           "developerName": "Mod4 & IPA Vault",
-          "version": "47.1.0",
+          "version": "47.4.0",
           "iconURL": "https://pub-dd800571175348b6a2745b3396360028.r2.dev/App%20Icons/TikTok-Icons/TikTok-AppStore-1024x1024.png",
-          "subtitle": "TikTok 47.1.0 with Infinitok 0.0.2"
+          "subtitle": "TikTok 47.4.0 with Infinitok 0.0.2"
         },
         {
           "name": "Turrit (MxGram)",
@@ -4916,7 +4916,7 @@
     {
       "id": "apptesters",
       "name": "AppTesters IPA Repo",
-      "appCount": 9551,
+      "appCount": 9552,
       "catalogLimited": true,
       "iconURL": "https://apptesters.org/apptesters-512x512.png",
       "sourceURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/apps.json",
@@ -4927,6 +4927,14 @@
           "developerName": "",
           "version": "4.3.1",
           "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/me.imgbase.videoday.png",
+          "subtitle": ""
+        },
+        {
+          "name": "foriOS",
+          "bundleIdentifier": "com.tapinfinity.HdjcXcode7",
+          "developerName": "",
+          "version": "13.3",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.tapinfinity.HdjcXcode7.png",
           "subtitle": ""
         },
         {
@@ -6511,14 +6519,6 @@
           "developerName": "",
           "version": "26.39.1",
           "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.yazio.ios.YAZIO.png",
-          "subtitle": ""
-        },
-        {
-          "name": "Documents",
-          "bundleIdentifier": "com.readdle.ReaddleDocsIPad",
-          "developerName": "",
-          "version": "8.22.7",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.readdle.ReaddleDocsIPad.png",
           "subtitle": ""
         }
       ]
@@ -8547,7 +8547,7 @@
           "name": "Kumone",
           "bundleIdentifier": "sb.moe.kumone",
           "developerName": "missuo",
-          "version": "0.3.20",
+          "version": "0.3.21",
           "iconURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/Kumone/icon.png",
           "subtitle": "原生 NetEase Cloud Music iOS 客户端（雲の音）"
         },
@@ -8699,7 +8699,7 @@
           "name": "SpotiFLAC",
           "bundleIdentifier": "com.zarz.spotiflac",
           "developerName": "zarzet",
-          "version": "5.1.1",
+          "version": "5.2.0",
           "iconURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/SpotiFLAC/icon.png",
           "subtitle": "FLAC Downloader for iOS"
         },
