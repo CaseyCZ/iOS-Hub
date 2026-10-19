@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-19T13:20:22Z",
+  "generatedAt": "2026-10-19T22:23:03Z",
   "sources": [
     {
       "id": "utm",
@@ -1276,7 +1276,7 @@
     {
       "id": "ipa-vault",
       "name": "IPA Vault Source Repo",
-      "appCount": 63,
+      "appCount": 64,
       "catalogLimited": false,
       "iconURL": "https://pub-dd800571175348b6a2745b3396360028.r2.dev/ipavault-altstore-repo-logo.png",
       "sourceURL": "https://raw.githubusercontent.com/927tx/IPA-Vault/main/ipavaultsource.json",
@@ -1605,9 +1605,9 @@
           "name": "Threads (ThreadSaver)",
           "bundleIdentifier": "com.burbn.barcelona",
           "developerName": "swiftleopard & IPA Vault",
-          "version": "451.0",
+          "version": "452.0",
           "iconURL": "https://pub-dd800571175348b6a2745b3396360028.r2.dev/App%20Icons/Threads-Icons/Threads-AppStore-1024x1024.png",
-          "subtitle": "Threads 451.0 with ThreadSaver"
+          "subtitle": "Threads 452.0 with ThreadSaver"
         },
         {
           "name": "TikTok (Infinitok)",
@@ -1645,9 +1645,9 @@
           "name": "TwitchUnblock",
           "bundleIdentifier": "com.mxfia19.TwitchUnblock",
           "developerName": "MXFia19 & IPA Vault",
-          "version": "1.4.0",
+          "version": "1.5.0",
           "iconURL": "https://pub-dd800571175348b6a2745b3396360028.r2.dev/App%20Icons/Twitch-Tweach-TC-Icons/Twitch-AppStore-1024x1024.png",
-          "subtitle": "TwitchUnblock 1.4.0"
+          "subtitle": "TwitchUnblock 1.5.0"
         },
         {
           "name": "Twitch",
@@ -1784,6 +1784,14 @@
           "version": "9.1.90",
           "iconURL": "https://pub-dd800571175348b6a2745b3396360028.r2.dev/App%20Icons/Spotify-Icons/Spotify-AppStore-1024x1024.png",
           "subtitle": "Spotify 9.1.90 with Taurus 0.60.2 (No Plugins)"
+        },
+        {
+          "name": "SpotiFLAC Mobile",
+          "bundleIdentifier": "com.zarz.spotiflac",
+          "developerName": "spotbye & IPA Vault",
+          "version": "5.2.0",
+          "iconURL": "https://pub-dd800571175348b6a2745b3396360028.r2.dev/App%20Icons/SpotiFLAC-Icons/Icon-App-1024x1024_Normal.png",
+          "subtitle": "SpotiFLAC Mobile 5.2.0"
         }
       ]
     },
@@ -4916,11 +4924,19 @@
     {
       "id": "apptesters",
       "name": "AppTesters IPA Repo",
-      "appCount": 9552,
+      "appCount": 9553,
       "catalogLimited": true,
       "iconURL": "https://apptesters.org/apptesters-512x512.png",
       "sourceURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/apps.json",
       "apps": [
+        {
+          "name": "VDIT",
+          "bundleIdentifier": "me.imgbase.videoday",
+          "developerName": "",
+          "version": "4.3.1",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/me.imgbase.videoday.png",
+          "subtitle": ""
+        },
         {
           "name": "VDIT",
           "bundleIdentifier": "me.imgbase.videoday",
@@ -6512,14 +6528,6 @@
           "version": "4.49.278",
           "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.endel.endel.png",
           "subtitle": ""
-        },
-        {
-          "name": "Yazio",
-          "bundleIdentifier": "com.yazio.ios.YAZIO",
-          "developerName": "",
-          "version": "26.39.1",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.yazio.ios.YAZIO.png",
-          "subtitle": ""
         }
       ]
     },
@@ -6607,7 +6615,7 @@
           "name": "YouTube+🗿",
           "bundleIdentifier": "com.google.ios.youtube",
           "developerName": "heyFordy",
-          "version": "21.13.6",
+          "version": "21.41.5",
           "iconURL": "http://repo.heyfordy.dev/assets/yt.png",
           "subtitle": "iOS YouTube Vanced experience."
         },
@@ -8459,7 +8467,7 @@
           "name": "ARMSX2",
           "bundleIdentifier": "com.armsx2.ios",
           "developerName": "ARMSX2",
-          "version": "nightly-20261018",
+          "version": "nightly-20261019",
           "iconURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/ARMSX2/icon.png",
           "subtitle": "PlayStation 2 emulator for ARM64"
         },
@@ -8651,7 +8659,7 @@
           "name": "Pixiv-SwiftUI",
           "bundleIdentifier": "org.eu.eslzzyl.Pixiv-SwiftUI",
           "developerName": "Eslzzyl",
-          "version": "0.16.2",
+          "version": "0.16.3",
           "iconURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/Pixiv-SwiftUI/icon.png",
           "subtitle": "基于 SwiftUI 的 Pixiv 第三方客户端"
         },
