@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-20T11:40:53Z",
+  "generatedAt": "2026-10-20T17:10:28Z",
   "sources": [
     {
       "id": "utm",
@@ -873,7 +873,7 @@
           "name": "Fortnite",
           "bundleIdentifier": "com.epicgames.FortniteGame",
           "developerName": "Epic Games Sweden AB",
-          "version": "42.40",
+          "version": "42.40.1",
           "iconURL": "https://cdn1.epicgames.com/item/fn/FN_Logo_512x512_1024x1024-0a19a924e7f61249ab0c76569abfdc31",
           "subtitle": ""
         },
@@ -1006,24 +1006,16 @@
     {
       "id": "wuxu-library-plus",
       "name": "WuXu's Library++",
-      "appCount": 13,
+      "appCount": 12,
       "catalogLimited": false,
       "iconURL": "https://external-content.duckduckgo.com/iu/?u=https://i.imgur.com/g17kMl9.jpeg",
       "sourceURL": "https://raw.githubusercontent.com/WuXu1/WuXu1.github.io/main/wuxu-complete-plus.json",
       "apps": [
         {
-          "name": "HD Flix (No Ads)",
-          "bundleIdentifier": "com.box.hd.flix.drama.hub",
-          "developerName": "Dezokr",
-          "version": "2.0",
-          "iconURL": "https://external-content.duckduckgo.com/iu/?u=https://i.imgur.com/3tQFB9N.png",
-          "subtitle": "The All-In-One Movie app for iOS"
-        },
-        {
           "name": "X++",
           "bundleIdentifier": "com.atebits.Tweetie2",
           "developerName": "Densor",
-          "version": "10.83",
+          "version": "12.35",
           "iconURL": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/bf/46/c4/bf46c48e-94bb-c30d-601f-d73ed5a70689/ProductionAppIcon-0-0-1x_U007emarketing-0-8-0-0-0-85-220.png/512x512bb.jpg",
           "subtitle": "An new tweak for X!"
         },
@@ -1031,7 +1023,7 @@
           "name": "Facebook++",
           "bundleIdentifier": "com.facebook.Facebook",
           "developerName": "Michael Lema",
-          "version": "1.3.1",
+          "version": "584.0.0",
           "iconURL": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/7f/72/b7/7f72b76a-5865-3da5-8dc3-71a2b75551e9/Icon-Production-0-0-1x_U007epad-0-1-0-sRGB-85-220.png/512x512bb.jpg",
           "subtitle": "Facebook with a number of new features!"
         },
@@ -1039,7 +1031,7 @@
           "name": "TikTok++",
           "bundleIdentifier": "com.zhiliaoapp.musically",
           "developerName": "aJBbo",
-          "version": "38.7.0",
+          "version": "47.4.0",
           "iconURL": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/50/70/42/50704260-89c4-2aa4-7740-4a6a621af5db/TikTok_AppIcon26-0-0-1x_U007epad-0-1-0-85-220.png/512x512bb.jpg",
           "subtitle": "TikTok with added features."
         },
@@ -1047,7 +1039,7 @@
           "name": "Instagram++",
           "bundleIdentifier": "com.burbn.instagram",
           "developerName": "Fouad Raheb",
-          "version": "356.1.0",
+          "version": "448.0.0",
           "iconURL": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/4c/be/de/4cbedeca-02d7-e15c-9e14-b0ac165eeb5a/Prod-0-0-1x_U007epad-0-1-0-sRGB-85-220.png/512x512bb.jpg",
           "subtitle": "A must-have tweak for Instagram users!"
         },
@@ -1079,7 +1071,7 @@
           "name": "SoundCloud++",
           "bundleIdentifier": "com.soundcloud.TouchApp",
           "developerName": "VAXMG",
-          "version": "8.71.0",
+          "version": "8.83.0",
           "iconURL": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/22/f9/36/22f936bd-f61d-d1e1-8227-7352688e9367/AppIcon-0-0-1x_U007epad-0-1-0-85-220.png/512x512bb.jpg",
           "subtitle": "SoundCloud with no ads! Read Description."
         },
@@ -1111,7 +1103,7 @@
           "name": "Messenger++",
           "bundleIdentifier": "com.facebook.Messenger",
           "developerName": "Michael Lema",
-          "version": "390.0",
+          "version": "584.0.0",
           "iconURL": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/05/90/0d/05900d52-cace-057b-aa3a-3c08aa064c4c/AppIcon-0-0-1x_U007epad-0-1-0-sRGB-85-220.png/512x512bb.jpg",
           "subtitle": "The ultimate Facebook Messenger tweak!"
         }
@@ -3474,19 +3466,11 @@
     {
       "id": "cypwn-ipa",
       "name": "CyPwn IPA Library",
-      "appCount": 210,
+      "appCount": 209,
       "catalogLimited": true,
       "iconURL": "https://repo.cypwn.xyz/assets/images/cypwn_small.png",
       "sourceURL": "https://ipa.cypwn.xyz/cypwn.json",
       "apps": [
-        {
-          "name": "Stremio-2.0.7",
-          "bundleIdentifier": "com.stremio.pal",
-          "developerName": "Stremio-2.0.7 x CyPwn",
-          "version": "2.0.7",
-          "iconURL": "https://ipa.cypwn.xyz/serve/icons/Stremio-2.0.7.png",
-          "subtitle": ""
-        },
         {
           "name": "Stremio-2.0.6",
           "bundleIdentifier": "com.stremio.pal",
@@ -4917,6 +4901,14 @@
           "developerName": "Star_Map_2.6_Satella x CyPwn",
           "version": "2.6",
           "iconURL": "https://ipa.cypwn.xyz/serve/icons/Star_Map_2.6_Satella.png",
+          "subtitle": ""
+        },
+        {
+          "name": "RefacePro_3.12.0",
+          "bundleIdentifier": "cypwn.RefacePro_3.12.0.3.12.0",
+          "developerName": "RefacePro_3.12.0 x CyPwn",
+          "version": "3.12.0",
+          "iconURL": "https://ipa.cypwn.xyz/serve/icons/RefacePro_3.12.0.png",
           "subtitle": ""
         }
       ]
@@ -8467,7 +8459,7 @@
           "name": "ARMSX2",
           "bundleIdentifier": "com.armsx2.ios",
           "developerName": "ARMSX2",
-          "version": "nightly-20261019",
+          "version": "2.6.0-nightly.20261020.1334",
           "iconURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/ARMSX2/icon.png",
           "subtitle": "PlayStation 2 emulator for ARM64"
         },
@@ -8563,7 +8555,7 @@
           "name": "LiveContainer+SideStore",
           "bundleIdentifier": "com.kdt.livecontainer",
           "developerName": "LiveContainer Team",
-          "version": "nightly",
+          "version": "3.8.11",
           "iconURL": "https://raw.githubusercontent.com/bebound/AltGallery/master/apps/LiveContainer+SideStore/icon.png",
           "subtitle": "Run iOS apps without actually installing them!"
         },
@@ -9962,7 +9954,7 @@
     {
       "id": "wuxu-standard",
       "name": "WuXu's Library",
-      "appCount": 20,
+      "appCount": 17,
       "catalogLimited": false,
       "iconURL": "https://external-content.duckduckgo.com/iu/?u=https://external-content.duckduckgo.com/iu/?u=https://i.imgur.com/g17kMl9.png",
       "sourceURL": "https://wuxu1.github.io/wuxu-complete.json",
@@ -9970,10 +9962,10 @@
         {
           "name": "LiveContainer",
           "bundleIdentifier": "com.kdt.livecontainer",
-          "developerName": "Unknown",
+          "developerName": "DuyTranKhanh",
           "version": "3.8.0",
           "iconURL": "https://raw.githubusercontent.com/LiveContainer/LiveContainer/main/screenshots/AppIcon1024.png",
-          "subtitle": ""
+          "subtitle": "Run iOS apps without actually installing them!"
         },
         {
           "name": "TrollInstallerX",
@@ -9982,14 +9974,6 @@
           "version": "1.0.3",
           "iconURL": "https://external-content.duckduckgo.com/iu/?u=https://external-content.duckduckgo.com/iu/?u=https://i.imgur.com/lQt6WqH.png",
           "subtitle": "The universal TrollStore installer for iOS 14.0 - 17.0.0.0 beta 4"
-        },
-        {
-          "name": "Santander (MDC)",
-          "bundleIdentifier": "org.haxi0.santander",
-          "developerName": "haxi0",
-          "version": "0.4",
-          "iconURL": "https://static.appdb.to/images/cydia-1900001066-icon-1673074358.png",
-          "subtitle": "A Modern File Manager MacDirtyCow Devices"
         },
         {
           "name": "PostBox",
@@ -10014,14 +9998,6 @@
           "version": "1.20.4",
           "iconURL": "https://external-content.duckduckgo.com/iu/?u=https://external-content.duckduckgo.com/iu/?u=https://i.imgur.com/JP0Fncv.png",
           "subtitle": "A fast and portable PSP emulator for IOS"
-        },
-        {
-          "name": "Filza (MDC)",
-          "bundleIdentifier": "com.dry05.filzaescaped11-12",
-          "developerName": "TIGI Software",
-          "version": "3.7",
-          "iconURL": "https://static.appdb.to/images/cydia-1900000088-icon.png",
-          "subtitle": "Filza for MacDirtyCow Devices!"
         },
         {
           "name": "Scarlet",
@@ -10051,7 +10027,7 @@
           "name": "unc0ver",
           "bundleIdentifier": "science.xnu.undecimus",
           "developerName": "Pwn20wnd",
-          "version": "8.0.2",
+          "version": "8.1.0",
           "iconURL": "https://external-content.duckduckgo.com/iu/?u=https://external-content.duckduckgo.com/iu/?u=https://i.imgur.com/5aehDxj.png",
           "subtitle": "The most advanced jailbreak tool."
         },
@@ -10059,7 +10035,7 @@
           "name": "Dopamine",
           "bundleIdentifier": "com.opa334.Dopamine",
           "developerName": "opa334",
-          "version": "2.4.1",
+          "version": "3.0.12",
           "iconURL": "https://external-content.duckduckgo.com/iu/?u=https://external-content.duckduckgo.com/iu/?u=https://i.imgur.com/67ffxsD.jpeg",
           "subtitle": "The semi-untethered jailbreak for iOS 15 - 16"
         },
@@ -10067,7 +10043,7 @@
           "name": "iTorrent",
           "bundleIdentifier": "ru.nonamedude.iTorrent",
           "developerName": "XITRIX",
-          "version": "1.9",
+          "version": "2.2.0-1",
           "iconURL": "https://user-images.githubusercontent.com/9553519/80646366-3d271680-8a75-11ea-8b60-9c5edd4ffd60.png",
           "subtitle": "An ordinary torrent client for iOS with Files app support"
         },
@@ -10075,7 +10051,7 @@
           "name": "Cowabunga",
           "bundleIdentifier": "com.leemin.Cowabunga",
           "developerName": "Leminlimez",
-          "version": "10.2.0",
+          "version": "10.3.2",
           "iconURL": "https://user-images.githubusercontent.com/52459150/215552092-9dc1e029-da35-43da-867f-17279e3dc180.png",
           "subtitle": "The MacDirtyCow Toolbox for iOS 14 – iOS 16"
         },
@@ -10083,7 +10059,7 @@
           "name": "ESign",
           "bundleIdentifier": "p3.xyz.yyyue.esign",
           "developerName": "esign.yyyue.xyz",
-          "version": "4.8.1",
+          "version": "5.0.2",
           "iconURL": "https://static.appdb.to/images/cydia-1900000897-icon-1651011412.png",
           "subtitle": "IPA Self Signer, Tweak Injector, File Manager"
         },
@@ -10118,14 +10094,6 @@
           "version": "1.5.12",
           "iconURL": "https://img.ipa4fun.com/56/fa/23/557138109-logo.webp",
           "subtitle": "Removed from the App Store!"
-        },
-        {
-          "name": "Pokemon Go (w/ SpooferPro)",
-          "bundleIdentifier": "com.nianticlabs.pokemongo",
-          "developerName": "SpooferPro Team",
-          "version": "0.269.1",
-          "iconURL": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/1e/0d/a8/1e0da8c5-c56a-68ef-601f-33078883892c/AppIcon-0-0-1x_U007emarketing-0-8-0-85-220.png/512x512bb.jpg",
-          "subtitle": "Pokemon Go injected with SpooferPro"
         }
       ]
     },
