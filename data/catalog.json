@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-20T17:10:28Z",
+  "generatedAt": "2026-10-20T21:39:21Z",
   "sources": [
     {
       "id": "utm",
@@ -3466,11 +3466,19 @@
     {
       "id": "cypwn-ipa",
       "name": "CyPwn IPA Library",
-      "appCount": 209,
+      "appCount": 210,
       "catalogLimited": true,
       "iconURL": "https://repo.cypwn.xyz/assets/images/cypwn_small.png",
       "sourceURL": "https://ipa.cypwn.xyz/cypwn.json",
       "apps": [
+        {
+          "name": "Stremio-2.0.7",
+          "bundleIdentifier": "com.stremio.pal",
+          "developerName": "Stremio-2.0.7 x CyPwn",
+          "version": "2.0.7",
+          "iconURL": "https://ipa.cypwn.xyz/serve/icons/Stremio-2.0.7.png",
+          "subtitle": ""
+        },
         {
           "name": "Stremio-2.0.6",
           "bundleIdentifier": "com.stremio.pal",
@@ -4902,25 +4910,25 @@
           "version": "2.6",
           "iconURL": "https://ipa.cypwn.xyz/serve/icons/Star_Map_2.6_Satella.png",
           "subtitle": ""
-        },
-        {
-          "name": "RefacePro_3.12.0",
-          "bundleIdentifier": "cypwn.RefacePro_3.12.0.3.12.0",
-          "developerName": "RefacePro_3.12.0 x CyPwn",
-          "version": "3.12.0",
-          "iconURL": "https://ipa.cypwn.xyz/serve/icons/RefacePro_3.12.0.png",
-          "subtitle": ""
         }
       ]
     },
     {
       "id": "apptesters",
       "name": "AppTesters IPA Repo",
-      "appCount": 9553,
+      "appCount": 9554,
       "catalogLimited": true,
       "iconURL": "https://apptesters.org/apptesters-512x512.png",
       "sourceURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/apps.json",
       "apps": [
+        {
+          "name": "VDIT",
+          "bundleIdentifier": "me.imgbase.videoday",
+          "developerName": "",
+          "version": "4.3.1",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/me.imgbase.videoday.png",
+          "subtitle": ""
+        },
         {
           "name": "VDIT",
           "bundleIdentifier": "me.imgbase.videoday",
@@ -6511,14 +6519,6 @@
           "developerName": "",
           "version": "2.12.5",
           "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.apalonapps.pdffree.png",
-          "subtitle": ""
-        },
-        {
-          "name": "Endel",
-          "bundleIdentifier": "com.endel.endel",
-          "developerName": "",
-          "version": "4.49.278",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.endel.endel.png",
           "subtitle": ""
         }
       ]
@@ -8683,7 +8683,7 @@
           "name": "Roam Control",
           "bundleIdentifier": "com.sean.roamcontrol",
           "developerName": "seanhowarthdev",
-          "version": "0.9.7",
+          "version": "0.9.9",
           "iconURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/Roam-Control/icon.png",
           "subtitle": "Choose, test and move your iPhone's reported location"
         },
@@ -8723,7 +8723,7 @@
           "name": "Tsumiru",
           "bundleIdentifier": "com.suwayomi.tachideskSorayomi",
           "developerName": "Suwayomi",
-          "version": "1.4.0",
+          "version": "1.5.0",
           "iconURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/Suwayomi-Tsumiru/icon.png",
           "subtitle": "Native manga & manhwa reader for Suwayomi-Server"
         },
