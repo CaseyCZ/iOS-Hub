@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-20T04:53:43Z",
+  "generatedAt": "2026-10-20T11:40:53Z",
   "sources": [
     {
       "id": "utm",
@@ -1161,7 +1161,7 @@
           "name": "Twitch",
           "bundleIdentifier": "tv.twitch",
           "developerName": "",
-          "version": "31.6.2",
+          "version": "31.7",
           "iconURL": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Twitch_Glitch_Logo_Purple.svg/640px-Twitch_Glitch_Logo_Purple.svg.png",
           "subtitle": ""
         },
@@ -1786,12 +1786,12 @@
           "subtitle": "Spotify 9.1.90 with Taurus 0.60.2 (No Plugins)"
         },
         {
-          "name": "SpotiFLAC Mobile",
-          "bundleIdentifier": "com.zarz.spotiflac",
-          "developerName": "spotbye & IPA Vault",
-          "version": "5.2.0",
-          "iconURL": "https://pub-dd800571175348b6a2745b3396360028.r2.dev/App%20Icons/SpotiFLAC-Icons/Icon-App-1024x1024_Normal.png",
-          "subtitle": "SpotiFLAC Mobile 5.2.0"
+          "name": "Mornye",
+          "bundleIdentifier": "com.zarz.mornye",
+          "developerName": "zarzet & IPA Vault",
+          "version": "5.2.1",
+          "iconURL": "https://pub-dd800571175348b6a2745b3396360028.r2.dev/App%20Icons/Mornye-Icons/Icon-App-1024x1024_Normal.png",
+          "subtitle": "Mornye 5.2.1"
         }
       ]
     },
@@ -8410,7 +8410,7 @@
     {
       "id": "altgallery",
       "name": "AltGallery",
-      "appCount": 43,
+      "appCount": 44,
       "catalogLimited": false,
       "iconURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/assets/icon.png",
       "sourceURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/all-apps.json",
@@ -8627,7 +8627,7 @@
           "name": "Novella",
           "bundleIdentifier": "sh.celia.novella",
           "developerName": "CELIA",
-          "version": "2.5.0",
+          "version": "2.6.0",
           "iconURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/Novella/icon.png",
           "subtitle": "轻书架第三方客户端"
         },
@@ -8707,9 +8707,17 @@
           "name": "SpotiFLAC",
           "bundleIdentifier": "com.zarz.spotiflac",
           "developerName": "zarzet",
-          "version": "5.2.0",
+          "version": "5.2.1",
           "iconURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/SpotiFLAC/icon.png",
           "subtitle": "FLAC Downloader for iOS"
+        },
+        {
+          "name": "StikDebug",
+          "bundleIdentifier": "com.stik.stikdebug",
+          "developerName": "StikDebug",
+          "version": "3.1.15",
+          "iconURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/StikDebug/icon.png",
+          "subtitle": "On-device JIT enabler and device toolbox."
         },
         {
           "name": "TiebaPure",
@@ -8755,7 +8763,7 @@
           "name": "ZhihuMinusMinus",
           "bundleIdentifier": "com.huamu013.ZhihuMinusMinus",
           "developerName": "huamurui",
-          "version": "0.9.1",
+          "version": "0.9.2",
           "iconURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/ZhihuMinusMinus/icon.png",
           "subtitle": "轻量、纯净的第三方知乎客户端"
         }
