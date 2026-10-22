@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-22T04:50:33Z",
+  "generatedAt": "2026-10-22T11:55:56Z",
   "sources": [
     {
       "id": "utm",
@@ -1129,7 +1129,7 @@
           "name": "YouTube",
           "bundleIdentifier": "com.google.ios.youtube",
           "developerName": "",
-          "version": "21.41.5",
+          "version": "21.42.4",
           "iconURL": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ef/Youtube_logo.png/512px-Youtube_logo.png",
           "subtitle": ""
         },
@@ -2184,11 +2184,19 @@
     {
       "id": "owo-source",
       "name": "OwO Source",
-      "appCount": 160,
-      "catalogLimited": false,
+      "appCount": 161,
+      "catalogLimited": true,
       "iconURL": "https://raw.githubusercontent.com/OwO-Network/Repo/main/icons/owo.repo.icon.png",
       "sourceURL": "https://repo.owo.network/",
       "apps": [
+        {
+          "name": "真果鉴",
+          "bundleIdentifier": "com.duanju.duanjuApp",
+          "developerName": "",
+          "version": "0.2.64+71",
+          "iconURL": "https://raw.githubusercontent.com/owo-network/Repo/main/icons/com.duanju.duanjuApp.png",
+          "subtitle": ""
+        },
         {
           "name": "Mori",
           "bundleIdentifier": "com.mori.downloader",
@@ -3459,14 +3467,6 @@
           "developerName": "",
           "version": "3.0.6",
           "iconURL": "https://raw.githubusercontent.com/owo-network/Repo/main/icons/com.blink.academy.nomoraw.png",
-          "subtitle": ""
-        },
-        {
-          "name": "WeChat",
-          "bundleIdentifier": "com.tencent.xin",
-          "developerName": "",
-          "version": "8.0.42",
-          "iconURL": "https://raw.githubusercontent.com/owo-network/Repo/main/icons/com.tencent.xin.png",
           "subtitle": ""
         }
       ]
@@ -4924,11 +4924,83 @@
     {
       "id": "apptesters",
       "name": "AppTesters IPA Repo",
-      "appCount": 9726,
+      "appCount": 9735,
       "catalogLimited": true,
       "iconURL": "https://apptesters.org/apptesters-512x512.png",
       "sourceURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/apps.json",
       "apps": [
+        {
+          "name": "Bearable",
+          "bundleIdentifier": "co.codeleap.bearable",
+          "developerName": "",
+          "version": "1.0.614",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/co.codeleap.bearable.png",
+          "subtitle": ""
+        },
+        {
+          "name": "Sofa",
+          "bundleIdentifier": "com.astrio.Sofa",
+          "developerName": "",
+          "version": "5.4.1",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.astrio.Sofa.png",
+          "subtitle": ""
+        },
+        {
+          "name": "SimplySing",
+          "bundleIdentifier": "com.joytunes.Sing",
+          "developerName": "",
+          "version": "3.2.1",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.joytunes.Sing.png",
+          "subtitle": ""
+        },
+        {
+          "name": "Luminar",
+          "bundleIdentifier": "com.skylum.luminaripad",
+          "developerName": "",
+          "version": "4.5.1",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.skylum.luminaripad.png",
+          "subtitle": ""
+        },
+        {
+          "name": "iLovePDF",
+          "bundleIdentifier": "com.ilovepdf.www",
+          "developerName": "",
+          "version": "4.2.0",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.ilovepdf.www.png",
+          "subtitle": ""
+        },
+        {
+          "name": "OrangePhone",
+          "bundleIdentifier": "com.orange.telephone",
+          "developerName": "",
+          "version": "7.2.0",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.orange.telephone.png",
+          "subtitle": ""
+        },
+        {
+          "name": "Videoleap",
+          "bundleIdentifier": "com.lightricks.Enlight-Video",
+          "developerName": "",
+          "version": "2.88",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.lightricks.Enlight-Video.png",
+          "subtitle": ""
+        },
+        {
+          "name": "Pillow",
+          "bundleIdentifier": "com.neybox.Pillow",
+          "developerName": "",
+          "version": "6.7",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.neybox.Pillow.png",
+          "subtitle": ""
+        },
+        {
+          "name": "ColorPop",
+          "bundleIdentifier": "com.mwm.procolor",
+          "developerName": "",
+          "version": "2.68.01",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.mwm.procolor.png",
+          "subtitle": ""
+        },
         {
           "name": "CollaNote",
           "bundleIdentifier": "net.quochuywdm.collanote496",
@@ -6455,78 +6527,6 @@
           "developerName": "",
           "version": "1.60",
           "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.andyworks.camera.png",
-          "subtitle": ""
-        },
-        {
-          "name": "Captions",
-          "bundleIdentifier": "boomer.Smart-Video",
-          "developerName": "",
-          "version": "13.38.0",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/boomer.Smart-Video.png",
-          "subtitle": ""
-        },
-        {
-          "name": "Moonly",
-          "bundleIdentifier": "com.moonly.Moonly",
-          "developerName": "",
-          "version": "2.9.3",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.moonly.Moonly.png",
-          "subtitle": ""
-        },
-        {
-          "name": "duet",
-          "bundleIdentifier": "com.kairos.duet",
-          "developerName": "",
-          "version": "3.2.1",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.kairos.duet.png",
-          "subtitle": ""
-        },
-        {
-          "name": "Facelab",
-          "bundleIdentifier": "com.lyrebirdstudio.facelab",
-          "developerName": "",
-          "version": "2.96",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.lyrebirdstudio.facelab.png",
-          "subtitle": ""
-        },
-        {
-          "name": "1Blocker",
-          "bundleIdentifier": "com.khanov.BlockerX",
-          "developerName": "",
-          "version": "6.7",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.khanov.BlockerX.png",
-          "subtitle": ""
-        },
-        {
-          "name": "Aloha",
-          "bundleIdentifier": "com.alohabrowser.alohabrowser",
-          "developerName": "",
-          "version": "8.11.0",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.alohabrowser.alohabrowser.png",
-          "subtitle": ""
-        },
-        {
-          "name": "Bearable",
-          "bundleIdentifier": "co.codeleap.bearable",
-          "developerName": "",
-          "version": "1.0.612",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/co.codeleap.bearable.png",
-          "subtitle": ""
-        },
-        {
-          "name": "ThePiano",
-          "bundleIdentifier": "com.impalastudios.pianofree",
-          "developerName": "",
-          "version": "2.23.8",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.impalastudios.pianofree.png",
-          "subtitle": ""
-        },
-        {
-          "name": "CLIME",
-          "bundleIdentifier": "com.apalonapps.radarfree",
-          "developerName": "",
-          "version": "5.13.72",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.apalonapps.radarfree.png",
           "subtitle": ""
         }
       ]
@@ -8475,7 +8475,7 @@
           "name": "BCD",
           "bundleIdentifier": "com.thebcd69.bcd",
           "developerName": "thebcd69",
-          "version": "0.1.579",
+          "version": "0.1.580",
           "iconURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/BCD/icon.png",
           "subtitle": "Windows games on iPhone and iPad"
         },
@@ -8547,7 +8547,7 @@
           "name": "Kazumi",
           "bundleIdentifier": "com.example.kazumi",
           "developerName": "Predidit",
-          "version": "2.3.9",
+          "version": "2.4.0",
           "iconURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/Kazumi/icon.png",
           "subtitle": "基于自定义规则的番剧采集APP，支持流媒体在线观看，支持弹幕，支持实时超分辨率。"
         },
@@ -8715,7 +8715,7 @@
           "name": "SpotiFLAC",
           "bundleIdentifier": "com.zarz.spotiflac",
           "developerName": "zarzet",
-          "version": "5.2.1",
+          "version": "5.2.5",
           "iconURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/SpotiFLAC/icon.png",
           "subtitle": "FLAC Downloader for iOS"
         },
@@ -8780,7 +8780,7 @@
     {
       "id": "ripestore",
       "name": "RipeStore",
-      "appCount": 11,
+      "appCount": 9,
       "catalogLimited": false,
       "iconURL": "https://i.imgur.com/pqIZoZo.jpeg",
       "sourceURL": "https://raw.githubusercontent.com/RipeStore/repos/main/RipeStore.json",
@@ -8808,14 +8808,6 @@
           "version": "1.8",
           "iconURL": "https://cdn.jsdelivr.net/gh/RipeStore/icons/telltale/BATMAN_TTS/icon_BATMAN.webp",
           "subtitle": "Enter the fractured psyche of Bruce Wayne where your choices have consequences"
-        },
-        {
-          "name": "Delight Games Premium Library",
-          "bundleIdentifier": "com.your-company.DelightGames",
-          "developerName": "Delight Games LLC",
-          "version": "4.6",
-          "iconURL": "https://cdn.jsdelivr.net/gh/RipeStore/icons/DELIGHTGAMES/icon_DELIGHTGAMES.png",
-          "subtitle": "Choice Text Adventures"
         },
         {
           "name": "Flappy Bird",
@@ -8864,14 +8856,6 @@
           "version": "1.4.3",
           "iconURL": "https://cdn.jsdelivr.net/gh/RipeStore/icons@main/IB1/IB1_icon.png",
           "subtitle": "A revolutionary action role-playing sword game."
-        },
-        {
-          "name": "Keka",
-          "bundleIdentifier": "com.aone.Keka-iOS",
-          "developerName": "aonez",
-          "version": "1.6.6",
-          "iconURL": "https://cdn.jsdelivr.net/gh/RipeStore/Keka@main/Keka-Squish-128x128.png",
-          "subtitle": "The file archiver for iOS"
         }
       ]
     },
