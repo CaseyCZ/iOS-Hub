@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-22T11:55:56Z",
+  "generatedAt": "2026-10-22T17:12:56Z",
   "sources": [
     {
       "id": "utm",
@@ -552,7 +552,7 @@
       "name": "Yattee",
       "appCount": 1,
       "catalogLimited": false,
-      "iconURL": "https://raw.githubusercontent.com/yattee/yattee/main/Assets/yattee-icon-512.png",
+      "iconURL": "https://raw.githubusercontent.com/yattee/yattee/main/assets/yattee-icon-512.png",
       "sourceURL": "https://raw.githubusercontent.com/yattee/yattee/main/altstore-source.json",
       "apps": [
         {
@@ -560,7 +560,7 @@
           "bundleIdentifier": "stream.yattee.app",
           "developerName": "Yattee",
           "version": "2.0.0",
-          "iconURL": "https://raw.githubusercontent.com/yattee/yattee/main/Assets/yattee-icon-512.png",
+          "iconURL": "https://raw.githubusercontent.com/yattee/yattee/main/assets/yattee-icon-512.png",
           "subtitle": "Privacy-focused video player"
         }
       ]
@@ -2184,8 +2184,8 @@
     {
       "id": "owo-source",
       "name": "OwO Source",
-      "appCount": 161,
-      "catalogLimited": true,
+      "appCount": 114,
+      "catalogLimited": false,
       "iconURL": "https://raw.githubusercontent.com/OwO-Network/Repo/main/icons/owo.repo.icon.png",
       "sourceURL": "https://repo.owo.network/",
       "apps": [
@@ -3099,374 +3099,6 @@
           "developerName": "",
           "version": "2.0.2",
           "iconURL": "https://raw.githubusercontent.com/owo-network/Repo/main/icons/com.hdnwbtb.uixnoe.png",
-          "subtitle": ""
-        },
-        {
-          "name": "Asspp",
-          "bundleIdentifier": "wiki.qaq.Asspp",
-          "developerName": "",
-          "version": "1.2.10",
-          "iconURL": "https://raw.githubusercontent.com/owo-network/Repo/main/icons/wiki.qaq.Asspp.png",
-          "subtitle": ""
-        },
-        {
-          "name": "Asspp",
-          "bundleIdentifier": "wiki.qaq.Asspp",
-          "developerName": "",
-          "version": "1.2.9",
-          "iconURL": "https://raw.githubusercontent.com/owo-network/Repo/main/icons/wiki.qaq.Asspp.png",
-          "subtitle": ""
-        },
-        {
-          "name": "Asspp",
-          "bundleIdentifier": "wiki.qaq.Asspp",
-          "developerName": "",
-          "version": "1.0",
-          "iconURL": "https://raw.githubusercontent.com/owo-network/Repo/main/icons/wiki.qaq.Asspp.png",
-          "subtitle": ""
-        },
-        {
-          "name": "AMap",
-          "bundleIdentifier": "com.autonavi.amap",
-          "developerName": "",
-          "version": "13.13.0",
-          "iconURL": "https://raw.githubusercontent.com/owo-network/Repo/main/icons/com.autonavi.amap.png",
-          "subtitle": ""
-        },
-        {
-          "name": "DouYin",
-          "bundleIdentifier": "com.ss.iphone.ugc.Aweme",
-          "developerName": "",
-          "version": "30.3.0",
-          "iconURL": "https://raw.githubusercontent.com/owo-network/Repo/main/icons/com.ss.iphone.ugc.Aweme.png",
-          "subtitle": ""
-        },
-        {
-          "name": "X",
-          "bundleIdentifier": "com.atebits.Tweetie2",
-          "developerName": "",
-          "version": "10.26",
-          "iconURL": "https://raw.githubusercontent.com/owo-network/Repo/main/icons/com.atebits.Tweetie2.png",
-          "subtitle": ""
-        },
-        {
-          "name": "WeChat",
-          "bundleIdentifier": "com.tencent.xin",
-          "developerName": "",
-          "version": "8.0.50",
-          "iconURL": "https://raw.githubusercontent.com/owo-network/Repo/main/icons/com.tencent.xin.png",
-          "subtitle": ""
-        },
-        {
-          "name": "WeChat",
-          "bundleIdentifier": "com.tencent.xin",
-          "developerName": "",
-          "version": "8.0.50",
-          "iconURL": "https://raw.githubusercontent.com/owo-network/Repo/main/icons/com.tencent.xin.png",
-          "subtitle": ""
-        },
-        {
-          "name": "XianYu",
-          "bundleIdentifier": "com.taobao.fleamarket",
-          "developerName": "",
-          "version": "7.15.40",
-          "iconURL": "https://raw.githubusercontent.com/owo-network/Repo/main/icons/com.taobao.fleamarket.png",
-          "subtitle": ""
-        },
-        {
-          "name": "BaiduMap",
-          "bundleIdentifier": "com.baidu.map.watchkitapp",
-          "developerName": "",
-          "version": "20.0.0",
-          "iconURL": "https://raw.githubusercontent.com/owo-network/Repo/main/icons/com.baidu.map.watchkitapp.png",
-          "subtitle": ""
-        },
-        {
-          "name": "WeChat",
-          "bundleIdentifier": "com.tencent.xin",
-          "developerName": "",
-          "version": "8.0.49",
-          "iconURL": "https://raw.githubusercontent.com/owo-network/Repo/main/icons/com.tencent.xin.png",
-          "subtitle": ""
-        },
-        {
-          "name": "Douyin",
-          "bundleIdentifier": "com.ss.iphone.ugc.Aweme",
-          "developerName": "",
-          "version": "29.6.0",
-          "iconURL": "https://raw.githubusercontent.com/owo-network/Repo/main/icons/com.ss.iphone.ugc.Aweme.png",
-          "subtitle": ""
-        },
-        {
-          "name": "WeChat",
-          "bundleIdentifier": "com.tencent.xin",
-          "developerName": "",
-          "version": "8.0.49",
-          "iconURL": "https://raw.githubusercontent.com/owo-network/Repo/main/icons/com.tencent.xin.png",
-          "subtitle": ""
-        },
-        {
-          "name": "WeChat",
-          "bundleIdentifier": "com.tencent.xin",
-          "developerName": "",
-          "version": "8.0.48",
-          "iconURL": "https://raw.githubusercontent.com/owo-network/Repo/main/icons/com.tencent.xin.png",
-          "subtitle": ""
-        },
-        {
-          "name": "WeChat",
-          "bundleIdentifier": "com.tencent.xin",
-          "developerName": "",
-          "version": "8.0.48",
-          "iconURL": "https://raw.githubusercontent.com/owo-network/Repo/main/icons/com.tencent.xin.png",
-          "subtitle": ""
-        },
-        {
-          "name": "WeChat",
-          "bundleIdentifier": "com.tencent.xin",
-          "developerName": "",
-          "version": "8.0.48",
-          "iconURL": "https://raw.githubusercontent.com/owo-network/Repo/main/icons/com.tencent.xin.png",
-          "subtitle": ""
-        },
-        {
-          "name": "WeChat",
-          "bundleIdentifier": "com.tencent.xin",
-          "developerName": "",
-          "version": "8.0.47",
-          "iconURL": "https://raw.githubusercontent.com/owo-network/Repo/main/icons/com.tencent.xin.png",
-          "subtitle": ""
-        },
-        {
-          "name": "WeChat",
-          "bundleIdentifier": "com.tencent.xin",
-          "developerName": "",
-          "version": "8.0.47",
-          "iconURL": "https://raw.githubusercontent.com/owo-network/Repo/main/icons/com.tencent.xin.png",
-          "subtitle": ""
-        },
-        {
-          "name": "Infuse",
-          "bundleIdentifier": "com.firecore.infuse",
-          "developerName": "",
-          "version": "7.7.1",
-          "iconURL": "https://raw.githubusercontent.com/owo-network/Repo/main/icons/com.firecore.infuse.png",
-          "subtitle": ""
-        },
-        {
-          "name": "WeChat",
-          "bundleIdentifier": "com.tencent.xin",
-          "developerName": "",
-          "version": "8.0.31",
-          "iconURL": "https://raw.githubusercontent.com/owo-network/Repo/main/icons/com.tencent.xin.png",
-          "subtitle": ""
-        },
-        {
-          "name": "WeChat",
-          "bundleIdentifier": "com.tencent.xin",
-          "developerName": "",
-          "version": "8.0.47",
-          "iconURL": "https://raw.githubusercontent.com/owo-network/Repo/main/icons/com.tencent.xin.png",
-          "subtitle": ""
-        },
-        {
-          "name": "Twitter",
-          "bundleIdentifier": "com.atebits.Tweetie2",
-          "developerName": "",
-          "version": "10.26",
-          "iconURL": "https://raw.githubusercontent.com/owo-network/Repo/main/icons/com.atebits.Tweetie2.png",
-          "subtitle": ""
-        },
-        {
-          "name": "WeChat",
-          "bundleIdentifier": "com.tencent.xin",
-          "developerName": "",
-          "version": "8.0.47",
-          "iconURL": "https://raw.githubusercontent.com/owo-network/Repo/main/icons/com.tencent.xin.png",
-          "subtitle": ""
-        },
-        {
-          "name": "WeChat",
-          "bundleIdentifier": "com.tencent.xin",
-          "developerName": "",
-          "version": "8.0.46",
-          "iconURL": "https://raw.githubusercontent.com/owo-network/Repo/main/icons/com.tencent.xin.png",
-          "subtitle": ""
-        },
-        {
-          "name": "WeChat",
-          "bundleIdentifier": "com.tencent.xin",
-          "developerName": "",
-          "version": "8.0.45",
-          "iconURL": "https://raw.githubusercontent.com/owo-network/Repo/main/icons/com.tencent.xin.png",
-          "subtitle": ""
-        },
-        {
-          "name": "WeChat",
-          "bundleIdentifier": "com.tencent.xin",
-          "developerName": "",
-          "version": "8.0.44",
-          "iconURL": "https://raw.githubusercontent.com/owo-network/Repo/main/icons/com.tencent.xin.png",
-          "subtitle": ""
-        },
-        {
-          "name": "Twitter",
-          "bundleIdentifier": "com.atebits.Tweetie2",
-          "developerName": "",
-          "version": "10.19",
-          "iconURL": "https://raw.githubusercontent.com/owo-network/Repo/main/icons/com.atebits.Tweetie2.png",
-          "subtitle": ""
-        },
-        {
-          "name": "WeChat",
-          "bundleIdentifier": "com.tencent.xin",
-          "developerName": "",
-          "version": "8.0.44",
-          "iconURL": "https://raw.githubusercontent.com/owo-network/Repo/main/icons/com.tencent.xin.png",
-          "subtitle": ""
-        },
-        {
-          "name": "Twitter",
-          "bundleIdentifier": "com.atebits.Tweetie2",
-          "developerName": "",
-          "version": "10.19",
-          "iconURL": "https://raw.githubusercontent.com/owo-network/Repo/main/icons/com.atebits.Tweetie2.png",
-          "subtitle": ""
-        },
-        {
-          "name": "WeChat",
-          "bundleIdentifier": "com.tencent.xin",
-          "developerName": "",
-          "version": "8.0.44",
-          "iconURL": "https://raw.githubusercontent.com/owo-network/Repo/main/icons/com.tencent.xin.png",
-          "subtitle": ""
-        },
-        {
-          "name": "WeChat",
-          "bundleIdentifier": "com.tencent.xin",
-          "developerName": "",
-          "version": "8.0.44",
-          "iconURL": "https://raw.githubusercontent.com/owo-network/Repo/main/icons/com.tencent.xin.png",
-          "subtitle": ""
-        },
-        {
-          "name": "WeChat",
-          "bundleIdentifier": "com.tencent.xin",
-          "developerName": "",
-          "version": "8.0.43",
-          "iconURL": "https://raw.githubusercontent.com/owo-network/Repo/main/icons/com.tencent.xin.png",
-          "subtitle": ""
-        },
-        {
-          "name": "WeChat",
-          "bundleIdentifier": "com.tencent.xin",
-          "developerName": "",
-          "version": "8.0.43",
-          "iconURL": "https://raw.githubusercontent.com/owo-network/Repo/main/icons/com.tencent.xin.png",
-          "subtitle": ""
-        },
-        {
-          "name": "WeChat",
-          "bundleIdentifier": "com.tencent.xin",
-          "developerName": "",
-          "version": "8.0.43",
-          "iconURL": "https://raw.githubusercontent.com/owo-network/Repo/main/icons/com.tencent.xin.png",
-          "subtitle": ""
-        },
-        {
-          "name": "AppInfo",
-          "bundleIdentifier": "uclort.com.AppInfo",
-          "developerName": "",
-          "version": "0.1.1",
-          "iconURL": "https://raw.githubusercontent.com/owo-network/Repo/main/icons/uclort.com.AppInfo.png",
-          "subtitle": ""
-        },
-        {
-          "name": "WeChat",
-          "bundleIdentifier": "com.tencent.xin",
-          "developerName": "",
-          "version": "8.0.43",
-          "iconURL": "https://raw.githubusercontent.com/owo-network/Repo/main/icons/com.tencent.xin.png",
-          "subtitle": ""
-        },
-        {
-          "name": "X",
-          "bundleIdentifier": "com.atebits.Tweetie2",
-          "developerName": "",
-          "version": "10.12",
-          "iconURL": "https://raw.githubusercontent.com/owo-network/Repo/main/icons/com.atebits.Tweetie2.png",
-          "subtitle": ""
-        },
-        {
-          "name": "WeChat",
-          "bundleIdentifier": "com.tencent.xin",
-          "developerName": "",
-          "version": "8.0.43.16.TF",
-          "iconURL": "https://raw.githubusercontent.com/owo-network/Repo/main/icons/com.tencent.xin.png",
-          "subtitle": ""
-        },
-        {
-          "name": "NOMOCAM",
-          "bundleIdentifier": "com.blink.academy.nomo",
-          "developerName": "",
-          "version": "1.6.6",
-          "iconURL": "https://raw.githubusercontent.com/owo-network/Repo/main/icons/com.blink.academy.nomo.png",
-          "subtitle": ""
-        },
-        {
-          "name": "WeChat",
-          "bundleIdentifier": "com.tencent.xin",
-          "developerName": "",
-          "version": "8.0.43.16.TF",
-          "iconURL": "https://raw.githubusercontent.com/owo-network/Repo/main/icons/com.tencent.xin.png",
-          "subtitle": ""
-        },
-        {
-          "name": "WeChat",
-          "bundleIdentifier": "com.tencent.xin",
-          "developerName": "",
-          "version": "8.0.43.16.TF",
-          "iconURL": "https://raw.githubusercontent.com/owo-network/Repo/main/icons/com.tencent.xin.png",
-          "subtitle": ""
-        },
-        {
-          "name": "MailMasterPro",
-          "bundleIdentifier": "com.netease.mailmasterpro",
-          "developerName": "",
-          "version": "7.12.1",
-          "iconURL": "https://raw.githubusercontent.com/owo-network/Repo/main/icons/com.netease.mailmasterpro.png",
-          "subtitle": ""
-        },
-        {
-          "name": "DouYin",
-          "bundleIdentifier": "com.ss.iphone.ugc.Aweme",
-          "developerName": "",
-          "version": "27.1.0",
-          "iconURL": "https://raw.githubusercontent.com/owo-network/Repo/main/icons/com.ss.iphone.ugc.Aweme.png",
-          "subtitle": ""
-        },
-        {
-          "name": "XianYu",
-          "bundleIdentifier": "com.taobao.fleamarket",
-          "developerName": "",
-          "version": "7.12.71",
-          "iconURL": "https://raw.githubusercontent.com/owo-network/Repo/main/icons/com.taobao.fleamarket.png",
-          "subtitle": ""
-        },
-        {
-          "name": "DouYin",
-          "bundleIdentifier": "com.ss.iphone.ugc.Aweme",
-          "developerName": "",
-          "version": "27.1.0",
-          "iconURL": "https://raw.githubusercontent.com/owo-network/Repo/main/icons/com.ss.iphone.ugc.Aweme.png",
-          "subtitle": ""
-        },
-        {
-          "name": "NOMORAW",
-          "bundleIdentifier": "com.blink.academy.nomoraw",
-          "developerName": "",
-          "version": "3.0.6",
-          "iconURL": "https://raw.githubusercontent.com/owo-network/Repo/main/icons/com.blink.academy.nomoraw.png",
           "subtitle": ""
         }
       ]
@@ -4924,11 +4556,43 @@
     {
       "id": "apptesters",
       "name": "AppTesters IPA Repo",
-      "appCount": 9735,
+      "appCount": 9739,
       "catalogLimited": true,
       "iconURL": "https://apptesters.org/apptesters-512x512.png",
       "sourceURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/apps.json",
       "apps": [
+        {
+          "name": "RiseSleep",
+          "bundleIdentifier": "com.risesci.nyx",
+          "developerName": "",
+          "version": "0.1.642",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.risesci.nyx.png",
+          "subtitle": ""
+        },
+        {
+          "name": "edjingMix",
+          "bundleIdentifier": "com.edjing.edjingdjturntable",
+          "developerName": "",
+          "version": "9.4.0",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.edjing.edjingdjturntable.png",
+          "subtitle": ""
+        },
+        {
+          "name": "PDFExpert",
+          "bundleIdentifier": "com.readdle.PDFExpert5",
+          "developerName": "",
+          "version": "7.26.3",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.readdle.PDFExpert5.png",
+          "subtitle": ""
+        },
+        {
+          "name": "Scanner",
+          "bundleIdentifier": "com.apalonapps.pdffree",
+          "developerName": "",
+          "version": "2.12.9",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.apalonapps.pdffree.png",
+          "subtitle": ""
+        },
         {
           "name": "Bearable",
           "bundleIdentifier": "co.codeleap.bearable",
@@ -6495,38 +6159,6 @@
           "developerName": "",
           "version": "27.0.6",
           "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/myndarc.newFitnessApp.png",
-          "subtitle": ""
-        },
-        {
-          "name": "Action",
-          "bundleIdentifier": "com.future.kapi",
-          "developerName": "",
-          "version": "4.42.0",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.future.kapi.png",
-          "subtitle": ""
-        },
-        {
-          "name": "Flightradar24",
-          "bundleIdentifier": "se.resenatverket.FlightRadar24-Free",
-          "developerName": "",
-          "version": "11.13.0",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/se.resenatverket.FlightRadar24-Free.png",
-          "subtitle": ""
-        },
-        {
-          "name": "ColorPop",
-          "bundleIdentifier": "com.mwm.procolor",
-          "developerName": "",
-          "version": "2.66.01",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.mwm.procolor.png",
-          "subtitle": ""
-        },
-        {
-          "name": "Camera",
-          "bundleIdentifier": "com.andyworks.camera",
-          "developerName": "",
-          "version": "1.60",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.andyworks.camera.png",
           "subtitle": ""
         }
       ]
@@ -8419,7 +8051,7 @@
           "name": "Aidoku",
           "bundleIdentifier": "app.aidoku.Aidoku",
           "developerName": "Skitty",
-          "version": "0.9-4",
+          "version": "",
           "iconURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/Aidoku/icon.png",
           "subtitle": "Free and open source manga reader for iOS and iPadOS"
         },
@@ -8427,7 +8059,7 @@
           "name": "AirCard-iOS",
           "bundleIdentifier": "com.mak5er.aircard",
           "developerName": "Mak5er",
-          "version": "1.3.2",
+          "version": "",
           "iconURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/AirCard/icon.png",
           "subtitle": "Apple Wallet card skins, passcode themes and wallpapers"
         },
@@ -8467,7 +8099,7 @@
           "name": "ARMSX2",
           "bundleIdentifier": "com.armsx2.ios",
           "developerName": "ARMSX2",
-          "version": "2.6.0-nightly.20261020.1334",
+          "version": "",
           "iconURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/ARMSX2/icon.png",
           "subtitle": "PlayStation 2 emulator for ARM64"
         },
@@ -8499,7 +8131,7 @@
           "name": "DukeX",
           "bundleIdentifier": "com.mafty.dukex",
           "developerName": "Manic EMU Development Team",
-          "version": "1.0.2",
+          "version": "",
           "iconURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/DukeX/icon.png",
           "subtitle": "Original Xbox emulation for iOS"
         },
@@ -8547,7 +8179,7 @@
           "name": "Kazumi",
           "bundleIdentifier": "com.example.kazumi",
           "developerName": "Predidit",
-          "version": "2.4.0",
+          "version": "",
           "iconURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/Kazumi/icon.png",
           "subtitle": "基于自定义规则的番剧采集APP，支持流媒体在线观看，支持弹幕，支持实时超分辨率。"
         },
@@ -8563,7 +8195,7 @@
           "name": "Kumone",
           "bundleIdentifier": "sb.moe.kumone",
           "developerName": "missuo",
-          "version": "0.3.21",
+          "version": "",
           "iconURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/Kumone/icon.png",
           "subtitle": "原生 NetEase Cloud Music iOS 客户端（雲の音）"
         },
@@ -8715,7 +8347,7 @@
           "name": "SpotiFLAC",
           "bundleIdentifier": "com.zarz.spotiflac",
           "developerName": "zarzet",
-          "version": "5.2.5",
+          "version": "",
           "iconURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/SpotiFLAC/icon.png",
           "subtitle": "FLAC Downloader for iOS"
         },
@@ -8731,7 +8363,7 @@
           "name": "TiebaPure",
           "bundleIdentifier": "dev.infinityf4p.tiebapure",
           "developerName": "infinityf4p",
-          "version": "1.4.15",
+          "version": "",
           "iconURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/TiebaPure/icon.png",
           "subtitle": "基于 SwiftUI 的第三方百度贴吧客户端"
         },
@@ -8747,7 +8379,7 @@
           "name": "UTM",
           "bundleIdentifier": "com.utmapp.UTM",
           "developerName": "osy",
-          "version": "5.0.8",
+          "version": "",
           "iconURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/UTM/icon.png",
           "subtitle": "Virtual machines for iOS"
         },
