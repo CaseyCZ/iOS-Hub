@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-23T11:42:13Z",
+  "generatedAt": "2026-10-23T17:10:36Z",
   "sources": [
     {
       "id": "utm",
@@ -1023,7 +1023,7 @@
           "name": "Facebook++",
           "bundleIdentifier": "com.facebook.Facebook",
           "developerName": "Michael Lema",
-          "version": "584.0.0",
+          "version": "584.1.0",
           "iconURL": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/7f/72/b7/7f72b76a-5865-3da5-8dc3-71a2b75551e9/Icon-Production-0-0-1x_U007epad-0-1-0-sRGB-85-220.png/512x512bb.jpg",
           "subtitle": "Facebook with a number of new features!"
         },
@@ -1285,17 +1285,17 @@
           "name": "Facebook (iQFace)",
           "bundleIdentifier": "com.facebook.Facebook",
           "developerName": "7MD & IPA Vault & lucaspedrosa",
-          "version": "584.0.0",
+          "version": "584.1.0",
           "iconURL": "https://pub-dd800571175348b6a2745b3396360028.r2.dev/App%20Icons/Facebook-Icons/Facebook-AppStore-1024x1024.png",
-          "subtitle": "Facebook 584.0.0 with iQFace 1.2"
+          "subtitle": "Facebook 584.1.0 with iQFace 1.2"
         },
         {
           "name": "Facebook (Facebook Plus)",
           "bundleIdentifier": "com.facebook.Facebook.facebookplus",
           "developerName": "shajon404 & IPA Vault",
-          "version": "584.0.0",
+          "version": "584.1.0",
           "iconURL": "https://pub-dd800571175348b6a2745b3396360028.r2.dev/App%20Icons/Facebook-Icons/Facebook-AppStore-1024x1024.png",
-          "subtitle": "Facebook 584.0.0 with Facebook Plus 1.0.2"
+          "subtitle": "Facebook 584.1.0 with Facebook Plus 1.0.2"
         },
         {
           "name": "Google Photos (Gunshot) (iOS 16.1+)",
@@ -1517,17 +1517,17 @@
           "name": "Telegram (MxGram)",
           "bundleIdentifier": "ph.telegra.Telegraph.mxgram",
           "developerName": "m1ronx1412 & IPA Vault",
-          "version": "13.1",
+          "version": "13.1.1",
           "iconURL": "https://pub-dd800571175348b6a2745b3396360028.r2.dev/App%20Icons/Telegram-Icons/Telegram-AppStore-1024x1024.png",
-          "subtitle": "Telegram 13.1 with MxGram 1.0.0"
+          "subtitle": "Telegram 13.1.1 with MxGram 1.0.0"
         },
         {
           "name": "Telegram (iQTele)",
           "bundleIdentifier": "ph.telegra.Telegraph",
           "developerName": "7MD & lucaspedrosa & IPA Vault",
-          "version": "13.1",
+          "version": "13.1.1",
           "iconURL": "https://pub-dd800571175348b6a2745b3396360028.r2.dev/App%20Icons/Telegram-Icons/Telegram-AppStore-1024x1024.png",
-          "subtitle": "Telegram 13.1 with iQTele 1.4"
+          "subtitle": "Telegram 13.1.1 with iQTele 1.4"
         },
         {
           "name": "Telegram (TGExtra)",
@@ -1559,7 +1559,7 @@
           "developerName": "MyNameIsJeff & skopevoj & IPA Vault",
           "version": "9.1.90",
           "iconURL": "https://pub-dd800571175348b6a2745b3396360028.r2.dev/App%20Icons/Spotify-Icons/Spotify-AppStore-1024x1024.png",
-          "subtitle": "Spotify 9.1.90 with Vitrine 1.0.0-b13"
+          "subtitle": "Spotify 9.1.90 with Vitrine 1.0.0-b14"
         },
         {
           "name": "Spotify (Vitrine) (No Plugins)",
@@ -1567,7 +1567,7 @@
           "developerName": "MyNameIsJeff & skopevoj & IPA Vault",
           "version": "9.1.90",
           "iconURL": "https://pub-dd800571175348b6a2745b3396360028.r2.dev/App%20Icons/Spotify-Icons/Spotify-AppStore-1024x1024.png",
-          "subtitle": "Spotify 9.1.90 with Vitrine 1.0.0-b13 (No Plugins)"
+          "subtitle": "Spotify 9.1.90 with Vitrine 1.0.0-b14 (No Plugins)"
         },
         {
           "name": "Threads (ThreadSaver)",
@@ -1757,9 +1757,9 @@
           "name": "Mornye",
           "bundleIdentifier": "com.zarz.mornye",
           "developerName": "zarzet & IPA Vault",
-          "version": "5.2.1",
+          "version": "5.2.6",
           "iconURL": "https://pub-dd800571175348b6a2745b3396360028.r2.dev/App%20Icons/Mornye-Icons/Icon-App-1024x1024_Normal.png",
-          "subtitle": "Mornye 5.2.1"
+          "subtitle": "Mornye 5.2.6"
         },
         {
           "name": "Spotify (Vitrine + Pixie)",
@@ -3474,41 +3474,25 @@
     {
       "id": "cypwn-ipa",
       "name": "CyPwn IPA Library",
-      "appCount": 209,
+      "appCount": 207,
       "catalogLimited": true,
       "iconURL": "https://repo.cypwn.xyz/assets/images/cypwn_small.png",
       "sourceURL": "https://ipa.cypwn.xyz/cypwn.json",
       "apps": [
         {
-          "name": "Stremio-2.0.6",
-          "bundleIdentifier": "com.stremio.pal",
-          "developerName": "Stremio-2.0.6 x CyPwn",
-          "version": "2.0.6",
-          "iconURL": "https://ipa.cypwn.xyz/serve/icons/Stremio-2.0.6.png",
-          "subtitle": ""
-        },
-        {
-          "name": "PowerWarriors_18.0",
+          "name": "Power Warriors 18.0",
           "bundleIdentifier": "com.ZombiAriel.Power-Warriors",
-          "developerName": "PowerWarriors_18.0 x CyPwn",
+          "developerName": "Power Warriors 18.0 x CyPwn",
           "version": "18",
-          "iconURL": "https://ipa.cypwn.xyz/serve/icons/PowerWarriors_18.0.png",
+          "iconURL": "https://ipa.cypwn.xyz/serve/icons/Power Warriors 18.0.png",
           "subtitle": ""
         },
         {
-          "name": "Stremio-2.0.0",
-          "bundleIdentifier": "com.stremio.pal",
-          "developerName": "Stremio-2.0.0 x CyPwn",
-          "version": "2.0.0",
-          "iconURL": "https://ipa.cypwn.xyz/serve/icons/Stremio-2.0.0.png",
-          "subtitle": ""
-        },
-        {
-          "name": "CloverPit-1.4.8",
+          "name": "CloverPit-1.4.3",
           "bundleIdentifier": "com.PanikArcade.CloverPit",
-          "developerName": "CloverPit-1.4.8 x CyPwn",
-          "version": "1.4.8",
-          "iconURL": "https://ipa.cypwn.xyz/serve/icons/CloverPit-1.4.8.png",
+          "developerName": "CloverPit-1.4.3 x CyPwn",
+          "version": "1.4.3",
+          "iconURL": "https://ipa.cypwn.xyz/serve/icons/CloverPit-1.4.3.png",
           "subtitle": ""
         },
         {
@@ -4918,17 +4902,121 @@
           "version": "3.12.0",
           "iconURL": "https://ipa.cypwn.xyz/serve/icons/RefacePro_3.12.0.png",
           "subtitle": ""
+        },
+        {
+          "name": "AppCake+",
+          "bundleIdentifier": "cypwn.AppCake+.7.2.2",
+          "developerName": "AppCake+ x CyPwn",
+          "version": "7.2.2",
+          "iconURL": "https://ipa.cypwn.xyz/serve/icons/AppCake+.png",
+          "subtitle": ""
+        },
+        {
+          "name": "NewOS",
+          "bundleIdentifier": "cypwn.NewOS.1.0",
+          "developerName": "NewOS x CyPwn",
+          "version": "1.0",
+          "iconURL": "https://ipa.cypwn.xyz/serve/icons/NewOS.png",
+          "subtitle": ""
         }
       ]
     },
     {
       "id": "apptesters",
       "name": "AppTesters IPA Repo",
-      "appCount": 9758,
+      "appCount": 9769,
       "catalogLimited": true,
       "iconURL": "https://apptesters.org/apptesters-512x512.png",
       "sourceURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/apps.json",
       "apps": [
+        {
+          "name": "Vibes",
+          "bundleIdentifier": "com.andyworks.vibes",
+          "developerName": "",
+          "version": "1.30",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.andyworks.vibes.png",
+          "subtitle": ""
+        },
+        {
+          "name": "Calendars",
+          "bundleIdentifier": "com.readdle.CalendarsLite",
+          "developerName": "",
+          "version": "5.41.0",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.readdle.CalendarsLite.png",
+          "subtitle": ""
+        },
+        {
+          "name": "Locket",
+          "bundleIdentifier": "com.locket.Locket",
+          "developerName": "",
+          "version": "2.70.0",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.locket.Locket.png",
+          "subtitle": ""
+        },
+        {
+          "name": "Hevy",
+          "bundleIdentifier": "com.hevyapp.hevy",
+          "developerName": "",
+          "version": "3.2.3",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.hevyapp.hevy.png",
+          "subtitle": ""
+        },
+        {
+          "name": "iScreen",
+          "bundleIdentifier": "com.zerone.hidesktop",
+          "developerName": "",
+          "version": "5.1.21",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.zerone.hidesktop.png",
+          "subtitle": ""
+        },
+        {
+          "name": "ScannerPro",
+          "bundleIdentifier": "com.readdle.Scanner",
+          "developerName": "",
+          "version": "9.0.3",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.readdle.Scanner.png",
+          "subtitle": ""
+        },
+        {
+          "name": "Phocus",
+          "bundleIdentifier": "com.ahmetserdarkaradeniz.Phocus",
+          "developerName": "",
+          "version": "3.4.9",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.ahmetserdarkaradeniz.Phocus.png",
+          "subtitle": ""
+        },
+        {
+          "name": "LUTStudio",
+          "bundleIdentifier": "com.solveit.lut-studio",
+          "developerName": "",
+          "version": "4.1.1",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.solveit.lut-studio.png",
+          "subtitle": ""
+        },
+        {
+          "name": "Crsel",
+          "bundleIdentifier": "com.frameoneapps.Crsel",
+          "developerName": "",
+          "version": "1.5.9",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.frameoneapps.Crsel.png",
+          "subtitle": ""
+        },
+        {
+          "name": "Cleanup",
+          "bundleIdentifier": "com.codeway.cleanerplus",
+          "developerName": "",
+          "version": "6.25.0",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.codeway.cleanerplus.png",
+          "subtitle": ""
+        },
+        {
+          "name": "Splice",
+          "bundleIdentifier": "com.path36.SpliceFree",
+          "developerName": "",
+          "version": "4.28.73",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.path36.SpliceFree.png",
+          "subtitle": ""
+        },
         {
           "name": "B612",
           "bundleIdentifier": "com.linecorp.b612",
@@ -6439,94 +6527,6 @@
           "developerName": "",
           "version": "4.49.290",
           "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.endel.endel.png",
-          "subtitle": ""
-        },
-        {
-          "name": "Elevate",
-          "bundleIdentifier": "com.elevateapp.elevate",
-          "developerName": "",
-          "version": "5.261.0",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.elevateapp.elevate.png",
-          "subtitle": ""
-        },
-        {
-          "name": "DynamicLyrics",
-          "bundleIdentifier": "com.bing.lyrics",
-          "developerName": "",
-          "version": "2.0.6",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.bing.lyrics.png",
-          "subtitle": ""
-        },
-        {
-          "name": "Duolingo",
-          "bundleIdentifier": "com.duolingo.DuolingoMobile",
-          "developerName": "",
-          "version": "7.145.0",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.duolingo.DuolingoMobile.png",
-          "subtitle": ""
-        },
-        {
-          "name": "Drafts",
-          "bundleIdentifier": "com.agiletortoise.Drafts5",
-          "developerName": "",
-          "version": "54.1.1",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.agiletortoise.Drafts5.png",
-          "subtitle": ""
-        },
-        {
-          "name": "Documents",
-          "bundleIdentifier": "com.readdle.ReaddleDocsIPad",
-          "developerName": "",
-          "version": "8.22.9",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.readdle.ReaddleDocsIPad.png",
-          "subtitle": ""
-        },
-        {
-          "name": "DiamondFinder",
-          "bundleIdentifier": "com.mcdiamondfinder.app",
-          "developerName": "",
-          "version": "9.2.6",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.mcdiamondfinder.app.png",
-          "subtitle": ""
-        },
-        {
-          "name": "DeviceMonitor",
-          "bundleIdentifier": "org.fastdevsproject.altervista.Device-Monitor",
-          "developerName": "",
-          "version": "27.0.1",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/org.fastdevsproject.altervista.Device-Monitor.png",
-          "subtitle": ""
-        },
-        {
-          "name": "Detail",
-          "bundleIdentifier": "co.detail.duo",
-          "developerName": "",
-          "version": "6.0.4",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/co.detail.duo.png",
-          "subtitle": ""
-        },
-        {
-          "name": "DaVinci",
-          "bundleIdentifier": "com.hubx.imagination",
-          "developerName": "",
-          "version": "5.0.10",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.hubx.imagination.png",
-          "subtitle": ""
-        },
-        {
-          "name": "Crsel",
-          "bundleIdentifier": "com.frameoneapps.Crsel",
-          "developerName": "",
-          "version": "1.5.8",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.frameoneapps.Crsel.png",
-          "subtitle": ""
-        },
-        {
-          "name": "ColorPop",
-          "bundleIdentifier": "com.mwm.procolor",
-          "developerName": "",
-          "version": "2.68.00",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.mwm.procolor.png",
           "subtitle": ""
         }
       ]
@@ -8467,7 +8467,7 @@
           "name": "ARMSX2",
           "bundleIdentifier": "com.armsx2.ios",
           "developerName": "ARMSX2",
-          "version": "2.6.0-nightly.20261022.1351",
+          "version": "2.6.0-nightly.20261023.1332",
           "iconURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/ARMSX2/icon.png",
           "subtitle": "PlayStation 2 emulator for ARM64"
         },
