@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-24T15:58:59Z",
+  "generatedAt": "2026-10-24T20:52:39Z",
   "sources": [
     {
       "id": "utm",
@@ -1112,8 +1112,8 @@
           "bundleIdentifier": "app.scenebox.SceneBox",
           "developerName": "",
           "version": "1.0.4",
-          "iconURL": "",
-          "subtitle": ""
+          "iconURL": "https://raw.githubusercontent.com/bebound/AltGallery/master/apps/SceneBox/icon.png",
+          "subtitle": "Free Movie/TV Show Streaming!"
         }
       ]
     },
@@ -1219,7 +1219,7 @@
           "name": "Instagram (RyukGram)",
           "bundleIdentifier": "com.burbn.instagram",
           "developerName": "Ryuk",
-          "version": "451.0.0",
+          "version": "452.0.0",
           "iconURL": "https://raw.githubusercontent.com/qnblackcat/AltStore/main/ScreenShot/800px-Instagram_logo_2016.svg.png",
           "subtitle": "Additional features and fixes by Ryuk based on SCInsta | If you want to donate: - https://ko-fi.com/driftywinds"
         },
@@ -4948,11 +4948,19 @@
     {
       "id": "apptesters",
       "name": "AppTesters IPA Repo",
-      "appCount": 9794,
+      "appCount": 9795,
       "catalogLimited": true,
       "iconURL": "https://apptesters.org/apptesters-512x512.png",
       "sourceURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/apps.json",
       "apps": [
+        {
+          "name": "Pillow",
+          "bundleIdentifier": "com.neybox.Pillow",
+          "developerName": "",
+          "version": "6.7.1",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.neybox.Pillow.png",
+          "subtitle": ""
+        },
         {
           "name": "DtdSounds",
           "bundleIdentifier": "com.dtd.aroundu",
@@ -6543,14 +6551,6 @@
           "developerName": "",
           "version": "23.15.1",
           "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.sillens.iShape.png",
-          "subtitle": ""
-        },
-        {
-          "name": "LUTStudio",
-          "bundleIdentifier": "com.solveit.lut-studio",
-          "developerName": "",
-          "version": "4.1.0",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.solveit.lut-studio.png",
           "subtitle": ""
         }
       ]
@@ -8499,7 +8499,7 @@
           "name": "BCD",
           "bundleIdentifier": "com.thebcd69.bcd",
           "developerName": "thebcd69",
-          "version": "0.1.592",
+          "version": "0.1.600",
           "iconURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/BCD/icon.png",
           "subtitle": "Windows games on iPhone and iPad"
         },
@@ -10567,7 +10567,7 @@
           "name": "Animeko",
           "bundleIdentifier": "org.animeko.animeko",
           "developerName": "openani",
-          "version": "6.3.0",
+          "version": "6.4.0",
           "iconURL": "https://avatars.githubusercontent.com/u/166622089",
           "subtitle": ""
         }
