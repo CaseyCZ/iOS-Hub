@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-24T11:04:41Z",
+  "generatedAt": "2026-10-24T15:58:59Z",
   "sources": [
     {
       "id": "utm",
@@ -1006,7 +1006,7 @@
     {
       "id": "wuxu-library-plus",
       "name": "WuXu's Library++",
-      "appCount": 12,
+      "appCount": 13,
       "catalogLimited": false,
       "iconURL": "https://external-content.duckduckgo.com/iu/?u=https://i.imgur.com/g17kMl9.jpeg",
       "sourceURL": "https://raw.githubusercontent.com/WuXu1/WuXu1.github.io/main/wuxu-complete-plus.json",
@@ -1106,6 +1106,14 @@
           "version": "584.0.0",
           "iconURL": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/05/90/0d/05900d52-cace-057b-aa3a-3c08aa064c4c/AppIcon-0-0-1x_U007epad-0-1-0-sRGB-85-220.png/512x512bb.jpg",
           "subtitle": "The ultimate Facebook Messenger tweak!"
+        },
+        {
+          "name": "SceneBox",
+          "bundleIdentifier": "app.scenebox.SceneBox",
+          "developerName": "",
+          "version": "1.0.4",
+          "iconURL": "",
+          "subtitle": ""
         }
       ]
     },
@@ -3490,11 +3498,19 @@
     {
       "id": "cypwn-ipa",
       "name": "CyPwn IPA Library",
-      "appCount": 209,
+      "appCount": 210,
       "catalogLimited": true,
       "iconURL": "https://repo.cypwn.xyz/assets/images/cypwn_small.png",
       "sourceURL": "https://ipa.cypwn.xyz/cypwn.json",
       "apps": [
+        {
+          "name": "Stremio-2.0.7",
+          "bundleIdentifier": "com.stremio.pal",
+          "developerName": "Stremio-2.0.7 x CyPwn",
+          "version": "2.0.7",
+          "iconURL": "https://ipa.cypwn.xyz/serve/icons/Stremio-2.0.7.png",
+          "subtitle": ""
+        },
         {
           "name": "Stremio-2.0.6",
           "bundleIdentifier": "com.stremio.pal",
@@ -4926,25 +4942,57 @@
           "version": "2.6",
           "iconURL": "https://ipa.cypwn.xyz/serve/icons/Star_Map_2.6_Satella.png",
           "subtitle": ""
-        },
-        {
-          "name": "RefacePro_3.12.0",
-          "bundleIdentifier": "cypwn.RefacePro_3.12.0.3.12.0",
-          "developerName": "RefacePro_3.12.0 x CyPwn",
-          "version": "3.12.0",
-          "iconURL": "https://ipa.cypwn.xyz/serve/icons/RefacePro_3.12.0.png",
-          "subtitle": ""
         }
       ]
     },
     {
       "id": "apptesters",
       "name": "AppTesters IPA Repo",
-      "appCount": 9789,
+      "appCount": 9794,
       "catalogLimited": true,
       "iconURL": "https://apptesters.org/apptesters-512x512.png",
       "sourceURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/apps.json",
       "apps": [
+        {
+          "name": "DtdSounds",
+          "bundleIdentifier": "com.dtd.aroundu",
+          "developerName": "",
+          "version": "2.6",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.dtd.aroundu.png",
+          "subtitle": ""
+        },
+        {
+          "name": "TikTok",
+          "bundleIdentifier": "com.zhiliaoapp.musically",
+          "developerName": "",
+          "version": "47.4.0",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.zhiliaoapp.musically.png",
+          "subtitle": ""
+        },
+        {
+          "name": "Instagram",
+          "bundleIdentifier": "com.burbn.instagram",
+          "developerName": "",
+          "version": "451.0.0",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.burbn.instagram.png",
+          "subtitle": ""
+        },
+        {
+          "name": "Facebook",
+          "bundleIdentifier": "com.facebook.Facebook",
+          "developerName": "",
+          "version": "583.0.0",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.facebook.Facebook.png",
+          "subtitle": ""
+        },
+        {
+          "name": "Crsel",
+          "bundleIdentifier": "com.frameoneapps.Crsel",
+          "developerName": "",
+          "version": "1.6.0",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.frameoneapps.Crsel.png",
+          "subtitle": ""
+        },
         {
           "name": "Aloha",
           "bundleIdentifier": "com.alohabrowser.alohabrowser",
@@ -6503,46 +6551,6 @@
           "developerName": "",
           "version": "4.1.0",
           "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.solveit.lut-studio.png",
-          "subtitle": ""
-        },
-        {
-          "name": "LINECamera",
-          "bundleIdentifier": "jp.naver.linecamera",
-          "developerName": "",
-          "version": "18.6.0",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/jp.naver.linecamera.png",
-          "subtitle": ""
-        },
-        {
-          "name": "LEMOFM",
-          "bundleIdentifier": "com.LEMO.LemoFM",
-          "developerName": "",
-          "version": "2.1.1",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.LEMO.LemoFM.png",
-          "subtitle": ""
-        },
-        {
-          "name": "KineMaster",
-          "bundleIdentifier": "com.kinemaster.kios",
-          "developerName": "",
-          "version": "8.2.5",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.kinemaster.kios.png",
-          "subtitle": ""
-        },
-        {
-          "name": "Ketoapp",
-          "bundleIdentifier": "com.lappir.keto",
-          "developerName": "",
-          "version": "10.0",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.lappir.keto.png",
-          "subtitle": ""
-        },
-        {
-          "name": "KKPhoto",
-          "bundleIdentifier": "tech.miidii.AlbumManager",
-          "developerName": "",
-          "version": "2.4",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/tech.miidii.AlbumManager.png",
           "subtitle": ""
         }
       ]
