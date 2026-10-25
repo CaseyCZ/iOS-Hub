@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-25T11:33:56Z",
+  "generatedAt": "2026-10-25T16:24:15Z",
   "sources": [
     {
       "id": "utm",
@@ -4948,11 +4948,51 @@
     {
       "id": "apptesters",
       "name": "AppTesters IPA Repo",
-      "appCount": 9801,
+      "appCount": 9806,
       "catalogLimited": true,
       "iconURL": "https://apptesters.org/apptesters-512x512.png",
       "sourceURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/apps.json",
       "apps": [
+        {
+          "name": "Moovit",
+          "bundleIdentifier": "com.tranzmate.tranzmate1",
+          "developerName": "",
+          "version": "5.202.1",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.tranzmate.tranzmate1.png",
+          "subtitle": ""
+        },
+        {
+          "name": "edjingMix",
+          "bundleIdentifier": "com.edjing.edjingdjturntable",
+          "developerName": "",
+          "version": "9.4.1",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.edjing.edjingdjturntable.png",
+          "subtitle": ""
+        },
+        {
+          "name": "Stemz",
+          "bundleIdentifier": "com.mwm.stems",
+          "developerName": "",
+          "version": "6.00.01",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.mwm.stems.png",
+          "subtitle": ""
+        },
+        {
+          "name": "SimplyPiano",
+          "bundleIdentifier": "com.joytunes.asla",
+          "developerName": "",
+          "version": "9.11.0",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.joytunes.asla.png",
+          "subtitle": ""
+        },
+        {
+          "name": "LEMOFM",
+          "bundleIdentifier": "com.LEMO.LemoFM",
+          "developerName": "",
+          "version": "2.2.3",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.LEMO.LemoFM.png",
+          "subtitle": ""
+        },
         {
           "name": "SimplyDraw",
           "bundleIdentifier": "com.joytunes.Draw",
@@ -6511,46 +6551,6 @@
           "developerName": "",
           "version": "1.12.8",
           "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/ventures.slam.minutes.png",
-          "subtitle": ""
-        },
-        {
-          "name": "Mindllama",
-          "bundleIdentifier": "com.vitalii.mind",
-          "developerName": "",
-          "version": "2.5.11",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.vitalii.mind.png",
-          "subtitle": ""
-        },
-        {
-          "name": "Mimo",
-          "bundleIdentifier": "com.getmimo.mimo",
-          "developerName": "",
-          "version": "12.32.0",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.getmimo.mimo.png",
-          "subtitle": ""
-        },
-        {
-          "name": "Mercury",
-          "bundleIdentifier": "com.tripleglazedstudios.Weather",
-          "developerName": "",
-          "version": "3.8.1",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.tripleglazedstudios.Weather.png",
-          "subtitle": ""
-        },
-        {
-          "name": "MediaConvert",
-          "bundleIdentifier": "com.verycoolapp.mediaconvert",
-          "developerName": "",
-          "version": "4.17",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.verycoolapp.mediaconvert.png",
-          "subtitle": ""
-        },
-        {
-          "name": "MDClock",
-          "bundleIdentifier": "tech.miidii.MDClock",
-          "developerName": "",
-          "version": "2.74.1",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/tech.miidii.MDClock.png",
           "subtitle": ""
         }
       ]
@@ -8467,7 +8467,7 @@
           "name": "AnimeFlow",
           "bundleIdentifier": "com.ligg.anime_flow",
           "developerName": "openAnimeFlow",
-          "version": "2.6.4",
+          "version": "2.6.5",
           "iconURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/AnimeFlow/icon.png",
           "subtitle": "跨平台动漫视频播放器，支持多数据源、实时 4K 超分辨率与弹幕"
         },
