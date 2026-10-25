@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-25T04:44:33Z",
+  "generatedAt": "2026-10-25T11:33:56Z",
   "sources": [
     {
       "id": "utm",
@@ -4948,11 +4948,43 @@
     {
       "id": "apptesters",
       "name": "AppTesters IPA Repo",
-      "appCount": 9797,
+      "appCount": 9801,
       "catalogLimited": true,
       "iconURL": "https://apptesters.org/apptesters-512x512.png",
       "sourceURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/apps.json",
       "apps": [
+        {
+          "name": "SimplyDraw",
+          "bundleIdentifier": "com.joytunes.Draw",
+          "developerName": "",
+          "version": "1.19.0",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.joytunes.Draw.png",
+          "subtitle": ""
+        },
+        {
+          "name": "Bazaart",
+          "bundleIdentifier": "co.bazaart.app",
+          "developerName": "",
+          "version": "27.0.6",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/co.bazaart.app.png",
+          "subtitle": ""
+        },
+        {
+          "name": "StressWatch",
+          "bundleIdentifier": "com.ideation.Stress",
+          "developerName": "",
+          "version": "3.4.5",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.ideation.Stress.png",
+          "subtitle": ""
+        },
+        {
+          "name": "FitnessOnline",
+          "bundleIdentifier": "com.aiti.FitnessOnline",
+          "developerName": "",
+          "version": "1.31.0",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.aiti.FitnessOnline.png",
+          "subtitle": ""
+        },
         {
           "name": "fGet",
           "bundleIdentifier": "com.penguinbit.fastdownload",
@@ -6519,38 +6551,6 @@
           "developerName": "",
           "version": "2.74.1",
           "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/tech.miidii.MDClock.png",
-          "subtitle": ""
-        },
-        {
-          "name": "Lyfta",
-          "bundleIdentifier": "com.lyftaios",
-          "developerName": "",
-          "version": "1.164",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.lyftaios.png",
-          "subtitle": ""
-        },
-        {
-          "name": "LookUp",
-          "bundleIdentifier": "in.muditbhargava.LookUp",
-          "developerName": "",
-          "version": "13.0.5",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/in.muditbhargava.LookUp.png",
-          "subtitle": ""
-        },
-        {
-          "name": "Locket",
-          "bundleIdentifier": "com.locket.Locket",
-          "developerName": "",
-          "version": "2.69.0",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.locket.Locket.png",
-          "subtitle": ""
-        },
-        {
-          "name": "Lingvist",
-          "bundleIdentifier": "ee.keel24.Lingvist",
-          "developerName": "",
-          "version": "2.65.5",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/ee.keel24.Lingvist.png",
           "subtitle": ""
         }
       ]
@@ -10269,7 +10269,7 @@
           "name": "Rocket for Instagram",
           "bundleIdentifier": "com.burbn.instagram",
           "developerName": "Rocket",
-          "version": "450.1.0",
+          "version": "452.0.1",
           "iconURL": "https://cdn.getrocketapp.io/assets/icon.png",
           "subtitle": "All-in-one tweak for Instagram"
         }
