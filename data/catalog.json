@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-26T04:50:19Z",
+  "generatedAt": "2026-10-26T13:07:09Z",
   "sources": [
     {
       "id": "utm",
@@ -3506,19 +3506,11 @@
     {
       "id": "cypwn-ipa",
       "name": "CyPwn IPA Library",
-      "appCount": 210,
+      "appCount": 209,
       "catalogLimited": true,
       "iconURL": "https://repo.cypwn.xyz/assets/images/cypwn_small.png",
       "sourceURL": "https://ipa.cypwn.xyz/cypwn.json",
       "apps": [
-        {
-          "name": "Stremio-2.0.7",
-          "bundleIdentifier": "com.stremio.pal",
-          "developerName": "Stremio-2.0.7 x CyPwn",
-          "version": "2.0.7",
-          "iconURL": "https://ipa.cypwn.xyz/serve/icons/Stremio-2.0.7.png",
-          "subtitle": ""
-        },
         {
           "name": "Stremio-2.0.6",
           "bundleIdentifier": "com.stremio.pal",
@@ -4950,17 +4942,105 @@
           "version": "2.6",
           "iconURL": "https://ipa.cypwn.xyz/serve/icons/Star_Map_2.6_Satella.png",
           "subtitle": ""
+        },
+        {
+          "name": "RefacePro_3.12.0",
+          "bundleIdentifier": "cypwn.RefacePro_3.12.0.3.12.0",
+          "developerName": "RefacePro_3.12.0 x CyPwn",
+          "version": "3.12.0",
+          "iconURL": "https://ipa.cypwn.xyz/serve/icons/RefacePro_3.12.0.png",
+          "subtitle": ""
         }
       ]
     },
     {
       "id": "apptesters",
       "name": "AppTesters IPA Repo",
-      "appCount": 9814,
+      "appCount": 9824,
       "catalogLimited": true,
       "iconURL": "https://apptesters.org/apptesters-512x512.png",
       "sourceURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/apps.json",
       "apps": [
+        {
+          "name": "Facetune",
+          "bundleIdentifier": "com.lightricks.Facetune2",
+          "developerName": "",
+          "version": "26.35",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.lightricks.Facetune2.png",
+          "subtitle": ""
+        },
+        {
+          "name": "JSCodePad",
+          "bundleIdentifier": "com.markodevcic.js-code-pad",
+          "developerName": "",
+          "version": "1.9.0",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.markodevcic.js-code-pad.png",
+          "subtitle": ""
+        },
+        {
+          "name": "FlightTracker",
+          "bundleIdentifier": "com.iaftt.flightplusfree",
+          "developerName": "",
+          "version": "8.8.2",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.iaftt.flightplusfree.png",
+          "subtitle": ""
+        },
+        {
+          "name": "PREQUEL",
+          "bundleIdentifier": "com.aiarlabs.prequel",
+          "developerName": "",
+          "version": "2.103.0",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.aiarlabs.prequel.png",
+          "subtitle": ""
+        },
+        {
+          "name": "ism",
+          "bundleIdentifier": "com.ahaf.mshion",
+          "developerName": "",
+          "version": "7.51.1",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.ahaf.mshion.png",
+          "subtitle": ""
+        },
+        {
+          "name": "Lightroom",
+          "bundleIdentifier": "com.adobe.lrmobilephone",
+          "developerName": "",
+          "version": "11.6.20",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.adobe.lrmobilephone.png",
+          "subtitle": ""
+        },
+        {
+          "name": "Mimo",
+          "bundleIdentifier": "com.getmimo.mimo",
+          "developerName": "",
+          "version": "12.33.0",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.getmimo.mimo.png",
+          "subtitle": ""
+        },
+        {
+          "name": "Unfold",
+          "bundleIdentifier": "com.moonlab.unfoldstories",
+          "developerName": "",
+          "version": "8.169.0",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.moonlab.unfoldstories.png",
+          "subtitle": ""
+        },
+        {
+          "name": "Stndrd",
+          "bundleIdentifier": "uni.cbum",
+          "developerName": "",
+          "version": "4.1.62",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/uni.cbum.png",
+          "subtitle": ""
+        },
+        {
+          "name": "DesignLab",
+          "bundleIdentifier": "com.apperto.piclabhd",
+          "developerName": "",
+          "version": "5.57.6",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.apperto.piclabhd.png",
+          "subtitle": ""
+        },
         {
           "name": "Unknown app",
           "bundleIdentifier": "com.intsig.CamScannerLite",
@@ -6479,86 +6559,6 @@
           "developerName": "",
           "version": "3.63.00",
           "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.mwm.piano-app.png",
-          "subtitle": ""
-        },
-        {
-          "name": "Paste",
-          "bundleIdentifier": "com.wiheads.paste",
-          "developerName": "",
-          "version": "7.0.3",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.wiheads.paste.png",
-          "subtitle": ""
-        },
-        {
-          "name": "PUSH",
-          "bundleIdentifier": "com.ADPTVLTD.push",
-          "developerName": "",
-          "version": "4.1.0",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.ADPTVLTD.push.png",
-          "subtitle": ""
-        },
-        {
-          "name": "PREQUEL",
-          "bundleIdentifier": "com.aiarlabs.prequel",
-          "developerName": "",
-          "version": "2.102.0",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.aiarlabs.prequel.png",
-          "subtitle": ""
-        },
-        {
-          "name": "PDFExpert",
-          "bundleIdentifier": "com.readdle.PDFExpert5",
-          "developerName": "",
-          "version": "7.26.2",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.readdle.PDFExpert5.png",
-          "subtitle": ""
-        },
-        {
-          "name": "Osmosis",
-          "bundleIdentifier": "com.osmose-it.osmosis",
-          "developerName": "",
-          "version": "6.0.10",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.osmose-it.osmosis.png",
-          "subtitle": ""
-        },
-        {
-          "name": "Origami",
-          "bundleIdentifier": "com.oribot.origami",
-          "developerName": "",
-          "version": "5.0",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.oribot.origami.png",
-          "subtitle": ""
-        },
-        {
-          "name": "OfflineMusic",
-          "bundleIdentifier": "com.offlinemusic",
-          "developerName": "",
-          "version": "3.9.7",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.offlinemusic.png",
-          "subtitle": ""
-        },
-        {
-          "name": "NutriCoach",
-          "bundleIdentifier": "nutrition.coach",
-          "developerName": "",
-          "version": "2.5.1",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/nutrition.coach.png",
-          "subtitle": ""
-        },
-        {
-          "name": "Notability",
-          "bundleIdentifier": "com.gingerlabs.Notability",
-          "developerName": "",
-          "version": "16.13.1",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.gingerlabs.Notability.png",
-          "subtitle": ""
-        },
-        {
-          "name": "NoFusion",
-          "bundleIdentifier": "com.grey.swiftcamera",
-          "developerName": "",
-          "version": "2.5.60",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.grey.swiftcamera.png",
           "subtitle": ""
         }
       ]
@@ -8442,7 +8442,7 @@
     {
       "id": "altgallery",
       "name": "AltGallery",
-      "appCount": 45,
+      "appCount": 48,
       "catalogLimited": false,
       "iconURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/assets/icon.png",
       "sourceURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/all-apps.json",
@@ -8475,7 +8475,7 @@
           "name": "AnimeFlow",
           "bundleIdentifier": "com.ligg.anime_flow",
           "developerName": "openAnimeFlow",
-          "version": "2.6.5",
+          "version": "2.6.6",
           "iconURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/AnimeFlow/icon.png",
           "subtitle": "跨平台动漫视频播放器，支持多数据源、实时 4K 超分辨率与弹幕"
         },
@@ -8560,6 +8560,14 @@
           "subtitle": "Android app launcher for iOS"
         },
         {
+          "name": "iDeck",
+          "bundleIdentifier": "com.kuschqin.madeira.steamui",
+          "developerName": "kuscholar",
+          "version": "0.1.3",
+          "iconURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/iDeck/icon.png",
+          "subtitle": "Steam Big Picture on iPhone and iPad"
+        },
+        {
           "name": "Iridium",
           "bundleIdentifier": "software.iridium",
           "developerName": "intraducine",
@@ -8600,12 +8608,28 @@
           "subtitle": "原生 NetEase Cloud Music iOS 客户端（雲の音）"
         },
         {
+          "name": "LinuxRunner",
+          "bundleIdentifier": "dev.linuxrunner.app",
+          "developerName": "Leminos",
+          "version": "1.0.0",
+          "iconURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/LinuxRunner/icon.png",
+          "subtitle": "Run ARM64 Linux apps and desktops on iOS"
+        },
+        {
           "name": "LiveContainer+SideStore",
           "bundleIdentifier": "com.kdt.livecontainer",
           "developerName": "LiveContainer Team",
           "version": "3.8.11",
           "iconURL": "https://raw.githubusercontent.com/bebound/AltGallery/master/apps/LiveContainer+SideStore/icon.png",
           "subtitle": "Run iOS apps without actually installing them!"
+        },
+        {
+          "name": "LSX4",
+          "bundleIdentifier": "com.llayerlinux.LSX4RuntimeProbe",
+          "developerName": "lpfoj",
+          "version": "1.0",
+          "iconURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/LSX4/icon.png",
+          "subtitle": "Open-source PS4/PS5 emulator"
         },
         {
           "name": "Madeira",
@@ -8771,7 +8795,7 @@
           "name": "Tsumiru",
           "bundleIdentifier": "com.suwayomi.tachideskSorayomi",
           "developerName": "Suwayomi",
-          "version": "1.5.1",
+          "version": "1.6.0",
           "iconURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/Suwayomi-Tsumiru/icon.png",
           "subtitle": "Native manga & manhwa reader for Suwayomi-Server"
         },
