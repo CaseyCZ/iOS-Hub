@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-27T12:15:15Z",
+  "generatedAt": "2026-10-27T18:04:32Z",
   "sources": [
     {
       "id": "utm",
@@ -855,7 +855,7 @@
           "name": "iPhanpy",
           "bundleIdentifier": "dev.fantinel.ios.phanpy",
           "developerName": "Matt Fantinel",
-          "version": "1.5.6",
+          "version": "1.6.0",
           "iconURL": "https://i.imgur.com/AAsffEA.png",
           "subtitle": "The best Mastodon client out there - now as an iOS app!"
         }
@@ -3514,19 +3514,11 @@
     {
       "id": "cypwn-ipa",
       "name": "CyPwn IPA Library",
-      "appCount": 210,
+      "appCount": 209,
       "catalogLimited": true,
       "iconURL": "https://repo.cypwn.xyz/assets/images/cypwn_small.png",
       "sourceURL": "https://ipa.cypwn.xyz/cypwn.json",
       "apps": [
-        {
-          "name": "Stremio-2.0.7",
-          "bundleIdentifier": "com.stremio.pal",
-          "developerName": "Stremio-2.0.7 x CyPwn",
-          "version": "2.0.7",
-          "iconURL": "https://ipa.cypwn.xyz/serve/icons/Stremio-2.0.7.png",
-          "subtitle": ""
-        },
         {
           "name": "Stremio-2.0.6",
           "bundleIdentifier": "com.stremio.pal",
@@ -4958,17 +4950,89 @@
           "version": "2.6",
           "iconURL": "https://ipa.cypwn.xyz/serve/icons/Star_Map_2.6_Satella.png",
           "subtitle": ""
+        },
+        {
+          "name": "RefacePro_3.12.0",
+          "bundleIdentifier": "cypwn.RefacePro_3.12.0.3.12.0",
+          "developerName": "RefacePro_3.12.0 x CyPwn",
+          "version": "3.12.0",
+          "iconURL": "https://ipa.cypwn.xyz/serve/icons/RefacePro_3.12.0.png",
+          "subtitle": ""
         }
       ]
     },
     {
       "id": "apptesters",
       "name": "AppTesters IPA Repo",
-      "appCount": 9847,
+      "appCount": 9855,
       "catalogLimited": true,
       "iconURL": "https://apptesters.org/apptesters-512x512.png",
       "sourceURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/apps.json",
       "apps": [
+        {
+          "name": "Fitia",
+          "bundleIdentifier": "com.ulisesolave.Fitia",
+          "developerName": "",
+          "version": "25.2.2",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.ulisesolave.Fitia.png",
+          "subtitle": ""
+        },
+        {
+          "name": "RiseSleep",
+          "bundleIdentifier": "com.risesci.nyx",
+          "developerName": "",
+          "version": "0.1.643",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.risesci.nyx.png",
+          "subtitle": ""
+        },
+        {
+          "name": "OraWeather",
+          "bundleIdentifier": "com.itwcalculator.worldradarfree",
+          "developerName": "",
+          "version": "6.4.0",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.itwcalculator.worldradarfree.png",
+          "subtitle": ""
+        },
+        {
+          "name": "Wikiloc",
+          "bundleIdentifier": "com.wikiloc.wikiloc",
+          "developerName": "",
+          "version": "3.31.1",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.wikiloc.wikiloc.png",
+          "subtitle": ""
+        },
+        {
+          "name": "FontCandy",
+          "bundleIdentifier": "com.aaronray.fontcandy",
+          "developerName": "",
+          "version": "6.2.5",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.aaronray.fontcandy.png",
+          "subtitle": ""
+        },
+        {
+          "name": "ThePiano",
+          "bundleIdentifier": "com.impalastudios.pianofree",
+          "developerName": "",
+          "version": "2.25.1",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.impalastudios.pianofree.png",
+          "subtitle": ""
+        },
+        {
+          "name": "PixelColor",
+          "bundleIdentifier": "com.djitlabs.pixelcolor",
+          "developerName": "",
+          "version": "6.05.00",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.djitlabs.pixelcolor.png",
+          "subtitle": ""
+        },
+        {
+          "name": "FLTR",
+          "bundleIdentifier": "com.feelty",
+          "developerName": "",
+          "version": "4.22.1",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.feelty.png",
+          "subtitle": ""
+        },
         {
           "name": "AIRetouch",
           "bundleIdentifier": "com.picretouch.photoeditor",
@@ -6503,70 +6567,6 @@
           "developerName": "",
           "version": "6.4.14",
           "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.revivasoftworks.Snore-Lab.png",
-          "subtitle": ""
-        },
-        {
-          "name": "Slopes",
-          "bundleIdentifier": "com.consumedbycode.slopes",
-          "developerName": "",
-          "version": "2026.16",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.consumedbycode.slopes.png",
-          "subtitle": ""
-        },
-        {
-          "name": "SleepCycle",
-          "bundleIdentifier": "com.lexwarelabs.goodmorning",
-          "developerName": "",
-          "version": "6.26.410",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.lexwarelabs.goodmorning.png",
-          "subtitle": ""
-        },
-        {
-          "name": "Moonly",
-          "bundleIdentifier": "com.moonly.Moonly",
-          "developerName": "",
-          "version": "2.9.4",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.moonly.Moonly.png",
-          "subtitle": ""
-        },
-        {
-          "name": "SkyGuide",
-          "bundleIdentifier": "com.fifthstarlabs.skyguide",
-          "developerName": "",
-          "version": "13.1",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.fifthstarlabs.skyguide.png",
-          "subtitle": ""
-        },
-        {
-          "name": "Sketchar",
-          "bundleIdentifier": "tech.sketchar.ios",
-          "developerName": "",
-          "version": "10.9.2",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/tech.sketchar.ios.png",
-          "subtitle": ""
-        },
-        {
-          "name": "SimplySing",
-          "bundleIdentifier": "com.joytunes.Sing",
-          "developerName": "",
-          "version": "3.1.3",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.joytunes.Sing.png",
-          "subtitle": ""
-        },
-        {
-          "name": "SimplyPiano",
-          "bundleIdentifier": "com.joytunes.asla",
-          "developerName": "",
-          "version": "9.10.99",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.joytunes.asla.png",
-          "subtitle": ""
-        },
-        {
-          "name": "SimplyGuitar",
-          "bundleIdentifier": "com.joytunes.SimplyGuitar",
-          "developerName": "",
-          "version": "10.31",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.joytunes.SimplyGuitar.png",
           "subtitle": ""
         }
       ]
@@ -8515,7 +8515,7 @@
           "name": "BCD",
           "bundleIdentifier": "com.thebcd69.bcd",
           "developerName": "thebcd69",
-          "version": "0.1.611",
+          "version": "0.1.614",
           "iconURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/BCD/icon.png",
           "subtitle": "Windows games on iPhone and iPad"
         },
@@ -8635,7 +8635,7 @@
           "name": "LSX4",
           "bundleIdentifier": "com.llayerlinux.LSX4RuntimeProbe",
           "developerName": "lpfoj",
-          "version": "128.9558",
+          "version": "128.9561",
           "iconURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/LSX4/icon.png",
           "subtitle": "Open-source PS4/PS5 emulator"
         },
