@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-28T05:45:02Z",
+  "generatedAt": "2026-10-28T12:58:35Z",
   "sources": [
     {
       "id": "utm",
@@ -3514,11 +3514,19 @@
     {
       "id": "cypwn-ipa",
       "name": "CyPwn IPA Library",
-      "appCount": 209,
+      "appCount": 210,
       "catalogLimited": true,
       "iconURL": "https://repo.cypwn.xyz/assets/images/cypwn_small.png",
       "sourceURL": "https://ipa.cypwn.xyz/cypwn.json",
       "apps": [
+        {
+          "name": "Stremio-2.0.7",
+          "bundleIdentifier": "com.stremio.pal",
+          "developerName": "Stremio-2.0.7 x CyPwn",
+          "version": "2.0.7",
+          "iconURL": "https://ipa.cypwn.xyz/serve/icons/Stremio-2.0.7.png",
+          "subtitle": ""
+        },
         {
           "name": "Stremio-2.0.6",
           "bundleIdentifier": "com.stremio.pal",
@@ -4950,25 +4958,73 @@
           "version": "2.6",
           "iconURL": "https://ipa.cypwn.xyz/serve/icons/Star_Map_2.6_Satella.png",
           "subtitle": ""
-        },
-        {
-          "name": "RefacePro_3.12.0",
-          "bundleIdentifier": "cypwn.RefacePro_3.12.0.3.12.0",
-          "developerName": "RefacePro_3.12.0 x CyPwn",
-          "version": "3.12.0",
-          "iconURL": "https://ipa.cypwn.xyz/serve/icons/RefacePro_3.12.0.png",
-          "subtitle": ""
         }
       ]
     },
     {
       "id": "apptesters",
       "name": "AppTesters IPA Repo",
-      "appCount": 9871,
+      "appCount": 9878,
       "catalogLimited": true,
       "iconURL": "https://apptesters.org/apptesters-512x512.png",
       "sourceURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/apps.json",
       "apps": [
+        {
+          "name": "TONfilters",
+          "bundleIdentifier": "onelight.video-editor",
+          "developerName": "",
+          "version": "1.16.7",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/onelight.video-editor.png",
+          "subtitle": ""
+        },
+        {
+          "name": "Lightroom",
+          "bundleIdentifier": "com.adobe.lrmobilephone",
+          "developerName": "",
+          "version": "11.6.21",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.adobe.lrmobilephone.png",
+          "subtitle": ""
+        },
+        {
+          "name": "SimplyPiano",
+          "bundleIdentifier": "com.joytunes.asla",
+          "developerName": "",
+          "version": "9.11.1",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.joytunes.asla.png",
+          "subtitle": ""
+        },
+        {
+          "name": "Moovit",
+          "bundleIdentifier": "com.tranzmate.tranzmate1",
+          "developerName": "",
+          "version": "5.202.2",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.tranzmate.tranzmate1.png",
+          "subtitle": ""
+        },
+        {
+          "name": "PUSH",
+          "bundleIdentifier": "com.ADPTVLTD.push",
+          "developerName": "",
+          "version": "4.1.1",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.ADPTVLTD.push.png",
+          "subtitle": ""
+        },
+        {
+          "name": "ColorPop",
+          "bundleIdentifier": "com.mwm.procolor",
+          "developerName": "",
+          "version": "2.68.02",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.mwm.procolor.png",
+          "subtitle": ""
+        },
+        {
+          "name": "Crsel",
+          "bundleIdentifier": "com.frameoneapps.Crsel",
+          "developerName": "",
+          "version": "1.6.2",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.frameoneapps.Crsel.png",
+          "subtitle": ""
+        },
         {
           "name": "QrCode",
           "bundleIdentifier": "com.internet-rocks.codescanner",
@@ -6511,62 +6567,6 @@
           "developerName": "",
           "version": "7.4.31",
           "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.snowcorp.epik.png",
-          "subtitle": ""
-        },
-        {
-          "name": "Detail",
-          "bundleIdentifier": "co.detail.duo",
-          "developerName": "",
-          "version": "6.0.5",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/co.detail.duo.png",
-          "subtitle": ""
-        },
-        {
-          "name": "Wallcraft",
-          "bundleIdentifier": "com.wallpaperscraft.wallpapers",
-          "developerName": "",
-          "version": "3.42",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.wallpaperscraft.wallpapers.png",
-          "subtitle": ""
-        },
-        {
-          "name": "VlogNow",
-          "bundleIdentifier": "com.frontrow.vlog",
-          "developerName": "",
-          "version": "2.23.0",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.frontrow.vlog.png",
-          "subtitle": ""
-        },
-        {
-          "name": "Videoleap",
-          "bundleIdentifier": "com.lightricks.Enlight-Video",
-          "developerName": "",
-          "version": "2.87.2",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.lightricks.Enlight-Video.png",
-          "subtitle": ""
-        },
-        {
-          "name": "VideoStudio",
-          "bundleIdentifier": "videoeditor.app",
-          "developerName": "",
-          "version": "3.21.5",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/videoeditor.app.png",
-          "subtitle": ""
-        },
-        {
-          "name": "VideoLite",
-          "bundleIdentifier": "com.videobrowser.ios",
-          "developerName": "",
-          "version": "625000",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.videobrowser.ios.png",
-          "subtitle": ""
-        },
-        {
-          "name": "VSCO",
-          "bundleIdentifier": "co.visualsupply.cam",
-          "developerName": "",
-          "version": "461.10.1",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/co.visualsupply.cam.png",
           "subtitle": ""
         }
       ]
@@ -8450,7 +8450,7 @@
     {
       "id": "altgallery",
       "name": "AltGallery",
-      "appCount": 48,
+      "appCount": 49,
       "catalogLimited": false,
       "iconURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/assets/icon.png",
       "sourceURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/all-apps.json",
@@ -8611,7 +8611,7 @@
           "name": "Kumone",
           "bundleIdentifier": "sb.moe.kumone",
           "developerName": "missuo",
-          "version": "0.3.23",
+          "version": "0.3.24",
           "iconURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/Kumone/icon.png",
           "subtitle": "原生 NetEase Cloud Music iOS 客户端（雲の音）"
         },
@@ -8670,6 +8670,22 @@
           "version": "1.6.0",
           "iconURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/MiniWatts/icon.png",
           "subtitle": "Battery, charging and thermal instrument"
+        },
+        {
+          "name": "Mornye",
+          "bundleIdentifier": "com.zarz.mornye",
+          "developerName": "zarzet",
+          "version": "5.2.6",
+          "iconURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/Mornye/icon.png",
+          "subtitle": "FLAC Downloader for iOS"
+        },
+        {
+          "name": "MoviePilot",
+          "bundleIdentifier": "org.moviepilot.app",
+          "developerName": "jxxghp",
+          "version": "1.0.4",
+          "iconURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/MoviePilot-App/icon.png",
+          "subtitle": "MoviePilot 的 iOS 原生客户端"
         },
         {
           "name": "MoviePilotLite",
@@ -8774,14 +8790,6 @@
           "version": "1.0.4",
           "iconURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/SceneBox/icon.png",
           "subtitle": "Torrent streaming client"
-        },
-        {
-          "name": "SpotiFLAC",
-          "bundleIdentifier": "com.zarz.spotiflac",
-          "developerName": "zarzet",
-          "version": "5.2.6",
-          "iconURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/SpotiFLAC/icon.png",
-          "subtitle": "FLAC Downloader for iOS"
         },
         {
           "name": "StikDebug",
