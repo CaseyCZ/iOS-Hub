@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-29T13:05:07Z",
+  "generatedAt": "2026-10-29T22:47:12Z",
   "sources": [
     {
       "id": "utm",
@@ -1383,7 +1383,7 @@
           "developerName": "faroukbmiled & IPA Vault",
           "version": "453.0.0",
           "iconURL": "https://pub-dd800571175348b6a2745b3396360028.r2.dev/App%20Icons/Instagram-Icons/Instagram-AppStore-1024x1024.png",
-          "subtitle": "Instagram 453.0.0 with RyukGram 1.5.0 (No Plugins)"
+          "subtitle": "Instagram 453.0.0 with RyukGram 1.5.1 (No Plugins)"
         },
         {
           "name": "Instagram (RyukGram)",
@@ -1391,7 +1391,7 @@
           "developerName": "faroukbmiled & IPA Vault",
           "version": "453.0.0",
           "iconURL": "https://pub-dd800571175348b6a2745b3396360028.r2.dev/App%20Icons/Instagram-Icons/Instagram-AppStore-1024x1024.png",
-          "subtitle": "Instagram 453.0.0 with RyukGram 1.5.0"
+          "subtitle": "Instagram 453.0.0 with RyukGram 1.5.1"
         },
         {
           "name": "Instagram (Sparkle No Plugins)",
@@ -1621,33 +1621,33 @@
           "name": "Twitter NFB",
           "bundleIdentifier": "com.atebits.Tweetie2",
           "developerName": "orionblur & IPA Vault",
-          "version": "12.38.1",
+          "version": "12.39",
           "iconURL": "https://pub-dd800571175348b6a2745b3396360028.r2.dev/App%20Icons/Twitter-12.14-Icons/Twitter-AppStore-1024x1024.png",
-          "subtitle": "Twitter 12.38.1 with NFB 7.2.0"
+          "subtitle": "Twitter 12.39 with NFB 7.3.0"
         },
         {
           "name": "Twitter NFB + TWI",
           "bundleIdentifier": "com.atebits.Tweetie2",
           "developerName": "orionblur & dens0r & IPA Vault",
-          "version": "12.38.1",
+          "version": "12.39",
           "iconURL": "https://pub-dd800571175348b6a2745b3396360028.r2.dev/App%20Icons/Twitter-12.14-Icons/Twitter-AppStore-1024x1024.png",
-          "subtitle": "Twitter 12.38.1 with NFB 7.2.0 + TWIGalaxy 1.14"
+          "subtitle": "Twitter 12.39 with NFB 7.3.0 + TWIGalaxy 1.14"
         },
         {
           "name": "X NFB",
           "bundleIdentifier": "com.atebits.Tweetie2",
           "developerName": "orionblur & IPA Vault",
-          "version": "12.38.1",
+          "version": "12.39",
           "iconURL": "https://pub-dd800571175348b6a2745b3396360028.r2.dev/App%20Icons/X-Icons/X-AppStore-1024x1024.png",
-          "subtitle": "X 12.38.1 with NFB 7.2.0"
+          "subtitle": "X 12.39 with NFB 7.3.0"
         },
         {
           "name": "X NFB + TWI",
           "bundleIdentifier": "com.atebits.Tweetie2",
           "developerName": "orionblur & dens0r & IPA Vault",
-          "version": "12.38.1",
+          "version": "12.39",
           "iconURL": "https://pub-dd800571175348b6a2745b3396360028.r2.dev/App%20Icons/X-Icons/X-AppStore-1024x1024.png",
-          "subtitle": "X 12.38.1 with NFB 7.2.0 + TWIGalaxy 1.14"
+          "subtitle": "X 12.39 with NFB 7.3.0 + TWIGalaxy 1.14"
         },
         {
           "name": "YouTube (YouMod 2.0.0) (iOS 16+)",
@@ -3514,19 +3514,11 @@
     {
       "id": "cypwn-ipa",
       "name": "CyPwn IPA Library",
-      "appCount": 210,
+      "appCount": 209,
       "catalogLimited": true,
       "iconURL": "https://repo.cypwn.xyz/assets/images/cypwn_small.png",
       "sourceURL": "https://ipa.cypwn.xyz/cypwn.json",
       "apps": [
-        {
-          "name": "Stremio-2.0.7",
-          "bundleIdentifier": "com.stremio.pal",
-          "developerName": "Stremio-2.0.7 x CyPwn",
-          "version": "2.0.7",
-          "iconURL": "https://ipa.cypwn.xyz/serve/icons/Stremio-2.0.7.png",
-          "subtitle": ""
-        },
         {
           "name": "Stremio-2.0.6",
           "bundleIdentifier": "com.stremio.pal",
@@ -4958,17 +4950,73 @@
           "version": "2.6",
           "iconURL": "https://ipa.cypwn.xyz/serve/icons/Star_Map_2.6_Satella.png",
           "subtitle": ""
+        },
+        {
+          "name": "RefacePro_3.12.0",
+          "bundleIdentifier": "cypwn.RefacePro_3.12.0.3.12.0",
+          "developerName": "RefacePro_3.12.0 x CyPwn",
+          "version": "3.12.0",
+          "iconURL": "https://ipa.cypwn.xyz/serve/icons/RefacePro_3.12.0.png",
+          "subtitle": ""
         }
       ]
     },
     {
       "id": "apptesters",
       "name": "AppTesters IPA Repo",
-      "appCount": 9905,
+      "appCount": 9911,
       "catalogLimited": true,
       "iconURL": "https://apptesters.org/apptesters-512x512.png",
       "sourceURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/apps.json",
       "apps": [
+        {
+          "name": "LEMOFM",
+          "bundleIdentifier": "com.LEMO.LemoFM",
+          "developerName": "",
+          "version": "2.3.1",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.LEMO.LemoFM.png",
+          "subtitle": ""
+        },
+        {
+          "name": "RiseSleep",
+          "bundleIdentifier": "com.risesci.nyx",
+          "developerName": "",
+          "version": "0.1.644",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.risesci.nyx.png",
+          "subtitle": ""
+        },
+        {
+          "name": "InCollage",
+          "bundleIdentifier": "PhotoEditor.PhotoCollage.inCollage",
+          "developerName": "",
+          "version": "2.2.81",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/PhotoEditor.PhotoCollage.inCollage.png",
+          "subtitle": ""
+        },
+        {
+          "name": "Endel",
+          "bundleIdentifier": "com.endel.endel",
+          "developerName": "",
+          "version": "4.49.305",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.endel.endel.png",
+          "subtitle": ""
+        },
+        {
+          "name": "Dropshare",
+          "bundleIdentifier": "net.mkswap.Dropshare-iOS",
+          "developerName": "",
+          "version": "3.66",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/net.mkswap.Dropshare-iOS.png",
+          "subtitle": ""
+        },
+        {
+          "name": "KineMaster",
+          "bundleIdentifier": "com.kinemaster.kios",
+          "developerName": "",
+          "version": "8.2.6",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.kinemaster.kios.png",
+          "subtitle": ""
+        },
         {
           "name": "Origami",
           "bundleIdentifier": "com.oribot.origami",
@@ -6519,54 +6567,6 @@
           "developerName": "",
           "version": "3.16",
           "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.pixite.pigment.png",
-          "subtitle": ""
-        },
-        {
-          "name": "GrowMe",
-          "bundleIdentifier": "com.book.summaries.reading",
-          "developerName": "",
-          "version": "1.4.3",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.book.summaries.reading.png",
-          "subtitle": ""
-        },
-        {
-          "name": "edjingMix",
-          "bundleIdentifier": "com.edjing.edjingdjturntable",
-          "developerName": "",
-          "version": "9.3.6",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.edjing.edjingdjturntable.png",
-          "subtitle": ""
-        },
-        {
-          "name": "Ketoapp",
-          "bundleIdentifier": "com.lappir.keto",
-          "developerName": "",
-          "version": "10.1",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.lappir.keto.png",
-          "subtitle": ""
-        },
-        {
-          "name": "LINECamera",
-          "bundleIdentifier": "jp.naver.linecamera",
-          "developerName": "",
-          "version": "18.6.2",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/jp.naver.linecamera.png",
-          "subtitle": ""
-        },
-        {
-          "name": "Duolingo",
-          "bundleIdentifier": "com.duolingo.DuolingoMobile",
-          "developerName": "",
-          "version": "7.145.1",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.duolingo.DuolingoMobile.png",
-          "subtitle": ""
-        },
-        {
-          "name": "Action",
-          "bundleIdentifier": "com.future.kapi",
-          "developerName": "",
-          "version": "4.43.0",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.future.kapi.png",
           "subtitle": ""
         }
       ]
@@ -8507,7 +8507,7 @@
           "name": "ARMSX2",
           "bundleIdentifier": "com.armsx2.ios",
           "developerName": "ARMSX2",
-          "version": "2.6.0-nightly.20261028.1320",
+          "version": "2.6.0-nightly.20261029.1302",
           "iconURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/ARMSX2/icon.png",
           "subtitle": "PlayStation 2 emulator for ARM64"
         },
@@ -10250,6 +10250,32 @@
           "version": "1.4.1",
           "iconURL": "https://pbs.twimg.com/profile_images/1019627376857280512/laMqxYhl_400x400.jpg",
           "subtitle": "Unpack the full potential of your iDevice."
+        }
+      ]
+    },
+    {
+      "id": "salupov-altrepo",
+      "name": "SalupovTeam",
+      "appCount": 2,
+      "catalogLimited": false,
+      "iconURL": "https://adp.salupovteam.com/pal/icon.png",
+      "sourceURL": "https://adp.salupovteam.com/altrepo.json",
+      "apps": [
+        {
+          "name": "Remind",
+          "bundleIdentifier": "dev.remindapp.remind",
+          "developerName": "S0meyosh1no",
+          "version": "1.1",
+          "iconURL": "https://adp.salupovteam.com/pal/remind.png",
+          "subtitle": "Easy reminders"
+        },
+        {
+          "name": "Bacon",
+          "bundleIdentifier": "com.s0meyosh1no.ibacon",
+          "developerName": "S0meyosh1no",
+          "version": "1.1",
+          "iconURL": "https://adp.salupovteam.com/pal/bacon.png",
+          "subtitle": "Bluetooth toolkit"
         }
       ]
     },
