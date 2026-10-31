@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-31T12:34:37Z",
+  "generatedAt": "2026-10-31T21:37:40Z",
   "sources": [
     {
       "id": "utm",
@@ -55,7 +55,7 @@
           "name": "iFly",
           "bundleIdentifier": "com.provenance.ifly",
           "developerName": "Provenance Emu",
-          "version": "1.0.0+1793414823",
+          "version": "1.0.0+1793428381",
           "iconURL": "https://ifly-emu.com/icon-1024.png",
           "subtitle": "Dreamcast Emulator for iOS & tvOS"
         },
@@ -657,7 +657,7 @@
           "name": "Stremio",
           "bundleIdentifier": "com.stremio.pal",
           "developerName": "Stremio",
-          "version": "2.1.0",
+          "version": "2.1.1",
           "iconURL": "https://www.stremio.com/website/stremio-logo-small.png",
           "subtitle": "Freedom to stream."
         }
@@ -1276,7 +1276,7 @@
     {
       "id": "ipa-vault",
       "name": "IPA Vault Source Repo",
-      "appCount": 68,
+      "appCount": 70,
       "catalogLimited": false,
       "iconURL": "https://pub-dd800571175348b6a2745b3396360028.r2.dev/ipavault-altstore-repo-logo.png",
       "sourceURL": "https://raw.githubusercontent.com/927tx/IPA-Vault/main/ipavaultsource.json",
@@ -1303,7 +1303,7 @@
           "developerName": "shajon404 & IPA Vault",
           "version": "585.0.0",
           "iconURL": "https://pub-dd800571175348b6a2745b3396360028.r2.dev/App%20Icons/Facebook-Icons/Facebook-AppStore-1024x1024.png",
-          "subtitle": "Facebook 584.1.0 with Facebook Plus 1.0.2"
+          "subtitle": "Facebook 585.0.0 with Facebook Plus 1.0.3"
         },
         {
           "name": "Google Photos (Gunshot) (iOS 16.1+)",
@@ -1323,11 +1323,11 @@
         },
         {
           "name": "Google Photos (Gunshot)",
-          "bundleIdentifier": "com.google.Photos",
+          "bundleIdentifier": "com.google.photos",
           "developerName": "tqmane & IPA Vault",
-          "version": "7.98.0",
+          "version": "7.99.0",
           "iconURL": "https://pub-dd800571175348b6a2745b3396360028.r2.dev/App%20Icons/Google-Photos-Icons/Google-Photos-AppStore-1024x1024.png",
-          "subtitle": "Google Photos 7.98.0 with Gunshot 0.3.0"
+          "subtitle": "Google Photos 7.99.0 with Gunshot 0.3.0"
         },
         {
           "name": "Infuse Plus (7.8.4)",
@@ -1357,9 +1357,9 @@
           "name": "Husk",
           "bundleIdentifier": "com.husk.app",
           "developerName": "Leviidev & IPA Vault",
-          "version": "3.1",
+          "version": "3.2.1",
           "iconURL": "https://pub-dd800571175348b6a2745b3396360028.r2.dev/App%20Icons/Husk-Icons/Icon-Default_Normal.png",
-          "subtitle": "Husk 3.1"
+          "subtitle": "Husk 3.2.1"
         },
         {
           "name": "Instagram (Regram 6.5)",
@@ -1453,9 +1453,9 @@
           "name": "Apollo Reborn (Glass)",
           "bundleIdentifier": "com.christianselig.Apollo",
           "developerName": "Apollo Reborn Team",
-          "version": "4.0.0",
+          "version": "4.0.1",
           "iconURL": "https://pub-dd800571175348b6a2745b3396360028.r2.dev/App%20Icons/Apollo%20Reborn%20Icons/apollo-round_Normal_Normal.png",
-          "subtitle": "Apollo Reborn 4.0.0 (Glass)"
+          "subtitle": "Apollo Reborn 4.0.1 (Glass)"
         },
         {
           "name": "Reddit (Login)",
@@ -1517,25 +1517,25 @@
           "name": "Telegram (MxGram)",
           "bundleIdentifier": "ph.telegra.Telegraph",
           "developerName": "m1ronx1412 & IPA Vault",
-          "version": "13.1.1",
+          "version": "13.1.2",
           "iconURL": "https://pub-dd800571175348b6a2745b3396360028.r2.dev/App%20Icons/Telegram-Icons/Telegram-AppStore-1024x1024.png",
-          "subtitle": "Telegram 13.1.1 with MxGram 1.0.0"
+          "subtitle": "Telegram 13.1.2 with MxGram 1.0.0"
         },
         {
           "name": "Telegram (iQTele)",
           "bundleIdentifier": "ph.telegra.Telegraph",
           "developerName": "7MD & lucaspedrosa & IPA Vault",
-          "version": "13.1.1",
+          "version": "13.1.2",
           "iconURL": "https://pub-dd800571175348b6a2745b3396360028.r2.dev/App%20Icons/Telegram-Icons/Telegram-AppStore-1024x1024.png",
-          "subtitle": "Telegram 13.1.1 with iQTele 1.5"
+          "subtitle": "Telegram 13.1.2 with iQTele 1.5"
         },
         {
           "name": "Telegram (TGExtra)",
           "bundleIdentifier": "ph.telegra.Telegraph",
           "developerName": "swiftleopard & IPA Vault",
-          "version": "13.1.1",
+          "version": "13.1.2",
           "iconURL": "https://pub-dd800571175348b6a2745b3396360028.r2.dev/App%20Icons/Telegram-Icons/Telegram-AppStore-1024x1024.png",
-          "subtitle": "Telegram 13.1.1 with TGExtra 1.7.10"
+          "subtitle": "Telegram 13.1.2 with TGExtra 1.7.10"
         },
         {
           "name": "Spotify (EeveeSpotify)",
@@ -1611,11 +1611,11 @@
         },
         {
           "name": "TwitchUnblock",
-          "bundleIdentifier": "com.mxfia19.TwitchUnblockTV",
+          "bundleIdentifier": "com.mxfia19.TwitchUnblock",
           "developerName": "MXFia19 & IPA Vault",
-          "version": "1.6.0",
+          "version": "1.7.0",
           "iconURL": "https://pub-dd800571175348b6a2745b3396360028.r2.dev/App%20Icons/TwitchUnblock%20Icons/icon_Normal.png",
-          "subtitle": "TwitchUnblock 1.6.0"
+          "subtitle": "TwitchUnblock 1.7.0"
         },
         {
           "name": "Twitter NFB",
@@ -1773,17 +1773,17 @@
           "name": "Nuvio (Full)",
           "bundleIdentifier": "com.nuvio.media",
           "developerName": "Nuvio Media",
-          "version": "0.6.5",
+          "version": "0.6.6",
           "iconURL": "https://pub-dd800571175348b6a2745b3396360028.r2.dev/App%20Icons/Nuvio%20Icons/app-icon-1024_Normal.png",
-          "subtitle": "Nuvio 0.6.5 (Full Release)"
+          "subtitle": "Nuvio 0.6.6 (Full Release)"
         },
         {
           "name": "Nuvio (Enhanced)",
           "bundleIdentifier": "com.nuvio.media",
           "developerName": "luqmanfadlli & Nuvio Media",
-          "version": "0.6.5",
+          "version": "0.6.6",
           "iconURL": "https://pub-dd800571175348b6a2745b3396360028.r2.dev/App%20Icons/Nuvio%20Icons/app-icon-1024_Normal.png",
-          "subtitle": "Nuvio 0.6.5 (Enhanced Release)"
+          "subtitle": "Nuvio 0.6.6 (Enhanced Release)"
         },
         {
           "name": "Omni",
@@ -1824,6 +1824,22 @@
           "version": "47.5.0",
           "iconURL": "https://pub-dd800571175348b6a2745b3396360028.r2.dev/App%20Icons/TikTok-Icons/TikTok-AppStore-1024x1024.png",
           "subtitle": "TikTok 47.5.0 with gtok 2.5"
+        },
+        {
+          "name": "Renovate AI (Pro)",
+          "bundleIdentifier": "app.renovateai",
+          "developerName": "Trial and Error, Inc & IPA Vault",
+          "version": "5.6.0",
+          "iconURL": "",
+          "subtitle": "Renovate AI 5.6.0 (Pro)"
+        },
+        {
+          "name": "Compressor (Pro)",
+          "bundleIdentifier": "com.theblackholecompany.ImageCompressor1",
+          "developerName": "Youssef Ismaili & IPA Vault",
+          "version": "2",
+          "iconURL": "",
+          "subtitle": "Compressor 2 (Pro)"
         }
       ]
     },
@@ -4964,11 +4980,59 @@
     {
       "id": "apptesters",
       "name": "AppTesters IPA Repo",
-      "appCount": 9929,
+      "appCount": 9935,
       "catalogLimited": true,
       "iconURL": "https://apptesters.org/apptesters-512x512.png",
       "sourceURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/apps.json",
       "apps": [
+        {
+          "name": "Fitia",
+          "bundleIdentifier": "com.ulisesolave.Fitia",
+          "developerName": "",
+          "version": "25.2.4",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.ulisesolave.Fitia.png",
+          "subtitle": ""
+        },
+        {
+          "name": "Tripsy",
+          "bundleIdentifier": "app.tripsy.ios",
+          "developerName": "",
+          "version": "3.10.7",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/app.tripsy.ios.png",
+          "subtitle": ""
+        },
+        {
+          "name": "Locket",
+          "bundleIdentifier": "com.locket.Locket",
+          "developerName": "",
+          "version": "2.70.1",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.locket.Locket.png",
+          "subtitle": ""
+        },
+        {
+          "name": "Uplens",
+          "bundleIdentifier": "app.uplens",
+          "developerName": "",
+          "version": "4.4.0",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/app.uplens.png",
+          "subtitle": ""
+        },
+        {
+          "name": "TORVPN",
+          "bundleIdentifier": "com.youssef.developer.Full-Browser",
+          "developerName": "",
+          "version": "12.4",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.youssef.developer.Full-Browser.png",
+          "subtitle": ""
+        },
+        {
+          "name": "Pillow",
+          "bundleIdentifier": "com.neybox.Pillow",
+          "developerName": "",
+          "version": "6.7.3",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.neybox.Pillow.png",
+          "subtitle": ""
+        },
         {
           "name": "NoFusion",
           "bundleIdentifier": "com.grey.swiftcamera",
@@ -6519,54 +6583,6 @@
           "developerName": "",
           "version": "2.12.9",
           "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.apalonapps.pdffree.png",
-          "subtitle": ""
-        },
-        {
-          "name": "Bearable",
-          "bundleIdentifier": "co.codeleap.bearable",
-          "developerName": "",
-          "version": "1.0.614",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/co.codeleap.bearable.png",
-          "subtitle": ""
-        },
-        {
-          "name": "Sofa",
-          "bundleIdentifier": "com.astrio.Sofa",
-          "developerName": "",
-          "version": "5.4.1",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.astrio.Sofa.png",
-          "subtitle": ""
-        },
-        {
-          "name": "SimplySing",
-          "bundleIdentifier": "com.joytunes.Sing",
-          "developerName": "",
-          "version": "3.2.1",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.joytunes.Sing.png",
-          "subtitle": ""
-        },
-        {
-          "name": "Luminar",
-          "bundleIdentifier": "com.skylum.luminaripad",
-          "developerName": "",
-          "version": "4.5.1",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.skylum.luminaripad.png",
-          "subtitle": ""
-        },
-        {
-          "name": "iLovePDF",
-          "bundleIdentifier": "com.ilovepdf.www",
-          "developerName": "",
-          "version": "4.2.0",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.ilovepdf.www.png",
-          "subtitle": ""
-        },
-        {
-          "name": "OrangePhone",
-          "bundleIdentifier": "com.orange.telephone",
-          "developerName": "",
-          "version": "7.2.0",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.orange.telephone.png",
           "subtitle": ""
         }
       ]
