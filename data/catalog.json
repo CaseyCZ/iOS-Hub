@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-01T13:27:56Z",
+  "generatedAt": "2026-11-01T22:04:10Z",
   "sources": [
     {
       "id": "utm",
@@ -55,7 +55,7 @@
           "name": "iFly",
           "bundleIdentifier": "com.provenance.ifly",
           "developerName": "Provenance Emu",
-          "version": "1.0.0+1793473481",
+          "version": "1.0.0+1793507282",
           "iconURL": "https://ifly-emu.com/icon-1024.png",
           "subtitle": "Dreamcast Emulator for iOS & tvOS"
         },
@@ -1006,11 +1006,147 @@
     {
       "id": "wuxu-library-plus",
       "name": "WuXu's Library++",
-      "appCount": 13,
+      "appCount": 30,
       "catalogLimited": false,
       "iconURL": "https://external-content.duckduckgo.com/iu/?u=https://i.imgur.com/g17kMl9.jpeg",
       "sourceURL": "https://raw.githubusercontent.com/WuXu1/WuXu1.github.io/main/wuxu-complete-plus.json",
       "apps": [
+        {
+          "name": "LiveContainer",
+          "bundleIdentifier": "com.kdt.livecontainer",
+          "developerName": "DuyTranKhanh",
+          "version": "3.8.0",
+          "iconURL": "https://raw.githubusercontent.com/LiveContainer/LiveContainer/main/screenshots/AppIcon1024.png",
+          "subtitle": "Run iOS apps without actually installing them!"
+        },
+        {
+          "name": "TrollInstallerX",
+          "bundleIdentifier": "com.Alfie.TrollInstallerX",
+          "developerName": "alfiecg24",
+          "version": "1.0.3",
+          "iconURL": "https://external-content.duckduckgo.com/iu/?u=https://external-content.duckduckgo.com/iu/?u=https://i.imgur.com/lQt6WqH.png",
+          "subtitle": "The universal TrollStore installer for iOS 14.0 - 17.0.0.0 beta 4"
+        },
+        {
+          "name": "PostBox",
+          "bundleIdentifier": "com.simplycode.PostBox",
+          "developerName": "PostBox Team",
+          "version": "0.8.1",
+          "iconURL": "https://static.appdb.to/images/cydia-102005202-icon-1661962646.png",
+          "subtitle": "The latest jailbreak news at your fingertips"
+        },
+        {
+          "name": "emuThreeDS",
+          "bundleIdentifier": "com.antique.emuThreeDS",
+          "developerName": "Antique",
+          "version": "1.0.5.2",
+          "iconURL": "https://external-content.duckduckgo.com/iu/?u=https://external-content.duckduckgo.com/iu/?u=https://i.imgur.com/5wBkakf.png",
+          "subtitle": "A Nintendo 3DS emulator for IOS"
+        },
+        {
+          "name": "PPSSPP",
+          "bundleIdentifier": "org.ppsspp.ppsspp",
+          "developerName": "Henrik Rydgård",
+          "version": "1.20.4",
+          "iconURL": "https://external-content.duckduckgo.com/iu/?u=https://external-content.duckduckgo.com/iu/?u=https://i.imgur.com/JP0Fncv.png",
+          "subtitle": "A fast and portable PSP emulator for IOS"
+        },
+        {
+          "name": "Scarlet",
+          "bundleIdentifier": "com.DebianArch.ScarletPersonalXYZZZ",
+          "developerName": "DebianArch",
+          "version": "1.0",
+          "iconURL": "https://pbs.twimg.com/profile_images/1367920028813787144/cwvAQV9f_400x400.jpg",
+          "subtitle": "Get more than an app store. Get Scarlet."
+        },
+        {
+          "name": "Odyssey",
+          "bundleIdentifier": "org.coolstar.odyssey",
+          "developerName": "Odyssey Team",
+          "version": "1.4.3",
+          "iconURL": "https://theodyssey.dev/assets/images/icon.png",
+          "subtitle": "A new jailbreak for a new era."
+        },
+        {
+          "name": "Taurine",
+          "bundleIdentifier": "org.coolstar.taurine",
+          "developerName": "Odyssey Team",
+          "version": "1.1.7-3",
+          "iconURL": "https://taurine.app/assets/images/icon.png",
+          "subtitle": "Time to get amped."
+        },
+        {
+          "name": "unc0ver",
+          "bundleIdentifier": "science.xnu.undecimus",
+          "developerName": "Pwn20wnd",
+          "version": "8.1.0",
+          "iconURL": "https://external-content.duckduckgo.com/iu/?u=https://external-content.duckduckgo.com/iu/?u=https://i.imgur.com/5aehDxj.png",
+          "subtitle": "The most advanced jailbreak tool."
+        },
+        {
+          "name": "Dopamine",
+          "bundleIdentifier": "com.opa334.Dopamine",
+          "developerName": "opa334",
+          "version": "3.0.12",
+          "iconURL": "https://external-content.duckduckgo.com/iu/?u=https://external-content.duckduckgo.com/iu/?u=https://i.imgur.com/67ffxsD.jpeg",
+          "subtitle": "The semi-untethered jailbreak for iOS 15 - 16"
+        },
+        {
+          "name": "iTorrent",
+          "bundleIdentifier": "ru.nonamedude.iTorrent",
+          "developerName": "XITRIX",
+          "version": "2.2.0-1",
+          "iconURL": "https://user-images.githubusercontent.com/9553519/80646366-3d271680-8a75-11ea-8b60-9c5edd4ffd60.png",
+          "subtitle": "An ordinary torrent client for iOS with Files app support"
+        },
+        {
+          "name": "Cowabunga",
+          "bundleIdentifier": "com.leemin.Cowabunga",
+          "developerName": "Leminlimez",
+          "version": "10.3.2",
+          "iconURL": "https://user-images.githubusercontent.com/52459150/215552092-9dc1e029-da35-43da-867f-17279e3dc180.png",
+          "subtitle": "The MacDirtyCow Toolbox for iOS 14 – iOS 16"
+        },
+        {
+          "name": "ESign",
+          "bundleIdentifier": "p3.xyz.yyyue.esign",
+          "developerName": "esign.yyyue.xyz",
+          "version": "5.0.2",
+          "iconURL": "https://static.appdb.to/images/cydia-1900000897-icon-1651011412.png",
+          "subtitle": "IPA Self Signer, Tweak Injector, File Manager"
+        },
+        {
+          "name": "Atrasis",
+          "bundleIdentifier": "com.atrasis.original",
+          "developerName": "Atrasis Team",
+          "version": "18.400.8",
+          "iconURL": "https://external-content.duckduckgo.com/iu/?u=https://external-content.duckduckgo.com/iu/?u=https://i.imgur.com/WfWpKOF.png",
+          "subtitle": "A modded Clash of Clans server!"
+        },
+        {
+          "name": "Null's Royale",
+          "bundleIdentifier": "nt.nr.ios",
+          "developerName": "Null",
+          "version": "4.88.4",
+          "iconURL": "https://external-content.duckduckgo.com/iu/?u=https://external-content.duckduckgo.com/iu/?u=https://i.imgur.com/ZDQVF7n.jpeg",
+          "subtitle": "A modded Clash Royale server!"
+        },
+        {
+          "name": "Angry Birds Space",
+          "bundleIdentifier": "com.rovio.AngryBirdsSpace",
+          "developerName": "Rovio",
+          "version": "2.2.13",
+          "iconURL": "https://img.ipa4fun.com/63/2d/06/501968250-logo.webp",
+          "subtitle": "Removed from the App Store!"
+        },
+        {
+          "name": "Angry Birds Star Wars",
+          "bundleIdentifier": "com.rovio.angrybirdsstarwars",
+          "developerName": "Rovio",
+          "version": "1.5.12",
+          "iconURL": "https://img.ipa4fun.com/56/fa/23/557138109-logo.webp",
+          "subtitle": "Removed from the App Store!"
+        },
         {
           "name": "X++",
           "bundleIdentifier": "com.atebits.Tweetie2",
@@ -4964,11 +5100,59 @@
     {
       "id": "apptesters",
       "name": "AppTesters IPA Repo",
-      "appCount": 9939,
+      "appCount": 9945,
       "catalogLimited": true,
       "iconURL": "https://apptesters.org/apptesters-512x512.png",
       "sourceURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/apps.json",
       "apps": [
+        {
+          "name": "SleepCycle",
+          "bundleIdentifier": "com.lexwarelabs.goodmorning",
+          "developerName": "",
+          "version": "6.26.430",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.lexwarelabs.goodmorning.png",
+          "subtitle": ""
+        },
+        {
+          "name": "Lampa",
+          "bundleIdentifier": "com.lampa.photo",
+          "developerName": "",
+          "version": "2.2.1",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.lampa.photo.png",
+          "subtitle": ""
+        },
+        {
+          "name": "SnoreLab",
+          "bundleIdentifier": "com.revivasoftworks.Snore-Lab",
+          "developerName": "",
+          "version": "6.5.2",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.revivasoftworks.Snore-Lab.png",
+          "subtitle": ""
+        },
+        {
+          "name": "Shapeyard",
+          "bundleIdentifier": "app.chudo",
+          "developerName": "",
+          "version": "5.34",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/app.chudo.png",
+          "subtitle": ""
+        },
+        {
+          "name": "PUSH",
+          "bundleIdentifier": "com.ADPTVLTD.push",
+          "developerName": "",
+          "version": "4.2",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.ADPTVLTD.push.png",
+          "subtitle": ""
+        },
+        {
+          "name": "iScreen",
+          "bundleIdentifier": "com.zerone.hidesktop",
+          "developerName": "",
+          "version": "5.1.25",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.zerone.hidesktop.png",
+          "subtitle": ""
+        },
         {
           "name": "KineMaster",
           "bundleIdentifier": "com.kinemaster.kios",
@@ -6519,54 +6703,6 @@
           "developerName": "",
           "version": "2026.10.10",
           "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.internet-rocks.codescanner.png",
-          "subtitle": ""
-        },
-        {
-          "name": "FindAir",
-          "bundleIdentifier": "co.airapps.finderbot",
-          "developerName": "",
-          "version": "2026.10.5",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/co.airapps.finderbot.png",
-          "subtitle": ""
-        },
-        {
-          "name": "LEMOFM",
-          "bundleIdentifier": "com.LEMO.LemoFM",
-          "developerName": "",
-          "version": "2.2.0",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.LEMO.LemoFM.png",
-          "subtitle": ""
-        },
-        {
-          "name": "Wikiloc",
-          "bundleIdentifier": "com.wikiloc.wikiloc",
-          "developerName": "",
-          "version": "3.31.0",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.wikiloc.wikiloc.png",
-          "subtitle": ""
-        },
-        {
-          "name": "Foodie",
-          "bundleIdentifier": "com.linecorp.Foodie",
-          "developerName": "",
-          "version": "8.5.1",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.linecorp.Foodie.png",
-          "subtitle": ""
-        },
-        {
-          "name": "Action",
-          "bundleIdentifier": "com.future.kapi",
-          "developerName": "",
-          "version": "4.43.1",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.future.kapi.png",
-          "subtitle": ""
-        },
-        {
-          "name": "Compress",
-          "bundleIdentifier": "com.newmarketinglab.ImageCompressor",
-          "developerName": "",
-          "version": "3.4",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.newmarketinglab.ImageCompressor.png",
           "subtitle": ""
         }
       ]
@@ -8651,7 +8787,7 @@
           "name": "Mangayomi",
           "bundleIdentifier": "com.kodjodevf.mangayomi",
           "developerName": "Moustapha Kodjo Amadou",
-          "version": "0.9.9",
+          "version": "0.9.95",
           "iconURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/Mangayomi/icon.png",
           "subtitle": "Read manga, novels, and watch anime"
         },
@@ -8859,7 +8995,7 @@
           "name": "ZhihuMinusMinus",
           "bundleIdentifier": "com.huamu013.ZhihuMinusMinus",
           "developerName": "huamurui",
-          "version": "0.9.7",
+          "version": "0.9.8",
           "iconURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/ZhihuMinusMinus/icon.png",
           "subtitle": "轻量、纯净的第三方知乎客户端"
         }
@@ -10042,7 +10178,7 @@
     {
       "id": "wuxu-standard",
       "name": "WuXu's Library",
-      "appCount": 17,
+      "appCount": 30,
       "catalogLimited": false,
       "iconURL": "https://external-content.duckduckgo.com/iu/?u=https://external-content.duckduckgo.com/iu/?u=https://i.imgur.com/g17kMl9.png",
       "sourceURL": "https://wuxu1.github.io/wuxu-complete.json",
@@ -10182,6 +10318,110 @@
           "version": "1.5.12",
           "iconURL": "https://img.ipa4fun.com/56/fa/23/557138109-logo.webp",
           "subtitle": "Removed from the App Store!"
+        },
+        {
+          "name": "X++",
+          "bundleIdentifier": "com.atebits.Tweetie2",
+          "developerName": "Densor",
+          "version": "12.39",
+          "iconURL": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/bf/46/c4/bf46c48e-94bb-c30d-601f-d73ed5a70689/ProductionAppIcon-0-0-1x_U007emarketing-0-8-0-0-0-85-220.png/512x512bb.jpg",
+          "subtitle": "An new tweak for X!"
+        },
+        {
+          "name": "Facebook++",
+          "bundleIdentifier": "com.facebook.Facebook",
+          "developerName": "Michael Lema",
+          "version": "585.0.0",
+          "iconURL": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/7f/72/b7/7f72b76a-5865-3da5-8dc3-71a2b75551e9/Icon-Production-0-0-1x_U007epad-0-1-0-sRGB-85-220.png/512x512bb.jpg",
+          "subtitle": "Facebook with a number of new features!"
+        },
+        {
+          "name": "TikTok++",
+          "bundleIdentifier": "com.zhiliaoapp.musically",
+          "developerName": "aJBbo",
+          "version": "47.5.0",
+          "iconURL": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/50/70/42/50704260-89c4-2aa4-7740-4a6a621af5db/TikTok_AppIcon26-0-0-1x_U007epad-0-1-0-85-220.png/512x512bb.jpg",
+          "subtitle": "TikTok with added features."
+        },
+        {
+          "name": "Instagram++",
+          "bundleIdentifier": "com.burbn.instagram",
+          "developerName": "Fouad Raheb",
+          "version": "448.0.0",
+          "iconURL": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/4c/be/de/4cbedeca-02d7-e15c-9e14-b0ac165eeb5a/Prod-0-0-1x_U007epad-0-1-0-sRGB-85-220.png/512x512bb.jpg",
+          "subtitle": "A must-have tweak for Instagram users!"
+        },
+        {
+          "name": "MyFitnessPal++",
+          "bundleIdentifier": "com.myfitnesspal.mfp",
+          "developerName": "Strejda603",
+          "version": "26.30.0",
+          "iconURL": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/87/17/fa/8717fa12-83f0-1184-f3d1-9ff90f157708/AppIcon-0-0-1x_U007emarketing-0-8-0-85-220.png/512x512bb.jpg",
+          "subtitle": "MyFitnessPal With Premium Activated."
+        },
+        {
+          "name": "BeReal++",
+          "bundleIdentifier": "AlexisBarreyat.BeReal",
+          "developerName": "Yandevelop",
+          "version": "2.14.2",
+          "iconURL": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/1f/38/c2/1f38c266-41ed-98be-c4a2-13412d9dd587/AppIcon-0-0-1x_U007emarketing-0-6-0-85-220.png/512x512bb.jpg",
+          "subtitle": "See your friends BeReals without posting anything!"
+        },
+        {
+          "name": "Deezer++",
+          "bundleIdentifier": "com.deezer.Deezer",
+          "developerName": "iJulioVerne",
+          "version": "7.15.0",
+          "iconURL": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/80/83/6f/80836fd9-2475-3392-d354-4ee3552ed0e9/AppIcon-0-0-1x_U007epad-0-11-0-0-85-220.png/512x512bb.jpg",
+          "subtitle": "Deezer with premium activated!"
+        },
+        {
+          "name": "SoundCloud++",
+          "bundleIdentifier": "com.soundcloud.TouchApp",
+          "developerName": "VAXMG",
+          "version": "8.84.0",
+          "iconURL": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/22/f9/36/22f936bd-f61d-d1e1-8227-7352688e9367/AppIcon-0-0-1x_U007epad-0-1-0-85-220.png/512x512bb.jpg",
+          "subtitle": "SoundCloud with no ads! Read Description."
+        },
+        {
+          "name": "Spotify++",
+          "bundleIdentifier": "com.spotify.client",
+          "developerName": "Eevee",
+          "version": "9.0.84",
+          "iconURL": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/01/b4/f5/01b4f500-a216-ede2-81dd-e6b4668e53cf/AppIcon-0-0-1x_U007epad-0-1-0-0-sRGB-85-220.png/512x512bb.jpg",
+          "subtitle": "Free Spotify Premium!"
+        },
+        {
+          "name": "YouTube++",
+          "bundleIdentifier": "com.google.ios.youtube",
+          "developerName": "Dayanch96",
+          "version": "21.43.5",
+          "iconURL": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/8e/43/35/8e43350e-2dad-ac27-13d4-71eac741cf80/logo_youtube_2024_q4_color-0-0-1x_U007emarketing-0-0-0-7-0-0-0-85-220.png/512x512bb.jpg",
+          "subtitle": "The All-In-One Tweak for YouTube."
+        },
+        {
+          "name": "Duolingo++",
+          "bundleIdentifier": "com.duolingo.DuolingoMobile",
+          "developerName": "Laxus",
+          "version": "7.134.0",
+          "iconURL": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/d6/b2/08/d6b20859-b86e-5b7c-4ebc-8258c0f9b754/AppIcon-0-0-1x_U007epad-0-1-85-220.png/512x512bb.jpg",
+          "subtitle": "Duolingo with Super Duolingo Activated!"
+        },
+        {
+          "name": "Messenger++",
+          "bundleIdentifier": "com.facebook.Messenger",
+          "developerName": "Michael Lema",
+          "version": "584.0.0",
+          "iconURL": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/05/90/0d/05900d52-cace-057b-aa3a-3c08aa064c4c/AppIcon-0-0-1x_U007epad-0-1-0-sRGB-85-220.png/512x512bb.jpg",
+          "subtitle": "The ultimate Facebook Messenger tweak!"
+        },
+        {
+          "name": "SceneBox",
+          "bundleIdentifier": "app.scenebox.SceneBox",
+          "developerName": "",
+          "version": "1.0.4",
+          "iconURL": "https://raw.githubusercontent.com/bebound/AltGallery/master/apps/SceneBox/icon.png",
+          "subtitle": "Free Movie/TV Show Streaming!"
         }
       ]
     },
@@ -10595,7 +10835,7 @@
           "name": "Mangayomi",
           "bundleIdentifier": "com.kodjodevf.mangayomi",
           "developerName": "Moustapha Kodjo Amadou",
-          "version": "0.9.9",
+          "version": "0.9.95",
           "iconURL": "https://raw.githubusercontent.com/kodjodevf/mangayomi/refs/heads/main/repo/images/icons/icon_default.webp",
           "subtitle": "Read manga, novels, and watch anime"
         }
