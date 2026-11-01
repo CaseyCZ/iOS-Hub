@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-01T06:09:08Z",
+  "generatedAt": "2026-11-01T13:27:56Z",
   "sources": [
     {
       "id": "utm",
@@ -515,7 +515,7 @@
           "name": "PokeMMO",
           "bundleIdentifier": "eu.pokemmo.client",
           "developerName": "PokeMMO",
-          "version": "34863",
+          "version": "34868",
           "iconURL": "https://pokemmo.com/build/images/altstore.f5930b35.png",
           "subtitle": ""
         }
@@ -2224,11 +2224,19 @@
     {
       "id": "owo-source",
       "name": "OwO Source",
-      "appCount": 161,
+      "appCount": 162,
       "catalogLimited": true,
       "iconURL": "https://raw.githubusercontent.com/OwO-Network/Repo/main/icons/owo.repo.icon.png",
       "sourceURL": "https://repo.owo.network/",
       "apps": [
+        {
+          "name": "PiliPlus",
+          "bundleIdentifier": "com.example.piliplus",
+          "developerName": "",
+          "version": "2.2.0",
+          "iconURL": "https://raw.githubusercontent.com/owo-network/Repo/main/icons/com.example.piliplus.png",
+          "subtitle": ""
+        },
         {
           "name": "真果鉴",
           "bundleIdentifier": "com.duanju.duanjuApp",
@@ -3499,14 +3507,6 @@
           "developerName": "",
           "version": "27.1.0",
           "iconURL": "https://raw.githubusercontent.com/owo-network/Repo/main/icons/com.ss.iphone.ugc.Aweme.png",
-          "subtitle": ""
-        },
-        {
-          "name": "NOMORAW",
-          "bundleIdentifier": "com.blink.academy.nomoraw",
-          "developerName": "",
-          "version": "3.0.6",
-          "iconURL": "https://raw.githubusercontent.com/owo-network/Repo/main/icons/com.blink.academy.nomoraw.png",
           "subtitle": ""
         }
       ]
@@ -4964,11 +4964,19 @@
     {
       "id": "apptesters",
       "name": "AppTesters IPA Repo",
-      "appCount": 9938,
+      "appCount": 9939,
       "catalogLimited": true,
       "iconURL": "https://apptesters.org/apptesters-512x512.png",
       "sourceURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/apps.json",
       "apps": [
+        {
+          "name": "KineMaster",
+          "bundleIdentifier": "com.kinemaster.kios",
+          "developerName": "",
+          "version": "8.2.7",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.kinemaster.kios.png",
+          "subtitle": ""
+        },
         {
           "name": "Locket",
           "bundleIdentifier": "com.locket.Locket",
@@ -6559,14 +6567,6 @@
           "developerName": "",
           "version": "3.4",
           "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.newmarketinglab.ImageCompressor.png",
-          "subtitle": ""
-        },
-        {
-          "name": "RiseSleep",
-          "bundleIdentifier": "com.risesci.nyx",
-          "developerName": "",
-          "version": "0.1.642",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.risesci.nyx.png",
           "subtitle": ""
         }
       ]
@@ -8515,7 +8515,7 @@
           "name": "BCD",
           "bundleIdentifier": "com.thebcd69.bcd",
           "developerName": "thebcd69",
-          "version": "0.1.625",
+          "version": "0.1.626",
           "iconURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/BCD/icon.png",
           "subtitle": "Windows games on iPhone and iPad"
         },
@@ -8675,7 +8675,7 @@
           "name": "Mornye",
           "bundleIdentifier": "com.zarz.mornye",
           "developerName": "zarzet",
-          "version": "5.2.6",
+          "version": "5.3.0",
           "iconURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/Mornye/icon.png",
           "subtitle": "FLAC Downloader for iOS"
         },
@@ -8739,7 +8739,7 @@
           "name": "PiliPlus",
           "bundleIdentifier": "com.example.piliplus",
           "developerName": "bggRGjQaUbCoE",
-          "version": "2.1.6",
+          "version": "2.2.0",
           "iconURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/PiliPlus/icon.png",
           "subtitle": "使用Flutter开发的BiliBili第三方客户端"
         },
