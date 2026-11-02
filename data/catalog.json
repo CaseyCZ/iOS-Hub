@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-02T06:08:43Z",
+  "generatedAt": "2026-11-02T15:57:48Z",
   "sources": [
     {
       "id": "utm",
@@ -388,10 +388,10 @@
       "sourceURL": "https://apps.manicemu.site/altstore",
       "apps": [
         {
-          "name": "Manic EMU v2.0.1",
+          "name": "Manic EMU v2.0.2",
           "bundleIdentifier": "com.aoshuang.manicemu",
           "developerName": "Manic EMU Development Team",
-          "version": "2.0.1",
+          "version": "2.0.2",
           "iconURL": "https://apps.manicemu.site/images/manicicon.jpg",
           "subtitle": "Love Retro Games"
         }
@@ -2392,11 +2392,27 @@
     {
       "id": "owo-source",
       "name": "OwO Source",
-      "appCount": 162,
+      "appCount": 163,
       "catalogLimited": true,
       "iconURL": "https://raw.githubusercontent.com/OwO-Network/Repo/main/icons/owo.repo.icon.png",
       "sourceURL": "https://repo.owo.network/",
       "apps": [
+        {
+          "name": "Mori",
+          "bundleIdentifier": "com.mori.downloader",
+          "developerName": "",
+          "version": "4.5.1-custom.1",
+          "iconURL": "https://raw.githubusercontent.com/owo-network/Repo/main/icons/com.mori.downloader.png",
+          "subtitle": ""
+        },
+        {
+          "name": "PiliPlus",
+          "bundleIdentifier": "com.example.piliplus",
+          "developerName": "",
+          "version": "2.2.0.1",
+          "iconURL": "https://raw.githubusercontent.com/owo-network/Repo/main/icons/com.example.piliplus.png",
+          "subtitle": ""
+        },
         {
           "name": "PiliPlus",
           "bundleIdentifier": "com.example.piliplus",
@@ -2411,14 +2427,6 @@
           "developerName": "",
           "version": "0.2.64+71",
           "iconURL": "https://raw.githubusercontent.com/owo-network/Repo/main/icons/com.duanju.duanjuApp.png",
-          "subtitle": ""
-        },
-        {
-          "name": "Mori",
-          "bundleIdentifier": "com.mori.downloader",
-          "developerName": "",
-          "version": "4.5.1",
-          "iconURL": "https://raw.githubusercontent.com/owo-network/Repo/main/icons/com.mori.downloader.png",
           "subtitle": ""
         },
         {
@@ -3668,33 +3676,17 @@
           "version": "7.12.71",
           "iconURL": "https://raw.githubusercontent.com/owo-network/Repo/main/icons/com.taobao.fleamarket.png",
           "subtitle": ""
-        },
-        {
-          "name": "DouYin",
-          "bundleIdentifier": "com.ss.iphone.ugc.Aweme",
-          "developerName": "",
-          "version": "27.1.0",
-          "iconURL": "https://raw.githubusercontent.com/owo-network/Repo/main/icons/com.ss.iphone.ugc.Aweme.png",
-          "subtitle": ""
         }
       ]
     },
     {
       "id": "cypwn-ipa",
       "name": "CyPwn IPA Library",
-      "appCount": 210,
+      "appCount": 209,
       "catalogLimited": true,
       "iconURL": "https://repo.cypwn.xyz/assets/images/cypwn_small.png",
       "sourceURL": "https://ipa.cypwn.xyz/cypwn.json",
       "apps": [
-        {
-          "name": "Stremio-2.0.7",
-          "bundleIdentifier": "com.stremio.pal",
-          "developerName": "Stremio-2.0.7 x CyPwn",
-          "version": "2.0.7",
-          "iconURL": "https://ipa.cypwn.xyz/serve/icons/Stremio-2.0.7.png",
-          "subtitle": ""
-        },
         {
           "name": "Stremio-2.0.6",
           "bundleIdentifier": "com.stremio.pal",
@@ -5126,17 +5118,145 @@
           "version": "2.6",
           "iconURL": "https://ipa.cypwn.xyz/serve/icons/Star_Map_2.6_Satella.png",
           "subtitle": ""
+        },
+        {
+          "name": "RefacePro_3.12.0",
+          "bundleIdentifier": "cypwn.RefacePro_3.12.0.3.12.0",
+          "developerName": "RefacePro_3.12.0 x CyPwn",
+          "version": "3.12.0",
+          "iconURL": "https://ipa.cypwn.xyz/serve/icons/RefacePro_3.12.0.png",
+          "subtitle": ""
         }
       ]
     },
     {
       "id": "apptesters",
       "name": "AppTesters IPA Repo",
-      "appCount": 9949,
+      "appCount": 9964,
       "catalogLimited": true,
       "iconURL": "https://apptesters.org/apptesters-512x512.png",
       "sourceURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/apps.json",
       "apps": [
+        {
+          "name": "Elevate",
+          "bundleIdentifier": "com.elevateapp.elevate",
+          "developerName": "",
+          "version": "5.264.0",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.elevateapp.elevate.png",
+          "subtitle": ""
+        },
+        {
+          "name": "Yazio",
+          "bundleIdentifier": "com.yazio.ios.YAZIO",
+          "developerName": "",
+          "version": "26.44.1",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.yazio.ios.YAZIO.png",
+          "subtitle": ""
+        },
+        {
+          "name": "Widgetsmith",
+          "bundleIdentifier": "com.crossforward.WidgetSmith",
+          "developerName": "",
+          "version": "9.0",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.crossforward.WidgetSmith.png",
+          "subtitle": ""
+        },
+        {
+          "name": "Facetune",
+          "bundleIdentifier": "com.lightricks.Facetune2",
+          "developerName": "",
+          "version": "26.36",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.lightricks.Facetune2.png",
+          "subtitle": ""
+        },
+        {
+          "name": "SCRL",
+          "bundleIdentifier": "com.dopedevelopment.Panels",
+          "developerName": "",
+          "version": "9.62",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.dopedevelopment.Panels.png",
+          "subtitle": ""
+        },
+        {
+          "name": "Mojo",
+          "bundleIdentifier": "archery.storify",
+          "developerName": "",
+          "version": "1.282.0",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/archery.storify.png",
+          "subtitle": ""
+        },
+        {
+          "name": "Buddy",
+          "bundleIdentifier": "com.iPwners.Plonkan",
+          "developerName": "",
+          "version": "13.51",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.iPwners.Plonkan.png",
+          "subtitle": ""
+        },
+        {
+          "name": "GOWOD",
+          "bundleIdentifier": "eu.gowod",
+          "developerName": "",
+          "version": "5.12.0",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/eu.gowod.png",
+          "subtitle": ""
+        },
+        {
+          "name": "AdGuard",
+          "bundleIdentifier": "com.adguard.AdguardExtension",
+          "developerName": "",
+          "version": "4.5.24",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.adguard.AdguardExtension.png",
+          "subtitle": ""
+        },
+        {
+          "name": "FlightTracker",
+          "bundleIdentifier": "com.iaftt.flightplusfree",
+          "developerName": "",
+          "version": "8.8.3",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.iaftt.flightplusfree.png",
+          "subtitle": ""
+        },
+        {
+          "name": "Mimo",
+          "bundleIdentifier": "com.getmimo.mimo",
+          "developerName": "",
+          "version": "12.34.0",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.getmimo.mimo.png",
+          "subtitle": ""
+        },
+        {
+          "name": "Piano",
+          "bundleIdentifier": "com.mwm.piano-app",
+          "developerName": "",
+          "version": "3.64.00",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.mwm.piano-app.png",
+          "subtitle": ""
+        },
+        {
+          "name": "BeatMakerPro",
+          "bundleIdentifier": "com.mwm.sampler-app",
+          "developerName": "",
+          "version": "4.21.00",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.mwm.sampler-app.png",
+          "subtitle": ""
+        },
+        {
+          "name": "Moovit",
+          "bundleIdentifier": "com.tranzmate.tranzmate1",
+          "developerName": "",
+          "version": "5.202.3",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.tranzmate.tranzmate1.png",
+          "subtitle": ""
+        },
+        {
+          "name": "Stndrd",
+          "bundleIdentifier": "uni.cbum",
+          "developerName": "",
+          "version": "4.1.63",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/uni.cbum.png",
+          "subtitle": ""
+        },
         {
           "name": "Unknown app",
           "bundleIdentifier": "com.intsig.CamScannerLite",
@@ -6615,126 +6735,6 @@
           "developerName": "",
           "version": "5.1.21",
           "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.zerone.hidesktop.png",
-          "subtitle": ""
-        },
-        {
-          "name": "ScannerPro",
-          "bundleIdentifier": "com.readdle.Scanner",
-          "developerName": "",
-          "version": "9.0.3",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.readdle.Scanner.png",
-          "subtitle": ""
-        },
-        {
-          "name": "Phocus",
-          "bundleIdentifier": "com.ahmetserdarkaradeniz.Phocus",
-          "developerName": "",
-          "version": "3.4.9",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.ahmetserdarkaradeniz.Phocus.png",
-          "subtitle": ""
-        },
-        {
-          "name": "LUTStudio",
-          "bundleIdentifier": "com.solveit.lut-studio",
-          "developerName": "",
-          "version": "4.1.1",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.solveit.lut-studio.png",
-          "subtitle": ""
-        },
-        {
-          "name": "Crsel",
-          "bundleIdentifier": "com.frameoneapps.Crsel",
-          "developerName": "",
-          "version": "1.5.9",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.frameoneapps.Crsel.png",
-          "subtitle": ""
-        },
-        {
-          "name": "Cleanup",
-          "bundleIdentifier": "com.codeway.cleanerplus",
-          "developerName": "",
-          "version": "6.25.0",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.codeway.cleanerplus.png",
-          "subtitle": ""
-        },
-        {
-          "name": "Splice",
-          "bundleIdentifier": "com.path36.SpliceFree",
-          "developerName": "",
-          "version": "4.28.73",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.path36.SpliceFree.png",
-          "subtitle": ""
-        },
-        {
-          "name": "B612",
-          "bundleIdentifier": "com.linecorp.b612",
-          "developerName": "",
-          "version": "15.4.6",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.linecorp.b612.png",
-          "subtitle": ""
-        },
-        {
-          "name": "wpsoffice",
-          "bundleIdentifier": "com.kingsoft.office.g.wpsoffice",
-          "developerName": "",
-          "version": "26.10.1",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.kingsoft.office.g.wpsoffice.png",
-          "subtitle": ""
-        },
-        {
-          "name": "LEMOFM",
-          "bundleIdentifier": "com.LEMO.LemoFM",
-          "developerName": "",
-          "version": "2.2.1",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.LEMO.LemoFM.png",
-          "subtitle": ""
-        },
-        {
-          "name": "Documents",
-          "bundleIdentifier": "com.readdle.ReaddleDocsIPad",
-          "developerName": "",
-          "version": "8.22.10",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.readdle.ReaddleDocsIPad.png",
-          "subtitle": ""
-        },
-        {
-          "name": "Mindllama",
-          "bundleIdentifier": "com.vitalii.mind",
-          "developerName": "",
-          "version": "2.5.20",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.vitalii.mind.png",
-          "subtitle": ""
-        },
-        {
-          "name": "Radiance",
-          "bundleIdentifier": "SimpleTools.Wallpaper-Workshop",
-          "developerName": "",
-          "version": "3.0.1",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/SimpleTools.Wallpaper-Workshop.png",
-          "subtitle": ""
-        },
-        {
-          "name": "GentlerStreak",
-          "bundleIdentifier": "app.gentler.activity",
-          "developerName": "",
-          "version": "5.13.5",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/app.gentler.activity.png",
-          "subtitle": ""
-        },
-        {
-          "name": "SODA",
-          "bundleIdentifier": "com.snowcorp.soda",
-          "developerName": "",
-          "version": "10.4.4",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.snowcorp.soda.png",
-          "subtitle": ""
-        },
-        {
-          "name": "AdobeExpress",
-          "bundleIdentifier": "com.adobe.post",
-          "developerName": "",
-          "version": "31.2.0",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.adobe.post.png",
           "subtitle": ""
         }
       ]
@@ -8827,7 +8827,7 @@
           "name": "ManicEMU",
           "bundleIdentifier": "com.aoshuang.manicemu",
           "developerName": "Manic EMU Development Team",
-          "version": "2.0.1",
+          "version": "2.0.2",
           "iconURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/ManicEMU/icon.png",
           "subtitle": "All-in-one retro game emulator for iOS"
         },
@@ -8923,7 +8923,7 @@
           "name": "Playport",
           "bundleIdentifier": "dev.playport.app",
           "developerName": "playportdev",
-          "version": "0.4.0",
+          "version": "0.5.0",
           "iconURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/Playport/icon.png",
           "subtitle": "PC games on your iPhone. Natively, no streaming."
         },
@@ -8995,7 +8995,7 @@
           "name": "Tsumiru",
           "bundleIdentifier": "com.suwayomi.tachideskSorayomi",
           "developerName": "Suwayomi",
-          "version": "1.6.3",
+          "version": "1.6.4",
           "iconURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/Suwayomi-Tsumiru/icon.png",
           "subtitle": "Native manga & manhwa reader for Suwayomi-Server"
         },
