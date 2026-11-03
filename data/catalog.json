@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-02T15:57:48Z",
+  "generatedAt": "2026-11-03T00:59:58Z",
   "sources": [
     {
       "id": "utm",
@@ -55,7 +55,7 @@
           "name": "iFly",
           "bundleIdentifier": "com.provenance.ifly",
           "developerName": "Provenance Emu",
-          "version": "1.0.0+1793561974",
+          "version": "1.0.0+1793600633",
           "iconURL": "https://ifly-emu.com/icon-1024.png",
           "subtitle": "Dreamcast Emulator for iOS & tvOS"
         },
@@ -515,7 +515,7 @@
           "name": "PokeMMO",
           "bundleIdentifier": "eu.pokemmo.client",
           "developerName": "PokeMMO",
-          "version": "34868",
+          "version": "34932",
           "iconURL": "https://pokemmo.com/build/images/altstore.f5930b35.png",
           "subtitle": ""
         }
@@ -970,10 +970,10 @@
           "subtitle": "Enhancer for Infuse app"
         },
         {
-          "name": "YouTube Plus (iOS16+)",
+          "name": "YouTube Plus (iOS17+)",
           "bundleIdentifier": "com.google.ios.youtube",
           "developerName": "dvntm",
-          "version": "21.16.2",
+          "version": "21.43.5",
           "iconURL": "https://raw.githubusercontent.com/dayanch96/YTLite/refs/heads/main/Resources/icon.png",
           "subtitle": "YouTube Plus with additional tweaks"
         },
@@ -1207,7 +1207,7 @@
           "name": "SoundCloud++",
           "bundleIdentifier": "com.soundcloud.TouchApp",
           "developerName": "VAXMG",
-          "version": "8.84.0",
+          "version": "8.85.0",
           "iconURL": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/22/f9/36/22f936bd-f61d-d1e1-8227-7352688e9367/AppIcon-0-0-1x_U007epad-0-1-0-85-220.png/512x512bb.jpg",
           "subtitle": "SoundCloud with no ads! Read Description."
         },
@@ -1255,7 +1255,7 @@
           "name": "BuildBox",
           "bundleIdentifier": "com.mikevillarroel.buildbox",
           "developerName": "MikeBuilds",
-          "version": "2.1.0",
+          "version": "2.1.4",
           "iconURL": "https://mikevillarroel.github.io/mikebuilds-source/icons/buildbox.png",
           "subtitle": "Compile, sign and install iOS apps from your iPhone"
         },
@@ -5132,11 +5132,115 @@
     {
       "id": "apptesters",
       "name": "AppTesters IPA Repo",
-      "appCount": 9964,
+      "appCount": 9977,
       "catalogLimited": true,
       "iconURL": "https://apptesters.org/apptesters-512x512.png",
       "sourceURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/apps.json",
       "apps": [
+        {
+          "name": "AdobeFresco",
+          "bundleIdentifier": "com.adobe.fresco.ios",
+          "developerName": "",
+          "version": "8.0.0",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.adobe.fresco.ios.png",
+          "subtitle": ""
+        },
+        {
+          "name": "NightSky",
+          "bundleIdentifier": "com.icandiapps.nightsky",
+          "developerName": "",
+          "version": "27.2",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.icandiapps.nightsky.png",
+          "subtitle": ""
+        },
+        {
+          "name": "CalculatorAir",
+          "bundleIdentifier": "com.CalculatorForiPad.InternetRocks",
+          "developerName": "",
+          "version": "2026.10.14",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.CalculatorForiPad.InternetRocks.png",
+          "subtitle": ""
+        },
+        {
+          "name": "ProCCD",
+          "bundleIdentifier": "com.yengshine.proccd",
+          "developerName": "",
+          "version": "7.0.1",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.yengshine.proccd.png",
+          "subtitle": ""
+        },
+        {
+          "name": "FindAir",
+          "bundleIdentifier": "co.airapps.finderbot",
+          "developerName": "",
+          "version": "2026.11.1",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/co.airapps.finderbot.png",
+          "subtitle": ""
+        },
+        {
+          "name": "NeoServer",
+          "bundleIdentifier": "com.neo.NeoMan",
+          "developerName": "",
+          "version": "8.4.8",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.neo.NeoMan.png",
+          "subtitle": ""
+        },
+        {
+          "name": "Documents",
+          "bundleIdentifier": "com.readdle.ReaddleDocsIPad",
+          "developerName": "",
+          "version": "8.22.11",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.readdle.ReaddleDocsIPad.png",
+          "subtitle": ""
+        },
+        {
+          "name": "fGet",
+          "bundleIdentifier": "com.penguinbit.fastdownload",
+          "developerName": "",
+          "version": "1.7.3",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.penguinbit.fastdownload.png",
+          "subtitle": ""
+        },
+        {
+          "name": "Rest",
+          "bundleIdentifier": "com.evolve.helm",
+          "developerName": "",
+          "version": "3.209.0",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.evolve.helm.png",
+          "subtitle": ""
+        },
+        {
+          "name": "QrCode",
+          "bundleIdentifier": "com.internet-rocks.codescanner",
+          "developerName": "",
+          "version": "2026.11.1",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.internet-rocks.codescanner.png",
+          "subtitle": ""
+        },
+        {
+          "name": "Duolingo",
+          "bundleIdentifier": "com.duolingo.DuolingoMobile",
+          "developerName": "",
+          "version": "7.147.0",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.duolingo.DuolingoMobile.png",
+          "subtitle": ""
+        },
+        {
+          "name": "LINECamera",
+          "bundleIdentifier": "jp.naver.linecamera",
+          "developerName": "",
+          "version": "18.6.5",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/jp.naver.linecamera.png",
+          "subtitle": ""
+        },
+        {
+          "name": "Moonly",
+          "bundleIdentifier": "com.moonly.Moonly",
+          "developerName": "",
+          "version": "2.9.5",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.moonly.Moonly.png",
+          "subtitle": ""
+        },
         {
           "name": "Elevate",
           "bundleIdentifier": "com.elevateapp.elevate",
@@ -6631,110 +6735,6 @@
           "developerName": "",
           "version": "3.53",
           "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.andyworks.weather.png",
-          "subtitle": ""
-        },
-        {
-          "name": "simpletimer",
-          "bundleIdentifier": "com.andyworks.timer",
-          "developerName": "",
-          "version": "3.23",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.andyworks.timer.png",
-          "subtitle": ""
-        },
-        {
-          "name": "CalculatorAir",
-          "bundleIdentifier": "com.CalculatorForiPad.InternetRocks",
-          "developerName": "",
-          "version": "2026.10.11",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.CalculatorForiPad.InternetRocks.png",
-          "subtitle": ""
-        },
-        {
-          "name": "Flightradar24",
-          "bundleIdentifier": "se.resenatverket.FlightRadar24-Free",
-          "developerName": "",
-          "version": "11.14.0",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/se.resenatverket.FlightRadar24-Free.png",
-          "subtitle": ""
-        },
-        {
-          "name": "ScannerAir",
-          "bundleIdentifier": "co.airapps.scannerapp",
-          "developerName": "",
-          "version": "2026.10.11",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/co.airapps.scannerapp.png",
-          "subtitle": ""
-        },
-        {
-          "name": "Captions",
-          "bundleIdentifier": "boomer.Smart-Video",
-          "developerName": "",
-          "version": "13.40.0",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/boomer.Smart-Video.png",
-          "subtitle": ""
-        },
-        {
-          "name": "UnifiedDictionary",
-          "bundleIdentifier": "com.bravolol.bravoLang.chineseDictionary",
-          "developerName": "",
-          "version": "36.3",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.bravolol.bravoLang.chineseDictionary.png",
-          "subtitle": ""
-        },
-        {
-          "name": "Lifesum",
-          "bundleIdentifier": "com.sillens.iShape",
-          "developerName": "",
-          "version": "24.0.0",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.sillens.iShape.png",
-          "subtitle": ""
-        },
-        {
-          "name": "Tripsy",
-          "bundleIdentifier": "app.tripsy.ios",
-          "developerName": "",
-          "version": "3.10.5",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/app.tripsy.ios.png",
-          "subtitle": ""
-        },
-        {
-          "name": "Vibes",
-          "bundleIdentifier": "com.andyworks.vibes",
-          "developerName": "",
-          "version": "1.30",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.andyworks.vibes.png",
-          "subtitle": ""
-        },
-        {
-          "name": "Calendars",
-          "bundleIdentifier": "com.readdle.CalendarsLite",
-          "developerName": "",
-          "version": "5.41.0",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.readdle.CalendarsLite.png",
-          "subtitle": ""
-        },
-        {
-          "name": "Locket",
-          "bundleIdentifier": "com.locket.Locket",
-          "developerName": "",
-          "version": "2.70.0",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.locket.Locket.png",
-          "subtitle": ""
-        },
-        {
-          "name": "Hevy",
-          "bundleIdentifier": "com.hevyapp.hevy",
-          "developerName": "",
-          "version": "3.2.3",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.hevyapp.hevy.png",
-          "subtitle": ""
-        },
-        {
-          "name": "iScreen",
-          "bundleIdentifier": "com.zerone.hidesktop",
-          "developerName": "",
-          "version": "5.1.21",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.zerone.hidesktop.png",
           "subtitle": ""
         }
       ]
@@ -8651,7 +8651,7 @@
           "name": "AnimeFlow",
           "bundleIdentifier": "com.ligg.anime_flow",
           "developerName": "openAnimeFlow",
-          "version": "2.6.6",
+          "version": "2.6.7",
           "iconURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/AnimeFlow/icon.png",
           "subtitle": "跨平台动漫视频播放器，支持多数据源、实时 4K 超分辨率与弹幕"
         },
@@ -8803,7 +8803,7 @@
           "name": "LSX4",
           "bundleIdentifier": "com.llayerlinux.LSX4RuntimeProbe",
           "developerName": "lpfoj",
-          "version": "128.9757",
+          "version": "128.9775",
           "iconURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/LSX4/icon.png",
           "subtitle": "Open-source PS4/PS5 emulator"
         },
@@ -10411,7 +10411,7 @@
           "name": "SoundCloud++",
           "bundleIdentifier": "com.soundcloud.TouchApp",
           "developerName": "VAXMG",
-          "version": "8.84.0",
+          "version": "8.85.0",
           "iconURL": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/22/f9/36/22f936bd-f61d-d1e1-8227-7352688e9367/AppIcon-0-0-1x_U007epad-0-1-0-85-220.png/512x512bb.jpg",
           "subtitle": "SoundCloud with no ads! Read Description."
         },
@@ -10459,7 +10459,7 @@
           "name": "BuildBox",
           "bundleIdentifier": "com.mikevillarroel.buildbox",
           "developerName": "MikeBuilds",
-          "version": "2.1.0",
+          "version": "2.1.4",
           "iconURL": "https://mikevillarroel.github.io/mikebuilds-source/icons/buildbox.png",
           "subtitle": "Compile, sign and install iOS apps from your iPhone"
         },
@@ -10839,7 +10839,7 @@
           "name": "Side Search",
           "bundleIdentifier": "net.cizzuk.sidesearch",
           "developerName": "Cizzuk",
-          "version": "4.1",
+          "version": "4.2",
           "iconURL": "https://i.cizzuk.net/altstore/sidesearch/v4.1/icon.png",
           "subtitle": "Use your Favorite Voice Assistant"
         },
