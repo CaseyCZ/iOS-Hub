@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-04T06:26:34Z",
+  "generatedAt": "2026-11-04T19:47:16Z",
   "sources": [
     {
       "id": "utm",
@@ -55,7 +55,7 @@
           "name": "iFly",
           "bundleIdentifier": "com.provenance.ifly",
           "developerName": "Provenance Emu",
-          "version": "1.0.0+1793743533",
+          "version": "1.0.0+1793769586",
           "iconURL": "https://ifly-emu.com/icon-1024.png",
           "subtitle": "Dreamcast Emulator for iOS & tvOS"
         },
@@ -1151,7 +1151,7 @@
           "name": "X++",
           "bundleIdentifier": "com.atebits.Tweetie2",
           "developerName": "Densor",
-          "version": "12.40",
+          "version": "12.40.1",
           "iconURL": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/bf/46/c4/bf46c48e-94bb-c30d-601f-d73ed5a70689/ProductionAppIcon-0-0-1x_U007emarketing-0-8-0-0-0-85-220.png/512x512bb.jpg",
           "subtitle": "An new tweak for X!"
         },
@@ -1821,33 +1821,33 @@
           "name": "Twitter NFB",
           "bundleIdentifier": "com.atebits.Tweetie2",
           "developerName": "orionblur & IPA Vault",
-          "version": "12.40",
+          "version": "12.40.1",
           "iconURL": "https://pub-dd800571175348b6a2745b3396360028.r2.dev/App%20Icons/Twitter-12.14-Icons/Twitter-AppStore-1024x1024.png",
-          "subtitle": "Twitter 12.40 with NFB 7.3.1"
+          "subtitle": "Twitter 12.40.1 with NFB 7.3.1"
         },
         {
           "name": "Twitter NFB + TWI",
           "bundleIdentifier": "com.atebits.Tweetie2",
           "developerName": "orionblur & dens0r & IPA Vault",
-          "version": "12.40",
+          "version": "12.40.1",
           "iconURL": "https://pub-dd800571175348b6a2745b3396360028.r2.dev/App%20Icons/Twitter-12.14-Icons/Twitter-AppStore-1024x1024.png",
-          "subtitle": "Twitter 12.40 with NFB 7.3.1 + TWIGalaxy 1.14"
+          "subtitle": "Twitter 12.40.1 with NFB 7.3.1 + TWIGalaxy 1.14"
         },
         {
           "name": "X NFB",
           "bundleIdentifier": "com.atebits.Tweetie2",
           "developerName": "orionblur & IPA Vault",
-          "version": "12.40",
+          "version": "12.40.1",
           "iconURL": "https://pub-dd800571175348b6a2745b3396360028.r2.dev/App%20Icons/X-Icons/X-AppStore-1024x1024.png",
-          "subtitle": "X 12.40 with NFB 7.3.1"
+          "subtitle": "X 12.40.1 with NFB 7.3.1"
         },
         {
           "name": "X NFB + TWI",
           "bundleIdentifier": "com.atebits.Tweetie2",
           "developerName": "orionblur & dens0r & IPA Vault",
-          "version": "12.40",
+          "version": "12.40.1",
           "iconURL": "https://pub-dd800571175348b6a2745b3396360028.r2.dev/App%20Icons/X-Icons/X-AppStore-1024x1024.png",
-          "subtitle": "X 12.40 with NFB 7.3.1 + TWIGalaxy 1.14"
+          "subtitle": "X 12.40.1 with NFB 7.3.1 + TWIGalaxy 1.14"
         },
         {
           "name": "YouTube (YouMod 2.0.0) (iOS 16+)",
@@ -1981,17 +1981,17 @@
           "name": "Nuvio (Full)",
           "bundleIdentifier": "com.nuvio.media",
           "developerName": "Nuvio Media",
-          "version": "0.6.6",
+          "version": "0.6.7",
           "iconURL": "https://pub-dd800571175348b6a2745b3396360028.r2.dev/App%20Icons/Nuvio%20Icons/app-icon-1024_Normal.png",
-          "subtitle": "Nuvio 0.6.6 (Full Release)"
+          "subtitle": "Nuvio 0.6.7 (Full Release)"
         },
         {
           "name": "Nuvio (Enhanced)",
           "bundleIdentifier": "com.nuvio.media",
           "developerName": "luqmanfadlli & Nuvio Media",
-          "version": "0.6.6",
+          "version": "0.6.7",
           "iconURL": "https://pub-dd800571175348b6a2745b3396360028.r2.dev/App%20Icons/Nuvio%20Icons/app-icon-1024_Normal.png",
-          "subtitle": "Nuvio 0.6.6 (Enhanced Release)"
+          "subtitle": "Nuvio 0.6.7 (Enhanced Release)"
         },
         {
           "name": "Omni",
@@ -2061,9 +2061,9 @@
           "name": "Vesper",
           "bundleIdentifier": "app.vesper",
           "developerName": "IPA Vault",
-          "version": "0.51",
+          "version": "0.5.2",
           "iconURL": "https://pub-dd800571175348b6a2745b3396360028.r2.dev/App%20Icons/Vesper%20Icons/VesperIcon1024x1024_Normal.png",
-          "subtitle": "Vesper 0.51"
+          "subtitle": "Vesper 0.5.2"
         }
       ]
     },
@@ -2464,11 +2464,35 @@
     {
       "id": "owo-source",
       "name": "OwO Source",
-      "appCount": 166,
+      "appCount": 169,
       "catalogLimited": true,
       "iconURL": "https://raw.githubusercontent.com/OwO-Network/Repo/main/icons/owo.repo.icon.png",
       "sourceURL": "https://repo.owo.network/",
       "apps": [
+        {
+          "name": "Mori",
+          "bundleIdentifier": "com.mori.downloader",
+          "developerName": "",
+          "version": "5.2.2-custom.1",
+          "iconURL": "https://raw.githubusercontent.com/owo-network/Repo/main/icons/com.mori.downloader.png",
+          "subtitle": ""
+        },
+        {
+          "name": "Mori",
+          "bundleIdentifier": "com.mori.downloader",
+          "developerName": "",
+          "version": "5.2.1-custom.1",
+          "iconURL": "https://raw.githubusercontent.com/owo-network/Repo/main/icons/com.mori.downloader.png",
+          "subtitle": ""
+        },
+        {
+          "name": "Mori",
+          "bundleIdentifier": "com.mori.downloader",
+          "developerName": "",
+          "version": "5.2.0-custom.1",
+          "iconURL": "https://raw.githubusercontent.com/owo-network/Repo/main/icons/com.mori.downloader.png",
+          "subtitle": ""
+        },
         {
           "name": "Mori",
           "bundleIdentifier": "com.mori.downloader",
@@ -3724,79 +3748,31 @@
           "version": "8.0.43.16.TF",
           "iconURL": "https://raw.githubusercontent.com/owo-network/Repo/main/icons/com.tencent.xin.png",
           "subtitle": ""
-        },
-        {
-          "name": "NOMOCAM",
-          "bundleIdentifier": "com.blink.academy.nomo",
-          "developerName": "",
-          "version": "1.6.6",
-          "iconURL": "https://raw.githubusercontent.com/owo-network/Repo/main/icons/com.blink.academy.nomo.png",
-          "subtitle": ""
-        },
-        {
-          "name": "WeChat",
-          "bundleIdentifier": "com.tencent.xin",
-          "developerName": "",
-          "version": "8.0.43.16.TF",
-          "iconURL": "https://raw.githubusercontent.com/owo-network/Repo/main/icons/com.tencent.xin.png",
-          "subtitle": ""
-        },
-        {
-          "name": "WeChat",
-          "bundleIdentifier": "com.tencent.xin",
-          "developerName": "",
-          "version": "8.0.43.16.TF",
-          "iconURL": "https://raw.githubusercontent.com/owo-network/Repo/main/icons/com.tencent.xin.png",
-          "subtitle": ""
         }
       ]
     },
     {
       "id": "cypwn-ipa",
       "name": "CyPwn IPA Library",
-      "appCount": 210,
+      "appCount": 207,
       "catalogLimited": true,
       "iconURL": "https://repo.cypwn.xyz/assets/images/cypwn_small.png",
       "sourceURL": "https://ipa.cypwn.xyz/cypwn.json",
       "apps": [
         {
-          "name": "Stremio-2.0.7",
-          "bundleIdentifier": "com.stremio.pal",
-          "developerName": "Stremio-2.0.7 x CyPwn",
-          "version": "2.0.7",
-          "iconURL": "https://ipa.cypwn.xyz/serve/icons/Stremio-2.0.7.png",
-          "subtitle": ""
-        },
-        {
-          "name": "Stremio-2.0.6",
-          "bundleIdentifier": "com.stremio.pal",
-          "developerName": "Stremio-2.0.6 x CyPwn",
-          "version": "2.0.6",
-          "iconURL": "https://ipa.cypwn.xyz/serve/icons/Stremio-2.0.6.png",
-          "subtitle": ""
-        },
-        {
-          "name": "PowerWarriors_18.0",
+          "name": "Power Warriors 18.0",
           "bundleIdentifier": "com.ZombiAriel.Power-Warriors",
-          "developerName": "PowerWarriors_18.0 x CyPwn",
+          "developerName": "Power Warriors 18.0 x CyPwn",
           "version": "18",
-          "iconURL": "https://ipa.cypwn.xyz/serve/icons/PowerWarriors_18.0.png",
+          "iconURL": "https://ipa.cypwn.xyz/serve/icons/Power Warriors 18.0.png",
           "subtitle": ""
         },
         {
-          "name": "Stremio-2.0.0",
-          "bundleIdentifier": "com.stremio.pal",
-          "developerName": "Stremio-2.0.0 x CyPwn",
-          "version": "2.0.0",
-          "iconURL": "https://ipa.cypwn.xyz/serve/icons/Stremio-2.0.0.png",
-          "subtitle": ""
-        },
-        {
-          "name": "CloverPit-1.4.8",
+          "name": "CloverPit-1.4.3",
           "bundleIdentifier": "com.PanikArcade.CloverPit",
-          "developerName": "CloverPit-1.4.8 x CyPwn",
-          "version": "1.4.8",
-          "iconURL": "https://ipa.cypwn.xyz/serve/icons/CloverPit-1.4.8.png",
+          "developerName": "CloverPit-1.4.3 x CyPwn",
+          "version": "1.4.3",
+          "iconURL": "https://ipa.cypwn.xyz/serve/icons/CloverPit-1.4.3.png",
           "subtitle": ""
         },
         {
@@ -5198,17 +5174,121 @@
           "version": "2.6",
           "iconURL": "https://ipa.cypwn.xyz/serve/icons/Star_Map_2.6_Satella.png",
           "subtitle": ""
+        },
+        {
+          "name": "RefacePro_3.12.0",
+          "bundleIdentifier": "cypwn.RefacePro_3.12.0.3.12.0",
+          "developerName": "RefacePro_3.12.0 x CyPwn",
+          "version": "3.12.0",
+          "iconURL": "https://ipa.cypwn.xyz/serve/icons/RefacePro_3.12.0.png",
+          "subtitle": ""
+        },
+        {
+          "name": "AppCake+",
+          "bundleIdentifier": "cypwn.AppCake+.7.2.2",
+          "developerName": "AppCake+ x CyPwn",
+          "version": "7.2.2",
+          "iconURL": "https://ipa.cypwn.xyz/serve/icons/AppCake+.png",
+          "subtitle": ""
+        },
+        {
+          "name": "NewOS",
+          "bundleIdentifier": "cypwn.NewOS.1.0",
+          "developerName": "NewOS x CyPwn",
+          "version": "1.0",
+          "iconURL": "https://ipa.cypwn.xyz/serve/icons/NewOS.png",
+          "subtitle": ""
         }
       ]
     },
     {
       "id": "apptesters",
       "name": "AppTesters IPA Repo",
-      "appCount": 9999,
+      "appCount": 10009,
       "catalogLimited": true,
       "iconURL": "https://apptesters.org/apptesters-512x512.png",
       "sourceURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/apps.json",
       "apps": [
+        {
+          "name": "TORVPN",
+          "bundleIdentifier": "com.youssef.developer.Full-Browser",
+          "developerName": "",
+          "version": "12.5",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.youssef.developer.Full-Browser.png",
+          "subtitle": ""
+        },
+        {
+          "name": "Threads",
+          "bundleIdentifier": "com.burbn.barcelona",
+          "developerName": "",
+          "version": "454.0.0",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.burbn.barcelona.png",
+          "subtitle": ""
+        },
+        {
+          "name": "Instagram",
+          "bundleIdentifier": "com.burbn.instagram",
+          "developerName": "",
+          "version": "454.0.0",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.burbn.instagram.png",
+          "subtitle": ""
+        },
+        {
+          "name": "ThePiano",
+          "bundleIdentifier": "com.impalastudios.pianofree",
+          "developerName": "",
+          "version": "2.26.1",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.impalastudios.pianofree.png",
+          "subtitle": ""
+        },
+        {
+          "name": "ImgAI",
+          "bundleIdentifier": "com.idevtal.Wallpapers",
+          "developerName": "",
+          "version": "5.91",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.idevtal.Wallpapers.png",
+          "subtitle": ""
+        },
+        {
+          "name": "Lightroom",
+          "bundleIdentifier": "com.adobe.lrmobilephone",
+          "developerName": "",
+          "version": "12.0.0",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.adobe.lrmobilephone.png",
+          "subtitle": ""
+        },
+        {
+          "name": "OraWeather",
+          "bundleIdentifier": "com.itwcalculator.worldradarfree",
+          "developerName": "",
+          "version": "6.4.2",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.itwcalculator.worldradarfree.png",
+          "subtitle": ""
+        },
+        {
+          "name": "edjingMix",
+          "bundleIdentifier": "com.edjing.edjingdjturntable",
+          "developerName": "",
+          "version": "9.4.3",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.edjing.edjingdjturntable.png",
+          "subtitle": ""
+        },
+        {
+          "name": "CollaNote",
+          "bundleIdentifier": "net.quochuywdm.collanote496",
+          "developerName": "",
+          "version": "5.1.1",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/net.quochuywdm.collanote496.png",
+          "subtitle": ""
+        },
+        {
+          "name": "HabitKit",
+          "bundleIdentifier": "com.roehl.habitkit",
+          "developerName": "",
+          "version": "1.19.1",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.roehl.habitkit.png",
+          "subtitle": ""
+        },
         {
           "name": "WaterAir",
           "bundleIdentifier": "co.airapps.waterreminder",
@@ -6728,86 +6808,6 @@
           "version": "3.5",
           "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.wakdev.wdnfc.png",
           "subtitle": ""
-        },
-        {
-          "name": "SleepCycle",
-          "bundleIdentifier": "com.lexwarelabs.goodmorning",
-          "developerName": "",
-          "version": "6.26.420",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.lexwarelabs.goodmorning.png",
-          "subtitle": ""
-        },
-        {
-          "name": "superagent",
-          "bundleIdentifier": "com.agent.super.extension.safari",
-          "developerName": "",
-          "version": "4.7.2",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.agent.super.extension.safari.png",
-          "subtitle": ""
-        },
-        {
-          "name": "Facebook",
-          "bundleIdentifier": "com.facebook.Facebook",
-          "developerName": "",
-          "version": "584.1.0",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.facebook.Facebook.png",
-          "subtitle": ""
-        },
-        {
-          "name": "Moovit",
-          "bundleIdentifier": "com.tranzmate.tranzmate1",
-          "developerName": "",
-          "version": "5.202.1",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.tranzmate.tranzmate1.png",
-          "subtitle": ""
-        },
-        {
-          "name": "edjingMix",
-          "bundleIdentifier": "com.edjing.edjingdjturntable",
-          "developerName": "",
-          "version": "9.4.1",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.edjing.edjingdjturntable.png",
-          "subtitle": ""
-        },
-        {
-          "name": "Stemz",
-          "bundleIdentifier": "com.mwm.stems",
-          "developerName": "",
-          "version": "6.00.01",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.mwm.stems.png",
-          "subtitle": ""
-        },
-        {
-          "name": "SimplyPiano",
-          "bundleIdentifier": "com.joytunes.asla",
-          "developerName": "",
-          "version": "9.11.0",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.joytunes.asla.png",
-          "subtitle": ""
-        },
-        {
-          "name": "LEMOFM",
-          "bundleIdentifier": "com.LEMO.LemoFM",
-          "developerName": "",
-          "version": "2.2.3",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.LEMO.LemoFM.png",
-          "subtitle": ""
-        },
-        {
-          "name": "SimplyDraw",
-          "bundleIdentifier": "com.joytunes.Draw",
-          "developerName": "",
-          "version": "1.19.0",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.joytunes.Draw.png",
-          "subtitle": ""
-        },
-        {
-          "name": "Bazaart",
-          "bundleIdentifier": "co.bazaart.app",
-          "developerName": "",
-          "version": "27.0.6",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/co.bazaart.app.png",
-          "subtitle": ""
         }
       ]
     },
@@ -6852,15 +6852,15 @@
       "name": "Discord",
       "appCount": 1,
       "catalogLimited": false,
-      "iconURL": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/69/3b/7e/693b7e6b-55ba-51ba-2608-6b38dabd6021/AppIcon-0-0-1x_U007epad-0-1-0-sRGB-85-220.png/512x512bb.jpg",
+      "iconURL": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/65/9c/e0/659ce065-5dd8-eb35-378f-217d9658f6d9/AppIcon-0-0-1x_U007epad-0-1-0-85-220.png/512x512bb.jpg",
       "sourceURL": "https://raw.githubusercontent.com/AlfaActa/discord-altstore-source/main/source.json",
       "apps": [
         {
           "name": "Discord - Talk, Play, Hang Out",
           "bundleIdentifier": "com.hammerandchisel.discord",
           "developerName": "Discord Inc.",
-          "version": "351.0",
-          "iconURL": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/69/3b/7e/693b7e6b-55ba-51ba-2608-6b38dabd6021/AppIcon-0-0-1x_U007epad-0-1-0-sRGB-85-220.png/512x512bb.jpg",
+          "version": "352.0",
+          "iconURL": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/65/9c/e0/659ce065-5dd8-eb35-378f-217d9658f6d9/AppIcon-0-0-1x_U007epad-0-1-0-85-220.png/512x512bb.jpg",
           "subtitle": "The standard Discord app with no tweaks added."
         }
       ]
@@ -8690,7 +8690,7 @@
     {
       "id": "altgallery",
       "name": "AltGallery",
-      "appCount": 52,
+      "appCount": 53,
       "catalogLimited": false,
       "iconURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/assets/icon.png",
       "sourceURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/all-apps.json",
@@ -8747,7 +8747,7 @@
           "name": "ARMSX2",
           "bundleIdentifier": "com.armsx2.ios",
           "developerName": "ARMSX2",
-          "version": "2.6.0-nightly.20261029.1302",
+          "version": "2.6.0-nightly.20261104.1113",
           "iconURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/ARMSX2/icon.png",
           "subtitle": "PlayStation 2 emulator for ARM64"
         },
@@ -8763,7 +8763,7 @@
           "name": "BCD",
           "bundleIdentifier": "com.thebcd69.bcd",
           "developerName": "thebcd69",
-          "version": "0.1.626",
+          "version": "0.1.630",
           "iconURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/BCD/icon.png",
           "subtitle": "Windows games on iPhone and iPad"
         },
@@ -8843,7 +8843,7 @@
           "name": "Kazumi",
           "bundleIdentifier": "com.example.kazumi",
           "developerName": "Predidit",
-          "version": "2.4.2",
+          "version": "2.4.3",
           "iconURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/Kazumi/icon.png",
           "subtitle": "基于自定义规则的番剧采集APP，支持流媒体在线观看，支持弹幕，支持实时超分辨率。"
         },
@@ -8859,7 +8859,7 @@
           "name": "Kumone",
           "bundleIdentifier": "sb.moe.kumone",
           "developerName": "missuo",
-          "version": "0.3.26",
+          "version": "0.3.28",
           "iconURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/Kumone/icon.png",
           "subtitle": "原生 NetEase Cloud Music iOS 客户端（雲の音）"
         },
@@ -9054,6 +9054,14 @@
           "version": "1.0.4",
           "iconURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/SceneBox/icon.png",
           "subtitle": "Torrent streaming client"
+        },
+        {
+          "name": "Silverphase",
+          "bundleIdentifier": "com.silverphase.editor",
+          "developerName": "akinal5765-byte",
+          "version": "1.1.1",
+          "iconURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/Silverphase/icon.png",
+          "subtitle": "Native film and print simulation for iPhone and iPad"
         },
         {
           "name": "StikDebug",
@@ -10435,7 +10443,7 @@
           "name": "X++",
           "bundleIdentifier": "com.atebits.Tweetie2",
           "developerName": "Densor",
-          "version": "12.40",
+          "version": "12.40.1",
           "iconURL": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/bf/46/c4/bf46c48e-94bb-c30d-601f-d73ed5a70689/ProductionAppIcon-0-0-1x_U007emarketing-0-8-0-0-0-85-220.png/512x512bb.jpg",
           "subtitle": "An new tweak for X!"
         },
