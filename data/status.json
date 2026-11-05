@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-11-05T06:50:41Z",
+  "generatedAt": "2026-11-05T19:58:51Z",
   "sources": {
     "utm": {
       "online": true,
-      "checkedAt": "2026-11-05T06:50:41Z",
+      "checkedAt": "2026-11-05T19:58:51Z",
       "appCount": 2,
       "httpStatus": 200,
       "iconURL": "",
@@ -52,7 +52,7 @@
     },
     "provenance": {
       "online": true,
-      "checkedAt": "2026-11-05T06:50:41Z",
+      "checkedAt": "2026-11-05T19:58:51Z",
       "appCount": 4,
       "httpStatus": 200,
       "iconURL": "",
@@ -101,7 +101,7 @@
     },
     "ish": {
       "online": true,
-      "checkedAt": "2026-11-05T06:50:41Z",
+      "checkedAt": "2026-11-05T19:58:51Z",
       "appCount": 1,
       "httpStatus": 200,
       "iconURL": "",
@@ -150,7 +150,7 @@
     },
     "flycast": {
       "online": true,
-      "checkedAt": "2026-11-05T06:50:41Z",
+      "checkedAt": "2026-11-05T19:58:51Z",
       "appCount": 1,
       "httpStatus": 200,
       "iconURL": "",
@@ -199,7 +199,7 @@
     },
     "sidestore-community": {
       "online": true,
-      "checkedAt": "2026-11-05T06:50:41Z",
+      "checkedAt": "2026-11-05T19:58:51Z",
       "appCount": 23,
       "httpStatus": 200,
       "iconURL": "",
@@ -248,7 +248,7 @@
     },
     "sidestore-official": {
       "online": true,
-      "checkedAt": "2026-11-05T06:50:41Z",
+      "checkedAt": "2026-11-05T19:58:51Z",
       "appCount": 1,
       "httpStatus": 200,
       "iconURL": "",
@@ -297,7 +297,7 @@
     },
     "stikdebug": {
       "online": true,
-      "checkedAt": "2026-11-05T06:50:41Z",
+      "checkedAt": "2026-11-05T19:58:51Z",
       "appCount": 2,
       "httpStatus": 200,
       "iconURL": "",
@@ -346,7 +346,7 @@
     },
     "livecontainer": {
       "online": true,
-      "checkedAt": "2026-11-05T06:50:41Z",
+      "checkedAt": "2026-11-05T19:58:51Z",
       "appCount": 1,
       "httpStatus": 200,
       "iconURL": "",
@@ -395,7 +395,7 @@
     },
     "livecontainer-nightly": {
       "online": true,
-      "checkedAt": "2026-11-05T06:50:41Z",
+      "checkedAt": "2026-11-05T19:58:51Z",
       "appCount": 1,
       "httpStatus": 200,
       "iconURL": "",
@@ -444,7 +444,7 @@
     },
     "manicemu": {
       "online": true,
-      "checkedAt": "2026-11-05T06:50:41Z",
+      "checkedAt": "2026-11-05T19:58:51Z",
       "appCount": 1,
       "httpStatus": 200,
       "iconURL": "",
@@ -493,7 +493,7 @@
     },
     "flycast-ios": {
       "online": true,
-      "checkedAt": "2026-11-05T06:50:41Z",
+      "checkedAt": "2026-11-05T19:58:51Z",
       "appCount": 1,
       "httpStatus": 200,
       "iconURL": "",
@@ -542,7 +542,7 @@
     },
     "geode-ios": {
       "online": true,
-      "checkedAt": "2026-11-05T06:50:41Z",
+      "checkedAt": "2026-11-05T19:58:51Z",
       "appCount": 1,
       "httpStatus": 200,
       "iconURL": "",
@@ -591,7 +591,7 @@
     },
     "retrosekai": {
       "online": true,
-      "checkedAt": "2026-11-05T06:50:41Z",
+      "checkedAt": "2026-11-05T19:58:51Z",
       "appCount": 1,
       "httpStatus": 200,
       "iconURL": "",
@@ -640,7 +640,7 @@
     },
     "oatmealdome": {
       "online": true,
-      "checkedAt": "2026-11-05T06:50:41Z",
+      "checkedAt": "2026-11-05T19:58:51Z",
       "appCount": 2,
       "httpStatus": 200,
       "iconURL": "",
@@ -688,57 +688,24 @@
       "preferredVariant": "classic"
     },
     "crystall1ne": {
-      "online": true,
-      "checkedAt": "2026-11-05T06:50:41Z",
-      "appCount": 2,
-      "httpStatus": 200,
+      "online": false,
+      "checkedAt": "2026-11-05T19:58:51Z",
+      "appCount": null,
+      "httpStatus": null,
       "iconURL": "",
-      "error": null,
+      "error": "classic: URLError: <urlopen error [Errno -2] Name or service not known>",
       "variants": {
         "classic": {
-          "online": true,
-          "httpStatus": 200,
-          "appCount": 2,
-          "error": null,
-          "duplicateBundleIdentifiers": {
-            "count": 0,
-            "duplicateAppEntries": 0,
-            "extraEntries": 0
-          }
+          "online": false,
+          "httpStatus": null,
+          "appCount": null,
+          "error": "URLError: <urlopen error [Errno -2] Name or service not known>"
         }
-      },
-      "duplicateBundleIdentifiers": {
-        "count": 0,
-        "duplicateAppEntries": 0,
-        "extraEntries": 0
-      },
-      "installerCompatibility": {
-        "altstore": {
-          "directSource": "pass",
-          "reason": "No duplicate bundle identifiers were detected in the source variant used by this installer."
-        },
-        "sidestore": {
-          "directSource": "pass",
-          "reason": "No duplicate bundle identifiers were detected in the source variant used by this installer."
-        },
-        "livecontainer": {
-          "directSource": "pass",
-          "reason": "No duplicate bundle identifiers were detected in the source variant used by this installer."
-        },
-        "flarestore": {
-          "directSource": "pass",
-          "reason": "No duplicate bundle identifiers were detected in the source variant used by this installer."
-        },
-        "feather": {
-          "directSource": "pass",
-          "reason": "No duplicate bundle identifiers were detected in the source variant used by this installer."
-        }
-      },
-      "preferredVariant": "classic"
+      }
     },
     "pokemmo": {
       "online": true,
-      "checkedAt": "2026-11-05T06:50:41Z",
+      "checkedAt": "2026-11-05T19:58:51Z",
       "appCount": 1,
       "httpStatus": 200,
       "iconURL": "",
@@ -787,7 +754,7 @@
     },
     "odyssey": {
       "online": true,
-      "checkedAt": "2026-11-05T06:50:41Z",
+      "checkedAt": "2026-11-05T19:58:51Z",
       "appCount": 2,
       "httpStatus": 200,
       "iconURL": "",
@@ -836,7 +803,7 @@
     },
     "yattee": {
       "online": true,
-      "checkedAt": "2026-11-05T06:50:41Z",
+      "checkedAt": "2026-11-05T19:58:51Z",
       "appCount": 1,
       "httpStatus": 200,
       "iconURL": "",
@@ -885,7 +852,7 @@
     },
     "ignited": {
       "online": true,
-      "checkedAt": "2026-11-05T06:50:41Z",
+      "checkedAt": "2026-11-05T19:58:51Z",
       "appCount": 1,
       "httpStatus": 200,
       "iconURL": "",
@@ -934,7 +901,7 @@
     },
     "mona": {
       "online": true,
-      "checkedAt": "2026-11-05T06:50:41Z",
+      "checkedAt": "2026-11-05T19:58:51Z",
       "appCount": 1,
       "httpStatus": 200,
       "iconURL": "",
@@ -983,7 +950,7 @@
     },
     "vortx": {
       "online": true,
-      "checkedAt": "2026-11-05T06:50:41Z",
+      "checkedAt": "2026-11-05T19:58:51Z",
       "appCount": 2,
       "httpStatus": 200,
       "iconURL": "",
@@ -1032,7 +999,7 @@
     },
     "stremio-official-pal": {
       "online": true,
-      "checkedAt": "2026-11-05T06:50:41Z",
+      "checkedAt": "2026-11-05T19:58:51Z",
       "appCount": 1,
       "httpStatus": 200,
       "iconURL": "",
@@ -1065,7 +1032,7 @@
     },
     "stremio-ios": {
       "online": true,
-      "checkedAt": "2026-11-05T06:50:41Z",
+      "checkedAt": "2026-11-05T19:58:51Z",
       "appCount": 1,
       "httpStatus": 200,
       "iconURL": "",
@@ -1114,7 +1081,7 @@
     },
     "kodi-ios": {
       "online": true,
-      "checkedAt": "2026-11-05T06:50:41Z",
+      "checkedAt": "2026-11-05T19:58:51Z",
       "appCount": 1,
       "httpStatus": 200,
       "iconURL": "",
@@ -1163,7 +1130,7 @@
     },
     "nineanimator": {
       "online": false,
-      "checkedAt": "2026-11-05T06:50:41Z",
+      "checkedAt": "2026-11-05T19:58:51Z",
       "appCount": null,
       "httpStatus": null,
       "iconURL": "",
@@ -1179,7 +1146,7 @@
     },
     "esound": {
       "online": true,
-      "checkedAt": "2026-11-05T06:50:41Z",
+      "checkedAt": "2026-11-05T19:58:51Z",
       "appCount": 1,
       "httpStatus": 200,
       "iconURL": "",
@@ -1212,7 +1179,7 @@
     },
     "partyknights": {
       "online": true,
-      "checkedAt": "2026-11-05T06:50:41Z",
+      "checkedAt": "2026-11-05T19:58:51Z",
       "appCount": 1,
       "httpStatus": 200,
       "iconURL": "",
@@ -1261,7 +1228,7 @@
     },
     "bringyour": {
       "online": false,
-      "checkedAt": "2026-11-05T06:50:41Z",
+      "checkedAt": "2026-11-05T19:58:51Z",
       "appCount": null,
       "httpStatus": null,
       "iconURL": "",
@@ -1277,7 +1244,7 @@
     },
     "itorrent": {
       "online": true,
-      "checkedAt": "2026-11-05T06:50:41Z",
+      "checkedAt": "2026-11-05T19:58:51Z",
       "appCount": 1,
       "httpStatus": 200,
       "iconURL": "",
@@ -1326,7 +1293,7 @@
     },
     "qbitconnect": {
       "online": true,
-      "checkedAt": "2026-11-05T06:50:41Z",
+      "checkedAt": "2026-11-05T19:58:51Z",
       "appCount": 1,
       "httpStatus": 200,
       "iconURL": "",
@@ -1390,7 +1357,7 @@
     },
     "artemis": {
       "online": true,
-      "checkedAt": "2026-11-05T06:50:41Z",
+      "checkedAt": "2026-11-05T19:58:51Z",
       "appCount": 1,
       "httpStatus": 200,
       "iconURL": "",
@@ -1454,7 +1421,7 @@
     },
     "hackerwebapp": {
       "online": true,
-      "checkedAt": "2026-11-05T06:50:41Z",
+      "checkedAt": "2026-11-05T19:58:51Z",
       "appCount": 1,
       "httpStatus": 200,
       "iconURL": "",
@@ -1487,7 +1454,7 @@
     },
     "courtpredict": {
       "online": true,
-      "checkedAt": "2026-11-05T06:50:41Z",
+      "checkedAt": "2026-11-05T19:58:51Z",
       "appCount": 1,
       "httpStatus": 200,
       "iconURL": "",
@@ -1520,7 +1487,7 @@
     },
     "wayfarer": {
       "online": true,
-      "checkedAt": "2026-11-05T06:50:41Z",
+      "checkedAt": "2026-11-05T19:58:51Z",
       "appCount": 1,
       "httpStatus": 200,
       "iconURL": "",
@@ -1569,7 +1536,7 @@
     },
     "qbitcontrol": {
       "online": true,
-      "checkedAt": "2026-11-05T06:50:41Z",
+      "checkedAt": "2026-11-05T19:58:51Z",
       "appCount": 1,
       "httpStatus": 200,
       "iconURL": "",
@@ -1633,7 +1600,7 @@
     },
     "iphanpy": {
       "online": true,
-      "checkedAt": "2026-11-05T06:50:41Z",
+      "checkedAt": "2026-11-05T19:58:51Z",
       "appCount": 1,
       "httpStatus": 200,
       "iconURL": "",
@@ -1666,7 +1633,7 @@
     },
     "epic-games": {
       "online": true,
-      "checkedAt": "2026-11-05T06:50:41Z",
+      "checkedAt": "2026-11-05T19:58:51Z",
       "appCount": 3,
       "httpStatus": 200,
       "iconURL": "",
@@ -1699,7 +1666,7 @@
     },
     "xn1ckuz-sidebox": {
       "online": true,
-      "checkedAt": "2026-11-05T06:50:41Z",
+      "checkedAt": "2026-11-05T19:58:51Z",
       "appCount": 4,
       "httpStatus": 200,
       "iconURL": "",
@@ -1748,7 +1715,7 @@
     },
     "dvntm0-workshop": {
       "online": true,
-      "checkedAt": "2026-11-05T06:50:41Z",
+      "checkedAt": "2026-11-05T19:58:51Z",
       "appCount": 7,
       "httpStatus": 200,
       "iconURL": "",
@@ -1797,7 +1764,7 @@
     },
     "wuxu-library-plus": {
       "online": true,
-      "checkedAt": "2026-11-05T06:50:41Z",
+      "checkedAt": "2026-11-05T19:58:51Z",
       "appCount": 34,
       "httpStatus": 200,
       "iconURL": "",
@@ -1846,7 +1813,7 @@
     },
     "baretsky-tweaked": {
       "online": true,
-      "checkedAt": "2026-11-05T06:50:41Z",
+      "checkedAt": "2026-11-05T19:58:51Z",
       "appCount": 7,
       "httpStatus": 200,
       "iconURL": "",
@@ -1895,7 +1862,7 @@
     },
     "driftywinds": {
       "online": true,
-      "checkedAt": "2026-11-05T06:50:41Z",
+      "checkedAt": "2026-11-05T19:58:51Z",
       "appCount": 10,
       "httpStatus": 200,
       "iconURL": "",
@@ -1944,7 +1911,7 @@
     },
     "ipa-vault": {
       "online": true,
-      "checkedAt": "2026-11-05T06:50:41Z",
+      "checkedAt": "2026-11-05T19:58:51Z",
       "appCount": 77,
       "httpStatus": 200,
       "iconURL": "",
@@ -1995,7 +1962,7 @@
     },
     "sideloadlabs": {
       "online": true,
-      "checkedAt": "2026-11-05T06:50:41Z",
+      "checkedAt": "2026-11-05T19:58:51Z",
       "appCount": 2,
       "httpStatus": 200,
       "iconURL": "",
@@ -2044,7 +2011,7 @@
     },
     "ytliteplus": {
       "online": true,
-      "checkedAt": "2026-11-05T06:50:41Z",
+      "checkedAt": "2026-11-05T19:58:51Z",
       "appCount": 1,
       "httpStatus": 200,
       "iconURL": "",
@@ -2093,7 +2060,7 @@
     },
     "moe-altstore": {
       "online": true,
-      "checkedAt": "2026-11-05T06:50:41Z",
+      "checkedAt": "2026-11-05T19:58:51Z",
       "appCount": 34,
       "httpStatus": 200,
       "iconURL": "",
@@ -2144,7 +2111,7 @@
     },
     "youmod-repo": {
       "online": true,
-      "checkedAt": "2026-11-05T06:50:41Z",
+      "checkedAt": "2026-11-05T19:58:51Z",
       "appCount": 1,
       "httpStatus": 200,
       "iconURL": "",
@@ -2193,7 +2160,7 @@
     },
     "youproextra": {
       "online": true,
-      "checkedAt": "2026-11-05T06:50:41Z",
+      "checkedAt": "2026-11-05T19:58:51Z",
       "appCount": 5,
       "httpStatus": 200,
       "iconURL": "",
@@ -2244,7 +2211,7 @@
     },
     "owo-source": {
       "online": true,
-      "checkedAt": "2026-11-05T06:50:41Z",
+      "checkedAt": "2026-11-05T19:58:51Z",
       "appCount": 169,
       "httpStatus": 200,
       "iconURL": "",
@@ -2295,8 +2262,8 @@
     },
     "cypwn-ipa": {
       "online": true,
-      "checkedAt": "2026-11-05T06:50:41Z",
-      "appCount": 210,
+      "checkedAt": "2026-11-05T19:58:51Z",
+      "appCount": 207,
       "httpStatus": 200,
       "iconURL": "",
       "error": null,
@@ -2304,50 +2271,50 @@
         "classic": {
           "online": true,
           "httpStatus": 200,
-          "appCount": 210,
+          "appCount": 207,
           "error": null,
           "duplicateBundleIdentifiers": {
-            "count": 15,
-            "duplicateAppEntries": 45,
-            "extraEntries": 30
+            "count": 14,
+            "duplicateAppEntries": 42,
+            "extraEntries": 28
           }
         }
       },
       "duplicateBundleIdentifiers": {
-        "count": 15,
-        "duplicateAppEntries": 45,
-        "extraEntries": 30
+        "count": 14,
+        "duplicateAppEntries": 42,
+        "extraEntries": 28
       },
       "installerCompatibility": {
         "altstore": {
           "directSource": "fail",
-          "reason": "15 bundle identifiers occur more than once; altstore requires unique apps when adding the original source."
+          "reason": "14 bundle identifiers occur more than once; altstore requires unique apps when adding the original source."
         },
         "sidestore": {
           "directSource": "fail",
-          "reason": "15 bundle identifiers occur more than once; sidestore requires unique apps when adding the original source."
+          "reason": "14 bundle identifiers occur more than once; sidestore requires unique apps when adding the original source."
         },
         "livecontainer": {
           "directSource": "pass",
           "installVariants": "try",
-          "reason": "15 duplicate bundle identifiers are present. The source parser can keep separate entries, but installing multiple variants with the same bundle identifier can still conflict."
+          "reason": "14 duplicate bundle identifiers are present. The source parser can keep separate entries, but installing multiple variants with the same bundle identifier can still conflict."
         },
         "flarestore": {
           "directSource": "try",
-          "reason": "15 duplicate bundle identifiers are present; direct-source behavior is not verified for this installer."
+          "reason": "14 duplicate bundle identifiers are present; direct-source behavior is not verified for this installer."
         },
         "feather": {
           "directSource": "pass",
           "installVariants": "try",
-          "reason": "15 duplicate bundle identifiers are present. The source parser can keep separate entries, but installing multiple variants with the same bundle identifier can still conflict."
+          "reason": "14 duplicate bundle identifiers are present. The source parser can keep separate entries, but installing multiple variants with the same bundle identifier can still conflict."
         }
       },
       "preferredVariant": "classic"
     },
     "apptesters": {
       "online": true,
-      "checkedAt": "2026-11-05T06:50:41Z",
-      "appCount": 10031,
+      "checkedAt": "2026-11-05T19:58:51Z",
+      "appCount": 10047,
       "httpStatus": 200,
       "iconURL": "",
       "error": null,
@@ -2355,19 +2322,19 @@
         "classic": {
           "online": true,
           "httpStatus": 200,
-          "appCount": 10031,
+          "appCount": 10047,
           "error": null,
           "duplicateBundleIdentifiers": {
             "count": 555,
-            "duplicateAppEntries": 9797,
-            "extraEntries": 9242
+            "duplicateAppEntries": 9813,
+            "extraEntries": 9258
           }
         }
       },
       "duplicateBundleIdentifiers": {
         "count": 555,
-        "duplicateAppEntries": 9797,
-        "extraEntries": 9242
+        "duplicateAppEntries": 9813,
+        "extraEntries": 9258
       },
       "installerCompatibility": {
         "altstore": {
@@ -2397,7 +2364,7 @@
     },
     "youtuberebornplus": {
       "online": true,
-      "checkedAt": "2026-11-05T06:50:41Z",
+      "checkedAt": "2026-11-05T19:58:51Z",
       "appCount": 1,
       "httpStatus": 200,
       "iconURL": "",
@@ -2446,7 +2413,7 @@
     },
     "apollo-reddit": {
       "online": true,
-      "checkedAt": "2026-11-05T06:50:41Z",
+      "checkedAt": "2026-11-05T19:58:51Z",
       "appCount": 1,
       "httpStatus": 200,
       "iconURL": "",
@@ -2495,7 +2462,7 @@
     },
     "discord-appstore-builds": {
       "online": true,
-      "checkedAt": "2026-11-05T06:50:41Z",
+      "checkedAt": "2026-11-05T19:58:51Z",
       "appCount": 1,
       "httpStatus": 200,
       "iconURL": "",
@@ -2544,7 +2511,7 @@
     },
     "ytkace": {
       "online": true,
-      "checkedAt": "2026-11-05T06:50:41Z",
+      "checkedAt": "2026-11-05T19:58:51Z",
       "appCount": 1,
       "httpStatus": 200,
       "iconURL": "",
@@ -2593,7 +2560,7 @@
     },
     "heyfordy": {
       "online": true,
-      "checkedAt": "2026-11-05T06:50:41Z",
+      "checkedAt": "2026-11-05T19:58:51Z",
       "appCount": 8,
       "httpStatus": 200,
       "iconURL": "",
@@ -2642,7 +2609,7 @@
     },
     "ipalibrary": {
       "online": true,
-      "checkedAt": "2026-11-05T06:50:41Z",
+      "checkedAt": "2026-11-05T19:58:51Z",
       "appCount": 834,
       "httpStatus": 200,
       "iconURL": "",
@@ -2693,7 +2660,7 @@
     },
     "armsx2": {
       "online": true,
-      "checkedAt": "2026-11-05T06:50:41Z",
+      "checkedAt": "2026-11-05T19:58:51Z",
       "appCount": 2,
       "httpStatus": 200,
       "iconURL": "",
@@ -2742,7 +2709,7 @@
     },
     "fouad-source": {
       "online": true,
-      "checkedAt": "2026-11-05T06:50:41Z",
+      "checkedAt": "2026-11-05T19:58:51Z",
       "appCount": 6,
       "httpStatus": 200,
       "iconURL": "",
@@ -2791,7 +2758,7 @@
     },
     "neofreebird": {
       "online": true,
-      "checkedAt": "2026-11-05T06:50:41Z",
+      "checkedAt": "2026-11-05T19:58:51Z",
       "appCount": 1,
       "httpStatus": 200,
       "iconURL": "",
@@ -2840,7 +2807,7 @@
     },
     "melonx": {
       "online": true,
-      "checkedAt": "2026-11-05T06:50:41Z",
+      "checkedAt": "2026-11-05T19:58:51Z",
       "appCount": 1,
       "httpStatus": 200,
       "iconURL": "",
@@ -2889,7 +2856,7 @@
     },
     "altgallery": {
       "online": true,
-      "checkedAt": "2026-11-05T06:50:41Z",
+      "checkedAt": "2026-11-05T19:58:51Z",
       "appCount": 54,
       "httpStatus": 200,
       "iconURL": "",
@@ -2938,7 +2905,7 @@
     },
     "ripestore": {
       "online": true,
-      "checkedAt": "2026-11-05T06:50:41Z",
+      "checkedAt": "2026-11-05T19:58:51Z",
       "appCount": 9,
       "httpStatus": 200,
       "iconURL": "",
@@ -2987,7 +2954,7 @@
     },
     "feather": {
       "online": true,
-      "checkedAt": "2026-11-05T06:50:41Z",
+      "checkedAt": "2026-11-05T19:58:51Z",
       "appCount": 1,
       "httpStatus": 200,
       "iconURL": "",
@@ -3036,7 +3003,7 @@
     },
     "quantum-source": {
       "online": true,
-      "checkedAt": "2026-11-05T06:50:41Z",
+      "checkedAt": "2026-11-05T19:58:51Z",
       "appCount": 38,
       "httpStatus": 200,
       "iconURL": "",
@@ -3085,7 +3052,7 @@
     },
     "spotc": {
       "online": true,
-      "checkedAt": "2026-11-05T06:50:41Z",
+      "checkedAt": "2026-11-05T19:58:51Z",
       "appCount": 3,
       "httpStatus": 200,
       "iconURL": "",
@@ -3134,7 +3101,7 @@
     },
     "foxster-altsource": {
       "online": true,
-      "checkedAt": "2026-11-05T06:50:41Z",
+      "checkedAt": "2026-11-05T19:58:51Z",
       "appCount": 2,
       "httpStatus": 200,
       "iconURL": "",
@@ -3183,8 +3150,8 @@
     },
     "fastsign": {
       "online": true,
-      "checkedAt": "2026-11-05T06:50:41Z",
-      "appCount": 16766,
+      "checkedAt": "2026-11-05T19:58:51Z",
+      "appCount": 16702,
       "httpStatus": 200,
       "iconURL": "",
       "error": null,
@@ -3192,49 +3159,49 @@
         "classic": {
           "online": true,
           "httpStatus": 200,
-          "appCount": 16766,
+          "appCount": 16702,
           "error": null,
           "duplicateBundleIdentifiers": {
-            "count": 1028,
-            "duplicateAppEntries": 14119,
-            "extraEntries": 13091
+            "count": 1016,
+            "duplicateAppEntries": 14053,
+            "extraEntries": 13037
           }
         }
       },
       "duplicateBundleIdentifiers": {
-        "count": 1028,
-        "duplicateAppEntries": 14119,
-        "extraEntries": 13091
+        "count": 1016,
+        "duplicateAppEntries": 14053,
+        "extraEntries": 13037
       },
       "installerCompatibility": {
         "altstore": {
           "directSource": "fail",
-          "reason": "1028 bundle identifiers occur more than once; altstore requires unique apps when adding the original source."
+          "reason": "1016 bundle identifiers occur more than once; altstore requires unique apps when adding the original source."
         },
         "sidestore": {
           "directSource": "fail",
-          "reason": "1028 bundle identifiers occur more than once; sidestore requires unique apps when adding the original source."
+          "reason": "1016 bundle identifiers occur more than once; sidestore requires unique apps when adding the original source."
         },
         "livecontainer": {
           "directSource": "pass",
           "installVariants": "try",
-          "reason": "1028 duplicate bundle identifiers are present. The source parser can keep separate entries, but installing multiple variants with the same bundle identifier can still conflict."
+          "reason": "1016 duplicate bundle identifiers are present. The source parser can keep separate entries, but installing multiple variants with the same bundle identifier can still conflict."
         },
         "flarestore": {
           "directSource": "try",
-          "reason": "1028 duplicate bundle identifiers are present; direct-source behavior is not verified for this installer."
+          "reason": "1016 duplicate bundle identifiers are present; direct-source behavior is not verified for this installer."
         },
         "feather": {
           "directSource": "pass",
           "installVariants": "try",
-          "reason": "1028 duplicate bundle identifiers are present. The source parser can keep separate entries, but installing multiple variants with the same bundle identifier can still conflict."
+          "reason": "1016 duplicate bundle identifiers are present. The source parser can keep separate entries, but installing multiple variants with the same bundle identifier can still conflict."
         }
       },
       "preferredVariant": "classic"
     },
     "quantum-plus": {
       "online": true,
-      "checkedAt": "2026-11-05T06:50:41Z",
+      "checkedAt": "2026-11-05T19:58:51Z",
       "appCount": 35,
       "httpStatus": 200,
       "iconURL": "",
@@ -3283,7 +3250,7 @@
     },
     "wuxu-standard": {
       "online": true,
-      "checkedAt": "2026-11-05T06:50:41Z",
+      "checkedAt": "2026-11-05T19:58:51Z",
       "appCount": 34,
       "httpStatus": 200,
       "iconURL": "",
@@ -3332,7 +3299,7 @@
     },
     "taurine": {
       "online": true,
-      "checkedAt": "2026-11-05T06:50:41Z",
+      "checkedAt": "2026-11-05T19:58:51Z",
       "appCount": 1,
       "httpStatus": 200,
       "iconURL": "",
@@ -3381,7 +3348,7 @@
     },
     "burrito-source": {
       "online": true,
-      "checkedAt": "2026-11-05T06:50:41Z",
+      "checkedAt": "2026-11-05T19:58:51Z",
       "appCount": 7,
       "httpStatus": 200,
       "iconURL": "",
@@ -3430,7 +3397,7 @@
     },
     "salupov-altrepo": {
       "online": true,
-      "checkedAt": "2026-11-05T06:50:41Z",
+      "checkedAt": "2026-11-05T19:58:51Z",
       "appCount": 2,
       "httpStatus": 200,
       "iconURL": "",
@@ -3479,7 +3446,7 @@
     },
     "cercube": {
       "online": true,
-      "checkedAt": "2026-11-05T06:50:41Z",
+      "checkedAt": "2026-11-05T19:58:51Z",
       "appCount": 2,
       "httpStatus": 200,
       "iconURL": "",
@@ -3528,7 +3495,7 @@
     },
     "rocket": {
       "online": true,
-      "checkedAt": "2026-11-05T06:50:41Z",
+      "checkedAt": "2026-11-05T19:58:51Z",
       "appCount": 1,
       "httpStatus": 200,
       "iconURL": "",
@@ -3577,7 +3544,7 @@
     },
     "reynard-browser": {
       "online": true,
-      "checkedAt": "2026-11-05T06:50:41Z",
+      "checkedAt": "2026-11-05T19:58:51Z",
       "appCount": 1,
       "httpStatus": 200,
       "iconURL": "",
@@ -3626,7 +3593,7 @@
     },
     "altstore-official": {
       "online": true,
-      "checkedAt": "2026-11-05T06:50:41Z",
+      "checkedAt": "2026-11-05T19:58:51Z",
       "appCount": 6,
       "httpStatus": 200,
       "iconURL": "",
@@ -3675,7 +3642,7 @@
     },
     "sidestore-connect": {
       "online": true,
-      "checkedAt": "2026-11-05T06:50:41Z",
+      "checkedAt": "2026-11-05T19:58:51Z",
       "appCount": 8,
       "httpStatus": 200,
       "iconURL": "",
@@ -3724,7 +3691,7 @@
     },
     "winston": {
       "online": true,
-      "checkedAt": "2026-11-05T06:50:41Z",
+      "checkedAt": "2026-11-05T19:58:51Z",
       "appCount": 1,
       "httpStatus": 200,
       "iconURL": "",
@@ -3773,7 +3740,7 @@
     },
     "cizzuk-source": {
       "online": true,
-      "checkedAt": "2026-11-05T06:50:41Z",
+      "checkedAt": "2026-11-05T19:58:51Z",
       "appCount": 6,
       "httpStatus": 200,
       "iconURL": "",
@@ -3806,7 +3773,7 @@
     },
     "aidoku": {
       "online": true,
-      "checkedAt": "2026-11-05T06:50:41Z",
+      "checkedAt": "2026-11-05T19:58:51Z",
       "appCount": 1,
       "httpStatus": 200,
       "iconURL": "",
@@ -3855,7 +3822,7 @@
     },
     "mangayomi": {
       "online": true,
-      "checkedAt": "2026-11-05T06:50:41Z",
+      "checkedAt": "2026-11-05T19:58:51Z",
       "appCount": 1,
       "httpStatus": 200,
       "iconURL": "",
@@ -3904,7 +3871,7 @@
     },
     "anymex": {
       "online": true,
-      "checkedAt": "2026-11-05T06:50:41Z",
+      "checkedAt": "2026-11-05T19:58:51Z",
       "appCount": 1,
       "httpStatus": 200,
       "iconURL": "",
@@ -3953,7 +3920,7 @@
     },
     "animeko-openani": {
       "online": true,
-      "checkedAt": "2026-11-05T06:50:41Z",
+      "checkedAt": "2026-11-05T19:58:51Z",
       "appCount": 1,
       "httpStatus": 200,
       "iconURL": "",
@@ -4002,7 +3969,7 @@
     },
     "wsf-source": {
       "online": true,
-      "checkedAt": "2026-11-05T06:50:41Z",
+      "checkedAt": "2026-11-05T19:58:51Z",
       "appCount": 7,
       "httpStatus": 200,
       "iconURL": "",
@@ -4051,7 +4018,7 @@
     },
     "nuvio": {
       "online": true,
-      "checkedAt": "2026-11-05T06:50:41Z",
+      "checkedAt": "2026-11-05T19:58:51Z",
       "appCount": 1,
       "httpStatus": 200,
       "iconURL": "",
@@ -4100,7 +4067,7 @@
     },
     "ryuksign": {
       "online": true,
-      "checkedAt": "2026-11-05T06:50:41Z",
+      "checkedAt": "2026-11-05T19:58:51Z",
       "appCount": 1,
       "httpStatus": 200,
       "iconURL": "",
