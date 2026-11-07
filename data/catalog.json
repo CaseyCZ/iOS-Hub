@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-07T06:00:33Z",
+  "generatedAt": "2026-11-07T13:05:12Z",
   "sources": [
     {
       "id": "utm",
@@ -55,7 +55,7 @@
           "name": "iFly",
           "bundleIdentifier": "com.provenance.ifly",
           "developerName": "Provenance Emu",
-          "version": "1.0.0+1793945919",
+          "version": "1.0.0+1794024116",
           "iconURL": "https://ifly-emu.com/icon-1024.png",
           "subtitle": "Dreamcast Emulator for iOS & tvOS"
         },
@@ -881,7 +881,7 @@
           "name": "Spotify Premium",
           "bundleIdentifier": "com.spotify.client",
           "developerName": "Eevee",
-          "version": "9.1.80",
+          "version": "9.1.94",
           "iconURL": "https://raw.githubusercontent.com/xN1ckuz/xN1ckuz-Sidestore-Repo/refs/heads/main/Resources/EeveeSpotify/icon.png",
           "subtitle": "Spotify Premium Tweak."
         },
@@ -889,7 +889,7 @@
           "name": "YouTube Plus",
           "bundleIdentifier": "com.google.ios.youtube",
           "developerName": "Dayanch96",
-          "version": "21.39.4",
+          "version": "21.44.4",
           "iconURL": "https://raw.githubusercontent.com/xN1ckuz/xN1ckuz-Sidestore-Repo/refs/heads/main/Resources/YouTubePlus/icon.png",
           "subtitle": "YouTube Premium Tweak."
         },
@@ -897,7 +897,7 @@
           "name": "YouTube Music Ultimate",
           "bundleIdentifier": "com.google.ios.youtubemusic",
           "developerName": "Dayanch96",
-          "version": "9.39.2",
+          "version": "9.44.2",
           "iconURL": "https://raw.githubusercontent.com/xN1ckuz/xN1ckuz-Sidestore-Repo/refs/heads/main/Resources/YTMusicUltimate/icon.png",
           "subtitle": "YouTube Music Premium Tweak."
         },
@@ -5194,11 +5194,43 @@
     {
       "id": "apptesters",
       "name": "AppTesters IPA Repo",
-      "appCount": 10073,
+      "appCount": 10077,
       "catalogLimited": true,
       "iconURL": "https://apptesters.org/apptesters-512x512.png",
       "sourceURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/apps.json",
       "apps": [
+        {
+          "name": "Stemz",
+          "bundleIdentifier": "com.mwm.stems",
+          "developerName": "",
+          "version": "6.00.04",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.mwm.stems.png",
+          "subtitle": ""
+        },
+        {
+          "name": "Lyfta",
+          "bundleIdentifier": "com.lyftaios",
+          "developerName": "",
+          "version": "1.166",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.lyftaios.png",
+          "subtitle": ""
+        },
+        {
+          "name": "BoxBox",
+          "bundleIdentifier": "club.boxbox.widgets-ios",
+          "developerName": "",
+          "version": "5.5.6",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/club.boxbox.widgets-ios.png",
+          "subtitle": ""
+        },
+        {
+          "name": "PREQUEL",
+          "bundleIdentifier": "com.aiarlabs.prequel",
+          "developerName": "",
+          "version": "2.104.1",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.aiarlabs.prequel.png",
+          "subtitle": ""
+        },
         {
           "name": "Unknown app",
           "bundleIdentifier": "tech.miidii.MDBlank",
@@ -6765,38 +6797,6 @@
           "developerName": "",
           "version": "1.16.7",
           "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/onelight.video-editor.png",
-          "subtitle": ""
-        },
-        {
-          "name": "Lightroom",
-          "bundleIdentifier": "com.adobe.lrmobilephone",
-          "developerName": "",
-          "version": "11.6.21",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.adobe.lrmobilephone.png",
-          "subtitle": ""
-        },
-        {
-          "name": "SimplyPiano",
-          "bundleIdentifier": "com.joytunes.asla",
-          "developerName": "",
-          "version": "9.11.1",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.joytunes.asla.png",
-          "subtitle": ""
-        },
-        {
-          "name": "Moovit",
-          "bundleIdentifier": "com.tranzmate.tranzmate1",
-          "developerName": "",
-          "version": "5.202.2",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.tranzmate.tranzmate1.png",
-          "subtitle": ""
-        },
-        {
-          "name": "PUSH",
-          "bundleIdentifier": "com.ADPTVLTD.push",
-          "developerName": "",
-          "version": "4.1.1",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.ADPTVLTD.push.png",
           "subtitle": ""
         }
       ]
@@ -8913,7 +8913,7 @@
           "name": "MiniWatts",
           "bundleIdentifier": "org.zhaohe.MiniWatts",
           "developerName": "ResistanceTo",
-          "version": "1.6.0",
+          "version": "1.7.0",
           "iconURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/MiniWatts/icon.png",
           "subtitle": "Battery, charging and thermal instrument"
         },
@@ -9065,7 +9065,7 @@
           "name": "StikDebug",
           "bundleIdentifier": "com.stik.stikdebug",
           "developerName": "StikDebug",
-          "version": "3.2.0",
+          "version": "3.2.1",
           "iconURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/StikDebug/icon.png",
           "subtitle": "On-device JIT enabler and device toolbox."
         },
