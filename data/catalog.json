@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-07T13:05:12Z",
+  "generatedAt": "2026-11-07T21:53:14Z",
   "sources": [
     {
       "id": "utm",
@@ -373,7 +373,7 @@
           "name": "LiveContainer (nightly)",
           "bundleIdentifier": "com.kdt.livecontainer",
           "developerName": "LiveContainer Team",
-          "version": "3.8.11",
+          "version": "3.8.12",
           "iconURL": "https://raw.githubusercontent.com/LiveContainer/LiveContainer/main/screenshots/AppIcon1024.png",
           "subtitle": "Run iOS apps without actually installing them!"
         }
@@ -569,7 +569,7 @@
           "name": "Mona - HRT journal",
           "bundleIdentifier": "com.deliacheminot.mona",
           "developerName": "Délia Cheminot",
-          "version": "1.25.0",
+          "version": "1.25.1",
           "iconURL": "https://i.imgur.com/Xb9A1Lh.png",
           "subtitle": "Your hormonal journal"
         }
@@ -1229,7 +1229,7 @@
           "name": "BuildBox",
           "bundleIdentifier": "com.mikevillarroel.buildbox",
           "developerName": "MikeBuilds",
-          "version": "2.1.6",
+          "version": "2.1.7",
           "iconURL": "https://mikevillarroel.github.io/mikebuilds-source/icons/buildbox.png",
           "subtitle": "Compile, sign and install iOS apps from your iPhone"
         },
@@ -5194,11 +5194,43 @@
     {
       "id": "apptesters",
       "name": "AppTesters IPA Repo",
-      "appCount": 10077,
+      "appCount": 10081,
       "catalogLimited": true,
       "iconURL": "https://apptesters.org/apptesters-512x512.png",
       "sourceURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/apps.json",
       "apps": [
+        {
+          "name": "CalculatorAir",
+          "bundleIdentifier": "com.CalculatorForiPad.InternetRocks",
+          "developerName": "",
+          "version": "2026.11.2",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.CalculatorForiPad.InternetRocks.png",
+          "subtitle": ""
+        },
+        {
+          "name": "Locket",
+          "bundleIdentifier": "com.locket.Locket",
+          "developerName": "",
+          "version": "2.72.1",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.locket.Locket.png",
+          "subtitle": ""
+        },
+        {
+          "name": "FindAir",
+          "bundleIdentifier": "co.airapps.finderbot",
+          "developerName": "",
+          "version": "2026.11.2",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/co.airapps.finderbot.png",
+          "subtitle": ""
+        },
+        {
+          "name": "Fitia",
+          "bundleIdentifier": "com.ulisesolave.Fitia",
+          "developerName": "",
+          "version": "25.2.6",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.ulisesolave.Fitia.png",
+          "subtitle": ""
+        },
         {
           "name": "Stemz",
           "bundleIdentifier": "com.mwm.stems",
@@ -6765,38 +6797,6 @@
           "developerName": "",
           "version": "4.3.6",
           "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/tech.miidii.MDBlank.png",
-          "subtitle": ""
-        },
-        {
-          "name": "ShutEye",
-          "bundleIdentifier": "health.sleep.sounds.tracker.alarm.calm",
-          "developerName": "",
-          "version": "3.5.8",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/health.sleep.sounds.tracker.alarm.calm.png",
-          "subtitle": ""
-        },
-        {
-          "name": "Sofa",
-          "bundleIdentifier": "com.astrio.Sofa",
-          "developerName": "",
-          "version": "5.4.4",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.astrio.Sofa.png",
-          "subtitle": ""
-        },
-        {
-          "name": "Captions",
-          "bundleIdentifier": "boomer.Smart-Video",
-          "developerName": "",
-          "version": "13.41.0",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/boomer.Smart-Video.png",
-          "subtitle": ""
-        },
-        {
-          "name": "TONfilters",
-          "bundleIdentifier": "onelight.video-editor",
-          "developerName": "",
-          "version": "1.16.7",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/onelight.video-editor.png",
           "subtitle": ""
         }
       ]
@@ -8737,7 +8737,7 @@
           "name": "ARMSX2",
           "bundleIdentifier": "com.armsx2.ios",
           "developerName": "ARMSX2",
-          "version": "2.6.0-nightly.20261106.1507",
+          "version": "2.6.0-nightly.20261107.1455",
           "iconURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/ARMSX2/icon.png",
           "subtitle": "PlayStation 2 emulator for ARM64"
         },
@@ -8873,7 +8873,7 @@
           "name": "LiveContainer+SideStore",
           "bundleIdentifier": "com.kdt.livecontainer",
           "developerName": "LiveContainer Team",
-          "version": "3.8.11",
+          "version": "3.8.12",
           "iconURL": "https://raw.githubusercontent.com/bebound/AltGallery/master/apps/LiveContainer+SideStore/icon.png",
           "subtitle": "Run iOS apps without actually installing them!"
         },
@@ -8881,7 +8881,7 @@
           "name": "LSX4",
           "bundleIdentifier": "com.llayerlinux.LSX4RuntimeProbe",
           "developerName": "lpfoj",
-          "version": "128.9775",
+          "version": "128.9921",
           "iconURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/LSX4/icon.png",
           "subtitle": "Open-source PS4/PS5 emulator"
         },
@@ -9097,7 +9097,7 @@
           "name": "VeneraNext",
           "bundleIdentifier": "com.github.cyrilpeng.veneranext",
           "developerName": "CyrilPeng",
-          "version": "1.18.2",
+          "version": "1.18.3",
           "iconURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/Venera-Next/icon.png",
           "subtitle": "跨平台漫画阅读器"
         },
@@ -10545,7 +10545,7 @@
           "name": "BuildBox",
           "bundleIdentifier": "com.mikevillarroel.buildbox",
           "developerName": "MikeBuilds",
-          "version": "2.1.6",
+          "version": "2.1.7",
           "iconURL": "https://mikevillarroel.github.io/mikebuilds-source/icons/buildbox.png",
           "subtitle": "Compile, sign and install iOS apps from your iPhone"
         },
