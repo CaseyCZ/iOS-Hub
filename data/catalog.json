@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-08T06:04:27Z",
+  "generatedAt": "2026-11-08T13:28:25Z",
   "sources": [
     {
       "id": "utm",
@@ -373,7 +373,7 @@
           "name": "LiveContainer (nightly)",
           "bundleIdentifier": "com.kdt.livecontainer",
           "developerName": "LiveContainer Team",
-          "version": "3.8.12",
+          "version": "3.8.13",
           "iconURL": "https://raw.githubusercontent.com/LiveContainer/LiveContainer/main/screenshots/AppIcon1024.png",
           "subtitle": "Run iOS apps without actually installing them!"
         }
@@ -5194,11 +5194,43 @@
     {
       "id": "apptesters",
       "name": "AppTesters IPA Repo",
-      "appCount": 10081,
+      "appCount": 10084,
       "catalogLimited": true,
       "iconURL": "https://apptesters.org/apptesters-512x512.png",
       "sourceURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/apps.json",
       "apps": [
+        {
+          "name": "Facetune",
+          "bundleIdentifier": "com.lightricks.Facetune2",
+          "developerName": "",
+          "version": "26.37",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.lightricks.Facetune2.png",
+          "subtitle": ""
+        },
+        {
+          "name": "Busuu",
+          "bundleIdentifier": "com.busuu.english.app",
+          "developerName": "",
+          "version": "30.33.0",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.busuu.english.app.png",
+          "subtitle": ""
+        },
+        {
+          "name": "Bazaart",
+          "bundleIdentifier": "co.bazaart.app",
+          "developerName": "",
+          "version": "27.0.7",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/co.bazaart.app.png",
+          "subtitle": ""
+        },
+        {
+          "name": "SimplyPiano",
+          "bundleIdentifier": "com.joytunes.asla",
+          "developerName": "",
+          "version": "9.11.3",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.joytunes.asla.png",
+          "subtitle": ""
+        },
         {
           "name": "CalculatorAir",
           "bundleIdentifier": "com.CalculatorForiPad.InternetRocks",
@@ -5261,14 +5293,6 @@
           "developerName": "",
           "version": "2.104.1",
           "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.aiarlabs.prequel.png",
-          "subtitle": ""
-        },
-        {
-          "name": "Unknown app",
-          "bundleIdentifier": "tech.miidii.MDBlank",
-          "developerName": "",
-          "version": "4.3.7",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/tech.miidii.MDBlank.png",
           "subtitle": ""
         },
         {
@@ -5561,10 +5585,10 @@
         },
         {
           "name": "Unknown app",
-          "bundleIdentifier": "tech.miidii.MDBlank",
+          "bundleIdentifier": "com.madarsoft.fitness",
           "developerName": "",
           "version": "20.0",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/tech.miidii.MDBlank.png",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.madarsoft.fitness.png",
           "subtitle": ""
         },
         {
@@ -6257,10 +6281,10 @@
         },
         {
           "name": "Unknown app",
-          "bundleIdentifier": "tech.miidii.MDBlank",
+          "bundleIdentifier": "com.madarsoft.fitness",
           "developerName": "",
           "version": "7.28.5",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/tech.miidii.MDBlank.png",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.madarsoft.fitness.png",
           "subtitle": ""
         },
         {
@@ -6773,30 +6797,6 @@
           "developerName": "",
           "version": "3.54",
           "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.andyworks.weather.png",
-          "subtitle": ""
-        },
-        {
-          "name": "Duolingo",
-          "bundleIdentifier": "com.duolingo.DuolingoMobile",
-          "developerName": "",
-          "version": "7.146.1",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.duolingo.DuolingoMobile.png",
-          "subtitle": ""
-        },
-        {
-          "name": "PureStatus",
-          "bundleIdentifier": "com.damtechdesigns.wa.story",
-          "developerName": "",
-          "version": "2026.11",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.damtechdesigns.wa.story.png",
-          "subtitle": ""
-        },
-        {
-          "name": "Unknown app",
-          "bundleIdentifier": "tech.miidii.MDBlank",
-          "developerName": "",
-          "version": "4.3.6",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/tech.miidii.MDBlank.png",
           "subtitle": ""
         }
       ]
@@ -8862,6 +8862,14 @@
           "subtitle": "原生 NetEase Cloud Music iOS 客户端（雲の音）"
         },
         {
+          "name": "LightNovelShelf",
+          "bundleIdentifier": "app.lightnovel.shelf",
+          "developerName": "LightNovelShelf",
+          "version": "1.13.2",
+          "iconURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/LightNovelShelf/icon.png",
+          "subtitle": "轻书架官方 Flutter 客户端"
+        },
+        {
           "name": "LinuxRunner",
           "bundleIdentifier": "dev.linuxrunner.app",
           "developerName": "Leminos",
@@ -8873,7 +8881,7 @@
           "name": "LiveContainer+SideStore",
           "bundleIdentifier": "com.kdt.livecontainer",
           "developerName": "LiveContainer Team",
-          "version": "3.8.12",
+          "version": "3.8.13",
           "iconURL": "https://raw.githubusercontent.com/bebound/AltGallery/master/apps/LiveContainer+SideStore/icon.png",
           "subtitle": "Run iOS apps without actually installing them!"
         },
@@ -8948,14 +8956,6 @@
           "version": "2.0.3",
           "iconURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/Musly/icon.png",
           "subtitle": "Free Navidrome client & Subsonic music player"
-        },
-        {
-          "name": "Novella",
-          "bundleIdentifier": "sh.celia.novella",
-          "developerName": "CELIA",
-          "version": "",
-          "iconURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/Novella/icon.png",
-          "subtitle": "轻书架第三方客户端"
         },
         {
           "name": "Opaline",
@@ -11113,7 +11113,7 @@
           "name": "Nuvio",
           "bundleIdentifier": "com.nuvio.media",
           "developerName": "NuvioMedia",
-          "version": "0.6.9",
+          "version": "0.6.10",
           "iconURL": "https://raw.githubusercontent.com/NuvioMedia/NuvioMobile/0.4.11/iosApp/iosApp/Assets.xcassets/AppIcon.appiconset/app-icon-1024.png",
           "subtitle": "A free, open-source media app for your phone, your desktop, and the TV you already own."
         }
