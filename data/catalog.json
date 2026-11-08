@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-08T13:28:25Z",
+  "generatedAt": "2026-11-08T22:08:16Z",
   "sources": [
     {
       "id": "utm",
@@ -569,7 +569,7 @@
           "name": "Mona - HRT journal",
           "bundleIdentifier": "com.deliacheminot.mona",
           "developerName": "Délia Cheminot",
-          "version": "1.25.1",
+          "version": "1.25.2",
           "iconURL": "https://i.imgur.com/Xb9A1Lh.png",
           "subtitle": "Your hormonal journal"
         }
@@ -1426,7 +1426,7 @@
     {
       "id": "ipa-vault",
       "name": "IPA Vault",
-      "appCount": 78,
+      "appCount": 81,
       "catalogLimited": false,
       "iconURL": "https://pub-dd800571175348b6a2745b3396360028.r2.dev/ipavault-altstore-repo-logo.png",
       "sourceURL": "https://raw.githubusercontent.com/927tx/IPA-Vault/main/ipavaultsource.json",
@@ -1453,7 +1453,7 @@
           "developerName": "shajon404 & IPA Vault",
           "version": "586.0.0",
           "iconURL": "https://pub-dd800571175348b6a2745b3396360028.r2.dev/App%20Icons/Facebook-Icons/Facebook-AppStore-1024x1024.png",
-          "subtitle": "Facebook 586.0.0 with Facebook Plus 1.0.4"
+          "subtitle": "Facebook 586.0.0 with Facebook Plus 1.0.5"
         },
         {
           "name": "Google Photos (Gunshot) (iOS 16.1+)",
@@ -1549,7 +1549,7 @@
           "developerName": "efibalogh & CieLogic & IPA Vault",
           "version": "454.1.0",
           "iconURL": "https://pub-dd800571175348b6a2745b3396360028.r2.dev/App%20Icons/Instagram-Icons/Instagram-AppStore-1024x1024.png",
-          "subtitle": "Instagram 454.1.0 with Sparkle 1.6.0 (No Plugins)"
+          "subtitle": "Instagram 454.1.0 with Sparkle 1.6.1 (No Plugins)"
         },
         {
           "name": "Instagram (Sparkle)",
@@ -1557,7 +1557,7 @@
           "developerName": "efibalogh & CieLogic & IPA Vault",
           "version": "454.1.0",
           "iconURL": "https://pub-dd800571175348b6a2745b3396360028.r2.dev/App%20Icons/Instagram-Icons/Instagram-AppStore-1024x1024.png",
-          "subtitle": "Instagram 454.1.0 with Sparkle 1.6.0"
+          "subtitle": "Instagram 454.1.0 with Sparkle 1.6.1"
         },
         {
           "name": "Messenger (Login)",
@@ -1600,12 +1600,12 @@
           "subtitle": "Nagram 13.1.1 with TGExtra 1.7.10"
         },
         {
-          "name": "Nagram (Lead 2.0)",
+          "name": "Nagram (Lead 2.0.3)",
           "bundleIdentifier": "xyz.nextalone.nagram",
           "developerName": "aquaonly & IPA Vault",
           "version": "13.1.1",
           "iconURL": "https://pub-dd800571175348b6a2745b3396360028.r2.dev/App%20Icons/Nagram-Icons/Nagram-AppStore-1024x1024.png",
-          "subtitle": "Nagram 13.1.1 with Lead 2.0"
+          "subtitle": "Nagram 13.1.1 with Lead 2.0.3"
         },
         {
           "name": "Apollo Reborn (Glass)",
@@ -1627,9 +1627,9 @@
           "name": "Reddit (RedditFilter)",
           "bundleIdentifier": "com.reddit.Reddit",
           "developerName": "Moe & IPA Vault",
-          "version": "2026.44.0",
+          "version": "2026.44.1",
           "iconURL": "https://pub-dd800571175348b6a2745b3396360028.r2.dev/App%20Icons/Reddit-Icons/Reddit-AppStore-1024x1024.png",
-          "subtitle": "Reddit 2026.44.0 with RedditFilter 4.6.1"
+          "subtitle": "Reddit 2026.44.1 with RedditFilter 4.6.1"
         },
         {
           "name": "SoundCloud (NexaSC) (iOS 16.0-16.3)",
@@ -1637,7 +1637,7 @@
           "developerName": "cielogic & IPA Vault",
           "version": "7.68.1",
           "iconURL": "https://pub-dd800571175348b6a2745b3396360028.r2.dev/App%20Icons/SoundCloud-7.68.1-Icons/SoundCloud-7.68.1-AppStore-1024x1024.png",
-          "subtitle": "SoundCloud 7.68.1 with NexaSC beta 4"
+          "subtitle": "SoundCloud 7.68.1 with NexaSC beta 5 (iOS 16.0–16.3)"
         },
         {
           "name": "SoundCloud (NexaSC)",
@@ -1645,7 +1645,7 @@
           "developerName": "cielogic & IPA Vault",
           "version": "8.85.0",
           "iconURL": "https://pub-dd800571175348b6a2745b3396360028.r2.dev/App%20Icons/SoundCloud-8.76.0-Icons/SoundCloud-AppStore-1024x1024.png",
-          "subtitle": "SoundCloud 8.85.0 with NexaSC beta 4"
+          "subtitle": "SoundCloud 8.85.0 with NexaSC beta 5"
         },
         {
           "name": "Swiftgram (MxGram)",
@@ -1672,12 +1672,12 @@
           "subtitle": "Swiftgram 13.1.2 with TGExtra"
         },
         {
-          "name": "Swiftgram (Lead 2.0)",
+          "name": "Swiftgram (Lead 2.0.3)",
           "bundleIdentifier": "app.swiftgram.ios",
           "developerName": "aquaonly & IPA Vault",
           "version": "13.1.2",
           "iconURL": "https://pub-dd800571175348b6a2745b3396360028.r2.dev/App%20Icons/Swiftgram-Icons/Swiftgram-AppStore-1024x1024.png",
-          "subtitle": "Swiftgram 13.1.2 with Lead 2.0"
+          "subtitle": "Swiftgram 13.1.2 with Lead 2.0.3"
         },
         {
           "name": "Telegram (MxGram)",
@@ -1704,12 +1704,12 @@
           "subtitle": "Telegram 13.2 with TGExtra"
         },
         {
-          "name": "Telegram (Lead 2.0)",
+          "name": "Telegram (Lead 2.0.3)",
           "bundleIdentifier": "ph.telegra.Telegraph",
           "developerName": "aquaonly & IPA Vault",
           "version": "13.2",
           "iconURL": "https://pub-dd800571175348b6a2745b3396360028.r2.dev/App%20Icons/Telegram-Icons/Telegram-AppStore-1024x1024.png",
-          "subtitle": "Telegram 13.2 with Lead 2.0"
+          "subtitle": "Telegram 13.2 with Lead 2.0.3"
         },
         {
           "name": "Spotify (EeveeSpotify)",
@@ -1784,12 +1784,12 @@
           "subtitle": "Turrit 1.5.8 with TGExtra"
         },
         {
-          "name": "Turrit (Lead 2.0)",
+          "name": "Turrit (Lead 2.0.3)",
           "bundleIdentifier": "com.seastar.turrit",
           "developerName": "aquaonly & IPA Vault",
           "version": "1.5.8",
           "iconURL": "https://pub-dd800571175348b6a2745b3396360028.r2.dev/App%20Icons/Turrit-Icons/Turrit-AppStore-1024x1024.png",
-          "subtitle": "Turrit 1.5.8 with Lead 2.0"
+          "subtitle": "Turrit 1.5.8 with Lead 2.0.3"
         },
         {
           "name": "TwitchUnblock",
@@ -1941,7 +1941,7 @@
           "developerName": "Glongq, IPA Vault, MyNameIsJeff & skopevoj",
           "version": "9.1.90",
           "iconURL": "https://pub-dd800571175348b6a2745b3396360028.r2.dev/App%20Icons/Spotify-Icons/Spotify-AppStore-1024x1024.png",
-          "subtitle": "Spotify 9.1.90 with Vitrine 1.0.0-b16 + Pixie 1.3"
+          "subtitle": "Spotify 9.1.90 with Vitrine 1.0.0-b16 + Pixie 1.4"
         },
         {
           "name": "Spotify (Vitrine + Pixie) (No Plugins)",
@@ -1963,17 +1963,17 @@
           "name": "Nuvio (Full)",
           "bundleIdentifier": "com.nuvio.media",
           "developerName": "Nuvio Media",
-          "version": "0.6.8",
+          "version": "0.6.9",
           "iconURL": "https://pub-dd800571175348b6a2745b3396360028.r2.dev/App%20Icons/Nuvio%20Icons/app-icon-1024_Normal.png",
-          "subtitle": "Nuvio 0.6.8 (Full Release)"
+          "subtitle": "Nuvio 0.6.9 Full"
         },
         {
           "name": "Nuvio (Enhanced)",
           "bundleIdentifier": "com.nuvio.media",
           "developerName": "luqmanfadlli & Nuvio Media",
-          "version": "0.6.8",
+          "version": "0.6.9",
           "iconURL": "https://pub-dd800571175348b6a2745b3396360028.r2.dev/App%20Icons/Nuvio%20Icons/app-icon-1024_Normal.png",
-          "subtitle": "Nuvio 0.6.8 (Enhanced Release)"
+          "subtitle": "Nuvio 0.6.9 Enhanced"
         },
         {
           "name": "Omni",
@@ -1989,7 +1989,7 @@
           "developerName": "skopevoj & IPA Vault",
           "version": "9.1.92",
           "iconURL": "https://pub-dd800571175348b6a2745b3396360028.r2.dev/App%20Icons/Spotify-Icons/Spotify-AppStore-1024x1024.png",
-          "subtitle": "Spotify 9.1.92 with EeveeSpotify 7.0.0 + Pixie 1.3"
+          "subtitle": "Spotify 9.1.92 with EeveeSpotify 7.0.0 + Pixie 1.4"
         },
         {
           "name": "Spotify (EeveeSpotify + Pixie) (No Plugins)",
@@ -2013,7 +2013,7 @@
           "developerName": "g_tweaks & IPA Vault",
           "version": "47.6.0",
           "iconURL": "https://pub-dd800571175348b6a2745b3396360028.r2.dev/App%20Icons/TikTok-Icons/TikTok-AppStore-1024x1024.png",
-          "subtitle": "TikTok 47.6.0 with gtok 2.5"
+          "subtitle": "TikTok 47.6.0 with gtok 2.6.1"
         },
         {
           "name": "BitChord",
@@ -2051,9 +2051,33 @@
           "name": "Best Brew Guide: Filtru Coffee",
           "bundleIdentifier": "com.przemyslawbobak.filtru",
           "developerName": "Spirograph Limited & IPA Vault",
-          "version": "5.0.0",
+          "version": "5.0.2",
           "iconURL": "https://pub-dd800571175348b6a2745b3396360028.r2.dev/App%20Icons/Filtru%20Icons/MainAppIcon_Normal.png",
-          "subtitle": "Filtru Coffee 5.0.0"
+          "subtitle": "Best Brew Guide: Filtru Coffee 5.0.2"
+        },
+        {
+          "name": "GoldenNuggetMobile",
+          "bundleIdentifier": "com.awesomenull.goldennugget",
+          "developerName": "GoldenNugget Team",
+          "version": "9.7.5",
+          "iconURL": "https://pub-dd800571175348b6a2745b3396360028.r2.dev/App%20Icons/GoldenNugget%20Icons/AppIcon1024x1024_Normal.png",
+          "subtitle": "GoldenNuggetMobile 9.7.5"
+        },
+        {
+          "name": "Henge",
+          "bundleIdentifier": "com.henge.app",
+          "developerName": "Leviidev",
+          "version": "0.2",
+          "iconURL": "https://pub-dd800571175348b6a2745b3396360028.r2.dev/App%20Icons/Henge%20Icons/AppIcon1024x1024_Normal.png",
+          "subtitle": "Henge 0.2"
+        },
+        {
+          "name": "KickUnblock",
+          "bundleIdentifier": "dev.ismaeltech.kickunblock",
+          "developerName": "swiftfreakdeer",
+          "version": "1.0",
+          "iconURL": "https://pub-dd800571175348b6a2745b3396360028.r2.dev/App%20Icons/KickUnblock%20Icons/AppIcon-1024_Normal.png",
+          "subtitle": "KickUnblock 1.0"
         }
       ]
     },
@@ -2413,7 +2437,7 @@
           "name": "YoutubePlus (YTLite)",
           "bundleIdentifier": "com.google.ios.youtube",
           "developerName": "dayanch96",
-          "version": "21.44.4",
+          "version": "21.45.4",
           "iconURL": "https://raw.githubusercontent.com/mrdrvt99/Altstore-Repository/main/assets/YouTube.png",
           "subtitle": ""
         },
@@ -2429,7 +2453,7 @@
           "name": "YTKACE",
           "bundleIdentifier": "com.google.ios.youtube",
           "developerName": "itzzace0",
-          "version": "21.44.4",
+          "version": "21.45.4",
           "iconURL": "https://raw.githubusercontent.com/mrdrvt99/Altstore-Repository/main/assets/YouTube.png",
           "subtitle": ""
         },
@@ -2437,7 +2461,7 @@
           "name": "YouPro",
           "bundleIdentifier": "com.google.ios.youtube",
           "developerName": "alibusut",
-          "version": "21.44.4",
+          "version": "21.45.4",
           "iconURL": "https://raw.githubusercontent.com/mrdrvt99/Altstore-Repository/main/assets/YouTube.png",
           "subtitle": ""
         },
@@ -2445,7 +2469,7 @@
           "name": "YouMod",
           "bundleIdentifier": "com.google.ios.youtube",
           "developerName": "Tonwalter888",
-          "version": "21.44.4",
+          "version": "21.45.4",
           "iconURL": "https://raw.githubusercontent.com/mrdrvt99/Altstore-Repository/main/assets/YouTube.png",
           "subtitle": ""
         }
@@ -3744,19 +3768,11 @@
     {
       "id": "cypwn-ipa",
       "name": "CyPwn IPA Library",
-      "appCount": 210,
+      "appCount": 209,
       "catalogLimited": true,
       "iconURL": "https://repo.cypwn.xyz/assets/images/cypwn_small.png",
       "sourceURL": "https://ipa.cypwn.xyz/cypwn.json",
       "apps": [
-        {
-          "name": "Stremio-2.0.7",
-          "bundleIdentifier": "com.stremio.pal",
-          "developerName": "Stremio-2.0.7 x CyPwn",
-          "version": "2.0.7",
-          "iconURL": "https://ipa.cypwn.xyz/serve/icons/Stremio-2.0.7.png",
-          "subtitle": ""
-        },
         {
           "name": "Stremio-2.0.6",
           "bundleIdentifier": "com.stremio.pal",
@@ -5188,17 +5204,33 @@
           "version": "2.6",
           "iconURL": "https://ipa.cypwn.xyz/serve/icons/Star_Map_2.6_Satella.png",
           "subtitle": ""
+        },
+        {
+          "name": "RefacePro_3.12.0",
+          "bundleIdentifier": "cypwn.RefacePro_3.12.0.3.12.0",
+          "developerName": "RefacePro_3.12.0 x CyPwn",
+          "version": "3.12.0",
+          "iconURL": "https://ipa.cypwn.xyz/serve/icons/RefacePro_3.12.0.png",
+          "subtitle": ""
         }
       ]
     },
     {
       "id": "apptesters",
       "name": "AppTesters IPA Repo",
-      "appCount": 10084,
+      "appCount": 10085,
       "catalogLimited": true,
       "iconURL": "https://apptesters.org/apptesters-512x512.png",
       "sourceURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/apps.json",
       "apps": [
+        {
+          "name": "Moovit",
+          "bundleIdentifier": "com.tranzmate.tranzmate1",
+          "developerName": "",
+          "version": "5.204.0",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.tranzmate.tranzmate1.png",
+          "subtitle": ""
+        },
         {
           "name": "Facetune",
           "bundleIdentifier": "com.lightricks.Facetune2",
@@ -6789,14 +6821,6 @@
           "developerName": "",
           "version": "3.5.8",
           "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.most.stories.png",
-          "subtitle": ""
-        },
-        {
-          "name": "simpleweather",
-          "bundleIdentifier": "com.andyworks.weather",
-          "developerName": "",
-          "version": "3.54",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.andyworks.weather.png",
           "subtitle": ""
         }
       ]
@@ -8680,7 +8704,7 @@
     {
       "id": "altgallery",
       "name": "AltGallery",
-      "appCount": 54,
+      "appCount": 55,
       "catalogLimited": false,
       "iconURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/assets/icon.png",
       "sourceURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/all-apps.json",
@@ -8737,7 +8761,7 @@
           "name": "ARMSX2",
           "bundleIdentifier": "com.armsx2.ios",
           "developerName": "ARMSX2",
-          "version": "2.6.0-nightly.20261107.2334",
+          "version": "2.6.0-nightly.20261108.1514",
           "iconURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/ARMSX2/icon.png",
           "subtitle": "PlayStation 2 emulator for ARM64"
         },
@@ -8916,6 +8940,14 @@
           "version": "2.0.2",
           "iconURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/ManicEMU/icon.png",
           "subtitle": "All-in-one retro game emulator for iOS"
+        },
+        {
+          "name": "MeloX",
+          "bundleIdentifier": "moye.MeloX",
+          "developerName": "youshen2",
+          "version": "1.4.1",
+          "iconURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/MeloX/icon.png",
+          "subtitle": "使用 SwiftUI 开发的网易云音乐第三方客户端"
         },
         {
           "name": "MiniWatts",
@@ -9105,7 +9137,7 @@
           "name": "YouProEXTRA",
           "bundleIdentifier": "com.google.ios.youtube",
           "developerName": "alibusut",
-          "version": "21.44.4",
+          "version": "21.45.4",
           "iconURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/YouProEXTRA/icon.png",
           "subtitle": "YouTube mod with customizable tweaks"
         },
@@ -11032,72 +11064,6 @@
           "version": "6.4.0",
           "iconURL": "https://avatars.githubusercontent.com/u/166622089",
           "subtitle": ""
-        }
-      ]
-    },
-    {
-      "id": "wsf-source",
-      "name": "WSF Source",
-      "appCount": 7,
-      "catalogLimited": false,
-      "iconURL": "https://github.com/WhySooooFurious/Ultimate-Sideloading-Guide/blob/main/branding.png?raw=true",
-      "sourceURL": "https://raw.githubusercontent.com/WSF-Team/WSF/main/repo/app-repo.json",
-      "apps": [
-        {
-          "name": "NeoFreeBird",
-          "bundleIdentifier": "timi2506.actuallyaridan.NeoFreeBird-New",
-          "developerName": "actuallyaridan and timi2506",
-          "version": "10.76b1",
-          "iconURL": "https://github.com/actuallyaridan/NeoFreeBird/blob/main/Branding/Icon.jpg?raw=true",
-          "subtitle": "A modified Twitter app, with branding reverts, BHTwitter and similar."
-        },
-        {
-          "name": "Portal Mini",
-          "bundleIdentifier": "com.timi2506.Portal-Mini",
-          "developerName": "timi2506",
-          "version": "1.0.0",
-          "iconURL": "https://github.com/WhySooooFurious/Ultimate-Sideloading-Guide/blob/main/branding.png?raw=true",
-          "subtitle": "Portal but for Dev Certs"
-        },
-        {
-          "name": "Haptics",
-          "bundleIdentifier": "com.timi2506.Haptics",
-          "developerName": "timi2506",
-          "version": "1.0.0",
-          "iconURL": "https://github.com/WhySooooFurious/Ultimate-Sideloading-Guide/blob/main/raw-files/App%20Icons/Haptics.png?raw=true",
-          "subtitle": "Developer Tool to Add Haptics"
-        },
-        {
-          "name": "macOS Icons",
-          "bundleIdentifier": "com.timi2506.macosicons",
-          "developerName": "timi2506",
-          "version": "1.0",
-          "iconURL": "https://github.com/WhySooooFurious/Ultimate-Sideloading-Guide/blob/main/raw-files/App%20Icons/macOS-Icons.png?raw=true",
-          "subtitle": "an Application to quickly search, browse and share or download macOS Icons from macOSicons.com"
-        },
-        {
-          "name": "YT-TV",
-          "bundleIdentifier": "com.timi2506.YT-TV",
-          "developerName": "timi2506",
-          "version": "1.0",
-          "iconURL": "https://github.com/WhySooooFurious/Ultimate-Sideloading-Guide/blob/main/raw-files/App%20Icons/YT-TV.png?raw=true",
-          "subtitle": "YouTube TV UI for iOS with the Help of WebView and a custom User Agent"
-        },
-        {
-          "name": "Browser",
-          "bundleIdentifier": "com.timi2506.Browser",
-          "developerName": "timi2506",
-          "version": "0.5b",
-          "iconURL": "https://github.com/WhySooooFurious/Ultimate-Sideloading-Guide/blob/main/raw-files/App%20Icons/Browser.png?raw=true",
-          "subtitle": "visionOS Style Browser Built with SwiftUI and WebView"
-        },
-        {
-          "name": "Portal",
-          "bundleIdentifier": "com.timi2506.wsf-portal",
-          "developerName": "timi2506",
-          "version": "1.0",
-          "iconURL": "https://github.com/WhySooooFurious/Ultimate-Sideloading-Guide/blob/main/branding.png?raw=true",
-          "subtitle": "The Portal to everything WSF"
         }
       ]
     },
