@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-11T06:26:02Z",
+  "generatedAt": "2026-11-11T19:38:18Z",
   "sources": [
     {
       "id": "utm",
@@ -3754,11 +3754,19 @@
     {
       "id": "cypwn-ipa",
       "name": "CyPwn IPA Library",
-      "appCount": 209,
+      "appCount": 210,
       "catalogLimited": true,
       "iconURL": "https://repo.cypwn.xyz/assets/images/cypwn_small.png",
       "sourceURL": "https://ipa.cypwn.xyz/cypwn.json",
       "apps": [
+        {
+          "name": "Stremio-2.0.7",
+          "bundleIdentifier": "com.stremio.pal",
+          "developerName": "Stremio-2.0.7 x CyPwn",
+          "version": "2.0.7",
+          "iconURL": "https://ipa.cypwn.xyz/serve/icons/Stremio-2.0.7.png",
+          "subtitle": ""
+        },
         {
           "name": "Stremio-2.0.6",
           "bundleIdentifier": "com.stremio.pal",
@@ -5190,25 +5198,137 @@
           "version": "2.6",
           "iconURL": "https://ipa.cypwn.xyz/serve/icons/Star_Map_2.6_Satella.png",
           "subtitle": ""
-        },
-        {
-          "name": "RefacePro_3.12.0",
-          "bundleIdentifier": "cypwn.RefacePro_3.12.0.3.12.0",
-          "developerName": "RefacePro_3.12.0 x CyPwn",
-          "version": "3.12.0",
-          "iconURL": "https://ipa.cypwn.xyz/serve/icons/RefacePro_3.12.0.png",
-          "subtitle": ""
         }
       ]
     },
     {
       "id": "apptesters",
       "name": "AppTesters IPA Repo",
-      "appCount": 10148,
+      "appCount": 10163,
       "catalogLimited": true,
       "iconURL": "https://apptesters.org/apptesters-512x512.png",
       "sourceURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/apps.json",
       "apps": [
+        {
+          "name": "Athlytic",
+          "bundleIdentifier": "myndarc.newFitnessApp",
+          "developerName": "",
+          "version": "27.0.10",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/myndarc.newFitnessApp.png",
+          "subtitle": ""
+        },
+        {
+          "name": "ThePiano",
+          "bundleIdentifier": "com.impalastudios.pianofree",
+          "developerName": "",
+          "version": "2.26.4",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.impalastudios.pianofree.png",
+          "subtitle": ""
+        },
+        {
+          "name": "Duolingo",
+          "bundleIdentifier": "com.duolingo.DuolingoMobile",
+          "developerName": "",
+          "version": "7.148.1",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.duolingo.DuolingoMobile.png",
+          "subtitle": ""
+        },
+        {
+          "name": "OfflineMusic",
+          "bundleIdentifier": "com.offlinemusic",
+          "developerName": "",
+          "version": "4.0.0",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.offlinemusic.png",
+          "subtitle": ""
+        },
+        {
+          "name": "Captions",
+          "bundleIdentifier": "boomer.Smart-Video",
+          "developerName": "",
+          "version": "13.43.0",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/boomer.Smart-Video.png",
+          "subtitle": ""
+        },
+        {
+          "name": "Endel",
+          "bundleIdentifier": "com.endel.endel",
+          "developerName": "",
+          "version": "4.49.325",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.endel.endel.png",
+          "subtitle": ""
+        },
+        {
+          "name": "Tripsy",
+          "bundleIdentifier": "app.tripsy.ios",
+          "developerName": "",
+          "version": "3.10.8",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/app.tripsy.ios.png",
+          "subtitle": ""
+        },
+        {
+          "name": "Pixomatic",
+          "bundleIdentifier": "us.pixomaticpro.PixomaticPro",
+          "developerName": "",
+          "version": "2.55.37",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/us.pixomaticpro.PixomaticPro.png",
+          "subtitle": ""
+        },
+        {
+          "name": "Lyfta",
+          "bundleIdentifier": "com.lyftaios",
+          "developerName": "",
+          "version": "1.167",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.lyftaios.png",
+          "subtitle": ""
+        },
+        {
+          "name": "ProFit",
+          "bundleIdentifier": "com.maxty.gofitness",
+          "developerName": "",
+          "version": "8.6.0",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.maxty.gofitness.png",
+          "subtitle": ""
+        },
+        {
+          "name": "Calm",
+          "bundleIdentifier": "com.calm.calmapp",
+          "developerName": "",
+          "version": "7.5",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.calm.calmapp.png",
+          "subtitle": ""
+        },
+        {
+          "name": "Yazio",
+          "bundleIdentifier": "com.yazio.ios.YAZIO",
+          "developerName": "",
+          "version": "26.45.0",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.yazio.ios.YAZIO.png",
+          "subtitle": ""
+        },
+        {
+          "name": "SODA",
+          "bundleIdentifier": "com.snowcorp.soda",
+          "developerName": "",
+          "version": "10.4.5",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.snowcorp.soda.png",
+          "subtitle": ""
+        },
+        {
+          "name": "FitnessOnline",
+          "bundleIdentifier": "com.aiti.FitnessOnline",
+          "developerName": "",
+          "version": "1.32.0",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.aiti.FitnessOnline.png",
+          "subtitle": ""
+        },
+        {
+          "name": "SimplySing",
+          "bundleIdentifier": "com.joytunes.Sing",
+          "developerName": "",
+          "version": "3.2.3",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.joytunes.Sing.png",
+          "subtitle": ""
+        },
         {
           "name": "wpsoffice",
           "bundleIdentifier": "com.kingsoft.office.g.wpsoffice",
@@ -6687,126 +6807,6 @@
           "developerName": "",
           "version": "5.264.0",
           "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.elevateapp.elevate.png",
-          "subtitle": ""
-        },
-        {
-          "name": "Yazio",
-          "bundleIdentifier": "com.yazio.ios.YAZIO",
-          "developerName": "",
-          "version": "26.44.1",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.yazio.ios.YAZIO.png",
-          "subtitle": ""
-        },
-        {
-          "name": "Widgetsmith",
-          "bundleIdentifier": "com.crossforward.WidgetSmith",
-          "developerName": "",
-          "version": "9.0",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.crossforward.WidgetSmith.png",
-          "subtitle": ""
-        },
-        {
-          "name": "Facetune",
-          "bundleIdentifier": "com.lightricks.Facetune2",
-          "developerName": "",
-          "version": "26.36",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.lightricks.Facetune2.png",
-          "subtitle": ""
-        },
-        {
-          "name": "SCRL",
-          "bundleIdentifier": "com.dopedevelopment.Panels",
-          "developerName": "",
-          "version": "9.62",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.dopedevelopment.Panels.png",
-          "subtitle": ""
-        },
-        {
-          "name": "Mojo",
-          "bundleIdentifier": "archery.storify",
-          "developerName": "",
-          "version": "1.282.0",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/archery.storify.png",
-          "subtitle": ""
-        },
-        {
-          "name": "Buddy",
-          "bundleIdentifier": "com.iPwners.Plonkan",
-          "developerName": "",
-          "version": "13.51",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.iPwners.Plonkan.png",
-          "subtitle": ""
-        },
-        {
-          "name": "GOWOD",
-          "bundleIdentifier": "eu.gowod",
-          "developerName": "",
-          "version": "5.12.0",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/eu.gowod.png",
-          "subtitle": ""
-        },
-        {
-          "name": "AdGuard",
-          "bundleIdentifier": "com.adguard.AdguardExtension",
-          "developerName": "",
-          "version": "4.5.24",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.adguard.AdguardExtension.png",
-          "subtitle": ""
-        },
-        {
-          "name": "FlightTracker",
-          "bundleIdentifier": "com.iaftt.flightplusfree",
-          "developerName": "",
-          "version": "8.8.3",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.iaftt.flightplusfree.png",
-          "subtitle": ""
-        },
-        {
-          "name": "Mimo",
-          "bundleIdentifier": "com.getmimo.mimo",
-          "developerName": "",
-          "version": "12.34.0",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.getmimo.mimo.png",
-          "subtitle": ""
-        },
-        {
-          "name": "Piano",
-          "bundleIdentifier": "com.mwm.piano-app",
-          "developerName": "",
-          "version": "3.64.00",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.mwm.piano-app.png",
-          "subtitle": ""
-        },
-        {
-          "name": "BeatMakerPro",
-          "bundleIdentifier": "com.mwm.sampler-app",
-          "developerName": "",
-          "version": "4.21.00",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.mwm.sampler-app.png",
-          "subtitle": ""
-        },
-        {
-          "name": "Moovit",
-          "bundleIdentifier": "com.tranzmate.tranzmate1",
-          "developerName": "",
-          "version": "5.202.3",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.tranzmate.tranzmate1.png",
-          "subtitle": ""
-        },
-        {
-          "name": "Stndrd",
-          "bundleIdentifier": "uni.cbum",
-          "developerName": "",
-          "version": "4.1.63",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/uni.cbum.png",
-          "subtitle": ""
-        },
-        {
-          "name": "Unknown app",
-          "bundleIdentifier": "com.madarsoft.fitness",
-          "developerName": "",
-          "version": "7.28.5",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.madarsoft.fitness.png",
           "subtitle": ""
         }
       ]
@@ -8690,7 +8690,7 @@
     {
       "id": "altgallery",
       "name": "AltGallery",
-      "appCount": 60,
+      "appCount": 61,
       "catalogLimited": false,
       "iconURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/assets/icon.png",
       "sourceURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/all-apps.json",
@@ -8755,7 +8755,7 @@
           "name": "ARMSX2",
           "bundleIdentifier": "com.armsx2.ios",
           "developerName": "ARMSX2",
-          "version": "2.6.0-nightly.20261108.1514",
+          "version": "2.6.0-nightly.20261111.0647",
           "iconURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/ARMSX2/icon.png",
           "subtitle": "PlayStation 2 emulator for ARM64"
         },
@@ -8771,7 +8771,7 @@
           "name": "BCD",
           "bundleIdentifier": "com.thebcd69.bcd",
           "developerName": "thebcd69",
-          "version": "0.1.634",
+          "version": "0.1.653",
           "iconURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/BCD/icon.png",
           "subtitle": "Windows games on iPhone and iPad"
         },
@@ -8862,6 +8862,14 @@
           "version": "0.1.3",
           "iconURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/iDeck/icon.png",
           "subtitle": "Steam Big Picture on iPhone and iPad"
+        },
+        {
+          "name": "iPadn",
+          "bundleIdentifier": "app.local.iPadn",
+          "developerName": "mengangs",
+          "version": "1.9.2",
+          "iconURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/iPadn/icon.png",
+          "subtitle": "Download older and removed App Store apps"
         },
         {
           "name": "Iridium",
