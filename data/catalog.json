@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-12T07:14:30Z",
+  "generatedAt": "2026-11-12T19:56:15Z",
   "sources": [
     {
       "id": "utm",
@@ -55,7 +55,7 @@
           "name": "iFly",
           "bundleIdentifier": "com.provenance.ifly",
           "developerName": "Provenance Emu",
-          "version": "1.0.0+1794380700",
+          "version": "1.0.0+1794465576",
           "iconURL": "https://ifly-emu.com/icon-1024.png",
           "subtitle": "Dreamcast Emulator for iOS & tvOS"
         },
@@ -873,7 +873,7 @@
           "name": "Fortnite",
           "bundleIdentifier": "com.epicgames.FortniteGame",
           "developerName": "Epic Games Sweden AB",
-          "version": "43.00",
+          "version": "43.10",
           "iconURL": "https://cdn1.epicgames.com/item/fn/FN_Logo_512x512_1024x1024-0a19a924e7f61249ab0c76569abfdc31",
           "subtitle": ""
         },
@@ -3754,11 +3754,19 @@
     {
       "id": "cypwn-ipa",
       "name": "CyPwn IPA Library",
-      "appCount": 209,
+      "appCount": 210,
       "catalogLimited": true,
       "iconURL": "https://repo.cypwn.xyz/assets/images/cypwn_small.png",
       "sourceURL": "https://ipa.cypwn.xyz/cypwn.json",
       "apps": [
+        {
+          "name": "Stremio-2.0.7",
+          "bundleIdentifier": "com.stremio.pal",
+          "developerName": "Stremio-2.0.7 x CyPwn",
+          "version": "2.0.7",
+          "iconURL": "https://ipa.cypwn.xyz/serve/icons/Stremio-2.0.7.png",
+          "subtitle": ""
+        },
         {
           "name": "Stremio-2.0.6",
           "bundleIdentifier": "com.stremio.pal",
@@ -5190,25 +5198,169 @@
           "version": "2.6",
           "iconURL": "https://ipa.cypwn.xyz/serve/icons/Star_Map_2.6_Satella.png",
           "subtitle": ""
-        },
-        {
-          "name": "RefacePro_3.12.0",
-          "bundleIdentifier": "cypwn.RefacePro_3.12.0.3.12.0",
-          "developerName": "RefacePro_3.12.0 x CyPwn",
-          "version": "3.12.0",
-          "iconURL": "https://ipa.cypwn.xyz/serve/icons/RefacePro_3.12.0.png",
-          "subtitle": ""
         }
       ]
     },
     {
       "id": "apptesters",
       "name": "AppTesters IPA Repo",
-      "appCount": 10170,
+      "appCount": 10189,
       "catalogLimited": true,
       "iconURL": "https://apptesters.org/apptesters-512x512.png",
       "sourceURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/apps.json",
       "apps": [
+        {
+          "name": "Boostcamp",
+          "bundleIdentifier": "com.bpmhealth.boostfitness",
+          "developerName": "",
+          "version": "269",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.bpmhealth.boostfitness.png",
+          "subtitle": ""
+        },
+        {
+          "name": "VideoLite",
+          "bundleIdentifier": "com.videobrowser.ios",
+          "developerName": "",
+          "version": "629000",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.videobrowser.ios.png",
+          "subtitle": ""
+        },
+        {
+          "name": "SnapEdit",
+          "bundleIdentifier": "com.sfun.snapedit",
+          "developerName": "",
+          "version": "6.28",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.sfun.snapedit.png",
+          "subtitle": ""
+        },
+        {
+          "name": "Balance",
+          "bundleIdentifier": "com.elevateapp.kamino.kamino",
+          "developerName": "",
+          "version": "1.215.0",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.elevateapp.kamino.kamino.png",
+          "subtitle": ""
+        },
+        {
+          "name": "iTranslate",
+          "bundleIdentifier": "com.outerspaceapps.itranslate",
+          "developerName": "",
+          "version": "17.4.77",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.outerspaceapps.itranslate.png",
+          "subtitle": ""
+        },
+        {
+          "name": "edjingMix",
+          "bundleIdentifier": "com.edjing.edjingdjturntable",
+          "developerName": "",
+          "version": "9.4.6",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.edjing.edjingdjturntable.png",
+          "subtitle": ""
+        },
+        {
+          "name": "Swiftgram",
+          "bundleIdentifier": "app.swiftgram.ios",
+          "developerName": "",
+          "version": "13.2",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/app.swiftgram.ios.png",
+          "subtitle": ""
+        },
+        {
+          "name": "Phocus",
+          "bundleIdentifier": "com.ahmetserdarkaradeniz.Phocus",
+          "developerName": "",
+          "version": "3.6.0",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.ahmetserdarkaradeniz.Phocus.png",
+          "subtitle": ""
+        },
+        {
+          "name": "superagent",
+          "bundleIdentifier": "com.agent.super.extension.safari",
+          "developerName": "",
+          "version": "4.7.5",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.agent.super.extension.safari.png",
+          "subtitle": ""
+        },
+        {
+          "name": "SleepCycle",
+          "bundleIdentifier": "com.lexwarelabs.goodmorning",
+          "developerName": "",
+          "version": "6.26.440",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.lexwarelabs.goodmorning.png",
+          "subtitle": ""
+        },
+        {
+          "name": "Lifesum",
+          "bundleIdentifier": "com.sillens.iShape",
+          "developerName": "",
+          "version": "24.1.0",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.sillens.iShape.png",
+          "subtitle": ""
+        },
+        {
+          "name": "Unknown app",
+          "bundleIdentifier": "tech.miidii.MDBlank",
+          "developerName": "",
+          "version": "4.4",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/tech.miidii.MDBlank.png",
+          "subtitle": ""
+        },
+        {
+          "name": "HabitKit",
+          "bundleIdentifier": "com.roehl.habitkit",
+          "developerName": "",
+          "version": "1.19.2",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.roehl.habitkit.png",
+          "subtitle": ""
+        },
+        {
+          "name": "AdGuard",
+          "bundleIdentifier": "com.adguard.AdguardExtension",
+          "developerName": "",
+          "version": "4.5.25",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.adguard.AdguardExtension.png",
+          "subtitle": ""
+        },
+        {
+          "name": "Crsel",
+          "bundleIdentifier": "com.frameoneapps.Crsel",
+          "developerName": "",
+          "version": "1.6.4",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.frameoneapps.Crsel.png",
+          "subtitle": ""
+        },
+        {
+          "name": "Origami",
+          "bundleIdentifier": "com.oribot.origami",
+          "developerName": "",
+          "version": "5.3",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.oribot.origami.png",
+          "subtitle": ""
+        },
+        {
+          "name": "Documents",
+          "bundleIdentifier": "com.readdle.ReaddleDocsIPad",
+          "developerName": "",
+          "version": "8.22.13",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.readdle.ReaddleDocsIPad.png",
+          "subtitle": ""
+        },
+        {
+          "name": "GentlerStreak",
+          "bundleIdentifier": "app.gentler.activity",
+          "developerName": "",
+          "version": "6.0",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/app.gentler.activity.png",
+          "subtitle": ""
+        },
+        {
+          "name": "SCRL",
+          "bundleIdentifier": "com.dopedevelopment.Panels",
+          "developerName": "",
+          "version": "9.64",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.dopedevelopment.Panels.png",
+          "subtitle": ""
+        },
         {
           "name": "Slopes",
           "bundleIdentifier": "com.consumedbycode.slopes",
@@ -5507,10 +5659,10 @@
         },
         {
           "name": "Unknown app",
-          "bundleIdentifier": "com.madarsoft.fitness",
+          "bundleIdentifier": "tech.miidii.MDBlank",
           "developerName": "",
           "version": "21.0",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.madarsoft.fitness.png",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/tech.miidii.MDBlank.png",
           "subtitle": ""
         },
         {
@@ -5563,10 +5715,10 @@
         },
         {
           "name": "Unknown app",
-          "bundleIdentifier": "com.madarsoft.fitness",
+          "bundleIdentifier": "tech.miidii.MDBlank",
           "developerName": "",
           "version": "7.29.0",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.madarsoft.fitness.png",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/tech.miidii.MDBlank.png",
           "subtitle": ""
         },
         {
@@ -6283,10 +6435,10 @@
         },
         {
           "name": "Unknown app",
-          "bundleIdentifier": "com.madarsoft.fitness",
+          "bundleIdentifier": "tech.miidii.MDBlank",
           "developerName": "",
           "version": "20.0",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.madarsoft.fitness.png",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/tech.miidii.MDBlank.png",
           "subtitle": ""
         },
         {
@@ -6655,158 +6807,6 @@
           "developerName": "",
           "version": "5.18.0",
           "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.caliberfitness.app.png",
-          "subtitle": ""
-        },
-        {
-          "name": "RiseSleep",
-          "bundleIdentifier": "com.risesci.nyx",
-          "developerName": "",
-          "version": "0.1.646",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.risesci.nyx.png",
-          "subtitle": ""
-        },
-        {
-          "name": "ScannerAir",
-          "bundleIdentifier": "co.airapps.scannerapp",
-          "developerName": "",
-          "version": "2026.11.1",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/co.airapps.scannerapp.png",
-          "subtitle": ""
-        },
-        {
-          "name": "Halide",
-          "bundleIdentifier": "com.chromanoir.Zeit",
-          "developerName": "",
-          "version": "3.3.2",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.chromanoir.Zeit.png",
-          "subtitle": ""
-        },
-        {
-          "name": "ColorPop",
-          "bundleIdentifier": "com.mwm.procolor",
-          "developerName": "",
-          "version": "2.68.03",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.mwm.procolor.png",
-          "subtitle": ""
-        },
-        {
-          "name": "Splice",
-          "bundleIdentifier": "com.path36.SpliceFree",
-          "developerName": "",
-          "version": "4.28.74",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.path36.SpliceFree.png",
-          "subtitle": ""
-        },
-        {
-          "name": "Balance",
-          "bundleIdentifier": "com.elevateapp.kamino.kamino",
-          "developerName": "",
-          "version": "1.214.0",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.elevateapp.kamino.kamino.png",
-          "subtitle": ""
-        },
-        {
-          "name": "edjingMix",
-          "bundleIdentifier": "com.edjing.edjingdjturntable",
-          "developerName": "",
-          "version": "9.4.2",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.edjing.edjingdjturntable.png",
-          "subtitle": ""
-        },
-        {
-          "name": "SnoreLab",
-          "bundleIdentifier": "com.revivasoftworks.Snore-Lab",
-          "developerName": "",
-          "version": "6.5.3",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.revivasoftworks.Snore-Lab.png",
-          "subtitle": ""
-        },
-        {
-          "name": "SimplySing",
-          "bundleIdentifier": "com.joytunes.Sing",
-          "developerName": "",
-          "version": "3.2.2",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.joytunes.Sing.png",
-          "subtitle": ""
-        },
-        {
-          "name": "Unzip",
-          "bundleIdentifier": "com.cuilingshi.fileextract",
-          "developerName": "",
-          "version": "6.3",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.cuilingshi.fileextract.png",
-          "subtitle": ""
-        },
-        {
-          "name": "UnifiedDictionary",
-          "bundleIdentifier": "com.bravolol.bravoLang.chineseDictionary",
-          "developerName": "",
-          "version": "36.5",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.bravolol.bravoLang.chineseDictionary.png",
-          "subtitle": ""
-        },
-        {
-          "name": "Compress",
-          "bundleIdentifier": "com.newmarketinglab.ImageCompressor",
-          "developerName": "",
-          "version": "3.5",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.newmarketinglab.ImageCompressor.png",
-          "subtitle": ""
-        },
-        {
-          "name": "AdobeFresco",
-          "bundleIdentifier": "com.adobe.fresco.ios",
-          "developerName": "",
-          "version": "8.0.0",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.adobe.fresco.ios.png",
-          "subtitle": ""
-        },
-        {
-          "name": "NightSky",
-          "bundleIdentifier": "com.icandiapps.nightsky",
-          "developerName": "",
-          "version": "27.2",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.icandiapps.nightsky.png",
-          "subtitle": ""
-        },
-        {
-          "name": "CalculatorAir",
-          "bundleIdentifier": "com.CalculatorForiPad.InternetRocks",
-          "developerName": "",
-          "version": "2026.10.14",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.CalculatorForiPad.InternetRocks.png",
-          "subtitle": ""
-        },
-        {
-          "name": "ProCCD",
-          "bundleIdentifier": "com.yengshine.proccd",
-          "developerName": "",
-          "version": "7.0.1",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.yengshine.proccd.png",
-          "subtitle": ""
-        },
-        {
-          "name": "FindAir",
-          "bundleIdentifier": "co.airapps.finderbot",
-          "developerName": "",
-          "version": "2026.11.1",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/co.airapps.finderbot.png",
-          "subtitle": ""
-        },
-        {
-          "name": "NeoServer",
-          "bundleIdentifier": "com.neo.NeoMan",
-          "developerName": "",
-          "version": "8.4.8",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.neo.NeoMan.png",
-          "subtitle": ""
-        },
-        {
-          "name": "Documents",
-          "bundleIdentifier": "com.readdle.ReaddleDocsIPad",
-          "developerName": "",
-          "version": "8.22.11",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.readdle.ReaddleDocsIPad.png",
           "subtitle": ""
         }
       ]
@@ -8690,7 +8690,7 @@
     {
       "id": "altgallery",
       "name": "AltGallery",
-      "appCount": 62,
+      "appCount": 66,
       "catalogLimited": false,
       "iconURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/assets/icon.png",
       "sourceURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/all-apps.json",
@@ -8755,7 +8755,7 @@
           "name": "ARMSX2",
           "bundleIdentifier": "com.armsx2.ios",
           "developerName": "ARMSX2",
-          "version": "2.6.0-nightly.20261111.0647",
+          "version": "2.6.0-nightly.20261112.1132",
           "iconURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/ARMSX2/icon.png",
           "subtitle": "PlayStation 2 emulator for ARM64"
         },
@@ -8816,6 +8816,14 @@
           "subtitle": "An unofficial E-Hentai App for iOS built with SwiftUI & TCA"
         },
         {
+          "name": "Erosion-CN",
+          "bundleIdentifier": "com.jbdotparty.Erosion",
+          "developerName": "Kianuni",
+          "version": "0.9.1",
+          "iconURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/Erosion-CN/icon.png",
+          "subtitle": "iOS / iPadOS 系统配置与 MobileGestalt 研究工具箱"
+        },
+        {
           "name": "Fathom",
           "bundleIdentifier": "app.fathom.emulator",
           "developerName": "Leviidev",
@@ -8867,7 +8875,7 @@
           "name": "iPadn",
           "bundleIdentifier": "app.local.iPadn",
           "developerName": "mengangs",
-          "version": "1.9.2",
+          "version": "2.0.0",
           "iconURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/iPadn/icon.png",
           "subtitle": "Download older and removed App Store apps"
         },
@@ -8891,7 +8899,7 @@
           "name": "Kazumi",
           "bundleIdentifier": "com.example.kazumi",
           "developerName": "Predidit",
-          "version": "2.4.3",
+          "version": "2.4.4",
           "iconURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/Kazumi/icon.png",
           "subtitle": "基于自定义规则的番剧采集APP，支持流媒体在线观看、弹幕与实时超分辨率，使用 Flutter 实现。"
         },
@@ -9136,6 +9144,14 @@
           "subtitle": "Native film and print simulation for iPhone and iPad"
         },
         {
+          "name": "Stats",
+          "bundleIdentifier": "com.ishtiaqsyed.StatsForIOS",
+          "developerName": "ishtiaq156",
+          "version": "0.3.3",
+          "iconURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/Stats/icon.png",
+          "subtitle": "Your Mac's activity, at a glance"
+        },
+        {
           "name": "StikDebug",
           "bundleIdentifier": "com.stik.stikdebug",
           "developerName": "StikDebug",
@@ -9174,6 +9190,22 @@
           "version": "1.18.3",
           "iconURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/Venera-Next/icon.png",
           "subtitle": "跨平台漫画阅读器"
+        },
+        {
+          "name": "WQ Files",
+          "bundleIdentifier": "cz.kolbi.wqfiles",
+          "developerName": "kolbicz",
+          "version": "0.9.3",
+          "iconURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/WQFiles/icon.png",
+          "subtitle": "File manager for iOS 26 and 27 (worse_query)"
+        },
+        {
+          "name": "WQToolkit",
+          "bundleIdentifier": "com.zhangfuhao.wqtoolkit",
+          "developerName": "MchinaMd57764",
+          "version": "1.0",
+          "iconURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/WQToolkit/icon.png",
+          "subtitle": "File browser and maintenance panel for your own app containers"
         },
         {
           "name": "YouProEXTRA",
