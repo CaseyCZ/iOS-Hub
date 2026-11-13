@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-13T06:48:36Z",
+  "generatedAt": "2026-11-13T19:44:38Z",
   "sources": [
     {
       "id": "utm",
@@ -5204,11 +5204,19 @@
     {
       "id": "apptesters",
       "name": "AppTesters IPA Repo",
-      "appCount": 10198,
+      "appCount": 10199,
       "catalogLimited": true,
       "iconURL": "https://apptesters.org/apptesters-512x512.png",
       "sourceURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/apps.json",
       "apps": [
+        {
+          "name": "Shapr3D",
+          "bundleIdentifier": "com.shapr3d.shapr",
+          "developerName": "",
+          "version": "26.200.0",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.shapr3d.shapr.png",
+          "subtitle": ""
+        },
         {
           "name": "Most",
           "bundleIdentifier": "com.most.stories",
@@ -6799,14 +6807,6 @@
           "developerName": "",
           "version": "1.19.1",
           "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.roehl.habitkit.png",
-          "subtitle": ""
-        },
-        {
-          "name": "WaterAir",
-          "bundleIdentifier": "co.airapps.waterreminder",
-          "developerName": "",
-          "version": "2026.11.1",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/co.airapps.waterreminder.png",
           "subtitle": ""
         }
       ]
@@ -8690,7 +8690,7 @@
     {
       "id": "altgallery",
       "name": "AltGallery",
-      "appCount": 66,
+      "appCount": 68,
       "catalogLimited": false,
       "iconURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/assets/icon.png",
       "sourceURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/all-apps.json",
@@ -8875,7 +8875,7 @@
           "name": "iPadn",
           "bundleIdentifier": "app.local.iPadn",
           "developerName": "mengangs",
-          "version": "2.0.0",
+          "version": "2.1.0",
           "iconURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/iPadn/icon.png",
           "subtitle": "Download older and removed App Store apps"
         },
@@ -9043,7 +9043,7 @@
           "name": "OpenParsec",
           "bundleIdentifier": "com.aigch.OpenParsec",
           "developerName": "hugeBlack",
-          "version": "1.4.0",
+          "version": "2.0.0",
           "iconURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/OpenParsec/icon.png",
           "subtitle": "Open Parsec client for iOS/iPadOS"
         },
@@ -9160,6 +9160,14 @@
           "subtitle": "On-device JIT enabler and device toolbox."
         },
         {
+          "name": "Swipt",
+          "bundleIdentifier": "io.nekohasekai.swipt",
+          "developerName": "nekohasekai",
+          "version": "0.1.0",
+          "iconURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/Swipt/icon.png",
+          "subtitle": "The universal iOS automation platform"
+        },
+        {
           "name": "TiebaPure",
           "bundleIdentifier": "dev.infinityf4p.tiebapure",
           "developerName": "infinityf4p",
@@ -9195,9 +9203,17 @@
           "name": "WQ Files",
           "bundleIdentifier": "cz.kolbi.wqfiles",
           "developerName": "kolbicz",
-          "version": "0.9.5",
+          "version": "0.9.6",
           "iconURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/WQFiles/icon.png",
           "subtitle": "File manager for iOS 26 and 27 (worse_query)"
+        },
+        {
+          "name": "WQGuard",
+          "bundleIdentifier": "com.wqguard.app",
+          "developerName": "Kianuni",
+          "version": "1.2.1",
+          "iconURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/WQGuard/icon.png",
+          "subtitle": "iOS 沙盒越权检测与侧载 IPA 审查工具"
         },
         {
           "name": "WQToolkit",
@@ -9702,7 +9718,7 @@
     {
       "id": "fastsign",
       "name": "Alan's Gigantic Repo",
-      "appCount": 17069,
+      "appCount": 17030,
       "catalogLimited": true,
       "iconURL": "https://fastsign.dev/icon.png",
       "sourceURL": "https://fastsign.dev/repo.json",
@@ -9710,18 +9726,138 @@
         {
           "name": "YouTube",
           "bundleIdentifier": "com.google.ios.youtube.ytkace.1.1.7",
-          "developerName": "YouTube",
+          "developerName": "TubeVault",
           "version": "21.45.4",
           "iconURL": "https://static.vecteezy.com/system/resources/previews/023/986/704/non_2x/youtube-logo-youtube-logo-transparent-youtube-icon-transparent-free-free-png.png",
-          "subtitle": "Best pick. Tweaks: YTKACE"
+          "subtitle": "Best pick. YTKACE 1.1.7"
         },
         {
           "name": "Spotify",
-          "bundleIdentifier": "com.spotify.client.ios.eeveespotifyreincarnated.7.0.0.patched.9.1.98.ipavault",
-          "developerName": "Spotify",
-          "version": "9.1.98",
+          "bundleIdentifier": "com.spotify.client.ios.taurus.0.60.6.patched.9.1.90",
+          "developerName": "TubeVault",
+          "version": "9.1.90",
           "iconURL": "https://repo.ballermc.com/tubevault/spotify-logo.jpg",
-          "subtitle": "Best pick. Tweaks: EeveeSpotify"
+          "subtitle": "Best pick. Taurus 0.60.6"
+        },
+        {
+          "name": "Vesper",
+          "bundleIdentifier": "app.vesper",
+          "developerName": "scholars lounge",
+          "version": "0.5.3",
+          "iconURL": "https://fastsign.dev/tg-icon/scholars-lounge/85780.png",
+          "subtitle": "scholars lounge | Vesper Version: 0.5.3 Bundle ID: app.vesper App by DjangoCustard225 A native iOS content hub utilising Stremio add-ons. Browse…"
+        },
+        {
+          "name": "WQ Files",
+          "bundleIdentifier": "cz.kolbi.wqfiles",
+          "developerName": "@ipavault",
+          "version": "0.9.6",
+          "iconURL": "https://fastsign.dev/tg-icon/ipavault/1352.png",
+          "subtitle": "@ipavault | WQ Files WQ Files is a file browser, app data manager and cache cleaner for iOS 27. \"WQ\" stands for worse_query, the sandbox technique…"
+        },
+        {
+          "name": "FotMob",
+          "bundleIdentifier": "com.mobilefootie.fotmobpro",
+          "developerName": "@riftysIPAlibrary",
+          "version": "1247.0",
+          "iconURL": "https://fastsign.dev/tg-icon/riftysipalibrary/8984.png",
+          "subtitle": "Premium unlocked"
+        },
+        {
+          "name": "WhatsApp",
+          "bundleIdentifier": "net.whatsapp.WhatsApp",
+          "developerName": "@spyg_vault",
+          "version": "26.44.72",
+          "iconURL": "https://fastsign.dev/tg-icon/spyg-vault/201.png",
+          "subtitle": "Tweaks: Watusi"
+        },
+        {
+          "name": "VEED Lite",
+          "bundleIdentifier": "io.veed.appstore",
+          "developerName": "@riftysIPAlibrary",
+          "version": "8.15.2",
+          "iconURL": "https://fastsign.dev/tg-icon/riftysipalibrary/8983.png",
+          "subtitle": "Premium unlocked"
+        },
+        {
+          "name": "Idle Miner",
+          "bundleIdentifier": "com.fluffyfairygames.idleminertycoon",
+          "developerName": "@riftysIPAlibrary",
+          "version": "5.69.0",
+          "iconURL": "https://fastsign.dev/tg-icon/riftysipalibrary/8982.png",
+          "subtitle": "Tweaks: SatellaJailed"
+        },
+        {
+          "name": "Napper",
+          "bundleIdentifier": "com.napper",
+          "developerName": "@riftysIPAlibrary",
+          "version": "6.96.0",
+          "iconURL": "https://fastsign.dev/tg-icon/riftysipalibrary/8981.png",
+          "subtitle": "Premium unlocked"
+        },
+        {
+          "name": "Hill Climb",
+          "bundleIdentifier": "com.fingersoft.hillclimbracing",
+          "developerName": "@riftysIPAlibrary",
+          "version": "1.73.2",
+          "iconURL": "https://fastsign.dev/tg-icon/riftysipalibrary/8980.png",
+          "subtitle": "Tweaks: SatellaJailed"
+        },
+        {
+          "name": "Speak4Me",
+          "bundleIdentifier": "com.yadux.Speak4Me",
+          "developerName": "@riftysIPAlibrary",
+          "version": "6.4.3",
+          "iconURL": "https://fastsign.dev/icon.png",
+          "subtitle": "Pro unlocked"
+        },
+        {
+          "name": "Genius Scan",
+          "bundleIdentifier": "com.geniussoftware.GeniusScan",
+          "developerName": "@riftysIPAlibrary",
+          "version": "8.16.2",
+          "iconURL": "https://fastsign.dev/tg-icon/riftysipalibrary/8978.png",
+          "subtitle": "Premium unlocked"
+        },
+        {
+          "name": "Tappy",
+          "bundleIdentifier": "cameronnazemi.Tappy",
+          "developerName": "@riftysIPAlibrary",
+          "version": "6.7.0",
+          "iconURL": "https://fastsign.dev/tg-icon/riftysipalibrary/8977.png",
+          "subtitle": "Subscription unlocked"
+        },
+        {
+          "name": "Most",
+          "bundleIdentifier": "com.most.stories",
+          "developerName": "AppTesters IPA Repo",
+          "version": "3.5.9",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.most.stories.png",
+          "subtitle": "Subscription unlocked"
+        },
+        {
+          "name": "MyVocab",
+          "bundleIdentifier": "vladchechura.VocabularyEN",
+          "developerName": "@riftysIPAlibrary",
+          "version": "2.0.2",
+          "iconURL": "https://fastsign.dev/tg-icon/riftysipalibrary/8976.png",
+          "subtitle": "Subscription unlocked"
+        },
+        {
+          "name": "Zen Color",
+          "bundleIdentifier": "happy.paint.color.coloring.number",
+          "developerName": "@riftysIPAlibrary",
+          "version": "2.2.13",
+          "iconURL": "https://fastsign.dev/tg-icon/riftysipalibrary/8975.png",
+          "subtitle": "Tweaks: NetworkBlocker"
+        },
+        {
+          "name": "Block Blast!",
+          "bundleIdentifier": "com.blockpuzzle.us.ios",
+          "developerName": "@riftysIPAlibrary",
+          "version": "7.6.1",
+          "iconURL": "https://fastsign.dev/tg-icon/riftysipalibrary/8974.png",
+          "subtitle": "Tweaks: NetworkBlocker"
         },
         {
           "name": "BitChord",
@@ -9754,6 +9890,22 @@
           "version": "2.0.2",
           "iconURL": "https://fastsign.dev/tg-icon/ipavault/1349.png",
           "subtitle": "@ipavault | Compressor 2.0.2 (Pro) Image, Video, PDF Compressor and Converter Compress photos, videos, and PDFs directly on your iPhone without…"
+        },
+        {
+          "name": "JournalCircle",
+          "bundleIdentifier": "com.genau.JournalCircle",
+          "developerName": "@riftysIPAlibrary",
+          "version": "3.6.7",
+          "iconURL": "https://fastsign.dev/tg-icon/riftysipalibrary/8973.png",
+          "subtitle": "Premium unlocked"
+        },
+        {
+          "name": "Open",
+          "bundleIdentifier": "com.o-p-e-n.open",
+          "developerName": "@riftysIPAlibrary",
+          "version": "26.46",
+          "iconURL": "https://fastsign.dev/tg-icon/riftysipalibrary/8972.png",
+          "subtitle": "Subscription unlocked"
         },
         {
           "name": "Notewise",
@@ -9796,12 +9948,84 @@
           "subtitle": "Subscription unlocked"
         },
         {
+          "name": "WQ Files",
+          "bundleIdentifier": "cz.kolbi.wqfiles",
+          "developerName": "kolbicz",
+          "version": "0.9.6",
+          "iconURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/WQFiles/icon.png",
+          "subtitle": "File browser, app data manager and cache cleaner for iOS 26 and 27, built on the worse_query sandbox technique. Browse other apps' containers, edit…"
+        },
+        {
+          "name": "Swipt",
+          "bundleIdentifier": "io.nekohasekai.swipt",
+          "developerName": "nekohasekai",
+          "version": "0.1.0",
+          "iconURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/Swipt/icon.png",
+          "subtitle": "Swipt automates this iPhone or iPad with JavaScript swiplets. It bundles a TypeScript SDK built on CoreDevice and the accessibility services, plus…"
+        },
+        {
+          "name": "Stats",
+          "bundleIdentifier": "com.ishtiaqsyed.StatsForIOS",
+          "developerName": "ishtiaq156",
+          "version": "0.3.6",
+          "iconURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/Stats/icon.png",
+          "subtitle": "View your Mac's system activity on iPhone over a local encrypted connection. A native, local-first system monitor with a lightweight Mac companion…"
+        },
+        {
+          "name": "OpenParsec",
+          "bundleIdentifier": "com.aigch.OpenParsec",
+          "developerName": "hugeBlack",
+          "version": "2.0.0",
+          "iconURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/OpenParsec/icon.png",
+          "subtitle": "An open-source Parsec client for iOS/iPadOS with mouse, keyboard, and touch-screen support."
+        },
+        {
+          "name": "MoviePilotLite",
+          "bundleIdentifier": "com.altman.moviepilot",
+          "developerName": "singleton-altman",
+          "version": "1.3.3",
+          "iconURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/MoviePilotLite/icon.png",
+          "subtitle": "基于 MoviePilot 的 Flutter 跨端客户端，对接 MoviePilot v2 API，在手机上完成订阅、搜索、下载、整理与系统运维等常用操作。"
+        },
+        {
+          "name": "iPadn",
+          "bundleIdentifier": "app.local.iPadn",
+          "developerName": "mengangs",
+          "version": "2.1.0",
+          "iconURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/iPadn/icon.png",
+          "subtitle": "Search, download and install the apps you own on iPhone and iPad — older versions, removed apps, regional price comparison and native install. Works…"
+        },
+        {
+          "name": "HermesEnabler",
+          "bundleIdentifier": "com.example.HermesEnabler",
+          "developerName": "pookjw",
+          "version": "1.0",
+          "iconURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/HermesEnabler/icon.png",
+          "subtitle": "Enable Hermès and Ultra watch faces on any Apple Watch, along with display, sensor, and Siri tweaks backed by MobileGestalt changes and automatic…"
+        },
+        {
+          "name": "ARMSX2",
+          "bundleIdentifier": "com.armsx2.ios",
+          "developerName": "ARMSX2",
+          "version": "2.6.0-nightly.20261113.0426",
+          "iconURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/ARMSX2/icon.png",
+          "subtitle": "A free and open-source PlayStation 2 (PS2) emulator based on PCSX2, with native ARM64 JIT recompilers. Play PS2 games on your phone, PC, or gaming…"
+        },
+        {
           "name": "iCube",
           "bundleIdentifier": "com.joemattiello.iCube",
           "developerName": "Provenance Emu",
           "version": "1.0.0",
           "iconURL": "https://icube-emu.com/icon-1024.png",
           "subtitle": "Experience classic Nintendo GameCube and Wii games on your iOS devices and Apple TV. Built on the proven Dolphin emulator foundation. Features: •…"
+        },
+        {
+          "name": "Shapr3D",
+          "bundleIdentifier": "com.shapr3d.shapr",
+          "developerName": "AppTesters IPA Repo",
+          "version": "26.200.0",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.shapr3d.shapr.png",
+          "subtitle": "Injected with Premium"
         },
         {
           "name": "Lyfta",
@@ -9892,220 +10116,12 @@
           "subtitle": "Subscription unlocked. Ignore purchase page"
         },
         {
-          "name": "Karteto",
-          "bundleIdentifier": "com.karteto.application",
-          "developerName": "@Sa1y0miii",
-          "version": "0.11.03",
-          "iconURL": "https://fastsign.dev/tg-icon/sa1y0miii/16024.png",
-          "subtitle": "Subscription unlocked"
-        },
-        {
-          "name": "Zen Flip Clock",
-          "bundleIdentifier": "com.mad.FlipClock",
-          "developerName": "@Sa1y0miii",
-          "version": "4.15.2",
-          "iconURL": "https://fastsign.dev/tg-icon/sa1y0miii/16021.png",
-          "subtitle": "Subscription unlocked. *(Close the purchase page)"
-        },
-        {
-          "name": "Pause Cam",
-          "bundleIdentifier": "com.saturdaytechnologies.Pause-Camera",
-          "developerName": "@Sa1y0miii",
-          "version": "5.20",
-          "iconURL": "https://fastsign.dev/tg-icon/sa1y0miii/16018.png",
-          "subtitle": "Subscription unlocked"
-        },
-        {
-          "name": "Leica LUX",
-          "bundleIdentifier": "com.leica-camera.camera",
-          "developerName": "@Sa1y0miii",
-          "version": "2.1.2",
-          "iconURL": "https://fastsign.dev/tg-icon/sa1y0miii/16015.png",
-          "subtitle": "Subscription unlocked"
-        },
-        {
-          "name": "LingUp",
-          "bundleIdentifier": "com.lingup.app",
-          "developerName": "@Sa1y0miii",
-          "version": "2.0.31",
-          "iconURL": "https://fastsign.dev/tg-icon/sa1y0miii/16012.png",
-          "subtitle": "Restart the app when you get to the subscription page"
-        },
-        {
-          "name": "Flashtex",
-          "bundleIdentifier": "de.kruschel.flashtex",
-          "developerName": "@Sa1y0miii",
-          "version": "2.4.0",
-          "iconURL": "https://fastsign.dev/tg-icon/sa1y0miii/16009.png",
-          "subtitle": "Subscription unlocked. *(close purchase page)"
-        },
-        {
-          "name": "[untitled]",
-          "bundleIdentifier": "com.untitledinbrackets.untitled-ios",
-          "developerName": "@Sa1y0miii",
-          "version": "1.28.0",
-          "iconURL": "https://fastsign.dev/tg-icon/sa1y0miii/16006.png",
-          "subtitle": "Subscription unlocked. *(the limit of 25 songs is not removed)"
-        },
-        {
-          "name": "Bearmore",
-          "bundleIdentifier": "com.bearmore",
-          "developerName": "@Sa1y0miii",
-          "version": "1.0.79",
-          "iconURL": "https://fastsign.dev/tg-icon/sa1y0miii/16003.png",
-          "subtitle": "Subscription unlocked"
-        },
-        {
-          "name": "pico cam",
-          "bundleIdentifier": "com.zuzu.peekapic",
-          "developerName": "@Sa1y0miii",
-          "version": "1.7.5",
-          "iconURL": "https://fastsign.dev/tg-icon/sa1y0miii/16000.png",
-          "subtitle": "Subscription unlocked"
-        },
-        {
-          "name": "StudyCards",
-          "bundleIdentifier": "com.cameronshemilt.StudyCards",
-          "developerName": "@Sa1y0miii",
-          "version": "3.3.4",
-          "iconURL": "https://fastsign.dev/tg-icon/sa1y0miii/15997.png",
-          "subtitle": "Subscription unlocked"
-        },
-        {
-          "name": "WQ Files",
-          "bundleIdentifier": "cz.kolbi.wqfiles",
-          "developerName": "kolbicz",
-          "version": "0.9.5",
-          "iconURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/WQFiles/icon.png",
-          "subtitle": "@ipavault | WQ Files WQ Files is a file browser, app data manager and cache cleaner for iOS 27. \"WQ\" stands for worse_query, the sandbox technique…"
-        },
-        {
-          "name": "Lyfta",
-          "bundleIdentifier": "com.lyftaios",
+          "name": "Reframe",
+          "bundleIdentifier": "com.glucobit.cravingBuster.CravingBuster",
           "developerName": "@riftysIPAlibrary",
-          "version": "1.168",
-          "iconURL": "https://fastsign.dev/tg-icon/riftysipalibrary/8969.png",
-          "subtitle": "Tweaks: riftyslyfta"
-        },
-        {
-          "name": "Soundbrenner",
-          "bundleIdentifier": "com.soundbrenner.metronome",
-          "developerName": "@Sa1y0miii",
-          "version": "1.44.2",
-          "iconURL": "https://fastsign.dev/tg-icon/sa1y0miii/15994.png",
-          "subtitle": "Login to unlock subscription"
-        },
-        {
-          "name": "TapeKit",
-          "bundleIdentifier": "com.widget-kid",
-          "developerName": "@Sa1y0miii",
-          "version": "3.8.3",
-          "iconURL": "https://fastsign.dev/tg-icon/sa1y0miii/15991.png",
-          "subtitle": "Subscription unlocked"
-        },
-        {
-          "name": "Pennies",
-          "bundleIdentifier": "com.magneticzero.pennies",
-          "developerName": "@Sa1y0miii",
-          "version": "6.6.2",
-          "iconURL": "https://fastsign.dev/tg-icon/sa1y0miii/15988.png",
-          "subtitle": "Subscription unlocked"
-        },
-        {
-          "name": "Animatic",
-          "bundleIdentifier": "com.inkboard.animatic",
-          "developerName": "@Sa1y0miii",
-          "version": "4.3",
-          "iconURL": "https://fastsign.dev/tg-icon/sa1y0miii/15985.png",
-          "subtitle": "Subscription unlocked"
-        },
-        {
-          "name": "Magic Sort",
-          "bundleIdentifier": "com.grandgames.magicsort",
-          "developerName": "@riftysIPAlibrary",
-          "version": "0.0.3482",
-          "iconURL": "https://fastsign.dev/tg-icon/riftysipalibrary/8968.png",
-          "subtitle": "Free iAP"
-        },
-        {
-          "name": "HabitGenius",
-          "bundleIdentifier": "com.habitgenius.mobile",
-          "developerName": "@Sa1y0miii",
-          "version": "4.1.2",
-          "iconURL": "https://fastsign.dev/tg-icon/sa1y0miii/15979.png",
-          "subtitle": "Subscription unlocked"
-        },
-        {
-          "name": "Pinterest",
-          "bundleIdentifier": "pinterest",
-          "developerName": "@riftysIPAlibrary",
-          "version": "14.44",
-          "iconURL": "https://fastsign.dev/tg-icon/riftysipalibrary/8967.png",
-          "subtitle": "Download Videos"
-        },
-        {
-          "name": "Structured",
-          "bundleIdentifier": "com.leomehlig.today",
-          "developerName": "@riftysIPAlibrary",
-          "version": "4.6.9",
-          "iconURL": "https://fastsign.dev/tg-icon/riftysipalibrary/8966.png",
-          "subtitle": "Subscription unlocked. Requires trollstore, jailbreak or a certificate with specific entitlements"
-        },
-        {
-          "name": "TwitchUnblock",
-          "bundleIdentifier": "com.mxfia19.TwitchUnblock",
-          "developerName": "@ipavault",
-          "version": "1.7.1",
-          "iconURL": "https://fastsign.dev/tg-icon/ipavault/1346.png",
-          "subtitle": "@ipavault | Builds of TwitchUnblock Builds: ▪TwitchUnblock 1.7.1 (iOS) ▪TwitchUnblockTV 0.1.49 (tvOS) TwitchUnblock is an open-source Twitch client…"
-        },
-        {
-          "name": "SolarWatch",
-          "bundleIdentifier": "com.fifteenjugglers.solarwatch",
-          "developerName": "@riftysIPAlibrary",
-          "version": "2026.29.2",
-          "iconURL": "https://fastsign.dev/tg-icon/riftysipalibrary/8965.png",
+          "version": "4.0.3",
+          "iconURL": "https://fastsign.dev/tg-icon/riftysipalibrary/8970.png",
           "subtitle": "Premium unlocked"
-        },
-        {
-          "name": "Pattrn",
-          "bundleIdentifier": "com.Pattrn",
-          "developerName": "@Sa1y0miii",
-          "version": "3.1.4",
-          "iconURL": "https://fastsign.dev/tg-icon/sa1y0miii/15976.png",
-          "subtitle": "Subscription unlocked. *(close purchase page)"
-        },
-        {
-          "name": "Charades",
-          "bundleIdentifier": "com.dmytrocheverda.Charades",
-          "developerName": "@Sa1y0miii",
-          "version": "2.13.3",
-          "iconURL": "https://fastsign.dev/tg-icon/sa1y0miii/15973.png",
-          "subtitle": "Subscription unlocked"
-        },
-        {
-          "name": "YaoYao",
-          "bundleIdentifier": "hltek.YaoYao",
-          "developerName": "@Sa1y0miii",
-          "version": "26.11.10",
-          "iconURL": "https://fastsign.dev/tg-icon/sa1y0miii/15970.png",
-          "subtitle": "Subscription unlocked"
-        },
-        {
-          "name": "ADHD White Noise",
-          "bundleIdentifier": "io.mindist.noise",
-          "developerName": "@Sa1y0miii",
-          "version": "3.4.0",
-          "iconURL": "https://fastsign.dev/tg-icon/sa1y0miii/15967.png",
-          "subtitle": "Subscription unlocked"
-        },
-        {
-          "name": "Structured",
-          "bundleIdentifier": "com.leomehlig.today",
-          "developerName": "@blatants",
-          "version": "4.6.9",
-          "iconURL": "https://fastsign.dev/tg-icon/blatants/13481.png",
-          "subtitle": "Subscription unlocked. >TrollStore/jailbreak only"
         }
       ]
     },
