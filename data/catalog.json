@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-14T06:26:50Z",
+  "generatedAt": "2026-11-14T18:05:43Z",
   "sources": [
     {
       "id": "utm",
@@ -2464,11 +2464,19 @@
     {
       "id": "owo-source",
       "name": "OwO Source",
-      "appCount": 170,
+      "appCount": 171,
       "catalogLimited": true,
       "iconURL": "https://raw.githubusercontent.com/OwO-Network/Repo/main/icons/owo.repo.icon.png",
       "sourceURL": "https://repo.owo.network/",
       "apps": [
+        {
+          "name": "PiliPlus",
+          "bundleIdentifier": "com.example.piliplus",
+          "developerName": "",
+          "version": "2.2.1",
+          "iconURL": "https://raw.githubusercontent.com/owo-network/Repo/main/icons/com.example.piliplus.png",
+          "subtitle": ""
+        },
         {
           "name": "Mori",
           "bundleIdentifier": "com.mori.downloader",
@@ -3739,14 +3747,6 @@
           "developerName": "",
           "version": "8.0.43",
           "iconURL": "https://raw.githubusercontent.com/owo-network/Repo/main/icons/com.tencent.xin.png",
-          "subtitle": ""
-        },
-        {
-          "name": "X",
-          "bundleIdentifier": "com.atebits.Tweetie2",
-          "developerName": "",
-          "version": "10.12",
-          "iconURL": "https://raw.githubusercontent.com/owo-network/Repo/main/icons/com.atebits.Tweetie2.png",
           "subtitle": ""
         }
       ]
@@ -8771,7 +8771,7 @@
           "name": "BCD",
           "bundleIdentifier": "com.thebcd69.bcd",
           "developerName": "thebcd69",
-          "version": "0.1.653",
+          "version": "0.1.659",
           "iconURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/BCD/icon.png",
           "subtitle": "Windows games on iPhone and iPad"
         },
@@ -8875,9 +8875,9 @@
           "name": "iPadn",
           "bundleIdentifier": "app.local.iPadn",
           "developerName": "mengangs",
-          "version": "2.1.0",
+          "version": "2.1.1",
           "iconURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/iPadn/icon.png",
-          "subtitle": "Download older and removed App Store apps"
+          "subtitle": "下载 App Store 的历史版本与已下架应用"
         },
         {
           "name": "Iridium",
@@ -8923,7 +8923,7 @@
           "name": "Kumone",
           "bundleIdentifier": "sb.moe.kumone-ios",
           "developerName": "missuo",
-          "version": "0.3.35",
+          "version": "0.3.37",
           "iconURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/Kumone/icon.png",
           "subtitle": "原生 NetEase Cloud Music iOS 客户端（雲の音）"
         },
@@ -9005,7 +9005,7 @@
           "developerName": "zarzet",
           "version": "5.3.1",
           "iconURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/Mornye/icon.png",
-          "subtitle": "FLAC Downloader for iOS"
+          "subtitle": "Hi-res music player with downloads"
         },
         {
           "name": "MoviePilot",
@@ -9059,7 +9059,7 @@
           "name": "PiliPlus",
           "bundleIdentifier": "com.example.piliplus",
           "developerName": "bggRGjQaUbCoE",
-          "version": "2.2.0",
+          "version": "2.2.1",
           "iconURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/PiliPlus/icon.png",
           "subtitle": "使用Flutter开发的BiliBili第三方客户端"
         },
@@ -9141,13 +9141,13 @@
           "developerName": "akinal5765-byte",
           "version": "1.1.1",
           "iconURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/Silverphase/icon.png",
-          "subtitle": "Native film and print simulation for iPhone and iPad"
+          "subtitle": "面向 iPhone 与 iPad 的原生胶片与印相模拟器"
         },
         {
           "name": "Stats",
           "bundleIdentifier": "com.ishtiaqsyed.StatsForIOS",
           "developerName": "ishtiaq156",
-          "version": "0.3.10",
+          "version": "0.3.15",
           "iconURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/Stats/icon.png",
           "subtitle": "Your Mac's activity, at a glance"
         },
@@ -11115,7 +11115,7 @@
           "name": "Mangayomi",
           "bundleIdentifier": "com.kodjodevf.mangayomi",
           "developerName": "Moustapha Kodjo Amadou",
-          "version": "0.9.95",
+          "version": "0.9.96",
           "iconURL": "https://raw.githubusercontent.com/kodjodevf/mangayomi/refs/heads/main/repo/images/icons/icon_default.webp",
           "subtitle": "Read manga, novels, and watch anime"
         }
