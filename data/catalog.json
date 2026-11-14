@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-14T18:05:43Z",
+  "generatedAt": "2026-11-14T22:26:46Z",
   "sources": [
     {
       "id": "utm",
@@ -5204,11 +5204,227 @@
     {
       "id": "apptesters",
       "name": "AppTesters IPA Repo",
-      "appCount": 10199,
+      "appCount": 10226,
       "catalogLimited": true,
       "iconURL": "https://apptesters.org/apptesters-512x512.png",
       "sourceURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/apps.json",
       "apps": [
+        {
+          "name": "foriOS",
+          "bundleIdentifier": "com.tapinfinity.HdjcXcode7",
+          "developerName": "",
+          "version": "13.4",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.tapinfinity.HdjcXcode7.png",
+          "subtitle": ""
+        },
+        {
+          "name": "Homeworkouts",
+          "bundleIdentifier": "com.abishkking.maleworkout",
+          "developerName": "",
+          "version": "1.55.0",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.abishkking.maleworkout.png",
+          "subtitle": ""
+        },
+        {
+          "name": "MDClock",
+          "bundleIdentifier": "tech.miidii.MDClock",
+          "developerName": "",
+          "version": "2.76",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/tech.miidii.MDClock.png",
+          "subtitle": ""
+        },
+        {
+          "name": "Luminar",
+          "bundleIdentifier": "com.skylum.luminaripad",
+          "developerName": "",
+          "version": "4.6.1",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.skylum.luminaripad.png",
+          "subtitle": ""
+        },
+        {
+          "name": "Unknown app",
+          "bundleIdentifier": "tech.miidii.MDBlank",
+          "developerName": "",
+          "version": "4.4.1",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/tech.miidii.MDBlank.png",
+          "subtitle": ""
+        },
+        {
+          "name": "VlogNow",
+          "bundleIdentifier": "com.frontrow.vlog",
+          "developerName": "",
+          "version": "2.25.0",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.frontrow.vlog.png",
+          "subtitle": ""
+        },
+        {
+          "name": "LookUp",
+          "bundleIdentifier": "in.muditbhargava.LookUp",
+          "developerName": "",
+          "version": "13.1.1",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/in.muditbhargava.LookUp.png",
+          "subtitle": ""
+        },
+        {
+          "name": "GrowMe",
+          "bundleIdentifier": "com.book.summaries.reading",
+          "developerName": "",
+          "version": "1.4.6",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.book.summaries.reading.png",
+          "subtitle": ""
+        },
+        {
+          "name": "Camera",
+          "bundleIdentifier": "com.andyworks.camera",
+          "developerName": "",
+          "version": "1.63",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.andyworks.camera.png",
+          "subtitle": ""
+        },
+        {
+          "name": "rPlayer",
+          "bundleIdentifier": "com.wangyuehuan.vrtef",
+          "developerName": "",
+          "version": "8.1.1",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.wangyuehuan.vrtef.png",
+          "subtitle": ""
+        },
+        {
+          "name": "ism",
+          "bundleIdentifier": "com.ahaf.mshion",
+          "developerName": "",
+          "version": "7.52.1",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.ahaf.mshion.png",
+          "subtitle": ""
+        },
+        {
+          "name": "VEEDLite",
+          "bundleIdentifier": "io.veed.appstore",
+          "developerName": "",
+          "version": "8.15.2",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/io.veed.appstore.png",
+          "subtitle": ""
+        },
+        {
+          "name": "Stay",
+          "bundleIdentifier": "com.dajiu.stay.pro",
+          "developerName": "",
+          "version": "2.9.26",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.dajiu.stay.pro.png",
+          "subtitle": ""
+        },
+        {
+          "name": "RiseSleep",
+          "bundleIdentifier": "com.risesci.nyx",
+          "developerName": "",
+          "version": "0.1.650",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.risesci.nyx.png",
+          "subtitle": ""
+        },
+        {
+          "name": "KKPhoto",
+          "bundleIdentifier": "tech.miidii.AlbumManager",
+          "developerName": "",
+          "version": "2.4.1",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/tech.miidii.AlbumManager.png",
+          "subtitle": ""
+        },
+        {
+          "name": "HappyScale",
+          "bundleIdentifier": "com.frontpocketsoftware.happyscale",
+          "developerName": "",
+          "version": "2026.9.1",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.frontpocketsoftware.happyscale.png",
+          "subtitle": ""
+        },
+        {
+          "name": "ColorPop",
+          "bundleIdentifier": "com.mwm.procolor",
+          "developerName": "",
+          "version": "2.69.01",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.mwm.procolor.png",
+          "subtitle": ""
+        },
+        {
+          "name": "B612",
+          "bundleIdentifier": "com.linecorp.b612",
+          "developerName": "",
+          "version": "15.5.1",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.linecorp.b612.png",
+          "subtitle": ""
+        },
+        {
+          "name": "VSCO",
+          "bundleIdentifier": "co.visualsupply.cam",
+          "developerName": "",
+          "version": "463.0.0",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/co.visualsupply.cam.png",
+          "subtitle": ""
+        },
+        {
+          "name": "Stemz",
+          "bundleIdentifier": "com.mwm.stems",
+          "developerName": "",
+          "version": "6.00.05",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.mwm.stems.png",
+          "subtitle": ""
+        },
+        {
+          "name": "Premiere",
+          "bundleIdentifier": "com.adobe.premiere.ios",
+          "developerName": "",
+          "version": "26.24.0",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.adobe.premiere.ios.png",
+          "subtitle": ""
+        },
+        {
+          "name": "Mockup",
+          "bundleIdentifier": "com.hasankassem.mockup",
+          "developerName": "",
+          "version": "4.6.3",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.hasankassem.mockup.png",
+          "subtitle": ""
+        },
+        {
+          "name": "JSCodePad",
+          "bundleIdentifier": "com.markodevcic.js-code-pad",
+          "developerName": "",
+          "version": "1.11.0",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.markodevcic.js-code-pad.png",
+          "subtitle": ""
+        },
+        {
+          "name": "Hevy",
+          "bundleIdentifier": "com.hevyapp.hevy",
+          "developerName": "",
+          "version": "3.2.7",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.hevyapp.hevy.png",
+          "subtitle": ""
+        },
+        {
+          "name": "Action",
+          "bundleIdentifier": "com.future.kapi",
+          "developerName": "",
+          "version": "4.45.2",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.future.kapi.png",
+          "subtitle": ""
+        },
+        {
+          "name": "OfflineMusic",
+          "bundleIdentifier": "com.offlinemusic",
+          "developerName": "",
+          "version": "4.0.1",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.offlinemusic.png",
+          "subtitle": ""
+        },
+        {
+          "name": "Enki",
+          "bundleIdentifier": "PHCXZHD53T.com.enki.insights",
+          "developerName": "",
+          "version": "2.40.16",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/PHCXZHD53T.com.enki.insights.png",
+          "subtitle": ""
+        },
         {
           "name": "Shapr3D",
           "bundleIdentifier": "com.shapr3d.shapr",
@@ -6591,222 +6807,6 @@
           "developerName": "",
           "version": "462.1.0",
           "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/co.visualsupply.cam.png",
-          "subtitle": ""
-        },
-        {
-          "name": "Splice",
-          "bundleIdentifier": "com.path36.SpliceFree",
-          "developerName": "",
-          "version": "4.28.75",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.path36.SpliceFree.png",
-          "subtitle": ""
-        },
-        {
-          "name": "PureStatus",
-          "bundleIdentifier": "com.damtechdesigns.wa.story",
-          "developerName": "",
-          "version": "2026.12",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.damtechdesigns.wa.story.png",
-          "subtitle": ""
-        },
-        {
-          "name": "Locket",
-          "bundleIdentifier": "com.locket.Locket",
-          "developerName": "",
-          "version": "2.71.2",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.locket.Locket.png",
-          "subtitle": ""
-        },
-        {
-          "name": "Crsel",
-          "bundleIdentifier": "com.frameoneapps.Crsel",
-          "developerName": "",
-          "version": "1.6.3",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.frameoneapps.Crsel.png",
-          "subtitle": ""
-        },
-        {
-          "name": "Athlytic",
-          "bundleIdentifier": "myndarc.newFitnessApp",
-          "developerName": "",
-          "version": "27.0.9",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/myndarc.newFitnessApp.png",
-          "subtitle": ""
-        },
-        {
-          "name": "Action",
-          "bundleIdentifier": "com.future.kapi",
-          "developerName": "",
-          "version": "4.45.0",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.future.kapi.png",
-          "subtitle": ""
-        },
-        {
-          "name": "HeavyBagPro",
-          "bundleIdentifier": "com.opentechiz.heavybagpro",
-          "developerName": "",
-          "version": "2.6.5",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.opentechiz.heavybagpro.png",
-          "subtitle": ""
-        },
-        {
-          "name": "SimplyPiano",
-          "bundleIdentifier": "com.joytunes.asla",
-          "developerName": "",
-          "version": "9.11.2",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.joytunes.asla.png",
-          "subtitle": ""
-        },
-        {
-          "name": "Fitia",
-          "bundleIdentifier": "com.ulisesolave.Fitia",
-          "developerName": "",
-          "version": "25.2.5",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.ulisesolave.Fitia.png",
-          "subtitle": ""
-        },
-        {
-          "name": "Paste",
-          "bundleIdentifier": "com.wiheads.paste",
-          "developerName": "",
-          "version": "7.0.5",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.wiheads.paste.png",
-          "subtitle": ""
-        },
-        {
-          "name": "Detail",
-          "bundleIdentifier": "co.detail.duo",
-          "developerName": "",
-          "version": "6.0.6",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/co.detail.duo.png",
-          "subtitle": ""
-        },
-        {
-          "name": "Scanner",
-          "bundleIdentifier": "com.apalonapps.pdffree",
-          "developerName": "",
-          "version": "2.12.11",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.apalonapps.pdffree.png",
-          "subtitle": ""
-        },
-        {
-          "name": "Duolingo",
-          "bundleIdentifier": "com.duolingo.DuolingoMobile",
-          "developerName": "",
-          "version": "7.147.1",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.duolingo.DuolingoMobile.png",
-          "subtitle": ""
-        },
-        {
-          "name": "iLovePDF",
-          "bundleIdentifier": "com.ilovepdf.www",
-          "developerName": "",
-          "version": "4.2.2",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.ilovepdf.www.png",
-          "subtitle": ""
-        },
-        {
-          "name": "Swiftgram",
-          "bundleIdentifier": "app.swiftgram.ios",
-          "developerName": "",
-          "version": "13.1.2",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/app.swiftgram.ios.png",
-          "subtitle": ""
-        },
-        {
-          "name": "TunerPro",
-          "bundleIdentifier": "com.mwm.guitartuner",
-          "developerName": "",
-          "version": "4.01.09",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.mwm.guitartuner.png",
-          "subtitle": ""
-        },
-        {
-          "name": "KineMaster",
-          "bundleIdentifier": "com.kinemaster.kios",
-          "developerName": "",
-          "version": "8.2.8",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.kinemaster.kios.png",
-          "subtitle": ""
-        },
-        {
-          "name": "TORVPN",
-          "bundleIdentifier": "com.youssef.developer.Full-Browser",
-          "developerName": "",
-          "version": "12.5",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.youssef.developer.Full-Browser.png",
-          "subtitle": ""
-        },
-        {
-          "name": "Threads",
-          "bundleIdentifier": "com.burbn.barcelona",
-          "developerName": "",
-          "version": "454.0.0",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.burbn.barcelona.png",
-          "subtitle": ""
-        },
-        {
-          "name": "Instagram",
-          "bundleIdentifier": "com.burbn.instagram",
-          "developerName": "",
-          "version": "454.0.0",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.burbn.instagram.png",
-          "subtitle": ""
-        },
-        {
-          "name": "ThePiano",
-          "bundleIdentifier": "com.impalastudios.pianofree",
-          "developerName": "",
-          "version": "2.26.1",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.impalastudios.pianofree.png",
-          "subtitle": ""
-        },
-        {
-          "name": "ImgAI",
-          "bundleIdentifier": "com.idevtal.Wallpapers",
-          "developerName": "",
-          "version": "5.91",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.idevtal.Wallpapers.png",
-          "subtitle": ""
-        },
-        {
-          "name": "Lightroom",
-          "bundleIdentifier": "com.adobe.lrmobilephone",
-          "developerName": "",
-          "version": "12.0.0",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.adobe.lrmobilephone.png",
-          "subtitle": ""
-        },
-        {
-          "name": "OraWeather",
-          "bundleIdentifier": "com.itwcalculator.worldradarfree",
-          "developerName": "",
-          "version": "6.4.2",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.itwcalculator.worldradarfree.png",
-          "subtitle": ""
-        },
-        {
-          "name": "edjingMix",
-          "bundleIdentifier": "com.edjing.edjingdjturntable",
-          "developerName": "",
-          "version": "9.4.3",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.edjing.edjingdjturntable.png",
-          "subtitle": ""
-        },
-        {
-          "name": "CollaNote",
-          "bundleIdentifier": "net.quochuywdm.collanote496",
-          "developerName": "",
-          "version": "5.1.1",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/net.quochuywdm.collanote496.png",
-          "subtitle": ""
-        },
-        {
-          "name": "HabitKit",
-          "bundleIdentifier": "com.roehl.habitkit",
-          "developerName": "",
-          "version": "1.19.1",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.roehl.habitkit.png",
           "subtitle": ""
         }
       ]
@@ -8755,7 +8755,7 @@
           "name": "ARMSX2",
           "bundleIdentifier": "com.armsx2.ios",
           "developerName": "ARMSX2",
-          "version": "2.6.0-nightly.20261113.0426",
+          "version": "2.6.0-nightly.20261114.1505",
           "iconURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/ARMSX2/icon.png",
           "subtitle": "PlayStation 2 emulator for ARM64"
         },
@@ -8907,7 +8907,7 @@
           "name": "Kazumi-Swift",
           "bundleIdentifier": "com.linkpass.kazumi",
           "developerName": "LinkPass888",
-          "version": "3.0.5",
+          "version": "3.0.6",
           "iconURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/Kazumi-Swift/icon.png",
           "subtitle": "基于自定义规则的番剧采集APP，支持流媒体在线观看、弹幕与实时超分辨率，使用 SwiftUI 实现。"
         },
@@ -8971,7 +8971,7 @@
           "name": "Mangayomi",
           "bundleIdentifier": "com.kodjodevf.mangayomi",
           "developerName": "Moustapha Kodjo Amadou",
-          "version": "0.9.95",
+          "version": "0.9.96",
           "iconURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/Mangayomi/icon.png",
           "subtitle": "Read manga, novels, and watch anime"
         },
@@ -9203,7 +9203,7 @@
           "name": "WQ Files",
           "bundleIdentifier": "cz.kolbi.wqfiles",
           "developerName": "kolbicz",
-          "version": "0.9.6",
+          "version": "0.9.8",
           "iconURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/WQFiles/icon.png",
           "subtitle": "File manager for iOS 26 and 27 (worse_query)"
         },
