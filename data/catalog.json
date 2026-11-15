@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-15T06:36:08Z",
+  "generatedAt": "2026-11-15T18:53:12Z",
   "sources": [
     {
       "id": "utm",
@@ -373,7 +373,7 @@
           "name": "LiveContainer (nightly)",
           "bundleIdentifier": "com.kdt.livecontainer",
           "developerName": "LiveContainer Team",
-          "version": "3.8.13",
+          "version": "3.8.14",
           "iconURL": "https://raw.githubusercontent.com/LiveContainer/LiveContainer/main/screenshots/AppIcon1024.png",
           "subtitle": "Run iOS apps without actually installing them!"
         }
@@ -5204,11 +5204,59 @@
     {
       "id": "apptesters",
       "name": "AppTesters IPA Repo",
-      "appCount": 10227,
+      "appCount": 10233,
       "catalogLimited": true,
       "iconURL": "https://apptesters.org/apptesters-512x512.png",
       "sourceURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/apps.json",
       "apps": [
+        {
+          "name": "NFCTools",
+          "bundleIdentifier": "com.wakdev.wdnfc",
+          "developerName": "",
+          "version": "3.6",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.wakdev.wdnfc.png",
+          "subtitle": ""
+        },
+        {
+          "name": "Moovit",
+          "bundleIdentifier": "com.tranzmate.tranzmate1",
+          "developerName": "",
+          "version": "5.205.0",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.tranzmate.tranzmate1.png",
+          "subtitle": ""
+        },
+        {
+          "name": "SimplyPiano",
+          "bundleIdentifier": "com.joytunes.asla",
+          "developerName": "",
+          "version": "9.11.4",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.joytunes.asla.png",
+          "subtitle": ""
+        },
+        {
+          "name": "Bazaart",
+          "bundleIdentifier": "co.bazaart.app",
+          "developerName": "",
+          "version": "27.0.8",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/co.bazaart.app.png",
+          "subtitle": ""
+        },
+        {
+          "name": "Stndrd",
+          "bundleIdentifier": "uni.cbum",
+          "developerName": "",
+          "version": "4.1.65",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/uni.cbum.png",
+          "subtitle": ""
+        },
+        {
+          "name": "Athlytic",
+          "bundleIdentifier": "myndarc.newFitnessApp",
+          "developerName": "",
+          "version": "27.0.11",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/myndarc.newFitnessApp.png",
+          "subtitle": ""
+        },
         {
           "name": "Crsel",
           "bundleIdentifier": "com.frameoneapps.Crsel",
@@ -6759,54 +6807,6 @@
           "developerName": "",
           "version": "2.26.3",
           "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.glority.everlens.png",
-          "subtitle": ""
-        },
-        {
-          "name": "Widgetsmith",
-          "bundleIdentifier": "com.crossforward.WidgetSmith",
-          "developerName": "",
-          "version": "9.0.1",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.crossforward.WidgetSmith.png",
-          "subtitle": ""
-        },
-        {
-          "name": "Origami",
-          "bundleIdentifier": "com.oribot.origami",
-          "developerName": "",
-          "version": "5.2",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.oribot.origami.png",
-          "subtitle": ""
-        },
-        {
-          "name": "ShutEye",
-          "bundleIdentifier": "health.sleep.sounds.tracker.alarm.calm",
-          "developerName": "",
-          "version": "3.5.9",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/health.sleep.sounds.tracker.alarm.calm.png",
-          "subtitle": ""
-        },
-        {
-          "name": "ScannerPro",
-          "bundleIdentifier": "com.readdle.Scanner",
-          "developerName": "",
-          "version": "9.0.4",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.readdle.Scanner.png",
-          "subtitle": ""
-        },
-        {
-          "name": "MDClock",
-          "bundleIdentifier": "tech.miidii.MDClock",
-          "developerName": "",
-          "version": "2.75",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/tech.miidii.MDClock.png",
-          "subtitle": ""
-        },
-        {
-          "name": "1Blocker",
-          "bundleIdentifier": "com.khanov.BlockerX",
-          "developerName": "",
-          "version": "6.7.1",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.khanov.BlockerX.png",
           "subtitle": ""
         }
       ]
@@ -8690,7 +8690,7 @@
     {
       "id": "altgallery",
       "name": "AltGallery",
-      "appCount": 68,
+      "appCount": 69,
       "catalogLimited": false,
       "iconURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/assets/icon.png",
       "sourceURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/all-apps.json",
@@ -8787,7 +8787,7 @@
           "name": "Doer",
           "bundleIdentifier": "com.naine.doer",
           "developerName": "moliango",
-          "version": "1.8.6",
+          "version": "1.8.7",
           "iconURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/Doer/icon.png",
           "subtitle": "A native iOS client for Linux.do"
         },
@@ -8875,7 +8875,7 @@
           "name": "iPadn",
           "bundleIdentifier": "app.local.iPadn",
           "developerName": "mengangs",
-          "version": "2.1.1",
+          "version": "2.1.3",
           "iconURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/iPadn/icon.png",
           "subtitle": "下载 App Store 的历史版本与已下架应用"
         },
@@ -8947,7 +8947,7 @@
           "name": "LiveContainer+SideStore",
           "bundleIdentifier": "com.kdt.livecontainer",
           "developerName": "LiveContainer Team",
-          "version": "3.8.13",
+          "version": "3.8.14",
           "iconURL": "https://raw.githubusercontent.com/bebound/AltGallery/master/apps/LiveContainer+SideStore/icon.png",
           "subtitle": "Run iOS apps without actually installing them!"
         },
@@ -9038,6 +9038,14 @@
           "version": "1.12.0",
           "iconURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/Opaline/icon.png",
           "subtitle": "YouTube client for iOS 12+"
+        },
+        {
+          "name": "Open Screen Sharing",
+          "bundleIdentifier": "io.nekohasekai.screensharing",
+          "developerName": "nekohasekai",
+          "version": "1.0.6",
+          "iconURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/OpenScreenSharing/icon.png",
+          "subtitle": "Remote desktop client optimized for Mac screen sharing"
         },
         {
           "name": "OpenParsec",
@@ -9203,7 +9211,7 @@
           "name": "WQ Files",
           "bundleIdentifier": "cz.kolbi.wqfiles",
           "developerName": "kolbicz",
-          "version": "0.9.8",
+          "version": "0.9.9",
           "iconURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/WQFiles/icon.png",
           "subtitle": "File manager for iOS 26 and 27 (worse_query)"
         },
@@ -11169,7 +11177,7 @@
           "name": "Nuvio",
           "bundleIdentifier": "com.nuvio.media",
           "developerName": "NuvioMedia",
-          "version": "0.6.12",
+          "version": "1.0.0",
           "iconURL": "https://raw.githubusercontent.com/NuvioMedia/NuvioMobile/0.4.11/iosApp/iosApp/Assets.xcassets/AppIcon.appiconset/app-icon-1024.png",
           "subtitle": "A free, open-source media app for your phone, your desktop, and the TV you already own."
         }
