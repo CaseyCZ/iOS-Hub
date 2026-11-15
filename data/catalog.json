@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-14T22:26:46Z",
+  "generatedAt": "2026-11-15T06:36:08Z",
   "sources": [
     {
       "id": "utm",
@@ -1151,7 +1151,7 @@
           "name": "X++",
           "bundleIdentifier": "com.atebits.Tweetie2",
           "developerName": "Densor",
-          "version": "12.43",
+          "version": "12.44",
           "iconURL": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/bf/46/c4/bf46c48e-94bb-c30d-601f-d73ed5a70689/ProductionAppIcon-0-0-1x_U007emarketing-0-8-0-0-0-85-220.png/512x512bb.jpg",
           "subtitle": "An new tweak for X!"
         },
@@ -3754,11 +3754,19 @@
     {
       "id": "cypwn-ipa",
       "name": "CyPwn IPA Library",
-      "appCount": 209,
+      "appCount": 210,
       "catalogLimited": true,
       "iconURL": "https://repo.cypwn.xyz/assets/images/cypwn_small.png",
       "sourceURL": "https://ipa.cypwn.xyz/cypwn.json",
       "apps": [
+        {
+          "name": "Stremio-2.0.7",
+          "bundleIdentifier": "com.stremio.pal",
+          "developerName": "Stremio-2.0.7 x CyPwn",
+          "version": "2.0.7",
+          "iconURL": "https://ipa.cypwn.xyz/serve/icons/Stremio-2.0.7.png",
+          "subtitle": ""
+        },
         {
           "name": "Stremio-2.0.6",
           "bundleIdentifier": "com.stremio.pal",
@@ -5190,25 +5198,25 @@
           "version": "2.6",
           "iconURL": "https://ipa.cypwn.xyz/serve/icons/Star_Map_2.6_Satella.png",
           "subtitle": ""
-        },
-        {
-          "name": "RefacePro_3.12.0",
-          "bundleIdentifier": "cypwn.RefacePro_3.12.0.3.12.0",
-          "developerName": "RefacePro_3.12.0 x CyPwn",
-          "version": "3.12.0",
-          "iconURL": "https://ipa.cypwn.xyz/serve/icons/RefacePro_3.12.0.png",
-          "subtitle": ""
         }
       ]
     },
     {
       "id": "apptesters",
       "name": "AppTesters IPA Repo",
-      "appCount": 10226,
+      "appCount": 10227,
       "catalogLimited": true,
       "iconURL": "https://apptesters.org/apptesters-512x512.png",
       "sourceURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/apps.json",
       "apps": [
+        {
+          "name": "Crsel",
+          "bundleIdentifier": "com.frameoneapps.Crsel",
+          "developerName": "",
+          "version": "1.6.5",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.frameoneapps.Crsel.png",
+          "subtitle": ""
+        },
         {
           "name": "foriOS",
           "bundleIdentifier": "com.tapinfinity.HdjcXcode7",
@@ -6799,14 +6807,6 @@
           "developerName": "",
           "version": "6.7.1",
           "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.khanov.BlockerX.png",
-          "subtitle": ""
-        },
-        {
-          "name": "VSCO",
-          "bundleIdentifier": "co.visualsupply.cam",
-          "developerName": "",
-          "version": "462.1.0",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/co.visualsupply.cam.png",
           "subtitle": ""
         }
       ]
@@ -9718,7 +9718,7 @@
     {
       "id": "fastsign",
       "name": "Alan's Gigantic Repo",
-      "appCount": 17071,
+      "appCount": 17052,
       "catalogLimited": true,
       "iconURL": "https://fastsign.dev/icon.png",
       "sourceURL": "https://fastsign.dev/repo.json",
@@ -9740,388 +9740,388 @@
           "subtitle": "Best pick. Taurus 0.60.6"
         },
         {
-          "name": "JournalCircle",
-          "bundleIdentifier": "com.genau.JournalCircle",
+          "name": "Bill Tracker",
+          "bundleIdentifier": "com.unofficialcalculators.payplan",
           "developerName": "@riftysIPAlibrary",
-          "version": "3.6.8",
-          "iconURL": "https://fastsign.dev/tg-icon/riftysipalibrary/8993.png",
+          "version": "4.3.14",
+          "iconURL": "https://fastsign.dev/tg-icon/riftysipalibrary/9007.png",
+          "subtitle": "Full Version unlocked"
+        },
+        {
+          "name": "Enki",
+          "bundleIdentifier": "PHCXZHD53T.com.enki.insights",
+          "developerName": "AppTesters IPA Repo",
+          "version": "2.40.16",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/PHCXZHD53T.com.enki.insights.png",
           "subtitle": "Premium unlocked"
         },
         {
-          "name": "MusicHarbor",
-          "bundleIdentifier": "br.com.marcosatanaka.music-harbor",
-          "developerName": "@riftysIPAlibrary",
-          "version": "5.4.2",
-          "iconURL": "https://fastsign.dev/tg-icon/riftysipalibrary/8992.png",
-          "subtitle": "Premium unlocked"
-        },
-        {
-          "name": "PokeMMO",
-          "bundleIdentifier": "eu.pokemmo.client",
-          "developerName": "PokeMMO",
-          "version": "35061",
-          "iconURL": "https://pokemmo.com/build/images/altstore.f5930b35.png",
-          "subtitle": "PokeMMO is a free to play mmorpg, come join a growing community as you level up and discover new monsters. Available now on PC, Android, iOS, Mac…"
-        },
-        {
-          "name": "Speak4Me",
-          "bundleIdentifier": "com.yadux.Speak4Me",
-          "developerName": "@riftysIPAlibrary",
-          "version": "6.4.4",
-          "iconURL": "https://fastsign.dev/icon.png",
+          "name": "OfflineMusic",
+          "bundleIdentifier": "com.offlinemusic",
+          "developerName": "AppTesters IPA Repo",
+          "version": "4.0.1",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.offlinemusic.png",
           "subtitle": "Pro unlocked"
         },
         {
-          "name": "FluentPal",
-          "bundleIdentifier": "org.reactjs.native.example.FluentAI",
-          "developerName": "@Sa1y0miii",
-          "version": "3.1.9",
-          "iconURL": "https://fastsign.dev/tg-icon/sa1y0miii/16132.png",
+          "name": "Action",
+          "bundleIdentifier": "com.future.kapi",
+          "developerName": "AppTesters IPA Repo",
+          "version": "4.45.2",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.future.kapi.png",
+          "subtitle": "Subscription unlocked. AI features may not work as expected. DO NOT report any issues related to these features"
+        },
+        {
+          "name": "Hevy",
+          "bundleIdentifier": "com.hevyapp.hevy",
+          "developerName": "AppTesters IPA Repo",
+          "version": "3.2.7",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.hevyapp.hevy.png",
+          "subtitle": "Subscription unlocked. > Can't create unlimited routines"
+        },
+        {
+          "name": "JSCodePad",
+          "bundleIdentifier": "com.markodevcic.js-code-pad",
+          "developerName": "AppTesters IPA Repo",
+          "version": "1.11.0",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.markodevcic.js-code-pad.png",
+          "subtitle": "Subscription unlocked. >Click restore purchases and restart the app"
+        },
+        {
+          "name": "Mockup",
+          "bundleIdentifier": "com.hasankassem.mockup",
+          "developerName": "AppTesters IPA Repo",
+          "version": "4.6.3",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.hasankassem.mockup.png",
           "subtitle": "Subscription unlocked"
         },
         {
-          "name": "Tracked",
-          "bundleIdentifier": "com.tracked.mobile",
-          "developerName": "@Sa1y0miii",
-          "version": "8.4.1",
-          "iconURL": "https://fastsign.dev/tg-icon/sa1y0miii/16129.png",
+          "name": "Premiere",
+          "bundleIdentifier": "com.adobe.premiere.ios",
+          "developerName": "AppTesters IPA Repo",
+          "version": "26.24.0",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.adobe.premiere.ios.png",
+          "subtitle": "Subscription unlocked. Log in with a random account (switch to the U.S. region if Adobe is blocked). Select the highest plan and click Buy then Cance…"
+        },
+        {
+          "name": "Stemz",
+          "bundleIdentifier": "com.mwm.stems",
+          "developerName": "AppTesters IPA Repo",
+          "version": "6.00.05",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.mwm.stems.png",
+          "subtitle": "Pro unlocked"
+        },
+        {
+          "name": "B612",
+          "bundleIdentifier": "com.linecorp.b612",
+          "developerName": "AppTesters IPA Repo",
+          "version": "15.5.1",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.linecorp.b612.png",
+          "subtitle": "Subscription unlocked. Ignore purchase popup's and restart the app if subscription isn't active"
+        },
+        {
+          "name": "ColorPop",
+          "bundleIdentifier": "com.mwm.procolor",
+          "developerName": "AppTesters IPA Repo",
+          "version": "2.69.01",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.mwm.procolor.png",
           "subtitle": "Subscription unlocked"
         },
         {
-          "name": "BattleTask",
-          "bundleIdentifier": "com.kuro121vn.battletask",
-          "developerName": "@Sa1y0miii",
-          "version": "5.0.0",
-          "iconURL": "https://fastsign.dev/tg-icon/sa1y0miii/16126.png",
+          "name": "HappyScale",
+          "bundleIdentifier": "com.frontpocketsoftware.happyscale",
+          "developerName": "AppTesters IPA Repo",
+          "version": "2026.9.1",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.frontpocketsoftware.happyscale.png",
           "subtitle": "Subscription unlocked"
         },
         {
-          "name": "MD Vinyl",
-          "bundleIdentifier": "tech.miidii.MDVinyl",
+          "name": "KKPhoto",
+          "bundleIdentifier": "tech.miidii.AlbumManager",
+          "developerName": "AppTesters IPA Repo",
+          "version": "2.4.1",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/tech.miidii.AlbumManager.png",
+          "subtitle": "Free IAP. Click \"Buy\" and then cancel"
+        },
+        {
+          "name": "RiseSleep",
+          "bundleIdentifier": "com.risesci.nyx",
+          "developerName": "AppTesters IPA Repo",
+          "version": "0.1.650",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.risesci.nyx.png",
+          "subtitle": "Subscription unlocked. >Certificate with healthkit entitlement is required"
+        },
+        {
+          "name": "Stay",
+          "bundleIdentifier": "com.dajiu.stay.pro",
+          "developerName": "AppTesters IPA Repo",
+          "version": "2.9.26",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.dajiu.stay.pro.png",
+          "subtitle": "Lifetime Pro. >Do not sign-in inside the app"
+        },
+        {
+          "name": "VEEDLite",
+          "bundleIdentifier": "io.veed.appstore",
+          "developerName": "AppTesters IPA Repo",
+          "version": "8.15.2",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/io.veed.appstore.png",
+          "subtitle": "Subscription unlocked"
+        },
+        {
+          "name": "ism",
+          "bundleIdentifier": "com.ahaf.mshion",
+          "developerName": "AppTesters IPA Repo",
+          "version": "7.52.1",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.ahaf.mshion.png",
+          "subtitle": "Subscription unlocked"
+        },
+        {
+          "name": "rPlayer",
+          "bundleIdentifier": "com.wangyuehuan.vrtef",
+          "developerName": "AppTesters IPA Repo",
+          "version": "8.1.1",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.wangyuehuan.vrtef.png",
+          "subtitle": "Subscription unlocked"
+        },
+        {
+          "name": "Camera",
+          "bundleIdentifier": "com.andyworks.camera",
+          "developerName": "AppTesters IPA Repo",
+          "version": "1.63",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.andyworks.camera.png",
+          "subtitle": "Subscription unlocked"
+        },
+        {
+          "name": "GrowMe",
+          "bundleIdentifier": "com.book.summaries.reading",
+          "developerName": "AppTesters IPA Repo",
+          "version": "1.4.6",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.book.summaries.reading.png",
+          "subtitle": "Subscription unlocked"
+        },
+        {
+          "name": "LookUp",
+          "bundleIdentifier": "in.muditbhargava.LookUp",
+          "developerName": "AppTesters IPA Repo",
+          "version": "13.1.1",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/in.muditbhargava.LookUp.png",
+          "subtitle": "LookUp+ Lifetime. >⚠️ Will crash with certificates if they are missing cloudKit entitlement"
+        },
+        {
+          "name": "VlogNow",
+          "bundleIdentifier": "com.frontrow.vlog",
+          "developerName": "AppTesters IPA Repo",
+          "version": "2.25.0",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.frontrow.vlog.png",
+          "subtitle": "Subscription unlocked"
+        },
+        {
+          "name": "Luminar",
+          "bundleIdentifier": "com.skylum.luminaripad",
+          "developerName": "AppTesters IPA Repo",
+          "version": "4.6.1",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.skylum.luminaripad.png",
+          "subtitle": "Subscription unlocked"
+        },
+        {
+          "name": "MDClock",
+          "bundleIdentifier": "tech.miidii.MDClock",
+          "developerName": "AppTesters IPA Repo",
+          "version": "2.76",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/tech.miidii.MDClock.png",
+          "subtitle": "Pro unlocked"
+        },
+        {
+          "name": "Homeworkouts",
+          "bundleIdentifier": "com.abishkking.maleworkout",
+          "developerName": "AppTesters IPA Repo",
+          "version": "1.55.0",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.abishkking.maleworkout.png",
+          "subtitle": "Subscription unlocked"
+        },
+        {
+          "name": "foriOS",
+          "bundleIdentifier": "com.tapinfinity.HdjcXcode7",
+          "developerName": "AppTesters IPA Repo",
+          "version": "13.4",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.tapinfinity.HdjcXcode7.png",
+          "subtitle": "Tweaks: iOS-Programming"
+        },
+        {
+          "name": "Crsel",
+          "bundleIdentifier": "com.frameoneapps.Crsel",
+          "developerName": "AppTesters IPA Repo",
+          "version": "1.6.5",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.frameoneapps.Crsel.png",
+          "subtitle": "Injected with Pro"
+        },
+        {
+          "name": "X (NFB 7.3.1)",
+          "bundleIdentifier": "com.atebits.Tweetie2",
+          "developerName": "@ipavault",
+          "version": "12.44",
+          "iconURL": "https://fastsign.dev/tg-icon/ipavault/1365.png",
+          "subtitle": "Tweaks: bhFLEX, BHTwitter"
+        },
+        {
+          "name": "X (NFB+TWI 7.3.1)",
+          "bundleIdentifier": "com.atebits.Tweetie2",
+          "developerName": "@ipavault",
+          "version": "12.44",
+          "iconURL": "https://fastsign.dev/tg-icon/ipavault/1366.png",
+          "subtitle": "Tweaks: bhFLEX, BHTwitter, TWIGalaxy"
+        },
+        {
+          "name": "Twitter (NFB 7.3.1)",
+          "bundleIdentifier": "com.atebits.Tweetie2",
+          "developerName": "@ipavault",
+          "version": "12.44",
+          "iconURL": "https://fastsign.dev/tg-icon/ipavault/1367.png",
+          "subtitle": "Tweaks: bhFLEX, BHTwitter"
+        },
+        {
+          "name": "Twitter (NFB+TWI 7.3.1)",
+          "bundleIdentifier": "com.atebits.Tweetie2",
+          "developerName": "@ipavault",
+          "version": "12.44",
+          "iconURL": "https://fastsign.dev/tg-icon/ipavault/1368.png",
+          "subtitle": "Tweaks: bhFLEX, BHTwitter, TWIGalaxy"
+        },
+        {
+          "name": "Lingora",
+          "bundleIdentifier": "com.stebtech.lingora",
+          "developerName": "@riftysIPAlibrary",
+          "version": "5.9.7",
+          "iconURL": "https://fastsign.dev/tg-icon/riftysipalibrary/9006.png",
+          "subtitle": "Subscription unlocked"
+        },
+        {
+          "name": "MD_Widgets_Live_Wallpaper_v4_4_1_Pro_Unlocked_blatant_Patched",
+          "bundleIdentifier": "tech.miidii.MDBlank",
+          "developerName": "@blatants",
+          "version": "4.4.1",
+          "iconURL": "https://fastsign.dev/tg-icon/blatants/13515.png",
+          "subtitle": "Tweaks: MDWidgets"
+        },
+        {
+          "name": "Tiny Decisions",
+          "bundleIdentifier": "com.nixwang.decision",
+          "developerName": "@blatants",
+          "version": "26.14",
+          "iconURL": "https://fastsign.dev/tg-icon/blatants/13509.png",
+          "subtitle": "Subscription unlocked. TrollStore/Jailbreak only"
+        },
+        {
+          "name": "Darkroom",
+          "bundleIdentifier": "co.bergen.Darkroom",
+          "developerName": "@blatants",
+          "version": "7.6.5",
+          "iconURL": "https://fastsign.dev/tg-icon/blatants/13501.png",
+          "subtitle": "Subscription unlocked. Trollstore only"
+        },
+        {
+          "name": "Stippl",
+          "bundleIdentifier": "com.stippl.stippl",
+          "developerName": "@riftysIPAlibrary",
+          "version": "3.1.14",
+          "iconURL": "https://fastsign.dev/tg-icon/riftysipalibrary/9005.png",
+          "subtitle": "Pro unlocked"
+        },
+        {
+          "name": "Spotify (EeveeSpotify 7.0.1)",
+          "bundleIdentifier": "com.spotify.client",
+          "developerName": "@ipavault",
+          "version": "9.1.94",
+          "iconURL": "https://fastsign.dev/tg-icon/ipavault/1363.png",
+          "subtitle": "Tweaks: EeveeSpotify"
+        },
+        {
+          "name": "Spotify (EeveeSpotify 7.0.1 · no plugins)",
+          "bundleIdentifier": "com.spotify.client",
+          "developerName": "@ipavault",
+          "version": "9.1.94",
+          "iconURL": "https://fastsign.dev/tg-icon/ipavault/1364.png",
+          "subtitle": "Tweaks: EeveeSpotify"
+        },
+        {
+          "name": "Alpin Quest",
+          "bundleIdentifier": "com.alpinquest.app",
+          "developerName": "@ipa_dark",
+          "version": "10.0.200",
+          "iconURL": "https://fastsign.dev/tg-icon/ipa-dark/1865.png",
+          "subtitle": "@ipa_dark | 🔄 Alpin Quest PRO - Outdoor GPS - appstore 🇷🇺 GPS-навигация для активного отдыха на природе с офлайн-картами, отслеживанием маршрутов…"
+        },
+        {
+          "name": "Chai",
+          "bundleIdentifier": "com.beauchamp.Messenger.external",
+          "developerName": "iOSDecrypted",
+          "version": "0.0.1",
+          "iconURL": "https://fastsign.dev/tg-icon/iosdecrypted/247719.png",
+          "subtitle": "Tweaks: SatellaJailed"
+        },
+        {
+          "name": "GoldenNugget",
+          "bundleIdentifier": "com.awesomenull.goldennugget",
+          "developerName": "@ipavault",
+          "version": "9.7.7",
+          "iconURL": "https://fastsign.dev/icon.png",
+          "subtitle": "@ipavault | GoldenNugget (Mobile) Unlock your device's full potential, with iOS 27 support! Customize your device with animated wallpapers, disable…"
+        },
+        {
+          "name": "Daygram",
+          "bundleIdentifier": "com.saltycrackers.daygram",
+          "developerName": "@riftysIPAlibrary",
+          "version": "5.9.8",
+          "iconURL": "https://fastsign.dev/tg-icon/riftysipalibrary/9004.png",
+          "subtitle": "Tweaks: riftysdaygram"
+        },
+        {
+          "name": "WQ Files",
+          "bundleIdentifier": "cz.kolbi.wqfiles",
+          "developerName": "kolbicz",
+          "version": "0.9.8",
+          "iconURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/WQFiles/icon.png",
+          "subtitle": "@ipavault | WQ Files WQ Files is a file browser, app data manager and cache cleaner for iOS 27. \"WQ\" stands for worse_query, the sandbox technique…"
+        },
+        {
+          "name": "PlaylistAI",
+          "bundleIdentifier": "bbauman.app.PlayMaker",
           "developerName": "@Sa1y0miii",
-          "version": "3.9",
-          "iconURL": "https://fastsign.dev/tg-icon/sa1y0miii/16123.png",
-          "subtitle": "❕To unlock Premium go to settings,scroll down to the bottom and Toggle 'Pro' on"
+          "version": "2.37",
+          "iconURL": "https://fastsign.dev/tg-icon/sa1y0miii/16180.png",
+          "subtitle": "Subscription unlocked"
+        },
+        {
+          "name": "Yana",
+          "bundleIdentifier": "com.yana.yanapp",
+          "developerName": "@Sa1y0miii",
+          "version": "6.1.7",
+          "iconURL": "https://fastsign.dev/tg-icon/sa1y0miii/16177.png",
+          "subtitle": "Subscription unlocked"
         },
         {
           "name": "Game Maps IRL",
           "bundleIdentifier": "com.retryapps.game.maps.irl",
           "developerName": "@Sa1y0miii",
-          "version": "2.6",
-          "iconURL": "https://fastsign.dev/tg-icon/sa1y0miii/16120.png",
+          "version": "2.7",
+          "iconURL": "https://fastsign.dev/tg-icon/sa1y0miii/16174.png",
           "subtitle": "Subscription unlocked. (*turn off dns/vpn if app is stuck loading)"
-        },
-        {
-          "name": "Reveri",
-          "bundleIdentifier": "com.reveri.reverihealth",
-          "developerName": "@riftysIPAlibrary",
-          "version": "4.25.0",
-          "iconURL": "https://fastsign.dev/tg-icon/riftysipalibrary/8990.png",
-          "subtitle": "Premium unlocked"
-        },
-        {
-          "name": "Parking Jam 3D",
-          "bundleIdentifier": "com.uqxuwtxbbu.parkingjam",
-          "developerName": "@riftysIPAlibrary",
-          "version": "233.8.1",
-          "iconURL": "https://fastsign.dev/tg-icon/riftysipalibrary/8989.png",
-          "subtitle": "No Ads, Unlimited Coins"
-        },
-        {
-          "name": "Neptune",
-          "bundleIdentifier": "de.neptune",
-          "developerName": "@Sa1y0miii",
-          "version": "7.0.1",
-          "iconURL": "https://fastsign.dev/tg-icon/sa1y0miii/16117.png",
-          "subtitle": "Subscription unlocked"
-        },
-        {
-          "name": "Dzeny",
-          "bundleIdentifier": "com.dzeny.app",
-          "developerName": "@Sa1y0miii",
-          "version": "1.15",
-          "iconURL": "https://fastsign.dev/tg-icon/sa1y0miii/16114.png",
-          "subtitle": "Subscription unlocked"
-        },
-        {
-          "name": "Nonsense",
-          "bundleIdentifier": "com.nonsense.app",
-          "developerName": "@Sa1y0miii",
-          "version": "5.4.7",
-          "iconURL": "https://fastsign.dev/tg-icon/sa1y0miii/16111.png",
-          "subtitle": "Subscription unlocked"
-        },
-        {
-          "name": "VocaCircle",
-          "bundleIdentifier": "com.genau.MemoryCircle",
-          "developerName": "@riftysIPAlibrary",
-          "version": "3.7.0",
-          "iconURL": "https://fastsign.dev/tg-icon/riftysipalibrary/8988.png",
-          "subtitle": "Subscription unlocked"
-        },
-        {
-          "name": "The Way",
-          "bundleIdentifier": "com.thewayapp.mobile",
-          "developerName": "@riftysIPAlibrary",
-          "version": "1.25.1",
-          "iconURL": "https://fastsign.dev/tg-icon/riftysipalibrary/8987.png",
-          "subtitle": "Subscription unlocked"
-        },
-        {
-          "name": "Karteto",
-          "bundleIdentifier": "com.karteto.application",
-          "developerName": "@Sa1y0miii",
-          "version": "0.11.04",
-          "iconURL": "https://fastsign.dev/tg-icon/sa1y0miii/16108.png",
-          "subtitle": "Subscription unlocked"
-        },
-        {
-          "name": "nomadtable",
-          "bundleIdentifier": "jayraavi.SoloMatch",
-          "developerName": "@Sa1y0miii",
-          "version": "16.2.57",
-          "iconURL": "https://fastsign.dev/tg-icon/sa1y0miii/16105.png",
-          "subtitle": "Subscription unlocked"
-        },
-        {
-          "name": "AI Art Generator",
-          "bundleIdentifier": "sato.tokyo.ai-art",
-          "developerName": "@Sa1y0miii",
-          "version": "3.23.43",
-          "iconURL": "https://fastsign.dev/tg-icon/sa1y0miii/16102.png",
-          "subtitle": "Subscription unlocked"
-        },
-        {
-          "name": "Gizmo",
-          "bundleIdentifier": "io.gonative.ios.xqdyad",
-          "developerName": "@Sa1y0miii",
-          "version": "3.2.155",
-          "iconURL": "https://fastsign.dev/tg-icon/sa1y0miii/16099.png",
-          "subtitle": "Subscription unlocked"
-        },
-        {
-          "name": "Liftoff",
-          "bundleIdentifier": "com.gymbros.app",
-          "developerName": "@riftysIPAlibrary",
-          "version": "2.18.0",
-          "iconURL": "https://fastsign.dev/tg-icon/riftysipalibrary/8986.png",
-          "subtitle": "Subscription unlocked"
-        },
-        {
-          "name": "PixelMe",
-          "bundleIdentifier": "sato.tokyo.pixel-me",
-          "developerName": "@Sa1y0miii",
-          "version": "4.28.52",
-          "iconURL": "https://fastsign.dev/tg-icon/sa1y0miii/16096.png",
-          "subtitle": "Subscription unlocked"
-        },
-        {
-          "name": "Enroad",
-          "bundleIdentifier": "io.uros.triprank",
-          "developerName": "@Sa1y0miii",
-          "version": "2.5.6",
-          "iconURL": "https://fastsign.dev/tg-icon/sa1y0miii/16093.png",
-          "subtitle": "Subscription unlocked"
-        },
-        {
-          "name": "Spotify (EeveeSpotify 7.0.1 UnPatched)",
-          "bundleIdentifier": "com.spotify.client",
-          "developerName": "@compiledipas",
-          "version": "9.2.0",
-          "iconURL": "https://fastsign.dev/tg-icon/compiledipas/1716.png",
-          "subtitle": "Tweaks: EeveeSpotify"
-        },
-        {
-          "name": "MyVocab",
-          "bundleIdentifier": "vladchechura.VocabularyEN",
-          "developerName": "@Sa1y0miii",
-          "version": "2.0.2",
-          "iconURL": "https://fastsign.dev/tg-icon/sa1y0miii/16090.png",
-          "subtitle": "Subscription unlocked. *(close the purchase page)"
-        },
-        {
-          "name": "Alarmy",
-          "bundleIdentifier": "droom.sleepIfUCanFree",
-          "developerName": "@Sa1y0miii",
-          "version": "26.43.0",
-          "iconURL": "https://fastsign.dev/tg-icon/sa1y0miii/16087.png",
-          "subtitle": "Subscription unlocked"
-        },
-        {
-          "name": "Spotify (EeveeSpotify 7.0.1)",
-          "bundleIdentifier": "com.spotify.client",
-          "developerName": "@compiledipas",
-          "version": "9.2.0",
-          "iconURL": "https://fastsign.dev/tg-icon/compiledipas/1714.png",
-          "subtitle": "Tweaks: EeveeSpotify"
-        },
-        {
-          "name": "HiiKER",
-          "bundleIdentifier": "com.hiiker.hiiker",
-          "developerName": "@riftysIPAlibrary",
-          "version": "26.112",
-          "iconURL": "https://fastsign.dev/tg-icon/riftysipalibrary/8985.png",
-          "subtitle": "Premium unlocked"
-        },
-        {
-          "name": "Retro",
-          "bundleIdentifier": "io.lonepalm.Retro",
-          "developerName": "@Sa1y0miii",
-          "version": "128.0",
-          "iconURL": "https://fastsign.dev/tg-icon/sa1y0miii/16084.png",
-          "subtitle": "Subscription unlocked"
-        },
-        {
-          "name": "QuakeMate",
-          "bundleIdentifier": "technology.fil.QuakeMate",
-          "developerName": "@Sa1y0miii",
-          "version": "4.3.6",
-          "iconURL": "https://fastsign.dev/tg-icon/sa1y0miii/16081.png",
-          "subtitle": "Premium unlocked"
-        },
-        {
-          "name": "CODMunity",
-          "bundleIdentifier": "com.convertify.codmobileloadout2",
-          "developerName": "@Sa1y0miii",
-          "version": "12.1002.0",
-          "iconURL": "https://fastsign.dev/tg-icon/sa1y0miii/16078.png",
-          "subtitle": "Subscription unlocked"
-        },
-        {
-          "name": "Compressor",
-          "bundleIdentifier": "com.theblackholecompany.ImageCompressor1",
-          "developerName": "@Sa1y0miii",
-          "version": "2.0.2",
-          "iconURL": "https://fastsign.dev/tg-icon/sa1y0miii/16075.png",
-          "subtitle": "Subscription unlocked"
-        },
-        {
-          "name": "SpokenPages",
-          "bundleIdentifier": "com.icartatechnologies.spokenpages",
-          "developerName": "@Sa1y0miii",
-          "version": "1.2.2",
-          "iconURL": "https://fastsign.dev/tg-icon/sa1y0miii/16072.png",
-          "subtitle": "Close all purchase pages"
-        },
-        {
-          "name": "WrapPin Tunnel",
-          "bundleIdentifier": "com.suversal.wrappin.selfsigned",
-          "developerName": "@kamohacks",
-          "version": "1.0.22",
-          "iconURL": "https://fastsign.dev/tg-icon/kamohacks/16971.png",
-          "subtitle": "@kamohacks | WrapPin 🆕 ⬆️⬆️ ⚙️Features⚙️ ✅Change your Location to anywhere you want. ✅iOS 18+ ⏺Warning Warning: This app will change the entire Date…"
-        },
-        {
-          "name": "Sleepwave",
-          "bundleIdentifier": "sleepwave.app",
-          "developerName": "@Sa1y0miii",
-          "version": "4.6.4",
-          "iconURL": "https://fastsign.dev/tg-icon/sa1y0miii/16069.png",
-          "subtitle": "Subscription unlocked"
-        },
-        {
-          "name": "Wakeout",
-          "bundleIdentifier": "com.AndresCanella.Wakeouts",
-          "developerName": "@Sa1y0miii",
-          "version": "110.0.24",
-          "iconURL": "https://fastsign.dev/tg-icon/sa1y0miii/16066.png",
-          "subtitle": "Subscription unlocked"
-        },
-        {
-          "name": "Pattrn",
-          "bundleIdentifier": "com.Pattrn",
-          "developerName": "@Sa1y0miii",
-          "version": "3.1.5",
-          "iconURL": "https://fastsign.dev/tg-icon/sa1y0miii/16063.png",
-          "subtitle": "Subscription unlocked. *(close purchase page)"
-        },
-        {
-          "name": "Time Left",
-          "bundleIdentifier": "com.lacroix.dev.Life",
-          "developerName": "@Sa1y0miii",
-          "version": "2026.24",
-          "iconURL": "https://fastsign.dev/tg-icon/sa1y0miii/16060.png",
-          "subtitle": "Click “restore purchases”"
-        },
-        {
-          "name": "MyDex TCG",
-          "bundleIdentifier": "com.albertomoral.PokedexTradingCards",
-          "developerName": "@Sa1y0miii",
-          "version": "2.5.0",
-          "iconURL": "https://fastsign.dev/tg-icon/sa1y0miii/16057.png",
-          "subtitle": "Subscription unlocked"
-        },
-        {
-          "name": "B42",
-          "bundleIdentifier": "com.soccerFitYou.App",
-          "developerName": "@Sa1y0miii",
-          "version": "7.16.1",
-          "iconURL": "https://fastsign.dev/tg-icon/sa1y0miii/16054.png",
-          "subtitle": "Subscription unlocked"
         },
         {
           "name": "Couple Island",
           "bundleIdentifier": "com.rethinkingstudio.CoupleIsland",
           "developerName": "@Sa1y0miii",
-          "version": "1.7.1",
-          "iconURL": "https://fastsign.dev/tg-icon/sa1y0miii/16051.png",
+          "version": "1.7.2",
+          "iconURL": "https://fastsign.dev/tg-icon/sa1y0miii/16171.png",
           "subtitle": "Subscription unlocked. *(close the purchase page)"
         },
         {
-          "name": "Blaukke",
-          "bundleIdentifier": "fr.blaukke",
-          "developerName": "@Sa1y0miii",
-          "version": "2.4.6",
-          "iconURL": "https://fastsign.dev/tg-icon/sa1y0miii/16048.png",
-          "subtitle": "Subscription unlocked"
-        },
-        {
-          "name": "Lifestack",
-          "bundleIdentifier": "com.demind.lifestack-calendar",
-          "developerName": "@Sa1y0miii",
-          "version": "2.16.11",
-          "iconURL": "https://fastsign.dev/tg-icon/sa1y0miii/16045.png",
-          "subtitle": "Subscription unlocked"
-        },
-        {
-          "name": "Open",
-          "bundleIdentifier": "com.o-p-e-n.open",
-          "developerName": "@Sa1y0miii",
-          "version": "26.46",
-          "iconURL": "https://fastsign.dev/tg-icon/sa1y0miii/16042.png",
-          "subtitle": "Subscription unlocked"
-        },
-        {
-          "name": "Vesper",
-          "bundleIdentifier": "app.vesper",
-          "developerName": "scholars lounge",
-          "version": "0.5.3",
-          "iconURL": "https://fastsign.dev/tg-icon/scholars-lounge/85780.png",
-          "subtitle": "scholars lounge | Vesper Version: 0.5.3 Bundle ID: app.vesper App by DjangoCustard225 A native iOS content hub utilising Stremio add-ons. Browse…"
-        },
-        {
-          "name": "WQ Files",
-          "bundleIdentifier": "cz.kolbi.wqfiles",
-          "developerName": "@ipavault",
-          "version": "0.9.6",
-          "iconURL": "https://fastsign.dev/tg-icon/ipavault/1352.png",
-          "subtitle": "@ipavault | WQ Files WQ Files is a file browser, app data manager and cache cleaner for iOS 27. \"WQ\" stands for worse_query, the sandbox technique…"
-        },
-        {
-          "name": "FotMob",
-          "bundleIdentifier": "com.mobilefootie.fotmobpro",
+          "name": "APEX Racer",
+          "bundleIdentifier": "com.pixeldev.APEXRacers",
           "developerName": "@riftysIPAlibrary",
-          "version": "1247.0",
-          "iconURL": "https://fastsign.dev/tg-icon/riftysipalibrary/8984.png",
-          "subtitle": "Premium unlocked"
-        },
-        {
-          "name": "WhatsApp",
-          "bundleIdentifier": "net.whatsapp.WhatsApp",
-          "developerName": "@spyg_vault",
-          "version": "26.44.72",
-          "iconURL": "https://fastsign.dev/tg-icon/spyg-vault/201.png",
-          "subtitle": "Tweaks: Watusi"
+          "version": "0.9.85",
+          "iconURL": "https://fastsign.dev/tg-icon/riftysipalibrary/9003.png",
+          "subtitle": "Tweaks: SatellaJailed"
         }
       ]
     },
@@ -10563,7 +10563,7 @@
           "name": "X++",
           "bundleIdentifier": "com.atebits.Tweetie2",
           "developerName": "Densor",
-          "version": "12.43",
+          "version": "12.44",
           "iconURL": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/bf/46/c4/bf46c48e-94bb-c30d-601f-d73ed5a70689/ProductionAppIcon-0-0-1x_U007emarketing-0-8-0-0-0-85-220.png/512x512bb.jpg",
           "subtitle": "An new tweak for X!"
         },
@@ -11079,7 +11079,7 @@
           "name": "WebA11Y",
           "bundleIdentifier": "com.tsg0o0.safariweba11y",
           "developerName": "Cizzuk",
-          "version": "3.7",
+          "version": "3.8",
           "iconURL": "https://i.cizzuk.net/altstore/safariweba11y/v3.7/icon.png",
           "subtitle": "Improve Web Accessibility in Safari"
         }
