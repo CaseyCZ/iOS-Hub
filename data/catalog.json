@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-17T07:57:16Z",
+  "generatedAt": "2026-11-17T20:57:39Z",
   "sources": [
     {
       "id": "utm",
@@ -657,7 +657,7 @@
           "name": "Stremio",
           "bundleIdentifier": "com.stremio.pal",
           "developerName": "Stremio",
-          "version": "2.1.1",
+          "version": "2.1.2",
           "iconURL": "https://www.stremio.com/website/stremio-logo-small.png",
           "subtitle": "Freedom to stream."
         }
@@ -5204,11 +5204,67 @@
     {
       "id": "apptesters",
       "name": "AppTesters IPA Repo",
-      "appCount": 10271,
+      "appCount": 10278,
       "catalogLimited": true,
       "iconURL": "https://apptesters.org/apptesters-512x512.png",
       "sourceURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/apps.json",
       "apps": [
+        {
+          "name": "Fitia",
+          "bundleIdentifier": "com.ulisesolave.Fitia",
+          "developerName": "",
+          "version": "25.3",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.ulisesolave.Fitia.png",
+          "subtitle": ""
+        },
+        {
+          "name": "Calm",
+          "bundleIdentifier": "com.calm.calmapp",
+          "developerName": "",
+          "version": "7.5.1",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.calm.calmapp.png",
+          "subtitle": ""
+        },
+        {
+          "name": "Picsart",
+          "bundleIdentifier": "com.picsart.studio",
+          "developerName": "",
+          "version": "31.1.1",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.picsart.studio.png",
+          "subtitle": ""
+        },
+        {
+          "name": "NutriCoach",
+          "bundleIdentifier": "nutrition.coach",
+          "developerName": "",
+          "version": "2.7.1",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/nutrition.coach.png",
+          "subtitle": ""
+        },
+        {
+          "name": "Mojo",
+          "bundleIdentifier": "archery.storify",
+          "developerName": "",
+          "version": "1.283.0",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/archery.storify.png",
+          "subtitle": ""
+        },
+        {
+          "name": "Buddy",
+          "bundleIdentifier": "com.iPwners.Plonkan",
+          "developerName": "",
+          "version": "13.53",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.iPwners.Plonkan.png",
+          "subtitle": ""
+        },
+        {
+          "name": "ColorPop",
+          "bundleIdentifier": "com.mwm.procolor",
+          "developerName": "",
+          "version": "2.69.03",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.mwm.procolor.png",
+          "subtitle": ""
+        },
         {
           "name": "SoundLab",
           "bundleIdentifier": "com.castpeer.audioroom.ios",
@@ -6751,62 +6807,6 @@
           "developerName": "",
           "version": "2.72.1",
           "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.locket.Locket.png",
-          "subtitle": ""
-        },
-        {
-          "name": "FindAir",
-          "bundleIdentifier": "co.airapps.finderbot",
-          "developerName": "",
-          "version": "2026.11.2",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/co.airapps.finderbot.png",
-          "subtitle": ""
-        },
-        {
-          "name": "Fitia",
-          "bundleIdentifier": "com.ulisesolave.Fitia",
-          "developerName": "",
-          "version": "25.2.6",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.ulisesolave.Fitia.png",
-          "subtitle": ""
-        },
-        {
-          "name": "Stemz",
-          "bundleIdentifier": "com.mwm.stems",
-          "developerName": "",
-          "version": "6.00.04",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.mwm.stems.png",
-          "subtitle": ""
-        },
-        {
-          "name": "Lyfta",
-          "bundleIdentifier": "com.lyftaios",
-          "developerName": "",
-          "version": "1.166",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.lyftaios.png",
-          "subtitle": ""
-        },
-        {
-          "name": "BoxBox",
-          "bundleIdentifier": "club.boxbox.widgets-ios",
-          "developerName": "",
-          "version": "5.5.6",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/club.boxbox.widgets-ios.png",
-          "subtitle": ""
-        },
-        {
-          "name": "PREQUEL",
-          "bundleIdentifier": "com.aiarlabs.prequel",
-          "developerName": "",
-          "version": "2.104.1",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.aiarlabs.prequel.png",
-          "subtitle": ""
-        },
-        {
-          "name": "PeakVisor",
-          "bundleIdentifier": "ru.routes.peakvisor",
-          "developerName": "",
-          "version": "5.120",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/ru.routes.peakvisor.png",
           "subtitle": ""
         }
       ]
@@ -8690,7 +8690,7 @@
     {
       "id": "altgallery",
       "name": "AltGallery",
-      "appCount": 71,
+      "appCount": 72,
       "catalogLimited": false,
       "iconURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/assets/icon.png",
       "sourceURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/all-apps.json",
@@ -8784,6 +8784,14 @@
           "subtitle": "Windows games on iPhone and iPad"
         },
         {
+          "name": "Breeze",
+          "bundleIdentifier": "com.zephyr.breeze",
+          "developerName": "deretame",
+          "version": "3.0.38",
+          "iconURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/Breeze/icon.png",
+          "subtitle": "使用 Flutter 开发的插件化漫画阅读器"
+        },
+        {
           "name": "DLiPA",
           "bundleIdentifier": "com.ahmedbafkir.dlipa",
           "developerName": "Ahmed Bafkir",
@@ -8795,7 +8803,7 @@
           "name": "Doer",
           "bundleIdentifier": "com.naine.doer",
           "developerName": "moliango",
-          "version": "1.8.8",
+          "version": "1.8.8.1",
           "iconURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/Doer/icon.png",
           "subtitle": "A native iOS client for Linux.do"
         },
@@ -8827,7 +8835,7 @@
           "name": "Erosion-CN",
           "bundleIdentifier": "com.jbdotparty.Erosion",
           "developerName": "Kianuni",
-          "version": "1.0.1",
+          "version": "1.0.4",
           "iconURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/Erosion-CN/icon.png",
           "subtitle": "iOS / iPadOS 系统配置与 MobileGestalt 研究工具箱"
         },
@@ -9011,7 +9019,7 @@
           "name": "Mornye",
           "bundleIdentifier": "com.zarz.mornye",
           "developerName": "zarzet",
-          "version": "5.3.1",
+          "version": "5.4.0",
           "iconURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/Mornye/icon.png",
           "subtitle": "Hi-res music player with downloads"
         },
@@ -9051,7 +9059,7 @@
           "name": "Open Screen Sharing",
           "bundleIdentifier": "io.nekohasekai.screensharing",
           "developerName": "nekohasekai",
-          "version": "1.0.6",
+          "version": "1.0.7",
           "iconURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/OpenScreenSharing/icon.png",
           "subtitle": "Remote desktop client optimized for Mac screen sharing"
         },
@@ -9227,7 +9235,7 @@
           "name": "WQ Files",
           "bundleIdentifier": "cz.kolbi.wqfiles",
           "developerName": "kolbicz",
-          "version": "0.9.16",
+          "version": "0.9.18",
           "iconURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/WQFiles/icon.png",
           "subtitle": "File manager for iOS 26 and 27 (worse_query)"
         },
@@ -10895,7 +10903,7 @@
           "name": "Reynard Browser",
           "bundleIdentifier": "com.minh-ton.Reynard",
           "developerName": "Minh Ton",
-          "version": "0.21.0",
+          "version": "0.22.0",
           "iconURL": "https://github.com/user-attachments/assets/1c42dda2-b778-4342-9f94-8f852c3ad652",
           "subtitle": "An experimental Gecko-based web browser for iOS 13+."
         }
