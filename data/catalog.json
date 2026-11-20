@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-20T07:19:25Z",
+  "generatedAt": "2026-11-20T20:23:57Z",
   "sources": [
     {
       "id": "utm",
@@ -319,8 +319,8 @@
     },
     {
       "id": "stikdebug",
-      "name": "StikDebug & More!",
-      "appCount": 2,
+      "name": "StikDebug Source",
+      "appCount": 1,
       "catalogLimited": false,
       "iconURL": "https://github.com/StikDebug/StikDebug/blob/main/assets/StikDebug.png?raw=true",
       "sourceURL": "https://stikdebug.xyz/index.json",
@@ -328,18 +328,10 @@
         {
           "name": "StikDebug",
           "bundleIdentifier": "com.stik.stikdebug",
-          "developerName": "StikDebug",
+          "developerName": "StikDebug Team",
           "version": "3.2.2",
           "iconURL": "https://github.com/StikDebug/StikDebug/blob/main/assets/StikDebug.png?raw=true",
           "subtitle": "On-device JIT enabler and device toolbox."
-        },
-        {
-          "name": "StikPair",
-          "bundleIdentifier": "com.stik.StikPair",
-          "developerName": "StikDebug",
-          "version": "1.2.0",
-          "iconURL": "https://github.com/StikDebug/StikPair/blob/main/App/Assets.xcassets/AppLogo.imageset/StikPair-iOS-Default-1024%401x.png?raw=true",
-          "subtitle": "Requires iOS 27+"
         }
       ]
     },
@@ -1151,7 +1143,7 @@
           "name": "X++",
           "bundleIdentifier": "com.atebits.Tweetie2",
           "developerName": "Densor",
-          "version": "12.44",
+          "version": "12.45.1",
           "iconURL": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/bf/46/c4/bf46c48e-94bb-c30d-601f-d73ed5a70689/ProductionAppIcon-0-0-1x_U007emarketing-0-8-0-0-0-85-220.png/512x512bb.jpg",
           "subtitle": "An new tweak for X!"
         },
@@ -1263,7 +1255,7 @@
           "name": "TendieMaker",
           "bundleIdentifier": "com.mikevillarroel.tendiemaker",
           "developerName": "MikeBuilds",
-          "version": "1.0.9",
+          "version": "1.0.10",
           "iconURL": "https://mikevillarroel.github.io/mikebuilds-source/icons/tendiemaker.png",
           "subtitle": "Make .tendie live wallpapers from your own videos"
         },
@@ -2464,11 +2456,27 @@
     {
       "id": "owo-source",
       "name": "OwO Source",
-      "appCount": 172,
+      "appCount": 174,
       "catalogLimited": true,
       "iconURL": "https://raw.githubusercontent.com/OwO-Network/Repo/main/icons/owo.repo.icon.png",
       "sourceURL": "https://repo.owo.network/",
       "apps": [
+        {
+          "name": "JavDB",
+          "bundleIdentifier": "com.javdb.com",
+          "developerName": "",
+          "version": "1.9.40",
+          "iconURL": "https://raw.githubusercontent.com/owo-network/Repo/main/icons/com.javdb.com.png",
+          "subtitle": ""
+        },
+        {
+          "name": "Mori",
+          "bundleIdentifier": "com.mori.downloader",
+          "developerName": "",
+          "version": "5.4.0-custom.1",
+          "iconURL": "https://raw.githubusercontent.com/owo-network/Repo/main/icons/com.mori.downloader.png",
+          "subtitle": ""
+        },
         {
           "name": "JavDB",
           "bundleIdentifier": "com.javdb.com",
@@ -3731,22 +3739,6 @@
           "developerName": "",
           "version": "8.0.43",
           "iconURL": "https://raw.githubusercontent.com/owo-network/Repo/main/icons/com.tencent.xin.png",
-          "subtitle": ""
-        },
-        {
-          "name": "WeChat",
-          "bundleIdentifier": "com.tencent.xin",
-          "developerName": "",
-          "version": "8.0.43",
-          "iconURL": "https://raw.githubusercontent.com/owo-network/Repo/main/icons/com.tencent.xin.png",
-          "subtitle": ""
-        },
-        {
-          "name": "AppInfo",
-          "bundleIdentifier": "uclort.com.AppInfo",
-          "developerName": "",
-          "version": "0.1.1",
-          "iconURL": "https://raw.githubusercontent.com/owo-network/Repo/main/icons/uclort.com.AppInfo.png",
           "subtitle": ""
         }
       ]
@@ -5204,11 +5196,67 @@
     {
       "id": "apptesters",
       "name": "AppTesters IPA Repo",
-      "appCount": 10344,
+      "appCount": 10351,
       "catalogLimited": true,
       "iconURL": "https://apptesters.org/apptesters-512x512.png",
       "sourceURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/apps.json",
       "apps": [
+        {
+          "name": "VlogNow",
+          "bundleIdentifier": "com.frontrow.vlog",
+          "developerName": "",
+          "version": "2.26.0",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.frontrow.vlog.png",
+          "subtitle": ""
+        },
+        {
+          "name": "superagent",
+          "bundleIdentifier": "com.agent.super.extension.safari",
+          "developerName": "",
+          "version": "4.7.6",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.agent.super.extension.safari.png",
+          "subtitle": ""
+        },
+        {
+          "name": "Lifesum",
+          "bundleIdentifier": "com.sillens.iShape",
+          "developerName": "",
+          "version": "24.1.2",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.sillens.iShape.png",
+          "subtitle": ""
+        },
+        {
+          "name": "PSExpress",
+          "bundleIdentifier": "com.adobe.PSMobile",
+          "developerName": "",
+          "version": "26.47.0",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.adobe.PSMobile.png",
+          "subtitle": ""
+        },
+        {
+          "name": "CoinID",
+          "bundleIdentifier": "com.aiby.wtcoin",
+          "developerName": "",
+          "version": "1.30",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.aiby.wtcoin.png",
+          "subtitle": ""
+        },
+        {
+          "name": "Scanner",
+          "bundleIdentifier": "com.apalonapps.pdffree",
+          "developerName": "",
+          "version": "2.12.12",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.apalonapps.pdffree.png",
+          "subtitle": ""
+        },
+        {
+          "name": "ProFit",
+          "bundleIdentifier": "com.maxty.gofitness",
+          "developerName": "",
+          "version": "8.7.1",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.maxty.gofitness.png",
+          "subtitle": ""
+        },
         {
           "name": "AdobeExpress",
           "bundleIdentifier": "com.adobe.post",
@@ -6751,62 +6799,6 @@
           "developerName": "",
           "version": "26.45.0",
           "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.yazio.ios.YAZIO.png",
-          "subtitle": ""
-        },
-        {
-          "name": "SODA",
-          "bundleIdentifier": "com.snowcorp.soda",
-          "developerName": "",
-          "version": "10.4.5",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.snowcorp.soda.png",
-          "subtitle": ""
-        },
-        {
-          "name": "FitnessOnline",
-          "bundleIdentifier": "com.aiti.FitnessOnline",
-          "developerName": "",
-          "version": "1.32.0",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.aiti.FitnessOnline.png",
-          "subtitle": ""
-        },
-        {
-          "name": "SimplySing",
-          "bundleIdentifier": "com.joytunes.Sing",
-          "developerName": "",
-          "version": "3.2.3",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.joytunes.Sing.png",
-          "subtitle": ""
-        },
-        {
-          "name": "wpsoffice",
-          "bundleIdentifier": "com.kingsoft.office.g.wpsoffice",
-          "developerName": "",
-          "version": "26.11.0",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.kingsoft.office.g.wpsoffice.png",
-          "subtitle": ""
-        },
-        {
-          "name": "QrCode",
-          "bundleIdentifier": "com.internet-rocks.codescanner",
-          "developerName": "",
-          "version": "2026.11.3",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.internet-rocks.codescanner.png",
-          "subtitle": ""
-        },
-        {
-          "name": "VSCO",
-          "bundleIdentifier": "co.visualsupply.cam",
-          "developerName": "",
-          "version": "462.1.1",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/co.visualsupply.cam.png",
-          "subtitle": ""
-        },
-        {
-          "name": "B612",
-          "bundleIdentifier": "com.linecorp.b612",
-          "developerName": "",
-          "version": "15.5.0",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.linecorp.b612.png",
           "subtitle": ""
         }
       ]
@@ -8779,7 +8771,7 @@
           "name": "BCD",
           "bundleIdentifier": "com.thebcd69.bcd",
           "developerName": "thebcd69",
-          "version": "0.1.665",
+          "version": "0.1.682",
           "iconURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/BCD/icon.png",
           "subtitle": "Windows games on iPhone and iPad"
         },
@@ -8907,7 +8899,7 @@
           "name": "iPadn",
           "bundleIdentifier": "app.local.iPadn",
           "developerName": "mengangs",
-          "version": "2.2.1",
+          "version": "2.3.0",
           "iconURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/iPadn/icon.png",
           "subtitle": "下载 App Store 的历史版本与已下架应用"
         },
@@ -8947,7 +8939,7 @@
           "name": "Kazumi-Swift",
           "bundleIdentifier": "com.linkpass.kazumi",
           "developerName": "LinkPass888",
-          "version": "3.0.9",
+          "version": "3.1.0",
           "iconURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/Kazumi-Swift/icon.png",
           "subtitle": "基于自定义规则的番剧采集APP，支持流媒体在线观看、弹幕与实时超分辨率，使用 SwiftUI 实现。"
         },
@@ -9091,7 +9083,7 @@
           "name": "Open Screen Sharing",
           "bundleIdentifier": "io.nekohasekai.screensharing",
           "developerName": "nekohasekai",
-          "version": "1.0.7",
+          "version": "1.0.8",
           "iconURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/OpenScreenSharing/icon.png",
           "subtitle": "Remote desktop client optimized for Mac screen sharing"
         },
@@ -9283,7 +9275,7 @@
           "name": "WQGuard",
           "bundleIdentifier": "com.wqguard.app",
           "developerName": "Kianuni",
-          "version": "1.3.5",
+          "version": "1.3.6",
           "iconURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/WQGuard/icon.png",
           "subtitle": "iOS 沙盒越权检测与侧载 IPA 审查工具"
         },
@@ -10643,7 +10635,7 @@
           "name": "X++",
           "bundleIdentifier": "com.atebits.Tweetie2",
           "developerName": "Densor",
-          "version": "12.44",
+          "version": "12.45.1",
           "iconURL": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/bf/46/c4/bf46c48e-94bb-c30d-601f-d73ed5a70689/ProductionAppIcon-0-0-1x_U007emarketing-0-8-0-0-0-85-220.png/512x512bb.jpg",
           "subtitle": "An new tweak for X!"
         },
@@ -10755,7 +10747,7 @@
           "name": "TendieMaker",
           "bundleIdentifier": "com.mikevillarroel.tendiemaker",
           "developerName": "MikeBuilds",
-          "version": "1.0.9",
+          "version": "1.0.10",
           "iconURL": "https://mikevillarroel.github.io/mikebuilds-source/icons/tendiemaker.png",
           "subtitle": "Make .tendie live wallpapers from your own videos"
         },
@@ -11195,7 +11187,7 @@
           "name": "Mangayomi",
           "bundleIdentifier": "com.kodjodevf.mangayomi",
           "developerName": "Moustapha Kodjo Amadou",
-          "version": "0.9.96",
+          "version": "0.9.97",
           "iconURL": "https://raw.githubusercontent.com/kodjodevf/mangayomi/refs/heads/main/repo/images/icons/icon_default.webp",
           "subtitle": "Read manga, novels, and watch anime"
         }
