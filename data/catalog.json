@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-21T07:12:07Z",
+  "generatedAt": "2026-11-21T19:17:58Z",
   "sources": [
     {
       "id": "utm",
@@ -1151,7 +1151,7 @@
           "name": "Facebook++",
           "bundleIdentifier": "com.facebook.Facebook",
           "developerName": "Michael Lema",
-          "version": "588.0.0",
+          "version": "588.1.0",
           "iconURL": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/7f/72/b7/7f72b76a-5865-3da5-8dc3-71a2b75551e9/Icon-Production-0-0-1x_U007epad-0-1-0-sRGB-85-220.png/512x512bb.jpg",
           "subtitle": "Facebook with a number of new features!"
         },
@@ -1255,7 +1255,7 @@
           "name": "TendieMaker",
           "bundleIdentifier": "com.mikevillarroel.tendiemaker",
           "developerName": "MikeBuilds",
-          "version": "1.0.10",
+          "version": "1.0.11",
           "iconURL": "https://mikevillarroel.github.io/mikebuilds-source/icons/tendiemaker.png",
           "subtitle": "Make .tendie live wallpapers from your own videos"
         },
@@ -2456,11 +2456,19 @@
     {
       "id": "owo-source",
       "name": "OwO Source",
-      "appCount": 174,
+      "appCount": 175,
       "catalogLimited": true,
       "iconURL": "https://raw.githubusercontent.com/OwO-Network/Repo/main/icons/owo.repo.icon.png",
       "sourceURL": "https://repo.owo.network/",
       "apps": [
+        {
+          "name": "JavDB",
+          "bundleIdentifier": "com.javdb.com",
+          "developerName": "",
+          "version": "1.9.41",
+          "iconURL": "https://raw.githubusercontent.com/owo-network/Repo/main/icons/com.javdb.com.png",
+          "subtitle": ""
+        },
         {
           "name": "JavDB",
           "bundleIdentifier": "com.javdb.com",
@@ -3722,14 +3730,6 @@
           "bundleIdentifier": "com.tencent.xin",
           "developerName": "",
           "version": "8.0.44",
-          "iconURL": "https://raw.githubusercontent.com/owo-network/Repo/main/icons/com.tencent.xin.png",
-          "subtitle": ""
-        },
-        {
-          "name": "WeChat",
-          "bundleIdentifier": "com.tencent.xin",
-          "developerName": "",
-          "version": "8.0.43",
           "iconURL": "https://raw.githubusercontent.com/owo-network/Repo/main/icons/com.tencent.xin.png",
           "subtitle": ""
         },
@@ -5196,11 +5196,19 @@
     {
       "id": "apptesters",
       "name": "AppTesters IPA Repo",
-      "appCount": 10358,
+      "appCount": 10359,
       "catalogLimited": true,
       "iconURL": "https://apptesters.org/apptesters-512x512.png",
       "sourceURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/apps.json",
       "apps": [
+        {
+          "name": "HabitKit",
+          "bundleIdentifier": "com.roehl.habitkit",
+          "developerName": "",
+          "version": "1.19.3",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.roehl.habitkit.png",
+          "subtitle": ""
+        },
         {
           "name": "wpsoffice",
           "bundleIdentifier": "com.kingsoft.office.g.wpsoffice",
@@ -6791,14 +6799,6 @@
           "developerName": "",
           "version": "4.0.0",
           "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.offlinemusic.png",
-          "subtitle": ""
-        },
-        {
-          "name": "Captions",
-          "bundleIdentifier": "boomer.Smart-Video",
-          "developerName": "",
-          "version": "13.43.0",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/boomer.Smart-Video.png",
           "subtitle": ""
         }
       ]
@@ -8682,7 +8682,7 @@
     {
       "id": "altgallery",
       "name": "AltGallery",
-      "appCount": 78,
+      "appCount": 80,
       "catalogLimited": false,
       "iconURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/assets/icon.png",
       "sourceURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/all-apps.json",
@@ -8755,7 +8755,7 @@
           "name": "ARMSX2",
           "bundleIdentifier": "com.armsx2.ios",
           "developerName": "ARMSX2",
-          "version": "2.6.0-nightly.20261120.0157",
+          "version": "2.6.0-nightly.20261121.1609",
           "iconURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/ARMSX2/icon.png",
           "subtitle": "PlayStation 2 emulator for ARM64"
         },
@@ -8779,7 +8779,7 @@
           "name": "Breeze",
           "bundleIdentifier": "com.zephyr.breeze",
           "developerName": "deretame",
-          "version": "3.0.38",
+          "version": "3.1.0",
           "iconURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/Breeze/icon.png",
           "subtitle": "使用 Flutter 开发的插件化漫画阅读器"
         },
@@ -8864,6 +8864,14 @@
           "subtitle": "On-device signing application"
         },
         {
+          "name": "Fladder",
+          "bundleIdentifier": "nl.jknaapen.fladder",
+          "developerName": "DonutWare",
+          "version": "0.12.1",
+          "iconURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/Fladder/icon.webp",
+          "subtitle": "A cross-platform Jellyfin frontend built on Flutter"
+        },
+        {
           "name": "GestaltX",
           "bundleIdentifier": "com.huami.gestultx",
           "developerName": "huamidev",
@@ -8899,7 +8907,7 @@
           "name": "iPadn",
           "bundleIdentifier": "app.local.iPadn",
           "developerName": "mengangs",
-          "version": "2.3.1",
+          "version": "2.3.3",
           "iconURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/iPadn/icon.png",
           "subtitle": "下载 App Store 的历史版本与已下架应用"
         },
@@ -8939,7 +8947,7 @@
           "name": "Kazumi-Swift",
           "bundleIdentifier": "com.linkpass.kazumi",
           "developerName": "LinkPass888",
-          "version": "3.1.0",
+          "version": "3.1.1",
           "iconURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/Kazumi-Swift/icon.png",
           "subtitle": "基于自定义规则的番剧采集APP，支持流媒体在线观看、弹幕与实时超分辨率，使用 SwiftUI 实现。"
         },
@@ -9051,7 +9059,7 @@
           "name": "MoviePilot",
           "bundleIdentifier": "org.moviepilot.app",
           "developerName": "jxxghp",
-          "version": "1.2.6",
+          "version": "2.0.0",
           "iconURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/MoviePilot-App/icon.png",
           "subtitle": "MoviePilot 的 iOS 原生客户端"
         },
@@ -9150,6 +9158,14 @@
           "version": "0.0.11",
           "iconURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/RewindBox/icon.png",
           "subtitle": "Emulation frontend for iPhone and iPad"
+        },
+        {
+          "name": "Rich4Renew",
+          "bundleIdentifier": "pro.areu.rich4",
+          "developerName": "iam567",
+          "version": "1.2.4",
+          "iconURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/Rich4Renew/icon.webp",
+          "subtitle": "大富翁4 高清重制版，新增歌舞伎町地图与大富豪模式"
         },
         {
           "name": "Roam Control",
@@ -10643,7 +10659,7 @@
           "name": "Facebook++",
           "bundleIdentifier": "com.facebook.Facebook",
           "developerName": "Michael Lema",
-          "version": "588.0.0",
+          "version": "588.1.0",
           "iconURL": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/7f/72/b7/7f72b76a-5865-3da5-8dc3-71a2b75551e9/Icon-Production-0-0-1x_U007epad-0-1-0-sRGB-85-220.png/512x512bb.jpg",
           "subtitle": "Facebook with a number of new features!"
         },
@@ -10747,7 +10763,7 @@
           "name": "TendieMaker",
           "bundleIdentifier": "com.mikevillarroel.tendiemaker",
           "developerName": "MikeBuilds",
-          "version": "1.0.10",
+          "version": "1.0.11",
           "iconURL": "https://mikevillarroel.github.io/mikebuilds-source/icons/tendiemaker.png",
           "subtitle": "Make .tendie live wallpapers from your own videos"
         },
@@ -11241,7 +11257,7 @@
           "name": "Nuvio",
           "bundleIdentifier": "com.nuvio.media",
           "developerName": "NuvioMedia",
-          "version": "1.0.0",
+          "version": "1.0.1",
           "iconURL": "https://raw.githubusercontent.com/NuvioMedia/NuvioMobile/0.4.11/iosApp/iosApp/Assets.xcassets/AppIcon.appiconset/app-icon-1024.png",
           "subtitle": "A free, open-source media app for your phone, your desktop, and the TV you already own."
         }
