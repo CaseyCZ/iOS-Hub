@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-22T06:51:52Z",
+  "generatedAt": "2026-11-22T19:43:02Z",
   "sources": [
     {
       "id": "utm",
@@ -587,7 +587,7 @@
           "name": "Mona - HRT journal",
           "bundleIdentifier": "com.deliacheminot.mona",
           "developerName": "Délia Cheminot",
-          "version": "1.25.2",
+          "version": "1.25.3",
           "iconURL": "https://i.imgur.com/Xb9A1Lh.png",
           "subtitle": "Your hormonal journal"
         }
@@ -5196,11 +5196,59 @@
     {
       "id": "apptesters",
       "name": "AppTesters IPA Repo",
-      "appCount": 10367,
+      "appCount": 10373,
       "catalogLimited": true,
       "iconURL": "https://apptesters.org/apptesters-512x512.png",
       "sourceURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/apps.json",
       "apps": [
+        {
+          "name": "Lifesum",
+          "bundleIdentifier": "com.sillens.iShape",
+          "developerName": "",
+          "version": "24.1.3",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.sillens.iShape.png",
+          "subtitle": ""
+        },
+        {
+          "name": "RiseSleep",
+          "bundleIdentifier": "com.risesci.nyx",
+          "developerName": "",
+          "version": "0.1.653",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.risesci.nyx.png",
+          "subtitle": ""
+        },
+        {
+          "name": "Calendars",
+          "bundleIdentifier": "com.readdle.CalendarsLite",
+          "developerName": "",
+          "version": "5.41.4",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.readdle.CalendarsLite.png",
+          "subtitle": ""
+        },
+        {
+          "name": "Facetune",
+          "bundleIdentifier": "com.lightricks.Facetune2",
+          "developerName": "",
+          "version": "26.39",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.lightricks.Facetune2.png",
+          "subtitle": ""
+        },
+        {
+          "name": "SimplyPiano",
+          "bundleIdentifier": "com.joytunes.asla",
+          "developerName": "",
+          "version": "9.11.6",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.joytunes.asla.png",
+          "subtitle": ""
+        },
+        {
+          "name": "SimplyGuitar",
+          "bundleIdentifier": "com.joytunes.SimplyGuitar",
+          "developerName": "",
+          "version": "10.32",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.joytunes.SimplyGuitar.png",
+          "subtitle": ""
+        },
         {
           "name": "Athlytic",
           "bundleIdentifier": "myndarc.newFitnessApp",
@@ -6751,54 +6799,6 @@
           "developerName": "",
           "version": "5.3",
           "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.oribot.origami.png",
-          "subtitle": ""
-        },
-        {
-          "name": "Documents",
-          "bundleIdentifier": "com.readdle.ReaddleDocsIPad",
-          "developerName": "",
-          "version": "8.22.13",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.readdle.ReaddleDocsIPad.png",
-          "subtitle": ""
-        },
-        {
-          "name": "GentlerStreak",
-          "bundleIdentifier": "app.gentler.activity",
-          "developerName": "",
-          "version": "6.0",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/app.gentler.activity.png",
-          "subtitle": ""
-        },
-        {
-          "name": "SCRL",
-          "bundleIdentifier": "com.dopedevelopment.Panels",
-          "developerName": "",
-          "version": "9.64",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.dopedevelopment.Panels.png",
-          "subtitle": ""
-        },
-        {
-          "name": "Slopes",
-          "bundleIdentifier": "com.consumedbycode.slopes",
-          "developerName": "",
-          "version": "2026.18",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.consumedbycode.slopes.png",
-          "subtitle": ""
-        },
-        {
-          "name": "iScreen",
-          "bundleIdentifier": "com.zerone.hidesktop",
-          "developerName": "",
-          "version": "5.1.30",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.zerone.hidesktop.png",
-          "subtitle": ""
-        },
-        {
-          "name": "FreeYourMusic",
-          "bundleIdentifier": "io.stampapp.Stamp",
-          "developerName": "",
-          "version": "11.2.0",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/io.stampapp.Stamp.png",
           "subtitle": ""
         }
       ]
@@ -8755,7 +8755,7 @@
           "name": "ARMSX2",
           "bundleIdentifier": "com.armsx2.ios",
           "developerName": "ARMSX2",
-          "version": "2.6.0-nightly.20261121.1609",
+          "version": "2.6.0-nightly.20261122.0919",
           "iconURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/ARMSX2/icon.png",
           "subtitle": "PlayStation 2 emulator for ARM64"
         },
@@ -8907,7 +8907,7 @@
           "name": "iPadn",
           "bundleIdentifier": "app.local.iPadn",
           "developerName": "mengangs",
-          "version": "2.3.3",
+          "version": "2.3.4",
           "iconURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/iPadn/icon.png",
           "subtitle": "下载 App Store 的历史版本与已下架应用"
         },
@@ -9059,7 +9059,7 @@
           "name": "MoviePilot",
           "bundleIdentifier": "org.moviepilot.app",
           "developerName": "jxxghp",
-          "version": "2.0.0",
+          "version": "2.0.1",
           "iconURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/MoviePilot-App/icon.png",
           "subtitle": "MoviePilot 的 iOS 原生客户端"
         },
@@ -10915,7 +10915,7 @@
           "name": "Cercube",
           "bundleIdentifier": "com.google.ios.youtube",
           "developerName": "Cercube",
-          "version": "21.44.4",
+          "version": "21.46.3",
           "iconURL": "https://cdn.cercube.com/assets/icon.png",
           "subtitle": "The all-in-one jailbreak tweak"
         },
