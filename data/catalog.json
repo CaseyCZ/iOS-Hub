@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-24T09:56:36Z",
+  "generatedAt": "2026-11-24T22:28:55Z",
   "sources": [
     {
       "id": "utm",
@@ -55,7 +55,7 @@
           "name": "iFly",
           "bundleIdentifier": "com.provenance.ifly",
           "developerName": "Provenance Emu",
-          "version": "1.0.0+1795433347",
+          "version": "1.0.0+1795506073",
           "iconURL": "https://ifly-emu.com/icon-1024.png",
           "subtitle": "Dreamcast Emulator for iOS & tvOS"
         },
@@ -419,7 +419,7 @@
           "name": "Geode",
           "bundleIdentifier": "com.geode.launcher",
           "developerName": "Geode SDK Team",
-          "version": "1.5.5",
+          "version": "1.6.1",
           "iconURL": "https://raw.githubusercontent.com/geode-sdk/ios-launcher/main/Icons/Default.png",
           "subtitle": "Geode, now on iOS!"
         }
@@ -631,7 +631,7 @@
           "name": "Stremio",
           "bundleIdentifier": "com.stremio.pal",
           "developerName": "Stremio",
-          "version": "2.1.2",
+          "version": "2.1.3",
           "iconURL": "https://i.imgur.com/ykZuH0r.png",
           "subtitle": "Freedom to stream."
         }
@@ -642,7 +642,7 @@
       "name": "Stremio iOS (Unofficial AltStore Source)",
       "appCount": 1,
       "catalogLimited": false,
-      "iconURL": "https://www.stremio.com/website/stremio-logo-small.png",
+      "iconURL": "https://gorlev.github.io/stremio-altstore/stremio-icon-512.png",
       "sourceURL": "https://gorlev.github.io/stremio-altstore/stremio-ios.json",
       "apps": [
         {
@@ -650,7 +650,7 @@
           "bundleIdentifier": "com.stremio.pal",
           "developerName": "Stremio",
           "version": "2.1.3",
-          "iconURL": "https://www.stremio.com/website/stremio-logo-small.png",
+          "iconURL": "https://gorlev.github.io/stremio-altstore/stremio-icon-512.png",
           "subtitle": "Freedom to stream."
         }
       ]
@@ -5196,11 +5196,179 @@
     {
       "id": "apptesters",
       "name": "AppTesters IPA Repo",
-      "appCount": 10410,
+      "appCount": 10431,
       "catalogLimited": true,
       "iconURL": "https://apptesters.org/apptesters-512x512.png",
       "sourceURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/apps.json",
       "apps": [
+        {
+          "name": "Phocus",
+          "bundleIdentifier": "com.ahmetserdarkaradeniz.Phocus",
+          "developerName": "",
+          "version": "3.6.2",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.ahmetserdarkaradeniz.Phocus.png",
+          "subtitle": ""
+        },
+        {
+          "name": "Lifesum",
+          "bundleIdentifier": "com.sillens.iShape",
+          "developerName": "",
+          "version": "24.1.4",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.sillens.iShape.png",
+          "subtitle": ""
+        },
+        {
+          "name": "Notability",
+          "bundleIdentifier": "com.gingerlabs.Notability",
+          "developerName": "",
+          "version": "16.14.1",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.gingerlabs.Notability.png",
+          "subtitle": ""
+        },
+        {
+          "name": "QrCode",
+          "bundleIdentifier": "com.internet-rocks.codescanner",
+          "developerName": "",
+          "version": "2026.11.10",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.internet-rocks.codescanner.png",
+          "subtitle": ""
+        },
+        {
+          "name": "Rest",
+          "bundleIdentifier": "com.evolve.helm",
+          "developerName": "",
+          "version": "3.212.0",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.evolve.helm.png",
+          "subtitle": ""
+        },
+        {
+          "name": "WaterAir",
+          "bundleIdentifier": "co.airapps.waterreminder",
+          "developerName": "",
+          "version": "2026.11.5",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/co.airapps.waterreminder.png",
+          "subtitle": ""
+        },
+        {
+          "name": "RiseSleep",
+          "bundleIdentifier": "com.risesci.nyx",
+          "developerName": "",
+          "version": "0.1.655",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.risesci.nyx.png",
+          "subtitle": ""
+        },
+        {
+          "name": "VideoStudio",
+          "bundleIdentifier": "videoeditor.app",
+          "developerName": "",
+          "version": "3.22.0",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/videoeditor.app.png",
+          "subtitle": ""
+        },
+        {
+          "name": "FitnessCoach",
+          "bundleIdentifier": "fitnessworkout.app",
+          "developerName": "",
+          "version": "2.13.3",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/fitnessworkout.app.png",
+          "subtitle": ""
+        },
+        {
+          "name": "Crsel",
+          "bundleIdentifier": "com.frameoneapps.Crsel",
+          "developerName": "",
+          "version": "1.6.8",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.frameoneapps.Crsel.png",
+          "subtitle": ""
+        },
+        {
+          "name": "TORVPN",
+          "bundleIdentifier": "com.youssef.developer.Full-Browser",
+          "developerName": "",
+          "version": "12.7",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.youssef.developer.Full-Browser.png",
+          "subtitle": ""
+        },
+        {
+          "name": "MDClock",
+          "bundleIdentifier": "tech.miidii.MDClock",
+          "developerName": "",
+          "version": "2.77",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/tech.miidii.MDClock.png",
+          "subtitle": ""
+        },
+        {
+          "name": "Shapeyard",
+          "bundleIdentifier": "app.chudo",
+          "developerName": "",
+          "version": "5.34.3",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/app.chudo.png",
+          "subtitle": ""
+        },
+        {
+          "name": "Moonly",
+          "bundleIdentifier": "com.moonly.Moonly",
+          "developerName": "",
+          "version": "2.9.6",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.moonly.Moonly.png",
+          "subtitle": ""
+        },
+        {
+          "name": "AdGuard",
+          "bundleIdentifier": "com.adguard.AdguardExtension",
+          "developerName": "",
+          "version": "4.5.26",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.adguard.AdguardExtension.png",
+          "subtitle": ""
+        },
+        {
+          "name": "Origami",
+          "bundleIdentifier": "com.oribot.origami",
+          "developerName": "",
+          "version": "5.5",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.oribot.origami.png",
+          "subtitle": ""
+        },
+        {
+          "name": "Unblink",
+          "bundleIdentifier": "com.idevtal.Wallpapers",
+          "developerName": "",
+          "version": "5.97",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.idevtal.Wallpapers.png",
+          "subtitle": ""
+        },
+        {
+          "name": "PUSH",
+          "bundleIdentifier": "com.ADPTVLTD.push",
+          "developerName": "",
+          "version": "4.3.0",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.ADPTVLTD.push.png",
+          "subtitle": ""
+        },
+        {
+          "name": "Uplens",
+          "bundleIdentifier": "app.uplens",
+          "developerName": "",
+          "version": "4.5.0",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/app.uplens.png",
+          "subtitle": ""
+        },
+        {
+          "name": "ScannerPro",
+          "bundleIdentifier": "com.readdle.Scanner",
+          "developerName": "",
+          "version": "9.0.6",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.readdle.Scanner.png",
+          "subtitle": ""
+        },
+        {
+          "name": "ScannerAir",
+          "bundleIdentifier": "co.airapps.scannerapp",
+          "developerName": "",
+          "version": "2026.11.5",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/co.airapps.scannerapp.png",
+          "subtitle": ""
+        },
         {
           "name": "Stemz",
           "bundleIdentifier": "com.mwm.stems",
@@ -6631,174 +6799,6 @@
           "developerName": "",
           "version": "5.205.0",
           "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.tranzmate.tranzmate1.png",
-          "subtitle": ""
-        },
-        {
-          "name": "SimplyPiano",
-          "bundleIdentifier": "com.joytunes.asla",
-          "developerName": "",
-          "version": "9.11.4",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.joytunes.asla.png",
-          "subtitle": ""
-        },
-        {
-          "name": "Bazaart",
-          "bundleIdentifier": "co.bazaart.app",
-          "developerName": "",
-          "version": "27.0.8",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/co.bazaart.app.png",
-          "subtitle": ""
-        },
-        {
-          "name": "Stndrd",
-          "bundleIdentifier": "uni.cbum",
-          "developerName": "",
-          "version": "4.1.65",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/uni.cbum.png",
-          "subtitle": ""
-        },
-        {
-          "name": "Athlytic",
-          "bundleIdentifier": "myndarc.newFitnessApp",
-          "developerName": "",
-          "version": "27.0.11",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/myndarc.newFitnessApp.png",
-          "subtitle": ""
-        },
-        {
-          "name": "Crsel",
-          "bundleIdentifier": "com.frameoneapps.Crsel",
-          "developerName": "",
-          "version": "1.6.5",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.frameoneapps.Crsel.png",
-          "subtitle": ""
-        },
-        {
-          "name": "foriOS",
-          "bundleIdentifier": "com.tapinfinity.HdjcXcode7",
-          "developerName": "",
-          "version": "13.4",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.tapinfinity.HdjcXcode7.png",
-          "subtitle": ""
-        },
-        {
-          "name": "Homeworkouts",
-          "bundleIdentifier": "com.abishkking.maleworkout",
-          "developerName": "",
-          "version": "1.55.0",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.abishkking.maleworkout.png",
-          "subtitle": ""
-        },
-        {
-          "name": "MDClock",
-          "bundleIdentifier": "tech.miidii.MDClock",
-          "developerName": "",
-          "version": "2.76",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/tech.miidii.MDClock.png",
-          "subtitle": ""
-        },
-        {
-          "name": "Luminar",
-          "bundleIdentifier": "com.skylum.luminaripad",
-          "developerName": "",
-          "version": "4.6.1",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.skylum.luminaripad.png",
-          "subtitle": ""
-        },
-        {
-          "name": "Unknown app",
-          "bundleIdentifier": "com.intsig.CamScannerLite",
-          "developerName": "",
-          "version": "4.4.1",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.intsig.CamScannerLite.png",
-          "subtitle": ""
-        },
-        {
-          "name": "VlogNow",
-          "bundleIdentifier": "com.frontrow.vlog",
-          "developerName": "",
-          "version": "2.25.0",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.frontrow.vlog.png",
-          "subtitle": ""
-        },
-        {
-          "name": "LookUp",
-          "bundleIdentifier": "in.muditbhargava.LookUp",
-          "developerName": "",
-          "version": "13.1.1",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/in.muditbhargava.LookUp.png",
-          "subtitle": ""
-        },
-        {
-          "name": "GrowMe",
-          "bundleIdentifier": "com.book.summaries.reading",
-          "developerName": "",
-          "version": "1.4.6",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.book.summaries.reading.png",
-          "subtitle": ""
-        },
-        {
-          "name": "Camera",
-          "bundleIdentifier": "com.andyworks.camera",
-          "developerName": "",
-          "version": "1.63",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.andyworks.camera.png",
-          "subtitle": ""
-        },
-        {
-          "name": "rPlayer",
-          "bundleIdentifier": "com.wangyuehuan.vrtef",
-          "developerName": "",
-          "version": "8.1.1",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.wangyuehuan.vrtef.png",
-          "subtitle": ""
-        },
-        {
-          "name": "ism",
-          "bundleIdentifier": "com.ahaf.mshion",
-          "developerName": "",
-          "version": "7.52.1",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.ahaf.mshion.png",
-          "subtitle": ""
-        },
-        {
-          "name": "VEEDLite",
-          "bundleIdentifier": "io.veed.appstore",
-          "developerName": "",
-          "version": "8.15.2",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/io.veed.appstore.png",
-          "subtitle": ""
-        },
-        {
-          "name": "Stay",
-          "bundleIdentifier": "com.dajiu.stay.pro",
-          "developerName": "",
-          "version": "2.9.26",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.dajiu.stay.pro.png",
-          "subtitle": ""
-        },
-        {
-          "name": "RiseSleep",
-          "bundleIdentifier": "com.risesci.nyx",
-          "developerName": "",
-          "version": "0.1.650",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.risesci.nyx.png",
-          "subtitle": ""
-        },
-        {
-          "name": "KKPhoto",
-          "bundleIdentifier": "tech.miidii.AlbumManager",
-          "developerName": "",
-          "version": "2.4.1",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/tech.miidii.AlbumManager.png",
-          "subtitle": ""
-        },
-        {
-          "name": "HappyScale",
-          "bundleIdentifier": "com.frontpocketsoftware.happyscale",
-          "developerName": "",
-          "version": "2026.9.1",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.frontpocketsoftware.happyscale.png",
           "subtitle": ""
         }
       ]
@@ -8682,7 +8682,7 @@
     {
       "id": "altgallery",
       "name": "AltGallery",
-      "appCount": 82,
+      "appCount": 90,
       "catalogLimited": false,
       "iconURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/assets/icon.png",
       "sourceURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/all-apps.json",
@@ -8692,7 +8692,7 @@
           "bundleIdentifier": "app.aidoku.Aidoku",
           "developerName": "Skitty",
           "version": "0.9",
-          "iconURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/Aidoku/icon.png",
+          "iconURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/Aidoku/icon.webp",
           "subtitle": "Free and open source manga reader for iOS and iPadOS"
         },
         {
@@ -8700,7 +8700,7 @@
           "bundleIdentifier": "com.mak5er.aircard",
           "developerName": "Mak5er",
           "version": "1.3.2",
-          "iconURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/AirCard/icon.png",
+          "iconURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/AirCard/icon.webp",
           "subtitle": "Apple Wallet card skins, passcode themes and wallpapers"
         },
         {
@@ -8708,7 +8708,7 @@
           "bundleIdentifier": "com.rileytestut.AltStore",
           "developerName": "Riley & Shane",
           "version": "2.3.1",
-          "iconURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/AltStore/icon.png",
+          "iconURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/AltStore/icon.webp",
           "subtitle": "Sideload non-notarized apps with AltServer."
         },
         {
@@ -8716,7 +8716,7 @@
           "bundleIdentifier": "ani.baka",
           "developerName": "AniBakaBaka",
           "version": "5.2.5",
-          "iconURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/AniBaka/icon.png",
+          "iconURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/AniBaka/icon.webp",
           "subtitle": "跨平台番剧聚合、媒体播放与弹幕客户端"
         },
         {
@@ -8724,7 +8724,7 @@
           "bundleIdentifier": "app.anich",
           "developerName": "Sle2p",
           "version": "1.5.27",
-          "iconURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/AniCh/icon.png",
+          "iconURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/AniCh/icon.webp",
           "subtitle": "支持超分辨率的在线动漫弹幕播放器"
         },
         {
@@ -8732,7 +8732,7 @@
           "bundleIdentifier": "com.ligg.animeflow",
           "developerName": "openAnimeFlow",
           "version": "2.7.0",
-          "iconURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/AnimeFlow/icon.png",
+          "iconURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/AnimeFlow/icon.webp",
           "subtitle": "跨平台动漫视频播放器，支持多数据源、实时 4K 超分辨率与弹幕"
         },
         {
@@ -8740,7 +8740,7 @@
           "bundleIdentifier": "org.animeko.animeko",
           "developerName": "open-ani",
           "version": "6.4.1",
-          "iconURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/Animeko/icon.png",
+          "iconURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/Animeko/icon.webp",
           "subtitle": "一站式弹幕追番平台"
         },
         {
@@ -8748,15 +8748,23 @@
           "bundleIdentifier": "com.christianselig.Apollo",
           "developerName": "Christian Selig (& Apollo-Reborn contributors)",
           "version": "4.1.0",
-          "iconURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/Apollo-Reborn/icon.png",
+          "iconURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/Apollo-Reborn/icon.webp",
           "subtitle": "Apollo-Reborn build with Liquid Glass patch"
+        },
+        {
+          "name": "Applesauce",
+          "bundleIdentifier": "io.github.johnny901901901.applesauce",
+          "developerName": "Unofficial iOS port contributors",
+          "version": "0.4.2",
+          "iconURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/Applesauce/icon.webp",
+          "subtitle": "A playful emulator for iOS"
         },
         {
           "name": "ARMSX2",
           "bundleIdentifier": "com.armsx2.ios",
           "developerName": "ARMSX2",
           "version": "2.6.0-nightly.20261123.2028",
-          "iconURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/ARMSX2/icon.png",
+          "iconURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/ARMSX2/icon.webp",
           "subtitle": "PlayStation 2 emulator for ARM64"
         },
         {
@@ -8764,7 +8772,7 @@
           "bundleIdentifier": "wiki.qaq.Asspp",
           "developerName": "Lakr233",
           "version": "4.2.0",
-          "iconURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/Asspp/icon.png",
+          "iconURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/Asspp/icon.webp",
           "subtitle": "The ultimate multi-region App Store manager"
         },
         {
@@ -8772,15 +8780,31 @@
           "bundleIdentifier": "com.thebcd69.bcd",
           "developerName": "thebcd69",
           "version": "0.1.712",
-          "iconURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/BCD/icon.png",
+          "iconURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/BCD/icon.webp",
           "subtitle": "Windows games on iPhone and iPad"
+        },
+        {
+          "name": "Beans Music",
+          "bundleIdentifier": "com.beans.app",
+          "developerName": "XIaodou0416",
+          "version": "1.6.6",
+          "iconURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/Beans-Music/icon.webp",
+          "subtitle": "使用 SwiftUI 开发的多平台音乐播放器"
+        },
+        {
+          "name": "BiliSponsorBlock",
+          "bundleIdentifier": "tv.danmaku.bilianime",
+          "developerName": "lcmovie",
+          "version": "9.10.0",
+          "iconURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/BiliSponsorBlock/icon.webp",
+          "subtitle": "官方哔哩哔哩 iOS App 的 SponsorBlock 空降助手插件"
         },
         {
           "name": "Breeze",
           "bundleIdentifier": "com.zephyr.breeze",
           "developerName": "deretame",
           "version": "3.1.0",
-          "iconURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/Breeze/icon.png",
+          "iconURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/Breeze/icon.webp",
           "subtitle": "使用 Flutter 开发的插件化漫画阅读器"
         },
         {
@@ -8788,7 +8812,7 @@
           "bundleIdentifier": "com.mengangs.Cloudn",
           "developerName": "mengangs",
           "version": "1.4.2",
-          "iconURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/Cloudn/icon.png",
+          "iconURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/Cloudn/icon.webp",
           "subtitle": "网盘分享与短视频高速解析下载"
         },
         {
@@ -8796,7 +8820,7 @@
           "bundleIdentifier": "ani.aayush262.dartotsu",
           "developerName": "aayush2622",
           "version": "1.2.1",
-          "iconURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/Dartotsu/icon.png",
+          "iconURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/Dartotsu/icon.webp",
           "subtitle": "Multiplatform anime and manga tracking client"
         },
         {
@@ -8804,7 +8828,7 @@
           "bundleIdentifier": "com.ahmedbafkir.dlipa",
           "developerName": "Ahmed Bafkir",
           "version": "1.4",
-          "iconURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/DLiPA/icon.png",
+          "iconURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/DLiPA/icon.webp",
           "subtitle": "Download, install and share App Store IPAs"
         },
         {
@@ -8812,7 +8836,7 @@
           "bundleIdentifier": "com.naine.doer",
           "developerName": "moliango",
           "version": "1.8.8.1",
-          "iconURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/Doer/icon.png",
+          "iconURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/Doer/icon.webp",
           "subtitle": "A native iOS client for Linux.do"
         },
         {
@@ -8820,7 +8844,7 @@
           "bundleIdentifier": "me.oatmealdome.DolphiniOS-njb-patreon-beta",
           "developerName": "OatmealDome",
           "version": "5.0.0b6",
-          "iconURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/DolphiniOS/icon.png",
+          "iconURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/DolphiniOS/icon.webp",
           "subtitle": "GameCube and Wii emulator for iOS/iPadOS"
         },
         {
@@ -8828,15 +8852,23 @@
           "bundleIdentifier": "com.mafty.dukex",
           "developerName": "Manic EMU Development Team",
           "version": "1.0.2",
-          "iconURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/DukeX/icon.png",
+          "iconURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/DukeX/icon.webp",
           "subtitle": "Original Xbox emulation for iOS"
+        },
+        {
+          "name": "Dusklight",
+          "bundleIdentifier": "dev.twilitrealm.dusk",
+          "developerName": "Twilit Realm",
+          "version": "2.0.3",
+          "iconURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/Dusklight/icon.webp",
+          "subtitle": "A native port of a classic adventure"
         },
         {
           "name": "EhPanda",
           "bundleIdentifier": "app.ehpanda",
           "developerName": "EhPanda-Team",
           "version": "2.8.1",
-          "iconURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/EhPanda/icon.png",
+          "iconURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/EhPanda/icon.webp",
           "subtitle": "An unofficial E-Hentai App for iOS built with SwiftUI & TCA"
         },
         {
@@ -8844,7 +8876,7 @@
           "bundleIdentifier": "com.jbdotparty.Erosion",
           "developerName": "Kianuni",
           "version": "1.0.6",
-          "iconURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/Erosion-CN/icon.png",
+          "iconURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/Erosion-CN/icon.webp",
           "subtitle": "iOS / iPadOS 系统配置与 MobileGestalt 研究工具箱"
         },
         {
@@ -8852,7 +8884,7 @@
           "bundleIdentifier": "app.fathom.emulator",
           "developerName": "Leviidev",
           "version": "1.0.0",
-          "iconURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/Fathom/icon.png",
+          "iconURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/Fathom/icon.webp",
           "subtitle": "x86-64 PC emulator for iOS"
         },
         {
@@ -8860,7 +8892,7 @@
           "bundleIdentifier": "thewonderofyou.Feather",
           "developerName": "Samara",
           "version": "2.9.0",
-          "iconURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/Feather/icon.png",
+          "iconURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/Feather/icon.webp",
           "subtitle": "On-device signing application"
         },
         {
@@ -8876,15 +8908,23 @@
           "bundleIdentifier": "com.huami.gestultx",
           "developerName": "huamidev",
           "version": "1.1.1",
-          "iconURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/GestaltX/icon.png",
+          "iconURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/GestaltX/icon.webp",
           "subtitle": "MobileGestalt editor for iOS 27 with region-code tweaks and presets"
+        },
+        {
+          "name": "GlobalRefresh",
+          "bundleIdentifier": "com.yoroin.globalrefresh",
+          "developerName": "Yoroin",
+          "version": "1.1.2",
+          "iconURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/GlobalRefresh/icon.webp",
+          "subtitle": "基于 iOS 画中画的悬浮窗高刷辅助工具"
         },
         {
           "name": "HermesEnabler",
           "bundleIdentifier": "com.example.HermesEnabler",
           "developerName": "pookjw",
           "version": "1.0",
-          "iconURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/HermesEnabler/icon.png",
+          "iconURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/HermesEnabler/icon.webp",
           "subtitle": "Enable Hermès Watch Faces on any Apple Watch"
         },
         {
@@ -8892,7 +8932,7 @@
           "bundleIdentifier": "com.husk.app",
           "developerName": "Leviidev",
           "version": "3.4",
-          "iconURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/Husk/icon.png",
+          "iconURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/Husk/icon.webp",
           "subtitle": "Android app launcher for iOS"
         },
         {
@@ -8908,7 +8948,7 @@
           "bundleIdentifier": "com.kuschqin.madeira.steamui",
           "developerName": "kuscholar",
           "version": "0.1.3",
-          "iconURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/iDeck/icon.png",
+          "iconURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/iDeck/icon.webp",
           "subtitle": "Steam Big Picture on iPhone and iPad"
         },
         {
@@ -8916,7 +8956,7 @@
           "bundleIdentifier": "app.local.iPadn",
           "developerName": "mengangs",
           "version": "2.3.5",
-          "iconURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/iPadn/icon.png",
+          "iconURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/iPadn/icon.webp",
           "subtitle": "下载 App Store 的历史版本与已下架应用"
         },
         {
@@ -8924,7 +8964,7 @@
           "bundleIdentifier": "novadev.iram-plus",
           "developerName": "NexSideloading",
           "version": "1.3.1",
-          "iconURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/iRAM-Plus/icon.png",
+          "iconURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/iRAM-Plus/icon.webp",
           "subtitle": "Enable Increased Memory Limit for sideloaded apps on device"
         },
         {
@@ -8932,7 +8972,7 @@
           "bundleIdentifier": "software.iridium",
           "developerName": "intraducine",
           "version": "0.2.0",
-          "iconURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/Iridium/icon.png",
+          "iconURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/Iridium/icon.webp",
           "subtitle": "Experimental Windows-game runtime for iPhone and iPad"
         },
         {
@@ -8940,7 +8980,7 @@
           "bundleIdentifier": "com.xitrix.iTorrent2",
           "developerName": "XITRIX",
           "version": "2.2.0-1",
-          "iconURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/iTorrent/icon.png",
+          "iconURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/iTorrent/icon.webp",
           "subtitle": "Torrent client for iOS"
         },
         {
@@ -8948,7 +8988,7 @@
           "bundleIdentifier": "com.example.kazumi",
           "developerName": "Predidit",
           "version": "2.4.6",
-          "iconURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/Kazumi/icon.png",
+          "iconURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/Kazumi/icon.webp",
           "subtitle": "基于自定义规则的番剧采集APP，支持流媒体在线观看、弹幕与实时超分辨率，使用 Flutter 实现。"
         },
         {
@@ -8956,7 +8996,7 @@
           "bundleIdentifier": "com.linkpass.kazumi",
           "developerName": "LinkPass888",
           "version": "3.1.2",
-          "iconURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/Kazumi-Swift/icon.png",
+          "iconURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/Kazumi-Swift/icon.webp",
           "subtitle": "基于自定义规则的番剧采集APP，支持流媒体在线观看、弹幕与实时超分辨率，使用 SwiftUI 实现。"
         },
         {
@@ -8964,7 +9004,7 @@
           "bundleIdentifier": "com.macxk.KMusic",
           "developerName": "Mac-XK",
           "version": "2.3.0",
-          "iconURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/KMusic/icon.png",
+          "iconURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/KMusic/icon.webp",
           "subtitle": "基于 SwiftUI 的多源音乐聚合播放器"
         },
         {
@@ -8972,7 +9012,7 @@
           "bundleIdentifier": "sb.moe.kumone-ios",
           "developerName": "missuo",
           "version": "0.3.38",
-          "iconURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/Kumone/icon.png",
+          "iconURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/Kumone/icon.webp",
           "subtitle": "原生 NetEase Cloud Music iOS 客户端（雲の音）"
         },
         {
@@ -8980,7 +9020,7 @@
           "bundleIdentifier": "app.lightnovel.shelf",
           "developerName": "LightNovelShelf",
           "version": "1.13.2",
-          "iconURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/LightNovelShelf/icon.png",
+          "iconURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/LightNovelShelf/icon.webp",
           "subtitle": "轻书架官方 Flutter 客户端"
         },
         {
@@ -8988,7 +9028,7 @@
           "bundleIdentifier": "dev.linuxrunner.app",
           "developerName": "Leminos",
           "version": "1.0.1",
-          "iconURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/LinuxRunner/icon.png",
+          "iconURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/LinuxRunner/icon.webp",
           "subtitle": "Run ARM64 Linux apps and desktops on iOS"
         },
         {
@@ -8996,7 +9036,7 @@
           "bundleIdentifier": "com.kdt.livecontainer",
           "developerName": "LiveContainer Team",
           "version": "3.8.14",
-          "iconURL": "https://raw.githubusercontent.com/bebound/AltGallery/master/apps/LiveContainer+SideStore/icon.png",
+          "iconURL": "https://raw.githubusercontent.com/bebound/AltGallery/master/apps/LiveContainer+SideStore/icon.webp",
           "subtitle": "Run iOS apps without actually installing them!"
         },
         {
@@ -9004,7 +9044,7 @@
           "bundleIdentifier": "com.llayerlinux.LSX4RuntimeProbe",
           "developerName": "lpfoj",
           "version": "128.9934",
-          "iconURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/LSX4/icon.png",
+          "iconURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/LSX4/icon.webp",
           "subtitle": "Open-source PS4/PS5 emulator"
         },
         {
@@ -9012,7 +9052,7 @@
           "bundleIdentifier": "com.willfaust.madeora",
           "developerName": "Will Faust",
           "version": "0.2.0",
-          "iconURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/Madeira/icon.png",
+          "iconURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/Madeira/icon.webp",
           "subtitle": "Windows PC games on your iPhone"
         },
         {
@@ -9020,7 +9060,7 @@
           "bundleIdentifier": "com.kodjodevf.mangayomi",
           "developerName": "Moustapha Kodjo Amadou",
           "version": "0.9.97",
-          "iconURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/Mangayomi/icon.png",
+          "iconURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/Mangayomi/icon.webp",
           "subtitle": "Read manga, novels, and watch anime"
         },
         {
@@ -9028,7 +9068,7 @@
           "bundleIdentifier": "com.aoshuang.manicemu",
           "developerName": "Manic EMU Development Team",
           "version": "2.0.2",
-          "iconURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/ManicEMU/icon.png",
+          "iconURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/ManicEMU/icon.webp",
           "subtitle": "All-in-one retro game emulator for iOS"
         },
         {
@@ -9036,7 +9076,7 @@
           "bundleIdentifier": "com.md3music.md3music",
           "developerName": "EPXiaohua",
           "version": "6.2.0",
-          "iconURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/MD3Music-iOS/icon.png",
+          "iconURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/MD3Music-iOS/icon.webp",
           "subtitle": "基于酷狗音乐 API 的 Material 3 音乐播放器"
         },
         {
@@ -9044,7 +9084,7 @@
           "bundleIdentifier": "moye.MeloX",
           "developerName": "youshen2",
           "version": "1.4.1",
-          "iconURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/MeloX/icon.png",
+          "iconURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/MeloX/icon.webp",
           "subtitle": "使用 SwiftUI 开发的网易云音乐第三方客户端"
         },
         {
@@ -9052,7 +9092,7 @@
           "bundleIdentifier": "org.zhaohe.MiniWatts",
           "developerName": "ResistanceTo",
           "version": "1.7.0",
-          "iconURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/MiniWatts/icon.png",
+          "iconURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/MiniWatts/icon.webp",
           "subtitle": "Battery, charging and thermal instrument"
         },
         {
@@ -9060,7 +9100,7 @@
           "bundleIdentifier": "com.zarz.mornye",
           "developerName": "zarzet",
           "version": "5.4.0",
-          "iconURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/Mornye/icon.png",
+          "iconURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/Mornye/icon.webp",
           "subtitle": "Hi-res music player with downloads"
         },
         {
@@ -9068,7 +9108,7 @@
           "bundleIdentifier": "org.moviepilot.app",
           "developerName": "jxxghp",
           "version": "2.0.2",
-          "iconURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/MoviePilot-App/icon.png",
+          "iconURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/MoviePilot-App/icon.webp",
           "subtitle": "MoviePilot 的 iOS 原生客户端"
         },
         {
@@ -9076,7 +9116,7 @@
           "bundleIdentifier": "com.altman.moviepilot",
           "developerName": "singleton-altman",
           "version": "1.3.3",
-          "iconURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/MoviePilotLite/icon.png",
+          "iconURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/MoviePilotLite/icon.webp",
           "subtitle": "MoviePilot 移动端，基于 Flutter 实现"
         },
         {
@@ -9084,7 +9124,7 @@
           "bundleIdentifier": "com.dddevid.musly",
           "developerName": "dddevid",
           "version": "2.0.3",
-          "iconURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/Musly/icon.png",
+          "iconURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/Musly/icon.webp",
           "subtitle": "Free Navidrome client & Subsonic music player"
         },
         {
@@ -9092,7 +9132,7 @@
           "bundleIdentifier": "com.verback.YTLite",
           "developerName": "verback2308",
           "version": "1.12.0",
-          "iconURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/Opaline/icon.png",
+          "iconURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/Opaline/icon.webp",
           "subtitle": "YouTube client for iOS 12+"
         },
         {
@@ -9100,7 +9140,7 @@
           "bundleIdentifier": "io.nekohasekai.screensharing",
           "developerName": "nekohasekai",
           "version": "1.0.10",
-          "iconURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/OpenScreenSharing/icon.png",
+          "iconURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/OpenScreenSharing/icon.webp",
           "subtitle": "Remote desktop client optimized for Mac screen sharing"
         },
         {
@@ -9108,14 +9148,14 @@
           "bundleIdentifier": "com.aigch.OpenParsec",
           "developerName": "hugeBlack",
           "version": "2.0.0",
-          "iconURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/OpenParsec/icon.png",
+          "iconURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/OpenParsec/icon.webp",
           "subtitle": "Open Parsec client for iOS/iPadOS"
         },
         {
           "name": "Orca",
           "bundleIdentifier": "com.thm.orcaios",
           "developerName": "huami1314",
-          "version": "0.1.2",
+          "version": "0.1.3",
           "iconURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/Orca/icon.webp",
           "subtitle": "iPhone client for Orca, the agent development environment"
         },
@@ -9124,7 +9164,7 @@
           "bundleIdentifier": "com.makr.orchard",
           "developerName": "MakrSas",
           "version": "0.2",
-          "iconURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/Orchard/icon.png",
+          "iconURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/Orchard/icon.webp",
           "subtitle": "Apple Silicon macOS Ventura running inside an iPhone app"
         },
         {
@@ -9132,7 +9172,7 @@
           "bundleIdentifier": "com.example.piliplus",
           "developerName": "bggRGjQaUbCoE",
           "version": "2.2.1",
-          "iconURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/PiliPlus/icon.png",
+          "iconURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/PiliPlus/icon.webp",
           "subtitle": "使用Flutter开发的BiliBili第三方客户端"
         },
         {
@@ -9140,7 +9180,7 @@
           "bundleIdentifier": "org.eu.eslzzyl.Pixiv-SwiftUI",
           "developerName": "Eslzzyl",
           "version": "0.16.3",
-          "iconURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/Pixiv-SwiftUI/icon.png",
+          "iconURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/Pixiv-SwiftUI/icon.webp",
           "subtitle": "基于 SwiftUI 的 Pixiv 第三方客户端"
         },
         {
@@ -9148,7 +9188,7 @@
           "bundleIdentifier": "dev.playport.app",
           "developerName": "playportdev",
           "version": "0.5.0",
-          "iconURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/Playport/icon.png",
+          "iconURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/Playport/icon.webp",
           "subtitle": "PC games on your iPhone. Natively, no streaming."
         },
         {
@@ -9156,7 +9196,7 @@
           "bundleIdentifier": "com.miguel.psx3ios",
           "developerName": "xmiguel911x",
           "version": "0.2.7-beta",
-          "iconURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/PSX3IOS/icon.png",
+          "iconURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/PSX3IOS/icon.webp",
           "subtitle": "PlayStation 3 emulator for iPhone and iPad"
         },
         {
@@ -9164,7 +9204,7 @@
           "bundleIdentifier": "com.mystyle.purelive.liu",
           "developerName": "liuchuancong",
           "version": "3.1.19",
-          "iconURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/PureLive/icon.png",
+          "iconURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/PureLive/icon.webp",
           "subtitle": "基于 Flutter 的开源多平台直播聚合播放器"
         },
         {
@@ -9172,7 +9212,7 @@
           "bundleIdentifier": "com.neogamelab.neostation",
           "developerName": "TarbleFR",
           "version": "0.0.11",
-          "iconURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/RewindBox/icon.png",
+          "iconURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/RewindBox/icon.webp",
           "subtitle": "Emulation frontend for iPhone and iPad"
         },
         {
@@ -9188,7 +9228,7 @@
           "bundleIdentifier": "com.sean.roamcontrol",
           "developerName": "seanhowarthdev",
           "version": "0.9.9",
-          "iconURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/Roam-Control/icon.png",
+          "iconURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/Roam-Control/icon.webp",
           "subtitle": "Choose, test and move your iPhone's reported location"
         },
         {
@@ -9196,15 +9236,23 @@
           "bundleIdentifier": "com.rushhours.app",
           "developerName": "ekomlenovic",
           "version": "2.2.2",
-          "iconURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/RushHours/icon.png",
+          "iconURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/RushHours/icon.webp",
           "subtitle": "Slide the cars, free the red one."
+        },
+        {
+          "name": "RyukSign",
+          "bundleIdentifier": "ryuk2.anoxclan.com",
+          "developerName": "faroukbmiled",
+          "version": "4.1.0",
+          "iconURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/RyukSign/icon.webp",
+          "subtitle": "On-device iOS app signer and installer"
         },
         {
           "name": "SceneBox",
           "bundleIdentifier": "app.scenebox.SceneBox",
           "developerName": "donbytyqi",
           "version": "1.0.4",
-          "iconURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/SceneBox/icon.png",
+          "iconURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/SceneBox/icon.webp",
           "subtitle": "Torrent streaming client"
         },
         {
@@ -9212,7 +9260,7 @@
           "bundleIdentifier": "com.SideStore.SideStore",
           "developerName": "SideStore Team",
           "version": "0.7.0-20260911.328+6032424a",
-          "iconURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/SideStore/icon.png",
+          "iconURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/SideStore/icon.webp",
           "subtitle": "Untethered alternative app store for iOS"
         },
         {
@@ -9220,7 +9268,7 @@
           "bundleIdentifier": "com.silverphase.editor",
           "developerName": "akinal5765-byte",
           "version": "1.1.1",
-          "iconURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/Silverphase/icon.png",
+          "iconURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/Silverphase/icon.webp",
           "subtitle": "面向 iPhone 与 iPad 的原生胶片与印相模拟器"
         },
         {
@@ -9228,7 +9276,7 @@
           "bundleIdentifier": "com.xycz.simple-live",
           "developerName": "June6699",
           "version": "1.13.3",
-          "iconURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/SimpleLive/icon.png",
+          "iconURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/SimpleLive/icon.webp",
           "subtitle": "支持弹幕与 IPTV 的开源多平台直播聚合播放器"
         },
         {
@@ -9236,7 +9284,7 @@
           "bundleIdentifier": "com.ishtiaqsyed.StatsForIOS",
           "developerName": "ishtiaq156",
           "version": "0.3.18",
-          "iconURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/Stats/icon.png",
+          "iconURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/Stats/icon.webp",
           "subtitle": "Your Mac's activity, at a glance"
         },
         {
@@ -9244,7 +9292,7 @@
           "bundleIdentifier": "com.stik.stikdebug",
           "developerName": "StikDebug",
           "version": "3.2.2",
-          "iconURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/StikDebug/icon.png",
+          "iconURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/StikDebug/icon.webp",
           "subtitle": "On-device JIT enabler and device toolbox."
         },
         {
@@ -9252,7 +9300,7 @@
           "bundleIdentifier": "io.nekohasekai.swipt",
           "developerName": "nekohasekai",
           "version": "0.1.0",
-          "iconURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/Swipt/icon.png",
+          "iconURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/Swipt/icon.webp",
           "subtitle": "The universal iOS automation platform"
         },
         {
@@ -9260,7 +9308,7 @@
           "bundleIdentifier": "dev.infinityf4p.tiebapure",
           "developerName": "infinityf4p",
           "version": "1.4.15",
-          "iconURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/TiebaPure/icon.png",
+          "iconURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/TiebaPure/icon.webp",
           "subtitle": "基于 SwiftUI 的第三方百度贴吧客户端"
         },
         {
@@ -9268,15 +9316,23 @@
           "bundleIdentifier": "com.suwayomi.tachideskSorayomi",
           "developerName": "Suwayomi",
           "version": "1.6.5",
-          "iconURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/Suwayomi-Tsumiru/icon.png",
+          "iconURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/Suwayomi-Tsumiru/icon.webp",
           "subtitle": "Native manga & manhwa reader for Suwayomi-Server"
+        },
+        {
+          "name": "TwinDesk",
+          "bundleIdentifier": "com.twindesk.ios",
+          "developerName": "Inuka Asith",
+          "version": "3.2.1",
+          "iconURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/TwinDesk/icon.webp",
+          "subtitle": "Use your iPhone and your computers as one desk"
         },
         {
           "name": "UTM",
           "bundleIdentifier": "com.utmapp.UTM",
           "developerName": "osy",
           "version": "5.0.9-2",
-          "iconURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/UTM/icon.png",
+          "iconURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/UTM/icon.webp",
           "subtitle": "Virtual machines for iOS"
         },
         {
@@ -9284,7 +9340,7 @@
           "bundleIdentifier": "com.github.cyrilpeng.veneranext",
           "developerName": "CyrilPeng",
           "version": "1.18.4",
-          "iconURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/Venera-Next/icon.png",
+          "iconURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/Venera-Next/icon.webp",
           "subtitle": "跨平台漫画阅读器"
         },
         {
@@ -9292,7 +9348,7 @@
           "bundleIdentifier": "io.github.vrcmteam.vrcm",
           "developerName": "vrcm-team",
           "version": "1.1.6",
-          "iconURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/VRCM/icon.png",
+          "iconURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/VRCM/icon.webp",
           "subtitle": "Bring your VRChat social life to your phone"
         },
         {
@@ -9300,7 +9356,7 @@
           "bundleIdentifier": "cz.kolbi.wqfiles",
           "developerName": "kolbicz",
           "version": "0.9.20",
-          "iconURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/WQFiles/icon.png",
+          "iconURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/WQFiles/icon.webp",
           "subtitle": "File manager for iOS 26 and 27 (worse_query)"
         },
         {
@@ -9308,7 +9364,7 @@
           "bundleIdentifier": "com.wqguard.app",
           "developerName": "Kianuni",
           "version": "1.3.6",
-          "iconURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/WQGuard/icon.png",
+          "iconURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/WQGuard/icon.webp",
           "subtitle": "iOS 沙盒越权检测与侧载 IPA 审查工具"
         },
         {
@@ -9316,7 +9372,7 @@
           "bundleIdentifier": "mumu.pduola.WQManager",
           "developerName": "hseons",
           "version": "0.5",
-          "iconURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/WQManager/icon.png",
+          "iconURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/WQManager/icon.webp",
           "subtitle": "无需越狱的 App 数据备份与缓存清理工具"
         },
         {
@@ -9324,15 +9380,23 @@
           "bundleIdentifier": "com.zhangfuhao.wqtoolkit",
           "developerName": "MchinaMd57764",
           "version": "1.0",
-          "iconURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/WQToolkit/icon.png",
+          "iconURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/WQToolkit/icon.webp",
           "subtitle": "File browser and maintenance panel for your own app containers"
+        },
+        {
+          "name": "WrapPin",
+          "bundleIdentifier": "com.suversal.wrappin",
+          "developerName": "suversal",
+          "version": "1.0.26",
+          "iconURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/WrapPin/icon.webp",
+          "subtitle": "本机虚拟定位与步行路线测试工具"
         },
         {
           "name": "YouProEXTRA",
           "bundleIdentifier": "com.google.ios.youtube",
           "developerName": "alibusut",
           "version": "21.33.6",
-          "iconURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/YouProEXTRA/icon.png",
+          "iconURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/YouProEXTRA/icon.webp",
           "subtitle": "YouTube mod with customizable tweaks"
         },
         {
@@ -9340,7 +9404,7 @@
           "bundleIdentifier": "com.huamu013.ZhihuMinusMinus",
           "developerName": "huamurui",
           "version": "0.10.0",
-          "iconURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/ZhihuMinusMinus/icon.png",
+          "iconURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/ZhihuMinusMinus/icon.webp",
           "subtitle": "轻量、纯净的第三方知乎客户端"
         }
       ]
@@ -11041,7 +11105,7 @@
           "name": "Clip",
           "bundleIdentifier": "com.rileytestut.Clip.Beta",
           "developerName": "Riley Testut",
-          "version": "1.2b2",
+          "version": "1.3",
           "iconURL": "https://user-images.githubusercontent.com/705880/63391981-5326f800-c37a-11e9-99d8-760fd06bb601.png",
           "subtitle": "Manage your clipboard history with ease."
         }
