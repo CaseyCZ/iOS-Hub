@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-23T23:55:42Z",
+  "generatedAt": "2026-11-24T09:56:36Z",
   "sources": [
     {
       "id": "utm",
@@ -55,7 +55,7 @@
           "name": "iFly",
           "bundleIdentifier": "com.provenance.ifly",
           "developerName": "Provenance Emu",
-          "version": "1.0.0+1795380446",
+          "version": "1.0.0+1795433347",
           "iconURL": "https://ifly-emu.com/icon-1024.png",
           "subtitle": "Dreamcast Emulator for iOS & tvOS"
         },
@@ -649,7 +649,7 @@
           "name": "Stremio",
           "bundleIdentifier": "com.stremio.pal",
           "developerName": "Stremio",
-          "version": "2.1.2",
+          "version": "2.1.3",
           "iconURL": "https://www.stremio.com/website/stremio-logo-small.png",
           "subtitle": "Freedom to stream."
         }
@@ -865,7 +865,7 @@
           "name": "Fortnite",
           "bundleIdentifier": "com.epicgames.FortniteGame",
           "developerName": "Epic Games Sweden AB",
-          "version": "43.10",
+          "version": "43.11",
           "iconURL": "https://cdn1.epicgames.com/item/fn/FN_Logo_512x512_1024x1024-0a19a924e7f61249ab0c76569abfdc31",
           "subtitle": ""
         },
@@ -1287,7 +1287,7 @@
           "name": "Twitch++",
           "bundleIdentifier": "tv.twitch",
           "developerName": "zeroxdeadbeef",
-          "version": "32.1",
+          "version": "32.2",
           "iconURL": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/64/9e/c0/649ec0ba-0f46-b437-401a-6633a175b235/TwitchAppIcon-0-0-1x_U007epad-0-1-0-0-sRGB-0-0-0-85-220.png/512x512bb.jpg",
           "subtitle": "All-In-One Tweak for Twitch!"
         }
@@ -1337,7 +1337,7 @@
           "name": "Twitch",
           "bundleIdentifier": "tv.twitch",
           "developerName": "",
-          "version": "31.9",
+          "version": "32.2",
           "iconURL": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Twitch_Glitch_Logo_Purple.svg/640px-Twitch_Glitch_Logo_Purple.svg.png",
           "subtitle": ""
         },
@@ -1371,7 +1371,7 @@
           "name": "YouMod + Tweaks (driftywinds)",
           "bundleIdentifier": "com.google.ios.youtube",
           "developerName": "Tonwalter888",
-          "version": "21.46.3",
+          "version": "21.47.6",
           "iconURL": "https://raw.githubusercontent.com/YTLitePlus/YTLitePlus-Altstore/main/Youtube_logo-512.png",
           "subtitle": "A flexible enhancer for YouTube on iOS | If you want to donate: - https://ko-fi.com/driftywinds"
         },
@@ -1379,7 +1379,7 @@
           "name": "Instagram (RyukGram)",
           "bundleIdentifier": "com.burbn.instagram",
           "developerName": "Ryuk",
-          "version": "456.0.0",
+          "version": "457.0.0",
           "iconURL": "https://raw.githubusercontent.com/driftywinds/driftywinds.github.io/refs/heads/master/AltStore/assets/Instagram_logo_2022.svg.png",
           "subtitle": "Additional features and fixes by Ryuk based on SCInsta | If you want to donate: - https://ko-fi.com/driftywinds"
         },
@@ -3746,19 +3746,11 @@
     {
       "id": "cypwn-ipa",
       "name": "CyPwn IPA Library",
-      "appCount": 210,
+      "appCount": 209,
       "catalogLimited": true,
       "iconURL": "https://repo.cypwn.xyz/assets/images/cypwn_small.png",
       "sourceURL": "https://ipa.cypwn.xyz/cypwn.json",
       "apps": [
-        {
-          "name": "Stremio-2.0.7",
-          "bundleIdentifier": "com.stremio.pal",
-          "developerName": "Stremio-2.0.7 x CyPwn",
-          "version": "2.0.7",
-          "iconURL": "https://ipa.cypwn.xyz/serve/icons/Stremio-2.0.7.png",
-          "subtitle": ""
-        },
         {
           "name": "Stremio-2.0.6",
           "bundleIdentifier": "com.stremio.pal",
@@ -5190,17 +5182,81 @@
           "version": "2.6",
           "iconURL": "https://ipa.cypwn.xyz/serve/icons/Star_Map_2.6_Satella.png",
           "subtitle": ""
+        },
+        {
+          "name": "RefacePro_3.12.0",
+          "bundleIdentifier": "cypwn.RefacePro_3.12.0.3.12.0",
+          "developerName": "RefacePro_3.12.0 x CyPwn",
+          "version": "3.12.0",
+          "iconURL": "https://ipa.cypwn.xyz/serve/icons/RefacePro_3.12.0.png",
+          "subtitle": ""
         }
       ]
     },
     {
       "id": "apptesters",
       "name": "AppTesters IPA Repo",
-      "appCount": 10403,
+      "appCount": 10410,
       "catalogLimited": true,
       "iconURL": "https://apptesters.org/apptesters-512x512.png",
       "sourceURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/apps.json",
       "apps": [
+        {
+          "name": "Stemz",
+          "bundleIdentifier": "com.mwm.stems",
+          "developerName": "",
+          "version": "6.00.06",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.mwm.stems.png",
+          "subtitle": ""
+        },
+        {
+          "name": "ism",
+          "bundleIdentifier": "com.ahaf.mshion",
+          "developerName": "",
+          "version": "7.53.0",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.ahaf.mshion.png",
+          "subtitle": ""
+        },
+        {
+          "name": "Facetune",
+          "bundleIdentifier": "com.lightricks.Facetune2",
+          "developerName": "",
+          "version": "26.39.1",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.lightricks.Facetune2.png",
+          "subtitle": ""
+        },
+        {
+          "name": "MobileScanner",
+          "bundleIdentifier": "com.glority.everlens",
+          "developerName": "",
+          "version": "2.26.6",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.glority.everlens.png",
+          "subtitle": ""
+        },
+        {
+          "name": "UnifiedDictionary",
+          "bundleIdentifier": "com.bravolol.bravoLang.chineseDictionary",
+          "developerName": "",
+          "version": "36.6",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.bravolol.bravoLang.chineseDictionary.png",
+          "subtitle": ""
+        },
+        {
+          "name": "Action",
+          "bundleIdentifier": "com.future.kapi",
+          "developerName": "",
+          "version": "4.47.1",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.future.kapi.png",
+          "subtitle": ""
+        },
+        {
+          "name": "Slopes",
+          "bundleIdentifier": "com.consumedbycode.slopes",
+          "developerName": "",
+          "version": "2026.20",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.consumedbycode.slopes.png",
+          "subtitle": ""
+        },
         {
           "name": "VSCO",
           "bundleIdentifier": "co.visualsupply.cam",
@@ -6744,62 +6800,6 @@
           "version": "2026.9.1",
           "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.frontpocketsoftware.happyscale.png",
           "subtitle": ""
-        },
-        {
-          "name": "ColorPop",
-          "bundleIdentifier": "com.mwm.procolor",
-          "developerName": "",
-          "version": "2.69.01",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.mwm.procolor.png",
-          "subtitle": ""
-        },
-        {
-          "name": "B612",
-          "bundleIdentifier": "com.linecorp.b612",
-          "developerName": "",
-          "version": "15.5.1",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.linecorp.b612.png",
-          "subtitle": ""
-        },
-        {
-          "name": "VSCO",
-          "bundleIdentifier": "co.visualsupply.cam",
-          "developerName": "",
-          "version": "463.0.0",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/co.visualsupply.cam.png",
-          "subtitle": ""
-        },
-        {
-          "name": "Stemz",
-          "bundleIdentifier": "com.mwm.stems",
-          "developerName": "",
-          "version": "6.00.05",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.mwm.stems.png",
-          "subtitle": ""
-        },
-        {
-          "name": "Premiere",
-          "bundleIdentifier": "com.adobe.premiere.ios",
-          "developerName": "",
-          "version": "26.24.0",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.adobe.premiere.ios.png",
-          "subtitle": ""
-        },
-        {
-          "name": "Mockup",
-          "bundleIdentifier": "com.hasankassem.mockup",
-          "developerName": "",
-          "version": "4.6.3",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.hasankassem.mockup.png",
-          "subtitle": ""
-        },
-        {
-          "name": "JSCodePad",
-          "bundleIdentifier": "com.markodevcic.js-code-pad",
-          "developerName": "",
-          "version": "1.11.0",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.markodevcic.js-code-pad.png",
-          "subtitle": ""
         }
       ]
     },
@@ -6844,15 +6844,15 @@
       "name": "Discord",
       "appCount": 1,
       "catalogLimited": false,
-      "iconURL": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/6a/2f/ba/6a2fba87-e0a7-ec69-6ca5-e77cad3e533e/AppIcon-0-0-1x_U007epad-0-1-0-85-220.png/512x512bb.jpg",
+      "iconURL": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/51/1a/5c/511a5c6c-5bce-fa96-9bcd-5a7ebdda0b71/AppIcon-0-0-1x_U007epad-0-1-0-85-220.png/512x512bb.jpg",
       "sourceURL": "https://raw.githubusercontent.com/AlfaActa/discord-altstore-source/main/source.json",
       "apps": [
         {
           "name": "Discord - Talk, Play, Hang Out",
           "bundleIdentifier": "com.hammerandchisel.discord",
           "developerName": "Discord Inc.",
-          "version": "354.0",
-          "iconURL": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/6a/2f/ba/6a2fba87-e0a7-ec69-6ca5-e77cad3e533e/AppIcon-0-0-1x_U007epad-0-1-0-85-220.png/512x512bb.jpg",
+          "version": "355.0",
+          "iconURL": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/51/1a/5c/511a5c6c-5bce-fa96-9bcd-5a7ebdda0b71/AppIcon-0-0-1x_U007epad-0-1-0-85-220.png/512x512bb.jpg",
           "subtitle": "The standard Discord app with no tweaks added."
         }
       ]
@@ -8682,7 +8682,7 @@
     {
       "id": "altgallery",
       "name": "AltGallery",
-      "appCount": 81,
+      "appCount": 82,
       "catalogLimited": false,
       "iconURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/assets/icon.png",
       "sourceURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/all-apps.json",
@@ -9099,7 +9099,7 @@
           "name": "Open Screen Sharing",
           "bundleIdentifier": "io.nekohasekai.screensharing",
           "developerName": "nekohasekai",
-          "version": "1.0.9",
+          "version": "1.0.10",
           "iconURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/OpenScreenSharing/icon.png",
           "subtitle": "Remote desktop client optimized for Mac screen sharing"
         },
@@ -9110,6 +9110,14 @@
           "version": "2.0.0",
           "iconURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/OpenParsec/icon.png",
           "subtitle": "Open Parsec client for iOS/iPadOS"
+        },
+        {
+          "name": "Orca",
+          "bundleIdentifier": "com.thm.orcaios",
+          "developerName": "huami1314",
+          "version": "0.1.2",
+          "iconURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/Orca/icon.webp",
+          "subtitle": "iPhone client for Orca, the agent development environment"
         },
         {
           "name": "Orchard",
@@ -9814,7 +9822,7 @@
     {
       "id": "fastsign",
       "name": "Alan's Gigantic Repo",
-      "appCount": 17304,
+      "appCount": 17358,
       "catalogLimited": true,
       "iconURL": "https://fastsign.dev/icon.png",
       "sourceURL": "https://fastsign.dev/repo.json",
@@ -9836,388 +9844,388 @@
           "subtitle": "Best pick. Taurus 0.60.7"
         },
         {
-          "name": "Spotify (Vitrine 1.0.0)",
-          "bundleIdentifier": "com.spotify.client",
-          "developerName": "@ipavault",
-          "version": "9.1.90",
-          "iconURL": "https://fastsign.dev/tg-icon/ipavault/1516.png",
-          "subtitle": "Variant: Vitrine 1.0.0-b17"
+          "name": "咔皮Action",
+          "bundleIdentifier": "com.future.kapi",
+          "developerName": "@blatants",
+          "version": "4.47.1",
+          "iconURL": "https://fastsign.dev/tg-icon/blatants/13705.png",
+          "subtitle": "Subscription unlocked. AI features may not work as expected. DO NOT report any issues related to these features"
         },
         {
-          "name": "Spotify (Vitrine 1.0.0 · no plugins)",
-          "bundleIdentifier": "com.spotify.client",
-          "developerName": "@ipavault",
-          "version": "9.1.90",
-          "iconURL": "https://fastsign.dev/tg-icon/ipavault/1517.png",
-          "subtitle": "Variant: Vitrine 1.0.0-b17 · No plugins"
+          "name": "Slopes",
+          "bundleIdentifier": "com.consumedbycode.slopes",
+          "developerName": "@blatants",
+          "version": "2026.20",
+          "iconURL": "https://fastsign.dev/tg-icon/blatants/13704.png",
+          "subtitle": "Subscription unlocked. Login to activate"
         },
         {
-          "name": "Twitter (XEnhancer+TWI)",
-          "bundleIdentifier": "com.atebits.Tweetie2",
-          "developerName": "@ipavault",
-          "version": "12.46",
-          "iconURL": "https://fastsign.dev/tg-icon/ipavault/1515.png",
-          "subtitle": "Tweaks: XEnhancer, TWIGalaxy"
-        },
-        {
-          "name": "Twitter (XEnhancer 1.0.1)",
-          "bundleIdentifier": "com.atebits.Tweetie2",
-          "developerName": "@ipavault",
-          "version": "12.46",
-          "iconURL": "https://fastsign.dev/tg-icon/ipavault/1514.png",
-          "subtitle": "Tweaks: XEnhancer"
-        },
-        {
-          "name": "X (XEnhancer+TWI)",
-          "bundleIdentifier": "com.atebits.Tweetie2",
-          "developerName": "@ipavault",
-          "version": "12.46",
-          "iconURL": "https://fastsign.dev/tg-icon/ipavault/1513.png",
-          "subtitle": "Tweaks: XEnhancer, TWIGalaxy"
-        },
-        {
-          "name": "X (XEnhancer 1.0.1)",
-          "bundleIdentifier": "com.atebits.Tweetie2",
-          "developerName": "@ipavault",
-          "version": "12.46",
-          "iconURL": "https://fastsign.dev/tg-icon/ipavault/1512.png",
-          "subtitle": "Tweaks: XEnhancer"
-        },
-        {
-          "name": "Twitter (NFB 7.3.1)",
-          "bundleIdentifier": "com.atebits.Tweetie2",
-          "developerName": "@ipavault",
-          "version": "12.46",
-          "iconURL": "https://fastsign.dev/tg-icon/ipavault/1510.png",
-          "subtitle": "Tweaks: bhFLEX, BHTwitter, CallessKit"
-        },
-        {
-          "name": "Twitter (NFB+TWI 7.3.1)",
-          "bundleIdentifier": "com.atebits.Tweetie2",
-          "developerName": "@ipavault",
-          "version": "12.46",
-          "iconURL": "https://fastsign.dev/tg-icon/ipavault/1511.png",
-          "subtitle": "Tweaks: bhFLEX, BHTwitter, CallessKit +1"
-        },
-        {
-          "name": "X (NFB 7.3.1)",
-          "bundleIdentifier": "com.atebits.Tweetie2",
-          "developerName": "@ipavault",
-          "version": "12.46",
-          "iconURL": "https://fastsign.dev/tg-icon/ipavault/1508.png",
-          "subtitle": "Tweaks: bhFLEX, BHTwitter, CallessKit"
-        },
-        {
-          "name": "X (NFB+TWI 7.3.1)",
-          "bundleIdentifier": "com.atebits.Tweetie2",
-          "developerName": "@ipavault",
-          "version": "12.46",
-          "iconURL": "https://fastsign.dev/tg-icon/ipavault/1509.png",
-          "subtitle": "Tweaks: bhFLEX, BHTwitter, CallessKit +1"
-        },
-        {
-          "name": "YouTube (YTKACE 1.1.9)",
-          "bundleIdentifier": "com.google.ios.youtube",
-          "developerName": "@ipavault",
-          "version": "21.47.6",
-          "iconURL": "https://fastsign.dev/tg-icon/ipavault/1507.png",
-          "subtitle": "Tweaks: PathRedirect, YouGroupSettings, LowContrastMode +2"
-        },
-        {
-          "name": "YouTube (YTKACE 1.1.9)",
-          "bundleIdentifier": "com.google.ios.youtube",
-          "developerName": "@ipavault",
-          "version": "21.33.6",
-          "iconURL": "https://fastsign.dev/tg-icon/ipavault/1506.png",
-          "subtitle": "Tweaks: PathRedirect, YouGroupSettings, LowContrastMode +2"
-        },
-        {
-          "name": "Unbound 1.12.2 (Discord 354.0) - IPAVault - Patched",
+          "name": "Unbound 1.12.4 (Discord 355.0) - IPAVault - Patched",
           "bundleIdentifier": "com.hammerandchisel.discord",
           "developerName": "TubeVault",
-          "version": "354.0",
+          "version": "355.0",
           "iconURL": "https://repo.ballermc.com/tubevault/discord-logo.jpg",
           "subtitle": "Tweaks: Unbound"
         },
         {
-          "name": "Unbound 1.12.2 (Discord 356.0 - TestFlight)",
+          "name": "Unbound 1.12.4 (Discord 357.0 - TestFlight)",
           "bundleIdentifier": "com.hammerandchisel.discord.testflight",
           "developerName": "TubeVault",
-          "version": "354.0_1.12.2",
+          "version": "357.0_1.12.4",
           "iconURL": "https://repo.ballermc.com/tubevault/discord-logo.jpg",
           "subtitle": "Tweaks: Unbound"
         },
         {
-          "name": "Unbound 1.12.2 (Discord 354.0 - App Store)",
+          "name": "Unbound 1.12.4 (Discord 354.0 - App Store)",
           "bundleIdentifier": "com.hammerandchisel.discord",
           "developerName": "TubeVault",
-          "version": "354.0_1.12.2",
+          "version": "354.0_1.12.4",
           "iconURL": "https://repo.ballermc.com/tubevault/discord-logo.jpg",
-          "subtitle": "This is modded Discord with Unbound 1.12.2 Injected. Read more about the mod here: https://unbound.rip/"
+          "subtitle": "This is modded Discord with Unbound 1.12.4 Injected. Read more about the mod here: https://unbound.rip/"
         },
         {
-          "name": "Cercube (6.6.1) - Legacy Support",
-          "bundleIdentifier": "com.google.ios.youtube",
+          "name": "TwitchAdBlock (v0.1.24 - IPAVault) - Patched - Liquid Glass",
+          "bundleIdentifier": "tv.twitch",
           "developerName": "TubeVault",
-          "version": "20.21.6",
-          "iconURL": "https://static.vecteezy.com/system/resources/previews/023/986/704/non_2x/youtube-logo-youtube-logo-transparent-youtube-icon-transparent-free-free-png.png",
-          "subtitle": "Tweaks: Cercube"
+          "version": "32.2",
+          "iconURL": "https://repo.ballermc.com/tubevault/Twitch-Icon.png",
+          "subtitle": "This is a modded version of Twitch with TwitchAdBlock with widget support. Does not work with sidestore!! In the app, this shows up as 'TwitchMods'…"
         },
         {
-          "name": "Cercube (6.6.1)",
+          "name": "TwitchAdBlock (v0.1.24 - IPAVault) - Patched",
+          "bundleIdentifier": "tv.twitch",
+          "developerName": "TubeVault",
+          "version": "32.2",
+          "iconURL": "https://repo.ballermc.com/tubevault/Twitch-Icon.png",
+          "subtitle": "This is a modded version of Twitch with TwitchAdBlock with widget support. Does not work with sidestore!! In the app, this shows up as 'TwitchMods'…"
+        },
+        {
+          "name": "TwitchAdBlock (v0.1.24 - gunnerkidBT)",
+          "bundleIdentifier": "tv.twitch",
+          "developerName": "TubeVault",
+          "version": "32.1",
+          "iconURL": "https://repo.ballermc.com/tubevault/Twitch-Icon.png",
+          "subtitle": "This is a modded version of Twitch with TwitchAdBlock with widget support. Does not work with sidestore!! In the app, this shows up as 'TwitchMods'…"
+        },
+        {
+          "name": "TwitchAdBlock (v0.1.24 - TubeVault/BallerMC) - Liquid Glass",
+          "bundleIdentifier": "tv.twitch",
+          "developerName": "TubeVault",
+          "version": "32.2",
+          "iconURL": "https://repo.ballermc.com/tubevault/Twitch-Icon.png",
+          "subtitle": "This is a modded version of Twitch with TwitchAdBlock and Liquid Glass added. In the app, this shows up as 'TwitchMods' open it from the row in your…"
+        },
+        {
+          "name": "TwitchAdBlock (v0.1.24 - TubeVault/BallerMC)",
+          "bundleIdentifier": "tv.twitch",
+          "developerName": "TubeVault",
+          "version": "32.2",
+          "iconURL": "https://repo.ballermc.com/tubevault/Twitch-Icon.png",
+          "subtitle": "This is a modded version of Twitch with TwitchAdBlock added. In the app, this shows up as 'TwitchMods' open it from the row in your account menu…"
+        },
+        {
+          "name": "TwitchControl (v0.0.7 - TubeVault/BallerMC) - Liquid Glass",
+          "bundleIdentifier": "tv.twitch",
+          "developerName": "TubeVault",
+          "version": "32.2",
+          "iconURL": "https://repo.ballermc.com/tubevault/Twitch-Icon.png",
+          "subtitle": "This is a modded version of Twitch with TwitchControl + Liquid Glass added."
+        },
+        {
+          "name": "TwitchControl (v0.0.7 - TubeVault/BallerMC)",
+          "bundleIdentifier": "tv.twitch",
+          "developerName": "TubeVault",
+          "version": "32.2",
+          "iconURL": "https://repo.ballermc.com/tubevault/Twitch-Icon.png",
+          "subtitle": "This is a modded version of Twitch with TwitchControl added."
+        },
+        {
+          "name": "TwitchControl (v0.0.7 - IPAVault) - Patched + Liquid Glass",
+          "bundleIdentifier": "tv.twitch",
+          "developerName": "TubeVault",
+          "version": "32.2",
+          "iconURL": "https://repo.ballermc.com/tubevault/Twitch-Icon.png",
+          "subtitle": "This is a modded version of Twitch with TwitchControl + Liquid Glass added."
+        },
+        {
+          "name": "TwitchControl (v0.0.7 - IPAVault) - Patched",
+          "bundleIdentifier": "tv.twitch",
+          "developerName": "TubeVault",
+          "version": "32.2",
+          "iconURL": "https://repo.ballermc.com/tubevault/Twitch-Icon.png",
+          "subtitle": "This is a modded version of Twitch with TwitchControl added."
+        },
+        {
+          "name": "Vitrine (v1.0.0 Beta 17 - Not Patched) IPAVault",
+          "bundleIdentifier": "com.spotify.client",
+          "developerName": "TubeVault",
+          "version": "9.1.90",
+          "iconURL": "https://repo.ballermc.com/tubevault/spotify-logo.jpg",
+          "subtitle": "This is a modded version of Spotify. This works with sidestore!! Vitrine is a fork of spoti.pw by Vojtěch Škopek, taken from 0.21.1 (commit c790445…"
+        },
+        {
+          "name": "Vitrine (v1.0.0 Beta 17 - Patched) IPAVault",
+          "bundleIdentifier": "com.spotify.client",
+          "developerName": "TubeVault",
+          "version": "9.1.90",
+          "iconURL": "https://repo.ballermc.com/tubevault/spotify-logo.jpg",
+          "subtitle": "This is a modded version of Spotify. This does not work with sidestore!! Vitrine is a fork of spoti.pw by Vojtěch Škopek, taken from 0.21.1 (commit…"
+        },
+        {
+          "name": "ASJTube + Bonus Tweaks (1.5.0 - mrdrvt99)",
           "bundleIdentifier": "com.google.ios.youtube",
           "developerName": "TubeVault",
           "version": "21.46.3",
           "iconURL": "https://static.vecteezy.com/system/resources/previews/023/986/704/non_2x/youtube-logo-youtube-logo-transparent-youtube-icon-transparent-free-free-png.png",
-          "subtitle": "Tweaks: Cercube"
+          "subtitle": "Tweaks: ASJTube, DontEatMyContent, IAmYouTube +16"
         },
         {
-          "name": "YouMod (2.0.0) + Bonus Tweaks (IPAVault)",
-          "bundleIdentifier": "com.google.ios.youtube",
-          "developerName": "TubeVault",
-          "version": "21.47.6",
-          "iconURL": "https://static.vecteezy.com/system/resources/previews/023/986/704/non_2x/youtube-logo-youtube-logo-transparent-youtube-icon-transparent-free-free-png.png",
-          "subtitle": "Tweaks: DontEatMyContent, YouTubeNativeShare, YouTubeDislikesReturn +13"
-        },
-        {
-          "name": "YouMod + Bonus Tweaks (2.1.0)",
-          "bundleIdentifier": "com.google.ios.youtube",
-          "developerName": "TubeVault",
-          "version": "21.47.6",
-          "iconURL": "https://static.vecteezy.com/system/resources/previews/023/986/704/non_2x/youtube-logo-youtube-logo-transparent-youtube-icon-transparent-free-free-png.png",
-          "subtitle": "Tweaks: DontEatMyContent, YouTubeDislikesReturn, UncappedAVPlayer +4"
-        },
-        {
-          "name": "YTKACE (1.1.8) - Bonus Tweaks (IPAVault)",
-          "bundleIdentifier": "com.google.ios.youtube",
-          "developerName": "TubeVault",
-          "version": "21.47.6",
-          "iconURL": "https://static.vecteezy.com/system/resources/previews/023/986/704/non_2x/youtube-logo-youtube-logo-transparent-youtube-icon-transparent-free-free-png.png",
-          "subtitle": "Tweaks: PathRedirect, DontEatMyContent, YouGroupSettings +5"
-        },
-        {
-          "name": "YTKACE (1.1.9 - iOS 16+ Support)",
+          "name": "YouMod (2.0.0) + Bonus Tweaks (mrdrvt99) - iOS 16+",
           "bundleIdentifier": "com.google.ios.youtube",
           "developerName": "TubeVault",
           "version": "21.33.6",
           "iconURL": "https://static.vecteezy.com/system/resources/previews/023/986/704/non_2x/youtube-logo-youtube-logo-transparent-youtube-icon-transparent-free-free-png.png",
-          "subtitle": "Tweaks: YTKACE"
+          "subtitle": "Tweaks: DontEatMyContent, YouTubeNativeShare, YouTubeDislikesReturn +12"
         },
         {
-          "name": "YTPlus/YTLite Cracked (6.0)",
+          "name": "YouMod (2.0.0) + Bonus Tweaks (mrdrvt99)",
           "bundleIdentifier": "com.google.ios.youtube",
           "developerName": "TubeVault",
           "version": "21.47.6",
           "iconURL": "https://static.vecteezy.com/system/resources/previews/023/986/704/non_2x/youtube-logo-youtube-logo-transparent-youtube-icon-transparent-free-free-png.png",
-          "subtitle": "Tweaks: YTLite"
+          "subtitle": "Tweaks: DontEatMyContent, YouTubeNativeShare, YouTubeDislikesReturn +12"
         },
         {
-          "name": "Lifesum",
-          "bundleIdentifier": "com.sillens.iShape",
+          "name": "YouMod (2.0.0) + Bonus Tweaks (iOSDecrypted)",
+          "bundleIdentifier": "com.google.ios.youtube",
+          "developerName": "TubeVault",
+          "version": "21.46.3",
+          "iconURL": "https://static.vecteezy.com/system/resources/previews/023/986/704/non_2x/youtube-logo-youtube-logo-transparent-youtube-icon-transparent-free-free-png.png",
+          "subtitle": "Tweaks: NoYTPremium, YouGroupSettings, YouPiP +6"
+        },
+        {
+          "name": "YTKACE (1.1.9) - Bonus Tweaks (IPAVault) iOS 16+",
+          "bundleIdentifier": "com.google.ios.youtube",
+          "developerName": "TubeVault",
+          "version": "21.33.6",
+          "iconURL": "https://static.vecteezy.com/system/resources/previews/023/986/704/non_2x/youtube-logo-youtube-logo-transparent-youtube-icon-transparent-free-free-png.png",
+          "subtitle": "Tweaks: PathRedirect, YouGroupSettings, LowContrastMode +2"
+        },
+        {
+          "name": "YTKACE (1.1.9) - Bonus Tweaks (IPAVault)",
+          "bundleIdentifier": "com.google.ios.youtube",
+          "developerName": "TubeVault",
+          "version": "21.47.6",
+          "iconURL": "https://static.vecteezy.com/system/resources/previews/023/986/704/non_2x/youtube-logo-youtube-logo-transparent-youtube-icon-transparent-free-free-png.png",
+          "subtitle": "Tweaks: PathRedirect, YouGroupSettings, LowContrastMode +2"
+        },
+        {
+          "name": "YTKACE (1.1.9) - Bonus Tweaks (mrdrvt99) iOS 16+",
+          "bundleIdentifier": "com.google.ios.youtube",
+          "developerName": "TubeVault",
+          "version": "21.33.6",
+          "iconURL": "https://static.vecteezy.com/system/resources/previews/023/986/704/non_2x/youtube-logo-youtube-logo-transparent-youtube-icon-transparent-free-free-png.png",
+          "subtitle": "Tweaks: DontEatMyContent, VolumeBoostYT, YouGetCaption +9"
+        },
+        {
+          "name": "YTKACE (1.1.9) - Bonus Tweaks (mrdrvt99)",
+          "bundleIdentifier": "com.google.ios.youtube",
+          "developerName": "TubeVault",
+          "version": "21.47.6",
+          "iconURL": "https://static.vecteezy.com/system/resources/previews/023/986/704/non_2x/youtube-logo-youtube-logo-transparent-youtube-icon-transparent-free-free-png.png",
+          "subtitle": "Tweaks: DontEatMyContent, VolumeBoostYT, YouGetCaption +9"
+        },
+        {
+          "name": "YTPlus/YTLite Cracked + Bonus Tweaks (6.0 - mrdrvt99)",
+          "bundleIdentifier": "com.google.ios.youtube",
+          "developerName": "TubeVault",
+          "version": "21.47.6",
+          "iconURL": "https://static.vecteezy.com/system/resources/previews/023/986/704/non_2x/youtube-logo-youtube-logo-transparent-youtube-icon-transparent-free-free-png.png",
+          "subtitle": "Tweaks: DontEatMyContent, YouTubeNativeShare, YouTubeDislikesReturn +12"
+        },
+        {
+          "name": "SimplyDraw",
+          "bundleIdentifier": "com.joytunes.Draw",
           "developerName": "AppTesters IPA Repo",
-          "version": "24.1.3",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.sillens.iShape.png",
+          "version": "1.25.0",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.joytunes.Draw.png",
+          "subtitle": "Injected with Subscription Unlocked"
+        },
+        {
+          "name": "PeakVisor",
+          "bundleIdentifier": "ru.routes.peakvisor",
+          "developerName": "AppTesters IPA Repo",
+          "version": "5.124",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/ru.routes.peakvisor.png",
+          "subtitle": "Injected with Subscription Unlocked"
+        },
+        {
+          "name": "SimplyGuitar",
+          "bundleIdentifier": "com.joytunes.SimplyGuitar",
+          "developerName": "AppTesters IPA Repo",
+          "version": "10.32.2",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.joytunes.SimplyGuitar.png",
+          "subtitle": "Injected with Subscription Unlocked"
+        },
+        {
+          "name": "RiseSleep",
+          "bundleIdentifier": "com.risesci.nyx",
+          "developerName": "AppTesters IPA Repo",
+          "version": "0.1.654",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.risesci.nyx.png",
+          "subtitle": "Injected with Subscription Unlocked"
+        },
+        {
+          "name": "ShutEye",
+          "bundleIdentifier": "health.sleep.sounds.tracker.alarm.calm",
+          "developerName": "AppTesters IPA Repo",
+          "version": "3.6.1",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/health.sleep.sounds.tracker.alarm.calm.png",
+          "subtitle": "Injected with Premium"
+        },
+        {
+          "name": "Slopes",
+          "bundleIdentifier": "com.consumedbycode.slopes",
+          "developerName": "AppTesters IPA Repo",
+          "version": "2026.20",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.consumedbycode.slopes.png",
           "subtitle": "Injected with Subscription Unlocked"
         },
         {
           "name": "Action",
           "bundleIdentifier": "com.future.kapi",
           "developerName": "AppTesters IPA Repo",
-          "version": "4.47.0",
+          "version": "4.47.1",
           "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.future.kapi.png",
           "subtitle": "Injected with Subscription Unlocked"
         },
         {
-          "name": "Provenance Alpha",
-          "bundleIdentifier": "org.provenance-emu.provenance.alpha",
-          "developerName": "Provenance-EMU",
-          "version": "3.4.0",
-          "iconURL": "https://raw.githubusercontent.com/Provenance-Emu/Provenance/develop/Provenance/Resources/Assets.xcassets/AppIcon.appiconset/iTunesArtwork@2x.png",
-          "subtitle": "Alpha builds of Provenance from the develop branch. These builds include the latest features and fixes but may contain bugs. Install alongside the…"
+          "name": "Opaline",
+          "bundleIdentifier": "com.verback.YTLite",
+          "developerName": "verback2308",
+          "version": "1.12.0",
+          "iconURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/Opaline/icon.png",
+          "subtitle": "A lightweight YouTube client with SponsorBlock, Return YouTube Dislike, and up to 1080p playback. No ads, no tracking, no dependencies."
         },
         {
-          "name": "YTKACE (1.1.8) - Bonus Tweaks (IPAVault) iOS 16+",
-          "bundleIdentifier": "com.google.ios.youtube",
-          "developerName": "TubeVault",
-          "version": "21.33.6",
-          "iconURL": "https://static.vecteezy.com/system/resources/previews/023/986/704/non_2x/youtube-logo-youtube-logo-transparent-youtube-icon-transparent-free-free-png.png",
-          "subtitle": "Tweaks: PathRedirect, DontEatMyContent, VolumeBoostYT +5"
-        },
-        {
-          "name": "YTPlus/YTLite Cracked (6.0 - iOS 14+ Support) - IPAVault - Patched",
-          "bundleIdentifier": "com.google.ios.youtube",
-          "developerName": "TubeVault",
-          "version": "19.20.2",
-          "iconURL": "https://static.vecteezy.com/system/resources/previews/023/986/704/non_2x/youtube-logo-youtube-logo-transparent-youtube-icon-transparent-free-free-png.png",
-          "subtitle": "Tweaks: YouTubeDislikesReturn, YouPiP, YouQuality +4"
-        },
-        {
-          "name": "YTPlus/YTLite Cracked (6.0 - iOS 15+ Support) - IPAVault - Patched",
-          "bundleIdentifier": "com.google.ios.youtube",
-          "developerName": "TubeVault",
-          "version": "20.21.6",
-          "iconURL": "https://static.vecteezy.com/system/resources/previews/023/986/704/non_2x/youtube-logo-youtube-logo-transparent-youtube-icon-transparent-free-free-png.png",
-          "subtitle": "Tweaks: YouTubeDislikesReturn, YouPiP, YouQuality +4"
-        },
-        {
-          "name": "YTPlus/YTLite Cracked (6.0 - iOS 16+ Support) - IPAVault - Patched",
-          "bundleIdentifier": "com.google.ios.youtube",
-          "developerName": "TubeVault",
-          "version": "21.33.6",
-          "iconURL": "https://static.vecteezy.com/system/resources/previews/023/986/704/non_2x/youtube-logo-youtube-logo-transparent-youtube-icon-transparent-free-free-png.png",
-          "subtitle": "Tweaks: YouTubeDislikesReturn, YouPiP, YouQuality +4"
-        },
-        {
-          "name": "YTPlus/YTLite Cracked (6.0) - iOS 14+ (IPAVault) + Bonus Tweaks",
-          "bundleIdentifier": "com.google.ios.youtube",
-          "developerName": "TubeVault",
-          "version": "19.20.2",
-          "iconURL": "https://static.vecteezy.com/system/resources/previews/023/986/704/non_2x/youtube-logo-youtube-logo-transparent-youtube-icon-transparent-free-free-png.png",
-          "subtitle": "This is the cracked version of YTPlus, without the Dan Account System DRM. This was cracked by Spy_G, with Bonus Tweaks added by IPAVAult, and…"
-        },
-        {
-          "name": "YTPlus/YTLite Cracked (6.0) - iOS 15+ (IPAVault) + Bonus Tweaks",
-          "bundleIdentifier": "com.google.ios.youtube",
-          "developerName": "TubeVault",
-          "version": "20.21.6",
-          "iconURL": "https://static.vecteezy.com/system/resources/previews/023/986/704/non_2x/youtube-logo-youtube-logo-transparent-youtube-icon-transparent-free-free-png.png",
-          "subtitle": "This is the cracked version of YTPlus, without the Dan Account System DRM. This was cracked by Spy_G, with Bonus Tweaks added by IPAVAult, and…"
-        },
-        {
-          "name": "YTPlus/YTLite Cracked (6.0) - iOS 16+ (IPAVault) + Bonus Tweaks",
-          "bundleIdentifier": "com.google.ios.youtube",
-          "developerName": "TubeVault",
-          "version": "21.33.6",
-          "iconURL": "https://static.vecteezy.com/system/resources/previews/023/986/704/non_2x/youtube-logo-youtube-logo-transparent-youtube-icon-transparent-free-free-png.png",
-          "subtitle": "This is the cracked version of YTPlus, without the Dan Account System DRM. This was cracked by Spy_G, with Bonus Tweaks added by IPAVAult, and…"
-        },
-        {
-          "name": "YouTube (YouMod 2.0.0)",
-          "bundleIdentifier": "com.google.ios.youtube",
+          "name": "Spotify (EeveeSpotify 7.5.0 · no plugins)",
+          "bundleIdentifier": "com.spotify.client",
           "developerName": "@ipavault",
-          "version": "21.33.6",
-          "iconURL": "https://fastsign.dev/tg-icon/ipavault/1393.png",
-          "subtitle": "Tweaks: DontEatMyContent, YouTubeNativeShare, YouTubeDislikesReturn +11"
+          "version": "9.2.2",
+          "iconURL": "https://fastsign.dev/tg-icon/ipavault/1534.png",
+          "subtitle": "Tweaks: EeveeSpotify"
         },
         {
-          "name": "YouTube",
-          "bundleIdentifier": "com.google.ios.youtube",
+          "name": "Spotify (EeveeSpotify 7.5.0)",
+          "bundleIdentifier": "com.spotify.client",
+          "developerName": "@ipavault",
+          "version": "9.2.2",
+          "iconURL": "https://fastsign.dev/tg-icon/ipavault/1533.png",
+          "subtitle": "Tweaks: EeveeSpotify, SpotifyAudioProbe"
+        },
+        {
+          "name": "WhatsApp",
+          "bundleIdentifier": "net.whatsapp.WhatsApp",
+          "developerName": "@spyg_vault",
+          "version": "26.46.72",
+          "iconURL": "https://fastsign.dev/tg-icon/spyg-vault/226.png",
+          "subtitle": "Tweaks: Watusi"
+        },
+        {
+          "name": "Twitter",
+          "bundleIdentifier": "com.atebits.Tweetie2",
           "developerName": "scholars lounge",
-          "version": "21.47.6",
-          "iconURL": "https://fastsign.dev/tg-icon/scholars-lounge/88011.png",
-          "subtitle": "Tweaks: YTKACE"
+          "version": "12.46",
+          "iconURL": "https://fastsign.dev/tg-icon/scholars-lounge/88246.png",
+          "subtitle": "Tweaks: bhFLEX, BHTwitter, CallessKit"
         },
         {
-          "name": "YouTube (YTKACE 1.1.9)",
-          "bundleIdentifier": "com.google.ios.youtube",
+          "name": "PS Express",
+          "bundleIdentifier": "com.adobe.PSMobile",
           "developerName": "scholars lounge",
-          "version": "21.33.6",
-          "iconURL": "https://fastsign.dev/tg-icon/scholars-lounge/88010.png",
-          "subtitle": "Tweaks: YTKACE"
+          "version": "26.47.0",
+          "iconURL": "https://fastsign.dev/tg-icon/scholars-lounge/88245.png",
+          "subtitle": "Tweaks: PhotoshopExpressPremium"
         },
         {
-          "name": "YouTube (YTPlus 6.0 base)",
-          "bundleIdentifier": "com.google.ios.youtube",
+          "name": "Infuse",
+          "bundleIdentifier": "com.firecore.infuse",
+          "developerName": "@spyg_vault",
+          "version": "8.5.11",
+          "iconURL": "https://fastsign.dev/tg-icon/spyg-vault/228.png",
+          "subtitle": "@spyg_vault | Infuse Pro Unlocked for iOS/iPadOS with Infuse Plus injected. iOS/iPadOS only!! ❤️ Support my work"
+        },
+        {
+          "name": "Nagram (iQTele 1.5)",
+          "bundleIdentifier": "xyz.nextalone.nagram",
           "developerName": "@ipavault",
-          "version": "21.47.6",
-          "iconURL": "https://fastsign.dev/tg-icon/ipavault/1505.png",
-          "subtitle": "Tweaks: YouTubeDislikesReturn, YouPiP, YouQuality +4"
+          "version": "13.2",
+          "iconURL": "https://fastsign.dev/tg-icon/ipavault/1532.png",
+          "subtitle": "Tweaks: iqKeepDeleted"
         },
         {
-          "name": "YouTube (YTPlus 6.0 base)",
-          "bundleIdentifier": "com.google.ios.youtube",
+          "name": "Nagram (Lead 2.0.3)",
+          "bundleIdentifier": "xyz.nextalone.nagram",
           "developerName": "@ipavault",
-          "version": "21.33.6",
-          "iconURL": "https://fastsign.dev/tg-icon/ipavault/1504.png",
-          "subtitle": "Tweaks: YouTubeDislikesReturn, YouPiP, YouQuality +4"
+          "version": "13.2",
+          "iconURL": "https://fastsign.dev/tg-icon/ipavault/1531.png",
+          "subtitle": "Tweaks: PathRedirect, Lead"
         },
         {
-          "name": "YouTube (YTPlus 6.0 base)",
-          "bundleIdentifier": "com.google.ios.youtube",
+          "name": "Instagram (RC)",
+          "bundleIdentifier": "com.burbn.instagram",
+          "developerName": "iOSDecrypted",
+          "version": "453.0.0",
+          "iconURL": "https://fastsign.dev/tg-icon/iosdecrypted/252726.png",
+          "subtitle": "Tweaks: Regram, InstaProxy"
+        },
+        {
+          "name": "Discord (Unbound 1.12.4)",
+          "bundleIdentifier": "com.hammerandchisel.discord",
           "developerName": "@ipavault",
-          "version": "20.21.6",
-          "iconURL": "https://fastsign.dev/tg-icon/ipavault/1503.png",
-          "subtitle": "Tweaks: YouTubeDislikesReturn, YouPiP, YouQuality +4"
+          "version": "355.0",
+          "iconURL": "https://fastsign.dev/tg-icon/ipavault/1530.png",
+          "subtitle": "Tweaks: Unbound"
         },
         {
-          "name": "YouTube (YTPlus 6.0 base)",
-          "bundleIdentifier": "com.google.ios.youtube",
-          "developerName": "@ipavault",
-          "version": "19.20.2",
-          "iconURL": "https://fastsign.dev/tg-icon/ipavault/1502.png",
-          "subtitle": "Tweaks: YouTubeDislikesReturn, YouPiP, YouQuality +4"
-        },
-        {
-          "name": "YouTube (YTPlus 6.0)",
-          "bundleIdentifier": "com.google.ios.youtube",
-          "developerName": "@ipavault",
-          "version": "21.47.6",
-          "iconURL": "https://fastsign.dev/tg-icon/ipavault/1501.png",
-          "subtitle": "Tweaks: YTLite, DontEatMyContent, YouTubeDislikesReturn +12"
-        },
-        {
-          "name": "YouTube (YTPlus 6.0)",
-          "bundleIdentifier": "com.google.ios.youtube",
-          "developerName": "@ipavault",
-          "version": "21.33.6",
-          "iconURL": "https://fastsign.dev/tg-icon/ipavault/1500.png",
-          "subtitle": "Tweaks: YTLite, DontEatMyContent, YouTubeDislikesReturn +12"
-        },
-        {
-          "name": "YouTube (DontEatMyContent, YouChooseQuality)",
-          "bundleIdentifier": "com.google.ios.youtube",
-          "developerName": "@ipavault",
-          "version": "20.21.6",
-          "iconURL": "https://fastsign.dev/tg-icon/ipavault/1499.png",
-          "subtitle": "Tweaks: YTLite, DontEatMyContent, YouTubeDislikesReturn +12"
-        },
-        {
-          "name": "YouTube (DontEatMyContent, YouChooseQuality)",
-          "bundleIdentifier": "com.google.ios.youtube",
-          "developerName": "@ipavault",
-          "version": "19.20.2",
-          "iconURL": "https://fastsign.dev/tg-icon/ipavault/1498.png",
-          "subtitle": "Tweaks: YTLite, DontEatMyContent, YouTubeDislikesReturn +12"
-        },
-        {
-          "name": "YouTube (YouMod 2.0.0)",
-          "bundleIdentifier": "com.google.ios.youtube",
-          "developerName": "@ipavault",
-          "version": "21.47.6",
-          "iconURL": "https://fastsign.dev/tg-icon/ipavault/1496.png",
-          "subtitle": "Tweaks: DontEatMyContent, YouTubeNativeShare, YouTubeDislikesReturn +13"
-        },
-        {
-          "name": "YouTube (YouMod 2.0.0)",
-          "bundleIdentifier": "com.google.ios.youtube",
-          "developerName": "@ipavault",
-          "version": "21.33.6",
-          "iconURL": "https://fastsign.dev/tg-icon/ipavault/1497.png",
-          "subtitle": "Tweaks: DontEatMyContent, YouTubeNativeShare, YouTubeDislikesReturn +11"
-        },
-        {
-          "name": "YouTube (YTKACE 1.1.8)",
-          "bundleIdentifier": "com.google.ios.youtube",
-          "developerName": "@ipavault",
-          "version": "21.47.6",
-          "iconURL": "https://fastsign.dev/tg-icon/ipavault/1495.png",
-          "subtitle": "Tweaks: PathRedirect, DontEatMyContent, YouGroupSettings +5"
-        },
-        {
-          "name": "YouTube (YTKACE 1.1.8)",
-          "bundleIdentifier": "com.google.ios.youtube",
-          "developerName": "@ipavault",
-          "version": "21.33.6",
-          "iconURL": "https://fastsign.dev/tg-icon/ipavault/1494.png",
-          "subtitle": "Tweaks: PathRedirect, DontEatMyContent, YouGroupSettings +5"
-        },
-        {
-          "name": "Radarbot",
-          "bundleIdentifier": "com.iteration-mobile.radarbot-free-ww",
+          "name": "ShutEye",
+          "bundleIdentifier": "health.sleep.sounds.tracker.alarm.calm",
           "developerName": "@blatants",
-          "version": "9.49",
-          "iconURL": "https://fastsign.dev/tg-icon/blatants/13671.png",
-          "subtitle": "Pro unlocked. >Click 'Restore Purchase' if subscription isn't active"
+          "version": "3.6.1",
+          "iconURL": "https://fastsign.dev/tg-icon/blatants/13702.png",
+          "subtitle": "Premium unlocked"
+        },
+        {
+          "name": "PosePal",
+          "bundleIdentifier": "com.tripathysattvik.posepal",
+          "developerName": "@Sa1y0miii",
+          "version": "1.2.4",
+          "iconURL": "https://fastsign.dev/tg-icon/sa1y0miii/16552.png",
+          "subtitle": "Subscription unlocked. *(ai features doesn’t work)"
+        },
+        {
+          "name": "Splash",
+          "bundleIdentifier": "app.cranberry.splash",
+          "developerName": "@Sa1y0miii",
+          "version": "3.0.3",
+          "iconURL": "https://fastsign.dev/tg-icon/sa1y0miii/16549.png",
+          "subtitle": "Subscription unlocked"
+        },
+        {
+          "name": "ClassDojo",
+          "bundleIdentifier": "com.ClassDojo",
+          "developerName": "@Sa1y0miii",
+          "version": "18.57.0",
+          "iconURL": "https://fastsign.dev/tg-icon/sa1y0miii/16546.png",
+          "subtitle": "Subscription unlocked"
+        },
+        {
+          "name": "FocusFour",
+          "bundleIdentifier": "com.canoe.FocusFour",
+          "developerName": "@Sa1y0miii",
+          "version": "1.2.8",
+          "iconURL": "https://fastsign.dev/tg-icon/sa1y0miii/16543.png",
+          "subtitle": "Subscription unlocked"
         }
       ]
     },
