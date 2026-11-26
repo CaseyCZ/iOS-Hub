@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-26T08:22:33Z",
+  "generatedAt": "2026-11-26T21:35:00Z",
   "sources": [
     {
       "id": "utm",
@@ -55,7 +55,7 @@
           "name": "iFly",
           "bundleIdentifier": "com.provenance.ifly",
           "developerName": "Provenance Emu",
-          "version": "1.0.0+1795608327",
+          "version": "1.0.0+1795695085",
           "iconURL": "https://ifly-emu.com/icon-1024.png",
           "subtitle": "Dreamcast Emulator for iOS & tvOS"
         },
@@ -5196,11 +5196,91 @@
     {
       "id": "apptesters",
       "name": "AppTesters IPA Repo",
-      "appCount": 10462,
+      "appCount": 10472,
       "catalogLimited": true,
       "iconURL": "https://apptesters.org/apptesters-512x512.png",
       "sourceURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/apps.json",
       "apps": [
+        {
+          "name": "RiseSleep",
+          "bundleIdentifier": "com.risesci.nyx",
+          "developerName": "",
+          "version": "0.1.656",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.risesci.nyx.png",
+          "subtitle": ""
+        },
+        {
+          "name": "ShutEye",
+          "bundleIdentifier": "health.sleep.sounds.tracker.alarm.calm",
+          "developerName": "",
+          "version": "3.6.2",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/health.sleep.sounds.tracker.alarm.calm.png",
+          "subtitle": ""
+        },
+        {
+          "name": "Picsew",
+          "bundleIdentifier": "com.sugarmo.ScrollClip",
+          "developerName": "",
+          "version": "3.20.2",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.sugarmo.ScrollClip.png",
+          "subtitle": ""
+        },
+        {
+          "name": "Wallpapers",
+          "bundleIdentifier": "com.apalonapps.wallpaperspys",
+          "developerName": "",
+          "version": "2.8.4",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.apalonapps.wallpaperspys.png",
+          "subtitle": ""
+        },
+        {
+          "name": "Cleanup",
+          "bundleIdentifier": "com.codeway.cleanerplus",
+          "developerName": "",
+          "version": "6.28.0",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.codeway.cleanerplus.png",
+          "subtitle": ""
+        },
+        {
+          "name": "ThePiano",
+          "bundleIdentifier": "com.impalastudios.pianofree",
+          "developerName": "",
+          "version": "2.26.8",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.impalastudios.pianofree.png",
+          "subtitle": ""
+        },
+        {
+          "name": "Scanner",
+          "bundleIdentifier": "com.apalonapps.pdffree",
+          "developerName": "",
+          "version": "2.12.13",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.apalonapps.pdffree.png",
+          "subtitle": ""
+        },
+        {
+          "name": "PSExpress",
+          "bundleIdentifier": "com.adobe.PSMobile",
+          "developerName": "",
+          "version": "26.47.1",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.adobe.PSMobile.png",
+          "subtitle": ""
+        },
+        {
+          "name": "Wikiloc",
+          "bundleIdentifier": "com.wikiloc.wikiloc",
+          "developerName": "",
+          "version": "3.31.3",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.wikiloc.wikiloc.png",
+          "subtitle": ""
+        },
+        {
+          "name": "FitnessCoach",
+          "bundleIdentifier": "fitnessworkout.app",
+          "developerName": "",
+          "version": "2.13.4",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/fitnessworkout.app.png",
+          "subtitle": ""
+        },
         {
           "name": "ProFit",
           "bundleIdentifier": "com.maxty.gofitness",
@@ -6719,86 +6799,6 @@
           "developerName": "",
           "version": "13.53",
           "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.iPwners.Plonkan.png",
-          "subtitle": ""
-        },
-        {
-          "name": "ColorPop",
-          "bundleIdentifier": "com.mwm.procolor",
-          "developerName": "",
-          "version": "2.69.03",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.mwm.procolor.png",
-          "subtitle": ""
-        },
-        {
-          "name": "SoundLab",
-          "bundleIdentifier": "com.castpeer.audioroom.ios",
-          "developerName": "",
-          "version": "2.11.7",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.castpeer.audioroom.ios.png",
-          "subtitle": ""
-        },
-        {
-          "name": "PeakVisor",
-          "bundleIdentifier": "ru.routes.peakvisor",
-          "developerName": "",
-          "version": "5.122",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/ru.routes.peakvisor.png",
-          "subtitle": ""
-        },
-        {
-          "name": "FindAir",
-          "bundleIdentifier": "co.airapps.finderbot",
-          "developerName": "",
-          "version": "2026.11.4",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/co.airapps.finderbot.png",
-          "subtitle": ""
-        },
-        {
-          "name": "CalculatorAir",
-          "bundleIdentifier": "com.CalculatorForiPad.InternetRocks",
-          "developerName": "",
-          "version": "2026.11.4",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.CalculatorForiPad.InternetRocks.png",
-          "subtitle": ""
-        },
-        {
-          "name": "Mockview",
-          "bundleIdentifier": "com.kavsoft.MockviewApp",
-          "developerName": "",
-          "version": "5.0.5",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.kavsoft.MockviewApp.png",
-          "subtitle": ""
-        },
-        {
-          "name": "CollaNote",
-          "bundleIdentifier": "net.quochuywdm.collanote496",
-          "developerName": "",
-          "version": "5.1.2",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/net.quochuywdm.collanote496.png",
-          "subtitle": ""
-        },
-        {
-          "name": "Locket",
-          "bundleIdentifier": "com.locket.Locket",
-          "developerName": "",
-          "version": "2.73.0",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.locket.Locket.png",
-          "subtitle": ""
-        },
-        {
-          "name": "Slopes",
-          "bundleIdentifier": "com.consumedbycode.slopes",
-          "developerName": "",
-          "version": "2026.19",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.consumedbycode.slopes.png",
-          "subtitle": ""
-        },
-        {
-          "name": "EPIK",
-          "bundleIdentifier": "com.snowcorp.epik",
-          "developerName": "",
-          "version": "7.5.20",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.snowcorp.epik.png",
           "subtitle": ""
         }
       ]
@@ -9171,7 +9171,7 @@
           "name": "MoviePilot",
           "bundleIdentifier": "org.moviepilot.app",
           "developerName": "jxxghp",
-          "version": "2.0.4",
+          "version": "2.0.6",
           "iconURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/MoviePilot-App/icon.webp",
           "subtitle": "MoviePilot 的 iOS 原生客户端"
         },
@@ -9467,7 +9467,7 @@
           "name": "WQ Files",
           "bundleIdentifier": "cz.kolbi.wqfiles",
           "developerName": "kolbicz",
-          "version": "0.9.20",
+          "version": "0.9.30",
           "iconURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/WQFiles/icon.webp",
           "subtitle": "File manager for iOS 26 and 27 (worse_query)"
         },
@@ -9499,7 +9499,7 @@
           "name": "WrapPin",
           "bundleIdentifier": "com.suversal.wrappin",
           "developerName": "suversal",
-          "version": "1.0.26",
+          "version": "1.0.27",
           "iconURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/WrapPin/icon.webp",
           "subtitle": "本机虚拟定位与步行路线测试工具"
         },
