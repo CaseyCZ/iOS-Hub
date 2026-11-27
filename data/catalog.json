@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-27T08:37:56Z",
+  "generatedAt": "2026-11-27T21:19:25Z",
   "sources": [
     {
       "id": "utm",
@@ -55,7 +55,7 @@
           "name": "iFly",
           "bundleIdentifier": "com.provenance.ifly",
           "developerName": "Provenance Emu",
-          "version": "1.0.0+1795695085",
+          "version": "1.0.0+1795764729",
           "iconURL": "https://ifly-emu.com/icon-1024.png",
           "subtitle": "Dreamcast Emulator for iOS & tvOS"
         },
@@ -5196,11 +5196,51 @@
     {
       "id": "apptesters",
       "name": "AppTesters IPA Repo",
-      "appCount": 10476,
+      "appCount": 10481,
       "catalogLimited": true,
       "iconURL": "https://apptesters.org/apptesters-512x512.png",
       "sourceURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/apps.json",
       "apps": [
+        {
+          "name": "Fitia",
+          "bundleIdentifier": "com.ulisesolave.Fitia",
+          "developerName": "",
+          "version": "25.4.1",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.ulisesolave.Fitia.png",
+          "subtitle": ""
+        },
+        {
+          "name": "Dropshare",
+          "bundleIdentifier": "net.mkswap.Dropshare-iOS",
+          "developerName": "",
+          "version": "3.69",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/net.mkswap.Dropshare-iOS.png",
+          "subtitle": ""
+        },
+        {
+          "name": "NutriCoach",
+          "bundleIdentifier": "nutrition.coach",
+          "developerName": "",
+          "version": "2.8.2",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/nutrition.coach.png",
+          "subtitle": ""
+        },
+        {
+          "name": "WeatherLive",
+          "bundleIdentifier": "com.apalonapps.wlf",
+          "developerName": "",
+          "version": "7.24.45",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.apalonapps.wlf.png",
+          "subtitle": ""
+        },
+        {
+          "name": "SpeakTranslate",
+          "bundleIdentifier": "com.appicfun.translatorfree",
+          "developerName": "",
+          "version": "6.0.63",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.appicfun.translatorfree.png",
+          "subtitle": ""
+        },
         {
           "name": "PeakVisor",
           "bundleIdentifier": "ru.routes.peakvisor",
@@ -6759,46 +6799,6 @@
           "developerName": "",
           "version": "1.4.7",
           "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.book.summaries.reading.png",
-          "subtitle": ""
-        },
-        {
-          "name": "Lyfta",
-          "bundleIdentifier": "com.lyftaios",
-          "developerName": "",
-          "version": "1.169",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.lyftaios.png",
-          "subtitle": ""
-        },
-        {
-          "name": "SCRL",
-          "bundleIdentifier": "com.dopedevelopment.Panels",
-          "developerName": "",
-          "version": "9.65.1",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.dopedevelopment.Panels.png",
-          "subtitle": ""
-        },
-        {
-          "name": "Camera",
-          "bundleIdentifier": "com.andyworks.camera",
-          "developerName": "",
-          "version": "1.64",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.andyworks.camera.png",
-          "subtitle": ""
-        },
-        {
-          "name": "Fitia",
-          "bundleIdentifier": "com.ulisesolave.Fitia",
-          "developerName": "",
-          "version": "25.3",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.ulisesolave.Fitia.png",
-          "subtitle": ""
-        },
-        {
-          "name": "Calm",
-          "bundleIdentifier": "com.calm.calmapp",
-          "developerName": "",
-          "version": "7.5.1",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.calm.calmapp.png",
           "subtitle": ""
         }
       ]
@@ -8682,11 +8682,19 @@
     {
       "id": "altgallery",
       "name": "AltGallery",
-      "appCount": 105,
+      "appCount": 114,
       "catalogLimited": false,
       "iconURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/assets/icon.png",
       "sourceURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/all-apps.json",
       "apps": [
+        {
+          "name": "Account Atlas",
+          "bundleIdentifier": "dev.huichen.atlas",
+          "developerName": "Ckxkx",
+          "version": "2.5",
+          "iconURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/AccountAtlas/icon.webp",
+          "subtitle": "记录邮箱和手机号绑定的各类账号"
+        },
         {
           "name": "Aidoku",
           "bundleIdentifier": "app.aidoku.Aidoku",
@@ -8816,6 +8824,14 @@
           "subtitle": "使用 Flutter 开发的插件化漫画阅读器"
         },
         {
+          "name": "Camlo",
+          "bundleIdentifier": "com.kianuni.Camlo",
+          "developerName": "Kianuni",
+          "version": "1.3.4",
+          "iconURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/Camlo/icon.webp",
+          "subtitle": "开幕 · 零门槛「滑动解锁变身 + 动态锁屏」壁纸工坊"
+        },
+        {
           "name": "Chance",
           "bundleIdentifier": "com.moffatman.chan",
           "developerName": "Callum Moffat",
@@ -8824,12 +8840,28 @@
           "subtitle": "Imageboard browser for iOS and Android"
         },
         {
+          "name": "cilicili",
+          "bundleIdentifier": "com.rayc.cilicili",
+          "developerName": "Rone89",
+          "version": "1.1.8",
+          "iconURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/cilicili/icon.webp",
+          "subtitle": "使用 SwiftUI 开发的哔哩哔哩第三方客户端"
+        },
+        {
           "name": "Cloudn",
           "bundleIdentifier": "com.mengangs.Cloudn",
           "developerName": "mengangs",
           "version": "1.4.2",
           "iconURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/Cloudn/icon.webp",
           "subtitle": "网盘分享与短视频高速解析下载"
+        },
+        {
+          "name": "CoolapkDesktop",
+          "bundleIdentifier": "com.coolapk.desktop",
+          "developerName": "coolapk-desktop",
+          "version": "1.48.0",
+          "iconURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/CoolapkDesktop/icon.webp",
+          "subtitle": "非官方酷安第三方客户端"
         },
         {
           "name": "D2R Mobile",
@@ -8870,6 +8902,14 @@
           "version": "5.0.0b6",
           "iconURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/DolphiniOS/icon.webp",
           "subtitle": "GameCube and Wii emulator for iOS/iPadOS"
+        },
+        {
+          "name": "DouDuo",
+          "bundleIdentifier": "me.rrmm.douduo",
+          "developerName": "81199000",
+          "version": "1.7.5",
+          "iconURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/DouDuo/icon.webp",
+          "subtitle": "原生 SwiftUI 第三方抖音客户端，适配折叠屏与 iPad"
         },
         {
           "name": "DukeX",
@@ -8968,6 +9008,14 @@
           "subtitle": "基于 iOS 画中画的悬浮窗高刷辅助工具"
         },
         {
+          "name": "GuoDuo",
+          "bundleIdentifier": "me.rrmm.hongguo",
+          "developerName": "81199000",
+          "version": "1.0.1",
+          "iconURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/GuoDuo/icon.webp",
+          "subtitle": "原生 SwiftUI 红果短剧客户端，适配折叠屏与 iPad"
+        },
+        {
           "name": "HermesEnabler",
           "bundleIdentifier": "com.example.HermesEnabler",
           "developerName": "pookjw",
@@ -9032,6 +9080,14 @@
           "subtitle": "Torrent client for iOS"
         },
         {
+          "name": "i短剧",
+          "bundleIdentifier": "com.local.STV",
+          "developerName": "my-name-is-alan",
+          "version": "1.6b41",
+          "iconURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/iDuanJu/icon.webp",
+          "subtitle": "免费开源的多源短剧/视频/漫画/Telegram 聚合播放器"
+        },
+        {
           "name": "Kazumi",
           "bundleIdentifier": "com.example.kazumi",
           "developerName": "Predidit",
@@ -9070,6 +9126,14 @@
           "version": "1.13.3",
           "iconURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/LightNovelShelf/icon.webp",
           "subtitle": "轻书架官方 Flutter 客户端"
+        },
+        {
+          "name": "LiLite",
+          "bundleIdentifier": "com.liuliuya.PiliNative",
+          "developerName": "liuliuya2333",
+          "version": "1.0.42",
+          "iconURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/LiLite/icon.webp",
+          "subtitle": "轻盈顺滑的第三方哔哩哔哩客户端"
         },
         {
           "name": "LinuxRunner",
@@ -9171,7 +9235,7 @@
           "name": "MoviePilot",
           "bundleIdentifier": "org.moviepilot.app",
           "developerName": "jxxghp",
-          "version": "2.0.8",
+          "version": "2.0.10",
           "iconURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/MoviePilot-App/icon.webp",
           "subtitle": "MoviePilot 的 iOS 原生客户端"
         },
@@ -9251,7 +9315,7 @@
           "name": "Photos Backup",
           "bundleIdentifier": "com.g8row.photosbackup",
           "developerName": "g8row",
-          "version": "0.3.8",
+          "version": "0.4.1",
           "iconURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/PhotosBackup/icon.webp",
           "subtitle": "On-device Google Photos backup"
         },
@@ -9294,6 +9358,14 @@
           "version": "3.1.19",
           "iconURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/PureLive/icon.webp",
           "subtitle": "基于 Flutter 的开源多平台直播聚合播放器"
+        },
+        {
+          "name": "Reloc",
+          "bundleIdentifier": "dev.reloc.ios",
+          "developerName": "Reukix",
+          "version": "1.0.4",
+          "iconURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/Reloc/icon.webp",
+          "subtitle": "面向 iPhone 的外设级定位模拟工具"
         },
         {
           "name": "RepoPocket",
