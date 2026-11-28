@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-27T21:19:25Z",
+  "generatedAt": "2026-11-28T07:52:19Z",
   "sources": [
     {
       "id": "utm",
@@ -55,7 +55,7 @@
           "name": "iFly",
           "bundleIdentifier": "com.provenance.ifly",
           "developerName": "Provenance Emu",
-          "version": "1.0.0+1795764729",
+          "version": "1.0.0+1795774653",
           "iconURL": "https://ifly-emu.com/icon-1024.png",
           "subtitle": "Dreamcast Emulator for iOS & tvOS"
         },
@@ -5196,11 +5196,51 @@
     {
       "id": "apptesters",
       "name": "AppTesters IPA Repo",
-      "appCount": 10481,
+      "appCount": 10486,
       "catalogLimited": true,
       "iconURL": "https://apptesters.org/apptesters-512x512.png",
       "sourceURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/apps.json",
       "apps": [
+        {
+          "name": "Action",
+          "bundleIdentifier": "com.future.kapi",
+          "developerName": "",
+          "version": "4.48.0",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.future.kapi.png",
+          "subtitle": ""
+        },
+        {
+          "name": "GrowMe",
+          "bundleIdentifier": "com.book.summaries.reading",
+          "developerName": "",
+          "version": "1.4.9",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.book.summaries.reading.png",
+          "subtitle": ""
+        },
+        {
+          "name": "Dehancer",
+          "bundleIdentifier": "com.dehancer.film.ios-app",
+          "developerName": "",
+          "version": "7.3",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.dehancer.film.ios-app.png",
+          "subtitle": ""
+        },
+        {
+          "name": "Detail",
+          "bundleIdentifier": "co.detail.duo",
+          "developerName": "",
+          "version": "6.1.0",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/co.detail.duo.png",
+          "subtitle": ""
+        },
+        {
+          "name": "Locket",
+          "bundleIdentifier": "com.locket.Locket",
+          "developerName": "",
+          "version": "2.75.0",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.locket.Locket.png",
+          "subtitle": ""
+        },
         {
           "name": "Fitia",
           "bundleIdentifier": "com.ulisesolave.Fitia",
@@ -6759,46 +6799,6 @@
           "developerName": "",
           "version": "6.29",
           "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.sfun.snapedit.png",
-          "subtitle": ""
-        },
-        {
-          "name": "NightSky",
-          "bundleIdentifier": "com.icandiapps.nightsky",
-          "developerName": "",
-          "version": "27.3",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.icandiapps.nightsky.png",
-          "subtitle": ""
-        },
-        {
-          "name": "MyFitnessPal",
-          "bundleIdentifier": "com.myfitnesspal.mfp",
-          "developerName": "",
-          "version": "26.46.0",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.myfitnesspal.mfp.png",
-          "subtitle": ""
-        },
-        {
-          "name": "QrCode",
-          "bundleIdentifier": "com.internet-rocks.codescanner",
-          "developerName": "",
-          "version": "2026.11.5",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.internet-rocks.codescanner.png",
-          "subtitle": ""
-        },
-        {
-          "name": "Busuu",
-          "bundleIdentifier": "com.busuu.english.app",
-          "developerName": "",
-          "version": "30.34.1",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.busuu.english.app.png",
-          "subtitle": ""
-        },
-        {
-          "name": "GrowMe",
-          "bundleIdentifier": "com.book.summaries.reading",
-          "developerName": "",
-          "version": "1.4.7",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.book.summaries.reading.png",
           "subtitle": ""
         }
       ]
@@ -8947,7 +8947,7 @@
           "name": "Erosion-CN",
           "bundleIdentifier": "com.jbdotparty.Erosion",
           "developerName": "Kianuni",
-          "version": "1.0.7",
+          "version": "1.0.8",
           "iconURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/Erosion-CN/icon.webp",
           "subtitle": "iOS / iPadOS 系统配置与 MobileGestalt 研究工具箱"
         },
@@ -9131,7 +9131,7 @@
           "name": "LiLite",
           "bundleIdentifier": "com.liuliuya.PiliNative",
           "developerName": "liuliuya2333",
-          "version": "1.0.42",
+          "version": "1.0.45",
           "iconURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/LiLite/icon.webp",
           "subtitle": "轻盈顺滑的第三方哔哩哔哩客户端"
         },
@@ -9235,7 +9235,7 @@
           "name": "MoviePilot",
           "bundleIdentifier": "org.moviepilot.app",
           "developerName": "jxxghp",
-          "version": "2.0.10",
+          "version": "2.0.11",
           "iconURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/MoviePilot-App/icon.webp",
           "subtitle": "MoviePilot 的 iOS 原生客户端"
         },
@@ -9363,7 +9363,7 @@
           "name": "Reloc",
           "bundleIdentifier": "dev.reloc.ios",
           "developerName": "Reukix",
-          "version": "1.0.4",
+          "version": "1.0.5",
           "iconURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/Reloc/icon.webp",
           "subtitle": "面向 iPhone 的外设级定位模拟工具"
         },
@@ -10078,7 +10078,7 @@
     {
       "id": "fastsign",
       "name": "Alan's Gigantic Repo",
-      "appCount": 17412,
+      "appCount": 17284,
       "catalogLimited": true,
       "iconURL": "https://fastsign.dev/icon.png",
       "sourceURL": "https://fastsign.dev/repo.json",
@@ -10100,12 +10100,300 @@
           "subtitle": "Best pick. Taurus 0.60.7"
         },
         {
+          "name": "Fitia",
+          "bundleIdentifier": "com.ulisesolave.Fitia",
+          "developerName": "AppTesters IPA Repo",
+          "version": "25.4.1",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.ulisesolave.Fitia.png",
+          "subtitle": "Injected with Subscription Unlocked"
+        },
+        {
+          "name": "Locket",
+          "bundleIdentifier": "com.locket.Locket",
+          "developerName": "AppTesters IPA Repo",
+          "version": "2.75.0",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.locket.Locket.png",
+          "subtitle": "Injected with Gold"
+        },
+        {
+          "name": "Detail",
+          "bundleIdentifier": "co.detail.duo",
+          "developerName": "AppTesters IPA Repo",
+          "version": "6.1.0",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/co.detail.duo.png",
+          "subtitle": "Injected with Subscription Unlocked"
+        },
+        {
+          "name": "Dehancer",
+          "bundleIdentifier": "com.dehancer.film.ios-app",
+          "developerName": "AppTesters IPA Repo",
+          "version": "7.3",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.dehancer.film.ios-app.png",
+          "subtitle": "Injected with Subscription Unlocked"
+        },
+        {
+          "name": "GrowMe",
+          "bundleIdentifier": "com.book.summaries.reading",
+          "developerName": "AppTesters IPA Repo",
+          "version": "1.4.9",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.book.summaries.reading.png",
+          "subtitle": "Injected with Subscription Unlocked"
+        },
+        {
+          "name": "Action",
+          "bundleIdentifier": "com.future.kapi",
+          "developerName": "AppTesters IPA Repo",
+          "version": "4.48.0",
+          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.future.kapi.png",
+          "subtitle": "Injected with Subscription Unlocked"
+        },
+        {
+          "name": "Provenance Alpha",
+          "bundleIdentifier": "org.provenance-emu.provenance.alpha",
+          "developerName": "Provenance-EMU",
+          "version": "3.4.0",
+          "iconURL": "https://raw.githubusercontent.com/Provenance-Emu/Provenance/develop/Provenance/Resources/Assets.xcassets/AppIcon.appiconset/iTunesArtwork@2x.png",
+          "subtitle": "Alpha builds of Provenance from the develop branch. These builds include the latest features and fixes but may contain bugs. Install alongside the…"
+        },
+        {
+          "name": "Locket",
+          "bundleIdentifier": "com.locket.Locket",
+          "developerName": "@blatants",
+          "version": "2.75.0",
+          "iconURL": "https://fastsign.dev/tg-icon/blatants/13786.png",
+          "subtitle": "Locket Gold"
+        },
+        {
+          "name": "Twitch (TwitchAdBlock 0.1.26)",
+          "bundleIdentifier": "tv.twitch",
+          "developerName": "@ipavault",
+          "version": "32.2",
+          "iconURL": "https://fastsign.dev/tg-icon/ipavault/1584.png",
+          "subtitle": "Tweaks: PathRedirect, TwitchAdBlock"
+        },
+        {
+          "name": "Twitch (TwitchAdBlock 0.1.26 Glass)",
+          "bundleIdentifier": "tv.twitch",
+          "developerName": "@ipavault",
+          "version": "32.2",
+          "iconURL": "https://fastsign.dev/tg-icon/ipavault/1585.png",
+          "subtitle": "Tweaks: PathRedirect, TwitchAdBlock"
+        },
+        {
+          "name": "Fitia",
+          "bundleIdentifier": "com.ulisesolave.Fitia",
+          "developerName": "@blatants",
+          "version": "25.4.1",
+          "iconURL": "https://fastsign.dev/tg-icon/blatants/13785.png",
+          "subtitle": "Subscription unlocked. >The app may take up to a minute to sign in, so be patient"
+        },
+        {
+          "name": "Dropshare",
+          "bundleIdentifier": "net.mkswap.Dropshare-iOS",
+          "developerName": "@blatants",
+          "version": "3.69",
+          "iconURL": "https://fastsign.dev/tg-icon/blatants/13784.png",
+          "subtitle": "Subscription unlocked"
+        },
+        {
+          "name": "World War Heroes",
+          "bundleIdentifier": "com.gamedevltd.wwh",
+          "developerName": "@kamohacks",
+          "version": "1.58.0",
+          "iconURL": "https://fastsign.dev/tg-icon/kamohacks/17041.png",
+          "subtitle": "Tweaks: iGameGod"
+        },
+        {
+          "name": "Re:Collection",
+          "bundleIdentifier": "com.orecolle.revival",
+          "developerName": "@kamohacks",
+          "version": "1.2.4",
+          "iconURL": "https://fastsign.dev/tg-icon/kamohacks/17040.png",
+          "subtitle": "Tweaks: iGameGod"
+        },
+        {
+          "name": "Grave Dividend",
+          "bundleIdentifier": "com.bytebrewit.gravedividend",
+          "developerName": "@kamohacks",
+          "version": "1.28.0",
+          "iconURL": "https://fastsign.dev/tg-icon/kamohacks/17039.png",
+          "subtitle": "Tweaks: iGameGod"
+        },
+        {
+          "name": "Lootruna",
+          "bundleIdentifier": "com.tinybatgames.lootrunarpg",
+          "developerName": "@kamohacks",
+          "version": "0.11.0",
+          "iconURL": "https://fastsign.dev/tg-icon/kamohacks/17038.png",
+          "subtitle": "Tweaks: iGameGod"
+        },
+        {
+          "name": "Fishing Inc",
+          "bundleIdentifier": "com.snapbreak.fishinginc",
+          "developerName": "@kamohacks",
+          "version": "1.0.6",
+          "iconURL": "https://fastsign.dev/tg-icon/kamohacks/17037.png",
+          "subtitle": "Tweaks: iGameGod"
+        },
+        {
+          "name": "Not Alone",
+          "bundleIdentifier": "com.modlestudio.notalone",
+          "developerName": "@kamohacks",
+          "version": "1.0.1",
+          "iconURL": "https://fastsign.dev/tg-icon/kamohacks/17036.png",
+          "subtitle": "Tweaks: iGameGod"
+        },
+        {
+          "name": "Last Day On Earth: Survival",
+          "bundleIdentifier": "zombie.survival.craft.z",
+          "developerName": "@kamohacks",
+          "version": "1.54.2",
+          "iconURL": "https://fastsign.dev/tg-icon/kamohacks/17035.png",
+          "subtitle": "Tweaks: iGameGod"
+        },
+        {
+          "name": "Grim Soul",
+          "bundleIdentifier": "fantasy.survival.game.rpg",
+          "developerName": "@kamohacks",
+          "version": "8.7.0",
+          "iconURL": "https://fastsign.dev/tg-icon/kamohacks/17034.png",
+          "subtitle": "Tweaks: iGameGod"
+        },
+        {
+          "name": "Warbox Sandbox",
+          "bundleIdentifier": "com.MadarGames.WarboxSandbox",
+          "developerName": "@kamohacks",
+          "version": "1.92.0",
+          "iconURL": "https://fastsign.dev/tg-icon/kamohacks/17033.png",
+          "subtitle": "Tweaks: iGameGod"
+        },
+        {
+          "name": "DragonCity",
+          "bundleIdentifier": "es.socialpoint.dragoncity",
+          "developerName": "@kamohacks",
+          "version": "26.15.0",
+          "iconURL": "https://fastsign.dev/tg-icon/kamohacks/17032.png",
+          "subtitle": "Tweaks: iGameGod"
+        },
+        {
+          "name": "Photos Backup",
+          "bundleIdentifier": "com.g8row.photosbackup",
+          "developerName": "@ipavault",
+          "version": "0.4.1",
+          "iconURL": "https://fastsign.dev/tg-icon/ipavault/1583.png",
+          "subtitle": "@ipavault | 💢 Photos Backup 0.4.1 Spoofs Google Pixel 1 for Unlimited Original Quality Photo Uploads Alternative to Gunshot tweak for Google Photos…"
+        },
+        {
+          "name": "TikTok",
+          "bundleIdentifier": "com.ss.iphone.ugc.Ame",
+          "developerName": "@spyg_vault",
+          "version": "47.9.0",
+          "iconURL": "https://fastsign.dev/tg-icon/spyg-vault/246.png",
+          "subtitle": "Tweaks: RTNotificationServiceGuard, ObjCTikTok"
+        },
+        {
+          "name": "Threads (ThreadsPulse · no plugins)",
+          "bundleIdentifier": "com.burbn.barcelona",
+          "developerName": "@ipavault",
+          "version": "457.0.0",
+          "iconURL": "https://fastsign.dev/tg-icon/ipavault/1582.png",
+          "subtitle": "@ipavault | 🧵 Threads 457.0.0 (ThreadsPulse 1.32.1) ✅Blocks Ads ✅Media Downloader Builds: 🧵 ThreadsPulse (Patched) 🧵 ThreadsPulse (No Plugins) Steps…"
+        },
+        {
+          "name": "Threads (ThreadsPulse)",
+          "bundleIdentifier": "com.burbn.barcelona",
+          "developerName": "@ipavault",
+          "version": "457.0.0",
+          "iconURL": "https://fastsign.dev/tg-icon/ipavault/1581.png",
+          "subtitle": "@ipavault | 🧵 Threads 457.0.0 (ThreadsPulse 1.32.1) ✅Blocks Ads ✅Media Downloader Builds: 🧵 ThreadsPulse (Patched) 🧵 ThreadsPulse (No Plugins) Steps…"
+        },
+        {
+          "name": "Photos Backup",
+          "bundleIdentifier": "com.g8row.photosbackup",
+          "developerName": "@ipavault",
+          "version": "0.4.0",
+          "iconURL": "https://fastsign.dev/tg-icon/ipavault/1580.png",
+          "subtitle": "@ipavault | 💢 Photos Backup 0.4.0 Spoofs Google Pixel 1 for Unlimited Original Quality Photo Uploads Alternative to Gunshot tweak for Google Photos…"
+        },
+        {
+          "name": "Dark Reader",
+          "bundleIdentifier": "com.ipadark.reader",
+          "developerName": "@ipa_dark",
+          "version": "1.0.0",
+          "iconURL": "https://fastsign.dev/tg-icon/ipa-dark/1886.png",
+          "subtitle": "@ipa_dark | 🔄 Dark Reader - книги и аудиокниги - разработчик 🇷🇺 Приложение для чтения книг и прослушивания аудиокниг. Скачивать книги можно прямо в…"
+        },
+        {
+          "name": "Nutri Coach",
+          "bundleIdentifier": "nutrition.coach",
+          "developerName": "@blatants",
+          "version": "2.8.2",
+          "iconURL": "https://fastsign.dev/tg-icon/blatants/13783.png",
+          "subtitle": "Subscription unlocked"
+        },
+        {
+          "name": "Weather Live",
+          "bundleIdentifier": "com.apalonapps.wlf",
+          "developerName": "@blatants",
+          "version": "7.24.45",
+          "iconURL": "https://fastsign.dev/tg-icon/blatants/13782.png",
+          "subtitle": "Subscription unlocked. Restart app if Subscriptions isn't activated"
+        },
+        {
+          "name": "Speak & Translate",
+          "bundleIdentifier": "com.appicfun.translatorfree",
+          "developerName": "@blatants",
+          "version": "6.0.63",
+          "iconURL": "https://fastsign.dev/tg-icon/blatants/13781.png",
+          "subtitle": "Subscription unlocked. >Restart app if Subscriptions isn't activated"
+        },
+        {
+          "name": "Instagram (Sparkle 1.7.0)",
+          "bundleIdentifier": "com.burbn.instagram",
+          "developerName": "@ipavault",
+          "version": "457.0.0",
+          "iconURL": "https://fastsign.dev/tg-icon/ipavault/1578.png",
+          "subtitle": "Tweaks: Sparkle"
+        },
+        {
+          "name": "Instagram (Sparkle 1.7.0 · no plugins)",
+          "bundleIdentifier": "com.burbn.instagram",
+          "developerName": "@ipavault",
+          "version": "457.0.0",
+          "iconURL": "https://fastsign.dev/tg-icon/ipavault/1579.png",
+          "subtitle": "Tweaks: Sparkle"
+        },
+        {
+          "name": "PeakVisor",
+          "bundleIdentifier": "ru.routes.peakvisor",
+          "developerName": "@blatants",
+          "version": "5.126",
+          "iconURL": "https://fastsign.dev/tg-icon/blatants/13780.png",
+          "subtitle": "Subscription unlocked"
+        },
+        {
+          "name": "SNOW",
+          "bundleIdentifier": "com.campmobile.snow",
+          "developerName": "@blatants",
+          "version": "15.5.6",
+          "iconURL": "https://fastsign.dev/tg-icon/blatants/13779.png",
+          "subtitle": "Subscription unlocked. Ignore purchase popup's and restart the app if subscription isn't active"
+        },
+        {
           "name": "B612",
           "bundleIdentifier": "com.linecorp.b612",
           "developerName": "@blatants",
           "version": "15.5.6",
           "iconURL": "https://fastsign.dev/tg-icon/blatants/13778.png",
           "subtitle": "Subscription unlocked. Ignore purchase popup's and restart the app if subscription isn't active"
+        },
+        {
+          "name": "Threads (ThreadsPulse)",
+          "bundleIdentifier": "com.burbn.barcelona",
+          "developerName": "@ipavault",
+          "version": "457.0.0",
+          "iconURL": "https://fastsign.dev/tg-icon/ipavault/1576.png",
+          "subtitle": "@ipavault | 🧵 Threads 457.0.0 (ThreadsPulse 1.32.0) ✅Blocks Ads ✅Media Downloader Builds: 🧵 ThreadsPulse (Patched) 🧵 ThreadsPulse (No Plugins) Steps…"
         },
         {
           "name": "Threads (ThreadsPulse · no plugins)",
@@ -10132,356 +10420,68 @@
           "subtitle": "@kamohacks | Faker - Fake Notifications 🆕 ⚙️Features⚙️ ✅IAP (InAppPurchases) ↪️ click on buy then Cancel RULES 📝 📄Buy Your Own Certificate Tap Here…"
         },
         {
+          "name": "Reloc",
+          "bundleIdentifier": "dev.reloc.ios",
+          "developerName": "Reukix",
+          "version": "1.0.4",
+          "iconURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/Reloc/icon.webp",
+          "subtitle": "通过本机回环连接系统的 com.apple.carkit.service 服务，以 iAP2 / MFi-v3 / NMEA 外设身份向系统下发实时坐标。需要外部代理提供指向 10.7.0.1 的本机回环，并先导入配对文件；仅支持 iPhone（iOS 17.0+）。"
+        },
+        {
+          "name": "Photos Backup",
+          "bundleIdentifier": "com.g8row.photosbackup",
+          "developerName": "g8row",
+          "version": "0.4.1",
+          "iconURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/PhotosBackup/icon.webp",
+          "subtitle": "An experimental, fully on-device iPhone app for backing up selected photos, videos, and albums to Google Photos."
+        },
+        {
+          "name": "MoviePilotLite",
+          "bundleIdentifier": "com.altman.moviepilot",
+          "developerName": "singleton-altman",
+          "version": "1.3.3",
+          "iconURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/MoviePilotLite/icon.webp",
+          "subtitle": "基于 MoviePilot 的 Flutter 跨端客户端，对接 MoviePilot v2 API，在手机上完成订阅、搜索、下载、整理与系统运维等常用操作。"
+        },
+        {
+          "name": "MoviePilot",
+          "bundleIdentifier": "org.moviepilot.app",
+          "developerName": "jxxghp",
+          "version": "2.0.10",
+          "iconURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/MoviePilot-App/icon.webp",
+          "subtitle": "MoviePilot 的 iOS 客户端，使用系统原生导航、搜索与快捷面板，业务页面、弹窗和插件界面复用 MoviePilot-Frontend，支持 iOS 26+ 的 Liquid Glass、侧滑返回、卡片长按菜单与前后台恢复。"
+        },
+        {
+          "name": "LiLite",
+          "bundleIdentifier": "com.liuliuya.PiliNative",
+          "developerName": "liuliuya2333",
+          "version": "1.0.42",
+          "iconURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/LiLite/icon.webp",
+          "subtitle": "使用 SwiftUI / UIKit 从头编写的原生第三方哔哩哔哩客户端，支持 mpv / AVPlayer 双内核、弹幕、画中画与离线缓存，适配 iOS 26 Liquid Glass。"
+        },
+        {
+          "name": "AniCh",
+          "bundleIdentifier": "app.anich",
+          "developerName": "Sle2p",
+          "version": "1.5.28",
+          "iconURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/AniCh/icon.webp",
+          "subtitle": "支持超分辨率、多平台、多番剧源与多弹幕的在线动漫播放应用，高清无广告。提供番剧索引与搜索、倍速播放、观看记录、追番管理、弹幕过滤与举报、分集评论和离线缓存。"
+        },
+        {
+          "name": "Account Atlas",
+          "bundleIdentifier": "dev.huichen.atlas",
+          "developerName": "Ckxkx",
+          "version": "2.5",
+          "iconURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/AccountAtlas/icon.webp",
+          "subtitle": "记录每个邮箱、手机号注册或绑定了哪些网站和 App。支持卡包视图、关系图、隐私打码与可选的端到端加密同步，数据默认仅保存在本地。"
+        },
+        {
           "name": "iCube",
           "bundleIdentifier": "com.joemattiello.iCube",
           "developerName": "Provenance Emu",
           "version": "1.0.0",
           "iconURL": "https://icube-emu.com/icon-1024.png",
           "subtitle": "Experience classic Nintendo GameCube and Wii games on your iOS devices and Apple TV. Built on the proven Dolphin emulator foundation. Features: •…"
-        },
-        {
-          "name": "Unbound 1.13.0 (Discord 355.0) - IPAVault - Patched",
-          "bundleIdentifier": "com.hammerandchisel.discord",
-          "developerName": "TubeVault",
-          "version": "355.0",
-          "iconURL": "https://repo.ballermc.com/tubevault/discord-logo.jpg",
-          "subtitle": "Tweaks: Unbound"
-        },
-        {
-          "name": "Unbound 1.12.9 (Discord 357.0 - TestFlight)",
-          "bundleIdentifier": "com.hammerandchisel.discord.testflight",
-          "developerName": "TubeVault",
-          "version": "355.0_1.12.9",
-          "iconURL": "https://repo.ballermc.com/tubevault/discord-logo.jpg",
-          "subtitle": "Tweaks: Unbound"
-        },
-        {
-          "name": "Unbound 1.13.0 (Discord 355.0 - App Store)",
-          "bundleIdentifier": "com.hammerandchisel.discord",
-          "developerName": "TubeVault",
-          "version": "355.0_1.13.0",
-          "iconURL": "https://repo.ballermc.com/tubevault/discord-logo.jpg",
-          "subtitle": "This is modded Discord with Unbound 1.13.0 Injected. Read more about the mod here: https://unbound.rip/"
-        },
-        {
-          "name": "TwitchAdBlock (v0.1.25 - IPAVault) - Patched",
-          "bundleIdentifier": "tv.twitch",
-          "developerName": "TubeVault",
-          "version": "32.2",
-          "iconURL": "https://repo.ballermc.com/tubevault/Twitch-Icon.png",
-          "subtitle": "Tweaks: PathRedirect, TwitchAdBlock"
-        },
-        {
-          "name": "tvOS ONLY!! - TwitchUnblock (v0.1.57) - IPAVault",
-          "bundleIdentifier": "com.mxfia19.twitchunblock",
-          "developerName": "TubeVault",
-          "version": "0.1.57",
-          "iconURL": "https://repo.ballermc.com/tubevault/TwitchUnblock-Icon.png",
-          "subtitle": "TwitchUnblock is an open-source Twitch client that lets you watch VODs and live streams without a subscription, at full quality. See more about this…"
-        },
-        {
-          "name": "iOS ONLY!! TwitchUnblock (v1.7.2) - IPAVault",
-          "bundleIdentifier": "com.mxfia19.twitchunblock",
-          "developerName": "TubeVault",
-          "version": "1.7.2",
-          "iconURL": "https://repo.ballermc.com/tubevault/TwitchUnblock-Icon.png",
-          "subtitle": "TwitchUnblock is an open-source Twitch client that lets you watch VODs and live streams without a subscription, at full quality. See more about this…"
-        },
-        {
-          "name": "EeveeSpotifyReincarnated (v7.5.0 - Patched) iOS 15 ONLY",
-          "bundleIdentifier": "com.spotify.client",
-          "developerName": "TubeVault",
-          "version": "9.2.2",
-          "iconURL": "https://repo.ballermc.com/tubevault/spotify-logo.jpg",
-          "subtitle": "Tweaks: EeveeSpotify, SpotifyAudioProbe"
-        },
-        {
-          "name": "EeveeSpotifyReincarnated (v7.5.0) iOS 15 ONLY",
-          "bundleIdentifier": "com.spotify.client",
-          "developerName": "TubeVault",
-          "version": "9.2.2",
-          "iconURL": "https://repo.ballermc.com/tubevault/spotify-logo.jpg",
-          "subtitle": "Tweaks: EeveeSpotify, SpotifyAudioProbe"
-        },
-        {
-          "name": "EeveeSpotifyReincarnated (v7.5.0 - Patched) - Hazel's EeveeSpotify IPAs",
-          "bundleIdentifier": "com.spotify.client",
-          "developerName": "TubeVault",
-          "version": "9.2.2",
-          "iconURL": "https://repo.ballermc.com/tubevault/spotify-logo.jpg",
-          "subtitle": "Tweaks: EeveeSpotify, SpotifyAudioProbe"
-        },
-        {
-          "name": "EeveeSpotifyReincarnated (v7.5.0) - Hazel's EeveeSpotify IPAs",
-          "bundleIdentifier": "com.spotify.client",
-          "developerName": "TubeVault",
-          "version": "9.2.2",
-          "iconURL": "https://repo.ballermc.com/tubevault/spotify-logo.jpg",
-          "subtitle": "Tweaks: EeveeSpotify, SpotifyAudioProbe"
-        },
-        {
-          "name": "YTKACE (1.1.9) - Bonus Tweaks (Drifty)",
-          "bundleIdentifier": "com.google.ios.youtube",
-          "developerName": "TubeVault",
-          "version": "21.47.6",
-          "iconURL": "https://static.vecteezy.com/system/resources/previews/023/986/704/non_2x/youtube-logo-youtube-logo-transparent-youtube-icon-transparent-free-free-png.png",
-          "subtitle": "Tweaks: YTKACE, Alderis, VolumeBoostYT +6"
-        },
-        {
-          "name": "YTKillerPlus Cracked (6.8.4)",
-          "bundleIdentifier": "com.google.ios.youtube",
-          "developerName": "TubeVault",
-          "version": "21.46.3",
-          "iconURL": "https://static.vecteezy.com/system/resources/previews/023/986/704/non_2x/youtube-logo-youtube-logo-transparent-youtube-icon-transparent-free-free-png.png",
-          "subtitle": "Tweaks: YTKPlus"
-        },
-        {
-          "name": "Picsew",
-          "bundleIdentifier": "com.sugarmo.ScrollClip",
-          "developerName": "AppTesters IPA Repo",
-          "version": "3.20.2",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.sugarmo.ScrollClip.png",
-          "subtitle": "Injected with Pro"
-        },
-        {
-          "name": "ShutEye",
-          "bundleIdentifier": "health.sleep.sounds.tracker.alarm.calm",
-          "developerName": "AppTesters IPA Repo",
-          "version": "3.6.2",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/health.sleep.sounds.tracker.alarm.calm.png",
-          "subtitle": "Injected with Premium"
-        },
-        {
-          "name": "RiseSleep",
-          "bundleIdentifier": "com.risesci.nyx",
-          "developerName": "AppTesters IPA Repo",
-          "version": "0.1.656",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.risesci.nyx.png",
-          "subtitle": "Injected with Subscription Unlocked"
-        },
-        {
-          "name": "Athlytic",
-          "bundleIdentifier": "myndarc.newFitnessApp",
-          "developerName": "AppTesters IPA Repo",
-          "version": "27.1",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/myndarc.newFitnessApp.png",
-          "subtitle": "Injected with Subscription Unlocked"
-        },
-        {
-          "name": "B612",
-          "bundleIdentifier": "com.linecorp.b612",
-          "developerName": "AppTesters IPA Repo",
-          "version": "15.5.6",
-          "iconURL": "https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.linecorp.b612.png",
-          "subtitle": "Injected with Subscription Unlocked"
-        },
-        {
-          "name": "Provenance Alpha",
-          "bundleIdentifier": "org.provenance-emu.provenance.alpha",
-          "developerName": "Provenance-EMU",
-          "version": "3.4.0",
-          "iconURL": "https://raw.githubusercontent.com/Provenance-Emu/Provenance/develop/Provenance/Resources/Assets.xcassets/AppIcon.appiconset/iTunesArtwork@2x.png",
-          "subtitle": "Alpha builds of Provenance from the develop branch. These builds include the latest features and fixes but may contain bugs. Install alongside the…"
-        },
-        {
-          "name": "RunCut",
-          "bundleIdentifier": "app.runcut",
-          "developerName": "@Sa1y0miii",
-          "version": "2.5.4",
-          "iconURL": "https://fastsign.dev/tg-icon/sa1y0miii/16774.png",
-          "subtitle": "Subscription unlocked"
-        },
-        {
-          "name": "YaoYao",
-          "bundleIdentifier": "hltek.YaoYao",
-          "developerName": "@Sa1y0miii",
-          "version": "26.11.27",
-          "iconURL": "https://fastsign.dev/tg-icon/sa1y0miii/16771.png",
-          "subtitle": "Subscription unlocked"
-        },
-        {
-          "name": "nea",
-          "bundleIdentifier": "com.keinois.nea.app",
-          "developerName": "@Sa1y0miii",
-          "version": "1.5.0",
-          "iconURL": "https://fastsign.dev/tg-icon/sa1y0miii/16768.png",
-          "subtitle": "Click “restore” or close the subscription page"
-        },
-        {
-          "name": "Framed",
-          "bundleIdentifier": "com.frameapp.photo",
-          "developerName": "@Sa1y0miii",
-          "version": "2.0.1",
-          "iconURL": "https://fastsign.dev/tg-icon/sa1y0miii/16765.png",
-          "subtitle": "Subscription unlocked"
-        },
-        {
-          "name": "Nami",
-          "bundleIdentifier": "com.nami.hydrationtracker",
-          "developerName": "@Sa1y0miii",
-          "version": "1.5",
-          "iconURL": "https://fastsign.dev/tg-icon/sa1y0miii/16762.png",
-          "subtitle": "Subscription unlocked"
-        },
-        {
-          "name": "Locationscout",
-          "bundleIdentifier": "app.derwebdesigner.locationscout.net",
-          "developerName": "@Sa1y0miii",
-          "version": "4.0.0",
-          "iconURL": "https://fastsign.dev/tg-icon/sa1y0miii/16759.png",
-          "subtitle": "Subscription unlocked"
-        },
-        {
-          "name": "Retrx",
-          "bundleIdentifier": "com.bikinstudio.screenx",
-          "developerName": "@Sa1y0miii",
-          "version": "0.0.59",
-          "iconURL": "https://fastsign.dev/tg-icon/sa1y0miii/16756.png",
-          "subtitle": "Subscription unlocked"
-        },
-        {
-          "name": "Budget Bestie",
-          "bundleIdentifier": "app.budgetbestie.budgetbestie",
-          "developerName": "@Sa1y0miii",
-          "version": "1.8.0",
-          "iconURL": "https://fastsign.dev/tg-icon/sa1y0miii/16753.png",
-          "subtitle": "Subscription unlocked"
-        },
-        {
-          "name": "Discord (Unbound 1.13.0)",
-          "bundleIdentifier": "com.hammerandchisel.discord",
-          "developerName": "@ipavault",
-          "version": "355.0",
-          "iconURL": "https://fastsign.dev/tg-icon/ipavault/1575.png",
-          "subtitle": "Tweaks: Unbound"
-        },
-        {
-          "name": "Facebook (Plus 1.1.1)",
-          "bundleIdentifier": "com.facebook.Facebook",
-          "developerName": "@ipavault",
-          "version": "588.1.0",
-          "iconURL": "https://fastsign.dev/tg-icon/ipavault/1574.png",
-          "subtitle": "@ipavault | 🌐 Facebook 588.1.0 (Facebook Plus 1.1.1) Steps to access Facebook Plus settings: – Press and hold the Home 💎 tab bar icon OR – Press and…"
-        },
-        {
-          "name": "Rise Sleep",
-          "bundleIdentifier": "com.risesci.nyx",
-          "developerName": "@blatants",
-          "version": "0.1.656",
-          "iconURL": "https://fastsign.dev/tg-icon/blatants/13776.png",
-          "subtitle": "Subscription unlocked. >Certificate with healthkit entitlement is required"
-        },
-        {
-          "name": "ShutEye",
-          "bundleIdentifier": "health.sleep.sounds.tracker.alarm.calm",
-          "developerName": "@blatants",
-          "version": "3.6.2",
-          "iconURL": "https://fastsign.dev/tg-icon/blatants/13775.png",
-          "subtitle": "Premium unlocked"
-        },
-        {
-          "name": "Picsew",
-          "bundleIdentifier": "com.sugarmo.ScrollClip",
-          "developerName": "@blatants",
-          "version": "3.20.2",
-          "iconURL": "https://fastsign.dev/tg-icon/blatants/13774.png",
-          "subtitle": "Picsew Pro"
-        },
-        {
-          "name": "Retro",
-          "bundleIdentifier": "io.lonepalm.Retro",
-          "developerName": "@Sa1y0miii",
-          "version": "130.0",
-          "iconURL": "https://fastsign.dev/tg-icon/sa1y0miii/16750.png",
-          "subtitle": "Subscription unlocked"
-        },
-        {
-          "name": "Pressure Pal",
-          "bundleIdentifier": "com.manev.mikhail.NoPressure",
-          "developerName": "@Sa1y0miii",
-          "version": "3.9.2",
-          "iconURL": "https://fastsign.dev/tg-icon/sa1y0miii/16747.png",
-          "subtitle": "Click restore if the subscription isn't unlocked"
-        },
-        {
-          "name": "Tracked",
-          "bundleIdentifier": "com.tracked.mobile",
-          "developerName": "@Sa1y0miii",
-          "version": "8.4.3",
-          "iconURL": "https://fastsign.dev/tg-icon/sa1y0miii/16744.png",
-          "subtitle": "Subscription unlocked"
-        },
-        {
-          "name": "Dtd Playlist",
-          "bundleIdentifier": "com.dtd.playlist",
-          "developerName": "@Sa1y0miii",
-          "version": "2.9",
-          "iconURL": "https://fastsign.dev/tg-icon/sa1y0miii/16741.png",
-          "subtitle": "Subscription unlocked"
-        },
-        {
-          "name": "GoldenNugget",
-          "bundleIdentifier": "com.awesomenull.goldennugget",
-          "developerName": "@ipavault",
-          "version": "9.7.10",
-          "iconURL": "https://fastsign.dev/icon.png",
-          "subtitle": "@ipavault | 🥩 GoldenNugget (Mobile) Unlock your device's full potential, with iOS 27 support! Customize your device with animated wallpapers…"
-        },
-        {
-          "name": "Cleanup",
-          "bundleIdentifier": "com.codeway.cleanerplus",
-          "developerName": "@blatants",
-          "version": "6.28.0",
-          "iconURL": "https://fastsign.dev/tg-icon/blatants/13772.png",
-          "subtitle": "Subscription unlocked"
-        },
-        {
-          "name": "Discord (Unbound 1.12.8)",
-          "bundleIdentifier": "com.hammerandchisel.discord",
-          "developerName": "@ipavault",
-          "version": "355.0",
-          "iconURL": "https://fastsign.dev/tg-icon/ipavault/1572.png",
-          "subtitle": "Tweaks: Unbound"
-        },
-        {
-          "name": "VinylStudio",
-          "bundleIdentifier": "app.vinylreleases.studio",
-          "developerName": "@Sa1y0miii",
-          "version": "1.13.8",
-          "iconURL": "https://fastsign.dev/tg-icon/sa1y0miii/16738.png",
-          "subtitle": "Subscription unlocked"
-        },
-        {
-          "name": "Finch",
-          "bundleIdentifier": "com.finch.finch",
-          "developerName": "@Sa1y0miii",
-          "version": "3.73.242",
-          "iconURL": "https://fastsign.dev/tg-icon/sa1y0miii/16735.png",
-          "subtitle": "Subscription unlocked. *(restart the app if u have some kind of error)"
-        },
-        {
-          "name": "Wheelz",
-          "bundleIdentifier": "com.gigamow.Wheelz",
-          "developerName": "@Sa1y0miii",
-          "version": "5.11",
-          "iconURL": "https://fastsign.dev/tg-icon/sa1y0miii/16732.png",
-          "subtitle": "Subscription unlocked. *(no extra credits or unlimited cars)"
-        },
-        {
-          "name": "Steps",
-          "bundleIdentifier": "com.adambinsz.Steps",
-          "developerName": "@Sa1y0miii",
-          "version": "8.0.1",
-          "iconURL": "https://fastsign.dev/tg-icon/sa1y0miii/16729.png",
-          "subtitle": "Subscription unlocked"
-        },
-        {
-          "name": "WQ Files",
-          "bundleIdentifier": "cz.kolbi.wqfiles",
-          "developerName": "@ipavault",
-          "version": "0.9.30",
-          "iconURL": "https://fastsign.dev/tg-icon/ipavault/1571.png",
-          "subtitle": "@ipavault | 📁 WQ Files WQ Files is a file browser, app data manager and cache cleaner for iOS 27. \"WQ\" stands for worse_query, the sandbox technique…"
         }
       ]
     },
